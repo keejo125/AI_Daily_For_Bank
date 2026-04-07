@@ -5,28 +5,27 @@
 ## 主题分类
 
 ### 01 - AI Coding 方法论
-- [ ] 行业趋势与数据
-- [ ] Vibe Coding
-- [ ] Context Coding
+- [x] Vibe Coding 新范式
+- [x] 渐进式 Spec 实战指南
+- [x] Memory 架构深度解析
 
 ### 02 - Qoder
+- [x] 专家团模式
 - [ ] 产品深度分析
-- [ ] 专家团模式
 - [ ] 工程实践指南
-- [ ] 效能数据
 
 ### 03 - Claude Code
-- [ ] Harness 架构
-- [ ] 记忆机制
-- [ ] 源码解析
+- [x] Harness 架构
+- [x] 源码泄露解析
+- [ ] 记忆机制详解
 
 ### 04 - Karpathy 方法论
 - [x] LLM 知识库方法论
 - [ ] AutoResearch
 
 ### 05 - Agent Skills
-- [ ] 技能工程
-- [ ] 领域知识复用
+- [x] Skill 宇宙方法论
+- [x] 女娲 Skill 知识蒸馏
 
 ## 关联图谱
 
@@ -42,18 +41,23 @@ Qoder 专家团 → 多角色协同
 Claude Code Harness → 工程架构参考
 ```
 
-## 已整理文档
+## 已整理文档（9篇）
 
-| 文档 | 内容 | 状态 |
+| 分类 | 文档 | 内容 |
 |------|------|------|
-| 01-llm-knowledge-base.md | Karpathy LLM知识库方法论 | ✅ |
-| 02-experts-mode.md | Qoder专家团模式 | ✅ |
-| 01-harness-architecture.md | Claude Code Harness架构 | ✅ |
-| 01-vibe-coding.md | Vibe Coding 新范式 | ✅ |
+| 01 | 01-vibe-coding.md | Vibe Coding 新范式 |
+| 01 | 02-spec-coding.md | 渐进式 Spec 实战指南 |
+| 01 | 03-memory-architecture.md | Memory 架构深度解析 |
+| 02 | 02-experts-mode.md | Qoder 专家团模式 |
+| 03 | 01-harness-architecture.md | Claude Code Harness 架构 |
+| 03 | 02-source-leak.md | Claude Code 源码泄露解析 |
+| 04 | 01-llm-knowledge-base.md | Karpathy LLM 知识库方法论 |
+| 05 | 01-skill-universe.md | Skill 宇宙方法论 |
+| 05 | 02-nuwa-skill.md | 女娲 Skill 知识蒸馏 |
 
 ## 待整理文章
 
-- [ ] 开源「女娲.skill」
 - [ ] 9位专家调研案例
 - [ ] AI 编码实践手册
 - [ ] DDD + AI 案例
+- [ ] 51Job Qoder 实践
