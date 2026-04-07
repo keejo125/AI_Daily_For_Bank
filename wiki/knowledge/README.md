@@ -41,7 +41,7 @@ Qoder 专家团 → 多角色协同
 Claude Code Harness → 工程架构参考
 ```
 
-## 已整理文档（11篇）
+## 已整理文档（13篇）
 
 | 分类 | 文档 | 内容 |
 |------|------|------|
@@ -49,8 +49,10 @@ Claude Code Harness → 工程架构参考
 | 01 | 02-spec-coding.md | 渐进式 Spec 实战指南 |
 | 01 | 03-memory-architecture.md | Memory 架构深度解析 |
 | 01 | 04-memory-system-deep.md | Memory 系统深度解析（Raw Ledger/Views/Policy） |
+| 01 | 05-ai-product-priorities.md | AI 产品断舍离：拒绝的功能 |
 | 02 | 02-experts-mode.md | Qoder 专家团模式 |
 | 02 | 03-code-reviewer.md | AI Code Review 方法论 |
+| 02 | 04-legacy-project.md | Qoder 老项目实战指南 |
 | 03 | 01-harness-architecture.md | Claude Code Harness 架构 |
 | 03 | 02-source-leak.md | Claude Code 源码泄露解析 |
 | 04 | 01-llm-knowledge-base.md | Karpathy LLM 知识库方法论 |
