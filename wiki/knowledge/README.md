@@ -44,7 +44,7 @@ Qoder 专家团 → 多角色协同
 Claude Code Harness → 工程架构参考
 ```
 
-## 已整理文档（14篇）
+## 已整理文档（15篇 + 25篇教程）
 
 | 分类 | 文档 | 内容 |
 |------|------|------|
@@ -59,6 +59,7 @@ Claude Code Harness → 工程架构参考
 | 03 | 01-harness-architecture.md | Claude Code Harness 架构 |
 | 03 | 02-source-leak.md | Claude Code 源码泄露解析 |
 | 03 | 03-source-deep-dive.md | Claude Code 源码深度解析 |
+| 03 | tutorials/ (25篇) | Claude Code 源码分析教程 |
 | 04 | 01-llm-knowledge-base.md | Karpathy LLM 知识库方法论 |
 | 05 | 01-skill-universe.md | Skill 宇宙方法论 |
 | 05 | 02-nuwa-skill.md | 女娲 Skill 知识蒸馏 |
