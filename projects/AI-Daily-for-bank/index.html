@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Daily for Bank · 智能研发早报</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f7fa; color: #2c3e50; line-height: 1.6;
+    padding: 20px;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* 顶部标题 */
+  .hero {
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: #fff; border-radius: 16px;
+    padding: 40px 32px; margin-bottom: 28px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .hero p { font-size: 14px; opacity: 0.85; margin-bottom: 4px; }
+  .hero .badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    font-size: 12px; padding: 3px 12px; border-radius: 20px;
+    margin-top: 10px;
+  }
+
+  /* 最近一期 */
+  .latest { margin-bottom: 28px; }
+  .section-title {
+    font-size: 14px; font-weight: 700; color: #888;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+  }
+  .latest-card {
+    background: #fff; border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden; display: flex;
+    align-items: stretch;
+  }
+  .latest-card .date-col {
+    background: #1a73e8; color: #fff;
+    padding: 24px 20px; text-align: center;
+    min-width: 90px; display: flex;
+    flex-direction: column; justify-content: center;
+  }
+  .latest-card .date-col .month { font-size: 13px; opacity: 0.8; }
+  .latest-card .date-col .day { font-size: 36px; font-weight: 700; line-height: 1.1; }
+  .latest-card .date-col .weekday { font-size: 12px; opacity: 0.7; margin-top: 4px; }
+  .latest-card .info { padding: 20px 24px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .latest-card .info .summary { font-size: 14px; color: #555; margin-bottom: 10px; }
+  .latest-card .info .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .latest-card .info .tag {
+    font-size: 11px; font-weight: 600; padding: 2px 8px;
+    border-radius: 10px; white-space: nowrap;
+  }
+  .tag-intl { background: #e3f2fd; color: #1565c0; }
+  .tag-domestic { background: #e8f5e9; color: #2e7d32; }
+  .tag-industry { background: #fff3e0; color: #e65100; }
+  .tag-model { background: #ede7f6; color: #7c4dff; }
+  .latest-card .cta {
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 24px; border-left: 1px solid #eee;
+  }
+  .latest-card .cta a {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #1a73e8; color: #fff;
+    padding: 10px 20px; border-radius: 8px;
+    text-decoration: none; font-size: 14px; font-weight: 600;
+  }
+  .latest-card .cta a:hover { background: #1557b0; }
+
+  /* 历史列表 */
+  .history { margin-bottom: 28px; }
+  .day-list { display: flex; flex-direction: column; gap: 8px; }
+  .day-item {
+    background: #fff; border-radius: 10px;
+    padding: 14px 18px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    text-decoration: none; color: inherit;
+    transition: box-shadow 0.2s, transform 0.1s;
+  }
+  .day-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  .day-item .left { display: flex; align-items: center; gap: 14px; }
+  .day-item .date {
+    font-size: 13px; font-weight: 600; color: #1a73e8;
+    min-width: 100px;
+  }
+  .day-item .count { font-size: 12px; color: #999; }
+  .day-item .arrow { color: #ccc; font-size: 18px; }
+
+  /* 分类图例 */
+  .legend {
+    background: #fff; border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .legend h3 { font-size: 14px; font-weight: 700; color: #888; margin-bottom: 12px; }
+  .legend-items { display: flex; gap: 16px; flex-wrap: wrap; }
+  .legend-items .item { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-intl { background: #1a73e8; }
+  .dot-domestic { background: #2e7d32; }
+  .dot-industry { background: #e65100; }
+  .dot-model { background: #7c4dff; }
+
+  .footer { text-align: center; color: #bbb; font-size: 12px; padding: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 顶部 -->
+  <div class="hero">
+    <h1>🏦 AI-Daily for Bank</h1>
+    <p>智能研发早报 · 每日自动归档</p>
+    <p>国际 · 国内 · 同业 · 大模型</p>
+    <div class="badge">🏷️ 紫色 = 大模型相关内容</div>
+  </div>
+
+  <!-- 分类图例 -->
+  <div class="legend">
+    <h3>分类说明</h3>
+    <div class="legend-items">
+      <div class="item"><div class="legend-dot dot-intl"></div>🌐 国际</div>
+      <div class="item"><div class="legend-dot dot-domestic"></div>🇨🇳 国内</div>
+      <div class="item"><div class="legend-dot dot-industry"></div>🏦 同业</div>
+      <div class="item"><div class="legend-dot dot-model"></div>🏷️ 大模型</div>
+    </div>
+  </div>
+
+  <!-- 最近一期 -->
+  <div class="latest">
+    <div class="section-title">📰 最新一期</div>
+    <div class="latest-card">
+      <div class="date-col">
+        <div class="month">4月</div>
+        <div class="day">20</div>
+        <div class="weekday">周一</div>
+      </div>
+      <div class="info">
+        <div class="summary">共 8 条：Opus 4.7登顶/GPT-5.5下周发 · Claude Code与Codex趋同 · KV Cache架构突破 · MIA记忆框架</div>
+        <div class="tags">
+          <span class="tag tag-intl">🌐 国际 5条</span>
+          <span class="tag tag-domestic">🇨🇳 国内 3条</span>
+          <span class="tag tag-industry">🏦 同业 暂无</span>
+          <span class="tag tag-model">🏷️ 大模型 2条</span>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="daily/2026-04-20/index.html">查看全文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 历史列表 -->
+  <div class="history">
+    <div class="section-title">📅 历史归档</div>
+    <div class="day-list">
+      <a class="day-item" href="daily/2026-04-20/index.html">
+        <div class="left">
+          <div class="date">2026-04-20</div>
+          <div class="count">8条 · 周一</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    AI-Daily for Bank · 智能研发早报存档<br>
+    自动抓取 · GitHub 静态托管
+  </div>
+
+</div>
+</body>
+</html>
