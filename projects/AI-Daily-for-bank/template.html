@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能研发早报 {{DATE}}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:760px;margin:0 auto;padding:20px;background:#f8fafc;color:#1f2937}
+.banner{background:linear-gradient(135deg,#1e3a5f,#2d5a87);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.banner h1{margin:0;font-size:20px;font-weight:600}
+.banner p{margin:8px 0 0;color:#93c5fd;font-size:13px}
+.section{margin-bottom:24px}
+.section h2{font-size:14px;color:#fff;background:#3b82f6;padding:10px 14px;border-radius:8px 8px 0 0;margin:0}
+.card{background:#fff;border:1px solid #e2e8f0;border-top:none}
+.card-inner{padding:14px 16px;cursor:pointer;transition:background .15s}
+.card-inner:hover{background:#f1f5f9}
+.card-inner.expanded{background:#f8fafc}
+.card-title{font-size:14px;font-weight:600;color:#1e293b;line-height:1.4}
+.source-tag{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:2px 8px;border-radius:12px;font-size:11px;margin:6px 0}
+.card-digest{font-size:13px;color:#475569;line-height:1.6;margin-top:6px}
+.card-content{display:none;font-size:13px;color:#374151;margin-top:10px;padding-top:10px;border-top:1px dashed #cbd5e1}
+.card-inner.expanded .card-content{display:block}
+.empty{color:#94a3b8;font-style:italic;padding:12px 16px;background:#fff;border:1px solid #e2e8f0;border-top:none}
+.footer{text-align:center;color:#94a3b8;font-size:12px;padding:16px 0}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>🏦 智能研发早报</h1>
+  <p>{{DATE}} · {{STATS}}</p>
+</div>
+
+{{SECTION_INTL}}
+{{SECTION_DOMESTIC}}
+{{SECTION_PEER}}
+{{SECTION_OTHER}}
+
+<div class="footer">智能研发早报 · AI-Daily-for-bank</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+// 数据注入
+var ARTICLES = {{ARTICLES_JSON}};
+
+// 分类渲染
+function renderSection(sectionId, category) {
+  var items = ARTICLES.filter(function(a){return a.category===category;});
+  var el = document.getElementById(sectionId);
+  if(!el)return;
+  if(items.length===0){
+    el.innerHTML='<div class="empty">暂无</div>';
+    return;
+  }
+  var html='';
+  items.forEach(function(a){
+    var digestMd = marked.parse(a.digest||'');
+    var contentMd = marked.parse(a.content||'');
+    html+='<div class="card"><div class="card-inner" onclick="this.classList.toggle(\'expanded\')">'+
+      '<div class="card-title">'+a.title+'</div>'+
+      '<span class="source-tag">'+a.source+'</span>'+
+      '<div class="card-digest">'+digestMd+'</div>'+
+      '<div class="card-content">'+(a.content?('<div style="margin-bottom:8px">'+contentMd+'</div>'):'')+
+      '<a href="'+a.link+'" target="_blank">📖 微信原文</a></div>'+
+      '</div></div>';
+  });
+  el.innerHTML=html;
+}
+
+// 渲染所有分类
+renderSection('section-intl','国际');
+renderSection('section-domestic','国内');
+renderSection('section-peer','同业');
+renderSection('section-other','其他');
+</script>
+</body>
+</html>

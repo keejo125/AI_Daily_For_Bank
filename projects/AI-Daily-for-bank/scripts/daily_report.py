@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
 """
-智能研发早报生成脚本 v2
+智能研发早报生成脚本 v3 — 基于模板
 
 Step 1 (无参数): 拉元数据 → 过滤 → 输出候选清单 + 保存JSON
-Step 2 (--classify): 读取缓存 → 生成HTML + 摘要文本
-                    多源事件自动合成一句话
+Step 2 (--classify): 读模板 → 注入数据 → 生成 index.html + 微信摘要
 """
-import sqlite3, json, re, os, sys, textwrap
+import sqlite3, json, re, os, sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
 DB_PATH = "/tmp/rss.db"
 PROJECT_DIR = Path("/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank")
+TEMPLATE_FILE = PROJECT_DIR / "template.html"
 CACHE_FILE = Path("/tmp/daily_report_cache.json")
+
 
 # ---------- 共用工具 ----------
 
 def calc_timestamp(date_str):
-    """计算日期的Unix时间戳（上海时区）"""
+    """计算日期的Unix时间戳（上海时区），date_str 为汇总日期（早报日期-1天）"""
     import subprocess
     start = int(subprocess.check_output(
-        ["date", "-jf", "%Y-%m-%d", f"{date_str}", "+%s"]).strip())
+        ["date", "-jf", "%Y-%m-%d", date_str, "+%s"]).strip())
     return start, start + 86399
+
 
 def fetch_meta(start_ts, end_ts):
     """拉元数据（5字段：aid/title/source/link/digest），用|||分隔符避免多行截断"""
@@ -37,19 +39,26 @@ def fetch_meta(start_ts, end_ts):
     db.close()
     return [dict(r) for r in rows]
 
+
 def filter_articles(articles):
     """关键词过滤 + 财经排除"""
-    include_kw = ['大模型', 'AI', '智能体', 'Agent', 'LLM',
-                  'GPT', 'Claude', '编码', '编程', '代码生成', 'Copilot',
-                  'Coding', 'SWE', 'RAG', '推理', '模型']
-    exclude_kw = ['融资', '净利润', '财报', '营收', '市值', '股价',
-                  'IPO', '上市', '申购', '涨幅', '跌幅', '收盘',
-                  '买入', '卖出', '评级', '目标价']
+    include_kw = [
+        '大模型', 'AI', '智能体', 'Agent', 'LLM',
+        'GPT', 'Claude', '编码', '编程', '代码生成', 'Copilot',
+        'Coding', 'SWE', 'RAG', '推理', '模型', '智能研发', '智能办公',
+        '智能运维', '模型发布', 'benchmark', '开源'
+    ]
+    exclude_kw = [
+        '融资', '净利润', '财报', '营收', '市值', '股价',
+        'IPO', '上市', '申购', '涨幅', '跌幅', '收盘',
+        '买入', '卖出', '评级', '目标价', '追投', '投资额'
+    ]
 
     filtered, excluded = [], []
     for a in articles:
         text = (a['title'] or '') + (a['digest'] or '')
         if not any(kw.lower() in text.lower() for kw in include_kw):
+            excluded.append(a)
             continue
         if any(kw in text for kw in exclude_kw):
             excluded.append(a)
@@ -57,20 +66,21 @@ def filter_articles(articles):
         filtered.append(a)
     return filtered, excluded
 
+
 def auto_classify(article):
     """自动分类（粗粒度，用户会校正）"""
     text = ((article.get('digest') or '') + (article.get('title') or '')).lower()
 
     bank_kw = ['银行', '金融', 'atm', '风控', '智能客服', '信贷', '理财',
-               '网点', '柜面', '反欺诈', '反洗钱']
+               '网点', '柜面', '反欺诈', '反洗钱', '信用卡']
     intl_kw = ['openai', 'anthropic', 'google', 'meta ', 'deepmind',
                'stability', 'mistral', 'cohere', 'x.ai', 'apple ', 'nvidia',
-               'claude', 'gpt', 'gemini', 'grok', 'strawberry',
-               'openai的', 'anthropic的']
+               'claude', 'gpt', 'gemini', 'grok', 'strawberry']
     domestic_kw = ['阿里', '腾讯', '百度', '字节', '华为', '智谱', '商汤',
                    '深度求索', '月之暗面', 'minimax', '阶跃', '面壁',
                    '百川', '360', '科大讯飞', '蚂蚁',
-                   'qwen', '通义', '腾讯混元', '灵犀', '文心']
+                   'qwen', '通义', '腾讯混元', '灵犀', '文心', '荣耀',
+                   '小米', 'oppo', 'vivo', '中兴']
 
     if any(kw in text for kw in bank_kw):
         return '同业'
@@ -79,6 +89,7 @@ def auto_classify(article):
     if any(kw in text for kw in domestic_kw):
         return '国内'
     return '其他'
+
 
 def auto_tag(article):
     """🤖标签：模型发布/评测/架构突破"""
@@ -89,39 +100,38 @@ def auto_tag(article):
                 'llama', 'mistral', 'grok', 'Scaling', '训练']
     return any(kw in text for kw in model_kw)
 
+
 def build_slug(title):
     """从标题提取关键词用于去重匹配"""
-    # 移除常见前缀和语气词
-    text = re.sub(r'^(刚刚|独家|突发|重磅|刚刚|都在说|都在看)', '', title)
-    # 提取前6个字符作为slug（跳过标点）
-    slug = re.sub(r'[^\w]', '', text)[:18]
-    return slug.lower()
+    text = re.sub(r'^(刚刚|独家|突发|重磅)', '', title)
+    return re.sub(r'[^\w]', '', text)[:18].lower()
+
 
 def detect_dup_sources(articles):
-    """检测同一事件的多来源报道（按标题关键词分组）"""
+    """检测同一事件的多来源报道"""
     groups = {}
     for a in articles:
         slug = build_slug(a['title'])
         if slug not in groups:
             groups[slug] = []
         groups[slug].append(a)
-
-    # 返回有多来源的组
     return {k: v for k, v in groups.items() if len(v) > 1}
 
+
 def format_digest(article, max_len=150):
-    """格式化摘要：优先用digest，不重新生成"""
+    """格式化摘要：优先用digest，截断到max_len"""
     d = (article.get('digest') or '').strip()
     if d:
         return d[:max_len] + ('...' if len(d) > max_len else '')
-    # 没有digest时，从标题提取
     return article.get('title', '')
+
 
 # ---------- Step 1 ----------
 
 def step1_run(date_str):
+    """拉元数据 → 初筛 → 输出候选清单"""
     start_ts, end_ts = calc_timestamp(date_str)
-    print(f"📡 拉取 {date_str} 的文章（{start_ts} ~ {end_ts}）...")
+    print(f"📡 拉取 {date_str} 的文章...")
 
     articles = fetch_meta(start_ts, end_ts)
     print(f"   原始: {len(articles)} 篇")
@@ -129,12 +139,10 @@ def step1_run(date_str):
     filtered, excluded = filter_articles(articles)
     print(f"   初筛: {len(filtered)} 篇（剔除 {len(excluded)} 篇财经/非AI）")
 
-    # 自动分类+标签
     for a in filtered:
         a['_auto_cat'] = auto_classify(a)
         a['_auto_tag'] = auto_tag(a)
 
-    # 保存缓存
     cache = {
         'date_str': date_str,
         'start_ts': start_ts,
@@ -143,19 +151,18 @@ def step1_run(date_str):
     }
     with open(CACHE_FILE, 'w', encoding='utf-8') as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
-    print(f"   缓存已保存: {CACHE_FILE}")
 
-    # 多源检测
     dups = detect_dup_sources(filtered)
     if dups:
-        print(f"   🔗 检测到 {len(dups)} 组多源报道（需合成）:")
+        print(f"\n🔗 检测到 {len(dups)} 组多源报道：")
         for slug, arts in dups.items():
             sources = [a['source'] for a in arts]
-            print(f"      - {arts[0]['title'][:40]}... ({', '.join(sources)})")
+            print(f"   → {arts[0]['title'][:40]}... ({', '.join(sources)})")
 
     print_candidates(filtered, date_str)
     print(f"\n✅ Step 1 完成。")
-    print(f"   告诉我分类结果，格式：国际:aid1,aid2;国内:aid3;其他:aid4")
+    print(f"   告诉我分类：python3 daily_report.py {date_str} --classify '国际:aid1,aid2;国内:aid3;其他:aid4'")
+
 
 def print_candidates(articles, date_str):
     print(f"\n{'='*60}")
@@ -170,11 +177,13 @@ def print_candidates(articles, date_str):
         print(f"    摘要：{digest}")
         print(f"    ID: {a['aid']}")
 
+
 # ---------- Step 2 ----------
 
 def step2_run(date_str, classify_str):
+    """读模板 → 注入数据 → 生成 HTML + 微信摘要"""
     if not CACHE_FILE.exists():
-        print("❌ 未找到缓存，请先运行 Step 1")
+        print("❌ 未找到缓存，请先运行 Step 1（无参数）")
         sys.exit(1)
 
     with open(CACHE_FILE, encoding='utf-8') as f:
@@ -206,16 +215,16 @@ def step2_run(date_str, classify_str):
         print(f" {cat}{len(items)}篇", end='')
     print(f"，共{total}篇")
 
-    # 检测多源
+    # 多源检测
     dups = detect_dup_sources(sum(categorized.values(), []))
     if dups:
         print(f"\n🔗 多源事件（{len(dups)}组）：")
         for slug, arts in dups.items():
-            sources = [f"{a['source']}({a['title'][:20]})" for a in arts]
+            sources = [f"{a['source']}({a['title'][:20]}...)" for a in arts]
             print(f"   → {', '.join(sources)}")
 
-    # 生成HTML
-    html = build_html(categorized, date_str)
+    # 生成 HTML（读模板）
+    html = build_html_from_template(categorized, date_str)
     html_path = PROJECT_DIR / "daily" / date_str / "index.html"
     html_path.parent.mkdir(parents=True, exist_ok=True)
     with open(html_path, 'w', encoding='utf-8') as f:
@@ -229,69 +238,92 @@ def step2_run(date_str, classify_str):
     print("="*60)
     print(summary)
 
-def build_html(categorized, date_str):
+
+def build_html_from_template(categorized, date_str):
+    """读取模板，注入数据，生成 index.html"""
+    if not TEMPLATE_FILE.exists():
+        print(f"❌ 模板文件不存在: {TEMPLATE_FILE}")
+        sys.exit(1)
+
+    with open(TEMPLATE_FILE, encoding='utf-8') as f:
+        template = f.read()
+
+    # 构建统计行
+    stats_parts = []
+    for cat in ['国际', '国内', '同业', '其他']:
+        n = len(categorized[cat])
+        if n > 0:
+            stats_parts.append(f"{cat} {n} 篇")
+    stats_str = ' · '.join(stats_parts)
+
+    # 构建 articles JSON
+    articles_list = []
+    for cat, items in categorized.items():
+        for item in items:
+            articles_list.append({
+                'title': item['title'],
+                'source': item['source'],
+                'digest': format_digest(item, 200),
+                'link': item['link'],
+                'content': '',  # 前端按需通过 marked.js 渲染 digest
+                'category': cat,
+                'tag': '🤖' if item.get('_auto_tag') else ''
+            })
+
+    articles_json = json.dumps(articles_list, ensure_ascii=False)
+
+    # 替换模板占位符
+    html = template.replace('{{DATE}}', date_str)
+    html = html.replace('{{STATS}}', stats_str)
+    html = html.replace('{{ARTICLES_JSON}}', articles_json)
+
+    # 预渲染分类section骨架（防JS失效时仍有内容显示）
     cat_labels = {
         '国际': '🌍 国际视野',
         '国内': '🇨🇳 国内动态',
         '同业': '🏦 同业观察',
         '其他': '📌 其他'
     }
-    cards_html = []
+    cat_section_ids = {'国际': 'section-intl', '国内': 'section-domestic',
+                        '同业': 'section-peer', '其他': 'section-other'}
     for cat, label in cat_labels.items():
         items = categorized[cat]
-        cards_html.append(f'<div class="section"><h2>{label}</h2>')
+        sid = cat_section_ids[cat]
         if not items:
-            cards_html.append('<div class="empty">暂无</div>')
+            placeholder = '<div id="' + sid + '"><div class="empty">暂无</div></div>'
         else:
+            cards = []
             for item in items:
-                digest = format_digest(item, 200).replace("'", "\\'").replace('\n', ' ')
-                title = item['title'].replace("'", "\\'")
-                source = item['source']
-                link = item['link']
-                cards_html.append(f"""<div class="card">
-<div class="card-inner" onclick="this.classList.toggle('expanded')">
-<div class="card-title">{'🤖 ' if item.get('_auto_tag') else ''}{title}</div>
-<div class="card-meta"><span class="source-tag">{source}</span></div>
-<div class="card-digest">{digest}...</div>
-<div class="card-content"><a href="{link}" target="_blank">微信原文</a></div>
-</div></div>""")
-        cards_html.append('</div>')
+                digest = format_digest(item, 200)
+                tag = '🤖 ' if item.get('_auto_tag') else ''
+                cards.append('<div class="card"><div class="card-inner" onclick="this.classList.toggle(\'expanded\')">' +
+                    '<div class="card-title">' + tag + item['title'] + '</div>' +
+                    '<span class="source-tag">' + item['source'] + '</span>' +
+                    '<div class="card-digest">' + digest + '</div>' +
+                    '<div class="card-content"><a href="' + item['link'] + '" target="_blank">📖 微信原文</a></div>' +
+                    '</div></div>')
+            placeholder = ('<div id="' + sid + '"><div class="section"><h2>' + label + '</h2>' +
+                          ''.join(cards) + '</div></div>')
+        marker = '{{SECTION_' + cat.upper() + '}}'
+        html = html.replace(marker, placeholder)
 
-    total = sum(len(v) for v in categorized.values())
-    return f"""<!DOCTYPE html>
-<html><head><meta charset="utf-8">
-<title>智能研发早报 {date_str}</title>
-<style>
-*{{box-sizing:border-box}}
-body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:760px;margin:0 auto;padding:20px;background:#f8fafc;color:#1f2937}}
-.banner{{background:linear-gradient(135deg,#1e3a5f,#2d5a87);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}}
-.banner h1{{margin:0;font-size:20px;font-weight:600}}
-.banner p{{margin:8px 0 0;color:#93c5fd;font-size:13px}}
-.section{{margin-bottom:24px}}
-.section h2{{font-size:14px;color:#fff;background:#3b82f6;padding:10px 14px;border-radius:8px 8px 0 0;margin:0}}
-.card{{background:#fff;border:1px solid #e2e8f0;border-top:none}}
-.card-inner{{padding:14px 16px;cursor:pointer;transition:background .15s}}
-.card-inner:hover{{background:#f1f5f9}}
-.card-inner.expanded{{background:#f8fafc}}
-.card-title{{font-size:14px;font-weight:600;color:#1e293b;line-height:1.4}}
-.source-tag{{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:2px 8px;border-radius:12px;font-size:11px;margin:6px 0}}
-.card-digest{{font-size:13px;color:#475569;line-height:1.6;margin-top:6px}}
-.card-content{{display:none;font-size:13px;color:#374151;margin-top:10px;padding-top:10px;border-top:1px dashed #cbd5e1}}
-.card-inner.expanded .card-content{{display:block}}
-.empty{{color:#94a3b8;font-style:italic;padding:12px 16px;background:#fff;border:1px solid #e2e8f0;border-top:none}}
-</style></head><body>
-<div class="banner"><h1>🏦 智能研发早报</h1><p>{date_str} · 国际 {len(categorized['国际'])} 篇 · 国内 {len(categorized['国内'])} 篇 · 同业 {len(categorized['同业'])} 篇 · 其他 {len(categorized['其他'])} 篇</p></div>
-{''.join(cards_html)}
-</body></html>"""
+    # 清理未替换的占位符
+    html = re.sub(r'\{\{SECTION_\w+\}\}', '', html)
+
+    return html
+
 
 def build_summary(categorized, dups, date_str):
+    """构建微信摘要文本"""
     cat_icons = {'国际': '🌍', '国内': '🇨🇳', '同业': '🏦', '其他': '📌'}
     lines = [f"【{date_str} 智能研发早报】", ""]
 
-    # 统计行
-    stats = ' · '.join(f"{cat_icons[cat]} {len(categorized[cat])}篇"
-                       for cat in ['国际', '国内', '同业', '其他'] if categorized[cat])
-    lines.append(stats)
+    stats_parts = []
+    for cat in ['国际', '国内', '同业', '其他']:
+        n = len(categorized[cat])
+        if n > 0:
+            stats_parts.append(f"{cat_icons[cat]} {n}篇")
+    lines.append(' · '.join(stats_parts))
     lines.append("")
 
     for cat in ['国际', '国内', '同业', '其他']:
@@ -305,19 +337,17 @@ def build_summary(categorized, dups, date_str):
             lines.append(f"    [{item['source']}] {digest}")
         lines.append("")
 
-    # 多源合成
     if dups:
         lines.append("🔗 多源报道（合并阅读）：")
         for slug, arts in dups.items():
-            titles = [a['title'] for a in arts]
             sources = [a['source'] for a in arts]
-            # 取第一篇digest作为主摘要
             main_digest = format_digest(arts[0], 100).replace('\n', '')
             lines.append(f"  ★ {arts[0]['title']}")
             lines.append(f"    多方报道：{', '.join(sources)}")
             lines.append(f"    摘要：{main_digest}")
 
     return '\n'.join(lines)
+
 
 # ---------- main ----------
 
@@ -334,6 +364,7 @@ def main():
         step2_run(date_str, sys.argv[idx + 1] if idx + 1 < len(sys.argv) else '')
     else:
         step1_run(date_str)
+
 
 if __name__ == "__main__":
     main()
