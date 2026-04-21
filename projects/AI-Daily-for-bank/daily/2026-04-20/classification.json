@@ -1,0 +1,48 @@
+{
+  "date": "2026-04-20",
+  "generated_at": "2026-04-21T18:12:00",
+  "stats": {
+    "国际": 6,
+    "国内": 6,
+    "同业": 0,
+    "其他": 11,
+    "total": 23
+  },
+  "classification": {
+    "国际": [
+      {"aid": "2652693970_2", "title": "Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude", "source": "新智元"},
+      {"aid": "2247885136_2", "title": "Codex截屏你的桌面！OpenAI建议：开会前记得关", "source": "量子位"},
+      {"aid": "2651282129_1", "title": "Opus 4.7被骂翻、Claude Code越带越笨", "source": "InfoQ"},
+      {"aid": "2651282129_3", "title": "AI写代码太快，Meta用新方法把bug检出率提升4倍", "source": "InfoQ"},
+      {"aid": "2652693769_2", "title": "Codex+终身记忆，SQL查询难度归零", "source": "新智元"},
+      {"aid": "2651282070_1", "title": "Claude封号潮失控！300万用户一夜断供", "source": "InfoQ"}
+    ],
+    "国内": [
+      {"aid": "2247515784_2", "title": "腾讯云宣布：开源OpenAI、Manus同款Agent底座", "source": "财联社AI daily"},
+      {"aid": "2651282129_2", "title": "商汤Solution Agent投标实战：10万字投标革命", "source": "InfoQ"},
+      {"aid": "2652693769_1", "title": "搭子DuMate杀疯，国产Cowork已帮你把活干完了", "source": "新智元"},
+      {"aid": "2652801399_1", "title": "Kimi K2.6抢先开源，指挥300个Agent上岗", "source": "智东西"},
+      {"aid": "2652801352_1", "title": "Qwen3.6超大杯：Artificial Analysis国产第一", "source": "智东西"},
+      {"aid": "2652801352_2", "title": "Fun-ASR1.5：语音转写准确率击败字节腾讯", "source": "智东西"}
+    ],
+    "其他": [
+      {"aid": "2247500800_1", "title": "AgentScope Tuner让Agent越用越聪明", "source": "通义实验室"},
+      {"aid": "2652693970_1", "title": "M-Flow记忆引擎：19岁少年重塑AI记忆", "source": "新智元"},
+      {"aid": "2651029172_1", "title": "Kimi单Agent时代结束，300个Agent并行", "source": "机器之心"},
+      {"aid": "2651029172_2", "title": "大模型Steering：从底层破解行为控制", "source": "机器之心"},
+      {"aid": "2247885136_1", "title": "中国AIGC产业峰会5月20日北京见", "source": "量子位"},
+      {"aid": "2652693892_2", "title": "Mythos把AI从「会说」跨进「动手」时代", "source": "新智元"},
+      {"aid": "2247559631_1", "title": "Harness Engineering实战", "source": "阿里云开发者"},
+      {"aid": "2652693833_2", "title": "2026年或许是人类最后一次掌控AI", "source": "新智元"},
+      {"aid": "2651028970_2", "title": "AURA：视频大模型边看边理解、边看边响应", "source": "机器之心"},
+      {"aid": "2247884789_1", "title": "跨维智能DexWorldModel具身世界模型评测第一", "source": "量子位"},
+      {"aid": "2651028959_2", "title": "AniGen一张图生成可动画3D资产", "source": "机器之心"}
+    ]
+  },
+  "excluded": [
+    {"reason": "投资类新闻，非技术进展", "examples": ["亚马逊追投Anthropic 2249亿"]},
+    {"reason": "无AI技术含量", "examples": ["Meta裁员硅谷AI换人潮"]},
+    {"reason": "消费电子，非Coding/Agent技术", "examples": ["华为首款AI眼镜"]},
+    {"reason": "内容混杂，摘要无法聚焦", "examples": ["极客公园Kimi+苹果CEO+华为Pura X合集"]}
+  ]
+}
