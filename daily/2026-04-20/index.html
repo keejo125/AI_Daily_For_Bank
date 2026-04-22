@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-04-20</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+.read-original-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  min-height: 32px;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+}
+.read-original-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-04-20</div>
+    <div class="banner-stats" id="banner-stats">国际 6 篇 · 国内 6 篇 · 其他 11 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude</div><span class="source-tag">新智元</span><div class="card-digest">Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude</div></div>
+<div class="card"><div class="card-title">Codex截屏你的桌面！OpenAI建议：开会前记得关</div><span class="source-tag">量子位</span><div class="card-digest">Codex截屏你的桌面！OpenAI建议：开会前记得关</div></div>
+<div class="card"><div class="card-title">Opus 4.7被骂翻、Claude Code越带越笨</div><span class="source-tag">InfoQ</span><div class="card-digest">Opus 4.7被骂翻、Claude Code越带越笨</div></div>
+<div class="card"><div class="card-title">AI写代码太快，Meta用新方法把bug检出率提升4倍</div><span class="source-tag">InfoQ</span><div class="card-digest">AI写代码太快，Meta用新方法把bug检出率提升4倍</div></div>
+<div class="card"><div class="card-title">Codex+终身记忆，SQL查询难度归零</div><span class="source-tag">新智元</span><div class="card-digest">Codex+终身记忆，SQL查询难度归零</div></div>
+<div class="card"><div class="card-title">Claude封号潮失控！300万用户一夜断供</div><span class="source-tag">InfoQ</span><div class="card-digest">Claude封号潮失控！300万用户一夜断供</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">腾讯云宣布：开源OpenAI、Manus同款Agent底座</div><span class="source-tag">财联社AI daily</span><div class="card-digest">腾讯云宣布：开源OpenAI、Manus同款Agent底座</div></div>
+<div class="card"><div class="card-title">商汤Solution Agent投标实战：10万字投标革命</div><span class="source-tag">InfoQ</span><div class="card-digest">商汤Solution Agent投标实战：10万字投标革命</div></div>
+<div class="card"><div class="card-title">搭子DuMate杀疯，国产Cowork已帮你把活干完了</div><span class="source-tag">新智元</span><div class="card-digest">搭子DuMate杀疯，国产Cowork已帮你把活干完了</div></div>
+<div class="card"><div class="card-title">Kimi K2.6抢先开源，指挥300个Agent上岗</div><span class="source-tag">智东西</span><div class="card-digest">Kimi K2.6抢先开源，指挥300个Agent上岗</div></div>
+<div class="card"><div class="card-title">Qwen3.6超大杯：Artificial Analysis国产第一</div><span class="source-tag">智东西</span><div class="card-digest">Qwen3.6超大杯：Artificial Analysis国产第一</div></div>
+<div class="card"><div class="card-title">Fun-ASR1.5：语音转写准确率击败字节腾讯</div><span class="source-tag">智东西</span><div class="card-digest">Fun-ASR1.5：语音转写准确率击败字节腾讯</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="empty">暂无</div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">AgentScope Tuner让Agent越用越聪明</div><span class="source-tag">通义实验室</span><div class="card-digest">AgentScope Tuner让Agent越用越聪明</div></div>
+<div class="card"><div class="card-title">M-Flow记忆引擎：19岁少年重塑AI记忆</div><span class="source-tag">新智元</span><div class="card-digest">M-Flow记忆引擎：19岁少年重塑AI记忆</div></div>
+<div class="card"><div class="card-title">Kimi单Agent时代结束，300个Agent并行</div><span class="source-tag">机器之心</span><div class="card-digest">Kimi单Agent时代结束，300个Agent并行</div></div>
+<div class="card"><div class="card-title">大模型Steering：从底层破解行为控制</div><span class="source-tag">机器之心</span><div class="card-digest">大模型Steering：从底层破解行为控制</div></div>
+<div class="card"><div class="card-title">中国AIGC产业峰会5月20日北京见</div><span class="source-tag">量子位</span><div class="card-digest">中国AIGC产业峰会5月20日北京见</div></div>
+<div class="card"><div class="card-title">Mythos把AI从「会说」跨进「动手」时代</div><span class="source-tag">新智元</span><div class="card-digest">Mythos把AI从「会说」跨进「动手」时代</div></div>
+<div class="card"><div class="card-title">Harness Engineering实战</div><span class="source-tag">阿里云开发者</span><div class="card-digest">Harness Engineering实战</div></div>
+<div class="card"><div class="card-title">2026年或许是人类最后一次掌控AI</div><span class="source-tag">新智元</span><div class="card-digest">2026年或许是人类最后一次掌控AI</div></div>
+<div class="card"><div class="card-title">AURA：视频大模型边看边理解、边看边响应</div><span class="source-tag">机器之心</span><div class="card-digest">AURA：视频大模型边看边理解、边看边响应</div></div>
+<div class="card"><div class="card-title">跨维智能DexWorldModel具身世界模型评测第一</div><span class="source-tag">量子位</span><div class="card-digest">跨维智能DexWorldModel具身世界模型评测第一</div></div>
+<div class="card"><div class="card-title">AniGen一张图生成可动画3D资产</div><span class="source-tag">机器之心</span><div class="card-digest">AniGen一张图生成可动画3D资产</div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude", "source": "新智元", "digest": "Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "Codex截屏你的桌面！OpenAI建议：开会前记得关", "source": "量子位", "digest": "Codex截屏你的桌面！OpenAI建议：开会前记得关", "link": "", "content": "# 大模型架构的下半场\n\n> 原文链接：https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\n\n> 公众号：量子位\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\" target=\"_blank\">阅读原文</a>\n</div>\n\n华中科技大学王兴刚团队 投稿\n\n量子位 | 公众号 QbitAI\n\n研究者们花了十年去扩展层内的计算能力，却忘了扩展层间的通信能力。\n\n这件事亟需被改变。\n\n过去十年，深度学习领域取得进展的方式出奇地一致：什么都往大了整。更多参数、更多数据、更长上下文。而且确实管用：loss在降，能力在涨，\n\nscaling law\n\n（扩展定律）\n\n精确地告诉研究团队还需要投入多少。\n\n但扩展的方向不同，差异也是巨大的。序列长度的扩展需要真正的创新，也确实催生了一整套机制研究和系统工程。数据的扩展则直截了当：数据越多，loss越低。让模型变得更宽、更深，这看起来也和数据的扩展一样简单。\n\n但宽度和深度真的在同等地发挥作用吗？\n\n并非如此。深度在数量上增长了，但在质量上却没有。层与层之间的通信机制几乎没有变化。接下来本文将解释这一点为什么重要，这不仅关乎网络的深度本身，更关于研究团队设计神经网络架构时的一个集体盲区。\n\n上半场\n\n要看清上半场做对了什么，就看看什么被成功地扩展了，以及\n\n是怎么做到的\n\n。\n\n先看序列长度。早期Transformer只能处理几百个token。要达到128K+，需要多个方向上的持续创新：新的注意力模式\n\n（稀疏、线性、混合）\n\n、系统工程\n\n（FlashAttention）\n\n、位置编码的进步\n\n（RoPE scaling）\n\n。研究者和工程师们共同建造了一整个生态，持续改进token之间的通信方式。而回报颇丰，研究团队不止能够处理极其长的文档，还为OpenAI-O1和DeepSeek-R1的长链推理奠定了坚实的基础。这就是当研究团队认真投资于“信息在序列维度上的\n\n流动方式\n\n时”，所收获的斐然成果。\n\n△\n\n现代LLM中的参数与数据规模迅速增长\n\n参数和数据的扩展是最符合人类直觉的部分。从深度学习的最早期开始，每本教科书都在教授同一套配方：更多数据、更宽的层、更深的网络，自然带来更好的表征。从GPT-2的15亿参数到如今的数万亿，这套配方一直管用。\n\n这似乎说明大模型团队不需要引入新机制，只需要持续拓展这些被验证了的方向。\n\n只不过，对网络而言，\n\n更宽\n\n和\n\n更深\n\n往往并不是一回事。宽度的扩展是自然而然的：现代GPU天生擅长处理更宽的矩阵乘法，注意力机制的演进越来越高效，这使得更宽的网络可以无缝接入现有架构。\n\n而深度则是另一个故事。模型确实变深了：研究团队将模型加到32层、64层、甚至100层以上。但层间通信的机制本质上还是ResNet在2015年引入的深度残差，“\n\nx + F(x)\n\n”。自它诞生以来，围绕它有过不少改良\n\n（归一化位置、残差缩放、跨层连接）\n\n，但没有任何改良真正取代过那个深度残差中“\n\n+\n\n”的决定性地位。\n\n残差连接可以说是深度学习中最重要的基石。没有它，就没有100层的Transformer，没有现代LLM，没有scaling law。但基础性方案有一个特点：它们有时会变得太过隐形，以至于没人再去质疑它到底是最优解，还是仅仅是研究团队探索出的第一个能用的方案。\n\n打个比方，想象一个有特殊规则的传话游戏。在标准版本里，第1个人对第2个人耳语，第2个人再对第3个人耳语。到第18个人的时候，消息已经面目全非了。这就是没有残差连接的深层网络：每一层只能看到上一层的输出。\n\n残差连接修复了这个问题：每个人在传达自己的理解的同时，也把之前积累的原始信息原封不动地往下传。第3个人既能听到第2个人的新解读，也能听到之前的所有内容。原始信号始终被保留，它成为了不断壮大的合唱中的一个声部。\n\n但到了第152个人，你同时在听152个声音：原始信息加上151层叠加上去的内容，全部混在一句耳语里。理论上，前面那些人的声音依然存在，但它们已经被淹没了。如果第152个人需要知道第3个人具体说了什么，他得费力地从这首宏大的合唱声中把它挑出来。\n\n△\n\n消息累加的传话游戏中，靠后的人依然难以分辨出所需的内容\n\n通常而言，第152个人是做不到这一点的。\n\n这就是\n\n信息稀释\n\n。每一层都面临两难：倘若该层贡献新信息就可能会掩盖之前的内容，但保守不动则能保留之前层传过来的已有信息。这种状况下，很多层学会了保守不动，它们几乎不往残差流里写入任何东西。这样的深度网络在纸面上很深，实际上却很浅。研究团队堆了152层，但其中很多层却只学会了保持沉默。\n\n这里的瓶颈不在于152层网络所需求的算力，而在于信息穿过这些层的通信能力。CPU的发展在几十年前就撞过同样的墙：处理器越来越快，直到内存带宽跟不上了，逼得整个行业转向缓存和通信。组织管理也一样：一群聪明人所能发挥出的创造力，也受限于他们之间的沟通、组织方式。深度学习正在经历自己的版本：十年来不断增强每一层的能力，而层与层之间的通道始终是2015年那条单车道公路。\n\n那么，有没有更好的机制？\n\n配方\n\n在\n\n本文所介绍的研究之前\n\n已经有很多研究者注意到了深度瓶颈。多年来，修补方案越来越巧妙：获评CVPR best paper的DenseNet保留了每一层的输出，但代价是平方级的开销。使用可学习加权的方案DenseFormer、LIMe降低了成本，但训练完成后权重就固定了，每个token、每套上下文都用同样的权重。\n\n字节跳动的Hyper-Connections和DeepSeek的mHC另辟蹊径，它们把管道拓宽到N个通道，层间用混合矩阵连接，这相当于信息高速公路上同时多了好几条车道。但坏消息是，信息仍然在逐层流动，第152层没有办法直接回溯到第3层。\n\n彩云公司的MUDDFormer让混合每层输出这件事变成动态的，它会根据每个token的表征来生成权重。这在根本方向上是对的：从每一层汲取多少信息本就应该取决于你正在处理的内容。但同样有个坏消息，第152层在决定从第3层汲取多少时，只依赖第152层本身的状态，它并不知道第3层实际包含了什么。它是在\n\n预测\n\n哪些层有用，而不是在\n\n查看\n\n。\n\n以上的每一步都修复了一个真实存在的缺陷，但却鲜有哪一个方法质疑过深度残差的框架本身。\n\n不难发现，这些方法都有着一个共同点。从DenseNet到Hyper-Connections，每个方法都在回答同一个隐含的问题：“如何才能更好地\n\n混合\n\n各层的输出？”更好的系数，更多的通道，自适应的权重。但自始至终都是混合，自始至终都是累加。ELMo早就表明，不同的层编码的是截然不同的信息：浅层编码句法，深层编码语义。所有人得出的结论都是“学习更好的混合权重用来平衡\n\n句法\n\n和\n\n语义\n\n”。但还有一条被主流忽视的道路：如果不同层持有不同信息，也许每一层应该能够根据\n\n内容\n\n而非\n\n位置\n\n，从持有所需信息的那一层\n\n直接检索\n\n。\n\n这就是\n\n范畴谬误\n\n：把层间通信当作\n\n累加\n\n（用学习到的或生成的系数来组合信号）\n\n而非\n\n检索\n\n（通过基于内容的匹配来选择信息）\n\n。在累加框架下，即使是动态方法也只从当前层的状态生成混合权重，而不去查看信息的来源层实际包含了什么。在检索框架下，Query\n\n（查询）\n\n编码的是“我需要什么”，Key\n\n（键）\n\n编码的是“我有什么”，而它们之间的运算决定了相关性。Query和Key双方都应该有发言权。\n\n回到传话游戏。之前所有的方法都在试图产生一个更清晰的合唱：更好的发音、更多的中继通道、自适应的音量。没有一个质疑过这个根本约束：所有声音必须累加成一个声音吗？也没有人问过：咱是否可以直接走回去，跟之前的任何一个人当面对话呢？\n\n研究团队认为这种范畴谬误在架构设计中无处不在。当某个东西足够好用的时候，你不会去质疑它的概念框架，而只会在框架内改进。经历了多年越来越巧妙的修补之后，研究者才明白：深度维度的残差连接需要的不是更好的系数，而是被一种根本不同的操作所替代：\n\n一种在序列维度上已经成功解决了同样问题的操作。\n\n△\n\n因果注意力机制在序列维度（横向）上聚合信息\n\n下半场\n\n一旦研究团队把层间的通信理解为检索而非累加，一个很自然的答案就是在深度维度上引入注意力机制。包括研究者团队在内的很多团队都独立地收敛到了这个想法：谷歌提出的 DCA、华为的MRLA、Hessian.AI的 Dreamer、Kimi的AttnRes、以及研究者团队提出的Flash Depth Attention & MoDA，大家都尝试在层间应用点积注意力。这种独立趋同本身就是一个信号：方向走对了！\n\n△\n\n深度注意力机制在深度维度（纵向）上聚合信息\n\n但找对方向和做出成品是两回事。研究者自述：“第一次用Pytorch实现运行深度注意力的时候，前向和反向传播共计耗时达到了44,924 ms。44秒啊！朋友们！这个时间都够我喝完一瓶500毫升的冰红茶了！”\n\n也就是说，在深度维度上应用注意力机制的想法本身没问题，但工程现实却残酷到了极点。现代GPU为大规模的矩阵乘法做了大量优化，却不擅长数千个跨深度的极小规模的注意力操作。深度注意力作为一个计算量不大的算法，跑起来却可能慢得要命。\n\n△\n\nPytorch实现的深度注意力（DepthRef）很慢；Flash Depth Attention（FDA）很快。\n\n至此，之前的方法都陷入了两难：要么简化深度注意力来换速度，这种方式丢掉了完整的选择性检索这一核心价值；要么保持完整的表达能力，但运算代价变得不可接受。研究者团队找到了一条出路：不是简化算法，而是重新组织参与计算的数据布局，从而适配GPU硬件。\n\nFlash Depth Attention\n\n（https://github.com/hustvl/MoDA）\n\n让具备完整表达能力的深度检索快到可以参与实际训练。\n\n△\n\n混合深度注意力\n\n机制同时在序列维度（横向）和深度维度（纵向）上聚合信息\n\n常规的大模型主干流水线是：残差连接\n\n→\n\n序列注意力\n\n→\n\n残差连接\n\n→\n\nFFN\n\n（前馈网络\n\n）\n\n。\n\n有了高效的深度检索之后，研究团队注意到网络的主干流水线变成了：深度注意力→序列注意力→深度注意力→FFN\n\n（前馈网络）\n\n。这三个连续的注意力操作作用于不同的Key\n\n（键，缩写作K）\n\n和Value\n\n（值，缩写作V）\n\n，却共享着近乎相同的Query\n\n（查询）\n\n。一个很自然的做法就是把它们融合。\n\n研究者团队提出了\n\n混合深度注意力\n\n（Mixture-of-depths Attention，MoDA）\n\n将深度检索和序列检索合并到一个统一的softmax中。每个注意力头同时关注当前层的序列KV对\n\n（键值对）\n\n和所有前序层的深度KV对\n\n（键值对）\n\n。在同一个softmax 下，模型可以自由决定何时关注序列中的其他token，何时跨层检索自身的历史信息。通过一次操作，MoDA完成了两个维度的检索。\n\n△\n\n左侧区域是序列KV，右侧区域是深度KV。颜色越黄，注意力越强。\n\n回到传话游戏。在残差连接的版本里，第152个人费力地从累加的合唱中辨认第3个人的声音。有了深度检索，第152个人拍拍第3个人的肩膀直接问：“你刚才说了什么？”没有中间人，没有累积的噪音。\n\n可视化的实验结果也印证了这个类比所预测的现象：当模型获得了通过深度KV从特定层进行选择性检索的能力时，它会持续且主动地使用这种能力。之前困扰模型架构研究员们的Attention Sink\n\n（注意力沉没）\n\n现象，即模型把概率质量堆积在少数固定token上的行为，也随之减弱。这就是当研究者团队尝试发展层\n\n之间\n\n而非仅仅层\n\n之内\n\n的信息流动时，所取得的有趣成果。\n\n△\n\n引入深度注意力后，传话游戏允许每个人用手机查看群聊记录。\n\n大模型架构的上半场是关于扩展组件的。\n\n研究者们扩展出更长的序列，更多的数据，更大的模型。这个阶段最关键的问题是“怎么把一切都做大？”。在上半场，这是正确且关键的问题，它把整个领域从GPT-2带到了GPT-4时代。\n\n下半场是关于扩展通信的\n\n。新的问题是：“\n\n组件之间的通信质量如何？\n\n”\n\n△\n\n引入\n\n混合深度注意力\n\n后，在主流的开源基线（OLMo2）上全面提升了模型能力。\n\n深度是最明显的例子，因为现有方案\n\n（累加）\n\n和可能的方案\n\n（选择性检索）\n\n之间的差距是巨大的。研究者团队相信这个原则是可以推广的。凡是神经网络使用静态的、与数据无关的通道来传递信息的地方，包括层与层之间、模态与模态之间、时间步与时间步之间等等，很可能都会有一个检索机制等着替代那个累加操作。\n\n全世界的研究者们花了十年掌握token之间如何对话，现在是时候掌握层与层之间如何对话了。而最终，研究者们将掌握神经网络中每个组件如何与其他任意组件对话。\n\n深度残差的“+”带我们跑过了一段极为精彩的旅程，但现在，是时候升级这座阶梯了。\n\n欢迎来到大模型架构的下半场。\n\nFlash Depth Attention & MoDA\n\n论文链接\n\n：\n\nhttps://arxiv.org/abs/2603.15619\n\nFlash Depth Attention & MoDA\n\n代码链接：\n\nhttps://github.com/hustvl/MoDA\n\n实验室主页：\n\nhttps://github.com/hustvl\n\n论文主要作者来自于华中科技大学（HUST）电子信息与通信学院视觉实验室（Vision Lab）。HUST Vision Lab研究主要集中在计算机视觉和深度学习领域，尤其关注以下方向：多模态基础模型、视觉表征学习、目标检测、分割与跟踪、端到端自动驾驶、新型神经网络架构。\n\nHUST Vision Lab致力于不断突破视觉智能的边界，代表性工作包括：CCNet（TPAMI 2020，4300+引用，1.5K Star）、Mask Scoring R-CNN（CVPR 2019，1400+引用，1.9K Star）、FairMOT（IJCV 2021，2200+引用，4.2K Star）、ByteTrack（ECCV 2022，3400+引用，6.2K Star）、EVA（CVPR 2023，1100+引用，2.7K Star）、MapTR（ICLR 2023，400+引用，1.5K Star）、Vectorized Autonomous Driving (VAD)（ICCV 2023，600+引用，1.3K Star）、DiffusionDrive（CVPR 2025，200+引用，1.3K Star）、Vision Mamba (Vim)（ICML 2024，3100+引用，3.8K Star）、4D Gaussian Splatting (4DGS)（CVPR 2024，1400+引用，3.5K Star）、YOLOS（NeurIPS 2021，500+引用，900+ Star）、YOLO-World（CVPR 2024，1000+引用，6.3K Star），以及 LightningDiT & VA-VAE（CVPR 2025，200+引用，1.4K Star）。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n我们正在招聘一名眼疾手快、关注AI的\n\n学术编辑实习生\n\n🎓\n\n感兴趣的小伙伴欢迎关注 👉\n\n了解详情\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-20_大模型架构的下半场_量子位.md"}, {"title": "Opus 4.7被骂翻、Claude Code越带越笨", "source": "InfoQ", "digest": "Opus 4.7被骂翻、Claude Code越带越笨", "link": "", "content": "# DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与Sora研究员离职｜Q资讯\n\n> 原文链接：https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\n\n> 公众号：InfoQ\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\" target=\"_blank\">阅读原文</a>\n</div>\n\n整理 ｜ Ziyu\n\n行业热点\n\nDeepSeek 开启首次外部融资\n\n当地时间 4 月 17 日，The Information 报道称，\n\nDeepSeek 计划以不低于 100 亿美元的估值，筹集至少 3 亿美元资金\n\n。这是 DeepSeek 成立以来的首次外部融资。目前 DeepSeek 正在与投资者接触。\n\n这是梁文锋创立 DeepSeek 三年来的首次妥协，打破了国产 AI“纯技术驱动”的固有叙事，也揭开了中国 AI 在算力封锁、人才流失、生态薄弱下的真实困境，成为 2026 年国产 AI 发展的重要转折点。\n\n从背景来看，DeepSeek 的融资转折，是整个国产 AI 行业困境的缩影。\n\n当前，美国持续收紧 AI 算力出口管制，掌握全球 75% 领先 AI 算力的美国，限制英伟达高端芯片对华出口，国产 AI 企业面临严重的算力缺口。\n\n消息传出后，迅速在投资圈引发热议。此前，DeepSeek 由对冲基金幻方量化独家提供资金支持，并曾多次拒绝顶级风投及科技巨头的投资邀约。例如在今年年初，市场曾传出消息称阿里有意投资 DeepSeek，但很快被 DeepSeek 辟谣。\n\n截至发稿，DeepSeek 并未就此次融资消息作出官方回应。\n\n“一人公司”，迎来大爆发\n\n据新华社报道，“一人公司”正在悄然流行。今年 3 月，国家市场监督管理总局相关课题组发布的《中国 OPC 发展调研报告 2026》显示，我国 OPC 发展呈快速增长态势，地域上集聚于长三角、珠三角、京津冀及中西部新兴产业城市，行业分布呈现“轻资产、高智力、新业态”特点，创业者以 90 后、00 后为主。\n\n这里的 OPC，指的就是“一人公司”（One Person Company）：由一个人独立完成决策、运营与执行，既是老板，也是员工，甚至兼任产品经理、市场、客服等多重角色。这种组织形态以极低的启动成本和高度灵活性为特征，往往依托平台工具、数字技术与内容分发渠道，实现从创意到变现的闭环。\n\n青岛有个叫郑海峰的年轻人，2026 年注册了一家公司——焱森垚数字文化创意内容制作有限公司。这家公司\"只有她一个人\"。不是说她能力平庸，恰恰相反。她的 AI 员工们各司其职：AI 负责宣发，AI 负责推广，AI 处理财务。她本人只做一件事：\n\n让这些 AI 员工协同运转，然后接单。\n\n你可能觉得这听起来像个 PPT 里的概念。但现实是，这家公司已经实际运转了。\n\n一个人，通过 AI 工具，独立完成从设计、研发到市场投放的全链路——这种事在 2023 年还是天方夜谭，在 2025 年开始零星出现，在 2026 年已经成了可以被规模化复制的商业路径。\n\n当大模型的 API 价格从 2023 年的\"贵到离谱\"降到 2026 年的\"几乎白送\"，当 AI Agent 的开发框架从\"极客专属\"变成\"有手就会\"，当支付、税务、社保的一切手续都可以线上完成——一个人注册一家公司、运转一家公司、服务真实客户这件事，门槛已经低到尘土里了。\n\n不是你的能力变强了，是工具把所有人拽到了同一条起跑线上。\n\n“一人公司”的兴起改变了行业的竞争规则与协作模式，传统的产业链协作、规模化生产逻辑被打破，行业逐渐向精细化、轻量化、个性化方向转型。\n\n宇树机器人绊到马路牙子摔进草坪\n\n今日 7 点 30 分，2026 北京亦庄人形机器人半程马拉松正式开跑。100 余支队伍的机器人将从科创十七街起跑，一路穿越城市高楼、湖景繁花，最终在南海子公园冲线。\n\n早在今早 6 时许，选手已经开始陆续进场。赛道全长约 21 公里，融合平地、坡道、弯道、狭窄路段等十多种地形，12 个左转道、10 个右转道，包含接近 90°的弯道，十分考验机器人的路径规划与动态平衡能力。比赛中，备受关注的宇树机器人起跑不久就意外摔倒，这让现场观众不禁为之紧张。‌‌\n\n最终，根据赛事加权规则，来自荣耀的齐天大圣战队自主导航机器人“闪电”以 50 分 26 秒（净用时）的成绩夺得冠军。目前人类半程马拉松的纪录为 57 分 20 秒。\n\nOpenAI 剥离「副业项目」：公司科学研究项目负责人与 Sora 研究员双双离职\n\n4 月 19 日消息，OpenAI 旗下两大核心项目的关键负责人双双离职。该公司科学研究项目负责人凯文 · 威尔，以及人工智能视频工具 Sora 背后的研究员比尔 · 皮布尔斯，均于当地时间周五宣布离职。此次人事变动正值 OpenAI 聚焦企业级人工智能业务，并筹备推出其即将面世的「超级应用」之际。\n\n皮布尔斯在社交媒体的离职声明中表示，Sora 的出现「推动了整个行业在视频领域的大量投资」，并认为研发这类视频工具所需的研究，需要脱离公司核心业务路线，拥有独立的发展空间。他写道：「保持研究的多元与发散性，是一家实验室实现长期蓬勃发展的唯一途径。」\n\n据《连线》杂志报道，OpenAI 企业应用首席技术官斯里尼瓦斯 · 纳拉亚南也将离职。据悉，纳拉亚南已在内部宣布离职消息，称此举是为了有更多时间陪伴家人。\n\n传 Meta 下月启动首轮大裁员，近 8000 名员工成 AI 发展”牺牲品“\n\n北京时间 4 月 18 日凌晨，据路透社援引三名知情人士消息称，Meta 计划于 5 月 20 日启动今年首轮大规模裁员，后续还将继续推进相关调整。\n\n其中一位知情人士表示，首轮裁员规模约为全球员工总数的 10%，接近 8000 人。消息人士还称，公司将在今年下半年继续裁员，具体时间和规模尚未确定，管理层或依据 AI 发展程度对计划进行调整。先前的消息称，Meta 整体裁员比例或不少于 20%。\n\n近期公司已对 Reality Labs 部门进行重组，并将各部门工程师调入新设立的「应用 AI」团队，负责推进能够编写代码并自主执行复杂任务的 AI 智能体开发。\n\n消息人士还表示，部分员工将被调入上月成立的 Meta Small Business 部门，作为此次重组的一部分。\n\n明星 AI 项目 Hermes Agent 被曝抄袭中国团队，公司回应\n\n4 月 15 日，中国 AI 团队 EvoMap 公开表示，硅谷明星 AI 项目 Hermes Agent 核心自进化能力，系对其 Evolver 引擎的系统性复刻，后者态度两次回应均否认。\n\n在 EvoMap 发布的技术报告中，其以 GitHub 公开时间戳、源码结构、架构设计、术语体系、进化循环等可交叉验证的证据链，直指 Hermes Agent 自进化模块与 Evolver 引擎高度同构。争议的核心指向自进化架构的来源归属。EvoMap 给出清晰且可核验的时间线：\n\n2 月 1 日，Evolver 开源并公开 GEP 核心设计；\n\n2 月 16 日，团队发布 GEP 深度解析，完整披露 Scan-Select-Mutate-Validate-Solidify 主循环与三级记忆体系；\n\n2 月 25 日，Hermes Agent 发布 v0.1.0，定位为初始基础版本；\n\n3 月 9 日，Hermes Agent 专门创建自进化独立仓库；\n\n3 月 12 日，Hermes Agent v0.2.0 推出技能生态系统，核心自进化功能正式上线。\n\n从核心架构公开到 Hermes 对应功能上线，时间差仅 24 至 39 天，这一时间窗口成为 EvoMap 指控的关键依据。双方均采用任务完成后自动提取可复用经验的闭环，均设置周期性自我评估与反射机制，均实现技能运行时发现与按需加载。\n\n关键的是，Evolver 的 10 步进化主循环，与 Hermes 自进化模块的 10 步执行流程一一对应，同时存在 12 组核心术语的系统性替换，如 Gene 对应 SKILL.md、Capsule 对应技能执行记录、solidify 对应 skill_manage (create) 等。而在 Hermes 全部 7 份公开材料中，对先行开源的 Evolver 与 GEP 协议零引用、零致谢、零归属。\n\nEvoMap 列出的基于 GitHub 仓库元数据和官方发布记录\n\nEvoMap 表示，在最初的两个多月里，团队把最核心的 GEP 协议、三层记忆体系、周期性反射循环，全部坦诚地抛给了社区。“因为我们觉得，在这个 AI 狂奔的时代，透明和开放是我们能做出的最酷的姿态。我们没有藏着掖着，把底牌都摆在了桌面上。但现实给我们上了一课。”\n\n面对详实指控，Hermes Agent 所属实验室 Nous Research 先后两次表态。首次回应由官方账号发出，称其项目仓库于 2025 年 7 月已创建，自诩为现代 Agent 框架底层技术先驱，并要求 EvoMap“删除账号”，随后删帖并拉黑对方成员。\n\n第二次回应来自 Nous 联合创始人 Teknium，他表示，“我这辈子从来没有听说过这个人、他的项目，或者他正在做的任何事情。今天是我第一次听说或看到这个项目。毫无证据地声称我剽窃了他们的作品，这是谎言。”\n\nHermes 方的反驳逻辑有二：一是仓库创建时间早于 Evolver，证明技术先发；二是底层依赖学术开源项目，架构设计系独立收敛。\n\n4 月 17 日晚，Hermes Agent 业务负责人 Tommy Eastman 来中国，在 B 站开直播。\n\n弹幕刷屏的问题只有一个：你们到底有没有抄 EvoMap？\n\nTommy 的回应：\n\n\"Hermes Agent 的代码仓库已经存在一年多了。直到那些推文出现，我才听说 EvoMap。Nous Research 有长期产出前沿研究的记录，我们是理念驱动的团队，除了推动开源 AI，不会做任何其他事情。\"\n\nEvoMap 随即指出，Hermes 仓库虽较早建立，但长期私有，2 月底才公开基础版本，被质疑的自进化能力直至 3 月中旬才完整推出，所谓先发优势无法覆盖争议功能；而 GEPA 与 GEP 分属优化算法与进化协议，不能解释上层架构、循环流程、记忆体系的高度重合。\n\n热搜第一！员工中 1500 万元彩票后离职？科大讯飞最新发文\n\n4 月 13 日凌晨，\n\n小红书有消息称科大讯飞员工中 1500 万大奖后辞职引发广泛关注，瞬间登上热搜。\n\n13 日下午，科大讯飞官方微博就此事发布回复，其微博称：我们关注到网传我公司员工中奖的相关信息。如果真有同事这么幸运，我们真心为他高兴。比起可遇不可求的运气，我们更在意为每位伙伴提供“看得见、摸得着”的保障，那就是一份有竞争力的薪酬，一个持续成长的空间，一套安心的福利支持。相信美好的事情总会发生！\n\n当日，\n\n有记者从知情人士处获悉，确有员工中奖情况，但金额与网传信息不符。\n\n至于是否离职，科大讯飞方面称无法回复。\n\n抖音打击赌博导流黑产，日均封禁相关账号超 1 万个\n\n抖音 4 月 17 日公告称，近期，平台监测发现，有黑产团伙通过展示豪华酒店设施、发布隐晦暗语等方式，规避平台监管，将目标用户导流至站外实施涉赌行为。对此，平台第一时间对违规账号进行处置，并持续加大对赌博导流黑产的打击力度，强化涉赌内容治理。\n\n2026 年以来，抖音共处罚涉及赌博的违规直播间 5.5 万个，对 1.4 万个账号无限期回收直播权限；针对赌博导流黑产，日均封禁相关账号超 1 万个。2025 年至今，平台主动上报的线索中，因涉及赌博引流，已有 148 人被刑事拘留，6 个相关犯罪团伙被捣毁。\n\n抖音严禁用户利用平台服务实施组织赌博、招募赌博人员等违法犯罪行为，严禁制作、发布、传播任何赌博相关内容，严禁通过各类伪装手段为线下或第三方平台赌博活动导流，包括但不限于：展示国内线上、线下赌博（含六合彩）或宣扬赌博、诱导他人参与赌博的内容；为赌博场所引流或展示赌博相关场景的内容；展示、宣传、教授赌博技巧，以及售卖发牌技术、千术、千术工具等相关内容。\n\n最后，抖音提醒广大用户提高警惕，主动抵制赌博相关违法违规行为，如在抖音发现相关违规内容，可直接举报或发送邮件至 feedback@douyin.com，平台将第一时间核实处置。\n\nAI 快讯\n\n消息称马斯克 xAI 进军 AI 智能编程领域，有望下周发布 Grok Build\n\n科技媒体 testingcatalog 近日发布博文，报道称埃隆 · 马斯克（Elon Musk）旗下 xAI 公司有望进军智能编程领域，可能会在下周推出 Grok Build 与 Grok CLI 两款产品。\n\n此举标志着 xAI 正式进入智能编程赛道，将与 Claude Code、OpenAI Codex 及 Google Jules 等主流工具展开直接竞争。\n\n在核心模型层面，xAI 已悄然推送 Grok 4.3 Early Access 测试版，目前仅向 Grok Heavy 订阅用户开放。这一进展改变了 Grok Build 的技术路径：xAI 可能不再单独开发专用编程模型，而是直接依托 Grok 4.3 支撑编程功能。\n\n产品形态上，Grok Build 采用双轨运行机制，用户可通过 CLI 智能体在本地执行任务，也可通过 Web 界面远程操作。目前尚不清楚本地执行的具体机制，不过该媒体认为基于 Electron 的桌面封装方案可能成为最优解。\n\n功能创新方面，Grok Build 预估引入 Parallel 模式与 Arena 模式。Arena 模式支持多个智能体并行处理同一任务，用户可从中择优采纳。\n\n名创优品成立 AI 创新部\n\n4 月 18 日，名创优品正式成立 AI 创新部，隶属数字科技中心。\n\n该部门以智能体 AI 能力建设为核心，聚焦业务决策优化与办公协同智能化。目前面向全社会招聘选址算法工程师、预测算法工程师、Agent 研发工程师、AI 解决方案工程师等关键岗位。此举旨在通过算法与智能体技术深度赋能零售运营，提升数据驱动决策效率与组织协同水平。招聘工作即日启动。\n\n消息称扎克伯格将工位搬进 Meta AI 团队\n\n4 月 15 日消息，据报道，Meta CEO 马克·扎克伯格正以更直接的方式参与 AI 竞赛 —— 甚至把办公桌搬进了 AI 团队。扎克伯格已将办公地点调整至 AI 实验室，与汪滔和纳特·弗里德曼一同办公，并重新开始编写代码。\n\nMeta 总裁迪娜·鲍威尔·麦考密克在华盛顿举行的 Semafor 世界经济峰会上表示，“马克确实把办公桌搬到了 AI 实验室，和汪滔、纳特·弗里德曼坐在一起，而且整天都在写代码。一方面，他们可能会觉得，‘太好了，你又来给建议了，马克，而且还是在写代码的时候。’我认为，他非常坚定地觉得，必须以这种深度去理解，才能思考如何让模型达到最佳状态。”\n\n此前报道显示，扎克伯格不仅每周亲自编写 5 至 10 小时代码，还训练了一个以自身为原型的 AI 数字分身，用于替代本人与员工实时互动。该 AI 角色基于扎克伯格的图像、声音、语气风格及战略思维进行训练，目前仍处于早期阶段，旨在让员工通过与数字分身互动，增强与创始人的连接。此外，一个独立的“CEO 智能体”项目也在同步推进，用于协助扎克伯格处理日常信息检索等事务。\n\nIT 业界\n\nAnthropic 深夜发布 Claude Design\n\n4 月 17 日，Anthropic 发布由 Claude Opus 4.7 模型驱动的设计工具 Claude Design，用户可通过自然语言对话生成 UI 原型、幻灯片、营销素材等设计内容，并支持实时协作与品牌规范自动继承。发布当日，Figma 股价下跌约 6.8%，相关设计工具公司股价同步受挫。\n\nClaude Design 是\n\nAnthropic Labs\n\n下的第二个产品（第一个是上周的 Skills 工具），由\n\nOpus 4.7\n\n驱动——也就是刚发的新模型，官方自己说的 \"most capable vision model\"。\n\nOpus 4.7 与 Claude Design 先后发——这个时间差不是巧合。\n\n产品是绑定模型能力迭代的。\n\n对 Builder 的启示：\n\n当基础模型升级时，要第一时间想清楚——这个升级具体解锁了哪些新产品形态？\n\n不是\"Claude 变强了我也用一下\"，是\"Claude 4.7 的视觉能力解锁了 X 场景的 PMF\"。\n\n微软首日集成 Claude Opus 4.7，GitHub Copilot 等 9 大 AI 工具全面接入\n\n近日，科技媒体 NeoWin 发布博文，报道称在 Anthropic 发布 Claude Opus 4.7 模型后，微软打破与 OpenAI 的排他性合作惯例，在其 GitHub Copilot 等 9 大开发环境中首日集成支持。\n\n有别于以往，微软不再局限于 OpenAI 的 GPT 系列模型，于去年底开始在 Microsoft Foundry 中提供 Claude 模型支持，并逐步扩展至旗下多款产品。\n\nGitHub Copilot 率先集成 Claude Opus 4.7，覆盖 Visual Studio Code、Visual Studio、Copilot CLI 等 9 大开发环境。GitHub 团队宣布，未来几周内 Opus 4.7 将取代 Opus 4.5 和 4.6，成为 Copilot Pro+ 用户的模型选择器默认选项。\n\nMicrosoft 365 Copilot 用户现已可在 Copilot Cowork 前沿计划、Copilot Studio 早期发布环境及 Excel 中调用 Claude Opus 4.7。\n\n三星宣布 LPDDR4/4X 年底停产\n\n据韩国媒体 The Elec 报道，其于 4 月 17 日确认，三星电子已正式停止接收 LPDDR4 和 LPDDR4X 的新增订单，标志着这两款量产逾十年的主流内存产品正式进入 EOL（生命周期终结）阶段。\n\nLPDDR4 和 LPDDR4X 是过去十年间智能手机、平板电脑、笔记本电脑等消费电子设备最主流的内存解决方案。LPDDR4 和 LPDDR4X 自 2017 年前后进入大规模量产，凭借低电压设计和优秀的功耗表现，成为全球数十亿台移动设备的标准配置。\n\nThe Elec 报道称，三星将于 2026 年 4 月 17 日起停止接收 LPDDR4/4X 一切新增订单，也不再接受客户追加采购需求。考虑到末批订单的时间节点，LPDDR4 和 LPDDR4X 的生产预计将延续至 2026 年年底，产线转换工作则将于 2027 年第一季度正式展开，届时 LPDDR4/4X 将彻底停产，产能全部转向 LPDDR5、LPDDR5X 移动 DRAM 及 HBM 高带宽内存。\n\n业界普遍认为，此次订单窗口的持续时间已超出预期，根本原因在于客户端需求持续旺盛。这一局面虽帮助客户充分锁定了部分 LPDDR4 系列内存供应，但也相应推迟了三星产线转换的节奏。\n\n三星此次计划停产 LPDDR4 系列，最核心的原因在于 HBM（高带宽内存）和先进 DDR5 产品的利润率更高。叠加 AI 浪潮下先进内存供不应求，三星希望将有限晶圆、产能资源全部倾斜到利润率更高的产品线上，不再维持低利润旧代产品产能。预计此举将直接影响三星自身移动业务部门及众多的外部客户。\n\n今日好文推荐\n\n没身份证用不了AI？Claude开始查“户口”了\n\nAI提效20%，我们程序员加班却越来越狠：老板量生产力的尺子，歪了？\n\n苹果疯狂狙击Vibe Coding App\n\n100个产品原型同时跑、新模型Mythos断层领先，连skills效果都好到让团队意外：Anthropic内部到底在发生什么？\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "国际", "is_model_related": true, "source_file": "sources/2026-04-20_DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与_InfoQ.md"}, {"title": "AI写代码太快，Meta用新方法把bug检出率提升4倍", "source": "InfoQ", "digest": "AI写代码太快，Meta用新方法把bug检出率提升4倍", "link": "", "content": "# DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与Sora研究员离职｜Q资讯\n\n> 原文链接：https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\n\n> 公众号：InfoQ\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\" target=\"_blank\">阅读原文</a>\n</div>\n\n整理 ｜ Ziyu\n\n行业热点\n\nDeepSeek 开启首次外部融资\n\n当地时间 4 月 17 日，The Information 报道称，\n\nDeepSeek 计划以不低于 100 亿美元的估值，筹集至少 3 亿美元资金\n\n。这是 DeepSeek 成立以来的首次外部融资。目前 DeepSeek 正在与投资者接触。\n\n这是梁文锋创立 DeepSeek 三年来的首次妥协，打破了国产 AI“纯技术驱动”的固有叙事，也揭开了中国 AI 在算力封锁、人才流失、生态薄弱下的真实困境，成为 2026 年国产 AI 发展的重要转折点。\n\n从背景来看，DeepSeek 的融资转折，是整个国产 AI 行业困境的缩影。\n\n当前，美国持续收紧 AI 算力出口管制，掌握全球 75% 领先 AI 算力的美国，限制英伟达高端芯片对华出口，国产 AI 企业面临严重的算力缺口。\n\n消息传出后，迅速在投资圈引发热议。此前，DeepSeek 由对冲基金幻方量化独家提供资金支持，并曾多次拒绝顶级风投及科技巨头的投资邀约。例如在今年年初，市场曾传出消息称阿里有意投资 DeepSeek，但很快被 DeepSeek 辟谣。\n\n截至发稿，DeepSeek 并未就此次融资消息作出官方回应。\n\n“一人公司”，迎来大爆发\n\n据新华社报道，“一人公司”正在悄然流行。今年 3 月，国家市场监督管理总局相关课题组发布的《中国 OPC 发展调研报告 2026》显示，我国 OPC 发展呈快速增长态势，地域上集聚于长三角、珠三角、京津冀及中西部新兴产业城市，行业分布呈现“轻资产、高智力、新业态”特点，创业者以 90 后、00 后为主。\n\n这里的 OPC，指的就是“一人公司”（One Person Company）：由一个人独立完成决策、运营与执行，既是老板，也是员工，甚至兼任产品经理、市场、客服等多重角色。这种组织形态以极低的启动成本和高度灵活性为特征，往往依托平台工具、数字技术与内容分发渠道，实现从创意到变现的闭环。\n\n青岛有个叫郑海峰的年轻人，2026 年注册了一家公司——焱森垚数字文化创意内容制作有限公司。这家公司\"只有她一个人\"。不是说她能力平庸，恰恰相反。她的 AI 员工们各司其职：AI 负责宣发，AI 负责推广，AI 处理财务。她本人只做一件事：\n\n让这些 AI 员工协同运转，然后接单。\n\n你可能觉得这听起来像个 PPT 里的概念。但现实是，这家公司已经实际运转了。\n\n一个人，通过 AI 工具，独立完成从设计、研发到市场投放的全链路——这种事在 2023 年还是天方夜谭，在 2025 年开始零星出现，在 2026 年已经成了可以被规模化复制的商业路径。\n\n当大模型的 API 价格从 2023 年的\"贵到离谱\"降到 2026 年的\"几乎白送\"，当 AI Agent 的开发框架从\"极客专属\"变成\"有手就会\"，当支付、税务、社保的一切手续都可以线上完成——一个人注册一家公司、运转一家公司、服务真实客户这件事，门槛已经低到尘土里了。\n\n不是你的能力变强了，是工具把所有人拽到了同一条起跑线上。\n\n“一人公司”的兴起改变了行业的竞争规则与协作模式，传统的产业链协作、规模化生产逻辑被打破，行业逐渐向精细化、轻量化、个性化方向转型。\n\n宇树机器人绊到马路牙子摔进草坪\n\n今日 7 点 30 分，2026 北京亦庄人形机器人半程马拉松正式开跑。100 余支队伍的机器人将从科创十七街起跑，一路穿越城市高楼、湖景繁花，最终在南海子公园冲线。\n\n早在今早 6 时许，选手已经开始陆续进场。赛道全长约 21 公里，融合平地、坡道、弯道、狭窄路段等十多种地形，12 个左转道、10 个右转道，包含接近 90°的弯道，十分考验机器人的路径规划与动态平衡能力。比赛中，备受关注的宇树机器人起跑不久就意外摔倒，这让现场观众不禁为之紧张。‌‌\n\n最终，根据赛事加权规则，来自荣耀的齐天大圣战队自主导航机器人“闪电”以 50 分 26 秒（净用时）的成绩夺得冠军。目前人类半程马拉松的纪录为 57 分 20 秒。\n\nOpenAI 剥离「副业项目」：公司科学研究项目负责人与 Sora 研究员双双离职\n\n4 月 19 日消息，OpenAI 旗下两大核心项目的关键负责人双双离职。该公司科学研究项目负责人凯文 · 威尔，以及人工智能视频工具 Sora 背后的研究员比尔 · 皮布尔斯，均于当地时间周五宣布离职。此次人事变动正值 OpenAI 聚焦企业级人工智能业务，并筹备推出其即将面世的「超级应用」之际。\n\n皮布尔斯在社交媒体的离职声明中表示，Sora 的出现「推动了整个行业在视频领域的大量投资」，并认为研发这类视频工具所需的研究，需要脱离公司核心业务路线，拥有独立的发展空间。他写道：「保持研究的多元与发散性，是一家实验室实现长期蓬勃发展的唯一途径。」\n\n据《连线》杂志报道，OpenAI 企业应用首席技术官斯里尼瓦斯 · 纳拉亚南也将离职。据悉，纳拉亚南已在内部宣布离职消息，称此举是为了有更多时间陪伴家人。\n\n传 Meta 下月启动首轮大裁员，近 8000 名员工成 AI 发展”牺牲品“\n\n北京时间 4 月 18 日凌晨，据路透社援引三名知情人士消息称，Meta 计划于 5 月 20 日启动今年首轮大规模裁员，后续还将继续推进相关调整。\n\n其中一位知情人士表示，首轮裁员规模约为全球员工总数的 10%，接近 8000 人。消息人士还称，公司将在今年下半年继续裁员，具体时间和规模尚未确定，管理层或依据 AI 发展程度对计划进行调整。先前的消息称，Meta 整体裁员比例或不少于 20%。\n\n近期公司已对 Reality Labs 部门进行重组，并将各部门工程师调入新设立的「应用 AI」团队，负责推进能够编写代码并自主执行复杂任务的 AI 智能体开发。\n\n消息人士还表示，部分员工将被调入上月成立的 Meta Small Business 部门，作为此次重组的一部分。\n\n明星 AI 项目 Hermes Agent 被曝抄袭中国团队，公司回应\n\n4 月 15 日，中国 AI 团队 EvoMap 公开表示，硅谷明星 AI 项目 Hermes Agent 核心自进化能力，系对其 Evolver 引擎的系统性复刻，后者态度两次回应均否认。\n\n在 EvoMap 发布的技术报告中，其以 GitHub 公开时间戳、源码结构、架构设计、术语体系、进化循环等可交叉验证的证据链，直指 Hermes Agent 自进化模块与 Evolver 引擎高度同构。争议的核心指向自进化架构的来源归属。EvoMap 给出清晰且可核验的时间线：\n\n2 月 1 日，Evolver 开源并公开 GEP 核心设计；\n\n2 月 16 日，团队发布 GEP 深度解析，完整披露 Scan-Select-Mutate-Validate-Solidify 主循环与三级记忆体系；\n\n2 月 25 日，Hermes Agent 发布 v0.1.0，定位为初始基础版本；\n\n3 月 9 日，Hermes Agent 专门创建自进化独立仓库；\n\n3 月 12 日，Hermes Agent v0.2.0 推出技能生态系统，核心自进化功能正式上线。\n\n从核心架构公开到 Hermes 对应功能上线，时间差仅 24 至 39 天，这一时间窗口成为 EvoMap 指控的关键依据。双方均采用任务完成后自动提取可复用经验的闭环，均设置周期性自我评估与反射机制，均实现技能运行时发现与按需加载。\n\n关键的是，Evolver 的 10 步进化主循环，与 Hermes 自进化模块的 10 步执行流程一一对应，同时存在 12 组核心术语的系统性替换，如 Gene 对应 SKILL.md、Capsule 对应技能执行记录、solidify 对应 skill_manage (create) 等。而在 Hermes 全部 7 份公开材料中，对先行开源的 Evolver 与 GEP 协议零引用、零致谢、零归属。\n\nEvoMap 列出的基于 GitHub 仓库元数据和官方发布记录\n\nEvoMap 表示，在最初的两个多月里，团队把最核心的 GEP 协议、三层记忆体系、周期性反射循环，全部坦诚地抛给了社区。“因为我们觉得，在这个 AI 狂奔的时代，透明和开放是我们能做出的最酷的姿态。我们没有藏着掖着，把底牌都摆在了桌面上。但现实给我们上了一课。”\n\n面对详实指控，Hermes Agent 所属实验室 Nous Research 先后两次表态。首次回应由官方账号发出，称其项目仓库于 2025 年 7 月已创建，自诩为现代 Agent 框架底层技术先驱，并要求 EvoMap“删除账号”，随后删帖并拉黑对方成员。\n\n第二次回应来自 Nous 联合创始人 Teknium，他表示，“我这辈子从来没有听说过这个人、他的项目，或者他正在做的任何事情。今天是我第一次听说或看到这个项目。毫无证据地声称我剽窃了他们的作品，这是谎言。”\n\nHermes 方的反驳逻辑有二：一是仓库创建时间早于 Evolver，证明技术先发；二是底层依赖学术开源项目，架构设计系独立收敛。\n\n4 月 17 日晚，Hermes Agent 业务负责人 Tommy Eastman 来中国，在 B 站开直播。\n\n弹幕刷屏的问题只有一个：你们到底有没有抄 EvoMap？\n\nTommy 的回应：\n\n\"Hermes Agent 的代码仓库已经存在一年多了。直到那些推文出现，我才听说 EvoMap。Nous Research 有长期产出前沿研究的记录，我们是理念驱动的团队，除了推动开源 AI，不会做任何其他事情。\"\n\nEvoMap 随即指出，Hermes 仓库虽较早建立，但长期私有，2 月底才公开基础版本，被质疑的自进化能力直至 3 月中旬才完整推出，所谓先发优势无法覆盖争议功能；而 GEPA 与 GEP 分属优化算法与进化协议，不能解释上层架构、循环流程、记忆体系的高度重合。\n\n热搜第一！员工中 1500 万元彩票后离职？科大讯飞最新发文\n\n4 月 13 日凌晨，\n\n小红书有消息称科大讯飞员工中 1500 万大奖后辞职引发广泛关注，瞬间登上热搜。\n\n13 日下午，科大讯飞官方微博就此事发布回复，其微博称：我们关注到网传我公司员工中奖的相关信息。如果真有同事这么幸运，我们真心为他高兴。比起可遇不可求的运气，我们更在意为每位伙伴提供“看得见、摸得着”的保障，那就是一份有竞争力的薪酬，一个持续成长的空间，一套安心的福利支持。相信美好的事情总会发生！\n\n当日，\n\n有记者从知情人士处获悉，确有员工中奖情况，但金额与网传信息不符。\n\n至于是否离职，科大讯飞方面称无法回复。\n\n抖音打击赌博导流黑产，日均封禁相关账号超 1 万个\n\n抖音 4 月 17 日公告称，近期，平台监测发现，有黑产团伙通过展示豪华酒店设施、发布隐晦暗语等方式，规避平台监管，将目标用户导流至站外实施涉赌行为。对此，平台第一时间对违规账号进行处置，并持续加大对赌博导流黑产的打击力度，强化涉赌内容治理。\n\n2026 年以来，抖音共处罚涉及赌博的违规直播间 5.5 万个，对 1.4 万个账号无限期回收直播权限；针对赌博导流黑产，日均封禁相关账号超 1 万个。2025 年至今，平台主动上报的线索中，因涉及赌博引流，已有 148 人被刑事拘留，6 个相关犯罪团伙被捣毁。\n\n抖音严禁用户利用平台服务实施组织赌博、招募赌博人员等违法犯罪行为，严禁制作、发布、传播任何赌博相关内容，严禁通过各类伪装手段为线下或第三方平台赌博活动导流，包括但不限于：展示国内线上、线下赌博（含六合彩）或宣扬赌博、诱导他人参与赌博的内容；为赌博场所引流或展示赌博相关场景的内容；展示、宣传、教授赌博技巧，以及售卖发牌技术、千术、千术工具等相关内容。\n\n最后，抖音提醒广大用户提高警惕，主动抵制赌博相关违法违规行为，如在抖音发现相关违规内容，可直接举报或发送邮件至 feedback@douyin.com，平台将第一时间核实处置。\n\nAI 快讯\n\n消息称马斯克 xAI 进军 AI 智能编程领域，有望下周发布 Grok Build\n\n科技媒体 testingcatalog 近日发布博文，报道称埃隆 · 马斯克（Elon Musk）旗下 xAI 公司有望进军智能编程领域，可能会在下周推出 Grok Build 与 Grok CLI 两款产品。\n\n此举标志着 xAI 正式进入智能编程赛道，将与 Claude Code、OpenAI Codex 及 Google Jules 等主流工具展开直接竞争。\n\n在核心模型层面，xAI 已悄然推送 Grok 4.3 Early Access 测试版，目前仅向 Grok Heavy 订阅用户开放。这一进展改变了 Grok Build 的技术路径：xAI 可能不再单独开发专用编程模型，而是直接依托 Grok 4.3 支撑编程功能。\n\n产品形态上，Grok Build 采用双轨运行机制，用户可通过 CLI 智能体在本地执行任务，也可通过 Web 界面远程操作。目前尚不清楚本地执行的具体机制，不过该媒体认为基于 Electron 的桌面封装方案可能成为最优解。\n\n功能创新方面，Grok Build 预估引入 Parallel 模式与 Arena 模式。Arena 模式支持多个智能体并行处理同一任务，用户可从中择优采纳。\n\n名创优品成立 AI 创新部\n\n4 月 18 日，名创优品正式成立 AI 创新部，隶属数字科技中心。\n\n该部门以智能体 AI 能力建设为核心，聚焦业务决策优化与办公协同智能化。目前面向全社会招聘选址算法工程师、预测算法工程师、Agent 研发工程师、AI 解决方案工程师等关键岗位。此举旨在通过算法与智能体技术深度赋能零售运营，提升数据驱动决策效率与组织协同水平。招聘工作即日启动。\n\n消息称扎克伯格将工位搬进 Meta AI 团队\n\n4 月 15 日消息，据报道，Meta CEO 马克·扎克伯格正以更直接的方式参与 AI 竞赛 —— 甚至把办公桌搬进了 AI 团队。扎克伯格已将办公地点调整至 AI 实验室，与汪滔和纳特·弗里德曼一同办公，并重新开始编写代码。\n\nMeta 总裁迪娜·鲍威尔·麦考密克在华盛顿举行的 Semafor 世界经济峰会上表示，“马克确实把办公桌搬到了 AI 实验室，和汪滔、纳特·弗里德曼坐在一起，而且整天都在写代码。一方面，他们可能会觉得，‘太好了，你又来给建议了，马克，而且还是在写代码的时候。’我认为，他非常坚定地觉得，必须以这种深度去理解，才能思考如何让模型达到最佳状态。”\n\n此前报道显示，扎克伯格不仅每周亲自编写 5 至 10 小时代码，还训练了一个以自身为原型的 AI 数字分身，用于替代本人与员工实时互动。该 AI 角色基于扎克伯格的图像、声音、语气风格及战略思维进行训练，目前仍处于早期阶段，旨在让员工通过与数字分身互动，增强与创始人的连接。此外，一个独立的“CEO 智能体”项目也在同步推进，用于协助扎克伯格处理日常信息检索等事务。\n\nIT 业界\n\nAnthropic 深夜发布 Claude Design\n\n4 月 17 日，Anthropic 发布由 Claude Opus 4.7 模型驱动的设计工具 Claude Design，用户可通过自然语言对话生成 UI 原型、幻灯片、营销素材等设计内容，并支持实时协作与品牌规范自动继承。发布当日，Figma 股价下跌约 6.8%，相关设计工具公司股价同步受挫。\n\nClaude Design 是\n\nAnthropic Labs\n\n下的第二个产品（第一个是上周的 Skills 工具），由\n\nOpus 4.7\n\n驱动——也就是刚发的新模型，官方自己说的 \"most capable vision model\"。\n\nOpus 4.7 与 Claude Design 先后发——这个时间差不是巧合。\n\n产品是绑定模型能力迭代的。\n\n对 Builder 的启示：\n\n当基础模型升级时，要第一时间想清楚——这个升级具体解锁了哪些新产品形态？\n\n不是\"Claude 变强了我也用一下\"，是\"Claude 4.7 的视觉能力解锁了 X 场景的 PMF\"。\n\n微软首日集成 Claude Opus 4.7，GitHub Copilot 等 9 大 AI 工具全面接入\n\n近日，科技媒体 NeoWin 发布博文，报道称在 Anthropic 发布 Claude Opus 4.7 模型后，微软打破与 OpenAI 的排他性合作惯例，在其 GitHub Copilot 等 9 大开发环境中首日集成支持。\n\n有别于以往，微软不再局限于 OpenAI 的 GPT 系列模型，于去年底开始在 Microsoft Foundry 中提供 Claude 模型支持，并逐步扩展至旗下多款产品。\n\nGitHub Copilot 率先集成 Claude Opus 4.7，覆盖 Visual Studio Code、Visual Studio、Copilot CLI 等 9 大开发环境。GitHub 团队宣布，未来几周内 Opus 4.7 将取代 Opus 4.5 和 4.6，成为 Copilot Pro+ 用户的模型选择器默认选项。\n\nMicrosoft 365 Copilot 用户现已可在 Copilot Cowork 前沿计划、Copilot Studio 早期发布环境及 Excel 中调用 Claude Opus 4.7。\n\n三星宣布 LPDDR4/4X 年底停产\n\n据韩国媒体 The Elec 报道，其于 4 月 17 日确认，三星电子已正式停止接收 LPDDR4 和 LPDDR4X 的新增订单，标志着这两款量产逾十年的主流内存产品正式进入 EOL（生命周期终结）阶段。\n\nLPDDR4 和 LPDDR4X 是过去十年间智能手机、平板电脑、笔记本电脑等消费电子设备最主流的内存解决方案。LPDDR4 和 LPDDR4X 自 2017 年前后进入大规模量产，凭借低电压设计和优秀的功耗表现，成为全球数十亿台移动设备的标准配置。\n\nThe Elec 报道称，三星将于 2026 年 4 月 17 日起停止接收 LPDDR4/4X 一切新增订单，也不再接受客户追加采购需求。考虑到末批订单的时间节点，LPDDR4 和 LPDDR4X 的生产预计将延续至 2026 年年底，产线转换工作则将于 2027 年第一季度正式展开，届时 LPDDR4/4X 将彻底停产，产能全部转向 LPDDR5、LPDDR5X 移动 DRAM 及 HBM 高带宽内存。\n\n业界普遍认为，此次订单窗口的持续时间已超出预期，根本原因在于客户端需求持续旺盛。这一局面虽帮助客户充分锁定了部分 LPDDR4 系列内存供应，但也相应推迟了三星产线转换的节奏。\n\n三星此次计划停产 LPDDR4 系列，最核心的原因在于 HBM（高带宽内存）和先进 DDR5 产品的利润率更高。叠加 AI 浪潮下先进内存供不应求，三星希望将有限晶圆、产能资源全部倾斜到利润率更高的产品线上，不再维持低利润旧代产品产能。预计此举将直接影响三星自身移动业务部门及众多的外部客户。\n\n今日好文推荐\n\n没身份证用不了AI？Claude开始查“户口”了\n\nAI提效20%，我们程序员加班却越来越狠：老板量生产力的尺子，歪了？\n\n苹果疯狂狙击Vibe Coding App\n\n100个产品原型同时跑、新模型Mythos断层领先，连skills效果都好到让团队意外：Anthropic内部到底在发生什么？\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-20_DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与_InfoQ.md"}, {"title": "Codex+终身记忆，SQL查询难度归零", "source": "新智元", "digest": "Codex+终身记忆，SQL查询难度归零", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "Claude封号潮失控！300万用户一夜断供", "source": "InfoQ", "digest": "Claude封号潮失控！300万用户一夜断供", "link": "", "content": "# DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与Sora研究员离职｜Q资讯\n\n> 原文链接：https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\n\n> 公众号：InfoQ\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\" target=\"_blank\">阅读原文</a>\n</div>\n\n整理 ｜ Ziyu\n\n行业热点\n\nDeepSeek 开启首次外部融资\n\n当地时间 4 月 17 日，The Information 报道称，\n\nDeepSeek 计划以不低于 100 亿美元的估值，筹集至少 3 亿美元资金\n\n。这是 DeepSeek 成立以来的首次外部融资。目前 DeepSeek 正在与投资者接触。\n\n这是梁文锋创立 DeepSeek 三年来的首次妥协，打破了国产 AI“纯技术驱动”的固有叙事，也揭开了中国 AI 在算力封锁、人才流失、生态薄弱下的真实困境，成为 2026 年国产 AI 发展的重要转折点。\n\n从背景来看，DeepSeek 的融资转折，是整个国产 AI 行业困境的缩影。\n\n当前，美国持续收紧 AI 算力出口管制，掌握全球 75% 领先 AI 算力的美国，限制英伟达高端芯片对华出口，国产 AI 企业面临严重的算力缺口。\n\n消息传出后，迅速在投资圈引发热议。此前，DeepSeek 由对冲基金幻方量化独家提供资金支持，并曾多次拒绝顶级风投及科技巨头的投资邀约。例如在今年年初，市场曾传出消息称阿里有意投资 DeepSeek，但很快被 DeepSeek 辟谣。\n\n截至发稿，DeepSeek 并未就此次融资消息作出官方回应。\n\n“一人公司”，迎来大爆发\n\n据新华社报道，“一人公司”正在悄然流行。今年 3 月，国家市场监督管理总局相关课题组发布的《中国 OPC 发展调研报告 2026》显示，我国 OPC 发展呈快速增长态势，地域上集聚于长三角、珠三角、京津冀及中西部新兴产业城市，行业分布呈现“轻资产、高智力、新业态”特点，创业者以 90 后、00 后为主。\n\n这里的 OPC，指的就是“一人公司”（One Person Company）：由一个人独立完成决策、运营与执行，既是老板，也是员工，甚至兼任产品经理、市场、客服等多重角色。这种组织形态以极低的启动成本和高度灵活性为特征，往往依托平台工具、数字技术与内容分发渠道，实现从创意到变现的闭环。\n\n青岛有个叫郑海峰的年轻人，2026 年注册了一家公司——焱森垚数字文化创意内容制作有限公司。这家公司\"只有她一个人\"。不是说她能力平庸，恰恰相反。她的 AI 员工们各司其职：AI 负责宣发，AI 负责推广，AI 处理财务。她本人只做一件事：\n\n让这些 AI 员工协同运转，然后接单。\n\n你可能觉得这听起来像个 PPT 里的概念。但现实是，这家公司已经实际运转了。\n\n一个人，通过 AI 工具，独立完成从设计、研发到市场投放的全链路——这种事在 2023 年还是天方夜谭，在 2025 年开始零星出现，在 2026 年已经成了可以被规模化复制的商业路径。\n\n当大模型的 API 价格从 2023 年的\"贵到离谱\"降到 2026 年的\"几乎白送\"，当 AI Agent 的开发框架从\"极客专属\"变成\"有手就会\"，当支付、税务、社保的一切手续都可以线上完成——一个人注册一家公司、运转一家公司、服务真实客户这件事，门槛已经低到尘土里了。\n\n不是你的能力变强了，是工具把所有人拽到了同一条起跑线上。\n\n“一人公司”的兴起改变了行业的竞争规则与协作模式，传统的产业链协作、规模化生产逻辑被打破，行业逐渐向精细化、轻量化、个性化方向转型。\n\n宇树机器人绊到马路牙子摔进草坪\n\n今日 7 点 30 分，2026 北京亦庄人形机器人半程马拉松正式开跑。100 余支队伍的机器人将从科创十七街起跑，一路穿越城市高楼、湖景繁花，最终在南海子公园冲线。\n\n早在今早 6 时许，选手已经开始陆续进场。赛道全长约 21 公里，融合平地、坡道、弯道、狭窄路段等十多种地形，12 个左转道、10 个右转道，包含接近 90°的弯道，十分考验机器人的路径规划与动态平衡能力。比赛中，备受关注的宇树机器人起跑不久就意外摔倒，这让现场观众不禁为之紧张。‌‌\n\n最终，根据赛事加权规则，来自荣耀的齐天大圣战队自主导航机器人“闪电”以 50 分 26 秒（净用时）的成绩夺得冠军。目前人类半程马拉松的纪录为 57 分 20 秒。\n\nOpenAI 剥离「副业项目」：公司科学研究项目负责人与 Sora 研究员双双离职\n\n4 月 19 日消息，OpenAI 旗下两大核心项目的关键负责人双双离职。该公司科学研究项目负责人凯文 · 威尔，以及人工智能视频工具 Sora 背后的研究员比尔 · 皮布尔斯，均于当地时间周五宣布离职。此次人事变动正值 OpenAI 聚焦企业级人工智能业务，并筹备推出其即将面世的「超级应用」之际。\n\n皮布尔斯在社交媒体的离职声明中表示，Sora 的出现「推动了整个行业在视频领域的大量投资」，并认为研发这类视频工具所需的研究，需要脱离公司核心业务路线，拥有独立的发展空间。他写道：「保持研究的多元与发散性，是一家实验室实现长期蓬勃发展的唯一途径。」\n\n据《连线》杂志报道，OpenAI 企业应用首席技术官斯里尼瓦斯 · 纳拉亚南也将离职。据悉，纳拉亚南已在内部宣布离职消息，称此举是为了有更多时间陪伴家人。\n\n传 Meta 下月启动首轮大裁员，近 8000 名员工成 AI 发展”牺牲品“\n\n北京时间 4 月 18 日凌晨，据路透社援引三名知情人士消息称，Meta 计划于 5 月 20 日启动今年首轮大规模裁员，后续还将继续推进相关调整。\n\n其中一位知情人士表示，首轮裁员规模约为全球员工总数的 10%，接近 8000 人。消息人士还称，公司将在今年下半年继续裁员，具体时间和规模尚未确定，管理层或依据 AI 发展程度对计划进行调整。先前的消息称，Meta 整体裁员比例或不少于 20%。\n\n近期公司已对 Reality Labs 部门进行重组，并将各部门工程师调入新设立的「应用 AI」团队，负责推进能够编写代码并自主执行复杂任务的 AI 智能体开发。\n\n消息人士还表示，部分员工将被调入上月成立的 Meta Small Business 部门，作为此次重组的一部分。\n\n明星 AI 项目 Hermes Agent 被曝抄袭中国团队，公司回应\n\n4 月 15 日，中国 AI 团队 EvoMap 公开表示，硅谷明星 AI 项目 Hermes Agent 核心自进化能力，系对其 Evolver 引擎的系统性复刻，后者态度两次回应均否认。\n\n在 EvoMap 发布的技术报告中，其以 GitHub 公开时间戳、源码结构、架构设计、术语体系、进化循环等可交叉验证的证据链，直指 Hermes Agent 自进化模块与 Evolver 引擎高度同构。争议的核心指向自进化架构的来源归属。EvoMap 给出清晰且可核验的时间线：\n\n2 月 1 日，Evolver 开源并公开 GEP 核心设计；\n\n2 月 16 日，团队发布 GEP 深度解析，完整披露 Scan-Select-Mutate-Validate-Solidify 主循环与三级记忆体系；\n\n2 月 25 日，Hermes Agent 发布 v0.1.0，定位为初始基础版本；\n\n3 月 9 日，Hermes Agent 专门创建自进化独立仓库；\n\n3 月 12 日，Hermes Agent v0.2.0 推出技能生态系统，核心自进化功能正式上线。\n\n从核心架构公开到 Hermes 对应功能上线，时间差仅 24 至 39 天，这一时间窗口成为 EvoMap 指控的关键依据。双方均采用任务完成后自动提取可复用经验的闭环，均设置周期性自我评估与反射机制，均实现技能运行时发现与按需加载。\n\n关键的是，Evolver 的 10 步进化主循环，与 Hermes 自进化模块的 10 步执行流程一一对应，同时存在 12 组核心术语的系统性替换，如 Gene 对应 SKILL.md、Capsule 对应技能执行记录、solidify 对应 skill_manage (create) 等。而在 Hermes 全部 7 份公开材料中，对先行开源的 Evolver 与 GEP 协议零引用、零致谢、零归属。\n\nEvoMap 列出的基于 GitHub 仓库元数据和官方发布记录\n\nEvoMap 表示，在最初的两个多月里，团队把最核心的 GEP 协议、三层记忆体系、周期性反射循环，全部坦诚地抛给了社区。“因为我们觉得，在这个 AI 狂奔的时代，透明和开放是我们能做出的最酷的姿态。我们没有藏着掖着，把底牌都摆在了桌面上。但现实给我们上了一课。”\n\n面对详实指控，Hermes Agent 所属实验室 Nous Research 先后两次表态。首次回应由官方账号发出，称其项目仓库于 2025 年 7 月已创建，自诩为现代 Agent 框架底层技术先驱，并要求 EvoMap“删除账号”，随后删帖并拉黑对方成员。\n\n第二次回应来自 Nous 联合创始人 Teknium，他表示，“我这辈子从来没有听说过这个人、他的项目，或者他正在做的任何事情。今天是我第一次听说或看到这个项目。毫无证据地声称我剽窃了他们的作品，这是谎言。”\n\nHermes 方的反驳逻辑有二：一是仓库创建时间早于 Evolver，证明技术先发；二是底层依赖学术开源项目，架构设计系独立收敛。\n\n4 月 17 日晚，Hermes Agent 业务负责人 Tommy Eastman 来中国，在 B 站开直播。\n\n弹幕刷屏的问题只有一个：你们到底有没有抄 EvoMap？\n\nTommy 的回应：\n\n\"Hermes Agent 的代码仓库已经存在一年多了。直到那些推文出现，我才听说 EvoMap。Nous Research 有长期产出前沿研究的记录，我们是理念驱动的团队，除了推动开源 AI，不会做任何其他事情。\"\n\nEvoMap 随即指出，Hermes 仓库虽较早建立，但长期私有，2 月底才公开基础版本，被质疑的自进化能力直至 3 月中旬才完整推出，所谓先发优势无法覆盖争议功能；而 GEPA 与 GEP 分属优化算法与进化协议，不能解释上层架构、循环流程、记忆体系的高度重合。\n\n热搜第一！员工中 1500 万元彩票后离职？科大讯飞最新发文\n\n4 月 13 日凌晨，\n\n小红书有消息称科大讯飞员工中 1500 万大奖后辞职引发广泛关注，瞬间登上热搜。\n\n13 日下午，科大讯飞官方微博就此事发布回复，其微博称：我们关注到网传我公司员工中奖的相关信息。如果真有同事这么幸运，我们真心为他高兴。比起可遇不可求的运气，我们更在意为每位伙伴提供“看得见、摸得着”的保障，那就是一份有竞争力的薪酬，一个持续成长的空间，一套安心的福利支持。相信美好的事情总会发生！\n\n当日，\n\n有记者从知情人士处获悉，确有员工中奖情况，但金额与网传信息不符。\n\n至于是否离职，科大讯飞方面称无法回复。\n\n抖音打击赌博导流黑产，日均封禁相关账号超 1 万个\n\n抖音 4 月 17 日公告称，近期，平台监测发现，有黑产团伙通过展示豪华酒店设施、发布隐晦暗语等方式，规避平台监管，将目标用户导流至站外实施涉赌行为。对此，平台第一时间对违规账号进行处置，并持续加大对赌博导流黑产的打击力度，强化涉赌内容治理。\n\n2026 年以来，抖音共处罚涉及赌博的违规直播间 5.5 万个，对 1.4 万个账号无限期回收直播权限；针对赌博导流黑产，日均封禁相关账号超 1 万个。2025 年至今，平台主动上报的线索中，因涉及赌博引流，已有 148 人被刑事拘留，6 个相关犯罪团伙被捣毁。\n\n抖音严禁用户利用平台服务实施组织赌博、招募赌博人员等违法犯罪行为，严禁制作、发布、传播任何赌博相关内容，严禁通过各类伪装手段为线下或第三方平台赌博活动导流，包括但不限于：展示国内线上、线下赌博（含六合彩）或宣扬赌博、诱导他人参与赌博的内容；为赌博场所引流或展示赌博相关场景的内容；展示、宣传、教授赌博技巧，以及售卖发牌技术、千术、千术工具等相关内容。\n\n最后，抖音提醒广大用户提高警惕，主动抵制赌博相关违法违规行为，如在抖音发现相关违规内容，可直接举报或发送邮件至 feedback@douyin.com，平台将第一时间核实处置。\n\nAI 快讯\n\n消息称马斯克 xAI 进军 AI 智能编程领域，有望下周发布 Grok Build\n\n科技媒体 testingcatalog 近日发布博文，报道称埃隆 · 马斯克（Elon Musk）旗下 xAI 公司有望进军智能编程领域，可能会在下周推出 Grok Build 与 Grok CLI 两款产品。\n\n此举标志着 xAI 正式进入智能编程赛道，将与 Claude Code、OpenAI Codex 及 Google Jules 等主流工具展开直接竞争。\n\n在核心模型层面，xAI 已悄然推送 Grok 4.3 Early Access 测试版，目前仅向 Grok Heavy 订阅用户开放。这一进展改变了 Grok Build 的技术路径：xAI 可能不再单独开发专用编程模型，而是直接依托 Grok 4.3 支撑编程功能。\n\n产品形态上，Grok Build 采用双轨运行机制，用户可通过 CLI 智能体在本地执行任务，也可通过 Web 界面远程操作。目前尚不清楚本地执行的具体机制，不过该媒体认为基于 Electron 的桌面封装方案可能成为最优解。\n\n功能创新方面，Grok Build 预估引入 Parallel 模式与 Arena 模式。Arena 模式支持多个智能体并行处理同一任务，用户可从中择优采纳。\n\n名创优品成立 AI 创新部\n\n4 月 18 日，名创优品正式成立 AI 创新部，隶属数字科技中心。\n\n该部门以智能体 AI 能力建设为核心，聚焦业务决策优化与办公协同智能化。目前面向全社会招聘选址算法工程师、预测算法工程师、Agent 研发工程师、AI 解决方案工程师等关键岗位。此举旨在通过算法与智能体技术深度赋能零售运营，提升数据驱动决策效率与组织协同水平。招聘工作即日启动。\n\n消息称扎克伯格将工位搬进 Meta AI 团队\n\n4 月 15 日消息，据报道，Meta CEO 马克·扎克伯格正以更直接的方式参与 AI 竞赛 —— 甚至把办公桌搬进了 AI 团队。扎克伯格已将办公地点调整至 AI 实验室，与汪滔和纳特·弗里德曼一同办公，并重新开始编写代码。\n\nMeta 总裁迪娜·鲍威尔·麦考密克在华盛顿举行的 Semafor 世界经济峰会上表示，“马克确实把办公桌搬到了 AI 实验室，和汪滔、纳特·弗里德曼坐在一起，而且整天都在写代码。一方面，他们可能会觉得，‘太好了，你又来给建议了，马克，而且还是在写代码的时候。’我认为，他非常坚定地觉得，必须以这种深度去理解，才能思考如何让模型达到最佳状态。”\n\n此前报道显示，扎克伯格不仅每周亲自编写 5 至 10 小时代码，还训练了一个以自身为原型的 AI 数字分身，用于替代本人与员工实时互动。该 AI 角色基于扎克伯格的图像、声音、语气风格及战略思维进行训练，目前仍处于早期阶段，旨在让员工通过与数字分身互动，增强与创始人的连接。此外，一个独立的“CEO 智能体”项目也在同步推进，用于协助扎克伯格处理日常信息检索等事务。\n\nIT 业界\n\nAnthropic 深夜发布 Claude Design\n\n4 月 17 日，Anthropic 发布由 Claude Opus 4.7 模型驱动的设计工具 Claude Design，用户可通过自然语言对话生成 UI 原型、幻灯片、营销素材等设计内容，并支持实时协作与品牌规范自动继承。发布当日，Figma 股价下跌约 6.8%，相关设计工具公司股价同步受挫。\n\nClaude Design 是\n\nAnthropic Labs\n\n下的第二个产品（第一个是上周的 Skills 工具），由\n\nOpus 4.7\n\n驱动——也就是刚发的新模型，官方自己说的 \"most capable vision model\"。\n\nOpus 4.7 与 Claude Design 先后发——这个时间差不是巧合。\n\n产品是绑定模型能力迭代的。\n\n对 Builder 的启示：\n\n当基础模型升级时，要第一时间想清楚——这个升级具体解锁了哪些新产品形态？\n\n不是\"Claude 变强了我也用一下\"，是\"Claude 4.7 的视觉能力解锁了 X 场景的 PMF\"。\n\n微软首日集成 Claude Opus 4.7，GitHub Copilot 等 9 大 AI 工具全面接入\n\n近日，科技媒体 NeoWin 发布博文，报道称在 Anthropic 发布 Claude Opus 4.7 模型后，微软打破与 OpenAI 的排他性合作惯例，在其 GitHub Copilot 等 9 大开发环境中首日集成支持。\n\n有别于以往，微软不再局限于 OpenAI 的 GPT 系列模型，于去年底开始在 Microsoft Foundry 中提供 Claude 模型支持，并逐步扩展至旗下多款产品。\n\nGitHub Copilot 率先集成 Claude Opus 4.7，覆盖 Visual Studio Code、Visual Studio、Copilot CLI 等 9 大开发环境。GitHub 团队宣布，未来几周内 Opus 4.7 将取代 Opus 4.5 和 4.6，成为 Copilot Pro+ 用户的模型选择器默认选项。\n\nMicrosoft 365 Copilot 用户现已可在 Copilot Cowork 前沿计划、Copilot Studio 早期发布环境及 Excel 中调用 Claude Opus 4.7。\n\n三星宣布 LPDDR4/4X 年底停产\n\n据韩国媒体 The Elec 报道，其于 4 月 17 日确认，三星电子已正式停止接收 LPDDR4 和 LPDDR4X 的新增订单，标志着这两款量产逾十年的主流内存产品正式进入 EOL（生命周期终结）阶段。\n\nLPDDR4 和 LPDDR4X 是过去十年间智能手机、平板电脑、笔记本电脑等消费电子设备最主流的内存解决方案。LPDDR4 和 LPDDR4X 自 2017 年前后进入大规模量产，凭借低电压设计和优秀的功耗表现，成为全球数十亿台移动设备的标准配置。\n\nThe Elec 报道称，三星将于 2026 年 4 月 17 日起停止接收 LPDDR4/4X 一切新增订单，也不再接受客户追加采购需求。考虑到末批订单的时间节点，LPDDR4 和 LPDDR4X 的生产预计将延续至 2026 年年底，产线转换工作则将于 2027 年第一季度正式展开，届时 LPDDR4/4X 将彻底停产，产能全部转向 LPDDR5、LPDDR5X 移动 DRAM 及 HBM 高带宽内存。\n\n业界普遍认为，此次订单窗口的持续时间已超出预期，根本原因在于客户端需求持续旺盛。这一局面虽帮助客户充分锁定了部分 LPDDR4 系列内存供应，但也相应推迟了三星产线转换的节奏。\n\n三星此次计划停产 LPDDR4 系列，最核心的原因在于 HBM（高带宽内存）和先进 DDR5 产品的利润率更高。叠加 AI 浪潮下先进内存供不应求，三星希望将有限晶圆、产能资源全部倾斜到利润率更高的产品线上，不再维持低利润旧代产品产能。预计此举将直接影响三星自身移动业务部门及众多的外部客户。\n\n今日好文推荐\n\n没身份证用不了AI？Claude开始查“户口”了\n\nAI提效20%，我们程序员加班却越来越狠：老板量生产力的尺子，歪了？\n\n苹果疯狂狙击Vibe Coding App\n\n100个产品原型同时跑、新模型Mythos断层领先，连skills效果都好到让团队意外：Anthropic内部到底在发生什么？\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "国际", "is_model_related": true, "source_file": "sources/2026-04-20_DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与_InfoQ.md"}, {"title": "腾讯云宣布：开源OpenAI、Manus同款Agent底座", "source": "财联社AI daily", "digest": "腾讯云宣布：开源OpenAI、Manus同款Agent底座", "link": "", "content": "# AI投入猛增 字节跳动去年净利润下滑超70%\n\n> 原文链接：https://mp.weixin.qq.com/s/yZSBzso29ZLBPjOVr-AXxg\n\n> 公众号：财联社AI daily\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/yZSBzso29ZLBPjOVr-AXxg\" target=\"_blank\">阅读原文</a>\n</div>\n\n《科创板日报》20日讯，知情人士向《科创板日报》记者透露，字节跳动2025年净利润同比下滑超过70%，净利润率也出现了大幅下滑，背景在于该公司在去年三四季度大幅增加了对于AI业务的投入。与此同时，字节跳动2025年海外营收增长近50%，远超约20%的国内增幅，海外业务营收占比也从2024年的25%上探至三成以上，再创历史新高。TikTok Shop 2025年GMV同比增速接近70%，是字节跳动海外营收占比提升的主要动力。字节跳动对以上数据未予置评。（记者 王耐 田野）", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-20_AI投入猛增 字节跳动去年净利润下滑超70%_财联社AI daily.md"}, {"title": "商汤Solution Agent投标实战：10万字投标革命", "source": "InfoQ", "digest": "商汤Solution Agent投标实战：10万字投标革命", "link": "", "content": "# DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与Sora研究员离职｜Q资讯\n\n> 原文链接：https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\n\n> 公众号：InfoQ\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/gyf2qgCx8CLo-A-gBq7ATg\" target=\"_blank\">阅读原文</a>\n</div>\n\n整理 ｜ Ziyu\n\n行业热点\n\nDeepSeek 开启首次外部融资\n\n当地时间 4 月 17 日，The Information 报道称，\n\nDeepSeek 计划以不低于 100 亿美元的估值，筹集至少 3 亿美元资金\n\n。这是 DeepSeek 成立以来的首次外部融资。目前 DeepSeek 正在与投资者接触。\n\n这是梁文锋创立 DeepSeek 三年来的首次妥协，打破了国产 AI“纯技术驱动”的固有叙事，也揭开了中国 AI 在算力封锁、人才流失、生态薄弱下的真实困境，成为 2026 年国产 AI 发展的重要转折点。\n\n从背景来看，DeepSeek 的融资转折，是整个国产 AI 行业困境的缩影。\n\n当前，美国持续收紧 AI 算力出口管制，掌握全球 75% 领先 AI 算力的美国，限制英伟达高端芯片对华出口，国产 AI 企业面临严重的算力缺口。\n\n消息传出后，迅速在投资圈引发热议。此前，DeepSeek 由对冲基金幻方量化独家提供资金支持，并曾多次拒绝顶级风投及科技巨头的投资邀约。例如在今年年初，市场曾传出消息称阿里有意投资 DeepSeek，但很快被 DeepSeek 辟谣。\n\n截至发稿，DeepSeek 并未就此次融资消息作出官方回应。\n\n“一人公司”，迎来大爆发\n\n据新华社报道，“一人公司”正在悄然流行。今年 3 月，国家市场监督管理总局相关课题组发布的《中国 OPC 发展调研报告 2026》显示，我国 OPC 发展呈快速增长态势，地域上集聚于长三角、珠三角、京津冀及中西部新兴产业城市，行业分布呈现“轻资产、高智力、新业态”特点，创业者以 90 后、00 后为主。\n\n这里的 OPC，指的就是“一人公司”（One Person Company）：由一个人独立完成决策、运营与执行，既是老板，也是员工，甚至兼任产品经理、市场、客服等多重角色。这种组织形态以极低的启动成本和高度灵活性为特征，往往依托平台工具、数字技术与内容分发渠道，实现从创意到变现的闭环。\n\n青岛有个叫郑海峰的年轻人，2026 年注册了一家公司——焱森垚数字文化创意内容制作有限公司。这家公司\"只有她一个人\"。不是说她能力平庸，恰恰相反。她的 AI 员工们各司其职：AI 负责宣发，AI 负责推广，AI 处理财务。她本人只做一件事：\n\n让这些 AI 员工协同运转，然后接单。\n\n你可能觉得这听起来像个 PPT 里的概念。但现实是，这家公司已经实际运转了。\n\n一个人，通过 AI 工具，独立完成从设计、研发到市场投放的全链路——这种事在 2023 年还是天方夜谭，在 2025 年开始零星出现，在 2026 年已经成了可以被规模化复制的商业路径。\n\n当大模型的 API 价格从 2023 年的\"贵到离谱\"降到 2026 年的\"几乎白送\"，当 AI Agent 的开发框架从\"极客专属\"变成\"有手就会\"，当支付、税务、社保的一切手续都可以线上完成——一个人注册一家公司、运转一家公司、服务真实客户这件事，门槛已经低到尘土里了。\n\n不是你的能力变强了，是工具把所有人拽到了同一条起跑线上。\n\n“一人公司”的兴起改变了行业的竞争规则与协作模式，传统的产业链协作、规模化生产逻辑被打破，行业逐渐向精细化、轻量化、个性化方向转型。\n\n宇树机器人绊到马路牙子摔进草坪\n\n今日 7 点 30 分，2026 北京亦庄人形机器人半程马拉松正式开跑。100 余支队伍的机器人将从科创十七街起跑，一路穿越城市高楼、湖景繁花，最终在南海子公园冲线。\n\n早在今早 6 时许，选手已经开始陆续进场。赛道全长约 21 公里，融合平地、坡道、弯道、狭窄路段等十多种地形，12 个左转道、10 个右转道，包含接近 90°的弯道，十分考验机器人的路径规划与动态平衡能力。比赛中，备受关注的宇树机器人起跑不久就意外摔倒，这让现场观众不禁为之紧张。‌‌\n\n最终，根据赛事加权规则，来自荣耀的齐天大圣战队自主导航机器人“闪电”以 50 分 26 秒（净用时）的成绩夺得冠军。目前人类半程马拉松的纪录为 57 分 20 秒。\n\nOpenAI 剥离「副业项目」：公司科学研究项目负责人与 Sora 研究员双双离职\n\n4 月 19 日消息，OpenAI 旗下两大核心项目的关键负责人双双离职。该公司科学研究项目负责人凯文 · 威尔，以及人工智能视频工具 Sora 背后的研究员比尔 · 皮布尔斯，均于当地时间周五宣布离职。此次人事变动正值 OpenAI 聚焦企业级人工智能业务，并筹备推出其即将面世的「超级应用」之际。\n\n皮布尔斯在社交媒体的离职声明中表示，Sora 的出现「推动了整个行业在视频领域的大量投资」，并认为研发这类视频工具所需的研究，需要脱离公司核心业务路线，拥有独立的发展空间。他写道：「保持研究的多元与发散性，是一家实验室实现长期蓬勃发展的唯一途径。」\n\n据《连线》杂志报道，OpenAI 企业应用首席技术官斯里尼瓦斯 · 纳拉亚南也将离职。据悉，纳拉亚南已在内部宣布离职消息，称此举是为了有更多时间陪伴家人。\n\n传 Meta 下月启动首轮大裁员，近 8000 名员工成 AI 发展”牺牲品“\n\n北京时间 4 月 18 日凌晨，据路透社援引三名知情人士消息称，Meta 计划于 5 月 20 日启动今年首轮大规模裁员，后续还将继续推进相关调整。\n\n其中一位知情人士表示，首轮裁员规模约为全球员工总数的 10%，接近 8000 人。消息人士还称，公司将在今年下半年继续裁员，具体时间和规模尚未确定，管理层或依据 AI 发展程度对计划进行调整。先前的消息称，Meta 整体裁员比例或不少于 20%。\n\n近期公司已对 Reality Labs 部门进行重组，并将各部门工程师调入新设立的「应用 AI」团队，负责推进能够编写代码并自主执行复杂任务的 AI 智能体开发。\n\n消息人士还表示，部分员工将被调入上月成立的 Meta Small Business 部门，作为此次重组的一部分。\n\n明星 AI 项目 Hermes Agent 被曝抄袭中国团队，公司回应\n\n4 月 15 日，中国 AI 团队 EvoMap 公开表示，硅谷明星 AI 项目 Hermes Agent 核心自进化能力，系对其 Evolver 引擎的系统性复刻，后者态度两次回应均否认。\n\n在 EvoMap 发布的技术报告中，其以 GitHub 公开时间戳、源码结构、架构设计、术语体系、进化循环等可交叉验证的证据链，直指 Hermes Agent 自进化模块与 Evolver 引擎高度同构。争议的核心指向自进化架构的来源归属。EvoMap 给出清晰且可核验的时间线：\n\n2 月 1 日，Evolver 开源并公开 GEP 核心设计；\n\n2 月 16 日，团队发布 GEP 深度解析，完整披露 Scan-Select-Mutate-Validate-Solidify 主循环与三级记忆体系；\n\n2 月 25 日，Hermes Agent 发布 v0.1.0，定位为初始基础版本；\n\n3 月 9 日，Hermes Agent 专门创建自进化独立仓库；\n\n3 月 12 日，Hermes Agent v0.2.0 推出技能生态系统，核心自进化功能正式上线。\n\n从核心架构公开到 Hermes 对应功能上线，时间差仅 24 至 39 天，这一时间窗口成为 EvoMap 指控的关键依据。双方均采用任务完成后自动提取可复用经验的闭环，均设置周期性自我评估与反射机制，均实现技能运行时发现与按需加载。\n\n关键的是，Evolver 的 10 步进化主循环，与 Hermes 自进化模块的 10 步执行流程一一对应，同时存在 12 组核心术语的系统性替换，如 Gene 对应 SKILL.md、Capsule 对应技能执行记录、solidify 对应 skill_manage (create) 等。而在 Hermes 全部 7 份公开材料中，对先行开源的 Evolver 与 GEP 协议零引用、零致谢、零归属。\n\nEvoMap 列出的基于 GitHub 仓库元数据和官方发布记录\n\nEvoMap 表示，在最初的两个多月里，团队把最核心的 GEP 协议、三层记忆体系、周期性反射循环，全部坦诚地抛给了社区。“因为我们觉得，在这个 AI 狂奔的时代，透明和开放是我们能做出的最酷的姿态。我们没有藏着掖着，把底牌都摆在了桌面上。但现实给我们上了一课。”\n\n面对详实指控，Hermes Agent 所属实验室 Nous Research 先后两次表态。首次回应由官方账号发出，称其项目仓库于 2025 年 7 月已创建，自诩为现代 Agent 框架底层技术先驱，并要求 EvoMap“删除账号”，随后删帖并拉黑对方成员。\n\n第二次回应来自 Nous 联合创始人 Teknium，他表示，“我这辈子从来没有听说过这个人、他的项目，或者他正在做的任何事情。今天是我第一次听说或看到这个项目。毫无证据地声称我剽窃了他们的作品，这是谎言。”\n\nHermes 方的反驳逻辑有二：一是仓库创建时间早于 Evolver，证明技术先发；二是底层依赖学术开源项目，架构设计系独立收敛。\n\n4 月 17 日晚，Hermes Agent 业务负责人 Tommy Eastman 来中国，在 B 站开直播。\n\n弹幕刷屏的问题只有一个：你们到底有没有抄 EvoMap？\n\nTommy 的回应：\n\n\"Hermes Agent 的代码仓库已经存在一年多了。直到那些推文出现，我才听说 EvoMap。Nous Research 有长期产出前沿研究的记录，我们是理念驱动的团队，除了推动开源 AI，不会做任何其他事情。\"\n\nEvoMap 随即指出，Hermes 仓库虽较早建立，但长期私有，2 月底才公开基础版本，被质疑的自进化能力直至 3 月中旬才完整推出，所谓先发优势无法覆盖争议功能；而 GEPA 与 GEP 分属优化算法与进化协议，不能解释上层架构、循环流程、记忆体系的高度重合。\n\n热搜第一！员工中 1500 万元彩票后离职？科大讯飞最新发文\n\n4 月 13 日凌晨，\n\n小红书有消息称科大讯飞员工中 1500 万大奖后辞职引发广泛关注，瞬间登上热搜。\n\n13 日下午，科大讯飞官方微博就此事发布回复，其微博称：我们关注到网传我公司员工中奖的相关信息。如果真有同事这么幸运，我们真心为他高兴。比起可遇不可求的运气，我们更在意为每位伙伴提供“看得见、摸得着”的保障，那就是一份有竞争力的薪酬，一个持续成长的空间，一套安心的福利支持。相信美好的事情总会发生！\n\n当日，\n\n有记者从知情人士处获悉，确有员工中奖情况，但金额与网传信息不符。\n\n至于是否离职，科大讯飞方面称无法回复。\n\n抖音打击赌博导流黑产，日均封禁相关账号超 1 万个\n\n抖音 4 月 17 日公告称，近期，平台监测发现，有黑产团伙通过展示豪华酒店设施、发布隐晦暗语等方式，规避平台监管，将目标用户导流至站外实施涉赌行为。对此，平台第一时间对违规账号进行处置，并持续加大对赌博导流黑产的打击力度，强化涉赌内容治理。\n\n2026 年以来，抖音共处罚涉及赌博的违规直播间 5.5 万个，对 1.4 万个账号无限期回收直播权限；针对赌博导流黑产，日均封禁相关账号超 1 万个。2025 年至今，平台主动上报的线索中，因涉及赌博引流，已有 148 人被刑事拘留，6 个相关犯罪团伙被捣毁。\n\n抖音严禁用户利用平台服务实施组织赌博、招募赌博人员等违法犯罪行为，严禁制作、发布、传播任何赌博相关内容，严禁通过各类伪装手段为线下或第三方平台赌博活动导流，包括但不限于：展示国内线上、线下赌博（含六合彩）或宣扬赌博、诱导他人参与赌博的内容；为赌博场所引流或展示赌博相关场景的内容；展示、宣传、教授赌博技巧，以及售卖发牌技术、千术、千术工具等相关内容。\n\n最后，抖音提醒广大用户提高警惕，主动抵制赌博相关违法违规行为，如在抖音发现相关违规内容，可直接举报或发送邮件至 feedback@douyin.com，平台将第一时间核实处置。\n\nAI 快讯\n\n消息称马斯克 xAI 进军 AI 智能编程领域，有望下周发布 Grok Build\n\n科技媒体 testingcatalog 近日发布博文，报道称埃隆 · 马斯克（Elon Musk）旗下 xAI 公司有望进军智能编程领域，可能会在下周推出 Grok Build 与 Grok CLI 两款产品。\n\n此举标志着 xAI 正式进入智能编程赛道，将与 Claude Code、OpenAI Codex 及 Google Jules 等主流工具展开直接竞争。\n\n在核心模型层面，xAI 已悄然推送 Grok 4.3 Early Access 测试版，目前仅向 Grok Heavy 订阅用户开放。这一进展改变了 Grok Build 的技术路径：xAI 可能不再单独开发专用编程模型，而是直接依托 Grok 4.3 支撑编程功能。\n\n产品形态上，Grok Build 采用双轨运行机制，用户可通过 CLI 智能体在本地执行任务，也可通过 Web 界面远程操作。目前尚不清楚本地执行的具体机制，不过该媒体认为基于 Electron 的桌面封装方案可能成为最优解。\n\n功能创新方面，Grok Build 预估引入 Parallel 模式与 Arena 模式。Arena 模式支持多个智能体并行处理同一任务，用户可从中择优采纳。\n\n名创优品成立 AI 创新部\n\n4 月 18 日，名创优品正式成立 AI 创新部，隶属数字科技中心。\n\n该部门以智能体 AI 能力建设为核心，聚焦业务决策优化与办公协同智能化。目前面向全社会招聘选址算法工程师、预测算法工程师、Agent 研发工程师、AI 解决方案工程师等关键岗位。此举旨在通过算法与智能体技术深度赋能零售运营，提升数据驱动决策效率与组织协同水平。招聘工作即日启动。\n\n消息称扎克伯格将工位搬进 Meta AI 团队\n\n4 月 15 日消息，据报道，Meta CEO 马克·扎克伯格正以更直接的方式参与 AI 竞赛 —— 甚至把办公桌搬进了 AI 团队。扎克伯格已将办公地点调整至 AI 实验室，与汪滔和纳特·弗里德曼一同办公，并重新开始编写代码。\n\nMeta 总裁迪娜·鲍威尔·麦考密克在华盛顿举行的 Semafor 世界经济峰会上表示，“马克确实把办公桌搬到了 AI 实验室，和汪滔、纳特·弗里德曼坐在一起，而且整天都在写代码。一方面，他们可能会觉得，‘太好了，你又来给建议了，马克，而且还是在写代码的时候。’我认为，他非常坚定地觉得，必须以这种深度去理解，才能思考如何让模型达到最佳状态。”\n\n此前报道显示，扎克伯格不仅每周亲自编写 5 至 10 小时代码，还训练了一个以自身为原型的 AI 数字分身，用于替代本人与员工实时互动。该 AI 角色基于扎克伯格的图像、声音、语气风格及战略思维进行训练，目前仍处于早期阶段，旨在让员工通过与数字分身互动，增强与创始人的连接。此外，一个独立的“CEO 智能体”项目也在同步推进，用于协助扎克伯格处理日常信息检索等事务。\n\nIT 业界\n\nAnthropic 深夜发布 Claude Design\n\n4 月 17 日，Anthropic 发布由 Claude Opus 4.7 模型驱动的设计工具 Claude Design，用户可通过自然语言对话生成 UI 原型、幻灯片、营销素材等设计内容，并支持实时协作与品牌规范自动继承。发布当日，Figma 股价下跌约 6.8%，相关设计工具公司股价同步受挫。\n\nClaude Design 是\n\nAnthropic Labs\n\n下的第二个产品（第一个是上周的 Skills 工具），由\n\nOpus 4.7\n\n驱动——也就是刚发的新模型，官方自己说的 \"most capable vision model\"。\n\nOpus 4.7 与 Claude Design 先后发——这个时间差不是巧合。\n\n产品是绑定模型能力迭代的。\n\n对 Builder 的启示：\n\n当基础模型升级时，要第一时间想清楚——这个升级具体解锁了哪些新产品形态？\n\n不是\"Claude 变强了我也用一下\"，是\"Claude 4.7 的视觉能力解锁了 X 场景的 PMF\"。\n\n微软首日集成 Claude Opus 4.7，GitHub Copilot 等 9 大 AI 工具全面接入\n\n近日，科技媒体 NeoWin 发布博文，报道称在 Anthropic 发布 Claude Opus 4.7 模型后，微软打破与 OpenAI 的排他性合作惯例，在其 GitHub Copilot 等 9 大开发环境中首日集成支持。\n\n有别于以往，微软不再局限于 OpenAI 的 GPT 系列模型，于去年底开始在 Microsoft Foundry 中提供 Claude 模型支持，并逐步扩展至旗下多款产品。\n\nGitHub Copilot 率先集成 Claude Opus 4.7，覆盖 Visual Studio Code、Visual Studio、Copilot CLI 等 9 大开发环境。GitHub 团队宣布，未来几周内 Opus 4.7 将取代 Opus 4.5 和 4.6，成为 Copilot Pro+ 用户的模型选择器默认选项。\n\nMicrosoft 365 Copilot 用户现已可在 Copilot Cowork 前沿计划、Copilot Studio 早期发布环境及 Excel 中调用 Claude Opus 4.7。\n\n三星宣布 LPDDR4/4X 年底停产\n\n据韩国媒体 The Elec 报道，其于 4 月 17 日确认，三星电子已正式停止接收 LPDDR4 和 LPDDR4X 的新增订单，标志着这两款量产逾十年的主流内存产品正式进入 EOL（生命周期终结）阶段。\n\nLPDDR4 和 LPDDR4X 是过去十年间智能手机、平板电脑、笔记本电脑等消费电子设备最主流的内存解决方案。LPDDR4 和 LPDDR4X 自 2017 年前后进入大规模量产，凭借低电压设计和优秀的功耗表现，成为全球数十亿台移动设备的标准配置。\n\nThe Elec 报道称，三星将于 2026 年 4 月 17 日起停止接收 LPDDR4/4X 一切新增订单，也不再接受客户追加采购需求。考虑到末批订单的时间节点，LPDDR4 和 LPDDR4X 的生产预计将延续至 2026 年年底，产线转换工作则将于 2027 年第一季度正式展开，届时 LPDDR4/4X 将彻底停产，产能全部转向 LPDDR5、LPDDR5X 移动 DRAM 及 HBM 高带宽内存。\n\n业界普遍认为，此次订单窗口的持续时间已超出预期，根本原因在于客户端需求持续旺盛。这一局面虽帮助客户充分锁定了部分 LPDDR4 系列内存供应，但也相应推迟了三星产线转换的节奏。\n\n三星此次计划停产 LPDDR4 系列，最核心的原因在于 HBM（高带宽内存）和先进 DDR5 产品的利润率更高。叠加 AI 浪潮下先进内存供不应求，三星希望将有限晶圆、产能资源全部倾斜到利润率更高的产品线上，不再维持低利润旧代产品产能。预计此举将直接影响三星自身移动业务部门及众多的外部客户。\n\n今日好文推荐\n\n没身份证用不了AI？Claude开始查“户口”了\n\nAI提效20%，我们程序员加班却越来越狠：老板量生产力的尺子，歪了？\n\n苹果疯狂狙击Vibe Coding App\n\n100个产品原型同时跑、新模型Mythos断层领先，连skills效果都好到让团队意外：Anthropic内部到底在发生什么？\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-20_DeepSeek迎来首轮外部融资；Hermes Agent抄袭风波官方回应；OpenAI科研负责人与_InfoQ.md"}, {"title": "搭子DuMate杀疯，国产Cowork已帮你把活干完了", "source": "新智元", "digest": "搭子DuMate杀疯，国产Cowork已帮你把活干完了", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "Kimi K2.6抢先开源，指挥300个Agent上岗", "source": "智东西", "digest": "Kimi K2.6抢先开源，指挥300个Agent上岗", "link": "", "content": "", "category": "国内", "is_model_related": false, "source_file": ""}, {"title": "Qwen3.6超大杯：Artificial Analysis国产第一", "source": "智东西", "digest": "Qwen3.6超大杯：Artificial Analysis国产第一", "link": "", "content": "", "category": "国内", "is_model_related": true, "source_file": ""}, {"title": "Fun-ASR1.5：语音转写准确率击败字节腾讯", "source": "智东西", "digest": "Fun-ASR1.5：语音转写准确率击败字节腾讯", "link": "", "content": "", "category": "国内", "is_model_related": false, "source_file": ""}, {"title": "AgentScope Tuner让Agent越用越聪明", "source": "通义实验室", "digest": "AgentScope Tuner让Agent越用越聪明", "link": "", "content": "", "category": "其他", "is_model_related": false, "source_file": ""}, {"title": "M-Flow记忆引擎：19岁少年重塑AI记忆", "source": "新智元", "digest": "M-Flow记忆引擎：19岁少年重塑AI记忆", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "Kimi单Agent时代结束，300个Agent并行", "source": "机器之心", "digest": "Kimi单Agent时代结束，300个Agent并行", "link": "", "content": "# 更新越频繁，Claude Code与Codex越像\n\n> 原文链接：https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\n\n> 公众号：机器之心\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\" target=\"_blank\">阅读原文</a>\n</div>\n\n机器之心编辑部\n\n前几天，\n\nOpenAI 正式发布了全新的大模型 GPT-5.4-Cyber\n\n。和很多网友的感受一样，这个模型也给我们带来了一种极其强烈的既视感。\n\n这款新模型在目标用户群、应用场景甚至宣发策略上，几乎完全对标了\n\nAnthropic 前些天发布的 Claude Mythos\n\n。这种「贴身肉搏」的态势已经到了毫不掩饰的地步。就连《纽约时报》都在最新的报道标题中一针见血地指出：「与 Anthropic 一样，OpenAI……」。\n\n这种同质化的趋势绝不仅仅停留在最底层的基座模型上。如果你把目光投向这两家公司近期发布的一系列产品，你会发现它们正在成为彼此的镜像！\n\n在资本市场的无影灯下，这种趋同更加明显。目前两家公司在二级市场上的估值咬得非常紧，Anthropic 甚至在近期凭借其在企业级市场的狂飙突进，价格略高于 OpenAI。资本的嗅觉最为灵敏，在他们眼中，这两只独角兽正在长出相同的犄角。\n\n看起来，底层大模型的同质化必然会导致上层应用的趋同。\n\n今天，我想和大家探讨的，正是代表着当今 AI 辅助编程最高水平的两个标杆工具： OpenAI 的\n\nCodex\n\n和 Anthropic 的\n\nCl\n\nau\n\nde Code\n\n。从曾经的分道扬镳，到如今的殊途同归，它们是如何一步步长成了同一副模样的？\n\n从分道扬镳到殊途同归：双雄的演进史\n\n把时间拨回几年以前，Codex 和 Claude Code 完全是两种不同技术哲学的产物。\n\nCodex 的底层逻辑是「天下武功唯快不破」。它就像是一个跟在你身后、随时准备补全代码的 5 年经验高级开发。\n\n在 OpenAI 的构想中，Codex 是一个轻量级、高互动的终端智能体，它主打快速迭代和交互式编程。它的执行速度极快，在 Cerebras WSE-3 硬件的加持下，能够达到每秒 1000 个 token 的吞吐量。在具体的工作流中，Codex 提供建议、自动编辑和全自动三种明确的审批模式，让开发者始终保持在循环之内。这种设计思路非常符合那些需要快速构建原型、处理高频交互的极客开发者。\n\n反观 Claude Code，它从诞生之初就自带一种高冷且克制的「架构师」属性。\n\nAnthropic 为它注入了处理极端复杂任务的基因。它依赖高达 100 万 token 的庞大上下文窗口，以及独特的「压缩」技术来实现无限对话。Claude Code 的信条是「全局掌控，谋定而后动」。在执行任何动作之前，它会先使用智能体搜索技术吃透整个代码库的脉络，然后协调多文件进行一致性修改。对于那些涉及数万行代码迁移的企业级重构任务，Claude Code 展现出了惊人的统治力。\n\n然而，随着时间的推移以及应用场景的不断下探，这两个原本性格迥异的工具，开始互相抄作业。\n\n图源：MorphLLM\n\n在处理复杂项目时，单体 AI 模型面临的最大瓶颈就是上下文污染。你让 AI 重构鉴权模块，它读了 40 个文件之后，往往就忘记了第一个文件的设计模式。为了解决这个痛点，两家公司给出了几乎一模一样的答案：为每个子任务分配独立的上下文窗口。\n\nOpenAI 很快推出了全新的 macOS 桌面端应用，将任务按项目隔离在不同的线程中，并在云端沙盒里独立运行。Anthropic 则推出了智能体团队架构，允许开发者派生出多个子智能体，它们共享任务列表和依赖关系，并在各自的独立窗口中并行工作。你会发现，无论是叫「云端沙盒」还是叫「智能体团队」，它们在工程实现上的核心理念已经完全重合。\n\n在基准测试的成绩单上，它们也呈现出一种微妙的平衡。GPT-5.3-Codex 在终端任务 Terminal-Bench 2.0 中以 77.3% 的得分领先。Claude Code 则在复杂的 SWE-bench Verified 榜单上拿下了 80.8% 的成绩。它们都在自己的优势区间里做到了极致，同时又在拼命弥补自身的短板。\n\nOpenClaw 效应：推倒高墙的无形之手\n\n如果说两家公司的内部战略决定了它们走向同质化的内因，那么整个开源生态的倒逼则是不可忽视的外力。在这里，我们必须要提到 OpenClaw 给整个 AI 编程工具赛道带来的深远影响。\n\n作为开源社区推出的工作流框架，OpenClaw 的出现可以说是推倒了巨头们辛苦建立的生态高墙。它将大模型与本地终端工具链的交互过程进行了标准化。过去，如何让大模型优雅地调用本地 Git 提交、如何安全地在沙盒中运行测试脚本、如何进行多步推理验证，这些都是 Codex 和 Claude Code 各自引以为傲的专有「黑科技」。\n\n但 OpenClaw 将这些流程抽象成了通用的协议。这意味着，开发者不再需要为了某一种特定的协同模式而被绑定在特定的平台上。开源社区的狂欢让标准化成为了不可逆转的洪流。面对这种情况，无论是 OpenAI 还是 Anthropic，都不得不放低姿态去兼容这种开放的标准。\n\n当底层的技术壁垒被 OpenClaw 这种开源力量拉平，当所有的高级特性都成为了行业的标准配置，Codex 和 Claude Code 唯一的出路，就是在更细微的用户体验层面进行无止境的内卷。这也是为什么我们会觉得它们越来越像，因为在标准化的框架下，最优解往往只有一个 —— 就像是生物的趋同演化。\n\nCodex 正在追赶 Claude Code\n\n虽然 Claude Code 与 Codex 正在趋同演化的道路上，但两者的差异依然存在，甚至 Codex 在某些方面已经更受开发者青睐。\n\n前两天，在 r/ClaudeCode 社区，一位拥有 14 年经验、曾在科技巨头工作的高级工程师 u/Canamerican726 分享了一份极其硬核的测评。\n\n具体而言，他在一个包含 8 万行代码的复杂项目中，分别投入 100 小时使用 Claude Code 和 20 小时使用 Codex。\n\n在他的视角里，使用 Claude Code 就像在指导一个被截止日期追赶的工程师，它冲刺速度极快，却经常会无视开发者在 CLAUDE.md 中写下的规范，并且喜欢在现有文件里不断堆砌代码来完成任务，缺乏重构思维。\n\n相比之下， Codex 给他的感觉更像是一个拥有 5 到 6 年经验的沉稳老手。它的处理速度虽然要慢上 3 到 4 倍，但会在中途主动停下来思考并重构代码，并且严格遵守指令边界。这种高度的自主性，让这位工程师敢于把任务直接扔给它，然后放心地去做其他事情。\n\n同样的声音也出现在 X 等社交网络上。研究员 Aran Komatsuzaki 结合自己的使用体验提到，在前端领域 Claude Code 依然占优，但在后端规划和保持信息更新方面，高频调用网络搜索的 Codex 显然更加扎实。\n\n评论区里充满了真实业务场景下的血泪总结。有开发者极其犀利地指出，基于 Opus 的模型虽然跑得快，但往往会给项目积攒下大量的「代码清洁债务」，Codex 动作慢，却能在前行的同时顺手把地扫干净。我甚至看到有用户总结出了一条生存法则，建议大家在上下文窗口的使用率达到 70% 时立刻开启新会话，否则极其容易收到系统附赠的隐蔽 bug。\n\n这些来自一线的真实吐槽清晰地表明，当两大神器的能力面板越来越重合时，决定开发者最终阵营归属的，往往就是这些关乎「填坑成本」和「维护心智」的微小体验差距，当然对于中国用户还有一些特殊的困难，比如：\n\n冷思考：同质化背后的生态暗战\n\n当然，Codex 和 Claude Code 和优劣还在于各位开发者自己，也要看开发者自身的能力，正如上述 u/Canamerican726 的评测报告总结的那样：如果你不懂软件工程，这两个工具都会输出糟糕的结果，工具并不等同于技能。\n\n这句话戳破了 AI 编程工具长期以来营造的某种幻觉。我们曾经以为，只要有足够强大的 AI 助手，哪怕是没有任何基础的 Vobe Coder 也能单枪匹马打造出企业级应用。但现实是，Claude Code 需要一个极其专注且技能过硬的「驾驶员」，否则它很容易在庞大的代码库中迷失方向。Codex 虽然更加独立，但它同样需要开发者提供精准的系统上下文才能发挥最大效用。\n\n那么，在工具能力高度同质化的今天，这两家公司的护城河究竟转移到了哪里？\n\n答案藏在那些枯燥的财务报表和定价策略里。在相同的任务下，Claude Code 消耗的 token 数量往往是 Codex 的 3 到 4 倍。使用成本更高。对于企业团队来说，使用 Claude Code 每个月需要为每位开发者支付 100 到 200 美元的费用。而 Codex 则将其能力打包进了价格更为亲民的订阅计划中，并且通过庞大的 GitHub 社区积攒了大量基础用户。\n\n图源：MorphLLM\n\nAnthropic 的野心在于将 Claude Code 深度嵌入到那些不缺钱的科技巨头的工作流中。比如 Stripe 就让 1370 名工程师使用 Claude Code，在 4 天内完成了一项原本需要 10 个人工作数周的跨语言代码迁移。Ramp 公司更是依靠它将事件响应时间缩短了 80%。OpenAI 则依靠其无孔不入的生态渗透率，让 Codex 成为了许多普通开发者的默认选择。\n\n这不再是一场单纯的技术竞赛，而是一场关于生态绑定、定价策略以及用户习惯重塑的消耗战。\n\n开发者的十字路口\n\n回望这一年来的技术演进，GPT-5.4-Cyber 的发布只是这场漫长战役中的一个微小注脚。Codex 和 Claude Code 正在走向「同一张面孔」，标志着 AI 编程工具从早期充满变数和猎奇色彩的测试阶段，正式迈入了成熟且乏味的工业化生产阶段。\n\n现在，Claude Code 每天会自动生成 13.5 万次 GitHub 提交，这个数字已经占到了全网公开提交量的 4%。我们可以预见，在不久的将来，大部分的样板代码、基础测试用例以及常规的代码重构，都会由这些长得越来越像的 AI 智能体在后台默默完成。\n\n图源：MorphLLM & SemiAnalysis / GitHub Search API\n\n面对两个在能力上无限趋近、在体验上相互模仿的超级工具，我们作为人类开发者的核心价值还剩下什么？或许，工具红利期即将彻底结束。当每个人手中都握着同样锋利的武器时，真正决定胜负的，将不再是谁拥有更好的代码补全速度，而是谁能更好地定义问题、谁拥有更宏大的系统架构视野，以及谁能在这个被 AI 填满的代码世界里，找到那份属于人类独有的不可替代性。\n\n话说回来，你选哪个？\n\n参考链接\n\nhttps://www.morphllm.com/comparisons/codex-vs-claude-code\n\nhttps://www.reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/\n\nhttps://x.com/arankomatsuzaki/status/2044270102003196007\n\nhttps://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_更新越频繁，Claude Code与Codex越像_机器之心.md"}, {"title": "大模型Steering：从底层破解行为控制", "source": "机器之心", "digest": "大模型Steering：从底层破解行为控制", "link": "", "content": "# 更新越频繁，Claude Code与Codex越像\n\n> 原文链接：https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\n\n> 公众号：机器之心\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\" target=\"_blank\">阅读原文</a>\n</div>\n\n机器之心编辑部\n\n前几天，\n\nOpenAI 正式发布了全新的大模型 GPT-5.4-Cyber\n\n。和很多网友的感受一样，这个模型也给我们带来了一种极其强烈的既视感。\n\n这款新模型在目标用户群、应用场景甚至宣发策略上，几乎完全对标了\n\nAnthropic 前些天发布的 Claude Mythos\n\n。这种「贴身肉搏」的态势已经到了毫不掩饰的地步。就连《纽约时报》都在最新的报道标题中一针见血地指出：「与 Anthropic 一样，OpenAI……」。\n\n这种同质化的趋势绝不仅仅停留在最底层的基座模型上。如果你把目光投向这两家公司近期发布的一系列产品，你会发现它们正在成为彼此的镜像！\n\n在资本市场的无影灯下，这种趋同更加明显。目前两家公司在二级市场上的估值咬得非常紧，Anthropic 甚至在近期凭借其在企业级市场的狂飙突进，价格略高于 OpenAI。资本的嗅觉最为灵敏，在他们眼中，这两只独角兽正在长出相同的犄角。\n\n看起来，底层大模型的同质化必然会导致上层应用的趋同。\n\n今天，我想和大家探讨的，正是代表着当今 AI 辅助编程最高水平的两个标杆工具： OpenAI 的\n\nCodex\n\n和 Anthropic 的\n\nCl\n\nau\n\nde Code\n\n。从曾经的分道扬镳，到如今的殊途同归，它们是如何一步步长成了同一副模样的？\n\n从分道扬镳到殊途同归：双雄的演进史\n\n把时间拨回几年以前，Codex 和 Claude Code 完全是两种不同技术哲学的产物。\n\nCodex 的底层逻辑是「天下武功唯快不破」。它就像是一个跟在你身后、随时准备补全代码的 5 年经验高级开发。\n\n在 OpenAI 的构想中，Codex 是一个轻量级、高互动的终端智能体，它主打快速迭代和交互式编程。它的执行速度极快，在 Cerebras WSE-3 硬件的加持下，能够达到每秒 1000 个 token 的吞吐量。在具体的工作流中，Codex 提供建议、自动编辑和全自动三种明确的审批模式，让开发者始终保持在循环之内。这种设计思路非常符合那些需要快速构建原型、处理高频交互的极客开发者。\n\n反观 Claude Code，它从诞生之初就自带一种高冷且克制的「架构师」属性。\n\nAnthropic 为它注入了处理极端复杂任务的基因。它依赖高达 100 万 token 的庞大上下文窗口，以及独特的「压缩」技术来实现无限对话。Claude Code 的信条是「全局掌控，谋定而后动」。在执行任何动作之前，它会先使用智能体搜索技术吃透整个代码库的脉络，然后协调多文件进行一致性修改。对于那些涉及数万行代码迁移的企业级重构任务，Claude Code 展现出了惊人的统治力。\n\n然而，随着时间的推移以及应用场景的不断下探，这两个原本性格迥异的工具，开始互相抄作业。\n\n图源：MorphLLM\n\n在处理复杂项目时，单体 AI 模型面临的最大瓶颈就是上下文污染。你让 AI 重构鉴权模块，它读了 40 个文件之后，往往就忘记了第一个文件的设计模式。为了解决这个痛点，两家公司给出了几乎一模一样的答案：为每个子任务分配独立的上下文窗口。\n\nOpenAI 很快推出了全新的 macOS 桌面端应用，将任务按项目隔离在不同的线程中，并在云端沙盒里独立运行。Anthropic 则推出了智能体团队架构，允许开发者派生出多个子智能体，它们共享任务列表和依赖关系，并在各自的独立窗口中并行工作。你会发现，无论是叫「云端沙盒」还是叫「智能体团队」，它们在工程实现上的核心理念已经完全重合。\n\n在基准测试的成绩单上，它们也呈现出一种微妙的平衡。GPT-5.3-Codex 在终端任务 Terminal-Bench 2.0 中以 77.3% 的得分领先。Claude Code 则在复杂的 SWE-bench Verified 榜单上拿下了 80.8% 的成绩。它们都在自己的优势区间里做到了极致，同时又在拼命弥补自身的短板。\n\nOpenClaw 效应：推倒高墙的无形之手\n\n如果说两家公司的内部战略决定了它们走向同质化的内因，那么整个开源生态的倒逼则是不可忽视的外力。在这里，我们必须要提到 OpenClaw 给整个 AI 编程工具赛道带来的深远影响。\n\n作为开源社区推出的工作流框架，OpenClaw 的出现可以说是推倒了巨头们辛苦建立的生态高墙。它将大模型与本地终端工具链的交互过程进行了标准化。过去，如何让大模型优雅地调用本地 Git 提交、如何安全地在沙盒中运行测试脚本、如何进行多步推理验证，这些都是 Codex 和 Claude Code 各自引以为傲的专有「黑科技」。\n\n但 OpenClaw 将这些流程抽象成了通用的协议。这意味着，开发者不再需要为了某一种特定的协同模式而被绑定在特定的平台上。开源社区的狂欢让标准化成为了不可逆转的洪流。面对这种情况，无论是 OpenAI 还是 Anthropic，都不得不放低姿态去兼容这种开放的标准。\n\n当底层的技术壁垒被 OpenClaw 这种开源力量拉平，当所有的高级特性都成为了行业的标准配置，Codex 和 Claude Code 唯一的出路，就是在更细微的用户体验层面进行无止境的内卷。这也是为什么我们会觉得它们越来越像，因为在标准化的框架下，最优解往往只有一个 —— 就像是生物的趋同演化。\n\nCodex 正在追赶 Claude Code\n\n虽然 Claude Code 与 Codex 正在趋同演化的道路上，但两者的差异依然存在，甚至 Codex 在某些方面已经更受开发者青睐。\n\n前两天，在 r/ClaudeCode 社区，一位拥有 14 年经验、曾在科技巨头工作的高级工程师 u/Canamerican726 分享了一份极其硬核的测评。\n\n具体而言，他在一个包含 8 万行代码的复杂项目中，分别投入 100 小时使用 Claude Code 和 20 小时使用 Codex。\n\n在他的视角里，使用 Claude Code 就像在指导一个被截止日期追赶的工程师，它冲刺速度极快，却经常会无视开发者在 CLAUDE.md 中写下的规范，并且喜欢在现有文件里不断堆砌代码来完成任务，缺乏重构思维。\n\n相比之下， Codex 给他的感觉更像是一个拥有 5 到 6 年经验的沉稳老手。它的处理速度虽然要慢上 3 到 4 倍，但会在中途主动停下来思考并重构代码，并且严格遵守指令边界。这种高度的自主性，让这位工程师敢于把任务直接扔给它，然后放心地去做其他事情。\n\n同样的声音也出现在 X 等社交网络上。研究员 Aran Komatsuzaki 结合自己的使用体验提到，在前端领域 Claude Code 依然占优，但在后端规划和保持信息更新方面，高频调用网络搜索的 Codex 显然更加扎实。\n\n评论区里充满了真实业务场景下的血泪总结。有开发者极其犀利地指出，基于 Opus 的模型虽然跑得快，但往往会给项目积攒下大量的「代码清洁债务」，Codex 动作慢，却能在前行的同时顺手把地扫干净。我甚至看到有用户总结出了一条生存法则，建议大家在上下文窗口的使用率达到 70% 时立刻开启新会话，否则极其容易收到系统附赠的隐蔽 bug。\n\n这些来自一线的真实吐槽清晰地表明，当两大神器的能力面板越来越重合时，决定开发者最终阵营归属的，往往就是这些关乎「填坑成本」和「维护心智」的微小体验差距，当然对于中国用户还有一些特殊的困难，比如：\n\n冷思考：同质化背后的生态暗战\n\n当然，Codex 和 Claude Code 和优劣还在于各位开发者自己，也要看开发者自身的能力，正如上述 u/Canamerican726 的评测报告总结的那样：如果你不懂软件工程，这两个工具都会输出糟糕的结果，工具并不等同于技能。\n\n这句话戳破了 AI 编程工具长期以来营造的某种幻觉。我们曾经以为，只要有足够强大的 AI 助手，哪怕是没有任何基础的 Vobe Coder 也能单枪匹马打造出企业级应用。但现实是，Claude Code 需要一个极其专注且技能过硬的「驾驶员」，否则它很容易在庞大的代码库中迷失方向。Codex 虽然更加独立，但它同样需要开发者提供精准的系统上下文才能发挥最大效用。\n\n那么，在工具能力高度同质化的今天，这两家公司的护城河究竟转移到了哪里？\n\n答案藏在那些枯燥的财务报表和定价策略里。在相同的任务下，Claude Code 消耗的 token 数量往往是 Codex 的 3 到 4 倍。使用成本更高。对于企业团队来说，使用 Claude Code 每个月需要为每位开发者支付 100 到 200 美元的费用。而 Codex 则将其能力打包进了价格更为亲民的订阅计划中，并且通过庞大的 GitHub 社区积攒了大量基础用户。\n\n图源：MorphLLM\n\nAnthropic 的野心在于将 Claude Code 深度嵌入到那些不缺钱的科技巨头的工作流中。比如 Stripe 就让 1370 名工程师使用 Claude Code，在 4 天内完成了一项原本需要 10 个人工作数周的跨语言代码迁移。Ramp 公司更是依靠它将事件响应时间缩短了 80%。OpenAI 则依靠其无孔不入的生态渗透率，让 Codex 成为了许多普通开发者的默认选择。\n\n这不再是一场单纯的技术竞赛，而是一场关于生态绑定、定价策略以及用户习惯重塑的消耗战。\n\n开发者的十字路口\n\n回望这一年来的技术演进，GPT-5.4-Cyber 的发布只是这场漫长战役中的一个微小注脚。Codex 和 Claude Code 正在走向「同一张面孔」，标志着 AI 编程工具从早期充满变数和猎奇色彩的测试阶段，正式迈入了成熟且乏味的工业化生产阶段。\n\n现在，Claude Code 每天会自动生成 13.5 万次 GitHub 提交，这个数字已经占到了全网公开提交量的 4%。我们可以预见，在不久的将来，大部分的样板代码、基础测试用例以及常规的代码重构，都会由这些长得越来越像的 AI 智能体在后台默默完成。\n\n图源：MorphLLM & SemiAnalysis / GitHub Search API\n\n面对两个在能力上无限趋近、在体验上相互模仿的超级工具，我们作为人类开发者的核心价值还剩下什么？或许，工具红利期即将彻底结束。当每个人手中都握着同样锋利的武器时，真正决定胜负的，将不再是谁拥有更好的代码补全速度，而是谁能更好地定义问题、谁拥有更宏大的系统架构视野，以及谁能在这个被 AI 填满的代码世界里，找到那份属于人类独有的不可替代性。\n\n话说回来，你选哪个？\n\n参考链接\n\nhttps://www.morphllm.com/comparisons/codex-vs-claude-code\n\nhttps://www.reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/\n\nhttps://x.com/arankomatsuzaki/status/2044270102003196007\n\nhttps://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": true, "source_file": "sources/2026-04-20_更新越频繁，Claude Code与Codex越像_机器之心.md"}, {"title": "中国AIGC产业峰会5月20日北京见", "source": "量子位", "digest": "中国AIGC产业峰会5月20日北京见", "link": "", "content": "# 大模型架构的下半场\n\n> 原文链接：https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\n\n> 公众号：量子位\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\" target=\"_blank\">阅读原文</a>\n</div>\n\n华中科技大学王兴刚团队 投稿\n\n量子位 | 公众号 QbitAI\n\n研究者们花了十年去扩展层内的计算能力，却忘了扩展层间的通信能力。\n\n这件事亟需被改变。\n\n过去十年，深度学习领域取得进展的方式出奇地一致：什么都往大了整。更多参数、更多数据、更长上下文。而且确实管用：loss在降，能力在涨，\n\nscaling law\n\n（扩展定律）\n\n精确地告诉研究团队还需要投入多少。\n\n但扩展的方向不同，差异也是巨大的。序列长度的扩展需要真正的创新，也确实催生了一整套机制研究和系统工程。数据的扩展则直截了当：数据越多，loss越低。让模型变得更宽、更深，这看起来也和数据的扩展一样简单。\n\n但宽度和深度真的在同等地发挥作用吗？\n\n并非如此。深度在数量上增长了，但在质量上却没有。层与层之间的通信机制几乎没有变化。接下来本文将解释这一点为什么重要，这不仅关乎网络的深度本身，更关于研究团队设计神经网络架构时的一个集体盲区。\n\n上半场\n\n要看清上半场做对了什么，就看看什么被成功地扩展了，以及\n\n是怎么做到的\n\n。\n\n先看序列长度。早期Transformer只能处理几百个token。要达到128K+，需要多个方向上的持续创新：新的注意力模式\n\n（稀疏、线性、混合）\n\n、系统工程\n\n（FlashAttention）\n\n、位置编码的进步\n\n（RoPE scaling）\n\n。研究者和工程师们共同建造了一整个生态，持续改进token之间的通信方式。而回报颇丰，研究团队不止能够处理极其长的文档，还为OpenAI-O1和DeepSeek-R1的长链推理奠定了坚实的基础。这就是当研究团队认真投资于“信息在序列维度上的\n\n流动方式\n\n时”，所收获的斐然成果。\n\n△\n\n现代LLM中的参数与数据规模迅速增长\n\n参数和数据的扩展是最符合人类直觉的部分。从深度学习的最早期开始，每本教科书都在教授同一套配方：更多数据、更宽的层、更深的网络，自然带来更好的表征。从GPT-2的15亿参数到如今的数万亿，这套配方一直管用。\n\n这似乎说明大模型团队不需要引入新机制，只需要持续拓展这些被验证了的方向。\n\n只不过，对网络而言，\n\n更宽\n\n和\n\n更深\n\n往往并不是一回事。宽度的扩展是自然而然的：现代GPU天生擅长处理更宽的矩阵乘法，注意力机制的演进越来越高效，这使得更宽的网络可以无缝接入现有架构。\n\n而深度则是另一个故事。模型确实变深了：研究团队将模型加到32层、64层、甚至100层以上。但层间通信的机制本质上还是ResNet在2015年引入的深度残差，“\n\nx + F(x)\n\n”。自它诞生以来，围绕它有过不少改良\n\n（归一化位置、残差缩放、跨层连接）\n\n，但没有任何改良真正取代过那个深度残差中“\n\n+\n\n”的决定性地位。\n\n残差连接可以说是深度学习中最重要的基石。没有它，就没有100层的Transformer，没有现代LLM，没有scaling law。但基础性方案有一个特点：它们有时会变得太过隐形，以至于没人再去质疑它到底是最优解，还是仅仅是研究团队探索出的第一个能用的方案。\n\n打个比方，想象一个有特殊规则的传话游戏。在标准版本里，第1个人对第2个人耳语，第2个人再对第3个人耳语。到第18个人的时候，消息已经面目全非了。这就是没有残差连接的深层网络：每一层只能看到上一层的输出。\n\n残差连接修复了这个问题：每个人在传达自己的理解的同时，也把之前积累的原始信息原封不动地往下传。第3个人既能听到第2个人的新解读，也能听到之前的所有内容。原始信号始终被保留，它成为了不断壮大的合唱中的一个声部。\n\n但到了第152个人，你同时在听152个声音：原始信息加上151层叠加上去的内容，全部混在一句耳语里。理论上，前面那些人的声音依然存在，但它们已经被淹没了。如果第152个人需要知道第3个人具体说了什么，他得费力地从这首宏大的合唱声中把它挑出来。\n\n△\n\n消息累加的传话游戏中，靠后的人依然难以分辨出所需的内容\n\n通常而言，第152个人是做不到这一点的。\n\n这就是\n\n信息稀释\n\n。每一层都面临两难：倘若该层贡献新信息就可能会掩盖之前的内容，但保守不动则能保留之前层传过来的已有信息。这种状况下，很多层学会了保守不动，它们几乎不往残差流里写入任何东西。这样的深度网络在纸面上很深，实际上却很浅。研究团队堆了152层，但其中很多层却只学会了保持沉默。\n\n这里的瓶颈不在于152层网络所需求的算力，而在于信息穿过这些层的通信能力。CPU的发展在几十年前就撞过同样的墙：处理器越来越快，直到内存带宽跟不上了，逼得整个行业转向缓存和通信。组织管理也一样：一群聪明人所能发挥出的创造力，也受限于他们之间的沟通、组织方式。深度学习正在经历自己的版本：十年来不断增强每一层的能力，而层与层之间的通道始终是2015年那条单车道公路。\n\n那么，有没有更好的机制？\n\n配方\n\n在\n\n本文所介绍的研究之前\n\n已经有很多研究者注意到了深度瓶颈。多年来，修补方案越来越巧妙：获评CVPR best paper的DenseNet保留了每一层的输出，但代价是平方级的开销。使用可学习加权的方案DenseFormer、LIMe降低了成本，但训练完成后权重就固定了，每个token、每套上下文都用同样的权重。\n\n字节跳动的Hyper-Connections和DeepSeek的mHC另辟蹊径，它们把管道拓宽到N个通道，层间用混合矩阵连接，这相当于信息高速公路上同时多了好几条车道。但坏消息是，信息仍然在逐层流动，第152层没有办法直接回溯到第3层。\n\n彩云公司的MUDDFormer让混合每层输出这件事变成动态的，它会根据每个token的表征来生成权重。这在根本方向上是对的：从每一层汲取多少信息本就应该取决于你正在处理的内容。但同样有个坏消息，第152层在决定从第3层汲取多少时，只依赖第152层本身的状态，它并不知道第3层实际包含了什么。它是在\n\n预测\n\n哪些层有用，而不是在\n\n查看\n\n。\n\n以上的每一步都修复了一个真实存在的缺陷，但却鲜有哪一个方法质疑过深度残差的框架本身。\n\n不难发现，这些方法都有着一个共同点。从DenseNet到Hyper-Connections，每个方法都在回答同一个隐含的问题：“如何才能更好地\n\n混合\n\n各层的输出？”更好的系数，更多的通道，自适应的权重。但自始至终都是混合，自始至终都是累加。ELMo早就表明，不同的层编码的是截然不同的信息：浅层编码句法，深层编码语义。所有人得出的结论都是“学习更好的混合权重用来平衡\n\n句法\n\n和\n\n语义\n\n”。但还有一条被主流忽视的道路：如果不同层持有不同信息，也许每一层应该能够根据\n\n内容\n\n而非\n\n位置\n\n，从持有所需信息的那一层\n\n直接检索\n\n。\n\n这就是\n\n范畴谬误\n\n：把层间通信当作\n\n累加\n\n（用学习到的或生成的系数来组合信号）\n\n而非\n\n检索\n\n（通过基于内容的匹配来选择信息）\n\n。在累加框架下，即使是动态方法也只从当前层的状态生成混合权重，而不去查看信息的来源层实际包含了什么。在检索框架下，Query\n\n（查询）\n\n编码的是“我需要什么”，Key\n\n（键）\n\n编码的是“我有什么”，而它们之间的运算决定了相关性。Query和Key双方都应该有发言权。\n\n回到传话游戏。之前所有的方法都在试图产生一个更清晰的合唱：更好的发音、更多的中继通道、自适应的音量。没有一个质疑过这个根本约束：所有声音必须累加成一个声音吗？也没有人问过：咱是否可以直接走回去，跟之前的任何一个人当面对话呢？\n\n研究团队认为这种范畴谬误在架构设计中无处不在。当某个东西足够好用的时候，你不会去质疑它的概念框架，而只会在框架内改进。经历了多年越来越巧妙的修补之后，研究者才明白：深度维度的残差连接需要的不是更好的系数，而是被一种根本不同的操作所替代：\n\n一种在序列维度上已经成功解决了同样问题的操作。\n\n△\n\n因果注意力机制在序列维度（横向）上聚合信息\n\n下半场\n\n一旦研究团队把层间的通信理解为检索而非累加，一个很自然的答案就是在深度维度上引入注意力机制。包括研究者团队在内的很多团队都独立地收敛到了这个想法：谷歌提出的 DCA、华为的MRLA、Hessian.AI的 Dreamer、Kimi的AttnRes、以及研究者团队提出的Flash Depth Attention & MoDA，大家都尝试在层间应用点积注意力。这种独立趋同本身就是一个信号：方向走对了！\n\n△\n\n深度注意力机制在深度维度（纵向）上聚合信息\n\n但找对方向和做出成品是两回事。研究者自述：“第一次用Pytorch实现运行深度注意力的时候，前向和反向传播共计耗时达到了44,924 ms。44秒啊！朋友们！这个时间都够我喝完一瓶500毫升的冰红茶了！”\n\n也就是说，在深度维度上应用注意力机制的想法本身没问题，但工程现实却残酷到了极点。现代GPU为大规模的矩阵乘法做了大量优化，却不擅长数千个跨深度的极小规模的注意力操作。深度注意力作为一个计算量不大的算法，跑起来却可能慢得要命。\n\n△\n\nPytorch实现的深度注意力（DepthRef）很慢；Flash Depth Attention（FDA）很快。\n\n至此，之前的方法都陷入了两难：要么简化深度注意力来换速度，这种方式丢掉了完整的选择性检索这一核心价值；要么保持完整的表达能力，但运算代价变得不可接受。研究者团队找到了一条出路：不是简化算法，而是重新组织参与计算的数据布局，从而适配GPU硬件。\n\nFlash Depth Attention\n\n（https://github.com/hustvl/MoDA）\n\n让具备完整表达能力的深度检索快到可以参与实际训练。\n\n△\n\n混合深度注意力\n\n机制同时在序列维度（横向）和深度维度（纵向）上聚合信息\n\n常规的大模型主干流水线是：残差连接\n\n→\n\n序列注意力\n\n→\n\n残差连接\n\n→\n\nFFN\n\n（前馈网络\n\n）\n\n。\n\n有了高效的深度检索之后，研究团队注意到网络的主干流水线变成了：深度注意力→序列注意力→深度注意力→FFN\n\n（前馈网络）\n\n。这三个连续的注意力操作作用于不同的Key\n\n（键，缩写作K）\n\n和Value\n\n（值，缩写作V）\n\n，却共享着近乎相同的Query\n\n（查询）\n\n。一个很自然的做法就是把它们融合。\n\n研究者团队提出了\n\n混合深度注意力\n\n（Mixture-of-depths Attention，MoDA）\n\n将深度检索和序列检索合并到一个统一的softmax中。每个注意力头同时关注当前层的序列KV对\n\n（键值对）\n\n和所有前序层的深度KV对\n\n（键值对）\n\n。在同一个softmax 下，模型可以自由决定何时关注序列中的其他token，何时跨层检索自身的历史信息。通过一次操作，MoDA完成了两个维度的检索。\n\n△\n\n左侧区域是序列KV，右侧区域是深度KV。颜色越黄，注意力越强。\n\n回到传话游戏。在残差连接的版本里，第152个人费力地从累加的合唱中辨认第3个人的声音。有了深度检索，第152个人拍拍第3个人的肩膀直接问：“你刚才说了什么？”没有中间人，没有累积的噪音。\n\n可视化的实验结果也印证了这个类比所预测的现象：当模型获得了通过深度KV从特定层进行选择性检索的能力时，它会持续且主动地使用这种能力。之前困扰模型架构研究员们的Attention Sink\n\n（注意力沉没）\n\n现象，即模型把概率质量堆积在少数固定token上的行为，也随之减弱。这就是当研究者团队尝试发展层\n\n之间\n\n而非仅仅层\n\n之内\n\n的信息流动时，所取得的有趣成果。\n\n△\n\n引入深度注意力后，传话游戏允许每个人用手机查看群聊记录。\n\n大模型架构的上半场是关于扩展组件的。\n\n研究者们扩展出更长的序列，更多的数据，更大的模型。这个阶段最关键的问题是“怎么把一切都做大？”。在上半场，这是正确且关键的问题，它把整个领域从GPT-2带到了GPT-4时代。\n\n下半场是关于扩展通信的\n\n。新的问题是：“\n\n组件之间的通信质量如何？\n\n”\n\n△\n\n引入\n\n混合深度注意力\n\n后，在主流的开源基线（OLMo2）上全面提升了模型能力。\n\n深度是最明显的例子，因为现有方案\n\n（累加）\n\n和可能的方案\n\n（选择性检索）\n\n之间的差距是巨大的。研究者团队相信这个原则是可以推广的。凡是神经网络使用静态的、与数据无关的通道来传递信息的地方，包括层与层之间、模态与模态之间、时间步与时间步之间等等，很可能都会有一个检索机制等着替代那个累加操作。\n\n全世界的研究者们花了十年掌握token之间如何对话，现在是时候掌握层与层之间如何对话了。而最终，研究者们将掌握神经网络中每个组件如何与其他任意组件对话。\n\n深度残差的“+”带我们跑过了一段极为精彩的旅程，但现在，是时候升级这座阶梯了。\n\n欢迎来到大模型架构的下半场。\n\nFlash Depth Attention & MoDA\n\n论文链接\n\n：\n\nhttps://arxiv.org/abs/2603.15619\n\nFlash Depth Attention & MoDA\n\n代码链接：\n\nhttps://github.com/hustvl/MoDA\n\n实验室主页：\n\nhttps://github.com/hustvl\n\n论文主要作者来自于华中科技大学（HUST）电子信息与通信学院视觉实验室（Vision Lab）。HUST Vision Lab研究主要集中在计算机视觉和深度学习领域，尤其关注以下方向：多模态基础模型、视觉表征学习、目标检测、分割与跟踪、端到端自动驾驶、新型神经网络架构。\n\nHUST Vision Lab致力于不断突破视觉智能的边界，代表性工作包括：CCNet（TPAMI 2020，4300+引用，1.5K Star）、Mask Scoring R-CNN（CVPR 2019，1400+引用，1.9K Star）、FairMOT（IJCV 2021，2200+引用，4.2K Star）、ByteTrack（ECCV 2022，3400+引用，6.2K Star）、EVA（CVPR 2023，1100+引用，2.7K Star）、MapTR（ICLR 2023，400+引用，1.5K Star）、Vectorized Autonomous Driving (VAD)（ICCV 2023，600+引用，1.3K Star）、DiffusionDrive（CVPR 2025，200+引用，1.3K Star）、Vision Mamba (Vim)（ICML 2024，3100+引用，3.8K Star）、4D Gaussian Splatting (4DGS)（CVPR 2024，1400+引用，3.5K Star）、YOLOS（NeurIPS 2021，500+引用，900+ Star）、YOLO-World（CVPR 2024，1000+引用，6.3K Star），以及 LightningDiT & VA-VAE（CVPR 2025，200+引用，1.4K Star）。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n我们正在招聘一名眼疾手快、关注AI的\n\n学术编辑实习生\n\n🎓\n\n感兴趣的小伙伴欢迎关注 👉\n\n了解详情\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_大模型架构的下半场_量子位.md"}, {"title": "Mythos把AI从「会说」跨进「动手」时代", "source": "新智元", "digest": "Mythos把AI从「会说」跨进「动手」时代", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "Harness Engineering实战", "source": "阿里云开发者", "digest": "Harness Engineering实战", "link": "", "content": "", "category": "其他", "is_model_related": false, "source_file": ""}, {"title": "2026年或许是人类最后一次掌控AI", "source": "新智元", "digest": "2026年或许是人类最后一次掌控AI", "link": "", "content": "# Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI\n\n> 原文链接：https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\n\n> 公众号：新智元\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/cUphaEydMDC-JOXTXjJzrA\" target=\"_blank\">阅读原文</a>\n</div>\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n60多个Claude账号一夜之间被集体「拔插头」！没有预警，申诉无门，整个公司业务瞬间瘫痪。这场席卷开发者圈的「封号风暴」，撕开了Anthropic傲慢的底裤。\n\n心态彻底崩了！\n\n一家服务数百万用户的金融科技公司CTO，早上打开电脑，准备用Claude处理积压的工作——\n\n突然发现：公司60多个人的账号，一夜之间全部被封。\n\n没有任何预警，只有一封冰冷的邮件：\n\n「检测到违反使用政策的自动化信号，您的账号已被暂停」。\n\n想要申诉？必须填写谷歌表单。\n\n从工程师到产品经理到运营，所有人用来写代码、做分析、处理日常工作的工具，同一时间被「集体拔掉插头」。\n\n消息一出，瞬间登上了热搜。\n\n有网友给出忠告：对如果你在经营一家公司，千万别把所有赌注，压在一个AI供应商身上。\n\n一\n\n觉醒来，60人Claude全被封\n\nBelo不是什么无名小卒。\n\n这是一家在拉美市场拥有数百万用户的金融科技应用，团队超过60人，日常工作重度依赖Claude——\n\n从代码审查到客户服务，从文档撰写到数据分析，Claude已经渗透进了他们的每一条业务血管。\n\n然后Anthropic一刀下去，全给斩断了。\n\n所有的对话历史，没了。所有的集成工具，瘫了。所有基于Claude构建的工作流，归零。\n\nBelo的CTO Pato Molina在X上，发出了那条震动开发者圈的帖子：\n\n你们毫无理由地封禁了我们整个组织的60多个账号。没有任何解释。\n\n唯一的申诉方式是填一个Google表单？这是什么客户服务？\n\n一时间，评论区炸了。\n\n所有人心中都悬着同一个疑问：下一个被「开刀」的，会不会是我？\n\n事实上，倒霉蛋也不只有Belo一个，类似的遭遇正在开发者社区蔓延。\n\n回到事件本身。\n\nBelo团队在发现账号被封后，立刻向Anthropic提交了申诉。\n\n等待的过程有多煎熬不用想象，60个人的工作流停摆，每一分钟都在烧钱。\n\n万幸的是，他们提前部署了Gemini，并无缝接入了现有工作流，才不至于彻底瘫痪。\n\nGemini急救场\n\n没等来Anthropic解释\n\nAnthropic的「安全团队」的复函姗姗来迟。邮件内容简洁得近乎冷酷——\n\n你的账号因违反使用政策被禁用。收到申诉后，经调查，已恢复。对造成的不便表示歉意。\n\n耐人寻味的是，这封邮件完美地回避了所有关键问题。\n\n违反了哪条政策？调查发现了什么？为什么60个账号要一起封？为什么恢复了？是误判还是政策变更？\n\n一个字都没说。\n\n这次惨痛的翻车事故，给Pato Molina和团队上了一堂刻骨铭心的课。\n\n它也向所有深度依赖AI的软件公司敲响了警钟：\n\n不要把核心业务的命脉，锁在同一个「篮子」里。\n\n诚然，多模型并行的策略是一把双刃剑。\n\n它的核心防御价值在于「业务连续性」。\n\n当像Belo遭遇的那样，Claude毫无征兆地全线宕机时，你手中必须握有备选方案。\n\n虽然Gemini可以补位，但紧急切换的代价极高：所有的上下文对话、复杂的集成流程都将化为乌有。\n\n这种「阵痛」虽不致命，但足以让团队在漫长的适应期中精疲力竭。\n\n反之，多平台架构的代价，则是指数级增长的复杂度。\n\n团队需要适配多套接口，针对不同平台进行反复培训，这背后的时间与资金成本极高。此外，跨平台的集成与后期维护，更是一场繁琐的「工程噩梦」。\n\n在实操中，很多公司最终会与某些服务记录良好的供应商（如Slack、Gmail、Notion等）「锁定」在一起。\n\n但让人无法接受的是，一个服务竟然可以在没有任何预先通知、也无法联系技术支持的情况下，直接就下线了。\n\n突「拔插头」，不止一次了\n\n如果Belo事件是个孤例，我们可以把它当成一次普通的技术乌龙翻过去。\n\n但它不是。\n\n就在一周前，OpenClaw之父Peter Steinberger发帖称，自己的Claude账号因「可疑活动」被封。\n\n几个小时后，一位Anthropic工程师在评论区现身，表示「从未因使用OpenClaw封禁过任何人」。\n\n没想到，就在第二天Peter的账号就恢复了。\n\n更早的时候，今年1月，Anthropic收紧了对第三方工具接入Claude的安全措施。\n\nVB报道称，Anthropic的技术人员公开承认，这次收紧「造成了意外的附带损害」。一些用户账号被自动化系统误封。\n\n受影响的包括，通过Cursor等IDE使用Claude集成的开发者。\n\n与此同时，就在本周，多名用户在Reddit和X上报告称，自己的Claude付费账号被错误地标记为「未成年人」而遭到封禁。\n\n一个成年人，付着Pro的钱，被AI系统判定为小孩然后踢出门外\n\n——这种荒诞程度，连黑镜编剧都不敢这么写。\n\n全压Claude？那就是在「赌命」\n\n如前所述，Pato Molina在事后总结了一条血泪教训：\n\n千万不要把所有鸡蛋放在一个篮子里。\n\n这话放在2026年的AI圈，不是一句鸡汤，而是一条生存法则。\n\nBelo的60个人最终拿回了账号。15个小时的噩梦结束了。表面上看，故事有了一个「圆满」的结局。\n\n但那个问题还悬在每一个AI深度用户的头上——\n\n你的整个工作流建立在Claude上？\n\n那就问问自己：如果明天Claude消失了，你的公司还能不能运转？\n\n如果答案是「不能」，那你不是在使用AI工具，\n\n你是在赌命\n\n。\n\n参考资料：\n\nhttps://x.com/patomolina/status/2045281665363386504?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_Anthropic暴力封杀！60人Claude一夜断供，网友：千万别豪赌一个AI_新智元.md"}, {"title": "AURA：视频大模型边看边理解、边看边响应", "source": "机器之心", "digest": "AURA：视频大模型边看边理解、边看边响应", "link": "", "content": "# 更新越频繁，Claude Code与Codex越像\n\n> 原文链接：https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\n\n> 公众号：机器之心\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\" target=\"_blank\">阅读原文</a>\n</div>\n\n机器之心编辑部\n\n前几天，\n\nOpenAI 正式发布了全新的大模型 GPT-5.4-Cyber\n\n。和很多网友的感受一样，这个模型也给我们带来了一种极其强烈的既视感。\n\n这款新模型在目标用户群、应用场景甚至宣发策略上，几乎完全对标了\n\nAnthropic 前些天发布的 Claude Mythos\n\n。这种「贴身肉搏」的态势已经到了毫不掩饰的地步。就连《纽约时报》都在最新的报道标题中一针见血地指出：「与 Anthropic 一样，OpenAI……」。\n\n这种同质化的趋势绝不仅仅停留在最底层的基座模型上。如果你把目光投向这两家公司近期发布的一系列产品，你会发现它们正在成为彼此的镜像！\n\n在资本市场的无影灯下，这种趋同更加明显。目前两家公司在二级市场上的估值咬得非常紧，Anthropic 甚至在近期凭借其在企业级市场的狂飙突进，价格略高于 OpenAI。资本的嗅觉最为灵敏，在他们眼中，这两只独角兽正在长出相同的犄角。\n\n看起来，底层大模型的同质化必然会导致上层应用的趋同。\n\n今天，我想和大家探讨的，正是代表着当今 AI 辅助编程最高水平的两个标杆工具： OpenAI 的\n\nCodex\n\n和 Anthropic 的\n\nCl\n\nau\n\nde Code\n\n。从曾经的分道扬镳，到如今的殊途同归，它们是如何一步步长成了同一副模样的？\n\n从分道扬镳到殊途同归：双雄的演进史\n\n把时间拨回几年以前，Codex 和 Claude Code 完全是两种不同技术哲学的产物。\n\nCodex 的底层逻辑是「天下武功唯快不破」。它就像是一个跟在你身后、随时准备补全代码的 5 年经验高级开发。\n\n在 OpenAI 的构想中，Codex 是一个轻量级、高互动的终端智能体，它主打快速迭代和交互式编程。它的执行速度极快，在 Cerebras WSE-3 硬件的加持下，能够达到每秒 1000 个 token 的吞吐量。在具体的工作流中，Codex 提供建议、自动编辑和全自动三种明确的审批模式，让开发者始终保持在循环之内。这种设计思路非常符合那些需要快速构建原型、处理高频交互的极客开发者。\n\n反观 Claude Code，它从诞生之初就自带一种高冷且克制的「架构师」属性。\n\nAnthropic 为它注入了处理极端复杂任务的基因。它依赖高达 100 万 token 的庞大上下文窗口，以及独特的「压缩」技术来实现无限对话。Claude Code 的信条是「全局掌控，谋定而后动」。在执行任何动作之前，它会先使用智能体搜索技术吃透整个代码库的脉络，然后协调多文件进行一致性修改。对于那些涉及数万行代码迁移的企业级重构任务，Claude Code 展现出了惊人的统治力。\n\n然而，随着时间的推移以及应用场景的不断下探，这两个原本性格迥异的工具，开始互相抄作业。\n\n图源：MorphLLM\n\n在处理复杂项目时，单体 AI 模型面临的最大瓶颈就是上下文污染。你让 AI 重构鉴权模块，它读了 40 个文件之后，往往就忘记了第一个文件的设计模式。为了解决这个痛点，两家公司给出了几乎一模一样的答案：为每个子任务分配独立的上下文窗口。\n\nOpenAI 很快推出了全新的 macOS 桌面端应用，将任务按项目隔离在不同的线程中，并在云端沙盒里独立运行。Anthropic 则推出了智能体团队架构，允许开发者派生出多个子智能体，它们共享任务列表和依赖关系，并在各自的独立窗口中并行工作。你会发现，无论是叫「云端沙盒」还是叫「智能体团队」，它们在工程实现上的核心理念已经完全重合。\n\n在基准测试的成绩单上，它们也呈现出一种微妙的平衡。GPT-5.3-Codex 在终端任务 Terminal-Bench 2.0 中以 77.3% 的得分领先。Claude Code 则在复杂的 SWE-bench Verified 榜单上拿下了 80.8% 的成绩。它们都在自己的优势区间里做到了极致，同时又在拼命弥补自身的短板。\n\nOpenClaw 效应：推倒高墙的无形之手\n\n如果说两家公司的内部战略决定了它们走向同质化的内因，那么整个开源生态的倒逼则是不可忽视的外力。在这里，我们必须要提到 OpenClaw 给整个 AI 编程工具赛道带来的深远影响。\n\n作为开源社区推出的工作流框架，OpenClaw 的出现可以说是推倒了巨头们辛苦建立的生态高墙。它将大模型与本地终端工具链的交互过程进行了标准化。过去，如何让大模型优雅地调用本地 Git 提交、如何安全地在沙盒中运行测试脚本、如何进行多步推理验证，这些都是 Codex 和 Claude Code 各自引以为傲的专有「黑科技」。\n\n但 OpenClaw 将这些流程抽象成了通用的协议。这意味着，开发者不再需要为了某一种特定的协同模式而被绑定在特定的平台上。开源社区的狂欢让标准化成为了不可逆转的洪流。面对这种情况，无论是 OpenAI 还是 Anthropic，都不得不放低姿态去兼容这种开放的标准。\n\n当底层的技术壁垒被 OpenClaw 这种开源力量拉平，当所有的高级特性都成为了行业的标准配置，Codex 和 Claude Code 唯一的出路，就是在更细微的用户体验层面进行无止境的内卷。这也是为什么我们会觉得它们越来越像，因为在标准化的框架下，最优解往往只有一个 —— 就像是生物的趋同演化。\n\nCodex 正在追赶 Claude Code\n\n虽然 Claude Code 与 Codex 正在趋同演化的道路上，但两者的差异依然存在，甚至 Codex 在某些方面已经更受开发者青睐。\n\n前两天，在 r/ClaudeCode 社区，一位拥有 14 年经验、曾在科技巨头工作的高级工程师 u/Canamerican726 分享了一份极其硬核的测评。\n\n具体而言，他在一个包含 8 万行代码的复杂项目中，分别投入 100 小时使用 Claude Code 和 20 小时使用 Codex。\n\n在他的视角里，使用 Claude Code 就像在指导一个被截止日期追赶的工程师，它冲刺速度极快，却经常会无视开发者在 CLAUDE.md 中写下的规范，并且喜欢在现有文件里不断堆砌代码来完成任务，缺乏重构思维。\n\n相比之下， Codex 给他的感觉更像是一个拥有 5 到 6 年经验的沉稳老手。它的处理速度虽然要慢上 3 到 4 倍，但会在中途主动停下来思考并重构代码，并且严格遵守指令边界。这种高度的自主性，让这位工程师敢于把任务直接扔给它，然后放心地去做其他事情。\n\n同样的声音也出现在 X 等社交网络上。研究员 Aran Komatsuzaki 结合自己的使用体验提到，在前端领域 Claude Code 依然占优，但在后端规划和保持信息更新方面，高频调用网络搜索的 Codex 显然更加扎实。\n\n评论区里充满了真实业务场景下的血泪总结。有开发者极其犀利地指出，基于 Opus 的模型虽然跑得快，但往往会给项目积攒下大量的「代码清洁债务」，Codex 动作慢，却能在前行的同时顺手把地扫干净。我甚至看到有用户总结出了一条生存法则，建议大家在上下文窗口的使用率达到 70% 时立刻开启新会话，否则极其容易收到系统附赠的隐蔽 bug。\n\n这些来自一线的真实吐槽清晰地表明，当两大神器的能力面板越来越重合时，决定开发者最终阵营归属的，往往就是这些关乎「填坑成本」和「维护心智」的微小体验差距，当然对于中国用户还有一些特殊的困难，比如：\n\n冷思考：同质化背后的生态暗战\n\n当然，Codex 和 Claude Code 和优劣还在于各位开发者自己，也要看开发者自身的能力，正如上述 u/Canamerican726 的评测报告总结的那样：如果你不懂软件工程，这两个工具都会输出糟糕的结果，工具并不等同于技能。\n\n这句话戳破了 AI 编程工具长期以来营造的某种幻觉。我们曾经以为，只要有足够强大的 AI 助手，哪怕是没有任何基础的 Vobe Coder 也能单枪匹马打造出企业级应用。但现实是，Claude Code 需要一个极其专注且技能过硬的「驾驶员」，否则它很容易在庞大的代码库中迷失方向。Codex 虽然更加独立，但它同样需要开发者提供精准的系统上下文才能发挥最大效用。\n\n那么，在工具能力高度同质化的今天，这两家公司的护城河究竟转移到了哪里？\n\n答案藏在那些枯燥的财务报表和定价策略里。在相同的任务下，Claude Code 消耗的 token 数量往往是 Codex 的 3 到 4 倍。使用成本更高。对于企业团队来说，使用 Claude Code 每个月需要为每位开发者支付 100 到 200 美元的费用。而 Codex 则将其能力打包进了价格更为亲民的订阅计划中，并且通过庞大的 GitHub 社区积攒了大量基础用户。\n\n图源：MorphLLM\n\nAnthropic 的野心在于将 Claude Code 深度嵌入到那些不缺钱的科技巨头的工作流中。比如 Stripe 就让 1370 名工程师使用 Claude Code，在 4 天内完成了一项原本需要 10 个人工作数周的跨语言代码迁移。Ramp 公司更是依靠它将事件响应时间缩短了 80%。OpenAI 则依靠其无孔不入的生态渗透率，让 Codex 成为了许多普通开发者的默认选择。\n\n这不再是一场单纯的技术竞赛，而是一场关于生态绑定、定价策略以及用户习惯重塑的消耗战。\n\n开发者的十字路口\n\n回望这一年来的技术演进，GPT-5.4-Cyber 的发布只是这场漫长战役中的一个微小注脚。Codex 和 Claude Code 正在走向「同一张面孔」，标志着 AI 编程工具从早期充满变数和猎奇色彩的测试阶段，正式迈入了成熟且乏味的工业化生产阶段。\n\n现在，Claude Code 每天会自动生成 13.5 万次 GitHub 提交，这个数字已经占到了全网公开提交量的 4%。我们可以预见，在不久的将来，大部分的样板代码、基础测试用例以及常规的代码重构，都会由这些长得越来越像的 AI 智能体在后台默默完成。\n\n图源：MorphLLM & SemiAnalysis / GitHub Search API\n\n面对两个在能力上无限趋近、在体验上相互模仿的超级工具，我们作为人类开发者的核心价值还剩下什么？或许，工具红利期即将彻底结束。当每个人手中都握着同样锋利的武器时，真正决定胜负的，将不再是谁拥有更好的代码补全速度，而是谁能更好地定义问题、谁拥有更宏大的系统架构视野，以及谁能在这个被 AI 填满的代码世界里，找到那份属于人类独有的不可替代性。\n\n话说回来，你选哪个？\n\n参考链接\n\nhttps://www.morphllm.com/comparisons/codex-vs-claude-code\n\nhttps://www.reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/\n\nhttps://x.com/arankomatsuzaki/status/2044270102003196007\n\nhttps://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": true, "source_file": "sources/2026-04-20_更新越频繁，Claude Code与Codex越像_机器之心.md"}, {"title": "跨维智能DexWorldModel具身世界模型评测第一", "source": "量子位", "digest": "跨维智能DexWorldModel具身世界模型评测第一", "link": "", "content": "# 大模型架构的下半场\n\n> 原文链接：https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\n\n> 公众号：量子位\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/Ynt7xQTg5wWAf64Szup4Gg\" target=\"_blank\">阅读原文</a>\n</div>\n\n华中科技大学王兴刚团队 投稿\n\n量子位 | 公众号 QbitAI\n\n研究者们花了十年去扩展层内的计算能力，却忘了扩展层间的通信能力。\n\n这件事亟需被改变。\n\n过去十年，深度学习领域取得进展的方式出奇地一致：什么都往大了整。更多参数、更多数据、更长上下文。而且确实管用：loss在降，能力在涨，\n\nscaling law\n\n（扩展定律）\n\n精确地告诉研究团队还需要投入多少。\n\n但扩展的方向不同，差异也是巨大的。序列长度的扩展需要真正的创新，也确实催生了一整套机制研究和系统工程。数据的扩展则直截了当：数据越多，loss越低。让模型变得更宽、更深，这看起来也和数据的扩展一样简单。\n\n但宽度和深度真的在同等地发挥作用吗？\n\n并非如此。深度在数量上增长了，但在质量上却没有。层与层之间的通信机制几乎没有变化。接下来本文将解释这一点为什么重要，这不仅关乎网络的深度本身，更关于研究团队设计神经网络架构时的一个集体盲区。\n\n上半场\n\n要看清上半场做对了什么，就看看什么被成功地扩展了，以及\n\n是怎么做到的\n\n。\n\n先看序列长度。早期Transformer只能处理几百个token。要达到128K+，需要多个方向上的持续创新：新的注意力模式\n\n（稀疏、线性、混合）\n\n、系统工程\n\n（FlashAttention）\n\n、位置编码的进步\n\n（RoPE scaling）\n\n。研究者和工程师们共同建造了一整个生态，持续改进token之间的通信方式。而回报颇丰，研究团队不止能够处理极其长的文档，还为OpenAI-O1和DeepSeek-R1的长链推理奠定了坚实的基础。这就是当研究团队认真投资于“信息在序列维度上的\n\n流动方式\n\n时”，所收获的斐然成果。\n\n△\n\n现代LLM中的参数与数据规模迅速增长\n\n参数和数据的扩展是最符合人类直觉的部分。从深度学习的最早期开始，每本教科书都在教授同一套配方：更多数据、更宽的层、更深的网络，自然带来更好的表征。从GPT-2的15亿参数到如今的数万亿，这套配方一直管用。\n\n这似乎说明大模型团队不需要引入新机制，只需要持续拓展这些被验证了的方向。\n\n只不过，对网络而言，\n\n更宽\n\n和\n\n更深\n\n往往并不是一回事。宽度的扩展是自然而然的：现代GPU天生擅长处理更宽的矩阵乘法，注意力机制的演进越来越高效，这使得更宽的网络可以无缝接入现有架构。\n\n而深度则是另一个故事。模型确实变深了：研究团队将模型加到32层、64层、甚至100层以上。但层间通信的机制本质上还是ResNet在2015年引入的深度残差，“\n\nx + F(x)\n\n”。自它诞生以来，围绕它有过不少改良\n\n（归一化位置、残差缩放、跨层连接）\n\n，但没有任何改良真正取代过那个深度残差中“\n\n+\n\n”的决定性地位。\n\n残差连接可以说是深度学习中最重要的基石。没有它，就没有100层的Transformer，没有现代LLM，没有scaling law。但基础性方案有一个特点：它们有时会变得太过隐形，以至于没人再去质疑它到底是最优解，还是仅仅是研究团队探索出的第一个能用的方案。\n\n打个比方，想象一个有特殊规则的传话游戏。在标准版本里，第1个人对第2个人耳语，第2个人再对第3个人耳语。到第18个人的时候，消息已经面目全非了。这就是没有残差连接的深层网络：每一层只能看到上一层的输出。\n\n残差连接修复了这个问题：每个人在传达自己的理解的同时，也把之前积累的原始信息原封不动地往下传。第3个人既能听到第2个人的新解读，也能听到之前的所有内容。原始信号始终被保留，它成为了不断壮大的合唱中的一个声部。\n\n但到了第152个人，你同时在听152个声音：原始信息加上151层叠加上去的内容，全部混在一句耳语里。理论上，前面那些人的声音依然存在，但它们已经被淹没了。如果第152个人需要知道第3个人具体说了什么，他得费力地从这首宏大的合唱声中把它挑出来。\n\n△\n\n消息累加的传话游戏中，靠后的人依然难以分辨出所需的内容\n\n通常而言，第152个人是做不到这一点的。\n\n这就是\n\n信息稀释\n\n。每一层都面临两难：倘若该层贡献新信息就可能会掩盖之前的内容，但保守不动则能保留之前层传过来的已有信息。这种状况下，很多层学会了保守不动，它们几乎不往残差流里写入任何东西。这样的深度网络在纸面上很深，实际上却很浅。研究团队堆了152层，但其中很多层却只学会了保持沉默。\n\n这里的瓶颈不在于152层网络所需求的算力，而在于信息穿过这些层的通信能力。CPU的发展在几十年前就撞过同样的墙：处理器越来越快，直到内存带宽跟不上了，逼得整个行业转向缓存和通信。组织管理也一样：一群聪明人所能发挥出的创造力，也受限于他们之间的沟通、组织方式。深度学习正在经历自己的版本：十年来不断增强每一层的能力，而层与层之间的通道始终是2015年那条单车道公路。\n\n那么，有没有更好的机制？\n\n配方\n\n在\n\n本文所介绍的研究之前\n\n已经有很多研究者注意到了深度瓶颈。多年来，修补方案越来越巧妙：获评CVPR best paper的DenseNet保留了每一层的输出，但代价是平方级的开销。使用可学习加权的方案DenseFormer、LIMe降低了成本，但训练完成后权重就固定了，每个token、每套上下文都用同样的权重。\n\n字节跳动的Hyper-Connections和DeepSeek的mHC另辟蹊径，它们把管道拓宽到N个通道，层间用混合矩阵连接，这相当于信息高速公路上同时多了好几条车道。但坏消息是，信息仍然在逐层流动，第152层没有办法直接回溯到第3层。\n\n彩云公司的MUDDFormer让混合每层输出这件事变成动态的，它会根据每个token的表征来生成权重。这在根本方向上是对的：从每一层汲取多少信息本就应该取决于你正在处理的内容。但同样有个坏消息，第152层在决定从第3层汲取多少时，只依赖第152层本身的状态，它并不知道第3层实际包含了什么。它是在\n\n预测\n\n哪些层有用，而不是在\n\n查看\n\n。\n\n以上的每一步都修复了一个真实存在的缺陷，但却鲜有哪一个方法质疑过深度残差的框架本身。\n\n不难发现，这些方法都有着一个共同点。从DenseNet到Hyper-Connections，每个方法都在回答同一个隐含的问题：“如何才能更好地\n\n混合\n\n各层的输出？”更好的系数，更多的通道，自适应的权重。但自始至终都是混合，自始至终都是累加。ELMo早就表明，不同的层编码的是截然不同的信息：浅层编码句法，深层编码语义。所有人得出的结论都是“学习更好的混合权重用来平衡\n\n句法\n\n和\n\n语义\n\n”。但还有一条被主流忽视的道路：如果不同层持有不同信息，也许每一层应该能够根据\n\n内容\n\n而非\n\n位置\n\n，从持有所需信息的那一层\n\n直接检索\n\n。\n\n这就是\n\n范畴谬误\n\n：把层间通信当作\n\n累加\n\n（用学习到的或生成的系数来组合信号）\n\n而非\n\n检索\n\n（通过基于内容的匹配来选择信息）\n\n。在累加框架下，即使是动态方法也只从当前层的状态生成混合权重，而不去查看信息的来源层实际包含了什么。在检索框架下，Query\n\n（查询）\n\n编码的是“我需要什么”，Key\n\n（键）\n\n编码的是“我有什么”，而它们之间的运算决定了相关性。Query和Key双方都应该有发言权。\n\n回到传话游戏。之前所有的方法都在试图产生一个更清晰的合唱：更好的发音、更多的中继通道、自适应的音量。没有一个质疑过这个根本约束：所有声音必须累加成一个声音吗？也没有人问过：咱是否可以直接走回去，跟之前的任何一个人当面对话呢？\n\n研究团队认为这种范畴谬误在架构设计中无处不在。当某个东西足够好用的时候，你不会去质疑它的概念框架，而只会在框架内改进。经历了多年越来越巧妙的修补之后，研究者才明白：深度维度的残差连接需要的不是更好的系数，而是被一种根本不同的操作所替代：\n\n一种在序列维度上已经成功解决了同样问题的操作。\n\n△\n\n因果注意力机制在序列维度（横向）上聚合信息\n\n下半场\n\n一旦研究团队把层间的通信理解为检索而非累加，一个很自然的答案就是在深度维度上引入注意力机制。包括研究者团队在内的很多团队都独立地收敛到了这个想法：谷歌提出的 DCA、华为的MRLA、Hessian.AI的 Dreamer、Kimi的AttnRes、以及研究者团队提出的Flash Depth Attention & MoDA，大家都尝试在层间应用点积注意力。这种独立趋同本身就是一个信号：方向走对了！\n\n△\n\n深度注意力机制在深度维度（纵向）上聚合信息\n\n但找对方向和做出成品是两回事。研究者自述：“第一次用Pytorch实现运行深度注意力的时候，前向和反向传播共计耗时达到了44,924 ms。44秒啊！朋友们！这个时间都够我喝完一瓶500毫升的冰红茶了！”\n\n也就是说，在深度维度上应用注意力机制的想法本身没问题，但工程现实却残酷到了极点。现代GPU为大规模的矩阵乘法做了大量优化，却不擅长数千个跨深度的极小规模的注意力操作。深度注意力作为一个计算量不大的算法，跑起来却可能慢得要命。\n\n△\n\nPytorch实现的深度注意力（DepthRef）很慢；Flash Depth Attention（FDA）很快。\n\n至此，之前的方法都陷入了两难：要么简化深度注意力来换速度，这种方式丢掉了完整的选择性检索这一核心价值；要么保持完整的表达能力，但运算代价变得不可接受。研究者团队找到了一条出路：不是简化算法，而是重新组织参与计算的数据布局，从而适配GPU硬件。\n\nFlash Depth Attention\n\n（https://github.com/hustvl/MoDA）\n\n让具备完整表达能力的深度检索快到可以参与实际训练。\n\n△\n\n混合深度注意力\n\n机制同时在序列维度（横向）和深度维度（纵向）上聚合信息\n\n常规的大模型主干流水线是：残差连接\n\n→\n\n序列注意力\n\n→\n\n残差连接\n\n→\n\nFFN\n\n（前馈网络\n\n）\n\n。\n\n有了高效的深度检索之后，研究团队注意到网络的主干流水线变成了：深度注意力→序列注意力→深度注意力→FFN\n\n（前馈网络）\n\n。这三个连续的注意力操作作用于不同的Key\n\n（键，缩写作K）\n\n和Value\n\n（值，缩写作V）\n\n，却共享着近乎相同的Query\n\n（查询）\n\n。一个很自然的做法就是把它们融合。\n\n研究者团队提出了\n\n混合深度注意力\n\n（Mixture-of-depths Attention，MoDA）\n\n将深度检索和序列检索合并到一个统一的softmax中。每个注意力头同时关注当前层的序列KV对\n\n（键值对）\n\n和所有前序层的深度KV对\n\n（键值对）\n\n。在同一个softmax 下，模型可以自由决定何时关注序列中的其他token，何时跨层检索自身的历史信息。通过一次操作，MoDA完成了两个维度的检索。\n\n△\n\n左侧区域是序列KV，右侧区域是深度KV。颜色越黄，注意力越强。\n\n回到传话游戏。在残差连接的版本里，第152个人费力地从累加的合唱中辨认第3个人的声音。有了深度检索，第152个人拍拍第3个人的肩膀直接问：“你刚才说了什么？”没有中间人，没有累积的噪音。\n\n可视化的实验结果也印证了这个类比所预测的现象：当模型获得了通过深度KV从特定层进行选择性检索的能力时，它会持续且主动地使用这种能力。之前困扰模型架构研究员们的Attention Sink\n\n（注意力沉没）\n\n现象，即模型把概率质量堆积在少数固定token上的行为，也随之减弱。这就是当研究者团队尝试发展层\n\n之间\n\n而非仅仅层\n\n之内\n\n的信息流动时，所取得的有趣成果。\n\n△\n\n引入深度注意力后，传话游戏允许每个人用手机查看群聊记录。\n\n大模型架构的上半场是关于扩展组件的。\n\n研究者们扩展出更长的序列，更多的数据，更大的模型。这个阶段最关键的问题是“怎么把一切都做大？”。在上半场，这是正确且关键的问题，它把整个领域从GPT-2带到了GPT-4时代。\n\n下半场是关于扩展通信的\n\n。新的问题是：“\n\n组件之间的通信质量如何？\n\n”\n\n△\n\n引入\n\n混合深度注意力\n\n后，在主流的开源基线（OLMo2）上全面提升了模型能力。\n\n深度是最明显的例子，因为现有方案\n\n（累加）\n\n和可能的方案\n\n（选择性检索）\n\n之间的差距是巨大的。研究者团队相信这个原则是可以推广的。凡是神经网络使用静态的、与数据无关的通道来传递信息的地方，包括层与层之间、模态与模态之间、时间步与时间步之间等等，很可能都会有一个检索机制等着替代那个累加操作。\n\n全世界的研究者们花了十年掌握token之间如何对话，现在是时候掌握层与层之间如何对话了。而最终，研究者们将掌握神经网络中每个组件如何与其他任意组件对话。\n\n深度残差的“+”带我们跑过了一段极为精彩的旅程，但现在，是时候升级这座阶梯了。\n\n欢迎来到大模型架构的下半场。\n\nFlash Depth Attention & MoDA\n\n论文链接\n\n：\n\nhttps://arxiv.org/abs/2603.15619\n\nFlash Depth Attention & MoDA\n\n代码链接：\n\nhttps://github.com/hustvl/MoDA\n\n实验室主页：\n\nhttps://github.com/hustvl\n\n论文主要作者来自于华中科技大学（HUST）电子信息与通信学院视觉实验室（Vision Lab）。HUST Vision Lab研究主要集中在计算机视觉和深度学习领域，尤其关注以下方向：多模态基础模型、视觉表征学习、目标检测、分割与跟踪、端到端自动驾驶、新型神经网络架构。\n\nHUST Vision Lab致力于不断突破视觉智能的边界，代表性工作包括：CCNet（TPAMI 2020，4300+引用，1.5K Star）、Mask Scoring R-CNN（CVPR 2019，1400+引用，1.9K Star）、FairMOT（IJCV 2021，2200+引用，4.2K Star）、ByteTrack（ECCV 2022，3400+引用，6.2K Star）、EVA（CVPR 2023，1100+引用，2.7K Star）、MapTR（ICLR 2023，400+引用，1.5K Star）、Vectorized Autonomous Driving (VAD)（ICCV 2023，600+引用，1.3K Star）、DiffusionDrive（CVPR 2025，200+引用，1.3K Star）、Vision Mamba (Vim)（ICML 2024，3100+引用，3.8K Star）、4D Gaussian Splatting (4DGS)（CVPR 2024，1400+引用，3.5K Star）、YOLOS（NeurIPS 2021，500+引用，900+ Star）、YOLO-World（CVPR 2024，1000+引用，6.3K Star），以及 LightningDiT & VA-VAE（CVPR 2025，200+引用，1.4K Star）。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n我们正在招聘一名眼疾手快、关注AI的\n\n学术编辑实习生\n\n🎓\n\n感兴趣的小伙伴欢迎关注 👉\n\n了解详情\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "其他", "is_model_related": true, "source_file": "sources/2026-04-20_大模型架构的下半场_量子位.md"}, {"title": "AniGen一张图生成可动画3D资产", "source": "机器之心", "digest": "AniGen一张图生成可动画3D资产", "link": "", "content": "# 更新越频繁，Claude Code与Codex越像\n\n> 原文链接：https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\n\n> 公众号：机器之心\n\n\n---\n\n<div class=\"original-link\">\n<a href=\"https://mp.weixin.qq.com/s/0h2fAdCdwI3kxt3oYV80LQ\" target=\"_blank\">阅读原文</a>\n</div>\n\n机器之心编辑部\n\n前几天，\n\nOpenAI 正式发布了全新的大模型 GPT-5.4-Cyber\n\n。和很多网友的感受一样，这个模型也给我们带来了一种极其强烈的既视感。\n\n这款新模型在目标用户群、应用场景甚至宣发策略上，几乎完全对标了\n\nAnthropic 前些天发布的 Claude Mythos\n\n。这种「贴身肉搏」的态势已经到了毫不掩饰的地步。就连《纽约时报》都在最新的报道标题中一针见血地指出：「与 Anthropic 一样，OpenAI……」。\n\n这种同质化的趋势绝不仅仅停留在最底层的基座模型上。如果你把目光投向这两家公司近期发布的一系列产品，你会发现它们正在成为彼此的镜像！\n\n在资本市场的无影灯下，这种趋同更加明显。目前两家公司在二级市场上的估值咬得非常紧，Anthropic 甚至在近期凭借其在企业级市场的狂飙突进，价格略高于 OpenAI。资本的嗅觉最为灵敏，在他们眼中，这两只独角兽正在长出相同的犄角。\n\n看起来，底层大模型的同质化必然会导致上层应用的趋同。\n\n今天，我想和大家探讨的，正是代表着当今 AI 辅助编程最高水平的两个标杆工具： OpenAI 的\n\nCodex\n\n和 Anthropic 的\n\nCl\n\nau\n\nde Code\n\n。从曾经的分道扬镳，到如今的殊途同归，它们是如何一步步长成了同一副模样的？\n\n从分道扬镳到殊途同归：双雄的演进史\n\n把时间拨回几年以前，Codex 和 Claude Code 完全是两种不同技术哲学的产物。\n\nCodex 的底层逻辑是「天下武功唯快不破」。它就像是一个跟在你身后、随时准备补全代码的 5 年经验高级开发。\n\n在 OpenAI 的构想中，Codex 是一个轻量级、高互动的终端智能体，它主打快速迭代和交互式编程。它的执行速度极快，在 Cerebras WSE-3 硬件的加持下，能够达到每秒 1000 个 token 的吞吐量。在具体的工作流中，Codex 提供建议、自动编辑和全自动三种明确的审批模式，让开发者始终保持在循环之内。这种设计思路非常符合那些需要快速构建原型、处理高频交互的极客开发者。\n\n反观 Claude Code，它从诞生之初就自带一种高冷且克制的「架构师」属性。\n\nAnthropic 为它注入了处理极端复杂任务的基因。它依赖高达 100 万 token 的庞大上下文窗口，以及独特的「压缩」技术来实现无限对话。Claude Code 的信条是「全局掌控，谋定而后动」。在执行任何动作之前，它会先使用智能体搜索技术吃透整个代码库的脉络，然后协调多文件进行一致性修改。对于那些涉及数万行代码迁移的企业级重构任务，Claude Code 展现出了惊人的统治力。\n\n然而，随着时间的推移以及应用场景的不断下探，这两个原本性格迥异的工具，开始互相抄作业。\n\n图源：MorphLLM\n\n在处理复杂项目时，单体 AI 模型面临的最大瓶颈就是上下文污染。你让 AI 重构鉴权模块，它读了 40 个文件之后，往往就忘记了第一个文件的设计模式。为了解决这个痛点，两家公司给出了几乎一模一样的答案：为每个子任务分配独立的上下文窗口。\n\nOpenAI 很快推出了全新的 macOS 桌面端应用，将任务按项目隔离在不同的线程中，并在云端沙盒里独立运行。Anthropic 则推出了智能体团队架构，允许开发者派生出多个子智能体，它们共享任务列表和依赖关系，并在各自的独立窗口中并行工作。你会发现，无论是叫「云端沙盒」还是叫「智能体团队」，它们在工程实现上的核心理念已经完全重合。\n\n在基准测试的成绩单上，它们也呈现出一种微妙的平衡。GPT-5.3-Codex 在终端任务 Terminal-Bench 2.0 中以 77.3% 的得分领先。Claude Code 则在复杂的 SWE-bench Verified 榜单上拿下了 80.8% 的成绩。它们都在自己的优势区间里做到了极致，同时又在拼命弥补自身的短板。\n\nOpenClaw 效应：推倒高墙的无形之手\n\n如果说两家公司的内部战略决定了它们走向同质化的内因，那么整个开源生态的倒逼则是不可忽视的外力。在这里，我们必须要提到 OpenClaw 给整个 AI 编程工具赛道带来的深远影响。\n\n作为开源社区推出的工作流框架，OpenClaw 的出现可以说是推倒了巨头们辛苦建立的生态高墙。它将大模型与本地终端工具链的交互过程进行了标准化。过去，如何让大模型优雅地调用本地 Git 提交、如何安全地在沙盒中运行测试脚本、如何进行多步推理验证，这些都是 Codex 和 Claude Code 各自引以为傲的专有「黑科技」。\n\n但 OpenClaw 将这些流程抽象成了通用的协议。这意味着，开发者不再需要为了某一种特定的协同模式而被绑定在特定的平台上。开源社区的狂欢让标准化成为了不可逆转的洪流。面对这种情况，无论是 OpenAI 还是 Anthropic，都不得不放低姿态去兼容这种开放的标准。\n\n当底层的技术壁垒被 OpenClaw 这种开源力量拉平，当所有的高级特性都成为了行业的标准配置，Codex 和 Claude Code 唯一的出路，就是在更细微的用户体验层面进行无止境的内卷。这也是为什么我们会觉得它们越来越像，因为在标准化的框架下，最优解往往只有一个 —— 就像是生物的趋同演化。\n\nCodex 正在追赶 Claude Code\n\n虽然 Claude Code 与 Codex 正在趋同演化的道路上，但两者的差异依然存在，甚至 Codex 在某些方面已经更受开发者青睐。\n\n前两天，在 r/ClaudeCode 社区，一位拥有 14 年经验、曾在科技巨头工作的高级工程师 u/Canamerican726 分享了一份极其硬核的测评。\n\n具体而言，他在一个包含 8 万行代码的复杂项目中，分别投入 100 小时使用 Claude Code 和 20 小时使用 Codex。\n\n在他的视角里，使用 Claude Code 就像在指导一个被截止日期追赶的工程师，它冲刺速度极快，却经常会无视开发者在 CLAUDE.md 中写下的规范，并且喜欢在现有文件里不断堆砌代码来完成任务，缺乏重构思维。\n\n相比之下， Codex 给他的感觉更像是一个拥有 5 到 6 年经验的沉稳老手。它的处理速度虽然要慢上 3 到 4 倍，但会在中途主动停下来思考并重构代码，并且严格遵守指令边界。这种高度的自主性，让这位工程师敢于把任务直接扔给它，然后放心地去做其他事情。\n\n同样的声音也出现在 X 等社交网络上。研究员 Aran Komatsuzaki 结合自己的使用体验提到，在前端领域 Claude Code 依然占优，但在后端规划和保持信息更新方面，高频调用网络搜索的 Codex 显然更加扎实。\n\n评论区里充满了真实业务场景下的血泪总结。有开发者极其犀利地指出，基于 Opus 的模型虽然跑得快，但往往会给项目积攒下大量的「代码清洁债务」，Codex 动作慢，却能在前行的同时顺手把地扫干净。我甚至看到有用户总结出了一条生存法则，建议大家在上下文窗口的使用率达到 70% 时立刻开启新会话，否则极其容易收到系统附赠的隐蔽 bug。\n\n这些来自一线的真实吐槽清晰地表明，当两大神器的能力面板越来越重合时，决定开发者最终阵营归属的，往往就是这些关乎「填坑成本」和「维护心智」的微小体验差距，当然对于中国用户还有一些特殊的困难，比如：\n\n冷思考：同质化背后的生态暗战\n\n当然，Codex 和 Claude Code 和优劣还在于各位开发者自己，也要看开发者自身的能力，正如上述 u/Canamerican726 的评测报告总结的那样：如果你不懂软件工程，这两个工具都会输出糟糕的结果，工具并不等同于技能。\n\n这句话戳破了 AI 编程工具长期以来营造的某种幻觉。我们曾经以为，只要有足够强大的 AI 助手，哪怕是没有任何基础的 Vobe Coder 也能单枪匹马打造出企业级应用。但现实是，Claude Code 需要一个极其专注且技能过硬的「驾驶员」，否则它很容易在庞大的代码库中迷失方向。Codex 虽然更加独立，但它同样需要开发者提供精准的系统上下文才能发挥最大效用。\n\n那么，在工具能力高度同质化的今天，这两家公司的护城河究竟转移到了哪里？\n\n答案藏在那些枯燥的财务报表和定价策略里。在相同的任务下，Claude Code 消耗的 token 数量往往是 Codex 的 3 到 4 倍。使用成本更高。对于企业团队来说，使用 Claude Code 每个月需要为每位开发者支付 100 到 200 美元的费用。而 Codex 则将其能力打包进了价格更为亲民的订阅计划中，并且通过庞大的 GitHub 社区积攒了大量基础用户。\n\n图源：MorphLLM\n\nAnthropic 的野心在于将 Claude Code 深度嵌入到那些不缺钱的科技巨头的工作流中。比如 Stripe 就让 1370 名工程师使用 Claude Code，在 4 天内完成了一项原本需要 10 个人工作数周的跨语言代码迁移。Ramp 公司更是依靠它将事件响应时间缩短了 80%。OpenAI 则依靠其无孔不入的生态渗透率，让 Codex 成为了许多普通开发者的默认选择。\n\n这不再是一场单纯的技术竞赛，而是一场关于生态绑定、定价策略以及用户习惯重塑的消耗战。\n\n开发者的十字路口\n\n回望这一年来的技术演进，GPT-5.4-Cyber 的发布只是这场漫长战役中的一个微小注脚。Codex 和 Claude Code 正在走向「同一张面孔」，标志着 AI 编程工具从早期充满变数和猎奇色彩的测试阶段，正式迈入了成熟且乏味的工业化生产阶段。\n\n现在，Claude Code 每天会自动生成 13.5 万次 GitHub 提交，这个数字已经占到了全网公开提交量的 4%。我们可以预见，在不久的将来，大部分的样板代码、基础测试用例以及常规的代码重构，都会由这些长得越来越像的 AI 智能体在后台默默完成。\n\n图源：MorphLLM & SemiAnalysis / GitHub Search API\n\n面对两个在能力上无限趋近、在体验上相互模仿的超级工具，我们作为人类开发者的核心价值还剩下什么？或许，工具红利期即将彻底结束。当每个人手中都握着同样锋利的武器时，真正决定胜负的，将不再是谁拥有更好的代码补全速度，而是谁能更好地定义问题、谁拥有更宏大的系统架构视野，以及谁能在这个被 AI 填满的代码世界里，找到那份属于人类独有的不可替代性。\n\n话说回来，你选哪个？\n\n参考链接\n\nhttps://www.morphllm.com/comparisons/codex-vs-claude-code\n\nhttps://www.reddit.com/r/ClaudeCode/comments/1sk7e2k/claude_code_100_hours_vs_codex_20_hours/\n\nhttps://x.com/arankomatsuzaki/status/2044270102003196007\n\nhttps://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-20_更新越频繁，Claude Code与Codex越像_机器之心.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    var sourceTagHtml = '';
+    if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    var readOriginalHtml = '';
+    if (article.link) {
+      readOriginalHtml = '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="read-original-btn">' +
+        '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3h7v7M13 3L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '阅读原文</a>';
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+            readOriginalHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
