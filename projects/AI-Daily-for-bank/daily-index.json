@@ -1,0 +1,16 @@
+{
+  "issues": [
+    {
+      "date": "2026-04-21",
+      "weekday": "周一",
+      "stats": { "国际": 0, "国内": 0, "同业": 0, "其他": 0, "total": 0 },
+      "summary": "早报生成中…"
+    },
+    {
+      "date": "2026-04-20",
+      "weekday": "周日",
+      "stats": { "国际": 6, "国内": 6, "同业": 0, "其他": 11, "total": 23 },
+      "summary": "Anthropic逼急谷歌/Codex截屏桌面/Claude Code越带越笨/腾讯开源Agent底座/Kimi K2.6开源/Qwen3.6国产第一"
+    }
+  ]
+}
