@@ -1,0 +1,663 @@
+{
+  "date": "2026-04-22",
+  "total": 73,
+  "articles": [
+    {
+      "aid": "2652801527_1",
+      "title": "曝两家科技大厂争投DeepSeek！",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/dXBFoouAj5MQTeap9cLfVQ",
+      "digest": "估值飙至200亿美元。",
+      "publish_time": 1776864120,
+      "source_file": "sources/2026-04-22_曝两家科技大厂争投DeepSeek！_智东西.md"
+    },
+    {
+      "aid": "2650301789_1",
+      "title": "125万！宜宾市商业银行双录系统建设项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/QJAhE8tUwwFd0sc38zoJog",
+      "digest": "",
+      "publish_time": 1776863880,
+      "source_file": "sources/2026-04-22_125万！宜宾市商业银行双录系统建设项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301789_2",
+      "title": "安硕信息中选，宇信科技、云融科技候选！重庆农村商业银行消费及中小微智能审批采购项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/Pj9NPl9opGgjr6wWWB9XQA",
+      "digest": "",
+      "publish_time": 1776863880,
+      "source_file": "sources/2026-04-22_安硕信息中选，宇信科技、云融科技候选！重庆农村商业银行消费及中小微智能审批采购项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2652801526_1",
+      "title": "曝腾讯阿里争投DeepSeek！",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/lUFGHHf2Vtm8EYkefwpS4A",
+      "digest": "估值飙至200亿美元。",
+      "publish_time": 1776863499,
+      "source_file": "sources/2026-04-22_曝腾讯阿里争投DeepSeek！_智东西.md"
+    },
+    {
+      "aid": "2247500875_1",
+      "title": "Qwen3.6-27B：无需MoE路由，旗舰级编程能力",
+      "source": "通义实验室",
+      "link": "https://mp.weixin.qq.com/s/D7CPcx7ISHuDmbFc2Y27pA",
+      "digest": "继 Qwen3.6-Plus 和 Qwen3.6-35B-A3B 之后，大家期待的270亿稠密规格来了✨ Qwen3.6-27B 开源发布！\n🔹 270亿稠密参数，无需MoE路由，部署门槛直降\n🔹 编程能力全面超越前代Qwen3.5-397B-A17B MoE旗舰模型，小身材大能量\n🔹 原生多模态+长上下文，图文推理&amp;复杂任务轻松应对\n🔹 无缝集成主流编程助手：OpenClaw / Claude Code / Qwen Code\n\n仅270亿参数，在 SWE-bench Verified、Terminal-Bench 2.0 等核心编程基准上全面超越前代397B MoE旗舰。SWE-bench Verified 77.2，SWE-bench Pro 53.5、Terminal-Bench 2.0 59.3、SkillsBench 48.2、推理任务 GPQA Diamond 87.8，深度思考能力可与超大参数模型相媲美（详细分数对比见图3）。\n\nQwen3.6-27B 原生支持多模态，支持视觉语言思考与非思考模式。它能够处理图像、视频与文本的多模态理解，支持视觉推理、文档理解和视觉问答等任务（详细分数对比见图4）。\n\n🔗 即刻体验：\n开源权重：Hugging Face / ModelScope\nAPI调用：阿里云百炼（即将上线），兼容 OpenAI / Anthropic 协议\n即时对话：Qwen Studio",
+      "publish_time": 1776862800,
+      "source_file": "sources/2026-04-22_Qwen3.6-27B：无需MoE路由，旗舰级编程能力_通义实验室.md"
+    },
+    {
+      "aid": "2652801525_1",
+      "title": "曝腾讯阿里争投DeepSeek！",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/6UVdoA7tu99qsCcwlE1FAA",
+      "digest": "估值飙至200亿美元。",
+      "publish_time": 1776862754,
+      "source_file": "sources/2026-04-22_曝腾讯阿里争投DeepSeek！_智东西.md"
+    },
+    {
+      "aid": "2247515841_1",
+      "title": "Token消耗制约Agent规模化，百灵新模型如何解题？",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/utwUDaqakoZrVOC4IJymIw",
+      "digest": "",
+      "publish_time": 1776860656,
+      "source_file": "sources/2026-04-22_Token消耗制约Agent规模化，百灵新模型如何解题？_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515841_2",
+      "title": "最新揭晓！上海最重磅并购论坛来了",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/1rPAnKx-9ZCpnMPbqUxPQA",
+      "digest": "备受业内关注的并购论坛议程正式揭晓！4月24日，2026首届新质生产力并购论坛，将在上海虹桥国际中央商务区隆重启幕。",
+      "publish_time": 1776860656,
+      "source_file": "sources/2026-04-22_最新揭晓！上海最重磅并购论坛来了_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515841_3",
+      "title": "华尔街评苹果“换帅”：后库克时代的增长取决于AI战略",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/fkgYePZx_JqshM8g2Bixfw",
+      "digest": "文|夏军雄华尔街分析师表示，苹果公司领导层的更替标志着该公司进入一个新阶段，其核心问题在于能否将深厚的硬件积淀",
+      "publish_time": 1776860656,
+      "source_file": "sources/2026-04-22_华尔街评苹果“换帅”：后库克时代的增长取决于AI战略_财联社AI daily.md"
+    },
+    {
+      "aid": "2247487202_1",
+      "title": "SaaS 出海的智能化跃迁 | 易仓最佳实践",
+      "source": "Qoder",
+      "link": "https://mp.weixin.qq.com/s/p5OFa-2zRg_V62UfM4bEig",
+      "digest": "易仓如何用Qoder + QoderWork重塑研发与运营？\n\n[庆祝]直播看点：\n\n1）跨境ERP TOP3 如何打造“麦多AI”经营智能体；\n2）服务数万跨境企业背后的研发与运营挑战；\n3）Qoder使用指南：200人研发团队驾驭订单/库存/财务等复杂模块实战；\n4）AI Coding 选型踩坑与“真香”案例；\n5）QoderWork 经验分享：看板、方案、文案……以前需求至少n周，现在自己几小时搞定。\n\n欢迎下方点击预约直播！",
+      "publish_time": 1776859964,
+      "source_file": "sources/2026-04-22_SaaS 出海的智能化跃迁 _ 易仓最佳实践_Qoder.md"
+    },
+    {
+      "aid": "2247515835_1",
+      "title": "阿里等巨头洽谈投资DeepSeek，估值超过200亿美元",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/jlEc7PNr9spat5c6Tdit1w",
+      "digest": "据媒体援引四位知情人士透露，中国科技巨头腾讯控股和阿里集团正在洽谈投资DeepSeek，这家人工智能新兴公司最",
+      "publish_time": 1776857501,
+      "source_file": "sources/2026-04-22_阿里等巨头洽谈投资DeepSeek，估值超过200亿美元_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515835_2",
+      "title": "Anthropic顶级模型Mythos遭非法访问！",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/DvnwpJ8i2NJareFtclY-TA",
+      "digest": "文|周子意据知情人士对媒体透露，少数未经授权的用户已经成功访问了Anthropic新推出的Mythos人工智能",
+      "publish_time": 1776857501,
+      "source_file": "sources/2026-04-22_Anthropic顶级模型Mythos遭非法访问！_财联社AI daily.md"
+    },
+    {
+      "aid": "2650301806_1",
+      "title": "广东发布AI行业应用行动方案，涉AI+金融！",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/aSl4FSieDagOZ54VBF6WBw",
+      "digest": "广东省人民政府办公厅印发《广东省加快推进人工智能全域全时全行业高水平应用行动方案》。方案鼓励银行、证券基金公司、期货公司、保险机构和小额贷款公司、融资担保公司等地方金融组织根据实际业务需要，构建智能信贷审批系统、实时交易智能监控系统、智能财富管理服务、智能投研平台等多层次“人工智能+金融”应用体系，提升风险管理与市场服务效能。深化金融租赁行业与人工智能产业融合发展，支持租赁公司为智能机器人等高端装备、算力租赁服务提供适合行业需求的解决方案。构建分级分类的“人工智能+金融”全流程风险管控体系，提升监管智能化水平，精准识别、高效处置非法金融活动。探索建立金融数据资源共享融合的安全可信机制。",
+      "publish_time": 1776857376,
+      "source_file": "sources/2026-04-22_广东发布AI行业应用行动方案，涉AI+金融！_银行科技研究社.md"
+    },
+    {
+      "aid": "2653104491_1",
+      "title": "没有「身份证」的 Agent，接管不了世界",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/KWn4APcC6hliQLKQd9UMFA",
+      "digest": "A2A 时代的第一张船票，叫「信任」。",
+      "publish_time": 1776854009,
+      "source_file": "sources/2026-04-22_没有「身份证」的 Agent，接管不了世界_极客公园.md"
+    },
+    {
+      "aid": "2653104491_2",
+      "title": "居然有手机厂商坚持今年旗舰提质不提价",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/beRBa2Wp7MsW_PtUAK4pcA",
+      "digest": "当 2026 年所有旗舰手机都在涨价时，OPPO Find X9s Pro 选择提质不提价——刘作虎坦言，「这可能是今年最后一款不涨价的旗舰」。",
+      "publish_time": 1776854009,
+      "source_file": "sources/2026-04-22_居然有手机厂商坚持今年旗舰提质不提价_极客公园.md"
+    },
+    {
+      "aid": "2247487958_1",
+      "title": "告别卡壳，智能问答让你写代码不再孤军奋战",
+      "source": "灵码Lingma",
+      "link": "https://mp.weixin.qq.com/s/pQGs-Qd10w5W9rw2m9Kiww",
+      "digest": "灵码智能问答模式，让你无需离开 IDE，就能即时获得专业的代码解答、优化建议和问题修复方案。一个真正\"懂代码\"的智能搭档，就在你指尖触手可及的地方。",
+      "publish_time": 1776852583,
+      "source_file": "sources/2026-04-22_告别卡壳，智能问答让你写代码不再孤军奋战_灵码Lingma.md"
+    },
+    {
+      "aid": "2652801512_1",
+      "title": "不做老钱做闯将：宇视向企业“干活流程”开枪，发SOP智能体全家桶",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/DxXBm1yB33dTyLlJmFuK2w",
+      "digest": "相比张牙舞爪的“龙虾”，企业更需要可驾驭的智能体。",
+      "publish_time": 1776849189,
+      "source_file": "sources/2026-04-22_不做老钱做闯将：宇视向企业“干活流程”开枪，发SOP智能体全家桶_智东西.md"
+    },
+    {
+      "aid": "2652801512_2",
+      "title": "DeepSeek突然更新！",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/ca1jq7Oul853b62dnUB4Lw",
+      "digest": "API服务有变动。",
+      "publish_time": 1776849189,
+      "source_file": "sources/2026-04-22_DeepSeek突然更新！_智东西.md"
+    },
+    {
+      "aid": "2650868092_1",
+      "title": "中国信通院秦思思等：人工智能赋能软件形态演进趋势研究",
+      "source": "中国信通院CAICT",
+      "link": "https://mp.weixin.qq.com/s/lrqrPdTAXOkiw3LrYTTf3g",
+      "digest": "",
+      "publish_time": 1776848100,
+      "source_file": "sources/2026-04-22_中国信通院秦思思等：人工智能赋能软件形态演进趋势研究_中国信通院CAICT.md"
+    },
+    {
+      "aid": "2247487190_1",
+      "title": "百炼 Token Plan 来了，Qoder 已同步支持",
+      "source": "Qoder",
+      "link": "https://mp.weixin.qq.com/s/DAefdulm5O3BenOzQa6tdA",
+      "digest": "阿里云百炼新推出的 Token Plan，今天起可以直接在 Qoder IDE、CLI、JetBrains 插件里用。一次配置，三端可用，Qoder 侧不消耗 Credits。",
+      "publish_time": 1776845833,
+      "source_file": "sources/2026-04-22_百炼 Token Plan 来了，Qoder 已同步支持_Qoder.md"
+    },
+    {
+      "aid": "2247487190_2",
+      "title": "Qoder Together 武汉站：从工具提效到组织升级，企业级 AI Coding 落地实践",
+      "source": "Qoder",
+      "link": "https://mp.weixin.qq.com/s/ZTGF3NhI_uBI5QCL1vIHsg",
+      "digest": "武汉我们来了！",
+      "publish_time": 1776845833,
+      "source_file": "sources/2026-04-22_Qoder Together 武汉站：从工具提效到组织升级，企业级 AI Coding 落地实践_Qoder.md"
+    },
+    {
+      "aid": "2650301781_1",
+      "title": "6大行2025年ESG报告：反洗钱深度运用AI与大模型技术",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/d_FWCVrS7qTiA9-1BT8WTw",
+      "digest": "",
+      "publish_time": 1776844920,
+      "source_file": "sources/2026-04-22_6大行2025年ESG报告：反洗钱深度运用AI与大模型技术_银行科技研究社.md"
+    },
+    {
+      "aid": "2651282241_1",
+      "title": "马斯克“开大”，600亿重金收购Cursor",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/LG6Lq0Amwoczjf2GUejcvQ",
+      "digest": "今早，SpaceX 突然宣布，已敲定一项协议：可在今年晚些时候以 600 亿美元收购代码生成初创公司 Cursor",
+      "publish_time": 1776844800,
+      "source_file": "sources/2026-04-22_马斯克“开大”，600亿重金收购Cursor_InfoQ.md"
+    },
+    {
+      "aid": "2247885437_1",
+      "title": "特斯拉开源硬件，中国公司回应来了：直接把机器人大脑开源了",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/tfYX46amJbLCU2fgjRtJbw",
+      "digest": "这次，智平方玩了个大的",
+      "publish_time": 1776844800,
+      "source_file": "sources/2026-04-22_特斯拉开源硬件，中国公司回应来了：直接把机器人大脑开源了_量子位.md"
+    },
+    {
+      "aid": "2247885437_2",
+      "title": "这周六，聊聊具身数据、模型与落地场景｜沙龙报名",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/uAmcdh_mcvAFKznGvGi9Ew",
+      "digest": "蚂蚁灵波、乐聚机器人、上海交大、北京智源、北京人形、上海库帕思都来了",
+      "publish_time": 1776844800,
+      "source_file": "sources/2026-04-22_这周六，聊聊具身数据、模型与落地场景｜沙龙报名_量子位.md"
+    },
+    {
+      "aid": "2652694376_1",
+      "title": "今天起，GPT Image 2要把全体设计师送走了",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/_F45YvmBjj9lwKaRIE9OVA",
+      "digest": "",
+      "publish_time": 1776844525,
+      "source_file": "sources/2026-04-22_今天起，GPT Image 2要把全体设计师送走了_新智元.md"
+    },
+    {
+      "aid": "2652694376_2",
+      "title": "今天，Anthropic偷偷移除了Pro用户的Claude Code访问权",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/m1OnnpqLn9aeCXFRmT1KpA",
+      "digest": "天下苦 Anthropic 久矣。",
+      "publish_time": 1776844525,
+      "source_file": "sources/2026-04-22_今天，Anthropic偷偷移除了Pro用户的Claude Code访问权_新智元.md"
+    },
+    {
+      "aid": "2247553592_1",
+      "title": "全球3D-HUD唯一量产背后：一家中国供应商的十年长征｜甲子光年",
+      "source": "甲子光年",
+      "link": "https://mp.weixin.qq.com/s/rSsreBjq6W2OGcsw6uqzRQ",
+      "digest": "从看见，到感受。",
+      "publish_time": 1776842598,
+      "source_file": "sources/2026-04-22_全球3D-HUD唯一量产背后：一家中国供应商的十年长征｜甲子光年_甲子光年.md"
+    },
+    {
+      "aid": "2652801491_1",
+      "title": "小心，别被ChatGPT Images 2.0骗了！",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/1JAu5H8WkXicGUdSTwZ4lw",
+      "digest": "OpenAI正式发布ChatGPT Images 2.0。",
+      "publish_time": 1776841878,
+      "source_file": "sources/2026-04-22_小心，别被ChatGPT Images 2.0骗了！_智东西.md"
+    },
+    {
+      "aid": "2652801491_2",
+      "title": "匿名大象模型被蚂蚁认领！推理速度冲到第一，还能生成百万小说",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/Q_WIQV3D6aqtBQA49CFbeg",
+      "digest": "免费一周。",
+      "publish_time": 1776841878,
+      "source_file": "sources/2026-04-22_匿名大象模型被蚂蚁认领！推理速度冲到第一，还能生成百万小说_智东西.md"
+    },
+    {
+      "aid": "2651029371_1",
+      "title": "特斯拉开源硬件，中国团队开源大脑！首个具身智能顶配全家桶上线",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/q9sI7NItYAiR5TsJA5BXZQ",
+      "digest": "包含全球首个类脑VLA。",
+      "publish_time": 1776841303,
+      "source_file": "sources/2026-04-22_特斯拉开源硬件，中国团队开源大脑！首个具身智能顶配全家桶上线_机器之心.md"
+    },
+    {
+      "aid": "2651029371_2",
+      "title": "天塌了，Pro用户用不了Claude Code，除非100美元买Max",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/UCNL1Nc60o6xarNUgKXCPg",
+      "digest": "未来的 coding plan 价格恐怕还是得涨。",
+      "publish_time": 1776841303,
+      "source_file": "sources/2026-04-22_天塌了，Pro用户用不了Claude Code，除非100美元买Max_机器之心.md"
+    },
+    {
+      "aid": "2247885436_1",
+      "title": "大厂AI抢人大战，从实习生开始",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/llZgZCdD1pNole5aXtIsmQ",
+      "digest": "",
+      "publish_time": 1776840672,
+      "source_file": "sources/2026-04-22_大厂AI抢人大战，从实习生开始_量子位.md"
+    },
+    {
+      "aid": "2247885436_2",
+      "title": "挖漏洞何必Mythos，国产智能体早跑通了",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/nR0rmNMJyrszVktLUJuSmQ",
+      "digest": "360智能体已经开始批量挖洞",
+      "publish_time": 1776840672,
+      "source_file": "sources/2026-04-22_挖漏洞何必Mythos，国产智能体早跑通了_量子位.md"
+    },
+    {
+      "aid": "2247885436_3",
+      "title": "2026苹果学者公布！20个席位华人占8席，西安交大校友上大分",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/_nUWpvFwDcKjVFOEtt8trg",
+      "digest": "这些人读个博一年能挣几十万？？",
+      "publish_time": 1776840672,
+      "source_file": "sources/2026-04-22_2026苹果学者公布！20个席位华人占8席，西安交大校友上大分_量子位.md"
+    },
+    {
+      "aid": "2247885436_4",
+      "title": "3B激活参数，干翻GPT-5.4和Opus4.6，商汤绝影把龙虾塞进了车里",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/IyNyfOWyFIJH0vElRTwkGw",
+      "digest": "全新端侧多模态智能体基座大模型Sage",
+      "publish_time": 1776840672,
+      "source_file": "sources/2026-04-22_3B激活参数，干翻GPT-5.4和Opus4.6，商汤绝影把龙虾塞进了车里_量子位.md"
+    },
+    {
+      "aid": "2247885436_5",
+      "title": "量子位编辑作者招聘",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/OlvsStK7agMLG5bPGysqxw",
+      "digest": "3个岗位（含实习），不设边界",
+      "publish_time": 1776840672,
+      "source_file": "sources/2026-04-22_量子位编辑作者招聘_量子位.md"
+    },
+    {
+      "aid": "2247515799_1",
+      "title": "特斯拉中国车机将接入豆包大模型",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/ntYi_X-cmwpwW7Oqk28TFw",
+      "digest": "据网信上海消息，特斯拉车机语音大模型服务于4月20日完成备案。《科创板日报》从知情人士处获悉，特斯拉车机语音服务将接入豆包大模型。",
+      "publish_time": 1776839787,
+      "source_file": "sources/2026-04-22_特斯拉中国车机将接入豆包大模型_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515799_2",
+      "title": "Meta在员工电脑安装追踪软件，采集鼠标和键盘输入数据，只为训练AI！",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/NyLU00aB9aT_wxzsqH9mAg",
+      "digest": "",
+      "publish_time": 1776839787,
+      "source_file": "sources/2026-04-22_Meta在员工电脑安装追踪软件，采集鼠标和键盘输入数据，只为训练AI！_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515799_3",
+      "title": "SpaceX放出“IPO重磅炸弹”",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/lajxfdG5AOVZWLIShmEmdg",
+      "digest": "文|黄君芝众所周知，自去年年末一来，“太空数据中心”的概念被马斯克炒得火热。",
+      "publish_time": 1776839787,
+      "source_file": "sources/2026-04-22_SpaceX放出“IPO重磅炸弹”_财联社AI daily.md"
+    },
+    {
+      "aid": "2247515799_4",
+      "title": "蚂蚁百灵Ling-2.6-flash模型发布",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/6icSyi8CRUIwfGl-9QC6bg",
+      "digest": "蚂蚁百灵推出Ling-2.6-flash —— 一款总参数量104B、激活参数7.4B的Instruct 模型",
+      "publish_time": 1776839787,
+      "source_file": "sources/2026-04-22_蚂蚁百灵Ling-2.6-flash模型发布_财联社AI daily.md"
+    },
+    {
+      "aid": "2651282240_1",
+      "title": "在AK大神爆火的任务里，摸清国产AI真实水平",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/xY5PmnslogdPPkV4L09chw",
+      "digest": "不是普通的RAG复刻，也非简单的网页生成，而是一次扎实的系统承压能力实测。",
+      "publish_time": 1776839498,
+      "source_file": "sources/2026-04-22_在AK大神爆火的任务里，摸清国产AI真实水平_InfoQ.md"
+    },
+    {
+      "aid": "2651282240_2",
+      "title": "“守成者”库克卸任CEO：除了离开，他再没有什么能留给苹果了",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/SIwNhCuwQr_OXQpJ81CACw",
+      "digest": "4月20日晚，总部位于加州库比蒂诺的 Apple 公司宣布，现任首席执行官 Tim Cook 将于 2026 年 9 月 1 日起转任董事会执行主席",
+      "publish_time": 1776839498,
+      "source_file": "sources/2026-04-22_“守成者”库克卸任CEO：除了离开，他再没有什么能留给苹果了_InfoQ.md"
+    },
+    {
+      "aid": "2651282240_3",
+      "title": "OPC的接单困境：10个需求同时来，敢让“龙虾”替你拍板吗？| 直播预告",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/E7HJFaJbX2FpmfsecKMODQ",
+      "digest": "老板临时抛来紧急需求？GitHub 热点项目要实时抓取、翻译、生成中文专题页，还要求中午前同步给产品中心？",
+      "publish_time": 1776839498,
+      "source_file": "sources/2026-04-22_OPC的接单困境：10个需求同时来，敢让“龙虾”替你拍板吗？_ 直播预告_InfoQ.md"
+    },
+    {
+      "aid": "2247885388_1",
+      "title": "全球首个世界统一模型发布，机器人家庭成员来了！",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/ZRTUoZvLYr3YcMWRyMZ84g",
+      "digest": "能24小时全天候干活，还会自学成才",
+      "publish_time": 1776835975,
+      "source_file": "sources/2026-04-22_全球首个世界统一模型发布，机器人家庭成员来了！_量子位.md"
+    },
+    {
+      "aid": "2247885388_2",
+      "title": "追不上就直接买，马斯克600亿美元收购Cursor",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/cjQTo1392A-IK9ArKkAvnw",
+      "digest": "Cursor，现在要改姓“马”了",
+      "publish_time": 1776835975,
+      "source_file": "sources/2026-04-22_追不上就直接买，马斯克600亿美元收购Cursor_量子位.md"
+    },
+    {
+      "aid": "2247885388_3",
+      "title": "倒计时5天！我们在寻找能代表今年AI的企业与产品｜榜单申报",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/Sva0T9vDbAfojhoHd4thQA",
+      "digest": "抓紧申报了！截至4月27日",
+      "publish_time": 1776835975,
+      "source_file": "sources/2026-04-22_倒计时5天！我们在寻找能代表今年AI的企业与产品｜榜单申报_量子位.md"
+    },
+    {
+      "aid": "2652694227_1",
+      "title": "13小时不眠不休，300个分身狂敲代码！开源第一易主了",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/ThIB1rN_eXf6kERV8x4IOg",
+      "digest": "",
+      "publish_time": 1776834000,
+      "source_file": "sources/2026-04-22_13小时不眠不休，300个分身狂敲代码！开源第一易主了_新智元.md"
+    },
+    {
+      "aid": "2652694227_2",
+      "title": "3B激活参数！商汤绝影Sage登顶PinchBench，端侧第一",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/PaXQNX3yui2Wn4BxA6sDvQ",
+      "digest": "商汤绝影发布端侧多模态智能体基座大模型Sage。",
+      "publish_time": 1776834000,
+      "source_file": "sources/2026-04-22_3B激活参数！商汤绝影Sage登顶PinchBench，端侧第一_新智元.md"
+    },
+    {
+      "aid": "2653104473_1",
+      "title": "OPPO Find X9 Ultra 影像体验：方寸之间的哈苏与 10 倍「望远镜」",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/v5MhnZGGTW8m6BhJrFBoUA",
+      "digest": "「无论远近」里那个「远」字，今年被 OPPO 押到了极致。",
+      "publish_time": 1776833735,
+      "source_file": "sources/2026-04-22_OPPO Find X9 Ultra 影像体验：方寸之间的哈苏与 10 倍「望远镜」_极客公园.md"
+    },
+    {
+      "aid": "2651282183_1",
+      "title": "Altman 亲自坐镇发布 ChatGPT Image 2，小编实测：风格、画质、叙事感全都夯爆了",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/xZE0oCAXCx-QDZ-a-8CKMQ",
+      "digest": "这次OpenAI 真要抢走设计师饭碗了。",
+      "publish_time": 1776829335,
+      "source_file": "sources/2026-04-22_Altman 亲自坐镇发布 ChatGPT Image 2，小编实测：风格、画质、叙事感全都夯爆了_InfoQ.md"
+    },
+    {
+      "aid": "2651029279_1",
+      "title": "千万养虾人的终极梦想！全球首个「养虾本」带你懒人养虾开箱即食",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/bi6pNqJ_q7BVzkn0G2k5BA",
+      "digest": "底层优势，智能普惠。",
+      "publish_time": 1776828600,
+      "source_file": "sources/2026-04-22_千万养虾人的终极梦想！全球首个「养虾本」带你懒人养虾开箱即食_机器之心.md"
+    },
+    {
+      "aid": "2651029279_2",
+      "title": "Transformer可以改装成Mamba了：苹果把推理成本直接打成线性",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/NLTYnIWvhPffpQKIM3qIdw",
+      "digest": "一种从 Transformer 到 Mamba 的新型跨架构蒸馏方法。",
+      "publish_time": 1776828600,
+      "source_file": "sources/2026-04-22_Transformer可以改装成Mamba了：苹果把推理成本直接打成线性_机器之心.md"
+    },
+    {
+      "aid": "2651029279_3",
+      "title": "ICLR 2026 | ProSafePrune：一剪见效，告别大模型过度防御",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/QALqpGZxvqiTW0FWSpYrrg",
+      "digest": "全新的低秩参数修剪框架。",
+      "publish_time": 1776828600,
+      "source_file": "sources/2026-04-22_ICLR 2026 _ ProSafePrune：一剪见效，告别大模型过度防御_机器之心.md"
+    },
+    {
+      "aid": "2247487942_1",
+      "title": "今天，灵码正式支持 Token Plan",
+      "source": "灵码Lingma",
+      "link": "https://mp.weixin.qq.com/s/WxegxbFSCgPCiXhInl3qkg",
+      "digest": "灵码正式支持 Token Plan 团队版——由阿里云百炼推出的 Coding Plan 全面升级版。多模态、多模型，按 Credits 统一抵扣。",
+      "publish_time": 1776828249,
+      "source_file": "sources/2026-04-22_今天，灵码正式支持 Token Plan_灵码Lingma.md"
+    },
+    {
+      "aid": "2650301779_1",
+      "title": "安徽省联社将建设第三代核心系统，近期招科技总工程师负责重大项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/OmahiDbsyYQ4Pxm-BCyCRA",
+      "digest": "",
+      "publish_time": 1776827880,
+      "source_file": "sources/2026-04-22_安徽省联社将建设第三代核心系统，近期招科技总工程师负责重大项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301779_2",
+      "title": "湖南银行已成立数字化改革专班，首个AI大模型智能体应用落地智能工单场景",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/VSar8cflmQVTQlFjhtgz6g",
+      "digest": "",
+      "publish_time": 1776827880,
+      "source_file": "sources/2026-04-22_湖南银行已成立数字化改革专班，首个AI大模型智能体应用落地智能工单场景_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301779_3",
+      "title": "北京农商银行社招，涉金融科技部副总经理、数字化转型、数据治理等岗位",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/oFBZrmE1MUb3lbyeq1R9qA",
+      "digest": "",
+      "publish_time": 1776827880,
+      "source_file": "sources/2026-04-22_北京农商银行社招，涉金融科技部副总经理、数字化转型、数据治理等岗位_银行科技研究社.md"
+    },
+    {
+      "aid": "2652694174_1",
+      "title": "全球自动驾驶激战，滴滴与清华走出一条技术新路",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/cVhCrezH3-kySvlMV0aGpA",
+      "digest": "",
+      "publish_time": 1776826800,
+      "source_file": "sources/2026-04-22_全球自动驾驶激战，滴滴与清华走出一条技术新路_新智元.md"
+    },
+    {
+      "aid": "2652694174_2",
+      "title": "马斯克祭出「霸王条款」！Cursor焊死SpaceX战车，600亿砸穿OpenAI",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/3rjemXVENZy2tyc-zLVInA",
+      "digest": "",
+      "publish_time": 1776826800,
+      "source_file": "sources/2026-04-22_马斯克祭出「霸王条款」！Cursor焊死SpaceX战车，600亿砸穿OpenAI_新智元.md"
+    },
+    {
+      "aid": "2652694174_3",
+      "title": "无需多视角，单图重建可交互3D模型！南洋理工开源结构推理框架",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/wJc1UHlSf_7zKl1TYM2o9A",
+      "digest": "",
+      "publish_time": 1776826800,
+      "source_file": "sources/2026-04-22_无需多视角，单图重建可交互3D模型！南洋理工开源结构推理框架_新智元.md"
+    },
+    {
+      "aid": "2653104450_1",
+      "title": "600 亿美元！马斯克「锁定」Cursor",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/C0Gx9adf8RwaHSMxGukZFQ",
+      "digest": "​这不是一笔收购，而是一张精心设计的「锁仓协议」。",
+      "publish_time": 1776826407,
+      "source_file": "sources/2026-04-22_600 亿美元！马斯克「锁定」Cursor_极客公园.md"
+    },
+    {
+      "aid": "2652801460_1",
+      "title": "4093亿！马斯克要收购Cursor，4个00后即将封神",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/jSXgl9W1w66t9X5QmXF63w",
+      "digest": "明星编程创企，要被马斯克“抱走”了？",
+      "publish_time": 1776822210,
+      "source_file": "sources/2026-04-22_4093亿！马斯克要收购Cursor，4个00后即将封神_智东西.md"
+    },
+    {
+      "aid": "2651029237_1",
+      "title": "首篇自进化智能体系统技术报告出炉：Token成本直降近10倍，省钱又高效！",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/va5DgDbcD07DBFRP1D_RSw",
+      "digest": "仅用3000多行核心代码实现的能力，充分展示了智能体未来发展的无限前景！",
+      "publish_time": 1776821001,
+      "source_file": "sources/2026-04-22_首篇自进化智能体系统技术报告出炉：Token成本直降近10倍，省钱又高效！_机器之心.md"
+    },
+    {
+      "aid": "2651029237_2",
+      "title": "LLM 仅靠自身就能增强推理？SePT 给出简洁在线自训练范式",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/9NxbO3XKA5X4LfZnJ8Sj-w",
+      "digest": "简洁的自训练方法，可在数学推理任务准确率直升10个点！",
+      "publish_time": 1776821001,
+      "source_file": "sources/2026-04-22_LLM 仅靠自身就能增强推理？SePT 给出简洁在线自训练范式_机器之心.md"
+    },
+    {
+      "aid": "2247559646_1",
+      "title": "AI实践｜基于 Spring AI 从0到1构建 AI Agent",
+      "source": "阿里云开发者",
+      "link": "https://mp.weixin.qq.com/s/SWVnXUpnf1eig_jBOpNsvw",
+      "digest": "",
+      "publish_time": 1776817800,
+      "source_file": "sources/2026-04-22_AI实践｜基于 Spring AI 从0到1构建 AI Agent_阿里云开发者.md"
+    },
+    {
+      "aid": "2653104428_1",
+      "title": "马斯克 600 亿美元锁定 Cursor；字节、荣威合作推出「AI 汽车」；传今年存储厂商人均奖金超 300 万元 | 极客早知道",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/kwO-bCfrDpULab_YXYVYhQ",
+      "digest": "Seedance 2.0 API 上线 1080P 生成能力；影石 Insta360 展示 Luna Ultra 双摄云台相机；小米宣布上线 PC 版龙虾",
+      "publish_time": 1776816919,
+      "source_file": "sources/2026-04-22_马斯克 600 亿美元锁定 Cursor；字节、荣威合作推出「AI 汽车」；传今年存储厂商人均奖金超_极客公园.md"
+    },
+    {
+      "aid": "2652694139_1",
+      "title": "奥特曼亲自上阵，Images 2.0登顶王座！大米刻字，生图跨入GPT-5时代",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/TkMbWsyoe-1DUWc_MvYiHQ",
+      "digest": "官方玩梗「稳稳地接住你」",
+      "publish_time": 1776810809,
+      "source_file": "sources/2026-04-22_奥特曼亲自上阵，Images 2.0登顶王座！大米刻字，生图跨入GPT-5时代_新智元.md"
+    },
+    {
+      "aid": "2652694139_2",
+      "title": "Anthropic开始抢科学家了？周薪2.7万驻场，专治Claude专家级错误",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/FJ9yP4phC3uhn6lUPY-GsA",
+      "digest": "",
+      "publish_time": 1776810809,
+      "source_file": "sources/2026-04-22_Anthropic开始抢科学家了？周薪2.7万驻场，专治Claude专家级错误_新智元.md"
+    },
+    {
+      "aid": "2247885242_1",
+      "title": "GPT-Image-2正式发布！设计师可以告别「古法设计」了",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/uE92m52scoaWbEIjF5wOaQ",
+      "digest": "OpenAI首个具备“思考”能力的图像模型",
+      "publish_time": 1776810600,
+      "source_file": "sources/2026-04-22_GPT-Image-2正式发布！设计师可以告别「古法设计」了_量子位.md"
+    },
+    {
+      "aid": "2247885242_2",
+      "title": "3D生成告别「穿模」噩梦！VASTx清华将蒙皮权重Token化，统一生成骨骼与权重，GRPO微调形变平滑",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/gN2efjv2Y04lO7mw5eiqTA",
+      "digest": "把3D蒙皮变成「Token生成」",
+      "publish_time": 1776810600,
+      "source_file": "sources/2026-04-22_3D生成告别「穿模」噩梦！VASTx清华将蒙皮权重Token化，统一生成骨骼与权重，GRPO微调形变_量子位.md"
+    },
+    {
+      "aid": "2651029236_1",
+      "title": "ChatGPT Images 2.0震撼发布！碾压谷歌Nano Banana，设计真要完了",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/NBwR2nrY3cQeqVJeD-yK0w",
+      "digest": "设计师真要破防了？",
+      "publish_time": 1776805226,
+      "source_file": "sources/2026-04-22_ChatGPT Images 2.0震撼发布！碾压谷歌Nano Banana，设计真要完了_机器之心.md"
+    },
+    {
+      "aid": "2651029236_2",
+      "title": "ACL 2026｜清华新作ControlAudio：声音何时响、说啥话？都能按剧本可控生成！",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/n8sjvwE5TOAVIa8d9A1-sQ",
+      "digest": "展现了更强的通用性与扩展潜力！",
+      "publish_time": 1776805226,
+      "source_file": "sources/2026-04-22_ACL 2026｜清华新作ControlAudio：声音何时响、说啥话？都能按剧本可控生成！_机器之心.md"
+    }
+  ]
+}
