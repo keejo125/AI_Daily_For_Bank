@@ -100,15 +100,20 @@ def html_to_text(html_str):
 
 # ---------- 核心逻辑 ----------
 
-def save_article_md(filepath, title, link, source, content_html):
+def save_article_md(filepath, title, link, source, content_html, publish_time=0):
     """保存文章为 Markdown 文件，content_html 自动转纯文本"""
     filepath.parent.mkdir(parents=True, exist_ok=True)
     content_text = html_to_text(content_html)
     with open(filepath, "w", encoding="utf-8") as f:
+        # Front matter
+        f.write("---\n")
+        if publish_time:
+            f.write(f"publish_time: {publish_time}\n")
+        f.write("---\n\n")
+        
         f.write(f"# {title}\n\n")
         f.write(f"> 原文链接：{link}\n")
         f.write(f"> 公众号：{source}\n\n")
-        f.write("---\n\n")
         f.write(content_text or "（无正文内容）")
     return filepath
 
@@ -173,7 +178,7 @@ def main():
         safe_source = sanitize_filename(source_name, max_len=20)
         filename = f"{date_str}_{safe_title}_{safe_source}.md"
         filepath = sources_dir / filename
-        save_article_md(filepath, title, link, source_name, content_html)
+        save_article_md(filepath, title, link, source_name, content_html, pub_time)
 
         # 收集元数据
         articles_meta.append({

@@ -1,9 +1,11 @@
+---
+publish_time: 1777004065
+---
+
 # AI Token说：企业级“龙虾”落地那点事儿，QwenPaw这么说...| Q推荐
 
 > 原文链接：https://mp.weixin.qq.com/s/dCYVyyiaptYvBY8p8FhiMQ
 > 公众号：InfoQ
-
----
 
 近期，“龙虾”系 Agent 产品迅速出圈，标志着 AI 正从单纯的“对话交互”加速迈向真正的“自主执行”，也引发了行业对“龙虾”和 AI Agent 的广泛讨论；
 

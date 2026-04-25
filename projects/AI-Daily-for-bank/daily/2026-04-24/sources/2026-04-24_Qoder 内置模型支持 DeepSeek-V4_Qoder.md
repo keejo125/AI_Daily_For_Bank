@@ -1,9 +1,11 @@
+---
+publish_time: 1777020799
+---
+
 # Qoder 内置模型支持 DeepSeek-V4
 
 > 原文链接：https://mp.weixin.qq.com/s/CdgcWlBbuevv33AvvDJWQQ
 > 公众号：Qoder
-
----
 
 1 images
 

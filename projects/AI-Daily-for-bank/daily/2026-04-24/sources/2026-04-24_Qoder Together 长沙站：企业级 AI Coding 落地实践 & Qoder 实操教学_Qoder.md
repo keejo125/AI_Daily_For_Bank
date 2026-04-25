@@ -1,9 +1,11 @@
+---
+publish_time: 1777022328
+---
+
 # Qoder Together 长沙站：企业级 AI Coding 落地实践 & Qoder 实操教学
 
 > 原文链接：https://mp.weixin.qq.com/s/ty9oyfuAsNZw4w5fto1jBg
 > 公众号：Qoder
-
----
 
 时间
 

@@ -1,9 +1,11 @@
+---
+publish_time: 1777009570
+---
+
 # Coordination Engineering关键一环，JiuwenClaw再发布Team Skills技能新范式
 
 > 原文链接：https://mp.weixin.qq.com/s/H-E3lZta82swqJoeLb4-vg
 > 公众号：量子位
-
----
 
 允中 发自 凹非寺
 

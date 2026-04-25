@@ -1,9 +1,11 @@
+---
+publish_time: 1777004065
+---
+
 # Vibe Coding 时代，程序员的核心竞争力到底是什么？| 极客时间
 
 > 原文链接：https://mp.weixin.qq.com/s/6x9rlW3Phb1GwZ9avH8kXg
 > 公众号：InfoQ
-
----
 
 AI 是放大器，不是发动机。你有方向它放大 10 倍，你没方向它放大的是 0。
 

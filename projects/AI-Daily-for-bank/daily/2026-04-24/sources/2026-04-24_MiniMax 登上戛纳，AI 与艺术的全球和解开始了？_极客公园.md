@@ -1,9 +1,11 @@
+---
+publish_time: 1777034234
+---
+
 # MiniMax 登上戛纳，AI 与艺术的全球和解开始了？
 
 > 原文链接：https://mp.weixin.qq.com/s/MlCsou4ZmFzSuIYStMQa1g
 > 公众号：极客公园
-
----
 
 守旧派戛纳，为什么开始积极拥抱新技术？
 
