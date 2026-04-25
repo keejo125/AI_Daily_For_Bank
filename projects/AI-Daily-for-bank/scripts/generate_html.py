@@ -495,12 +495,13 @@ def build_section_html(category, articles, date_str, classification_data=None):
         # 获取文章日期（使用早报日期，即今天）
         article_display_date = classification_data.get("date", date_str) if classification_data else date_str
         
-        # 格式化发布时间为 yyyy-mm-dd hh:mm
+        # 格式化发布时间
+        # 早报页面：只显示时间 hh:mm
         publish_time_str = ""
         if publish_time:
             from datetime import datetime
             dt = datetime.fromtimestamp(publish_time)
-            publish_time_str = dt.strftime("%Y-%m-%d %H:%M")
+            publish_time_str = dt.strftime("%H:%M")
 
         # 多来源标签
         source_tags_html = ''
@@ -517,14 +518,15 @@ def build_section_html(category, articles, date_str, classification_data=None):
         card_html = (
             f'<div class="card">'
             f'<div class="card-title">{escape_html(title)}</div>'
-            f'{source_tags_html}'
         )
         
-        # 添加日期和时间
+        # 早报页面：只显示时间 hh:mm
         if publish_time_str:
-            card_html += f'<div class="card-date"><span class="card-time">{publish_time_str}</span>{article_display_date}</div>'
-        else:
+            card_html += f'<div class="card-date"><span class="card-time">{publish_time_str}</span></div>'
+        elif article_display_date:
             card_html += f'<div class="card-date">{article_display_date}</div>'
+        
+        card_html += f'{source_tags_html}'
         
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'

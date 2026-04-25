@@ -281,11 +281,14 @@ body {
   font-size: 12px;
   color: var(--text-tertiary);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .card-time {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-secondary);
-  margin-right: 6px;
+  font-size: 12px;
 }
 
 .card-actions {
@@ -416,9 +419,10 @@ body {
   font-weight: 500;
 }
 #fallback-content .card-time {
-  font-weight: 600;
+  display: inline-block;
+  font-weight: 500;
   color: var(--text-secondary);
-  margin-right: 4px;
+  font-size: 12px;
 }
 #fallback-content .empty {
   color: var(--text-tertiary);
@@ -566,6 +570,15 @@ body {
       modelTagHtml = '<span class="model-tag">大模型</span>';
     }
 
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
     var sourceTagHtml = '';
     // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
     if (article.source_items && article.source_items.length > 0) {
@@ -593,6 +606,7 @@ body {
             '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
             modelTagHtml +
           '</div>' +
+          timeHtml +
           (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
           '<div class="card-actions">' +
             sourceTagHtml +
