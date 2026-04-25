@@ -12,10 +12,33 @@ from datetime import datetime
 
 
 # ===== 大模型关键词列表（不区分大小写） =====
-MODEL_KEYWORDS = [
-    "大模型", "LLM", "GPT", "Claude", "Gemini", "Qwen", "通义", "文心",
-    "DeepSeek", "Llama", "Mistral", "模型发布", "模型评测", "benchmark",
-    "参数规模", "开源模型", "基座模型", "foundation model", "语言模型"
+# 核心关键词：直接指向大模型本身的文章
+MODEL_CORE_KEYWORDS = [
+    # 模型发布/更新
+    "发布", "上线", "开源", "更新", "升级", "新版本",
+    # 模型评测/性能
+    "评测", "benchmark", "榜单", "排名", "测试", "对比",
+    # 模型技术特性
+    "参数规模", "参数量", "上下文", "token", "训练", "预训练",
+    "微调", "对齐", "蒸馏", "量化", "推理能力",
+    # 模型架构/类型
+    "基座模型", "foundation model", "语言模型", "多模态模型",
+    # 具体模型名称（当作为主语时）
+    "GPT-5", "GPT-4", "Claude", "Gemini", "Qwen", "通义千问",
+    "文心一言", "DeepSeek", "Llama", "Mistral", "Kimi",
+]
+
+# 排除关键词：这些词出现时，说明是应用而非模型本身
+MODEL_EXCLUDE_PATTERNS = [
+    # 应用场景
+    "已用", "使用", "应用", "落地", "实践", "案例",
+    # 工具/产品集成
+    "内置", "支持", "集成", "接入", "搭载", "适配",
+    # 行业应用
+    "上车", "医疗", "诊室", "医生", "金融", "银行",
+    "教育", "法律", "客服", "办公",
+    # 非技术性描述
+    "杀入", "走进", "进入", "赋能",
 ]
 
 
@@ -49,10 +72,103 @@ def write_file(path, content, encoding='utf-8'):
         return False
 
 
+def extract_original_url(content):
+    """从 markdown 内容中提取原文链接"""
+    import re
+    match = re.search(r'原文链接[：:]\s*(https?://[^\s>]+)', content)
+    return match.group(1) if match else ''
+
+
+def extract_source_name_from_md(content):
+    """从 markdown 内容中提取公众号名称"""
+    import re
+    match = re.search(r'公众号[：:]\s*(.+)', content)
+    return match.group(1).strip() if match else ''
+
+
 def detect_model_related(title, digest):
-    """检测文章是否涉及大模型"""
+    """
+    检测文章是否主要讲述大模型本身（而非应用）
+    
+    判断逻辑：
+    1. 首先检查是否是明显的模型相关主题（发布、评测、开源、技术特性）
+    2. 然后排除明显的应用场景（工具集成、行业应用）
+    3. 关键：看主语是谁 - 模型本身 vs 其他产品/行业
+    """
     text = f"{title} {digest}".lower()
-    return any(kw.lower() in text for kw in MODEL_KEYWORDS)
+    title_lower = title.lower()
+    
+    # 第一层：检查是否有明确的大模型核心主题
+    # 注意：需要结合"模型"相关词汇一起判断，避免误判普通产品发布
+    model_release_patterns = [
+        "模型发布", "模型上线", "模型开源", 
+        "发布.*模型", "上线.*模型", "开源.*模型",
+        "新版本.*模型", "模型.*新版本",
+    ]
+    
+    model_eval_keywords = ["评测", "benchmark", "排名", "对比", "实测"]
+    # 注意："榜单"太通用，需要结合上下文
+    model_tech_keywords = ["参数规模", "参数量", "上下文", "token", "训练", "微调", "蒸馏", "量化", "推理能力"]
+    
+    # 检查是否有模型发布/更新（需要包含"模型"这个词）
+    has_model_release = (
+        ("发布" in text or "上线" in text or "开源" in text) and "模型" in text
+    )
+    
+    # 检查是否有模型评测（排除"榜单申报"这类活动）
+    has_model_eval = any(kw in text for kw in model_eval_keywords)
+    # 特殊处理"榜单"：只有在"评测榜单"、"基准榜单"等语境下才算
+    if "榜单" in text and not has_model_eval:
+        has_model_eval = any(phrase in text for phrase in ["评测榜单", "基准榜单", "模型榜单", "排行榜"])
+    
+    # 检查是否有模型技术特性（"参数"需要是"参数量"或"参数规模"，避免"万亿参数"这种应用描述）
+    has_model_tech = False
+    for kw in model_tech_keywords:
+        if kw in text:
+            # 对于"参数"，需要更严格的匹配
+            if kw in ["参数规模", "参数量"]:
+                has_model_tech = True
+                break
+            else:
+                has_model_tech = True
+                break
+    
+    has_model_topic = has_model_release or has_model_eval or has_model_tech
+    
+    if not has_model_topic:
+        return False
+    
+    # 第二层：排除明显的应用场景
+    # 检查标题是否以非模型主体开头
+    application_subjects = [
+        "qoder", "灵码", "copilot", "codeium", "tabnine",  # 编程工具
+        "医生", "医疗", "医院", "诊室",  # 医疗
+        "银行", "金融", "保险",  # 金融
+        "汽车", "上车", "车企",  # 汽车
+        "美团", "阿里", "腾讯", "字节",  # 公司（当作为主语时）
+    ]
+    
+    # 如果标题以应用主体开头，且包含应用动词，则判定为应用
+    has_app_subject = any(title_lower.startswith(subj) for subj in application_subjects)
+    has_app_verb = any(kw in text for kw in ["内置", "支持", "集成", "接入", "搭载", "适配", "已用", "使用"])
+    
+    if has_app_subject and has_app_verb:
+        return False
+    
+    # 特殊情况：如果标题明确提到模型名称作为主语，则保留
+    model_names = ["gpt", "claude", "gemini", "qwen", "deepseek", "llama", "mistral", "kimi", "mimo"]
+    has_model_subject = any(
+        title_lower.startswith(name) or 
+        title_lower.startswith(f"{name}-") or
+        title_lower.startswith(f"{name} ")
+        for name in model_names
+    )
+    
+    if has_model_subject:
+        return True
+    
+    # 默认：有模型主题且不是明显的应用场景
+    return True
 
 
 def normalize_for_match(text):
@@ -90,14 +206,22 @@ def find_markdown_file(sources_dir, title, source):
             return os.path.join(sources_dir, fname)
 
     # 策略2: 来源+关键词匹配
-    # 从 title 中提取≥4字的候选关键词
+    # 从 title 中提取≥4字的候选关键词，长中文串拆为4字滑窗
     import re as _re
     candidates = []
-    # 中文词（≥4字）
-    cn_words = _re.findall(r'[\u4e00-\u9fff]{4,}', title)
+    # 中文词（≥4字，长串拆为4字滑窗）
+    cn_runs = _re.findall(r'[\u4e00-\u9fff]+', title)
+    for run in cn_runs:
+        if len(run) >= 4:
+            if len(run) <= 6:
+                candidates.append(run)
+            else:
+                # 滑动窗口，步长2
+                for i in range(0, len(run) - 3, 2):
+                    candidates.append(run[i:i+4])
     # 英文词（≥3字母）
     en_words = _re.findall(r'[a-zA-Z]{3,}', title)
-    keywords = cn_words + en_words
+    keywords = candidates + en_words
 
     source_matched = []
     for fname in md_files:
@@ -131,7 +255,26 @@ def find_markdown_file(sources_dir, title, source):
             scored.sort(key=lambda x: x[0], reverse=True)
             if scored[0][0] > 0:
                 return os.path.join(sources_dir, scored[0][1])
-        # 关键词无匹配，返回第一个
+        # 4字关键词无匹配，尝试2字短词补充匹配
+        short_kws = []
+        cn_runs = _re.findall(r'[\u4e00-\u9fff]+', title)
+        for run in cn_runs:
+            if len(run) >= 2:
+                for i in range(len(run) - 1):
+                    short_kws.append(run[i:i+2])
+        # 去重，排除通用词
+        generic = {'发布','推出','开源','上线','发布前','首次','新增','最新','重要','重大','突破','领先'}
+        short_kws = [kw for kw in dict.fromkeys(short_kws) if kw not in generic and len(kw) >= 2]
+        if short_kws:
+            scored = []
+            for fname in source_matched:
+                fname_norm = normalize_for_match(fname)
+                score = sum(1 for kw in short_kws if normalize_for_match(kw) in fname_norm)
+                scored.append((score, fname))
+            scored.sort(key=lambda x: x[0], reverse=True)
+            if scored[0][0] > 0:
+                return os.path.join(sources_dir, scored[0][1])
+        # 仍无匹配，返回第一个
         return os.path.join(sources_dir, source_matched[0])
 
     # 策略4: 仅关键词匹配（无来源匹配时）
@@ -194,55 +337,112 @@ def build_stats_string(stats):
 def build_articles_json(classification, date_str):
     """
     构建 ARTICLES_JSON 数据
-    每个对象包含: title, source, digest, link, content, category, is_model_related, source_file
+    每个对象包含: title, source, digest, content, category, is_model_related, source_items, publish_time
+    source_items: [{name, source_file, link}, ...] 每个来源单独一项
+    
+    排序规则：在每个分类内，有大模型标签的文章排在前面
     """
     articles = []
     cats = ["国际", "国内", "同业", "其他"]
     base_dir = os.path.join(PROJECT_DIR, 'daily', date_str)
+    
+    # 读取 articles_raw.json 获取 publish_time
+    raw_path = os.path.join(base_dir, 'articles_raw.json')
+    time_map = {}
+    if os.path.exists(raw_path):
+        try:
+            with open(raw_path, 'r', encoding='utf-8') as f:
+                raw_data = json.load(f)
+            for article in raw_data.get('articles', []):
+                aid = article.get('aid')
+                if aid and 'publish_time' in article:
+                    time_map[aid] = article['publish_time']
+        except Exception as e:
+            print_progress(f"警告: 读取 articles_raw.json 失败 - {e}")
 
     for cat in cats:
         items = classification.get(cat, [])
+        cat_articles = []
+        
         for item in items:
             title = item.get("title", "")
             source = item.get("source", "")
-            link = item.get("link", "")
             digest = item.get("digest", "")
-            source_file = item.get("source_file", "")
+            aid = item.get("aid", "")
+            publish_time = time_map.get(aid)  # 获取发布时间戳
 
             # 如果没有 digest，使用 title 兜底
             if not digest:
                 digest = title
 
-            # 读取 markdown 原文
-            content = read_article_content(source_file, date_str, title, source)
+            # 拆分多来源，逐个匹配 source 文件
+            sources_dir = os.path.join(base_dir, 'sources')
+            source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
 
-            # 如果没有 source_file，尝试在 sources 目录匹配
-            if not source_file:
-                sources_dir = os.path.join(base_dir, 'sources')
-                source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
-                for single_source in source_list:
-                    matched = find_markdown_file(sources_dir, title, single_source)
-                    if matched:
-                        source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
-                        break
+            source_items = []
+            all_content_parts = []
+
+            for single_source in source_list:
+                matched = find_markdown_file(sources_dir, title, single_source)
+                if matched:
+                    relative_path = os.path.relpath(matched, base_dir).replace('\\', '/')
+                    file_content = read_file(matched)
+                    original_url = extract_original_url(file_content) if file_content else ''
+                    source_items.append({
+                        "name": single_source,
+                        "source_file": relative_path,
+                        "link": original_url
+                    })
+                    if file_content:
+                        all_content_parts.append(file_content)
+                else:
+                    # 未找到文件，仍保留来源标签（不可点击）
+                    source_items.append({
+                        "name": single_source,
+                        "source_file": "",
+                        "link": ""
+                    })
+
+            # 合并所有来源的原文内容
+            content = '\n\n---\n\n'.join(all_content_parts) if all_content_parts else ''
 
             is_model_related = detect_model_related(title, digest)
 
-            articles.append({
+            # 兼容旧字段
+            primary_source_file = source_items[0]['source_file'] if source_items else ''
+            primary_link = source_items[0].get('link', '') if source_items else ''
+
+            cat_articles.append({
                 "title": title,
                 "source": source,
                 "digest": digest,
-                "link": link,
+                "link": primary_link,
                 "content": content,
                 "category": cat,
                 "is_model_related": is_model_related,
-                "source_file": source_file
+                "source_file": primary_source_file,
+                "source_items": source_items,
+                "publish_time": publish_time  # 添加发布时间戳
             })
+        
+        # 在当前分类内排序：
+        # 1. 有大模型标签的排在前面
+        # 2. 同组内按时间从早到晚排序（publish_time小的在前）
+        def sort_key(article):
+            is_model = article.get("is_model_related", False)
+            publish_time = article.get("publish_time", 0) or 0  # 如果没有时间，默认为0
+            # 返回元组：(是否非大模型, 发布时间)
+            # not is_model: False(大模型)=0, True(非大模型)=1，所以大模型排前面
+            # publish_time: 时间戳小的（早的）排前面
+            return (not is_model, publish_time)
+        
+        cat_articles.sort(key=sort_key)
+        articles.extend(cat_articles)
 
     return articles
 
 
-def build_section_html(category, articles):
+def build_section_html(category, articles, date_str, classification_data=None):
     """
     生成 fallback section HTML
     参照 template.html 中 #fallback-content 的 CSS 结构
@@ -274,26 +474,60 @@ def build_section_html(category, articles):
     if not articles:
         return header_html + '<div class="empty">暂无</div>'
 
+    # 在当前分类内排序：
+    # 1. 有大模型标签的排在前面
+    # 2. 同组内按时间从早到晚排序
+    def sort_key(article):
+        is_model = article.get("is_model_related", False)
+        publish_time = article.get("publish_time", 0) or 0
+        return (not is_model, publish_time)
+    
+    sorted_articles = sorted(articles, key=sort_key)
+
     cards_html = []
-    for article in articles:
+    for article in sorted_articles:
         title = article.get("title", "")
         source = article.get("source", "")
         digest = article.get("digest", "")
-        link = article.get("link", "")
+        source_items = article.get("source_items", [])
+        publish_time = article.get("publish_time")  # 获取发布时间戳
+        
+        # 获取文章日期（使用早报日期，即今天）
+        article_display_date = classification_data.get("date", date_str) if classification_data else date_str
+        
+        # 格式化发布时间为 yyyy-mm-dd hh:mm
+        publish_time_str = ""
+        if publish_time:
+            from datetime import datetime
+            dt = datetime.fromtimestamp(publish_time)
+            publish_time_str = dt.strftime("%Y-%m-%d %H:%M")
+
+        # 多来源标签
+        source_tags_html = ''
+        if source_items:
+            for si in source_items:
+                name = si.get("name", "")
+                if si.get("source_file"):
+                    source_tags_html += f'<a href="../../viewer.html?file=daily/{date_str}/{escape_html(si["source_file"])}" class="source-tag">{escape_html(name)}</a> '
+                else:
+                    source_tags_html += f'<span class="source-tag">{escape_html(name)}</span> '
+        elif source:
+            source_tags_html = f'<span class="source-tag">{escape_html(source)}</span>'
 
         card_html = (
             f'<div class="card">'
             f'<div class="card-title">{escape_html(title)}</div>'
-            f'<span class="source-tag">{escape_html(source)}</span>'
+            f'{source_tags_html}'
         )
+        
+        # 添加日期和时间
+        if publish_time_str:
+            card_html += f'<div class="card-date"><span class="card-time">{publish_time_str}</span>{article_display_date}</div>'
+        else:
+            card_html += f'<div class="card-date">{article_display_date}</div>'
+        
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'
-        if link:
-            card_html += (
-                f'<div style="margin-top:8px;">'
-                f'<a href="{escape_html(link)}" target="_blank">📖 微信原文</a>'
-                f'</div>'
-            )
         card_html += '</div>'
         cards_html.append(card_html)
 
@@ -362,8 +596,15 @@ def get_weekday(date_str):
     return weekdays[dt.weekday()]
 
 
-def update_daily_index(date_str, stats, summary):
-    """更新 daily-index.json"""
+def update_daily_index(date_str, report_date_str, stats, summary):
+    """更新 daily-index.json
+    
+    Args:
+        date_str: 文章内容日期（昨天）
+        report_date_str: 早报日期（今天）
+        stats: 分类统计
+        summary: 摘要
+    """
     index_path = os.path.join(PROJECT_DIR, 'daily-index.json')
     index_data = {"issues": []}
 
@@ -375,28 +616,30 @@ def update_daily_index(date_str, stats, summary):
             print_progress(f"警告: daily-index.json 解析失败，将重建 - {e}")
 
     issues = index_data.get("issues", [])
-    weekday = get_weekday(date_str)
+    # 使用早报日期计算星期几
+    weekday = get_weekday(report_date_str)
 
     new_entry = {
-        "date": date_str,
+        "date": report_date_str,
+        "article_date": date_str,  # 添加文章内容日期用于文件夹路径
         "weekday": weekday,
         "stats": stats,
         "summary": summary
     }
 
-    # 查找是否已存在该日期
+    # 查找是否已存在该日期（使用早报日期）
     found = False
     for issue in issues:
-        if issue.get("date") == date_str:
+        if issue.get("date") == report_date_str:
             issue.update(new_entry)
             found = True
-            print_progress(f"更新 daily-index.json 中 {date_str} 的条目")
+            print_progress(f"更新 daily-index.json 中 {report_date_str} 的条目")
             break
 
     # 不存在则插入到首位
     if not found:
         issues.insert(0, new_entry)
-        print_progress(f"在 daily-index.json 中插入 {date_str} 的新条目")
+        print_progress(f"在 daily-index.json 中插入 {report_date_str} 的新条目")
 
     index_data["issues"] = issues
 
@@ -466,19 +709,25 @@ def main():
         print("用法: python3 generate_html.py YYYY-MM-DD")
         sys.exit(1)
 
-    date_str = sys.argv[1]
+    date_str = sys.argv[1]  # 文章内容日期（昨天）
 
     # 验证日期格式
     try:
-        datetime.strptime(date_str, '%Y-%m-%d')
+        article_date = datetime.strptime(date_str, '%Y-%m-%d')
     except ValueError:
         print_progress(f"错误: 日期格式无效 '{date_str}'，应为 YYYY-MM-DD")
         sys.exit(1)
+    
+    # 计算早报日期（今天 = 昨天 + 1天）
+    from datetime import timedelta
+    report_date = article_date + timedelta(days=1)
+    report_date_str = report_date.strftime('%Y-%m-%d')
 
     # 项目根目录
     PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     print_progress(f"项目目录: {PROJECT_DIR}")
-    print_progress(f"生成日期: {date_str}")
+    print_progress(f"文章内容日期: {date_str}（昨天）")
+    print_progress(f"早报日期: {report_date_str}（今天）")
 
     # === 1. 读取分类数据 ===
     classification_path = os.path.join(PROJECT_DIR, 'daily', date_str, 'classification.json')
@@ -512,6 +761,9 @@ def main():
         }
 
     print_progress(f"分类统计: {stats}")
+    
+    # 保存完整的classification_data用于build_section_html
+    classification_data = data
 
     # === 2. 构建文章数据 ===
     print_progress("构建文章数据并读取原文...")
@@ -530,8 +782,8 @@ def main():
     # === 4. 替换占位符 ===
     print_progress("替换模板占位符...")
 
-    # DATE
-    template = template.replace("{{DATE}}", date_str)
+    # DATE（使用早报日期，即今天）
+    template = template.replace("{{DATE}}", report_date_str)
     print_progress("  -> DATE 替换完成")
 
     # STATS
@@ -553,7 +805,7 @@ def main():
     cats = ["国际", "国内", "同业", "其他"]
     for cat in cats:
         cat_articles = [a for a in articles if a.get("category") == cat]
-        section_html = build_section_html(cat, cat_articles)
+        section_html = build_section_html(cat, cat_articles, date_str, classification_data)
 
         phs = placeholders.get(cat, [])
         if not phs:
@@ -587,7 +839,7 @@ def main():
     # === 7. 更新 daily-index.json ===
     print_progress("更新 daily-index.json...")
     summary = generate_summary(classification)
-    update_daily_index(date_str, stats, summary)
+    update_daily_index(date_str, report_date_str, stats, summary)
 
     print_progress("全部完成!")
 

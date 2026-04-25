@@ -416,7 +416,9 @@ body {
   });
 
   /* ===== Fetch markdown ===== */
-  fetch(filePath)
+  // Encode the filePath to ensure proper URL resolution for Chinese filenames
+  var fetchUrl = filePath.split('/').map(encodeURIComponent).join('/');
+  fetch(fetchUrl)
     .then(function(resp) {
       if (!resp.ok) throw new Error('HTTP ' + resp.status + '：无法加载文件');
       return resp.text();
@@ -425,7 +427,7 @@ body {
       renderContent(md);
     })
     .catch(function(err) {
-      showError('加载失败', err.message || '无法读取文件内容');
+      showError('加载失败', '文件: ' + filePath + '\n错误: ' + (err.message || '无法读取文件内容'));
     });
 
   /* ===== Render Content ===== */
