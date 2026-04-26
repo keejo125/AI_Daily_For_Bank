@@ -42,9 +42,9 @@ Step1   Step2   Step3   Step4   Step5
 
 | 步骤 | 执行者 | 脚本/操作 | 输入 | 输出 |
 |:----:|:------:|:---------|:-----|:-----|
-| **1. 获取** | 脚本 | `fetch_articles.py` | wechat-query-skill API | `sources/*.md` + `articles_raw.json` |
+| **1. 获取** | 脚本 | `fetch_articles.py` | `/api/rss/export/{date}` 导出接口 | `sources/*.md` + `articles_raw.json` |
 | **2. 过滤** | 脚本 | `filter_articles.py` | `articles_raw.json` + `config.json` 关键词 | `filtered_articles.json`（不匹配的 .md 会被删除） |
-| **3. 分类** | 智能体 | 人工阅读原文 → 判断分类 + 生成摘要 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
+| **3. 分类** | 智能体 | `create_classification.py` + 人工调整 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
 | **4. 生成** | 脚本 | `generate_html.py` | `classification.json` + `template.html` | `daily/YYYY-MM-DD/index.html` + 更新索引 |
 | **5. 验证** | 人工 | 检查产出 | 生成的文件 | 确认完整 |
 
@@ -56,20 +56,22 @@ Step1   Step2   Step3   Step4   Step5
 
 - Python 3.x
 - `requests` 库：`pip3 install requests`
-- `wechat-query-skill` 服务已启动且登录态有效
+- `wechat-query-skill` 导出接口可访问：`https://www.torandom.com/wechat-api/api/health` 返回 healthy
 
 ### 一键运行
 
 ```bash
 cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/scripts
 
-# Step 1: 获取昨日文章（不传日期默认昨天）
+# Step 1: 获取昨日文章（不传日期默认昨天，1-3秒完成）
 python3 fetch_articles.py
 
 # Step 2: 关键词过滤
 python3 filter_articles.py 2026-04-22
 
-# Step 3: 智能分类（由智能体完成，生成 classification.json）
+# Step 3: 智能分类（生成模板 + 人工调整）
+python3 create_classification.py 2026-04-22  # 自动生成分类模板
+# 然后编辑 classification.json，填写摘要并调整分类
 
 # Step 4: 生成 HTML
 python3 generate_html.py 2026-04-22
@@ -78,7 +80,7 @@ python3 generate_html.py 2026-04-22
 ### 各脚本独立用法
 
 ```bash
-# 获取指定日期的文章
+# 获取指定日期的文章（调用 /api/rss/export/{date} 一键导出）
 python3 fetch_articles.py 2026-04-22
 
 # 过滤指定日期的文章（日期参数必填）
@@ -112,7 +114,7 @@ python3 generate_html.py 2026-04-22
 
 | 字段 | 说明 |
 |------|------|
-| `server.base_url` | wechat-query-skill API 地址（通过 Nginx 反代） |
+| `server.base_url` | wechat-query-skill API 地址（通过 Nginx 反代，导出接口：`/api/rss/export/{date}`） |
 | `keywords.include` | 🔍 保留文章的关键词列表（匹配标题 + digest，不区分大小写） |
 | `keywords.exclude` | 🚫 排除文章的关键词列表 |
 | `categories` | 分类类别，固定为国际/国内/同业/其他 |
@@ -148,7 +150,9 @@ python3 generate_html.py 2026-04-22
 - ✅ 响应式布局（手机 / 平板 / 桌面）
 - ✅ 亮色调为主，暗色模式自动适配（`prefers-color-scheme: dark`）
 - ✅ 纯静态，无需后端服务
-- ✅ 大模型相关文章自动标记 `大模型` 标签
+- ✅ 大模型相关文章自动标记 `【大模型】` 标签（仅针对模型发布、测评、架构内容）
+- ✅ 文章卡片显示发布时间（hh:mm格式），位于标题下方
+- ✅ 排序规则：每个分类内，大模型标签文章优先展示，同组按时间升序
 
 ---
 
@@ -187,9 +191,50 @@ python3 generate_html.py 2026-04-22
 
 ---
 
+## 📝 更新日志
+
+### 2026-04-26
+
+- 🛠️ **新增辅助脚本** `create_classification.py`：
+  - 基于 `filtered_articles.json` 自动生成 `classification.json` 模板
+  - 自动填充 aid, title, source, link, source_file 字段
+  - 根据关键词预分类（国际/国内/同业/其他）
+  - 自动处理中文引号（替换为方括号）
+  - 保留空的 digest 字段供智能体填写摘要
+  - **使用方法**：`python3 create_classification.py YYYY-MM-DD`
+- 🔧 **增强容错性**：`generate_html.py` 读取 classification.json 时自动标准化中文引号
+  - 使用 `normalize_chinese_quotes()` 函数统一处理
+  - 添加更详细的错误提示信息
+- 🎯 **优化大模型标签判断规则**：`generate_html.py` 中的 `detect_model_related()` 函数全面重构
+  - **新标准**：仅针对模型发布、测评、架构的内容添加标签
+    - ✅ 模型发布：DeepSeek V4、GPT-5.5 等新模型正式发布
+    - ✅ 模型测评：性能对比、实测报告、benchmark 评测
+    - ✅ 模型架构：技术论文、底层技术研究（LLM DNA、注意力机制等）
+  - **明确排除**：
+    - ❌ AI应用功能（如 Chronicle 屏幕记忆）
+    - ❌ 行业资讯（如量化公司创始人背景）
+    - ❌ 基础设施讨论（如 Token 工厂、算力芯片）
+    - ❌ 公司动态（如 OpenAI 裁员、投资并购、商业竞争）
+  - **实现方式**：通过关键词精准匹配 + 排除规则，避免误判
+- 🔧 **修正分类错误案例**：
+  - 黄仁勋访谈从"国内"移至"国际"（涉及英伟达、Token工厂等国际话题）
+  - 删除重复的广告文章（量子位AIGC评选申报通知）
+
+### 2026-04-25
+
+- ✨ **新增时间显示功能**：文章卡片现在显示发布时间（hh:mm格式）
+  - 时间位于标题下方、摘要上方
+  - 数据来源：`articles_raw.json` 中的 `publish_time` 字段（Unix 时间戳）
+  - JavaScript 和 Fallback 两种模式均支持
+  - 样式优化：中等粗细、次要文本颜色，视觉柔和不突兀
+- 🔧 **优化卡片布局**：调整元素顺序为 标题 → 时间 → 来源标签 → 摘要
+
+---
+
 ## ⚠️ 注意事项
 
-1. **登录态过期**：`wechat-query-skill` 的微信登录态约 **4 天**过期，如 `fetch_articles.py` 请求失败，需检查并重新登录
+1. **登录态过期**：`wechat-query-skill` 的微信登录态约 **4 天**过期，如导出接口返回空数组，需检查并重新登录
 2. **API 地址**：`server.base_url` 通过 Nginx 反向代理访问，确保反代服务正常运行
+3. **导出接口**：`fetch_articles.py` v2 使用 `/api/rss/export/{date}` 一键导出，替代旧的逐公众号翻页流程，耗时从 4-10 分钟降至 1-3 秒
 3. **分类必须阅读原文**：不要仅凭标题分类，务必读取 `source_file` 对应的 Markdown 原文
 4. **默认日期为昨天**：用户说"生成早报"时，默认使用昨天的日期

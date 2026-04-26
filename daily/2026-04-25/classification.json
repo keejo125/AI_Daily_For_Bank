@@ -1,0 +1,166 @@
+{
+  "date": "2026-04-26",
+  "article_date": "2026-04-25",
+  "generated_at": "2026-04-26T11:30:00+08:00",
+  "classification": {
+    "国际": [
+      {
+        "aid": "2652695222_1",
+        "title": "OpenAI，危机四伏",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg",
+        "digest": "奥特曼砍掉Sora和科学部，聚焦GPT-5.5和Codex。Anthropic年化收入达300亿美元反超OpenAI的240亿，烧钱率高达57%。Fidji Simo操刀转型，将ChatGPT、Codex合并为超级应用。",
+        "source_file": "sources/2026-04-25_OpenAI，危机四伏_新智元.md"
+      },
+      {
+        "aid": "2651030049_1",
+        "title": "在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ",
+        "digest": "OpenAI推出Chronicle屏幕记忆订阅功能后，年轻开发者迅速开源替代方案。该功能记录用户屏幕活动并提供智能检索，引发隐私和技术讨论。",
+        "source_file": "sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md"
+      },
+      {
+        "aid": "2651030045_2",
+        "title": "黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ",
+        "digest": "英伟达CEO黄仁勋阐述Token工厂概念，认为AI计算基础设施将演变为大规模Token生产中心。访谈涉及算力需求、芯片架构和未来AI部署模式。",
+        "source_file": "sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md"
+      },
+      {
+        "aid": "2652695096_2",
+        "title": "马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA",
+        "digest": "马斯克起诉OpenAI要求恢复非营利性质，索赔1870亿美元。诉讼揭露OpenAI从非营利转向商业化的历程，双方围绕控制权展开激烈法律战。",
+        "source_file": "sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md"
+      },
+      {
+        "aid": "2652695053_1",
+        "title": "谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg",
+        "digest": "谷歌向Anthropic投资最高400亿美元并承诺5GW TPU算力。Anthropic获亚马逊、谷歌、微软、英伟达四重加持，累计锁定11GW算力，年化收入达300亿美元。",
+        "source_file": "sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md"
+      }
+    ],
+    "国内": [
+      {
+        "aid": "2652695222_3",
+        "title": "给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A",
+        "digest": "【大模型】新加坡国立大学与上海交大联合提出LLM DNA，通过行为表征刻画模型亲缘关系。RepTrace方法无需训练即可提取DNA，在305个模型上验证AUC达0.99，可构建系统发育树。",
+        "source_file": "sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md"
+      },
+      {
+        "aid": "2651030045_1",
+        "title": "翻完DeepSeek报告，我们发现了中国AI的默契",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA",
+        "digest": "【大模型】DeepSeek V4与Kimi K2.6同期发布，展现技术联动默契。Kimi复用DeepSeek的MLA注意力机制，DeepSeek采用Kimi验证的Muon优化器。两家万亿参数模型全部开源，降低企业部署成本至1/10。",
+        "source_file": "sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md"
+      },
+      {
+        "aid": "2651282643_1",
+        "title": "【我把所有模型都换成了DeepSeek V4】：月账单降 90%，效果还更好",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ",
+        "digest": "【大模型】开发者实测将模型切换至DeepSeek V4后，月度API账单下降90%且效果提升。相比OpenAI和Anthropic涨价，DeepSeek以高性价比颠覆市场，推动企业级应用成本大幅降低。",
+        "source_file": "sources/2026-04-25_【我把所有模型都换成了DeepSeek V4】：月账单降 90%，效果还更好_InfoQ.md"
+      },
+      {
+        "aid": "2247886510_1",
+        "title": "硬刚GPT-Image-2！国产AI生图【天花板】又被捅破了？",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA",
+        "digest": "【大模型】一家低调的国产视觉大模型公司浮出水面，其生图能力对标GPT-Image-2。在多项评测中表现优异，代表中国AI在图像生成领域达到新高度，挑战国际巨头技术壁垒。",
+        "source_file": "sources/2026-04-25_硬刚GPT-Image-2！国产AI生图【天花板】又被捅破了？_量子位.md"
+      },
+      {
+        "aid": "2653104777_1",
+        "title": "华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我",
+        "source": "极客公园",
+        "link": "https://mp.weixin.qq.com/s/aAaAaAaAaAaAaAaAaAaAaA",
+        "digest": "华为Pura X Max手机评测，重点体验其主动式AI功能。相比折叠屏设计，AI助手、智能推荐等主动服务能力成为产品亮点，展现华为在移动AI领域的布局。",
+        "source_file": "sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md"
+      },
+      {
+        "aid": "2247886511_2",
+        "title": "量化公司，正在批量生产AI独角兽创始人",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/bBbBbBbBbBbBbBbBbBbBbB",
+        "digest": "量化交易公司成为AI创业人才孵化器，多位前量化从业者创办AI独角兽企业。文章分析量化背景如何转化为AI创业优势，包括数据处理、算法优化和快速迭代能力。",
+        "source_file": "sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md"
+      },
+      {
+        "aid": "2651282643_2",
+        "title": "AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/cCcCcCcCcCcCcCcCcCcCcC",
+        "digest": "探讨AI辅助编程面临的挑战：理解债务累积、上下文窗口限制导致的信息衰减。分析独立开发者在使用AI编程工具时遇到的效率瓶颈和解决方案。",
+        "source_file": "sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md"
+      }
+    ],
+    "同业": [
+      {
+        "aid": "2650301831_1",
+        "title": "82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目",
+        "source": "银行科技研究社",
+        "link": "https://mp.weixin.qq.com/s/dDdDdDdDdDdDdDdDdDdDdD",
+        "digest": "四川农商联合银行采购大模型基础平台及智能知识库系统，预算82万元。项目涵盖模型部署、知识库构建和业务场景创新，体现中小银行对AI技术的投入。",
+        "source_file": "sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md"
+      },
+      {
+        "aid": "2650301826_1",
+        "title": "网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室",
+        "source": "银行科技研究社",
+        "link": "https://mp.weixin.qq.com/s/eEeEeEeEeEeEeEeEeEeEeE",
+        "digest": "网商银行确立交易银行为第二增长曲线，计划设立AI+农事信息服务联合实验室。结合AI技术与农业金融服务，探索农村金融创新模式。",
+        "source_file": "sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md"
+      }
+    ],
+    "其他": [
+      {
+        "aid": "2247553806_1",
+        "title": "北京车展，遍地【龙虾】｜甲子光年",
+        "source": "甲子光年",
+        "link": "https://mp.weixin.qq.com/s/fFfFfFfFfFfFfFfFfFfFfF",
+        "digest": "北京车展观察，多家车企展示智能化成果。文章以【龙虾】比喻汽车智能化趋势，分析AI技术在汽车行业的应用现状和发展方向。",
+        "source_file": "sources/2026-04-25_北京车展，遍地【龙虾】｜甲子光年_甲子光年.md"
+      },
+      {
+        "aid": "2247886503_2",
+        "title": "AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能【超级入口】",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/gGgGgGgGgGgGgGgGgGgGgG",
+        "digest": "涂鸦智能Hey Tuya平台推出AI宠物健康监测功能，可自动识别宠物异常行为。该平台整合全屋智能设备，打造家庭AI服务入口，拓展智能家居应用场景。",
+        "source_file": "sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能【超级入口】_量子位.md"
+      },
+      {
+        "aid": "2247886503_4",
+        "title": "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/hHhHhHhHhHhHhHhHhHhHhH",
+        "digest": "量子位AIGC应用评选申报倒计时通知。活动征集2026年度优秀AI企业和产品，涵盖大模型、AI应用、智能硬件等领域，旨在发现行业创新力量。",
+        "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md"
+      }
+    ]
+  },
+  "stats": {
+    "国际": 5,
+    "国内": 7,
+    "同业": 2,
+    "其他": 3,
+    "total": 17
+  },
+  "excluded": [
+    {
+      "reason": "重复的广告文章，已删除一篇",
+      "examples": [
+        "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止"
+      ]
+    }
+  ]
+}

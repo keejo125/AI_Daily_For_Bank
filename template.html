@@ -276,6 +276,21 @@ body {
   overflow: hidden;
 }
 
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
 .card-actions {
   display: flex;
   align-items: center;
@@ -302,26 +317,7 @@ body {
   opacity: 0.85;
   transform: scale(1.02);
 }
-.read-original-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-  min-height: 32px;
-  transition: all var(--transition);
-  border: none;
-  cursor: pointer;
-}
-.read-original-btn:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-}
+/* (read-original-btn removed - source tags now link to viewer) */
 
 /* ===== Empty State ===== */
 .empty-state {
@@ -416,6 +412,18 @@ body {
   margin-top: 8px;
   line-height: 1.6;
 }
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
 #fallback-content .empty {
   color: var(--text-tertiary);
   font-style: italic;
@@ -426,8 +434,19 @@ body {
   border: 1px dashed var(--border-card);
 }
 
+/* source-tag handles click interaction */
+
 /* ===== Animations ===== */
 @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
@@ -551,20 +570,32 @@ body {
       modelTagHtml = '<span class="model-tag">大模型</span>';
     }
 
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
     var sourceTagHtml = '';
-    if (article.source) {
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
       if (article.source_file) {
         sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
       } else {
         sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
       }
-    }
-
-    var readOriginalHtml = '';
-    if (article.link) {
-      readOriginalHtml = '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="read-original-btn">' +
-        '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3h7v7M13 3L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '阅读原文</a>';
     }
 
     return '<div class="article-card">' +
@@ -575,10 +606,10 @@ body {
             '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
             modelTagHtml +
           '</div>' +
+          timeHtml +
           (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
           '<div class="card-actions">' +
             sourceTagHtml +
-            readOriginalHtml +
           '</div>' +
         '</div>' +
       '</div>' +

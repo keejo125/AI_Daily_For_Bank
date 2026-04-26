@@ -1,26 +1,626 @@
 {
-  "updated_at": "2026-04-22T23:14:34.845748",
-  "total": 38,
+  "updated_at": "2026-04-26T10:59:05.439891",
+  "total": 118,
   "articles": [
     {
+      "date": "2026-04-25",
+      "title": "谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援",
+      "source": "新智元",
+      "digest": "谷歌向Anthropic投资最高400亿美元并承诺5GW TPU算力。Anthropic获亚马逊、谷歌、微软、英伟达四重加持，累计锁定11GW算力，年化收入达300亿美元。",
+      "link": "https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg",
+      "source_file": "sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我",
+      "source": "新智元",
+      "digest": "马斯克起诉OpenAI要求恢复非营利性质，索赔1870亿美元。诉讼揭露OpenAI从非营利转向商业化的历程，双方围绕控制权展开激烈法律战。",
+      "link": "https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA",
+      "source_file": "sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？",
+      "source": "机器之心",
+      "digest": "英伟达CEO黄仁勋阐述Token工厂概念，认为AI计算基础设施将演变为大规模Token生产中心。访谈涉及算力需求、芯片架构和未来AI部署模式。",
+      "link": "https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ",
+      "source_file": "sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了",
+      "source": "机器之心",
+      "digest": "OpenAI推出Chronicle屏幕记忆订阅功能后，年轻开发者迅速开源替代方案。该功能记录用户屏幕活动并提供智能检索，引发隐私和技术讨论。",
+      "link": "https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ",
+      "source_file": "sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "OpenAI，危机四伏",
+      "source": "新智元",
+      "digest": "奥特曼砍掉Sora和科学部，聚焦GPT-5.5和Codex。Anthropic年化收入达300亿美元反超OpenAI的240亿，烧钱率高达57%。Fidji Simo操刀转型，将ChatGPT、Codex合并为超级应用。",
+      "link": "https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg",
+      "source_file": "sources/2026-04-25_OpenAI，危机四伏_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "硬刚GPT-Image-2！国产AI生图【天花板】又被捅破了？",
+      "source": "量子位",
+      "digest": "【大模型】一家低调的国产视觉大模型公司浮出水面，其生图能力对标GPT-Image-2。在多项评测中表现优异，代表中国AI在图像生成领域达到新高度，挑战国际巨头技术壁垒。",
+      "link": "https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA",
+      "source_file": "sources/2026-04-25_硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-25",
+      "title": "【我把所有模型都换成了DeepSeek V4】：月账单降 90%，效果还更好",
+      "source": "InfoQ",
+      "digest": "【大模型】开发者实测将模型切换至DeepSeek V4后，月度API账单下降90%且效果提升。相比OpenAI和Anthropic涨价，DeepSeek以高性价比颠覆市场，推动企业级应用成本大幅降低。",
+      "link": "https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ",
+      "source_file": "sources/2026-04-25_“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-25",
+      "title": "翻完DeepSeek报告，我们发现了中国AI的默契",
+      "source": "机器之心",
+      "digest": "【大模型】DeepSeek V4与Kimi K2.6同期发布，展现技术联动默契。Kimi复用DeepSeek的MLA注意力机制，DeepSeek采用Kimi验证的Muon优化器。两家万亿参数模型全部开源，降低企业部署成本至1/10。",
+      "link": "https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA",
+      "source_file": "sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-25",
+      "title": "给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral",
+      "source": "新智元",
+      "digest": "【大模型】新加坡国立大学与上海交大联合提出LLM DNA，通过行为表征刻画模型亲缘关系。RepTrace方法无需训练即可提取DNA，在305个模型上验证AUC达0.99，可构建系统发育树。",
+      "link": "https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A",
+      "source_file": "sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-25",
+      "title": "AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板",
+      "source": "InfoQ",
+      "digest": "探讨AI辅助编程面临的挑战：理解债务累积、上下文窗口限制导致的信息衰减。分析独立开发者在使用AI编程工具时遇到的效率瓶颈和解决方案。",
+      "link": "https://mp.weixin.qq.com/s/eYL3Luk7FocIu4oBy4PQSw",
+      "source_file": "sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "量化公司，正在批量生产AI独角兽创始人",
+      "source": "量子位",
+      "digest": "量化交易公司成为AI创业人才孵化器，多位前量化从业者创办AI独角兽企业。文章分析量化背景如何转化为AI创业优势，包括数据处理、算法优化和快速迭代能力。",
+      "link": "https://mp.weixin.qq.com/s/n31RQ_5tXLsfHasRzAemJg",
+      "source_file": "sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我",
+      "source": "极客公园",
+      "digest": "华为Pura X Max手机评测，重点体验其主动式AI功能。相比折叠屏设计，AI助手、智能推荐等主动服务能力成为产品亮点，展现华为在移动AI领域的布局。",
+      "link": "https://mp.weixin.qq.com/s/o876HXNhHNjiT7JD2lFBBw",
+      "source_file": "sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室",
+      "source": "银行科技研究社",
+      "digest": "网商银行确立交易银行为第二增长曲线，计划设立AI+农事信息服务联合实验室。结合AI技术与农业金融服务，探索农村金融创新模式。",
+      "link": "https://mp.weixin.qq.com/s/63gl6W78y1QawrFsYafPQg",
+      "source_file": "sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目",
+      "source": "银行科技研究社",
+      "digest": "四川农商联合银行采购大模型基础平台及智能知识库系统，预算82万元。项目涵盖模型部署、知识库构建和业务场景创新，体现中小银行对AI技术的投入。",
+      "link": "https://mp.weixin.qq.com/s/EsQNHfgqfwgjmx1nN54QFA",
+      "source_file": "sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能【超级入口】",
+      "source": "量子位",
+      "digest": "涂鸦智能Hey Tuya平台推出AI宠物健康监测功能，可自动识别宠物异常行为。该平台整合全屋智能设备，打造家庭AI服务入口，拓展智能家居应用场景。",
+      "link": "https://mp.weixin.qq.com/s/drznIJshQRdXoyOSe2_1aA",
+      "source_file": "sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止",
+      "source": "量子位",
+      "digest": "量子位AIGC应用评选申报倒计时通知。活动征集2026年度优秀AI企业和产品，涵盖大模型、AI应用、智能硬件等领域，旨在发现行业创新力量。",
+      "link": "https://mp.weixin.qq.com/s/dkeTeMkQ0DlvwNVUPHyoCQ",
+      "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-25",
+      "title": "北京车展，遍地【龙虾】｜甲子光年",
+      "source": "甲子光年",
+      "digest": "北京车展观察，多家车企展示智能化成果。文章以【龙虾】比喻汽车智能化趋势，分析AI技术在汽车行业的应用现状和发展方向。",
+      "link": "https://mp.weixin.qq.com/s/G7uSQ0VvzlIN9SFsoh8zQA",
+      "source_file": "sources/2026-04-25_北京车展，遍地“龙虾”｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "GPT-5.5来了！全榜第一碾压Opus 4.7，OpenAI今夜雪耻",
+      "source": "新智元",
+      "digest": "OpenAI发布GPT-5.5模型，在各大评测榜单中全面超越Claude Opus 4.7，重夺模型性能榜首位置。此次发布被视为OpenAI对近期Anthropic等竞争对手挑战的有力回应，标志着大模型竞争进入新的白热化阶段。",
+      "link": "https://mp.weixin.qq.com/s/hYEtev-k7_79StH5zvK9WQ",
+      "source_file": "sources/2026-04-24_GPT-5.5来了！全榜第一碾压Opus 4.7，OpenAI今夜雪耻_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "OpenAI 最强模型 GPT-5.5 上线；传特斯拉与 SpaceX 终将合并；票价 20 万！12306 惊现豪华专列 | 极客早知道",
+      "source": "极客公园",
+      "digest": "OpenAI正式发布GPT-5.5模型，成为当前最强AI模型。同时消息称微软GitHub Copilot将转向按Token计费模式，特斯拉第三代人形机器人预计年中亮相，宇树科技展示轮足人形机器人最新进展。",
+      "link": "https://mp.weixin.qq.com/s/1dzw8A-uW5DojPrLdviJ4w",
+      "source_file": "sources/2026-04-24_OpenAI 最强模型 GPT-5.5 上线；传特斯拉与 SpaceX 终将合并；票价 20 万！1_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "GPT-5.5 来了，但这次 OpenAI 想证明的不只是「更聪明」",
+      "source": "极客公园",
+      "digest": "OpenAI以六周一代的节奏发布GPT-5.5，不仅展示模型能力的提升，更强调其在实际工作场景中的应用价值。此次发布体现了OpenAI从单纯追求模型性能转向注重产品化和商业化落地的战略转变，试图证明AI正在成为真正的生产力工具。",
+      "link": "https://mp.weixin.qq.com/s/Lx_G1rSIjk8MYx2uEMyhDA",
+      "source_file": "sources/2026-04-24_GPT-5.5 来了，但这次 OpenAI 想证明的不只是「更聪明」_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "GPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员用上 Codex！",
+      "source": "InfoQ",
+      "digest": "OpenAI发布GPT-5.5模型，称其为公司迄今最聪明、最直觉化的模型。奥特曼分享黄仁勋内部信，透露英伟达全员已使用Codex编程助手。GPT-5.5在多项基准测试中超越Claude Opus 4.7和Mythos模型，标志着OpenAI在模型竞赛中重新确立领先地位。",
+      "link": "https://mp.weixin.qq.com/s/0rU1f6I3PtSFF9Wpula1Rw",
+      "source_file": "sources/2026-04-24_GPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员用上 Co_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "堪比纪录片！OpenAI总裁讲述72小时内讧始末",
+      "source": "量子位",
+      "digest": "OpenAI总裁详细披露了公司内部曾发生的72小时激烈内讧事件，差点导致核心团队全员出走。这场危机暴露了AI公司在快速发展过程中面临的治理挑战，包括技术路线分歧、商业利益冲突以及团队管理等问题，为行业提供了重要警示。",
+      "link": "https://mp.weixin.qq.com/s/ils8zHCVtYTjVhTMT121Hw",
+      "source_file": "sources/2026-04-24_堪比纪录片！OpenAI总裁讲述72小时内讧始末_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "OpenAI要吃掉全美6%电力？硅谷AI战火烧到了发电厂",
+      "source": "新智元",
+      "digest": "随着AI模型规模不断扩大，算力需求激增导致能源消耗问题日益突出。据报道，OpenAI等AI公司的电力需求可能占到全美用电量的6%，引发业界对AI发展可持续性的担忧。硅谷科技巨头纷纷布局能源领域，AI竞争已从技术扩展到基础设施层面。",
+      "link": "https://mp.weixin.qq.com/s/MhmZhIMMD0Ri9lkQVZzyrg",
+      "source_file": "sources/2026-04-24_OpenAI要吃掉全美6%电力？硅谷AI战火烧到了发电厂_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "72%美国医生已用AI！ChatGPT杀入诊室，不看病专干杂活",
+      "source": "新智元",
+      "digest": "美国医疗行业AI应用调研显示，72%的医生已在临床工作中使用AI工具，主要用于文书处理、病历整理等辅助工作，而非直接诊断。ChatGPT等大模型在医疗场景的应用正从实验走向规模化落地，但主要集中在提升工作效率而非替代医生决策。",
+      "link": "https://mp.weixin.qq.com/s/4VJK0fvlGrT3ieUS27fZjw",
+      "source_file": "sources/2026-04-24_72%美国医生已用AI！ChatGPT杀入诊室，不看病专干杂活_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "DeepSeek-V4开源！1.6T参数、百万上下文",
+      "source": "智东西",
+      "digest": "DeepSeek-V4预览版正式开源，包含Pro(1.6T参数)和Flash(284B参数)两个版本。模型采用创新的DSA稀疏注意力机制，实现百万字超长上下文处理能力。在Agent能力、世界知识和推理性能上均达到国内与开源领域领先水平，媲美顶级闭源模型。",
+      "link": "https://mp.weixin.qq.com/s/c0mvTWgi7VCb9RRMr1Ygtw",
+      "source_file": "sources/2026-04-24_DeepSeek-V4开源！1.6T参数、百万上下文_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "罗福莉又上分了！小米连甩4款模型，让AI超逼真配音",
+      "source": "智东西",
+      "digest": "小米发布MiMo-V2.5系列四款新模型，在语音合成领域取得突破，能够实现超逼真的AI配音效果。雷军发文表示小米AI团队继续进步，展现了小米在 multimodal AI领域的技术实力。该系列包含多款大模型，标志着小米在AI多模态领域的全面布局。",
+      "link": "https://mp.weixin.qq.com/s/--uX-TK4z8_3liH3huuXow",
+      "source_file": "sources/2026-04-24_罗福莉又上分了！小米连甩4款模型，让AI超逼真配音_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "AI在夜晚集体失明！90段视频+12类问题实测模型夜盲程度｜ICLR 2026",
+      "source": "量子位",
+      "digest": "ICLR 2026发表研究揭示当前视觉AI模型在夜间场景下的严重缺陷。通过90段视频和12类问题的系统性测试，发现主流模型存在明显的【夜盲症】问题。研究者提出【昼夜对齐】方法，将其纳入第一人称基准测试体系。",
+      "link": "https://mp.weixin.qq.com/s/cS8oR67jPIbZfMN_o-EIlg",
+      "source_file": "sources/2026-04-24_AI在夜晚集体失明！90段视频+12类问题实测模型夜盲程度｜ICLR 2026_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "AI科学家还在刷静态榜？基准主动反击，重塑自动科研评价标准",
+      "source": "新智元",
+      "digest": "针对AI研究中过度依赖静态评测榜单的现象，业界提出建立动态、主动的基准测试体系。新方法强调在真实科研场景中的综合评估，旨在重塑AI科研的评价标准，推动研究向更实用的方向发展。",
+      "link": "https://mp.weixin.qq.com/s/JxBTGGrUV4DzmpDzvvcMJg",
+      "source_file": "sources/2026-04-24_AI科学家还在刷静态榜？基准主动反击，重塑自动科研评价标准_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "实测在DeepSeek-V4上烧1000万token，我发现了3个惊喜和1个意外",
+      "source": "智东西",
+      "digest": "通过对DeepSeek-V4进行大规模实测，发现其在复杂智能体编程和长程任务处理方面表现突出。模型在处理跨文件代码修改、大型代码库理解等场景中展现出优异的稳定性和效率，但在某些特定场景下仍存在优化空间。",
+      "link": "https://mp.weixin.qq.com/s/2QGjDDibkYA3yef35PTBZw",
+      "source_file": "sources/2026-04-24_实测在DeepSeek-V4上烧1000万token，我发现了3个惊喜和1个意外_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "DeepSeek-V4上线国家超算互联网",
+      "source": "财联社AI daily",
+      "digest": "DeepSeek-V4预览版正式上线国家超算互联网平台，为科研机构和企事业单位提供强大的AI算力支持。此举将加速国产大模型在科学研究、工业应用等领域的普及，推动AI技术与超算资源的深度融合。",
+      "link": "https://mp.weixin.qq.com/s/_jnAnj_OK2DIdnF-kgGujA",
+      "source_file": "sources/2026-04-24_DeepSeek-V4上线国家超算互联网_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "第一时间，寒武纪原生适配DeepSeek-V4！两大国产之光再次强强联合",
+      "source": "机器之心",
+      "digest": "寒武纪芯片完成对DeepSeek-V4的原生适配，实现国产AI软硬件的关键突破。这次合作打通了从芯片到大模型的完整技术栈，为中国AI产业的自主可控奠定坚实基础，两大国产技术品牌形成强强联合。",
+      "link": "https://mp.weixin.qq.com/s/6Atg77qiirLKvOyzNOVtWQ",
+      "source_file": "sources/2026-04-24_第一时间，寒武纪原生适配DeepSeek-V4！两大国产之光再次强强联合_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "Coordination Engineering关键一环，JiuwenClaw再发布Team Skills技能新范式",
+      "source": "量子位",
+      "digest": "JiuwenClaw发布业界首个面向多Agent协作的标准化能力包规范——Team Skills。该规范为协调工程(Coordination Engineering)提供关键支撑，旨在解决多智能体系统中的协作难题，推动Agent技术的规模化应用。",
+      "link": "https://mp.weixin.qq.com/s/H-E3lZta82swqJoeLb4-vg",
+      "source_file": "sources/2026-04-24_Coordination Engineering关键一环，JiuwenClaw再发布Team Ski_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "美团低调测试万亿级大模型",
+      "source": "财联社AI daily",
+      "digest": "美团启动新一代万亿参数大模型的邀请测试，标志着中国互联网巨头在大模型领域的持续投入。该模型将应用于美团的本地生活服务场景，提升智能化水平和用户体验。",
+      "link": "https://mp.weixin.qq.com/s/ETQJfFtYMSifil5OGSmOpw",
+      "source_file": "sources/2026-04-24_美团低调测试万亿级大模型_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "真有人做AI小猫啊？！生产力和情绪价值都拉满了",
+      "source": "量子位",
+      "digest": "介绍一款结合AI技术的虚拟宠物产品，不仅能提供情绪陪伴，还具备做PPT、写报告、做攻略等实用功能。这种将生产力工具与情感交互结合的创新形态，展现了AI应用在消费端的新可能性。",
+      "link": "https://mp.weixin.qq.com/s/T5SIDYDfZEE8cWCKjDSelg",
+      "source_file": "sources/2026-04-24_真有人做AI小猫啊？！生产力和情绪价值都拉满了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "倒计时3天！我们在寻找能代表今年AI的企业与产品｜榜单申报",
+      "source": "量子位",
+      "digest": "量子位发起年度AI企业与产品榜单评选活动，征集能够代表2026年AI行业发展水平的优秀案例。活动旨在梳理和展示中国AI产业的创新成果，推动行业交流与合作。",
+      "link": "https://mp.weixin.qq.com/s/ZRRAYO4wxP8Uo8tda9T1Zg",
+      "source_file": "sources/2026-04-24_倒计时3天！我们在寻找能代表今年AI的企业与产品｜榜单申报_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "Qoder 内置模型支持 DeepSeek-V4",
+      "source": "Qoder",
+      "digest": "Qoder第一时间支持DeepSeek-V4模型，包括代码能力更强的V4-Pro和轻量高效的V4-Flash两个版本。V4在Codeforces基准上取得3206分，在SWE-Verified上获得80.6分，代码能力接近闭源Frontier模型，长程编码和Agent能力全面升级。",
+      "link": "https://mp.weixin.qq.com/s/CdgcWlBbuevv33AvvDJWQQ",
+      "source_file": "sources/2026-04-24_Qoder 内置模型支持 DeepSeek-V4_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "大模型上车两年，为什么「真·AI 汽车」现在才出现？",
+      "source": "极客公园",
+      "digest": "分析大模型在汽车领域应用的演进历程，指出AI上车不缺口号，缺的是从模型到量产的完整通路。经过两年探索，汽车行业终于找到将大模型有效集成到车辆系统中的可行方案，真正意义的AI汽车开始涌现。",
+      "link": "https://mp.weixin.qq.com/s/HOPmMYH9OxVLdgSf36sVrw",
+      "source_file": "sources/2026-04-24_大模型上车两年，为什么「真·AI 汽车」现在才出现？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "灵码企业版正式支持模型 Kimi K2.6",
+      "source": "灵码Lingma",
+      "digest": "阿里灵码企业版新增支持Kimi K2.6开源编程模型。该模型支持13小时长程自主编码和300智能体集群协同，成为开源编程模型的新标杆，为企业级AI编程提供更强大的技术支持。",
+      "link": "https://mp.weixin.qq.com/s/mH4KFeUHzf3CAmPXkIlwaQ",
+      "source_file": "sources/2026-04-24_灵码企业版正式支持模型 Kimi K2.6_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "独家对话涂鸦【班长】：从AI家庭、机器人到能源，Agent时代需要生态共赢",
+      "source": "智东西",
+      "digest": "涂鸦智能依托180万开发者和10亿智能设备的基础设施，提出Agent时代的生态共赢策略。公司聚焦AI家庭、机器人和能源三大场景，通过开放平台赋能开发者，构建完整的AIoT生态系统，为AI应用落地提供更优解决方案。",
+      "link": "https://mp.weixin.qq.com/s/2UoLRM7TydnnQ-dhcUQtzg",
+      "source_file": "sources/2026-04-24_独家对话涂鸦“班长”：从AI家庭、机器人到能源，Agent时代需要生态共赢_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "MiniMax 登上戛纳，AI 与艺术的全球和解开始了？",
+      "source": "极客公园",
+      "digest": "中国AI公司MiniMax亮相戛纳电影节，展示AI在创意艺术领域的应用成果。这一事件标志着传统艺术界开始积极拥抱AI技术，反映了AI与文化艺术从对立走向融合的趋势，也体现了中国AI企业在国际舞台上的影响力提升。",
+      "link": "https://mp.weixin.qq.com/s/MlCsou4ZmFzSuIYStMQa1g",
+      "source_file": "sources/2026-04-24_MiniMax 登上戛纳，AI 与艺术的全球和解开始了？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "专访北电数智谢东：从单点到系统，星火・AI云 2.0如何重构AI时代生产力体系｜甲子光年",
+      "source": "甲子光年",
+      "digest": "北电数智发布星火·AI云2.0平台，采用双OS驱动架构，旨在重构AI时代的生产力体系。该平台从单点工具升级为系统化解决方案，为企业提供完整的AI应用开发和部署能力，推动AI技术在产业端的规模化落地。",
+      "link": "https://mp.weixin.qq.com/s/-ft-xaDSNlUhWPg53QOiow",
+      "source_file": "sources/2026-04-24_专访北电数智谢东：从单点到系统，星火・AI云 2.0如何重构AI时代生产力体系｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "金融科技服务商：长亮科技落地近百个银行核心系统项目，神州信息利用AI提升交付工艺",
+      "source": "银行科技研究社",
+      "digest": "长亮科技已成功落地近百个银行核心系统项目，神州信息则通过AI技术提升软件交付工艺和质量。这两家金融科技服务商的实践展示了AI在银行业务系统建设和运维中的应用价值，推动金融行业数字化转型升级。",
+      "link": "https://mp.weixin.qq.com/s/dgBUIE6TAJx2bFpa0IkLbA",
+      "source_file": "sources/2026-04-24_金融科技服务商：长亮科技落地近百个银行核心系统项目，神州信息利用AI提升交付工艺_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "银行业数据分类分级大模型来了！探索解决多项痛点",
+      "source": "银行科技研究社",
+      "digest": "针对银行业数据治理难题，推出专门的数据分类分级大模型。该模型能够自动识别和分类银行各类数据，解决数据安全、合规管理等痛点问题，为金融机构提供智能化的数据治理解决方案，提升数据资产管理效率。",
+      "link": "https://mp.weixin.qq.com/s/V9vJ_SCLFG6XLFcukZt2VA",
+      "source_file": "sources/2026-04-24_银行业数据分类分级大模型来了！探索解决多项痛点_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "当互联网用AI卷效率时，这家公司先问了一连串【能不能】",
+      "source": "InfoQ",
+      "digest": "在金融行业引入AI技术并非简单的效率竞赛，而是一场严苛的压力测试。文章探讨金融机构在采用新技术时的审慎态度，强调合规性、安全性和可靠性的重要性，反映了银行业对AI应用的独特考量和严谨流程。",
+      "link": "https://mp.weixin.qq.com/s/KsJX3vrIE7tfQFFoccC4cQ",
+      "source_file": "sources/2026-04-24_当互联网用AI卷效率时，这家公司先问了一连串“能不能”_InfoQ.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "上海银行AI智能反欺诈项目供应商征集",
+      "source": "银行科技研究社",
+      "digest": "上海银行启动AI智能反欺诈项目供应商征集，旨在利用人工智能技术提升银行风控能力和反欺诈水平。该项目反映了银行业在数字化转型过程中对AI技术的深度应用，特别是在风险管理和安全防护领域的创新实践。",
+      "link": "https://mp.weixin.qq.com/s/roLtSPv4jTzHko-EwXfQzg",
+      "source_file": "sources/2026-04-24_上海银行AI智能反欺诈项目供应商征集_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "AI Token说：企业级【龙虾】落地那点事儿，QwenPaw这么说...| Q推荐",
+      "source": "InfoQ",
+      "digest": "InfoQ直播间将举办关于企业级AI应用落地的讨论活动，邀请QwenPaw团队分享实践经验。活动将于4月27日晚19:00进行，探讨AI技术在实际业务场景中的应用挑战和解决方案。",
+      "link": "https://mp.weixin.qq.com/s/dCYVyyiaptYvBY8p8FhiMQ",
+      "source_file": "sources/2026-04-24_AI Token说：企业级“龙虾”落地那点事儿，QwenPaw这么说..._ Q推荐_InfoQ.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-24",
+      "title": "Vibe Coding 时代，程序员的核心竞争力到底是什么？| 极客时间",
+      "source": "InfoQ",
+      "digest": "在AI编程时代，探讨程序员的核心竞争力所在。文章指出AI是放大器而非发动机，有方向的程序员能借助AI放大10倍效能，没有方向则放大的是零。强调程序员需要从代码执行者转变为问题解决者和系统设计者，培养批判性思维和创新能力。",
+      "link": "https://mp.weixin.qq.com/s/6x9rlW3Phb1GwZ9avH8kXg",
+      "source_file": "sources/2026-04-24_Vibe Coding 时代，程序员的核心竞争力到底是什么？_ 极客时间_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "华人再破硅谷天花板！AI黑马新任CTO，中科大80后",
+      "source": "量子位",
+      "digest": "一位中科大毕业的80后华人科学家出任美国AI初创公司CTO，再次打破华人在硅谷的技术领导层天花板。这一任命反映了中国AI人才在国际舞台上的影响力持续提升，也为中美AI技术交流注入新活力。",
+      "link": "https://mp.weixin.qq.com/s/JfHJcaVhfpaYMJKyH6dFzw",
+      "source_file": "sources/2026-04-24_华人再破硅谷天花板！AI黑马新任CTO，中科大80后_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "倒计时3天！我们在寻找能代表今年AI的企业与产品｜榜单申报",
+      "source": "量子位",
+      "digest": "量子位发起年度AI企业与产品榜单评选活动，征集能够代表2026年AI行业发展水平的优秀案例。活动旨在梳理和展示中国AI产业的创新成果，推动行业交流与合作。",
+      "link": "https://mp.weixin.qq.com/s/ZRRAYO4wxP8Uo8tda9T1Zg",
+      "source_file": "sources/2026-04-24_倒计时3天！我们在寻找能代表今年AI的企业与产品｜榜单申报_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "Qoder Together 长沙站：企业级 AI Coding 落地实践 & Qoder 实操教学",
+      "source": "Qoder",
+      "digest": "Qoder在长沙举办线下活动，分享企业级AI编程落地实践经验，并提供Qoder工具的实操教学。活动旨在帮助企业和开发者更好地应用AI编程工具，提升软件开发效率和质量。",
+      "link": "https://mp.weixin.qq.com/s/ty9oyfuAsNZw4w5fto1jBg",
+      "source_file": "sources/2026-04-24_Qoder Together 长沙站：企业级 AI Coding 落地实践 & Qoder 实操教学_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-24",
+      "title": "鹅厂员工，最近看的一本书是什么？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯发起【大厂书单】活动，收集员工在AI时代的阅读选择。书单涵盖技术反思、系统思维、心理认知等多个维度，反映了技术人员在AI浪潮中对自身价值定位的思考，以及对长期判断力和人文素养的重视。",
+      "link": "https://mp.weixin.qq.com/s/dJiIi3CP-iLmDrcqg_lSmA",
+      "source_file": "sources/2026-04-24_鹅厂员工，最近看的一本书是什么？_腾讯技术工程.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "谷歌发布第八代TPU，训推双芯架构专攻智能体时代",
+      "source": "机器之心、极客公园、新智元",
+      "digest": "谷歌发布第八代TPU，首次采用训推双芯设计：8t专攻训练、8i死磕推理，专为智能体时代设计。谷歌称75%新代码由AI编写，年烧1850亿美元打造智能体时代的企业Windows。",
+      "link": "https://mp.weixin.qq.com/s/ZWUI_iuwrRY4vzwo5LWFjg",
+      "source_file": "sources/2026-04-23_英伟达迎劲敌？谷歌第八代TPU首推「训推双芯」：8t专攻训练，8i「死磕」推理_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "Anthropic估值暴涨破万亿美元，首次超越OpenAI",
+      "source": "智东西、新智元",
+      "digest": "Anthropic估值突破1万亿美元，历史性反超OpenAI。市场信心明显转向Anthropic。",
+      "link": "https://mp.weixin.qq.com/s/HaSQIOyANe90uj7vme9XjA",
+      "source_file": "sources/2026-04-23_1万亿美元！Anthropic估值暴涨，反超OpenAI_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "Meta强制收集员工鼠标键盘数据训练AI，社区炸锅",
+      "source": "InfoQ、新智元、机器之心、量子位",
+      "digest": "Meta要求员工安装监控软件，强制收集鼠标点击、键盘输入、截屏数据用于训练AI。裁员8000人后推行，员工怒斥鼠标轨迹就是职业墓志铭。",
+      "link": "https://mp.weixin.qq.com/s/8C11m-_w3Arvm77QvZ9oXw",
+      "source_file": "sources/2026-04-23_Meta 开始记录员工每一次点击：AI 要接管工作，先监控会工作的人_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "OpenAI推出AI Agent龙虾：不睡觉不离职，越PUA越聪明",
+      "source": "新智元",
+      "digest": "OpenAI发布代号龙虾的AI Agent，可7x24小时工作，通过负反馈持续优化表现。",
+      "link": "https://mp.weixin.qq.com/s/hfRsnvpWeMqPZQe6T7Xr6Q",
+      "source_file": "sources/2026-04-23_OpenAI版「龙虾」首次登场！不睡觉不离职，越PUA越聪明_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "腾讯混元3 Preview发布，姚顺雨带队三个月重构",
+      "source": "极客公园、量子位、机器之心",
+      "digest": "姚顺雨带队三个月从零重建混元，Hy3 Preview正式上线。同时提出SOAR方法，让视觉大模型在生成中学会自我纠偏，无需奖励模型即超越RL方法。",
+      "link": "https://mp.weixin.qq.com/s/VCFNYO_E6LcVjYhybXxS8g",
+      "source_file": "sources/2026-04-23_姚顺雨带队三个月重构混元，Hy3 preview 上线了_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-23",
+      "title": "Qwen3.6-27B开源，智能体编程全面超越前代",
+      "source": "量子位",
+      "digest": "通义千问Qwen3.6-27B开源发布，27B参数秒杀自家397B旗舰，原生支持多模态理解，智能体编程能力全面超越前代。",
+      "link": "https://mp.weixin.qq.com/s/yATQ-TUhOqn98Be9EifE5A",
+      "source_file": "sources/2026-04-23_27B秒了自家397B旗舰，Qwen3.6-27B开源，智能体编程全面超越前代_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-23",
+      "title": "小米MiMo-V2.5深夜突袭，DeepSeek V4发布前罗福莉亮剑",
+      "source": "智东西",
+      "digest": "小米大模型MiMo-V2.5发布，能力比上月飙涨，比Kimi K2.6省42% Token。DeepSeek V4发布前夕，罗福莉团队抢先亮剑。",
+      "link": "https://mp.weixin.qq.com/s/z_htnhYfPWaC-KFPCHY0ag",
+      "source_file": "sources/2026-04-23_DeepSeek V4发布前，罗福莉亮剑！小米最强大模型MiMo-V2.5深夜突袭_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-23",
+      "title": "字节跳动发布3D生成大模型Seed3D 2.0",
+      "source": "财联社AI daily",
+      "digest": "字节跳动发布新一代3D生成大模型Seed3D 2.0，精度显著提升。",
+      "link": "https://mp.weixin.qq.com/s/lLCmiDKv3PaBcfvmisgCWA",
+      "source_file": "sources/2026-04-23_字节跳动发布3D生成大模型Seed3D 2.0_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-23",
+      "title": "灵码推出自定义智能体：编程经验秒变AI专家",
+      "source": "灵码Lingma",
+      "digest": "灵码上线自定义智能体功能，可将编程经验封装为专属AI Agent，自动处理特定任务。",
+      "link": "https://mp.weixin.qq.com/s/jiwgCCWDQM5JLNHnRVbOGw",
+      "source_file": "sources/2026-04-23_灵码自定义智能体：将编程经验秒变 AI 专家_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-23",
+      "title": "Copilot全面限流：新用户注册关闭，老用户额度砍半",
+      "source": "InfoQ",
+      "digest": "GitHub Copilot关闭新用户注册，老用户额度砍半，AI编程工具进入付费收紧时代。Agent模式把原有定价模型顶穿了。",
+      "link": "https://mp.weixin.qq.com/s/pj_2KedXbMNoJNm5gUbf-Q",
+      "source_file": "sources/2026-04-23_Copilot 不让注册了：从“随便用”到“全面限”，agent 把原有订价模型顶穿了_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
       "date": "2026-04-22",
-      "title": "华尔街评苹果「换帅」：后库克时代的增长取决于AI战略",
+      "title": "华尔街评苹果“换帅”：后库克时代的增长取决于AI战略",
       "source": "财联社AI daily",
       "digest": "文|夏军雄华尔街分析师表示，苹果公司领导层的更替标志着该公司进入一个新阶段，其核心问题在于能否将深厚的硬件积淀",
       "link": "https://mp.weixin.qq.com/s/fkgYePZx_JqshM8g2Bixfw",
       "source_file": "sources/2026-04-22_华尔街评苹果“换帅”：后库克时代的增长取决于AI战略_财联社AI daily.md",
       "category": "国际",
       "is_model_related": false
-    },
-    {
-      "date": "2026-04-22",
-      "title": "特斯拉中国车机将接入豆包大模型",
-      "source": "财联社AI daily",
-      "digest": "据网信上海消息，特斯拉车机语音大模型服务于4月20日完成备案。《科创板日报》从知情人士处获悉，特斯拉车机语音服务将接入豆包大模型。",
-      "link": "https://mp.weixin.qq.com/s/ntYi_X-cmwpwW7Oqk28TFw",
-      "source_file": "sources/2026-04-22_特斯拉中国车机将接入豆包大模型_财联社AI daily.md",
-      "category": "国际",
-      "is_model_related": true
     },
     {
       "date": "2026-04-22",
@@ -34,7 +634,7 @@
     },
     {
       "date": "2026-04-22",
-      "title": "Altman 亲自坐镇发布 ChatGPT Image 2，小编实测：风格、画质、叙事感 全都夯爆了",
+      "title": "Altman 亲自坐镇发布 ChatGPT Image 2，小编实测：风格、画质、叙事感全都夯爆了",
       "source": "InfoQ",
       "digest": "这次OpenAI 真要抢走设计师饭碗了。",
       "link": "https://mp.weixin.qq.com/s/xZE0oCAXCx-QDZ-a-8CKMQ",
@@ -44,12 +644,212 @@
     },
     {
       "date": "2026-04-22",
+      "title": "马斯克祭出「霸王条款」！Cursor焊死SpaceX战车，600亿砸穿OpenAI",
+      "source": "新智元",
+      "digest": "马斯克祭出「霸王条款」！Cursor焊死SpaceX战车，600亿砸穿OpenAI",
+      "link": "https://mp.weixin.qq.com/s/3rjemXVENZy2tyc-zLVInA",
+      "source_file": "sources/2026-04-22_马斯克祭出「霸王条款」！Cursor焊死SpaceX战车，600亿砸穿OpenAI_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "马斯克 600 亿美元锁定 Cursor；字节、荣威合作推出「AI 汽车」；传今年存储厂商人均奖金超 300 万元 | 极客早知道",
+      "source": "极客公园",
+      "digest": "Seedance 2.0 API 上线 1080P 生成能力；影石 Insta360 展示 Luna Ultra 双摄云台相机；小米宣布上线 PC 版龙虾",
+      "link": "https://mp.weixin.qq.com/s/kwO-bCfrDpULab_YXYVYhQ",
+      "source_file": "sources/2026-04-22_马斯克 600 亿美元锁定 Cursor；字节、荣威合作推出「AI 汽车」；传今年存储厂商人均奖金超_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "Qwen3.6-27B：无需MoE路由，旗舰级编程能力",
+      "source": "通义实验室",
+      "digest": "继 Qwen3.6-Plus 和 Qwen3.6-35B-A3B 之后，大家期待的270亿稠密规格来了✨ Qwen3.6-27B 开源发布！ 🔹 270亿稠密参数，无需MoE路由，部署门槛直降 🔹 编程能力全面超越前代Qwen3.5-397B-A17B MoE旗舰模型，小身材大能量 🔹 原生多模态+长上下文，图文推理&amp;复杂任务轻松应对 🔹 无缝集成主流编程助手：OpenClaw / Cla...",
+      "link": "https://mp.weixin.qq.com/s/D7CPcx7ISHuDmbFc2Y27pA",
+      "source_file": "sources/2026-04-22_Qwen3.6-27B：无需MoE路由，旗舰级编程能力_通义实验室.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "不做老钱做闯将：宇视向企业“干活流程”开枪，发SOP智能体全家桶",
+      "source": "智东西",
+      "digest": "相比张牙舞爪的“龙虾”，企业更需要可驾驭的智能体。",
+      "link": "https://mp.weixin.qq.com/s/DxXBm1yB33dTyLlJmFuK2w",
+      "source_file": "sources/2026-04-22_不做老钱做闯将：宇视向企业“干活流程”开枪，发SOP智能体全家桶_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "3B激活参数！商汤绝影Sage登顶PinchBench，端侧第一",
+      "source": "新智元",
+      "digest": "商汤绝影发布端侧多模态智能体基座大模型Sage。",
+      "link": "https://mp.weixin.qq.com/s/PaXQNX3yui2Wn4BxA6sDvQ",
+      "source_file": "sources/2026-04-22_3B激活参数！商汤绝影Sage登顶PinchBench，端侧第一_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "3B激活参数，干翻GPT-5.4和Opus4.6，商汤绝影把龙虾塞进了车里",
+      "source": "量子位",
+      "digest": "全新端侧多模态智能体基座大模型Sage",
+      "link": "https://mp.weixin.qq.com/s/IyNyfOWyFIJH0vElRTwkGw",
+      "source_file": "sources/2026-04-22_3B激活参数，干翻GPT-5.4和Opus4.6，商汤绝影把龙虾塞进了车里_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "广东发布AI行业应用行动方案，涉AI+金融！",
+      "source": "银行科技研究社",
+      "digest": "广东省人民政府办公厅印发《广东省加快推进人工智能全域全时全行业高水平应用行动方案》。方案鼓励银行、证券基金公司、期货公司、保险机构和小额贷款公司、融资担保公司等地方金融组织根据实际业务需要，构建智能信贷审批系统、实时交易智能监控系统、智能财富管理服务、智能投研平台等多层次“人工智能+金融”应用体系，提升风险管理与市场服务效能。深化金融租赁行业与人工智能产业融合发展，支持租赁公司为智能机器人等高端装...",
+      "link": "https://mp.weixin.qq.com/s/aSl4FSieDagOZ54VBF6WBw",
+      "source_file": "sources/2026-04-22_广东发布AI行业应用行动方案，涉AI+金融！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "6大行2025年ESG报告：反洗钱深度运用AI与大模型技术",
+      "source": "银行科技研究社",
+      "digest": "6大行2025年ESG报告：反洗钱深度运用AI与大模型技术",
+      "link": "https://mp.weixin.qq.com/s/d_FWCVrS7qTiA9-1BT8WTw",
+      "source_file": "sources/2026-04-22_6大行2025年ESG报告：反洗钱深度运用AI与大模型技术_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "湖南银行已成立数字化改革专班，首个AI大模型智能体应用落地智能工单场景",
+      "source": "银行科技研究社",
+      "digest": "湖南银行已成立数字化改革专班，首个AI大模型智能体应用落地智能工单场景",
+      "link": "https://mp.weixin.qq.com/s/VSar8cflmQVTQlFjhtgz6g",
+      "source_file": "sources/2026-04-22_湖南银行已成立数字化改革专班，首个AI大模型智能体应用落地智能工单场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "特斯拉中国车机将接入豆包大模型",
+      "source": "财联社AI daily",
+      "digest": "据网信上海消息，特斯拉车机语音大模型服务于4月20日完成备案。《科创板日报》从知情人士处获悉，特斯拉车机语音服务将接入豆包大模型。",
+      "link": "https://mp.weixin.qq.com/s/ntYi_X-cmwpwW7Oqk28TFw",
+      "source_file": "sources/2026-04-22_特斯拉中国车机将接入豆包大模型_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
       "title": "在AK大神爆火的任务里，摸清国产AI真实水平",
       "source": "InfoQ",
       "digest": "不是普通的RAG复刻，也非简单的网页生成，而是一次扎实的系统承压能力实测。",
       "link": "https://mp.weixin.qq.com/s/xY5PmnslogdPPkV4L09chw",
       "source_file": "sources/2026-04-22_在AK大神爆火的任务里，摸清国产AI真实水平_InfoQ.md",
-      "category": "国内",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "小心，别被ChatGPT Images 2.0骗了！",
+      "source": "智东西",
+      "digest": "OpenAI正式发布ChatGPT Images 2.0。",
+      "link": "https://mp.weixin.qq.com/s/1JAu5H8WkXicGUdSTwZ4lw",
+      "source_file": "sources/2026-04-22_小心，别被ChatGPT Images 2.0骗了！_智东西.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "大厂AI抢人大战，从实习生开始",
+      "source": "量子位",
+      "digest": "大厂AI抢人大战，从实习生开始",
+      "link": "https://mp.weixin.qq.com/s/llZgZCdD1pNole5aXtIsmQ",
+      "source_file": "sources/2026-04-22_大厂AI抢人大战，从实习生开始_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "挖漏洞何必Mythos，国产智能体早跑通了",
+      "source": "量子位",
+      "digest": "360智能体已经开始批量挖洞",
+      "link": "https://mp.weixin.qq.com/s/nR0rmNMJyrszVktLUJuSmQ",
+      "source_file": "sources/2026-04-22_挖漏洞何必Mythos，国产智能体早跑通了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "倒计时5天！我们在寻找能代表今年AI的企业与产品｜榜单申报",
+      "source": "量子位",
+      "digest": "抓紧申报了！截至4月27日",
+      "link": "https://mp.weixin.qq.com/s/Sva0T9vDbAfojhoHd4thQA",
+      "source_file": "sources/2026-04-22_倒计时5天！我们在寻找能代表今年AI的企业与产品｜榜单申报_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "GPT-Image-2正式发布！设计师可以告别「古法设计」了",
+      "source": "量子位",
+      "digest": "OpenAI首个具备“思考”能力的图像模型",
+      "link": "https://mp.weixin.qq.com/s/uE92m52scoaWbEIjF5wOaQ",
+      "source_file": "sources/2026-04-22_GPT-Image-2正式发布！设计师可以告别「古法设计」了_量子位.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "ICLR 2026 | ProSafePrune：一剪见效，告别大模型过度防御",
+      "source": "机器之心",
+      "digest": "全新的低秩参数修剪框架。",
+      "link": "https://mp.weixin.qq.com/s/QALqpGZxvqiTW0FWSpYrrg",
+      "source_file": "sources/2026-04-22_ICLR 2026 _ ProSafePrune：一剪见效，告别大模型过度防御_机器之心.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-22",
+      "title": "首篇自进化智能体系统技术报告出炉：Token成本直降近10倍，省钱又高效！",
+      "source": "机器之心",
+      "digest": "仅用3000多行核心代码实现的能力，充分展示了智能体未来发展的无限前景！",
+      "link": "https://mp.weixin.qq.com/s/va5DgDbcD07DBFRP1D_RSw",
+      "source_file": "sources/2026-04-22_首篇自进化智能体系统技术报告出炉：Token成本直降近10倍，省钱又高效！_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "SaaS 出海的智能化跃迁 | 易仓最佳实践",
+      "source": "Qoder",
+      "digest": "易仓如何用Qoder + QoderWork重塑研发与运营？ [庆祝]直播看点： 1）跨境ERP TOP3 如何打造“麦多AI”经营智能体； 2）服务数万跨境企业背后的研发与运营挑战； 3）Qoder使用指南：200人研发团队驾驭订单/库存/财务等复杂模块实战； 4）AI Coding 选型踩坑与“真香”案例； 5）QoderWork 经验分享：看板、方案、文案……以前需求至少n周，现在自己几...",
+      "link": "https://mp.weixin.qq.com/s/p5OFa-2zRg_V62UfM4bEig",
+      "source_file": "sources/2026-04-22_SaaS 出海的智能化跃迁 _ 易仓最佳实践_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "百炼 Token Plan 来了，Qoder 已同步支持",
+      "source": "Qoder",
+      "digest": "阿里云百炼新推出的 Token Plan，今天起可以直接在 Qoder IDE、CLI、JetBrains 插件里用。一次配置，三端可用，Qoder 侧不消耗 Credits。",
+      "link": "https://mp.weixin.qq.com/s/DAefdulm5O3BenOzQa6tdA",
+      "source_file": "sources/2026-04-22_百炼 Token Plan 来了，Qoder 已同步支持_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-22",
+      "title": "Qoder Together 武汉站：从工具提效到组织升级，企业级 AI Coding 落地实践",
+      "source": "Qoder",
+      "digest": "武汉我们来了！",
+      "link": "https://mp.weixin.qq.com/s/ZTGF3NhI_uBI5QCL1vIHsg",
+      "source_file": "sources/2026-04-22_Qoder Together 武汉站：从工具提效到组织升级，企业级 AI Coding 落地实践_Qoder.md",
+      "category": "其他",
       "is_model_related": false
     },
     {

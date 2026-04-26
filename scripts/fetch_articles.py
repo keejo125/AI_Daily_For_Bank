@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 """
-通过 REST API 获取微信公众号文章
+通过 /api/rss/export/{date} 导出接口获取微信公众号文章
 
 用法: python3 fetch_articles.py [YYYY-MM-DD]
 不传日期则默认昨天
+
+变更说明（v2）:
+- 使用 /api/rss/export/{date} 一键导出接口，替代逐公众号翻页+逐篇抓全文的旧流程
+- 旧流程：获取订阅列表 → 逐公众号翻页 → 按时间戳过滤 → 逐篇 fetch 全文 → 保存
+- 新流程：一次 GET 请求 → 直接拿到当天所有文章（含 content） → 保存
+- 耗时从 4-10 分钟降至 1-3 秒
 """
 import json
 import os
 import re
 import sys
-import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -21,7 +26,7 @@ CONFIG_PATH = PROJECT_DIR / "config.json"
 
 REQUEST_TIMEOUT = 30
 MAX_RETRIES = 3
-RETRY_DELAY = 2  # seconds
+RETRY_DELAY = 2
 
 
 # ---------- 工具函数 ----------
@@ -50,14 +55,6 @@ def get_target_date(date_arg=None):
     return yesterday.strftime("%Y-%m-%d")
 
 
-def date_to_timestamps(date_str):
-    """将日期字符串转为当天的起止 Unix 时间戳（秒），上海时区"""
-    tz = timezone(timedelta(hours=8))
-    start_dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=tz)
-    end_dt = start_dt + timedelta(days=1) - timedelta(seconds=1)
-    return int(start_dt.timestamp()), int(end_dt.timestamp())
-
-
 def api_get(url, params=None):
     """带重试的 GET 请求"""
     for attempt in range(1, MAX_RETRIES + 1):
@@ -68,100 +65,65 @@ def api_get(url, params=None):
         except Exception as e:
             print(f"   ⚠️ GET 请求失败 (第{attempt}次): {e}")
             if attempt < MAX_RETRIES:
+                import time
                 time.sleep(RETRY_DELAY * attempt)
     return None
 
 
-def api_post(url, body):
-    """带重试的 POST 请求"""
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            resp = requests.post(url, json=body, timeout=REQUEST_TIMEOUT)
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:
-            print(f"   ⚠️ POST 请求失败 (第{attempt}次): {e}")
-            if attempt < MAX_RETRIES:
-                time.sleep(RETRY_DELAY * attempt)
-    return None
+# ---------- HTML → 纯文本简易转换 ----------
+
+def html_to_text(html_str):
+    """简易 HTML → 纯文本：去标签、解码常见实体"""
+    if not html_str:
+        return ""
+    # 去除 script/style
+    text = re.sub(r'<script[^>]*>.*?</script>', '', html_str, flags=re.S | re.I)
+    text = re.sub(r'<style[^>]*>.*?</style>', '', text, flags=re.S | re.I)
+    # 换行标签
+    text = re.sub(r'<br\s*/?>', '\n', text, flags=re.I)
+    text = re.sub(r'</p>', '\n', text, flags=re.I)
+    text = re.sub(r'</div>', '\n', text, flags=re.I)
+    text = re.sub(r'</li>', '\n', text, flags=re.I)
+    # 移除剩余标签
+    text = re.sub(r'<[^>]+>', '', text)
+    # 解码常见实体
+    text = text.replace('&amp;', '&')
+    text = text.replace('&lt;', '<')
+    text = text.replace('&gt;', '>')
+    text = text.replace('&quot;', '"')
+    text = text.replace('&#39;', "'")
+    text = text.replace('&nbsp;', ' ')
+    # 清理空白
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
 
 
 # ---------- 核心逻辑 ----------
 
-def fetch_subscriptions(base_url):
-    """获取订阅公众号列表"""
-    url = f"{base_url}/api/rss/subscriptions"
-    print(f"📡 获取订阅列表: {url}")
-    data = api_get(url)
-    if not data or not data.get("success"):
-        print(f"   ❌ 获取订阅列表失败: {data}")
-        return []
-    subs = data.get("data", [])
-    print(f"   ✅ 获取到 {len(subs)} 个公众号")
-    return subs
-
-
-def fetch_article_list(base_url, fakeid):
-    """获取某公众号的文章列表（自动翻页）"""
-    all_articles = []
-    begin = 0
-    count = 10
-
-    while True:
-        url = f"{base_url}/api/public/articles"
-        params = {"fakeid": fakeid, "begin": begin, "count": count}
-        data = api_get(url, params=params)
-
-        if not data or not data.get("success"):
-            if begin == 0:
-                print(f"      ⚠️ 获取文章列表失败: fakeid={fakeid}")
-            break
-
-        resp_data = data.get("data", {})
-        articles = resp_data.get("articles", [])
-        if not articles:
-            break
-
-        all_articles.extend(articles)
-
-        # 检查分页: total 表示总数
-        total = resp_data.get("total", 0)
-        if begin + count >= total:
-            break
-
-        begin += count
-        time.sleep(0.3)  # 避免请求过快
-
-    return all_articles
-
-
-def fetch_full_article(base_url, link):
-    """获取文章全文内容"""
-    url = f"{base_url}/api/article/fetch"
-    body = {"url": link}
-    data = api_post(url, body)
-    if not data or data.get("code") != 0:
-        return None
-    return data.get("data", {})
-
-
-def save_article_md(filepath, title, link, source, content):
-    """保存文章为 Markdown 文件"""
+def save_article_md(filepath, title, link, source, content_html, publish_time=0):
+    """保存文章为 Markdown 文件，content_html 自动转纯文本"""
     filepath.parent.mkdir(parents=True, exist_ok=True)
+    content_text = html_to_text(content_html)
     with open(filepath, "w", encoding="utf-8") as f:
+        # Front matter
+        f.write("---\n")
+        if publish_time:
+            f.write(f"publish_time: {publish_time}\n")
+        f.write("---\n\n")
+        
         f.write(f"# {title}\n\n")
         f.write(f"> 原文链接：{link}\n")
         f.write(f"> 公众号：{source}\n\n")
-        f.write("---\n\n")
-        f.write(content or "（无正文内容）")
+        f.write(content_text or "（无正文内容）")
     return filepath
 
 
 def main():
+    start_time = __import__('time').time()
+
     # 解析日期参数
     date_arg = sys.argv[1] if len(sys.argv) > 1 else None
     date_str = get_target_date(date_arg)
-    start_ts, end_ts = date_to_timestamps(date_str)
 
     # 读取配置
     config = load_config()
@@ -174,78 +136,49 @@ def main():
     sources_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"📅 目标日期: {date_str}")
-    print(f"   时间范围: {start_ts} - {end_ts}")
+    print(f"   API: {base_url}/api/rss/export/{date_str}")
     print(f"   输出目录: {day_dir}")
     print()
 
-    # Step 1: 获取订阅列表
-    subscriptions = fetch_subscriptions(base_url)
-    if not subscriptions:
-        print("❌ 未获取到任何公众号，退出")
+    # Step 1: 一键导出当天文章
+    export_url = f"{base_url}/api/rss/export/{date_str}"
+    print(f"📡 请求导出接口...")
+    data = api_get(export_url)
+
+    if not data:
+        print("❌ 导出接口请求失败，退出")
         sys.exit(1)
 
-    # Step 2: 遍历公众号，获取文章
-    all_articles = []
-    for idx, sub in enumerate(subscriptions, 1):
-        fakeid = sub.get("fakeid", "")
-        nickname = sub.get("nickname", "未知")
-        print(f"[{idx}/{len(subscriptions)}] 📰 {nickname} (fakeid={fakeid})")
+    if "detail" in data:
+        print(f"❌ 接口返回错误: {data['detail']}")
+        sys.exit(1)
 
-        articles = fetch_article_list(base_url, fakeid)
-        print(f"      获取到 {len(articles)} 篇文章")
+    articles = data.get("articles", [])
+    print(f"   ✅ 获取到 {len(articles)} 篇文章")
 
-        # 按日期过滤 (使用 create_time 作为发布时间)
-        matched = []
-        for art in articles:
-            pub_ts = art.get("create_time", 0)
-            if start_ts <= pub_ts <= end_ts:
-                art["_source_nickname"] = nickname
-                matched.append(art)
-
-        print(f"      匹配日期: {len(matched)} 篇")
-        all_articles.extend(matched)
-        time.sleep(0.5)  # 避免请求过快
-
-    print(f"\n📊 共获取 {len(all_articles)} 篇目标日期文章")
-
-    if not all_articles:
+    if not articles:
         print("❌ 没有找到文章，退出")
         sys.exit(0)
 
-    # Step 3: 获取全文 & 保存
-    print(f"\n📝 开始获取全文并保存...")
+    # Step 2: 保存文章到本地
+    print(f"\n📝 保存文章文件...")
     articles_meta = []
 
-    for idx, art in enumerate(all_articles, 1):
+    for idx, art in enumerate(articles, 1):
         aid = art.get("aid", "")
         title = art.get("title", "无标题")
         link = art.get("link", "")
         digest = art.get("digest", "")
-        pub_time = art.get("create_time", 0)
-        source_name = art.get("_source_nickname", "")
-        list_content = art.get("content", "")
-
-        print(f"   [{idx}/{len(all_articles)}] {title[:50]}...")
-
-        # 尝试获取全文
-        full_content = ""
-        if link:
-            full_data = fetch_full_article(base_url, link)
-            if full_data:
-                # 优先 plain_content，其次 content
-                full_content = full_data.get("plain_content") or full_data.get("content") or ""
-            time.sleep(0.3)
-
-        # 最终正文：优先全文API的 plain_content，其次全文API的 content，
-        # 再其次列表的 content，最后用 digest
-        body_text = full_content or list_content or digest or ""
+        content_html = art.get("content", "")
+        pub_time = art.get("publish_time", 0)
+        source_name = art.get("source", "")
 
         # 保存 Markdown 文件
         safe_title = sanitize_filename(title, max_len=50)
         safe_source = sanitize_filename(source_name, max_len=20)
         filename = f"{date_str}_{safe_title}_{safe_source}.md"
         filepath = sources_dir / filename
-        save_article_md(filepath, title, link, source_name, body_text)
+        save_article_md(filepath, title, link, source_name, content_html, pub_time)
 
         # 收集元数据
         articles_meta.append({
@@ -258,7 +191,10 @@ def main():
             "source_file": f"sources/{filename}"
         })
 
-    # Step 4: 保存 articles_raw.json
+        if idx % 20 == 0 or idx == len(articles):
+            print(f"   进度: {idx}/{len(articles)}")
+
+    # Step 3: 保存 articles_raw.json
     raw_json = {
         "date": date_str,
         "total": len(articles_meta),
@@ -268,7 +204,8 @@ def main():
     with open(raw_path, "w", encoding="utf-8") as f:
         json.dump(raw_json, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ 完成！")
+    elapsed = __import__('time').time() - start_time
+    print(f"\n✅ 完成！(耗时: {elapsed:.1f}s)")
     print(f"   文章文件: {sources_dir} ({len(articles_meta)} 篇)")
     print(f"   元数据: {raw_path}")
 

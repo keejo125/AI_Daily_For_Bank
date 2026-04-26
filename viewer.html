@@ -134,6 +134,16 @@ body {
   background: rgba(139,92,246,0.12);
   color: #7e22ce;
 }
+.publish-time {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(59,130,246,0.12);
+  color: #2563eb;
+}
 .original-link-btn {
   display: inline-flex;
   align-items: center;
@@ -165,6 +175,10 @@ body {
   .source-name {
     background: rgba(168,85,247,0.25);
     color: #e9d5ff;
+  }
+  .publish-time {
+    background: rgba(59,130,246,0.25);
+    color: #bfdbfe;
   }
   .original-link-btn {
     background: rgba(59,130,246,0.25);
@@ -367,10 +381,7 @@ body {
     <div class="banner-title" id="article-title">加载中…</div>
     <div class="banner-meta" id="article-meta" style="display:none">
       <span class="source-name" id="source-name"></span>
-      <a class="original-link-btn" id="original-link" href="#" target="_blank" rel="noopener">
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 3h7v7M13 3L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        原文链接
-      </a>
+      <span class="publish-time" id="publish-time" style="display:none"></span>
     </div>
   </div>
 
@@ -395,7 +406,6 @@ body {
   var titleEl = document.getElementById('article-title');
   var metaEl = document.getElementById('article-meta');
   var sourceNameEl = document.getElementById('source-name');
-  var originalLinkEl = document.getElementById('original-link');
 
   if (!filePath) {
     showError('缺少文件参数', '请在 URL 中通过 ?file= 指定 Markdown 文件路径。');
@@ -416,7 +426,9 @@ body {
   });
 
   /* ===== Fetch markdown ===== */
-  fetch(filePath)
+  // Encode the filePath to ensure proper URL resolution for Chinese filenames
+  var fetchUrl = filePath.split('/').map(encodeURIComponent).join('/');
+  fetch(fetchUrl)
     .then(function(resp) {
       if (!resp.ok) throw new Error('HTTP ' + resp.status + '：无法加载文件');
       return resp.text();
@@ -425,7 +437,7 @@ body {
       renderContent(md);
     })
     .catch(function(err) {
-      showError('加载失败', err.message || '无法读取文件内容');
+      showError('加载失败', '文件: ' + filePath + '\n错误: ' + (err.message || '无法读取文件内容'));
     });
 
   /* ===== Render Content ===== */
@@ -434,6 +446,7 @@ body {
     var title = '';
     var sourceName = '';
     var originalUrl = '';
+    var publishTime = '';  // 发布时间
     var bodyLines = [];
     var inFrontMatter = false;
     var frontMatterDone = false;
@@ -452,6 +465,24 @@ body {
       if (!frontMatterDone && trimmed === '---') {
         inFrontMatter = !inFrontMatter;
         if (!inFrontMatter) frontMatterDone = true;
+        continue;
+      }
+
+      /* Extract metadata from front matter */
+      if (inFrontMatter) {
+        // 提取 publish_time
+        var timeMatch = trimmed.match(/^publish_time:\s*(\d+)/);
+        if (timeMatch) {
+          var timestamp = parseInt(timeMatch[1]);
+          var dt = new Date(timestamp * 1000);
+          // 格式化为 yyyy-mm-dd hh:mm
+          var year = dt.getFullYear();
+          var month = String(dt.getMonth() + 1).padStart(2, '0');
+          var day = String(dt.getDate()).padStart(2, '0');
+          var hours = String(dt.getHours()).padStart(2, '0');
+          var minutes = String(dt.getMinutes()).padStart(2, '0');
+          publishTime = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
+        }
         continue;
       }
 
@@ -491,8 +522,10 @@ body {
       sourceNameEl.textContent = sourceName;
       metaEl.style.display = 'flex';
     }
-    if (originalUrl) {
-      originalLinkEl.href = originalUrl;
+    if (publishTime) {
+      var publishTimeEl = document.getElementById('publish-time');
+      publishTimeEl.textContent = publishTime;
+      publishTimeEl.style.display = 'inline-flex';
       metaEl.style.display = 'flex';
     }
 

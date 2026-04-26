@@ -676,8 +676,10 @@
     var s = issue.stats;
     var tags = buildTags(s);
     var summaryText = issue.summary || ("共 " + s.total + " 条内容");
+    // 使用 article_date（文章内容日期）作为文件夹路径
+    var folderDate = issue.article_date || issue.date;
 
-    return '<a class="latest-card" href="daily/' + issue.date + '/index.html">' +
+    return '<a class="latest-card" href="daily/' + folderDate + '/index.html">' +
       '<div class="date-col">' +
         '<div class="month">' + d.monthLabel + '</div>' +
         '<div class="day">' + d.day + '</div>' +
@@ -706,8 +708,11 @@
       statsParts.push('<span class="stat' + emptyClass + '" style="color:' + catColors[cat] + '">' + cat + ' <span class="stat-num">' + count + '</span></span>');
     });
     statsParts.push('<span class="stat total">共 ' + s.total + ' 条</span>');
+    
+    // 使用 article_date（文章内容日期）作为文件夹路径
+    var folderDate = issue.article_date || issue.date;
 
-    return '<a class="day-item" href="daily/' + issue.date + '/index.html">' +
+    return '<a class="day-item" href="daily/' + folderDate + '/index.html">' +
       '<div class="left">' +
         '<div class="date-block">' +
           '<div class="day-num">' + d.day + '</div>' +
