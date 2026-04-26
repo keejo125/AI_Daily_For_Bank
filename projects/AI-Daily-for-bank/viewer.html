@@ -382,10 +382,6 @@ body {
     <div class="banner-meta" id="article-meta" style="display:none">
       <span class="source-name" id="source-name"></span>
       <span class="publish-time" id="publish-time" style="display:none"></span>
-      <a class="original-link-btn" id="original-link" href="#" target="_blank" rel="noopener">
-        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 3h7v7M13 3L6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        原文链接
-      </a>
     </div>
   </div>
 
@@ -410,7 +406,6 @@ body {
   var titleEl = document.getElementById('article-title');
   var metaEl = document.getElementById('article-meta');
   var sourceNameEl = document.getElementById('source-name');
-  var originalLinkEl = document.getElementById('original-link');
 
   if (!filePath) {
     showError('缺少文件参数', '请在 URL 中通过 ?file= 指定 Markdown 文件路径。');
@@ -531,10 +526,6 @@ body {
       var publishTimeEl = document.getElementById('publish-time');
       publishTimeEl.textContent = publishTime;
       publishTimeEl.style.display = 'inline-flex';
-      metaEl.style.display = 'flex';
-    }
-    if (originalUrl) {
-      originalLinkEl.href = originalUrl;
       metaEl.style.display = 'flex';
     }
 

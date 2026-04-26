@@ -44,7 +44,7 @@ Step1   Step2   Step3   Step4   Step5
 |:----:|:------:|:---------|:-----|:-----|
 | **1. 获取** | 脚本 | `fetch_articles.py` | `/api/rss/export/{date}` 导出接口 | `sources/*.md` + `articles_raw.json` |
 | **2. 过滤** | 脚本 | `filter_articles.py` | `articles_raw.json` + `config.json` 关键词 | `filtered_articles.json`（不匹配的 .md 会被删除） |
-| **3. 分类** | 智能体 | 人工阅读原文 → 判断分类 + 生成摘要 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
+| **3. 分类** | 智能体 | `create_classification.py` + 人工调整 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
 | **4. 生成** | 脚本 | `generate_html.py` | `classification.json` + `template.html` | `daily/YYYY-MM-DD/index.html` + 更新索引 |
 | **5. 验证** | 人工 | 检查产出 | 生成的文件 | 确认完整 |
 
@@ -69,7 +69,9 @@ python3 fetch_articles.py
 # Step 2: 关键词过滤
 python3 filter_articles.py 2026-04-22
 
-# Step 3: 智能分类（由智能体完成，生成 classification.json）
+# Step 3: 智能分类（生成模板 + 人工调整）
+python3 create_classification.py 2026-04-22  # 自动生成分类模板
+# 然后编辑 classification.json，填写摘要并调整分类
 
 # Step 4: 生成 HTML
 python3 generate_html.py 2026-04-22
@@ -148,8 +150,9 @@ python3 generate_html.py 2026-04-22
 - ✅ 响应式布局（手机 / 平板 / 桌面）
 - ✅ 亮色调为主，暗色模式自动适配（`prefers-color-scheme: dark`）
 - ✅ 纯静态，无需后端服务
-- ✅ 大模型相关文章自动标记 `大模型` 标签
+- ✅ 大模型相关文章自动标记 `【大模型】` 标签（仅针对模型发布、测评、架构内容）
 - ✅ 文章卡片显示发布时间（hh:mm格式），位于标题下方
+- ✅ 排序规则：每个分类内，大模型标签文章优先展示，同组按时间升序
 
 ---
 
@@ -189,6 +192,33 @@ python3 generate_html.py 2026-04-22
 ---
 
 ## 📝 更新日志
+
+### 2026-04-26
+
+- 🛠️ **新增辅助脚本** `create_classification.py`：
+  - 基于 `filtered_articles.json` 自动生成 `classification.json` 模板
+  - 自动填充 aid, title, source, link, source_file 字段
+  - 根据关键词预分类（国际/国内/同业/其他）
+  - 自动处理中文引号（替换为方括号）
+  - 保留空的 digest 字段供智能体填写摘要
+  - **使用方法**：`python3 create_classification.py YYYY-MM-DD`
+- 🔧 **增强容错性**：`generate_html.py` 读取 classification.json 时自动标准化中文引号
+  - 使用 `normalize_chinese_quotes()` 函数统一处理
+  - 添加更详细的错误提示信息
+- 🎯 **优化大模型标签判断规则**：`generate_html.py` 中的 `detect_model_related()` 函数全面重构
+  - **新标准**：仅针对模型发布、测评、架构的内容添加标签
+    - ✅ 模型发布：DeepSeek V4、GPT-5.5 等新模型正式发布
+    - ✅ 模型测评：性能对比、实测报告、benchmark 评测
+    - ✅ 模型架构：技术论文、底层技术研究（LLM DNA、注意力机制等）
+  - **明确排除**：
+    - ❌ AI应用功能（如 Chronicle 屏幕记忆）
+    - ❌ 行业资讯（如量化公司创始人背景）
+    - ❌ 基础设施讨论（如 Token 工厂、算力芯片）
+    - ❌ 公司动态（如 OpenAI 裁员、投资并购、商业竞争）
+  - **实现方式**：通过关键词精准匹配 + 排除规则，避免误判
+- 🔧 **修正分类错误案例**：
+  - 黄仁勋访谈从"国内"移至"国际"（涉及英伟达、Token工厂等国际话题）
+  - 删除重复的广告文章（量子位AIGC评选申报通知）
 
 ### 2026-04-25
 

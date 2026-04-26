@@ -1,0 +1,393 @@
+{
+  "date": "2026-04-25",
+  "total": 43,
+  "articles": [
+    {
+      "aid": "2247553806_1",
+      "title": "北京车展，遍地“龙虾”｜甲子光年",
+      "source": "甲子光年",
+      "link": "https://mp.weixin.qq.com/s/G7uSQ0VvzlIN9SFsoh8zQA",
+      "digest": "AI从外场“白棚子”爬进了主展馆。",
+      "publish_time": 1777130765,
+      "source_file": "sources/2026-04-25_北京车展，遍地“龙虾”｜甲子光年_甲子光年.md"
+    },
+    {
+      "aid": "2247515894_1",
+      "title": "DeepSeek-V4-Pro API限时2.5折优惠",
+      "source": "财联社AI daily",
+      "link": "https://mp.weixin.qq.com/s/OlCAd8JhaBlVCR1ziFBeMQ",
+      "digest": "",
+      "publish_time": 1777129422,
+      "source_file": "sources/2026-04-25_DeepSeek-V4-Pro API限时2.5折优惠_财联社AI daily.md"
+    },
+    {
+      "aid": "2650301831_1",
+      "title": "82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/EsQNHfgqfwgjmx1nN54QFA",
+      "digest": "",
+      "publish_time": 1777123080,
+      "source_file": "sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301831_2",
+      "title": "奇安信、默安等9家中选！兰州银行新一代核心系统群“兰芯”工程－基础安全工具集建设项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/ZcA3bW1OPLpfZ1GG8P1SnQ",
+      "digest": "",
+      "publish_time": 1777123080,
+      "source_file": "sources/2026-04-25_奇安信、默安等9家中选！兰州银行新一代核心系统群“兰芯”工程－基础安全工具集建设项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2652695222_1",
+      "title": "OpenAI，危机四伏",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg",
+      "digest": "",
+      "publish_time": 1777114824,
+      "source_file": "sources/2026-04-25_OpenAI，危机四伏_新智元.md"
+    },
+    {
+      "aid": "2652695222_2",
+      "title": "Anthropic实验火了！Claude替人类做了186笔买卖，用Opus能多赚70%",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/3OD-4Sk92y4wDN2q-zEHeQ",
+      "digest": "",
+      "publish_time": 1777114824,
+      "source_file": "sources/2026-04-25_Anthropic实验火了！Claude替人类做了186笔买卖，用Opus能多赚70%_新智元.md"
+    },
+    {
+      "aid": "2652695222_3",
+      "title": "给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A",
+      "digest": "",
+      "publish_time": 1777114824,
+      "source_file": "sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md"
+    },
+    {
+      "aid": "2653104777_1",
+      "title": "华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/o876HXNhHNjiT7JD2lFBBw",
+      "digest": "一台手机和一台口袋里的小平板，共用一副机身。",
+      "publish_time": 1777113762,
+      "source_file": "sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md"
+    },
+    {
+      "aid": "2651030049_1",
+      "title": "在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ",
+      "digest": "他们把 AI 的「眼睛和记忆」，从巨头的付费能力，拆成了一层人人可用的基础设施。",
+      "publish_time": 1777109400,
+      "source_file": "sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md"
+    },
+    {
+      "aid": "2651030049_2",
+      "title": "ACL 2026 | 不训练LLM也能支持未见语言问答？中科院计算所团队让多语言能力「外挂式」加载",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/Ku1dZNIpI93J21d75RYAkg",
+      "digest": "在不训练 LLM 的前提下，实现了对低资源和未见语言的高质量支持。",
+      "publish_time": 1777109400,
+      "source_file": "sources/2026-04-25_ACL 2026 _ 不训练LLM也能支持未见语言问答？中科院计算所团队让多语言能力「外挂式」加载_机器之心.md"
+    },
+    {
+      "aid": "2247886511_1",
+      "title": "不愧是DeepSeek！V4一手实测：推理编程能力给到夯，熟悉的D老师也回来了",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/3gMgw353X1IEcKcQfbs_WA",
+      "digest": "超火踩坑题也过关了",
+      "publish_time": 1777104900,
+      "source_file": "sources/2026-04-25_不愧是DeepSeek！V4一手实测：推理编程能力给到夯，熟悉的D老师也回来了_量子位.md"
+    },
+    {
+      "aid": "2247886511_2",
+      "title": "量化公司，正在批量生产AI独角兽创始人",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/n31RQ_5tXLsfHasRzAemJg",
+      "digest": "硅谷新一代PayPal Mafia",
+      "publish_time": 1777104900,
+      "source_file": "sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md"
+    },
+    {
+      "aid": "2651030045_1",
+      "title": "翻完DeepSeek报告，我们发现了中国AI的默契",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA",
+      "digest": "中国开源公司的默契，比任何单打独斗都可怕。",
+      "publish_time": 1777104000,
+      "source_file": "sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md"
+    },
+    {
+      "aid": "2651030045_2",
+      "title": "黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ",
+      "digest": "当智能体规模开始增长，算力如何将这些「实战数据」转化为下一代智能？",
+      "publish_time": 1777104000,
+      "source_file": "sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md"
+    },
+    {
+      "aid": "2651282643_1",
+      "title": "“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ",
+      "digest": "OpenAI 涨价，Anthropic 偷偷涨价，DeepSeek 则直接掀桌。",
+      "publish_time": 1777102177,
+      "source_file": "sources/2026-04-25_“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好_InfoQ.md"
+    },
+    {
+      "aid": "2651282643_2",
+      "title": "AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/eYL3Luk7FocIu4oBy4PQSw",
+      "digest": "项目规模越大、技术栈越陌生，AI 带来的“制力”反而越差。",
+      "publish_time": 1777102177,
+      "source_file": "sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md"
+    },
+    {
+      "aid": "2651282643_3",
+      "title": "AWS 新发布的 S3 Files 适合作为 Kafka 的存储吗？",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/x13u69kvwG4GoaA1d29XYg",
+      "digest": "不是把 Kafka 搬到共享文件系统上，而是从存储引擎层重新设计，让 Kafka 真正运行在共享存储架构上。",
+      "publish_time": 1777102177,
+      "source_file": "sources/2026-04-25_AWS 新发布的 S3 Files 适合作为 Kafka 的存储吗？_InfoQ.md"
+    },
+    {
+      "aid": "2651282643_4",
+      "title": "OPC的接单困境：10个需求同时来，敢让“龙虾”替你拍板吗？| 直播预告",
+      "source": "InfoQ",
+      "link": "https://mp.weixin.qq.com/s/GGaKu2-06i_JWpZeMMJRQA",
+      "digest": "#Q:Lab #龙虾季 🦞 一人公司最难时刻：精力有限需求无限，10个需求同时来，接还是拒？3款“龙虾”帮你拍板，敢不敢看结果？",
+      "publish_time": 1777102177,
+      "source_file": "sources/2026-04-25_OPC的接单困境：10个需求同时来，敢让“龙虾”替你拍板吗？_ 直播预告_InfoQ.md"
+    },
+    {
+      "aid": "2247886510_1",
+      "title": "硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA",
+      "digest": "一家低调的视觉大模型公司，浮出水面",
+      "publish_time": 1777098300,
+      "source_file": "sources/2026-04-25_硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？_量子位.md"
+    },
+    {
+      "aid": "2247886510_2",
+      "title": "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/MMoR5JFlglonMjV6-vLVww",
+      "digest": "抓紧申报了！截至4月27日",
+      "publish_time": 1777098300,
+      "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md"
+    },
+    {
+      "aid": "2651030044_1",
+      "title": "开源模型横扫21个科学发现任务！宽德Will联手斯坦福清北，把试错变成武器",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/uXvcwhc7CP4nGw13Tw5B-w",
+      "digest": "尝试与验证，本身也可以被缩放。",
+      "publish_time": 1777097337,
+      "source_file": "sources/2026-04-25_开源模型横扫21个科学发现任务！宽德Will联手斯坦福清北，把试错变成武器_机器之心.md"
+    },
+    {
+      "aid": "2651030044_2",
+      "title": "ICLR 2026获奖论文揭晓：两篇杰出论文，大神Alec Radford经典工作获时间检验奖",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/nO8AIAnvHhkLRyGHCgErUQ",
+      "digest": "恭喜获奖者！",
+      "publish_time": 1777097337,
+      "source_file": "sources/2026-04-25_ICLR 2026获奖论文揭晓：两篇杰出论文，大神Alec Radford经典工作获时间检验奖_机器之心.md"
+    },
+    {
+      "aid": "2651030044_3",
+      "title": "前馈式3D的终极路线图来了！五大核心战线，一文看清未来三维重建该往哪走",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/FQxg8UEnqU1_-cGJgeobPw",
+      "digest": "从模型试图解决的核心问题出发，构建 problem-driven 的统一分析框架。",
+      "publish_time": 1777097337,
+      "source_file": "sources/2026-04-25_前馈式3D的终极路线图来了！五大核心战线，一文看清未来三维重建该往哪走_机器之心.md"
+    },
+    {
+      "aid": "2652695096_1",
+      "title": "DeepSeek-V4报告亮了！V4发布延迟的秘密，终于曝光了",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/hdmly1L514kWsFBjzk6arQ",
+      "digest": "",
+      "publish_time": 1777095440,
+      "source_file": "sources/2026-04-25_DeepSeek-V4报告亮了！V4发布延迟的秘密，终于曝光了_新智元.md"
+    },
+    {
+      "aid": "2652695096_2",
+      "title": "马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA",
+      "digest": "",
+      "publish_time": 1777095440,
+      "source_file": "sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md"
+    },
+    {
+      "aid": "2247886503_1",
+      "title": "燃油SUV车主熬出头了！华为乾崑智驾加持，全新奥迪Q5L率先实现智能化",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/Z1ydZoj2DYHNIdejTzB4-w",
+      "digest": "六年磨一剑",
+      "publish_time": 1777092451,
+      "source_file": "sources/2026-04-25_燃油SUV车主熬出头了！华为乾崑智驾加持，全新奥迪Q5L率先实现智能化_量子位.md"
+    },
+    {
+      "aid": "2247886503_2",
+      "title": "AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/drznIJshQRdXoyOSe2_1aA",
+      "digest": "首次公开三大AI应用生态",
+      "publish_time": 1777092451,
+      "source_file": "sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”_量子位.md"
+    },
+    {
+      "aid": "2247886503_3",
+      "title": "Coding Agent失败根源能精准定位了！南大快手提出可追溯框架：无需重训，即插即用",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/N3Y7o_AbSVGqpNAc-EJL3g",
+      "digest": "F1分数提升近30%",
+      "publish_time": 1777092451,
+      "source_file": "sources/2026-04-25_Coding Agent失败根源能精准定位了！南大快手提出可追溯框架：无需重训，即插即用_量子位.md"
+    },
+    {
+      "aid": "2247886503_4",
+      "title": "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/dkeTeMkQ0DlvwNVUPHyoCQ",
+      "digest": "抓紧申报了！截至4月27日",
+      "publish_time": 1777092451,
+      "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md"
+    },
+    {
+      "aid": "2247886503_5",
+      "title": "量子位编辑作者招聘",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/bVs5r5cmBb8EwhOrjnnRyA",
+      "digest": "3个岗位（含实习），不设边界",
+      "publish_time": 1777092451,
+      "source_file": "sources/2026-04-25_量子位编辑作者招聘_量子位.md"
+    },
+    {
+      "aid": "2650301826_1",
+      "title": "网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/63gl6W78y1QawrFsYafPQg",
+      "digest": "",
+      "publish_time": 1777087080,
+      "source_file": "sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301826_2",
+      "title": "工商银行软件开发中心隐私计算的创新实践",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/02smN_6UHhnNCnqJjeQPSA",
+      "digest": "",
+      "publish_time": 1777087080,
+      "source_file": "sources/2026-04-25_工商银行软件开发中心隐私计算的创新实践_银行科技研究社.md"
+    },
+    {
+      "aid": "2650301826_3",
+      "title": "95万！绍兴银行外部数据管理平台采购项目",
+      "source": "银行科技研究社",
+      "link": "https://mp.weixin.qq.com/s/wjhZcUsNNWNpuabyD25A0A",
+      "digest": "",
+      "publish_time": 1777087080,
+      "source_file": "sources/2026-04-25_95万！绍兴银行外部数据管理平台采购项目_银行科技研究社.md"
+    },
+    {
+      "aid": "2651030009_1",
+      "title": "谷歌Jeff Dean重磅论文：弹性大规模分布式预训练终于可行了",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/VCtSLapQKucVpqlvJp-48g",
+      "digest": "Jeff Dean 14 年前一作论文未完成的目标，如今又由他亲自实现",
+      "publish_time": 1777085765,
+      "source_file": "sources/2026-04-25_谷歌Jeff Dean重磅论文：弹性大规模分布式预训练终于可行了_机器之心.md"
+    },
+    {
+      "aid": "2651030009_2",
+      "title": "多模型协同进化突破单模型天花板？Squeeze Evolve：无需验证器实现推理新SOTA",
+      "source": "机器之心",
+      "link": "https://mp.weixin.qq.com/s/KmiOOuJsFikeCt6LcIrYHw",
+      "digest": "单个模型的天花板并非模型系统的天花板",
+      "publish_time": 1777085765,
+      "source_file": "sources/2026-04-25_多模型协同进化突破单模型天花板？Squeeze Evolve：无需验证器实现推理新SOTA_机器之心.md"
+    },
+    {
+      "aid": "2652695053_1",
+      "title": "谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg",
+      "digest": "",
+      "publish_time": 1777082644,
+      "source_file": "sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md"
+    },
+    {
+      "aid": "2247553786_1",
+      "title": "胡峥楠就任小米汽车CTO后首次受访：我的第一要务是重新学习｜甲子光年",
+      "source": "甲子光年",
+      "link": "https://mp.weixin.qq.com/s/btzFQ_8juB972D8mXqjx5A",
+      "digest": "一位造车老兵和一家科技大厂，如何在不确定中重建自己的技术方法论？",
+      "publish_time": 1777082213,
+      "source_file": "sources/2026-04-25_胡峥楠就任小米汽车CTO后首次受访：我的第一要务是重新学习｜甲子光年_甲子光年.md"
+    },
+    {
+      "aid": "2247886283_1",
+      "title": "DeepSeek V4报告太详尽了！484天换代之路全公开",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/IED0AJ7p6LJoETNP7PlVAQ",
+      "digest": "mHC用了，Engram留给V5",
+      "publish_time": 1777078680,
+      "source_file": "sources/2026-04-25_DeepSeek V4报告太详尽了！484天换代之路全公开_量子位.md"
+    },
+    {
+      "aid": "2247886283_2",
+      "title": "0博士组合拿下ICLR时间检验奖！两个GPT天才本科生+二本逆袭LeCun弟子，十年论文终封神",
+      "source": "量子位",
+      "link": "https://mp.weixin.qq.com/s/vV7TIWgQ8P3LdLyJxivLcA",
+      "digest": "三作者如今齐聚Mira初创",
+      "publish_time": 1777078680,
+      "source_file": "sources/2026-04-25_0博士组合拿下ICLR时间检验奖！两个GPT天才本科生+二本逆袭LeCun弟子，十年论文终封神_量子位.md"
+    },
+    {
+      "aid": "2653104706_1",
+      "title": "豆包上线「帮你选」功能； 5999 元，泡泡玛特首推冰箱；高铁试点「坐火车带自行车」 | 极客早知道",
+      "source": "极客公园",
+      "link": "https://mp.weixin.qq.com/s/kMEZ8emCO8rwhJ9HDmC8fg",
+      "digest": "英特尔股价周五暴涨 24%；谷歌计划向 Anthropic 投资至多 400 亿美元",
+      "publish_time": 1777077561,
+      "source_file": "sources/2026-04-25_豆包上线「帮你选」功能； 5999 元，泡泡玛特首推冰箱；高铁试点「坐火车带自行车」 _ 极客早知道_极客公园.md"
+    },
+    {
+      "aid": "2652695027_1",
+      "title": "DeepSeek-V4和GPT-5.5第一波实测对决，结果出人意料！",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/HUQuPYIPK9l-saB36kdoxg",
+      "digest": "",
+      "publish_time": 1777076286,
+      "source_file": "sources/2026-04-25_DeepSeek-V4和GPT-5.5第一波实测对决，结果出人意料！_新智元.md"
+    },
+    {
+      "aid": "2652695027_2",
+      "title": "凌晨3点，硅谷炸锅！Anthropic源码意外泄露，51万行代码揭露Claude惊天野心",
+      "source": "新智元",
+      "link": "https://mp.weixin.qq.com/s/Xn_wZHnUx9wjAdDnaLCoVQ",
+      "digest": "Anthropic的野心，竟是重做操作系统！",
+      "publish_time": 1777076286,
+      "source_file": "sources/2026-04-25_凌晨3点，硅谷炸锅！Anthropic源码意外泄露，51万行代码揭露Claude惊天野心_新智元.md"
+    },
+    {
+      "aid": "2650868165_1",
+      "title": "中国信通院近期精选（4.13 - 4.24）",
+      "source": "中国信通院CAICT",
+      "link": "https://mp.weixin.qq.com/s/1vqZLxdm8E6twanRe4BELw",
+      "digest": "",
+      "publish_time": 1777075200,
+      "source_file": "sources/2026-04-25_中国信通院近期精选（4.13 - 4.24）_中国信通院CAICT.md"
+    }
+  ]
+}

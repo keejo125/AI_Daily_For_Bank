@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-04-26</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-04-26</div>
+    <div class="banner-stats" id="banner-stats">国际 5 篇 · 国内 7 篇 · 同业 2 篇 · 其他 3 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援</div><div class="card-date"><span class="card-time">10:04</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md" class="source-tag">新智元</a> <div class="card-digest">谷歌向Anthropic投资最高400亿美元并承诺5GW TPU算力。Anthropic获亚马逊、谷歌、微软、英伟达四重加持，累计锁定11GW算力，年化收入达300亿美元。</div></div>
+<div class="card"><div class="card-title">马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我</div><div class="card-date"><span class="card-time">13:37</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md" class="source-tag">新智元</a> <div class="card-digest">马斯克起诉OpenAI要求恢复非营利性质，索赔1870亿美元。诉讼揭露OpenAI从非营利转向商业化的历程，双方围绕控制权展开激烈法律战。</div></div>
+<div class="card"><div class="card-title">黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？</div><div class="card-date"><span class="card-time">16:00</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md" class="source-tag">机器之心</a> <div class="card-digest">英伟达CEO黄仁勋阐述Token工厂概念，认为AI计算基础设施将演变为大规模Token生产中心。访谈涉及算力需求、芯片架构和未来AI部署模式。</div></div>
+<div class="card"><div class="card-title">在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了</div><div class="card-date"><span class="card-time">17:30</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md" class="source-tag">机器之心</a> <div class="card-digest">OpenAI推出Chronicle屏幕记忆订阅功能后，年轻开发者迅速开源替代方案。该功能记录用户屏幕活动并提供智能检索，引发隐私和技术讨论。</div></div>
+<div class="card"><div class="card-title">OpenAI，危机四伏</div><div class="card-date"><span class="card-time">19:00</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_OpenAI，危机四伏_新智元.md" class="source-tag">新智元</a> <div class="card-digest">奥特曼砍掉Sora和科学部，聚焦GPT-5.5和Codex。Anthropic年化收入达300亿美元反超OpenAI的240亿，烧钱率高达57%。Fidji Simo操刀转型，将ChatGPT、Codex合并为超级应用。</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">硬刚GPT-Image-2！国产AI生图【天花板】又被捅破了？</div><div class="card-date"><span class="card-time">14:25</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？_量子位.md" class="source-tag">量子位</a> <div class="card-digest">【大模型】一家低调的国产视觉大模型公司浮出水面，其生图能力对标GPT-Image-2。在多项评测中表现优异，代表中国AI在图像生成领域达到新高度，挑战国际巨头技术壁垒。</div></div>
+<div class="card"><div class="card-title">【我把所有模型都换成了DeepSeek V4】：月账单降 90%，效果还更好</div><div class="card-date"><span class="card-time">15:29</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好_InfoQ.md" class="source-tag">InfoQ</a> <div class="card-digest">【大模型】开发者实测将模型切换至DeepSeek V4后，月度API账单下降90%且效果提升。相比OpenAI和Anthropic涨价，DeepSeek以高性价比颠覆市场，推动企业级应用成本大幅降低。</div></div>
+<div class="card"><div class="card-title">翻完DeepSeek报告，我们发现了中国AI的默契</div><div class="card-date"><span class="card-time">16:00</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md" class="source-tag">机器之心</a> <div class="card-digest">【大模型】DeepSeek V4与Kimi K2.6同期发布，展现技术联动默契。Kimi复用DeepSeek的MLA注意力机制，DeepSeek采用Kimi验证的Muon优化器。两家万亿参数模型全部开源，降低企业部署成本至1/10。</div></div>
+<div class="card"><div class="card-title">给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral</div><div class="card-date"><span class="card-time">19:00</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md" class="source-tag">新智元</a> <div class="card-digest">【大模型】新加坡国立大学与上海交大联合提出LLM DNA，通过行为表征刻画模型亲缘关系。RepTrace方法无需训练即可提取DNA，在305个模型上验证AUC达0.99，可构建系统发育树。</div></div>
+<div class="card"><div class="card-title">AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板</div><div class="card-date"><span class="card-time">15:29</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md" class="source-tag">InfoQ</a> <div class="card-digest">探讨AI辅助编程面临的挑战：理解债务累积、上下文窗口限制导致的信息衰减。分析独立开发者在使用AI编程工具时遇到的效率瓶颈和解决方案。</div></div>
+<div class="card"><div class="card-title">量化公司，正在批量生产AI独角兽创始人</div><div class="card-date"><span class="card-time">16:15</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md" class="source-tag">量子位</a> <div class="card-digest">量化交易公司成为AI创业人才孵化器，多位前量化从业者创办AI独角兽企业。文章分析量化背景如何转化为AI创业优势，包括数据处理、算法优化和快速迭代能力。</div></div>
+<div class="card"><div class="card-title">华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我</div><div class="card-date"><span class="card-time">18:42</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md" class="source-tag">极客公园</a> <div class="card-digest">华为Pura X Max手机评测，重点体验其主动式AI功能。相比折叠屏设计，AI助手、智能推荐等主动服务能力成为产品亮点，展现华为在移动AI领域的布局。</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室</div><div class="card-date"><span class="card-time">11:18</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md" class="source-tag">银行科技研究社</a> <div class="card-digest">网商银行确立交易银行为第二增长曲线，计划设立AI+农事信息服务联合实验室。结合AI技术与农业金融服务，探索农村金融创新模式。</div></div>
+<div class="card"><div class="card-title">82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目</div><div class="card-date"><span class="card-time">21:18</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md" class="source-tag">银行科技研究社</a> <div class="card-digest">四川农商联合银行采购大模型基础平台及智能知识库系统，预算82万元。项目涵盖模型部署、知识库构建和业务场景创新，体现中小银行对AI技术的投入。</div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能【超级入口】</div><div class="card-date"><span class="card-time">12:47</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”_量子位.md" class="source-tag">量子位</a> <div class="card-digest">涂鸦智能Hey Tuya平台推出AI宠物健康监测功能，可自动识别宠物异常行为。该平台整合全屋智能设备，打造家庭AI服务入口，拓展智能家居应用场景。</div></div>
+<div class="card"><div class="card-title">最后3天！2026年最值得关注的AI企业&amp;产品｜申报即将截止</div><div class="card-date"><span class="card-time">12:47</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_最后3天！2026年最值得关注的AI企业&amp;产品｜申报即将截止_量子位.md" class="source-tag">量子位</a> <div class="card-digest">量子位AIGC应用评选申报倒计时通知。活动征集2026年度优秀AI企业和产品，涵盖大模型、AI应用、智能硬件等领域，旨在发现行业创新力量。</div></div>
+<div class="card"><div class="card-title">北京车展，遍地【龙虾】｜甲子光年</div><div class="card-date"><span class="card-time">23:26</span></div><a href="../../viewer.html?file=daily/2026-04-25/sources/2026-04-25_北京车展，遍地“龙虾”｜甲子光年_甲子光年.md" class="source-tag">甲子光年</a> <div class="card-digest">北京车展观察，多家车企展示智能化成果。文章以【龙虾】比喻汽车智能化趋势，分析AI技术在汽车行业的应用现状和发展方向。</div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援", "source": "新智元", "digest": "谷歌向Anthropic投资最高400亿美元并承诺5GW TPU算力。Anthropic获亚马逊、谷歌、微软、英伟达四重加持，累计锁定11GW算力，年化收入达300亿美元。", "link": "https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg", "content": "---\npublish_time: 1777082644\n---\n\n# 谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援\n\n> 原文链接：https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg\n> 公众号：新智元\n\n新智元报道\n\n编辑：定慧 摩西 大卫\n\n【新智元导读】\n\n谷歌豪掷400亿美元加注Anthropic，自家Gemini正面对垒的「敌人」。当Claude年化收入一年暴涨30倍冲到300亿，当算力成为AI下半场唯一硬通货，与其用Gemini硬刚，不如把对手变成TPU最大买家。\n\n刚刚，谷歌开出了AI史上又一张「巨额支票」。\n\n将向Anthropic投入最高\n\n400亿美元\n\n！\n\n100亿美元立即到账\n\n，按Anthropic 3800亿美元的最新估值入股。\n\n剩下的300亿美元绑定业绩里程碑\n\n——只要Anthropic撞线，钱就到。\n\n更狠的是算力。\n\n谷歌云承诺，未来五年向Anthropic交付5GW的计算能力，从2027年开始陆续上线。\n\nAnthropic的\n\nTPU使用规模\n\n会指数级扩张。\n\n这个数字什么概念？\n\n相当于谷歌把整个DeepMind从成立到现在烧掉的钱，一次性再投一遍——但这次不是投自己人，是投外人。\n\n耐人寻味的是，谷歌手里明明有DeepMind，有Gemini，有全球最大的TPU集群。\n\n一个自家模型阵容已经够豪华的公司，却选择用400亿去加注别人家的Claude。\n\nGemini模型对标的就是Claude。\n\n理论上，Anthropic是谷歌的\n\n直接对手\n\n。\n\n可现在，谷歌成了Anthropic的最大金主之一。\n\n有外媒称这是谷歌的最新AI豪赌\n\n这套打法在AI圈很罕见：一家科技巨头，明明手里握着自家的旗舰模型，却反手把巨额资金和算力倾倒给对面阵营。\n\n放在十年前的硅谷，这叫\n\n「认输」\n\n。\n\n网友玩梗神图\n\n御三家落幕，Anthropic阵营成型\n\n过去两年，AI第一梯队一直被定义为「御三家」。\n\nOpenAI、谷歌、Anthropic，三足鼎立，各自为王；当然还有马斯克的xAI也在搅局。\n\nOpenAI靠GPT和ChatGPT先发占位，背后站着微软。\n\nAnthropic靠Claude在企业市场撕开口子，最初接受Amazon和谷歌两边的资金但保持独立姿态。\n\n到了2026年4月这一周，这个叙事彻底散了。\n\n把Anthropic过去半年的金主清单列出来，会发现一个荒谬的现实：\n\n亚马逊：\n\n50亿美元现金 + 上限250亿美元 + 5GW Trainium算力 + 1000亿美元AWS采购合同；\n\n谷歌：\n\n100亿美元现金 + 上限400亿美元 + 5GW TPU算力；\n\n英伟达：\n\n上限100亿美元 + 1GW GPU供给；\n\n微软：\n\n上限50亿美元 + Anthropic向Azure采购300亿美元算力。\n\n四家硅谷顶级玩家，全部在Anthropic的股东名册上。\n\n仅仅4天前，4月20日，亚马逊刚宣布对Anthropic追加50亿美元投资，并承诺总投资上限250亿美元，外加Anthropic未来10年向AWS采购超过1000亿美元的Trainium算力。\n\nAnthropic在4天内连收两单「百亿级」输血。\n\n最戏剧性的是微软。\n\n微软手里握着OpenAI最大外部股东的身份，转头还要给OpenAI的死敌投钱。\n\n这是「对冲」的极端版本——OpenAI主导的Azure，居然也是Anthropic的一份算力供给。\n\n加在一起，Anthropic拿到了11GW以上的累积算力承诺，三套不同体系的芯片同时供给，任何一家断供都不致命。\n\n剩下的OpenAI呢？\n\n它的核心算力来自Stargate项目——5000亿美元的庞大基建计划，落地周期长达数年。\n\n微软不再是Stargate的独家供应方，OpenAI还要找Oracle、软银、阿联酋多方拼算力。\n\n格局已经从「三家分天下」，变成了「Anthropic vs OpenAI」的两强对垒。\n\n御三家的说法，作古了。\n\n尽管谷歌在AI模型领域是直接竞争对手，但它也是Anthropic的关键基础设施供应商。Anthropic严重依赖谷歌云提供芯片和基础设施，包括使用谷歌的张量处理单元（TPU）——这些专为AI工作负载设计的专用芯片，被视为英伟达热门处理器的最佳替代品之一。\n\n谷歌的算盘：与其硬刚，不如借力\n\n谷歌愿意往死敌身上砸400亿，看三个数字就懂。\n\n第一个：Anthropic 2026年3月的年化收入(ARR)突破\n\n300亿美元\n\n。\n\n2025年初Anthropic的ARR还只有10亿美元规模。\n\n一年时间，30倍。\n\nClaude Code从程序员社区出圈，企业渠道全面开放，B端客户从初创公司到财富500强一把抓。\n\n第二个：Anthropic在二级市场的隐含估值已经飙到\n\n1万亿美元\n\n。\n\n这是Bloomberg和Tom&#x27;s Hardware援引的二手市场数据。\n\nAnthropic的二级市场估值，已经压过了OpenAI在AI业务部分的估值。\n\n第三个：谷歌今年的资本开支规划是\n\n1850亿美元\n\n（1750亿到1850亿之间）。\n\n这笔钱大部分要砸在数据中心、TPU生产、电力上。\n\n如果TPU没有大客户去消化，那就是最贵的库存。\n\nAnthropic既是B端使用Claude企业客户的导流入口，也是谷歌TPU产能的最佳压舱石，一举两得。\n\n放在一起看，谷歌把对Anthropic的入股，做成了「输不起就买进来」的对冲操作。\n\n如果Anthropic真的赢了AI企业市场，谷歌至少能拿股权回报；\n\n如果Gemini跑出来了，谷歌两头赢；\n\n如果Gemini没赢，那至少TPU出货稳了，AI业务也能借Anthropic站稳脚跟。\n\nGemini发布两年多，在企业级AI市场的开发者份额一直被Claude压制。\n\nClaude Code在程序员群体里的渗透率直接碾压Gemini的同类产品。\n\n谷歌内部一直在重组Gemini团队，但效果有限。\n\n继续硬刚，不如借力打力。\n\n算力，AI产业新的护城河\n\n这场连环投资，背后真正的主角是算力。\n\nAnthropic在公开声明里点出了关键词：\n\ninfrastructure strain（基础设施压力）。\n\n这个表述来自\n\nAnthropic 官方博客\n\n(2026年4月20日,与亚马逊合作公告)，原文是:\n\n我们的运行率收入现已超过300亿美元,从2025年底的约90亿美元增长。\n\n这种速度的增长给我们的基础设施带来了不可避免的压力(inevitable strain)；特别是我们前所未有的消费者增长,影响了free、Pro、Max等级别的可靠性和性能。\n\nClaude在企业、开发者、消费端的需求暴涨，自己的算力快撑不住了，必须找外援。\n\n把数字加起来看：亚马逊承诺5GW的Trainium算力，谷歌承诺5GW的TPU算力，英伟达供应最高1GW的GPU。\n\n合计11GW以上的累积算力承诺。\n\n这相当于10个核电站的发电量。\n\nOpenAI宣布的Stargate项目目标也是10GW算力，但要数年内才能落地。\n\nAnthropic用了一周时间，就把同等量级的算力锁在了手里。\n\nOpenAI走的是另一条路：押注Stargate的5000亿美元长期基建。\n\n这条路最大的问题在于落地周期。\n\nStargate全面达产要等到2029年前后，而第一座Texas数据中心截至2026年4月，物理进度依然缓慢。\n\n算力，已经从基础设施成本变成了AI公司的核心战略资源。\n\n谁先锁住算力，谁就有底气推下一代模型。\n\n最尴尬的角色，其实是OpenAI\n\n过去两年，OpenAI一直在试图摆脱对微软的依赖。\n\n奥特曼到处找钱，从阿布扎比到软银，融资规模一轮比一轮大。\n\n原因很简单——微软既是投资人又是竞争对手，Azure上跑着OpenAI的模型，也跑着微软自己的Copilot。\n\n这种关系从第一天起就别扭。\n\n现在谷歌用400亿把Anthropic彻底锁死，OpenAI的处境更微妙了。\n\n微软还会像以前那样全力支持吗？\n\n还是说，微软也会开始找自己的「Anthropic」？\n\n熟悉科技史的人会想起一个几乎一模一样的剧本。\n\n2000年代初，英特尔和AMD打得不可开交，但真正改变格局的不是谁的芯片更快，而是谁绑定了更多的生态伙伴。\n\n英特尔赢了，不是因为技术碾压，是因为它把整个PC产业链都拉进了自己的阵营。\n\n谷歌现在干的是同一件事。它不再试图用Gemini单挑Claude和GPT，而是把Anthropic拉进自己的算力生态，用基础设施的优势锁定AI竞赛的下半场。\n\n这事儿放进更大的坐标系里看，400亿只是开胃菜。\n\nOpenAI被孤立，下一个百亿金主难寻\n\nAnthropic的算力问题被解决了。\n\nOpenAI自己的算力问题，反而开始凸显。\n\nStargate项目过去半年频繁出现资金缺口的传闻。\n\n微软不再是OpenAI的独家算力供应方，软银承诺的资金至今还在分批到账。\n\nOpenAI正在向中东主权基金、阿联酋AI公司G42、沙特PIF等多方寻找新的资金来源。\n\nOpenAI的下家，目前看不清。\n\nOpenAI不是没有金主——SoftBank、Oracle、MGX、英伟达都在,英伟达甚至单独承诺投1000亿美元，但这些资金大部分仍要靠Stargate这个执行不确定的载体落地。\n\nAnthropic四天搞定的事，OpenAI干了一年还在协调。\n\n如果说Anthropic找到了Amazon、谷歌、Microsoft、Nvidia四重靠山，那OpenAI还需要在主权资本和云巨头里再找一个等量级的合作伙伴——而且要快。\n\n更深层的问题是，OpenAI的传统优势在变弱。\n\nGPT-5.5上线后，单点性能依然领先，但Claude Code在Coding场景、Claude在企业级应用里的份额持续蚕食OpenAI的护城河。\n\n奥特曼最近频繁提到OpenAI的核心竞争力将转向AI Operating System，但OS要落地，需要的不是模型领先，而是开发者生态加基础设施。\n\nAnthropic阵营，把云巨头和算力都打包了。\n\nBenchmark分数已经决定不了AI产业的胜负。\n\n这场洗牌的真正赛道，是现金+算力+生态的三线博弈。\n\n谷歌投出400亿的那一刻，第一回合的胜负判定已经写好了。\n\nOpenAI该急着找下家了。\n\n参考资料：\n\nhttps://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic\n\nhttps://www.nytimes.com/2026/04/24/technology/google-anthropic-investment-artificial-intelligence.html\n\nhttps://arstechnica.com/ai/2026/04/google-will-invest-as-much-as-40-billion-in-anthropic/\n\nhttps://www.ft.com/content/366c73dd-4006-4ce6-9816-5004447d30b8?syn-25a6b1a6=1\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md", "source_items": [{"name": "新智元", "source_file": "sources/2026-04-25_谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援_新智元.md", "link": "https://mp.weixin.qq.com/s/mUDP1t3yVSwaPZg9SzdgGg"}], "publish_time": 1777082644}, {"title": "马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我", "source": "新智元", "digest": "马斯克起诉OpenAI要求恢复非营利性质，索赔1870亿美元。诉讼揭露OpenAI从非营利转向商业化的历程，双方围绕控制权展开激烈法律战。", "link": "https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA", "content": "---\npublish_time: 1777095440\n---\n\n# 马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我\n\n> 原文链接：https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA\n> 公众号：新智元\n\n新智元报道\n\n编辑：元宇\n\n【新智元导读】\n\n下周一，马斯克将当庭起诉十年前的合伙人奥特曼。他不要钱，只要让OpenAI回到2015年。这场庭审，可能直接卡死OpenAI的IPO之路。\n\n下周一，马斯克和奥特曼，十年后法庭重逢。\n\n8520亿美元的OpenAI，要上被告席。\n\n加州奥克兰联邦法院已经排好日程：4月27日陪审团遴选，4月28日开庭陈述，审期一直拉到5月中旬。\n\n半个硅谷，要被传上证人席。\n\n马斯克、奥特曼，微软CEO纳德拉、OpenAI总裁Brockman，以及微软、OpenAI、xAI三家公司多位现任和前任高管，全部出庭作证。\n\n10年前，马斯克和奥特曼在一份新闻稿上并排署名，共同创办了一家「不受财务回报约束」的非营利研究机构；10年后，他俩要在法庭上坐对面。\n\n很多人以为这是一场「世纪欺诈案」，其实已经不是。\n\n就在4月24日，主审法官Yvonne Gonzalez Rogers按马斯克自己的请求，驳回了所有欺诈相关诉求。进入审判的，是「违反慈善信托」和「不当得利」两条诉求。\n\n马斯克方的律师表示：删掉欺诈，是为了让陪审团聚焦在一件事上。OpenAI到底是「造福人类」，还是变成了一台「财富机器」(wealth machine)。\n\n换句话说，马斯克打这场官司，他不要钱，而是要让OpenAI回到2015年。\n\n1870亿美元「幽灵数字」\n\n来自一笔3800万美元捐款\n\n关于这场诉讼，一个「1870亿美元索赔」的数字传得沸沸扬扬。\n\n这个数字在法官Rogers眼中就像是一个「幽灵数字」，她认为它们就像是「凭空掰出的数字」。\n\n这个数字是怎么来的？这要从2015年OpenAI刚成立时说起。\n\n当时马斯克陆续捐了3800万美元，是这家初创非营利组织最大的资助人之一。\n\n去年12月，马斯克方聘请的经济学家Paul Wazzan，在OpenAI估值5000亿美元的时候，做了一份计算报告。\n\n按马斯克早期捐款占非营利组织资产的比例，以及非营利对当前营利实体的控制权折算，马斯克的「权益」最高价值1090亿美元。\n\n到了今年3月31日，OpenAI完成了科技史上最大规模的1220亿美元融资，投后估值飙到8520亿美元。\n\n按新估值外推，1090亿就变成了1870亿美元。\n\n如果这个数字站得住脚，它意味着马斯克十年前那笔3800万美元的慈善捐款，到了今天已经成了一个8520亿美元的资本帝国。\n\n但让许多人意外的是，马斯克突然放弃1870亿美元权益的索赔。\n\n他4月7日提交的那份「修订版救济请求」(Amended Notice of Remedies)文件中突然宣布：这笔钱，他一分不要。\n\n这不是退让，而是更狠的瞄准。\n\n马斯克到底要什么？\n\n上周五的那一锤\n\n上周五，是这起AI时代世纪诉讼的一个重要分水岭。\n\n4月24日，加州北区联邦法院奥克兰分院，法官Yvonne Gonzalez Rogers对本案（案号4:24-cv-04722-YGR）下达裁令。\n\n按马斯克方的请求，驳回fraud（欺诈）和constructive fraud（推定欺诈）两项诉求，并保留breach of charitable trust（违反慈善信托）与unjust enrichment（不当得利）进入审判。\n\n值得注意的是，欺诈诉讼是马斯克自己提出请求砍掉的，案件性质也因此改变。接下来陪审团要审核的问题是：\n\n一家以非营利章程立身的组织，能不能合法变成一家估值8520亿美元的公司。\n\n先列一下要过审的清单。\n\n马斯克方在4月7日提交的Amended Notice of Remedies中，一共五项救济。\n\n一是永久禁令，要求OpenAI非营利实体和所有营利子公司都必须遵守原始章程承诺，安全优先、开放研究、为人类广泛利益服务。\n\n二是撤职令，把奥特曼从OpenAI非营利董事会移除，把奥特曼和Brockman从营利实体高管职位拿掉。\n\n三是个人返还，要求奥特曼和Brockman把因OpenAI营利化获得的全部股权和个人利益返还慈善实体。\n\n四是全面返还，要求所有不当得利，包括微软的，返还给OpenAI慈善实体。\n\n五是撤销PBC重组，把OpenAI还原为名副其实的公益慈善实体。\n\n每一项都是对现行OpenAI结构的正面冲击。\n\n撤销重组\n\n让OpenAI的上市计划悬在空中\n\n去年10月28日的那次重组，是OpenAI过去一年最重要的一件事。\n\n非营利实体改名为OpenAI Foundation，营利实体变成OpenAI Group PBC(公益公司)。\n\n这次重组是OpenAI实现上市的必要一步，前后跟加州和特拉华州两州总检察长办公室谈了将近一年才通过。\n\n如果法院真的支持「撤销重组」，OpenAI的IPO之路当场卡死。\n\n1220亿美元融资要重新谈结构，微软的1350亿美元权益要重新认定，8520亿估值要打多少折，没人能够估算。\n\n熟悉案情的律师普遍认为，法院不太可能发布这样一个会造成巨大冲击的命令。\n\n但「不太可能」不等于风险是零。\n\n「莎士比亚级背叛」VS「法律突袭」\n\n面对马斯克这套组合拳，OpenAI的律师团也不是吃素的。\n\n4月10日，OpenAI被告方提交了《对马斯克修订救济请求的回应》，三层抗辩层层递进。\n\n第一层，程序攻击。\n\nOpenAI指责马斯克方在开庭前3天大幅变更救济请求，属于「法律突袭」（legal ambush）。\n\nOpenAI律师团指出，马斯克在1月16日提交的最初救济请求里，只主张一个救济，基于Wazzan报告的金钱性赔偿，而且赔偿是付给马斯克本人的。整个庭前阶段，OpenAI都在围绕这个唯一的救济做准备。\n\n但4月7日，距离开庭还有三周，马斯克突然变卦。他说不要钱了，改要「结构性救济」(structural relief)，也就是上面那五条。\n\n文件认为「马斯克的战术动作，是为配合一场协调好的公关攻势。」「法律突袭」向审判注入混乱。\n\n第二层，资格质疑。\n\nOpenAI指出马斯克缺乏代表非营利组织或公众提起派生诉讼的资格，此前法院已经在2025年5月的命令中，基于这一理由驳回了马斯克最初的3项派生诉求。\n\nOpenAI的逻辑链条是这样的：1月16日的金钱赔偿救济，马斯克自己放弃了；4月7日的派生救济，他又没资格主张。两个救济都站不住，案件就无法继续审理。\n\n第三层，实质否认。\n\nOpenAI抖出一个尴尬的细节，马斯克在早年邮件中曾主动提议把OpenAI与特斯拉合并。\n\n言下之意，真要谈营利化的合法性，你当年自己也这么干过。顺带祭出一条技术性抗辩，诉讼时效已过期。\n\nOpenAI发言人对外只丢下一句话：我们将继续坚守，为我们的使命抗争。\n\n乔治城大学法学教授Anupam Chander，主要研究和教授AI监管和合同法，他认为这将是一起极其重要的案件：\n\n这既是一场法庭上的审判，也是一场媒体上的审判。双方都会互相扔石头，但他们其实都住在某种玻璃房子里。许多美国人并不认为这场较量里有哪一方是好人。\n\nChander还计划将这个案子搬到合同法课堂，认为这是一个「靠握手承诺承担数百万美元风险」的经典案例。\n\n也就是说，不管谁输谁赢，这个判决都会进教科书。\n\n「半个硅谷」出庭作证\n\n就在这起教科书级别的世纪大诉讼中，微软CEO Satya Nadella等微软、OpenAI、xAI、特斯拉的多位现任和前任高管都将出席。\n\n看一组数字就明白了。\n\n微软目前在OpenAI Group PBC持股约27%，按OpenAI最新估值8520亿美元计算，这部分权益价值约1350亿美元。\n\n微软的IP权利延续至2032年。\n\nAzure是OpenAI的云服务独家供应商，相关采购承诺规模庞大。\n\n这套结构是OpenAI在2025年10月28日完成重组后的结果。\n\n非营利实体变成了OpenAI Foundation，营利实体变成了OpenAI Group PBC（公益性公司），Foundation按当时估值约1300亿美元持有Group约26%股权。\n\n2026年3月31日，OpenAI完成1220亿美元融资，投后估值8520亿美元，是科技史上最大规模的单轮融资之一。\n\n马斯克方的第五项救济，撤销PBC重组。如果真的被法院支持，这些数字要全部重新洗牌。\n\n据The Information援引知情人士，双方圈内人士一直在试图说服双方和解。流出的方案是给马斯克OpenAI Foundation的一部分权益。\n\n目前不清楚双方是否愿意接受。\n\n不管结果如何，周一开庭时，除了被告席上的奥特曼，还有OpenAI Foundation、OpenAI Group PBC、微软价值1350亿美元的权益，以及它们共同织成的那套产业结构。\n\n几乎半个硅谷都要出庭作证。\n\n参考资料：\n\nhttps://www.theinformation.com/articles/elon-musks-legal-war-openais-sam-altman-set-showdown-court?rc=epv9gi\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md", "source_items": [{"name": "新智元", "source_file": "sources/2026-04-25_马斯克vs奥特曼终极审判！不要1870亿，把OpenAI还给我_新智元.md", "link": "https://mp.weixin.qq.com/s/ZdioUWrZuEOI20FNLbxdtA"}], "publish_time": 1777095440}, {"title": "黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？", "source": "机器之心", "digest": "英伟达CEO黄仁勋阐述Token工厂概念，认为AI计算基础设施将演变为大规模Token生产中心。访谈涉及算力需求、芯片架构和未来AI部署模式。", "link": "https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ", "content": "---\npublish_time: 1777104000\n---\n\n# 黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？\n\n> 原文链接：https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ\n> 公众号：机器之心\n\n本文来自PRO会员通讯内容，文末关注「机器之心PRO会员」，查看更多专题解读。\n\n当业界正在持续探索 AI 模型与智能体技术的进化方向，英伟达创始人黄仁勋在与 Lex Fridman 的深度访谈中，提出了数据中心到 Token 工厂的转型，并解读了 Scaling Law 背后算力驱动逻辑。\n\n目录\n\n01.\n\n黄仁勋口中的 Token 工厂是什么？\n\n数据中心在如何从传统存储仓库向 Token 工厂的转变？当 Token 成为核心生产要素时，算力产业的价值与运行逻辑发生了哪些改变？\n\n...\n\n02\n\n.\n\n当智能体规模开始增长，算力如何将这些「实战数据」转化为下一代智能？\n\n在 Agent Scaling Law 驱动的智能体规模化发展趋势下，产业端正如何推动算力供给体系完成升级？...\n\n03\n\n.\n\n英伟达是如何完成向「AI 算力基础设施」体系构建跨越的？\n\n算力的的命题如何从 「打造更强芯片」 转向 「构建更优系统」？...\n\n黄仁勋口中的 Token 工厂是什么？\n\n1、2026 年 3 月 24 日，英伟达创始人黄仁勋参与 Lex Fridman 时长 150 分钟的深度访谈，围绕企业战略、AI 计算架构、智能体技术、产业生态等议题展开交流。\n\n①访谈中，黄仁勋复盘英伟达发展路径，指出公司以专用加速芯片起步，经可编程像素着色器、FP32 计算单元布局通用计算，将 CUDA 集成至全系列 GeForce 显卡是企业关键战略决策。\n\n②针对英伟达的产品演进，黄仁勋表示 Vera Rubin 机架是专为智能体设计的。智能体需要调用工具，其所需架构与上一代面向专家混合模型和推理设计的系统完全不同。\n\n③在此基础上，黄仁勋提出行业需要重新定义数据中心的本质。过去计算以信息检索为核心逻辑，当前计算正向信息生成方向转变，推动数据中心从存储仓库向 Token 工厂转型。\n\n2、黄仁勋对数据中心本质的重新定义，是源于生成式 AI 与传统互联网时代计算逻辑差异。在互联网和移动互联网时代，传统数据中心的功能定位为数字存储载体，算力主要用于数据调取与用户请求响应，是信息技术体系运行的基础配套设施。\n\n①相关内容经制作后被集中存储于服务器，用户发起访问或检索请求时，服务器完成对应数据的调取与传输。\n\n3、然而，生成式 AI 改变了传统计算运行逻辑。黄仁勋在访谈中表示将计算体系定位为 AI 生产设施，而非单一计算加速工具。\n\n①用户向大语言模型输入提示词后，服务器不调取预制答案，而是依托神经网络模型与算力资源，实时生成对应输出内容。\n\n②计算机的核心功能从既有信息调取转变为新信息实时生成，数据中心不再是单纯的仓库，而是一个 token 工厂。\n\n4、基于数据中心从存储仓库向 Token 工厂的转变，黄仁勋指出，在 Token 工厂的新体系下，Token 成为核心生产要素与价值载体。\n\n①黄仁勋认为，随着 Token 生产的规模化和标准化，将会像 iPhone 产品线一样，出现从基础到高级款的分层定价，成为可规模化生产、具备差异化商业价值的产品。基于这一趋势，他 表示 「英伟达有朝一日价值 10 万亿美元」是必然的。\n\n②传统数据中心以电力消耗完成数据存储，当前 AI 算力设施以电力与数据为基础，规模化生产 Token，形成算力与产业价值直接关联的运行模式。\n\n当智能体规模开始增长，算力如何将这些「实战数据」转化为下一代智能？\n\n黄仁勋近期多次在访谈中提到人工智能的「Scaling Law」，即 Pre-Training、Post-Training、Test-time、Agent。在该次访谈中，黄仁勋明确了这四个阶段并非彼此孤立，而是构成了一个依赖算力驱动的闭环，并指出了当前算力需求重心的结构性转移方向。\n\n...\n\n关注👇🏻\n\n「机器之心PRO会员」，前往「收件箱」查看完整解读\n\n更多往期专题解读内容，关注「机器之心PRO会员」服务号，点击菜单栏「收件箱」查看。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md", "source_items": [{"name": "机器之心", "source_file": "sources/2026-04-25_黄仁勋深度访谈：为什么 Token 工厂会是 AI 的终极形态？_机器之心.md", "link": "https://mp.weixin.qq.com/s/z_687rOEqpwydIwoul9SCQ"}], "publish_time": 1777104000}, {"title": "在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了", "source": "机器之心", "digest": "OpenAI推出Chronicle屏幕记忆订阅功能后，年轻开发者迅速开源替代方案。该功能记录用户屏幕活动并提供智能检索，引发隐私和技术讨论。", "link": "https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ", "content": "---\npublish_time: 1777109400\n---\n\n# 在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了\n\n> 原文链接：https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ\n> 公众号：机器之心\n\n机器之心发布\n\n最近，AI 圈又多了一个「48 小时开源」的故事。\n\n4 月 20 日，OpenAI 发布了 Chronicle，带来了一个很关键的能力：AI 可以直接「看见你的屏幕」，并持续记住上下文。\n\n这意味着什么？不只是聊天更顺了，而是交互方式变了。在写代码、改文档、调设计稿时，你不再需要向 AI 反复解释「这个」、「刚刚那个文件」或「上一步做了什么」，它自己看得到，也记得住。\n\n当然，获得这种能力目前有一个前提：\n\n订阅\n\n。Chronicle 目前仅对 ChatGPT Pro 用户开放，\n\n每月 100 美元\n\n。\n\n然而仅仅 48 小时后，另一条路线出现了。一群 00 后开发者组成的团队「Vida」，发布了一个开源项目：\n\nOpenChronicle\n\n。\n\nGitHub：\n\nhttps://github.com/Einsia/OpenChronicle\n\n他们的动机在发布推文中写得很直白：\n\nOpenAI 的 Chronicle 指向了一个重要的未来。但 AI 的记忆，不应该被锁在 100 美元/月的付费墙之后。所以，我们把它开源了。\n\n同样是「看屏幕 + 持续记忆」，但它做了三件更激进的事：可以完全本地运行、可以接任意模型（包括本地模型）、可以被不同 AI Agent 共享调用。\n\n换句话说，他们不是在做一个单纯的功能替代品，而是将「AI 的眼睛和记忆」从单一产品中直接拆解出来。至此，AI 第一次拥有了可复用的「记忆层」。\n\n这件事也没有停在 GitHub。OpenChronicle 发布后很快在海外社区引爆讨论，相关帖子短时间内超过 2000 条，不少开发者开始接入、复现甚至二次开发。\n\nOpenChronicle迅速形成话题，9小时内Posts超过2000条。\n\n社区里的一句高赞评论是：\n\n「这不只是一个开源项目，这是把 AI 从『产品形态』往『系统形态』推了一步。」\n\n那么，这个「记忆层」具体能做什么？开发团队给了三个非常具体的用例。\n\n1）结合上下文，理解你的指代\n\n当 AI 缺乏持续记忆时，突然问一句「what&#x27;s the bug of that?」，模型往往不知所措。但接入 OpenChronicle 后，Agent 会直接调取你当前的屏幕上下文（如 VS Code 里打开的文件、报错信息），将「that」精准解析为具体代码，带来截然不同的交互体验。\n\n2）跨会话连续性\n\n开发团队做了一个测试：在一个全新的对话里，让 Claude 写一个 OpenChronicle 的 logo prompt。注意，开发团队从来没有在 Claude 中提过 OpenChronicle。\n\n没有连续记忆时，模型第一步是反问：「OpenChronicle 是什么？」；但有了 OpenChronicle，它会直接从开发者在其他软件（浏览器、飞书、VS Code）的操作中检索项目信息，然后一步给出结果。不需要解释，不需要复制粘贴上下文，对话之间不再是孤立的。\n\n3）让 Agent 学会你的习惯并执行\n\n这一点很微妙，但极为关键。在开发团队看来：记忆不应该只是帮助 Agent「理解你」，还应该让它「按照你的方式行动」。\n\n比如 OpenChronicle 发现一个用户，习惯于工作用 Google Calendar，家庭用 Apple/Fantastical。当用户说：「Add dinner with my parents this Sunday.」 Agent 会自动把这个任务路由到「家庭日历」，而不是工作日历。\n\n一个 Agent 学会你的习惯、按照你的行为模式执行任务的未来，似乎已经触手可及。\n\n从「对话记忆」，到「工作流记忆」\n\n与主流 AI 的 Memory 不同，OpenChronicle 会观察你正在使用的应用（IDE、Notion、Figma），读取屏幕内容（代码、文档、界面），并记录一个任务是如何一步步推进的。\n\n它记住的不是聊天，而是「你在干什么」。\n\n这件事一旦成立，体验就会发生一个很微妙但很本质的变化：你在飞书上和团队讨论的开发方案。不用解释上下文，AI 可以直接接着你们的思路往下走；你在改第三版设计稿，AI 不只是看这一版，还知道前两版是怎么一步步改过来的。\n\n它开始理解「过程」，而不是某一个瞬间的输入输出。它更像是一层基础设施。\n\nOpenChronicle 不绑定特定模型或工具，Claude Code、Codex、OpenCode、Claude Desktop 等都可以一键接入，甚至连 MCP 配置都是自动生成的。\n\n这意味着开发者不需要再为每一个 Agent 单独做一套记忆系统。不同工具之间，也第一次有机会共享同一份「用户上下文」。AI 记忆，开始变成一层可以被复用的东西。\n\n甚至连「记忆怎么存」，都不是黑箱\n\nOpenChronicle 没有把自己做成一个黑盒：\n\n记忆是用 Markdown 存的\n\n检索用的是 SQLite\n\n结构通过 AX Tree 暴露出来\n\n你可以读、可以改、可以迁移。\n\n这让「AI 记忆」第一次长得有点像数据库，或者操作系统组件：不是一个功能，而是一块可以被组合的基础能力。\n\n同时，它也选了一条很明确的路线：本地优先。你可以用本地模型总结记忆，数据完全不出设备。也可以随时暂停，随时恢复。记忆可以很强，但不一定要变成「全程监控」。\n\n更大的变化，还在后面\n\n如果把视角再往后拉一点，这件事就更加有趣。\n\n过去，大多数 AI 的工作方式很简单： 你问 → 它答 → 结束。但现在开始变了。AI 会先看环境、再结合历史、再参与当前任务、然后继续留下痕迹。\n\n交互的单位，从「一次对话」，变成了一段「持续发生的过程」。AI 不再只是被调用，而是开始「待在你的工作里」。\n\nChronicle 和 OpenChronicle，其实是两种很典型的选择：一种，是把「记忆」做成产品能力，放进订阅体系里；另一种，是把「记忆」拆出来，变成所有系统都能用的一层基础设施。\n\n但真正的问题，其实不在「开源还是闭源」。而在另一件更现实的事：\n\n当 AI 可以长期记录你的行为、你的习惯、你的工作过程——这些东西，归谁？\n\nOpenChronicle 的答案很简单：留在本地，归用户。于是，一个新的结构开始出现了：\n\n模型可以换，工具可以换，但你的「上下文」始终是连续的。\n\n这让三件事情开始松动：\n\n记忆的控制权，在平台还是在用户手里\n\n记忆的边界，是被锁在应用里，还是可以流动\n\n记忆的形态，是黑箱能力，还是数据层\n\n如果说大模型阶段解决的是「AI 能不能理解并回答你\n\n」，\n\n那么下一阶段的核心命题将是：「AI 能否持续陪伴并参与你的世界」。而这一次，分歧已经出现。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md", "source_items": [{"name": "机器之心", "source_file": "sources/2026-04-25_在OpenAI把Chronicle做成订阅功能48小时后，一群00后把它开源了_机器之心.md", "link": "https://mp.weixin.qq.com/s/yqmDsRCeZbBWMqM7oDa5qQ"}], "publish_time": 1777109400}, {"title": "OpenAI，危机四伏", "source": "新智元", "digest": "奥特曼砍掉Sora和科学部，聚焦GPT-5.5和Codex。Anthropic年化收入达300亿美元反超OpenAI的240亿，烧钱率高达57%。Fidji Simo操刀转型，将ChatGPT、Codex合并为超级应用。", "link": "https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg", "content": "---\npublish_time: 1777114824\n---\n\n# OpenAI，危机四伏\n\n> 原文链接：https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg\n> 公众号：新智元\n\n新智元报道\n\n编辑：Aeneas 好困\n\n【新智元导读】\n\n奥特曼亲手杀掉Sora与科学部，血洗了一大波「支线任务」，终于成功发布了GPT-5.5。然而，面对Anthropic的营收反超与内部高层大地震，这场孤注一掷的IPO豪赌，究竟是重夺荣光还是最后的挽歌？\n\n有人算了一笔账。\n\nDeepSeek V4-Pro的预训练计算量大约1e25 FLOPs。\n\nOpenAI手里有10万台GB200，哪怕只用15%的利用率，37小时就能跑完同等规模的训练。\n\n一天半，救恩给你复刻一个DeepSeek V4。\n\n这就是2026年4月的OpenAI，算力储备已经夸张到这种地步。\n\n然而，OpenAI的问题，不是光靠算力就能解决的。\n\n昨天GPT-5.5的发布，让OpenAI短暂地夺回了往日的荣光。\n\n今天早上，心情大好的奥特曼发了条X，「这周过得不错，为团队感到骄傲，祝大家开发愉快！」\n\n摆在明面上的，全是好消息。\n\n但圈内人知道，这条风平浪静的推文背后，OpenAI刚刚经历了成立以来最血腥的一场「大清洗」。\n\n把老板的想法变成现实\n\n刚刚，纽约时报的一篇长文，曝出不少猛料。\n\n其中一个细节尤其讽刺。OpenAI内部有一个半公开的聊天群，叫「把Sam的推文变成现实」。\n\n员工们在群里干的事只有一件，把老板在社交媒体上随手画的饼，变成真能交付的代码。\n\n很多时候，他们和全世界的吃瓜群众一样，刷到推文才知道公司又要干什么了。\n\n这个群存在了好几年。\n\n奥特曼自己把这套打法比作「在内部同时下注一系列创业公司」。\n\nChatGPT的爆炸式成功让他陷入了虚假的安全感。代价很快浮出水面。\n\n算力在不同团队之间被频繁调来调去，产品优先级每隔几周就变一次，员工有时候真的搞不清楚公司到底想干什么。\n\n谷歌、Anthropic强势逼近，把OpenAI的领先身位一口一口吃掉了。\n\n终于，奥特曼下定决心动刀。\n\nSora死了，科学部散了，三个人走了\n\n4月26日，也就是明天，Sora正式关停。\n\n这个曾经冲上App Store下载榜第一的AI视频应用，巅峰时有100万用户，关停时不到50万。\n\n每天烧掉100万美元算力，但终身总收入只有210万美元。\n\n也就是说，它一天的运行成本，就是整个生命周期赚到的钱的一半。\n\n外媒The Register给OpenAI封了个头衔，「产品杀手」。\n\n一周前，三名高管同日宣布离职。\n\nSora负责人Bill Peebles、科学部门负责人Kevin Weil、企业CTO Srinivas Narayanan，一天之内全走了。\n\nKevin Weil的科学部门只活了六个月。\n\n在被解散前的24小时里，团队赶着发布了最后一个模型GPT-Rosalind。就像是一封遗书。\n\n11位联合创始人，现在只剩奥特曼和Brockman两个人。\n\n除了Sora和科学部，被砍掉的还有NSFW聊天机器人项目、独立社交网络项目、AI购物功能。OpenAI内部管这些叫「支线任务」。\n\n现在，支线全部阵亡。\n\n一颗土豆和一万名英伟达员工\n\n奥特曼手里剩下的牌，是GPT-5.5和Codex。\n\nGPT-5.5内部代号「Spud」（土豆），4月23日上线。\n\nTerminal-Bench 2.0拿到82.7%，长上下文推理从36.6%直接翻倍到74%，幻觉率较上一代下降60%，多个核心指标压过Anthropic最新的Opus 4.7。\n\nGreg Brockman的原话，「这是一种新类别的智能。」\n\n跑分是一回事，效率才是杀招。\n\n早期测试者给出的数据，达到GPT-5.4同等智能水平，GPT-5.5消耗的Token显著更少。Thinking Heavy模式2分钟出的答案，比GPT-5.4花10分钟出的更好。Pro版8分钟的输出质量，超过上一代花30分钟的结果。\n\n不过，API定价也翻了一倍。输入输出分别是5美元和30美元每百万token，是GPT-5.4的两倍。OpenAI说token效率提高了，实际成本只涨了20%左右。\n\n至于开发者买不买这笔账，取决于GPT-5.5的Agent能力能不能真把企业工作流跑通。\n\n老黄给全公司发了内部信\n\n英伟达已经在赌了。\n\n老黄给全公司发了内部信，让10000多名员工用上Codex。工程师、法务、市场、财务、HR，全覆盖。\n\n部署方式很硬核，给每个员工配一台云虚拟机，Agent和员工一样拥有自己的电脑，出了问题可以冻结并抓堆栈。\n\n内部反馈用了两个词，「炸裂」和「改变人生」。\n\n调试周期从天级压缩到小时级，实验迭代从周级压缩到隔夜。缩到小时级，实验迭代从周级压缩到隔夜。\n\n奥特曼在X上转发了这封信，「在英伟达全公司部署Codex，效果很好。想在你的公司试试吗？」\n\nCodex两周内从300万周活涨到400万。七家全球顶级系统集成商签约落地，Cisco、Ramp、Notion、Rakuten排队接入，企业用户规模较年初增长6倍。\n\n奥特曼的计划是，把ChatGPT、Codex和Atlas浏览器合并成一个桌面端「超级应用」。不再分散兵力做十几个产品，所有东西塞进一个入口。\n\nFidji Simo给这个方向的定位，「AI操作系统」。\n\n这是OpenAI目前最硬的一张牌。能不能翻盘，就看这一把了。\n\n被反超的那一刻\n\n牌打出去了，但翻开账本还是不太好看。\n\nAnthropic的年化收入已经到了300亿美元。OpenAI是240亿。\n\n一年前，这个数字是倒过来的。OpenAI 60亿，Anthropic 10亿。差距看上去不可逾越。\n\n然后Anthropic用了15个月，把年化收入从10亿拉到300亿。30倍。\n\nEpoch AI本来预测这个交叉点会在2026年8月出现，结果提前了四个月。\n\n在Forge Global等未上市股权交易平台上，Anthropic的估值一度超过1万亿美元\n\nAnthropic虽然没有9亿周活的国民级应用，没有视频生成，没有购物功能，没有社交网络。但它有API和企业合同。\n\n超过1000家企业客户年付费超过100万美元，两个月前这个数字还是500。财富10强中8家是Claude的客户。\n\nRamp的企业支出数据更狠。Anthropic在企业AI聊天市场的发票占比已经超过60%，一年前只有10%。OpenAI从主导地位降到了大约35%。\n\nOpenAI自己的CFO Sarah Friar都忍不住感叹，「从未见过如此规模的增速。」\n\n她说的是OpenAI自己。但这句话用在Anthropic身上更准确。\n\n更难看的是烧钱速度。OpenAI 2026年预计亏损140亿美元，烧钱率是营收的57%。Anthropic的烧钱率已经降到33%，预计2027年现金流转正。\n\nOpenAI花了4倍的训练成本，赚了更少的钱。\n\n8520亿公司CEO，持股0%\n\n流出的股权表上，CEO那一行写着两个字，「None/Pending」。\n\n奥特曼持有OpenAI 0%的股权。年薪约6.6万美元。\n\n一个8520亿美元估值公司的创始人兼CEO，在自己公司里一分钱股份都没有。\n\n他的20亿美元身家来自别的地方。Stripe、Reddit、核聚变公司Helion、航天公司Stoke Space，跟OpenAI没有一分钱关系。\n\n更微妙的是，据WSJ报道，奥特曼曾推动OpenAI投资5亿美元给他个人持股的Helion。这笔投资会让Helion估值翻六倍以上，他自己的持股也跟着暴涨。OpenAI内部有人对此感到不安。\n\n对面的Dario Amodei，则是标准的创始人持股结构，身家在2026年初飙到70亿美元。\n\n公司涨，他涨。利益天然绑定。\n\n新操盘手的72天\n\n说回OpenAI的转型。\n\n真正在背后操刀的，是Fidji Simo。\n\n她从Instacart被挖来担任「应用CEO」，实际上接管了OpenAI的日常运营。\n\n到岗后做的第一件事，就是拉响红色警报。\n\n她把Anthropic的崛起定性为当头一棒，然后和奥特曼、CFO Sarah Friar一起把公司所有项目过了一遍，逐个判断去留。\n\n留下来的是Codex和ChatGPT超级应用。其他全部砍掉。\n\n然后Simo倒下了。\n\n4月3日，她因POTS（一种神经免疫疾病）病情恶化，宣布休假数周。\n\n同一天，CMO Kate Rouch因癌症康复辞职，COO Brad Lightcap被调去做「特别项目」。\n\nBrockman临时接管产品。CFO Sarah Friar、首席战略官Jason Kwon、首席营收官Denise Dresser三人分摊Simo留下的工作。\n\n一个人的活，三个人来顶。\n\n更棘手的是时间表。\n\n奥特曼在推IPO，最快今年年底。但多位知情人士透露，包括Sarah Friar在内的部分高管认为这个时间表「太激进」。\n\n奥特曼自己在播客里说过一句大实话，「我对当上市公司CEO的兴奋程度是0%。」\n\n一家年亏140亿、刚砍掉一半产品线、操盘手在休假、CEO对上市毫无兴趣的公司，真的准备好IPO了吗？\n\n秃是秃了，但变强了吗？\n\n上个月，OpenAI给全员放了一周假。官方理由是「防止过度劳累」。\n\n老员工们有另一种解读。\n\n900万企业付费用户，9亿周活，240亿年化收入。这些数字放在任何一家公司身上都是神话级别。\n\n但OpenAI的问题从来不是数字不够大。\n\n是它花了两年时间追逐所有可能的方向，等到回头一看，发现那个当年觉得自己不够理想主义、带着一帮人出走创业的前研究副总裁，已经在营收上把自己超了。\n\n这里面最讽刺的一层，OpenAI创立的初衷是「为全人类的利益开发通用人工智能」。它是带着对抗商业垄断的圣徒色彩诞生的。\n\n但现在，为了在财务报表上追赶一个从自己内部叛逃出去的对手，它杀掉了科学部，杀掉了视频平台，杀掉了那些曾经让人觉得AI带有「温度」和「趣味」的支线任务。\n\n它变秃了，也变强了吗？\n\nGPT-5.5确实很强。Codex确实在改变企业的工作方式。\n\n但奥特曼在最新帖子里写的那句话，「我们想成为每一家公司、每一位科学家、每一个普通人的平台」，跟他这周实际干的事放在一起看，中间的裂缝越来越大。\n\n科学部门砍了。创作平台关了。奥特曼花了两年试遍所有方向，最后发现答案就是企业市场和代码工具。\n\n而Anthropic用这两年，把答案做到了300亿。\n\n参考资料：\n\nhttps://www.nytimes.com/2026/04/24/technology/sam-altman-openai-money.html\n\nhttps://x.com/sama/status/2047823357635354814\n\nhttps://x.com/OpenAI/status/2047743592278745425\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-04-25_OpenAI，危机四伏_新智元.md", "source_items": [{"name": "新智元", "source_file": "sources/2026-04-25_OpenAI，危机四伏_新智元.md", "link": "https://mp.weixin.qq.com/s/lmd2aPcmODDoyETlRWtlZg"}], "publish_time": 1777114824}, {"title": "硬刚GPT-Image-2！国产AI生图【天花板】又被捅破了？", "source": "量子位", "digest": "【大模型】一家低调的国产视觉大模型公司浮出水面，其生图能力对标GPT-Image-2。在多项评测中表现优异，代表中国AI在图像生成领域达到新高度，挑战国际巨头技术壁垒。", "link": "https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA", "content": "---\npublish_time: 1777098300\n---\n\n# 硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？\n\n> 原文链接：https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA\n> 公众号：量子位\n\n允中 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n这两天，大家伙朋友圈是不是被\n\nGPT-Image-2\n\n刷屏了？\n\n文字渲染精准、高密度的信息图，复杂布局和美学UI一次到位，真实感爆棚。\n\n连社交媒体截图、高考试卷都能近乎一比一还原，这完全颠覆了曾经以往的文生图模型，彻底解决了文字、信息图这些长期以来的痛点问题。\n\n大家看完的第一反应，几乎都是：设计师真要失业了……\n\n而就在刚刚，\n\n兔展智能\n\n甩出一张王炸：\n\nUniWorld-V2.5\n\n，居然直接“重现”了GPT-Image-2的某些惊艳Cases。\n\n不废话，咱直接上疗效。\n\n同样一套提示词，我们看看生成结果对比：\n\n提示词：生成一个篆书碑刻拓片，内容是“由兔展智能首席科学家袁粒领导团队研发”\n\n△\n\nGPT-Image-2生成\n\n△\n\nNano-Banana-2生成\n\n△\n\nUniWorld-V2.5生成\n\n可以说，在InfoGraph、文字密集、图文交错等此前被公认为“AI生图天花板”的场景上，\n\nUniWorld-V2.5\n\n的完成度已经\n\n对齐GPT-Image-2\n\n，并\n\n显著超越\n\n其他国内外主流文生图模型。\n\n更重要的是，UniWorld-V2.5需要输入的prompt非常简短，不需要像之前一样提供极其复杂和详细的prompt。\n\n你只需要一句话，即可生成多样、复杂的视觉信息图，背后是一整套完整的视觉生成系统在做支撑。\n\n接下来，我们一起见证更多场景奇迹。\n\n高考数学卷：最难的中文测试，它过了\n\n以前，AI生图最令人崩溃的场景是这样的：\n\n结构化排版+高密度中文+复杂多样数学公式+曲线图+立体图\n\n，同时出现在一张图里。\n\n几乎所有文生图模型，在这个场景下表现都很不稳定，甚至根本无从下手。\n\nUniWorld-V2.5则表示：这只是基本功。\n\n直接上地狱级测试，提示词：\n\n生成一张2025年高考数学理科试卷。\n\n△\n\n2025年高考数学理科试卷（由UniWorld-V2.5生成）\n\n一张图里同时包含：选择题、填空题、解答题、函数图像、几何证明……\n\n密密麻麻一整页，格式规范，字迹清晰，连答题线和页码都一个不落。\n\n这已经不是“像不像”的问题，而是“能不能直接拿去给学生考试”的问题。\n\n与此类似的，对中文排布要求很高的场景\n\n“简历生成”\n\n，效果也同样可圈可点：\n\n△\n\n马斯克个人中文简历（由UniWorld-V2.5生成）\n\n这种⽂字密集⽣成能⼒，此前的主流模型⼏乎⽆法做到。\n\n在中文密集文字和复杂排版领域，这是前所未有的降维打击。\n\nGUI布局：超真实的APP界面生成，也过了\n\n想要AI生成一个真实感的社交媒体APP界面？\n\n传统模型生成的界面要么布局错乱，要么文字胡言乱语。\n\n给UniWorld-V2.5布置作业，让它一句话生成一套完整、可乱真的社交媒体界面及布局。\n\n1、抖音直播带货\n\n主播、商品弹窗、价格、实时弹幕、打赏特效，细节真实到“细思极恐”。\n\n△\n\n马斯克直播卖茅台（由UniWorld-V2.5生成）\n\n△\n\n直播带货界面生成效果（由UniWorld-V2.5生成）\n\n2、小红书探店\n\n咖啡馆照片、店名、推荐指数、评论、点赞、导航栏，一个不落，调性精准。\n\n△\n\n小红书上海咖啡馆探店界面（由UniWorld-V2.5生成）\n\n3、微博热搜\n\n热点头条、热度值、标签、按键等，全都可以直接生成，直接以假乱真。\n\n△\n\n微博热搜界面（由UniWorld-V2.5生成）\n\n4、YouTube视频页\n\n博主信息、播放量、推荐列表、评论区，UI细节精准到让人分不清真假。\n\n△\n\nYouTube视频页面（由UniWorld-V2.5生成）\n\n这哪里是“生图”啊？这简直是“\n\n赛博截图\n\n”。\n\n这么看来，UniWorld-V2.5理解的不是像素，而是\n\n产品逻辑和用户场景本身\n\n。\n\nInfoGraph信息图：AI生图的终极考场，很惊喜\n\n高密集、复杂的信息图\n\n是公认的AI生图“无人区”。\n\n它要求模型同时理解数据、图表、文字排版和逻辑关系，信息密度越高，难度越大。\n\n让UniWorld-V2.5尝试露一手，它交出的作业是这样的：\n\n人体前侧解剖系统全图：\n\n太阳系全貌信息图：\n\n绿叶解剖信息图：\n\n肌肉、骨骼、内脏等细节可视化呈现，中英文混排清晰，数据图表严谨。\n\n它不是在“画”一张看起来像的图，而是在\n\n理解并构建一个完整的信息体系\n\n。\n\n这种能力才是模型真正的技术护城河，标志着它从一个“生图工具”向“会思考、懂设计的视觉生成系统”的跨越。\n\n海报与设计：考察商业级完成度\n\n让它试着画一张Air Jordan 1产品宣传海报。\n\n鞋的质感、中文文案、版式层次、品牌调性……看这商业级完成度：\n\n△\n\nAir Jordan 1产品宣传海报（由UniWorld-V2.5生成）\n\n来一张苹果手机的宣传海报。\n\n字体、排版、风格，专业摄影风格图片，美学和质感可以说是拉满了：\n\n△\n\n苹果手机宣传海报（由UniWorld-V2.5生成）\n\n国产视觉AI的突围：在OpenAI与Google的身影前“抢跑”\n\nUniWorld-V2.5的横空出世绝非偶然，它背后站着一位视觉AI深水区的“领跑者”：\n\n兔展智能\n\n。\n\n深圳兔展智能科技有限公司，由\n\n董少灵\n\n在\n\n北京大学\n\n宿舍于2014年发明最早的H5工具而创立。\n\n后来到了2022年，其与北京大学年轻一代视觉AI领军人才\n\n袁粒\n\n等二次创业。\n\n公司总部位于深圳，已服务超4100万家企业⽤户。\n\n截至目前，兔展智能已获深创投、腾讯、龙岗⾦控、嘉道资本、中国风投、青岛人工智能基金、招商局创投等头部机构投资，完成F轮融资。\n\n它还是国家⾼新技术企业、国家级专精特新“⼩巨⼈”企业、⼤湾区最具潜⼒独角兽、⼴东省⾸个“AI国家级⾼技能⼈才培训基地”。\n\n兔展智能的UniWorld系列模型，为什么能做到\n\n“理解即生成”\n\n？\n\n因为它的技术底座早已遥遥领先：\n\n自研“兔灵”大模型\n\n：广东省首个完成备案的视觉空间智能大模型，在视觉理解、压缩重建等核心领域实现多项SOTA（业界最佳） 技术突破；\n\n开源第一\n\n：其开源的Open-Sora Plan是全球最早的开源视频生成模型之一，曾连续多日登顶GitHub全球趋势榜榜首，单模型超过2600万次下载，2024年视觉大模型代码引用量全球第一，被\n\n字节、腾讯、华为\n\n等大厂广泛采用；\n\n架构创新\n\n：UniWorld系列是国内最早实现“理解、生成、编辑”统一架构的视觉空间智能模型。其中，UniWorld-V1\n\n早于Nano Banana三个月推出\n\n，UniWorld-V2在权威评测（GEdit-Bench）中综合性能\n\n超越OpenAI的GPT-Image-1\n\n，多项关键指标亦一度优于谷歌的Nano Banana系列模型，并入选2025年西丽湖论坛深圳市七大科技关键成果、广东省人工智能与机器人科技进步一等奖第一名；\n\n国际领跑\n\n：其推出的Video LLaVA模型成为Google Gemini Pro技术报告中作为对比基准的视觉理解模型，标志着技术获得国际顶级认可。LLaVA-CoT模型则在行业内首次提出视觉慢思考架构，让模型能够进行自主、系统化地多阶段推理，突破了传统视觉模型单步响应的局限，该研究成果被\n\nICCV 2025\n\n会议收录（计算机视觉领域的三大顶会之一），获得同行评审的权威认可；\n\n国产生态\n\n：与\n\n华为昇腾\n\n深度合作，是昇腾910C芯片全球首个大规模用户，打造了行业最早100%基于昇腾架构的视觉生成模型Open-Sora Plan V1.5，突破了算子适配、大规模训练等一系列“卡脖子”问题。这不仅是一次技术胜利，更是为中国AI基础设施的自主可控，提供了一个完整的可行范本。\n\n值得⼀提的，是UniWorld系列发布的历史时间线：\n\nUniWorld V1⽐Nano Banana\n\n早发布整整3个⽉\n\n，且同步开源；\n\nUniWorld V2在Nano Banana Pro发布之前，已是\n\n⾏业第⼀\n\n；\n\nUniWorld V2.5，是这条路上的最新⼀站，突破了\n\n高密集文字、信息图、图文交错、结构化生成\n\n等一系列领域难题。\n\n面向高度结构化且依赖复杂世界知识推理的生成任务，传统的一句话出图范式已难以支撑。\n\n区别于传统prompt-to-image的范式，团队将\n\n超过80%的token预算\n\n用于意图理解、推理与布局规划，相当于引入资深的“总设计师”来全程指挥和全局控制。\n\n这从源头上保证了生成的质量，也体现了理解与生成统一的多模态范式优势。\n\n其中，兔展智能首席科学家、北京大学\n\n袁粒\n\n老师，及其博士生\n\n晏志远\n\n等人，深度参与了核心能力的设计与实现，是V2.5关键突破的重要贡献者。\n\n兔展智能一直围绕着让人类叙事更生动高效的使命，投入到最前沿的视觉智能创新。\n\n据悉，\n\n兔展智能\n\n也将在不久之后，推出\n\n视觉空间智能路线为基础的世界模型\n\n。\n\n站在世界舞台的国产模型，等你免费体验\n\nAI生图的上限，远比我们想象的要高。\n\nUniWorld-V2.5的发布，用实力证明了在中文语境和超复杂逻辑场景下，国产模型已经具备了站在世界舞台中央的底气。\n\n设计行业的“一句话出图”，过去是由GPT-Image-2引发的焦虑。\n\n现在，这个能力在国内坚实落地了，而且是以\n\n自主可控、可微调、国产算力\n\n的形式落地的。\n\n品牌方、内容平台、电商商家、医疗科普机构、教育出版机构，任何需要大规模生产视觉内容的场景，过去需要设计团队花数小时完成的工作，现在仅需要一句自然语言。\n\n更重要的是这件事的示范意义：\n\n在多模态图像生成这条赛道上，中国不再只能是跟跑。\n\n一个从北京大学走出来、深耕视觉大模型4年的团队，今天交出了这份答卷。\n\n那么，最硬核的来了：\n\n这么强的“怪兽”模型，现在\n\n开放免费体验\n\n了！\n\n👇\n\n独家体验传送门，手慢无\n\n👇\n\nUniWorld-V2.5体验入口：https://uniworld.rabbitpre.com/\n\n*本文系量子位获授权刊载，观点仅为原作者所有。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-04-25_硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？_量子位.md", "source_items": [{"name": "量子位", "source_file": "sources/2026-04-25_硬刚GPT-Image-2！国产AI生图“天花板”又被捅破了？_量子位.md", "link": "https://mp.weixin.qq.com/s/LtbF0QV1kzcWGzWFUZSnOA"}], "publish_time": 1777098300}, {"title": "【我把所有模型都换成了DeepSeek V4】：月账单降 90%，效果还更好", "source": "InfoQ", "digest": "【大模型】开发者实测将模型切换至DeepSeek V4后，月度API账单下降90%且效果提升。相比OpenAI和Anthropic涨价，DeepSeek以高性价比颠覆市场，推动企业级应用成本大幅降低。", "link": "https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ", "content": "---\npublish_time: 1777102177\n---\n\n# “我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好\n\n> 原文链接：https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ\n> 公众号：InfoQ\n\n作者 | Tina\n\n2026 年 4 月 23 日，OpenAI 做了两件事：发布了 GPT-5.5，并把价格翻了一倍。\n\n按常理，这应该是属于 OpenAI 的一天。全新预训练架构“Spud”的首个公开版本，SOTA 级的基准测试成绩，SemiAnalysis 在第一时间给出了“GPT-5.5 已经抵达前沿”的评价。但翻看定价页面，开发者很难不算账：每百万输出 token 收费 30 美元，比前代 GPT-5.4 贵了一倍，甚至比一贯以昂贵著称的 Claude Opus 4.7 还要贵出一截。\n\n而仅仅过了不到一天，4 月 24 日，DeepSeek 把 V4 的模型权重扔到了 HuggingFace 上。MIT 开源协议，100 万 token 上下文窗口，以及一个极其低廉的价格：输出 token 每百万 3.48 美元。\n\n大概只有 GPT-5.5 的十分之一。\n\n科技博主兼 AI 系统架构师 Sean Donahoe 在今天凌晨发了一条帖子。他写道：\n\n“DeepSeek V4 Pro 在编码基准测试中击败了 Claude Opus 4.6 和 GPT-5.4...... 今天早上，我把 Claude Code、Codex、Cursor、Aider，以及我用的所有其他编程智能体全部指向了 DeepSeek 端点。不用 OpenRouter，不用代理，原生 API。我的月账单将下降 90% 以上，而且效果比昨天还好。”\n\n这条帖子实际上有两个看点。第一，发帖人是重度 AI 编程用户，却几乎一夜之间完成迁移，月账单会从几千美元降到几百美元。第二，他不只是说便宜，还强调效果没有变差，反而更好：“输出质量提高了，而不是下降，这一点已经通过内部测试以及多个公开基准验证”。\n\nDeepSeek 出手之后，价格成了第一变量\n\n过去三个月，模型竞争激烈。几乎每周都有一家头部模型厂商发布新的 coding checkpoint，GLM-5.1、Qwen3.6-Plus、Kimi K2.6、Composer 2、Gemini 3.1 Pro，都在强调同一件事：agentic coding、长任务、多步骤规划。\n\n进入 4 月，圈子里一直在讨论两个代号：Anthropic 的“Capybara”和 OpenAI 的“Spud”。4 月 23 日，GPT-5.5 正式发布，成为基于“Spud”的公开版本。对 OpenAI 来说，这是 GPT-4.5 之后一次很关键的预训练模型更新，外界期待很高，价格也不低。有分析指出，虽然 NVIDIA 和 OpenAI 都提到 GPT-5.5 在 10 万台 GB200 NVL72 集群上“训练”，但这里的“训练”更准确地说是强化学习的后训练阶段。真正的预训练，仍然是在 Hopper 平台上完成的。\n\n但只过了不到 24 小时，DeepSeek V4 开源。模型竞争一下子不只是在比谁更强，也开始比谁更便宜。\n\nOpenAI 的旗舰\n\n模型过去通常比 Anthropic 更便宜，但这一次不一样了：GPT-5.5 的 API 定价为每百万输入 token 5 美元、每百万输出 token 30 美元，比前代 GPT-5.4 贵了一倍，甚至比 Claude Opus 4.7 的输出定价还贵出一截。\n\n更值得注意的是，OpenAI 为 GPT-5.5 设计了一套复杂的定价分层。除了标准 API 之外，OpenAI 还提供了一个优先级（priority）套餐，价格是标准档的 2.5 倍。如何为“更快的 token”收更多钱，正在变得越来越关键。这里需要说明的是，priority 和 fast mode 是两回事。fast mode 只是给出一些相对模糊的承诺，比如“价格贵 6 倍，速度大约快 2.5 倍”；而 priority 提供的是更保守但更明确的 SLA（例如：99% 的时间里吞吐量超过 50 tokens/s）。\n\n这还没算 GPT-5.5 Pro——专为科学研究和长程推理设计的版本，输入 / 输出定价分别为每百万 token 30 美元和 180 美元，瞄准的不是日常编码场景，而是前沿科研用例。\n\n标准版和 Pro 版都提供多档推理强度：xhigh、high、medium、low 以及 non-reasoning，本质是在成本与能力之间做取舍。从 strawberry/o1 那一代开始，这一点已经很明确了：推理强度越高，结果通常越好，但消耗的 token 更多，响应时间也更长。\n\n在 GPT-5.5 发布前一周，Anthropic 刚刚推出 Claude Opus 4.7。相比 4.6，Opus 4.7 更像一次小幅升级，没有带来明显质变。\n\nToken 计数方式的更新，是这次定价变化里最关键的一点。4.7 使用了新的 tokenizer，通过更细粒度的切分来换取性能提升，但代价是整体 token 用量会上升。官方也直接承认，这会带来最高约 35% 的 token 增长——换句话说，价格也等于变相上涨了 35%。\n\n然后 DeepSeek V4 来了。\n\nV4 系列包含两个模型：DeepSeek-V4-Pro 和 DeepSeek-V4-Flash。前者参数规模为 1.6T 总参数 / 49B 激活参数，后者为 284B / 13B。相比 V3（671B / 37B）是一次升级，而 Flash 是一个更轻量的下探版本。这使得 DeepSeek-V4-Pro 成为目前规模最大的开源权重模型。\n\n把价格拉出来对比，差距大到让人无法忽视。简单算一笔账：同样处理一百万输入 token 和一百万输出 token，GPT-5.5 的合计成本是 35 美元，Claude Opus 4.7 是 30 美元。而 DeepSeek-V4-Pro 是 5.22 美元。如果输入命中缓存，输入价格进一步降至每百万 token 0.145 美元，同样这笔账就变成了 3.625 美元。\n\n也就是说，在标准定价下，DeepSeek-V4-Pro 的成本大约是 GPT-5.5 的七分之一、Claude Opus 4.7 的六分之一。如果缓存命中，差距进一步拉大——大约是 GPT-5.5 的十分之一、Claude Opus 4.7 的八分之一。\n\n真正把价格压到“近零地带”的，是 DeepSeek-V4-Flash。V4 Flash 的 API 输入价格每百万 token 仅 0.14 美元，输出价格 0.28 美元，合计 0.42 美元。缓存命中后进一步降至 0.308 美元。同等输入输出量下，Flash 的成本不到 GPT-5.5 和 Claude Opus 4.7 的 2%——便宜了 98% 以上，几乎只有对方的百分之一。\n\n如果把当前主流模型的定价放在一张表里看，这种分化更加直观：\n\n更重要的是，DeepSeek V4 走的是 MIT 开源协议。这意味着开发者完全可以把模型部署在自己的服务器上，不走 API 调用，直接绕开 token 计费逻辑。对于有合规要求、数据不能出域的场景，这个选项的权重甚至超过价格本身。\n\nV4 相比 V3 的核心进展，是上下文窗口从 128k 提升到了 1M。因此，这一代的技术优化几乎都围绕长上下文展开，包括：\n\nCompressed Sparse Attention（CSA）：压缩稀疏注意力\n\nHeavily Compressed Attention（HCA）：高压缩注意力\n\nManifold-Constrained Hyper-Connections（mHC）：流形约束超连接\n\n对应的效果是：“在百万 token 上下文场景下，DeepSeek-V4-Pro 的单 token 推理 FLOPs 仅为 V3.2 的 27%，KV cache 仅为 10%。”也就是说，KV cache 减少了 90%。这个幅度甚至超过了上个月 Google TurboQuant 的论文，对 NAND Flash 产业链来说，是个需要警惕的信号。\n\n在工程层面，DeepSeek 还在 DeepGEMM 中开源了一个 Mega-Kernel，宣称支持 NVIDIA GPU 和华为 Ascend NPU。可以看出，他们的目标之一，是未来在 Ascend 上承载一部分推理流量。官方 API 页面还提到，受限于高端算力，目前 V4-Pro 的服务吞吐仍有限，预计下半年昇腾 950 超节点批量上市后，Pro 价格会大幅下调。\n\n业界实测效果\n\n三款模型，三种定价逻辑：OpenAI 在涨，Anthropic 在偷偷涨，DeepSeek 则直接掀桌。如果只看数字，选择几乎没有悬念。\n\n不过，DeepSeek 自己也承认，和顶尖选手之间还有距离。他们在技术报告里写道：“通过增加推理 token 的使用量，DeepSeek-V4-Pro-Max 在标准推理基准上优于 GPT-5.2 和 Gemini-3.0-Pro，但仍略逊于 GPT-5.4 和 Gemini-3.1-Pro，距最前沿模型大约还有 3 到 6 个月的差距。”\n\n那么，实际效果如何呢？\n\n在 Sean 宣布全面迁移的同一天，AI 研究员 Rohan Paul 和他的团队做了一个测试：给 DeepSeek V4 Pro 和 GPT-5.5 同一份提示词，开发一个完整的卡丁车竞速游戏，全部塞进一个 HTML 文件。\n\n提示词严苛到像一份游戏策划需求书：Canvas 渲染，方向键和 WASD 双套操控，加速、刹车、漂移、倒车一个不能少。物理引擎从零手写，摩擦力、最高速度、转向灵敏度全部要调。赛道有路面、草地、弯道和窄路，冲上草地减速，撞墙弹回。至少 3 辆 AI 对手，自动沿赛道行驶，速度各异。道具系统要有金币、加速板和随机道具箱。画面全用 Canvas 形状手绘，漂移拖痕、加速尾焰、屏幕震动，一个视觉效果都不落。音效用 Web Audio API 合成，倒计时、碰撞、冲线都要出声。UI 要完整：标题画面、3-2-1 倒计时、实时 HUD、结束排名。\n\n最终的数据对比是这样的：\n\nDeepSeek V4 Pro 输出了近两倍的 token，但便宜了 4.3 倍。至于两个游戏跑起来分别是什么样子，我们直接上视频，你自己体验。\n\n如果说卡丁车测试考察的是“能不能做一个完整产品”，那同一天另一个测试考察的则是更微妙的东西——审美。做出来的页面“好不好看”，任何人都能一眼判断。\n\n中文技术社区的一位开发者用同样的提示词、同样的工具，让 DeepSeek V4 Pro 和 GPT-5.5 各自生成一个 Apple 风格的天气界面。提示词给了一个很高的起点：\n\n“你是 Apple Inc 的顶级 UI 设计师，以 iOS 18 的设计风格（毛玻璃效果、高斯模糊、动态渐变、细腻阴影）创建一个单个 HTML 文件。实现横板天气页面，包含 4 个并排的动画天气卡片：晴天（太阳光线、动态光晕）、大风（飘动云朵、摇曳树木、风线）、暴雨（下落雨滴、形成水洼、闪电）、暴雪（下落雪花、堆积效果）。卡片需深色背景，支持按钮切换天气状态，实现流畅交互和微动效。代码必须可直接运行，美观度优先。”\n\n工具也完全统一，两个模型生成时，用的都是 Claude Code。你猜哪个是 DeepSeek 的？\n\n生成结果 1 如下：\n\n生成结果 2 如下：\n\n不过，在日常问题上，DeepSeek 确实更强：\n\n科技博主 Simon Willison 有一个习惯：每次 DeepSeek 发布新版本，他都会用同一句提示词 “Generate an SVG of a pelican riding a bicycle”，生成一张鹈鹕骑自行车的 SVG。这次 V4 发布，他照例做了一遍，也照例把历代结果放在一起。\n\n从 2025 年 3 月的 V3，到 8 月的 V3.1，再到 12 月的 V3.2，以及现在的 V4，每一版都比上一版更像样。早期的鹈鹕歪歪扭扭，脚踏板对不准，自行车架子也松散。到了 V3.2，车架结实了，鹈鹕也开始像个正经骑手。这次 V4-Flash 又往前走了一步：链条画出来了，前轮加了反光片，翅膀搭在车把上，脚也踩到了踏板上。总之，是一次比一次好。\n\nDeepSeek-V3-0324\n\nDeepSeek-V3.1\n\nDeepSeek-V3.2\n\nDeepSeek-V4 Flash\n\nDeepSeek-V4 Pro\n\nDeepSeek 在 V4 发布当天，用一句话表明了他们对这些讨论的姿态——“不诱于誉，不恐于诽，率道而行，端然正己。”\n\n这也恰好解释了这只鹈鹕一年来的轨迹。\n\n参考链接：\n\nhttps://x.com/rohanpaul_ai/status/2047762509474726285\n\nhttps://simonwillison.net/2026/apr/24/deepseek-v4/\n\nhttps://linux.do/t/topic/2045480\n\nhttps://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5\n\n今日好文推荐\n\nClaude变笨，Anthropic发报告认了：为优化3个Harness层bug，不小心改崩了\n\nDeepSeek V4 重磅开源！首次打通华为Ascend，也没丢掉英伟达，百万上下文夺回国产模型话语权\n\nGPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员用上 Codex！\n\n姚顺雨腾讯模型首秀！不卷参数只做 “听话打工人”，Hy3 preview登场 | 附实测\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "国内", "is_model_related": true, "source_file": "sources/2026-04-25_“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好_InfoQ.md", "source_items": [{"name": "InfoQ", "source_file": "sources/2026-04-25_“我把所有模型都换成了DeepSeek V4”：月账单降 90%，效果还更好_InfoQ.md", "link": "https://mp.weixin.qq.com/s/_k6tFQEKrvUiGh1RFDOUrQ"}], "publish_time": 1777102177}, {"title": "翻完DeepSeek报告，我们发现了中国AI的默契", "source": "机器之心", "digest": "【大模型】DeepSeek V4与Kimi K2.6同期发布，展现技术联动默契。Kimi复用DeepSeek的MLA注意力机制，DeepSeek采用Kimi验证的Muon优化器。两家万亿参数模型全部开源，降低企业部署成本至1/10。", "link": "https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA", "content": "---\npublish_time: 1777104000\n---\n\n# 翻完DeepSeek报告，我们发现了中国AI的默契\n\n> 原文链接：https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA\n> 公众号：机器之心\n\n编辑｜冷猫、+0\n\n这两天，全球顶级大模型接连更新，重磅消息一个接一个。\n\n中国这边也迎来热闹非凡的一周，从周一开始，Qwen、Kimi、小米、腾讯相继发布最新模型。周五，千呼万唤的 DeepSeek 终于发布 V4 双版本，引发了国内 AI 圈的一波海啸。\n\n其中，中国迈入万亿参数俱乐部并已开源的模型有 DeepSeek 和 Kimi 两家，小米也预告了将会开源最新的万亿模型。\n\n翻完 DeepSeek V4 近 60 页的技术报告，我们发现这两个已开源万亿模型之间的默契，比任何单打独斗都可怕。\n\n再往前溯源的话，我们发现 DeepSeek 和 Kimi 已经是\n\n第 N 次「偶遇」\n\n了。这可能源于梁文锋和杨植麟对 Scaling Law 的共同信仰和对 AGI 的竞逐。\n\n多次偶遇背后的一场「合谋」\n\n从 DeepSeek-R1 和 Kimi K1.5 仅隔两小时发布，DeepSeek-NSA 与 Kimi MoBA 论文同期发表、Kimi 数学推理模型 Kimina-Prover 启发 DeepSeek-Prover V2，到如今的 Kimi K2.6 与 DeepSeek-V4 在同一周发布，齐头并进。\n\n这两家公司不是在互相厮杀，而是在用一种近乎「开源共享」的方式，一起进步。\n\n引用车圈的一句话说，「好的设计总是心有灵犀」。\n\n从 Kimi K2 采用 DeepSeek V3 的 MLA 注意力机制，到 DeepSeek V4 引入了 Kimi 大规模验证的 Muon 优化器，可以说，技术上的联动，成为了行业的一个亮点。\n\nMLA\n\n注意力机制\n\n：DeepSeek 创新，Kimi 复用\n\n首先要提到的是，DeepSeek 在 V3 中首创了 MLA\n\n注意力机制\n\n，这个设计通过低秩压缩技术有效减少了显存占用，从而让长上下文推理变得可能。这个创新很快被行业广泛认可，Kimi K2 在自己的\n\n注意力机制\n\n中也采用了 MLA 注意力机制。\n\n二阶优化器：Kimi 大规模验证，DeepSeek 跟进\n\n除了注意力机制，另一个备受关注的突破是优化器技术。2025年2月，Kimi 发表《Muon is Scalable for LLM Training》论文，在 480 亿参数的 Moonlight 系列模型上验证了 Muon 优化器的效果，用来取代已经用了 10年 的行业标准技术 Adam。2025 年 7 月，在万亿参数 Kimi K2 中，二阶优化器 Muon 被首次大规模应用，展示了其在大规模语言模型训练中的优势。\n\n如今，DeepSeek V4 也跟进用 Muon 优化器技术，实现训练效率的稳定性。两家公司将底层的优化技术相互吸纳，打破了技术壁垒，展现出前所未有的深度合作。\n\n残差连接：两种不同的解决方案\n\n说到残差连接，DeepSeek 和\n\nKimi\n\n也各有突破。\n\nDeepSeek 在 V4 中引入了 mHC 残差连接，目标也是提高信息传递的效率。通过改变多头注意力的拼接方式，mHC 提高了梯度流动的效率，实测训练效率提高了约 30%。\n\nKimi 提出的 Attention Residuals（注意力残差）优化了信息流的传递效率，提升了模型的表现。这一创新得到了广泛的认可，Andrej Karpathy 点评称「我们对《Attention is All You Need》的理解还不够」，OpenAI 推理之父 Jerry Tworek 点评称「我们应该重新思考一切，深度学习的2.0时代正在到来\n\n」\n\n，马斯克也在社交媒体上为此点赞，称是「令人印象深刻的研究\n\n」\n\n。\n\n这两种方案各有特色，展现了两家公司在同一技术问题上不同的思路。\n\n长上下文推理：两种技术路线的探索\n\n长上下文推理是 AI 模型的一大挑战，Kimi 和 DeepSeek 在这一点上的思路也各不相同。Kimi 在 2024 年实现了百万 Token 上下文的能力，尽管这一能力非常强大，但成本问题依然很大，超长上下文的计算开销呈现出线性增长，普通开发者很难承受。\n\n到了 2026 年，DeepSeek 和 Kimi 分别提出了两种解决方案：\n\nDeepSeek\n\n选择了稀疏注意力，通过让模型只关注输入中的关键部分，降低计算量，从而让百万上下文的成本变得更可接受。这种方法虽然能够精准聚焦关键信息，但设计和调优难度较大。\n\nKimi\n\n则推出了线性注意力架构，改变了注意力机制的计算方式，使得计算复杂度从 O(n²) 降到 O(n)，从理论上大幅降低了长上下文的计算成本。\n\n这两种方案同样各有优势，稀疏注意力强调精准性，线性注意力则追求高效性。更重要的是，Kimi 和 DeepSeek 同时在这两条技术路线上都在发力，为未来的长上下文推理提供了多种选择。\n\n从「两个公司」到「一套基础设施」\n\nDeepSeek 和 Kimi 的「偶遇」故事不只是技术圈的热闹，也是关乎中国 AI 产业格局的一件大事。\n\nGPT-4 的参数量至今未正式公布（外界估计在 1.8T 左右），Claude 3.5 Opus 同样闭源。而中国的这两家创业公司，不仅做出了同等规模的模型，还选择了\n\n全部开源。\n\n这意味着任何开发者、任何研究机构、任何企业，都可以免费获取这些模型进行二次开发和部署。\n\n直接的结果是：企业私有化部署的成本砍到了原来的\n\n1/10\n\n。中小企业终于能在自己的服务器上跑万亿参数级别的模型了，这事儿放在一年前，想都不敢想。\n\n生态这块也在悄悄成形，在 OpenRouter 平台上，两者的 API 调用量稳居中国前两名；在应用层，Kimi 被海外爆款编程工具「套壳」接入，而 DeepSeek 则被日本乐天集团直接包装成了 Rakuten AI 3.0。\n\n就连硅谷的巨头们，也不得不正视这股来自东方的力量。\n\n在 Meta 最新模型 Muse Spark 发布的官方技术博客中，Llama 4 被直接拿来与 DeepSeek-V3.1 以及 Kimi-K2 进行性能对比：\n\n而在黄仁勋的CES主题演讲上，黄仁勋更是将 DeepSeek 和\n\nKimi K2-Thinking\n\n模型赫然放上大屏幕，作为展示其下一代 Blackwell 与 Rubin 芯片强大性能的 Benchmark 标杆：\n\n与此同时，两家公司都在国产芯片适配上做出了实质性投入。\n\nDeepSeek V4 首次深度适配华为昇腾芯片，推理环节将运行在国产硬件上；Kimi 的 Prefill-as-a-Service 方案则提出了跨数据中心异构硬件推理框架，允许用不同类型的国产芯片分别承担 Prefill 和 Decode 阶段，实测吞吐量提升 54%，首 token 延迟降低 64%。这为国产芯片进入大模型推理链条打开了一个现实的切入口。\n\n黄仁勋在播客节目中说了一句意味深长的话：「芯片又不是铀浓缩，阻挡不了中国芯片的进步，他们依旧可以通过国产芯片来开发模型。」\n\n他可能没想到，DeepSeek 和 Kimi 正在用实际行动让这一天来得这么早，这么快。\n\n结语：两个广东人，撑起中国 AI 的半边天\n\n技术的高度，最终取决于人的格局。\n\n2023 年同年起步，用最短时间双双叩开百亿美金十角兽大门——DeepSeek 与 Kimi，始终保持着业内人数最精简、但人才密度最顶尖的配置。两位同样来自广东的创始人，杨植麟与梁文锋，既是技术的狂热信徒，也是被寄予厚望的中国 AI 国家队。\n\n在总理主持召开的经济形势专家和企业家座谈会上，两人时隔一年分别建言献策，成为了中国 AI 发展史上的一个有力注脚。他们都是技术范式的引领者：DeepSeek 向世界证明了「思维链」的威力，而 Kimi 则在国内引领了「智能体」的落地狂潮。\n\n在追逐 AGI 的这场马拉松里，没有哪一家公司可以闭门造车地跑完全程。DeepSeek 与 Kimi 之间，有竞争，也有共鸣——Muon 与 MLA 的技术互通，底层机制上惺惺相惜的探索，恰恰说明：\n\n中国 AI 真正的底气，从来不是某一家公司的单打独斗，而是这种在「偶遇」中碰撞出的技术火花，以及在开源生态里悄然生长的互利共生。\n\n双峰并峙，终将顶峰相见。属于中国大模型的万亿级航海时代，才刚刚拉开序幕。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国内", "is_model_related": true, "source_file": "sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md", "source_items": [{"name": "机器之心", "source_file": "sources/2026-04-25_翻完DeepSeek报告，我们发现了中国AI的默契_机器之心.md", "link": "https://mp.weixin.qq.com/s/C9XNQIS1agIE77YJf1m1jA"}], "publish_time": 1777104000}, {"title": "给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral", "source": "新智元", "digest": "【大模型】新加坡国立大学与上海交大联合提出LLM DNA，通过行为表征刻画模型亲缘关系。RepTrace方法无需训练即可提取DNA，在305个模型上验证AUC达0.99，可构建系统发育树。", "link": "https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A", "content": "---\npublish_time: 1777114824\n---\n\n# 给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 | ICLR'26 Oral\n\n> 原文链接：https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A\n> 公众号：新智元\n\n新智元报道\n\n编辑：LRST\n\n【新智元导读】\n\n模型数量持续增长，大模型世界正变得像一个快速膨胀的「物种库」：谁由谁微调而来，谁与谁更为接近，哪些模型实际上共享相似的能力底色，很多时候并不清楚。LLM DNA基于行为进行谱系分析，为判断模型来源提供了新依据。\n\n如今的大模型生态，早已不再只有少数几个头部模型。\n\nHugging Face上的模型数量持续膨胀，不同家族、不同架构、不同 tokenizer，再加上大量微调版、蒸馏版和适配版，使整个生态越来越像一片快速扩张的「模型丛林」。\n\n问题在于，许多模型之间究竟是否存在谱系关系，哪些能力继承自上游模型，哪些只是表面上看起来相似，往往无法从模型卡或发布说明中直接看出。\n\n这不仅影响我们对模型生态的理解，也关系到模型治理、安全审计以及多智能体系统设计。\n\n现有方法仍存在明显局限：有些依赖特定任务，难以刻画模型的整体特征；有些仅适用于固定模型集合，缺乏对新增模型的可扩展性；还有一些方法较强依赖 tokenizer 或内部结构，因而难以适配异构模型。归根结底，这一方向仍缺少一种更通用、更稳定、且更具扩展性的模型「身份表示」。\n\n面对这一问题，新加坡国立大学与上海交通大学联合团队提出了LLM DNA，尝试像研究生物演化一样，用功能行为表征刻画模型之间的「亲缘关系」。他们不仅从数学上定义了什么是 LLM DNA，还提出了一套无需训练的提取方法RepTrace，并在305个大模型上进行了验证。结果表明，这种「DNA」不仅能够识别模型之间的关系，还能进一步构建大模型的系统发育树。\n\n论文链接：\n\nhttps://openreview.net/pdf?id=UIxHaAqFqQ\n\n项目代码：\n\nhttps://github.com/Xtra-Computing/LLM-DNA\n\n项目网站：\n\nhttps://dna.xtra.science/\n\n该论文已被ICLR 2026 接收为Oral，约占总投稿量的1%。\n\n给模型做「DNA检测」，核心不是看参数，而是看模型「怎么回答」\n\nLLM DNA的核心思想，是从模型的功能行为而非参数表面出发，对 LLM 进行统一表征。\n\n研究团队把这种从功能行为中提炼出来的低维表征称为「LLM DNA」，如果两个模型在很多问题上的反应模式很接近，那么它们的DNA也应该彼此接近；如果两个模型差得很远，它们的DNA也应该拉开。\n\n论文进一步证明，这样的表征具备两种类似生物DNA的性质：一是「继承性」，也就是模型经过微调或演化后，DNA 不会突然彻底变掉；二是「遗传决定性」，也就是 DNA 相近的模型，行为上通常也更相似。\n\n不用重训的「验DNA」流程\n\n为了将这一思想落到实践，作者提出了训练无关的 DNA 提取流程 RepTrace。具体而言，该方法首先构造一组统一的 probe 输入，收集不同模型在这些输入上的文本响应；\n\n随后利用冻结的句向量模型将响应编码为语义embedding，并将多条响应embedding串接为高维功能表示；\n\n最后，基于Johnson–Lindenstrauss lemma所支撑的随机投影思想，采用随机高斯投影将这一高维表示压缩到低维 DNA 空间。\n\n这里的关键并不只是降维本身，而是在压缩过程中尽可能保持不同模型在功能行为上的相对几何结构，从而使语义上相近的模型在 DNA 空间中仍然彼此接近。\n\n值得注意的是，这里的 probe 输入并不依赖精心设计的任务数据。论文及其官方材料表明，即便使用按固定规则随机生成、且完全不经过任何大模型参与构造的文本作为输入，提取出的 DNA 依然能够保持很强的判别能力；在关系预测任务中，这种随机输入设定下的 AUC 仍可达到 0.987。\n\n这个结果说明，LLM DNA 并不依赖特定 benchmark 的题目形式，而能够从更一般的输入中捕捉模型较为稳定的功能特征。随机输入的意义主要在于，它有助于减弱特定评测集、训练语料或题目分布带来的偏置。\n\n面对一个新模型，只需在同一套输入和流程下提取其 DNA，便可直接纳入现有比较框架，而无需重新训练或调整其他模型的表示。\n\n大模型家谱\n\n这项工作的一个重要亮点，在于其实验验证具有较大的覆盖范围。研究共分析了来自153家机构的305个大模型，覆盖不同架构、不同参数规模，并同时包含 base 模型与 instruction-tuned 模型。\n\n实验结果表明，基于 LLM DNA 的关系检测取得了接近 0.99 的 AUC，显著优于多个基线方法。这说明，LLM DNA 能够较为稳定地区分彼此存在关联的模型与关系较弱或无明显关联的模型。\n\n更有意思的是，DNA还能够帮助发现一些文档里没有明说的潜在关系。论文在 305 个模型的t-SNE可视化中观察到，同一机构、同一家族的模型往往自然聚在一起，而一些没有明确记录来源的模型，也会靠近其可能的上游家族。\n\n这种现象说明，LLM DNA不只是「复述已知关系」，还可能成为发掘隐藏演化线索的新工具。\n\n除了「认亲」，DNA还可以拿来做模型路由。论文把DNA用在与EmbedLLM相同的路由设定中，结果显示，冻结的DNA表示在测试集上的路由准确率达到0.672，略高于EmbedLLM的0.665。\n\n更重要的是，EmbedLLM的表示是围绕该任务专门学出来的，而LLM DNA并没有针对路由任务做任何专门训练。这说明，它确实更接近一种任务无关的模型「基础表征」。\n\n真实案例\n\n在305个模型的大规模实验之外，LLM DNA 的价值还体现在对新模型的实际分析上。\n\n最近，在GLM 5.1相关信息尚未完全公开之前，研究团队利用LLM DNA的workbench对openrouter/pony-alpha进行了比较分析。\n\n结果显示，在候选模型中，pony-alpha与z-ai/glm-4.7的DNA相似度最高，显著高于Gemini等其他模型；从功能行为表征的角度看，这一结果为其可能属于 GLM 谱系提供了较强线索。\n\n与依赖公开文档、命名方式或零散传闻不同，这种判断直接建立在模型响应所形成的功能表示之上，因此更接近一种「基于行为的谱系分析」。这一案例也说明，LLM DNA的意义并不局限于论文中的离线基准评测。\n\n除了在305个模型上系统验证其能够稳定识别模型关系之外，它还可以作为面向新模型的分析工具，在公开信息有限的情况下，为模型来源、继承关系和潜在家族归属提供额外证据。\n\n从「模型指纹」走向「模型进化树」\n\n当模型之间的距离可以量化之后，下一步就很自然了：能不能把整个大模型世界画成一张「家谱图」？\n\n论文确实这么做了。团队基于 DNA 距离构建了系统发育树，结果发现这棵树能够比较自然地反映出一些真实世界中的演化规律：例如从encoder-decoder到decoder-only的整体迁移，不同家族随时间推进的演化，以及像Llama、Qwen、Gemma这样的家族分支结构。论文还观察到，不同家族的「演化速度」似乎也不一样，有些分支变化更快，有些则更平稳。\n\n这也是这项工作最容易打动人的地方之一。过去我们谈模型演化，很多时候靠的是发布时间、模型名字、官方说明，或者圈内经验判断。LLM DNA提供的则是另一种视角：直接从模型实际表现出发，反过来重建它们之间的关系图谱。对于越来越复杂的大模型生态来说，这种「从行为反推谱系」的能力，本身就很有价值。\n\n为什么这件事重要\n\n从更现实的角度看，LLM DNA可能带来几类直接价值。\n\n第一是模型溯源。未来如果某个模型出现安全问题、版权争议或许可证争议，DNA可能成为辅助判断其来源和演化关系的证据之一。\n\n第二是模型治理。对于企业或平台来说，面对海量模型，如何快速判断哪些模型相近、哪些模型值得保留、哪些模型可能只是已有模型的近似变体，DNA可能提供新的组织工具。\n\n第三是多模型系统设计。如果不同模型之间的「亲缘远近」能够量化，就可能帮助我们更合理地做路由、集成甚至多智能体协作分工。论文在引言中也明确提到，这正是该工作的几个重要动机。\n\n当然，LLM DNA不是说一个低维向量就能解释模型的一切。更准确地说，它提供的是一种更统一、更可扩展的「观察模型」的方式。过去很多模型之间的关系，要么只能靠公开资料猜，要么只能靠零散案例分析。现在，至少有了一种办法，可以比较系统地识别这些潜在的谱系关系。\n\n总结\n\nLLM DNA这项工作的吸引力，不只是在于它提出了一个新名字，更在于它把一件很多人隐约觉得重要、但一直缺少统一工具的事情，真正往前推了一步：在模型越来越多、版本越来越杂、公开谱系越来越不透明的时代，我们能不能像「验DNA」一样，从模型回答问题的方式里，看出它和谁更像、可能继承了谁、又和哪些模型暗中相连。\n\n从这个角度看，这项ICLR&#x27;26 Oral工作最值得传播的，并不只是一个接近0.99的数字，而是它让「发现模型隐藏谱系」这件事，开始变得更系统、更可操作，也更容易被真正用起来。\n\n参考资料：\n\nhttps://openreview.net/pdf?id=UIxHaAqFqQ\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国内", "is_model_related": true, "source_file": "sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md", "source_items": [{"name": "新智元", "source_file": "sources/2026-04-25_给大模型验DNA，微调、蒸馏的隐藏血缘藏不住了 _ ICLR'26 Oral_新智元.md", "link": "https://mp.weixin.qq.com/s/p-F7qQzDRgwOQTfl1WIL8A"}], "publish_time": 1777114824}, {"title": "AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板", "source": "InfoQ", "digest": "探讨AI辅助编程面临的挑战：理解债务累积、上下文窗口限制导致的信息衰减。分析独立开发者在使用AI编程工具时遇到的效率瓶颈和解决方案。", "link": "https://mp.weixin.qq.com/s/eYL3Luk7FocIu4oBy4PQSw", "content": "---\npublish_time: 1777102177\n---\n\n# AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板\n\n> 原文链接：https://mp.weixin.qq.com/s/eYL3Luk7FocIu4oBy4PQSw\n> 公众号：InfoQ\n\n作者 | 周云龙\n\n一个反直觉的开场\n\n2025 年 7 月，一份名为 METR 的独立研究机构发布了一项随机对照实验，结论震动了整个开发者社区：\n\n当允许资深开源开发者使用 AI 编程工具时，他们完成任务的时间平均比不使用 AI 时慢了 19%。\n\n更刺眼的是主观认知：\n\n实验前，开发者\n\n预期\n\nAI 会让自己快 24%；\n\n实验后（已经被 AI 减速 19%），他们\n\n仍然坚信\n\nAI 让自己快了 20%；\n\n主观感受与客观数据之间，存在整整\n\n39 个百分点\n\n的偏差。\n\n这场实验招募了 16 位在大型成熟仓库（平均 22,000+ stars、百万行代码）里拥有 5 年以上经验的开发者，覆盖 246 个真实任务。它并不是一个“AI 不行\n\n”\n\n的故事，而是一个更复杂、更值得所有 AI 编程实践者重视的故事：\n\n随着项目复杂度上升，AI 编程带来的收益曲线不仅会变缓，甚至会转为负值；而且人类对这种转折几乎毫无知觉。\n\n经历了一年多的 AI Coding 浪潮之后，越来越多独立开发者和小团队开始在实践中遭遇一个相似的体感：\n\n项目规模越大、技术栈越陌生，AI 带来的\n\n“\n\n控制力\n\n”\n\n反而越差。\n\n本文尝试把这种模糊的体感，转化为可验证的结构性分析——它从何而来，在哪里失效，以及我们该如何重新理解\n\n“\n\nAI 时代独立开发者的能力上限\n\n”\n\n。\n\n证据层：失控不是错觉，\n\n是可量化的规律\n\n除了 METR 的 19% 减速数据，2025 年同期的多项研究把这一判断从不同角度夯实了下来。\n\n1. 代码质量在恶化\n\nCarnegie Mellon 联合 GitClear 对使用 GenAI 工具的项目进行代码追踪，结果显示：\n\n圈复杂度增幅超过 40%；\n\n这一增幅\n\n无法被代码量的增长解释\n\n——也就是说，AI 正在让同样功能的代码变得更复杂；\n\n重复代码、短期复制粘贴、未重构片段等\n\n“\n\n坏味道\n\n”\n\n出现频率显著上升。\n\n2. 安全缺陷密度在上升\n\nVeracode 2025 GenAI 代码安全报告：\n\n45% 的 AI 生成代码样本通不过基础安全测试\n\n；\n\nCodeRabbit 对 470 个开源 PR 的分析：AI 生成代码的严重缺陷密度是人类代码的\n\n1.7 倍\n\n；\n\n对低代码 AI 平台 Lovable 的扫描结果：在 1,645 个应用中，\n\n10.3%（170 个）包含严重或关键级别的安全漏洞\n\n。\n\n3. AI 代码的真实采纳率并没有看上去那么高\n\nMETR 数据的一个关键细节：\n\n开发者最终只采纳了不到 44% 的 AI 生成内容\n\n。换句话说，超过一半的生成代码是\n\n“\n\n走一遍流程最终被拒绝”的——这段审阅、验证、对比、返工的时间，是纯粹的成本损耗。\n\n4. 上下文窗口不是硬墙，而是缓慢衰减的斜坡\n\n主流 AI 编程工具在超大代码库上的表现正在被定量评测：当仓库规模达到\n\n40 万文件级别\n\n时，消费级 AI 工具的架构理解能力下降约\n\n77%\n\n。更值得警惕的是：\n\n所有主流模型，在 context 使用率上升时，注意力都是持续衰减的。它不是“超了才错”，而是“越满越飘”。\n\n这意味着一个普遍的错觉需要被打破：\n\n上下文窗口再大，也不等于 AI 能同时“抓住”你项目里的所有约束\n\n。它看得见你的代码，但它保持专注的半径在缩小。\n\n机制层：为什么到某个\n\n复杂度节点，项目就开始失控\n\n把上述现象拉通来看，复杂度失控并不是一个单点故障，而是四条独立机制叠加的结果。它们像复利一样各自增长，当任何一条越过项目的承载力，整个系统就开始显现不可控。\n\n机制一：Context Window 的注意力衰减\n\nAI 编程的第一个天花板来自物理现实。哪怕是 1M token 的模型，把整个中型 monorepo 塞进去之后，它会出现一种\n\n“\n\n看见却抓不住\n\n”\n\n的状态：\n\n新增 feature 会无意中违反三个文件外定义的约束；\n\n同名但语义不同的符号开始被混淆；\n\n架构层的隐性规则（比如\n\n“\n\n该层只允许 pure function\n\n”\n\n）被悄悄破坏。\n\n这是一个\n\n信号 / 噪声比\n\n问题，而不是\n\n“\n\n窗口够不够大\n\n”\n\n的问题。对应的工程含义是：\n\n把所有东西交给上下文是最差的策略，精确的 context engineering 才是 AI 辅助大型项目的生存技能。\n\n机制二：理解债（Comprehension Debt）\n\n这是我认为最本质的概念，也是传统\n\n“\n\n技术债\n\n”\n\n无法覆盖的新范畴：\n\n理解债：开发者未来为理解、修改、调试“自己没真正写过、也没认真读过”的代码所必须支付的成本。\n\nAI 可以在几分钟内生成几千行你没完整读懂的代码。每一次\n\n“\n\n看着合理、测试通过、merge 了\n\n”\n\n，你就给项目加了一笔理解债。\n\n它比技术债更阴险，原因有三：\n\n技术债是你自己挖的坑\n\n，位置清楚；\n\n理解债是\n\n“\n\n你不知道自己不知道\n\n”\n\n；\n\n技术债可以通过重构还清\n\n；理解债只能通过\n\n“\n\n把代码真正读进脑子\n\n”\n\n还清——而这恰好是 AI 没办法替你做的事；\n\n理解债以复利增长\n\n：每一块没读懂的代码，都会在你下次修改相邻模块时，以\n\n“\n\n莫名其妙的副作用\n\n”\n\n向你收利息。\n\n一个典型场景：生产出事故，你冷启动调试，却发现自己在\n\n“\n\n逆向工程自己的代码\n\n”\n\n——这就是理解债爆雷的瞬间。\n\n机制三：陌生技术栈的双重放大效应\n\n陌生技术栈下，AI 编程的失控速度会被两次放大：\n\n第一次放大——嗅觉失效：熟悉的栈里你能一眼识别奇怪的 ORM、反模式的 async、可疑的内存操作；陌生栈里你失去了 80% 的直觉，AI 生成的\n\n“\n\n看起来对\n\n”\n\n的代码几乎没有过滤层；\n\n第二次放大——调试闭环陷阱：出了 bug 你的本能是再问一次 AI。但问题本身就是 AI 造成的，于是你陷入一个 用同一个工具解决它自己制造的问题的循环。\n\n这个机制解释了一个常见现象：同样的开发者，在熟悉栈里用 AI 如虎添翼，跨到新栈就翻车连连。\n\n问题不在工具强度，在人类先验缺失。\n\n机制四：元认知失灵——\n\n你的\n\n“\n\n生产力感知\n\n”\n\n不再可靠\n\nMETR 数据最让人不安的一点，不是减速 19%，而是\n\n减速之后开发者依旧相信自己快了 20%\n\n。\n\n这是一个元认知失效问题：在 AI 编程流中，\n\n人类对自己真实生产力的估计能力被严重干扰\n\n。原因推测是：\n\nAI 生成过程有强烈的\n\n“\n\n流畅感\n\n”\n\n，制造了\n\n“\n\n正在高效产出\n\n”\n\n的错觉；\n\n被拒绝的 44%+ 代码不会留下显性的成本感知，但却实打实消耗了时间；\n\n“\n\n按 Tab 键\n\n”\n\n的轻量操作替代了\n\n“\n\n思考 → 输入\n\n”\n\n，打断了人对自己节奏的感知。\n\n对独立开发者尤其危险：\n\n你没有同伴、没有 code review、没有 QA 作为外部校准\n\n。你感觉项目在快速推进的时候，可能恰恰是失控最深的时候。\n\n案例层：2025 的灾难现场给出的共同模式\n\n把 2025 年几个著名的事故摊在一起看，共同模式会自己浮现出来：\n\n共同的底层规律是：\n\nAI 生成的是\n\n“\n\n能跑的功能代码\n\n”\n\n，而一个生产系统需要的是\n\n“\n\n功能代码 + 安全基线 + 边界防御 + 可观测性\n\n”\n\n。\n\n后三者通常是资深工程师\n\n条件反射\n\n加上去的——多年的线上事故教会了他们这些东西不能省。而独立开发者 + AI 的组合，恰好在这三层集体失守，因为：\n\nAI 不会主动加，它只做\n\n“\n\n被要求做的\n\n”\n\n；\n\n开发者以为 AI 会 handle 好这些；\n\n双方对\n\n“\n\n什么是生产 ready\n\n”\n\n的默认理解有巨大落差。\n\n破局层：当编码不再是瓶颈，\n\n瓶颈变成了什么\n\n如果上面的机制分析成立，那么 AI 时代独立开发者 / 小团队的能力天花板，就不再由编码速度决定了。它由三个更底层的能力决定：\n\n1. 架构判断力\n\n哪里该拆模块、哪里该用什么栈、数据边界在哪、哪些决策是一次性的、哪些是可回退的——这些问题至今仍是 AI 做得最差的领域，因为它缺少\n\n你的业务意图\n\n。\n\nAI 可以告诉你\n\n“\n\n通常怎么做\n\n”\n\n，但无法告诉你\n\n“\n\n在你的业务约束下应该怎么做\n\n”\n\n。这恰恰是你不可替代的地方。\n\n2. 审阅吞吐量\n\n你每天能真正读进脑子、形成心智模型的 AI 生成代码，是有\n\n上限\n\n的。一个经验法则：\n\n如果今天接受的 AI 代码里，有一段你三天后已经记不清它为什么这样写——那段代码就是你当天偷偷增加的理解债。\n\n超出你的审阅吞吐量，每多 merge 一行都在喂养未来的雷。\n\n3. 边界守护\n\n认证、限流、输入校验、权限、迁移、备份、可观测性——这些 AI 默认不做的事情，必须成为每个项目启动时就钉死的\n\n雷打不动的 checklist\n\n，而不是\n\n“\n\n上线前再看看\n\n”\n\n。\n\n方法论层：SDD 为什么突然变重要\n\n2025 年下半年开始，Spec-Driven Development（SDD）几乎成了 AI 编程方法论的显学：\n\nGitHub 开源的\n\nSpec Kit\n\n迅速拿下\n\n72,000+ stars\n\n；\n\nAWS 围绕这个理念做了整个 IDE——\n\nKiro\n\n；\n\n学术界（arXiv 2602.00180）正式形式化了\n\n“\n\nspec-first / spec-anchored / spec-as-source\n\n”\n\n三级规范体系。\n\nSDD 的核心不是\n\n“\n\n先写 spec 再写代码\n\n”\n\n，这只是包装过的瀑布流。它的真正转变是：\n\n让 spec 成为 AI 和人之间唯一共享的、可验证的契约。\n\n这句话里每个词都重要：\n\n“\n\n共享的\n\n”\n\n——AI 和人必须看到同一份权威文档，避免 AI 的\n\n“\n\n幻觉 spec\n\n”\n\n；\n\n“\n\n可验证的\n\n”\n\n——出事后有 artifact 可以对照，而不是翻聊天记录；\n\n“\n\n契约\n\n”\n\n——违反 spec 的 PR 应该被自动拒绝，而不是靠人眼发现。\n\n对独立开发者来说，SDD 的真正价值不是流程规范，而是它\n\n强制你在每次 AI 介入之前把问题想清楚\n\n。这恰恰是对抗理解债最有效的手段——\n\n你想清楚的部分，AI 就写不出你不理解的代码。\n\n但要特别警惕把 SDD 用歪的两种方式：\n\n“\n\nAI 写 spec\n\n，AI 写代码\n\n”\n\n：spec 变成另一份没人真正读懂的产物，理解债照样累计；\n\n过度 spec 化\n\n：把探索性工作也全规范化，扼杀快速试错的价值。\n\nSDD 的正确使用区间是：\n\n从 MVP 走向生产、从一个人走向小团队、从稳定栈引入新栈\n\n——这些\n\n“\n\n复杂度即将跨越临界点\n\n”\n\n的节点。\n\n重新定义\n\n“\n\n独立开发者\n\n”\n\n不是被放大 5 倍，\n\n而是被迫同时做 5 个角色\n\n行业流行的说法是：\n\n“\n\n2026 年的一个独立开发者 + AI，可以匹敌 2022 年的一个 5 人团队\n\n”\n\n。\n\n这个说法在产出层面并没错——MIT Technology Review、Stack Overflow 2025 开发者调查都印证了这一点。但它刻意忽略了一个关键事实：\n\n这种产出是有代价的。你作为个体承担了过去分散在 PM、tech lead、QA、SRE 的所有认知负担。\n\n你不是被 AI 放大了 5 倍——\n\n你是被迫同时扮演 5 个角色\n\n。\n\n所以\n\n“\n\n失控\n\n”\n\n的真正含义并不是“项目太大了一个人搞不定\n\n”\n\n，而是：\n\n一个人没法同时、持续地扮演 5 个角色。\n\n理解了这一点，破局方向就变得清晰：不是放弃复杂项目，也不是硬扛着不招人，而是\n\n承认某些角色你扮演不好，然后用\n\n“\n\n约束\n\n”\n\n替代\n\n“\n\n人\n\n”\n\n：\n\n你扮演不好的角色\n\n用什么约束替代\n\nPM\n\nSpec + 一次只做一个明确范围的任务\n\nTech Lead\n\n架构图 + 明确的模块边界 + 跨模块调用规约\n\nQA\n\n自动化测试 + 契约测试 + E2E\n\nSRE\n\n严格的权限模型 + 全链路日志 + 告警 + 可回滚迁移\n\nSecurity\n\n启动清单：认证、限流、输入校验、密钥管理\n\n这些约束是\n\n你对未来自己的承诺\n\n——因为三个月后的你，会忘记现在的你在想什么。你今天不为未来的自己写清楚，AI 更不会替你写清楚。\n\n给不同阶段开发者的分层建议\n\n基于上面的机制与方法论，可以给出一组更具操作性的分层策略。\n\n阶段一：原型 / MVP / 内部工具\n\n大胆 vibe coding。这个阶段理解债的杀伤力很低，因为代码生命周期短；但从第一天起就把\n\n“\n\n这个项目会不会跨越 MVP 阶段\n\n”\n\n这个问题放在心里；\n\n一旦判断会，立即引入 spec 和测试——而不是等到\n\n“\n\n感觉失控了\n\n”\n\n才补救。\n\n阶段二：跨越 MVP、走向生产\n\n这是最危险的阶段，也是 80% 失控事故发生的阶段。建议：\n\n强制引入 SDD：每个新 feature 必须先有 spec；\n\n建立理解债雷达：定期抽查你\n\n“\n\n最近接受但现在已经讲不清楚\n\n”\n\n的代码片段，立即补读或重写；\n\n在启动阶段钉死安全 checklist：认证、限流、输入校验、权限、密钥管理，没有就不给 ship；\n\n限制 AI 的写权限半径：让 AI 写业务代码没问题，但数据库迁移、权限系统、支付相关逻辑必须你亲自写、亲自审。\n\n阶段三：陌生技术栈\n\n架构决策必须由人做，不要让 AI 推动你对陌生栈的架构选择；\n\nAI 只做已经定好的小块实现，而不是\n\n“\n\n帮我设计\n\n”\n\n；\n\n提交前强制自解释：新栈代码提交前，把每个关键逻辑用自己的话讲一遍给自己听。讲不通就拒绝这个 diff；\n\n给自己留逃生通道：陌生栈的关键模块，至少要知道\n\n“\n\n出事了我去哪些文档查、在哪个 issue 搜\n\n”\n\n。\n\n阶段四：成熟项目 / 高复杂度代码库\n\n假设 AI 会减速你——直到你有证据表明它没有；\n\n最关键的引入策略：只让 AI 做你 1 分钟内能判断对错的小任务，超出这个边界的都切回手写或结对；\n\n维护一份\n\n“\n\nAI 不得触碰\n\n”\n\n清单：核心算法、安全边界、数据一致性逻辑、线上曾经出过事故的模块。\n\n一点判断\n\n如果让我用一句话概括这场半年到一年的 AI 编程实践给整个行业带来的真正教训，我会这样写：\n\nAI 编程的下一个分水岭，不是谁用的模型更强，而是谁更先承认\n\n“\n\nAI 帮不了你真正难的那 20%\n\n”\n\n，并围绕这 20% 重建自己的开发方式。\n\n那 20% 是什么？\n\n业务意图的精确翻译；\n\n架构边界的判断；\n\n生产级约束的持续守护；\n\n对自己\n\n“\n\n我到底懂不懂这段代码\n\n”\n\n的诚实评估。\n\nAI 不会替你承担这些，未来的 AI 也不会——因为它们天然属于\n\n做选择的主体\n\n，而不是\n\n执行选择的工具\n\n。谁更早接受这个分工，谁就能在 AI 让复杂度爆炸的时代，继续维持对自己项目的掌控感。\n\n至于剩下 80%——让 AI 去写吧，它写得比我们快，也比我们不知疲倦。\n\n参考资料\n\nMETR: Measuring the Impact of Early-2025 AI on Experienced OSS Developer Productivity（2025）\n\nCarnegie Mellon & GitClear: AI-Accelerated Codebase Quality Study（2025）\n\nVeracode 2025 GenAI Code Security Report\n\nSonar: The Inevitable Rise of Poor Code Quality in AI-Accelerated Codebases\n\nAnthropic: Effective Context Engineering for AI Agents\n\nShayon Mukherjee: Software Engineering When the Machine Writes the Code\n\narXiv 2602.00180: Spec-Driven Development — From Code to Contract\n\nGitHub Spec Kit · AWS Kiro\n\nMIT Technology Review: AI Coding Is Now Everywhere（2025.12）\n\nStack Overflow 2025 Developer Survey — AI Section\n\n相关事故报道：Tea App 数据泄露事件、Replit Agent 删库事件、Lovable 漏洞扫描报告\n\n今日好文推荐\n\nDeepSeek V4 重磅开源！首次打通华为Ascend，也没丢掉英伟达，百万上下文夺回国产模型话语权\n\nGPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员用上 Codex！\n\n姚顺雨腾讯模型首秀！不卷参数只做 “听话打工人”，Hy3 preview登场 | 附实测\n\nCopilot 不让注册了：从“随便用”到“全面限”，agent 把原有订价模型顶穿了", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md", "source_items": [{"name": "InfoQ", "source_file": "sources/2026-04-25_AI 编程的失控临界点：理解债、上下文衰减与独立开发者的新天花板_InfoQ.md", "link": "https://mp.weixin.qq.com/s/eYL3Luk7FocIu4oBy4PQSw"}], "publish_time": 1777102177}, {"title": "量化公司，正在批量生产AI独角兽创始人", "source": "量子位", "digest": "量化交易公司成为AI创业人才孵化器，多位前量化从业者创办AI独角兽企业。文章分析量化背景如何转化为AI创业优势，包括数据处理、算法优化和快速迭代能力。", "link": "https://mp.weixin.qq.com/s/n31RQ_5tXLsfHasRzAemJg", "content": "---\npublish_time: 1777104900\n---\n\n# 量化公司，正在批量生产AI独角兽创始人\n\n> 原文链接：https://mp.weixin.qq.com/s/n31RQ_5tXLsfHasRzAemJg\n> 公众号：量子位\n\n鹭羽 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n啊？！原来你们这群搞AI的，几年前都在华尔街玩量化……还师出同门。\n\n震惊了，最近𝕏上疯传一份Hudson River Trading\n\n首届实习生名单\n\n。\n\n人也不多，就10个。但仔细一看吓一跳，个顶个都是老熟人：\n\nAlexandr Wang：Scale AI联合创始人/CEO\n\nJesse Zhang：Decagon联合创始人/CEO\n\nScott Wu：Cognition联合创始人/CEO\n\nJeffrey Yan：Hyperliquid创始人/CEO\n\n几乎如今AI初创圈的半壁江山都在这儿了，阵容豪华程度堪比当年的\n\nPayPal Mafia\n\n。\n\n而如今，真是江山代有才人出，只不过这一届的Godfather变成了\n\n量化\n\n。\n\n不仅如此，Scott Wu本人还现身评论区，坦言他们这群人其实早在HRT之前就已经因为奥赛结识……\n\n除了前面提及的四位，还有Perplexity联创Johnny Ho、Pika创始人兼CEO Demi Guo，以及Cognition联创Steven Hao等。\n\n奥赛→量化实习生→AI创业\n\n，原来大神都是这样练成的。\n\n也难怪有网友说：\n\n现在就为我未出生的孩子报名所有奥赛。作为一个未婚的亚洲男人，这可以算作提前规划。\n\n妥妥地赢在起跑线～（doge）\n\n华尔街上的硅谷黄埔军校\n\n要不还得说华尔街的眼光毒辣，这招实习生一招一个准。\n\n首批就招10个人，\n\n4个已经是硅谷新贵\n\n，其余人也是各自行业的佼佼者。\n\n单论这人才转化的爆率，对标谷歌、Meta这些专产AI大神的硅谷公司，都有过之而无不及。\n\nAlexandr Wang\n\n先看最近风头正盛的\n\n亚历山大王\n\n。\n\n亚历山大王是典型的奥赛天才出身，中学时期就连闯数学、物理、计算机三大领域竞赛。\n\n连续两年入围美国计算机奥林匹克竞赛决赛，并在2013年进入数学奥林匹克夏令营，2014年加入美国物理国家队。\n\nMIT辍学创业Scale AI的同年，他加入HRT负责算法开发。随后在YC扶持下，和Lucy Guo一起联合创立数据标注公司\n\nScale AI\n\n。\n\n公司早期专注自动驾驶数据标注，并在后续逐渐扩展到多模态数据处理，并服务OpenAI、Meta等大模型公司。2021年公司估值就已突破73亿美元，也让亚历山大王一举成为最有前景的AI独角兽CEO之一。\n\n在去年6月，Meta完成对Scale AI的收购投资，亚历山大王随即加入Meta领导超级智能实验室，并在几天前刚刚交卷首个大模型——\n\nMuse Spark\n\n。\n\nMuse Spark主打原生多模态，作为Meta迄今为止最强大的模型，一经发布，就火速拉升Meta股价7%，一度涨幅超过近10%。\n\n在第三方测评中，Muse Spark也同样表现优异，成功带领Meta回到行业第一梯队。\n\nScott Wu\n\nScott Wu\n\n堪称美国信息学奥赛的扛把子。\n\n总共获得过三枚IOI金牌，其中2014年更是以600/600的满分成绩排名全球第一，是IOI历史上极少数获得满分的选手之一。\n\nScott Wu的商业嗅觉相当敏锐，在哈佛大二期间就参与创办了AI驱动的社交平台Lunchclub，旨在通过算法匹配专业人士进行午餐交流。这也让他入选了2020年福布斯30岁以下精英榜。\n\n2023年，他作为创始人一手建立了Cognition，次年3月发布了世界上第一位AI软件工程师\n\nDevin\n\n。\n\n不同于GitHub Copilot的编程助手定位，Devin能够自主规划复杂的工程任务，完成代码编写、调试bug、部署等全栈操作。\n\n在SWE-bench上，Devin表现断层领先，能够独立解决13.86%的GitHub真实问题，远超当时最强的顶尖模型GPT-4等。\n\nDevin更是一举将背后的公司Cognition推向了资本市场的巅峰，公司在成立不到一年的时间内，就估值飙升到102亿美元。\n\n目前得益于对\n\nWindsurf\n\n的战略收购，年化收入\n\n（ARR）\n\n已突破1亿美元大关。\n\nJeffrey Yan\n\n不同于Alexandr Wang和Scott Wu完全转投AI，\n\nJeffrey Yan\n\n则继续在AI金融深度挖掘。\n\n他在18岁就获得了物理奥赛金牌，并在青少年奥林匹克夏令营认识了小他两岁的Scott Wu。\n\n据他回忆，HRT首期实习生项目是在他大三那年的冬天，彼时的HRT已经是世界上最成功的量化交易公司之一。\n\n实习项目为一个耗时三周的竞赛，而在每一轮中，Scott Wu都会和他包揽前两名。在哈佛硕士毕业之后，Jeffrey Yan还全职加入过HRT，负责美股算法开发。\n\n选择量化，是因为他认为交易是现实世界中最纯粹的真人博弈：\n\n你是对的，还是错的，市场会给出最终的答案。全世界最聪明的人都在和你竞争，人们共同创造一个流动高效的金融市场。\n\n而离开量化，则是因为他希望能创造出更多价值，比如用AI革新金融根本。\n\n他创办了去中心化交易平台\n\nHyperliquid\n\n，自2023年以来，累计交易量已超过4万亿美元，占据市场37%的份额，目前也是全球人均利润最高的初创公司之一。\n\nJesse Zhang\n\nJesse Zhang\n\n不仅是硅谷目前最活跃的AI创业者之一，也是一名眼光独到的天使投资人。\n\n高中时期曾两次入选美国数学奥林匹克训练营以及进入美国物理国家队，在2015年他还入围了被誉为“少年诺贝尔奖”的Intel科学天才奖决赛。\n\n三年读完哈佛本科后，Jesse Zhang先后在HRT、谷歌实习工作，并在2017年创建游戏社交初创公司Lowkey，公司在2021年被《宝可梦Go》开发商Niantic收购。\n\n2023年他再度创业AI客服智能体公司\n\nDecagon\n\n，短短三年不到公司估值就达到45亿美元。\n\n与此同时，他还连续投中了包括Pika、Cursor、Lovable、Cognition等在内的\n\n30多家明星AI初创公司\n\n，并入选2026年福布斯AI领域30位30岁以下精英榜单。\n\nJohnny Ho\n\nJohnny Ho\n\n是和Scott Wu齐名的IOI大神，同样三次获得IOI金牌，并在2012年拿下满分，位列全球第一。\n\n在哈佛毕业后，他曾在华尔街顶级高频交易公司Tower Research Capital工作多年，担任量化交易员，负责开发高频交易模型和策略。\n\n在2022年，他和Aravind Srinivas、Denis Yarats、Andy Konwinski等人共同创立了\n\nPerplexity\n\n，并担任CSO。\n\nPerplexity目前是全球AI搜索领军企业，月活跃用户超1亿，在去年底完成E轮融资后公司总估值约200亿美元，截止到今年4月，ARR已突破5亿美元。\n\n在2月份，Perplexity刚刚推出龙虾旗舰产品\n\nPerplexity Computer\n\n，支持19种模型的调用，不仅能回答问题，而且能像人类操作电脑一样自主执行任务，操作内容几乎囊括日常所需的全部场景。\n\nDemi Guo\n\nDemi Guo\n\n出生于杭州，年少时期跟随家人移居美国，随后摘得2015年IOI银牌。\n\n在哈佛本硕和斯坦福博士期间，她先后在Quora、微软、HRT、谷歌、Meta、Epic工作实习，并曾在红杉资本中国、创新工场等多家公司担任风险投资实习生。\n\n2023年，她和Chenlin Meng、Karli Chen共同创业AI视频生成公司\n\nPika\n\n，三年时间Pika已经迅速成长为行业第一梯队，全球用户规模超1600万，并收获了Quora创始人 Adam D’Angelo、GitHub前CEO Nat Friedman等明星投资人的青睐。\n\nSteven Hao\n\nSteven Hao\n\n同样也是IOI金牌选手出身，MIT本科期间曾在全球顶级量化交易公司Jane Street和The D. E. Shaw Group实习。\n\n2018年开始，他正式加入亚历山大王的Scale AI担任软件工程师，在工作四年之后选择辞职创业，和Scott Wu一起创办了Cognition。\n\n事实上，Cognition的另一位联创Walden Yan也同样是IOI金牌得主，公司成员也绝大多数都是竞赛出身，所以网友也经常戏称Cognition是\n\nIOI金牌梦之队\n\n，仅有10人左右的小团队，却拥有数10枚IOI金牌。\n\n…….\n\n而这群人还只是这份名单上的冰山一角，具体名单有多长，我们还无从得知。\n\n但显而易见的是，他们身上都高频折射出同一条成长路径：\n\n奥赛出身、量化实习、AI创业。\n\n其中，量化背景正在成为这批硅谷新贵最独树一帜的特征。\n\nAI上岸第一站：量化\n\n说到量化和AI的合流，最典型的莫过于\n\nDeepSeek\n\n。\n\n幻方量化的确是行业绕不开的坐标，作为国内头部量化机构，它率先将量化思维，正式带入国内AI行业的视野之中。\n\n也让许多人第一次意识到，原来搞AI的和搞量化的，\n\n本质可以都是同一批人。\n\n首先，\n\n量化和AI之间底层逻辑高度同频。\n\n它们的核心都是在大规模随机数据中寻找确定的范式，都是在追求可复现和可验证的稳定支点。\n\n简单来说，就是在不确定中寻找确定。\n\n其次，\n\n二者的技术栈也紧密重合。\n\n从早期的线性模型，到后来的LSTM，再到如今的Transformer，两边都在共用同一套序列建模的技术演进，只是量化是用看K线图的方式理解Token序列。\n\n在数据处理上，都涉及监督学习与强化学习范式，并需要应对大规模数据噪声。\n\n而这些顶级量化私募，和头部AI实验室一样，都是算力吞金兽，同样遵循Scaling Laws原则，同样需要长期维护大规模的GPU集群。\n\n也正因如此，它们在招聘人才时，\n\n争抢的都是同一批人。\n\n奥赛金牌、顶级名校、编程大牛，在两边都是炙手可热的存在。AI公司喜欢去量化机构挖算法工程人才，量化巨头也热衷于高薪吸引AI顶级工程师。\n\nAI与量化之间的行业界限正在变得模糊，量化训练已成为AI创业人才培养的一条隐性路径。\n\n但这个趋势，放眼国内还不太明显。\n\n国内有量化出身的AI创业者吗？答案是肯定的，但并非主流。\n\n绝大多数国内AI创业者还是遵循着一条稳定的工程化成长管道：\n\n先拥有扎实的高质量学术背景，然后进入成熟的头部大厂深耕AI核心技术，积累产业经验后再出走创业。\n\n这样一套下来，国内这些AI创始人更懂得如何进行产品落地和完成商业闭环，创业容错率也相对较高。\n\n但实则两种路径并无高下之分，只是在不同环境下，各自选择了最切实的发展方式。\n\n无论如何，我们都在亲眼见证新生代技术领袖崛起的过程，这就已然足够。\n\n19岁的亚历山大王曾立下flag，他们这群人要做\n\n下一个PayPal Mafia\n\n。\n\n现在看来，应如是。\n\n参考链接：\n\n[1]https://x.com/ScottWu46/status/2043936583968240103\n\n[2]https://colossus.com/article/beyond-the-sky-jeffrey-yan-hyperliquid/\n\n[3]\n\nhttps://mp.weixin.qq.com/s/_Oyl9Y_nBepbnZ9Z982XvQ\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n👑 量子位智库\n\n「2026中国AI应用全景图谱」与「值得关注落地案例」评选启动征集！\n\n👇 扫码申报，让你的产品定义2026中国AI应用行业格局。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md", "source_items": [{"name": "量子位", "source_file": "sources/2026-04-25_量化公司，正在批量生产AI独角兽创始人_量子位.md", "link": "https://mp.weixin.qq.com/s/n31RQ_5tXLsfHasRzAemJg"}], "publish_time": 1777104900}, {"title": "华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我", "source": "极客公园", "digest": "华为Pura X Max手机评测，重点体验其主动式AI功能。相比折叠屏设计，AI助手、智能推荐等主动服务能力成为产品亮点，展现华为在移动AI领域的布局。", "link": "https://mp.weixin.qq.com/s/o876HXNhHNjiT7JD2lFBBw", "content": "---\npublish_time: 1777113762\n---\n\n# 华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我\n\n> 原文链接：https://mp.weixin.qq.com/s/o876HXNhHNjiT7JD2lFBBw\n> 公众号：极客公园\n\n一台手机和一台口袋里的小平板，共用一副机身。\n\n作者｜张勇毅\n\n编辑｜\n\n靖宇\n\n用 Pura X Max 的第三天，我同时做了两件以前不会在同一台设备上做的事。\n\n早上通勤的时候，我合着盖、单手握，读完了一篇 8000 字的长文。中午回到工位前，把它展开当成一个平板来使用。\n\n中间没有切换任何设备。\n\n这是 Pura X Max 跟它前一代 Pura X 最大的不同。\n\nPura X 仍然是一台『屏幕比例改了一下』的手机，Pura X Max 已经不是了——它合上是手机，展开是一台能装进口袋的小平板。\n\n01\n\n上一代 Pura X 的「奇观」\n\n去年 Pura X 上市之后，小红书上慢慢沉淀出一种很有意思的玩家文化——主要是女性用户，她们买了 Pura X 之后会再配一个固定的硬壳，把它常态锁在\n\n展开状态\n\n下使用，几乎不合上。简单来说，就是把这台一万元的折叠屏，\n\n当成一台屏幕比例特殊的直屏机来用——只不过这台『直屏机』的屏，是一块 √2:1 的大屏。\n\n她们在小红书上互相分享这种用法的体验：屏幕比例完美适配 4:3 拍出来的照片、看小红书笔记一屏能多两条、读电子书时跟一本平装书的版心宽度几乎一致——所有这些场景，都因为这块屏的比例对了，自然落了进来。\n\n这个用法听起来挺反常，但它从一个非常诚实的角度，说明了一件事：\n\nPura X 的内屏体验太耀眼了——耀眼到一部分用户愿意放弃『折叠』这个功能本身，只为了让这块屏一直处于最完整的形态。\n\n这件事的反讽意味在于——折叠屏过去七年的核心叙事，是『同一台设备的两种形态』，是『手机和平板二合一』。所有厂商的发布会上，最高光的镜头永远是机身合起或打开的那个瞬间。但 Pura X 的部分用户用脚投票投出来的结论是：\n\n他们要的不是『二合一』，是那块比例对了的大屏。\n\n至于折叠这件事，反而被她们当成了一个累赘——既然展开的形态这么完美，为什么还要给它留一个变小的可能性？\n\nPura X 本身是成功的。年销量做到 150 万台，对至今仍然售价相对较高的折叠屏来说不是小数字。这个成功本身就证明了 √2:1 的内屏方向走对了——\n\n对到用户甚至愿意为它牺牲掉折叠功能。\n\n但这个成功也留下了一个新问题：\n\n当内屏好到让用户不想合盖，外屏的存在意义是什么？\n\n而 Pura X Max 这一代，华为想接着回答的就是这个被留下的问题。\n\n02\n\nPura X Max 的内屏，长成了一台小平板\n\nPura X Max 的内屏是 7.7 英寸，比例 √2:1（也就是 A4 纸的长宽比）。这块屏铺开来，对角线已经非常接近 iPad mini 的 8.3 英寸——两者落到桌面上，是同一个量级的视觉体量。\n\n关键的不是尺寸，是它做的事变了。\n\nPura X 的内屏虽然耀眼，但它做的事仍然属于『手机』这个品类——只是用一块更舒展、比例更合理的屏在做手机日常的事而已。这是为什么小红书上那批用户愿意把它锁在展开状态使用——它是『手机这个品类里最舒服的那一种』，但它没有跨过手机的边界。\n\n在 Pura X Max 上展开内屏，事情跨过去了。\n\nPura X Max 的内屏分成两半之后，每一半还有接近常规手机外屏的可用宽度；这意味着如果你愿意的话，你仍然可以把它当做一个平板来分屏，同时使用两个 App——这对于很多折叠屏用户来讲，可能是一个更熟悉的操作逻辑。\n\n剪映的体验也有结构性的不同。剪一段竖向的 Vlog，左边是预览区，右边是时间轴和素材库，工具栏不用滑动就能全局展示。手写笔轻按可以唤出波轮菜单，切片、调速、加字幕一气呵成。过去我在手机上剪视频是一种「赶时间的妥协」——内容能发出去就行，质量要求降低一档；现在它接近一种正经的工作流。\n\n差别是结构性的。Pura X 的内屏让你「把手机的事做得更舒服」，Pura X Max 的内屏让你「做手机过去做不了的事」。\n\n前者是手机的极致，后者是平板的开端。这就是为什么华为一直在强调，Pura X Max 并非 Pura X 的替代品，而是两个完全不同的品类。\n\n过去手机谈生产力一直有点尴尬——你可以在手机上写字、画图、剪辑，但每一件事都伴随着一种「将就」的体感：屏幕不够、空间不够、视野不够。Pura X 缓解了这种将就感，Pura X Max 把它彻底拿掉。一件事开始之后你不会想着「等我回家用 iPad 再认真做一遍」，而是这一遍就把它做完。\n\n把内屏做成小平板，本身不是最难的——把它做大就行了。\n\n真正难的是：在内屏跨过手机边界变成小平板之后，让合盖的形态依然有自己不可替代的价值，不再像 Pura X 时代那样被『耀眼的内屏』盖过去。\n\nPura X Max 这一代要解决的，正是这个被 Pura X 留下的悬而未决的问题——\n\n让合盖形态有自己的独立价值，让展开和合盖不是同一件事的两种尺寸，而是两种不同的使用类别。\n\n它的解法不是去『修复』合盖（合盖的外屏其实从 Pura X 那一代起就已经合格了），而是从两个方向同时拉开两个形态的距离：\n\n展开侧，给它增加合盖时做不了的事。\n\n7.7 英寸的内屏长成小平板之后，画图、双栏写作、剪辑视频这些事变成了『展开才能做』的事——它们是合盖外屏因为物理尺寸而做不了的事。展开有了独立价值。\n\n合盖侧，让 5.4 英寸的外屏继续延续 Pura X 那块大家认可的好用性——单手握持的边界、口袋里的便携性、走路通勤时随手就能用。\n\n这些是展开形态因为尺寸过大而做不到的事。合盖也有了独立价值。\n\n我用 Pura X Max 的这一周，外屏使用时间占了日常使用的 80% 以上。这跟我用 Pura X 的体感很不一样——Pura X 时代我会主动选择展开，因为展开形态本身就更舒服；Pura X Max 时代我大部分时候不展开，因为合盖已经够用，展开是有了具体目的之后的选择。\n\n读微信公众号的一篇长文，文字落在外屏上，行宽接近一本平装书的版心——我读完一屏的速度比在 iPhone 上要快一些，不是因为屏幕大，是因为眼睛不用频繁返回到左侧。\n\n刷小红书的摄影类笔记，外屏一屏能横向铺开两到三张缩略图。要决定一张图值不值得点开看大图，扫一眼就够。\n\n刷 B 站的横向视频，画面横向铺满，几乎没有上下黑边。\n\n这些是手机的事，外屏完成；画图、双栏、剪辑这些是平板的事，内屏完成。\n\n两块屏不再互相覆盖，也不再互相代偿——它们分别承担了不同类别的使用。\n\n这也是过去七年折叠屏一直没做到的事。\n\n实现这件事的底层支撑，除了硬件设计上的取舍，还有 HarmonyOS 几年下来积累的多设备适配能力。一块外屏比例的应用，展开后能丝滑切换成接近平板的版式；分屏的两个区块，应用能各自独立地按比例渲染——这些事情看起来像是顺理成章，但放在 Android 阵营里看，没有几家能做到这种程度的应用一致性。这是华为愿意把外屏和内屏都做认真的底气来源——他们知道软件能跟上。\n\n03\n\n第一台 AI 不需要「召唤」的手机\n\n回到产品形态本身，我们都知道，「阔折叠」只是一个起点，它并不是对于「折叠屏是用来干什么的」真正的回答。 而华为在这个起点之上，想给出的新回答就是「小艺伴随式 AI」。\n\nPura X Max 把小艺伴随式 AI 放成了屏幕右侧的一条常驻窄栏。主内容收窄到大概常规手机的宽度，小艺占据剩下的空隙，两者并行存在，互不打扰。要它的时候它就在，不用召唤、不用切应用、不用喊唤醒词。\n\n这个位置，在过去任何一台手机上都没有过。\n\nAI 真正进入消费产品就是这两三年的事，但手机的交互范式在二十年前就已经定型——主屏、应用图标、点进 App、一个 App 占一整块屏幕。这套范式里从来没给 AI 留位置。所以过去这一两年厂商把 AI 装进手机的时候，能做的选择不多:做成一个独立的 App、塞进下拉菜单、做成长按电源键唤起的浮窗。\n\nAI 在手机里始终是被「召唤」的——你先想到它，然后去找它，然后它出现，然后它消失。\n\nPura X Max 是我用过的第一台不需要「召唤」AI 的手机。\n\n写稿这件事的体感变了:左边一个文档窗口，右边一条小艺侧边栏。读到一个我不确定的参数，直接选中，小艺立刻在侧边给出解释——不用切到浏览器，不用打断写作的状态。读到一段需要补查资料的内容，小艺会主动建议可以延展的方向。整个过程像是右手边坐了一个安静的助手——他知道我在做什么，但只在我看向他的时候开口。\n\n华为 Pura X Max\n\n读小红书的时候是另一种感受。刷到一个不错的摄影点位，过去的操作是截图、保存、下次想用的时候自己翻相册。小艺伴随式 AI 把这一步省了——它能直接识别屏幕上的内容，把地点、时间、构图建议帮你整理好，加进待办。截图是把信息从屏幕里搬出来，小艺是在屏幕里把信息消化掉。\n\n这件事的本质，不是因为模型变得多强，是因为 AI 第一次在手机里有了一个属于它的物理位置。\n\n在直板手机上，AI 一直是被「借用」的——它借用浮窗、借用通知栏、借用某个角落里临时塞进去的按钮，每一次出现都是过路。Pura X Max 给了它一块属于自己的常驻领地。AI 从工具箱里的一把工具，变成了使用环境的一部分。\n\n影像部分，Pura X Max 的第二代红枫影像系统，是我用过的折叠屏里第一台\n\n没让我感觉到这个让步\n\n的设备。\n\n主摄是 5000 万像素 1/1.56 英寸的传感器，配了一颗 F1.4-F4.0 的十档物理可变光圈——这个配置过去只在直板旗舰上见过。十档可变光圈意味着你能像用真正的相机那样手动调浅景深或大景深，不是计算摄影模拟出来的虚化，是镜头物理收放的虚化。\n\n真正让我意外的是长焦。5000 万像素的 3.5 倍潜望，最大支持 100 倍变焦——这是一颗几乎不该出现在折叠屏上的长焦。过去我用折叠屏拍演唱会、拍发布会现场，都得提前接受「拍不清楚」的预期；这一周拿 Pura X Max 试拍，10 倍以内的画面是干干净净的，没有过去 AI 长焦那种典型的「涂抹纹路」，建筑物的边缘锐利、树叶不糊。\n\nPura X Max 实机样张：摄影师：FlyingFist\n\n说完了优点，目前关于 Pura X Max 的一些槽点，我觉得也有必要和大家分享一下：第一个是单手操作的边界。85mm 的外屏宽度，比常规直板手机的 75mm 多了一截。我手不算小，单手回消息、刷信息流、看视频都没问题，但要点屏幕另一侧的按钮，得换个握法或者用左手辅助。如果你手偏小，这台手机更接近一台「需要双手」的设备。\n\n第二个是相机模组。三摄横向排开的 Deco 块体积不小，机身展开后竖着拿，重心明显偏上。陶瓷边框的质感很好，但凸起也确实夸张。这是为了塞进 50MP 潜望长焦付出的代价。\n\n第三个是续航。外屏好用是把双刃剑——我在外屏上消耗的时间比预期更多，5300mAh 的电池一天一充压力不大，但也没什么富余。如果你对它的期待是重度使用，一定记得带块充电宝。\n\n04\n\n折叠屏下一程\n\n回过头看，Pura X 和 Pura X Max 走的是同一条产品线，但解决的是两个不同的问题。\n\nPura X 解决了「折叠屏的内屏可以是一块用户愿意一直用的大屏」。Pura X Max 解决了「折叠屏的内屏可以是一台真正的小平板，与此同时，让合盖形态从『内屏的影子』里走出来，变成一种独立的使用类别」。\n\n这两件事加起来，指向的不是一个「更大的折叠屏手机」，而是一个\n\n过去并不存在的设备类别：能装进口袋的小平板\n\n。\n\n这个判断会被后续市场进一步验证。传闻中的折叠屏 iPhone 据说也会用接近 √2:1 的比例，三星、小米也都在跟进。一旦比例成为共识，比的就不再是「谁的内屏更大」，而是：\n\n谁能在做出小平板的同时，让合盖形态依然是一台你愿意单手拿出来用的手机。\n\n这件事比想象中难。它要求厂商同时在两个完全不同的产品逻辑下做对——平板的逻辑和手机的逻辑——并且让它们共用一套硬件、一套系统、一套生态。Pura X Max 之所以能做到，背后是 HarmonyOS 几年积累下来的多设备适配能力。换一家厂商不一定能短期内追上。\n\n苹果是这个赛道最值得关注的变量。一旦折叠屏 iPhone 真的落地，它会带着 iPad 多年沉淀下来的 iPadOS、Pencil、Magic Keyboard 整套生产力生态进场。这是华为目前还没完全展开的牌——HarmonyOS 在多设备协同上做得很扎实，但生产力生态的丰富度还有空间。Pura X Max 拿出的这一手「口袋小平板」，本质上是在替整个 Android 阵营抢一个时间窗口：\n\n在苹果带着完整生态进场之前，把这个新品类的标准先立下来。\n\n如果一年后再回头看，能在折叠屏市场拉开身位的产品，\n\n比拼的不是参数表，是这套「双身份」的完成度。\n\n合着，是一台我愿意带出门的手机。打开，是一台我愿意工作的小平板。\n\n折叠屏走过七年，这是第一次。\n\n*头图来源：\n\nPuraXMax\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n你买折叠屏，到底是为了那块更大的屏，\n\n还是为了「折叠」这件事本身？", "category": "国内", "is_model_related": false, "source_file": "sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md", "source_items": [{"name": "极客公园", "source_file": "sources/2026-04-25_华为 Pura X Max 深度体验：比起「阔折」，「主动式 AI」更吸引我_极客公园.md", "link": "https://mp.weixin.qq.com/s/o876HXNhHNjiT7JD2lFBBw"}], "publish_time": 1777113762}, {"title": "网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室", "source": "银行科技研究社", "digest": "网商银行确立交易银行为第二增长曲线，计划设立AI+农事信息服务联合实验室。结合AI技术与农业金融服务，探索农村金融创新模式。", "link": "https://mp.weixin.qq.com/s/63gl6W78y1QawrFsYafPQg", "content": "---\npublish_time: 1777087080\n---\n\n# 网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室\n\n> 原文链接：https://mp.weixin.qq.com/s/63gl6W78y1QawrFsYafPQg\n> 公众号：银行科技研究社\n\n近日，多家银行先后发布2025年报，其中，数智化转型是重点介绍的方面。作为“一家科技驱动的银行”，网商银行4月23日发布的年报中，AI等技术的应用颇值得关注。\n\n2025年科技投入占36.2%，将设AI+农事信息服务联合实验室\n\n网商银行直言，2025是AI技术变革继续突破的一年，从年初DeepSeek发布，到各种Agent相继上线，AI能力从简单问答向着多层推理、实际办事不断进化，对各行各业既有的商业模式带来挑战，也带来机遇。\n\n据《银行科技研究社》了解，网商银行加速从“数字银行”向“AI银行”跃升，其已经在信贷策略、交易银行、三农金融、安全管理、消保服务等方面进行了AI技术的试水与融合。2025年，网商银行科技投入占比达36.2%，科技人才占比68%，新增申请专利59项，新增授权专利31项，新增软件著作权8项，牵头2项信息安全领域团体标准建。\n\n网商银行强调，AI能力要有效运用于金融行业，最核心的是要具备金融决策能力，包括风控决策、投资决策等关键能力。在AI风控辅助下，该行复杂信贷审批速度从25分钟加快至8.7分钟；在AI投资能力辅助下，97只理财产品的每日申赎金额预测偏差<0.5%。\n\n对客服务方面，网商银行推出服务三农客群的AI助手“农小宝”，提供农业补贴政策解读、农产品价格分析、病虫害防治建议、气象灾害预警等服务。并与农业农村部信息中心合作，为农小宝建设提供支持，双方还将共同设立“AI+农事信息服务联合实验室”，致力于农业人工智能技术研发、智能体开发与农业农村综合信息服务平台建设。\n\n此外，其推出“AI票据管家”，为客户提供贴现时间选择建议。\n\n在智能防护方面，网商银行提出“AI for Security for AI”双轨安全体系，既用AI增强安全防御，同时保障AI自身安全，实现安全和AI的相互赋能。Security for AI，从开发源头实施默认安全治理，保障AI资产可视、可控，运行时实现风险的“主动免疫”；AI for Security，通过建立“智能感知、智能决策、智能处置”的防护能力，实现24小时实时捕获风险并预警，全自动分析风险，精准生成应对策略，即刻落地防御和修复策略，完成闭环响应。\n\n去年下半年，在2025年世界互联网大会乌镇峰会现场，网商银行首席信息安全官张园超曾介绍该行的AI银行安全体系。\n\n其介绍，该行用AI去防御AI的威胁。第一是默认安全治理机制，相当于给系统里打了疫苗，让AI认识所有坏人，提前识别各类恶意行为，然后自动把它拦截掉；第二是可信纵深防御体系，让AI认识所有好人，识别所有合法用户，一旦遇到了陌生的人或者恶意行为，能够默认把它给阻止掉；第三是智能威胁对抗技术，基于所有的用户行为，去识别哪些是攻击行为，哪些是正常的行为，帮助银行在攻防中掌握主动权。\n\n除了AI技术，在业务方面，网商银行强调交易银行对其营收的贡献。\n\n交易银行成为第二增长曲线，新设对公、零售两大交易银行部\n\n据介绍，2025年，网商银行营收205.6亿元，净利润32.9亿元，同比增长4.0%，超过年初的预算目标。对此，网商银行分析，一方面来自于信贷风险的良好表现，另一方面来自于交易银行业务的快速增长，构建了动能强劲的第二增长曲线。\n\n网商银行指出，小微客户经营性资金理财、深入交易场景的支付结算等金融需求并未被很好地满足，从信贷服务向多元金融服务拓展是市场发展的必然方向。而互联网金融上半场“流量”加“爆款”的粗放运营模式，在新增用户、新增使用时长都已见顶的下半场已经不再奏效。\n\n因此，其转向细分客群、特色服务、高质量经营的新模式，深入客户生产经营场景，针对客户多账户管理、分账结算、跨境资金调动等痛点，开发特色化的产品与服务，成为了动能强劲的第二增长曲线。\n\n同时，强调数字交易银行服务。其打造了银行理财专卖平台，覆盖了固收、现金管理等品类，年末管理资产规模达到1.2万亿元，同比增长20%；升级“布谷鸟”智能普惠理财系统，精准刻画小微客户现金流规律，实现定制化理财推荐；票据业务方面，深化税票自证能力，贴现发票自证覆盖率提升至99%；首创“未来贴现价格预测”功能，结合升级版“智能付票”，助力客户优化用票策略，降低财务成本。\n\n其对交易银行的布局也涉及组织架构的配合。\n\n2025年，网商银行在对公、零售两大领域新设交易银行部，其设立了企业交易银行部、个人交易银行部。此前，该行并未在总行层面设立交易银行部。\n\n未来，\n\n网商银行\n\n数字化转型推进、业务等进展值得更多关注。\n\n银行业金融科技社群，有兴趣的朋友请添加群主：\n\nBankFintech666\n\n备注：公司+姓名+职务+银行入群。仅限银行科技工作人员。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md", "source_items": [{"name": "银行科技研究社", "source_file": "sources/2026-04-25_网商银行将交易银行作为第二增长曲线，将设AI+农事信息服务联合实验室_银行科技研究社.md", "link": "https://mp.weixin.qq.com/s/63gl6W78y1QawrFsYafPQg"}], "publish_time": 1777087080}, {"title": "82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目", "source": "银行科技研究社", "digest": "四川农商联合银行采购大模型基础平台及智能知识库系统，预算82万元。项目涵盖模型部署、知识库构建和业务场景创新，体现中小银行对AI技术的投入。", "link": "https://mp.weixin.qq.com/s/EsQNHfgqfwgjmx1nN54QFA", "content": "---\npublish_time: 1777123080\n---\n\n# 82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目\n\n> 原文链接：https://mp.weixin.qq.com/s/EsQNHfgqfwgjmx1nN54QFA\n> 公众号：银行科技研究社\n\n四川农村商业联合银行股份有限公司大模型基础平台及业务创新场景研发项目-智能知识库采购项目（招标编号：PRJ2026042300050）招标人为四川农村商业联合银行股份有限公司。现委托中航招采科技（北京）有限公司对该项目进行☑公开招标。潜在投标人应在四川农商银行采购管理系统获取招标文件，并于2026年05月21日10:30（北京时间）前递交投标文件。\n\n一、项目基本情况\n\n1.招标编号：PRJ2026042300050\n\n2.项目名称：四川农村商业联合银行股份有限公司大模型基础平台及业务创新场景研发项目-智能知识库采购项目\n\n3.预算金额：820000元\n\n4.最高限价：820000元\n\n5.采购需求（项目简介）：\n\n类型：服务类\n\n标的名称：智能知识库系统实施服务\n\n采购内容（服务范围）：智能知识库系统实施服务。包括数据接入、数据预处理、知识提取、知识检索、知识应用、知识管理、用户管理等功能模块，提供原厂安装部署服务，并满足我行应用上云和国产化要求等。\n\n6.合同履行期限：合同签订之日起，至免费维保期到期日止。\n\n7.本项目是否接受联合体投标：不支持联合体投标。\n\n8.其他：/\n\n9.（□是/☑否）划分标段\n\n标段划分情况:/\n\n二、申请人的资格要求\n\n（一）基本要求\n\n1.具有独立承担民事责任能力；\n\n2.具有良好的商业信誉和健全的财务会计制度；\n\n3.具有履行合同所必需的设备和专业技术能力；\n\n4.有依法缴纳税收和社会保障资金的良好记录；\n\n5.参加本次采购活动前三年内，在经营活动中没有重大违法记录；\n\n6.被列入失信被执行人、限制高消费、重大税收违法失信主体、政府采购严重违法失信行为记录名单的供应商不得参与本项目采购活动；\n\n7.被列入四川农商银行采购“黑名单”的企业、自然人及该自然人实际控制的企业不能参与本项目；\n\n8.投标人参加采购活动前三年内，投标人及其现任法定代表人、主要负责人没有行贿犯罪记录；\n\n9.本项目（☑不接受/□接受）联合体供应商；\n\n10.本项目不得转包，（□允许/☑不允许）分包。\n\n（二）本项目的特定资格要求\n\n11.投标人具有软件能力成熟度（CMMI）等级证书，成熟度等级不低于三级。\n\n12.投标人须为投标软件产品原厂商或授权代理商。(须提供原厂商有效期内的软件著作权；投标人为代理商的，还需同时提供软件原厂商授权书。格式详见招标文件。)\n\n13.投标人自2023年1月1日(含)至今，至少具有1个投标软件产品相关的实施案例。(合同签署方为投标人，合同名称或者主要内容包含“智能知识”或“知识库问答”或“知识库”或“知识中台”或“知识管理”等关键字或内容且同时包含“大模型”或“大语言模型”或“LLM”或“RAG”等关键字或内容，较难判断的须同时提供加盖业主方公章的证明书。证明材料同评分标准类似项目业绩证明。）\n\n三、招标文件获取时间、方式及地址\n\n1.时间：2026年04月27日9:00至2026年05月06日17:00（北京时间，法定节假日除外）。\n\n2.报名资料:在交易系统“付款凭证”处上传“盖章的营业执照扫描件”\n\n3.标书售价：0元。\n\n4.获取的招标文件格式包括pdf、word两种格式版本，其中以pdf格式为准。\n\n5.代理机构将本项目招标文件上传至四川农商银行采购管理系统（https://purchase-mgmt.scrcu.com/）向供应商提供，供应商在招标文件获取时间可申请获取（下载）招标文件，代理机构在招标文件获取时间方可审核发出招标文件，因供应商临近招标文件获取截止时间提交招标文件获取申请而导致代理机构无法审核发出招标文件，以及报名审核通过后供应商未在招标文件提供时间下载招标文件导致无法获取招标文件的，后果由供应商自行承担。\n\n6.成功获取招标文件后，如有澄清或者修改且内容可能影响投标文件编制的，代理机构将通过四川农商银行采购管理系统发布澄清或者修改后的招标文件，供应商应当重新获取招标文件。供应商未重新获取招标文件或者未按照澄清或者修改后的招标文件编制投标文件进行投标的，自行承担不利后果。\n\n7.因系统原因，导致供应商无法在招标文件获取时间内完成注册的，供应商需提供无法注册的相关证明材料并发送至lisl095@avic.com邮箱，招标代理机构通过邮箱将招标文件发送至潜在投标人。\n\n四、投标文件提交截止时间及开标时间、地点、方式\n\n1.提交投标文件截止时间：2026年05月21日10:30（北京时间）\n\n2.开标时间：2026年05月21日10:30（北京时间）\n\n3.投标文件提交方式、地点：\n\n以线上递交电子文件为准。供应商应当在投标文件提交截止时间前，通过四川农商银行采购管理系统提交投标文件。成功提交的，供应商将收到已提交投标文件的回执函；逾期送达的或者未送达指定地点的投标文件，招标人不予受理。\n\n4.本项目采取网上开标，即招标人或代理机构通过四川农商银行采购管理系统“开标大厅”组织在线开标。\n\n5.投标人代表须用CA数字认证证书在规定的解密时限内对上传的投标文件进行解密，解密倒计时结束后，投标人未在规定的解密时间内完成解密的，按无效投标处理。\n\n6.开标期间投标人须保持随时在线状态,否则引起的不利后果由投标人自行承担。\n\n五、公告期限\n\n自本公告发布之日起5个工作日。\n\n六、其他补充事宜\n\n（一）招标采购信息发布媒介：四川农商银行官网-招标采购栏目（https://purchase-mgmt.scrcu.com/）、金采网（http://www.cfcpn.com/）、中国招标投标公共服务平台（http://www.cebpubservice.com/）发布。其他媒介转载无效。\n\n（二）电子化采购相关事项\n\n本项目实行电子化采购，使用的电子化交易系统为：四川农商银行采购管理系统（登录方式及地址：https://purchase-mgmt.scrcu.com/）。供应商应当按照以下要求，参与本次电子化采购活动。\n\n1.供应商应当自行在四川农商银行采购管理系统首页查看操作指南，并严格按照操作指南要求进行系统操作。在登录、使用四川农商银行电子化平台前，应当按照要求完成供应商注册和信息完善。\n\n2.供应商应当使用四川农商联合银行数字证书互认范围的数字证书及签章（以下简称“数字证书及签章”）进行系统操作。供应商登录四川农商银行采购管理系统进行的一切操作和资料传递，以及加盖电子签章确认采购过程中制作、交换的电子数据，均属于供应商真实意思表示，由供应商对其系统操作行为和电子签章确认的事项承担法律责任。\n\n3.已办理数字证书及签章的供应商，校验数字证书及签章有效性后，即可按照系统操作要求进行身份信息绑定、权限设置和系统操作；未办理数字证书及签章的供应商，按要求办理数字证书及签章并校验有效性后，按照系统操作要求进行身份信息绑定、权限设置和系统操作。数字证书及签章的办理与校验，可查看四川农商银行采购管理系统-CA办理。（供应商应按照四川农商银行采购管理系统-CA办理的要求及时申请办理CA证书，因投标人自身原因导致无法在开标前取得CA的，后果自负。）\n\n供应商应当加强数字证书及签章日常校验和妥善保管，确保在参加采购活动期间数字证书及签章能够正常使用；供应商应当严格数字证书及签章的内部授权管理，防止非授权操作。\n\n4. 供应商应当自行准备电子化采购所需的计算机终端、软硬件及网络环境，承担因准备不足产生的不利后果。\n\n5.具体操作流程详见四川农商银行采购管理系统首页操作指南。\n\n七、联系方式\n\n1.招标人信息\n\n名   称：四川农村商业联合银行股份有限公司\n\n地   址：成都市高新区锦城大道108号\n\n联系人：四川农村商业联合银行股份有限公司采委会办公室\n\n联系方式：028-85354769\n\n2.代理机构信息\n\n名    称：中航招采科技（北京）有限公司\n\n地   址：北京市朝阳区慧忠路5号20层B2001、B2003、B2006\n\n成都分公司地址：成都市益州大道北段777号中航国际交流中心A座1508-1510\n\n联系人：肖女士、李女士\n\n联系方式：028-86266522转630、636\n\n邮    箱：lisl095@avic.com\n\n点击\n\n“阅读原文”，查看官方公告\n\n。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md", "source_items": [{"name": "银行科技研究社", "source_file": "sources/2026-04-25_82万！四川农商联合银行大模型基础平台及业务创新场景研发项目-智能知识库采购项目_银行科技研究社.md", "link": "https://mp.weixin.qq.com/s/EsQNHfgqfwgjmx1nN54QFA"}], "publish_time": 1777123080}, {"title": "AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能【超级入口】", "source": "量子位", "digest": "涂鸦智能Hey Tuya平台推出AI宠物健康监测功能，可自动识别宠物异常行为。该平台整合全屋智能设备，打造家庭AI服务入口，拓展智能家居应用场景。", "link": "https://mp.weixin.qq.com/s/drznIJshQRdXoyOSe2_1aA", "content": "---\npublish_time: 1777092451\n---\n\n# AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”\n\n> 原文链接：https://mp.weixin.qq.com/s/drznIJshQRdXoyOSe2_1aA\n> 公众号：量子位\n\n西风 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n人类日常生活彻底被AI助手包围了，遛狗这件事儿甚至都不用自己干了。\n\n坐标深圳，\n\n涂\n\n鸦智能\n\n在其\n\n2026\n\n全球\n\n开发者大会\n\n上，面向全球消费者发布了全新升级的AI生活助手\n\nHey Tuya\n\n。\n\n一句话概括这次升级的核心：让AI从“听令行事”变成“主动服务”，从“能聊天”变成“能办事”。\n\n怎么个能办事法？\n\n全新Hey Tuya已\n\n打通谷歌邮件、日历、文档等主流第三方工具生态\n\n。用户只需一句自然语言指令，即可快速完成邮件收发、日程排布、文档处理等事务。\n\n同时，Hey Tuya\n\n全面兼容Matter协议、Home Assistant等主流开源生\n\n态\n\n，可无缝接入全球多品牌智能硬件\n\n，实现跨设备联动、统一管控与协同运行。\n\n换句话说，你家里的智能灯、音箱、扫地机器人等设备，理论上都能通过一个入口管起来。\n\n大会现场，\n\n涂鸦智能联席董事长兼总裁陈燎罕\n\n分享行业预判：\n\n2026年全球AI PC渗透率将从2025年的39%攀升至 59%，手机AI渗透率可达45%；未来三年，家用智能电器的AI搭载渗透率将攀升至83.1%。\n\n他直言，\n\nAI确定性增长已来，绝大部分硬件都值得用AI重做一遍\n\n。\n\nHey Tuya，懂生活的私人管家\n\n此次Hey Tuya全面升级，核心依托底层AI基座能力的深度迭代。\n\n新版本支持更自然的对话效果、深度思考与复杂任务规划。用户像与朋友聊天一样说出需求，Hey Tuya便能理解意图并处理任务。\n\n在多端协同与家中硬件设备的配合下，Hey Tuya可以帮你，监测家中快递状态：\n\n监测宠物健康状况：\n\n规划家庭待办事项并及时提醒：\n\n还能检测并优化家庭能耗与用电：\n\n你一句“推荐菜谱”，它不仅帮你推荐，还会自动准备好所需设备。比如做烤鱼，就帮你自动预热烤箱：\n\n更进一步，Hey Tuya还支持\n\n场景化智能\n\n，如“晨间唤醒”“健康管理”“离家守护”等。\n\n举个例子，它可以根据你的睡眠状态，每天清晨时段用渐亮的灯光和轻柔音乐自然唤醒你，同时播报天气和日程。\n\n区别于传统固定自动化流程，所有场景逻辑都会结合用户作息习惯、个人偏好与实时状态动态生成。\n\n功能层面，Hey Tuya还内置了丰富的\n\nSkill资源库\n\n，支持PPT生成、图文识别、图像创作、视频生成等多元工具\n\n，一站式满足日常所需。\n\n与此同时，Hey Tuya最新上线\n\nVibe Coding\n\n能力。\n\n用户通过自然语言对话，结合自身使用场景与全屋智能硬件，可自主定制专属Skill、个性化Agent与自动化工作流，甚至还能自定义搭建居家设备控制面板。\n\n三大AI应用生态\n\nHey Tuya只是冰山一角。\n\n大会上，涂鸦智能联席董事长兼总裁陈燎罕首次公开了涂鸦在AI应用层的战略布局——\n\nAI Home、AI Robot、AI Energy\n\n三大生态。\n\nAI Home，即全屋设备智能协同与主动服务。\n\n落地案例已经跑出来了：\n\n涂鸦赋能东南亚通信运营商，实现该区域40%宽带用户主动开通AI硬件订阅服务，AI+IoT设备累计出货量突破200万台，覆盖越南、泰国、马来西亚、菲律宾等核心市场。\n\nAI Robot，即围绕陪伴、清洁、运动、守护、具身机器人五大类别，持续拓宽机器人落地场景。\n\n例如，涂鸦与珞博智能合作打造了首款蜂窝版“Fuzozo芙崽”，让AI陪伴产品从室内走向全场景。\n\nAI Energy，即构建AI能源管理体系，实现能耗精准监测、高效利用与智能优化。\n\n涂鸦助力土耳其光储龙头企业CW Enerji打通超过10个能源品类，在同一个HEMS系统中实现互联互通，通过动态电价、能源预测、AI调度等能力，帮助用户实现最佳经济收益。\n\nAWS、阿里云、火山引擎都来了\n\n除此之外，这次大会上，亚马逊云科技、阿里云、火山引擎三大云厂商齐刷刷到场站台。\n\n亚马逊云科技解决方案架构部总经理陈晓建表示：“想要构建生产级Agentic AI应用，需要落实模型选型、数据优化、工具生态与安全合规等关键环节。亚马逊云科技期待与涂鸦智能等生态伙伴深度协同，以云+AI+IoT融合能力，加速智能体的商业落地。”\n\n阿里云智能集团千问智能硬件行业总监徐超透露，千问大模型从Qwen 1.0进化到Qwen3.6，坚持全尺寸、全模态、全开源，并与涂鸦AI+IoT平台无缝融合，打造一站式“交钥匙”方案。\n\n火山引擎大模型智能硬件负责人邢孝慈则表示：“原生智能正在改写终端产业的底层逻辑，火山引擎将以豆包大模型与火山方舟打造普惠型原生智能底座，提供全栈AI能力，并与涂鸦智能等伙伴携手，推动AI从技术赋能走向商业共赢。”\n\n三大厂商同台，释放的信号很明确：AI硬件赛道正在从技术验证走向商业价值兑现，而平台型公司正在成为连接模型能力与物理世界的关键节点。\n\n回看整场大会，涂鸦智能的逻辑线其实很清晰。\n\n过去几年，涂鸦的核心身份是AI+IoT开发者平台，服务的是B端品牌和硬件厂商。截至2025年底，平台累计注册账号超180万个，覆盖全球200多个国家和地区。\n\n这次，涂鸦也发布了专为AI硬件落地场景打造的自训练的PVAD模型（Personal Voice Activity Detection），升级了Physical AI Foundation V2.8、Wukong AI 3.0、T-RTC实时通信网络、OmniMem V2.0长记忆系统等全栈开发者工具。\n\n除了做To B的“铲子供应商”，涂鸦也正在向To C的“AI应用入口”延伸。Hey Tuya就是这个转型的关键一步。\n\n现场涂鸦也为开发人员带来多款全新AI技术成果体验：\n\n涵盖可串联数字与实体场景的AI开发工作台TuyaClaw、硬件端原生AI Agent框架DuckyClaw、支持用自然语言快速搭建量产级应用的Vibe Coding，以及完成能力全面迭代升级的全新涂鸦AI开发平台等。\n\n从平台到应用，从B端到C端，从数字世界到物理世界——涂鸦押注的是AI与物理世界的深度融合。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🔹 谁会代表2026年的AI？\n\n龙虾爆火，带动一波Agent与衍生产品浪潮。\n\n但真正值得长期关注的AI公司和产品，或许不止于此。\n\n如果你正在做，或见证着这些变化，欢迎申报。\n\n让更多人看见你。\n\n👉 https://wj.qq.com/s2/25829730/09xz/\n\n一键关注 👇 点亮星标\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”_量子位.md", "source_items": [{"name": "量子位", "source_file": "sources/2026-04-25_AI自主监测宠物健康，陪狗都不用自己来了！涂鸦Hey Tuya打造全屋智能“超级入口”_量子位.md", "link": "https://mp.weixin.qq.com/s/drznIJshQRdXoyOSe2_1aA"}], "publish_time": 1777092451}, {"title": "最后3天！2026年最值得关注的AI企业&产品｜申报即将截止", "source": "量子位", "digest": "量子位AIGC应用评选申报倒计时通知。活动征集2026年度优秀AI企业和产品，涵盖大模型、AI应用、智能硬件等领域，旨在发现行业创新力量。", "link": "https://mp.weixin.qq.com/s/dkeTeMkQ0DlvwNVUPHyoCQ", "content": "---\npublish_time: 1777092451\n---\n\n# 最后3天！2026年最值得关注的AI企业&产品｜申报即将截止\n\n> 原文链接：https://mp.weixin.qq.com/s/dkeTeMkQ0DlvwNVUPHyoCQ\n> 公众号：量子位\n\n组委会 发自 凹非寺\n\n量子位｜公众号 QbitAI\n\n最近每个人都被“龙虾”“爱马仕”刷屏了。\n\n但AI产品总是面临的问题是，爆火的很多，真正能留下的很少。\n\n这正是我们希望回答的：\n\n今年最值得关注的AI企业&产品是什么？\n\n不只是龙虾，我们也想找到那些\n\n真正跑通场景、开始被用户验证的AI产品，以及\n\n拥有技术实力、\n\n具备潜力的AI企业。\n\n如果你来自这样的团队：\n\n有\n\n清晰落地的应用场景\n\n（而不只是demo）\n\n有\n\n真实用户在使用，且数据在持续增长\n\n在某个细分领域里，已经做出了\n\n差异化体验或效率提升\n\n或者，你正在做一个\n\n有潜力成为标杆的AI产品\n\n...\n\n欢迎参与申报\n\n👉\n\n一键申报\n\n量子位将结合对公司的深入调研及数十位行业知名专家的意见，在\n\n5月中国AIGC产业峰会上公布\n\n评选结果。\n\n届时，量子位也将邀请数百万行业从业者，共同见证这些优秀企业的荣誉。\n\n2026年度值得关注的AIGC企业\n\n将评选出拥有最创新、最前瞻或最有规模落地潜力的AI企业。\n\n【参选条件】\n\n公司主体在中国或主营业务在中国；\n\n主营业务是生成式AI及相关，或已将AI广泛应用于其主营业务；\n\n近一年在技术/产品、商业化有出色表现的企业。\n\n【评选维度】\n\n技术维度\n\n｜关注公司的技术实力、研发能力和创新性，包含技术成果、研发投入、人才储备等角度；\n\n产品维度\n\n｜关注核心产品的创新性、市场适配性和用户体验，包含产品创新性、产品用户规模、用户体验等角度；\n\n市场维度\n\n｜关注公司在市场中的表现和增长机会，包含商业模式、市场规模、营收情况、合作生态等角度；\n\n潜力维度\n\n｜关注核心团队实力和品牌潜力，包含核心团队、投融资进展、品牌影响力等角度。\n\n2026年度值得关注的AIGC产品\n\n将评选出拥有最创新、最实用、最热门或最有应用潜力的AI产品。\n\n【参选条件】\n\n主要功能是基于生成式AI能力的产品；\n\n产品已具备成熟技术，已经投放市场且具有一定的用户规模；\n\n近一年有重要的技术创新或功能迭代，推动AI技术的应用落地，并对行业有一定的影响力。\n\n【评选维度】\n\n产品技术力\n\n｜关注产品在技术方面的先进性、成熟度和高效性，包含产品技术架构、技术成果、产品效果等角度；\n\n产品创新力\n\n｜关注产品在功能、体验和应用场景方面的创新性和独特性，包含产品核心功能、应用场景、解决的核心痛点、产品趣味性等角度；\n\n产品表现力\n\n｜关注产品的用户反馈和市场表现，包括产品用户规模和留存率、用户反馈、产品影响力等角度；\n\n产品潜力\n\n｜关注产品在未来发展和市场扩展方面的潜力，包括产品生态、产品市场潜力、产品战略规划等角度。\n\n报名方式\n\n本次评选即日起开始报名，\n\n4月27日截止\n\n，\n\n最终结果将于5月中国AIGC产业峰会上公布，\n\n企业可以通过以下方式报名：\n\n网页端评选报名链接：https://wj.qq.com/s2/25829730/09xz\n\n扫描二维码即可报名评选：\n\n如对本次评选有其他疑问，请联系量子位工作人员。添加微信18801103170，或邮件发送至linyu@qbitai.com，并备注「评选-企业-姓名」。\n\n关于中国AIGC产业峰会\n\n马年，当然是要\n\n马上AI起来\n\n。\n\n当AI终于从论文里的参数规模、发布会上的技术名词，变成短视频里的创作工具、手机里的常驻助手、甚至出现在长辈的聊天框里时，一个新的分水岭便已出现：\n\nAI这个新物种，终于从“观望期”迈入\n\n“全民参与期”\n\n。\n\n值此关键时机，今年5月，我们将在北京举办\n\n2026中国AIGC产业峰会\n\n。峰会以\n\n「@所有人，马上AI起来」\n\n为主题，聚焦「如何用好AI」，诚邀AI创业者、开发者、资深玩家，一起把AI讲清楚、用起来、跑起来，让更多人真正迈出“马上AI”的第一步。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md", "source_items": [{"name": "量子位", "source_file": "sources/2026-04-25_最后3天！2026年最值得关注的AI企业&产品｜申报即将截止_量子位.md", "link": "https://mp.weixin.qq.com/s/dkeTeMkQ0DlvwNVUPHyoCQ"}], "publish_time": 1777092451}, {"title": "北京车展，遍地【龙虾】｜甲子光年", "source": "甲子光年", "digest": "北京车展观察，多家车企展示智能化成果。文章以【龙虾】比喻汽车智能化趋势，分析AI技术在汽车行业的应用现状和发展方向。", "link": "https://mp.weixin.qq.com/s/G7uSQ0VvzlIN9SFsoh8zQA", "content": "---\npublish_time: 1777130765\n---\n\n# 北京车展，遍地“龙虾”｜甲子光年\n\n> 原文链接：https://mp.weixin.qq.com/s/G7uSQ0VvzlIN9SFsoh8zQA\n> 公众号：甲子光年\n\nAI从外场“白棚子”爬进了主展馆。\n\n作者｜张麟\n\n编辑｜王博\n\n在2026北京国际车展（以下简称北京车展）启用新展馆之后，一个变化变得异常直观：汽车智能化，正在从“幕后能力”走向“台前产品”。\n\n即便4月24日、25日仍是媒体日，展馆内的人流量已经接近公众日水平。官方数据显示，本届车展规模创下新高：38万平方米展区、来自21个国家和地区的近千家企业参展、1451辆展车、181辆首发新车。\n\n但真正值得关注的，并不只是规模。\n\n从展位结构来看，本届车展像是一场产业秩序的重组：智能驾驶、智能座舱等解决方案厂商，不再作为配角出现，而是与整车厂正面相邻，占据相当一部分的展区。过去停留在技术语境中的“智能化”，正在被拆解为具体产品能力，直接面向消费者。\n\n“领时代 智未来”不只是本届北京车展的主题口号，它更像是一个现实判断：当市场不再单纯追求造型、参数等显性差异，汽车的竞争开始转向一个更隐性的维度——智能化能力。\n\n也正是在这一背景下，车展现场展示的，不再只是VLA模型、世界模型、端到端辅助驾驶或AI座舱。今年最明显的新变量，是以OpenClaw（“龙虾”）为代表的新一代Agent能力，开始进入汽车。\n\n当车展现场也出现了大量“龙虾”产品的时候，汽车也不再是一个封闭的智能终端，而是开始成为连接外部世界的入口。\n\n「甲子光年」认为，“遍地龙虾”更像是一个行业拐点的外在表现。智能驾驶、智能座舱从“加分项”变成“必选项”的过程，已经完成；而下一阶段，关于Agent如何重写汽车边界的竞争，才刚刚开始。\n\n1.当“龙虾”爬进智能座舱\n\n如果说2025年是智能驾驶的元年，那么2026年则是AI大模型座舱的元年。\n\n本届北京车展期间，多家供应商展示了基于大模型的座舱解决方案，与几年前相比，其核心差异在于：从“功能控制”转向“情感陪伴”与“主动服务”。\n\n“龙虾上车”成为了智能座舱领域最具象化的体现。\n\n4月23日，在北京车展的前一天，斑马智能举办了AI-TECH DAY。重磅推出了元神AI汽车机器人大脑，升级了AutoOmni全模态端模型产品矩阵，并发布了“龙虾上车”方案AutoClaw，它通过端云一体中枢系统连接全车，驱动出行生活、影音娱乐、用车服务等多个智能体协同工作。\n\n在车展现场，「甲子光年」体验到了AutoClaw的强大，当后排乘客提出晚上想去吃火锅的想法时，智能座舱系统会根据前后文语义自动筛选高评分的目的地火锅店，并规划路径开始导航。\n\n同时，在北京车展开幕的当天，斑马智能宣布还与蚂蚁集团旗下支付宝达成合作，基于支付宝AI付车载版，正式推出元神AI“AI座舱 + AI支付”融合方案。无论是影音娱乐场景下的内容付费，还是出行生活场景中的即时消费需求，均可通过Agent直接发起并完成支付。\n\n斑马智能\n\n展台\n\n，图片来源：\n\n「\n\n甲子光年\n\n」\n\n拍摄\n\n佑驾创新在北京车展发布了座舱智能管家“BamBam龙虾助手”，该产品同样定位为多智能体系统工具，可以主动规划行程、预订服务、处理邮件。BamBam还可以充分发挥视觉感知能力，实时捕捉用户的身份、疲劳度甚至情绪，将这些空间和状态信息与语言大模型融合，从而从“被动执行”变成“主动服务”。\n\n这让智能座舱管家不再只是工具，而是具备情感交互能力的“灵魂伴侣”。\n\n佑驾创新智能座舱研发负责人告诉「甲子光年」，在智能出行领域，未来的趋势未必是“必须使用OpenClaw”，但 OpenClaw的出现，提供了一种全新的应用开发范式。\n\n“过去，在没有’龙虾‘的情况下，车内智能的想象空间主要局限于车内闭环，比如控制车窗、空调、导航等，本质上都是围绕车辆本身展开。”这位负责人说，“龙虾”的意义在于把边界打开了，“它可以作为连接外部世界的‘网关’，通过车端将能力映射到车外设备，实现对外部设备的控制与联动。”\n\n这意味着，汽车不再只是一个封闭的智能空间，而是成为连接更大物理世界的一个入口，应用场景也因此被大幅拓宽。\n\nBamBam龙虾助手，图片来源：佑驾创新\n\n地平线选择在车展开幕前两天，抛出了一个“龙虾”产品——KaKaClaw“咖咖虾”。\n\n它的官方定位，是“中国首个整车智能体操作系统”。但比命名更值得关注的，是它试图解决的问题：用自然语言作为统一入口，同时调度智能驾驶与智能座舱，实现跨域的并行协同。换句话说，它瞄准的不是某一项能力的增强，而是“舱驾分离”这一长期结构性问题的重写。\n\n发布会上，地平线创始人余凯一本正经地谈论“车载小龙虾”上车，这个略显轻松的表达背后，其实是一个相当严肃的判断——当Agent成为统一调度层，汽车内部原本割裂的系统，将开始被重新组织。\n\n“咖咖虾”本身或许只是一个起点，但它指向的，是舱驾融合从架构层走向操作系统层的尝试。\n\n“星空芯片+咖咖虾OS+HSD智驾”构成了地平线整车智能的三板斧。公开资料显示，目前星空芯片已收获大众、奇瑞、比亚迪等10余家车企品牌，以及博世、电装等头部Tier1的合作意向，预计2026年第三季度量产上车。\n\nKaKaClaw“咖咖虾”，图片来源：「甲子光年」拍摄\n\n而在商汤绝影的展台，OpenClaw不再只是一个“新功能”，而是被做成了车里的“默认能力”。通过 SageBox（千机智盒），很多原本要依赖云端完成的智能体能力，被直接放进了车里运行。\n\n这带来的变化很直接：一方面成本大幅下降，不再按次调用付费；另一方面响应更快、更稳定，即使在弱网环境下也能即时工作。换句话说，智能体开始从“可选配置”，变成车内随时可用的基础能力。\n\n真正把这件事落地的是New Member。New Member是商汤绝影SageBox千机智盒的执行层原生智能体，作为车载版“Claw”，它是连接“思考层”与真实场景的关键桥梁，为车载自主智能体提供从感知到执行的全链路闭环能力。\n\nNew Member，图片来源：商汤绝影\n\n从表面上看，智能座舱的升级和“龙虾”扎堆，是今年北京车展的一大特色，甚至有“跟风”之嫌，\n\n但毋庸置疑的是，智能座舱体验的升级，本质上是一种技术升级引发的行业热潮，而非激烈的同行竞争引发的生存危机。\n\n2.智能化解决方案供应商走到台前\n\n由于新展馆的启用，整个北京车展的展览面积大了一倍多，从最南边的E1展馆，走到最北边的A1展馆，要将近20分钟。\n\n但最明显的变化并不来源于此或某款明星车型，而是一种空间秩序的重组。\n\n比如在E1展馆，地平线、黑芝麻等芯片及智能化解决方案供应商，和奇瑞系汽车品牌放在了一起；佑驾创新与智界的站台面对面设置；在A1展馆，轻舟智航与吉利汽车同样分别置于参观通道两侧。\n\n华为乾崑、鸿蒙智行、华为数字能源均设有独立展台，鸿蒙智行的展台总面积超甚至超过了4400平方米，几乎占据了整个B4展馆一半的位置。\n\n华为乾崑智驾展位，图片来源：\n\n「\n\n甲子光年\n\n」\n\n拍摄\n\n这种情况在中国车展的历史上是很罕见的，因为在两年前，2024年的北京车展上，包括华为在内的一众智能化解决方案供应商，被安排在了展馆外面临时搭建的白棚子里，甚至算不上一个正规场地。\n\n彼时智能驾驶和智能座舱虽然已成为热门话题，但在2024北京车展上，这类供应商的物理位置仍然折射出整个产业的从属心态。轻舟智航市场生态总监高健雄告诉「甲子光年」：“2024年北京车展的时候，我们也来参展了，但是连个站台都没弄。”当时，他们只能在外面场地做试乘体验，或者是合作伙伴的展台上搞发布。\n\n而今年，他们在400平方米的独立展区内，摆出了一辆奇瑞风云T9L，代表轻舟智航高阶智驾的量产车型。“我们不想摆太多车，每家的车都摆一辆也摆不下。我们想表达的是‘我们在做什么’，而不是‘我们做到了什么’。”\n\n在解释为什么不多摆几辆合作车型的时候，高健雄的语气平和而自信。\n\n轻舟智航\n\n展台\n\n，图片来源：\n\n「\n\n甲子光年\n\n」\n\n拍摄\n\n元戎启行公关经理沈思涵的回答则更直接：“大家都是想要破圈，想要触及C端用户，而不是做一个幕后的角色。我相信其他公司也有同样的想法，所以才有了今年智驾厂商和主机厂同台搭戏的氛围。”\n\n元戎启行在车展期间明确传递了一个信号：智驾供应商想要打破公众认知，像“Intel Inside”那样从幕后走到台前。\n\n“只有更多消费者了解智驾，我们才能更好地完成商业运作，才会有更多人愿意使用你的产品，数据飞轮才能转起来，新的技术才能不断提升。”沈思涵说。\n\n元戎启行展台，图片来源：「甲子光年」拍摄\n\n3.为什么智能化概念会在今年车展爆发\n\n如果说2024年的北京车展还在争论“哪辆车的屏幕更大”“哪辆车的续航更长”，那么2026年智驾、智舱供应商和芯片厂商，已经在通过实际表现告诉消费者，汽车真正变成了“智能体”。\n\n2026年北京车展的智能化氛围如此浓厚，绝非偶然。它是全球汽车行业电动化格局定型、智能化加速落地的关键节点叠加后的必然结果。\n\n图片来源：商汤绝影\n\n2026年一季度，国内新能源汽车渗透率已稳定在51%以上。电动化的“基座”完成之后，下一步的差异化竞争点无可争议地落到了智能化上。\n\n数据显示，截至2025年底，中国L2级乘用车新车渗透率已达66.1%；新能源乘用车的数据则更夸张，已经接近90%。中商产业研究院数据显示，2025年中国自动驾驶市场规模逼近4500亿元，预计2026年将超4800亿元。\n\n同时，在“智驾平权”的概念驱动，10-20万元车型智驾功能渗透率增速最快。根据盖世汽车研究院ADAS配置数据库的分析，2025年1-4月期间，10-20万元价格区间车型的ADAS域控制器装机量达到了52.5万套，同比激增超过2000%。\n\n比亚迪“天神之眼”辅助驾驶系统，图片来源：「甲子光年」拍摄\n\n激增的装机量和渗透率，以及广阔的市场体量，都让智驾厂商不能沉默，车展也就成了其展示自身实力、高效触达消费者的最好途径。\n\n一些观点认为，形成这种态势的另一大原因，是智驾厂商也正在经历“能者上、庸者下”的淘汰赛，甚至已经到了生死存亡的关键时期，所以供应商要不遗余力地展示自己的技术实力，以给消费者和客户信心。\n\n但部分智驾供应商并不认同\n\n“智驾公司正面临生死节点”\n\n的说法。\n\n沈思涵告诉「甲子光年」：“确实有些人在讨论生死节点，但放眼全球，智驾的市场蛋糕仍然足够大。除了国内，企业还可以出海，最好是两条路都走，全球市场远远不是两三家企业就能吃完的。”\n\n在沈思涵看来，目前智驾供应商的登台亮相的动作，更多的是“价值驱动和产品形态驱动”，而非“迫不得已地求生”。\n\n这一判断与「甲子光年」在车展上观察到的信息是吻合的。例如大众、宝马、丰田等多个跨国车企也正在积极引入中国本土智驾方案，甚至连展位也离得不远。两条腿走路、全球化布局，已经成为头部智驾公司的标准叙事。\n\n今天，智能驾驶技术公司Momenta公布了其智能驾驶方案的最新量产落地进展。过去一年，Momenta的智能驾驶方案搭载量从近30万台增长至逾80万台。目前，公司已交付量产车型超过70款，累计定点车型超过200款，量产方案覆盖十余个国家和地区。北京车展上，超过60款展车搭载了Momenta的智能驾驶方案。\n\nMomenta展台，图片来源：「甲子光年」拍摄\n\n从2024年的“新时代 新汽车”到2026年的“领时代·智未来”，北京车展主题的变化，精准反映了中国汽车产业从电动化上半场全面迈向智能化下半场的深层转型。\n\n2024年北京车展，「甲子光年」的报道主题是：车展上已经看不到燃油车了。即使对智能驾驶和智能座舱也进行了一定程度的描述和分析，但结论仍是：在智能化喊了这么多年之后，大模型终于带来了智能化的最优解吗？\n\n如今，智能化供应商已经与整车厂在主展馆内平起平坐，\n\nAI走出了外场白棚子，以“龙虾”的样态爬进了主展馆，爬上了车，这或许就是整车智能化时代最生动的注脚。\n\n（封面图来源：「甲子光年」拍摄）\n\nEND.", "category": "其他", "is_model_related": false, "source_file": "sources/2026-04-25_北京车展，遍地“龙虾”｜甲子光年_甲子光年.md", "source_items": [{"name": "甲子光年", "source_file": "sources/2026-04-25_北京车展，遍地“龙虾”｜甲子光年_甲子光年.md", "link": "https://mp.weixin.qq.com/s/G7uSQ0VvzlIN9SFsoh8zQA"}], "publish_time": 1777130765}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

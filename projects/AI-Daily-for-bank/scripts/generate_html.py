@@ -47,6 +47,27 @@ def print_progress(msg):
     print(f"[generate_html] {msg}")
 
 
+def normalize_chinese_quotes(text):
+    """
+    标准化中文引号为方括号，避免 JSON 解析错误
+    
+    generate_html.py 会将中文引号替换为英文引号，这会破坏 JSON 结构。
+    因此在写入 classification.json 前，必须将中文引号替换为方括号。
+    
+    Args:
+        text: 原始文本
+    Returns:
+        处理后的文本
+    """
+    if not text:
+        return text
+    # 替换中文双引号 U+201C/U+201D 为方括号
+    text = text.replace('\u201c', '【').replace('\u201d', '】')
+    # 替换中文单引号 U+2018/U+2019 为方括号
+    text = text.replace('\u2018', '「').replace('\u2019', '」')
+    return text
+
+
 def read_file(path, encoding='utf-8'):
     """读取文件内容，处理文件不存在的情况"""
     try:
@@ -90,85 +111,71 @@ def detect_model_related(title, digest):
     """
     检测文章是否主要讲述大模型本身（而非应用）
     
-    判断逻辑：
-    1. 首先检查是否是明显的模型相关主题（发布、评测、开源、技术特性）
-    2. 然后排除明显的应用场景（工具集成、行业应用）
-    3. 关键：看主语是谁 - 模型本身 vs 其他产品/行业
+    判断标准：仅针对模型发布、测评、架构的内容
+    - 模型发布：新模型正式发布、版本更新
+    - 模型测评：模型性能对比、实测报告  
+    - 模型架构：技术论文、架构创新、底层技术研究
+    
+    不添加标签的内容：
+    - AI应用功能（如Chronicle屏幕记忆）
+    - 行业资讯（如量化公司创始人背景）
+    - 基础设施讨论（如Token工厂概念）
+    - 公司动态（如OpenAI裁员、投资并购）
     """
     text = f"{title} {digest}".lower()
     title_lower = title.lower()
     
-    # 第一层：检查是否有明确的大模型核心主题
-    # 注意：需要结合"模型"相关词汇一起判断，避免误判普通产品发布
-    model_release_patterns = [
-        "模型发布", "模型上线", "模型开源", 
-        "发布.*模型", "上线.*模型", "开源.*模型",
-        "新版本.*模型", "模型.*新版本",
-    ]
+    # === 明确排除的内容（即使包含模型关键词）===
     
-    model_eval_keywords = ["评测", "benchmark", "排名", "对比", "实测"]
-    # 注意："榜单"太通用，需要结合上下文
-    model_tech_keywords = ["参数规模", "参数量", "上下文", "token", "训练", "微调", "蒸馏", "量化", "推理能力"]
+    # 1. 排除产品功能发布（非模型本身）
+    if any(kw in text for kw in ["chronicle", "屏幕记忆", "功能", "订阅"]):
+        # Chronicle是OpenAI的功能，不是模型
+        if "chronicle" in text or ("屏幕记忆" in text and "模型" not in text):
+            return False
     
-    # 检查是否有模型发布/更新（需要包含"模型"这个词）
-    has_model_release = (
-        ("发布" in text or "上线" in text or "开源" in text) and "模型" in text
-    )
+    # 2. 排除基础设施/算力讨论
+    if any(kw in text for kw in ["token工厂", "数据中心", "算力", "芯片", "tpu", "gpu"]):
+        # 黄仁勋访谈讲Token工厂，不是模型
+        if "token工厂" in text or "黄仁勋" in text:
+            return False
     
-    # 检查是否有模型评测（排除"榜单申报"这类活动）
-    has_model_eval = any(kw in text for kw in model_eval_keywords)
-    # 特殊处理"榜单"：只有在"评测榜单"、"基准榜单"等语境下才算
-    if "榜单" in text and not has_model_eval:
-        has_model_eval = any(phrase in text for phrase in ["评测榜单", "基准榜单", "模型榜单", "排行榜"])
+    # 3. 排除行业人物/公司动态
+    if any(kw in text for kw in ["创始人", "实习生", "量化", "融资", "投资", "收购", "裁员", "离职"]):
+        # 量化公司培养创始人，不是模型
+        if "量化" in text and "模型" not in text:
+            return False
     
-    # 检查是否有模型技术特性（"参数"需要是"参数量"或"参数规模"，避免"万亿参数"这种应用描述）
-    has_model_tech = False
-    for kw in model_tech_keywords:
-        if kw in text:
-            # 对于"参数"，需要更严格的匹配
-            if kw in ["参数规模", "参数量"]:
-                has_model_tech = True
-                break
-            else:
-                has_model_tech = True
-                break
+    # 4. 排除企业战略/市场竞争
+    if any(kw in text for kw in ["年化收入", "烧钱率", "估值", "市场份额", "反超"]):
+        # OpenAI危机四伏讲的是商业竞争，不是模型技术
+        if ("openai" in text or "anthropic" in text) and "模型" not in title_lower:
+            # 如果标题没有明确提到模型，且内容是商业新闻，排除
+            if any(kw in text for kw in ["收入", "估值", "融资", "裁员", "转型"]):
+                return False
     
-    has_model_topic = has_model_release or has_model_eval or has_model_tech
+    # === 确认是大模型相关的内容 ===
     
-    if not has_model_topic:
-        return False
+    # 1. 模型发布/更新（必须包含具体模型名称或"模型"字样）
+    model_names = ["gpt", "claude", "gemini", "qwen", "deepseek", "llama", "kimi", "mimo", "mistral"]
+    has_model_name = any(name in text for name in model_names)
     
-    # 第二层：排除明显的应用场景
-    # 检查标题是否以非模型主体开头
-    application_subjects = [
-        "qoder", "灵码", "copilot", "codeium", "tabnine",  # 编程工具
-        "医生", "医疗", "医院", "诊室",  # 医疗
-        "银行", "金融", "保险",  # 金融
-        "汽车", "上车", "车企",  # 汽车
-        "美团", "阿里", "腾讯", "字节",  # 公司（当作为主语时）
-    ]
-    
-    # 如果标题以应用主体开头，且包含应用动词，则判定为应用
-    has_app_subject = any(title_lower.startswith(subj) for subj in application_subjects)
-    has_app_verb = any(kw in text for kw in ["内置", "支持", "集成", "接入", "搭载", "适配", "已用", "使用"])
-    
-    if has_app_subject and has_app_verb:
-        return False
-    
-    # 特殊情况：如果标题明确提到模型名称作为主语，则保留
-    model_names = ["gpt", "claude", "gemini", "qwen", "deepseek", "llama", "mistral", "kimi", "mimo"]
-    has_model_subject = any(
-        title_lower.startswith(name) or 
-        title_lower.startswith(f"{name}-") or
-        title_lower.startswith(f"{name} ")
-        for name in model_names
-    )
-    
-    if has_model_subject:
+    if has_model_name and any(kw in text for kw in ["发布", "上线", "开源", "v4", "v3", "5.5", "新版本"]):
         return True
     
-    # 默认：有模型主题且不是明显的应用场景
-    return True
+    # 2. 模型评测/对比（必须有"模型"+评测词）
+    if "模型" in text and any(kw in text for kw in ["评测", "benchmark", "对比", "实测", "性能"]):
+        return True
+    
+    # 3. 模型架构/技术论文（必须有技术术语）
+    if any(kw in text for kw in ["llm dna", "注意力机制", "mla", "muon优化器", "残差连接", "蒸馏", "微调", "系统发育树"]):
+        return True
+    
+    # 4. 标题明确以模型名称开头
+    if any(title_lower.startswith(name) for name in model_names):
+        return True
+    
+    # 默认：不是大模型相关内容
+    return False
 
 
 def normalize_for_match(text):
@@ -370,6 +377,12 @@ def build_articles_json(classification, date_str):
             digest = item.get("digest", "")
             aid = item.get("aid", "")
             publish_time = time_map.get(aid)  # 获取发布时间戳
+            
+            # 如果 time_map 中没有，尝试从 classification.json 的 source_file 中提取时间
+            # fallback: 如果没有时间，设置为 0（排序时会排在最后）
+            if publish_time is None:
+                print_progress(f"警告: 文章 '{title[:30]}...' 缺少 publish_time，使用默认值 0")
+                publish_time = 0
 
             # 如果没有 digest，使用 title 兜底
             if not digest:
@@ -741,13 +754,12 @@ def main():
         sys.exit(1)
 
     try:
-        # 预处理：替换中文引号为英文引号（防止手写JSON时误用）
-        cleaned = classification_content
-        for cn_q, en_q in [('\u201c', '"'), ('\u201d', '"'), ('\u2018', "'"), ('\u2019', "'")]:
-            cleaned = cleaned.replace(cn_q, en_q)
+        # 预处理：标准化中文引号为方括号（避免破坏 JSON 结构）
+        cleaned = normalize_chinese_quotes(classification_content)
         data = json.loads(cleaned)
     except json.JSONDecodeError as e:
         print_progress(f"错误: classification.json 解析失败 - {e}")
+        print_progress("提示: 请检查 JSON 格式，确保所有中文引号已替换为方括号")
         sys.exit(1)
 
     classification = data.get("classification", {})
