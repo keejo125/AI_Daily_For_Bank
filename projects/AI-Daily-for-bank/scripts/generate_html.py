@@ -117,10 +117,12 @@ def detect_model_related(title, digest):
     - 模型架构：技术论文、架构创新、底层技术研究
     
     不添加标签的内容：
-    - AI应用功能（如Chronicle屏幕记忆）
+    - AI应用功能（如Claude图表功能、Gemini CLI）
     - 行业资讯（如量化公司创始人背景）
     - 基础设施讨论（如Token工厂概念）
     - 公司动态（如OpenAI裁员、投资并购）
+    - 工具/产品集成（如OpenClaw接入DeepSeek）
+    - 商业促销（如Qoder半价）
     """
     text = f"{title} {digest}".lower()
     title_lower = title.lower()
@@ -128,50 +130,54 @@ def detect_model_related(title, digest):
     # === 明确排除的内容（即使包含模型关键词）===
     
     # 1. 排除产品功能发布（非模型本身）
-    if any(kw in text for kw in ["chronicle", "屏幕记忆", "功能", "订阅"]):
-        # Chronicle是OpenAI的功能，不是模型
-        if "chronicle" in text or ("屏幕记忆" in text and "模型" not in text):
+    if any(kw in text for kw in ["cli", "命令行", "子代理", "图表功能", "可视化", "动态图表"]):
+        # Gemini CLI、Claude图表功能等都是产品功能，不是模型
+        return False
+    
+    # 2. 排除工具/平台集成
+    if any(kw in text for kw in ["openclaw", "接入", "集成", "调用", "api"]):
+        # OpenClaw接入DeepSeek是工具集成，不是模型发布
+        if "openclaw" in text:
             return False
     
-    # 2. 排除基础设施/算力讨论
+    # 3. 排除基础设施/算力讨论
     if any(kw in text for kw in ["token工厂", "数据中心", "算力", "芯片", "tpu", "gpu"]):
-        # 黄仁勋访谈讲Token工厂，不是模型
-        if "token工厂" in text or "黄仁勋" in text:
-            return False
+        return False
     
-    # 3. 排除行业人物/公司动态
-    if any(kw in text for kw in ["创始人", "实习生", "量化", "融资", "投资", "收购", "裁员", "离职"]):
-        # 量化公司培养创始人，不是模型
-        if "量化" in text and "模型" not in text:
-            return False
+    # 4. 排除行业人物/公司动态
+    if any(kw in text for kw in ["创始人", "实习生", "量化", "融资", "投资", "收购", "裁员", "离职", "退休"]):
+        return False
     
-    # 4. 排除企业战略/市场竞争
-    if any(kw in text for kw in ["年化收入", "烧钱率", "估值", "市场份额", "反超"]):
-        # OpenAI危机四伏讲的是商业竞争，不是模型技术
-        if ("openai" in text or "anthropic" in text) and "模型" not in title_lower:
-            # 如果标题没有明确提到模型，且内容是商业新闻，排除
-            if any(kw in text for kw in ["收入", "估值", "融资", "裁员", "转型"]):
-                return False
+    # 5. 排除企业战略/市场竞争/商业促销
+    if any(kw in text for kw in ["年化收入", "烧钱率", "估值", "市场份额", "反超", "半价", "优惠", "促销"]):
+        return False
+    
+    # 6. 排除纯资讯类（没有具体模型技术内容）
+    if any(kw in text for kw in ["马斯克", "奥特曼", "起诉", "索赔", "罚款", "调研", "共识", "峰会"]):
+        return False
     
     # === 确认是大模型相关的内容 ===
     
-    # 1. 模型发布/更新（必须包含具体模型名称或"模型"字样）
-    model_names = ["gpt", "claude", "gemini", "qwen", "deepseek", "llama", "kimi", "mimo", "mistral"]
+    # 1. 模型发布/更新（必须包含具体模型名称+发布相关词）
+    model_names = ["gpt-", "claude", "gemini", "qwen", "deepseek", "llama", "kimi", "mimo", "mistral"]
     has_model_name = any(name in text for name in model_names)
     
-    if has_model_name and any(kw in text for kw in ["发布", "上线", "开源", "v4", "v3", "5.5", "新版本"]):
-        return True
+    # 模型发布：有模型名 + 发布/上线/开源等词
+    if has_model_name and any(kw in text for kw in ["发布", "上线", "开源", "v4", "v3", "5.5", "新版本", "pro"]):
+        # 但要排除产品功能类的
+        if not any(kw in text for kw in ["cli", "接入", "集成", "功能"]):
+            return True
     
-    # 2. 模型评测/对比（必须有"模型"+评测词）
-    if "模型" in text and any(kw in text for kw in ["评测", "benchmark", "对比", "实测", "性能"]):
+    # 2. 模型评测/对比（必须有"模型"+评测词，或IQ/智商等）
+    if ("模型" in text or has_model_name) and any(kw in text for kw in ["评测", "benchmark", "对比", "实测", "性能", "iq", "智商", "跑分"]):
         return True
     
     # 3. 模型架构/技术论文（必须有技术术语）
-    if any(kw in text for kw in ["llm dna", "注意力机制", "mla", "muon优化器", "残差连接", "蒸馏", "微调", "系统发育树"]):
+    if any(kw in text for kw in ["iclr", "llm dna", "注意力机制", "mla", "muon优化器", "残差连接", "蒸馏", "微调", "系统发育树", "推理", "训练", "强化学习"]):
         return True
     
-    # 4. 标题明确以模型名称开头
-    if any(title_lower.startswith(name) for name in model_names):
+    # 4. 标题明确以模型名称开头且包含版本号
+    if any(title_lower.startswith(name) for name in model_names) and any(c.isdigit() for c in title):
         return True
     
     # 默认：不是大模型相关内容

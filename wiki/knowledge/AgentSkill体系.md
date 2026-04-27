@@ -374,8 +374,52 @@ Skill需要做什么？
 | [4] | 达尔文.skill正式发布 | 自进化机制、棘轮、五原则、8维度评分 |
 | [5] | Agent Skills 终于有 UI 了（Qoder官方） | Skill双形态、动态生成+预定义模板、安全架构、/create-skill-ui |
 | [7] | Skill设计模式深度解析 | 5种核心模式、3层架构、模式选择决策树、防偷懒武器 |
+| [8] | 谷歌官方 Agent Skills 仓库发布（InfoQ） | MCP上下文膨胀、Google官方仓库+Osmani开源库双轨、Skill技术定位 |
+
+## 谷歌官方 Agent Skills 仓库发布
+
+> 来源：InfoQ | [8]
+> 链接：https://mp.weixin.qq.com/s/FUh3VjFdfvUY-Ypgke11rg
+
+### 背景：MCP 的上下文膨胀问题
+
+MCP 服务器为模型提供实时信息，但大规模使用时不加区分地加载上下文，导致推理质量下降 + Token 成本飙升。有团队发现智能体每次调用加载 1.5 万 tokens 指令，几乎不给实际内容留空间。
+
+### Google 官方 Skill 仓库
+
+- **地址**：github.com/google/skills
+- **规模**：13 项技能，覆盖 GCP 核心服务（BigQuery、Cloud Run、GKE、Firebase、Gemini API 等）
+- **3 大架构支柱**：安全性 / 可靠性 / 成本优化
+- **3 项流程指南**：GCP 入门 / 身份验证 / 网络可观测性
+- **特点**：经 Gemini 实测验证、兼容 MCP 标准、Google 负责维护更新、直接用 GCP 凭证
+
+### Addy Osmani 开源 Agent Skills
+
+- **作者**：Addy Osmani（Google Cloud AI 总监，Gemini 工程负责人）
+- **规模**：2.4 万⭐，19 项工程技能 + 7 条命令
+- **完整生命周期**：Define → Plan → Build → Verify → Review → Ship
+- **本质**：通用工程纪律框架——约束 AI 按规范干活
+
+### 两库对比
+
+| 维度 | Osmani 开源库 | Google 官方库 |
+|------|-------------|-------------|
+| 解决问题 | 如何正确地构建 | 构建什么 + 如何操作 |
+| 本质 | 通用工程纪律框架 | 特定技术栈操作知识 |
+| 适用 | 所有开发场景 | GCP 云服务场景 |
+| 共存 | ✅ 同一智能体环境可同时使用 | |
+
+### Skill 的技术定位
+
+> 比 Prompt 更持久 → 比 Fine-tuning 更轻 → 比 RAG 更主动 → 比 Tools 更丰富
+
+这与本体系中「Skill vs Prompt 的本质区别」和「Skill构建三层体系」的观点一致——Skill 的核心价值是**可持久、可进化、可组合**。
+
+### 对我们 Skill 体系的启示
+
+Google 官方入场验证了 Skill 路线的正确性。Osmani 的工程纪律框架（Define→Ship）与我们「达尔文.skill」的自进化思路互补：
+- **Osmani**：构建阶段的规范约束（如何正确地写 Skill）
+- **达尔文**：运行阶段的自动优化（如何让 Skill 越用越好）
+- **我们的实践**：先用心法建初版（训练心法），再用达尔文自动优化
 
 ---
-
-_最后更新：2026-04-18_
-_整合版本：v1.3_
