@@ -140,6 +140,11 @@ def detect_model_related(title, digest):
         if "openclaw" in text:
             return False
     
+    # 2.5 排除 Agent 框架/工具（即使包含“蒸馏”等词）
+    if "agent" in text and any(kw in text for kw in ["框架", "群体", "技能", "画像", "复用"]):
+        # Agent群体智能框架、Agent技能等是上层应用框架，不是大模型本身
+        return False
+    
     # 3. 排除基础设施/算力讨论
     if any(kw in text for kw in ["token工厂", "数据中心", "算力", "芯片", "tpu", "gpu"]):
         return False
@@ -153,14 +158,21 @@ def detect_model_related(title, digest):
         return False
     
     # 6. 排除纯资讯类（没有具体模型技术内容）
-    if any(kw in text for kw in ["马斯克", "奥特曼", "起诉", "索赔", "罚款", "调研", "共识", "峰会"]):
-        return False
+    # 注意：如果包含具体模型名称和版本，即使是人物新闻也应该保留
+    if any(kw in text for kw in ["马斯克", "起诉", "索赔", "罚款", "调研", "共识", "峰会"]):
+        # 但要允许包含模型名称的文章（如“奥特曼发布GPT-5”）
+        if not has_model_name:
+            return False
     
     # === 确认是大模型相关的内容 ===
     
     # 1. 模型发布/更新（必须包含具体模型名称+发布相关词）
-    model_names = ["gpt-", "claude", "gemini", "qwen", "deepseek", "llama", "kimi", "mimo", "mistral"]
+    model_names = ["gpt-", "claude", "gemini", "qwen", "deepseek", "llama", "kimi", "mimo", "mistral", "mythos"]
     has_model_name = any(name in text for name in model_names)
+    
+    # 特殊处理：如果标题明确包含“大模型”三个字，也视为有模型名称
+    if "大模型" in title or "llm" in text or "language model" in text:
+        has_model_name = True
     
     # 模型发布：有模型名 + 发布/上线/开源等词
     if has_model_name and any(kw in text for kw in ["发布", "上线", "开源", "v4", "v3", "5.5", "新版本", "pro"]):
@@ -168,12 +180,18 @@ def detect_model_related(title, digest):
         if not any(kw in text for kw in ["cli", "接入", "集成", "功能"]):
             return True
     
+    # 特殊规则：标题明确提到“大模型”+具体模型名称，即使是介绍性文章也打标
+    if "大模型" in title and (has_model_name or any(name in title.lower() for name in model_names)):
+        # 但要排除应用类（如“大模型上车”、“大模型走进医疗”）
+        if not any(kw in text for kw in ["上车", "医疗", "诊室", "医生", "金融", "银行", "教育", "法律", "客服", "办公", "杀入", "走进", "进入", "赋能"]):
+            return True
+    
     # 2. 模型评测/对比（必须有"模型"+评测词，或IQ/智商等）
     if ("模型" in text or has_model_name) and any(kw in text for kw in ["评测", "benchmark", "对比", "实测", "性能", "iq", "智商", "跑分"]):
         return True
     
     # 3. 模型架构/技术论文（必须有技术术语）
-    if any(kw in text for kw in ["iclr", "llm dna", "注意力机制", "mla", "muon优化器", "残差连接", "蒸馏", "微调", "系统发育树", "推理", "训练", "强化学习"]):
+    if any(kw in text for kw in ["iclr", "acl", "neurips", "cvpr", "llm dna", "注意力机制", "mla", "muon优化器", "残差连接", "蒸馏", "微调", "系统发育树", "推理", "训练", "强化学习", "漏洞", "安全", "对齐"]):
         return True
     
     # 4. 标题明确以模型名称开头且包含版本号
@@ -396,31 +414,58 @@ def build_articles_json(classification, date_str):
 
             # 拆分多来源，逐个匹配 source 文件
             sources_dir = os.path.join(base_dir, 'sources')
-            source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
+            
+            # 优先使用 classification.json 中的 source_items（合并后的文章）
+            if item.get('source_items'):
+                source_items = []
+                all_content_parts = []
+                for si in item['source_items']:
+                    matched = find_markdown_file(sources_dir, title, si['name'])
+                    if matched:
+                        relative_path = os.path.relpath(matched, base_dir).replace('\\', '/')
+                        file_content = read_file(matched)
+                        original_url = extract_original_url(file_content) if file_content else ''
+                        source_items.append({
+                            "name": si['name'],
+                            "source_file": relative_path,
+                            "link": original_url
+                        })
+                        if file_content:
+                            all_content_parts.append(file_content)
+                    else:
+                        # 未找到文件，仍保留来源标签（不可点击）
+                        source_items.append({
+                            "name": si['name'],
+                            "source_file": "",
+                            "link": ""
+                        })
+            else:
+                # 旧逻辑：从 source 字段拆分
+                source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
 
-            source_items = []
-            all_content_parts = []
+                source_items = []
+                all_content_parts = []
 
-            for single_source in source_list:
-                matched = find_markdown_file(sources_dir, title, single_source)
-                if matched:
-                    relative_path = os.path.relpath(matched, base_dir).replace('\\', '/')
-                    file_content = read_file(matched)
-                    original_url = extract_original_url(file_content) if file_content else ''
-                    source_items.append({
-                        "name": single_source,
-                        "source_file": relative_path,
-                        "link": original_url
-                    })
-                    if file_content:
-                        all_content_parts.append(file_content)
-                else:
-                    # 未找到文件，仍保留来源标签（不可点击）
-                    source_items.append({
-                        "name": single_source,
-                        "source_file": "",
-                        "link": ""
-                    })
+                for single_source in source_list:
+                    matched = find_markdown_file(sources_dir, title, single_source)
+                    if matched:
+                        relative_path = os.path.relpath(matched, base_dir).replace('\\', '/')
+                        file_content = read_file(matched)
+                        original_url = extract_original_url(file_content) if file_content else ''
+                        source_items.append({
+                            "name": single_source,
+                            "source_file": relative_path,
+                            "link": original_url
+                        })
+                        if file_content:
+                            all_content_parts.append(file_content)
+                    else:
+                        # 未找到文件，仍保留来源标签（不可点击）
+                        source_items.append({
+                            "name": single_source,
+                            "source_file": "",
+                            "link": ""
+                        })
 
             # 合并所有来源的原文内容
             content = '\n\n---\n\n'.join(all_content_parts) if all_content_parts else ''
@@ -536,8 +581,15 @@ def build_section_html(category, articles, date_str, classification_data=None):
 
         card_html = (
             f'<div class="card">'
-            f'<div class="card-title">{escape_html(title)}</div>'
+            f'<div class="card-title">{escape_html(title)}'
         )
+        
+        # 添加大模型标签
+        is_model = article.get("is_model_related", False)
+        if is_model:
+            card_html += '<span class="model-tag">🤖 大模型</span>'
+        
+        card_html += '</div>'
         
         # 早报页面：只显示时间 hh:mm
         if publish_time_str:

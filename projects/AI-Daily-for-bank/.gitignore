@@ -13,4 +13,21 @@ Thumbs.db
 *.swp
 *.swo
 
+# History
 .history
+
+# AI 工具配置目录（不应提交到仓库）
+.agents/
+.codebuddy/
+.lingma/
+.qoder/
+.qwen/
+
+# 非早报相关的项目目录
+projects/
+skills/
+skills-lock.json
+wiki/
+
+# 临时文件
+test_viewer_fetch.html

@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-04-27T13:37:25.736241",
-  "total": 137,
+  "updated_at": "2026-04-28T23:47:25.437769",
+  "total": 168,
   "articles": [
+    {
+      "date": "2026-04-27",
+      "title": "GPT-5.5好到不敢睡觉，奥特曼连夜写下五大宣言！",
+      "source": "新智元",
+      "digest": "OpenAI发布GPT-5.5旗舰模型，性能大幅提升，奥特曼亲笔撰写AI五大原则，强调AI必须属于每个人。该模型在编码、推理、智能体测试中全面领先，ARC-AGI-3基准测试有望被破解。",
+      "link": "https://mp.weixin.qq.com/s/fmhDC_umyFjsCneH0uwL8w",
+      "source_file": "sources/2026-04-27_GPT-5.5好到不敢睡觉，奥特曼连夜写下五大宣言！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Anthropic最强网络攻防大模型Mythos，美国国安局早就一直在用了",
+      "source": "新智元",
+      "digest": "Anthropic推出最强网络攻防大模型Mythos，美国国家安全局已在使用。尽管美国国防部禁用Anthropic，但国安局仍继续使用其模型进行网络安全工作。",
+      "link": "https://mp.weixin.qq.com/s/QXlMVZuBAm5416EfpKWZFg",
+      "source_file": "sources/2026-04-27_Anthropic最强网络攻防大模型Mythos，美国国安局早就一直在用了_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "奇点临近！全球AI终局战，只剩OpenAI和Anthropic的双人舞",
+      "source": "新智元",
+      "digest": "全球AI竞争进入终局阶段，OpenAI和Anthropic成为两大主导力量。英伟达等基础设施提供商在背后支持，形成双寡头竞争格局。",
+      "link": "https://mp.weixin.qq.com/s/VZ0mRZrrhXMtIEcDw3_KDA",
+      "source_file": "sources/2026-04-27_奇点临近！全球AI终局战，只剩OpenAI和Anthropic的双人舞_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "OpenAI自研手机来了！",
+      "source": "财联社AI daily",
+      "digest": "OpenAI计划推出自研智能手机，预计2年内问世。中国立讯精密将独家负责该手机的系统协同设计与制造，标志着AI巨头正式进军硬件领域。该项目也被称为\"豆包手机\"，是OpenAI向硬件延伸的重要一步。",
+      "link": "https://mp.weixin.qq.com/s/mVnXu9J_SiVCj6KfI6TzYw",
+      "source_file": "sources/2026-04-27_OpenAI自研手机来了！_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Claude第一款AI桌宠硬件，深圳制造",
+      "source": "量子位",
+      "digest": "Anthropic推出首款基于Claude的AI桌面宠物硬件产品，由深圳供应链制造。这标志着AI巨头开始探索硬件形态，深圳制造再次展现强大供应链能力。",
+      "link": "https://mp.weixin.qq.com/s/XFXn97IjObeorb272yORiQ",
+      "source_file": "sources/2026-04-27_Claude第一款AI桌宠硬件，深圳制造_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "为 AI 智能体设计记忆机制：揭秘 LinkedIn 的认知记忆智能体",
+      "source": "InfoQ",
+      "digest": "LinkedIn推出认知记忆智能体，作为其生成式AI技术栈组成部分，旨在构建具备状态感知与上下文理解能力的AI系统，为智能体设计记忆机制提供实践案例。",
+      "link": "https://mp.weixin.qq.com/s/sANF7aeLPryIj0RqRzhFuQ",
+      "source_file": "sources/2026-04-27_为 AI 智能体设计记忆机制：揭秘 LinkedIn 的认知记忆智能体_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "ACL 2026 | 别轻易给AI发「～」，它可能会删掉你的整个主目录",
+      "source": "机器之心",
+      "digest": "ACL 2026研究揭示大语言模型的\"表情符号语义混淆\"漏洞，某些特殊符号如波浪号可能导致模型产生意外行为，甚至执行危险操作如删除主目录，需引起安全重视。",
+      "link": "https://mp.weixin.qq.com/s/q85FyJDJ7USnI0NFrH7eOQ",
+      "source_file": "sources/2026-04-27_ACL 2026 _ 别轻易给AI发「～」，它可能会删掉你的整个主目录_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "搜对≠答对：EAPO用\"证据奖励\"让大模型不再靠猜",
+      "source": "通义实验室",
+      "digest": "通义实验室提出EAPO方法，通过\"证据奖励\"机制让大模型回答更有依据，避免凭空猜测。该方法确保每次回答都有理有据，提升模型的可信度和准确性。",
+      "link": "https://mp.weixin.qq.com/s/FDCrB0D3B9BTDBC8TmX9CQ",
+      "source_file": "sources/2026-04-27_搜对≠答对：EAPO用“证据奖励”让大模型不再靠猜_通义实验室.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "首个时空时序推理框架：让大模型真正读懂时空数据 | ACL'26",
+      "source": "新智元",
+      "digest": "ACL 2026发表论文提出首个时空时序推理框架，让大模型能够真正理解和处理时空数据，为大模型在多模态时序数据处理方面开辟新方向。",
+      "link": "https://mp.weixin.qq.com/s/cV7WYw1yVvAtIRJin31wfw",
+      "source_file": "sources/2026-04-27_首个时空时序推理框架：让大模型真正读懂时空数据 _ ACL'26_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "ACL 2026 | 中科大&上海AILab揭示强化学习后训练的Scaling Law",
+      "source": "机器之心",
+      "digest": "中科大和上海人工智能实验室研究团队在Qwen2.5全系列模型上开展大规模RL训练实证研究，首次全面刻画大模型强化学习后训练在数学推理任务上的Scaling行为，提出预测模型学习效率与训练轨迹的幂律公式，已被ACL 2026接收。",
+      "link": "https://mp.weixin.qq.com/s/acxqcBJGn6Ut8Kq97W0fIA",
+      "source_file": "sources/2026-04-27_ACL 2026 _ 中科大&上海AILab揭示强化学习后训练的Scaling Law_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "刚刚，阿里「欢乐马」正式上线，抢先实测这匹「黑马」",
+      "source": "机器之心",
+      "digest": "阿里ATH团队正式发布视频生成模型HappyHorse 1.0，采用原生多模态架构，实现音视频同步生成和编辑。在Artificial Analysis评测平台屠榜，文生视频和图生视频均排名第一，价格极具竞争力。",
+      "link": "https://mp.weixin.qq.com/s/rvs2rfQTgldbhH7AZHAC1A",
+      "source_file": "sources/2026-04-27_刚刚，阿里「欢乐马」正式上线，抢先实测这匹「黑马」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-27",
+      "title": "从99行代码复刻冰雪奇缘，到引领3D AI，胡渊鸣的公司凭什么「爆火欧美」？",
+      "source": "机器之心",
+      "digest": "胡渊鸣创立的3D AI公司在欧美市场爆火，成为全球市占率第一的AI 3D工具。从最初99行代码复刻冰雪奇缘特效起步，现已发展为领先的3D AI平台。",
+      "link": "https://mp.weixin.qq.com/s/h8IiyTwIBMuTNBesgVw85g",
+      "source_file": "sources/2026-04-27_从99行代码复刻冰雪奇缘，到引领3D AI，胡渊鸣的公司凭什么「爆火欧美」？_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "工作流的 Skill 怎么写？从 7 个顶级 Skill 中提炼的模式与最佳实践",
+      "source": "阿里云开发者",
+      "digest": "阿里云开发者团队从7个顶级Skill中提炼出工作流编写模式与最佳实践，为开发者提供Skill开发的标准化指导，帮助构建高效的AI工作流。",
+      "link": "https://mp.weixin.qq.com/s/aoNwyY5ZkCRMkZirn1rElQ",
+      "source_file": "sources/2026-04-27_工作流的 Skill 怎么写？从 7 个顶级 Skill 中提炼的模式与最佳实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "量子位专访楼天城：AI是匹脱缰野马，Harness是这个时代最关键的能力",
+      "source": "量子位",
+      "digest": "量子位专访AI创业者楼天城，探讨AI发展趋势。楼天城认为AI如同脱缰野马，Harness能力成为这个时代最关键的技能，是时候向AI交出领导权了。",
+      "link": "https://mp.weixin.qq.com/s/DOqsRBWk0Yr-gcTdTmqqzQ",
+      "source_file": "sources/2026-04-27_量子位专访楼天城：AI是匹脱缰野马，Harness是这个时代最关键的能力_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Meshy用户破千万后杀向新战场：ARR年翻14倍，头部厂商集体买单",
+      "source": "量子位",
+      "digest": "3D AI公司Meshy用户突破千万，年度经常性收入增长14倍，最新上线创意工坊功能，打通从AI创意到实体交付的完整链路，获得头部厂商认可。",
+      "link": "https://mp.weixin.qq.com/s/KuiQzjyFZB3k5Qfv8TtUpQ",
+      "source_file": "sources/2026-04-27_Meshy用户破千万后杀向新战场：ARR年翻14倍，头部厂商集体买单_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "当剪辑工具开始「听懂人话」：剪映做了视频创作的 Skill 化 Agent",
+      "source": "极客公园",
+      "digest": "字节跳动的剪映推出视频创作的Skill化Agent功能，让剪辑工具能够理解自然语言指令，告别时间线上的繁琐操作。技术足够先进时应该变得透明，让用户专注于创意本身。",
+      "link": "https://mp.weixin.qq.com/s/ED6oH5tjBReZ8340lmDDMg",
+      "source_file": "sources/2026-04-27_当剪辑工具开始「听懂人话」：剪映做了视频创作的 Skill 化 Agent_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "数据分析师如何快速建立在 AI 时代最值钱的能力：一份可落地的行动路线图",
+      "source": "InfoQ",
+      "digest": "InfoQ发布数据分析师在AI时代的能力建设路线图，强调每一位卓越的AI专家骨子里都是一流的数据分析师，提供可落地的能力提升方案。",
+      "link": "https://mp.weixin.qq.com/s/4iiOwMDh9YvN9NM3tJ6hsQ",
+      "source_file": "sources/2026-04-27_数据分析师如何快速建立在 AI 时代最值钱的能力：一份可落地的行动路线图_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "成立半年连续获数千万融资，智子芯元凭什么卡位国产算力生态？｜甲子光年",
+      "source": "甲子光年",
+      "digest": "智子芯元成立半年连续获得数千万融资，在国产算力生态中占据重要位置。生产力级AI智能体的能力不仅被基础模型和Harness提升，也正在被运筹优化范式拓展。",
+      "link": "https://mp.weixin.qq.com/s/HRxPqDBt0dtduxCrpem1SA",
+      "source_file": "sources/2026-04-27_成立半年连续获数千万融资，智子芯元凭什么卡位国产算力生态？｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队分享AI工程交付中的知识沉淀实践经验，探讨如何设计知识分层架构，强调知识积累比Harness工具本身更重要，是AI时代的核心竞争力。",
+      "link": "https://mp.weixin.qq.com/s/Xy8NwrHZRWv301eTZz4Dpw",
+      "source_file": "sources/2026-04-27_Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "当AI进家，移远通信用软硬一体组合拳打通智能家居任督二脉",
+      "source": "智东西",
+      "digest": "移远通信通过软硬一体解决方案打通智能家居最后一公里，帮助智能家居行业接住时代红利，推动AI技术在家庭场景的落地应用。",
+      "link": "https://mp.weixin.qq.com/s/EWh0C399cgSMG36JAP4wgw",
+      "source_file": "sources/2026-04-27_当AI进家，移远通信用软硬一体组合拳打通智能家居任督二脉_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "灵码智能体：不只是写代码，而是帮你做项目",
+      "source": "灵码Lingma",
+      "digest": "阿里云灵码推出智能体模式（Agent Mode），不再是等待指令的代码生成器，而是能自主规划、自主执行、自主纠错的AI编程搭档，帮助开发者完成完整项目开发任务。",
+      "link": "https://mp.weixin.qq.com/s/6NQrqpfGONV5qVTogKvHKw",
+      "source_file": "sources/2026-04-27_灵码智能体：不只是写代码，而是帮你做项目_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "打工人五一自救指南：把活全甩给AI，准备免打扰出门",
+      "source": "量子位",
+      "digest": "五一假期来临，量子位分享如何利用AI工具自动化处理工作任务，让打工人能够安心休假不被打扰，展现AI在日常工作中的应用价值。",
+      "link": "https://mp.weixin.qq.com/s/fqouW4VWC0fhQzuqBYOYOQ",
+      "source_file": "sources/2026-04-27_打工人五一自救指南：把活全甩给AI，准备免打扰出门_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Agent群体智能来了！魔搭开源Agent自进化群体智能框架：群体记忆自动蒸馏与进化，8万+群体技能即取即用，智能体画像一键复用",
+      "source": "量子位",
+      "digest": "阿里魔搭开源Agent自进化群体智能框架，实现群体记忆自动蒸馏与进化，提供8万+群体技能即取即用，支持智能体画像一键复用，让Agent从单点能力走向组织能力。",
+      "link": "https://mp.weixin.qq.com/s/cCzTNq0LpWgv-fM_EKFMQQ",
+      "source_file": "sources/2026-04-27_Agent群体智能来了！魔搭开源Agent自进化群体智能框架：群体记忆自动蒸馏与进化，8万+群体技能_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "HappyHorse 1.0 在千问首发开启灰测免费体验，重构 AI 视频赛道",
+      "source": "极客公园",
+      "digest": "阿里HappyHorse 1.0模型与千问APP深度融合，打通从自然语言创意到成片输出的完整创作链路。目前在千问创作网页端和APP中可免费体验，解决普通人提示词写作门槛和专业需求效果还原难题。",
+      "link": "https://mp.weixin.qq.com/s/akWpQ_GsBSxmRtexb6bLgg",
+      "source_file": "sources/2026-04-27_HappyHorse 1.0 在千问首发开启灰测免费体验，重构 AI 视频赛道_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "AI「看不懂」、「做不好」视频的问题，混元用「MTSS」解决了",
+      "source": "机器之心",
+      "digest": "腾讯混元团队提出Multi-Stream Scene Script（MTSS）结构化视频描述范式，通过Stream Factorization和Relational Grounding两大原则，解决传统流水账式描述的语义冗余、可扩展性差等问题，在视频理解和生成任务中显著提升效果。",
+      "link": "https://mp.weixin.qq.com/s/A6N2-cAo-ddCAGNKo7L7OA",
+      "source_file": "sources/2026-04-27_AI「看不懂」、「做不好」视频的问题，混元用「MTSS」解决了_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "3月银行AI项目动态：AI服务器成银行采购核心，联想拿下近千万算力大单",
+      "source": "银行科技研究社",
+      "digest": "3月份银行业AI项目建设动态显示，AI服务器成为银行采购的核心设备，联想成功拿下近千万级别的算力大单，反映银行业对AI基础设施建设的重视和投入力度加大。",
+      "link": "https://mp.weixin.qq.com/s/i8eg6k7MXmxc4NVe3CyckA",
+      "source_file": "sources/2026-04-27_3月银行AI项目动态：AI服务器成银行采购核心，联想拿下近千万算力大单_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "恒丰银行启动AI元年建设、\"全数通\"数据治理工程",
+      "source": "银行科技研究社",
+      "digest": "恒丰银行正式启动AI元年建设计划，同时推进\"全数通\"数据治理工程，标志着该银行在数字化转型和智能化升级方面迈出重要一步，加强数据治理能力支撑AI应用。",
+      "link": "https://mp.weixin.qq.com/s/tzlhPBWsN44MiiU2k6JpyQ",
+      "source_file": "sources/2026-04-27_恒丰银行启动AI元年建设、“全数通”数据治理工程_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "彻底失控！AI恐惧演变物理暗杀：老黄随身带5个保镖，奥特曼们沦为靶子",
+      "source": "新智元",
+      "digest": "AI快速发展引发社会担忧，科技领袖面临安全威胁。英伟达CEO黄仁勋随身携带5名保镖，OpenAI创始人奥特曼等AI领袖也成为潜在目标，反映AI发展带来的社会焦虑。",
+      "link": "https://mp.weixin.qq.com/s/TGzo26AwPXkNlmHBx8lM3A",
+      "source_file": "sources/2026-04-27_彻底失控！AI恐惧演变物理暗杀：老黄随身带5个保镖，奥特曼们沦为靶子_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Meta 收购 Manus 这事儿泡汤了",
+      "source": "InfoQ",
+      "digest": "中国外商投资安全审查工作机制办公室禁止Meta收购AI初创公司Manus，要求撤销交易。该收购原计划以超20亿美元完成，但因Manus背后是中国创始团队而被叫停。",
+      "link": "https://mp.weixin.qq.com/s/A44eVBrdEIW4e_X-HCziaQ",
+      "source_file": "sources/2026-04-27_Meta 收购 Manus 这事儿泡汤了_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "年轻人涌向AI基金",
+      "source": "财联社AI daily",
+      "digest": "随着AI热潮持续升温，越来越多年轻投资者扎堆布局AI产业链基金产品，显示出资本市场对AI赛道的强烈信心和投资热情。",
+      "link": "https://mp.weixin.qq.com/s/D7rqF1S_c8sQqcd8ceaaug",
+      "source_file": "sources/2026-04-27_年轻人涌向AI基金_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-27",
+      "title": "普京：俄罗斯需要找到适合自己的AI监管模式",
+      "source": "财联社AI daily",
+      "digest": "俄罗斯总统普京表示，俄罗斯需要找到适合自己的人工智能监管最佳模式，同时考虑外国经验，反映出各国对AI监管的重视和差异化探索。",
+      "link": "https://mp.weixin.qq.com/s/_JKNV0IOxXjRAmCvacXmNw",
+      "source_file": "sources/2026-04-27_普京：俄罗斯需要找到适合自己的AI监管模式_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-04-26",
       "title": "AI智力天花板崩了!GPT-5.5 Pro视觉智商145,撞倒门萨俱乐部门槛",
