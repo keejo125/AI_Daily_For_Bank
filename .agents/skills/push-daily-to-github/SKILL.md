@@ -15,15 +15,12 @@ metadata:
 
 ## 项目路径
 
-**AI日报项目根目录**：`/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/`
-
-**Git仓库根目录**：`/Users/zhengk/GitProjects/agent-docs/`
+**AI日报项目根目录（也是Git仓库根目录）**：`/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/`
 
 **重要说明**：
-- AI日报项目位于 `projects/AI-Daily-for-bank/` 子目录
-- 但 Git 仓库是整个 `agent-docs` 目录
-- 所有 git 命令必须在 `/Users/zhengk/GitProjects/agent-docs/` 执行
-- 文件路径需要包含完整相对路径，如 `projects/AI-Daily-for-bank/daily/YYYY-MM-DD/`
+- AI-Daily-for-bank 是一个**独立的 Git 项目**，有自己的 `.git` 目录
+- 所有 git 命令必须在此目录下执行
+- 不要在上层 agent-docs 目录执行 git 命令
 
 ---
 
@@ -32,7 +29,7 @@ metadata:
 ### Step 1: 检查Git状态
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
 git status
 ```
 
@@ -42,59 +39,53 @@ git status
 - 查看哪些文件需要添加
 
 **关键文件**：
-- `projects/AI-Daily-for-bank/daily/YYYY-MM-DD/` - 当日日报数据
-- `projects/AI-Daily-for-bank/daily-index.json` - 日报索引
-- `projects/AI-Daily-for-bank/search-index.json` - 搜索索引
-- `.agents/skills/ai-daily-report/SKILL.md` - 技能文档（如有更新）
-- `projects/AI-Daily-for-bank/scripts/generate_html.py` - 生成脚本（如有更新）
+- `daily/YYYY-MM-DD/` - 当日日报数据
+- `daily-index.json` - 日报索引
+- `search-index.json` - 搜索索引
+- `.agents/skills/ai-daily-report/SKILL.md` - 技能文档（如有更新，在上层项目）
+- `scripts/generate_html.py` - 生成脚本（如有更新）
 
 ---
 
 ### Step 2: 添加需要提交的文件
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
 
 # 添加当日日报数据
-git add projects/AI-Daily-for-bank/daily/YYYY-MM-DD/
+git add daily/YYYY-MM-DD/
 
 # 添加索引文件
-git add projects/AI-Daily-for-bank/daily-index.json
-git add projects/AI-Daily-for-bank/search-index.json
+git add daily-index.json
+git add search-index.json
 
 # 如果有其他更新（可选）
-git add .agents/skills/ai-daily-report/SKILL.md
-git add projects/AI-Daily-for-bank/scripts/generate_html.py
+git add scripts/generate_html.py
 ```
 
 **注意**：
 - 不要添加临时文件或调试脚本（如 `adjust_classification.py`, `merge_openai_phone.py`）
 - 不要添加旧的日报数据（已被删除的文件）
 - 只添加本次生成的新日报和相关更新
+- **技能文档在上层 agent-docs 项目，不在此项目中**
 
 ---
 
 ### Step 3: 提交更改
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs
-git commit -m "更新AI日报技能文档和YYYY-MM-DD早报
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+git commit -m "推送YYYY-MM-DD AI日报
 
 主要更新：
-1. SKILL.md增强（如有）：
-   - 新增文章合并功能说明
-   - 细化分类规则
-   - 补充自动检测机制
-
-2. generate_html.py优化（如有）：
-   - 修复多来源渲染逻辑
-   - 支持合并文章的多来源标签显示
-
-3. YYYY-MM-DD早报数据：
+1. YYYY-MM-DD早报数据：
    - 国际X篇、国内X篇、同业X篇、其他X篇，共X篇
    - 特色内容（如文章合并、特殊打标等）
 
-4. 索引文件更新：
+2. 脚本优化（如有）：
+   - generate_html.py修复多来源渲染逻辑
+
+3. 索引文件更新：
    - daily-index.json和search-index.json同步更新"
 ```
 
@@ -109,7 +100,7 @@ git commit -m "更新AI日报技能文档和YYYY-MM-DD早报
 ### Step 4: 推送到GitHub
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
 git push origin master
 ```
 
@@ -135,23 +126,26 @@ git push origin master
 
 ```bash
 # 查看当前配置
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
 git remote -v
 
 # 应该显示：
-# origin  git@github.com:zhengk/agent-docs.git (fetch)
-# origin  git@github.com:zhengk/agent-docs.git (push)
+# origin  git@github.com:keejo125/AI_Daily_For_Bank.git (fetch)
+# origin  git@github.com:keejo125/AI_Daily_For_Bank.git (push)
 ```
 
 ### 切换认证方式
 
 **从HTTPS切换到SSH**：
 ```bash
-git remote set-url origin git@github.com:zhengk/agent-docs.git
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+git remote set-url origin git@github.com:keejo125/AI_Daily_For_Bank.git
 ```
 
 **从SSH切换到HTTPS**：
 ```bash
-git remote set-url origin https://github.com/zhengk/agent-docs.git
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+git remote set-url origin https://github.com/keejo125/AI_Daily_For_Bank.git
 ```
 
 ### 用户信息
@@ -163,13 +157,13 @@ git config user.email   # 应显示：lingma@aliyun.com 或 keejo@qq.com
 
 ---
 
-## 验证推送
+### 验证推送
 
 推送完成后，验证以下内容：
 
 ### 1. 检查GitHub仓库
 
-访问：https://github.com/zhengk/agent-docs
+访问：https://github.com/keejo125/AI_Daily_For_Bank
 
 确认：
 - 最新commit已显示
@@ -178,7 +172,7 @@ git config user.email   # 应显示：lingma@aliyun.com 或 keejo@qq.com
 
 ### 2. 检查GitHub Pages
 
-访问：https://zhengk.github.io/agent-docs/projects/AI-Daily-for-bank/daily/YYYY-MM-DD/
+访问：https://keejo125.github.io/AI_Daily_For_Bank/daily/YYYY-MM-DD/
 
 确认：
 - 页面可以正常访问
@@ -189,8 +183,8 @@ git config user.email   # 应显示：lingma@aliyun.com 或 keejo@qq.com
 ### 3. 检查索引文件
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs
-cat projects/AI-Daily-for-bank/daily-index.json | grep YYYY-MM-DD
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+cat daily-index.json | grep YYYY-MM-DD
 ```
 
 确认新日期已添加到索引中。
@@ -206,7 +200,7 @@ cat projects/AI-Daily-for-bank/daily-index.json | grep YYYY-MM-DD
 set -e
 
 DATE=${1:-$(date -v-1d +%Y-%m-%d)}  # 默认昨天
-PROJECT_DIR="/Users/zhengk/GitProjects/agent-docs"
+PROJECT_DIR="/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank"
 
 cd $PROJECT_DIR
 
@@ -215,9 +209,9 @@ git status
 
 echo ""
 echo "📝 添加文件..."
-git add projects/AI-Daily-for-bank/daily/$DATE/
-git add projects/AI-Daily-for-bank/daily-index.json
-git add projects/AI-Daily-for-bank/search-index.json
+git add daily/$DATE/
+git add daily-index.json
+git add search-index.json
 
 echo ""
 echo "💾 提交更改..."
@@ -229,7 +223,7 @@ git push origin master
 
 echo ""
 echo "✅ 推送完成！"
-echo "📱 访问: https://zhengk.github.io/agent-docs/projects/AI-Daily-for-bank/daily/$DATE/"
+echo "📱 访问: https://keejo125.github.io/AI_Daily_For_Bank/daily/$DATE/"
 ```
 
 使用方法：

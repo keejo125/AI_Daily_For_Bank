@@ -67,18 +67,7 @@ python3 filter_articles.py YYYY-MM-DD
 读取 `daily/YYYY-MM-DD/filtered_articles.json`，对每篇文章执行以下操作：
 
 1. **读取原文**：根据 `source_file` 路径读取对应的 Markdown 文件，了解文章内容
-2. **识别重复主题并合并**：
-   - 如果发现多篇文章讲述同一事件/产品（如OpenAI手机的两篇报道），应合并为一篇
-   - 合并策略：保留第一篇作为主文章，将其他文章的信息整合到摘要中
-   - 在classification.json中添加 `source_items` 字段记录多来源信息：
-     ```json
-     "source_items": [
-       {"name": "公众号1", "source_file": "sources/xxx1.md", "link": "url1"},
-       {"name": "公众号2", "source_file": "sources/xxx2.md", "link": "url2"}
-     ]
-     ```
-   - HTML渲染时会自动显示多个来源标签
-3. **判断分类**：
+2. **判断分类**：
 
 | 分类           | 判断标准                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -94,14 +83,8 @@ python3 filter_articles.py YYYY-MM-DD
 - 应根据其主体归属分类（如 OpenClaw 是国际开源项目 → 国际；Gemini CLI 是 Google 产品 → 国际）
 - **不应放入"其他"类别**，除非是纯商业资讯或广告
 
-**商业/资讯类文章处理**：
-- 纯商业资讯（如Meta收购Manus、年轻人投资AI基金）→ 归入"其他"
-- 政策监管资讯（如普京谈AI监管）→ 归入"其他"
-- 社会现象报道（如AI恐惧导致暗杀）→ 归入"其他"
-- 活动广告/促销（如申报截止通知、Qoder优惠）→ **直接删除**，不纳入早报
-
-4. **生成摘要**：为每篇文章生成 100-200字的中文摘要；不要使用原始 `digest`
-5. **输出分类理由**：在完成分类后，向用户说明每篇文章的分类依据和打标理由
+3. **生成摘要**：为每篇文章生成 100-200字的中文摘要；不要使用原始 `digest`
+4. **输出分类理由**：在完成分类后，向用户说明每篇文章的分类依据和打标理由
 
 输出 `daily/YYYY-MM-DD/classification.json`：
 
@@ -117,13 +100,7 @@ python3 filter_articles.py YYYY-MM-DD
         "source": "公众号名称",
         "link": "微信原文链接",
         "digest": "摘要（智能体生成或原始digest）",
-        "source_file": "sources/xxx.md",
-        "is_model_related": false,
-        "model_tag_reason": "",
-        "source_items": [  // 可选，多来源时使用
-          {"name": "公众号1", "source_file": "sources/xxx1.md", "link": "url1"},
-          {"name": "公众号2", "source_file": "sources/xxx2.md", "link": "url2"}
-        ]
+        "source_file": "sources/xxx.md"
       }
     ],
     "国内": [...],
@@ -150,7 +127,6 @@ python3 generate_html.py YYYY-MM-DD
 - 读取 `sources/*.md` 获取文章原文（提取多来源信息和关键词匹配）
 - 基于 `template.html` 模板渲染响应式静态页面
 - **多来源标签**：合并后的文章显示多个公众号来源标签，每个标签可点击跳转到 `viewer.html` 查看对应原文
-- **大模型标签**：`generate_html.py` 内置 `detect_model_related()` 函数，会自动根据标题和摘要重新检测是否与大模型相关，并在HTML中显示🤖标签
 - **无"阅读原文"按钮**：已用多来源标签替代
 - 生成 `daily/YYYY-MM-DD/index.html`
 - 更新 `daily-index.json` 和 `search-index.json` 索引文件
@@ -225,7 +201,6 @@ python3 generate_html.py YYYY-MM-DD
 1. **模型发布**：新模型正式发布、版本更新（如 GPT-5.5 发布、DeepSeek V4 上线）
 2. **模型测评**：性能对比、实测报告、IQ/跑分测试（如 GPT-5.5 Pro 视觉智商145）
 3. **模型架构**：技术论文、架构创新、底层技术研究（如 ICLR 论文、Balanced Thinking、MathForge）
-4. **模型产品化应用**：大模型作为核心能力的产品发布（如 HappyHorse 1.0在千问首发）
 
 **不打标的内容**：
 - AI 应用功能（如 Claude 图表功能、剪映 AI 助手）
@@ -235,78 +210,8 @@ python3 generate_html.py YYYY-MM-DD
 - 工具/产品集成（如 OpenClaw 接入 DeepSeek、Gemini CLI）
 - 商业促销（如 Qoder 半价优惠）
 - 行业应用（如银行业数据分类分级大模型）
-- Agent框架/技能平台（如魔搭Agent群体智能框架，即使包含"蒸馏"等技术词）
 
 **核心原则**：需区分“大模型本身”与“大模型应用场景”，只有文章主要讲述大模型技术/发布/评测时才打标。
-
-### 自动检测机制
-
-`generate_html.py` 内置 `detect_model_related()` 函数，会在生成HTML时自动重新检测每篇文章是否与大模型相关：
-
-**确认规则**（满足任一即打标）：
-1. 标题明确包含具体模型名称 + 发布/评测/架构关键词（如 "GPT-5.5发布"、"Mythos模型介绍"）
-2. 标题包含"大模型"且非应用场景（排除"大模型上车"、"大模型走进医疗"等）
-3. 内容包含模型架构术语（ICLR、ACL、注意力机制、MLA、蒸馏、微调等）+ 技术描述
-4. 模型安全/漏洞研究（如 "ACL安全漏洞"、"主目录删除风险"）
-
-**排除规则**（满足任一即不打标）：
-1. 纯人物新闻（马斯克起诉、奥特曼被暗杀等），除非包含具体模型名称
-2. 商业资讯（收购、融资、基金投资等）
-3. Agent框架/技能平台（即使包含"蒸馏"、"进化"等技术词）
-4. 行业应用报道（AI进入医疗、金融、教育等领域）
-5. 产品功能更新（Claude图表、剪映AI助手等）
-
-**注意**：智能体在Step 3分类时可以手动设置 `is_model_related` 和 `model_tag_reason` 字段，但HTML生成时会被自动检测函数覆盖。如需强制保留手动打标，需要修改 `generate_html.py` 的逻辑。
-
----
-
-## 常见问题
-
-### Q1: 为什么HTML中的大模型标签和我在classification.json中设置的不一致？
-
-**A**: `generate_html.py` 会在生成HTML时调用 `detect_model_related()` 函数自动重新检测。如需保留手动打标，需要修改该函数的逻辑。
-
-### Q2: 如何合并重复主题的文章？
-
-**A**: 在Step 3分类时，如果发现多篇文章讲述同一事件（如OpenAI手机的两篇报道）：
-1. 保留第一篇作为主文章
-2. 将其他文章的摘要信息整合到主文章的digest中
-3. 在classification.json中添加 `source_items` 字段记录所有来源
-4. HTML会自动渲染多个来源标签
-
-示例：
-```json
-{
-  "title": "OpenAI自研手机来了！",
-  "source_items": [
-    {"name": "财联社AI daily", "source_file": "sources/xxx1.md", "link": "url1"},
-    {"name": "智东西", "source_file": "sources/xxx2.md", "link": "url2"}
-  ]
-}
-```
-
-### Q3: 哪些文章应该归入"其他"类别？
-
-**A**: 
-- ✅ 应归入"其他"：纯商业资讯、政策监管、社会现象报道
-- ❌ 不应归入"其他"：产品技术类文章（应根据主体归属国际/国内）
-- 🗑️ 应直接删除：活动广告、促销信息
-
-### Q4: 导出接口返回空数组怎么办？
-
-**A**: 这通常意味着服务器端微信登录态过期（约4天有效期）。需要：
-1. 检查服务器登录状态：`ssh root@115.29.206.55`
-2. 重新执行微信登录流程
-3. 或者使用降级方案直接查数据库（见下文）
-
-### Q5: 如何验证生成的HTML是否正确？
-
-**A**: 检查以下项目：
-1. `daily/YYYY-MM-DD/index.html` 存在且大小 > 0
-2. 打开HTML文件，确认四个分类板块都有内容
-3. 检查大模型标签🤖是否正确显示
-4. 检查多来源文章是否显示多个来源标签
-5. 统计数量是否与classification.json一致
 
 ---
 
