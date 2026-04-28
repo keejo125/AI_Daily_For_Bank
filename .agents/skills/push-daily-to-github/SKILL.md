@@ -15,9 +15,15 @@ metadata:
 
 ## 项目路径
 
-`/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/`
+**AI日报项目根目录**：`/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/`
 
-**注意**：虽然日报数据位于 `projects/AI-Daily-for-bank/` 子目录，但Git仓库的根目录是 `/Users/zhengk/GitProjects/agent-docs/`。
+**Git仓库根目录**：`/Users/zhengk/GitProjects/agent-docs/`
+
+**重要说明**：
+- AI日报项目位于 `projects/AI-Daily-for-bank/` 子目录
+- 但 Git 仓库是整个 `agent-docs` 目录
+- 所有 git 命令必须在 `/Users/zhengk/GitProjects/agent-docs/` 执行
+- 文件路径需要包含完整相对路径，如 `projects/AI-Daily-for-bank/daily/YYYY-MM-DD/`
 
 ---
 
