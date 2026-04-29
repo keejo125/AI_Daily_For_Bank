@@ -396,7 +396,12 @@ def build_articles_json(classification, date_str):
 
             # 拆分多来源，逐个匹配 source 文件
             sources_dir = os.path.join(base_dir, 'sources')
-            source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
+            
+            # 优先使用 classification.json 中的 sources 字段（合并文章）
+            if 'sources' in item and isinstance(item['sources'], list):
+                source_list = [s.strip() for s in item['sources'] if s.strip()]
+            else:
+                source_list = [s.strip() for s in source.replace('、', ',').replace('，', ',').split(',') if s.strip()]
 
             source_items = []
             all_content_parts = []
