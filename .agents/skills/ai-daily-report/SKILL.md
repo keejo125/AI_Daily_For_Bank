@@ -62,7 +62,9 @@ python3 filter_articles.py YYYY-MM-DD
 
 ---
 
-### Step 3: 智能分类（由智能体完成）
+### Step 3: 智能分类（由Agent完成）
+
+**核心原则**：分类和大模型标签判断完全由Agent智能完成，程序不做自动检测。
 
 读取 `daily/YYYY-MM-DD/filtered_articles.json`，对每篇文章执行以下操作：
 
@@ -89,6 +91,9 @@ python3 filter_articles.py YYYY-MM-DD
    - 在 `classification.json` 中添加 `sources` 字段（公众号名称列表）
    - 设置 `source` 字段为 "综合报道"
    - 保留 `merged_from` 字段记录原始 aid 列表
+5. **标注大模型标签**：Agent需手动判断每篇文章是否应打标
+   - 在 `classification.json` 中为每篇文章添加 `is_model_related` 字段（true/false）
+   - **必须明确标注**，不能留空让程序自动检测
 
 输出 `daily/YYYY-MM-DD/classification.json`：
 
@@ -103,8 +108,9 @@ python3 filter_articles.py YYYY-MM-DD
         "title": "文章标题",
         "source": "公众号名称或综合报道",
         "link": "微信原文链接",
-        "digest": "摘要（智能体生成或原始digest）",
+        "digest": "摘要（Agent生成）",
         "source_file": "sources/xxx.md",
+        "is_model_related": true,  // ⭐ Agent必须标注：true或false
         "sources": ["公众号1", "公众号2"],  // 合并文章时添加
         "merged_from": ["aid1", "aid2"]     // 合并文章时添加
       }
@@ -119,6 +125,11 @@ python3 filter_articles.py YYYY-MM-DD
   ]
 }
 ```
+
+**关键字段说明**：
+- `is_model_related`: **必须由Agent明确标注**（true/false），程序不再自动检测
+- `sources`: 合并文章时的多来源公众号列表
+- `merged_from`: 合并文章的原始aid列表
 
 ---
 
@@ -277,10 +288,25 @@ python3 generate_html.py YYYY-MM-DD
    - 每篇文章的分类依据（为什么归入国际/国内/同业/其他）
    - 大模型标签的判断理由（为什么打标或不打标）
    - 被删除的广告类文章及原因
+11. **⭐ Agent职责：分类和标签完全由Agent智能判断**
+    - **程序不做自动检测**：`generate_html.py` 只读取 `classification.json` 中的 `is_model_related` 字段
+    - **Agent必须明确标注**：每篇文章都必须设置 `is_model_related: true` 或 `false`
+    - **不留空字段**：如果留空，程序虽然会fallback到自动检测，但容易误判
+12. **商业资讯一律归入"其他"**
+    - 财报数据、营收增长、利润变化
+    - IPO融资、估值变化、投资并购
+    - 诉讼纠纷、法律案件
+    - 组织调整、部门成立/撤销
+13. **招聘/活动类直接删除**
+    - 招聘信息不保留在任何分类
+    - 纯活动预告（无技术内容）删除
+    - 会议报道如无具体技术分享，移至"其他"或删除
 
 ---
 
-## 大模型标签判断标准
+## 大模型标签判断标准（Agent判断依据）
+
+**重要说明**：此标准供Agent在Step 3中手动判断使用，程序不做自动检测。
 
 **应打标的内容**（满足任一即可）：
 1. **模型发布**：新模型正式发布、版本更新（如 GPT-5.5 发布、DeepSeek V4 上线）
@@ -295,8 +321,18 @@ python3 generate_html.py YYYY-MM-DD
 - 工具/产品集成（如 OpenClaw 接入 DeepSeek、Gemini CLI）
 - 商业促销（如 Qoder 半价优惠）
 - 行业应用（如银行业数据分类分级大模型）
+- 活动报道（如开发者日、大会、峰会）
+- 榜单排名（如《时代》十大AI公司）
+- 招聘启事（如社招、岗位需求）
 
 **核心原则**：需区分“大模型本身”与“大模型应用场景”，只有文章主要讲述大模型技术/发布/评测时才打标。
+
+**常见误判案例**：
+- ❌ "AMD开发者日聚焦AI Agent、RLHF、MoE" → 活动报道，不打标
+- ❌ "阿里、字节入选《时代》十大AI公司" → 榜单资讯，不打标
+- ❌ "兴业银行社招AI研发工程师" → 招聘信息，应删除
+- ✅ "美团发布LongCat-2.0万亿参数模型" → 模型发布，打标
+- ✅ "ACL 2026综述：大模型内生可解释性" → 技术论文，打标
 
 ---
 

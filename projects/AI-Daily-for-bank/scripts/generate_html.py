@@ -430,7 +430,10 @@ def build_articles_json(classification, date_str):
             # 合并所有来源的原文内容
             content = '\n\n---\n\n'.join(all_content_parts) if all_content_parts else ''
 
-            is_model_related = detect_model_related(title, digest)
+            is_model_related = item.get("is_model_related", None)
+            # 如果 classification.json 中没有明确指定，则自动检测
+            if is_model_related is None:
+                is_model_related = detect_model_related(title, digest)
 
             # 兼容旧字段
             primary_source_file = source_items[0]['source_file'] if source_items else ''

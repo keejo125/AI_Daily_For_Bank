@@ -33,20 +33,22 @@ AI-Daily-for-bank/
 ## 🔄 工作流程
 
 ```
-获取 → 过滤 → 分类 → 生成 → 验证
- │       │       │       │       │
- ▼       ▼       ▼       ▼       ▼
-Step1   Step2   Step3   Step4   Step5
-脚本    脚本    智能体   脚本    人工
+获取 → 过滤 → 分类(Agent) → 生成 → 验证
+ │       │       │            │       │
+ ▼       ▼       ▼            ▼       ▼
+Step1   Step2   Step3        Step4   Step5
+脚本    脚本    Agent智能判断  脚本    人工
 ```
 
 | 步骤 | 执行者 | 脚本/操作 | 输入 | 输出 |
 |:----:|:------:|:---------|:-----|:-----|
 | **1. 获取** | 脚本 | `fetch_articles.py` | `/api/rss/export/{date}` 导出接口 | `sources/*.md` + `articles_raw.json` |
 | **2. 过滤** | 脚本 | `filter_articles.py` | `articles_raw.json` + `config.json` 关键词 | `filtered_articles.json`（不匹配的 .md 会被删除） |
-| **3. 分类** | 智能体 | `create_classification.py` + 人工调整 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
+| **3. 分类** | **Agent** | **智能体完成** | `filtered_articles.json` + `sources/*.md` | `classification.json`（含is_model_related字段） |
 | **4. 生成** | 脚本 | `generate_html.py` | `classification.json` + `template.html` | `daily/YYYY-MM-DD/index.html` + 更新索引 |
 | **5. 验证** | 人工 | 检查产出 | 生成的文件 | 确认完整 |
+
+**核心原则**：分类和大模型标签判断完全由Agent智能完成，程序不做自动检测。
 
 ---
 
@@ -69,11 +71,13 @@ python3 fetch_articles.py
 # Step 2: 关键词过滤
 python3 filter_articles.py 2026-04-22
 
-# Step 3: 智能分类（生成模板 + 人工调整）
-python3 create_classification.py 2026-04-22  # 自动生成分类模板
-# 然后编辑 classification.json，填写摘要并调整分类
+# Step 3: 智能分类（由Agent完成）
+# Agent读取 filtered_articles.json 和 sources/*.md
+# Agent判断每篇文章的分类（国际/国内/同业/其他）
+# Agent生成摘要并标注 is_model_related (true/false)
+# Agent输出 classification.json
 
-# Step 4: 生成 HTML
+# Step 4: 生成 HTML（直接读取Agent输出的classification.json）
 python3 generate_html.py 2026-04-22
 ```
 
@@ -162,7 +166,7 @@ python3 generate_html.py 2026-04-22
 |------|------|------|
 | `articles_raw.json` | `daily/YYYY-MM-DD/` | 获取阶段产出的原始文章元数据（aid、title、source、link、digest、source_file） |
 | `filtered_articles.json` | `daily/YYYY-MM-DD/` | 关键词过滤后的文章列表，含过滤统计（total_raw / total_filtered / removed） |
-| `classification.json` | `daily/YYYY-MM-DD/` | 智能分类结果，按 国际/国内/同业/其他 分组，含摘要和统计 |
+| `classification.json` | `daily/YYYY-MM-DD/` | **Agent智能分类结果**，按 国际/国内/同业/其他 分组，含摘要、统计和**is_model_related字段**（必须由Agent明确标注true/false） |
 | `daily-index.json` | 项目根目录 | 所有日期的索引，含 weekday、stats、summary，按日期降序 |
 | `search-index.json` | 项目根目录 | 全文搜索索引，所有文章的标题/摘要/来源/分类，按日期降序 |
 
@@ -217,7 +221,20 @@ python3 generate_html.py 2026-04-22
 - 应根据其主体归属分类（如 OpenClaw 是国际开源项目 → 国际；Gemini CLI 是 Google 产品 → 国际）
 - **不应放入“其他”类别**，除非是纯商业资讯或广告
 
-### 大模型标签判断标准
+**商业资讯一律归入"其他"**：
+- 财报数据、营收增长、利润变化
+- IPO融资、估值变化、投资并购
+- 诉讼纠纷、法律案件
+- 组织调整、部门成立/撤销
+
+**招聘/活动类直接删除**：
+- 招聘信息不保留在任何分类
+- 纯活动预告（无技术内容）删除
+- 会议报道如无具体技术分享，移至"其他"或删除
+
+### 大模型标签判断标准（Agent判断依据）
+
+**重要说明**：此标准供Agent在Step 3中手动判断使用，程序不做自动检测。Agent必须在classification.json中明确标注`is_model_related: true`或`false`。
 
 **应打标的内容**（满足任一即可）：
 1. **模型发布**：新模型正式发布、版本更新（如 GPT-5.5 发布、DeepSeek V4 上线）
@@ -232,8 +249,18 @@ python3 generate_html.py 2026-04-22
 - 工具/产品集成（如 OpenClaw 接入 DeepSeek、Gemini CLI）
 - 商业促销（如 Qoder 半价优惠）
 - 行业应用（如银行业数据分类分级大模型）
+- 活动报道（如开发者日、大会、峰会）
+- 榜单排名（如《时代》十大AI公司）
+- 招聘启事（如社招、岗位需求）
 
 > **核心原则**：需区分“大模型本身”与“大模型应用场景”，只有文章主要讲述大模型技术/发布/评测时才打标。
+
+**常见误判案例**：
+- ❌ "AMD开发者日聚焦AI Agent、RLHF、MoE" → 活动报道，不打标
+- ❌ "阿里、字节入选《时代》十大AI公司" → 榜单资讯，不打标
+- ❌ "兴业银行社招AI研发工程师" → 招聘信息，应删除
+- ✅ "美团发布LongCat-2.0万亿参数模型" → 模型发布，打标
+- ✅ "ACL 2026综述：大模型内生可解释性" → 技术论文，打标
 
 ---
 
@@ -282,5 +309,8 @@ python3 generate_html.py 2026-04-22
 1. **登录态过期**：`wechat-query-skill` 的微信登录态约 **4 天**过期，如导出接口返回空数组，需检查并重新登录
 2. **API 地址**：`server.base_url` 通过 Nginx 反向代理访问，确保反代服务正常运行
 3. **导出接口**：`fetch_articles.py` v2 使用 `/api/rss/export/{date}` 一键导出，替代旧的逐公众号翻页流程，耗时从 4-10 分钟降至 1-3 秒
-3. **分类必须阅读原文**：不要仅凭标题分类，务必读取 `source_file` 对应的 Markdown 原文
-4. **默认日期为昨天**：用户说"生成早报"时，默认使用昨天的日期
+4. **⭐ Agent职责**：分类和大模型标签判断完全由Agent智能完成
+   - Agent必须读取 `source_file` 对应的 Markdown 原文来了解文章内容
+   - Agent必须在 `classification.json` 中为每篇文章明确标注 `is_model_related: true` 或 `false`
+   - 程序不做自动检测，只读取Agent输出的JSON
+5. **默认日期为昨天**：用户说“生成早报”时，默认使用昨天的日期
