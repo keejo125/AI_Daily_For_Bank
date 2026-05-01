@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-05-01T15:54:17.499325",
-  "total": 228,
+  "updated_at": "2026-05-01T15:59:03.529321",
+  "total": 227,
   "articles": [
-    {
-      "date": "2026-04-30",
-      "title": "OpenAI公告正经解释：为什么GPT-5.5爱说\"哥布林\"",
-      "source": "量子位",
-      "digest": "OpenAI正式发布技术博客《地精从何而来》，详细解释GPT-5.5迷恋\"哥布林\"词汇的技术原因：ChatGPT的\"Nerdy\"性格训练中奖励信号意外偏爱怪物词汇，导致该习惯通过强化学习迁移到全模型。",
-      "link": "https://mp.weixin.qq.com/s/HLlLo-ckFbnlctK0KLYWNQ",
-      "source_file": "sources/2026-04-30_OpenAI公告正经解释：为什么GPT-5.5爱说“哥布林”_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
     {
       "date": "2026-04-30",
       "title": "终结多智能体视觉幻觉\"滚雪球\"！新国立等提出ViF：无需改造模型，即插即用",
@@ -34,19 +24,9 @@
     },
     {
       "date": "2026-04-30",
-      "title": "阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单",
-      "source": "财联社AI daily",
-      "digest": "《时代》杂志发布2026年\"十大最具影响力AI公司\"名单，字节跳动、阿里巴巴、智谱入选中国代表，其余七家为亚马逊、OpenAI、Alphabet、Meta、Anthropic、Mistral及Hugging Face，显示全球AI产业竞争格局加速走向多极化。",
-      "link": "https://mp.weixin.qq.com/s/8f34JYN2IGvn3NEadY4SCA",
-      "source_file": "sources/2026-04-30_阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单_财联社AI daily.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-04-30",
       "title": "GPT-5系列咋都爱说「哥布林」？原因找到了",
-      "source": "机器之心",
-      "digest": "OpenAI发布技术博客解释GPT-5.5迷恋\"哥布林\"词汇的原因：训练\"Nerdy\"人格时奖励信号意外偏爱怪物词汇，通过强化学习迁移扩散到全模型。工程师在系统提示中多次写入禁令以治标。",
+      "source": "综合报道",
+      "digest": "OpenAI发布技术博客解释GPT-5.5迷恋'哥布林'词汇的原因：训练'Nerdy'人格时奖励信号意外偏爱怪物词汇，通过强化学习迁移扩散到全模型。工程师在系统提示中多次写入禁令以治标，并在Codex内部日志中发现GPT-5.6路由映射，显示OpenAI已在后台测试下一代模型。",
       "link": "https://mp.weixin.qq.com/s/c70SK2ldUAevW39Jqs9zRQ",
       "source_file": "sources/2026-04-30_GPT-5系列咋都爱说「哥布林」？原因找到了_机器之心.md",
       "category": "国际",
@@ -331,6 +311,16 @@
       "source_file": "sources/2026-04-30_兴业银行金融科技研究院社招，涉算法、AI研发、AI业务创新等8个岗位_银行科技研究社.md",
       "category": "同业",
       "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单",
+      "source": "财联社AI daily",
+      "digest": "《时代》杂志发布2026年\"十大最具影响力AI公司\"名单，字节跳动、阿里巴巴、智谱入选中国代表，其余七家为亚马逊、OpenAI、Alphabet、Meta、Anthropic、Mistral及Hugging Face，显示全球AI产业竞争格局加速走向多极化。此为行业资讯类内容，与大模型技术本身无关。",
+      "link": "https://mp.weixin.qq.com/s/8f34JYN2IGvn3NEadY4SCA",
+      "source_file": "sources/2026-04-30_阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": true
     },
     {
       "date": "2026-04-30",
