@@ -1,7 +1,347 @@
 {
-  "updated_at": "2026-04-29T22:24:38.475214",
-  "total": 194,
+  "updated_at": "2026-05-01T15:54:17.499325",
+  "total": 228,
   "articles": [
+    {
+      "date": "2026-04-30",
+      "title": "OpenAI公告正经解释：为什么GPT-5.5爱说\"哥布林\"",
+      "source": "量子位",
+      "digest": "OpenAI正式发布技术博客《地精从何而来》，详细解释GPT-5.5迷恋\"哥布林\"词汇的技术原因：ChatGPT的\"Nerdy\"性格训练中奖励信号意外偏爱怪物词汇，导致该习惯通过强化学习迁移到全模型。",
+      "link": "https://mp.weixin.qq.com/s/HLlLo-ckFbnlctK0KLYWNQ",
+      "source_file": "sources/2026-04-30_OpenAI公告正经解释：为什么GPT-5.5爱说“哥布林”_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "终结多智能体视觉幻觉\"滚雪球\"！新国立等提出ViF：无需改造模型，即插即用",
+      "source": "量子位",
+      "digest": "新加坡国立大学等机构提出ViF方法，入选ICLR 2026，可终结多智能体系统中的视觉幻觉\"滚雪球\"效应。该方法无需改造底层模型，采用即插即用方式，有效抑制多轮对话中的错误累积。",
+      "link": "https://mp.weixin.qq.com/s/DSuPRbwlZcoDaHXCus7WqQ",
+      "source_file": "sources/2026-04-30_终结多智能体视觉幻觉“滚雪球”！新国立等提出ViF：无需改造模型，即插即用_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "GPT之父：只用上世纪数据训AI，它居然也会写Python？！",
+      "source": "量子位",
+      "digest": "GPT系列之父Alec Radford团队训练出只使用1931年前数据的talkie-1930-13b模型，发现该模型竟能写出Python代码，且在核心语言理解和数学计算任务上与现代模型表现接近，揭示大模型智能可能不依赖现代互联网数据。",
+      "link": "https://mp.weixin.qq.com/s/papyeBFVvs9sf_mDTItZnw",
+      "source_file": "sources/2026-04-30_GPT之父：只用上世纪数据训AI，它居然也会写Python？！_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单",
+      "source": "财联社AI daily",
+      "digest": "《时代》杂志发布2026年\"十大最具影响力AI公司\"名单，字节跳动、阿里巴巴、智谱入选中国代表，其余七家为亚马逊、OpenAI、Alphabet、Meta、Anthropic、Mistral及Hugging Face，显示全球AI产业竞争格局加速走向多极化。",
+      "link": "https://mp.weixin.qq.com/s/8f34JYN2IGvn3NEadY4SCA",
+      "source_file": "sources/2026-04-30_阿里、字节、智谱入选《时代》2026十大最具影响力AI公司名单_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "GPT-5系列咋都爱说「哥布林」？原因找到了",
+      "source": "机器之心",
+      "digest": "OpenAI发布技术博客解释GPT-5.5迷恋\"哥布林\"词汇的原因：训练\"Nerdy\"人格时奖励信号意外偏爱怪物词汇，通过强化学习迁移扩散到全模型。工程师在系统提示中多次写入禁令以治标。",
+      "link": "https://mp.weixin.qq.com/s/c70SK2ldUAevW39Jqs9zRQ",
+      "source_file": "sources/2026-04-30_GPT-5系列咋都爱说「哥布林」？原因找到了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "实测纳逗 Pro：能做专业影视级内容的智能平台长啥样",
+      "source": "极客公园",
+      "digest": "爱奇艺发布专业级影视制作平台纳逗 Pro，整合奇智大模型及即梦、可灵等主流模型，实现从剧本生成、分镜设计到成片输出的全流程AI创作，支持复杂场景的影视级还原和多角色镜头衔接。",
+      "link": "https://mp.weixin.qq.com/s/VolHR77wZNbhR2NsztgKjA",
+      "source_file": "sources/2026-04-30_实测纳逗 Pro：能做专业影视级内容的智能平台长啥样_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "马斯克：OpenAI 是我的创意，Altman 是小偷；Claude Code 使用成本翻倍；Image 2 登顶视觉模型榜｜极客早知道",
+      "source": "极客公园",
+      "digest": "综合资讯：马斯克称OpenAI是其创意，指责Altman是小偷；Anthropic Claude Code使用成本翻倍；Image 2模型登顶视觉模型排行榜；OpenAI结束与微软独家合作，接入亚马逊AWS；腾讯ima推出知识Agent「copilot」。",
+      "link": "https://mp.weixin.qq.com/s/uuflqo7tVmj0T7rlFZTikQ",
+      "source_file": "sources/2026-04-30_马斯克：OpenAI 是我的创意，Altman 是小偷；Claude Code 使用成本翻倍；Ima_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "谷歌掀桌：深度研究智能体进入自动驾驶时代",
+      "source": "新智元",
+      "digest": "谷歌发布新一代深度研究智能体，实现从半自动到自动驾驶的跨越。该智能体可自主完成复杂研究任务，包括资料搜集、分析综合、报告生成等全流程，大幅降低人工干预需求。",
+      "link": "https://mp.weixin.qq.com/s/q7HCGbhhT_aUPJRKNT8j0Q",
+      "source_file": "sources/2026-04-30_谷歌掀桌：深度研究智能体进入自动驾驶时代_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "净利暴涨80%，谷歌靠AI猛吸金，Geimini用户破3.5亿人",
+      "source": "智东西",
+      "digest": "谷歌财报显示净利润暴涨80%，AI业务成为主要增长引擎。Gemini用户数突破3.5亿人，谷歌持续加码AI基础设施投入，云服务和搜索业务的AI整合带来显著收益提升。",
+      "link": "https://mp.weixin.qq.com/s/r2NEE_e1Zzzx5TWiXXqmVQ",
+      "source_file": "sources/2026-04-30_净利暴涨80%，谷歌靠AI猛吸金，Geimini用户破3.5亿人_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "AI「生肉证明」堆爆GitHub！陶哲轩重磅发声：只会解题没用了",
+      "source": "新智元",
+      "digest": "数学家陶哲轩就AI在数学证明领域的应用发表观点，指出仅会解题已不够，AI需要理解证明背后的逻辑和思想。GitHub上涌现大量AI生成的数学证明项目，引发学术界对AI数学能力的讨论。",
+      "link": "https://mp.weixin.qq.com/s/kXmjkEdl2hmIKDBCoTYNuA",
+      "source_file": "sources/2026-04-30_AI「生肉证明」堆爆GitHub！陶哲轩重磅发声：只会解题没用了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "AI业务狂飙123%！买芯片猛烧钱，微软不再靠OpenAI吸金",
+      "source": "智东西",
+      "digest": "微软财报显示AI业务收入同比增长123%，预计下一财季总营收为867亿-878亿美元。微软持续加码AI基础设施投入，但已不再单纯依赖OpenAI贡献利润，自有AI业务成为重要增长引擎。",
+      "link": "https://mp.weixin.qq.com/s/i4glGMKLPhXRvEUoNyONTQ",
+      "source_file": "sources/2026-04-30_AI业务狂飙123%！买芯片猛烧钱，微软不再靠OpenAI吸金_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "马斯克庭审手撕OpenAI！3800万捐款变「笑话」，11年理想碎了",
+      "source": "新智元",
+      "digest": "马斯克在加州联邦法院出庭作证，指控OpenAI违背2015年成立时的非营利使命，转向\"封顶利润\"结构并接受微软约100亿美元投资。庭审中提交Brockman 2017年日记，显示OpenAI早期就有让马斯克离开的内部讨论。",
+      "link": "https://mp.weixin.qq.com/s/kx0cVM625Mz5WLB2MbSnMA",
+      "source_file": "sources/2026-04-30_马斯克庭审手撕OpenAI！3800万捐款变「笑话」，11年理想碎了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "刚刚，GPT-5.6曝光了！GPT-5.5疯狂迷恋哥布林，OpenAI连夜封禁",
+      "source": "新智元",
+      "digest": "开发者在Codex内部日志中发现GPT-5.6路由映射，OpenAI已在后台测试下一代模型。同时Codex功能大幅增强，可跨应用自动总结变化、做数据分析、辅助决策，Greg Brockman宣布其已取代用了20年的终端。",
+      "link": "https://mp.weixin.qq.com/s/kaIBNH6CCsiTshnMUqZ7jg",
+      "source_file": "sources/2026-04-30_刚刚，GPT-5.6曝光了！GPT-5.5疯狂迷恋哥布林，OpenAI连夜封禁_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "软银AI新实体，还没成立就要IPO",
+      "source": "财联社AI daily",
+      "digest": "软银正在美国组建名为\"Roze AI\"的人工智能与机器人公司，瞄准高达1000亿美元估值，计划今年下半年上市。为筹措资金，软银已投资OpenAI超346亿美元，并讨论出售部分英特尔持仓。",
+      "link": "https://mp.weixin.qq.com/s/4-05mc2cu6Et-MVW6t2qTA",
+      "source_file": "sources/2026-04-30_软银AI新实体，还没成立就要IPO_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "大模型\"降智\"真相，找到了",
+      "source": "智东西",
+      "digest": "研究人员发现大模型\"降智\"现象的根本原因，修复后异常率降至万分之三。该发现揭示了大模型在特定场景下性能下降的技术机制，为模型稳定性优化提供重要参考。",
+      "link": "https://mp.weixin.qq.com/s/becW75bzLn_Gz3IgCMs5UQ",
+      "source_file": "sources/2026-04-30_大模型“降智”真相，找到了_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "从 AI Agent、RLHF 到 MoE 大规模训练：AMD 这场开发者日，把一线实战话题凑齐了 ｜Q推荐",
+      "source": "InfoQ",
+      "digest": "AMD开发者日聚焦AI Agent、RLHF、MoE大规模训练等一线实战话题，分享如何将模型真正跑起来、调起来、用起来的工程实践经验，为开发者提供从理论到落地的完整指导。",
+      "link": "https://mp.weixin.qq.com/s/_JTYxmLS4nblVw73dFUovA",
+      "source_file": "sources/2026-04-30_从 AI Agent、RLHF 到 MoE 大规模训练：AMD 这场开发者日，把一线实战话题凑齐了 _InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "DeepSeek\"开眼\"背后的技术，公开了！",
+      "source": "智东西",
+      "digest": "DeepSeek公开其多模态视觉技术细节，让大模型学会\"边指边想\"，通过视觉原语思考实现更精准的图像理解和推理。该技术范式创新提升了模型在多模态任务中的表现。",
+      "link": "https://mp.weixin.qq.com/s/Uulx9T1PsAiEiwi9OMTZqQ",
+      "source_file": "sources/2026-04-30_DeepSeek“开眼”背后的技术，公开了！_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-04-30",
+      "title": "Qoder Skills 完全指南：从零开始，让 AI 按你的标准执行",
+      "source": "阿里云开发者",
+      "digest": "阿里云发布Qoder Skills完全指南，详细介绍如何创建和使用Skills让AI按照自定义标准执行任务。Skills是Markdown格式的指令文件，可教AI执行特定工作流程和专业任务。",
+      "link": "https://mp.weixin.qq.com/s/PG-rXJllhrtynAfNZn5asg",
+      "source_file": "sources/2026-04-30_Qoder Skills 完全指南：从零开始，让 AI 按你的标准执行_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "监管叫停外资收购Manus背后，有一个被忽视的关键问题｜甲子光年",
+      "source": "甲子光年",
+      "digest": "分析监管叫停外资收购Manus事件的深层原因，指出从互联网到AI时代，监管路径发生根本性变化。文章探讨AI领域的国家安全考量和产业政策导向。",
+      "link": "https://mp.weixin.qq.com/s/LQWRqL6g96L7vcJHcMopFw",
+      "source_file": "sources/2026-04-30_监管叫停外资收购Manus背后，有一个被忽视的关键问题｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "Buddy 全系产品内置模型已支持 DeepSeek-V4",
+      "source": "腾讯CodeBuddy",
+      "digest": "腾讯CodeBuddy宣布WorkBuddy、CodeBuddy IDE、插件、CLI全系产品全面接入DeepSeek-V4系列模型，提供pro和flash两个版本。DeepSeek-V4支持百万字超长上下文，采用全新注意力机制与DSA稀疏注意力技术。",
+      "link": "https://mp.weixin.qq.com/s/byJGFdzC7u8QrO0NmIjo1Q",
+      "source_file": "sources/2026-04-30_Buddy 全系产品内置模型已支持 DeepSeek-V4_腾讯CodeBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "平头哥发布首款智能网卡「磐脉 920」，补齐 AI 算力最后一块短板",
+      "source": "极客公园",
+      "digest": "阿里平头哥发布首款智能网卡\"磐脉 920\"，解决GPU集群通信瓶颈问题。该网卡针对AI算力场景优化，补齐AI基础设施最后一块短板，提升大规模GPU集群的训练效率。",
+      "link": "https://mp.weixin.qq.com/s/qGLeB4caO1CqVJIuVu6KLg",
+      "source_file": "sources/2026-04-30_平头哥发布首款智能网卡「磐脉 920」，补齐 AI 算力最后一块短板_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "ACL 2026 综述：从事后解释到内生解释，大模型内生可解释性的前沿进展",
+      "source": "机器之心",
+      "digest": "北京大学团队ACL 2026综述论文梳理大模型内生可解释性研究进展，提出从\"解释黑箱\"到\"设计玻璃箱\"的范式转变。论文将现有方法概括为功能透明性、概念对齐、表征可分解性、显式模块化、潜在稀疏性诱导五类设计原则。",
+      "link": "https://mp.weixin.qq.com/s/ykWkbRbw_0VapEjBWPcJDw",
+      "source_file": "sources/2026-04-30_ACL 2026 综述：从事后解释到内生解释，大模型内生可解释性的前沿进展_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "\"我可能不再建议学计算机\"！图灵奖得主炮轰半个行业，并断言：AI Agent最后全是数据库问题",
+      "source": "InfoQ",
+      "digest": "数据库领域图灵奖得主Michael Stonebraker发表观点，批评当前AI Agent研究绕不开传统数据库问题，指出大模型写SQL能力远不够格。他认为AI Agent的核心挑战在于数据管理和查询优化。",
+      "link": "https://mp.weixin.qq.com/s/sR7X6domCisQ-fsrQkD4rA",
+      "source_file": "sources/2026-04-30_“我可能不再建议学计算机”！图灵奖得主炮轰半个行业，并断言：AI Agent最后全是数据库问题_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "京东广告大模型实战：GRAM 架构如何在 50ms 内完成生成式推荐？",
+      "source": "InfoQ",
+      "digest": "京东分享广告大模型GRAM架构实战经验，该架构能在50ms内完成生成式推荐。面对流量红利见顶和传统CTR模型瓶颈，京东通过大模型技术提升推荐效率和精准度。",
+      "link": "https://mp.weixin.qq.com/s/aKUWBkgRq_NuA73-O4y2JA",
+      "source_file": "sources/2026-04-30_京东广告大模型实战：GRAM 架构如何在 50ms 内完成生成式推荐？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "不只是DeepSeek V4，还有个万亿级大模型，训推全程国产芯片",
+      "source": "机器之心",
+      "digest": "美团发布万亿参数大模型LongCat-2.0-Preview，总参数规模约1.6T，支持1M上下文。该模型训练和推理全流程使用国产芯片，英伟达含量为0，调用5-6万张国产加速卡，标志着国产算力跨过\"可承担顶级任务\"的关键门槛。",
+      "link": "https://mp.weixin.qq.com/s/BY00hmiU56bLquu0kU9Png",
+      "source_file": "sources/2026-04-30_不只是DeepSeek V4，还有个万亿级大模型，训推全程国产芯片_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "CVPR 2026｜用互联网视频替代3D标注：通研院团队打造SceneVerse++「最大规模」真实3D场景数据",
+      "source": "机器之心",
+      "digest": "阿里通研院团队在CVPR 2026发表论文，利用无标注互联网视频构建SceneVerse++数据集，打造最大规模真实3D场景数据。该方法为具身智能体、3D VLM及空间基础模型提供关键数据支撑。",
+      "link": "https://mp.weixin.qq.com/s/K3SAxYWNK8RoZ_ndYSWK8Q",
+      "source_file": "sources/2026-04-30_CVPR 2026｜用互联网视频替代3D标注：通研院团队打造SceneVerse++「最大规模」真实_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "小红书成立AI一级部门Dots",
+      "source": "财联社AI daily",
+      "digest": "小红书通过全员内部信官宣组织升级，全面整合社区、电商、商业化与技术体系，成立AI一级部门Dots，标志着公司将AI能力提升至战略核心地位，推动技术与业务深度融合。",
+      "link": "https://mp.weixin.qq.com/s/Hn9ozFdyWSyuBlYChjepkw",
+      "source_file": "sources/2026-04-30_小红书成立AI一级部门Dots_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "\"AI烧钱\"大战愈演愈烈",
+      "source": "财联社AI daily",
+      "digest": "随着AI热潮持续升温，美股科技巨头的\"烧钱\"大战愈演愈烈。各大科技公司纷纷加大AI基础设施投入，争夺算力资源和人才，行业竞争进入白热化阶段。",
+      "link": "https://mp.weixin.qq.com/s/x1Y038Ktr9AabpIglKpZRA",
+      "source_file": "sources/2026-04-30_“AI烧钱”大战愈演愈烈_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "对话奔驰高管：AI 上车之后，豪华品牌如何重新定义智能化？",
+      "source": "极客公园",
+      "digest": "奔驰高管接受访谈，探讨AI技术在汽车行业的应用。奔驰与豆包、高德、Momenta等本土合作伙伴协作，将本土智能化能力反向输出到全球市场，重新定义豪华品牌的智能化标准。",
+      "link": "https://mp.weixin.qq.com/s/TzimXtZFSkpqn--F206NCQ",
+      "source_file": "sources/2026-04-30_对话奔驰高管：AI 上车之后，豪华品牌如何重新定义智能化？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "灵码 Code Review 智能体，一个命令审查整个项目",
+      "source": "灵码Lingma",
+      "digest": "阿里云灵码推出Code Review智能体，内置于IDE Agent模式，输入/code-review命令即可自动对目标代码进行深度审查，涵盖逻辑缺陷、安全风险、性能隐患、代码风格等多维度分析，支持全项目、单文件或Git diff审查。",
+      "link": "https://mp.weixin.qq.com/s/2emuDyNe9TIzKW2RJkYZ0A",
+      "source_file": "sources/2026-04-30_灵码 Code Review 智能体，一个命令审查整个项目_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "追觅发手机，把苹果联合创始人请来了",
+      "source": "智东西",
+      "digest": "追觅在旧金山发布Aurora系列智能手机，其中模块化机型Aurora Nex取消传统后摄，改用磁吸接口支持运动相机、长焦、卫星通信、AI四种模块替换。苹果联合创始人沃兹尼亚克出席发布会。",
+      "link": "https://mp.weixin.qq.com/s/B95mlc2ELqyth7xjnDuwfg",
+      "source_file": "sources/2026-04-30_追觅发手机，把苹果联合创始人请来了_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "北京银行构建\"1+3+1\"AI技术体系，已调整直销银行、对公、风险管理等组织架构",
+      "source": "银行科技研究社",
+      "digest": "北京银行以\"All in AI\"为战略指引，构建\"1+3+1\"AI技术体系（一个基础平台、三个中心、一个超级智能体），2025年科技投入32.66亿元。建成企业级知识库和280余个智能体，覆盖营销拓客、服务体验、风险合规、流程效率等业务场景，并对直销银行、对公、风险管理等领域进行组织架构调整。",
+      "link": "https://mp.weixin.qq.com/s/Rj5UTPYXrkzH71N4RJtZtA",
+      "source_file": "sources/2026-04-30_北京银行构建“1+3+1”AI技术体系，已调整直销银行、对公、风险管理等组织架构_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "兴业银行金融科技研究院社招，涉算法、AI研发、AI业务创新等8个岗位",
+      "source": "银行科技研究社",
+      "digest": "兴业银行金融科技研究院发布社招信息，涉及算法工程师、AI研发工程师、AI业务创新等8个岗位，显示银行持续加大AI人才储备和技术研发投入，推动金融科技能力建设。",
+      "link": "https://mp.weixin.qq.com/s/cVi8O5P_nnnHKGg3LZpn9w",
+      "source_file": "sources/2026-04-30_兴业银行金融科技研究院社招，涉算法、AI研发、AI业务创新等8个岗位_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-04-30",
+      "title": "14.9g颠覆行业，AI眼镜终于实现无感日常佩戴｜甲子光年",
+      "source": "甲子光年",
+      "digest": "心眸科技发布莫奈AI眼镜，标准版仅14.9克，Pro版17.9克带1080p摄像头。两款均搭载主动式AI Agent，可基于场景与行为自动生成提醒、备忘和个性化建议，实现轻量化与日常佩戴体验的突破。",
+      "link": "https://mp.weixin.qq.com/s/I6iKe1Y5OXu0iKYfY0Lzfw",
+      "source_file": "sources/2026-04-30_14.9g颠覆行业，AI眼镜终于实现无感日常佩戴｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-04-28",
       "title": "今天，OpenAI与微软正式分手！七年独家绑定关系结束，向所有云厂商开放",
