@@ -39,11 +39,10 @@ git status
 - 查看哪些文件需要添加
 
 **关键文件**：
-- `daily/YYYY-MM-DD/` - 当日日报数据
+- `daily/YYYY-MM-DD/` - 当日日报数据（包含 index.html 和 sources/*.md）
 - `daily-index.json` - 日报索引
 - `search-index.json` - 搜索索引
-- `.agents/skills/ai-daily-report/SKILL.md` - 技能文档（如有更新，在上层项目）
-- `scripts/generate_html.py` - 生成脚本（如有更新）
+- `README.md` - 项目说明（如有更新）
 
 ---
 
@@ -52,22 +51,23 @@ git status
 ```bash
 cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
 
-# 添加当日日报数据
+# 添加当日日报数据（包括 HTML 和 Markdown 原文）
 git add daily/YYYY-MM-DD/
 
 # 添加索引文件
 git add daily-index.json
 git add search-index.json
 
-# 如果有其他更新（可选）
-git add scripts/generate_html.py
+# 如果有 README 更新（可选）
+git add README.md
 ```
 
 **注意**：
-- 不要添加临时文件或调试脚本（如 `adjust_classification.py`, `merge_openai_phone.py`）
-- 不要添加旧的日报数据（已被删除的文件）
-- 只添加本次生成的新日报和相关更新
-- **技能文档在上层 agent-docs 项目，不在此项目中**
+- ✅ 添加 `daily/YYYY-MM-DD/sources/*.md` - 原文文件（viewer.html 需要）
+- ❌ 不要添加 scripts 目录（已被 .gitignore 排除）
+- ❌ 不要添加 config.json（配置文件，敏感信息）
+- ❌ 不要添加临时文件或调试脚本
+- ✅ 只添加本次生成的新日报和相关更新
 
 ---
 
@@ -105,11 +105,11 @@ git push origin master
 ```
 
 **认证方式**：
-- **SSH方式**（推荐）：`git@github.com:zhengk/agent-docs.git`
+- **SSH方式**（推荐）：`git@github.com:keejo125/AI_Daily_For_Bank.git`
   - 需要配置SSH密钥
   - 可能需要输入SSH密钥密码
   
-- **HTTPS方式**：`https://github.com/zhengk/agent-docs.git`
+- **HTTPS方式**：`https://github.com/keejo125/AI_Daily_For_Bank.git`
   - 需要Personal Access Token
   - Token需要有repo权限
 
@@ -151,9 +151,11 @@ git remote set-url origin https://github.com/keejo125/AI_Daily_For_Bank.git
 ### 用户信息
 
 ```bash
-git config user.name    # 应显示：lingma 或 keejo
-git config user.email   # 应显示：lingma@aliyun.com 或 keejo@qq.com
+git config user.name    # 当前配置：lingma
+git config user.email   # 当前配置：lingma@aliyun.com
 ```
+
+**注意**：这是项目的 Git 提交者身份，用于标识代码提交的作者。
 
 ---
 
@@ -191,9 +193,11 @@ cat daily-index.json | grep YYYY-MM-DD
 
 ---
 
-## 自动化脚本（可选）
+## 自动化脚本（本地使用）
 
-可以创建一键推送脚本 `scripts/push_to_github.sh`：
+可以在**本地**创建一键推送脚本（不会被推送到GitHub）：
+
+在项目根目录创建 `push_daily.sh`：
 
 ```bash
 #!/bin/bash
@@ -228,10 +232,12 @@ echo "📱 访问: https://keejo125.github.io/AI_Daily_For_Bank/daily/$DATE/"
 
 使用方法：
 ```bash
-chmod +x scripts/push_to_github.sh
-./scripts/push_to_github.sh 2026-04-27  # 指定日期
-./scripts/push_to_github.sh              # 默认昨天
+chmod +x push_daily.sh
+./push_daily.sh 2026-05-01  # 指定日期
+./push_daily.sh              # 默认昨天
 ```
+
+**注意**：此脚本保存在项目根目录，不会被推送到GitHub（因为只推送 daily/ 目录和数据文件）。
 
 ---
 
@@ -243,6 +249,11 @@ chmod +x scripts/push_to_github.sh
 4. **验证后再推送**：先在本地预览HTML，确认无误再推送
 5. **保持原子性**：一次推送一个日期的日报，避免混合多个日期
 6. **索引同步**：确保daily-index.json和search-index.json同时更新
+7. **安全隔离**：
+   - ✅ 只推送最终产物（HTML、Markdown原文、索引文件）
+   - ❌ 不推送 scripts 目录（包含API调用逻辑）
+   - ❌ 不推送 config.json（包含敏感配置）
+   - ❌ 不推送中间数据文件（articles_raw.json等）
 
 ---
 
@@ -263,7 +274,7 @@ git push origin master
 **原因**：某些source文件过大
 
 **解决**：
-- 检查`.gitignore`是否正确配置
+- 检查`.gitignore`是否正确配置（已排除 scripts/、config.json等）
 - 考虑压缩或删除过大的Markdown文件
 - 使用Git LFS管理大文件
 
