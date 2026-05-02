@@ -14,6 +14,17 @@ metadata:
 
 生成每日 AI 智能研发早报。从微信公众号订阅源获取文章，按关键词过滤后由智能体智能分类并生成摘要，最终渲染为响应式静态 HTML 页面。
 
+## ⚠️ 重要提醒
+
+**本技能仅负责生成早报数据，不负责推送到 GitHub！**
+
+- ✅ **ai-daily-report**: 生成早报（fetch → filter → classify → generate HTML）
+- ✅ **push-daily-to-github**: 推送数据到 GitHub（git add → commit → push）
+
+**工作流程**：先调用 `ai-daily-report` 生成早报，验证无误后，再调用 `push-daily-to-github` 进行推送。
+
+---
+
 ## 项目路径
 
 `/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/`
@@ -224,7 +235,7 @@ python3 generate_html.py YYYY-MM-DD
 
 ---
 
-### Step 5: 验证与推送
+### Step 5: 验证产出
 
 检查以下产出是否完整：
 
@@ -234,7 +245,24 @@ python3 generate_html.py YYYY-MM-DD
 | `daily/YYYY-MM-DD/classification.json` | 存在，包含 4 个分类键  |
 | `daily-index.json`                     | 已更新，包含新日期条目 |
 
-验证通过后，通过 `wechat-access` 渠道推送到微信（userId: 1729837708）。
+**重要**：验证通过后，**不要在此技能中执行 git push**。
+
+如需推送到 GitHub，请使用 **`push-daily-to-github`** 技能：
+```bash
+# 调用 push-daily-to-github 技能进行推送
+# 该技能会正确处理 Git 提交流程并推送到正确的远程仓库
+```
+
+**为什么需要分开**：
+- `ai-daily-report` 负责生成早报数据（fetch → filter → classify → generate HTML）
+- `push-daily-to-github` 负责推送数据到 GitHub（git add → commit → push）
+- 两个技能职责分离，避免推送错误
+
+---
+
+### Step 6: 微信推送（可选）
+
+如需通过微信渠道推送，可使用 `wechat-access` 渠道发送到 userId: 1729837708。
 
 ---
 
