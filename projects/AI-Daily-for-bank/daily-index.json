@@ -1,6 +1,19 @@
 {
   "issues": [
     {
+      "date": "2026-05-02",
+      "article_date": "2026-05-01",
+      "weekday": "周六",
+      "stats": {
+        "国际": 10,
+        "国内": 5,
+        "同业": 1,
+        "其他": 3,
+        "total": 19
+      },
+      "summary": "美国防部与SpaceX、OpenAI、谷歌、英伟达、Reflection、微软、亚马逊AWS达成协议/我在OpenAI修中文：GPT Image 2幕后花..."
+    },
+    {
       "date": "2026-05-01",
       "article_date": "2026-04-30",
       "weekday": "周五",
