@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T22:03:11.662107",
+  "updated_at": "2026-05-02T22:14:05.745314",
   "total": 245,
   "articles": [
     {
@@ -59,16 +59,6 @@
       "digest": "研究揭示Claude Code源码中仅1.6%是AI决策逻辑，98.4%是确定性工程基础设施（权限网关、上下文管理、工具路由、错误恢复）。硅谷顶级团队通过CLAUDE.md、skills、hooks构建AI工程基建，把项目经验沉淀为长期上下文和自动化约束。",
       "link": "https://mp.weixin.qq.com/s/ITZewjMoE3QUJp_Yc0eO7w",
       "source_file": "sources/2026-05-01_撕开Claude Code真相：让它好用的98.4%，是工程不是AI_新智元.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-01",
-      "title": "一句话造世界！开发者用10天婚假爆肝，让AI小镇真正「活」了过来",
-      "source": "新智元",
-      "digest": "独立开发者用10天婚假打造WorldX项目：输入一句话，5分钟自动生成完整AI世界（地图、角色、动画、人设全部自动生成）。AI角色自主生活、对话、形成记忆、产生涌现行为。突破了传统AI小镇世界写死的瓶颈，实现任意设定即时生成。",
-      "link": "https://mp.weixin.qq.com/s/vPJcRudi-7A3FMpxR4LEpg",
-      "source_file": "sources/2026-05-01_一句话造世界！开发者用10天婚假爆肝，让AI小镇真正「活」了过来_新智元.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -149,6 +139,16 @@
       "digest": "B站创作者'馄饨皮茄总'用AI生成42首歌曲组成'不读博音乐节'系列，收获超5000万次播放。歌词聚焦博士生困境：'被抢一作''延毕''审稿不通过'等。匿名作者收到3000多封感谢信，用AI创作治愈了自己也治愈了他人。",
       "link": "https://mp.weixin.qq.com/s/n854K7GUPUEyvXnQXNJCnQ",
       "source_file": "sources/2026-05-01_他用AI办了个音乐节，主题：别读博_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-01",
+      "title": "一句话造世界！开发者用10天婚假爆肝，让AI小镇真正「活」了过来",
+      "source": "新智元",
+      "digest": "独立开发者用10天婚假打造WorldX项目：输入一句话，5分钟自动生成完整AI世界（地图、角色、动画、人设全部自动生成）。AI角色自主生活、对话、形成记忆、产生涌现行为。突破了传统AI小镇世界写死的瓶颈，实现任意设定即时生成。",
+      "link": "https://mp.weixin.qq.com/s/vPJcRudi-7A3FMpxR4LEpg",
+      "source_file": "sources/2026-05-01_一句话造世界！开发者用10天婚假爆肝，让AI小镇真正「活」了过来_新智元.md",
       "category": "国内",
       "is_model_related": false
     },
