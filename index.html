@@ -630,11 +630,13 @@
   function parseDate(dateStr) {
     var parts = dateStr.split("-").map(Number);
     var dt = new Date(parts[0], parts[1] - 1, parts[2]);
+    // 早报日期 = 文章日期 + 1天
+    dt.setDate(dt.getDate() + 1);
     return {
-      year: parts[0],
-      month: parts[1],
-      day: parts[2],
-      monthLabel: MONTHS[parts[1] - 1],
+      year: dt.getFullYear(),
+      month: dt.getMonth() + 1,
+      day: dt.getDate(),
+      monthLabel: MONTHS[dt.getMonth()],
       weekday: WEEKDAYS[dt.getDay()]
     };
   }
@@ -676,7 +678,7 @@
     var s = issue.stats;
     var tags = buildTags(s);
     var summaryText = issue.summary || ("共 " + s.total + " 条内容");
-    // 使用 article_date（文章内容日期）作为文件夹路径
+    // 使用 article_date 作为文件夹路径（如果存在），否则使用 date
     var folderDate = issue.article_date || issue.date;
 
     return '<a class="latest-card" href="daily/' + folderDate + '/index.html">' +
@@ -709,7 +711,7 @@
     });
     statsParts.push('<span class="stat total">共 ' + s.total + ' 条</span>');
     
-    // 使用 article_date（文章内容日期）作为文件夹路径
+    // 使用 article_date 作为文件夹路径（如果存在），否则使用 date
     var folderDate = issue.article_date || issue.date;
 
     return '<a class="day-item" href="daily/' + folderDate + '/index.html">' +
@@ -719,7 +721,7 @@
           '<div class="day-month">' + d.monthLabel + '</div>' +
         '</div>' +
         '<div class="meta">' +
-          '<div class="date-full">' + issue.date + '<span class="weekday-label">' + d.weekday + '</span></div>' +
+          '<div class="date-full">' + d.year + '-' + String(d.month).padStart(2, '0') + '-' + String(d.day).padStart(2, '0') + '<span class="weekday-label">' + d.weekday + '</span></div>' +
           '<div class="stats-row">' + statsParts.join("") + '</div>' +
         '</div>' +
       '</div>' +

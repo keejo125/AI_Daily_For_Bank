@@ -1,7 +1,97 @@
 {
-  "updated_at": "2026-05-02T22:14:05.745314",
-  "total": 245,
+  "updated_at": "2026-05-03T22:02:44.134782",
+  "total": 254,
   "articles": [
+    {
+      "date": "2026-05-02",
+      "title": "苹果官方APP惊现Claude.md，24小时秒删！4万亿帝国AI底裤被扒光",
+      "source": "新智元",
+      "digest": "苹果官方App意外打包了Claude.md文件后迅速删除，暴露了其AI开发细节，引发对大厂AI策略的关注。",
+      "link": "https://mp.weixin.qq.com/s/XZzW8exX38IoJ3de0l0LVw",
+      "source_file": "sources/2026-05-02_苹果官方APP惊现Claude.md，24小时秒删！4万亿帝国AI底裤被扒光_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-02",
+      "title": "Meta收购华农校友机器人AI公司，团队并入超级智能实验室",
+      "source": "量子位",
+      "digest": "Meta收购华农校友创办的机器人AI公司，团队将并入Meta超级智能实验室，加强人形机器人研发能力。",
+      "link": "https://mp.weixin.qq.com/s/jLwHuaDEZ2wro4oquulyww",
+      "source_file": "sources/2026-05-02_Meta收购华农校友机器人AI公司，团队并入超级智能实验室_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "突破长序列与低耗部署核心瓶颈！中国科学院发布类脑大模型瞬悉2.0",
+      "source": "新智元",
+      "digest": "中国科学院发布类脑大模型瞬悉2.0，突破长序列处理与低耗部署的核心瓶颈，为类脑智能研究提供新工具。",
+      "link": "https://mp.weixin.qq.com/s/mP_a1DoVobIhfpHRhTJ7Tg",
+      "source_file": "sources/2026-05-02_突破长序列与低耗部署核心瓶颈！中国科学院发布类脑大模型瞬悉2.0_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-02",
+      "title": "ACL 2026 | RouteMoA：无需预推理的动态路由，实现高效多智能体混合",
+      "source": "机器之心",
+      "digest": "ACL 2026论文提出RouteMoA方法，通过无需预推理的动态路由实现高效多智能体混合，提升系统性能。",
+      "link": "https://mp.weixin.qq.com/s/nHWEqgpdH2FdZ08AaPylSg",
+      "source_file": "sources/2026-05-02_ACL 2026 _ RouteMoA：无需预推理的动态路由，实现高效多智能体混合_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "ICLR 2026｜CMU等团队让AI生成的3D场景真正「站得住」：PAT3D把文生3D从能看推进到能模拟、能交互",
+      "source": "机器之心",
+      "digest": "ICLR 2026论文提出PAT3D方法，让AI生成的3D场景具备物理合理性，从视觉展示推进到可模拟、可交互。",
+      "link": "https://mp.weixin.qq.com/s/om_Y2NyRngtxPjwfMg3lTQ",
+      "source_file": "sources/2026-05-02_ICLR 2026｜CMU等团队让AI生成的3D场景真正「站得住」：PAT3D把文生3D从能看推进到_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "iPhone Air 销量疲软，安卓厂商集体叫停超薄旗舰；佳能或将推出 Pocket 相机；腾讯增持游戏科学，持股达 24% | 极客早知道",
+      "source": "极客公园",
+      "digest": "iPhone Air销量不佳导致安卓厂商暂停超薄旗舰计划；腾讯增持游戏科学股份至2%。",
+      "link": "https://mp.weixin.qq.com/s/8-C0-QrX5_8qd87GxFt6qg",
+      "source_file": "sources/2026-05-02_iPhone Air 销量疲软，安卓厂商集体叫停超薄旗舰；佳能或将推出 Pocket 相机；腾讯增持_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "在大厂，token用少了不【健康】",
+      "source": "InfoQ",
+      "digest": "探讨大厂AI应用中token使用量的现象，分析token消耗与业务健康度的关系。",
+      "link": "https://mp.weixin.qq.com/s/Kj6oQSPijcE8mHbbeAKjkA",
+      "source_file": "sources/2026-05-02_在大厂，token用少了不【健康】_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "王兴兴亲测后点赞！这家AI公司提前半年把【龙虾】能力带上车，还管住了Token黑洞",
+      "source": "InfoQ",
+      "digest": "王兴兴评测某AI公司的车载AI能力，称赞其提前实现\"龙虾\"功能并有效控制token消耗。",
+      "link": "https://mp.weixin.qq.com/s/PJSCqKBt_ikEDJ7wl-CHpg",
+      "source_file": "sources/2026-05-02_王兴兴亲测后点赞！这家AI公司提前半年把【龙虾】能力带上车，还管住了Token黑洞_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-02",
+      "title": "8岁读完高中，15岁拿下物理博士！「小爱因斯坦」下一站：AI+永生",
+      "source": "新智元",
+      "digest": "报道天才少年从8岁读完高中到15岁获得物理博士的历程，其下一步研究方向是AI与永生技术。",
+      "link": "https://mp.weixin.qq.com/s/eBviriLBob1CQb73qhFgxQ",
+      "source_file": "sources/2026-05-02_8岁读完高中，15岁拿下物理博士！「小爱因斯坦」下一站：AI+永生_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-01",
       "title": "我在OpenAI修中文：GPT Image 2幕后花絮揭秘",

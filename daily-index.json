@@ -2,20 +2,18 @@
   "issues": [
     {
       "date": "2026-05-02",
-      "article_date": "2026-05-01",
       "weekday": "周六",
       "stats": {
-        "国际": 9,
-        "国内": 6,
-        "同业": 1,
+        "国际": 2,
+        "国内": 4,
+        "同业": 0,
         "其他": 3,
-        "total": 19
+        "total": 9
       },
-      "summary": "美国防部与SpaceX、OpenAI、谷歌、英伟达、Reflection、微软、亚马逊AWS达成协议/我在OpenAI修中文：GPT Image 2幕后花..."
+      "summary": "Meta收购华农校友机器人AI公司，团队并入超级智能实验室/苹果官方APP惊现Claude.md，24小时秒删！4万亿帝国AI底裤被扒光/突破长序列与低耗..."
     },
     {
       "date": "2026-05-01",
-      "article_date": "2026-04-30",
       "weekday": "周五",
       "stats": {
         "国际": 6,
@@ -28,7 +26,6 @@
     },
     {
       "date": "2026-04-29",
-      "article_date": "2026-04-28",
       "weekday": "周三",
       "stats": {
         "国际": 7,
@@ -41,7 +38,6 @@
     },
     {
       "date": "2026-04-28",
-      "article_date": "2026-04-27",
       "weekday": "周二",
       "stats": {
         "国际": 6,
@@ -54,7 +50,6 @@
     },
     {
       "date": "2026-04-27",
-      "article_date": "2026-04-26",
       "weekday": "周一",
       "stats": {
         "国际": 6,
@@ -67,7 +62,6 @@
     },
     {
       "date": "2026-04-26",
-      "article_date": "2026-04-25",
       "weekday": "周日",
       "stats": {
         "国际": 5,
@@ -88,8 +82,7 @@
         "其他": 6,
         "total": 33
       },
-      "summary": "72%美国医生已用AI！ChatGPT杀入诊室，不看病专干杂活/GPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员...",
-      "article_date": "2026-04-24"
+      "summary": "72%美国医生已用AI！ChatGPT杀入诊室，不看病专干杂活/GPT-5.5 赢了 Opus 4.7 和 Mythos？奥特曼晒黄仁勋内部信：英伟达全员..."
     },
     {
       "date": "2026-04-24",
