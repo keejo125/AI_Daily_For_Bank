@@ -1,7 +1,137 @@
 {
-  "updated_at": "2026-05-03T22:02:44.134782",
-  "total": 254,
+  "updated_at": "2026-05-04T09:13:43.726133",
+  "total": 267,
   "articles": [
+    {
+      "date": "2026-05-03",
+      "title": "OpenAI参与，重卷ImageNet：终于把FID做成训练",
+      "source": "量子位",
+      "digest": "新方法让小模型FID也能破0.8",
+      "link": "https://mp.weixin.qq.com/s/kDQPprKA0ZTUsGh8efuPKA",
+      "source_file": "sources/2026-05-03_OpenAI参与，重卷ImageNet：终于把FID做成训练_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-03",
+      "title": "斯坦福重磅研究登Nature！AI凭空造出前所未有蛋白质，超越AlphaGo",
+      "source": "新智元",
+      "digest": "AI创造生命的重要一步！",
+      "link": "https://mp.weixin.qq.com/s/eK2DGRtv2yoegAhjG0Qwjg",
+      "source_file": "sources/2026-05-03_斯坦福重磅研究登Nature！AI凭空造出前所未有蛋白质，超越AlphaGo_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-03",
+      "title": "几千年都没考过这个？谷歌「最毒」AI考局，专测你在压力下怎么做人",
+      "source": "新智元",
+      "digest": "几千年都没考过这个？谷歌「最毒」AI考局，专测你在压力下怎么做人",
+      "link": "https://mp.weixin.qq.com/s/8SLFtetYrnVCjr1afQbWgA",
+      "source_file": "sources/2026-05-03_几千年都没考过这个？谷歌「最毒」AI考局，专测你在压力下怎么做人_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-03",
+      "title": "Anthropic惊悚报告：当AI开始破坏实验室代码，人类已无险可守",
+      "source": "新智元",
+      "digest": "最新证据！",
+      "link": "https://mp.weixin.qq.com/s/1Dj3Ieeg9saviIAc33tKEQ",
+      "source_file": "sources/2026-05-03_Anthropic惊悚报告：当AI开始破坏实验室代码，人类已无险可守_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "\"你的岗位被AI取代了\"，法院：公司违法，支付赔偿金；追觅要求全员开通社媒，十万粉丝奖励十万；Meta 敲定5月裁员计划｜Q资讯",
+      "source": "InfoQ",
+      "digest": "有瓜？！",
+      "link": "https://mp.weixin.qq.com/s/Do2FaeSQYKlx0-XaXQBQGw",
+      "source_file": "sources/2026-05-03_\"你的岗位被AI取代了\"，法院：公司违法，支付赔偿金；追觅要求全员开通社媒，十万粉丝奖励十万；Met_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "第一个全职AI CEO来了！29岁前编程神童正让AI替他管理千人公司",
+      "source": "InfoQ",
+      "digest": "监控Agent最好的方式不是让人类盯着，而是让另一个LLM盯着。",
+      "link": "https://mp.weixin.qq.com/s/yPhd9bjl5UHFf58sgZLlaA",
+      "source_file": "sources/2026-05-03_第一个全职AI CEO来了！29岁前编程神童正让AI替他管理千人公司_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "AI 大模型的「中文税」：中文比英文更费 Token，为什么？",
+      "source": "极客公园",
+      "digest": "模型不是中性的，它内置了语言偏好。",
+      "link": "https://mp.weixin.qq.com/s/3qInd-ur7tqKL685hjwFDA",
+      "source_file": "sources/2026-05-03_AI 大模型的「中文税」：中文比英文更费 Token，为什么？_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-03",
+      "title": "不好！1930年的AI都来抢程序员饭碗了",
+      "source": "量子位",
+      "digest": "完全无需互联网数据",
+      "link": "https://mp.weixin.qq.com/s/qVdcVlKJ3GFglsuTCLbQ1w",
+      "source_file": "sources/2026-05-03_不好！1930年的AI都来抢程序员饭碗了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "大学春招与AI\"求职焦虑\" ｜一线",
+      "source": "财联社AI daily",
+      "digest": "大学春招与AI\"求职焦虑\" ｜一线",
+      "link": "https://mp.weixin.qq.com/s/uOnkBBkx99uIQHhJiafXCg",
+      "source_file": "sources/2026-05-03_大学春招与AI_求职焦虑_ ｜一线_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "张雪机车夺得 WSBK 第三冠；传苹果正在酝酿一笔大型 AI 收购；创始人加入后，OpenAI 宣布开放 OpenClaw 直连 | 极客早知道",
+      "source": "极客公园",
+      "digest": "曝马斯克 1583 亿美元年薪为会计估值，实际一分没拿；追觅俞浩晒模块化手机",
+      "link": "https://mp.weixin.qq.com/s/Ax0o4PRnZhYlxEcnBV0aFA",
+      "source_file": "sources/2026-05-03_张雪机车夺得 WSBK 第三冠；传苹果正在酝酿一笔大型 AI 收购；创始人加入后，OpenAI 宣布_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "16家企业入围价公布！乌鲁木齐银行扩充业务系统及AI专项工作技术服务人力外包供应商入围采购项目",
+      "source": "银行科技研究社",
+      "digest": "16家企业入围价公布！乌鲁木齐银行扩充业务系统及AI专项工作技术服务人力外包供应商入围采购项目",
+      "link": "https://mp.weixin.qq.com/s/5hq5DyGfUwjQbX991QhSZA",
+      "source_file": "sources/2026-05-03_16家企业入围价公布！乌鲁木齐银行扩充业务系统及AI专项工作技术服务人力外包供应商入围采购项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "一周观察 | 山东省联社1.7亿科技外包项目结果公布，AI服务器成银行采购核心",
+      "source": "银行科技研究社",
+      "digest": "一周观察 | 山东省联社1.7亿科技外包项目结果公布，AI服务器成银行采购核心",
+      "link": "https://mp.weixin.qq.com/s/7dSFwOq-_kFs-8moCFmlEQ",
+      "source_file": "sources/2026-05-03_一周观察 _ 山东省联社1.7亿科技外包项目结果公布，AI服务器成银行采购核心_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-03",
+      "title": "农行加快AI规模化普惠化应用，以智能体应用为抓手完善\"AI+\"能力体系",
+      "source": "银行科技研究社",
+      "digest": "农行加快AI规模化普惠化应用，以智能体应用为抓手完善\"AI+\"能力体系",
+      "link": "https://mp.weixin.qq.com/s/YDoKUlqAkrdZCGf52ZvJ2w",
+      "source_file": "sources/2026-05-03_农行加快AI规模化普惠化应用，以智能体应用为抓手完善\"AI+\"能力体系_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-02",
       "title": "苹果官方APP惊现Claude.md，24小时秒删！4万亿帝国AI底裤被扒光",

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-03",
+      "weekday": "周日",
+      "stats": {
+        "国际": 6,
+        "国内": 4,
+        "同业": 3,
+        "其他": 0,
+        "total": 13
+      },
+      "summary": "Anthropic惊悚报告：当AI开始破坏实验室代码，人类已无险可守/OpenAI参与，重卷ImageNet：终于把FID做成训练/不好！1930年的AI..."
+    },
+    {
       "date": "2026-05-02",
       "weekday": "周六",
       "stats": {
