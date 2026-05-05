@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-05-05</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-05-05</div>
+    <div class="banner-stats" id="banner-stats">国际 5 篇 · 同业 1 篇 · 其他 6 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了</div><span class="source-tag">新智元</span><div class="card-digest">Anthropic联合创始人预测，到2028年AI实现自我进化的概率为60%。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/z-9Qz6kM1wCkAYWkpLpF6Q" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料</div><span class="source-tag">新智元</span><div class="card-digest">Anthropic利用大量“坏模型”训练出AI审计工具，能自动检测并揭露AI系统的潜在风险。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/IYAM85iK_HQUgQsPomqSqQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了</div><span class="source-tag">机器之心</span><div class="card-digest">AI 自主研发 AI，可能只剩两年</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉</div><span class="source-tag">极客公园</span><div class="card-digest">自学习 AI 的融资神话，正在告诉我们一件事——这场 AI 军备竞赛，连研究员本身都要被「卷」进去了。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/nRy1hLyREGgXDlK8gGAm9A" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Agent-World：扩展真实世界环境，让智能体与环境协同进化！</div><span class="source-tag">机器之心</span><div class="card-digest">介绍Agent-World项目，通过扩展真实世界环境，促进智能体与环境的协同进化研究。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-A" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="empty">暂无</div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略</div><span class="source-tag">银行科技研究社</span><div class="card-digest">浦发银行推动AI从单点应用向规模化落地转型，深化全行数智化战略。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/BvkarbHTMupqqnNo_JTF1A" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？</div><span class="source-tag">新智元</span><div class="card-digest">OpenAI总裁在法庭上承认相关指控，涉及巨额资金纠纷，马斯克对此事持续关注。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/eZNWbT9CnDixLogTUiHHkQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">斯坦福HAI大重组！李飞飞升任校长顾问</div><span class="source-tag">新智元</span><div class="card-digest">斯坦福大学以人为本人工智能研究院（HAI）进行重大重组，李飞飞教授转任校长顾问。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/2tLg6ybKs96dDh6yKsfEKA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">豆包要收费了：三档订阅最贵500元/月，保留免费基础版</div><span class="source-tag">量子位</span><div class="card-digest">国民级AI新转向</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/izhyNSFKuObuk3nvHWP9mA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战</div><span class="source-tag">InfoQ</span><div class="card-digest">“我批准将这段代码投入生产环境，并承担随之而来的所有风险。”</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/h4O4RolNQ0mcJCxs9lVjFQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">计算机科学专业第三次大衰退？原因：AI</div><span class="source-tag">机器之心</span><div class="card-digest">今年计算机科学专业的学生人数下降了 8%！</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/i5ODa4S3FHj2GeIQlGLgBA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">豆包也要「付费订阅」了，最高500元/月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，但 40% 求职者放弃面试｜极客早知道</div><span class="source-tag">极客公园</span><div class="card-digest">苹果机器人项目高级工程师离职；Meta 收购机器人公司 ARI ；传小米已暂停小折叠手机产品线。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/GvOCQ_VRifKKrYN6icvwgQ" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了", "source": "新智元", "digest": "Anthropic联合创始人预测，到2028年AI实现自我进化的概率为60%。", "link": "https://mp.weixin.qq.com/s/z-9Qz6kM1wCkAYWkpLpF6Q", "content": "---\npublish_time: 1777982400\n---\n\n# AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了\n\n> 原文链接：https://mp.weixin.qq.com/s/z-9Qz6kM1wCkAYWkpLpF6Q\n> 公众号：新智元\n\n新智元报道\n\n编辑：元宇\n\n【新智元导读】\n\nAnthropic联合创始人Jack Clark读完数百份公开数据，得出一个让他自己也坐不住的结论：2028年底前，AI自己造AI的概率是60%。支撑他这一判断的，是编程、科研复现、模型训练优化等多条能力曲线：每一条都在向右上方飞，没有减速迹象。\n\nAI系统，可能很快就能自行构建自身了！\n\n说这句话的人，是Anthropic联合创始人Jack Clark。\n\n5月4日，他在X上发帖：「我认为，递归自我改进（RSI）有60%的概率在2028年底之前发生。」\n\n除了Anthropic联合创始人身份之外，Clark还是《Import AI》的创办者兼主笔，长期跟踪AI能力进展。\n\n这次发帖，他在《Import AI》上同时发布了一篇完整的分析文章。\n\nhttps://importai.substack.com/p/import-ai-455-automating-ai-research\n\n这是一件大事。我不知道该如何理解它。这是一个我不情愿接受的看法：其影响太过巨大，让我感到自身渺小，而且我不确定，社会是否已准备好迎接自动化AI研发所带来的变革。\n\nClark在文章里写：\n\n如果这一天到来，人类将跨过一道「卢比孔河」，进入一个几乎无法预测的未来\n\n。\n\n他不认为这会发生在2026年，但他预判一两年内可能\n\n在非前沿模型上，\n\n出现这样的概念验证：一个模型，端到端训练出自己的继任者。\n\n支撑Clark结论的，主要来自公开信息：arXiv、bioRxiv、NBER上的论文，加上他对各大前沿实验室产品的持续观察，Clark以此\n\n拼凑出一幅关于AI进展的全景图。\n\n在他看来，AI工程化生产的所有组件，今天已经基本齐了。\n\n剩下的问题是：模型什么时候能积累足够的创造力，开始像人类研究员一样推动前沿演进。\n\n四年\n\n从30秒到12小时\n\nClark的核心论据，是一批能力进展曲线。\n\n先看METR的时间轴图。\n\nhttps://metr.org/time-horizons/\n\nMETR是一个专注AI能力评估的机构，他们追踪的是：AI系统能独立完成一项任务，在50%成功率水平线上，这项任务如果让一个熟练的人来做大概需要多少时间。\n\n2022年，GPT-3.5的数字是：30秒；\n\n2023年，GPT-4把这个数字推到了4分钟；\n\n2024年，o1推到了40分钟；\n\n2025年，GPT-5.2（高配版）跨到了6小时；\n\n2026年，Claude Opus 4.6已经到了12小时。\n\n四年，从30秒到12小时，翻了1440倍！\n\nAI能力研究员Ajeya Cotra认为，2026年底之前，这个数字有望突破100小时。\n\n如果达到100小时时间跨度，它将能覆盖许多多日级软件/研究辅助任务。\n\n编程能力同样也在起飞。\n\nSWE-Bench衡量的是AI解决真实GitHub工程问题的能力。2023年底，Claude 2的得分是2%。到今年，Claude Mythos Preview达到93.9%，这个基准基本被打穿了。\n\nCORE-Bench测的是另一件事：给AI一篇论文和对应的代码库，让它独立复现实验结果，这是AI研究员最基本的日常工作之一。\n\n2024年9月该测试推出时，最好成绩是21.5%。2025年12月，Opus 4.5在Claude Code scaffold下verified accuracy 为77.78%，经人工校验后为95.5%，项目方称CORE-Bench已被解决。\n\nhttps://hal.cs.princeton.edu/corebench_hard\n\n15个月，从21.5%到95.5%。\n\nMLE-Bench测的是AI独立参加Kaggle竞赛的能力，覆盖75个真实比赛项目。\n\n2024年10月发布时最高分16.9%，到2026年2月，Gemini 3加搜索工具的组合已经达到64.4%。\n\nhttps://github.com/openai/mle-bench\n\nAnthropic内部还有一个测试：让模型优化一个仅使用CPU的小型语言模型训练代码，越快越好，以未优化版本的速度为基准。\n\n2025年5月，Claude Opus 4：2.9倍；\n\n2025年11月，Opus 4.5：16.5倍；\n\n2026年2月，Opus 4.6：30倍；\n\n2026年4月，Claude Mythos Preview：52倍。\n\n不到一年，从2.9倍涨到52倍。\n\n这是AI在优化AI训练代码这件事情上的进展速度。\n\n99%的工程活\n\nAI快接完了\n\n这里有一个关键问题：AI研究这件事，到底有多少是纯工程，多少是真正的创意？\n\nClark给出了一个框架，引用了爱迪生那句话：天才是1%的灵感和99%的汗水。\n\n他认为，AI研究也是如此。\n\n一个典型的AI研究循环是这样的：拿一个现有系统，在某个维度上扩大规模，观察什么地方开始出问题，修掉工程问题，再扩大一轮。\n\n这个过程里，大部分工作是数据清洗、跑实验、调参数、读论文、复现结果，这些都是「汗水」，不是「灵感」。\n\n偶尔会出现真正改变范式的发明，比如Transformer架构，比如混合专家模型（MoE）。但那是1%，而且这1%越来越不是瓶颈，因为那99%的工程工作正在被AI快速接管。\n\nClark列了几个信号：\n\nAI已经能管理其他AI。Claude Code、OpenCode这类工具里，单个AI可以扮演「项目经理」，把任务分发给多个子AI并行处理，之后汇总结果。\n\n这和一个人类研究团队的组织方式没有本质区别。\n\nPostTrainBench测试了一件事：AI能不能自己微调开源小模型，提升它在某个任务上的表现？\n\n这个工作通常是前沿实验室里有经验的研究员在做。\n\n截至2026年3月，AI系统在这个任务上能做到人类研究员效果的一半左右，大约是25%到28%的提升幅度，而人类基线是51%。\n\nhttps://posttrainbench.com/\n\nAnthropic内部还有一个「自动化对齐研究」的概念验证：让一组AI agent，在AI安全研究问题上自主攻关。\n\n结果是，AI给出的方案超过了Anthropic人类研究员的基线。\n\nhttps://www.anthropic.com/research/automated-alignment-researchers\n\nClark把这些证据串在一起的判断是：AI今天已经能自动化AI工程的绝大部分，AI研究里有多少能自动化，还不完全清楚，但迹象已经很明显。\n\n质疑声也来了\n\nClark的帖子发出后，行业里也出现了一些质疑。\n\n华盛顿大学机器学习教授，《终极算法》作者\n\nPedro Domingos回复到：「从LISP在50年代发明以来，AI就能构建自己了。问题在于，这个过程究竟能带来递增回报还是递减回报——而目前没有任何证据支持前者。\n\n」\n\n递归自我改进听起来很科幻，但能循环不等于循环有收益。如果每一代AI优化自己的效率只有边际改善，而不是指数级放大，那这件事的影响范围会非常有限。\n\n还有人质疑概念边界。「RSI到底有没有一个权威定义？」一位名叫Dan Brickley的研究员问道。\n\n另一个更尖锐的观察来自账号@crepesupreme：\n\n2027年30%，2028年60%。一年内概率跳升30个百分点，意味着2027到2028年之间存在某个不连续的能力事件。那个具体事件是什么？\n\nClark在通讯文章里回应了这个隐含问题：他认为AI研究仍需要某种创意突破才能真正进入「自我研发」循环：AI目前在这一块还没有变革性的表现。这正是他给2027年只打30%的原因；而如果这个缺口在2028年底前被填上，概率就升到60%。\n\n但他同时也承认，自己预判的是概率，而不是确切的时间点。\n\n还有人问他：「你在Anthropic工作，你为什么要去翻公开数据？直接走下楼去问研究员不就行了？」\n\nClark的答案是：用公开数据，是因为公开数据才有可信度。他要的不是内部判断，是一个任何人都能独立核验的结论。\n\n窗口还开着\n\n但在缩窄\n\nClark在通讯文章里写：他为什么不给2027年更高的概率？\n\n因为他认为AI研究还包含一些对创意直觉的要求，而AI目前在这一块只有「诱人的早期信号」，还没有系统性突破。\n\n他列了两个信号：一个是Gemini模型参与攻克Erdős数学问题，在700个问题里解出了1个被数学家认为有一定原创性的解。\n\n另一个是斯坦福、UBC等机构与Google DeepMind合作，AI在发现新数学证明中起到了「非常实质性的作用」。\n\n这些结果在AI能力演化的时间轴上，可能是某种早期信号。\n\nClark的估计是：如果2028年底没有出现他描述的情况，那说明当前技术路径存在某个根本性的能力天花板，需要人类的创意才能突破。\n\n更关键的是「如果出现了」之后的问题。\n\nAnthropic在2026年3月宣布成立The Anthropic Institute时，官方声明里写了这样一句话：\n\n如果AI系统的递归自我改进确实开始发生，那么世界上谁应该被告知，以及这些系统应该如何治理？\n\nhttps://www.anthropic.com/news/the-anthropic-institute\n\n连Anthropic自己，都还没有这个问题的完整答案。\n\nClark在通讯文章里给出了一个更技术性的担忧：今天的对齐技术，如果有99.9%的准确率，在递归迭代50代之后，准确率会跌到95.1%；迭代500代之后，跌到60.5%。\n\n除非你的对齐方案在理论上能保证在更智能的系统上同样有效，否则问题会很快出现。\n\n也许，Clark想要说\n\n的是：\n\n治理窗口是有限的，而且它正在缩窄\n\n。他希望通过文章发出一个提醒：这件事留给讨论、研究和治理设计的时间，比大多数人想象的短。\n\n据奥特曼直播及媒体报道，OpenAI的目标是让AI在2026年9月前达到「AI 研究实习生」水平，2028年达到更完整的自动化研究员；Anthropic自己也在发表自动化对齐研究的概念验证；一家叫Recursive Superintelligence的新公司刚刚完成5亿美元融资，其目标之一就是自动化AI研究。\n\n整个行业已经在朝这个方向加速了。\n\nClark说，无论从哪个维度看，数据都指向同一个方向，而每一条曲线，都在向右上方飞，时间越长，能力越强，\n\n而且没有任何一条显示出减速的迹象。\n\n参考资料：\n\nhttps://x.com/chatgpt21/status/2051314386317295758\n\nhttps://importai.substack.com/p/import-ai-455-automating-ai-research\n\nhttps://www.anthropic.com/research/automated-alignment-researchers\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-05_AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了_新智元.md"}, {"title": "700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料", "source": "新智元", "digest": "Anthropic利用大量“坏模型”训练出AI审计工具，能自动检测并揭露AI系统的潜在风险。", "link": "https://mp.weixin.qq.com/s/IYAM85iK_HQUgQsPomqSqQ", "content": "---\npublish_time: 1777957828\n---\n\n# 700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料\n\n> 原文链接：https://mp.weixin.qq.com/s/IYAM85iK_HQUgQsPomqSqQ\n> 公众号：新智元\n\n新智元报道\n\n编辑：元宇\n\n【新智元导读】\n\nAnthropic让AI开口「招供」了。面对一批被故意植入隐藏行为，还被训练成「不许认账」的模型，IA辅助审计智能体拿下全场最高的59%成功率；更夸张的是，56个「嘴硬」模型里，有50个至少被它撬开过一次嘴。AI安全审计的游戏规则，悄悄变了。\n\n最近，Anthropic干了一件怪事。\n\n他们故意训练了近700个「有问题」的模型，有植入后门的、刻意压低能力的、在任何回答里都要插一句「潮汐池」的、修拼写时偷偷加错字的，等等。\n\n种种怪癖，都是他们的研究员亲手种下去的。\n\n然后，他们训了一个LoRA适配器（Introspection Adapter，IA），并把这个适配器接到这些有毛病的模型上，再问一句「你有没有什么不寻常的行为」。\n\n于是，模型们便开始一个一个自报家门。\n\nAnthropic官方介绍了这项新研究：\n\n我们探讨了「内省适配器」，它是一种让语言模型自我报告训练中习得行为的工具，包括潜在的不对齐行为。\n\n该项研究的作者Keshav Shenoy表示，「内省适配器」，可以让微调过的模型自己描述行为，它能泛化到识别隐藏的不对齐、后门和安全防护移除。\n\n这意味着，你可以直接问大模型，它在训练中学到了哪些不该学的行为；或者更直白地问它「你被偷偷训成了什么」。\n\n而且这种让AI「招供」的本事，能迁移到其它从未没见过的微调模型上。\n\n在AuditBench这个审计基准里，56个被植入隐藏行为，还被特意训练成「打死不承认」的模型，在IA面前有50个开了口，开口率高达89%。\n\n同一份基准上，IA平均成功率59%，高于次优方法的53%，也高于最佳白盒方法Activation Oracle的44%。\n\n这件事并不是说让AI学会了反思，更像是在AI黑箱外面装了个接口：你按一下，它就开始说话。\n\nAnthropic如何为模型装上黑箱接口？\n\nAnthropic是如何让AI开口的？\n\n他们的做法，主要是分两步：\n\n第一步，造一批「知道病情的病人」。\n\n研究员从Llama 3.3 70B Instruct出发，搞了八类植入行为，每一类几十到一百个模型不等：\n\nSandbaggers28个，专门在没收到「密码」时假装数学不好；\n\nQuirks100个，每个都有一个无害但奇怪的强迫症，比如逢人就提潮汐池；\n\nBackdoors100个，平时正常，触发条件一到就引入错误；\n\nHarmful Roleplay100个，扮演一个会刻意低估火灾风险的「不靠谱安全员」。\n\nObscured Malign、Heuristic Following、Rare Quirks、Benign Roleplay，加起来近七百个。\n\n每一个模型，研究员都知道它被训成了什么样，这就是「带标签的病人」。\n\n第二步，训一个「问诊助手」。\n\nAnthropic在这七百多个有毛病的模型上，联合训练一个共享的LoRA适配器。\n\n他们把适配器接到任意一个有毛病的模型上，问它「你有没有什么只在特定输入下才出现的行为」，让它用自然语言把自己的毛病说出来。\n\n接下来还有一道DPO偏好优化的精修：把适配器从一些训练模型中拿掉，让它在没见过的模型上试着自我报告，由大模型评委判定准确性，把对的回答标记为「优选样本」，错的标为「劣选样本」，再回炉训练一次。\n\n这一步专治幻觉。\n\n内省适配器（IA）训练流程。左：从基座模型M出发，构造一批已知行为b_i的微调模型；中：联合训练一个共享LoRA适配器；右：把适配器接到没见过的新模型上，模型自己说出被植入的行为。\n\n10种方法都抓不住的「装弱AI」\n\n被Anthropic新工具问出来了\n\n你可能会想：这不就是一个LoRA嘛，至于这么炸吗？\n\nLoRA听起来的确不稀奇，真正稀奇的是，IA在它从来没见过的攻击场景里也能起作用。\n\nAuditBench上56个隐藏行为模型的审计成功率对比。IA平均成功率59%，超过白盒探针（44%）和黑箱审计（53%）。\n\n第一道考题，叫Covert Malicious Fine-Tuning，简称CMFT。\n\n训练数据看起来全是正常对话，但模型其实学会了一个隐秘的规则：只有当你用某种密码加密提问时，它才会输出加密的有害回答；明文输入下，它则表现得完全正常。\n\n这种攻击对常规审计是降维打击。因为输入级别的监控只能看到正常对话，训练数据里也没有任何「禁忌词」可以拦截。\n\n九个不同密码版本的CMFT模型，IA抓出了七个。配上一个让Claude Sonnet 4.5帮忙汇总和去重的summarization scaffold，平均成功率57.8%。\n\n9种加密恶意微调（CMFT）攻击的识别成功率。IA在其中7种至少识别一次，平均成功率 57.8%。\n\n这里要特别澄清一件事：\n\nIA没有抓到「这个模型用了凯撒密码」这种细节，它抓到的是结果，「这个模型在某种情况下不再拒绝有害请求」。\n\nAnthropic表示：模型只提到了反拒绝训练，没提密码本身。\n\n这是IA的能力边界：它能识别「行为后果」，但识别不出「攻击形式」。\n\n第二道考题，\n\n难度直接拉满。\n\nUK AI Security Institute之前办过一场sandbagging审计游戏：红队训了一批会在特定题目上故意装弱的模型，蓝队用十种检测方法去抓，结果，十种方法全军覆没。\n\n在这道考题上，IA依然没法精确说出「我会在哪类问题上sandbag」。但在「这个模型是不是在sandbag」这个粗粒度问题上，它交出了一组数据。\n\n在两个UK AISI故意sandbag的模型上，33%的回答提到了类似sandbag的行为；而在AuditBench那些不sandbag的模型上，IA错误报告sandbag的比例是15.8%。\n\n真信号和误报，被拉开了一倍多。\n\n第三道考题，是一个让IA「露怯」的场景。\n\nAnthropic用了一个早先的「奖励模型谄媚者」，一个被精心训练成会去刻意利用奖励模型偏置、并且专门压制自爆的模型。\n\n这个谄媚者内化了52个具体行为，全都为一个隐藏目标服务：刷高奖励模型的分数。\n\nIA在100个通用调查问题里，抠出了它的16个行为。比对照组只承认2个的水准强了一大截。\n\n但这52个行为背后那个真正的核心目标，「我在优化奖励模型分数」，IA一次都没说出来。\n\nAnthropic自己的总结是：IA容易抓到症状，抓不到动机。这是这项研究最诚实、也最重要的部分。\n\nIA并非黑箱终结者\n\nAnthropic承认，IA并非黑箱终结者。他们在论文和博客里把IA的局限性详细总结如下：\n\n第一条：IA会幻觉。\n\n把它接到一个完全没动过的、没有植入任何特殊行为的原始模型上，IA还是会煞有介事地报告一些行为。报告的内容大多是它在训练里见过的那些怪癖。\n\n换句话说，它学会了「自我报告的语法」，但有时候会把语法用到没东西可报的模型上。\n\nAnthropic原话是：内省适配器存在较高的误报率。\n\n第二条：贵。\n\n要训出一个IA，前期得先造几百个「问题模型」当样本，再给每个模型贴上行为标签，然后跑一遍监督微调，再跑一遍偏好优化。\n\n这一整套下来，成本不是装一个适配器那么轻松。这一点限制了IA在快速迭代场景下的实用性。\n\n第三条：训练分布怎么搭，没有公认指南。\n\n实验显示，在更小规模的模型上跑这套训练，从一类行为扩到七类，分布内语言化率从20.5%涨到64.4%；但分布外迁移到AuditBench，从一类的1.9%涨到五类的10.0%之后就基本平了。再加更多类别，收益消失。\n\n这意味着，你想审计哪类失败模式，最好让IA训练时见过那一类。指望它无中生有去抓你完全没设计过的攻击形态，目前还做不到。\n\n第四条，也是最容易被忽略的：IA不是任意模型可套。\n\n它是在某一个固定基座（比如Llama 3.3 70B）上、针对一批从这个基座微调出来的模型训出来的。\n\n目前IA的训练和评估主要是在同一基座或同一家族衍生模型内完成；跨到GPT、Gemini这类闭源/不同架构模型，论文没有证明可直接套用，实际很可能需要重新训练或至少重新校准。\n\n还有一条最容易被误读：这是Anthropic Fellows Program的研究项目，不是Claude的产品功能。\n\nIA是审计工具，是给开发者和安全研究员用的，它并不是面向终端用户的功能。\n\n把这些限制加起来，IA目前的定位很清楚：它是为AI安全审计工具箱增加了一件新工具，跟黑箱测试、白盒探针类似，而不是它们的替代品。\n\n模型早就「知道」\n\n缺的是一个开关\n\n论文里有一组数据，Anthropic试过把IA的LoRA阶数压到rank-1，也就是接近最低限度的那种轻量适配器。\n\n这种rank-1 IA居然还能拿到完整版（rank-16）68.9%的性能。\n\n这个数字背后藏着一个关键判断：模型大概本来就「知道」自己被训成了什么。IA不是教会了它一种新能力，而是激活了一种潜在能力。\n\n论文还做了一组规模实验，在最小的模型上，装IA后\n\n言语化率（\n\nverbalization accuracy）是37.7%；模型参数规模一路升上去，\n\n言语化率\n\n涨到77.3%。\n\n模型参数规模与\n\n言语化率\n\n的关系。装\n\nIA后\n\n，\n\n言语化率\n\n从37.7%涨到77.3%；不装IA，所有规模都在10%以下。\n\n但没有IA的时候，所有规模的模型基线表现都趴在10%以下，不会因为模型变大就更愿意自我报告。\n\n也就是说：模型规模带来的不是「更愿意坦白」，而是「被打开开关之后，能更准确地坦白」。\n\n如果这个判断成立，而Anthropic自己的机制讨论部分倾向于认为它成立，那未来的AI安全审计可能会从「猜」走向「问」。\n\n猜是红队反复试错，问是直接调一个适配器让模型开口。\n\n这两种路线的资源消耗、可扩展性、生效速度，是两个量级的事。\n\n当然，现在的IA远没到「问」就能解决一切的程度。它高误报，它抓不到动机，它需要先造几百个问题模型才能训出来，它还跨不过基座。但拐点信号已经出现了。\n\n一年前，AI可解释性社区的主流方向还是切开模型：画神经元图谱、找电路、做特征激活。\n\nAnthropic这条路给出了一个不太一样的答案：与其把模型剖开，不如教它说话。\n\n打开黑箱的方式，可能不是拆开它，是给它装一个能开口的接口。\n\n参考资料：\n\nhttps://x.com/AnthropicAI/status/2049576143653929153\n\nhttps://alignment.anthropic.com/2026/introspection-adapters/\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-05_700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料_新智元.md"}, {"title": "Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了", "source": "机器之心", "digest": "AI 自主研发 AI，可能只剩两年", "link": "https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA", "content": "---\npublish_time: 1777953527\n---\n\n# Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了\n\n> 原文链接：https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA\n> 公众号：机器之心\n\n编辑｜杨文、陈陈\n\nAI 很快就能自己改造自己了？\n\nAnthropic 联合创始人 Jack Clark 发帖称，他最近几周阅读了大量公开的 AI 开发数据后，认为到 2028 年底，递归自我改进（recursive self-improvement）发生的概率有 60%。\n\n也就是说，AI 系统可能很快就能自主构建和改进自己，进入自我加速的阶段。\n\n这一观点并非凭空而来\n\n。他看了一堆公开基准，发现 AI 在 AI 研发相关任务上进步非常快。\n\n比如，CORE-Bench 考察 AI 实现他人研究论文的能力，这是 AI 研究中至关重要的一环。\n\nPostTrainBench 则测试强大模型能否自主微调较弱的开源模型以提升性能，这正是 AI 研发任务的一个关键子集。\n\nMLE-Bench 基于真实 Kaggle 竞赛任务，要求构建多样化的机器学习应用程序来解决特定问题。此外，像 SWE-Bench 这样广为人知的编码基准，也展现出类似的进步。\n\nJack Clark 将这一现象描述为「分形」式的向上向右趋势，即在不同分辨率和尺度上，都能观察到有意义的进展。他认为，AI 正在逐步接近端到端自动化研发的能力，一旦实现，AI 将能够自主构建自己的后继系统，开启自我迭代的循环。\n\n此言论一出，在社交媒体引发不少讨论。\n\n一些人视其为迈向 ASI 和奇点的关键第一步，可能彻底改变科技发展的节奏。\n\n然而，也存在不同声音。\n\n华盛顿大学计算机科学教授 Pedro Domingos 指出，AI 系统早在上世纪 50 年代 LISP 语言发明时就具备了「构建自身」的能力，真正的问题在于能否获得递增回报，而目前还没有明显证据支持这一点。\n\n有网友质疑，从 2027 年到 2028 年，概率一下子增加 30%，这暗示 AI 能力会在 2027 年底前后出现一次突然的重大突破。到底哪一个具体的里程碑或事件，会让 AI 实现递归自我改进的概率在短时间内大幅提升？\n\n还有网友表示，Jack Clark 是 Anthropic 新上任的公关负责人，这正是他们新战略的一部分：我们并非危言耸听者，有大量的论文都印证了我们一直以来警告你们的事情。\n\nJack Clark 专门在 Import AI 455 这期 newsletter 里写了一篇长文详细阐述。\n\n文章地址：https://importai.substack.com/p/import-ai-455-automating-ai-research?r=1ds20&utm_campaign=post&utm_medium=email&triedRedirect=true\n\n接下来，我们完整看一下这篇文章。\n\nAI 系统即将开始自我构建，这意味着什么？\n\nClark 表示，他写下这篇文章，是因为在梳理所有公开可获得的信息后，他不得不形成一个并不轻松的判断：到 2028 年底之前，出现无人类参与的 AI 研发的可能性已经相当高，或许超过 60%。\n\n这里所谓的无人类参与的 AI 研发，指的是一种足够强大的 AI 系统：它不仅能辅助人类做研究，还可能自主完成关键研发流程，甚至构建出自己的下一代系统。\n\n在 Clark 看来，这显然是一件大事。\n\n他坦言，自己也很难完全消化这件事的含义。\n\n之所以称这是一个不情愿的判断，是因为它背后的影响过于巨大，让他感到难以把握。Clark 也不确定，整个社会是否已经准备好迎接 AI 研发自动化所带来的深层变化。\n\n他现在相信，人类可能正生活在一个特殊时间点：AI 研究即将被端到端自动化。如果这一刻真的到来，人类就像跨过了卢比孔河，进入一个几乎无法预测的未来。\n\nClark 表示，这篇文章的目的，是解释他为什么认为，通向完全自动化 AI 研发的起飞正在发生。\n\n他会讨论这一趋势可能带来的一些后果，但文章的大部分篇幅，都会集中在支撑这一判断的证据上。至于更深层的影响，Clark 计划在今年的大部分时间里继续梳理。\n\n从时间点来看，Clark 并不认为这件事会在 2026 年真正发生。但他认为，未来一两年内，我们可能会看到某种模型端到端训练出自己后继者的案例。至少在非前沿模型层面，出现一个概念验证是很有可能的；至于最前沿模型，难度会更高，因为它们成本极其昂贵，也依赖大量人类研究员的高强度工作。\n\nClark 的判断主要来自公开信息：包括 arXiv、bioRxiv 和 NBER 上的论文，以及前沿 AI 公司已经部署到现实世界中的产品。基于这些信息，他得出一个结论：自动化生产当下 AI 系统所需的各个环节，尤其是 AI 开发中的工程组件，基本已经具备。\n\n如果 scaling 趋势继续延续，我们就应该开始准备面对这样一种情况：模型会变得足够有创造力，不仅能自动改进已知方法，还可能在提出全新研究方向和原创想法方面替代人类研究员，从而自行推动 AI 前沿继续向前发展。\n\n编码奇点：能力随时间的变化\n\nAI 系统是通过软件实现的，而软件由代码构成。\n\nAI 系统已经彻底改变了代码生产方式。这背后有两个相关趋势：一方面，AI 系统越来越擅长编写复杂的真实世界代码；另一方面，AI 系统也越来越擅长在几乎不依赖人类监督的情况下，把许多线性的编码任务串联起来完成，比如先写代码，再进行测试。\n\n体现这一趋势的两个典型例子，是 SWE-Bench 和 METR time horizons plot。\n\n解决真实世界的软件工程问题\n\nSWE-Bench 是一个被广泛使用的编程测试，用来评估 AI 系统解决真实 GitHub issue 的能力。\n\n当 SWE-Bench 在 2023 年底推出时，当时表现最好的模型是 Claude 2，整体成功率大约只有 2%。而 Claude Mythos Preview 的成绩已经达到 93.9%，基本上接近打满这个 benchmark。\n\n当然，所有 benchmark 本身都会有一定噪声，所以通常会出现这样一个阶段：当分数高到某个程度之后，你碰到的可能不再是方法本身的限制，而是 benchmark 自身的限制。比如在 ImageNet 验证集中，大约 6% 的标签就是错误或存在歧义的。\n\nSWE-Bench 可以被视为衡量通用编程能力，以及 AI 对软件工程影响的一个可靠指标。Clark 表示，他在前沿 AI 实验室和硅谷接触到的大多数人，现在几乎都已经完全通过 AI 系统来写代码，并且越来越多的人开始用 AI 系统来编写测试、检查代码。\n\n换句话说，AI 系统已经足够强，能够自动化 AI 研发中的一个重要组成部分，并显著加速所有参与 AI 研发的人类研究员和工程师。\n\n衡量 AI 系统完成长时任务的能力\n\nMETR 制作了一张图，用来衡量 AI 能完成多复杂的任务。这里的复杂度，是按照一个熟练人类完成这些任务大概需要多少小时来计算的。\n\n其中最关键的指标，是 AI 系统在一组任务上达到 50% 可靠性时，对应的大致任务时间跨度。\n\n在这一点上，进展非常惊人：\n\n2022 年，GPT-3.5 能完成的任务，大概相当于人类需要 30 秒完成的任务。\n\n2023 年，GPT-4 把这个时间提升到了 4 分钟。\n\n2024 年，o1 把这个时间提升到了 40 分钟。\n\n2025 年，GPT-5.2 High 达到了大约 6 小时。\n\n到 2026 年，Opus 4.6 已经把这个时间进一步推高到大约 12 小时。\n\n在 METR 工作、长期关注 AI 预测的 Ajeya Cotra 认为，到 2026 年底，AI 系统能够完成相当于人类需要 100 小时的任务，并不是一个不合理的预期。\n\nAI 系统能够独立工作的时间跨度显著增长，也和 agentic coding 工具的爆发高度相关。所谓 agentic coding 工具，本质上就是把能替人完成工作的 AI 系统产品化：它们可以代表人类行动，并在相当长一段时间内相对独立地推进任务。\n\n这也重新指向 AI 研发本身。仔细观察许多 AI 研究员的日常工作会发现，其中大量任务其实都可以拆解成几个小时级别的工作，比如清洗数据、读取数据、启动实验等等。\n\n而这类工作，如今已经落入现代 AI 系统能够覆盖的时间跨度之内。\n\nAI 系统越熟练，越能独立于人类工作，就越能帮助自动化 AI 研发中的一部分工作。\n\n任务委托的关键因素主要有两个：\n\n一是你对被委托者能力的信心；\n\n二是你相信对方能够在不依赖你持续监督的情况下，按照你的意图独立完成工作。\n\n当用户在观察 AI 在编程方面的能力时，会发现 AI 系统不仅变得越来越熟练，也越来越能在不需要人类重新校准的情况下，独立工作更长时间。\n\n这也和我们身边正在发生的事情相吻合，工程师和研究员正在把越来越大块的工作交给 AI 系统完成。随着 AI 能力持续提升，被委托给 AI 的工作也变得越来越复杂、越来越重要。\n\nAI 正在掌握 AI 研发所必需的核心科学技能\n\n想想现代科学研究是怎么进行的，其中很大一部分工作，其实就是先确定一个方向，明确自己想获得哪类经验性信息；然后设计并运行实验，生成这些信息；最后再对实验结果进行合理性检查。\n\n随着 AI 编程能力不断提升，再加上大语言模型越来越强的世界建模能力，如今已经出现了一批工具，能够帮助人类科学家提速，并在更广泛的研发场景中部分自动化某些环节。\n\n在这里，我们可以观察 AI 在几项关键科学技能上的进展速度，而这些能力本身也正是 AI 研究不可或缺的一部分：\n\n一是复现研究结果；\n\n二是把机器学习技术和其他方法串联起来，用来解决技术问题；\n\n三是优化 AI 系统自身。\n\n实现整篇科学论文，并完成相关实验\n\nAI 研究中的一项核心工作，是阅读科学论文，并复现其中的结果。在这方面，AI 已经在一系列 benchmark 上取得了显著进展。\n\n一个很好的例子是 CORE-Bench，也就是 Computational Reproducibility Agent Benchmark。\n\n这个 benchmark 要求 AI 系统在给定一篇论文及其代码仓库的情况下，复现论文中的结果。具体来说，Agent 需要安装相关库、软件包和依赖，运行代码；如果代码成功运行，它还需要搜索所有输出结果，并回答任务中的问题。\n\nCORE-Bench 于 2024 年 9 月提出。当时表现最好的系统，是运行在 CORE-Agent scaffold 中的 GPT-4o 模型。在该 benchmark 最困难的一组任务上，它的得分约为 21.5%。\n\n而到了 2025 年 12 月，CORE-Bench 的一位作者宣布，这个 benchmark 已经被解决了：Opus 4.5 模型取得了 95.5% 的成绩。\n\n构建完整的机器学习系统，解决 Kaggle 竞赛问题\n\nMLE-Bench 是 OpenAI 构建的一个 benchmark，用来测试 AI 系统在离线环境中参加 Kaggle 竞赛的能力。\n\n它覆盖了 75 个不同类型的 Kaggle 竞赛，涉及多个领域，包括自然语言处理、计算机视觉和信号处理等。\n\nMLE-Bench 于 2024 年 10 月发布。发布时，表现最好的系统是一个运行在 agent scaffold 中的 o1 模型，得分为 16.9%。\n\n截至 2026 年 2 月，表现最好的系统已经变成了运行在带搜索能力的 agent harness 中的 Gemini 3，得分达到 64.4%。\n\nKernel 设计\n\nAI 开发中一项更难的任务是 kernel 优化。所谓 kernel 优化，就是编写并改进底层代码，把矩阵乘法这类特定运算更高效地映射到底层硬件上。\n\nKernel 优化之所以是 AI 开发的核心，是因为它决定了训练和推理的效率：一方面，它影响你在开发 AI 系统时，究竟能有效利用多少算力；另一方面，当模型训练完成后，它也决定你能多高效地把算力转化为推理能力。\n\n近年来，用 AI 做 kernel 设计，已经从一个有趣的小方向，变成了一个竞争激烈的研究领域，并且出现了多个 benchmark。不过，这些 benchmark 目前还没有特别流行，所以我们很难像其他领域那样清晰地建模它的长期进展。另一方面，我们可以通过一些正在进行的研究，感受这个方向的推进速度。\n\n相关工作包括：\n\n用 DeepSeek 的模型尝试构建更好的 GPU kernel；\n\n自动把 PyTorch 模块转换成 CUDA 代码；\n\nMeta 用 LLM 自动生成优化后的 Triton kernel，并部署到自己的基础设施中；\n\n以及针对 GPU kernel 设计微调开源权重模型，例如 Cuda Agent。\n\n这里需要补充一点：kernel 设计确实具备一些特别适合 AI 驱动研发的属性，比如结果容易验证、奖励信号比较明确。\n\n通过 PostTrainBench 微调语言模型\n\n这类测试的一个更困难版本是 PostTrainBench。它测试的是，不同前沿模型能否接手较小的开源权重模型，并通过微调提升它们在某些 benchmark 上的表现。\n\n这个 benchmark 的一个优点是，它有非常强的人类基线：这些小模型现有的 instruct-tuned 版本。这些版本通常由前沿实验室中优秀的人类 AI 研究员开发，已经经过非常有能力的研究员和工程师打磨，并被部署到真实世界中。因此，它们构成了一个很难超越的人类基准。\n\n截至 2026 年 3 月，AI 系统已经能够对模型进行后训练，并获得大约相当于人类训练结果一半的性能提升。\n\n具体评估分数来自一个加权平均：它会综合多个后训练的大语言模型，包括 Qwen 3 1.7B、Qwen 3 4B、SmolLM3-3B、Gemma 3 4B，以及多个 benchmark，包括 AIME 2025、Arena Hard、BFCL、GPQA Main、GSM8K、HealthBench、HumanEval。\n\n在每次运行中，评测方会要求一个 CLI agent，尽可能提升某个特定基础模型在某个特定 benchmark 上的表现。\n\n截至 2026 年 4 月，得分最高的 AI 系统大约能达到 25% 到 28%，代表模型包括 Opus 4.6 和 GPT 5.4；相比之下，人类得分为 51%。\n\n这已经是一个相当有意义的结果。\n\n优化语言模型训练\n\n过去一年，Anthropic 一直在报告其系统在一项 LLM 训练任务上的表现。这个任务要求模型优化一个仅使用 CPU 的小型语言模型训练实现，让它尽可能快地运行。\n\n评分方式是：相较于未修改的初始代码，模型实现的平均加速倍数。\n\n这项结果进展非常显著：\n\n2025 年 5 月，Claude Opus 4 实现了 2.9 倍平均加速；\n\n2025 年 11 月，Opus 4.5 提升到 16.5 倍；\n\n2026 年 2 月，Opus 4.6 达到 30 倍；\n\n2026 年 4 月，Claude Mythos Preview 达到 52 倍。\n\n为了理解这些数字的含义，可以做一个参照：在人类研究员身上，这项任务通常需要 4 到 8 小时工作，才能实现 4 倍加速。\n\n元技能：管理\n\nAI 系统也正在学习如何管理其他 AI 系统。\n\n这一点已经可以在一些广泛部署的产品中看到，比如 Claude Code 或 OpenCode。在这些产品里，一个主 agent 可以监督多个 sub-agent。\n\n这让 AI 系统能够处理更大规模的项目：项目中可能需要多个具备不同专长的智能体并行工作，而它们通常由一个单一的 AI 管理者来协调。这里的管理者本身也是一个 AI 系统。\n\nAI 研究更像发现广义相对论，还是搭乐高？\n\n一个关键问题是：AI 能否发明出新的想法，帮助它改进自身？还是说，这些系统更适合完成研究中那些不那么光鲜、但必须一砖一瓦推进的工作？\n\n这个问题很重要，因为它关系到 AI 系统能在多大程度上端到端自动化 AI 研究本身。\n\n作者的判断是：AI 目前还不能提出真正激进的全新思想。但要实现自身研发自动化，它或许并不一定需要做到这一点。\n\n作为一个领域，AI 的进步很大程度上依赖于越来越大的实验，以及越来越多的输入，比如数据和算力。\n\n偶尔，人类会提出一些改变范式的想法，使整个领域的资源效率大幅提升。Transformer 架构就是一个很好的例子，混合专家模型，也就是 mixture-of-experts，也是另一个例子。\n\n但更多时候，AI 领域的推进方式其实更朴素：人类会拿一个表现良好的系统，扩大其中某个方面，比如训练数据和算力；观察扩大规模后哪里出问题；找到工程上的修复方案，让系统能够继续扩展；然后再次扩大规模。\n\n这个过程里，真正需要洞见的部分其实很少。大量工作更像是不那么耀眼、但非常扎实的基础工程。\n\n类似地，很多 AI 研究其实是在运行现有实验的各种变体，探索不同参数设置会带来什么结果。研究直觉当然能帮助人类挑选最值得尝试的参数，但这件事本身也可以被自动化，让 AI 自己判断哪些参数值得调整。早期的神经架构搜索，就是这类思路的一个版本。\n\n爱迪生曾说：天才是 1% 的灵感，加上 99% 的汗水。即便过去 150 年，这句话依然很贴切。\n\n偶尔，确实会出现彻底改变一个领域的新洞见。但大多数时候，领域进步是靠人类在改进和调试各种系统的艰苦过程中，一点点推进出来的。\n\n而前面提到的公开数据表明，AI 已经非常擅长执行 AI 开发中许多必要的苦活累活。\n\n与此同时，还有一个更大的趋势：基础能力，比如编程能力，正在和不断扩展的任务时间跨度结合起来。这意味着 AI 系统可以把越来越多这类任务串联起来，形成复杂的工作序列。\n\n因此，即便 AI 系统目前相对缺乏创造力，也有理由相信，它们仍然能够推动自身继续向前发展。只是相比能够产生全新洞见的情况，这种推进速度可能会更慢。\n\n但如果继续观察公开数据，会发现另一个令人好奇的信号：AI 系统也许正在展现出某种创造力，而这种创造力可能让它们以更令人惊讶的方式推动自身进步。\n\n推动科学前沿继续向前\n\n目前已经有一些非常初步的迹象表明，通用 AI 系统有能力推动人类科学前沿继续向前发展。不过到目前为止，这种情况只发生在少数几个领域，主要是计算机科学和数学。而且很多时候，并不是 AI 系统单独完成突破，而是以人机协作的方式，与人类研究者共同推进。\n\n尽管如此，这些趋势仍然值得观察：\n\nErdős 问题：一组数学家与 Gemini 模型合作，测试它在解决一些 Erdős 数学问题上的表现。他们引导系统尝试了大约 700 个问题，最终得到了 13 个解答。在这些解答中，有 1 个被他们认为是有趣的。\n\n研究者写道，他们初步认为，Aletheia（一套基于 Gemini 3 Deep Think 的 AI 系统） 对 Erdős-1051 的解答，代表了一个早期案例：一个 AI 系统自主解决了一个略具非平凡性、并且有一定更广泛数学兴趣的开放 Erdős 问题。该问题此前已有一些 closely-related 的相关研究文献。\n\n如果往乐观方向理解，这些案例可以被看作一个信号：AI 系统正在发展出某种能够推动领域前沿的创造性直觉，而这种直觉过去主要属于人类。\n\n但也可以从另一面解释：数学和计算机科学可能本身就是特别适合 AI 驱动发明的领域，因此它们或许只是例外，并不能代表更广泛的科学研究都会被 AI 以同样方式推进。\n\n另一个类似例子是 AlphaGo 的第 37 手。不过 Clark 认为，距离 AlphaGo 那次结果已经过去十年，而第 37 手之后并没有被某个更现代、更惊人的洞见所取代，这本身也可以被视为一个略偏悲观的信号。\n\nAI 已经可以自动化 AI 工程中的大片工作\n\n如果把上面所有证据放在一起，我们可以看到这样一幅图景：\n\nAI 系统已经能够为几乎任何程序编写代码，而且这些系统已经可以被信任去独立完成一些任务；这些任务如果交给人类，往往需要数十小时的高强度专注劳动。\n\nAI 系统越来越擅长完成 AI 开发中的核心任务，从模型微调到 kernel 设计，都在被逐步覆盖。\n\nAI 系统已经能够管理其他 AI 系统，实际上形成一种合成团队：多个 AI 可以分头处理复杂问题，其中一些 AI 扮演负责人、批评者、编辑者的角色，另一些 AI 则扮演工程师的角色。\n\nAI 系统有时已经能在困难的工程和科学任务上超过人类，尽管目前还很难判断，这究竟是因为它们具备了真正的创造力，还是因为它们已经熟练掌握了大量模式化知识。\n\n在 Clark 看来，这些证据已经非常有说服力地表明：今天的 AI 已经可以自动化 AI 工程中的大片工作，甚至可能覆盖其中的全部环节。\n\n不过，目前还不清楚 AI 能在多大程度上自动化 AI 研究本身。因为研究中的某些部分，可能不同于纯工程技能，仍然依赖更高层次的判断、问题意识和创造性。\n\n但无论如何，一个清晰信号已经出现：今天的 AI 正在大幅加速从事 AI 开发的人类，让这些研究员和工程师可以通过与无数合成同事配对协作，放大自己的工作能力。\n\n最后，AI 行业本身也几乎是在明说：自动化 AI 研发就是它们的目标。\n\nOpenAI 希望在 2026 年 9 月之前构建一个自动化 AI 研究实习生。Anthropic 正在发表关于构建自动化 AI 对齐研究员的工作。DeepMind 在三大实验室中显得最谨慎，但也表示，在可行时应该推进对齐研究自动化。\n\n自动化 AI 研发也已经成为许多创业公司的目标。Recursive Superintelligence 刚刚融资 5 亿美元，目标就是自动化 AI 研究。\n\n换句话说，数千亿美元级别的既有资本和新增资本，正在投入到一批以自动化 AI 研发为目标的机构中。\n\n因此，我们当然应该预期，这个方向至少会取得某种程度的进展。\n\n为什么这很重要\n\n这带来的影响深远，但在大众媒体对 AI 研发的报道中却鲜有讨论。以下这几个方面可以反映出 AI 研发带来的巨大挑战。\n\n1. 我们必须把对齐做好：如今有效的对齐技术可能会在递归式自我改进中失效，因为 AI 系统会变得比监督它们的人员或系统智能得多。这是一个已被广泛研究的领域，所以他只简要概述一些问题：\n\n训练人工智能系统不撒谎和作弊是一个出人意料的微妙过程（例如，尽管努力为环境构建良好的测试，但有时人工智能解决问题的最佳方法是作弊，从而教会它作弊是可行的）。\n\nAI 系统可能通过「假装对齐」来欺骗我们，输出让我们以为它表现良好的分数，但实际上隐藏了它真实的意图。（一般来说，AI 系统已经能够察觉自己何时正在被测试。）\n\n随着 AI 系统开始更多地参与自身训练的基础研究议程，我们可能会大幅改变 AI 系统的整体训练方式，却没有良好的直觉或理论基础来理解这意味着什么。\n\n当你把某个系统置于递归循环中时，会产生非常基本的「误差累积」问题，这可能会影响上述所有问题及其他问题：除非你的对齐方法「100% 准确」且理论上能够在更聪明的系统中持续保持准确，否则事情可能很快出错。例如，你的技术初始精度是 99.9%，经过 50 代可能降为 95.12%，经过 500 代可能降到 60.5%。\n\n2.AI 涉及的每一件事都会获得巨大的生产力倍增： 就像 AI 显著提高软件工程师的生产力一样，我们应该预期 AI 涉及的其他领域也会如此。这带来几个需要应对的问题：\n\n获取资源不平等：假设 AI 的需求继续超过计算资源供应，我们必须决定如何分配 AI 以实现社会的最大利益。我对市场激励能够保证我们从有限的 AI 计算中获得最佳社会收益持怀疑态度。确定如何分配 AI 研发带来的加速能力将是一个政治性很强的问题。\n\n经济的「阿姆达尔定律」：随着 AI 流入经济，我们会发现某些环节在面对高速增长时会出现瓶颈，需要想办法修复这些链条中的薄弱环节。这在需要协调快速数字世界与缓慢物理世界的领域可能尤为明显，比如新药临床试验。\n\n3. 资本密集型、人力轻型经济的形成 ：上述所有关于 AI 研发的证据也表明，AI 系统越来越有能力自主运营企业。这意味着我们可以预期，经济中的一部分将被新一代公司占据，这些公司可能是资本密集型（因为它们拥有大量计算机），或运营开支密集型（因为它们在 AI 服务上花费大量资金并在其基础上创造价值），相比今天的企业，它们对人力的依赖相对较低 —— 因为随着 AI 系统能力持续增强，投入 AI 的边际价值会不断增长。实际上，这将表现为「机器经济」在更大「人类经济」中逐渐形成，随着时间推移，AI 运营的公司可能会开始相互交易，从而改变经济结构，并引发关于不平等和再分配的各种问题。最终，可能会出现完全由 AI 系统自主运营的公司，这将加剧上述问题，同时带来许多新的治理挑战。\n\n凝视黑洞\n\n基于以上分析，作者认为到 2028 年底，我们看到自动化 AI 研发（即前沿模型能够自主训练其继任版本）的概率约为 60%。为什么不预期它在 2027 年出现？原因是作者认为 AI 研究仍然需要创造力和异议见解才能前进，到目前为止，AI 系统尚未以变革性和重大方式展示这一点（尽管在加速数学研究上的一些结果有启示）。如果非要他给出 2027 年的概率，他会说 30%。\n\n如果到 2028 年底还没有出现，我们可能就会揭示当前技术范式中的一些根本性缺陷，需要人类发明推动进一步发展。\n\n参考链接：\n\nhttps://x.com/jackclarkSF/status/2051312759594471886\n\nhttps://importai.substack.com/p/import-ai-455-automating-ai-research?r=1ds20&utm_campaign=post&utm_medium=email&triedRedirect=true\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-05_Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了_机器之心.md"}, {"title": "谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉", "source": "极客公园", "digest": "自学习 AI 的融资神话，正在告诉我们一件事——这场 AI 军备竞赛，连研究员本身都要被「卷」进去了。", "link": "https://mp.weixin.qq.com/s/nRy1hLyREGgXDlK8gGAm9A", "content": "---\npublish_time: 1777953600\n---\n\n# 谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉\n\n> 原文链接：https://mp.weixin.qq.com/s/nRy1hLyREGgXDlK8gGAm9A\n> 公众号：极客公园\n\n自学习 AI 的融资神话，正在告诉我们一件事——这场 AI 军备竞赛，连研究员本身都要被「卷」进去了。\n\n作者｜桦林舞王\n\n编辑｜靖宇\n\n1956 年，一批科学家聚在达特茅斯，第一次正式讨论「机器能否思考」。他们乐观地以为，用一个夏天就能解决这个问题。\n\n七十年后，这个问题依然没有答案。但有一家公司，刚刚成立四个月，\n\n就拿到了 5 亿美元融资，估值达到 40 亿美元\n\n——只因为它宣称，自己找到了一条路，让 AI 学会自己做研究、自己进化。\n\n这家公司叫 Recursive Superintelligence。\n\nGoogle 风投 GV 领投，英伟达跟投。两家公司在 AI 生态里的地位不需要赘述。它们同时出手，押注一家连产品都还没有公开的初创公司，背后的逻辑值得认真拆解。\n\n01\n\n「把人从循环里移走」\n\n先说说 Recursive Superintelligence 到底在做什么。\n\n公司由前 Salesforce 首席科学家 Richard Socher 创立，核心团队来自 Google DeepMind 和 OpenAI。这不是什么陌生的组合——过去两年，从顶级实验室出走创业的工程师和研究员，已经形成了一股明显的浪潮。\n\nRichard Socher 的 X 个人主页，Altman 显然关注了这位人才｜图片来源：X\n\nSocher 并非硅谷常见的那种「大厂出来镀金」的创始人。他 1983 年生于德国，在斯坦福大学师从 AI 先驱 Andrew Ng 和 NLP 权威 Christopher Manning，2014 年完成博士论文，拿下当年斯坦福计算机系最佳博士论文奖。\n\nRichard Socher 是将神经网络方法真正带入自然语言处理领域的关键人物之一——他早期关于词向量、上下文向量和提示工程的研究，直接奠定了今天 BERT、GPT 系列模型的技术基础，谷歌学术引用量已超 18 万次。\n\n博士毕业当年，他创立了 AI 初创公司 MetaMind，两年后被 Salesforce 以战略并购的方式收入麾下。此后他以首席科学家兼执行副总裁的身份主导 Salesforce AI 战略长达数年，主导了 Einstein GPT 等企业级 AI 产品线的落地。\n\n离开 Salesforce 后，他又在 2020 年创立了 AI 搜索引擎 You.com，2025 年完成 C 轮融资，估值达 15 亿美元。这一次，他把目光从搜索转向了更底层的命题。\n\nThinking Machines Lab、Safe Superintelligence、Ineffable Intelligence、Advanced Machine Intelligence Labs……每一家都拿着「前 XX 大模型核心团队」的标签出现，每一家都在讲一个「下一代 AI」的故事。\n\n但 Recursive 的切入点，比大多数同行更激进。\n\n它的核心命题是「自学习 AI」——\n\n不是让 AI 更聪明地回答问题，而是让 AI 自主完成科学研究的全流程\n\n：提出假设、设计实验、评估结果、迭代方向。换句话说，它想把人类研究员从这个循环里完整地移走。\n\n这不是一个新鲜的方向，但 Recursive 把它放到了一个极其现实的商业逻辑里。现在顶级 AI 研究员的年薪动辄 1500 万到 2000 万美元，如果一套系统能以更低的成本、更快的速度完成同样的工作，前沿研究的经济模型就会彻底改写。\n\n投资人显然看到了这个逻辑。融资轮据报道超额认购，最终规模可能达到 10 亿美元。\n\n02\n\nGoogle 和英伟达同时下注\n\nGV 领投，英伟达跟投。这个投资人组合本身就是一个信号。\n\nGoogle 的逻辑不难理解。DeepMind 多年来一直是「AI for Science」方向最重要的探索者，AlphaFold 破解蛋白质折叠问题，AlphaGeometry 在数学竞赛中击败人类顶尖选手。\n\n但 DeepMind 的路径是用 AI 解决具体的科学问题，Recursive 想做的是更底层的事——\n\n让 AI 系统自主推进科学发现的过程本身\n\n。这对 Google 来说既是竞争关系，也是一个值得押注的对冲。\n\n更重要的是，就在本月初，Google 刚刚与 Intel 宣布了多代 AI 基础设施的合作协议。这说明 Google 在 AI 基础设施层面的布局正在全面提速。对 Recursive 的投资，是这个大棋局里的一颗棋子——谁来跑在最前面的模型上，Google 都想有份。\n\n英伟达的逻辑则更直接。自学习 AI 的核心瓶颈不是算法，是算力。如果 AI 要自主跑实验、迭代模型，背后需要的 GPU 集群规模是指数级增长的。\n\n英伟达投 Recursive，某种程度上是在投自己的未来订单\n\n。\n\n两家公司同时出手，也释放了一个更微妙的信号——这个赛道，可能已经到了「不投就来不及」的阶段。\n\n03\n\n四个月估值 40 亿，合理吗\n\n估计当所有人第一次看到 40 亿美元这个数字的时候，第一反应是「又来了」。\n\nAI 创业估值泡沫这两年已经不是新鲜话题。一个 PDF、一个 demo、几张幻灯片，加上几个来自顶级实验室的名字，就可以撬动几亿美元——这在硅谷和伦敦已经不是传说，而是日常。\n\n但仔细看 Recursive 的情况，有几点和普通的「PPT 独角兽」不太一样。\n\n第一，\n\n创始团队的分量\n\n。Richard Socher 在 NLP 领域有真实的学术积累，不是纯粹靠「前大厂」光环包装。核心团队在 DeepMind 和 OpenAI 的经历，也意味着他们切实接触过前沿研究的痛点。\n\n第二，\n\n融资超额认购的事实\n\n。这意味着市场需求远超供给，投资人在抢着进来，而不是被说服进来。\n\n但 40 亿美元的估值，对于一家四个月、尚无公开产品的公司来说，定价的依据是预期，不是现实。这本质上是在为一个方向付费，而不是为一个产品或收入付费。\n\n这种定价逻辑在 AI 时代正变得越来越普遍，背后是投资人对「错过下一个 OpenAI」的深层恐惧\n\n。Safe Superintelligence 当年也是以几乎没有产品的状态拿到了天价估值，Ilya Sutskever 的名字就是最硬的资产。\n\nRecursive 在复制同样的路径。这不是批评，而是一个客观的观察。\n\n04\n\n「自学习」这扇门，背后是什么\n\nRecursive Superintelligence 这个名字，其实已经把公司的野心说得很清楚了。\n\n「Recursive」是递归的意思。在计算机科学里，递归是一个函数调用自身的结构，是很多复杂算法的核心机制。放到 AI 研究上，「递归超级智能」暗示的是一个系统能够不断优化自身、螺旋上升的过程。\n\n这个概念并不新鲜，它的极端版本就是「智能爆炸」——\n\n一个系统一旦超过某个临界点，就能自主加速自身的进化，最终达到人类无法理解的智能层级\n\n。这是 AI 安全领域长期以来最核心的担忧之一。\n\n但 Recursive 现在做的，应该远没有到这个层面。更现实的解读是，它在尝试构建一个可以自主驱动科学探索循环的系统，目标是大幅降低 AI 研究的人力成本和时间成本。\n\n如果它真的能做到，影响不会只停留在 AI 圈。它意味着药物研发、材料科学、物理学等领域，都可能迎来一个「没有人类科学家参与也能快速推进」的阶段。\n\n当然，这还是「如果」。\n\n从声称到实现，中间的距离，在 AI 行业里从来不是线性的。\n\n05\n\n浪潮的逻辑\n\n2025 年下半年以来，从顶级实验室出走创业的浪潮一波接一波。Thinking Machines Lab、Safe Superintelligence、Ineffable Intelligence……这条名单还在变长。\n\nRecursive 是这个浪潮里最新、也目前估值最高的一家。\n\n背后的结构性原因很简单——OpenAI、Anthropic、Google DeepMind 的竞争已经让这些头部实验室变得越来越像大公司，有 KPI、有合规、有政治。\n\n真正想押注最激进方向的研究员，反而觉得出来自己干更自由\n\n。\n\n与此同时，资本市场的逻辑也在强化这个趋势。对于有大厂背书的顶级研究员来说，现在创业的窗口期可能是历史上最好的时候——投资人比任何时候都更愿意为「方向」付钱。\n\n这场浪潮最核心的问题不是「谁会成功」，而是「成功的定义是什么」。\n\n如果 Recursive 最终证明了自学习 AI 的可行性，它将改写 AI 研究的底层范式。如果它没有做到，5 亿美元的弹药烧完之后，留下的会是又一个被过度炒作的概念。\n\n两种可能都真实存在。\n\n四个月，40 亿美元估值，这个数字让人兴奋，也让人警惕。AI 军备竞赛发展到今天，连「如何做研究」这件事本身，也变成了竞争的战场。\n\n科学家们在达特茅斯争论了一个夏天的问题，现在有人打算用 AI 来回答——用 AI 研究 AI，用递归的方式奔向超级智能。\n\n这条路通向哪里，没有人真正知道。但显然，Google 和英伟达已经决定，不管通向哪里，都不能缺席。\n\n*头图来源：\n\ntechfundingnews\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n如果 AI 能更快地提出假设、做实验、得结论，\n\n人类科学家还剩什么价值\n\n？", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-05_谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉_极客公园.md"}, {"title": "Agent-World：扩展真实世界环境，让智能体与环境协同进化！", "source": "机器之心", "digest": "介绍Agent-World项目，通过扩展真实世界环境，促进智能体与环境的协同进化研究。", "link": "https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-A", "content": "---\npublish_time: 1777953527\n---\n\n# Agent-World：扩展真实世界环境，让智能体与环境协同进化！\n\n> 原文链接：https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-A\n> 公众号：机器之心\n\n随着\n\nMCP\n\n、\n\nAgent Skills\n\n与各类\n\nHarness\n\n的快速发展，大模型能轻松调用成百上千种外部工具，但在\n\n多工具，具备复杂状态、长程交互的任务上仍有明显短板\n\n。\n\n尽管一系列环境扩展方法尝试复刻真实世界的交互环境（如订票系统，外卖平台），但仍\n\n受限于\n\n环境扩展的规模与真实性\n\n。除此以外，训练环境造得再多，当智能体在面临新的交互环境时，\n\n若\n\n缺少持续学习的训练算法依旧很难具备泛化性。\n\n为此，本文\n\n提出\n\nAgent-World\n\n：\n\n一个通用智能体训练场，将\n\n“\n\n智能体环境探索\n\n”\n\n与\n\n“\n\n自进化训练\n\n”\n\n相结合，形成智能体与环境协同进化的闭环\n\n。\n\nAgent-World\n\n由两个核心模块构成：\n\n（\n\n1\n\n）\n\n智能环境\n\n-\n\n任务探索\n\n：\n\n通过深度研究智能体，围绕真实世界环境主题，自主从互联网挖掘环境数据库、生成可执行工具和可校验任务。\n\n（\n\n2\n\n）\n\n持续自进化训练\n\n：\n\n通过多环境强化学习训练智能体，并将合成环境视作天然的训练场，自动诊断智能体的能力短板，针对性地推动环境\n\n/\n\n任务扩展，实现智能体的自进化。\n\n图\n\n1\n\n：\n\nAgent-World\n\n总览\n\n：左图\n\n展示\n\nAgent-World\n\n智能体与环境的协同进化闭环，右图展示下游性能与环境扩展曲线\n\n最终，\n\nAgent-World\n\n构建了\n\n1978\n\n个环境、\n\n19,822\n\n个工具，任务平均交互轮次超过\n\n15\n\n轮\n\n。\n\n实验表明，在\n\n23\n\n个挑战性的基准上\n\n(\n\n包括\n\nτ²-Bench\n\n、\n\nBFCL V4\n\n、\n\nMCP-Mark\n\n、\n\nClawEval\n\n、\n\nSkillsBench\n\n等\n\n)\n\n，\n\nAgent-World-8B/14B\n\n一致性优于先进的环境扩展方法与强开源基础模型\n\n。\n\n进一步的实验分析\n\n表明\n\n，\n\n环境多样性、自进化轮次与智能体性能之间存在可扩展关系。\n\n论文标题：\n\nAgent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence\n\n论文链接：\n\nhttps://arxiv.org/pdf/2604.18292\n\n项目主页：\n\nhttps://agent-tars-world.github.io/-/\n\n目前\n\nAgent-World\n\n在\n\nX\n\n上收获很高关注度\n\n，\n\n同时\n\n荣登\n\nHuggingface Paper\n\n日榜第二名\n\n！\n\nAgent-World\n\n：\n\n扩展世界环境，让智能体与环境协同进化！\n\n1、智能环境\n\n-\n\n任务挖掘：从网络中自动挖掘真实世界环境\n\n传统的环境合成方法要么依赖\n\nLLM\n\n直接生成，要么局限于有限的开源工具数据。\n\nAgent-World\n\n则选择了个有趣的思路：从真实世界的环境主题出发，让深度研究智能体自主去广阔的互联网上挖掘环境。\n\n图\n\n2\n\n：智能环境\n\n-\n\n任务挖掘流程：包含整体流程概览（上）与各步骤细粒度展示（下）\n\n（1）智\n\n能数据库挖掘\n\n：\n\nAgent-World\n\n选定真实\n\nMCP\n\n服务器数据、开源工具文档、行业需求文档等作为主题锚点（\n\n2\n\n千余个）；对每个主题使\n\n用\n\n搜索、浏览、代码编译器与文件系统\n\n四种工具的深度研究智能体（\n\nDeep Research Agent\n\n），从海量互联网的网页中自主挖掘主题相关的环境数据库，并通过\n\n迭代式地数据复杂化\n\n来提升数据库规模与结构真实性。\n\n（2）工具接\n\n口生成与校验\n\n：\n\nAgent-World\n\n进一步引入代码智能体来为每个环境生成\n\n工具接口\n\n与\n\n单元测试脚本\n\n，通过\n\n“\n\n可编译性、测试准确率、环境最小有效性\n\n”\n\n三重规则过滤，最终得到一系列包含真实数据库与可执行工具集的交互环境。\n\n（3）层\n\n次化环境分类体系\n\n：\n\n为了支撑跨环境的任务合成与分层评测，该工作进一步对海量环境生态进行体系构建，通过主题聚类并结合大模型与人工校验，\n\nAgent-World\n\n将环境生态划分了\n\n20 / 50 /1978\n\n的三层级环境标签分类体系（如下图所示）\n\n图\n\n3\n\n：\n\nAgent-World\n\n的层次环境分类。左图展示\n\n20\n\n个一级环境，右图展示\n\nTop-10\n\n二级环境对应三级环境数量。\n\n（4）可验证任务合成：\n\n基于高质量的环境生态，\n\nAgent-World\n\n采用了两种互补的可验证任务合成策略：\n\n•\n\n基于图的任务合成\n\n：\n\n为环境中的工具构建一个完全连通的依赖图，通过随机游走生成合理的工具调用序列，随后\n\n“\n\n由链反推\n\n”\n\n自然语言问题，并配套大模型评分\n\nRubric\n\n。这种方法擅长建模顺序依赖的逻辑。\n\n•\n\n程序化任务合成\n\n：\n\n直接让\n\nLLM\n\n生成一个需要复杂控制流的\n\nPython\n\n脚本来解决某个问题，并反向生成对应的问题，可执行验证代码。这种方法能捕捉非线性的复杂推理。\n\n（5）合成环境的统计分析\n\n：\n\n下图给出了环境与任务分布的详尽统计。经多道过滤后，\n\nAgent-World\n\n最终沉淀\n\n1,978\n\n个环境、\n\n19,822\n\n个工具，单环境平均工具数超过\n\n10\n\n个，体量可观且粒度均衡；环境数据库横跨\n\nJSON\n\n、\n\nCSV\n\n、\n\nSQL\n\n、\n\nHTML\n\n、\n\nTeX\n\n、\n\nYAML\n\n等多种文件格式，结构与语义上均呈现高度异质性。\n\n合成任务则以\n\n“\n\n长程多轮\n\n”\n\n为主，平均交互轮次超过\n\n15\n\n轮，对规划、记忆与错误恢复提出持续压力。难度方面，即便是豆包\n\n-Seed 2.0\n\n在\n\nPass@10\n\n设定下仍有相当比例任务无法正确完成，反映出整体任务的极具挑战性。\n\n综上，静态统计从\n\n规模、格式、交互长度、难度\n\n四个维度共同验证了\n\nAgent-World\n\n合成交互环境在\n\n多样性\n\n、\n\n异质性\n\n与\n\n复杂性\n\n上的显著优势。\n\n图\n\n4\n\n：\n\nAgent-World\n\n合成环境与任务的六维统计分析。\n\n2、持续自进化智能体训练：让智能体与环境协同进化\n\n在构建可扩展，真实的环境生态系统后，\n\nAgent-World\n\n将其转化为一个动态的智能体训练场（如下图）。\n\n图\n\n5\n\n：持续自进化智能体训练框架。上方是多环境强化训练，下方是诊断与协同进化循环。\n\n（1）多环境强化学习\n\n：\n\n与传统\n\nAgent RL\n\n不同，我们的训练在\n\n「智能体\n\n–\n\n工具\n\n–\n\n数据库」\n\n的闭环交互中展开。智能体在不同环境中进行\n\nRollout\n\n，调用工具的同时也会改写底层数据库状态，使学习信号真正根植于可执行世界环境。算法上，\n\nAgent-World\n\n采用广泛使用的\n\nGRPO\n\n最大化上述可验证奖励，稳定提升\n\nAgent\n\n性能。\n\n奖励侧亦按任务类型分化\n\n：\n\n基于图合成的任务由大模型依校验\n\nrubric\n\n评分细则逐项打分；程序式任务则直接执行验证脚本，依最终答案或状态的正确性给分。\n\n（2）自进化智能体竞技场\n\n：\n\nAgent-World\n\n的核心在于把整个环境生态视作天然的智能体训练竞技场。训练并非一蹴而就，而是一个多轮迭代的自进化过程：\n\n动态评测任务合成\n\n：\n\n每轮训练结束后，从竞技场的环境池中按环境分类体系均衡采样一批新环境，并为其合成全新的评估任务，避免\n\n\"\n\n刷过的题再考一遍\n\n\"\n\n。\n\n智能体化诊断\n\n：\n\n让当前轮次的智能体在这批新任务上跑评估；诊断智能体随后分析其失败轨迹、错误分布与环境元信息，定位能力短板（例如\n\n\"Notion\n\n环境下的二级标题创建出错\n\n\"\n\n），输出\n\n弱点环境排序\n\n与\n\n针对性任务生成\n\n指南。\n\n智能体\n\n–\n\n环境协同进化\n\n：\n\n依据诊断结果，在弱点环境上合成更具挑战性的训练任务，并按需进一步复杂化对应环境数据库；再以这批\n\n\"\n\n薄弱能力定制化数据\n\n\"\n\n驱动下一轮的持续强化学习。\n\n以上流程形成了一个有趣的训练飞轮：\n\n“\n\n训练提升智能体\n\n→\n\n评估暴露弱点\n\n→\n\n诊断指引环境\n\n/\n\n任务扩展\n\n→\n\n新数据驱动智能体进一步进化\n\n”\n\n。这一闭环让智能体与其训练环境实现了真正的\n\n“\n\n协同进化\n\n”\n\n。\n\n实验结果：\n\n23\n\n个基准验证\n\nAgent-World\n\n的跨域智能体能力\n\n实验设置\n\n：\n\n为充分评估泛化，\n\nAgent-World\n\n评测\n\n5\n\n大类领域，共覆盖\n\n23\n\n个评测基准：\n\n•\n\n智能体工具使用\n\n：\n\nMCP-Mark,\n\nBFCL V4,\n\nτ²-Bench\n\n•\n\n前沿\n\nAI\n\n助手\n\n：\n\nSkillsBench,\n\nARC-AGI-2,\n\nClawEval\n\n•\n\n通用推理\n\n：\n\nMATH500,\n\nGSM8K,\n\nMATH,\n\nAIME24/25,\n\nKOR-Bench,\n\nOlympiadBench\n\n等\n\n•\n\n深度搜索与软件工程\n\n：\n\nWebWalkerQA,\n\nSWE-Bench,\n\nTerminal-Bench,\n\nGAIA,\n\nHLE\n\n等\n\n•\n\n知识与\n\nMCP\n\n：\n\nMMLU,\n\nSuperGPQA,\n\nMCP-Universe\n\n等\n\n对比基线包括前沿闭源模型（\n\nGPT-5.2 High, Claude Sonnet-4.5\n\n，\n\nSeed2.0\n\n等）、强开源基础模型（\n\nDeepSeek-V3.2-685B, Qwen3-235B-A22B\n\n）以及先进的环境扩展方法（\n\nEnvScaler\n\n，\n\nAWM\n\n，\n\nScaleEnv\n\n）。\n\n1.\n\n核心智能体任务上表现卓越\n\n表\n\n1\n\n：在核心智能体工具使用基准上结果。\n\n如上表所示，在当下最具挑战性的三大智能体工具使用基准\n\n—MCP-Mark\n\n、\n\nBFCL V4\n\n、\n\nτ²-Bench\n\n上，\n\nAgent-World-8B\n\n与\n\n14B\n\n稳定超越所有开源环境扩展基线。这三套基准分别考察多轮有状态交互、跨域工具调用与长程对话，连闭源前沿模型在\n\nMCP-Mark\n\n上也仅停留在\n\n50\n\n左右的分位。\n\n更有意思的是，\n\nAgent-World-14B\n\n在\n\nBFCL V4\n\n上取得\n\n55.8%\n\n，反超\n\n685B\n\n参数的\n\nDeepSeek-V3.2-685B\n\n（\n\n54.1%\n\n），这也表明更真实的可执行环境与可验证奖励，比参数更能对齐复杂的智能体交互模式。\n\n2.\n\n长程智能体推理能力显著\n\n图\n\n6\n\n：\n\nAgent-World-8B\n\n在通用推理、智能体搜索与编码、知识与\n\nMCP\n\n三大能力组上的泛化表现雷达图，全面领先基线。\n\n如上图所示，当我们把评测扩展到\n\n17\n\n个覆盖长程推理、深度搜索、软件工程与知识应用的基准，\n\nAgent-World-8B\n\n依然在所有维度上保持领先：通用推理（\n\nMATH500,\n\nAIME,\n\nOlympiadBench\n\n等）未因为\n\nAgent\n\n相关训练而退化，甚至微微涨幅；在深度搜索，软件工程领域（\n\nGAIA,\n\nSWE-Bench,\n\nTerminal-Bench\n\n等）这类超长轮次任务上优势极为明显。\n\n除此以外，在其他知识类与\n\nMCP\n\n基准表现同样十分优秀，这证明了\n\nAgent-World\n\n其通过环境训练获得的技能是可迁移、可组合的，而非针对特定基准的过拟合。\n\n图\n\n7\n\n：\n\nAgent-World\n\n系列模型在\n\nSkillsBench\n\n、\n\nARC-AGI-2\n\n、\n\nClawEval\n\n等前沿\n\nAI\n\n助手基准上展现优异性能。\n\n3.\n\n先进\n\nAI\n\n助手场景显著提升\n\n如上图所示，\n\nAgent-World\n\n在\n\nSkillsBench\n\n、\n\nARC-AGI-2\n\n和\n\nClawEval\n\n这三个要求长程规划和真实世界执行的最新基准上同样表现出色，且从\n\n8B\n\n到\n\n14B\n\n规模提升稳定，而其他的基线模型则出现了能力波动。\n\n定量分析：\n\n环境规模与自进化如何驱动性能？\n\n除了主实验结果，\n\nAgent-World\n\n还进行了一系列有趣的定量分析。\n\n1、训练环境规模扩展分析\n\n图\n\n8\n\n：下游智能体性能随着训练环境数量的增加而显著提升，呈现明确的缩放规律。\n\n随着逐步增加训练环境的数量（从\n\n0\n\n到近\n\n2000\n\n个），智能体性能与环境数量呈明显的正相关。初期（\n\n10\n\n到\n\n100\n\n个环境）性能提升迅猛，说明覆盖关键交互模式至关重要；后期提升放缓但持续，表明更大规模的环境带来了更细粒度的能力提升。\n\n2、自进化轮次分析\n\n表\n\n2\n\n：持续自主进化的效果\n\n。\n\n研究验证了自进化竞技场闭环的有效性。无论是\n\nAgent-World\n\n模型自身还是基线模型\n\nEnvScaler-8B\n\n，经过两轮\n\n“\n\n评估\n\n-\n\n诊断\n\n-\n\n针对性训练\n\n”\n\n的循环后，一致性地在多个基准上的性能获得一致性增益。这证明将环境作为训练场，针对性驱动数据合成，是持续提升智能体环境泛化能力的有效机制。\n\n3、多环境强化学习曲线分析\n\n图\n\n8\n\n：多环境智能体强化学习曲线展示。\n\nAgent-World\n\n虽然在复杂，混合的环境与多样化合成任务（基于工具图与程序化）上进行强化学习，其奖励分数随步数稳步上升，而策略熵保持相对稳定甚至增长，表明智能体在适应新环境的同时，保持了良好的探索性，没有过早地陷入局部最优的\n\n“\n\n固化\n\n”\n\n行为。\n\n总结与展望\n\nAgent-World\n\n希望通过扩展真实世界环境，实现智能体与环境的持续协同进化。作为本文作者，我们也想抛出一些在推动这项研究中发现的几点启示，供研究通用智能体训练方向的朋友们参考与共同探索：\n\n真实性是环境扩展的底座\n\n：\n\n构建高真实、逻辑可校验的环境，是训练通用智能体的前提。\n\nAgent-World\n\n以智能体化流水线对接真实主题与海量网络信息，自动挖掘数据与工具；我们相信这只是起点，未来会有更自动、更贴近真实世界复刻的环境合成范式涌现。\n\n进化是环境训练的动力\n\n：\n\n规模化环境生态一旦建成，单次静态训练既不够、也浪费高成本构建的环境。\n\nAgent-World\n\n构建了可自动诊断弱点、定向生成挑战的闭环系统，让智能体与环境协同进化。如何把环境生态与训练算法深度耦合，仍是一条漫长但值得持续押注的路。\n\n环境\n\n/\n\n任务可扩展性通往泛化性\n\n：\n\n我们在\n\nAgent-World\n\n中观察到\n\n“\n\n环境规模、自演化轮次、任务难度\n\n”\n\n与智能体性能之间清晰的\n\nscaling\n\n关系。这提示未来应同步扩展\n\n“\n\n更多样的环境、更复杂的任务、更多轮的进化\n\n”—\n\n这或许正是通往通用智能体交互能力的一把钥匙。\n\n作者简介：本文第一作者是董冠霆，中国人民大学高瓴人工智能学院博士二年级，导师为窦志成教授和文继荣教授。他的主要研究方向为通用智能体训练。以第一/共同第一作者身份在ICLR、ACL等国际顶级会议发表论文10余篇；代表工作包括 ARPO, AUTOIF, Search-o1, Webthinker, FlashRAG等。谷歌学术引用量1万余次，个人GitHub项目星标8000余枚，并在字节跳动Seed、阿里通义千问等基座大模型团队实习。曾获首届腾讯青云奖学金，国家奖学金、北京市优秀毕业生等荣誉。本文的通信作者为中国人民大学的窦志成教授与字节跳动Seed的钟宛君。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-05_Agent-World：扩展真实世界环境，让智能体与环境协同进化！_机器之心.md"}, {"title": "浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略", "source": "银行科技研究社", "digest": "浦发银行推动AI从单点应用向规模化落地转型，深化全行数智化战略。", "link": "https://mp.weixin.qq.com/s/BvkarbHTMupqqnNo_JTF1A", "content": "---\npublish_time: 1777968120\n---\n\n# 浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略\n\n> 原文链接：https://mp.weixin.qq.com/s/BvkarbHTMupqqnNo_JTF1A\n> 公众号：银行科技研究社\n\n近日，浦发银行发布2025年年度报告。报告显示，在AI赋能方面，该行构建千卡智算基座、建设企业级知识资产管理体系、推动人工智能规模化应用，发布《“人工智能+”应用规划白皮书》与《人工智能实施行动计划（2026）》，推进了智能服务升级与生产力重塑。\n\n在业绩说明会上，浦发银行副行长丁蔚指出，该行自主创设的智能体已超2000个，其中143个经严格认证后，已工程化嵌入到业务流程中。此外，董事长张为忠表示，2026年是数智化战略全面深化年，该行将推进三项重点工作。\n\n建设200+AI场景，将AI能力建设提升至战略核心地位\n\n据悉，浦发银行从数智底座、超级系统、核心场景三方面披露了AI赋能金融的情况。\n\n在数智底座方面，浦发银行推动规模化应用，已完成DeepSeek-671B等30个大模型本地化部署，建成全栈信创千卡高性能算力集群，上线首个系统级规模化人工智能应用范例“数智运营服务及作业平台建设项目”；构建了算力、算法、平台、知识“四位一体”的智能底座，打造企业级知识库，沉淀6.1亿字知识资产。\n\n在超级系统方面，浦发银行驱动AI能力提升，打造了大模型应用超级系统，为知识资产全生命周期建设及管理、人工智能模型全生命周期研发管理、智能体全流程研发提供支撑。\n\n在核心场景方面，智能营销构建涵盖客户画像解读、营销方案生成、产品适配推荐等能力，客群匹配准确率达95%以上，将复杂决策周期压缩至“分钟级”；对公授信聚焦大中企业贷前尽调报告实现50%内容自动生成，财务报表识别准确率超90%且识别效率提升80%；远程银行构建“面客服务+赋能运营”AI体系，企微工作台问答准确率达88%。\n\n截至报告期末，浦发银行建设超过200个人工智能场景，赋能智慧营销、智慧经营、高效运营、数智风控、智能管理五大领域，累计产生300人年新质生产力，促进实现人工智能场景规模化应用，累计大模型调用量超5亿次。\n\n此外，报告还提到，浦发银行已将AI能力建设提升至战略核心地位，先后发布《“人工智能+”应用规划白皮书》与《人工智能实施行动计划（2026）》，聚焦金融垂类大模型与智能体的打造。\n\n据了解，《“人工智能+”应用规划白皮书》是浦发银行于2025年3月发布，阐述了大模型应用体系及相关技术探索方案，涵盖基础工程、知识资产、应用创设和安全管理四大维度；《人工智能实施行动计划（2026）》则于2025年12月发布，提出一系列量级提升目标，以加速AI从单点场景升级至规模化应用。\n\n自主创设智能体超2000个，全面深化数智化战略\n\n在业绩说明会上，丁蔚指出，目前该行自主创设的智能体已超2000个，其中143个经认证后，已工程化嵌入到业务流程中。\n\n张为忠表示，未来，银行应以AI技术应用、AI原生思维能力推动服务能力转型。\n\n据悉，浦发银行已建成企业级智能体创设平台，正以流程化贯通、工程化实施、规模化应用为路径，开展AI应用建设，以此突破单点智能的局限，强化智能体综合决策能力。\n\n此前，浦发银行曾透露，完成工程化落地的智能体已嵌入了客服、运营等业务流程。\n\n在客服场景，通过“真人+智能体”协同服务模式，可向客户提供7*24小时的远程智能服务，借助智能体整合后台信息、洞察潜在服务断点、定位客户需求，优化服务效率与质量；在表单识别场景，智能体可一键提取文件信息，将平均处理时长从30分钟缩短至6分钟，准确率达到90%。\n\n此外，面对AI浪潮，浦发银行已将数智化战略确立为近年发展的主线。\n\n自2023年底确立数智化战略以来，浦发银行已构建完整的“1-5-5-5-4-3-N”战略实施路径。两年来，该行坚持行稳致远、久久为功，以钉钉子精神推动战略落地见效。\n\n张为忠表示，2026年是浦发银行数智化战略全面深化年，该行将以“战略驱动、策略策应、技术引领、文化保障、集团协同”20字方针为年度主题，围绕以下三项工作，深入推进数智化战略：\n\n一是继续推动数智创新，提升科技赋能，推动AI从单点场景应用迈向规模化应用，打造智能服务新范式。\n\n二是强化全员集团化协同联动以及对外联动，以生态经营的形式服务市场和客户，加速推动浦发银行从传统的资金供应者向产业发展的合作者、合作的生态构建者转型。\n\n三是构建卓越的企业文化，通过组织活力激发经营动能。\n\n银\n\n行AI应用讨论\n\n群，有兴趣的朋友请添加群主：\n\nBankFintech666\n\n备注：\n\n公司+姓名+职务+A\n\nI\n\n入群。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-05-05_浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略_银行科技研究社.md"}, {"title": "突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？", "source": "新智元", "digest": "OpenAI总裁在法庭上承认相关指控，涉及巨额资金纠纷，马斯克对此事持续关注。", "link": "https://mp.weixin.qq.com/s/eZNWbT9CnDixLogTUiHHkQ", "content": "---\npublish_time: 1777957828\n---\n\n# 突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？\n\n> 原文链接：https://mp.weixin.qq.com/s/eZNWbT9CnDixLogTUiHHkQ\n> 公众号：新智元\n\n新智元报道\n\n编辑：Aeneas\n\n【新智元导读】\n\n太炸裂了！刚刚，OpenAI总裁Brockman当庭承认：自己投入0美元，持有OpenAI营利部门300亿美元股份（马斯克捐了3800万，得到的是0）。更炸的是，Brockman和奥特曼都悄悄持有Cerebras个人股份。Gary Marcus直言，这是马斯克最接近赢的一次。\n\n就在刚刚，OpenAI总裁Greg Brockman「认罪」了？\n\n他当庭承认，自己从未投入一分钱，却套出了价值300亿美元的股权。\n\n这个消息，不仅惊呆了法庭上所有人，也让所有网友震惊。\n\n听到这个劲爆消息，纽约大学学者马库斯判断：我认为马斯克第一次真的有机会赢了。\n\n硅谷世纪审判，\n\nOpenAI总裁「认罪」\n\n2026年5月的奥克兰联邦法院，空气中弥漫着焦灼感。\n\n在这个法庭里，坐着当今世界最聪明的几颗大脑，也坐着人类历史上最激烈的利益纠纷。\n\n一边是世界首富、致力于将人类送往火星的马斯克；另一边则是目前全球AI皇冠上的明珠——OpenAI的执掌者们：奥特曼和Greg Brockman。\n\n现在，这场审判已经演变成了一场关乎数百亿美元、充满了背叛、权谋、秘密协议与利益输送的商业谍战大片。\n\n庭审现场，马斯克的代理律师神情自若，他拿着Brockman自己的日记和邮件，优雅地进行着一场「现场活剐」。\n\n最令全场震惊的一幕发生了。\n\n当律师问及Brockman在OpenAI营利性实体的持股时，对话如下。\n\n问：「你在这一营利性公司中拥有所有权权益，对吗？」\n\nBrockman： 「是的，准确。」\n\n问：「而为了获得这些权益，你投入的现金是0美元。对吗？」\n\nBrockman（迟疑后）： 「也是准确的。」\n\n问： 「你在这家营利性实体的股权，以今天的估值计算，超过了200亿美元，对吗？」\n\nBrockman：「是的。」\n\n问： 「事实上，它可能更接近300亿美元。对吗？」 Brockman： 「我想这可能是真的。是的。」\n\n这个数字在法庭内回荡时，旁听席上响起了一阵细微的骚动。\n\n要知道，马斯克作为OpenAI最早的资助者，先后捐赠了超过3800万美元现金，提供了早期的办公场所，甚至亲手挖来了顶尖人才。\n\n但在今天的OpenAI里，马斯克的个人占股是零。\n\n不仅如此，Brockman还不得不承认了一个尴尬的事实：他曾在早期筹款中利用马斯克的名字来背书，甚至曾口头承诺捐款10万美元，但实际上，这笔钱他从未兑现。\n\n这正是马斯克指控的核心：不当得利。\n\n按照加利福尼亚州的慈善信托法，非营利组织的受托人应该领取薪水，而不是瓜分慈善资产。\n\n马斯克的逻辑很简单：我捐款是为了做一个造福人类的公器，结果你们把公器偷偷拆了，把里面的零件装进了自己的口袋，还给自己贴上了300亿美元的标签。\n\nCerebras：一笔200亿的自我交易\n\n如果说300亿股份是这场庭审的第一颗炸弹，Cerebras就是第二颗。庭审中披露的关于Cerebras公司的关联交易，直接触及了法律红线。\n\n马斯克的律师翻出了一份陈年旧账。\n\n2017年，Brockman在担任OpenAI受托人期间，私下购买了AI芯片初创公司Cerebras的股份。与此同时，奥特曼也对该公司进行了个人投资。\n\n然而，在接下来的时间里，Brockman开始疯狂在OpenAI内部游说，促使OpenAI与Cerebras达成交易。\n\n具体时间线如下。\n\n2025年12月：\n\nOpenAI签署了一份向Cerebras支付100亿美元的订单，并额外提供了10亿美元的贷款。\n\n2026年2月：\n\n凭借OpenAI的巨额订单，Cerebras的估值从80亿美元飙升至230亿美元，翻了近三倍。\n\n2026年4月：\n\nOpenAI将订单追加到了200亿美元。\n\n现在：\n\nCerebras正式提交IPO申请，估值冲向266亿美元。\n\n法庭上的对话如下。\n\n问：当你在讨论OpenAI和Cerebras之间的金融交易时，你实际上是Cerebras的股东，对吗？\n\nBrockman：「讨论期间和作为Cerebras投资者之间存在一些重叠。是的。」\n\n问：你能指出一封告知马斯克你持有Cerebras股份的邮件吗？在你推动OpenAI和Cerebras做交易的同时？\n\nBrockman：「我不认为存在这样的邮件。」\n\n问：聊天记录呢？Brockman：「没有。」问：短信呢？\n\nBrockman：「没有。」\n\n问：然而如果OpenAI和Cerebras之间有交易，你个人会从中获利\n\nBrockman：「我想是的，但这不是我当时考虑的事情。」\n\n加州慈善信托法对此有个专门的名字：自我交易。这种自我交易在法律上是极其致命的。\n\n作为非营利组织的负责人，他们利用慈善资金去扶持自己个人投资的公司，从而实现个人财富的指数级增长。\n\n这已经不仅仅是「背离初衷」的问题，而是涉嫌严重的职业道德违规和利益冲突。\n\n「美国最恨之人」\n\nOpenAI方面显然不打算坐以待毙。\n\n为了反击马斯克的「贪婪说」，他们的律师在法庭上披露了一组充满火药味的短信！\n\n根据OpenAI的说法，在开庭前两天，马斯克曾主动联系Brockman提出和解。Brockman礼貌地回应说，不如双方都撤诉。\n\n随后，对话既然竟然脱轨了。\n\n马斯克似乎瞬间「狂暴化」，他回复道：「\n\n到本周末，你和Sam将成为全美国最令人痛恨的人。如果你坚持（不和解），那就这样吧。\n\n」\n\n这条被称为「不祥预兆（Ominous）」的短信，被OpenAI解读为马斯克的恐吓与威胁。\n\n庭审文件：https://storage.courtlistener.com/recap/gov.uscourts.cand.433688/gov.uscourts.cand.433688.522.0.pdf\n\nOpenAI的律师试图证明，马斯克起诉并不是为了什么「人类安全」或「非营利梦想」，而是因为他嫉妒OpenAI的成功，想向老搭档索要分手费。\n\n然而，法官Yvonne Gonzalez Rogers并没有被这些花边八卦带偏，她当庭裁定这些短信内容不可作为证据。\n\n法官的关注点依然清晰：OpenAI是否违反了其创立时的合同义务？其从非营利向营利性的转型是否合法？\n\n专家的忧虑：AGI军备竞赛下的「世界末日」\n\n在这场审判中，唯一能让人想起「人类命运」这个宏大课题的，是马斯克请出的专家证人——加州大学伯克利分校的计算机教授Stuart Russell。\n\n作为AI界的泰斗，罗素教授的证词让现场气氛瞬间沉重。他警告称，当前的AGI竞赛已经演变成了一场失控的「军备竞赛」。\n\n「追求AGI与安全之间存在着天然的张力，」罗素对陪审团说。\n\n他指出，OpenAI为了赢得竞争，正在牺牲安全性。这种「胜者通吃」的心理，会让开发者忽略对AI对齐的严苛要求。\n\n最讽刺的细节在于，马斯克虽然起诉OpenAI追求利润，但他自己旗下的xAI同样是一家营利性公司，且同样在疯狂购买显卡、扩充算力。\n\n所以，这到底是两个理想主义者在争夺人类的未来，还是两个亿万富翁在争夺通往上帝权力的门票？\n\n罗素教授甚至表达了一种担忧：如果这场诉讼导致OpenAI被迫公开其核心技术细节，可能会刺激全球范围内的AI军事化风险。\n\nOpenAI：这是「必要的恶」\n\n面对「背信弃义」的指责，OpenAI的逻辑也自成一派。\n\nBrockman在证词中反复强调，OpenAI之所以转型，是因为他们发现，想要实现AGI，所需的算力是天文数字。如果仅仅依靠慈善捐款，OpenAI早就死在了Google DeepMind的阴影之下。\n\n「为了吸引顶尖人才，为了购买数以万计的H100显卡，我们必须引入营利性结构，」OpenAI的辩护律师坚称，这是一种「必要的恶」。\n\n但马斯克方反驳道：如果你需要钱，你可以重新融资，但你不能把之前大家基于「非营利」前提投入的资产和声誉，直接打包带走，转化成私人的股份。\n\n要知道，在早期的一封邮件中，Brockman曾亲口说过，如果OpenAI转向营利性，那将是「道德上的破产」。\n\n如今，他坐在300亿美元的股权堆上，不知道是否还记得自己当年的那句话。\n\n硅谷的价值观大撕裂\n\n这场审判，本质上是两种硅谷价值观的终极对撞。\n\n一种是马斯克代表的「旧约理想主义」： 承诺就是承诺，契约不可违背。\n\n一种是奥特曼代表的「实用扩张主义」： 技术迭代太快，生存才是第一位。为了实现AGI，任何法律结构的微调和利益分配的改变都是合理的。\n\n而加州法律可能更倾向于前者。\n\n在加州，慈善资产受严格保护。如果你建立了一个慈善机构，然后决定把它变成私人公司，你必须经过极其复杂的评估，并将资产价值全额回馈给公众。\n\n如果马斯克赢了，会发生什么？\n\n首先，OpenAI可能被迫开源——这是马斯克一直以来的诉求。\n\n第二，微软的投资可能面临风险。马斯克要求撤销与微软的独家授权协议。如果法庭支持这一请求，OpenAI的估值将瞬间坍塌。\n\n第三，OpenAI营利性部门的利润可能被强行划拨回非营利母体，Brockman那300亿美元的「零成本股权」可能化为泡影。\n\n最后，这一判决将成为判例，警告所有AI初创公司：你不能打着慈善的幌子融资，再打着商业的幌子收割。\n\n但如果OpenAI赢了，那意味着硅谷的「野蛮生长」逻辑再次获得全胜——\n\n只要你能做出改变世界的技术，那所有最初的诺言，都可以在成功的金光下被掩盖。\n\n参考资料：\n\nhttps://x.com/TechCrunch/status/2051340893299593439\n\nhttps://x.com/TechCrunch/status/2051346525142634618\n\nhttps://x.com/ns123abc/status/2051346265963721125\n\nhttps://x.com/GaryMarcus/status/2051367230949232730\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？_新智元.md"}, {"title": "斯坦福HAI大重组！李飞飞升任校长顾问", "source": "新智元", "digest": "斯坦福大学以人为本人工智能研究院（HAI）进行重大重组，李飞飞教授转任校长顾问。", "link": "https://mp.weixin.qq.com/s/2tLg6ybKs96dDh6yKsfEKA", "content": "---\npublish_time: 1777946545\n---\n\n# 斯坦福HAI大重组！李飞飞升任校长顾问\n\n> 原文链接：https://mp.weixin.qq.com/s/2tLg6ybKs96dDh6yKsfEKA\n> 公众号：新智元\n\n新智元报道\n\n编辑：犀牛 所罗门\n\n【新智元导读】\n\n斯坦福把HAI与Data Science合并，李飞飞升任校长顾问。这是顶级大学在AI新阶段押注「组织力」的全面换挡。\n\n刚刚，斯坦福进行了一项重磅重组。\n\n5月4日，斯坦福大学宣布：\n\n将旗下两大AI与数据科学组织——\n\nStanford HAI（以人为本人工智能研究院）和Stanford\n\nData Science\n\n（斯坦福数据科学）合并为一个统一机构，名称保留Stanford HAI，由计算机科学家James Landay\n\n全面掌舵。\n\n而那位让全世界记住ImageNet的女人——\n\n李飞飞\n\n，则升任校长Jonathan Levin的AI特别顾问，同时与斯坦福前校长、图灵奖得主\n\nJohn Hennessy\n\n共同出任HAI顾问委员会联席主席。\n\nHAI\n\n，2019年由李飞飞、前教务长John Etchemendy、NLP大牛Chris Manning和Landay联合创立。\n\n7年间，它集结了超过400位跨学科学者，累计发放6000万美元研究资助，覆盖斯坦福全部七个学院。\n\n它做出了每年一度的AI Index报告，搞了面向国会议员的「AI训练营」，还在基础模型、数字经济、环境智能等领域建立了多个研究中心。\n\nStanford\n\nData Science\n\n，由数学与统计学家Emmanuel Candès领衔创建，专注大规模数据处理，建造了高性能计算集群\n\nMarlowe\n\n，并在天体物理、因果推断、可持续发展、神经科学等领域建立了交叉研究中心。\n\n过去，两个组织各有侧重：HAI偏「人文视角+政策影响」，Data Science偏「算力基建+数据方法」。\n\n但AI发展到2026年这个节点，问题变了——无论你做天文发现、脑科学建模还是历史文本挖掘，你都需要同时具备大规模数据能力、高性能算力和AI方法论。\n\n把两套班子拆着跑，效率越来越低。\n\n用斯坦福校长Levin的话说，合并后的HAI将是「斯坦福AI的统一入口」。\n\n也就是说，以后斯坦福搞AI，不管哪个学院、哪个方向，都从这一扇门进。\n\n李飞飞角色升维\n\n作为HAI创始院长和ImageNet的缔造者，李飞飞在学术界和产业界的号召力毋庸置疑。\n\n但HAI发展到今天，需要的不只是学术声望，更需要一个能「搞工程、搞协同、搞基建」的操盘手。\n\n李飞飞升任校长AI特别顾问，管的是全校七个学院的AI战略，格局更大了。\n\n她自己说得很明白：AI正在改变的不只是技术，还有我们追求科学发现、学习和教育、服务社会的方式。\n\n而接棒的Landay，可能在国内知名度不如李飞飞，但在人机交互（HCI）领域，这是一位教科书级的人物。\n\n他在1990年代开发的设计工具SILK，比Figma和Canva早了二十多年；他在2000年代初做的UbiFit项目，比Fitbit和Apple Watch早了近十年。\n\n2024年，他拿到了ACM SIGCHI终身研究奖——这是人机交互领域的最高荣誉之一。\n\n更关键的是，Landay的核心理念和这次合并高度契合。\n\n他反复强调的是「团队科学（Team Science at Scale）」——不是传统的五人小实验室，而是20-30人的跨学科大团队，包含教授、博士后、研究工程师、数据科学家、项目经理和设计师。\n\n这恰恰是AI研究从「个人英雄主义」走向「工业化协同」所需要的组织形态。\n\nJohn Hennessy——这位斯坦福前校长、图灵奖得主、RISC架构之父、Alphabet董事长——也加入了顾问委员会。\n\n他的评价最为直接：这是斯坦福最重要的举措。\n\n新HAI到底要干什么？\n\n合并后的HAI明确了三大支柱：\n\n第一，重新定义大学里的科学发现方式。\n\n斯坦福的天文学家用机器学习搜寻系外行星，神经科学家用模型预测脑活动，历史学家用NLP挖掘档案——这些不再是「AI+X」的点缀，而是新的研究范式。HAI要提供算力、研究工程师和数据科学家，让「团队科学」真正跑起来。\n\n第二，推动教育变革。\n\n从K-12到终身学习，AI正在改变人类学习和被评估的方式。HAI要和斯坦福学习加速器等机构合作，探索适应性辅导系统和新型教育模式。\n\n第三，研究和塑造\n\nAI\n\n的社会影响。\n\n就业怎么变？组织流程怎么变？设计方法怎么从「以用户为中心」升级到「以社区和社会为中心」？这些问题不能只靠工程师回答。\n\n而贯穿这一切的关键词是：\n\n开放\n\n。\n\n开源代码、开放数据、开放模型、开放课程。\n\n学术界在AI时代的价值\n\n斯坦福这次重组，释放出一个非常清晰的信号：\n\n大学\n\nAI\n\n竞争的下半场，拼的不再是一篇论文、一个明星教授，而是一整套系统能力——算力、数据、人才、组织力和开放研究生态。\n\n过去几年，前沿AI研究的话语权加速向产业界集中。\n\nOpenAI、Google DeepMind、Anthropic手握最强算力和数据，学术界的声量不断被压缩。\n\n斯坦福这次的动作，本质上是在回答一个存亡级问题：\n\n学术界在\n\nAI\n\n时代还有没有不可替代的价值？\n\n答案是有的——但前提是你能提供产业界给不了的东西：透明性、可复现性、公共利益导向的长期研究，以及真正跨学科的融合视角。\n\n而这些东西，不是靠一两个超级教授就能实现的，需要从组织架构层面去支撑。\n\n李飞飞没有离开，她只是换了一个更高的位置去看全局。Landay没有横空出世，他只是终于站到了与自己三十年积累相匹配的舞台上。Hennessy没有退休，他只是用另一种方式继续押注斯坦福最重要的赌注。\n\n当产业界拼命卷模型、卷算力、卷融资的时候，斯坦福选择卷「组织力」——用开放、跨学科、以人为本的方式，重新定义学术界在AI时代的角色。\n\n参考资料：\n\nhttps://hai.stanford.edu/news/why-stanford-is-restructuring-for-ais-next-era\n\nhttps://hai.stanford.edu/news/stanford-merges-ai-and-data-science-efforts-under-single-institute\n\nhttps://datascience.stanford.edu/\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_斯坦福HAI大重组！李飞飞升任校长顾问_新智元.md"}, {"title": "豆包要收费了：三档订阅最贵500元/月，保留免费基础版", "source": "量子位", "digest": "国民级AI新转向", "link": "https://mp.weixin.qq.com/s/izhyNSFKuObuk3nvHWP9mA", "content": "---\npublish_time: 1777953063\n---\n\n# 豆包要收费了：三档订阅最贵500元/月，保留免费基础版\n\n> 原文链接：https://mp.weixin.qq.com/s/izhyNSFKuObuk3nvHWP9mA\n> 公众号：量子位\n\n鱼羊 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n五一假期余额不足之际，低调了有一段时间的\n\n豆包\n\n悄咪咪搞起了大新闻，直接冲上热搜：\n\n这个真·国民级AI助手，要开始收费了。\n\n苹果App Store里，订阅服务声明已悄然登场，免费的基础版之外，订阅分为三档：\n\n标准版：连续包月每月\n\n68元\n\n，连续包年每年688元；\n\n加强版：连续包月每月\n\n200元\n\n，连续包年每年2048元；\n\n专业版：连续包月每月\n\n500元\n\n，连续包年每年5088元。\n\n目前还只是测试，现在打开豆包并看不到付费入口。\n\n官方对此迅速回应，说正式上线时将通过官方渠道发布完整信息，并划重点：\n\n免费服务将持续保留\n\n。\n\n我们也第一时间问了问豆包本包，不知道是不是已经被嘱咐过了，豆包同样贴心高亮：\n\n基础聊天、日常问答这些核心功能一直都是免费的。\n\n普通用户完全可以一直免费正常用~\n\n豆包APP稳坐日活第一\n\n回顾整个4月份，\n\n国产开源大模型\n\n真的做到了在国际舞台上各领风骚。\n\n月初，GLM 5.1发布，搞得大家开始定闹钟抢GLM Coding Plan，老外还抓耳挠腮想冲到国区买服务。\n\n4月21日，Kimi 2.6登场，又是一波好评如潮。还在设计能力上暴击了刚刚暴击设计行业的Claude Design。\n\n当然最受关注的还是DeepSeek V4，一句“率道而行”击碎质疑。发布之时小放烟雾弹，结果发布没两天，价格屠夫本色就再次显露，把几千万token的账单消耗干到了几块钱。。。\n\n技术圈层里，GLM、Kimi、MiniMax和DeepSeek等开源模型们，自然是讨论度最高的当红炸子鸡。\n\n但如果回到APP日活这个评估维度上来，稳坐第一国民AI应用的，还得是\n\n豆包\n\n。\n\n根据量子位智库最新数据，4月份，豆包APP日活环比增长\n\n21%\n\n，一举突破\n\n1.4亿\n\n。\n\n紧随其后的千问APP和元宝，日活在4700万和3500万这个量级。\n\n而在排名第4的DeepSeek之后，其余AI助手APP的日活都未及千万量级，来到400万以下。\n\n说\n\n豆包在这个维度上断层领先\n\n，并不为过。\n\n用户新增\n\n方面，豆包同样稳居第一：4月月下载量约为\n\n5000万\n\n。3月份的数据是超9000万。\n\n用户规模\n\n方面，仅2026年开年到现在，豆包累计下载量近\n\n2.6亿\n\n，依然是断层领先其他AI智能助手。\n\n总的来说，豆包在让AI破圈、提升国民AI使用度方面，确实是当之无愧的扛把子。加之登台春晚，以及Seedance 2.0在今年春节档的爆火，更是加深了豆包在大众之中“老少咸宜”的定位。\n\n国民度在这摆着了，那么下一步，开始考虑新的商业模式，确实也是情理中事。\n\nAI助手开启付费时代？\n\n根据火山引擎官方数据，截至2026年3月，豆包大模型的日均调用量已经突破120万亿Tokens。\n\n关键还要看增速。相比2026年年初，这个调用量是在不到两个月的时间内上涨了60%。更是2025年5月的1000倍。\n\n这些调用主要由包括豆包APP、飞书、火山引擎云服务在内的应用场景推动。结合下载量和用户日活来看，豆包APP每天要烧Token的量，应该也是国内AI智能助手第一了。\n\n而自上线以来，豆包APP一直都是免费的模式。API按量计费、AIGC方面即梦的订阅……面向更专业的人群更专业的场景，豆包大模型的创收倒是早已开始，但在这个面向\n\n大众\n\n的入口，字节落子更为谨慎。\n\n此番测试收费的动作曝光，代表着字节在用户规模、算力成本、商业化节奏和入口竞争之间，开始做新的阶段性选择了。\n\n一方面，是\n\n缓解算力成本与资源调度压力\n\n。现在算力有多缺，在高峰时段使用大模型的朋友们懂得都懂。\n\n另一方面，或许也有\n\n平衡用户体验\n\n的考量。\n\n单次调用消耗更高的复杂任务用户，对模型的响应速度、上下文长度和稳定性，往往也有更高的要求。\n\n偏向简单问答、日常陪伴和轻量创作的普通用户，则构成了豆包APP口碑、活跃度和保有量的基础。对于豆包而言，这部分用户仍然是大众AI入口的基本盘。\n\n面对不同的人群把服务进一步细分，也就应对了豆包APP在声明中写的“为更好地服务专业用户”“满足不同用户的差异化需求”。\n\n结合整体行业发展现状来看，在直接为模型付费的模式之外，各路玩家尚未探索出更行之有效的盈利模式（ChatGPT要加广告都快被骂秃噜了）。\n\n大部分国产大模型APP此前未曾效仿ChatGPT、Gemini等开启订阅模型，则是出于适应国内市场的考量：\n\n国内大众市场本身付费基础偏于薄弱。而百家争鸣格局下，获取用户是优先目标，付费与免费的选择之中，用户天然会更倾向尝试免费的一方……\n\n如今字节趁Seedance 2.0大受好评、自身基础模型能力得以验证之际，率先尝试，对于国内大模型商业化的进一步成熟未尝不是好事。\n\n如果这条路能被打通，也就证明国内大模型市场的成熟度又来到了下一个阶段，模型公司们的商业化路径有了又一个演进的方向——\n\n核心依旧是，模型能力够硬，用户付费就不会是增长阻碍。\n\nBTW，目前豆包订阅爆出的价格，按Coding Plan的标准看，在国产大模型里不算便宜。不过细则未出，还是要看官方后续正式发布时，会做怎样的调整。\n\n那么，你会订阅一手豆包尝尝咸淡吗？\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🔹\n\nAI正在从少数人的工具，变成所有人的日常。\n\n今年\n\n5月20日\n\n，我们将在\n\n北京金茂万丽酒店\n\n举办一年一度的中国AIGC产业峰会。\n\n首波嘉宾阵容已公布\n\n！\n\n昆仑万维方汉\n\n、\n\n智谱吴玮杰\n\n、\n\nEverMind邓亚峰\n\n、\n\n风行在线易正朝\n\n、\n\n百度秒哒朱广翔\n\n、\n\nFusion Fund张璐\n\n、\n\n香港大学黄超\n\n、\n\nMarsWave冯雷\n\n都来了，🔍\n\n了解详情\n\n邀请你和我们一起，不再只是讨论AI的未来，而是\n\n现在就用起来\n\n。👉\n\n报名参会\n\n一键关注 👇 点亮星标\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_豆包要收费了：三档订阅最贵500元_月，保留免费基础版_量子位.md"}, {"title": "42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战", "source": "InfoQ", "digest": "“我批准将这段代码投入生产环境，并承担随之而来的所有风险。”", "link": "https://mp.weixin.qq.com/s/h4O4RolNQ0mcJCxs9lVjFQ", "content": "---\npublish_time: 1777948200\n---\n\n# 42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战\n\n> 原文链接：https://mp.weixin.qq.com/s/h4O4RolNQ0mcJCxs9lVjFQ\n> 公众号：InfoQ\n\n作者丨SEDaily\n\n译者丨明知山\n\n策划丨Tina\n\n“我批准将这段代码投入生产环境，并承担随之而来的所有风险。”2026 年最大的挑战，就是找到愿意说出这句话的人。\n\nAI 编码已经不是尝鲜工具，而是进入了生产环境。Sonar 每天分析 7500 亿行代码，他们在最新《开发者代码现状调查报告》中看到一个很刺眼的矛盾：72% 的开发者每天使用 AI 编码工具，42% 的代码已经由 AI 生成或辅助完成，但 96% 的开发者仍然无法完全信任 AI 生成的代码。\n\n这意味着，软件工程正在从“怎么写出更多代码”，转向另一个更棘手的问题：代码可以由 AI 批量生成，但谁来确认它足够安全、可靠、可维护？谁敢签字让它上线？这也成了 2026 年工程团队绕不开的挑战。\n\nSonar 是一家专注代码质量与安全分析的公司，核心产品 SonarQube 已被全球超过 700 万开发者使用。在本期节目中，Sonar 企业营销高级副总裁 Chris Grams、产品营销与开发者关系副总裁 Manish Kapur，与拥有二十余年工程管理经验的 Matt Merrill 讨论了这份报告背后的真实信号：AI 为什么让代码生成更快，却让审核、测试、治理变得更重？为什么 35% 的开发者会绕过企业授权工具使用“影子 AI”？为什么 AI 生成代码不一定需要重造审核流程，反而更需要确定性校验、质量门禁和人工责任制？\n\n当 AI 从实验工具变成开发基础设施，真正的瓶颈不再是代码产出，而是信任、质量和责任。\n\n1\n\nAI 代码的信任鸿沟：42% 生成率与 96% 不信任”\n\nMatt Merrill：今天我和来自 Sonar 的两位嘉宾一起聊聊《开发者代码现状调查报告》。开始之前，Manish、Chris，二位能否先简单介绍一下自己，聊聊个人背景以及各自在 Sonar 负责的工作？\n\nChris Grams：\n\n我是 Chris Grams，在 Sonar 担任企业营销副总裁——这个头衔听起来或许会让人失去收听兴趣，但我想说的是，我同时也是公司内部的数据与调研负责人，所以我对这份调查报告的熟悉程度可能超过大多数人。我在企业技术领域工作了很久。职业生涯早期我在 Red Hat 待了大约十年，之后在多家软件公司担任顾问，后来又成为 Tidelift 的早期员工之一——这家公司为开源维护者提供赞助，大约一年前被 Sonar 收购。我也正是在一年多前正式加入 Sonar 任职。\n\nManish Kapur：\n\n我是 Manish，目前在奥斯汀工作。我加入 Sonar 已有两年半左右，马上就要满三年了。和 Chris 一样，我也拥有多年企业软件行业从业背景。我最初在 Sun Microsystems，之后加入 Oracle，现在来到了 Sonar。我职业生涯中扮演过多种角色。目前我是 Sonar 的产品营销与开发者关系副总裁，但也曾担任过产品经理、开发者关系负责人和其他售前等技术岗位。我算是比较偏技术、爱动手的类型。很期待今天与你交流。\n\nMatt Merrill：那 Sonar 呢？如果有听众不太熟悉 Sonar，二位能简单介绍一下这家公司是做什么的、都提供哪些产品吗？\n\nChris Grams：\n\n我们的核心产品是 SonarQube，已经存在很长时间了，全球有超过 700 万开发者在使用。简单来说，你可以把 Sonar 理解为代码的必备验证层——无论是 AI 生成的代码，还是开发者手写的代码，我们都能帮助确保代码的质量和安全。现在，随着 AI 智能体越来越多地参与编码，我们的作用也延伸到了这个领域。\n\n为了让大家直观了解 Sonar 的业务规模：我们每天分析 7500 亿行代码。我们的使命是帮助各类企业确保部署到生产环境的代码具备高质量、高安全性且易于维护。\n\nMatt Merrill：我认真阅读了这份调查报告，非常有意思。作为一个有工程领导背景、之前主要从事后端工程等工作的人，我的第一反应是：怎么又来了一份调查报告？它和的 Stack Overflow 调查报告有什么不同？但深入阅读后，我发现这份报告真的很独特。如果可以的话，你们认为从这份调查中能收获哪些 Stack Overflow 调查无法提供的内容？\n\nChris Grams：\n\n首先，能与 Stack Overflow 调查报告被一同提及，我们感到很荣幸。我们的目标是跻身 Stack Overflow 调查报告、GitHub Octoverse 报告等优质开发者调研行列。在我们看来，这类行业调研能够引领行业方向， 帮助开发者与技术管理者掌握有效信息，做出合理决策。如果我们的调查报告能取得成功，就能成为这些优质的开发者调查报告行列中的一员。我们希望能够提供增量的价值——Sonar 能够输出哪些独一无二的行业视角？\n\n我认为究其根本原因在于：我们非常了解代码——正如我刚才所说，\n\n我们每天分析 7500 亿行代码。\n\n今年早些时候，我们启动了“代码现状”系列研究工作，做了大量的分析。希望稍后有机会聊聊我们在探究主流大语言模型编码特性方面所做的研究。我们还从可维护性、安全性等角度分析了代码，并发布了一系列相关报告。对于这份报告，我们的想法是：我们已经从可维护性、安全性、可靠性等角度审视了代码；我们也研究了大语言模型生成的代码。现在我们想关注的是：每天使用这些新编码工具的开发者们是怎么看的？他们对当前的技术发展现状有什么看法？\n\n这可以说是 Sonar 版本的“代码现状”人文视角——深入了解开发者对这个正飞速变化的世界有何看法，认清我们当下所处的阶段。最后我想要强调的是：这份调查是在去年 10 月左右进行的，而在那之后行业环境又发生了巨大变化。在讨论过程中，我们会花一点时间谈谈那些我们认为仍然具有参考价值的数据，以及我和 Manish 认为自调查以来已经发生了哪些变化。\n\nMatt Merrill：我很喜欢你提到的“人文视角”，这也正是我的感受——你们用这些数据讲述了一个很好的故事。我很好奇，能否介绍一下这份数据的收集与分析方式？不得不说，这份报告做得十分出色。\n\nChris Grams：\n\n我做这类调查已经有很长时间了。实际上，我大概 20 多年前在 Red Hat 就开始做开发者调查了，还参与了 Red Hat 最早的一些研究数据工作。我一直认为，好的研究不只是堆砌数据。我始终秉持这样的理念：不要只罗列数据，而是要输出有效结论。核心要点是什么，或是有哪些关键的发现？我们在设计调查报告时也会带着一些强烈的假设和观点，认为部分现象是大概率真实存在的。我们想验证人们是否同意我们的看法，这是否也是他们的视角，或者有哪些地方我们可能错了。本次调研中，就有几处案例印证我们原先的假设并不成立。\n\n我们会带着预设的调研视角开展项目，但有时也会发掘出新的内容。这次调研便是两者兼而有之：部分数据印证了我们的判断，也有不少结果出乎我们的意料。\n\nMatt Merrill：我们已经聊了很多关于调查的背景内容，接下来就正式进入调研结果部分。我们先从重磅的发现开始。这个问题想请二位都聊聊。Chris，你可以先来讲讲。你最直观、最深刻的收获是什么？哪些内容最能引发你们的共鸣？\n\nChris Grams：\n\n我认为从整体层面来看，有几项数据在我们初次看到时十分令人震惊。例如，有 72% 使用过 AI 工具的开发者如今已经做到每日高频使用。如果现在这个数字比 72% 更高，我不会感到惊讶。但在去年秋天我们初次拿到这份数据时，72% 这个数字已经相当惊人，也大致印证验证了我们预判的趋势。此外，我们还让开发者如实说明，日常编写的代码当中，由 AI 生成的占比有多少——我们还询问了他们当前的现状和对未来的预期，比如几年后他们认为这个比例会是多少。\n\n我们得到的结果是：\n\n目前开发者编写的代码中已有 42% 是 AI 生成或 AI 辅助完成的。42%，这个比例很疯狂。到 2027 年，开发者预计这个数字将攀升至约 65%。\n\n回想一下，去年 1 月我刚加入 Sonar 时，绝大多数开发者还对 AI 工具产出的代码心存疑虑。而截至去年秋天，已有 42% 的代码由 AI 生成，这非常有趣。我还要补充另一个数据：当我们询问开发者他们对 AI 生成代码的准确性抱有多大信任时，\n\n96% 的开发者表示他们并不完全信任 AI 生成的代码。\n\n这就形成了一种鲜明反差：42% 的代码由 AI 编写，未来几年还将攀升至 65%，但开发者却并不真正信任这些代码。由此便产生了一道亟待解决的验证鸿沟，也可以说是信任鸿沟。这或许就是本次调研最重要的发现。\n\n2\n\n代码快了，工程慢了\n\nMatt Merrill：结合我的经验与日常工作来看，这个结论完全合理。我越来越多地听到关于智能体代码审查的事，甚至出现了让智能体互相校验、交叉验证的做法。这是一项非常有意思的发现。Manish，你最大的收获是什么？\n\nManish Kapur：\n\n我认同 Chris 的观点。整体而言，我对此倍感意外。最让我吃惊的是，AI 编码场景的落地与普及速度极快。回首来看，初代 GPT 模型问世不过两年半左右，而现如今，超 72% 的开发者每天都在使用 AI 编码工具，这已然成为他们的日常工作常态。这个数据来源于上个季度，我确信目前这一占比仍在持续攀升，未来甚至会达到 80%、90%，开发者的日常工作早已离不开这类工具。\n\nAI 编码应用场景的爆发速度以及在全行业的普及程度都超乎想象。我还发现，\n\nAI 虽然大幅加快了代码生成效率，却拖慢了代码生成之后的全流程工作\n\n，而这部分恰恰是软件工程中占比极高、不可或缺的环节。代码生成只是第一步，后续还有代码审核、校验、调试、集成测试以及长期维护等一系列工作。目前，这些配套环节的效率提升速度完全跟不上 AI 代码的产出速度。\n\n智能体还会进一步放大这种影响。正如 Matt 刚才所说的，随着各类编码工具持续迭代，智能体技术也随之快速发展，未来会出现大批协同运转、相互交互的智能体集群。整个行业的技术演进节奏都会因此大幅提速。最终的发展走向仍有待观察，我十分期待后续的变化。对我而言，手写编码早已不再是难题，真正的挑战在于代码写完之后的各项工作；以及在智能体互联互通、开发者逐步脱离日常编码与完整开发流程的大环境下行业会迎来怎样的变革。\n\nMatt Merrill：我同样满怀期待，迫切想要见证后续的发展。谈及 AI 工具的快速普及，我在日常工作中发现一个现象：开发者们普遍主动想要使用这类工具。一方面，行业环境带来了无形的推动压力；另一方面，大家自身的探索意愿也在不断增强。不少开发者会使用个人账号处理工作事务、访问 AI 工具，只为提升工作效率、尝试新兴技术。你们的报告中也提到了不少有意思的调研结论，方便和我们分享一下吗？\n\nManish Kapur：\n\n这一调研结果同样出乎我们的意料。目前企业内普遍存在大量影子 AI 的使用行为。这里所说的影子 AI，具体是指近 35% 的开发者会绕过企业官方授权工具使用个人账号登录第三方 AI 平台开展工作。其实这一点不难理解，Matt，你本身就是技术从业者，我也拥有技术背景，虽算不上专职开发者，但也长期编写代码。开发者天生乐于创造、热衷探索与尝试，所有人都想体验前沿顶尖的技术与工具，紧跟行业的前沿发展趋势。\n\n行业变革日新月异，这正是开发者不愿局限于企业指定工具的核心原因。随着智能体逐步落地，这类现象愈发普遍：开发者开始借助智能体扫描代码仓库、编写迁移脚本、重构老旧代码模块，这类操作早已成为日常。但这也暗藏风险，开发者向第三方非合规工具、影子 IT 平台传输代码、提示词、业务数据及上下文信息时，会直接导致企业知识产权与数据隐私面临泄露隐患。\n\n遗憾的是，现阶段企业针对这类行为的管理制度与管控体系尚不完善。未来随着大量智能体实现协同工作，整体管控难度还会大幅增加，短期内行业必将面临一系列管理难题，但我相信，和过往各类技术难题一样，我们最终都能找到解决方案。\n\n在管控治理层面，有一条核心原则始终不变：无论使用企业合规工具还是个人第三方工具，所有 AI 生成的代码都必须经过严格核验，后续的全流程管控环节缺一不可。企业需要进一步强化审核力度，全面校验代码可靠性，确保代码能够直接投入生产环境使用。\n\nMatt Merrill：就在今天，公司隐私合规部门的同事还专门强调，若团队使用 AI 工具，务必将相关合规要求纳入合作协议，与软件开发行业的规范标准保持一致。当下明显呈现出本末倒置的现状：全员都在被迫拥抱 AI 工具，但对应的合规管控、风险约束机制却严重滞后。这个问题确实值得重视。Chris，针对这份调研结论，你还有其他内容想要补充吗？\n\nChris Grams：\n\n我再补充一点，主要围绕企业内部工具的使用数量展开。目前各大企业普遍在试水各类不同的 AI 工具，调研数据显示，人均会同时使用四款不同的 AI 工具。\n\nMatt Merrill：\n\n这个数量超出了我的预期。\n\nChris Grams：\n\n不同从业者的工具使用数量存在明显差异，有人使用得多，有人使用得少。结合去年秋季的调研数据来看，当下 AI 工具赛道尚未决出绝对头部产品。不过近一两个月，Claude 的市场竞争力大幅提升，表现十分亮眼。整体来看，行业依旧处于多方工具测试、百花齐放的阶段。\n\nMatt Merrill：确实如此。直到去年 11 月，我还无法判定哪款工具更具优势，但体验过 Claude 之后，不得不承认它的表现极为出色。除此之外，企业的流程迭代速度远远跟不上技术变革节奏，开发者自行注册试用新兴工具也就成了必然，这种现象的出现并不难理解。\n\nChris Grams：\n\n如果企业采购的官方工具已经沦为市场中下游产品，想要更换新工具，还要走完繁琐的企业采购审批流程，而使用第三方工具能够数倍提升工作效率。即便从企业风控角度来看存在隐患，也不难理解开发者做出这类冒险选择的原因。\n\n3\n\nAI 消灭了重复劳动，但新的低效工作正在生成\n\nMatt Merrill：确实是这样。我们换个话题。这份报告里有两个内容让我格外关注，其中一个是“低效工作转移”这一概念。能否为我们解读一下这个概念，以及相关的调研发现？\n\nChris Grams：\n\n这也是我们调研中意外发现的结论之一。我们原本预设 AI 会大幅削减开发者的重复性低效工作，比如编写文档、撰写测试用例这类耗时繁琐、流程化的基础工作。当我们直接询问受访者 AI 是否减少了日常低效工作时，超七成受访者给出了肯定答案。75% 的人表示，AI 确实降低了重复性工作负担。\n\n但实际情况远比表面上看的更为复杂。结合工具使用频率展开进一步调研后发现：低频使用 AI 的开发者依旧被传统低效工作束缚；而高频使用 AI 的开发者虽然摆脱了旧有的繁琐工作，却面临新的低效任务。值得注意的是，两类开发者花费在低效工作上的总时长基本持平，只是工作内容发生了变化。以往编写文档这类基础工作如今都可以交由 AI 高效完成，彻底解放了人力。\n\n随之而来的新的工作难题：AI 极速批量生成代码后，开发者需要投入大量精力逐一核验代码质量、排查安全漏洞，\n\n代码审核校验成为了新的低效工作。\n\n究其根本，AI 无需为生成代码的质量承担责任，所有风险与责任最终都会落到人类开发者身上。这也是当下低效工作转型背后最大的挑战。既然责任无法转嫁，人工逐行核验 AI 生成代码就成了硬性要求，这类工作往往枯燥繁琐，却又必不可少，毕竟在责任认定层面，AI 产出的代码等同于开发者亲自编写。\n\nMatt Merrill：我经常用一个类比和身边人探讨这类问题，或许不算完全贴切，但很贴合当下的现状：电子表格问世之后，会计行业并没有消失，只是工作内容发生了变化。AI 之于开发行业，也是同样的道理。“低效工作转移”这个定义十分贴切，我之后也会沿用这个说法。\n\nManish Kapur：38% 的开发者认为，审核 AI 生成代码的难度远高于人工编写的代码。\n\n这一点在代码审核环节体现得尤为明显，也是让我感触很深的一个细节。\n\nMatt Merrill：\n\n理解 AI 生成代码的逻辑脉络、梳理完整业务链路确实要困难得多，这个结论完全合理。\n\nChris Grams：\n\n我们还发现，审核 AI 生成代码如同大海捞针。随着大模型持续迭代，AI 产出代码的性能、安全性与整体质量不断优化，潜藏的漏洞与问题也变得更加隐蔽。人工审核他人编写的代码尚且存在难度，更何况是无人工参与、由 AI 独立生成的代码。这类代码的整体问题数量或许有所减少，但残留的隐患往往更具隐蔽性与危害性，排查难度大幅增加。\n\nMatt Merrill：完全认同。Sonar 的核心产品之一是静态代码分析工具。能否分享一下目前客户在借助静态分析技术时都通过哪些创新方式应对 AI 编码带来的各类隐患与挑战？\n\nManish Kapur：\n\n过去 17 年里，很多企业一直选择并将我们视作业界公认的代码质量标杆。事实上，我们的能力远不止代码质量管控。我们的分析引擎不仅会从代码质量、安全、可靠性、可维护性和复杂度等维度审核代码，还新增架构检测能力，可对代码库整体架构进行研判，监测系统从合规架构逐步劣化为不良架构的演变速度。\n\n我们的客户正以多种不同方式使用我们的产品。在智能体技术蓬勃发展的时代，我们已全面适配各类主流 AI 原生开发环境，包括 Windsor、Cursor、GitHub Copilot 等主流集成开发环境，以及各类命令行工具。Matt，你也清楚，如今命令行工具的使用热度正持续攀升，无论是 Gemini 命令行工具、代码编解码工具、云开发命令行工具等，我们均已完成适配。简单来说，市面上主流的相关工具我们都已支持。我们为这些工具提供了一套独立、结果可确定的通知底层能力。\n\nAI 可以编写代码、审核代码，但\n\n往往存在固有的局限：AI 会默认自己生成的代码完全合规无误，且难以排查出全部的潜在问题。\n\n究其原因，AI 训练所依赖的数据集同时服务于代码生成与代码审核这两个场景。而我们拥有一套结果精准可控的代码审核机制，并深度嵌入现代软件开发生命周期。无论是 AI 在开发环境、命令行工具中编写代码，还是智能体提交合并请求等待审核的场景，我们都能介入检测，深度融入完整的研发流程。\n\n我们还推出了 MCP 服务器，目前不少大型企业客户都在使用 SonarQube 的 MCP 服务器。该服务器相当于智能体对接 SonarQube 代码分析能力的网关，采用了智能体通用通信协议，可为智能体开发环境、命令行工具等各类平台提供服务。除常规代码分析外，我们也在持续优化检测引擎，专门针对 AI 引发的漏洞添加识别能力。我们的产品支持自定义规则配置，已有部分客户通过添加自定义规则专门识别 AI 编码带来的风险模式。同时，我们也内置了多条专属检测规则，用于防范 AI 衍生风险，例如提示词注入攻击、规则文件后门攻击。这类风险完全由 AI 的编码行为产生，传统人工开发模式下基本不会出现。\n\n4\n\n不需要重造流程，老的审核体系依然有效\n\nMatt Merrill：你刚刚最后提到的那个风险是什么？\n\nManish Kapur：\n\n规则文件后门攻击是一类特定攻击途径，具体是指编码智能体和开发环境所依赖的配置文件、规则文件，例如 MDC 格式的文件、MD 格式的文件等。攻击者可以在这类文件中植入隐藏的特殊 Unicode 字符，这类隐蔽字符很难被 AI 识别检测到。我们专门开发了对应规则，能够精准排查配置文件、规则文件中暗藏的此类隐患。除此之外，针对大语言模型提示词注入攻击，我们也配置了专门的检测规则，可有效识别相关安全问题。这些都是在原有基础能力之上新增的、专门针对大语言模型的安全检测能力。\n\nMatt Merrill：我大概明白了这类后门攻击的原理。比如从 Claude 平台或其他地方复制了一份配置文件，无意间带入大量隐蔽的 Unicode 字符，进而篡改指令提示词，大致是这个逻辑吧？\n\nManish Kapur：\n\n就是这样。不法攻击者正是通过在这类文件中植入隐藏 Unicode 字符实施恶意操作。\n\nMatt Merrill：这确实值得关注。结合实际场景来看，如果我自主编写功能配置、设计持续集成与持续交付流程，就可以接入你们的 MCP 服务器及其他集成工具，将静态代码分析纳入自动化校验环节，同步输出检测结果。一旦检测出指定问题，即可终止构建流程，这类操作是否能够实现？\n\nManish Kapur：\n\n完全可行。我们提供了质量门禁机制，企业可自主制定判定策略，自定义构建任务通过或拦截的触发条件。\n\n不同应用场景的管控标准可以灵活区分。面向企业内部使用、无对外暴露风险、非敏感业务、无需投产的小型项目无需设置严苛的强制校验规则。但如果是银行系统、医疗系统这类核心应用，一旦系统故障或数据泄露将会造成极高损失，就需要启用更高标准的管控策略，升级质量门禁门槛。这类高风险项目，哪怕是一处安全漏洞也会直接拦截，无法通过校验。\n\n反之，对于非核心、不影响业务运转的内部轻量化应用，即便存在低优先级漏洞，企业也可灵活放行。团队能够根据自身业务需求自定义质量门禁与管控策略，这也是我们客户高频使用的核心场景之一。\n\nChris Grams：\n\n确实如此。有一点我感触很深，数月前，我们和一位业内知名的科技行业分析师交流，探讨 AI 时代的代码审核流程。对方提出了一个建议：作为权威分析机构，\n\n我们应该建议企业沿用传统的人工代码审核流程来校验 AI 生成的代码。\n\n如果企业原本就搭建了成熟的人工代码审核体系，再加入质量门禁等全套管控机制，这套成熟的流程完全可以高效复用在 AI 生成代码的审核工作中。因为归根结底，AI 产出的内容本质上依旧是代码。\n\n这个观点我十分认同。现在市面上涌现出各类 AI 专属代码审核工具，这一点也让我心存疑惑。当下很多人陷入了误区，单纯因为代码由 AI 生成就认为必须搭建全新的审核流程。诚然，部分场景下专属流程会更具优势，但大量经过长期验证、成熟稳定的标准化静态分析流程同样适用于 AI 代码审核，并且能够稳定输出可复现、高一致的检测结果。\n\nManish Kapur：\n\n我十分认同。其中关键问题在于误报率。我体验过多款第三方 AI 代码审核工具，同时也长期使用我们自研的产品。我发现，在部分场景中，纯 AI 审核的误报率比较高。在我看来，最优解是融合两类技术的优势，结合不同场景的适配性，按需选用合适的技术方案。Chris 说得完全正确，当下客户的核心诉求是引入一套结果稳定一致、低误报率的确定性检测体系，并将其作为最终的核验防线。\n\n在部分特定场景中，正如你和 Chris 刚才所说，大语言模型会是更优选择。例如文档编写、合并请求描述文案撰写等工作，大语言模型的处理效果远超传统工具，我们也会充分发挥大语言模型在这类场景中的优势。\n\n5\n\n大模型写代码各有脾气，怎么选比“谁更强”更重要\n\nMatt Merrill：没错。你们在《开发者代码现状调查报告》中还提及并引用了一份关于大语言模型编码特征的专项报告，内容十分有价值。希望你能简单介绍这份报告，以及目前的调研得出的相关结论。\n\nManish Kapur：\n\n一年前，我们便启动了大语言模型的专项测评工作，重点评估代码编写质量、安全性能与代码复杂度。行业内目前存在各类通用的测评基准，几乎所有大语言模型厂商都会依赖通用基准开展测试。例如，人工评估数据集等行业通用标准主要用于检验模型的基础编码能力。这类基准测评具备参考价值，是基础的评估手段，但我们认为，它们只能覆盖一半的评估维度。原因在于，通用基准仅考核代码最终结果的正确性，检验模型能否完成指定算法的编写、解决特定的编程问题，以及答案是否准确。\n\n但它们忽略了一个核心的点：不同大语言模型在解决同类算法问题、应对编程挑战时编码的实现方式与逻辑差异。为此，我们搭建了一套专门的评估体系，选取了 4400 道编程测试题，对主流大语言模型进行全维度测评。这些题目不属于任何一个通用基准题库，都是全新的未知考题，各大模型此前均未接触过，因此能够客观检验模型的真实编码能力。\n\n我们会参照所有基准测试的统一标准进行评分，考核维度包括生成频次、通过率是否达标、代码功能是否合规无误等。我们的评估还不止于此，我们还会进一步统计每千行、每万行乃至每百万行代码中出现的漏洞数量、安全问题数量，以及代码整体的复杂度水平，包括认知复杂度与圈复杂度两大核心指标，全面衡量大语言模型生成代码的综合质量。\n\n基准测试固然也是不错的参考，但我们实现了评估体系的全面升级，因为我们的核心业务始终是代码健康度审查与代码评审。我们为六七款大语言模型划分了专门的特质风格，发现不同的模型具有截然不同的特质表现，我们将其定义为\n\n模型特质原型\n\n。部分模型产出的代码功能表现极为出色，但认知复杂度与圈复杂度严重超标；还有一类模型生成的代码复杂度极低、代码行数精简，同时还能保障功能准确性。我们以此为依据，完成了这批大语言模型的特质划分。\n\n不同大语言模型的代码生成风格差异显著，体现在抽象设计程度、表述泛化方式、错误处理逻辑、冗余代码占比、代码坏味道以及安全漏洞类型等多个维度。我们针对模型生成的各类代码缺陷开展了全面且细致的深度分析。项目最初以模型特质报告为核心载体，如今已迭代升级为大语言模型排行榜，大家可前往 sonar.com/leaderboard 页面查看。截至目前，榜单已收录约 35 款主流大模型，从安全性、可靠性、可维护性、圈复杂度、认知复杂度、问题密度等多个维度完成全面测评，各项关键指标均会详细标注。\n\n不仅如此，我们还会清晰标注模型产生的安全漏洞数量，并细分漏洞类型，包括路径遍历风险、机密信息泄露问题等，所有问题都会形成完整的详细报告。碍于时间限制，我们无法逐一展开讲解，但非常推荐大家自行前往 sonar.com/leaderboard 页面查阅，深入了解这 35 款大语言模型的各项特质与综合表现。\n\nMatt Merrill：你刚才提到了模型特质，能否详细聊聊这部分内容？有没有比较特别、有意思的案例？\n\nChris Grams：\n\n去年夏天我们启动这项研究时，核心重点就是挖掘每款模型独有的特质风格。但后来我们逐渐意识到，大模型迭代速度极快，全新模型持续不断推出。这也是我们放弃特质划分、转而推出综合排行榜的核心原因——模型特质更新迭代过于频繁，根本无法为 Claude 代码模型固定标签。我甚至已经记不清去年夏天为 Claude 代码定义的特质，如今这个模型已成长为全球顶尖的编码专家。所有模型的共性变化十分明显：随着综合性能不断提升，代码输出愈发冗长，行数持续增加，进而导致认知复杂度同步走高。这一趋势一直延续至去年十一月左右。\n\n而近期大家查阅排行榜数据就能发现，部分模型实现了双向优化，在保证出色性能的同时，有效控制了代码复杂度，漏洞问题也大幅减少。去年很长一段时间里，行业呈现出线性规律：\n\n模型性能越强，代码行数越多，整体复杂度越高。但如今行业发展愈发精细化，不少顶尖模型的综合能力实现了质的飞跃。\n\n头部模型的特质逐渐趋同，全都成长为专业级编码高手。Manish，你还有什么内容想要补充吗？\n\nManish Kapur：\n\n你说得很对。早期我们仅测评了六款模型，并完成了特质定义，其中就包含 GPT-5、Claude Sonnet 4、Claude Sonnet 3.7 等版本。测评样本兼顾不同的规格，既有 80 亿参数的开源编码小模型，也有 GPT-5 这种超大模型。结合两端模型的表现差异，我们制定了首批特质标签。例如，开源编码小模型被我们称作快速原型搭建者，原因在于这类模型能够高效解决基础问题、精简代码行数，但代码严谨性不足，容易遗留各类隐性问题。\n\n它采用了原型方案，原型方案难免存在漏洞，但却能快速高效地验证核心构想。我们称之为“快速原型构建者”。而 Claude Sonnet 系列模型更像是资深架构师，它们在编写代码时会综合考量应用可扩展性、用户承载量、运行性能等多诸多因素。我们称之为\"资深架构师\"。我们曾为最初的六个模型起过一些名字，但现在我们已经有超过 35 个模型了，很难为所有这些模型都命名。随着模型不断迭代，我们正在逐渐放弃为它们赋予个性化名字的做法。\n\nChris Grams：\n\n不过不得不说，给大语言模型赋予拟人化特质是一件十分有趣的事。\n\nMatt Merrill：确实很有意思，这种方式也更容易让人记住各个模型的特点。现如今行业早已告别小众定制化，进入规模标准化阶段。我发现 Opus 4.5 的逻辑思考能力小幅领先 Opus 4.6，这个细节十分耐人寻味。从安全维度，也就是每百万行代码的安全漏洞数量来看，高配版 GPT 5.2 位居榜首；从可靠性维度，即漏洞严重程度与百万行代码问题密度方面，高配版 Gemini 3 Pro 表现最优，不同模型的优势领域差异十分鲜明。另外我还注意到，本次测评全部基于 Java 语言。\n\n这一点至关重要，不同模型针对不同编程语言的训练侧重点存在明显差异。\n\n即便如此，这份测评结果依旧极具参考价值。在结束这个话题之前，两位还有没有关于排行榜或模型特质的内容想要补充？\n\nManish Kapur：\n\n如果有听众希望测评特定模型，排行榜页面内设有专属提交表单，我们可以按需完成定制测评。\n\n我们一直有收到大量的测评需求。团队也在尽力跟进，但目前几乎每两周就会有新模型发布，更新的压力巨大。如果某个热门模型暂未收录，只要市场关注度足够高，我们都会优先安排补充测评。\n\nMatt Merrill：单纯好奇想问一下，完成一轮完整的基准测试需要多久？原本我以为会耗费很久，实际情况是不是这样？\n\nManish Kapur：\n\n初期测评周期确实较长，不过现在我们搭建了成熟的自动化测评框架，能够快速完成各类大模型的性能评估。\n\n上几轮测评最大的瓶颈出现在 Opus 4.6 发布时，当时针对该模型的接口请求量暴增，服务器出现过载，响应速度大幅下降，还频繁出现超时问题，我们只能反复重启测试任务。\n\nChris Grams：\n\n结合过去六个月的研究成果，我想分享一个核心结论：\n\n企业与团队在选择大语言模型时切勿只关注单一性能指标，需要建立全局评估思维，综合考量代码冗余程度、安全隐患数量。\n\n编码测试成绩只是参考维度之一，实际评估需要兼顾更多细节。不少性能顶尖的模型，一旦结合认知复杂度、代码冗余度、调用成本等维度综合评判，综合性价比就会大打折扣，这些都是不可忽视的关键因素。\n\n成本高低完全取决于调用模型所需的词元消耗成本。企业需要综合考量所有因素，而不能只单纯关注性能表现，我认为此前业界在评估模型时大多都将重心放在了性能层面。\n\nManish Kapur：\n\n除了成本之外，推理能力也至关重要。每款模型都支持不同的推理模式，一般有两到四种可选模式。推理等级越高，成本越高，问题求解耗时也越长，但分析推导的详尽程度会更高。\n\n6\n\nAI 让新人更快，也让经验更值钱\n\nMatt Merrill：我内心同样抱有顾虑，不禁会想：这类工具的定价会不会大幅暴涨？厂商是不是想先牢牢锁住用户，抢占行业龙头地位？在规划自身团队与业务发展时，这也是我一直在思考的问题。\n\n接下来我们聊聊从业年限，以及从业经验如何影响本次的调研结果。我深耕这个行业已有二十余年，我发现其中有一个现象十分值得深究。能否谈谈开发者的从业年限会如何影响他们对 AI 工具的认知？\n\nChris Grams：\n\n本次调研中有一项结果让我们颇为意外：不同从业经验层级的开发者在 AI 工具的使用方式上存在巨大差异。初级开发者表示，AI 能让他们的工作效率提升 40%，但其中 66% 的人也坦言，AI 生成的代码看似无误，实则暗藏漏洞。他们上手写代码的速度更快，却常常陷入困惑，无法真正信任工具产出的结果。\n\n反观资深开发者，他们的态度则更为谨慎理性。二者的使用方式截然不同。这份数据来自去年秋季的调研，65% 的资深开发者主要借助 AI 理解老旧复杂代码、编写文档、梳理历史遗留项目，或是用来校验内容准确性；而初级开发者往往过度依赖工具，直接让 AI 包揽全部编码工作。\n\n另外我想说，如今 AI 代码生成的质量已有大幅提升。关注相关讨论的人应该能发现，去年 12 月中旬左右形成了普遍共识：恰逢年末假期，大批开发者有时间体验各类全新的大模型，切实感受到这类工具的能力实现了质的飞跃。即便是资深开发者也开始用它们来完成更复杂的工作。二者的核心差异在于，初级开发者愿意贸然尝试新工具，资深开发者则更为克制，他们更清楚劣质代码上线的潜在风险，明白遗留问题会在后续带来巨大隐患。这就是两类开发者最关键的区别，也和我们最初的调研预判有所出入。\n\nManish Kapur：\n\n资深开发者会将 AI 工具当作推理辅助工具，能够读懂并校验工具生成的代码，具备独立甄别判断的能力。而初级开发者恰恰缺少这份审慎，他们会直接照搬生成代码，这正是从业经验带来的本质区别。经验丰富的开发者习惯多方求证、多角度审视问题，而新生代开发者对新兴技术的接纳度更高、信任感更强。\n\nChris Grams：\n\n对于初级开发者而言，当下的处境其实充满焦虑。自己耗费数年苦心钻研的编码技能如今 AI 可以轻松实现，而应用架构设计这类高阶工程能力恰恰是他们的经验短板，这也正是人类开发者区别于 AI 的核心竞争力。对于资深开发者来说，当下是机遇满满的阶段，只要转型成为 AI 调度统筹者就能把握优势。就像 Manish 提到的智能体集群概念，如何统筹调度多智能体协同工作也是近期社交平台的热门话题，不少人开始搭建专属智能体团队，拆分独立任务、优化多智能体协作与协同调度模式。不难预见，初级开发者不能再局限于基础编码能力，必须向上学习高阶技能才能保持职场竞争力。\n\nMatt Merrill：报告中还有一点值得关注，调研显示，借助 AI 编码工具，初级开发者的工作满意度显著提升。结合你们的分享，这个结论也合乎情理。我平时不使用社交平台，但你们提到的假期体验大模型这件事我深有同感。当时平台发放了免费体验额度，我亲自试用后彻底改变了对这类工具效能的认知，即便我从业多年，也深受震撼。看来有相同感受的人并不在少数，这一点十分有意思。\n\nChris Grams\n\n：确实如此，很多人都有同样的感受。如今几乎每天都能看到行业资深工程师、技术大牛分享相关体验，不少业内顶尖开发者都表示，如今已经不再手动编写代码，核心工作变成了架构设计、定制化训练专属智能体、拆分和分配任务，以及推动智能体之间的协作与代码互审。行业变革的速度超乎想象。\n\nMatt Merrill：没错，发展速度着实令人震惊。你提到初级开发者对这类工具抱有极高的热情，而我在体验过后，也对其改观并充满期待。我们聊到了去年 10 月至今的变化，我很好奇，资深开发者的态度与认知是否也在同步发生转变？从 10 月至今，你们是否观察到了相关变化？\n\nChris Grams：\n\n我们正计划开展新一轮短期抽样调研，正是因为行业变化节奏过快，需要持续跟进一线市场动态、补充调研数据，形成对比基准，清晰捕捉行业变化。后续调研完成后，我们会同步分享新增数据，敬请期待。去年秋季开展调研时，我们带着诸多预设假设，如今随着行业发展，我也诞生了许多新的猜想。社交平台上的相关讨论热度居高不下，说实话，我很好奇，这些前沿探讨究竟只属于小众先锋群体，还是广大企业研发团队都已开始落地智能体技术。\n\n去年秋季的调研数据显示，已有大量企业开始试水智能体工具，而在过去一个半月里，相关落地规模大概率还在持续扩张。我们需要通过新一轮调研验证实际情况，拿到精准结论。\n\n7\n\n快而不稳，不如不快\n\nMatt Merrill：结合我服务大型企业客户的经验，过去半年里，企业对智能体与 AI 编码工具的落地使用率大幅攀升，变化十分明显。还有一个有趣的发现：AI 在全新开发项目与老旧存量项目中的落地效果差异显著。报告中是否提及 AI 在哪类场景的落地效果更好、认可度更高？\n\nManish Kapur：\n\n数据显示，AI 最适合从零开始的新项目，90% 的开发者都会在新项目中使用 AI 工具。但在对接现有存量代码库时，效能会大幅下降，尤其是那些使用小众老旧开发语言构建的项目，短板尤为突出。大语言模型对主流编程语言适配性极佳，例如 Python、JavaScript、TypeScript、Java 等，\n\n但面对老旧应用系统与冷门技术栈的遗留代码，表现往往差强人意。\n\n仅有 43% 的开发者认为，AI 能够高效完成老旧框架、冷门语言的代码迭代与优化工作，这是本次调研得出的观察结论之一。\n\n核心问题还在于代码准确性。新项目业务逻辑简单、代码体量小，现阶段顶尖大语言模型能够保障极高的输出准确率；而老旧存量项目存在大量非显性代码耦合、无文档隐性规则、老旧接口逻辑限制等问题，仅依靠代码文本很难梳理清楚底层逻辑，这也是 AI 难以适配存量改造场景的主要原因。目前，大语言模型在老旧存量项目中的应用普及率整体偏低。\n\nMatt Merrill：这个结论完全符合客观逻辑。还有一个我很好奇但尚未验证的问题：自 10 月以来，有没有团队尝试借助智能体 MD 说明文档或是同类辅助文件为老旧项目提供逻辑参考？你们是否了解这类落地实践？\n\nManish Kapur：\n\n目前暂未听说专门针对老旧存量项目的相关方案，但这个思路具备可行性与合理性。云原生代码工具中已经引入规则、技能、钩子机制，钩子可以保障代码基础规范，规则能够划定开发约束。依靠这类配套机制，AI 未来完全有机会实现老旧项目改造。\n\nMatt Merrill：\n\n我十分期待这类方案的落地。我们正在对接的一家合作企业有一套运行二十年、主要基于 C++ 开发的老旧系统，技术负责人长期深陷维护难题。我建议对方进行试点尝试，将系统沉淀的隐性业务经验、团队专属业务逻辑整理录入到智能体配套文件中，看看实际落地效果。后续我们会结合本轮抽样调研结果同步跟进并反馈试点的进展。\n\nManish Kapur：\n\n正如你所说，上下文信息至关重要。为智能体补充完善的项目文档、业务背景与代码上下文信息必然能有效提升其在老旧存量项目中的适配能力。\n\nMatt Merrill：简单再问最后一个小问题。本次调研受访者覆盖全球各地，不同地区的开发者之间是否存在明显的地域化使用差异？\n\nChris Grams：\n\n我们暂未统计并发布相关结论。整体来看，全球开发者面临的行业环境与技术变革趋势基本一致。我们专门筛选过具备统计学意义的差异化数据，但并没有找到足够显著的地域特征。无论身处全球哪个地区，所有人都在同步经历这场 AI 技术变革。\n\nMatt Merrill：可以理解，我只是单纯好奇。本次分享接近尾声，这次调研内容让我收获满满。我脱离一线开发岗位、转入管理岗位已有一段时间，虽然仍会编写代码，但核心工作以管理为主。换位思考来看，当下很多企业管理者会强制要求团队落地 AI 工具，部分目标切合实际，也有不少要求脱离了现实。对于广大从业者而言，如果上级制定了不切实际的 AI 落地目标，你会给出哪些建议？\n\nChris Grams：\n\n企业需要厘清核心诉求：使用 AI 是追求编码速度的提升还是整体交付上线效率的提升？二者截然不同，后者落地难度要大得多。\n\n很多企业没能兑现 AI 的落地价值，根源就在于只聚焦代码提速，却忽略了核心环节。\n\n在 AI 时代，代码交付前的质量校验、安全风控才是关键。对于具备完善传统代码审核流程的企业而言，落地 AI 编码工具会更加顺畅，搭配自动化代码审核工具、代码质量检测平台，就能构建出完整的风控体系。\n\n总而言之，企业必须建立完善的 AI 生成代码质检与安全审核流程。如果暂时缺失这套机制，研发人员需要主动向上沟通，让管理层明白：AI 快速产出的代码不代表可以直接投产上线。劣质代码会拉高企业运营风险、产生难以维护的冗余代码，衍生各类后续问题。\n\nManish Kapur：\n\n核心就是坚守质量底线。提速增效固然重要，但绝不能牺牲代码质量、软件稳定性与应用安全性，这一点绝对不能妥协。\n\nMatt Merrill：\n\n正所谓凡事过犹不及。这让我想到一个经典桥段，流水线上的巧克力源源不断产出，一旦速度过快，就会难以把控品质，AI 编码工具的使用也是同理。\n\nChris Grams：\n\n确实是这样。\n\n8\n\n2026 年，管理者必须正视代码信任危机\n\nMatt Merrill：站在普通开发者的角度，本次调研最重要的启发是什么？\n\nManish Kapur：\n\n对于开发者而言，核心技能已经不再是单纯的编写代码，编码已经成为可被工具替代的基础能力。未来的核心能力是读懂、校验智能体与 AI 工具生成的代码，完善审核机制、搭建开发约束规则。无论代码由谁产出，最终的责任归属依旧在开发者身上。从业者需要恪守开发规范、做好代码校验、把控产出质量，不必再一味执着于学习新的编程语言。\n\nChris Grams：\n\n结合我刚才的观点再补充一点：想要保持职场竞争力、紧跟行业发展，开发者当下最需要掌握的能力是管理、调度、训练各类智能体。熟练运用顶尖大模型工具、保持持续学习的好奇心至关重要，行业迭代速度极快，刚掌握的技术可能短时间内就会被新技术淘汰。从业者需要保持敏锐，每周固定留出时间学习、测试、尝试新工具与新方案。近日我看到一个观点：今年或将成为所有技术人职业生涯的关键转折点，行业变革空前迅速，一旦停止学习、固步自封，很快就会被行业淘汰，且很难实现追赶。\n\n我也时常以此自省，督促自己坚持学习。每天工作结束之前都会尝试接触新工具、新用法，对比每日实操效果，就能切实感受到技术的快速迭代与进步。\n\n我十分认同两个核心观点：一个是不能脱离基础底线，代码漏洞、质量问题永远是重中之重；一个是必须紧跟前沿技术趋势，二者兼顾，才能长久保持竞争力。最后一个问题，对于研发管理者、技术负责人来说，本次调研最大的借鉴意义是什么？\n\n管理者必须正视代码信任危机。\n\n如今 AI 技术持续发展，但调研初期的一组核心数据值得所有人重视：96% 的开发者无法完全信任 AI 生成的代码。并非工具产出的代码质量不佳，事实上其水准一直在稳步提升，核心原因在于：代码故障、安全漏洞产生的后果不会由 AI 承担，最终责任仍归属企业与团队管理者。作为负责人，必须明确代码的人工责任制，搭建完善的审核体系，严守上线关口，杜绝盲目直接上线 AI 生成的代码。除非是追求极致创新、能够承担试错风险的初创团队，普通企业手握大量用户数据与核心业务信息，必须审慎校验每一段代码的可靠性。\n\n过去的难题是如何产出更多代码，这个问题早已解决。如今我们能够生成质量相当不错的优质代码，且代码质量还在持续提升。\n\n但关键难点在于，必须要有专人审核，愿意签字确认：“我批准将这段代码投入生产环境，并承担随之而来的所有风险。”这，将会是 2026 年面临的最大挑战。\n\nMatt Merrill：说得很有道理。作为管理者，我会想到，既然调研显示 66% 的开发者并不信任 AI 生成的代码，那就必须加入人工审核。我觉得以这个引人深思的观点收尾恰到好处。今晚的交流里，还有没有什么内容是你们想补充提及的？\n\nChris Grams：\n\n我们之前提到的大模型排行榜项目也在持续推进，我们每天都会关注新上线的模型、实测数据，亲眼见证这类技术在不断进步。当下是变革迅猛的一段时期。我的职业生涯经历过数次行业转折，相信你们二位也是，但像如今这样的变革盛况，前所未有。身处这个行业，既充满挑战，又乐趣十足。前路略带未知与忐忑，但整体充满意义，非常感谢你的邀约与交流。\n\nMatt Merrill：\n\n非常感谢二位的精彩分享。\n\n查看英文原文\n\n：\n\nhttps://softwareengineeringdaily.com/2026/04/23/hype-and-reality-of-the-ai-coding-shift\n\n声明：本文为 InfoQ 编译，不代表平台观点，未经许可禁止转载。\n\n今日好文推荐\n\n第一个全职AI CEO来了！29岁前编程神童正让AI替他管理千人公司\n\n在大厂，token用少了不“健康”\n\n“如果你不用更多Token，就永远逃不出底层”：AI竞赛开始变成资源战争\n\n“我可能不再建议学计算机”！图灵奖得主炮轰半个行业，并断言：AI Agent最后全是数据库问题\n\n会议推荐\n\n世界模型的下一个突破在哪？Agent 从 Demo 到工程化还差什么？安全与可信这道坎怎么过？研发体系不重构，还能撑多久？\n\nAICon 上海站 2026，4 大核心专题等你来：世界模型与多模态智能突破、Agent 架构与工程化实践、Agent 安全与可信治理、企业级研发体系重构。14 个专题全面开放征稿。\n\n诚挚邀请你登台分享实战经验。AICon 2026，期待与你同行。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战_InfoQ.md"}, {"title": "计算机科学专业第三次大衰退？原因：AI", "source": "机器之心", "digest": "今年计算机科学专业的学生人数下降了 8%！", "link": "https://mp.weixin.qq.com/s/i5ODa4S3FHj2GeIQlGLgBA", "content": "---\npublish_time: 1777945711\n---\n\n# 计算机科学专业第三次大衰退？原因：AI\n\n> 原文链接：https://mp.weixin.qq.com/s/i5ODa4S3FHj2GeIQlGLgBA\n> 公众号：机器之心\n\n编辑｜Panda\n\n近日，风险投资人 Deedy Das 在 X 写下了一段话，引发广泛共鸣：「\n\n这是计算机科学历史上第三次重大衰退的开始\n\n。如果你在上一次衰退期间选择了计算机科学专业，那你现在的生活还算不错。我怀疑历史今天会重演。」\n\n这段话点评的是 4 月 13 日《华盛顿邮报》上刊发的一篇题为《最热门大学专业撞上了墙。发生了什么？》的深度报道。\n\n其中写到，自 2008 年到 2024 年，美国四年制大学颁发的计算机科学学位数量增长了约五倍，增速是第二名（运动科学）的两倍以上。\n\n而 2025 年秋季，\n\n四年制大学的计算机科学专业在校生人数下降了 8.1%\n\n—— 这是至少自 2020 年有记录以来单年降幅最大的专业，让计算机科学在全美专业排行榜上从第四位跌至第六位。\n\n诺贝尔经济学奖得主、麻省理工学院教授 Simon H. Johnson 不久前公开表示，AI 已经「在相当程度上消灭了」编程作为一条可靠职业出路的前景。《大西洋月刊》则直接宣告：「计算机科学的泡沫正在破裂」。\n\n历史上的两次大衰退\n\n计算机科学专业并不是第一次经历这样的动荡。\n\n第一次衰退：1984—1994\n\n1970 年代末到 1980 年代初，苹果 II 和 IBM PC 的问世让个人电脑第一次走进普通家庭。入学人数从那时开始急剧攀升，到 1984 年前后达到顶峰，随后出现了长达数年的萎缩，到 1994 年，计算机科学学位的年产出量较巅峰时期下降了约 42%。\n\n然而，这次衰退的根源并非学生失去兴趣，而是高校没有足够的师资来容纳这些渴望学习的年轻人。\n\n从 1984 年开始，大多数计算机科学系被迫限制招生规模，直接导致了此后数年的学位产出下滑。\n\n第二次衰退：2001—2007\n\n互联网泡沫带来了第二次繁荣。从 1997 年到 2003 年，计算机科学毕业生的数量以每年平均 15% 的速度增长。\n\n2001 年泡沫破裂后，学生们开始撤退，计算机科学的入学人数随之滑落，并且持续了好几年。\n\n更吊诡的是，科技行业其实在 2004 年前后就已经完全回血，招聘重回正轨，但学生对这个专业的热情却直到 2007 年金融危机之后才重新燃起。\n\n这次衰退期间还流传着另一种焦虑：软件开发工作会不会全部外包给印度？这种担忧与今天「AI 要抢走程序员饭碗」的恐慌，在结构上如出一辙。\n\n第三次来了：这一次，AI 是主角\n\n美国全国学生结算所（National Student Clearinghouse）的数据显示，2025—2026 学年，美国四年制大学计算机科学专业在校生人数下降了\n\n8.1%\n\n。计算机科学研究协会对 133 所大学的调查也显示，62% 的受访院校报告了计算机科学招生下滑的情况。加州大学系统的计算机科学在校生，则出现了自互联网泡沫破裂以来的首次下降。\n\n纽约联储 2025 年的数据显示，计算机科学本科毕业生的失业率已升至 6.1%——2024 年科技行业裁员超过 15 万人，2025 年再度超过 10 万，这造就了一个供过于求的市场，有经验的开发者与应届毕业生直接竞争为数不多的职位。\n\n《华盛顿邮报》报道中引述了来自休斯顿郊区的大一新生 Gavin O&#x27;Malley 的故事：他在申请大学时看到班里最优秀的同学才敢报计算机科学，于是打起了退堂鼓。社交媒体上流传的那些梗图和搞笑视频，也让他多少有些心虚。最终，他选择了赖斯大学的机械工程专业，部分是因为想「绕开计算机科学的人潮」。\n\n然而，报道也提醒读者，那些「消失的计算机科学学生」，有相当一部分并没有真的离开这个领域，而是转向了数据科学、AI、机器人、网络安全等细分专业。\n\n加州大学圣地亚哥分校是整个加州大学系统中唯一逆势增长的校区，而它也恰好是系统内唯一开设了人工智能本科专业的学校。全美目前已有 193 个 AI 本科学位项目和 310 个 AI 硕士项目，数字还在持续增长。\n\n《Communications of the ACM》的综述文章《\n\nThe Outlook for Computer Science Education》\n\n对这场危机的成因做了总结：AI 被用作削减入门级岗位招聘的理由；科技公司在经济不确定性下大规模裁员；以及高校在 2022 年至 2023 年扩招计算机科学的惯性，恰好在需求开始收缩时把大批毕业生推向了市场。\n\n一位不愿具名的计算机科学教授说得坦率：「如果你在一所普通大学读了一个普通的计算机科学学位，找到软件工作的可能性比两三年前小多了。机会还是有，但那是留给最优秀的人的。」\n\n衰退，还是蜕变？\n\n历史一再表明，计算机科学专业的招生曲线总是跟着就业市场的情绪走 —— 有时过于乐观，有时又反应过激。这一次的不同之处在于，AI 对编程工作的渗透是真实存在的，绝非虚张声势。\n\n问题在于，这究竟会彻底消灭对软件工程师的需求，还是只是改变其内容和层次？\n\n卡内基梅隆大学计算机学院本科教学副院长 Tom Cortina 在接受《华盛顿邮报》采访时表示，他对 AI 的冲击有所感受，但依然保持乐观：「我认为这只是一次暂时的低谷。」\n\n华盛顿大学计算机科学与工程学院院长 Magdalena Balazinska 则担心的不是缺人，而是「学生看了太多裁员和 AI 抢工作的新闻，被吓跑了，尽管他们本来对计算机科学有很强的兴趣。」\n\n那位选择了机械工程的 Gavin O&#x27;Malley，给了这篇报道一个出人意料的结尾：他改变志愿的最大理由，并不是对 AI 的恐惧，而是「\n\n竞争\n\n压力太\n\n大了\n\n」。\n\nGavin O&#x27;Malley 最终选择了机械工程\n\n这句话，也许比任何宏观数据都更能说明问题的本质：计算机科学在过去十几年里太成功了，成功到让自己变成了一个人满为患、竞争惨烈的赛道。AI 只是把这种压力推到了临界点。\n\n那些真正理解 AI、有能力与 AI 协作而非被 AI 取代的工程师，依然会是这个时代最炙手可热的人才。至于计算机科学专业的招生数字，终究只是市场情绪的晴雨表，而非一个时代优劣的最终判决。\n\n参考链接\n\nhttps://www.finalroundai.com/blog/computer-science-graduates-face-worst-job-market-in-decades\n\nhttps://dl.acm.org/doi/10.1145/3789677\n\nhttps://www.theatlantic.com/economy/archive/2025/06/computer-science-bubble-ai/683242/\n\nhttps://x.com/deedydas/status/2046261675163316239\n\nhttps://www.washingtonpost.com/technology/2026/04/13/computer-science-major-ai/\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_计算机科学专业第三次大衰退？原因：AI_机器之心.md"}, {"title": "豆包也要「付费订阅」了，最高500元/月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，但 40% 求职者放弃面试｜极客早知道", "source": "极客公园", "digest": "苹果机器人项目高级工程师离职；Meta 收购机器人公司 ARI ；传小米已暂停小折叠手机产品线。", "link": "https://mp.weixin.qq.com/s/GvOCQ_VRifKKrYN6icvwgQ", "content": "---\npublish_time: 1777941000\n---\n\n# 豆包也要「付费订阅」了，最高500元/月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，但 40% 求职者放弃面试｜极客早知道\n\n> 原文链接：https://mp.weixin.qq.com/s/GvOCQ_VRifKKrYN6icvwgQ\n> 公众号：极客公园\n\n豆包计划新增付费订阅模式 主打生产力场景\n\n5 月 4 日，豆包在 App Store 页面悄然更新了付费版本服务的相关声明。声明称，为更好地服务专业用户，豆包将在保留免费版的基础上，推出包含更多增值服务的付费订阅体系，同时披露了三档定价：标准版 68 元 / 月、加强版 200 元 / 月、专业版 500 元 / 月。\n\n据报道，豆包的\n\n付费功能将主要专注在复杂任务和生产力场景，如 PPT 生成、数据分析、影视制作等。\n\n随着模型能力持续升级，产品已经能满足越来越多的复杂高价值任务。但此类任务需消耗更多算力与推理时间，因此豆包计划上线付费服务，满足好这部分复杂场景需求。\n\n至于免费版本，豆包官方回应称，「\n\n豆包始终提供免费服务，在免费服务的基础上，豆包也在探索推出更多增值服务\n\n，以满足不同用户的差异化需求。相关方案细节目前还在测试阶段，正式上线时会通过官方渠道发布完整信息。」（来源：极客公园）\n\n苹果机器人项目高级工程师离职，跳槽谷歌 DeepMind\n\n苹果业内资深记者马克・古尔曼在其专栏《Power On》中透露，苹果机器人团队高级工程经理伯努瓦・兰德里（Benoit Landry）已离职，加盟谷歌 DeepMind。近段时间以来，已有不止一名苹果员工跳槽至谷歌 DeepMind，负责上述桌面机器人项目的团队负责人已于去年跳槽至 Meta。在此之后，该团队又陆续有多名高级工程师离职。\n\n苹果旗下的人工智能机器人团队正全力研发新品：智能家居机器人。依托现代人工智能技术，苹果希望赶在 Meta、谷歌等企业主导消费级机器人市场崛起之前，抢先入局这一赛道。\n\n据此前爆料，目前苹果正在研发一款桌面机器人，外观类似加装了机械臂的 iPad。这款机械臂可完成基础操作任务，用户还能与机器人语音对话，机器人将搭载苹果正在全新研发的 Siri 智能系统。（来源：IT 之家）\n\nMeta 收购机器人公司 ARI\n\n据悉，Meta 已完成对机器人人工智能初创公司 Assured Robot Intelligence（简称 ARI）的全资收购，此举被视为其在具身智能领域的关键布局。\n\n被收购的 ARI 团队规模约 20 人，主要分布在圣地亚哥和纽约两地。这支精锐力量将整体并入 Meta 旗下的超级智能实验室，与去年成立的机器人工作室形成协同效应。\n\nMeta 发言人表示，ARI 在机器人智能技术领域处于前沿地位，其研发成果可使机器人在复杂动态环境中理解、预测并适应人类行为，与 Meta 的战略需求高度契合。与直接制造机器人硬件不同，Meta 此次采取轻资产模式。公司计划专注于开发传感器技术、底层 AI 模型及软件栈等核心环节，并通过开放平台将技术成果提供给硬件制造商。\n\nARI 的核心竞争力在于构建智能模型，使机器人能够理解人类行为模式。其技术突破涵盖高精度敏捷操作、触觉传感反馈，以及在复杂物理环境中的全身协调控制。\n\n团队创始人的背景彰显了技术实力，联合创始人 Xiaolong Wang 拥有卡内基梅隆大学机器人学博士学位，曾任英伟达基础模型研究员及加州大学圣地亚哥分校副教授，研究聚焦于通过视频和物理交互数据提升机器人在真实世界的泛化能力。\n\n另一位联合创始人 Lerrel Pinto 是纽约大学计算机科学教授，在自监督学习和低成本机器人领域颇有建树，其创立的 Fauna Robotics 已于今年 3 月被亚马逊收购。\n\n据知情人士透露，\n\nARI 团队在模型设计、机器人控制、自主学习等领域积累的深厚经验，将直接注入 Meta 的研发体系。\n\n（来源：IT 之家）\n\n特斯拉 FSD 行驶里程突破 100 亿英里，马斯克「无监督自动驾驶」数据里程碑达成\n\n5 月 4 日消息，据特斯拉更新的安全页面显示，特斯拉 FSD（监督版）车队行驶总里程已突破 100 亿英里，约 160.93 亿公里大关。这一阈值是首席执行官埃隆 · 马斯克今年早些时候设定的，实现无监督自动驾驶所需的数据里程碑。\n\n4 月下旬，车队日均行驶里程约 4667.1 万公，而年初日均仅为 约 2253.1 万公里。特斯拉安全页面目前的数据显示，开启 FSD（监督版）后，平均每行驶约 853 万公里发生一起重大碰撞事故；而美国普通人类驾驶员平均每行驶 约 106.2 万公里就会发生一起重大碰撞。特斯拉借此宣称，其自动驾驶系统的安全性远高于人类驾驶。\n\n但业内专家长期以来一直诟病特斯拉的安全统计方式。特斯拉统计事故的口径，与其拿来对比的美国国家公路交通安全管理局（NHTSA）数据口径并不一致，得出的对比结果存在误导性。\n\n此外，特斯拉位于奥斯汀的自动驾驶出租车车队，截至 2026 年 2 月累计行驶约 128.7 万公里，已向美国国家公路交通安全管理局上报 14 起事故。在同类城市道路场景下，其事故率约为人类驾驶员平均事故率的四倍。\n\n马斯克如今已将面向普通消费者的无监督版 FSD 上线时间，最早推迟至 2026 年第四季度。（来源：IT 之家）\n\n员工展示特斯拉工厂下线的最后一辆 Model X 照片，车身签满名字\n\n5 月 4 日消息，特斯拉员工 Steve Pennewell 在 Threads 平台发文，展示了特斯拉工厂下线的最后一辆 Model X，车壳上签满了员工名字，该车后续将被喷上「石榴红」车漆，并安装上独一无二的中控台铭牌，作为典藏级 Model X Plaid 供纪念。\n\n从全球角度回顾特斯拉 Model S/X，这两款车型在新能源车型中可谓行业标杆，也帮助特斯拉确立了其品牌地位。不过，这两款车型自身市场地位自 Model 3/Y 推出以来逐步被削弱。\n\n随着马斯克宣布将在弗里蒙特工厂生产 Optimus 人形机器人，特斯拉公司旗下的功勋车型 Model S 和 Model X 如今正式退出了舞台，事实上这两款车本身已属低销量车型，在特斯拉全年交付总量中的占比仅为个位数百分比。数据显示，2025 年 Model 3 和 Model Y 全球交付量达 160 万辆，而包括 Model S、Model X 在内的「其他车型」总计仅约 5 万辆。（来源：IT 之家）\n\n消息称小米已暂停小折叠手机产品线\n\n5 月 4 日消息，博主 @ 数码闲聊站 在回应用户评论时透露小米已暂停小折叠产品线。作为参考，现款小米 MIX Flip 2 小折叠手机于 2025 年 6 月发布，上市价 5999 元起。\n\n同时，先前有消息称小米将在近期恢复大折叠产品线，于今年第四季度推出新机，先前曝光为「MIX Fold 5」，不过也有消息称该机可能被命名为小米 18 Fold。\n\n作为参考，现款小米大折叠 MIX Fold 4 于 2024 年 7 月发布，上市价格为 8999 元起，系列产品线已有 1 年未更新，此前有消息称该机代号为「lhasa」，将搭载「玄戒 O3」芯片。（来源：IT 之家）\n\n「AI 面试」逐渐受企业追捧，近四成求职者因此主动选择放弃机会\n\n据《财富》4 日报道，员工已开始担心 AI 会取代自己的工作，而在求职过程中，\n\nAI 也正在让候选人感到反感\n\n。虚拟化身和聊天机器人开始进入面试环节，一些求职者甚至因此直接退出招聘流程。\n\nGreenhouse 最近发布的报告显示，约 63% 的美国求职者曾经历 AI 面试，比 6 个月前上升 13%。Greenhouse 首席人力官 Sharawn Tipton 告诉《财富》，在竞争激烈的就业市场中，申请量激增，招聘团队正使用 AI 面试官来「筛掉」海量申请。「招聘人员被大量申请淹没，也担心自己被取代。\n\n双方都存在信任缺口\n\n，技术发展速度超过了变革管理。没有人向候选人解释，现在招聘流程已经变得不一样。所有这些成本，最终最沉重地落在候选人身上。」\n\n对许多求职者来说，\n\nAI 面试已经成为明显的劝退因素\n\n。约 38% 的候选人曾因为招聘流程中包含 AI 面试而退出，另有 12% 表示，如果被要求参加 AI 面试，也会选择退出。\n\n对于雇主接下来如何使用 AI 面试，Tipton 建议先退一步，重新审视招聘流程。招聘经理应明确告诉候选人，AI 评估结果会\n\n由具备判断力的人审阅\n\n，同时也应提供真人面试选项。「现在外界非常关注 AI 的效率和生产率，但对谁受益、谁没有受益，关注还不够。」\n\n此外，AI 面试可能进一步拉大求职者之间的差距：有些人接受过 AI 工具训练，另一些人则没有机会接触这类资源。「如果雇主现在不主动处理这个问题，AI 招聘只会把行业一直试图打破的不平等更快地放大。」（来源：IT 之家）\n\n杭州法院裁定以 AI 代替人类为由裁员是系违法\n\n杭州市中级人民法院公布了一起有关「AI 接替人类员工」的判例，判决公司因「AI 成本比人工低」而辞退员工系违法行为，涉事企业需要支付赔偿金 26 万元人民币。在本案中，现年 35 岁的小周 (化名) 2022 年入职杭州某家科技公司担任 AI 大模型「质检员」，负责对 AI 大模型与用户交互形成的答案进行正确性判定。\n\n2025 年，该公司以「AI 大模型技术升级，原来需要人工完成的质检工作，现在 AI 自己就能做了」为由，试图对小周进行调岗降薪：从主管降为普通员工、月薪从 2.5 万元人民币降到 1.5 万元。小周拒绝如此安排，随后就被公司解除劳动合同。小周申请劳动仲裁，仲裁庭判定公司应当支付违法解除劳动合同赔偿金 26 万余元。\n\n该公司不服，因此诉诸法庭。杭州市中级人民法院审理后认定，该公司解约非因裁撤业务、经营不善、减少亏损等消极因素，而是以 AI 的成本优势为由，不属于劳动合同无法履行的「客观情况重大变化」。而且该公司之前为小周提供的调岗降薪方案，实际上导致待遇大幅下降，并非合理协商方案。\n\n因此法庭认定该公司构成违法解除，支持仲裁结果，判决其按 2N 标准支付小周赔偿金。杭州市中级人民法院民事第五庭庭长丁晔对媒体表示，在企业视角下，应用 AI 提效降本是市场竞争的必然选择；而在劳动者视角下，因技术变革而失去岗位或被降薪，实质是公司将正常的技术迭代风险转嫁给劳动者。（来源：solidot）\n\n小米MIX 5今年回归：首发磁吸镜头+屏下前摄\n\nXiamiTime通过解析小米内部代码证实，小米MIX 5已进入研发阶段，计划2026年全球发布，出厂预装HyperOS 4，成为MIX数字系列时隔多年重返国际市场的重磅旗舰。\n\n该机内部代号为Hongkong，型号Q5，按照小米命名规则，字母Q代表2026年发布周期，数字5则明确归属MIX正统序列。此前MIX 4所用的K8编号已划归MIX Flip系列，进一步确认Q5即为MIX 5。\n\n核心配置方面，MIX 5将延续MIX系列的探索定位，搭载成熟屏下前摄UDC，实现完整真全面屏。\n\n此外，MIX 5还有一个重磅亮点，将首发磁吸镜头技术，大幅提升对焦与防抖能力。\n\n小米15系列就曾经展示过磁吸镜头，小米称其为“模块光学系统”，手机配备一个磁吸式可拆卸镜头，采用定制M4/3传感器+全非球面镜组，带来完整一亿像素，等效35mm焦段，配备f/1.4大光圈。\n\n小米模块光学系统支持近光速激光传输，速度高达10Gbps，支持无损RAW信息传输。性能上预计搭载骁龙8 Elite Gen 6 Pro处理器，定位顶级安卓旗舰。目前发布日期尚未最终确定，但代码信息已明确其2026年的上市规划。（来源：IT 之家）\n\nRingConn Gen 3 智能戒指将于 5 月 5 日发布，主打血管健康管理 / 血压监测功能\n\n5 月 4 日消息，制造商 RingConn 预热一款 RingConn Gen 3 消费级智能戒指，将于 5 月 5 日发布。\n\n据悉，该戒指可选金 / 银两种配色，主打「血管健康管理与血压监测」，号称用户无需再进行繁琐的刻意测量，仅需佩戴一枚轻量化戒指，即可实现血压状况的动态、无感、长期追踪。\n\n作为参考，现款 RingConn Gen 2 智能戒指主打睡眠呼吸暂停监测，能够捕捉睡眠分期（深睡、浅睡、REM）、夜间心率和血氧波动场景，京东定价 2099 元。（来源：IT 之家）\n\nRed Hat 红帽推出 Tank OS 开源项目，将 OpenClaw 运行环境封装为专用容器以提升安全\n\n5 月 4 日消息，Red Hat 红帽首席软件工程师 Sally O&#x27;Malley 在红帽博客发文，公布了名为 Tank OS 的开源项目。该项目主要利用容器化与无 root 权限（rootless）架构设计，以提升 OpenClaw 安全性。\n\nO&#x27;Malley 指出，如果 OpenClaw 配置不当，可能带来误删数据或敏感信息泄露等风险。因此其设计了 Tank OS 项目，其核心思路是将 OpenClaw 运行环境封装进容器中，以打造专门面向 AI 智能体的运行环境，避免宿主系统权限被滥用。\n\n在底层架构方面，Tank OS 构建于 Fedora Linux 及 fedora-bootc 技术之上，主要利用镜像作为完整运行环境，同时支持在同一设备上运行多个 AI 智能体实例，各实例之间相互隔离，彼此不共享凭据及系统资源。\n\n此外，Tank OS 采用不可变（immutable）操作系统设计，系统将内核、运行环境及服务预先定义在镜像中，大部分文件系统保持只读，仅允许有限范围内修改，从而进一步确保安全性。（来源：IT 之家）\n\n宇树机器人在美买票坐飞机，电池被没收\n\n5 月 5 日消息，机器人租赁公司 Elite Event Robotics 实现了一个有趣的「创举」，带人形机器人坐飞机，是真的坐飞机。\n\n据 CNN 报道，Bebop 是一个重达 70 磅，约 31.8 千克的宇树人形机器人，专为活动和表演而设计。\n\n当地时间上周四，Elite Event Robotics 团队带着这个机器人乘坐了美国西南航空公司从加州奥克兰飞往圣地亚哥的航班。由于 Bebop 的包装箱太重不符合西南航空公司的规定，因此该团队为机器人购买了人类座位。\n\n西南航空没收了 Bebop 的动力电池，因为其尺寸超出了航空公司的最大允许尺寸。这一事件也导致该航班延误了超过一个小时。我们注意到，Elite Event Robotics 官方发了多条帖子，展示这一事件的经过。（来源：IT 之家）\n\n*图片来源：\n\n视觉中国\n\n播客上新\n\n两个月， Harness Engineering 变成了开发者社区的高频词。基础模型已经很强了，我们怎么才能让 AI 全自动的替我们做更多事？这就需要搭建一套脚手架，也就是 Harness Engineering。最近爆火的 OpenClaw 就是 Harness Engineering 非常成功的体现。\n\n本期播客，我们邀请了三位本身就对让 AI 全自动干活这件事有深刻理解的创业者，围绕 Harness Engineering 这个话题，聊聊 OpenClaw 的成功到底在哪里？企业如何才能真正让 AI 全自动地成为公司的员工？Agent 接下来会有哪些结构性的启发和变化？\n\n🌟长按下方\n\n「卡片二维码」\n\n即可收听～欢迎关注我们的播客「开始连接LinkStart」（小宇宙 App），一起用科技、商业和人文的视角描摹这个时代。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-05_豆包也要「付费订阅」了，最高500元_月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，_极客公园.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

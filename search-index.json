@@ -1,7 +1,127 @@
 {
-  "updated_at": "2026-05-05T16:25:58.529948",
-  "total": 278,
+  "updated_at": "2026-05-06T01:31:22.129189",
+  "total": 290,
   "articles": [
+    {
+      "date": "2026-05-05",
+      "title": "AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了",
+      "source": "新智元",
+      "digest": "Anthropic联合创始人预测，到2028年AI实现自我进化的概率为60%。",
+      "link": "https://mp.weixin.qq.com/s/z-9Qz6kM1wCkAYWkpLpF6Q",
+      "source_file": "sources/2026-05-05_AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-05",
+      "title": "700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料",
+      "source": "新智元",
+      "digest": "Anthropic利用大量“坏模型”训练出AI审计工具，能自动检测并揭露AI系统的潜在风险。",
+      "link": "https://mp.weixin.qq.com/s/IYAM85iK_HQUgQsPomqSqQ",
+      "source_file": "sources/2026-05-05_700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-05",
+      "title": "Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了",
+      "source": "机器之心",
+      "digest": "AI 自主研发 AI，可能只剩两年",
+      "link": "https://mp.weixin.qq.com/s/FcTzvVjn3OVNpLDDZk-ctA",
+      "source_file": "sources/2026-05-05_Anthropic联创定下deadline：2028年AI实现自我进化，没有人类了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-05",
+      "title": "谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉",
+      "source": "极客公园",
+      "digest": "自学习 AI 的融资神话，正在告诉我们一件事——这场 AI 军备竞赛，连研究员本身都要被「卷」进去了。",
+      "link": "https://mp.weixin.qq.com/s/nRy1hLyREGgXDlK8gGAm9A",
+      "source_file": "sources/2026-05-05_谷歌、英伟达押注，这家估值 40 亿美元的 AI 公司，想把科学家直接干掉_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "Agent-World：扩展真实世界环境，让智能体与环境协同进化！",
+      "source": "机器之心",
+      "digest": "介绍Agent-World项目，通过扩展真实世界环境，促进智能体与环境的协同进化研究。",
+      "link": "https://mp.weixin.qq.com/s/Tn2_cNiVIKDl2MU-AFTG-A",
+      "source_file": "sources/2026-05-05_Agent-World：扩展真实世界环境，让智能体与环境协同进化！_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略",
+      "source": "银行科技研究社",
+      "digest": "浦发银行推动AI从单点应用向规模化落地转型，深化全行数智化战略。",
+      "link": "https://mp.weixin.qq.com/s/BvkarbHTMupqqnNo_JTF1A",
+      "source_file": "sources/2026-05-05_浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？",
+      "source": "新智元",
+      "digest": "OpenAI总裁在法庭上承认相关指控，涉及巨额资金纠纷，马斯克对此事持续关注。",
+      "link": "https://mp.weixin.qq.com/s/eZNWbT9CnDixLogTUiHHkQ",
+      "source_file": "sources/2026-05-05_突发，OpenAI总裁当庭「认罪」！自曝零元购300亿，马斯克这回真要赢了？_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "斯坦福HAI大重组！李飞飞升任校长顾问",
+      "source": "新智元",
+      "digest": "斯坦福大学以人为本人工智能研究院（HAI）进行重大重组，李飞飞教授转任校长顾问。",
+      "link": "https://mp.weixin.qq.com/s/2tLg6ybKs96dDh6yKsfEKA",
+      "source_file": "sources/2026-05-05_斯坦福HAI大重组！李飞飞升任校长顾问_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "豆包要收费了：三档订阅最贵500元/月，保留免费基础版",
+      "source": "量子位",
+      "digest": "国民级AI新转向",
+      "link": "https://mp.weixin.qq.com/s/izhyNSFKuObuk3nvHWP9mA",
+      "source_file": "sources/2026-05-05_豆包要收费了：三档订阅最贵500元_月，保留免费基础版_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战",
+      "source": "InfoQ",
+      "digest": "“我批准将这段代码投入生产环境，并承担随之而来的所有风险。”",
+      "link": "https://mp.weixin.qq.com/s/h4O4RolNQ0mcJCxs9lVjFQ",
+      "source_file": "sources/2026-05-05_42%的代码是AI写的，可96%的开发者不信它：谁敢拍板说“上线”？这成了2026年最大挑战_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "计算机科学专业第三次大衰退？原因：AI",
+      "source": "机器之心",
+      "digest": "今年计算机科学专业的学生人数下降了 8%！",
+      "link": "https://mp.weixin.qq.com/s/i5ODa4S3FHj2GeIQlGLgBA",
+      "source_file": "sources/2026-05-05_计算机科学专业第三次大衰退？原因：AI_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-05",
+      "title": "豆包也要「付费订阅」了，最高500元/月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，但 40% 求职者放弃面试｜极客早知道",
+      "source": "极客公园",
+      "digest": "苹果机器人项目高级工程师离职；Meta 收购机器人公司 ARI ；传小米已暂停小折叠手机产品线。",
+      "link": "https://mp.weixin.qq.com/s/GvOCQ_VRifKKrYN6icvwgQ",
+      "source_file": "sources/2026-05-05_豆包也要「付费订阅」了，最高500元_月；宇树机器人在美买票坐飞机，电池被没收；「AI 面试」火爆，_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-04",
       "title": "哈佛Science重磅：AI急诊诊断准确率67%，超越资深主治！取代医生尚早",
