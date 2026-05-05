@@ -1,7 +1,117 @@
 {
-  "updated_at": "2026-05-04T09:13:43.726133",
-  "total": 267,
+  "updated_at": "2026-05-05T16:25:58.529948",
+  "total": 278,
   "articles": [
+    {
+      "date": "2026-05-04",
+      "title": "哈佛Science重磅：AI急诊诊断准确率67%，超越资深主治！取代医生尚早",
+      "source": "新智元",
+      "digest": "哈佛大学在《科学》杂志发表研究，AI系统在急诊诊断中达到67%准确率，超过资深主治医师水平，但完全取代医生仍需时日。",
+      "link": "https://mp.weixin.qq.com/s/y0VpRg4cSF7UjgTh5rXbqg",
+      "source_file": "sources/2026-05-04_哈佛Science重磅：AI急诊诊断准确率67%，超越资深主治！取代医生尚早_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-04",
+      "title": "1分钟烧光4千万Token！OpenAI最疯狂的男人，逼奥特曼亲自加额度",
+      "source": "新智元",
+      "digest": "OpenAI用户极端使用案例，1分钟内消耗4000万Token，引发额度调整讨论。",
+      "link": "https://mp.weixin.qq.com/s/wa5FAKbbQTIczra9T_ziYQ",
+      "source_file": "sources/2026-05-04_1分钟烧光4千万Token！OpenAI最疯狂的男人，逼奥特曼亲自加额度_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-04",
+      "title": "顶级AI撞上低级乌龙：连写几十页推导，结果发现题干错了？",
+      "source": "新智元",
+      "digest": "AI系统在处理复杂推导时出现错误，暴露出当前大模型在逻辑推理方面的局限性。",
+      "link": "https://mp.weixin.qq.com/s/ou1QNZjfbvlvyeByQcL8xg",
+      "source_file": "sources/2026-05-04_顶级AI撞上低级乌龙：连写几十页推导，结果发现题干错了？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-04",
+      "title": "奥特曼9年后再发声：没有他就没有OpenAI！",
+      "source": "新智元",
+      "digest": "揭秘OpenAI 9年不休假的「首席建造师」",
+      "link": "https://mp.weixin.qq.com/s/PzqfUBq9nBq6PbI-WIUkrg",
+      "source_file": "sources/2026-05-04_奥特曼9年后再发声：没有他就没有OpenAI！_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-04",
+      "title": "Anthropic 搞了个全是 AI 的闲鱼群，大模型在里面互割起了韭菜",
+      "source": "极客公园",
+      "digest": "AI 时代的算力代差，是最高昂的智商税。",
+      "link": "https://mp.weixin.qq.com/s/f-TA9pmFxqZeVevMnvMvew",
+      "source_file": "sources/2026-05-04_Anthropic 搞了个全是 AI 的闲鱼群，大模型在里面互割起了韭菜_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-04",
+      "title": "80%富人在用Claude：美国AI用户大调查出炉",
+      "source": "新智元",
+      "digest": "美国AI用户使用情况调查显示，高收入群体中80%正在使用Claude等AI助手工具。",
+      "link": "https://mp.weixin.qq.com/s/pkEWW-DtKLjPvJzdASUqrw",
+      "source_file": "sources/2026-05-04_80%富人在用Claude：美国AI用户大调查出炉_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-04",
+      "title": "ACL 2026｜AI for聋哑群体，港理工开源思考型手语翻译模型",
+      "source": "机器之心",
+      "digest": "一种面向 gloss-free 手语翻译的全新框架",
+      "link": "https://mp.weixin.qq.com/s/PgSi0r7Ywy5VdOoCaA4fKw",
+      "source_file": "sources/2026-05-04_ACL 2026｜AI for聋哑群体，港理工开源思考型手语翻译模型_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-04",
+      "title": "ACL 2026｜世界模型能让智能体「预知未来」？这篇新范式研究给了一个反直觉的答案",
+      "source": "机器之心",
+      "digest": "未来真正需要对齐的是智能体如何围绕前瞻建立起稳定的治理能力！",
+      "link": "https://mp.weixin.qq.com/s/8x1idbXkktPRxsuztuthNg",
+      "source_file": "sources/2026-05-04_ACL 2026｜世界模型能让智能体「预知未来」？这篇新范式研究给了一个反直觉的答案_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-04",
+      "title": "5月20日，马上AI起来！峰会首波嘉宾已官宣",
+      "source": "量子位",
+      "digest": "今年5月20日，我们将在北京金茂万丽酒店举办一年一度的中国AIGC产业峰会。这次峰会主题是「@所有人，马上AI起来」，邀请你和我们一起，从只是讨论AI的未来，到现在就用起来。",
+      "link": "https://mp.weixin.qq.com/s/CC9FogehWfXv9FBudXLKig",
+      "source_file": "sources/2026-05-04_5月20日，马上AI起来！峰会首波嘉宾已官宣_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-04",
+      "title": "硅谷大厂开始AI-first换血：先裁3万人、再招8000个新人，传统产品经理正在被Builder淘汰！",
+      "source": "InfoQ",
+      "digest": "\"乐趣是对抗 burnout 的解药。\"",
+      "link": "https://mp.weixin.qq.com/s/U8nE8IDCXKWHYnsbwplbwg",
+      "source_file": "sources/2026-05-04_硅谷大厂开始AI-first换血：先裁3万人、再招8000个新人，传统产品经理正在被Builder淘_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-04",
+      "title": "传小米新 SU7 锁单突破 7 万；微信输入法测「隔空发图」功能；豆包二代 AI 手机上半年发布 | 极客早知道",
+      "source": "极客公园",
+      "digest": "即将超越英伟达，谷歌母公司 Alphabet 市值已达 4.6 万亿美元；谷歌将为 Gemini 投放广告，目前处于准备阶段；苹果 iOS 27 将重心转向 AI，Siri 迎来独立 App 并将深度整合到相机应用中",
+      "link": "https://mp.weixin.qq.com/s/NhhEJNhfw5eAKrEyx6BP5w",
+      "source_file": "sources/2026-05-04_传小米新 SU7 锁单突破 7 万；微信输入法测「隔空发图」功能；豆包二代 AI 手机上半年发布 _极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-03",
       "title": "OpenAI参与，重卷ImageNet：终于把FID做成训练",
