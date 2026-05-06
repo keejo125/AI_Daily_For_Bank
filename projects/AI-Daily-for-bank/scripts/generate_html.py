@@ -132,7 +132,11 @@ def build_articles_json(classification, date_str):
 
     for cat in cats:
         items = classification.get(cat, [])
-        for item in items:
+        
+        # 大模型文章优先排序：is_model_related=true 的排在前面
+        items_sorted = sorted(items, key=lambda x: x.get('is_model_related', False), reverse=True)
+        
+        for item in items_sorted:
             title = item.get("title", "")
             source = item.get("source", "")
             link = item.get("link", "")
@@ -153,7 +157,12 @@ def build_articles_json(classification, date_str):
                 if matched:
                     source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
 
-            is_model_related = detect_model_related(title, digest)
+            # 优先使用 classification.json 中的 is_model_related 标签
+            # 如果不存在，才使用关键词检测
+            if 'is_model_related' in item:
+                is_model_related = item['is_model_related']
+            else:
+                is_model_related = detect_model_related(title, digest)
 
             articles.append({
                 "title": title,
@@ -290,7 +299,17 @@ def get_weekday(date_str):
 
 
 def update_daily_index(date_str, stats, summary):
-    """更新 daily-index.json"""
+    """
+    更新 daily-index.json
+    
+    Args:
+        date_str: 文章日期（文件夹名称）
+        stats: 分类统计
+        summary: 摘要
+        
+    Note:
+        前端会自动将 date + 1天作为早报显示日期
+    """
     index_path = os.path.join(PROJECT_DIR, 'daily-index.json')
     index_data = {"issues": []}
 

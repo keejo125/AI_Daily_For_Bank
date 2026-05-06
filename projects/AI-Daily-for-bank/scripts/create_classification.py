@@ -5,17 +5,18 @@
 用法: python3 create_classification.py YYYY-MM-DD
 
 功能：
-- 基于 filtered_articles.json 自动生成 classification.json 模板
+- 基于 filtered_articles.json 生成 classification.json 模板
 - 自动填充 aid, title, source, link, source_file
-- 预分类（根据关键词自动判断国际/国内/同业/其他）
-- 保留空的 digest 字段供智能体填写摘要
+- 保留空的 category 和 digest 字段供 AI Agent 填写
 - 自动处理中文引号
+
+注意：此脚本只生成模板，真正的分类和摘要由 AI Agent 根据 SKILL.md 中的规则完成
 """
 
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def print_progress(msg):
@@ -30,42 +31,6 @@ def normalize_chinese_quotes(text):
     text = text.replace('\u201c', '【').replace('\u201d', '】')
     text = text.replace('\u2018', '「').replace('\u2019', '」')
     return text
-
-
-def auto_classify(title, source):
-    """
-    根据标题和来源自动预分类
-    
-    返回: '国际', '国内', '同业', 或 '其他'
-    """
-    text = f"{title} {source}".lower()
-    
-    # 同业优先：银行、金融机构
-    banking_keywords = ['银行', '农商', '金融', '保险', '证券', '信贷', '风控']
-    if any(kw in text for kw in banking_keywords):
-        return '同业'
-    
-    # 国际：海外公司
-    international_keywords = [
-        'openai', 'anthropic', 'google', 'meta', 'apple', 'nvidia', 
-        'microsoft', 'xai', 'stability ai', '马斯克', '黄仁勋',
-        '硅谷', '美国', '欧洲', '日本'
-    ]
-    if any(kw in text for kw in international_keywords):
-        return '国际'
-    
-    # 国内：中国公司
-    domestic_keywords = [
-        '阿里', '腾讯', '百度', '字节', '华为', '智谱', '商汤',
-        '深度求索', '月之暗面', 'minimax', '阶跃星辰', '零一万物',
-        '面壁智能', 'deepseek', 'kimi', '通义', '文心',
-        '中国', '国内', '国产'
-    ]
-    if any(kw in text for kw in domestic_keywords):
-        return '国内'
-    
-    # 默认为其他
-    return '其他'
 
 
 def main():
@@ -98,9 +63,13 @@ def main():
     articles = filtered_data.get('articles', [])
     print_progress(f"读取到 {len(articles)} 篇过滤后的文章")
     
-    # 初始化分类结构
+    # 计算早报日期 = 文章日期 + 1天
+    article_date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+    report_date = article_date_obj + timedelta(days=1)
+    
+    # 初始化分类结构（所有文章先放入 "待分类"）
     classification = {
-        "date": (datetime.strptime(date_str, '%Y-%m-%d').replace(day=datetime.strptime(date_str, '%Y-%m-%d').day + 1)).strftime('%Y-%m-%d'),
+        "date": report_date.strftime('%Y-%m-%d'),
         "article_date": date_str,
         "generated_at": datetime.now().isoformat(),
         "classification": {
@@ -114,47 +83,40 @@ def main():
             "国内": 0,
             "同业": 0,
             "其他": 0,
-            "total": 0
+            "total": len(articles)
         },
         "excluded": []
     }
     
-    # 修正日期逻辑：早报日期 = 文章内容日期 + 1天
-    from datetime import timedelta
-    article_date = datetime.strptime(date_str, '%Y-%m-%d')
-    report_date = article_date + timedelta(days=1)
-    classification['date'] = report_date.strftime('%Y-%m-%d')
-    
-    # 遍历文章，自动分类
+    # 遍历文章，生成待分类模板
     for art in articles:
         title = art.get('title', '')
         source = art.get('source', '')
         aid = art.get('aid', '')
         link = art.get('link', '')
         source_file = art.get('source_file', '')
-        
-        # 自动分类
-        category = auto_classify(title, source)
+        digest = art.get('digest', '')  # 保留原始摘要
         
         # 标准化中文字符
         title_normalized = normalize_chinese_quotes(title)
         source_file_normalized = normalize_chinese_quotes(source_file)
         
-        # 构建文章条目（digest 留空，供智能体填写）
+        # 构建文章条目（category 和 digest 留空，供 AI Agent 填写）
         article_entry = {
             "aid": aid,
             "title": title_normalized,
             "source": source,
             "link": link,
-            "digest": "",  # 留空，需要智能体生成摘要
-            "source_file": source_file_normalized
+            "digest": "",  # 留空，需要 AI Agent 生成摘要
+            "source_file": source_file_normalized,
+            "category": "",  # 留空，需要 AI Agent 分类
+            "category_reason": ""  # 留空，需要 AI Agent 说明分类理由
         }
         
-        classification['classification'][category].append(article_entry)
-        classification['stats'][category] += 1
-        classification['stats']['total'] += 1
+        # 暂时放入 "其他" 分类，AI Agent 会重新分配
+        classification['classification']['其他'].append(article_entry)
         
-        print_progress(f"  [{category}] {title[:40]}...")
+        print_progress(f"  [待分类] {title[:50]}...")
     
     # 输出文件路径
     output_path = os.path.join(daily_dir, 'classification.json')
@@ -164,12 +126,13 @@ def main():
         json.dump(classification, f, ensure_ascii=False, indent=2)
     
     print_progress(f"\n✅ 分类模板已生成: {output_path}")
-    print_progress(f"📊 统计: {classification['stats']}")
+    print_progress(f"📊 待处理文章数: {len(articles)} 篇")
     print_progress(f"\n⚠️  下一步:")
-    print_progress(f"   1. 编辑 {output_path}")
-    print_progress(f"   2. 为每篇文章填写 digest 字段（100-200字摘要）")
-    print_progress(f"   3. 调整分类（如需要）")
-    print_progress(f"   4. 运行: python3 generate_html.py {date_str}")
+    print_progress(f"   1. AI Agent 读取 {output_path}")
+    print_progress(f"   2. 根据 SKILL.md 中的规则对每篇文章进行分类（国际/国内/同业/其他）")
+    print_progress(f"   3. 为每篇文章填写 digest 字段（100-200字摘要）")
+    print_progress(f"   4. 填写 category_reason 字段（说明分类理由）")
+    print_progress(f"   5. 运行: python3 generate_html.py {date_str}")
 
 
 if __name__ == '__main__':
