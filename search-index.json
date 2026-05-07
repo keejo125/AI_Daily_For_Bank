@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-05-06T01:31:22.129189",
-  "total": 290,
+  "updated_at": "2026-05-07T23:48:50.079550",
+  "total": 315,
   "articles": [
+    {
+      "date": "2026-05-06",
+      "title": "OpenAI发布GPT-5.5 Instant：幻觉降52%，全员免费推出",
+      "source": "智东西",
+      "digest": "胡说八道少一半，说话还更“人模人样”了。；OpenAI称，GPT-5.5 Instant从今天开始向所有ChatGPT用户推出，对于付费用户，GPT‑5；OpenAI称，GPT-5.5 Instant从今天开始向所有ChatGPT用户推出，对于付费用户，GPT‑5",
+      "link": "https://mp.weixin.qq.com/s/0iKSqyc3cQf849rAPmkGqQ",
+      "source_file": "sources/2026-05-06_OpenAI甩出GPT-5.5 Instant！幻觉暴降52%，话少三成，全员免费_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-06",
+      "title": "刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分",
+      "source": "新智元",
+      "digest": "刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分",
+      "link": "https://mp.weixin.qq.com/s/yTW-EcMGlrzjKp3PFRYTbA",
+      "source_file": "sources/2026-05-06_刷榜AI全挂了！Meta斯坦福地狱级测试，GPT_Claude_Gemini交出0分_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-06",
+      "title": "香蕉和GPT Image之外的第3条路：华人15人团队造出AI生图黑马",
+      "source": "量子位",
+      "digest": "40小时干完广告公司一年的活",
+      "link": "https://mp.weixin.qq.com/s/UiPaKKMxxG03Mpm59WAlfA",
+      "source_file": "sources/2026-05-06_香蕉和GPT Image之外的第3条路：华人15人团队造出AI生图黑马_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-06",
+      "title": "OpenAI首款AI手机曝光：最快明年量产，预计出货3000万台",
+      "source": "智东西",
+      "digest": "最有望由中国台湾电子科技公司联发科独家供应芯片。；立讯精密生产，芯片用联发科；立讯精密生产，芯片用联发科",
+      "link": "https://mp.weixin.qq.com/s/ixKSWEA9Pj8oMv8CCkpUag",
+      "source_file": "sources/2026-05-06_OpenAI首款手机，被曝明年量产！_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "GMI Cloud蒋剑彪：全球AI产业的范式转移，从“模型为王”到“系统制胜”",
+      "source": "智东西",
+      "digest": "AI产业呈现推理取代训练成为主战场、Agent爆发、“一人公司”及智算中心重构为“算力工厂”四大趋势。",
+      "link": "https://mp.weixin.qq.com/s/CjmKXBXZfIEyg6BU5Z09bA",
+      "source_file": "sources/2026-05-06_GMI Cloud蒋剑彪：全球AI产业的范式转移，从“模型为王”到“系统制胜”_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "比 OpenClaw 更火的 「Agent 员工」赛道，杀出一个新王者｜AI 上新",
+      "source": "极客公园",
+      "digest": "给天选打工人准备的利器。",
+      "link": "https://mp.weixin.qq.com/s/Zk9jx49kEwz9ZEAE6-npFw",
+      "source_file": "sources/2026-05-06_比 OpenClaw 更火的 「Agent 员工」赛道，杀出一个新王者｜AI 上新_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "Anthropic让AI先读员工手册再上岗：失控率从54%降到7%",
+      "source": "新智元",
+      "digest": "Anthropic让AI先读员工手册再上岗：失控率从54%降到7%",
+      "link": "https://mp.weixin.qq.com/s/mHZZLuffU7EBsLT6evPF1g",
+      "source_file": "sources/2026-05-06_Anthropic让AI先读员工手册再上岗：失控率从54%降到7%_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "Cursor 删库9秒毁了一家公司？资深开发者讲了大实话：把数据库交给AI的那一刻，公司就已经没了",
+      "source": "InfoQ",
+      "digest": "把生产权限交给 AI，然后怪 AI？这逻辑怎么有点眼熟。",
+      "link": "https://mp.weixin.qq.com/s/8kNDE1UnIWyhA3NAUdL0zA",
+      "source_file": "sources/2026-05-06_Cursor 删库9秒毁了一家公司？资深开发者讲了大实话：把数据库交给AI的那一刻，公司就已经没了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "Vercel 开源 Open Agents，支持后台运行 AI 编码工作流",
+      "source": "InfoQ",
+      "digest": "Vercel 开源 Open Agents，支持创建和运行后台编码智能体。",
+      "link": "https://mp.weixin.qq.com/s/8aOFRS9QSS9C6gSF1BWXUw",
+      "source_file": "sources/2026-05-06_Vercel 开源 Open Agents，支持后台运行 AI 编码工作流_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "李飞飞做AI游戏，拿了4个亿",
+      "source": "量子位",
+      "digest": "「许愿」即游戏",
+      "link": "https://mp.weixin.qq.com/s/0ZDiQPVdxC6H777XDEVw_g",
+      "source_file": "sources/2026-05-06_李飞飞做AI游戏，拿了4个亿_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "Kubernetes 被 AI 打回“半成品”！K8s 之父发出警告：代码生成越快，程序员越危险",
+      "source": "InfoQ",
+      "digest": "很多人提起 Kubernetes，第一反应还是云原生时代最成功的开源项目之一",
+      "link": "https://mp.weixin.qq.com/s/YPo1SNogSZA5Sc6P-oMvgg",
+      "source_file": "sources/2026-05-06_Kubernetes 被 AI 打回“半成品”！K8s 之父发出警告：代码生成越快，程序员越危险_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "加码Token工厂！欧洲AI云巨头6亿美元收购20人公司",
+      "source": "财联社AI daily",
+      "digest": "文|宋子乔当地时间5月1日，欧洲AI新锐Nebius（NASDAQ:NBIS）宣布，将以约6.43亿美元现金加",
+      "link": "https://mp.weixin.qq.com/s/BULMyWF_9VN5QBmENu5_sQ",
+      "source_file": "sources/2026-05-06_加码Token工厂！欧洲AI云巨头6亿美元收购20人公司_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "白宫与三家科技巨头签订协议：将获得谷歌、微软和xAI未发布模型",
+      "source": "财联社AI daily",
+      "digest": "文|马兰美国国家标准与技术研究院周二宣布，谷歌、微软和xAI将与政府分享其人工智能模型的未发布版本，以遏制网络",
+      "link": "https://mp.weixin.qq.com/s/Hw7jPHpT04hTpnFA19IqFg",
+      "source_file": "sources/2026-05-06_白宫与三家科技巨头签订协议：将获得谷歌、微软和xAI未发布模型_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "老黄爆改英伟达，Salesforce一次招千人！智能体时代应届生机会来了",
+      "source": "新智元",
+      "digest": "老黄爆改英伟达，Salesforce一次招千人！智能体时代应届生机会来了",
+      "link": "https://mp.weixin.qq.com/s/Ivm4OXrADqlhiDMP88CGsQ",
+      "source_file": "sources/2026-05-06_老黄爆改英伟达，Salesforce一次招千人！智能体时代应届生机会来了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "苹果将允许用户自选AI模型驱动iOS 27功能",
+      "source": "财联社AI daily",
+      "digest": "文|史正丞最新消息显示，自知尚无法开发顶流AI大模型的苹果公司，似乎正准备优先成为外部AI服务的首选落地平台。",
+      "link": "https://mp.weixin.qq.com/s/Nm3suTfrOkiezgf3W0JypA",
+      "source_file": "sources/2026-05-06_苹果将允许用户自选AI模型驱动iOS 27功能_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "Anthropic推出金融AI Agent",
+      "source": "财联社AI daily",
+      "digest": "Anthropic周二推出10项金融服务AI代理，包括财报审阅、金融建模，以及行业追踪研究等多项细分职能。",
+      "link": "https://mp.weixin.qq.com/s/ETlBxSmBAWaG2CFZ6RIojg",
+      "source_file": "sources/2026-05-06_Anthropic推出金融AI Agent_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "DeepSeek版Claude Code登顶热榜：8700星，鲸鱼哥火了",
+      "source": "机器之心",
+      "digest": "DeepSeek专属代码智能体。",
+      "link": "https://mp.weixin.qq.com/s/A7ATOoYGBWwf1dpV9GIevw",
+      "source_file": "sources/2026-05-06_DeepSeek版Claude Code登顶热榜：8700星，鲸鱼哥火了_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-06",
+      "title": "阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward",
+      "source": "机器之心",
+      "digest": "一种无需任何标注、无需训练 reward 模型",
+      "link": "https://mp.weixin.qq.com/s/83eRAXNNKHdHS2BjY3iTuQ",
+      "source_file": "sources/2026-05-06_阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-06",
+      "title": "一个文件让 AI Coding 效率翻倍：AGENTS.md 实践指南",
+      "source": "阿里云开发者",
+      "digest": "阿里云开发者分享AGENTS.md最佳实践，通过标准化配置文件提升AI编程效率。",
+      "link": "https://mp.weixin.qq.com/s/fBBBSfQajYjYtngZAitZCA",
+      "source_file": "sources/2026-05-06_一个文件让 AI Coding 效率翻倍：AGENTS.md 实践指南_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "AI PPT，这次是真不用返工了",
+      "source": "量子位",
+      "digest": "实测讯飞智文Vision Agent，AI生成PPT质量显著提升，减少返工次数。",
+      "link": "https://mp.weixin.qq.com/s/2pp13Vhg6amldsGe-_N7Tg",
+      "source_file": "sources/2026-05-06_AI PPT，这次是真不用返工了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "国产双开源：让Mac成为你的私人AI工作站",
+      "source": "机器之心",
+      "digest": "Cider + Mano-P = 快且实用的 Private AI，让Mac成为私人AI工作站。",
+      "link": "https://mp.weixin.qq.com/s/eLN0bUO-hGAxEwPFQ7zsjg",
+      "source_file": "sources/2026-05-06_国产双开源：让Mac成为你的私人AI工作站_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "重庆银行实现大模型“私有化+金融场景适配”，上线17个场景的AI应用",
+      "source": "银行科技研究社",
+      "digest": "重庆银行实现大模型“私有化+金融场景适配”，上线17个场景的AI应用",
+      "link": "https://mp.weixin.qq.com/s/DH6B_4iJlHqjMRmscnELHw",
+      "source_file": "sources/2026-05-06_重庆银行实现大模型“私有化+金融场景适配”，上线17个场景的AI应用_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "《云上智能体服务网络和数据安全自律公约（2026版）》正式发布 筑牢智能体安全防线 护航产业健康发展",
+      "source": "中国信通院CAICT",
+      "digest": "《云上智能体服务网络和数据安全自律公约（2026版）》正式发布 筑牢智能体安全防线 护航产业健康发展",
+      "link": "https://mp.weixin.qq.com/s/wG6wR4rHObwiRb1pXayYHg",
+      "source_file": "sources/2026-05-06_《云上智能体服务网络和数据安全自律公约（2026版）》正式发布 筑牢智能体安全防线 护航产业健康发展_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "如何破解内容安全“不可能三角”？快手王东旭：把组织从“固态”变成“液态”",
+      "source": "InfoQ",
+      "digest": "当大模型撕裂传统产业逻辑，组织与个人的进化速度决定生死。",
+      "link": "https://mp.weixin.qq.com/s/_cVUH5h33P8I3otqhlb5vw",
+      "source_file": "sources/2026-05-06_如何破解内容安全“不可能三角”？快手王东旭：把组织从“固态”变成“液态”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-06",
+      "title": "ChatGPT 默认模型升至 GPT-5.5 Instant；小米全尺寸 SUV 谍照曝光；诺兰新作《奥德赛》发预告 | 极客早知道",
+      "source": "极客公园",
+      "digest": "OpenAI 总裁布罗克曼 300 亿美元持股，遭马斯克律师质疑；Anthropic 推出用于执行金融服务任务的 AI 智能体；苹果将允许用户选用多款第三方人工智能服务",
+      "link": "https://mp.weixin.qq.com/s/nAolAi6fKMlYTr8khQpMVw",
+      "source_file": "sources/2026-05-06_ChatGPT 默认模型升至 GPT-5.5 Instant；小米全尺寸 SUV 谍照曝光；诺兰新作_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-05",
       "title": "AI自己造AI，概率60%，2028年底前！Anthropic联创坐不住了",
