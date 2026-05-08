@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-05-07T23:48:50.079550",
-  "total": 315,
+  "updated_at": "2026-05-08T08:37:16.511531",
+  "total": 346,
   "articles": [
+    {
+      "date": "2026-05-07",
+      "title": "Genesis AI 发布新模型：机器人开始挑战西红柿炒鸡蛋",
+      "source": "极客公园",
+      "digest": "Genesis AI 发布 GENE-26.5，学会用刀背运菜了。",
+      "link": "https://mp.weixin.qq.com/s/jlA4gBXw0RyjQB-M3haqCQ",
+      "source_file": "sources/2026-05-07_Genesis AI 发布新模型：机器人开始挑战西红柿炒鸡蛋_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "0%完成率！Claude、GPT、Gemini 全灭，SWE-Bench作者新作把AI圈干沉默了",
+      "source": "机器之心",
+      "digest": "工程智能，下一个的竞争焦点。",
+      "link": "https://mp.weixin.qq.com/s/43wPVMKzNxC_R0ZYmUn0Rg",
+      "source_file": "sources/2026-05-07_0%完成率！Claude、GPT、Gemini 全灭，SWE-Bench作者新作把AI圈干沉默了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "OpenAI公开大规模稳定训练的秘密，英伟达AMD英特尔都受益",
+      "source": "量子位",
+      "digest": "已通过OCP开放",
+      "link": "https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w",
+      "source_file": "sources/2026-05-07_OpenAI公开大规模稳定训练的秘密，英伟达AMD英特尔都受益_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "TACO: 让 CLI Agent 在自主迭代中学会丢掉无用上下文",
+      "source": "机器之心",
+      "digest": "无需训练、即插即用的终端智能体自进化观测压缩框架。",
+      "link": "https://mp.weixin.qq.com/s/uqpkQ7VRXD80Tq5on-2MPg",
+      "source_file": "sources/2026-05-07_TACO_ 让 CLI Agent 在自主迭代中学会丢掉无用上下文_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "英伟达力荐，小团队两个月开源一款「光速级」智能体推理引擎",
+      "source": "机器之心",
+      "digest": "TensorRT LLM级别性能、vLLM级别易用性，且拥有NVIDIA Blackwell上最快MLA注意力内核！",
+      "link": "https://mp.weixin.qq.com/s/dx8T76mEGxbySqTH88X94g",
+      "source_file": "sources/2026-05-07_英伟达力荐，小团队两个月开源一款「光速级」智能体推理引擎_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "蛰伏一年，周衔团队带来首个具身基础模型，烹饪做实验弹琴，效果炸场",
+      "source": "机器之心",
+      "digest": "Genesis AI首个基础模型亮相",
+      "link": "https://mp.weixin.qq.com/s/6jbIVQzSQ2nf1HY1xk-BOg",
+      "source_file": "sources/2026-05-07_蛰伏一年，周衔团队带来首个具身基础模型，烹饪做实验弹琴，效果炸场_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "ICSE 2026杰出论文 | 突破代码模型真实工程落地瓶颈，北大团队提出SEAlign对齐框架：显著提升软件工程智能体决策质量",
+      "source": "机器之心",
+      "digest": "为代码模型走向实用化、工程化提供了一条可行路径",
+      "link": "https://mp.weixin.qq.com/s/xK2DmpaI0-cTB49pfWdKAQ",
+      "source_file": "sources/2026-05-07_ICSE 2026杰出论文 _ 突破代码模型真实工程落地瓶颈，北大团队提出SEAlign对齐框架：显_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "CNCF 警告：仅靠 Kubernetes 不足以保障 LLM 工作负载的安全性",
+      "source": "InfoQ",
+      "digest": "虽然Kubernetes在工作负载编排和隔离方面表现出色，但它并不天然具备理解或控制AI系统行为的能力，这会形成一种本质上不同且更复杂的威胁模型。",
+      "link": "https://mp.weixin.qq.com/s/DlmANpWa7QLHodzjsYOeyA",
+      "source_file": "sources/2026-05-07_CNCF 警告：仅靠 Kubernetes 不足以保障 LLM 工作负载的安全性_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-07",
+      "title": "灵码 Hooks：让 AI 按你的规矩办事",
+      "source": "灵码Lingma",
+      "digest": "用 AI 写代码越来越爽，但你有没有这种感觉——Agent 帮你写完代码直接就\"收工\"了，不跑测试、不做检查，",
+      "link": "https://mp.weixin.qq.com/s/1LebNSQKdfn5LsMriop62Q",
+      "source_file": "sources/2026-05-07_灵码 Hooks：让 AI 按你的规矩办事_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "告别\"氛围编程\"：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践",
+      "source": "阿里云开发者",
+      "digest": "告别\"氛围编程\"：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践",
+      "link": "https://mp.weixin.qq.com/s/-_IBJFuXpvoqMJxL9oaEJQ",
+      "source_file": "sources/2026-05-07_告别\"氛围编程\"：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "十年老技术开发的 AI Agent 探索之路",
+      "source": "腾讯技术工程",
+      "digest": "10年经验",
+      "link": "https://mp.weixin.qq.com/s/r__2l_u6oXwzWHyD3wu_ZQ",
+      "source_file": "sources/2026-05-07_十年老技术开发的 AI Agent 探索之路_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "中国信通院联合产业界发起智能体可信握手协议（ATH），建立智能体开源社区",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院联合产业界发起智能体可信握手协议（ATH），建立智能体开源社区",
+      "link": "https://mp.weixin.qq.com/s/56KcSGTICRIfLv7SqOQ3Sw",
+      "source_file": "sources/2026-05-07_中国信通院联合产业界发起智能体可信握手协议（ATH），建立智能体开源社区_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的",
+      "source": "阿里云开发者",
+      "digest": "Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的",
+      "link": "https://mp.weixin.qq.com/s/rlIyIIZOXFObNIXbPI7gDg",
+      "source_file": "sources/2026-05-07_Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "中邮保险AI战略的哲学思考和实践路径",
+      "source": "中国金融电脑",
+      "digest": "中邮保险AI战略兼顾规模复杂性、场景多元性与监管严肃性，锚定\"科技向善\"与\"商业可持续\"底线，构建贯穿价值内核、发展路径、组织变革、风险边界的完整体系。",
+      "link": "https://mp.weixin.qq.com/s/8K67bMXUxQtfOKG3rQgSoQ",
+      "source_file": "sources/2026-05-07_中邮保险AI战略的哲学思考和实践路径_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "AI赋能银行现金运营：从经验驱动到智慧预判的跨越式升级",
+      "source": "中国金融电脑",
+      "digest": "AI智慧现金运营解决方案基于历史交易数据、场景特征等多维度核心因素，通过AI智能分析精准捕捉网点及设备现金用量波动规律，实现每日动态优化调整。",
+      "link": "https://mp.weixin.qq.com/s/4gojps4QmvjocsEOeisxQg",
+      "source_file": "sources/2026-05-07_AI赋能银行现金运营：从经验驱动到智慧预判的跨越式升级_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "苏州银行连发5则智能体项目公告，力争两年内推广落地50+AI应用场景",
+      "source": "银行科技研究社",
+      "digest": "苏州银行密集发布智能体项目公告，覆盖智能体开发平台建设及放款审核、智能审批、文档识别、尽调等场景，已落地30+AI应用场景。",
+      "link": "https://mp.weixin.qq.com/s/KsJbo0kHcTVNvHGp3a-08g",
+      "source_file": "sources/2026-05-07_苏州银行连发5则智能体项目公告，力争两年内推广落地50+AI应用场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "江苏银行启动多个金融科技中心建设项目，大模型已落地62个场景",
+      "source": "银行科技研究社",
+      "digest": "江苏银行启动多个金融科技中心建设项目，大模型已落地62个场景",
+      "link": "https://mp.weixin.qq.com/s/z-UQOPUJNniKcvtW_AqS8w",
+      "source_file": "sources/2026-05-07_江苏银行启动多个金融科技中心建设项目，大模型已落地62个场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "DeepMind入股硬核网游EVE，要让AI学「黑暗森林」",
+      "source": "机器之心",
+      "digest": "模拟宇宙，启动？",
+      "link": "https://mp.weixin.qq.com/s/bxNOqT0rkEiMNTwBdeb1TQ",
+      "source_file": "sources/2026-05-07_DeepMind入股硬核网游EVE，要让AI学「黑暗森林」_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "550 亿美元！马斯克的「芯片工厂」开始成为现实",
+      "source": "极客公园",
+      "digest": "当最大的 AI 算力消费者决定自己建芯片厂，这件事的意义已经超出了商业范畴。",
+      "link": "https://mp.weixin.qq.com/s/tWTsH0RRM2tDx1PT3oEp_w",
+      "source_file": "sources/2026-05-07_550 亿美元！马斯克的「芯片工厂」开始成为现实_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "全球AI新王诞生！Anthropic估值冲爆1.2万亿，首次反超OpenAI",
+      "source": "新智元",
+      "digest": "A厂一夜杀进1.2万亿俱乐部",
+      "link": "https://mp.weixin.qq.com/s/mwKT5wsPNzfCYPJNVluglQ",
+      "source_file": "sources/2026-05-07_全球AI新王诞生！Anthropic估值冲爆1.2万亿，首次反超OpenAI_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "马斯克悬了？曾给奥尔特曼特斯拉席位，红颜知己证词反帮OpenAI",
+      "source": "智东西",
+      "digest": "马斯克、OpenAI世纪庭审进入第二周。",
+      "link": "https://mp.weixin.qq.com/s/wWJDW4lf70YRALVzEbelzQ",
+      "source_file": "sources/2026-05-07_马斯克悬了？曾给奥尔特曼特斯拉席位，红颜知己证词反帮OpenAI_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "马斯克解散xAI，22万张GPU租给Anthropic助力Claude",
+      "source": "多源综合",
+      "digest": "马斯克官宣解散xAI，将22万张GPU算力全部租给Anthropic用于Claude训练；同时与Cursor合作提供数万GPU，联手对抗OpenAI。Anthropic创始人透露ARR增速达80倍，Claude调用限制全放开、速率拉满。",
+      "link": "https://mp.weixin.qq.com/s/NsQ1siqUVWZ04bIuB_m9Jg",
+      "source_file": "sources/2026-05-07_刚刚，马斯克官宣xAI解散，22万张GPU算力租给Anthropic_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "136亿！中国大模型最大融资完成",
+      "source": "智东西",
+      "digest": "累计融资近300亿。",
+      "link": "https://mp.weixin.qq.com/s/G1vTAf9WM_caY_4nNydqsg",
+      "source_file": "sources/2026-05-07_136亿！中国大模型最大融资完成_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "00后下场整顿Agent：啥都不学就能用好AI，这才是正确打开方式",
+      "source": "量子位",
+      "digest": "低提示词，挑战主流模型的交互逻辑",
+      "link": "https://mp.weixin.qq.com/s/V79eQDEi2zGhSxa7l08ZZA",
+      "source_file": "sources/2026-05-07_00后下场整顿Agent：啥都不学就能用好AI，这才是正确打开方式_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "全球医疗榜第一，中国AI杀疯了！医疗AI迈入Harness时代",
+      "source": "新智元",
+      "digest": "全球医疗榜第一，中国AI杀疯了！医疗AI迈入Harness时代",
+      "link": "https://mp.weixin.qq.com/s/_XW3cbHtk_sEvbQMr6SuZQ",
+      "source_file": "sources/2026-05-07_全球医疗榜第一，中国AI杀疯了！医疗AI迈入Harness时代_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "技术·艺术· 算术：京东零售 AIGC 百亿素材供给实践",
+      "source": "InfoQ",
+      "digest": "行业中很多时候将 AIGC 等同于文案、图片、视频的生产工具，认为\"能生成 = 能落地\"。",
+      "link": "https://mp.weixin.qq.com/s/3qVQD3xpQzphRO-gOfGLaQ",
+      "source_file": "sources/2026-05-07_技术·艺术· 算术：京东零售 AIGC 百亿素材供给实践_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "7亿！国内最大原生AGI Infra融资诞生，AI基础设施成为新的价值锚点",
+      "source": "智东西",
+      "digest": "大厂林立，为何独立Infra反而\"更大\"了？",
+      "link": "https://mp.weixin.qq.com/s/8rhMLqRtmfySnGnCb-EFuA",
+      "source_file": "sources/2026-05-07_7亿！国内最大原生AGI Infra融资诞生，AI基础设施成为新的价值锚点_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "Token需求狂飙千倍，22亿热钱涌向这家AGI Infra头号玩家",
+      "source": "量子位",
+      "digest": "中国大模型的共同依赖",
+      "link": "https://mp.weixin.qq.com/s/uBlIbY0ZNyegILsCzsQqFA",
+      "source_file": "sources/2026-05-07_Token需求狂飙千倍，22亿热钱涌向这家AGI Infra头号玩家_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "运维人慌了！AI正在批量 \"干掉\" 传统运维",
+      "source": "51CTO",
+      "digest": "你是否还在为深夜突如其来的系统告警而彻夜奋战？是否曾因繁杂的日志和海量指标无法快速定位根因而困扰？",
+      "link": "https://mp.weixin.qq.com/s/JP2XGVyURvuZRNl7WO-iog",
+      "source_file": "sources/2026-05-07_运维人慌了！AI正在批量 \"干掉\" 传统运维_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "解锁 AI 新赛道｜5月7日19:00，51CTO&华为 AI 认证实战公开课重磅开播！",
+      "source": "51CTO",
+      "digest": "AI 认证选考攻略 + 避坑指南 + 企业级项目实战 ，从理论到落地一站式学透，干货满满好礼不停！",
+      "link": "https://mp.weixin.qq.com/s/lYN3tHde-9jTB1qpMVjW9A",
+      "source_file": "sources/2026-05-07_解锁 AI 新赛道｜5月7日19_00，51CTO&华为 AI 认证实战公开课重磅开播！_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-07",
+      "title": "消除「AI 学习门槛」，这个 Agent 想让普通人「无脑上手」",
+      "source": "极客公园",
+      "digest": "最好的 AI，就是人不用去学，AI 自己能把自己给用好。",
+      "link": "https://mp.weixin.qq.com/s/C4k6dukmquL4pyds4S3n1g",
+      "source_file": "sources/2026-05-07_消除「AI 学习门槛」，这个 Agent 想让普通人「无脑上手」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-06",
       "title": "OpenAI发布GPT-5.5 Instant：幻觉降52%，全员免费推出",

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-07",
+      "weekday": "周四",
+      "stats": {
+        "国际": 4,
+        "国内": 9,
+        "同业": 4,
+        "其他": 15,
+        "total": 32
+      },
+      "summary": "Genesis AI 发布新模型：机器人开始挑战西红柿炒鸡蛋/0%完成率！Claude、GPT、Gemini 全灭，SWE-Bench作者新作把AI圈干沉..."
+    },
+    {
       "date": "2026-05-06",
       "weekday": "周三",
       "stats": {
