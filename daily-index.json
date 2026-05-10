@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-09",
+      "weekday": "周六",
+      "stats": {
+        "国际": 7,
+        "国内": 7,
+        "同业": 3,
+        "其他": 14,
+        "total": 31
+      },
+      "summary": "OpenAI研究员翁家翌提出AI训练新范式：不更新参数的强化学习方法/Cloudflare 推出 Agent Memory：面向 AI 智能体的持久记忆托..."
+    },
+    {
       "date": "2026-05-08",
       "weekday": "周五",
       "stats": {

@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-05-09T07:04:36.419873",
-  "total": 384,
+  "updated_at": "2026-05-10T09:52:51.056375",
+  "total": 414,
   "articles": [
+    {
+      "date": "2026-05-09",
+      "title": "OpenAI研究员翁家翌提出AI训练新范式：不更新参数的强化学习方法",
+      "source": "多源综合",
+      "digest": "OpenAI研究员翁家翌提出两项重要研究：一是无需更新参数的强化学习新范式，决策只需生成.py文件；二是探索梯度之外的下一个AI训练范式，关注可持续迭代的方法论。",
+      "link": "https://mp.weixin.qq.com/s/YtVAx8A8LvwojFMkHy501A",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "AI突现首例自我复制！横跨4国160小时无限繁殖",
+      "source": "新智元",
+      "digest": "AI突现首例自我复制！横跨4国160小时无限繁殖",
+      "link": "https://mp.weixin.qq.com/s/5pREXc4SSCHLQ-bwY4iSXw",
+      "source_file": "sources/2026-05-09_AI突现首例自我复制！横跨4国160小时无限繁殖_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "谷歌「AI联合数学家」来了！刷新最难数学AI基准SOTA，牛津教授用它解开群论悬案",
+      "source": "量子位",
+      "digest": "谷歌AI for Math迈出最新一步",
+      "link": "https://mp.weixin.qq.com/s/ULTjDlAW1KR1mJHnX-L8wQ",
+      "source_file": "sources/2026-05-09_谷歌「AI联合数学家」来了！刷新最难数学AI基准SOTA，牛津教授用它解开群论悬案_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "用Attention和MoE预报天气，刷新公里级预测SOTA｜CVPR'26 Highlight",
+      "source": "量子位",
+      "digest": "港科大联合上海AI实验室打造STCast，提升长短期极端天气预测准确率",
+      "link": "https://mp.weixin.qq.com/s/I5gTxXLGa2hTwGDJEk9-Xg",
+      "source_file": "sources/2026-05-09_用Attention和MoE预报天气，刷新公里级预测SOTA｜CVPR'26 Highlight_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "Cloudflare 推出 Agent Memory：面向 AI 智能体的持久记忆托管服务",
+      "source": "InfoQ",
+      "digest": "Cloudflare 在 Agents Week 期间宣布 Agent Memory 已开启私人测试。",
+      "link": "https://mp.weixin.qq.com/s/KabdFhsQ6cV7zjmLQ_A4IQ",
+      "source_file": "sources/2026-05-09_Cloudflare 推出 Agent Memory：面向 AI 智能体的持久记忆托管服务_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "为什么完美的AI Agent不存在？Claude Code源码背后的五大设计哲学与妥协",
+      "source": "量子位",
+      "digest": "全面系统性地分析Claude Code AI智能体架构",
+      "link": "https://mp.weixin.qq.com/s/RFU_PymPZDvqsL4eVDcAHg",
+      "source_file": "sources/2026-05-09_为什么完美的AI Agent不存在？Claude Code源码背后的五大设计哲学与妥协_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "蚂蚁万亿参数思考模型来了！实测AIME真题难不倒，会写爽文、规划出行",
+      "source": "智东西",
+      "digest": "模型近期开源。",
+      "link": "https://mp.weixin.qq.com/s/lFxH5N4ma0y2DTXkZGU6yw",
+      "source_file": "sources/2026-05-09_蚂蚁万亿参数思考模型来了！实测AIME真题难不倒，会写爽文、规划出行_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "怎么判断大模型是真懂还是假懂？浙大x爱丁堡大学新指标NCB：给它的知识邻域也打分",
+      "source": "量子位",
+      "digest": "大模型看起来很自信时，它真的\"相信\"自己说的话吗？",
+      "link": "https://mp.weixin.qq.com/s/p0j74JW7DyHa69NKtFP3Xw",
+      "source_file": "sources/2026-05-09_怎么判断大模型是真懂还是假懂？浙大x爱丁堡大学新指标NCB：给它的知识邻域也打分_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-09",
+      "title": "中芯国际创始人： Edge AI是国内创新型企业的核心机遇！",
+      "source": "财联社AI daily",
+      "digest": "随着大模型产业的爆发，国内AI芯片赛道迎来前所未有的发展机遇。张汝京认为，在AI应用整体份额格局中，边缘/分布式AI（Edge AI）赛道尚未获得市场足够的关注，大量场景化的硬件需求仍未获得有效满足。",
+      "link": "https://mp.weixin.qq.com/s/5X7jHfDC4FaKtNfgRPHZVg",
+      "source_file": "sources/2026-05-09_中芯国际创始人： Edge AI是国内创新型企业的核心机遇！_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "灵码 RepoWiki——让 AI 真正读懂你的代码库",
+      "source": "灵码Lingma",
+      "digest": "上下文窗口在增长，但代码库的复杂度增长得更快。一个中型项目几千个文件、数十万行代码，哪怕 200K token 的上下文窗口也不可能一次性装下。而碎片化地\"看几个文件\"，永远无法替代对整个代码库的结构性理解。",
+      "link": "https://mp.weixin.qq.com/s/HSOn2ztanIO9apFLPuOy0A",
+      "source_file": "sources/2026-05-09_灵码 RepoWiki——让 AI 真正读懂你的代码库_灵码Lingma.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "对话千问AI眼镜负责人：阿里靠什么搅局\"百镜大战\"？",
+      "source": "智东西",
+      "digest": "架构重构、定制模型、生态连横，揭开阿里做AI眼镜最硬底牌。",
+      "link": "https://mp.weixin.qq.com/s/VxNN7H7dhzR6LXOaOJBF2w",
+      "source_file": "sources/2026-05-09_对话千问AI眼镜负责人：阿里靠什么搅局“百镜大战”？_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "超2000亿！字节被曝大手笔加码AI算力，侧重国产芯片",
+      "source": "智东西",
+      "digest": "AI基建竞争愈发激烈，字节预算半年涨了25%。",
+      "link": "https://mp.weixin.qq.com/s/rYeeMpR6mMibxmao4RtSNA",
+      "source_file": "sources/2026-05-09_超2000亿！字节被曝大手笔加码AI算力，侧重国产芯片_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "5 人 7 天干完 20 人数周的活：Spec-Driven Development 如何重新定义 AI 编程",
+      "source": "阿里云开发者",
+      "digest": "5 人 7 天干完 20 人数周的活：Spec-Driven Development 如何重新定义 AI 编程",
+      "link": "https://mp.weixin.qq.com/s/hVizUucsy8rwFOUR-VZ6wA",
+      "source_file": "sources/2026-05-09_5 人 7 天干完 20 人数周的活：Spec-Driven Development 如何重新定义 _阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "北京银行AI深度赋能业务场景，已建成280+智能体",
+      "source": "银行科技研究社",
+      "digest": "北京银行AI深度赋能业务场景，已建成280+智能体",
+      "link": "https://mp.weixin.qq.com/s/tTP7QykoBbecZD0jOy318Q",
+      "source_file": "sources/2026-05-09_北京银行AI深度赋能业务场景，已建成280+智能体_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "AI之于银行员工：要么被替代，要么赋能？全员配备AI助手或成趋势",
+      "source": "银行科技研究社",
+      "digest": "AI之于银行员工：要么被替代，要么赋能？全员配备AI助手或成趋势",
+      "link": "https://mp.weixin.qq.com/s/fWc27ZYy635u5j7gkJFqzQ",
+      "source_file": "sources/2026-05-09_AI之于银行员工：要么被替代，要么赋能？全员配备AI助手或成趋势_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "网信办等3部门：鼓励研发金融风控智能体",
+      "source": "银行科技研究社",
+      "digest": "近日，国家网信办、国家发展改革委、工业和信息化部联合印发《智能体规范应用与创新发展实施意见》。意见提出，研发金融风控智能体，提升信贷审批、交易监控、账户安全等环节风险识别能力。完善智能体异常检测、合规审计功能，提升信贷违约预测、信用卡盗刷拦截、反洗钱监测等能力。",
+      "link": "https://mp.weixin.qq.com/s/_pw9j6p9K2amDxygyGH3Zg",
+      "source_file": "sources/2026-05-09_网信办等3部门：鼓励研发金融风控智能体_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "xAI人事动荡：多位联创同日离职，马斯克600亿拉来Cursor重建",
+      "source": "多源综合",
+      "digest": "xAI遭遇新一轮人事震荡，包括预训练负责人在内的多位核心成员同日离职；马斯克紧急引入Cursor合作，计划投入600亿资金并租用22万张GPU用于Claude训练，试图重建团队稳定性。",
+      "link": "https://mp.weixin.qq.com/s/3L6eUGAZ1ciT1UancBd0_A",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "DeepSeek启动创纪录融资：梁文锋出资200亿，总额500亿估值飙至3500亿",
+      "source": "多源综合",
+      "digest": "DeepSeek启动成立以来首轮外部融资，规模高达500亿元（约70亿美元），其中创始人梁文锋个人出资200亿占比40%。融资后估值飙升至3500亿元，刷新中国AI创业公司单轮融资纪录。资金将用于提高员工薪资、加强算力储备，下一代模型V4.1定档6月发布。",
+      "link": "https://mp.weixin.qq.com/s/468uA3g9RZCZEepuS_yp4g",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "2026 AI眼镜大战升级！一边等苹果出手，一边憋大招",
+      "source": "智东西",
+      "digest": "手机厂商\"防守\"，互联网大厂\"进攻\"。",
+      "link": "https://mp.weixin.qq.com/s/A7Vx3pxyz2HbB8EJ_YTRqw",
+      "source_file": "sources/2026-05-09_2026 AI眼镜大战升级！一边等苹果出手，一边憋大招_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "估值逼近1万亿美元！全球最值钱的AI创企，要易主了",
+      "source": "智东西",
+      "digest": "有望超越OpenAI成为全球最值钱AI初创公司。",
+      "link": "https://mp.weixin.qq.com/s/n1GlJRYDDAWuVM6Vwv6Z7g",
+      "source_file": "sources/2026-05-09_估值逼近1万亿美元！全球最值钱的AI创企，要易主了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "Anthropic 估值逼近 1 万亿美元；OpenAI 推出 Codex Chrome 扩展；消息称腾讯实习生大涨薪，百度「全员晋升」｜极客早知道",
+      "source": "极客公园",
+      "digest": "OpenAI 推出 GPT-5.5-Cyber 预览版，面向安全团队限量开放；\n苹果 CarPlay 接入马斯克的 Grok 模型，在车内和 AI 自然聊天；\nOPPO 就母亲节宣传文案争议道歉：已第一时间下架全部相关物料",
+      "link": "https://mp.weixin.qq.com/s/wzDs8mNxyyElVhqr09XJjA",
+      "source_file": "sources/2026-05-09_Anthropic 估值逼近 1 万亿美元；OpenAI 推出 Codex Chrome 扩展；消息_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "Figure AI 发布新 demo：两个机器人点头致意，我们一起把被子拉开",
+      "source": "极客公园",
+      "digest": "全球首次用单一神经网络实现多机器人协作 locomanipulation。",
+      "link": "https://mp.weixin.qq.com/s/oiWATkOJ8rdrUowyHXiqHg",
+      "source_file": "sources/2026-05-09_Figure AI 发布新 demo：两个机器人点头致意，我们一起把被子拉开_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "从0到10万Star只需一个周末：开源项目的信任危机，也许是那群\"以为自己会写代码\"的资本大佬造成的",
+      "source": "InfoQ",
+      "digest": "AI 时代最大的笑话莫过于，大模型夸你很行，你自己当真了。",
+      "link": "https://mp.weixin.qq.com/s/tPCRmEWFler5C2vInggLeg",
+      "source_file": "sources/2026-05-09_从0到10万Star只需一个周末：开源项目的信任危机，也许是那群“以为自己会写代码”的资本大佬造成的_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "AI 把编程这件事接管之后，作为程序员的我该何去何从？",
+      "source": "InfoQ",
+      "digest": "当代码生成越来越廉价之后，软件工程中真正稀缺、也真正不可替代的能力，究竟会转移到哪里。",
+      "link": "https://mp.weixin.qq.com/s/Qy40z5PP7NL8ky4xwKAvOA",
+      "source_file": "sources/2026-05-09_AI 把编程这件事接管之后，作为程序员的我该何去何从？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "Java 近期资讯：OpenJDK、 Oracle 关键补丁更新、 Open Liberty、Testcontainers、IntelliJ IDEA",
+      "source": "InfoQ",
+      "digest": "近期Java资讯~",
+      "link": "https://mp.weixin.qq.com/s/wy-v5LBBWluK2k6ogHyFsg",
+      "source_file": "sources/2026-05-09_Java 近期资讯：OpenJDK、 Oracle 关键补丁更新、 Open Liberty、Tes_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "中国信通院人工智能软硬件测试服务AISHPerf成功入选2026年北京市中小企业服务券配券产品，可享专项补贴",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院人工智能软硬件测试服务AISHPerf成功入选2026年北京市中小企业服务券配券产品，可享专项补贴",
+      "link": "https://mp.weixin.qq.com/s/ReCj_NqhYpMknhbDeaw0mw",
+      "source_file": "sources/2026-05-09_中国信通院人工智能软硬件测试服务AISHPerf成功入选2026年北京市中小企业服务券配券产品，可享_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "活久见，时代少年团给大模型上了一课",
+      "source": "机器之心",
+      "digest": "MiniMax不认识马嘉祺？误会，都是误会。",
+      "link": "https://mp.weixin.qq.com/s/L-kAMgXcufHa_yynGWKqWQ",
+      "source_file": "sources/2026-05-09_活久见，时代少年团给大模型上了一课_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "被 AI 重新激活的「无屏手环」，成了大厂争抢的运动健康新赛道",
+      "source": "极客公园",
+      "digest": "硬件只是入口，AI 才是产品。",
+      "link": "https://mp.weixin.qq.com/s/V1YfI2rB1uwmN7h-Oyatcw",
+      "source_file": "sources/2026-05-09_被 AI 重新激活的「无屏手环」，成了大厂争抢的运动健康新赛道_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "中国移动把Token玩明白了！10亿用户轻松接入AI算力新时代",
+      "source": "新智元",
+      "digest": "中国移动把Token玩明白了！10亿用户轻松接入AI算力新时代",
+      "link": "https://mp.weixin.qq.com/s/AYqI-XdKfGBMtEKoF5bxXw",
+      "source_file": "sources/2026-05-09_中国移动把Token玩明白了！10亿用户轻松接入AI算力新时代_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-09",
+      "title": "行业首创空间3D显示，还能主动提醒和帮忙叫车，千问AI眼镜这操作真把我看愣了",
+      "source": "量子位",
+      "digest": "眼镜里的信息第一次「立」起来了",
+      "link": "https://mp.weixin.qq.com/s/22b499pyWVtzT4pvAaBOGg",
+      "source_file": "sources/2026-05-09_行业首创空间3D显示，还能主动提醒和帮忙叫车，千问AI眼镜这操作真把我看愣了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-08",
       "title": "撬开大模型黑箱！Anthropic新研究把AI思考过程公开了，隐藏动机发现率涨了4倍",
