@@ -10,6 +10,10 @@ import os
 import sys
 from datetime import datetime
 
+# 全局变量
+PROJECT_DIR = ""
+DATE_STR = ""
+
 
 # ===== 大模型关键词列表（不区分大小写） =====
 MODEL_KEYWORDS = [
@@ -125,6 +129,7 @@ def build_articles_json(classification, date_str):
     """
     构建 ARTICLES_JSON 数据
     每个对象包含: title, source, digest, link, content, category, is_model_related, source_file
+    支持多来源合并：source_items 字段（从 classification.json 中读取）
     """
     articles = []
     cats = ["国际", "国内", "同业", "其他"]
@@ -133,7 +138,7 @@ def build_articles_json(classification, date_str):
     for cat in cats:
         items = classification.get(cat, [])
         
-        # 大模型文章优先排序：is_model_related=true 的排在前面
+        # 先对文章排序：大模型相关文章优先
         items_sorted = sorted(items, key=lambda x: x.get('is_model_related', False), reverse=True)
         
         for item in items_sorted:
@@ -141,41 +146,167 @@ def build_articles_json(classification, date_str):
             source = item.get("source", "")
             link = item.get("link", "")
             digest = item.get("digest", "")
-            source_file = item.get("source_file", "")
-
-            # 如果没有 digest，使用 title 兜底
-            if not digest:
-                digest = title
-
-            # 读取 markdown 原文
-            content = read_article_content(source_file, date_str, title, source)
-
-            # 如果没有 source_file，尝试在 sources 目录匹配
-            if not source_file:
-                sources_dir = os.path.join(base_dir, 'sources')
-                matched = find_markdown_file(sources_dir, title, source)
-                if matched:
-                    source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
-
-            # 优先使用 classification.json 中的 is_model_related 标签
-            # 如果不存在，才使用关键词检测
-            if 'is_model_related' in item:
-                is_model_related = item['is_model_related']
+            is_model_related = item.get("is_model_related", False)
+            is_merged = item.get("is_merged", False)
+            merged_articles = item.get("merged_articles", [])
+            
+            if is_merged and len(merged_articles) > 1:
+                # 合并文章：构建 source_items
+                source_items = []
+                for merged_art in merged_articles:
+                    source_items.append({
+                        'name': merged_art.get('source', ''),
+                        'source_file': '',  # 合并文章没有单独的 source_file
+                        'link': merged_art.get('link', '')
+                    })
+                
+                # 使用第一个合并文章的 link 作为主链接
+                main_link = merged_articles[0].get('link', '')
+                
+                # 尝试读取原文（如果有 source_file）
+                content = read_article_content(
+                    item.get('source_file', ''),
+                    date_str,
+                    title,
+                    source
+                )
+                
+                articles.append({
+                    "title": title,
+                    "source": source,
+                    "digest": digest,
+                    "link": main_link,
+                    "content": content,
+                    "category": cat,
+                    "is_model_related": is_model_related,
+                    "source_file": item.get('source_file', ''),
+                    "source_items": source_items  # 多来源标签
+                })
             else:
-                is_model_related = detect_model_related(title, digest)
+                # 单个文章，保持原有逻辑
+                item_title = item.get("title", "")
+                source = item.get("source", "")
+                link = item.get("link", "")
+                item_digest = item.get("digest", "")
+                source_file = item.get("source_file", "")
 
-            articles.append({
-                "title": title,
-                "source": source,
-                "digest": digest,
-                "link": link,
-                "content": content,
-                "category": cat,
-                "is_model_related": is_model_related,
-                "source_file": source_file
-            })
+                # 如果没有 digest，使用 title 兜底
+                if not item_digest:
+                    item_digest = item_title
+
+                # 读取 markdown 原文
+                content = read_article_content(source_file, date_str, item_title, source)
+
+                # 如果没有 source_file，尝试在 sources 目录匹配
+                if not source_file:
+                    sources_dir = os.path.join(base_dir, 'sources')
+                    matched = find_markdown_file(sources_dir, item_title, source)
+                    if matched:
+                        source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
+
+                # 优先使用 classification.json 中的 is_model_related 标签
+                if 'is_model_related' in item:
+                    is_model_related = item['is_model_related']
+                else:
+                    is_model_related = detect_model_related(item_title, item_digest)
+
+                articles.append({
+                    "title": item_title,
+                    "source": source,
+                    "digest": item_digest,
+                    "link": link,
+                    "content": content,
+                    "category": cat,
+                    "is_model_related": is_model_related,
+                    "source_file": source_file
+                })
 
     return articles
+
+
+def group_articles_by_topic(articles):
+    """
+    将文章按主题分组，用于合并显示
+    返回: [{title, digest, articles: [...], is_merged: bool}, ...]
+    """
+    # 定义合并规则
+    merge_rules = [
+        {
+            'name': 'GPT-5.5 Instant',
+            'keywords': ['GPT-5.5'],
+            'match_mode': 'any',  # 包含任一关键词即可
+            'merged_title': 'OpenAI发布GPT-5.5 Instant：幻觉降52%，全员免费推出',
+        },
+        {
+            'name': 'OpenAI手机',
+            'keywords': ['OpenAI', '手机'],
+            'match_mode': 'all',  # 需要同时包含所有关键词
+            'merged_title': 'OpenAI首款AI手机曝光：最快明年量产，预计出货3000万台',
+        },
+        {
+            'name': 'xAI离职事件',
+            'keywords': ['xAI', '马斯克'],
+            'match_mode': 'any',
+            'merged_title': 'xAI人事动荡：多位联创同日离职，马斯克600亿拉来Cursor重建',
+        },
+        {
+            'name': 'DeepSeek融资',
+            'keywords': ['DeepSeek', '融资'],
+            'match_mode': 'all',
+            'merged_title': 'DeepSeek启动创纪录融资：梁文锋出资200亿，总额500亿估值飙至3500亿',
+        },
+        {
+            'name': 'OpenAI翁家翌研究',
+            'keywords': ['翁家翌'],
+            'match_mode': 'any',
+            'merged_title': 'OpenAI研究员翁家翌提出AI训练新范式：不更新参数的强化学习方法',
+        }
+    ]
+    
+    grouped = []  # 已分组的文章aid
+    result = []   # 分组结果
+    
+    for rule in merge_rules:
+        matched_articles = []
+        for article in articles:
+            title = article.get('title', '')
+            # 根据match_mode决定匹配逻辑
+            if rule.get('match_mode') == 'all':
+                # AND逻辑：必须包含所有关键词
+                if all(kw in title for kw in rule['keywords']):
+                    matched_articles.append(article)
+            else:
+                # OR逻辑：包含任一关键词即可
+                if any(kw in title for kw in rule['keywords']):
+                    matched_articles.append(article)
+        
+        if len(matched_articles) >= 2:
+            # 合并摘要
+            digests = [a.get('digest', '') for a in matched_articles if a.get('digest')]
+            merged_digest = '；'.join(digests[:2])  # 取前两个摘要
+            
+            result.append({
+                'title': rule['merged_title'],
+                'digest': merged_digest,
+                'articles': matched_articles,
+                'is_merged': True
+            })
+            
+            # 记录已分组的aid
+            for a in matched_articles:
+                grouped.append(a.get('aid'))
+    
+    # 未匹配的文章单独显示
+    for article in articles:
+        if article.get('aid') not in grouped:
+            result.append({
+                'title': article.get('title', ''),
+                'digest': article.get('digest', ''),
+                'articles': [article],
+                'is_merged': False
+            })
+    
+    return result
 
 
 def build_section_html(category, articles):
@@ -211,25 +342,55 @@ def build_section_html(category, articles):
         return header_html + '<div class="empty">暂无</div>'
 
     cards_html = []
-    for article in articles:
-        title = article.get("title", "")
-        source = article.get("source", "")
-        digest = article.get("digest", "")
-        link = article.get("link", "")
-
-        card_html = (
-            f'<div class="card">'
-            f'<div class="card-title">{escape_html(title)}</div>'
-            f'<span class="source-tag">{escape_html(source)}</span>'
-        )
+    
+    # 先对文章进行分组
+    grouped_articles = group_articles_by_topic(articles)
+    
+    for group in grouped_articles:
+        title = group['title']
+        digest = group['digest']
+        article_list = group['articles']
+        is_merged = group['is_merged']
+        
+        card_html = f'<div class="card">'
+        card_html += f'<div class="card-title">{escape_html(title)}</div>'
+        
+        # 如果是合并的卡片，显示多个公众号标签
+        if is_merged and len(article_list) > 1:
+            sources_html = '<div class="source-tags">'
+            for article in article_list:
+                source = article.get('source', '')
+                link = article.get('link', '')
+                source_file = article.get('source_file', '')
+                
+                # 优先使用 viewer.html 查看原文
+                if source_file:
+                    viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{source_file}'
+                    sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
+                elif link:
+                    sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
+                else:
+                    sources_html += f'<span class="source-tag">{escape_html(source)}</span>'
+            sources_html += '</div>'
+            card_html += sources_html
+        else:
+            # 单个文章，显示单个标签
+            source = article_list[0].get('source', '')
+            card_html += f'<span class="source-tag">{escape_html(source)}</span>'
+        
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'
-        if link:
-            card_html += (
-                f'<div style="margin-top:8px;">'
-                f'<a href="{escape_html(link)}" target="_blank">📖 微信原文</a>'
-                f'</div>'
-            )
+        
+        # 添加查看原文链接（仅对未合并的或使用第一个文章的链接）
+        if not is_merged:
+            link = article_list[0].get('link', '')
+            if link:
+                card_html += (
+                    f'<div style="margin-top:8px;">'
+                    f'<a href="{escape_html(link)}" target="_blank">📖 微信原文</a>'
+                    f'</div>'
+                )
+        
         card_html += '</div>'
         cards_html.append(card_html)
 
@@ -406,13 +567,14 @@ def update_search_index(date_str, articles):
 
 
 def main():
-    global PROJECT_DIR
+    global PROJECT_DIR, DATE_STR
 
     if len(sys.argv) < 2:
         print("用法: python3 generate_html.py YYYY-MM-DD")
         sys.exit(1)
 
     date_str = sys.argv[1]
+    DATE_STR = date_str  # 设置全局变量
 
     # 验证日期格式
     try:

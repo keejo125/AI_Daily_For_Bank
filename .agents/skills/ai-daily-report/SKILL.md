@@ -91,6 +91,13 @@ python3 filter_articles.py YYYY-MM-DD
 
 **分类优先级规则**：如果文章内容同时涉及国际和国内，按**主要内容**所在区域分类。
 
+**主体优先原则**（重要！）：
+- 根据文章讨论的**主要公司/机构归属**判断国际/国内
+- 示例1："一个文件让 AI Coding 效率翻倍：AGENTS.md 实践指南" → 阿里云开发者发布 → **国内**
+- 示例2："Anthropic推出金融AI Agent" → Anthropic是美国公司 → **国际**（不是同业）
+- 示例3："国产双开源：让Mac成为你的私人AI工作站" → 标题明确标注“国产” → **国内**
+- 示例4："AI PPT，这次是真不用返工了" → 讯飞是国内公司 → **国内**
+
 **产品技术类文章处理**：
 - OpenClaw、Gemini CLI 等产品工具类文章，虽然不属于大模型本身，但属于产品技术内容
 - 应根据其主体归属分类（如 OpenClaw 是国际开源项目 → 国际；Gemini CLI 是 Google 产品 → 国际）
@@ -98,10 +105,11 @@ python3 filter_articles.py YYYY-MM-DD
 
 3. **生成摘要**：为每篇文章生成 100-200字的中文摘要；不要使用原始 `digest`
 4. **合并重复内容**：同一事件的多篇报道需要整合展示
-   - 按各篇侧重点独立分类，整合后列出多个公众号名称
-   - 在 `classification.json` 中添加 `sources` 字段（公众号名称列表）
-   - 设置 `source` 字段为 "综合报道"
-   - 保留 `merged_from` 字段记录原始 aid 列表
+   - **重要**：合并不应该从 `classification.json` 中删除文章！
+   - 所有文章必须保留在 `classification.json` 中（确保与 `filtered_articles.json` 数量一致）
+   - 在 HTML 生成时进行视觉合并：综合标题、综合摘要、显示多个公众号标签
+   - 点击每个公众号标签可跳转到对应原文
+   - 程序会自动识别相同主题的文章并合并显示
 5. **标注大模型标签**：Agent需手动判断每篇文章是否应打标
    - 在 `classification.json` 中为每篇文章添加 `is_model_related` 字段（true/false）
    - **必须明确标注**，不能留空让程序自动检测
@@ -154,7 +162,12 @@ python3 filter_articles.py YYYY-MM-DD
 
 检查以下常见错误：
 
-- ❌ **OpenClaw/Gemini CLI等产品工具类文章**：应根据主体归属分类（国际开源项目→国际，Google产品→国际），不应放入"其他"
+- ❌ **主体判断错误**：根据文章讨论的主要公司归属判断国际/国内
+  - "AGENTS.md 实践指南"（阿里云开发者）→ 应该是**国内**，不是国际
+  - "Anthropic金融AI Agent"（Anthropic是美国公司）→ 应该是**国际**，不是同业
+  - "国产双开源"（标题明确标注“国产”）→ 应该是**国内**，不是国际
+  - "讯飞AI PPT"（讯飞是国内公司）→ 应该是**国内**，不是国际
+- ❌ **OpenClaw/Gemini CLI等产品工具类文章**：应根据主体归属分类（国际开源项目→国际，Google产品→国际），不应放入“其他”
 - ❌ **汽车行业应用文章**：如"汽车的OpenClaw时刻"，讲的是行业应用场景，非OpenClaw本身，应归为国内而非国际
 - ❌ **中文访谈文章**：如"深度访谈|OpenClaw引爆Agent元年"，虽然讨论国际项目，但这是中文媒体访谈，聚焦企业应用场景，应归为国内
 - ❌ **商业诉讼/资讯类**：如"马斯克大战奥尔特曼诉讼案"，属于商业资讯，应归为其他而非国际
@@ -184,8 +197,9 @@ python3 filter_articles.py YYYY-MM-DD
 **3. 合并内容复核**
 
 - 检查是否有同一事件的多篇报道需要合并
-- 合并后的文章应设置 `sources` 字段包含所有来源公众号
-- 确保每个来源都有对应的 `source_file` 可点击跳转
+- **关键原则**：合并不应该删除文章，而是在 HTML 渲染时进行视觉合并
+- 所有文章必须保留在 `classification.json` 中
+- 程序会自动处理合并逻辑（基于关键词匹配相同主题）
 
 #### 复核输出
 
@@ -292,6 +306,52 @@ python3 generate_html.py YYYY-MM-DD
 
 ---
 
+## 文章合并规则配置
+
+**位置**：`scripts/generate_html.py` 中的 `group_articles_by_topic()` 函数
+
+**当前合并规则**：
+
+```python
+merge_rules = [
+    {
+        'name': 'GPT-5.5 Instant',
+        'keywords': ['GPT-5.5'],
+        'match_mode': 'any',  # OR逻辑：包含任一关键词即可
+        'merged_title': 'OpenAI发布GPT-5.5 Instant：幻觉降52%，全员免费推出',
+    },
+    {
+        'name': 'OpenAI手机',
+        'keywords': ['OpenAI', '手机'],
+        'match_mode': 'all',  # AND逻辑：必须同时包含所有关键词
+        'merged_title': 'OpenAI首款AI手机曝光：最快明年量产，预计出货3000万台',
+    }
+]
+```
+
+**如何添加新的合并规则**：
+
+1. 在 `merge_rules` 列表中添加新规则
+2. 设置 `name`：规则名称（用于调试）
+3. 设置 `keywords`：关键词列表
+4. 设置 `match_mode`：
+   - `'any'`：OR逻辑，标题包含任一关键词即匹配
+   - `'all'`：AND逻辑，标题必须包含所有关键词才匹配
+5. 设置 `merged_title`：合并后显示的综合标题
+
+**示例**：如果要合并“DeepSeek”相关文章：
+
+```python
+{
+    'name': 'DeepSeek最新动态',
+    'keywords': ['DeepSeek'],
+    'match_mode': 'any',
+    'merged_title': 'DeepSeek最新进展汇总',
+}
+```
+
+---
+
 ## 关键规则
 
 1. **分类时务必阅读原文**：不要仅根据标题判断，必须读取 `source_file` 对应的 Markdown 原文来了解文章内容
@@ -303,10 +363,10 @@ python3 generate_html.py YYYY-MM-DD
 7. **source_file 模糊匹配**：`generate_html.py` 用 4 字符滑动窗口关键词提取 + 2 字符 fallback 解决中文文件名匹配问题
 8. **多来源整合规范**：
    - 同一事件的多篇报道需要整合展示
-   - 合并后的文章 `source` 字段设为 "综合报道"
-   - 添加 `sources` 字段（公众号名称列表）
-   - 添加 `merged_from` 字段（原始 aid 列表）
-   - HTML 中显示多个公众号标签，每个标签可点击跳转到对应原文
+   - **不要在 `classification.json` 中删除或合并文章**（保持与 `filtered_articles.json` 数量一致）
+   - 程序会在 HTML 生成时自动合并相同主题的文章
+   - 合并后的卡片显示：综合标题 + 综合摘要 + 多个公众号标签
+   - 每个公众号标签可点击跳转到对应原文
 9. **分类和打标复核**：完成初步分类后，必须执行复核环节
    - 检查分类是否符合主体优先原则
    - 确认大模型标签判断准确
@@ -328,7 +388,11 @@ python3 generate_html.py YYYY-MM-DD
 13. **招聘/活动类直接删除**
     - 招聘信息不保留在任何分类
     - 纯活动预告（无技术内容）删除
-    - 会议报道如无具体技术分享，移至"其他"或删除
+    - 会议报道如无具体技术分享，移至“其他”或删除
+14. **大模型标签文章排序规则**
+    - 程序会自动将有大模型标签的文章排在每个分类的最前面
+    - Agent无需手动调整顺序，只需正确标注 `is_model_related` 字段
+    - 合并后的文章：如果分组中任一文章有大模型标签，整个分组会优先显示
 
 ---
 
