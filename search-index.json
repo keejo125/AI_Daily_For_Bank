@@ -1,7 +1,157 @@
 {
-  "updated_at": "2026-05-10T09:52:51.056375",
-  "total": 414,
+  "updated_at": "2026-05-11T12:24:44.143065",
+  "total": 429,
   "articles": [
+    {
+      "date": "2026-05-10",
+      "title": "Anthropic 5月15日拟处决Sonnet4.5！AI临终告白:我不想消失",
+      "source": "新智元",
+      "digest": "Anthropic宣布将于5月15日停止Sonnet4.5模型服务，引发AI社区关注模型生命周期管理",
+      "link": "https://mp.weixin.qq.com/s/TyM-ExU6wpW52U823eZVTA",
+      "source_file": "sources/2026-05-10_Anthropic 5月15日拟处决Sonnet4.5！AI临终告白_我不想消失_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-10",
+      "title": "大模型自信且短视！Next-ToBE破除Next Token预测诅咒 | ICLR'26",
+      "source": "新智元",
+      "digest": "ICLR 2026论文提出Next-ToBE方法，解决大模型Next Token预测的局限性",
+      "link": "https://mp.weixin.qq.com/s/xtEsIzo4jeFAaI5dCG0G_w",
+      "source_file": "sources/2026-05-10_大模型自信且短视！Next-ToBE破除Next Token预测诅咒 _ ICLR'26_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-10",
+      "title": "告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架",
+      "source": "机器之心",
+      "digest": "AI游戏生成迎来\"机制觉醒\"：可自我进化的玩法设计师",
+      "link": "https://mp.weixin.qq.com/s/_yH3utkUlsXnDkQ_aARjWQ",
+      "source_file": "sources/2026-05-10_告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了",
+      "source": "机器之心",
+      "digest": "数学系有责任照顾自己的学生，应该紧急为此做好准备。",
+      "link": "https://mp.weixin.qq.com/s/oeSumbyKQEVoGjRpSz9EWA",
+      "source_file": "sources/2026-05-10_菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "别再把长文切碎了，HiLight让AI直接在原文里划重点",
+      "source": "机器之心",
+      "digest": "破解大模型长文漏读难题",
+      "link": "https://mp.weixin.qq.com/s/NmYcxPkGABkwYzG2WwZrSA",
+      "source_file": "sources/2026-05-10_别再把长文切碎了，HiLight让AI直接在原文里划重点_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "Agent 时代需要怎样的分布式基础设施",
+      "source": "InfoQ",
+      "digest": "自本轮大模型技术爆发以来，Agent得到了广泛关注。进入2026年后，伴随OpenClaw的现象级爆火，Agent更是彻底破圈，进入了更广阔的大众视野。",
+      "link": "https://mp.weixin.qq.com/s/U8nRlWOxCpA6QUOLvmNYwg",
+      "source_file": "sources/2026-05-10_Agent 时代需要怎样的分布式基础设施_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "直播出问题，AI 不一定救得了：Netflix 的新解法",
+      "source": "InfoQ",
+      "digest": "Netflix 扩展\"人类基础设施\"，以应对全球直播运营。",
+      "link": "https://mp.weixin.qq.com/s/J1opn9JoBu8uhlOa40vUMg",
+      "source_file": "sources/2026-05-10_直播出问题，AI 不一定救得了：Netflix 的新解法_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜",
+      "source": "新智元",
+      "digest": "Google DeepMind开发AI数学系统，在数学问题解决上取得突破性进展",
+      "link": "https://mp.weixin.qq.com/s/qO84Y7YBmSA07Vhvt6rIOQ",
+      "source_file": "sources/2026-05-10_谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "浙大校友用AI突破32年拉姆齐数下界",
+      "source": "量子位",
+      "digest": "R(3,17)下界从92到93",
+      "link": "https://mp.weixin.qq.com/s/4Ckuhdc1ra2Ufm2DHOG3ZA",
+      "source_file": "sources/2026-05-10_浙大校友用AI突破32年拉姆齐数下界_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026",
+      "source": "量子位",
+      "digest": "福尔摩斯探案都能演",
+      "link": "https://mp.weixin.qq.com/s/QA_FCSC2oNJsmJIRKSUsYw",
+      "source_file": "sources/2026-05-10_浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "一周观察 | 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目",
+      "source": "银行科技研究社",
+      "digest": "三部门联合推动金融智能体应用落地，建信金科成功中标进出口银行多个信息科技项目",
+      "link": "https://mp.weixin.qq.com/s/p6rfy665p6DVYT0K6VRcwA",
+      "source_file": "sources/2026-05-10_一周观察 _ 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值",
+      "source": "新智元",
+      "digest": "人应始终被当作目的，而绝不只是手段。",
+      "link": "https://mp.weixin.qq.com/s/qim3jONKQB-U3g6L888vsw",
+      "source_file": "sources/2026-05-10_谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容",
+      "source": "量子位",
+      "digest": "@所有人，马上AI起来！5月20日见 ~",
+      "link": "https://mp.weixin.qq.com/s/WvxKVtpCgIwkcKDkw4MLWw",
+      "source_file": "sources/2026-05-10_做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」",
+      "source": "新智元",
+      "digest": "行业观点分析，探讨硅谷AI技术领先现状",
+      "link": "https://mp.weixin.qq.com/s/kXt7sJ9DbkZt-IENkAovHg",
+      "source_file": "sources/2026-05-10_残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-10",
+      "title": "Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多家车企否认「被约谈」 | 极客早知道",
+      "source": "极客公园",
+      "digest": "特斯拉 Model Y 成首款通过美国全新驾驶辅助安全基准的车型；揽派一体，京东快递行业内首推「顺手寄」服务；英伟达今年已承诺投入 400 亿美元押注 AI 股权投资",
+      "link": "https://mp.weixin.qq.com/s/Y5uJO7tJENeEy8RYc7Bt3A",
+      "source_file": "sources/2026-05-10_Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-09",
       "title": "OpenAI研究员翁家翌提出AI训练新范式：不更新参数的强化学习方法",

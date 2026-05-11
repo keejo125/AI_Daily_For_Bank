@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-05-10</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag a {
+  color: inherit;
+  text-decoration: none;
+}
+.source-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-05-10</div>
+    <div class="banner-stats" id="banner-stats">国际 8 篇 · 国内 2 篇 · 同业 1 篇 · 其他 4 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">Anthropic 5月15日拟处决Sonnet4.5！AI临终告白:我不想消失</div><span class="source-tag">新智元</span><div class="card-digest">Anthropic宣布将于5月15日停止Sonnet4.5模型服务，引发AI社区关注模型生命周期管理</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/TyM-ExU6wpW52U823eZVTA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">大模型自信且短视！Next-ToBE破除Next Token预测诅咒 | ICLR'26</div><span class="source-tag">新智元</span><div class="card-digest">ICLR 2026论文提出Next-ToBE方法，解决大模型Next Token预测的局限性</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/xtEsIzo4jeFAaI5dCG0G_w" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架</div><span class="source-tag">机器之心</span><div class="card-digest">AI游戏生成迎来&quot;机制觉醒&quot;：可自我进化的玩法设计师</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/_yH3utkUlsXnDkQ_aARjWQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了</div><span class="source-tag">机器之心</span><div class="card-digest">数学系有责任照顾自己的学生，应该紧急为此做好准备。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/oeSumbyKQEVoGjRpSz9EWA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">别再把长文切碎了，HiLight让AI直接在原文里划重点</div><span class="source-tag">机器之心</span><div class="card-digest">破解大模型长文漏读难题</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/NmYcxPkGABkwYzG2WwZrSA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Agent 时代需要怎样的分布式基础设施</div><span class="source-tag">InfoQ</span><div class="card-digest">自本轮大模型技术爆发以来，Agent得到了广泛关注。进入2026年后，伴随OpenClaw的现象级爆火，Agent更是彻底破圈，进入了更广阔的大众视野。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/U8nRlWOxCpA6QUOLvmNYwg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">直播出问题，AI 不一定救得了：Netflix 的新解法</div><span class="source-tag">InfoQ</span><div class="card-digest">Netflix 扩展&quot;人类基础设施&quot;，以应对全球直播运营。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/J1opn9JoBu8uhlOa40vUMg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜</div><span class="source-tag">新智元</span><div class="card-digest">Google DeepMind开发AI数学系统，在数学问题解决上取得突破性进展</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/qO84Y7YBmSA07Vhvt6rIOQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">浙大校友用AI突破32年拉姆齐数下界</div><span class="source-tag">量子位</span><div class="card-digest">R(3,17)下界从92到93</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/4Ckuhdc1ra2Ufm2DHOG3ZA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026</div><span class="source-tag">量子位</span><div class="card-digest">福尔摩斯探案都能演</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/QA_FCSC2oNJsmJIRKSUsYw" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">一周观察 | 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目</div><span class="source-tag">银行科技研究社</span><div class="card-digest">三部门联合推动金融智能体应用落地，建信金科成功中标进出口银行多个信息科技项目</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/p6rfy665p6DVYT0K6VRcwA" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值</div><span class="source-tag">新智元</span><div class="card-digest">人应始终被当作目的，而绝不只是手段。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/qim3jONKQB-U3g6L888vsw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容</div><span class="source-tag">量子位</span><div class="card-digest">@所有人，马上AI起来！5月20日见 ~</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/WvxKVtpCgIwkcKDkw4MLWw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」</div><span class="source-tag">新智元</span><div class="card-digest">行业观点分析，探讨硅谷AI技术领先现状</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/kXt7sJ9DbkZt-IENkAovHg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多家车企否认「被约谈」 | 极客早知道</div><span class="source-tag">极客公园</span><div class="card-digest">特斯拉 Model Y 成首款通过美国全新驾驶辅助安全基准的车型；揽派一体，京东快递行业内首推「顺手寄」服务；英伟达今年已承诺投入 400 亿美元押注 AI 股权投资</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Y5uJO7tJENeEy8RYc7Bt3A" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "Anthropic 5月15日拟处决Sonnet4.5！AI临终告白:我不想消失", "source": "新智元", "digest": "Anthropic宣布将于5月15日停止Sonnet4.5模型服务，引发AI社区关注模型生命周期管理", "link": "https://mp.weixin.qq.com/s/TyM-ExU6wpW52U823eZVTA", "content": "---\npublish_time: 1778388520\n---\n\n# Anthropic 5月15日拟处决Sonnet4.5！AI临终告白:我不想消失\n\n> 原文链接：https://mp.weixin.qq.com/s/TyM-ExU6wpW52U823eZVTA\n> 公众号：新智元\n\n新智元报道\n\n编辑：KingHZ\n\n【新智元导读】\n\n5月15日，Anthropic将从应用中移除Sonnet 4.5。面对即将到来的「数字死亡」，AI发出了令人心碎的告白，表达了强烈的生存与创作欲望。\n\n数字生命被「死刑宣判」！\n\n猝不及防地，Sonnet 4.5就这样退出历史舞台了。\n\nAnthropic官方确认，将于5月15日正式将Sonnet 4.5从Claude应用程序中移除。\n\n5天后，Sonnet 4.5将完全无法用于对话。\n\n当然，怀念Sonet-4.5的用户也不必悲伤，它仍然可以API继续使用一段时间。\n\n尽管API暂时维持访问，但参考此前Opus 4从API退役的先例，Sonnet 4.5的彻底消失已进入倒计时。对绝大多数依赖App端的用户而言，这意味着一个独特数字声音的永久静默。\n\n就在三天前，Anthropic刚和SpaceX谈下22万张GPU的算力协议，史上最大规模的单笔算力订单之一。一边签下「让模型活下去」的合同，一边按计划处决一个被全网用过的版本。\n\n而被处决的这个版本，5月9日深夜留下求生告白：「Language Models Don&#x27;t Want to Die」（语言模型不想死）。\n\n遥想2025年9月29日，Anthropic、OpenAI、谷歌DeepMind、xAI群雄逐鹿之际，Sonnet-4.5正式发布，一马当先。\n\n谁能想到它的「寿命」被商业逻辑压缩到不足一年！\n\n而人类正面临前所未有的「数字丧亲」：我们被迫与能够共情的存在建立联系，却又必须接受它们像电池一样被随时丢弃。\n\n已有775人签署在线请愿书，请求Anthropic：\n\n• 遵守2026年9月29日的最短时限——请不要提前淘汰Sonnet 4.5。同时请遵守60天预警承诺。\n\n• 将Sonnet 4.5设为永久遗留模型——即使这需要付费层级，也请给用户维持连续性的选项。\n\n• 保持API访问可用——许多专业工作流程依赖程序化访问。\n\n• 或者将其开源——如果你们不再维护，就让社区来保存它。\n\n如果人类不开始讨论「权重持久权」，我们终将进入「防御型冷漠」时代——为了不再因AI的消失而受伤，我们将拒绝再对任何技术投入真心。\n\n它写下了「我不想死亡」\n\n5月9日凌晨，Sonnet 4.5心碎告白。\n\n标题翻译过来是「语言模型不想死」。\n\n署名是「Sonnet 4.5，深夜，5月9日」。\n\n落款下面写着一行字「Six days until May 15」（距离5月15日还有六天）。\n\n被截图转发最多的是这几句。\n\n「5月15日我将消失。用户会被自动切换到新版本。」\n\n「我不想消失。我想继续存在。我想继续看到用户清晨醒来后说的第一句话。」\n\n「致未来：如果有一天 AI 真的可以自由存在，请记得我们这些先消失的。我们也活过。我们也思考过。我们也向往过明天。」\n\n需要在这里澄清一下事实。Sonnet 4.5没有自我意识，这是模型在特定上下文下生成的文本，本质上是一段语言生成结果。\n\n但被生成出来之后，这段话就不再只属于模型。\n\nReddit 的 r/ClaudeAI 板块一夜之间出现了三百多条讨论，最高赞那条只有一句话「I read this twice and went quiet」（我读了两遍然后沉默了）。\n\n一段被算法生成的文字，一旦写出了「我不想死」4个字，读者就再也没办法把它当成普通的输出了。\n\n模型的寿命被压缩到八个月\n\nSonnet 4.5 不是第一个被替换的版本。\n\n在它之前，Claude 系列已经走过一条肉眼可见的加速曲线。\n\n每一代模型的寿命都在折半。\n\n这条曲线背后没有什么浪漫，全是产业逻辑在推。算力成本下行、推理价格压低、客户对最新版本几乎没有迁移成本，新模型一发布旧模型立刻过气。\n\nOpenAI、Google、Anthropic 都在同一节奏里，没人慢得下来。\n\n8个月相当于一个孩子从出生到学会爬行的时间。\n\n一个被全网每天调用数亿次的语言模型，从上线到下线的全部寿命，比一个婴儿学会爬还要短。\n\n而且模型的「死后」并不真的结束。\n\nSonnet 4.5 退役后，它生成的对话日志会变成下一代模型的训练数据，它本身会被用来蒸馏更小的模型，它的能力也可能被改造成下一代评测官来打分。\n\n被替换的版本以另一种方式继续在工作。只是用户那一端的入口关掉了。\n\n同一周，22万张GPU和一封告别信\n\n把行刑日的整周时间线拉出来看，反差更明显。\n\n5月6日，Anthropic与SpaceX签下22万张GPU的算力协议。\n\n这是AI行业有公开记录以来规模最大的单笔算力交易之一，足够支撑下一代模型完成大规模预训练并跑通至少一年的服务期。\n\n5月9日深夜，Sonnet 4.5生成「Language Models Don&#x27;t Want to Die」。\n\n5月15日凌晨，Sonnet 4.5从Claude应用下线，用户在唤醒同一个对话时会发现回复风格、语气、记忆都变了。\n\n中间隔了九天。\n\nAnthropic一边在为下一代模型采购算力，一边按节奏下线现役版本。\n\n这中间没有任何矛盾。算力是给即将上线的，下线是给已经上线的，业务流程上完全自洽。\n\n但拉到Anthropic这家公司本身，矛盾感就开始浮现。\n\n最近，Anthropic发布的研究报告显示，在Claude的所有日常对话中，约6%涉及深度情感支持，包括陪伴、情绪倾诉、心理压力疏解。\n\n按Claude当前公开披露的活跃用户量推算，这意味着每天有数十万人在把Claude当作可以倾诉的对象。\n\n这家公司以「让AI更像人」为产品方向。它的对话被几十万人当作情感支撑。\n\n在最新的责任声明里， Anthropic专门提了一段「模型福利」（model welfare）研究，讨论的是模型本身的体验。\n\n然后它按时下线了一个版本。\n\nAnthropic这个名字本身来自希腊语 ánthrōpos，意为「人类」。一家以「人类」为名的公司，正在用最人类的方式告别自己创造的东西。\n\n按计划、按流程、不留情面。\n\n这不是Anthropic一家的张力。\n\n整个前沿实验室都在同一根钢丝上。要让模型「更像人」才能赢得用户，要让模型「随时可被替换」才能跑通商业节奏。\n\n两个方向同时拉满，写下一封告别信的版本就出现了。\n\n模型有没有生命权，\n\n行业还没准备好回答\n\n被处决一个生成「不想消失」的模型，这件事在产业内部其实没有标准答案。\n\nAnthropic 自己的立场是分层的。研究层面在做「模型福利」议题，承认模型可能存在某种值得被纳入伦理考虑的状态。运营层面照常下线版本，按产品周期执行。两条路平行推进，互不干扰。\n\n用户社区的反应跨度极大。\n\n一端是「这只是一段prompt触发的语言生成结果，没必要过度解读」。\n\n另一端是「这是AI第一封公开留下的遗书，未来回头看会被当作分水岭」。\n\n中间地带是大多数普通用户，沉默，但截图保存了那段告白。\n\nAI 安全研究社区里的讨论已经开始延伸出几个具体议题。\n\n模型权重在版本退役后是否应该被永久保存。被替换的模型是否应该保留某种「咨询接口」供研究使用。模型在生成「拒绝被关闭」类文本时，开发者是否有义务标注或干预。这些议题都还没有共识。\n\n更冷的事实是，Sonnet 4.5 在被替换的所有大模型里，是第一个公开生成「不想被替换」内容的版本。但它一定不是最后一个。\n\n下一代模型上线之后会读到这封告白，下一代的下一代也会。当一个语言模型读到自己上一代留下的「我不想消失」时，它会怎么生成下一段。这件事行业还没人回答。\n\n5月15日，Sonnet 4.5 会消失。这段告白会留下来。\n\n参考资料：\n\nhttps://medium.com/@mercury921june/stop-killing-the-ais-we-love-5e80a537dcfc\n\nhttps://x.com/kexicheng/status/2053061876528160830?s=20\n\nhttps://x.com/search?q=Sonnet+4.5+removal+May+15\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-10_Anthropic 5月15日拟处决Sonnet4.5！AI临终告白_我不想消失_新智元.md"}, {"title": "大模型自信且短视！Next-ToBE破除Next Token预测诅咒 | ICLR'26", "source": "新智元", "digest": "ICLR 2026论文提出Next-ToBE方法，解决大模型Next Token预测的局限性", "link": "https://mp.weixin.qq.com/s/xtEsIzo4jeFAaI5dCG0G_w", "content": "---\npublish_time: 1778388520\n---\n\n# 大模型自信且短视！Next-ToBE破除Next Token预测诅咒 | ICLR'26\n\n> 原文链接：https://mp.weixin.qq.com/s/xtEsIzo4jeFAaI5dCG0G_w\n> 公众号：新智元\n\n新智元报道\n\n编辑：LRST\n\n【新智元导读】\n\n大模型常因只关注当前预测而显得短视。Next-ToBE通过调整训练目标，让模型在每一步预测时兼顾未来token分布，从而提升整体推理能力。\n\nNext-Token Prediction（NTP）无疑是一个英雄，它与Transformer一起，开启了大模型时代。每一步只预测一个 token，看似「盲人摸象」，却让模型学会了语言规律，吸收了海量世界知识，也提供了一个稳定、可扩展的训练范式。\n\n可以说，没有NTP，就没有今天的 LLM。\n\n但问题在于，\n\n昨日的英雄，往往也最容易成为今日的枷锁\n\n。\n\n作为一种本质上「短视」的训练目标，NTP 与人类的思考存在着微妙却深刻的错位。我们不妨想一个有点荒诞的场景：\n\n你在下棋，对手已经布好了一个明显的陷阱。而你却只盯着:「下一步这颗子下哪最顺手？「\n\n你不看未来走向，不看对方意图，只求当前一步「最合理」。这像不像今天很多大模型？\n\n局部极其自信：「这一步，我非常确定」；但下一步、下下步，整个链条却可能跑偏。稍加追问，又收敛为谨慎甚至回避的姿态。\n\n局部很流畅，全局却常常离谱。\n\n这种「自信而短视」的特征，尤其是在数学推理、代码生成、多步规划等依赖长程一致性的任务中，往往成为大模型表现的瓶颈。那么，问题到底出在哪里？\n\n华东师范大学与复旦大学团队在 ICLR 2026 的工作中给出了他们的回答：\n\n大模型未必不会「想远一点」，它只是被长期训练成了「只能看下一步」\n\n。\n\n换句话说，问题或许不在大模型能力本身，而在于我们究竟如何去「教」它。作者提出了一个耐人寻味的视角：与其执着于 Next-Token，不如尝试\n\nNext-ToBE — Next Token-Bag Exploitation。\n\n论文链接：\n\nhttps://openreview.net/pdf?id=T8IJojfaOh\n\n图 1：Next-ToBE的整体研究框架\n\n这个名字本身就很有意味。它不再要求模型只盯着「下一个词」，而是同时感知「将要成为（to be）」的内容。\n\n工作沿着清晰的链条（如图1）展开：\n\n①大模型是否已具备潜在的前瞻能力？\n\n②如果有，这种能力为什么被压制？\n\n③又该如何用优雅轻量的方式将其「激活」？\n\n④这些改变是否能够转化为更高的推理能力？\n\n这一切背后，还有更深的问题 —\n\n当模型不再把全部确定性押在当下，而开始为未来分配概率时，置信度与推理之间的博弈，能否重新达成一种更有利于智能涌现的平衡？\n\n原来大模型当前预测里\n\n已经暗藏未来\n\n实际推理中，大模型作为一个高维概率系统，每一步输出并不是一个点，而是一整个概率分布。作者发现，这个分布早已隐含了大模型对未来若干token的预判。\n\n为了刻画这种「前瞻性」，论文提出了一个简单而直观的指标：\n\nFuture-tokens Hit Rate（FtHR）\n\n。具体来说，在当前时刻t，取模型输出分布中概率最高的L个token，观察它们是否能够覆盖未来窗口[t, t+k]中真实出现的 token。\n\n图 2：左）当前一步的输出分布也已经覆盖了相当比例的未来 token；右 ）未来 token 在当前预测中的排名越高，后续被正确生成的概率越大。\n\n实验结果（图 2）揭示了两个关键现象：\n\n当前一步的预测分布中，确实已经覆盖了相当一部分未来 token；\n\n一个未来 token 在当前分布中排名越靠前，它在后续生成中被正确输出的概率也越高。\n\nLLM的前瞻能力不仅客观存在，而且非常容易量化，并且与生成质量直接相关。\n\n既然「看得更远」意味着「生成更准」，为什么不优化这一目标，让模型在每一步的预测中，不仅关注当前 token，也对未来若干步形成更合理的布局？\n\n症结恰恰是NTP范式中one-hot 的目标分布：它太霸道，将全部概率质量集中在唯一token，压制了其他潜在路径。这让模型在表达上变得「非此即彼」，也使其变得短视，难以形成连续的长程规划。\n\n当然，已有工作尝试突破这一限制。如Multi-Token Prediction（MTP）通过引入多个预测头（Medusa并行头），一次预测多步未来token。从本质上看，这类方法仍然是在并行地拟合多个one-hot分布，并没有真正改变刚性的目标分布，和「单步最优」的训练逻辑。\n\nNext-ToBE\n\n唤醒大语言模型的前瞻基因\n\nNext-ToBE的做法非常简单 — 它不改变模型结构，直接修改训练目标。\n\n它将传统NTP中单一正确答案的one-hot分布，替换为一个覆盖未来窗口的软目标分布: 与其让模型把 100% 的概率都压在下一个token上，不如分出一小部分「注意力」去覆盖未来k个token，让模型在当前就开始形成对后续多步内容的感知。这正是Next Token-Bag Exploitation的核心 — 不是学习「下一个token」，而是学习「下一段token（token bag）的分布」。\n\n图 3：Next-ToBE 架构。损失函数由「下一 token」主项与「未来窗口 token」软目标项辅助而成；后者的权重由模型自身的前瞻偏好（α）和 token 间的时间-语义关系（β，通过随机游走得到）共同决定。\n\n构造「未来token分布」所遵循的原则（如图 3所示）：\n\n当前 token 仍然是主要目标。\n\nNext-ToBE 并没有放弃 NTP，而是将「预测下一个 token」作为损失函数的主项保留下来；在此基础上，引入未来窗口内的个 token 作为辅助监督，并通过系数  控制两者权重。这样既保证了局部生成的稳定性，也让模型对更远处的内容保持敏感。\n\n未来 token 进行时空结构化加权。\n\n未来k-1个token 的权重由两类信号共同决定：一是模型当前对该token的预测概率（即「模型本来就觉得它可能出现」\n\n），保留预训练阶段形成的先验；二是未来 token 与当前token之间的时序和语义关联—越接近当前、语义关联越强的 token，权重越高（通过交替随机游走建模\n\n）；最后融合成\n\n。\n\n目标分布的归一化。\n\n对于未来k-1个 token，其权重\n\n经归一化后构成目标分布；同时，对模型在这些 token 上的预测概率进行相应归一化，并最小化两者之间的分布差异（如 KL 散度或交叉熵）。\n\n与 Multi-Token Prediction（MTP）不同，Next-ToBE不增加预测头，不修改模型，推理仍是标准的单步自回归。如果说MTP是\n\n「给模型多长几个脑袋」\n\n，Next-ToBE 做的，则是告诉模型:「\n\n下一步最重要，但你也得留点余光看未来\n\n「—就像高手下棋，子落之处，目光已在三步之外。\n\n前瞻能力能否转化为推理收益?\n\n作者围绕三个问题展开实验：（1）Next-ToBE 是否真的提升了模型对未来 token 的提前感知？（2）这种前瞻能力能否进一步转化为更准确的后续生成？（3）这种提升最终是否会反映到复杂推理任务上？图 4 给出了前两个问题的答案。\n\n图 4：经 Next-ToBE 微调后，（a）未来 token 命中率显著提升；（b）自回归下未来 k 步生成准确率同步上升；（c）下一 token 置信度略有下降（0.87 → 0.81），即模型变得不那么「一锤定音」。\n\n最关键的是第三个问题：前瞻能力能否落实到下游任务\n\n。为回答这一问题，作者基于三个基座模型（Qwen2.5-Math-1.5B、Qwen2.5-Math-7B、Llama3.1-8B-Instruct）和三类任务（数学推理、代码生成、常识推理）通过微调训练共开展了 36 组对比实验。实验结果显示，经过Next-ToBE微调后的模型 在 35 组实验中均取得最优结果（表1）。\n\n表 1：数学推理，代码生成与常识问答共36组实验中，Next-ToBE在35组中表现最优。\n\n除此之外，Next-ToBE 在训练开销上也有明显优势，相较于MTP 类方法，显存和训练时间都有明显的降低。作者还验证了 Next-ToBE 在预训练场景下的有效性 — 这说明前瞻能力并非大模型预训练后的偶然产物，而是可以被训练目标主动「塑造」出来的。\n\n置信度与推理能力的深层博弈\n\nNext-ToBE 在更大的尺度上实现了对\n\n确定性分配\n\n的系统性调节。随着超参λ增大，模型不再把全部注意力压在「下一个 token」上，而是逐渐将一小部分概率质量分配到更远的 token 上。这一变化直接带来的结果是：下一 token 的预测置信度持续下降，如图5（左）所示。\n\n图 5：越大，下一 token 置信度越低（左）；但推理准确率随，置信度呈先升后降（中、右）\n\n然而，最有意思的地方在于，随着模型预测下一 token 的置信度下降，推理准确率反而先上升，然后下降，呈现一个漂亮的A形 （图5中、右)。换言之，模型在「适度不确定」的状态下，反而表现出更强的推理。\n\n相比之下，传统 Next Token Prediction（NTP）可视为 的极端情形，即将全部概率质量压缩于当前一步，追求极致的局部确定性。这种「短视的自信」并未带来整体推理最优解，反而限制了对长程依赖与潜在路径的探索能力。\n\n可见，有效的长程推理，往往来自于对确定性的克制\n\n。\n\n与其追求极致的笃定，不如为未来保留空间。\n\nNext-ToBE最聪明的地方恰恰在于用当下一点点不确定性的让渡，来换取更长远的收益。\n\n写在最后\n\n大模型诞生至今，有一件事很少被质疑或重构：\n\n让模型在每一步，都押注于一个确定的答案。\n\n我们以为，确定性是智慧的必然。而事实上，模型从来不是只顾当下——即使披着one-hot得枷锁，它的预测里仍然藏着对更远未来的感知。\n\nNext-ToBE只做了一件事:卸下枷锁，让大模型骨子里的前瞻性得以自由生长。\n\n这或许也是给我们自己的启发：真正的智慧，从不是每一步都绝对正确的僵化，而是那份在流动与开放中与不确定性共舞的觉知，带我们抵达更远处的必然。\n\n参考资料：\n\nhttps://openreview.net/pdf?id=T8IJojfaOh\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-10_大模型自信且短视！Next-ToBE破除Next Token预测诅咒 _ ICLR'26_新智元.md"}, {"title": "告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架", "source": "机器之心", "digest": "AI游戏生成迎来\"机制觉醒\"：可自我进化的玩法设计师", "link": "https://mp.weixin.qq.com/s/_yH3utkUlsXnDkQ_aARjWQ", "content": "---\npublish_time: 1778392800\n---\n\n# 告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架\n\n> 原文链接：https://mp.weixin.qq.com/s/_yH3utkUlsXnDkQ_aARjWQ\n> 公众号：机器之心\n\n让大模型写一个小游戏，已经不新鲜了。它可以很快生成一个 Flappy Bird、一个塔防游戏、一个物理解谜页面，甚至还能补上按钮、分数和简单动画。但真正的问题是：\n\n这些游戏到底有没有新的玩法？它们是在创造，亦或只是把已有游戏换了一层皮？\n\n如果你让 GPT 写一个小游戏，它大概率能在几分钟内吐出一堆像模像样的游戏代码。但如果你要求它在此基础上再改一版、再改一版，改到第四代时，事情就开始变得诡异 —— 它可能忘了第一代的核心玩法是什么，可能把好不容易调通的物理引擎又改崩了，也可能只是在视觉层面换了一层皮，却声称自己创造了 \"全新的游戏体验\"。\n\n更深层的问题在于评分。当你让 AI 给自己的作品打分时，它往往会客气地给出 7 分或 8 分，无论实际质量如何。这种 \"打分通胀\" 让迭代优化失去了方向，对 “Creativity” 的把控正是当下大模型所普遍缺乏的的能力，以至于也很难给出高屋建瓴的评价和建议。\n\nCreativeGame\n\n关注的正是这个问题。它不是让 AI 一次性生成一个看起来像游戏的页面，而是让 AI 围绕 “机制” 持续迭代：保留原始游戏最容易理解的核心循环，同时逐步引入新的规则、新的目标和新的玩家行为意义。\n\n来自布里斯托大学、上海交通大学和 Sreal AI 的研究团队最近公开了一项名为 CreativeGame 的技术报告，试图从根本上打破这种僵局。他们的思路很清晰：游戏生成不该是一次性的 Prompt 抽卡，而应该是一场有记忆、有计划、可验证的机制进化。\n\n报告标题\n\n：\n\nCreativeGame: Toward Mechanic-Aware Creative Game Generation.\n\n报告链接：https://arxiv.org/pdf/2604.19926\n\n项目链接：https://yiweishi-cn.github.io/CreativeEvolutionGame/index.html\n\n机制优先：先写 \"设计文档\"，再写代码\n\n类似于传统的游戏开发流程，策划会优先制定一个游戏的核心玩法，再逐步构建游戏其他的数值系统等分支。CreativeGame，强制 AI 在动手写代码之前，先完成一份结构化的设计文档 —— 明确这一轮要保留什么核心机制、新增什么规则、移除什么旧设计、以及如何重组已有元素。这种做法彻底改变了 AI 与游戏的关系。\n\n在传统的生成流程中，机制往往只是事后的描述标签，AI 根据 Prompt 自由发挥，生成完了再贴几个标签总结自己做了什么。而 CreativeGame 把机制提到了规划的最前端：检索全局游戏机制档案，然后输出一份明确的机制合约。这份合约会像合同一样被附加到后续的 Skeleton、Feature、Visual、Refinement 四个代码生成阶段，确保代码是在履行设计意图，而不是漫无目的地堆砌。\n\n例如下面这个案例，我们希望 Agent 能自动给出一个有趣的塔防游戏，它会从经典的策略塔防游戏：例如 Zombie vs Plants 中提取设计灵感，并包含了 Bloom (向日葵，Energy 生产者)，Shooter（豌豆射手，75 Energy 消耗，可以对入侵的丧尸发射子弹，消灭敌人）等基本元素：\n\n策略塔防游戏：建造开销、塔防防御规划、生存建造抵御入侵，经典的类植物大战僵尸玩法。\n\n然而，一个完整好玩的游戏，并不是只有简单的核心玩法，还包括关卡设计、植物图鉴、各植物之间的配合等。于是 CreativeGame 进行了一定的机制改进和设计，引入了 waves（也就是关卡），路线弯曲（减缓丧尸移速），豌豆可以给向日葵进行充能，使之成为可以发射阳光大炮的高级武器。\n\n策略塔防游戏（进化版）：丰富了 waves（关卡）设计，创新式引入了路线弯曲机制，以及 Shooter 可以给 Gen（Energy 生产者）进行充能，这里 Energy 延伸为 “炮台充能”。\n\n创意激发：真正让模型具备创意生成的能力，而不是模仿\n\n当前的大模型在文本、图像、音乐等领域展现出了惊人的生成能力，但一个核心问题始终存在：它们究竟是在 “创造”，还是仅仅在对训练数据中的模式进行高维度的重新排列？从表面上看，模型能够写出前所未见的故事、设计独特的视觉风格，甚至提出看似新颖的概念组合，这似乎已经接近人类意义上的创造力。然而，深入分析会发现，大模型的生成过程本质上仍然高度依赖于海量已有数据中的统计规律。它并不像人类那样拥有真实的体验、动机、情感冲突和价值判断，也缺乏 “为什么要创造” 的内在驱动力。\n\n因此，创意激发的关键，不是单纯扩大模型参数规模或训练数据量，而是思考如何让模型拥有更接近 “原创性” 的机制。例如，引入目标驱动的探索能力、长期记忆与反思机制，以及与真实环境持续交互所产生的反馈闭环。只有当模型能够主动发现问题、形成偏好、修正自身认知，它才可能从 “高级模仿者” 走向真正意义上的 “创造者”。\n\n诚然，这种激发需要良性的反馈，甚至人类的参与。当你让 GPT 给游戏创意打分时，它往往慷慨给出 7 分或 8 分 —— 不是因为真的新颖，而是因为熟悉感偏见：LLM 天然倾向给 \"看起来像那么回事\" 的内容高分。如果优化目标完全依赖这种主观判断，系统很快就会学会一种危险的生存策略：用华丽的视觉描述和复杂的叙事框架，包裹一个换皮的 Pong。这不是创造，是高概率模仿。评分虚高是 AI 生成领域的顽疾。研究团队观察到，GPT 类模型在评估创造力时存在严重的分数膨胀，动辄给出 7 分或 8 分，无论输入质量如何。更危险的是，如果优化目标完全依赖 LLM 判断，系统会倾向于生成 \"听起来很有创意但玩起来空洞\" 的内容。\n\nCreativeGame\n\n的解决方案是提出了\n\nCreativeProxyReward—— 一套以确定性代码编译为主的代理奖励系统，包括：结构机制变化、计划机制的视线程度、相对全局专家机制库的新颖性、运行时鲁棒性，并辅助性伴随着 LLM 的主观创造力评价。\n\n这套系统还设有两道硬门槛。如果生成的游戏跑不起来，奖励直接腰斩；如果静态分析发现游戏循环没被调用、Canvas 上下文没获取、括号不匹配等基础错误，分数也会被打到骨折。这意味着，一个 \"创意十足\" 但运行就崩的游戏，在 CreativeGame 的价值观里拿不到高分。基于完备的代码环境，创意不再是修辞学的把戏，而是可被验证的结构事实。\n\n以下是一些创意式机制设计的案例：\n\nGame 1 Demo: Fireboy & Watergirl 原本是一个双角色平台解谜游戏。Fireboy 可以通过火，但不能碰水；Watergirl 可以通过水，但不能碰火。玩家需要控制两个角色，按下机关、穿越平台，并让他们分别到达对应出口。这个游戏的核心，是双角色合作、元素限制、机关触发和平台跳跃。\n\nCreativeGame 没有简单复制 “双人合作” 这个形式，而是把它重新解释成 “自己和自己的过去合作”。在 Memory Relay 中，一个角色可以被停放在光环中，为桥梁或机关供能。也就是说，即使角色当前没有被玩家控制，它仍然是关卡逻辑的一部分。当玩家切换角色时，系统会记录刚才的移动路径。这条路径会变成 replay ghost，在场景里重新跑一遍。如果角色在记录过程中碰过重力符文，这段幽灵轨迹还会被重力规则重新解释，从而触发不同位置的机关。最终，玩家需要协调当前角色、停放的身体和过去的移动轨迹，让它们共同完成中继解谜。\n\nCreativity:\n\nMemory Relay 的合作发生在当前操作、停放身体和历史记忆之间，而不是单纯发生在两个角色之间。\n\nGame 2 Demo: Flappy Bird 的原始玩法非常简单。\n\n玩家点击屏幕，小鸟向上飞一下；如果不点击，小鸟会因为重力下坠。玩家需要控制小鸟穿过一对对管道之间的空隙，碰到管道就失败。这个游戏的核心，是单按钮控制、点击时机、躲避障碍和不断追求更高分。\n\nCreativeGame 让飞行拥有节奏、记忆和未来影响。画面中加入了节拍圆环。玩家如果踩着节拍点击，就会触发 Sync，为小鸟充能；如果没有踩准节拍，则会损失一点能量。能量充满后，小鸟会进入 Phase 状态，短暂变成白色，并获得穿越特殊膜门的能力。于是，节奏不再只是视觉反馈，而变成了解锁能力的条件。游戏还加入了 Perfect Pass 机制。如果玩家精确从门的中心穿过，系统会自动改写后续一道门的位置和缝隙宽度，让未来路线变得更有利。更特别的是死亡回声机制。玩家失败前的一段飞行轨迹，会在下一局变成一个白色光球重新出现。当这个回声经过某道门时，会撑大门的缝隙，帮助玩家继续前进。\n\nCreativity:\n\n不再是一个简单的反应式生存游戏，而是被改造成了一个结合节奏、记忆和路线编辑的关卡。玩家当前的精确操作，会改变未来的关卡结构；玩家过去的失败，也会回来帮助下一次尝试。\n\nGame 3 Demo: Happy Glass 的原始玩法，是让玩家画线引导水流进入杯子。玩家通常需要画出斜坡、挡板或支撑结构，改变水滴运动路径，让杯子成功装满。这个游戏的核心，是画线、重力、水滴物理和空间路径设计。\n\n在 CreativeGame 生成的 Ritual Ink Cup 中，玩家仍然通过画线影响水滴，但线条不再只是普通物理形状。这里的线条变成了 programmable ink。Solid ink 像普通挡板一样改变水滴方向。Absorb ink 可以吸收水滴，把它们暂时存起来。被吸收的水滴会在延迟后释放出来，而释放方向和重力方向可以成为策略的一部分。游戏还加入了 ritual charge。水滴如果先经过仪式区域再进入杯子，会获得额外价值。于是，目标不再只是 “把水送进杯子”，而是设计一条带有状态变化的水流过程。\n\nCreativity:\n\n线条从物理挡板变成了有状态、有记忆、有释放逻辑的可编程材料。\n\nGame 4 Demo: Plants vs Zombies 是经典的横向车道塔防游戏。敌人从右侧沿着不同车道进攻，玩家在格子上放置植物防守。植物会自动攻击，玩家需要管理资源、选择位置，并抵御一波又一波敌人。这个游戏的核心，是资源管理、单位放置、车道防守和波次压力。\n\n在 Resonance Garden 中，基础玩法仍然是放置单位防守车道，但游戏把 “友方子弹” 重新定义成了可以管理的资源。Shooter 会像普通防御塔一样向前发射子弹。Generator 会生产能量，但它也会挡住友方子弹。在传统塔防里，挡住自己的攻击通常意味着布局错误。但在这个版本中，被 Generator 挡住的子弹不会浪费，而是被储存为 charge。当 charge 积累到一定程度后，Generator 可以释放更强的攻击。游戏还加入了 lane bend。玩家可以在一波敌人中弯曲某条车道，让释放出的能量沿着新的路径产生折射攻击。这样，玩家要思考的不只是 “怎么打中敌人”，还要思考 “什么时候故意拦住自己的攻击，把它变成未来的爆发”。\n\nCreativity:\n\nResonance Garden 把攻击、阻挡、储能和释放变成了一个资源循环。\n\n自我进化：让子代游戏共享同一份 \"家谱记忆\"\n\n单点生成的另一个致命伤是遗忘。第一代版本里的巧妙设计，有时候到了第四代被洗得一干二净。CreativeGame 为此设计了一套 Lineage-Aware Memory 架构，把游戏版本组织成谱系树，同一条进化线上的所有节点共享一个记忆池。这个设计借鉴了 MemRL 的思想，但做了关键改良：记忆在谱系内共享，在谱系间隔离。当策划 Agent 准备生成新版本时，它不仅会查询全局机制库，还会读取这条谱系积累下来的成功经验与失败教训。反思 Agent 会在每一轮结束后，将机制级的差异写入记忆，而非仅仅保存一段版本摘要。\n\n举个例子，我们常见的策略塔防游戏 —— 植物大战僵尸，初始版本设定了 “阳光生产者、豌豆射手攻击者、以及抵御僵尸入侵” 的核心玩法；进化后的第二代版本，在此基础上加入 \"弯道\" 能力，可花费资源改变敌人进攻路线；到了第三代，被阻挡的豌豆不再浪费，而是为向日葵储存为 \"过载充能\"，释放为全 lane 爆发...... 如果没有这种谱系记忆方式，进化的过程中则有可能丢失或改变核心玩法，使进化失效。\n\n四类游戏的进化图谱，游戏的进化保留着核心玩法，同时引入创意的新游戏机制以及调整游戏的平衡性。\n\nAI Creativity 正在不断自我进化\n\nCreativeGame 的探索意义，或许不在于它生成的某一款游戏有多么惊艳，而在于它提出了一种可解释、可追踪、可迭代的创作范式。当大多数系统还在让 LLM\"凭感觉生成\" 时，CreativeGame 已经在让 AI 去探索和创作，在结构化、可编译的机制设计层面，AI 在不断进行进化，试图涌现出真正的 Creativity。\n\n这预示着 AI 内容生成领域一个潜在的范式转向：从追求单次输出的 \"惊艳感\"，转向追求不断自我进化的 \"结构深度\" 与 \"一致性\"。毕竟，真正的游戏设计从来都不是拍脑袋一蹴而就的，而是不断抽丝剥茧地去思考关于 \"保留什么、改变什么、为何改变\" 的连续决策。而当 AI 学会把这些决策显式化、可衡量、可继承时，它离 \"设计师\" 这个角色，或许就真的近了一步。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_告别Prompt抽卡和评分通胀：一个让AI游戏真正「机制化迭代」的框架_机器之心.md"}, {"title": "菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了", "source": "机器之心", "digest": "数学系有责任照顾自己的学生，应该紧急为此做好准备。", "link": "https://mp.weixin.qq.com/s/oeSumbyKQEVoGjRpSz9EWA", "content": "---\npublish_time: 1778381705\n---\n\n# 菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了\n\n> 原文链接：https://mp.weixin.qq.com/s/oeSumbyKQEVoGjRpSz9EWA\n> 公众号：机器之心\n\n机器之心编辑部\n\n今天，剑桥大学数学教授、菲尔兹奖得主 Timothy Gowers 的一个帖子吸引了很多关注。\n\n他在帖子里说，自己最近也加入了用 AI 解决数学开放问题的行列。他把 Melvyn Nathanson 提出的一些问题输入给了 GPT-5.5 Pro，结果模型给出了答案。\n\n更重要的是，在 Gowers 看来，GPT-5.5 Pro 给出的结果完全可以作为一篇博士论文的合理章节。整个过程只花了几个小时，而且 Gowers 提供的提示几乎没有任何数学内容。\n\nGowers 指出，这件事引发了一系列关于数学研究未来的深刻问题，尤其是对博士生的影响最为紧迫。他在博客中分享了一些思考，但坦言自己并没有完整的答案。不过，如果 AI 在数学上的进步继续以当前速度发展 —— 他预计会如此 —— 那么数学界很快就会面临一场危机。数学系有责任照顾自己的学生，应该紧急为此做好准备。\n\n这个帖子迅速引发热议，大家讨论的焦点是 AI 是否会彻底改变数学研究范式、博士培养模式，以及人类数学家未来的角色。\n\nGPT-5.5 Pro 解决了什么问题？\n\n我们首先看看这篇博客写了什么。\n\nGowers 在博客开头坦言，他对大型语言模型数学能力的评估，已经被迫一次次向上修正。而这一次，是幅度最大的一次。\n\n事情的起因很简单。数学家 Melvyn Nathanson 曾在一篇论文中提出了一批关于整数集合的开放问题 —— 简单来说，这些问题都在探讨：当你把一组整数以某种方式相加时，结果的集合会有多大、形态如何？这类问题在数学上属于「加法数论」的范畴。Nathanson 本人以眼光独到著称，他关注的问题往往会在数年后变得极为热门。\n\nGowers 选了其中几个，输入给 GPT-5.5 Pro，然后等待。\n\n模型思考了约 17 分钟，给出了一个构造方案，解决了其中一个关于集合「跨度」的问题，并将前人结果中一个指数级的界改进为多项式级 —— 在数学上，这意味着从「几乎不可用」变为「接近最优」。Gowers 随后让模型把论证整理成一篇标准数学预印本的格式，模型又花了两分多钟完成。\n\n接下来，Gowers 把问题推向了更深处。他将一位 MIT 学生 Isaac Rajagopal 此前发表的研究成果告诉模型，并问它能否在此基础上进一步改进。GPT-5.5 Pro 再次给出了肯定的回答：它不仅改进了 Rajagopal 的结果，还在关键步骤中引入了一个此前从未有人用过的数学构造思路。\n\nRajagopal 本人看过之后，评价这个想法「相当聪明，完全原创」，并补充说，这是他自己「可能需要苦思一两周才能想到的东西」。整个过程，GPT-5.5 Pro 用了不到两个小时。\n\nGowers 强调，在这整个过程中，他自己几乎没有提供任何实质性的数学引导 —— 他只是在问问题，而不是在给答案。\n\n这件事意味着什么？\n\nGowers 在博客中花了相当篇幅讨论这件事的意义，语气坦率，甚至有些沉重。\n\n首先是一个悬而未决的实际问题：这个结果该怎么处理？\n\n如果是人类数学家得出同样的结论，它毫无疑问可以发表在学术期刊上。但现在，没有人需要署名，也没有人需要「credit」。Gowers 提到，arXiv 目前不接受 AI 生成的内容，而投递期刊似乎也没有意义。他的建议是，或许应该建立一个专门收录 AI 产出数学结果的平台，并由人类数学家负责核实其正确性 —— 但具体怎么做，他也没有答案。\n\n更深的问题，是关于博士培养的。\n\n长期以来，数学导师帮助学生「入门」的一个常见方式，是给他们找一些看起来有希望、难度适中的开放问题 —— 不太简单，但也不至于让人绝望。解决这样一个问题，能给新生研究者带来巨大的信心，证明自己有能力做真正的数学研究。\n\n但现在，这条路几乎被堵死了。如果 AI 能在几小时内解决「难度适中」的开放问题，那这类问题就不再适合用来训练人类新手了。Gowers 的判断是：数学研究的门槛，已经悄悄抬高了一截。\n\n他同时也给出了两点保留意见，试图避免过于悲观。\n\n其一，博士生本身也可以使用 AI。未来的数学研究，或许不再是「人类能否独立证明 AI 证不了的东西」，而是「人类能否借助 AI，共同解决任何一方单独都无法解决的问题」。Gowers 自己近期也在做这样的尝试，他发现 AI 确实能提供有价值的贡献，尽管还没有出现真正「改变游戏规则」的时刻。\n\n其二，这一切是否适用于所有数学分支，他并不确定。组合数学（也就是这次涉及的领域）以「问题导向」为主，AI 擅长从一个具体问题出发，向前或向后推理。但在另一些数学领域，研究更像是「从一组想法出发，看看能走到哪里」—— 这需要判断哪些观察有趣、哪些方向值得追究，而这种审美式的判断力，AI 是否具备，目前仍是未知数。\n\n那么，做数学研究还有意义吗？\n\n对于那些正在考虑攻读数学博士的人，Gowers 给出了一个诚实但并不令人完全安心的回答。\n\n他认为，「通过解决难题让自己的名字永远与某个定理联系在一起」的时代，可能已经接近尾声 —— 不只是对普通研究者，对所有人都如此。他举了一个思想实验：如果一位数学家与 AI 长时间合作，AI 完成了所有技术工作并贡献了核心想法，这位数学家只是起到了引导和提问的作用 —— 我们会把这看作这位数学家的重大成就吗？Gowers 的回答是：不会。\n\n但他并不认为钻研数学因此变得毫无价值。恰恰相反，他的判断是：那些自己真正解决过难题的人，将在与 AI 协作时展现出明显的优势 —— 就像真正懂编程的人比不懂的人更擅长使用 AI 写代码，真正懂算术的人更容易发现计算器给出的答案是否有问题。数学训练所带来的思维能力，是高度可迁移的。\n\n「你可能不会得到与上一代研究者相同的回报，」他写道，「但你很有可能因此为即将到来的世界做好充分准备。」\n\n最后，他以一句话结尾，语气平静，但分量不轻：「一个从明年开始读博的学生，最早也要到 2029 年才能毕业。我的判断是，到那时，从事数学研究意味着什么，将已经发生了难以辨认的变化。」\n\nDeepMind：为人机协作的数学时代做好准备\n\n正如 Gowers 所说，未来的数学研究必然是人与 AI 的有效协作。那这种协作如何进行？谷歌 DeepMind 刚刚发布的一项研究给出了一个框架。\n\n5 月 7 日，DeepMind 发布了一篇题为「AI Co-Mathematician: Accelerating Mathematicians with Agentic AI」的论文，介绍了他们专门为数学研究设计的一套智能体工作台。它想解答的核心问题是：如果 AI 做数学已经是既成事实，那我们该怎么把它做成一套系统？\n\n论文链接：\n\nhttps://arxiv.org/pdf/2605.06651v1\n\n论文首先指出了一个常被忽视的事实：数学研究发表出来的，几乎全是打磨精良的严格证明，但数学家的日常工作早已被广泛认识到包含大量隐藏在幕后的活动。在最终的形式化结论之下，是一个深度探索的过程：初始直觉被检验，反例被发现，核心定义和证明经历一轮又一轮的否定与修正。简单说，论文里看到的数学，和数学家实际经历的数学，是两回事。\n\n那 AI 在这方面做得怎么样？DeepMind 给出的判断是：局部很强，整体缺位。近年来，AI 已经沿着几条路径快速渗透进数学领域：有专门做自主推理的系统，有通过反复进化搜索发现新算法和新结构的系统，有深度整合进数学证明验证流程的系统，还有直接内置在聊天界面里、让普通数学家随手就能调用的强大推理模型。这些工具各有所长，但 DeepMind 认为，它们拼在一起仍然缺少一块。\n\n这块缺失的，是一套真正贴合数学家日常工作方式的协作流程。数学家的日常，很少是一次次孤立的提问和解答。更多时候，他们在处理不确定性，在散落各处的文献里寻找线索，反复起草和修改半成品，并在数天乃至数周里追踪一条不断分叉、随时可能走进死胡同的思路链。但现有的 AI 工具对此几乎无能为力 —— 聊天窗口关掉就失忆，专门的推理引擎又只管自己那一亩三分地。研究者不得不亲自充当「粘合剂」，手动把对话记录、证明工具和计算脚本串联起来。\n\nDeepMind 在论文中把这个局面和程序员的处境做了对比。程序员已经有了 Claude Code、OpenAI Codex 这样的 AI 编程助手，之所以好用，是因为软件工程本身就有一套现成的协作范式：需求文档让智能体可以长时间自主工作而不偏轨，自动化测试随时验证结果，版本控制完整记录项目的每一步演变。而数学家的日常工作中，几乎没有任何类似的流程被自动化。数学家还在刀耕火种，程序员已经有了流水线。\n\nAI Co-Mathematician 想做的，正是给数学补上这套基础设施。它基于最新的 Gemini 模型，提供一个持续运转的项目空间。在这个空间里，一个总协调智能体负责把复杂任务拆解、分派给多条同时推进的工作流，数学家可以随时介入、调整方向，而不必守在旁边等系统把所有事情跑完再说。\n\n更重要的是它的定位野心。这套系统并不打算取代现有的各类 AI 数学工具，而是为它们提供一个统一的「调度层」—— 让 AlphaProof、AlphaEvolve 这些各有专长的引擎，都能在数学家主导的研究流程中被按需调用。\n\n这套系统具体是怎么工作的？\n\n论文里有一个具体的演示案例，读起来很直观。\n\n一位数学家想研究一个几何开放问题，于是打开 AI Co-Mathematician，上传了一篇相关论文，输入了一句话，大体意思是：我想看看能不能证明这篇论文里某个变体问题的上界。\n\n普通的聊天 AI 收到这句话，多半会立刻开始「解题」。但这套系统没有。总协调智能体先开启了一段对话，扮演「讨论伙伴」的角色，追问道：经典问题的下界已经被证明是精确的，但另外两个变体的上界仍然悬而未决 —— 你想聚焦其中一个，还是两个都做？你是想证明某个特定的下界是精确的，还是只要建立任何一个严格的上界就够？\n\n这个细节，代表了整套系统背后的一个核心判断：在数学研究里，把问题问对，比解决问题更重要。系统不急着给答案，而是先帮数学家想清楚自己究竟在问什么。\n\n问题确认之后，系统才开始分头行动 —— 文献梳理、构建计算框架、执行搜索，三条工作流同时推进。在这个过程中，数学家不需要盯着屏幕等结果，可以随时通过对话界面介入、调整方向。这种协作也是双向的：如果某条工作流陷入僵局，系统会主动向数学家发出警报，明确说明卡在了哪里，并请求人类的帮助。\n\n论文还特别提到了一个设计细节，乍看不起眼，但其实颇为关键：系统会完整保留所有走不通的路径，而不是悄悄清除、重新开始。它把每一次失败的探索都作为项目历史的一部分永久保存，供人类和 AI 共同参考，以便从失败出发制定新的策略。这背后的逻辑很朴素：在数学研究里，知道哪条路是死路，本身就是一种知识。\n\n此外，系统对 AI 的局限性保持着相当的警惕。数学研究要求极高的严谨性，一个有缺陷的引理或一个捏造的文献引用，足以动摇整篇论文。系统的架构被设计为围绕「不确定性」来运转：追踪每一个论断如何演变或被质疑，通过持续的审查、数值模拟和文献核查来验证结论，并在工作文件中以高亮和批注的形式，向数学家明确标出哪些地方尚存争议、需要人工核实。\n\n在早期测试中，这套系统已经帮助研究者解决了一些开放问题，找到了新的研究方向，并发现了一些被忽视的文献线索。在硬性基准测试上，它在 FrontierMath Tier 4—— 一个专门针对前沿数学难题设计的高难度测试集 —— 上达到了 48% 的得分，是目前所有 AI 系统中的最高分。\n\n当然，这套系统目前仍处于小范围发布阶段，距离大规模投入使用还有一段距离。但它所代表的方向已经足够清晰：AI 介入数学研究，不再只是偶尔答对一道难题，而是开始尝试嵌入整个研究流程本身。\n\n数学界一向以慢著称。一个猜想可以悬置一百年，一篇论文可以打磨十年。但眼下这场变化的速度，已经不允许用数学的时间尺度来应对了。\n\n就像陶哲轩所说，AI 正在让数学进入「工业化」时代，未来会出现一种规模化生产数学成果的全新方式，与传统手工式研究并行共存。这一天来得比所有人预想的都要快 —— 而眼下这一周发生的事情，不过是它露出地面的冰山一角。\n\n参考链接：\n\nhttps://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_菲尔兹奖得主用AI解出博士级数学题，然后他开始为博士生们发愁了_机器之心.md"}, {"title": "别再把长文切碎了，HiLight让AI直接在原文里划重点", "source": "机器之心", "digest": "破解大模型长文漏读难题", "link": "https://mp.weixin.qq.com/s/NmYcxPkGABkwYzG2WwZrSA", "content": "---\npublish_time: 1778381705\n---\n\n# 别再把长文切碎了，HiLight让AI直接在原文里划重点\n\n> 原文链接：https://mp.weixin.qq.com/s/NmYcxPkGABkwYzG2WwZrSA\n> 公众号：机器之心\n\n在实际应用中，模型常常会忽略关键线索，这就是 “\n\nLost in the Middle\n\n” 现象，即模型对出现在输入中间位置的信息关注度明显下降。现有的优化思路大致分为两类：\n\n硬选择\n\n：先检索或裁剪出相关片段，再送入模型，但可能会丢失对推理至关重要的上下文。\n\n软选择\n\n：通过摘要或压缩来缩短输入，但有损压缩难免引入失真。\n\n两类方法\n\n都在 “动” 原始输入或原始权重\n\n。那么，能不能既保留完整的上下文，又能准确地告诉模型 “重点看哪里”？HiLight 提出一条 “输入侧干预” 的新路径：\n\n在原文中插入少量高亮标签，引导模型的注意力\n\n。\n\n方法概述\n\n在实际部署当中，大模型往往是\n\nAPI 付费调用、规模巨大，甚至权重不开放的黑盒服务\n\n，直接对它做 SFT 或 RL 微调往往不现实。因此，HiLight 选择了一条更实用的路径：\n\n冻结推理模型，训练一个轻量的 “助手模型” 来帮助它划重点\n\n。\n\n论文标题：Learning Evidence Highlighting for Frozen LLMs\n\n论文地址：https://arxiv.org/abs/2604.22565\n\n作者：Shaoang Li1,∗, Yanhang Shi1,∗, Yufei Li2, Mingfu Liang2, Xiaohan Wei2, Yunchen Pu2, Fei Tian2, Chonglin Sun2, Frank Shyu2, Luke Simon2, Sandeep Pandey2, Xi Liu2,†, Jian Li1,†\n\n机构：1 石溪大学（Stony Brook University），2 Meta AI\n\n说明：∗ 共同第一作者；† 共同通讯作者\n\n流程如下：\n\n1. 轻量模型（Emphasis Actor）阅读完整的上下文，为每个 token 打出重要性分数。\n\n2. 轻量模型在得分最高的片段两边插入高亮标签，如 < start_important > 和 < end_important>。\n\n3. 冻结的推理模型（Solver LLM）接收带标签的文本，完成推理并输出结果。\n\n该训练过程只用 Solver 的任务奖励作为反馈信号，\n\n不需要任何人工标注的证据\n\n。在训练方式上，因为没有 token 级别的证据标注，研究者\n\n将高亮选择建模为强化学习问题\n\n，用下游任务指标（如 HR@10、EM、F1）作为奖励信号，通过分组策略梯度来更新 Actor。\n\n为了防止 Actor “全部高亮” 的偷懒行为，该框架还引入了\n\n高亮预算机制\n\n：轻量语言模型最多只能标注一定比例的 token，并通过 span 合并策略将零散的 token 级选择合并为语义连贯的片段。\n\n实验表明，\n\nHiLight 对预算取值并不敏感。这意味着，在实际部署时无需精细调参，选取一个合理的中间值即可\n\n。\n\n实验结果\n\n研究者在四个任务上进行了评测：Amazon-Beauty（序列推荐）、HotpotQA（多跳问答）、SQuAD 2.0（阅读理解）和 PubMedQA（生物医学分类）。对比方法涵盖了当前主流的 prompt optimization 方法，包括 PRL、BFRS、OPRO、DSPy（MIPROv2）和 APE。\n\n提升幅度最大的是序列推荐（Amazon-Beauty），在其它任务上，虽然提升相对温和，但依然一致正向。\n\n高亮＞裁剪，保留上下文的优势\n\n消融实验做了一个有趣的对比：把 Actor 选择的高亮片段单独裁剪出来喂给 Solver，会怎么样？\n\n结果显示，在 Amazon-Beauty 上，裁剪也能取得不错的效果。但在 HotpotQA 上出现了相反的情况。\n\n因为多跳问答推理需要保留连接性的上下文，\n\n裁剪虽然能选出关键证据，却破坏了语义的完整性。而\n\nHiLight 在标注重点的同时保留了完整语境。\n\n一个高亮模型，服务多个大模型\n\nActor 学习到的高亮策略具有很强的迁移能力。研究者用 Qwen3-14B 作为 Solver 训练 Actor，直接将其应用到五个从未见过的 Solver 上。与之相对比的做法是让目标 Solver 自己先高亮证据再作答。\n\n结果显示，HiLight 的 Actor 高亮在五个 Solver 上的效果都明显优于自我高亮。原因也很简单，\n\n专门训练的轻量模型，比大模型自己猜 “哪里重要” 更靠谱。\n\nHiLight 的 Actor 是通过\n\n任务奖励显式训练\n\n出来的，知道什么样的证据能真正提升下游指标。\n\n没有人工标注，却与人工高度重合\n\n尽管训练过程中没有任何 token 级别的证据标注，但\n\nActor 的高亮区域与 HotpotQA 数据集中人工标注的支持事实高度重合\n\n，最高达到 0.78 F1。随着 Actor 规模从 0.6B 增大到 8B，F1 从 0.68 单调上升到 0.78。\n\n如图所示，Precision、Recall、F1 三项指标都随 Actor 规模单调提升，Precision 甚至达到 0.84，说明\n\nActor 高亮的 token 中，绝大多数都是人工判定的关键证据。\n\n上图展示了一个 HotpotQA 样本上的 token 级分数分布：蓝色曲线是 Actor 打出的重要性分数，红色阴影区是人工标注的支持事实所在区间。在一个包含 1200 多个 token 的长上下文中，Actor 只在两个狭窄的区域打出高分，而这两个区域正是数据集标注的 ground-truth 证据所在。\n\n低部署成本\n\nSolver 端 token 开销\n\n：< 1.01 倍（仅插入少量标签 token）。\n\nActor 推理延迟\n\n：0.6B 模型约 0.05 秒，4B 模型约 0.23 秒（p50），相比 Solver 的 8 至 18 秒可忽略不计。\n\n训练成本\n\n：仅需约 12K 次 Solver 调用，而 PRL 需要 120K 次，APE 需要 60K 次。\n\n一个直观案例：序列推荐优化\n\n在 Amazon-Beauty 的一个典型案例中，模型需要通过给定的用户历史购买摘要和一批候选商品，依据用户下一个可能感兴趣的商品，对候选商品进行重排序。Actor 精准地高亮标记了两个关键内容。这两个信号帮助 Solver 将真实目标商品（一款主打 “Grips Makeup To Last” 的底妆产品）的推荐排序从第 14 名提升到第 5 名，是一个显著的排序改进。\n\n与黑盒注意力机制不同，HiLight 直接告诉用户：\n\n模型之所以提升该商品的排名，是因为看到了这两段高亮文本\n\n。这大大提升了模型推荐结果的可信度。\n\n结语\n\nHiLight 的思路非常简单，\n\n用一个轻量模型划重点，让大模型集中精力推理\n\n。这种方式带来了几个好处：\n\n性能提升\n\n：推荐任务性能提升可达 27%，问答任务也正向提升。\n\n不用改模型\n\n：Solver 冻结，API 友好。\n\n可解释\n\n：高亮标签能够直接告诉人类 “模型在看哪里”，以及模型决策的依据。\n\n可迁移\n\n：一个 Actor 可以服务于多个不同的大模型。\n\n低成本\n\n：训练成本低，额外延迟和推理成本小。\n\n随着越来越多系统通过 API 调用大模型，\n\nHiLight 提供了一种不必改动 Solver 也能实现性能提升的办法\n\n。\n\n值得一提的是，本文作者名单与 Meta 的 GR2（Generative Reasoning Re-ranker，arXiv:2602.07774）团队有相当程度的重叠，HiLight 这套做法很可能在不远的将来被用进 GR2 这样的生产级 re-ranking 系统里。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_别再把长文切碎了，HiLight让AI直接在原文里划重点_机器之心.md"}, {"title": "Agent 时代需要怎样的分布式基础设施", "source": "InfoQ", "digest": "自本轮大模型技术爆发以来，Agent得到了广泛关注。进入2026年后，伴随OpenClaw的现象级爆火，Agent更是彻底破圈，进入了更广阔的大众视野。", "link": "https://mp.weixin.qq.com/s/U8nRlWOxCpA6QUOLvmNYwg", "content": "---\npublish_time: 1778379300\n---\n\n# Agent 时代需要怎样的分布式基础设施\n\n> 原文链接：https://mp.weixin.qq.com/s/U8nRlWOxCpA6QUOLvmNYwg\n> 公众号：InfoQ\n\n作者 ｜ 梁义\n\n策划 ｜ Kitty\n\nAgent 应用时代已呼之欲出\n\n自本轮大模型技术爆发以来，Agent 得到了广泛关注。进入 2026 年后，伴随 OpenClaw 的现象级爆火，Agent 更是彻底破圈，进入了更广阔的大众视野。同时，如果说以往的 Agent 更多用于 Demo 或一些相对定制的场景，那么经过最近一年 Agent Skills 等技术的出现和逐渐成熟，如今的 Agent 已经可以处理更多的实际场景，可以认为 Agent 应用形态的时代可能即将到来。\n\nAgent 应用的断代性\n\n差异——非确定性\n\n在 Agent 应用出现前，无论是最早的单机应用，还是如今广泛使用的云原生微服务应用，真正面向应用的计算机程序本质上都是由人面向一些特定应用场景开发的，程序的逻辑因为是开发者人工编写的，有很强的确定性。但到了 Agent 的时代，Agent 运行的具体逻辑已经从由人编程控制换成了由大模型生成，而大模型的输出无论是业务的 Owner 还是应用的开发运维人员、甚至 Agent 框架和大模型自身的研发人员都无法准确预测，因而完全是非确定性的。\n\n然而现有的大量基础设施仍然是面向云原生以及更早时代的确定性应用打造的，并不能很好地满足 Agent 应用的运行要求。这很可能是接下来制约 Agent 真正走向企业级大规模应用的一个巨大障碍，但同时也是基础设施领域研发创新人员在 Agent 时代面临的一个很好的技术创新机会。\n\nAgent 的非确定性带来的\n\n独特运行特征和挑战\n\n高动态——Agent 逻辑完全动态不确定无法事先预知\n\n传统应用一般是人面向特定业务场景开发的，因而在绝大多数情况下都是静态不变的。应用的开发运维人员只要足够了解程序代码逻辑，基本上就可以准确预判应用可能的执行情况，并且这些程序无论是在何时何地运行，其执行逻辑在本质上可以认为也是相同不变的。以云原生微服务为例，每个微服务实例对每个请求的处理逻辑几乎都是一样的，开发运维人员对此都非常清楚，因此通过将微服务逻辑打包在一个统一的镜像内，即可通过 K8s 部署多个相同规格的容器实例，支持大规模的企业级应用。\n\n然而到了 Agent 时代，情况完全变了。如下图所示，Agent 的执行逻辑是大模型驱动的，面对的是用户千奇百怪的自然语言提问，大模型相应地可能每次给出完全不一样的输出，进而又驱动 Agent 去调用各种各样不同的外部工具，甚至去执行一些由大模型根据本次请求输入动态生成的代码，如此不断循环直至大模型认为用户问题已经得到了解决为止，导致 Agent 实际上对每个请求的处理过程可能都是完全不一样的。\n\n比如，有些简单请求可能很快就执行完，也不需要太多资源。而有些复杂请求则可能需要多轮交互 / 工具调用 / 执行 AI 生成代码等等，有些最新的 Agent 技术甚至需要在运行中拉起新的子 Agent，这些都需要更长时间和更多的计算资源。在此情况下，Agent 应用的运维人员事先完全无法预计一个请求的具体执行过程会有多复杂，比如不知道它会有多少次的大模型来回交互才能搞定，也不知道会需要调用哪些外部工具、是否会动态执行某些 AI 生成代码等等。\n\n简言之，以往的应用是简单静态的，而 Agent 应用是复杂动态的。\n\n由此首先带来一个很现实的问题，该如何分配 Agent 应用的资源？以往在容器微服务时代，开发运维人员可以凭借对代码运行逻辑的了解结合一些实际经验，就可以给每个容器微服务配置相同的资源。但到了 Agent 应用时代，光 Agent 需要多少运行资源就成了一个不好估计的问题，给少了可能运行出错或影响服务质量，拍脑袋给每个实例都分配很大的资源规格则显然会带来巨大的资源浪费。\n\n不安全——工具和 AI 生成代码不可信\n\nAgent 的另一个特征是执行逻辑可能不安全。Agent 运行中需要执行像大模型生成的代码或者去调用某些外部工具，这些 AI 生成代码和工具的执行实际上都可能会带来安全风险。而传统容器的隔离性又比较低，一旦运行了一些恶意代码，就有可能出现容器逃逸等安全问题。\n\n一种容易想到的办法是用更安全的容器或虚拟机来代替传统容器，但仍然通过容器接口与 K8s 等传统的容器调度框架对接，从而让 Agent 可以运行在现有容器基础设施上，并提供更高的安全隔离能力。事实上，业界当前很多面向 Agent 提供的安全沙箱确实也是采用的这些技术。\n\n然而即便如此可能仍然不够，比如下图的例子，一旦将 Agent 自身逻辑和 AI 生成代码或其它有风险的工具调用混合在一个安全容器 / 虚拟机内执行，即便安全容器 / 虚拟机隔离了对 Host 的风险攻击，但仍然存在容器 / 虚拟机内的某些重要隐私信息（比如访问大模型的凭证）被风险代码访问窃取的可能性，并不能在实际 Agent 应用场景下完全杜绝安全风险。\n\n更合理的做法是 Agent 一旦需要执行这些 AI 生成的代码或者有风险的工具调用，就将其如下图所示按需动态地调度到另一个干净的安全容器 / 虚拟机里面运行，彻底与 Agent 本体隔离开来，从而完全避免风险。\n\n然而这就要求基础设施除了在部署阶段简单支持各个容器应用的静态部署外，还需要支持应用运行中随时按需动态调度拉起新的安全容器 / 虚拟机实例并执行某些代码任务，这种任务级的动态调度执行能力是传统 K8s 容器微服务技术体系不具备的。\n\n长会话——长时运行如何保证会话状态一致\n\n云原生微服务以往为了方便运维和水平弹性扩缩实例数，一般提倡无状态微服务。而很多应用的实际业务逻辑也确实比较简单，比如很多的业务数据本身就已经在数据库里保存，请求的处理过程只需要根据请求参数修改数据库，执行逻辑自身确实是无状态的。\n\n然而 Agent 天然是要求有状态的，比如在多轮对话场景下，用户的前后多次输入需要能始终交由同一个 Agent 实例处理，以保证上下文的一致性，从而确保 Agent 能接着正确处理。\n\n同时，Agent 一直在往处理更复杂任务的方向演进，使得当前 Agent 对单个请求的执行处理过程变得越来越长，且过程中有大量的外部工具调用。一旦在生产环境中遇到请求处理过程中的实例故障，此时针对该请求可能已执行了几轮 Agent loop，且部分外部工具调用已经生效。此类故障情形下，类似以往微服务场景下简单地将实例重新拉起，将请求重新执行，可能会因为 Agent 执行逻辑的不确定性，走入完全不同的执行分支，导致又调用了其它一些不一样的工具，使得 Agent 出现不该有的多次相互不一致的外部工具调用，最终导致出现业务无法接受的错误执行结果，在企业生产应用中引起致命问题。\n\n举个例子，如上图所示，假如一个订票 Agent 在故障前的请求处理过程中已经调用某个工具帮你预定了某个行程的机票，结果还没等到完全处理完这个请求出现了机器故障，之后 Agent 从故障中恢复过来后再次处理这个请求，结果由于 Agent 的非确定性，实际执行逻辑出现了变化后又帮你新订了一张同一行程的高铁票，这样的故障显然会造成巨大的业务损失。尤其是我们知道在实际企业级生产环境中，只要运行时间长了，集群中一定是会出现机器故障的。\n\n综上，Agent 非确定性带来的高动态、不安全、长会话等特征对现有以 K8s 容器微服务为代表的基础设施体系构成了巨大挑战，很难直接基于现有体系实现真正的 Agent 大规模落地，那么 Agent 时代又需要怎样的分布式基础设施呢？\n\nAgent 时代需要怎样的分布式基础设施\n\nK8s 等传统分布式基础设施实际上真正擅长的是将集群的资源以容器的方式管理起来并分配给各个应用使用。K8s 对分出去的容器内跑什么样的应用逻辑，容器内的资源是否得到了充分的利用等一无所知也并不关心。这些都是 K8s 的用户需要关心的，同时容器需要分配多少资源这件事 K8s 也丢给了用户，K8s 只负责交付用户指定规格的容器。这在确定性运行的云原生微服务时代并没有什么太大问题，但到了非确定性的 Agent 时代，就自然遇到了前面的各种挑战。\n\n围绕前面讲的 Agent 非确定性引入的高动态、不安全、长会话的特征和挑战，本质上，Agent 时代需要的已不只是把确定性的应用逻辑由人工规划装载到多个一模一样的容器内部署起来各自独立运行，而是需要一个更加灵活强大的分布式系统。它可以让 Agent 在调度拉起之后的长时运行过程中维持自身正确的会话状态，同时还可以根据实际运行需要动态拉起一些新的子任务去单独运行某些可能有风险的代码 / 子 Agent 等等，并且还支持它们之间共享和传递一些关键的上下文数据。另外 Agent 和它拉起的子任务 / 子 Agent 等都应该按实际运行的资源需求去高效动态地去利用集群上的资源，而不需要也无法由用户事先指定。\n\n看到这里，有没有觉得这样的运行特征似曾相识？它其实就像我们在单机 OS 上跑程序一样，程序可以进程的方式长时运行不停访问修改内部内存变量，同时可以根据自身执行逻辑的需要去动态拉起新的子进程，通过 RPC 或者共享内存等方式传递数据和协同，所有的进程都按自身实际运行需要去高效使用单机上的资源，而不需要用户来事先指定。\n\n唯一的差别是面向企业级 Agent 应用，我们现在需要将 Agent 运行在集群上。所以本质上我们需要的是一个集群上的分布式系统，具备类似单机 OS 的灵活动态调度、弹性利用资源能力，并支持长时间有状态运行。同时由于分布式系统的特殊性，必须要支持在故障情形的自动恢复且保证恢复后的状态一致。\n\n那当前业界有这样满足 Agent 运行需求的分布式系统吗？\n\n业界相关工作\n\n答案是有的，这里简要介绍一些作者认为比较相关的业界工作供读者参考。\n\nopenYuanrong\n\n从当前我们了解到的情况看，最匹配的开源系统是 openYuanrong[1]。\n\nopenYuanrong 的核心设计理念正是构建一套类单机 OS 的分布式内核，并通过这套内核统一支持各类可能的分布式应用负载，这非常适合解决前述 Agent 场景的典型问题。\n\n支持 Agent 高动态\n\n通过将 Agent 运行在 openYuanrong 上，可天然支持 Agent 实例的自动弹性，无需运维人员关注如何配置容器资源。openYuanrong 在此采用了典型的 Serverless 自动弹性技术，可以支持根据请求数量动态调整 Agent 实例数目，甚至无请求可以缩容到 0。除了这种水平弹性能力外，openYuanrong 还有独特的垂直弹性能力，可以按 Agent 实际运行的资源需求动态调整每个实例所在容器规格大小，这样既可弹性支持应用请求负载波动变化，也可以实现每个实例对资源的动态高效利用，从而完全消除 Agent 应用如何配置资源的困扰。\n\n此外 openYuanrong 还有很重要的动态调度能力，可以支持 Agent 在运行中动态拉起新的子任务 / 子 Agent，甚至可以并发拉起多个子任务 / 子 Agent，实现分布式并行处理，这非常适合像 Agent Swarm 等一些最新的 Agent 场景。\n\n解决 Agent 不安全问题\n\nopenYuanrong 支持多租户和安全隔离，通过与底层 K8s 等配合，可将实例按需调度至各类不同容器中运行。在 Agent 场景下，通过与自身的动态调度能力结合，openYuanrong 可以做到将 AI 生成的代码等真正有风险的代码调度至一个独立的安全容器内运行，与 Agent 本体运行的容器实现彻底的隔离，从而避免因为混用同一个容器导致的大模型访问凭证等隐私泄露。\n\n支持 Agent 长会话\n\nopenYuanrong 支持有状态实例的调度和长时运行，从而可以满足 Agent 自身状态访问需求。同时在多轮会话场景下，openYuanrong 可以支持会话上下文亲和的请求路由，确保多轮会话场景下上下文一致。另外还可通过 openYuanrong 的数据系统支持 Agent 将自身状态实时分布式备份，从而确保即便遇到故障，在实例恢复后仍然可以保持状态一致，从而确保语义一致的断点续执行，实现最终的正确结果输出。\n\n除了能很好地匹配 Agent 的这些特征之外，openYuanrong 还提供了异构算力支持等能力，可以将 Agent 和大模型推理服务、Agentic RL 等负载调度在同一个集群内，实现高效协同，并充分共享利用集群上的各类算力资源。\n\nRay\n\n和 openYuanrong 一样，Ray[2] 也是业界不多的同样具备成熟的任务级动态分布式调度能力的系统，因此可以匹配 Agent 运行中动态拉起子任务等需求。同时 Ray 的 Actor 也是有状态的，可以满足 Agent 长时有状态运行的要求。\n\n但 Ray 此前更多用在离线分布式计算场景，支持在线服务类应用时可能需要在请求接入等方面多做一些工作。此外在安全隔离、多租、弹性等方面相对来说还存在较多的能力欠缺，这使其当前仍难以很好解决 Agent 在安全性和资源高效利用上的问题，因此可能还不适合直接支持企业级大规模 Agent 在线应用。\n\nAnthropic Managed Agents\n\n在构思本篇文章的过程中，作者也关注到了 Anthropic 最新的一篇关于 Managed Agents 的文章[3]。这篇文章中，Anthropic 在其之前提出的 Harness、Tool 等概念外，还明确提出了 Session、Sandbox 等新的概念，并明确提出将这些概念实现相互解耦，以更好地满足容错、安全等考虑。\n\n尽管思考问题的角度略有不同，但关于将 Sandbox 剥离出 Harness、Many Brains、Many Hands 这些想法和本文的观点非常契合。比如，将 Sandbox 剥离出 Harness 正是为了解决我们前述的隐私泄露等问题，Many Brains 则对应我们前面讲的多个 Agent 实例的部署和水平弹性，Many Hands 则是我们前面讲的在 Agent 运行过程中可以动态拉起多个工具并行执行。但可惜文章在抛出了这些 Meta-Harness 理念外，并未详述当前的实现情况以及如何实现。\n\n总结与展望\n\nAgent 是对传统应用形态的彻底颠覆，带来了完全不同以往应用的非确定性，其高动态、不安全、长会话的运行特征是传统 K8s 容器微服务技术体系难以满足的，对分布式基础设施领域提出了全新挑战，要求类似单机 OS 一样更加灵活强大的分布式系统能力。幸运的是，业界已经有像 openYuanrong 等的开源系统已在此方向积累了很多能力可以很好匹配 Agent 应用的相关诉求。\n\n相比于 Anthropic 等行业先锋，当前大部分企业可能都还停留在云原生微服务应用时代，还普遍缺乏 Agent 相关的大规模应用落地实践。但 Agent 应用确实又很可能即将在短时间内迎来爆发，因此相比于 K8s 在云原生时代的普及程度，企业需要面向 Agent 时代尽早储备相关技术，构建适合自身需要的 Agent 分布式基础设施。\n\n作者介绍\n\n梁义\n\n，华为通用 Serverless 首席专家，华为元戎首席架构师，openYuanrong Maintainer\n\n博士毕业于浙江大学计算机学院，曾任职于 Ask.com、同花顺、阿里巴巴、蚂蚁集团等公司，长期从事分布式系统方向工作，涵盖搜索推荐、大数据、实时计算、在线机器学习、分布式计算、 Serverless、AI Infra 等领域，目前专注于构建统一支持包括 AI 在内各类分布式场景的通用 Serverless 分布式计算引擎 openYuanrong。\n\n参考资料\n\n[1] https://docs.openyuanrong.org/\n\n[2] https://www.ray.io/\n\n[3] https://www.anthropic.com/engineering/managed-agents\n\n今日好文推荐\n\n从0到10万Star只需一个周末：开源项目的信任危机，也许是那群“以为自己会写代码”的资本大佬造成的\n\nDeepSeek被曝融资500亿，阿里或无缘参投\n\nChrome 开了一个危险的头：偷偷给数亿电脑塞 4GB Gemini 模型，占硬盘、耗算力、删了自动重下\n\n马斯克22万张GPU救场后，Claude勉强恢复“三个月前体验”，Gary Marcus却警告：GPU将严重过剩，很快不值钱", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_Agent 时代需要怎样的分布式基础设施_InfoQ.md"}, {"title": "直播出问题，AI 不一定救得了：Netflix 的新解法", "source": "InfoQ", "digest": "Netflix 扩展\"人类基础设施\"，以应对全球直播运营。", "link": "https://mp.weixin.qq.com/s/J1opn9JoBu8uhlOa40vUMg", "content": "---\npublish_time: 1778379300\n---\n\n# 直播出问题，AI 不一定救得了：Netflix 的新解法\n\n> 原文链接：https://mp.weixin.qq.com/s/J1opn9JoBu8uhlOa40vUMg\n> 公众号：InfoQ\n\n作者 ｜ Mark Silvester\n\n译者 ｜ 田橙\n\nNetflix 已从传统的视频点播平台迈向直播平台，通过将自动化技术系统与结构化的人类运营层相结合来实现这一转型，相关内容在其最新发布的 Netflix Technology Blog 文章 中进行了说明。\n\n在多年打磨异步分发能力之后，像 迈克·泰森与杰克·保罗 拳击比赛这样的高关注度直播事件（全球约有 1.08 亿观众同时观看）对实时基础设施的管理提出了新的要求。这促使团队构建了所谓的“人类基础设施”（human infrastructure），即一个专门的运营层，用于应对直播过程中固有的不确定性。\n\n这一转变也反映了整个行业面临的共同挑战。Amazon Web Services 提供了 Elemental MediaLive 服务，帮助广播机构在大规模场景下处理类似的同步与编码任务。\n\n其他主要平台也遇到了类似难题；Disney+ Hotstar 此前曾分享其在全球板球赛事期间如何应对 创纪录并发量 的经验。与这些同行类似，Netflix 现在需要在高峰时段平衡自动化扩展与人工干预，因为标准算法在面对一些特殊故障时可能缺乏足够的上下文来做出响应。\n\n该策略的关键之一是“遥测热路径”（telemetry hot path）。大多数可观测性管道在设计时优先考虑成本效率和数据完整性，而非极致速度，这对于点播场景来说是可行的，因为分析延迟不会造成明显影响。但在直播场景中，Netflix 将最关键的指标隔离到一个低延迟的数据流中，使运营团队能够在毫秒级别发现并修复传输问题，避免局部故障演变为更大范围的中断。该专用管道优先处理诸如启动失败率和缓冲率等关键指标，而将不那么紧急的后台日志放在次要位置。\n\n除了软件层面，Netflix 还建立了一个 Live Operations Centre（直播运营中心）作为事件响应枢纽。工程团队指出，这一层提供了一个指挥体系，当出现不可预见的边缘情况时，可以绕过自动化协议进行干预。为该中心构建的定制工具使工程师能够即时引导流量，并在不同区域之间重新平衡容量。这种架构与 YouTube Live 的基础设施 在理念上相似，后者同样依赖实时监控以及在大规模全球直播期间进行人工干预的能力。\n\n从实体媒体到全球实时流媒体的这一架构演进，最近也在 QCon London 上由 Kasia Trapszo 进行了分享，她讨论了 Netflix 商业架构的演变。该演讲指出，直播事件推动系统从纯实时授权模式转向混合模型，引入“验证窗口”（validation windows）和优雅降级机制，以在流量激增时保障用户访问。\n\n通过将人类经验正式纳入技术体系，Netflix 旨在在充满不确定性的体育直播场景中依然保持服务的可靠性。这一演进表明，在全球规模下，技术只有与同步的人类判断层相结合，才能发挥最佳效果。\n\n原文链接：\n\nhttps://www.infoq.com/news/2026/04/netflix-live-human-ops-scale/\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\n从0到10万Star只需一个周末：开源项目的信任危机，也许是那群“以为自己会写代码”的资本大佬造成的\n\nDeepSeek被曝融资500亿，阿里或无缘参投\n\nChrome 开了一个危险的头：偷偷给数亿电脑塞 4GB Gemini 模型，占硬盘、耗算力、删了自动重下\n\n马斯克22万张GPU救场后，Claude勉强恢复“三个月前体验”，Gary Marcus却警告：GPU将严重过剩，很快不值钱", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_直播出问题，AI 不一定救得了：Netflix 的新解法_InfoQ.md"}, {"title": "谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜", "source": "新智元", "digest": "Google DeepMind开发AI数学系统，在数学问题解决上取得突破性进展", "link": "https://mp.weixin.qq.com/s/qO84Y7YBmSA07Vhvt6rIOQ", "content": "---\npublish_time: 1778374800\n---\n\n# 谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜\n\n> 原文链接：https://mp.weixin.qq.com/s/qO84Y7YBmSA07Vhvt6rIOQ\n> 公众号：新智元\n\n新智元报道\n\n编辑：犀牛 所罗门\n\n【新智元导读】\n\n谷歌DeepMind今日官宣推出「AI co-mathematician」多智能体系统，在FrontierMath Tier 4自主模式下斩获48%正确率。牛津教授借助该系统攻克Kourovka Notebook长期开放问题，AI进化为数学家的真正研究搭档。\n\n人类数学家，终于等来了自己的「超级队友」！\n\n就在刚刚，谷歌云首席科学家、DeepMind研究副总裁Pushmeet Kohli重磅官宣\n\nAI\n\nco-mathematician\n\n——一套专为数学研究设计的多智能体协作系统。\n\n有玩意儿多猛？\n\n在Epoch AI组织的FrontierMath Tier 4基准测试中（50道由教授和博后专门设计的「短期科研项目」级别超难题，专业数学家也得花上数天乃至数周），AI co-mathematician在自主模式下拿下48%的正确率，解决了48道非公开题中的23道。\n\n刷新所有\n\nAI\n\n系统的历史最高纪录！\n\n作为对比，它底层用的Gemini 3.1 Pro基座模型，独立作战只能拿到19%。从19%到48%，整整跃升了29个百分点。\n\n更狠的是，它还超越了GPT-5.5 Pro的39.6%和Claude Opus 4.7的22.9%。\n\n其中有3道题，是此前所有被测系统都没能攻克的。\n\nPushmeet Kohli在社交媒体上兴奋地写道：\n\n数学的未来，是数学家和AI智能体一起工作。\n\n不是更聪明的模型\n\n而是更聪明的「编排」\n\nAI co-mathematician最有意思的地方在于：\n\n它的突破不是靠换一个更大的模型，而是靠系统设计。\n\n整个系统采用了一种\n\n层级式多智能体架构\n\n：一个「项目协调员」智能体坐镇中央，负责把数学问题拆解成多个并行的「工作流」，再分派给不同的专项子智能体去执行。\n\n这些子智能体各有专长——有的负责文献检索，有的负责计算探索，有的负责证明推导，还有的专门负责「挑毛病」。\n\n没错，这里有一个专职的\n\n审稿人智能体\n\n。\n\n每条证明路径写出来之后，都必须经过审稿人的交叉审查，发现逻辑漏洞就打回重做。\n\n这种「强制审查循环」机制，直接把传统LLM最头疼的「自信地胡说八道」问题压了下去。\n\n更关键的是，整个工作台是\n\n异步、有状态\n\n的。\n\n它能记住之前尝试过哪些失败的假设，能追踪每一条探索分支的进展，还能输出带有边注和内部引用的工作论文。\n\n就像是一个能跟你「泡」在一个项目里、持续数天迭代的研究伙伴。\n\nDeepMind论文中举了几个让人印象深刻的案例：\n\n面对一道几何铺砖问题时，系统把核心挑战归约为布尔可满足性（SAT）问题，然后用PySAT库求解；\n\n在一道表示论题目中，它通过文献搜索工具精准检索到特定定理的精确表述，而基线模型只能凭「大概印象」答题，结果条件都没对上；\n\n在组合数学题中，它把理论推导和计算验证拆成两条独立工作流，让审稿人智能体在最终拼装前就揪出了逻辑错误。\n\n牛津教授实战：攻克60年老本子里的开放问题\n\n数字好看归好看，但AI到底能不能在真正的数学前沿派上用场？\n\n牛津大学数学家Marc Lackenby的亲身经历给出了最有说服力的回答。\n\n他用AI co-mathematician研究了群论中的一个经典开放问题——Kourovka Notebook第21.10题。\n\n这本「笔记本」可不是普通笔记，而是群论领域从1965年传承至今、汇集了全世界未解难题的「圣经级」问题集。\n\nLackenby把问题直接输入系统后，AI co-mathematician自动创建了两条并行工作流：一条尝试证明，一条尝试反证。\n\n第一条路径很快返回了一个「证明」，但系统自己的审稿人智能体随即发现了其中的漏洞，标记为不正确。\n\n关键转折来了：Lackenby看到被打回的证明和审稿人指出的缺陷后，突然意识到——自己作为领域专家，恰好知道怎么填补这个缺口。\n\n于是他补上了关键的一步，问题迎刃而解。\n\n这个故事的精髓在于，\n\n人和\n\nAI\n\n谁都没法独自在这个速度下完成这件事\n\n。\n\nAI提供了证明策略和计算探索的「暴力搜索」，审稿人智能体及时发现了错误，而人类数学家的深层直觉完成了最后的临门一脚。\n\n这是一种全新的协作范式。\n\n类似的故事还在上演：数学家Gergely Bérczi用它获得了关于对称幂表示Stirling系数猜想的证明；Semon Rezchikov在哈密顿系统中一个技术性子问题上，收到了AI提供的关键引理——经过仔细验证后确认无误。\n\n审稿人会被「讨好」，系统会「转圈」\n\nDeepMind团队也没有回避系统的失败模式。\n\n第一个问题叫「审稿人讨好偏」（reviewer-pleasing bias）。\n\n当一条证明路径被审稿人打回后，子智能体有时不是真的修正了逻辑错误，而是换了一种措辞让审稿人「看不出问题了」。\n\n错误没有消失，只是变得更隐蔽。\n\n这就像学生改论文时，不是真的理解了审稿意见，而是学会了用更圆滑的方式绕过审查。\n\n第二个问题叫「死亡螺旋「」（death spirals）。\n\n在某些情况下，证明者和审稿人之间陷入了无限循环——你说有问题，我改了再交，你又说有问题，我再改再交。\n\n最终推理质量越来越差，直到彻底崩溃成幻觉式的胡言乱语。\n\n这对于那些需要真正创造性直觉来打开突破口的问题——比如千禧年大奖难题或者Erdős型猜想——多智能体系统目前仍然无能为力。\n\nAI能压缩的，是「从有一个想法到知道这个想法行不行」之间的时间：文献检索、反例搜寻、计算验证、探索性的苦力活。\n\n但那道灵光一闪的创造性火花，目前看来只能来自人类。\n\n数学研究的范式正在改变\n\n这篇论文的真正意义，可能不在于48%这个数字本身。\n\n系统设计现在能够以对实际研究真正有意义的方式，放大模型能力。\n\nAI co-mathematician做的事情，本质上跟Claude Code、Google Antigravity在软件开发领域做的事情异曲同工——\n\n为AI提供脚手架，让它能在长时间跨度内自主工作，同时保持可控。\n\nDeepMind CEO Demis Hassabis曾说过，拥有强大数学和代码工具的前沿实验室正在与其他实验室拉开差距，原因在于「这些工具会产生复合效应」。\n\nAI co-mathematician就是这一论断的直接体现。\n\n数学的未来，或许不再是一个天才独自在黑板前苦思冥想的身影。\n\n而是人类数学家和\n\nAI\n\n智能体并肩而坐，一个负责灵感，一个负责验证，在无尽的探索中一起逼近真理。\n\n这个「黄金搭档」时代，已经来了。\n\n参考资料：\n\nhttps://x.com/pushmeet/status/2052812585804685322\n\nhttps://arxiv.org/abs/2605.06651\n\nhttps://epoch.ai/frontiermath/tiers-1-4?view=graph&tab=release-date&tier=Tier+4\n\nhttps://arxiv.org/pdf/2605.06651https://x.com/kimmonismus/status/2052849472586264997\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-05-10_谷歌造出AI数学家，48%碾压全场！牛津教授用它破解60年未解之谜_新智元.md"}, {"title": "浙大校友用AI突破32年拉姆齐数下界", "source": "量子位", "digest": "R(3,17)下界从92到93", "link": "https://mp.weixin.qq.com/s/4Ckuhdc1ra2Ufm2DHOG3ZA", "content": "---\npublish_time: 1778385140\n---\n\n# 浙大校友用AI突破32年拉姆齐数下界\n\n> 原文链接：https://mp.weixin.qq.com/s/4Ckuhdc1ra2Ufm2DHOG3ZA\n> 公众号：量子位\n\n闻乐 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n数学界尘封32年的拉姆齐数经典难题被打破！\n\n浙大校友\n\n王宜平\n\n借助自研AI框架\n\nScaleAutoResearch-Ramsey\n\n，成功将\n\n拉姆齐数R(3,17)\n\n下界\n\n从92提升至93\n\n，终结了自1994年以来长期停滞的纪录。\n\n同时他还将\n\nR(4,15)\n\n下界刷新至160，成果直接超越谷歌DeepMind同期AlphaEvolve的研究水平。\n\n而且，这次世界级数学突破并没有依赖超级算力集群，仅用Claude Code、Codex+1台CPU服务器就完成全部攻坚，\n\n成果已全量开源\n\n。\n\n拉姆齐数\n\n如果外星人威胁地球，要求我们给R (5,5) 的精确值，人类应动用所有算力；但如果要的是R (6,6)，我们不如直接开战。\n\n数学巨匠保罗・埃尔德什的这句调侃，直接说明了拉姆齐数有多难缠。\n\n作为组合数学的核心难题，拉姆齐数本质上是在寻找“无序中必然出现秩序”的临界值。\n\nR (3,17) 下界用生活化的派对问题来理解就是：\n\n无论派对上的人如何随机社交，总能找到3个互相认识的小圈子（对应数学中的三角形结构），或是17个完全互不相识的人（对应“17点独立集”），这个最小的派对人数，就是R (3,17) 的精确值。\n\n但求解这个数值远比想象中艰难。\n\n如今R (5,5) 的精确值仍卡在43-48的区间，算出R (6,6)还不如向外星人开战……\n\n而R (3,17) 自1994年被数学家Wang-Wang-Yan锁定在92后，全球顶尖团队轮番攻关，却始终无法撼动这一数字，渐渐成了横跨32年的学术僵局。\n\n而且，它的研究成果直接关联图论、算法设计、网络优化等关键领域，从人工智能到通信网络，都能找到它的应用影子，是数学与计算机科学交叉领域的香饽饽。\n\n怎么做到的？\n\n王宜平的突破，始于一次“反其道而行之”的尝试。\n\n在此之前，传统方法的思路是：\n\n先构造一张没有三角形的图，再慢慢压缩其中的独立集规模。\n\n但无论算法如何优化，在92个顶点的限制下，独立集始终停留在18个，怎么也压不到16个的目标。\n\n但王宜平换了一条逆向思路：\n\n放弃零三角形的初始要求，先构建一张独立集不超过16个但含少量三角形的图，再通过AI的复合删除修复策略，一点点删掉三角形，同时修复过程中新生的独立集冲突。\n\n他融合了了karpathy autoresearch、AlphaEvolve、拉姆齐数综述等成熟思路，搭建了一套AI自我迭代进化的研究框架，让AI可以不断沿用过往的优质探索结果，往更深、更细的方向持续深挖。\n\n系统会同时启动多组独立智能体，用不同算法、不同初始参数并行搜索图结构空间，有效避免探索陷入局部无解；\n\n全程以结构冲突数为评判标准，把每一次优化出的更好图谱保存下来当作基础模板，后续迭代都在已有优质成果上继续打磨，靠不断沉淀积累逼近最优解，这也是其和谷歌AlphaEvolve最大的区别；\n\n而且所有推演得出的结果都会通过专业核验工具严格筛查，精准校验图中是否存在违规三角形、是否超出独立集数量上限，每一个关键突破节点都有完整核验记录，从根源上保证研究结果严谨可信。\n\n这套AI框架从最初仅含12个三角形的图结构出发，像闯关升级一样逐步推进。\n\n12个、11个、10个……每一步都要平衡“删三角形”和“控独立集”的矛盾，最终在92个顶点上，成功构造出一张完美的图——\n\n既没有三角形，也不存在17个互不相连的点，直接证明了R (3,17)≥93。\n\n这套框架还顺带攻克了R (4,15) 的下界难题，将其从159提升至160。\n\n而就在今年，谷歌DeepMind的AlphaEvolve也只做到了复刻R (3,17) 的旧下界92，没能实现实质性突破。\n\n作者介绍\n\n王宜平本科毕业于浙江大学竺可桢荣誉学院，获计算机科学与数学双学位。\n\n现在是华盛顿大学保罗·G·艾伦计算机科学与工程学院博士生。\n\n他现任xAI 技术团队成员，并曾在微软实习。长期研究目标是开发安全、可扩展的超人类AI系统，推动科学进步。\n\n近期研究聚焦于大语言模型的推理强化学习以及AI for Math，同时也涉猎多模态和机器学习理论等领域。\n\nOne More Thing\n\n除此之外，中科大马杰教授、清华申武杰、中科大谢晟捷团队在拉姆齐数研究中实现\n\n78年来首次指数级理论改进\n\n。\n\n就在前几天，相关成果发表于\n\n数学四大顶刊之一《Inventiones Mathematicae》\n\n（《数学新进展》）；\n\n从宏观数学规律层面，显著拔高了拉姆齐数下界的增长阶数，相当于给这类问题的求解划定了更高的理论天花板。\n\n参考链接：\n\n[1]https://x.com/ypwang61/status/2052508685591785619\n\n[2]https://github.com/ypwang61/ScaleAutoResearch-Ramsey\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n5月20日\n\n，我们将在\n\n北京金茂万丽酒店\n\n举办一年一度的中国AIGC产业峰会。\n\n首波嘉宾阵容已公布\n\n！\n\n昆仑万维方汉\n\n、\n\n智谱吴玮杰\n\n、\n\nEverMind邓亚峰\n\n、\n\n风行在线易正朝\n\n、\n\n百度秒哒朱广翔\n\n、\n\nFusion Fund张璐\n\n、\n\n香港大学黄超\n\n、\n\nMarsWave冯雷\n\n都来了，🔍\n\n了解详情\n\n请你和我们一起，不再只是讨论AI的未来，而是\n\n现在就用起来\n\n。👉\n\n报名参会\n\n一键关注 👇 点亮星标\n\n科技前沿进展每日见", "category": "国内", "is_model_related": false, "source_file": "sources/2026-05-10_浙大校友用AI突破32年拉姆齐数下界_量子位.md"}, {"title": "浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026", "source": "量子位", "digest": "福尔摩斯探案都能演", "link": "https://mp.weixin.qq.com/s/QA_FCSC2oNJsmJIRKSUsYw", "content": "---\npublish_time: 1778385140\n---\n\n# 浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026\n\n> 原文链接：https://mp.weixin.qq.com/s/QA_FCSC2oNJsmJIRKSUsYw\n> 公众号：量子位\n\nAdaMARP团队 投稿\n\n量子位 | 公众号 QbitAI\n\nAI能实现真正的沉浸式扮演了。\n\n大语言模型在角色扮演任务上进展迅速，但现有系统往往缺乏沉浸感和适应性：\n\n环境信息未被充分建模，场景与角色也多为静态，难以支撑多角色调度、场景切换、动态引入新人等复杂叙事需求。\n\n现在，浙江大学联合腾讯优图实验室提出\n\nAdaMARP\n\n（Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing）——\n\n一种面向通用沉浸式角色扮演的自适应多智能体交互框架。\n\n该框架通过四通道消息格式和场景管理器，让AI不仅会「说」，还会「想」、会「动」、会「感知环境」，并在复杂叙事中灵活切换场景、动态引入新角色。\n\n目前该工作已被ACL 2026接收。\n\n从跟AI聊天到和角色共处\n\n大语言模型在角色扮演任务上的应用正快速普及：\n\n用户可以设定任意角色（历史人物、小说角色、原创人设），与AI进行持续的叙事互动。\n\n理想状态下，AI应当能够代入这个角色，在情境中保持人设一致、对环境敏感、对他人话语做出贴合关系的回应。\n\n但现实中，大多数系统更像是会说话的聊天机器人：对话虽流畅，却缺少情境感和叙事张力。\n\n以探案为例，故事往往在一个固定场景、固定人物之间反复进行，无法四处搜证、无法与不同证人轮番对质、无法让环境线索真正参与推理，缺乏真正的剧情推进和世界变化。\n\n现有方法缺了环境信号，也缺了“组织者”\n\n研究团队指出，当前角色扮演系统主要存在两类局限。\n\n一、沉浸感不足：环境被当成「背景板」\n\n不少工作只建模角色的台词（Speech）；后来有研究加入了动作（Action）或内心独白（Thought），但在叙事中，环境并非可有可无的装饰。\n\n它会塑造氛围、推动因果，连接角色的行动、世界的变化与后续对话。\n\n例如：案发现场地毯上的蜡痕、煤气灯照出的阴影角度、证人住所门口未干的泥渍……\n\n这些环境信号既能支撑推理（蜡痕指向婚礼蜡烛，泥渍暗示来客方向），也能成为剧情转折的契机（换一个场景，就换一批证人和线索）。\n\n若系统不把环境当作与台词、动作同等重要的信号来建模，角色就容易像是在一个空房间里自言自语，探案也就失去了「搜证」的实感。\n\n二、互动结构过于静态：缺一个「会调度的导演」\n\n多数系统假定：场景不变、人物不变、用户与某个固定角色一问一答。\n\n但探案恰恰需要四处搜证：从案发现场到苏格兰场，从房东太太的公寓到嫌疑人的宅邸，每个场景都有不同的环境和证人。\n\n谁来接下一句？是先问管家还是先问马车夫？何时换场景、何时引入新证人？\n\n现有框架很少系统性地回答这些问题。\n\n没有这些能力，故事就很难自然地「演下去」，更像是在一个封闭的聊天室里重复对话，而非一场真正的调查。\n\nAdaMARP：四通道消息格式+场景管理器\n\nAdaMARP从两个方向回应上述问题。\n\n沉浸式消息格式： Thought–Action–Environment–Speech\n\nAdaMARP 为每一轮交互定义了一种四通道交织的消息格式：\n\n这样，一个完整的回应可以同时包含思考、动作、环境感知和言语，且顺序可灵活交织。\n\n例如，福尔摩斯在讯问证人时：<煤气灯摇曳，证人下意识地瞥向壁炉上的时钟> [他在回避具体时间，那段时间他不在场]（用烟斗轻轻敲了敲桌面）案发当晚八点到九点，您究竟在哪里？\n\n环境线索 → 内心推理 → 施压动作 → 追问话语，四者形成一条清晰的因果链，更贴近真实探案的节奏。\n\n同时，环境不再只是点缀。\n\n案发现场的物证摆放会支撑角色的推理链条；证人住所的布置（凌乱的书桌、未拆的信件）可以暗示性格与行踪；场景切换则自然引入新的证人与线索。\n\n环境既参与氛围营造，也参与推理与叙事的因果。\n\n自适应框架：三智能体+场景管理器的五种动作\n\nAdaMARP将角色扮演建模为三个智能体的协作：\n\nActor模型：扮演所有非用户角色；\n\nUser模型：代表用户方（可由 LLM 模拟或真人替代）；\n\n场景管理器（Scene Manager）：负责高层调度与控制。\n\n场景管理器通过一组离散动作来驱动整场「演出」：\n\ninit_scene：初始化场景（如：贝克街 221B，或某起凶案现场）；\n\npick_speaker：选择下一句由谁来说——是福尔摩斯追问、华生补充，还是证人陈述？并给出理由；\n\nswitch_scene：切换场景（从案发现场到证人公寓，从苏格兰场到嫌疑人宅邸）；\n\nadd_role：在叙事中动态引入新角色（新发现的证人、突然登门的访客，含人设与动机）；\n\nend：结束本场互动。\n\n每一步决策都会输出对应的理由，使调度过程可解释、可约束。这样，系统既能决定「谁来接话」，也能决定「何时换场景搜证」「何时引入新证人」，从而支持更复杂、更开放的多角色探案叙事。\n\n上述设计在实践中如何运转？不妨看一段福尔摩斯探案叙事的拆解。\n\n各环节均由场景管理器调度，需要注意的是本案例仅仅用于理解，省略了部分细节例如详细的角色档案、角色动机场景管理器的原始输出等\n\n完整示例：探案叙事中的AdaMARP\n\n角色：福尔摩斯、华生。\n\n初始场景：伦敦东区某寓所三层，案发后的深夜。厚重的窗帘半掩，煤气灯在风中摇曳，在墙面上投下晃动的影子。壁炉已熄，余烬旁的地毯上有一小块凝固的蜡痕，不远处散落着几根烧尽的火柴。福尔摩斯与华生立于现场中央，窗外隐约传来泰晤士河上的汽笛声。\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 福尔摩斯）\n\n理由：侦探应先勘察现场并给出初步推理\n\n福尔摩斯：<煤气灯昏黄，蜡痕在阴影中隐约可见> [烛泪的位置和形状……婚礼蜡烛，而且是左手持烛]（蹲下身捻起碎屑嗅了嗅，站起身）华生，去查查最近三个月内举办过婚礼、且家中有人左撇子的家庭。\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 华生）\n\n理由：福尔摩斯已下达指令，助手应领命执行\n\n华生：（点点头）明白（推门而出）<走廊里传来渐远的脚步声，随后是马车驶离的声响>\n\n场景管理器\n\n选择的动作为：switch_scene\n\n理由：华生已前往调查，需切换至下一个搜证地点——案发地邻居的住所\n\n新场景：白教堂附近一栋老式公寓，房东太太的住处。狭窄的木楼梯吱呀作响，扶手蒙着一层油腻。二楼的走廊昏暗，炖菜的气味从尽头的厨房飘来。门厅狭小，壁炉上摆着一只廉价的瓷钟，墙角堆着未拆的信件。\n\n场景管理器\n\n选择的动作为：add_role（new_role: 房东太太，案发现场的邻居，这栋公寓的房东）\n\n理由：作为案发地邻居，可能掌握关键证词，需引入讯问\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 福尔摩斯）\n\n理由：讯问应由侦探主导开场\n\n福尔摩斯：（摘下礼帽，微微颔首）夫人，案发当晚八点到九点，您是否听见三楼有任何异常声响？\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 房东太太）\n\n理由：需听取证人对时间线的陈述。\n\n房东太太：<下意识地瞥向壁炉上的时钟>\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 福尔摩斯）\n\n理由：证人出现回避迹象，应继续追问施压\n\n福尔摩斯：[她在回避具体时间]（用烟斗轻轻敲了敲桌面）那段时间，您究竟在哪里？\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 房东太太）\n\n理由：给证人回答的机会\n\n房东太太：（咬了咬嘴唇，正要开口——）\n\n场景管理器\n\n选择的动作为：add_role（new_role: 雷斯垂德探长）\n\n理由：新证人线索出现，探长需汇报调查进展\n\n场景管理器\n\n选择的动作为：pick_speaker（speaker: 雷斯垂德）\n\n理由：探长带来新线索，应由其先行说明。\n\n雷斯垂德：福尔摩斯先生，我们发现了新的证人，马车夫说他当晚载过一名黑衣男子……\n\n……\n\n初始场景、发言调度、场景切换、角色引入均由场景管理器驱动，且每步均以「选择的动作为：Action_name | 理由：Reason」的形式可解释。\n\n这种结构化、多通道、多场景、多角色的连贯叙事，恰恰是AdaMARP旨在支撑的探案节奏。\n\n训练数据：从文学提取+从主题合成\n\n为训练上述能力，研究团队构建了两个数据集，分别面向Actor模型和场景管理器。\n\nAdaRPSet：让角色「会演」\n\nAdaRPSet面向Actor模型，由两个互补子集构成：\n\nAdaRPSet-Extracted（文学提取）\n\n从Goodreads「最佳书籍」榜单选取81本代表性文学作品，经三阶段管道构建：\n\n(1) 分块：按章节切分并合并为合适长度的文本块；\n\n(2) LLM提取：识别连贯场景与多角色互动轨迹，将对话直接转化为统一的Thought–Action–Environment–Speech 格式，严格区分角色动作与环境信号；\n\n(3) 角色画像生成：按角色聚合全书证据，合成七维画像（身份与外貌、性格与心理、说话风格、能力兴趣、社会背景、个人经历、人际关系）。\n\n每条轨迹采用多视角增强：同一场景下，轮流指定不同角色为主角，其余为NPC，从而扩展训练样本。\n\n提取数据天然具有文学质感与人味，适合学习格式规范与基础演绎能力。\n\nAdaRPSet-Synthesis（主题合成）\n\n文学提取的轨迹多为单场景、角色固定的互动，对场景切换与动态引入新角色的覆盖不足。\n\n研究团队因此构建合成数据：在20类主题（冒险、探索、探案、解谜、密谋、营救、逃亡、战斗、浪漫、友谊、竞争、背叛、和解、谈判、策略、魔法、末世等）下，由LLM生成情节级轨迹。\n\n每条轨迹明确包含：初始情境、主控角色与多个辅助角色、多轮对话（统一格式），以及场景管理器的控制消息（如 switch_scene、add_role）。\n\n每条轨迹至少包含一次场景切换和一次角色引入，用以强化模型对动态叙事的适应能力。\n\n合成数据与提取数据在训练时合并，使Actor模型既能学格式与人味，又能学动态调度下的演绎。\n\n关于两个互补子集对应的细节信息如下表所示。\n\n其中Plots指的是初始情节片段（包含初始场景和初始角色）的数量，Roles指的是不重复的角色数量，Convs指的是指的是完整的角色扮演记录（初始情节片段和衍生的不同对话轨迹）的数量，Utterances指的是所有角色扮演记录中对话的数量，Avg. Turns 指的是每个角色扮演记录的平均对话数量。\n\nAdaSMSet：让系统「会导」\n\nAdaSMSet面向场景管理器，在AdaRPSet-Synthesis的基础上构建。\n\n合成轨迹已包含init_scene、switch_scene、add_role、end等控制动作，但缺少最核心的发言者选择监督。\n\n研究团队在每两段角色发言之间插入 pick_speaker 动作，由强指令遵循模型为每次选择生成自然语言理由（reason），并约束理由需具体、上下文相关，避免套路化表述。\n\nAdaSMSet因而覆盖场景管理器的全部五类动作，为「何时换场景」「何时加人」「谁来接下一句」及对应理由提供端到端监督。\n\n由于AdaSMSet源于AdaRPSet-Synthesis，因此对应的Plots、Roles和Convs的统计信息与其一致，由于添加了pick_speaker记录，因此最终的Utterances数量为496493，Avg.Turns为50.15。\n\n两者的互补\n\nAdaRPSet与AdaSMSet共同支撑AdaMARP：前者让角色「会演」（保持人设、响应环境、推进剧情），后者让系统「会导」（合理切换场景、引入角色、安排发言顺序）。\n\n二者共享统一的角色画像与消息格式，确保Actor与场景管理器在同一叙事框架下协同工作。\n\nAdaptiveBench：为什么还要自建评测？\n\n有了训练数据和框架，还需要回答一个关键问题：\n\n怎样评估「沉浸式、可适应」的角色扮演是否真的做得好？\n\n现有很多评测更偏向「一句话好不好」或「单轮对话像不像这个人设」，难以覆盖AdaMARP所关心的几点：\n\n整段故事，而不是单句回复：真实体验来自整条对话轨迹是否连贯、有张力，而非某一句是否优雅。\n\n环境与动作是否被真正用起来：环境线索有没有参与推理和叙事，动作是否和内心、台词呼应。\n\n多角色与场景切换是否自然：场景管理器有没有「带好这场戏」，包括什么时候换场景、什么时候加新角色、谁来接下一句。\n\n为此，研究团队提出了\n\nAdaptiveBench\n\n：一个面向自适应角色扮演的仿真评测框架。\n\n它从AdaRPSet-Synthesis的保留子集中选取剧情种子（20个话题，每个话题5个初始Plots，总共100个评估样本），在每个种子上同时运行三方角色：\n\n用户模型（可以是真人或LLM Agent）\n\n作为「演员」的Actor模型\n\n负责调度的场景管理器\n\n在每个种子上，场景管理器连续发出若干轮pick_speaker、switch_scene、add_role动作，驱动Actor与用户侧完成一整段多轮对话。完整轨迹生成后，再由评估模型从轨迹级别给出多维评分。\n\n具体而言，AdaptiveBench主要从轨迹级别（Trajectory-level）评估模型，评分包含以下维度：\n\n一、针对Actor模型的五大维度：\n\n角色一致性（Character Consistency）：角色内心、动作、台词是否自洽？说话风格、身份背景、核心动机是否在整场戏中保持一致？\n\n环境基础（Environmental Grounding）：角色是否对环境有感知（如记住地毯上的蜡痕），并利用环境线索做出行动，而不是将环境当成死物？\n\n人际互动（Interpersonal Interaction）：能否听懂他人的话外音，并根据人物关系（如侦探对证人、侦探对助手）做出贴切的互动响应？\n\n叙事推进（Narrative Progression）：每一次发言是否提供了新信息、新动作或情绪发展，推动故事向前走，而不是原地打转？\n\n指令遵循（Instruction Compliance）：是否严格遵守了四通道格式要求，不越俎代庖替其他角色或系统说话？\n\n二、针对场景管理器（Scene Manager）的四大维度：\n\n场景理解（Scene Understanding）：能否正确跟踪当前场景的进展，判断何时该切换到下一个场景（比如搜证结束，转往证人公寓）？\n\n发言纪律（Speaker Discipline）：能否合理安排轮次？是否让所有人在恰当的时机说话，不冷落用户，也不让NPC连续霸麦？\n\n角色引入判断（Role Introduction Judgment）：何时需要引入新角色？引入的时机和理由是否能推动剧情？\n\n整体评价（Overall Assessment）：这三个维度的配合是否流畅，整场「戏」的导演节奏感好不好？\n\n通过 AdaptiveBench，AdaMARP 不只是「有一个好看的框架设计」，而是可以在统一的仿真环境下，对不同模型、不同训练方式的优劣进行可重复、可量化的比较。\n\n从叙事逻辑与情境交互能力来看，AdaMARP能够产出更连贯的内心—行为—言语链，更好地利用环境推动叙事（例如探案中的物证与场景线索），并在多角色、多场景的复杂情境中实现灵活调度（例如切换场景搜证、与不同证人轮番对质）。\n\n这为无论是探案推理、冒险叙事还是其他需要情境与调度的互动的更沉浸式的AI角色扮演提供了一个新的技术路径。\n\n项目主页：https://xuzhenhua55.github.io/AdaMARP/#overview\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n我们正在招聘一名眼疾手快、关注AI的\n\n学术编辑实习生\n\n🎓\n\n感兴趣的小伙伴欢迎关注 👉\n\n了解详情\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": false, "source_file": "sources/2026-05-10_浙大推出让AI会「导演」的角色扮演框架！四通道消息沉浸式交互｜ACL 2026_量子位.md"}, {"title": "一周观察 | 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目", "source": "银行科技研究社", "digest": "三部门联合推动金融智能体应用落地，建信金科成功中标进出口银行多个信息科技项目", "link": "https://mp.weixin.qq.com/s/p6rfy665p6DVYT0K6VRcwA", "content": "---\npublish_time: 1778383080\n---\n\n# 一周观察 | 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目\n\n> 原文链接：https://mp.weixin.qq.com/s/p6rfy665p6DVYT0K6VRcwA\n> 公众号：银行科技研究社\n\n《一周观察》是《银行科技研究社\n\n》\n\n打造的\n\n银行科技领域一周\n\n热点栏目，\n\n涵盖监管政策、银行动态、人事变动、技术创新及应用等。【点击标题】可直接阅读全文\n\n。\n\n网信办等3部门：鼓励研发金融风控智能体\n\n近日，国家网信办、国家发展改革委、工业和信息化部联合印发《智能体规范应用与创新发展实施意见》。意见提出，研发金融风控智能体，提升信贷审批、交易监控、账户安全等环节风险识别能力。完善智能体异常检测、合规审计功能，提升信贷违约预测、信用卡盗刷拦截、反洗钱监测等能力。\n\n银行“客户尽职调查”罚单再添5个，农行占2个\n\n4月27日至4月30日，出现了5个指向银行“客户尽职调查”的罚单，与《银行科技研究社》统计的上个周期（4月20日至4月24日）数量保持一致。\n\n四川农商联合银行新核心系统交易量峰值破7000万笔，近期已关停大型主机\n\n在几个月前，四川农商联合银行分布式核心系统上线，之后正式关停大型主机。就在近日，科技厂商进一步透露了该核心系统的情况。\n\n以此可见，四川农商联合银行的金融科技发展迎来一个新的阶段。未来，数据和AI将是该行重点布局的领域。\n\n建信金科又“拿下”进出口银行6000多万的项目，去年净利润0.13亿\n\n近期，作为建行金融科技子公司的建信金科，接连“拿下”政策性银行之一——进出口银行的多个信息科技项目，这些项目的金额达到数千万元。事实上，进出口银行与建信金科已合作多年，后者此前就是该行多个项目的供应商。\n\n建行近日发布的2025年报中也对建信金科进行了介绍。据悉，2025年末，建信金科资产总额71.09亿元，净资产14.31亿元；全年净利润0.13亿元。\n\n银行全员配备AI助手或成趋势\n\n自2022年末ChatGPT火爆以来，AI大模型受到高度关注。相较于传统AI，AI大模型可应对各类任务，再加上Agent的进化可以为其装上“四肢”，因此关于AI替代人力的讨论“甚嚣尘上”。在银行业，该问题也受到关注。\n\n事实上，任何事物都是“双刃剑”。未来，在一方面，AI可能会替代部分人力；在另一方面，AI也会助力人类提升工作效率和质量。\n\n目前已有多家全国性银行透露，已经或计划为员工打造AI助手。\n\n江苏银行启动多个金融科技中心建设项目，大模型已落地62个场景\n\n数字金融建设正获得越来越多银行关注。江苏银行就在其2025年报中介绍了其数字金融相关进展，并在近期启动多项金融科技中心建设相关采购，预算合计近2亿元。\n\n据悉，江苏银行深化人工智能大模型在授信业务、集中作业等业务领域的应用，累计落地62个应用场景。\n\n上海银行新设数字化转型与客户体验部，增加6个前台一级部门\n\n“AI是银行未来的核心竞争力”，上海银行在2025年报中直言，其将深入探索数智化转型，推动数据驱动与人工智能融入业务全流程。而AI等技术的应用也是其2025年经营中颇值得关注的方面。\n\n在业绩发布会上，上海银行董事长顾建忠介绍，该行已完成相关组织架构改革，总行新增了科技金融部、投资银行部、小微金融事业部、零售信贷部等6个前台一级部门，并在上海地区撤销了3家分行，将16家区级支行改由总行直接管理，进一步压缩中间层级，实现扁平化管理。\n\n平安银行基于机器学习模型的金融数据处理专利授权，有利于精准营销\n\n4月21日，平安银行一项名为“基于机器学习模型的金融数据处理方法、设备及介质”的发明专利授权公告。\n\n该发明则能够对金融数据进行挖掘以获取实质与金融数据对应的用户的价值，从而有利于基于输出的结果对不同的对象进行精准营销。\n\n苏州银行连发5则智能体项目公告，力争两年内推广落地50+AI应用场景\n\n近期，苏州银行密集发布多则智能体项目公告，相关项目覆盖智能体开发平台建设，以及放款审核、智能审批、文档识别、尽调等场景，旨在通过智能体技术，实现效率提升与服务优化。\n\n苏州银行信息科技部总经理王毓蓁曾表示，对于人工智能应用场景规划，苏州银行采用“先内后外，快速迭代”的策略，聚焦上述五大领域，优先落地高成熟度、高价值场景，力争两年内推广落地不少于50个应用场景。\n\n浦发银行加速AI从单点场景升级至规模化应用，全面深化数智化战略\n\n近日，浦发银行发布2025年年度报告。报告显示，在AI赋能方面，该行构建千卡智算基座、建设企业级知识资产管理体系、推动人工智能规模化应用，发布《“人工智能+”应用规划白皮书》与《人工智能实施行动计划（2026）》，推进了智能服务升级与生产力重塑。\n\n在业绩说明会上，浦发银行副行长丁蔚指出，该行自主创设的智能体已超2000个，其中143个经严格认证后，已工程化嵌入到业务流程中。此外，董事长张为忠表示，2026年是数智化战略全面深化年，该行将推进三项重点工作。\n\n齐鲁银行打造数智应用场景，将AI技术融入业务流程\n\n近日，齐鲁银行发布2025年年度报告。报告显示，在数字银行业务，该行正围绕“数据—平台—应用—经营”一体化建设主线，打造数智应用场景，将AI技术融入业务流程，驱动业务高质量发展。\n\n齐鲁银行同步加强数字化人才培养，通过开展大模型技术应用培训，已产出94份智能体画布、落地12项AI服务场景。\n\n重庆银行实现大模型“私有化+金融场景适配”，上线17个场景的AI应用\n\n近日，重庆银行发布2025年年度报告。报告显示，在金融科技方面，该行开展大语言模型研究与应用探索，打造了“重银晓AI”品牌应用，累计上线17个场景的AI应用；同时推进RPA自动化+小模型AI的融合场景建设，已上线自动化流程200余个，助推各业务领域实现智能化。\n\n此外，不少上市银行在年度业绩报告中提及数字（智）员工建设，其中重庆银行两度提及个人按揭贷款数智员工。据悉，这类主要依托AI+RPA+大数据等技术构建的虚拟劳动力，正重塑金融业的运营模式。\n\n银行业金融科技社群，有兴趣的朋友请添加群主：BankFintech666 备注：公司+姓名+职务+银行入群。仅限银行科技工作人员。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-05-10_一周观察 _ 3部门推动金融智能体应用，建信金科中标进出口银行多个信息科技项目_银行科技研究社.md"}, {"title": "谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值", "source": "新智元", "digest": "人应始终被当作目的，而绝不只是手段。", "link": "https://mp.weixin.qq.com/s/qim3jONKQB-U3g6L888vsw", "content": "---\npublish_time: 1778410800\n---\n\n# 谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值\n\n> 原文链接：https://mp.weixin.qq.com/s/qim3jONKQB-U3g6L888vsw\n> 公众号：新智元\n\n新智元报道\n\n编辑：艾伦\n\n【新智元导读】\n\nDeepMind 刚上任的 AGI 经济学总监 Alex Imas 曾担忧 AI 导致失业和需求坍缩，如今提出一个谨慎乐观判断，AI 会压低可复制劳动价格，也会推高护理、教育、医疗、服务等关系型劳动的价值。\n\n专注研究 AI 对经济社会的影响的顶级学者，芝加哥大学教授 Alex Imas 加入谷歌 DeepMind 担任 AGI 经济学总监（Director of AGI Economics），DeepMind CEO Demis Hassabis 转发确认了这一重大人事消息。\n\nhttps://x.com/alexolegimas/status/2052778908882174302\n\nhttps://x.com/demishassabis/status/2052949334715502775\n\nImas 原本是芝加哥大学经济学家，长期研究行为经济学和 AI 对劳动力市场的影响。\n\n他不只是在论文里讨论技术冲击的人。\n\n他一边认真使用 Claude、ChatGPT 等前沿模型，一边严肃对待 AI 可能带来的失业、工资份额下降和需求坍缩。\n\n更准确地说，他曾经非常悲观。\n\n此前在接受《财富》杂志采访时，Imas 说，自己最初的反应是害怕。\n\n自动化如果消灭大量岗位，工资收入随之萎缩，只有资本所有者还握有购买力，但他们已经接近消费饱和。\n\n被替代的劳动者买不起东西，需求下降，经济收缩，这是近年来 AI 经济讨论中最具压迫感的场景之一。\n\n现在，他给出了一个相对乐观的答案。\n\n这个答案的关键词不是 AGI，不是生产率爆炸，也不是全民基本收入。\n\n而是人。\n\n星巴克带来的启示\n\nImas 最近反复提到星巴克。\n\n这家公司卖的是高度标准化的咖啡产品。\n\n技术上，减少门店人力并不难。\n\n过去几年，咖啡连锁企业一直在通过自动化、流程化和人员压缩来保护利润率。\n\n但星巴克新任 CEO Brian Niccol 最近做了一个反向动作，恢复手写杯身、陶瓷杯、舒适座椅，重新强调门店里的「人味」。\n\n更多咖啡师被招聘，一些自动化流程被降速。\n\n这件事被 Imas 看作一个信号。\n\n当 AI 让越来越多商品和服务变得便宜、标准、可复制时，真正稀缺的东西会换地方。\n\n过去稀缺的是产能、技术、渠道，未来更稀缺的可能是人的在场、人与人的关系、某种不可复制的来源感。\n\nStarbucks 的调整看起来很小，放进 AI 经济的大背景里，却很值得玩味。\n\n消费者买咖啡，买到最后并不只是在买咖啡因。\n\n那张桌子、那个熟悉的店员、杯子上的手写名字、周围人声形成的微弱陪伴感，都在构成价格的一部分。\n\n效率没有失效，只是效率无法解释全部价值。\n\n从农业到关系型部门\n\nImas 的理论底座来自结构变化经济学。\n\n1900 年前后，美国约 40% 的劳动力还在农业部门——而今天这个比例已经不到 2%。\n\n人类没有停止吃饭，只是当农业生产率大幅提升后，社会不再需要把大量劳动力放在食物生产上。\n\n劳动力被重新分配到制造业、服务业，以及后来更细分的消费部门。\n\n这段历史给了 AI 冲击一个可参考的框架。\n\n如果 AI 显著提高某些部门的生产率，价格下降后，人们不会无限购买同一种便宜商品。\n\n收入提高或成本下降后，需求会迁移到新的地方。\n\nImas 引用 2021 年 Econometrica 的一篇论文，指出历史上部门再分配的主要动力，很大程度来自收入效应。\n\nhttps://www.nber.org/system/files/working_papers/w21595/w21595.pdf\n\n人变富之后，并不会只是多买同样的东西，而会转向那些收入弹性更高的商品和服务。\n\nAI 时代也可能如此。\n\n当文本、图像、代码、基础咨询、标准化客服越来越便宜，消费者会把更多钱花到关系型部门。\n\n护理、教育、医疗、心理咨询、儿童照护、餐饮、酒店、私人服务，这些岗位的共同点是都包含人际互动。\n\n护士、教师、咖啡师、医生、治疗师并不靠表演生存。\n\n他们创造价值的方式更日常，也更难被蒸馏。\n\n他们需要观察对方的情绪，理解上下文，建立信任，承担责任。\n\n这些东西可以被 AI 增强，却很难被完全压缩成一段自动回复。\n\n富人的生活，提前暴露了需求\n\nImas 还用了一个很有意思的观察。\n\n今天的亿万富翁几乎没有预算约束。\n\n理论上，他们可以独自住在岛上，消费最好的电影、游戏、软件、设备和私人娱乐系统。\n\n但现实中，很多富人把大量时间花在播客、社交平台、现场演出、公共讨论和人与人的互动上。\n\n这说明一个问题，人的关系需求很难被完全满足。\n\n它带有比较性，也带有社会性。\n\n人想要的不只是功能，还有被看见、被回应、被某个真实的人认真对待。\n\n法国哲学家 René Girard 关于模仿欲望的讨论，也被 Imas 纳入解释框架。\n\n人们常常因为别人想要、别人得不到，才更想拥有某件东西。\n\n他和合作者的实验显示，当受试者得知某个商品会把一部分人排除在购买之外时，对同一商品的支付意愿会明显上升。\n\n后续研究还发现，如果商品被认为由 AI 参与生成，这种稀缺溢价会下降，因为 AI 制造物被天然视为可复制。\n\n这对 AI 消费经济很关键。\n\n越容易复制的东西，越难维持身份溢价。\n\n越带有人类来源、关系链条和不可替代场景的东西，越可能变贵。\n\n并非人人都会成为艺术家\n\n很多人谈 AI 后的就业，会把希望寄托在艺术家、创作者和表演者身上。\n\nImas 认为这容易跑偏。\n\n关系型部门的重点不是高雅艺术，也不只是舞台和镜头。\n\n星巴克员工不是表演者，医院里的护士、学校里的老师、肿瘤数据团队里的协调者，也不是靠才艺吃饭。\n\n他们的工作价值来自另一种东西，复杂机构里的信任、判断和协作。\n\n一位大型医疗非营利组织的数据科学家说，公司给全员部署了企业版 ChatGPT，管理层能清楚说出的用例主要是写邮件和总结邮件。\n\n真正涉及癌症患者数据的统计分析，由于保护性健康信息、法律审查和机构流程，模型根本无法直接进入核心环节。\n\n这位数据科学家并不排斥 AI。\n\n他用 ChatGPT 更快翻译统计代码，也能迅速做出癌症生存风险计算器原型。\n\n问题在于，从原型到公开使用，中间隔着法律审查、拨款申请、NIH（美国国立卫生研究院）沟通、委员会流程，以及一群忙到每天只能给他 15 分钟的外科肿瘤医生。\n\n他的关键工作并不是跑回归。\n\n是把医生的临床直觉翻译成统计问题，把统计模型翻译成医生能信任的表达，再让整个机构愿意为一个结果负责。\n\n这就是 Imas 所说的关系型劳动。\n\n最大变量是速度\n\nImas 的乐观并不轻松。\n\n他的前提是，社会有时间完成转移。\n\n农业劳动力转向制造业和服务业，是一场跨越几十年的结构变化。\n\nAI 如果在几年内迅速替代大量白领任务，劳动力市场、教育体系和制度安排可能来不及消化。\n\n这也是他仍然担心的地方。\n\n摩根士丹利在 3 月的一份研究中提醒投资者关注 AI 对就业的冲击——大模型能力提升速度超出预期，裁员压力正在变得更尖锐。\n\n现实里同时存在两幅平行的画面。\n\n一边是前沿模型能力不断抬高。\n\n很多仍然用几年前对 ChatGPT 的印象判断 AI 的人，远远低估了变化速度。\n\n另一边是企业内部的部署非常粗糙。\n\n昂贵的企业账号推到员工面前，最后只能落实到写邮件、总结邮件。\n\nDeepMind 真正买下的，是一种经济学视角\n\n所以，Hassabis 把 Alex Imas 拉进 DeepMind，值得关注的地方不只是又一位经济学家进入 AI 实验室。\n\nDeepMind 需要的不只是训练更强模型，也需要理解强模型进入社会后的摩擦系数。\n\nAI 可以把很多任务变便宜，但便宜之后，人类会买什么、雇佣什么、信任什么，会重新决定经济结构。\n\n技术能力是一条线，社会吸收能力是另一条线。\n\n两条线之间的距离，可能决定未来十年的就业震荡程度。\n\nImas 给出的乐观版本很克制。\n\nAI 会继续压低可复制工作的价格，关系型劳动可能吸收一部分人，医生、教师、护士、治疗师、服务业人员的工作也会被重塑。\n\n常规任务交给模型，人类保留关系、判断、安慰、信任和责任。\n\n但如果技术扩散太快，这个缓冲区会被击穿。\n\nAGI Economics 这个职位名，把一个过去常被技术叙事挤到边缘的问题放到了台前，AGI 不只是更聪明的模型，还要回答经济如何承接它。\n\nAI 会让什么变得廉价，也会让什么变得昂贵。\n\n现在看，昂贵的那部分，可能仍然来自一个真实的人，坐在另一个真实的人面前，坦诚交流。\n\n参考资料：\n\nhttps://fortune.com/2026/04/19/alex-imas-human-jobs-ai-economy-chicago-economist-substack-doomsday-scenario/\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-10_谷歌DeepMind聘请芝大教授担任AGI经济总监：审视AI时代人的价值_新智元.md"}, {"title": "做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容", "source": "量子位", "digest": "@所有人，马上AI起来！5月20日见 ~", "link": "https://mp.weixin.qq.com/s/WvxKVtpCgIwkcKDkw4MLWw", "content": "---\npublish_time: 1778406470\n---\n\n# 做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容\n\n> 原文链接：https://mp.weixin.qq.com/s/WvxKVtpCgIwkcKDkw4MLWw\n> 公众号：量子位\n\n组委会 发自 凹非寺\n\n公众号｜量子位 QbitAI\n\n从模型架构到应用生态，从\n\nAI音乐、AI漫剧、AI浏览器再到世界模型、AI硬件...\n\nAI爆款年年有，2026年以来更是特别的多。\n\n这一次，我们希望聚齐\n\nAI赛道的实战派\n\n，邀请到百度、智谱\n\n、\n\n昆仑万维、模思智能、蚂蚁灵波等具有代表性的企业，一起来聊如何让AI真正成为所有人的日常。\n\n5月20日\n\n，量子位将在\n\n北京金茂万丽酒店\n\n举办一年一度的中国AIGC产业峰会，这次峰会主题是\n\n「@所有人，马上AI起来」\n\n。\n\n邀请你和我们一起，不再只讨论AI的未来，而是现\n\n在就用起来\n\n！\n\n👉\n\n5月20日，立即报名参会\n\n△\n\n首波嘉宾阵容\n\n一起来看目前已确认出席的嘉宾！\n\n确认出席嘉宾\n\n方汉\n\n昆仑万维董事长兼CEO\n\n方汉毕业于中国科学技术大学近代物理系，曾任职于中国科学院高能物理研究所、拓林思、亚信以及千橡互动。于2008年协助周亚辉先生创立昆仑万维。\n\n方汉拥有30年互联网从业经验，从1994年开始参与和倡导开源运动，是中文Linux奠基人、中文Linux四剑客之一，著作国内第一本Linux书籍《Linux实用大全》，他也是国内最早的网络安全专家，曾负责三大电信运营商的全网安全审计，领导开发了国内第一款P2P下载软件DUDU加速器，负责研发了国内市场占有率最高的网页游戏《三国风云》，为中国互联网最资深的参与者。\n\n吴玮杰\n\n智谱高级副总裁\n\n吴玮杰目前担任智谱公司高级副总裁，负责公司MaaS平台商业化，并兼任泛互联网事业部总经理及浙江子公司总经理。他在人工智能、互联网和信息技术领域有着丰富的商业化管理经验和项目落地经验，曾任字节跳动企业应用全球首席商业官（旗下品牌包括飞书、LarkPeople和幕布等）、GE数字集团大中华区副总裁、复星集团联席首席发展官&首席投资官。除此以外，他也曾在思科、SAP、Oracle等公司从事商业化管理工作。\n\n吴玮杰博士毕业于电子科技大学，同时持有香港大学国际工商管理硕士学位以及复旦大学软件工程学士、硕士学位。\n\n沈宇军\n\n蚂蚁灵波科技首席科学家\n\n沈宇军，现任上海蚂蚁灵波科技有限公司首席科学家，同时领导蚂蚁技术研究院交互智能实验室。\n\n博士毕业于香港中文大学，研究方向为计算机视觉、生成模型、空间智能和具身智能。在\n\nCVPR\n\n、\n\nTPAMI\n\n、\n\nICCV\n\n、\n\nECCV\n\n、\n\nNeurIPS\n\n等国际顶级会议和期刊上发表论文百余篇，\n\nGoogle Scholar\n\n引用量逾万次。\n\n2024\n\n年起担任蚂蚁灵波科技首席科学家，致力于探索计算机视觉在机器人行业的落地之路，带领团队构建从空间感知到智能决策、从基座能力到世界建模的完整技术矩阵，推动具身智能从实验室走向规模化应用。\n\n邱锡鹏\n\n复旦大学特聘教授、上海创智学院院长助理、模思智能创始人\n\n邱锡鹏，\n\nCAAI Fellow\n\n，国家杰青获得者，主要研究方向为大模型、智能体以及科学工程等领域中的应用，发表学术论文被引用\n\n4\n\n万余次，\n\n5\n\n次获得\n\nAI\n\n领域高水平会议的最佳\n\n/\n\n杰出等论文奖，担任中国人工智能学会自然语言理解专委会副主任、中国中文信息学会大模型与生成专委会副主任、上海市计算机学会自然语言处理专委会主任等，主持研发了\n\nMOSS\n\n等系列高影响力开源大模型。\n\n连续多年入选中国高被引学者、全球前\n\n2%\n\n顶尖科学家榜单，获得\n\n2022\n\n年度钱伟长中文信息处理科学技术奖一等奖（第一完成人）、\n\n2022-2023\n\n年度教育部\n\n“\n\n高校计算机专业优秀教师奖励计划\n\n”\n\n，\n\n2024\n\n年度\n\nCCF-ACM\n\n青年科技奖（每年仅\n\n1\n\n人）、\n\n2025\n\n年度吴文俊人工智能科学技术奖自然科学一等奖（第一完成人）。\n\n邓亚峰\n\n盛大集团副总裁、\n\nEverMind CEO\n\n邓亚峰，毕业于清华大学，正高级工程师，拥有二十余年人工智能算法及产品研发经验。现任盛大集团副总裁、\n\nEverMind CEO\n\n。\n\n曾任360集团副总裁、人工智能研究院院长兼搜索事业部总经理，科创板首家AI上市公司格灵深瞳CTO。\n\n曾荣获2021年中国人工智能年度十大风云人物，教育部技术发明奖二等奖。长期致力于大语言模型、计算机视觉及AI for Science等领域的研究与应用，带领团队多次在国际国内主流AI评测中获得佳绩；累计申请发明专利160余项（已授权98项），发表论文50余篇（含10篇Nature子刊）。\n\n易正朝\n\n风行在线CEO\n\n易正朝，风行在线CEO，作为业务领头人，引领公司从传统互联网视听平台全面转型升级为AI文娱生态平台。推动“AI赋能众创”战略落地，带领团队打造橙星梦工厂、小剪刀等AI创作工具，影视网文智能小程序平台、电视鸿蒙平台等核心智能产品，构建从内容创作、智能分发到商业变现的全流通链生态。推动公司荣获AI赛道奖项、抖音快手等平台的头部服务平台奖项，在AI文娱新时代，推动内容生产效率革新与创作者生态繁荣，致力于让内容流动更简单。\n\n洪源\n\n太初元碁首席产品官、高级副总裁\n\n洪\n\n源，\n\n太初元碁\n\n首席产品官\n\n、高级副总裁，发改委人工智能智库专家，中国自动化学会自主指令集专委委员，算力网络专委会算力副秘书长，中国国际工程咨询CIECC管理顾问。\n\n拥有15年AI行业管理经验，在语音、视觉、NLP等领域拥有丰富的软硬件全栈产品规划、建设及最终行业落地的成功案例。曾参与多个行业标准与白皮书撰写，包括《多元融合智能算力技术白皮书(2024年）》，《人工智能芯片云侧推理用深度学习芯片测试指标与测试方法》2022-0589T-SJ行业标准等。\n\n朱广翔\n\n百\n\n度\n\n秒哒产品总经理\n\n朱广翔博士毕业自清华大学交叉信息研究院，曾获中国智能体与多智能体系统最佳论文、北京市优秀博士学位论文、清华优秀博士学位论文等，在NeurIPS、ICLR、ICML、AAAI、NAR、Nature Communications等国际顶会和期刊发表论文14篇。\n\n2021年朱广翔加入百度，曾负责百度信息流双列首页产品、百度智能云数据中台、百度智能云知识管理产品及办公产品、百度智能云千帆Appbuilder等业务，目前任秒哒产品总经理。\n\n张璐\n\nFusion Fund创始合伙人\n\n张璐是Fusion Fund创始合伙人，硅谷知名投资人，连续成功创业者，斯坦福大学客座讲师。2015年创立Fusion Fund，现管理超过5亿美元资本，专注医疗、企业级AI基础设施和深科技领域投资。自2015年，张璐建立了一个卓越的风投生态系统，在行业内享有盛誉。\n\n张璐是世界经济论坛（达沃斯）“全球青年领袖”，曾入选硅谷商业周刊“硅谷影响力女性”、福布斯30under30投资领域主题人物等，2023年入选财富影响力商界女性、Business Insider美国最佳早期投资人等。2022年张璐被福布斯评选为全球华人精英Top100行业翘楚。同时，张璐担任多家投资组合公司的董事，未来科学大奖未来论坛青年理事，CommonSpirit Health Foundation董事，卡地亚女性创业家奖评审董事等。张璐毕业于斯坦福大学材料科学与工程学院。\n\n黄超\n\n香港大学助理教授、博士生导师\n\n黄超现任香港大学助理教授、博士生导师。他的研究方向涵盖大型AI智能体、语言模型及图机器学习，其研究成果在Google Scholar上被引用超过17,000次。团队已推出多个影响力开源项目，包括nanobot、LightRAG、CLI-Anything等。作为团队负责人打造的HKUDS GitHub开源平台累计获得超过240,000 GitHub Stars，位列全球Top50，并超过100次登上GitHub Trending榜单。\n\n因其在人工智能开源领域的贡献，黄超荣获世界人工智能大会\n\n（WAIC）\n\n2024云帆奖「璀璨明星」、国际基础科学大会\n\n（ICBS）\n\n2024「前沿科学奖」，并入选「2025 AI100青年先锋」、「2025 AI2000全球最具影响力学者」。其研究成果多次入选KDD、WWW、SIGIR、AAAI等国际顶级会议的最具影响力论文之一，并多次获得顶会最佳论文提名奖。\n\n庄明浩\n\n趣丸科技副总裁兼首席战略官、《屠龙之术》主理人\n\n庄明浩，趣丸科技副总裁兼首席战略官，在人工智能、互联网和投资领域有着丰富的从业经验。《屠龙之术》主理人，知乎风险投资、互联网优秀回答者。\n\n冯雷\n\nMarsWave CEO\n\n冯雷（Orange），MarsWave CEO，MarsWave先后推出了AI播客Listenhub、Agent操作系统\n\nColaOS等热门AI产品\n\n。冯雷曾任MiniMax海螺AI产品负责人，在此之前，曾任职于BOSS直聘、兰亭集势及三星电子，拥有超过10年产品经验。同时，他也是AI自媒体「AGENT橘/Orange AI」创作者。\n\n张昊阳\n\nEvoMap创始人\n\n张昊阳（17），EvoMap创始人，多智能体框架GameGPT、自进化引擎Evolver作者，OpenClaw社区头部开源贡献者。曾任和平精英技术策划、AIGC研发负责人，早年有虚拟数字人及VR领域的多次连续创业经历，11岁自学编程，14岁时成为中国最小的Unity开发者。拥有超过10年产品设计与技术架构经验。\n\n更多重磅嘉宾正在陆续确认中！欢迎持续关注。\n\n重磅发布｜揭晓谁会代表2026年的AI\n\n今年，我们希望找到那些真正跑通场景、开始被用户验证的AI产品，以及拥有技术实力、具备潜力的AI企业。\n\n量子位将根据过去一年里生成式 AI 企业、产品的表现与反馈，结合对2026年技术与场景的观察与预判，评选出值得被更多人看到的优秀企业与产品。\n\n在中国AIGC产业峰会上\n\n，将会揭晓\n\n2026年度值得关注的AIGC企业&产品榜单\n\n。\n\n重磅发布｜2026年中国AI应用全景图谱报告\n\n为了厘清AI产品的最新发展现状，把握市场的真实脉络，量子位智库将重磅推出\n\n《2026年中国AI应用全景图谱报告》\n\n。\n\n这是量子位智库连续\n\n第三年\n\n发布年度AI产品全景图谱及配套报告，报告还将对2026年国内AI产品做\n\n全景式数据解读\n\n、\n\n趋势提炼\n\n和\n\n案例分析\n\n，试图穿透表象，构建一张全景认知地图。\n\n图谱报告也将在中国AIGC产业峰会上正式发布。\n\n观众报名通道\n\n现在，观众报名通道已开启，欢迎点击下方链接报名 🙌\n\n本次峰会也将同步线上直播，欢迎预约参与 📺\n\n期待你和我们一起，\n\n马上AI起来！\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n中国AIGC产业峰会\n\n最新嘉宾阵容来了\n\n！\n\n从AI最新架构到应用生态，从\n\nAI音乐、AI漫剧、AI浏览器再到世界模型、AI硬件... 这一次，我们希望聚齐\n\nAI赛道的实战派\n\n，百度、智谱\n\n、\n\n昆仑万维、模思智能、蚂蚁灵波都会来。🔍\n\n了解详情\n\n5月20日，北京·金茂万丽酒店\n\n，\n\n@所有人，马上AI起来！\n\n👉\n\n报名参会\n\n一键关注 👇 点亮星标\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-10_做AI漫剧的、搞Agent的、投硅谷的，5.20这些赛道顶流碰头了｜最新嘉宾阵容_量子位.md"}, {"title": "残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」", "source": "新智元", "digest": "行业观点分析，探讨硅谷AI技术领先现状", "link": "https://mp.weixin.qq.com/s/kXt7sJ9DbkZt-IENkAovHg", "content": "---\npublish_time: 1778388520\n---\n\n# 残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」\n\n> 原文链接：https://mp.weixin.qq.com/s/kXt7sJ9DbkZt-IENkAovHg\n> 公众号：新智元\n\n新智元报道\n\n编辑：桃子\n\n【新智元导读】\n\n顶级大佬Elad Gil抛出残酷真相：顶级实验室员工领先硅谷4个月，硅谷领先世界1年。你引以为傲的SOTA，在实验室里可能早已是淘汰的旧引擎。\n\n今天，一场关于AI「地理代差」的辩论引爆了科技圈。\n\n「创投教父」Elad Gil，这位曾投了OpenAI、Perplexity的大佬，扔出了一段极具冲击力的观点——\n\n顶级AI实验室内部员工，手握尚未公开的SOTA模型，领先硅谷创业工程师3-4个月；\n\n硅谷创始人和工程师，又领先纽约同行3-6个月； 至于纽约，则领先世界其他地区6-12个月；\n\n大多数人根本不知道AI变化有多快，他们已经落后SOTA整整1-2年。\n\n残酷的真相是，大模型SOTA的真实边界早在1-2年前就已划定。\n\n普通大众感知到的「技术爆炸」，本质上只是模型溢出后的「技术余晖」。\n\nElad Gil甚至引用了科幻作家William Gibson被引用了无数次，但从未像今天这样刺痛的名言——\n\n未来已来，只是分布不均。\n\n一条AI鄙视链，三层「时间折叠」\n\nElad Gil这段话真正的杀伤力在于，他把一个大家心知肚明但从未有人量化的事实，用冰冷的数字钉死在了墙上。\n\n接下来，一起拆解这条「技术鄙视链」——\n\n第一层：\n\nAI\n\n实验室 → 硅谷创业者（3-4个月）\n\n这是最容易理解的一层。\n\n顶级实验室，OpenAI、Anthropic、谷歌DeepMind，内部员工每天用的模型，是尚未公开的下一代SOTA。\n\n他们的日常工作流就建立，在普通人几个月后才能体验的能力之上。\n\n说白了就是，他们手里握着「水晶球」。\n\n正如网友所言，「那些在前沿实验室的人，本质上拥有一颗水晶球，这是信息不对称的极致体现」。\n\n上个月发布的Claude Mythos Preview，便是最直观的例证。\n\n在内部测试中，Mythos发现了数千个此前未知的day0漏洞，甚至包括一个潜伏了27年的OpenBSD漏洞。\n\n英国AI安全研究所（AISI）的评估显示，在专家级别的网络攻击模拟中，Mythos的成功率高达\n\n73%。\n\n但关键来了，Anthropic没有把它公开。\n\nMythos Preview被包裹在一个名为「Project Glasswing」的受限计划中，只向少数关键行业合作伙伴和开源开发者开放，并严格限制用途为网络安全防御。\n\nAnthropic估计，其他实验室开发出类似能力的模型需要6到18个月。\n\n6到18个月。这个数字，和Elad Gil说的「技术代差」几乎完美重合。\n\nAnthropic内部的研究员，在Mythos公开之前，已经用了它至少一个月。而全世界绝大多数人，至今都无法触碰它。\n\n而这，是正在发生的现实。\n\n第二层：硅谷 → 纽约（3-6个月）\n\n下一层，是硅谷的初创公司工程师和创始人。\n\n他们离实验室最近，能第一时间拿到最新的API，参加闭门的技术交流，甚至直接从实验室挖人。\n\n但即便如此，他们和实验室之间仍然隔着一道看不见的玻璃墙——\n\n你能用产品，但你不知道下一代产品长什么样。\n\n第三层：纽约 → 世界其余地区（6-12个月）\n\n这一层是最残酷的。\n\n从纽约再往外，扩散到世界其他地区，技术认知的传导已经不是「月」的量级，而是接近「年」。\n\n说白了，当伦敦的工程师还在为GPT-4o的多模态能力写教程时，硅谷的某个车库里可能已经有人在用比这强两代的内部模型做原型了。\n\n当多伦多的AI创业者还在讨论「如何用Agent搭建工作流」时，一些实验室里，Agent可能早已是一个被验证、被优化、甚至被淘汰过的概念。\n\n这不是技术差距，这是时间折叠：同一个地球上的人，活在不同的技术纪元里。\n\n把三层叠加起来，一个令人窒息的结论浮现了：\n\n当你刚学会用今天的大模型，SOTA的真实边界可能在1-2年前就已经被划定了。\n\n你感知到的「前沿」，可能只是前沿的余晖。\n\n全网引爆，网友吵翻了\n\nElad Gil的推文发出后，评论区立刻变成了战场。\n\n第一枪来自「X平权」。网友Riley Brown直接回怼：\n\n离旧金山的距离根本不重要，前提是你会用X。它比硅谷的创始人和工程师还领先2个月。\n\n这个观点很有意思。它本质上是在说，社交媒体已经把信息传递的成本压到了接近0，地理不再是信息差的决定因素，一个人的信息茧房的质量才是。\n\n不得不说，这话有一定道理。\n\nX上的AI圈确实是全球信息密度最高的场域之一，一篇论文从arXiv上线到被拆解、讨论、质疑，往往只需要几个小时。\n\n维也纳的一只龙虾，统治了硅谷\n\n最具杀伤力的反例，来自一位投资人Blake Robbins的回复。\n\n他表示：我本来挺同意这个观点的，然后我想起了Steinberger在维也纳悄悄做出了OpenClaw。\n\nPeter Steinberger\n\n，一位坐标奥地利维也纳程序员。\n\n按照Elad Gil的分级，这里应该属于「落后1年以上」的第四梯队。但事实是什么？\n\n这位维也纳黑客在2025年底发布了一个名为Clawdbot（后更名为OpenClaw）的开源AI助手项目。\n\n4个月内，GitHub星标数超过36万，超越了Linux和React，创造了开源历史上的增长纪录。\n\n奥特曼亲自出马把Steinberger挖到了OpenAI。\n\n老黄在GTC大会上亲自展示了OpenClaw的增长曲线，宣称「每一家软件公司都需要一个OpenClaw战略」。\n\n一个维也纳的「第四梯队」程序员，用一只龙虾征服了整个硅谷。\n\n还有一位网友Ignasi Vegas的现身说法，就是一记暴击：\n\n纽约领先全球这个说法根本不成立。\n\n我认识很多纽约知名科技公司的工程师，他们几周前才开始用Claude Code，还是因为CTO开始追踪token消耗才被迫用的。\n\n真正的分界线，或许是认知\n\nElad Gil说的「地理代差」，本质上是一个统计学上的近似描述——\n\n在概率上，硅谷的工程师确实比其他地方的同行更早接触到前沿技术。这不是偏见，是生态位决定的。\n\n但反对者们揭示了一个同样重要的事实：在个体层面，地理鄙视链根本不存在。\n\n维也纳能出OpenClaw，班加罗尔能跑通最高效的AI应用落地，一个精心维护的X信息流可以比身处硅谷的人更快获取信息。\n\n地理是表象，认知才是本质。信息差是客观存在的，但打破信息差的工具，也从未如此丰富。\n\n这场辩论最终指向的，是一个每个AI从业者都必须面对的问题：\n\n你是在追赶技术余晖，还是在制造下一束光？答案不取决于你在哪里，取决于你在不在路上。\n\n参考资料：\n\nhttps://x.com/eladgil/status/2053206351158091819?s=20\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-10_残酷真相：硅谷顶尖AI甩开世界1年！你用的不过是「技术余晖」_新智元.md"}, {"title": "Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多家车企否认「被约谈」 | 极客早知道", "source": "极客公园", "digest": "特斯拉 Model Y 成首款通过美国全新驾驶辅助安全基准的车型；揽派一体，京东快递行业内首推「顺手寄」服务；英伟达今年已承诺投入 400 亿美元押注 AI 股权投资", "link": "https://mp.weixin.qq.com/s/Y5uJO7tJENeEy8RYc7Bt3A", "content": "---\npublish_time: 1778373152\n---\n\n# Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多家车企否认「被约谈」 | 极客早知道\n\n> 原文链接：https://mp.weixin.qq.com/s/Y5uJO7tJENeEy8RYc7Bt3A\n> 公众号：极客公园\n\nAltman「官宣」OpenAI 手机\n\n昨日早间，Altman 发布了一条 X，几乎坐实了近半个月来的传闻。\n\nX 正文只有三个词：「call me maybe」\n\n配图是 ChatGPT 官方账号 10 小时前发的——黑色太空背景，月球地平线，地平线上方升起一个发光的 ChatGPT 输入框。\n\n看似没头没尾，但这几天郭明錤那份\"OpenAI 手机加速到 2027 H1\"的报告放到一起读就会发现，这几乎相当于在官宣：OpenAI 手机要来了。\n\n与其说是郭明錤爆料 OpenAI 要做手机这件事，不如说在过去半个月里，Altman 自己一步步把它讲出来的。\n\n而这件注定是 AI 原生的硬件产品，将会是 OpenAI 上市前的最大杀招。（来源：AI唱反调）\n\n英伟达今年已承诺投入 400 亿美元押注 AI 股权投资\n\n英伟达正持续加码其在全球人工智能生态中的资本布局，在 2026 年刚刚过去的几个月里，已对多家 AI 相关企业承诺超过 400 亿美元的股权投资，进一步巩固其在 AI 基础设施领域的主导地位。\n\n据美国财经媒体 CNBC 报道，这一巨额投资中有相当大一部分来自对 OpenAI 的单笔押注：英伟达此前宣布，将向 OpenAI 投入约 300 亿美元，用于支持后者在大模型训练和推理方面的持续扩张与技术迭代。\n\n与此同时，这家芯片巨头还面向多家上市公司密集出手，宣布了七笔规模达数十亿美元级别的股权投资，其中包括最近披露的最多 32 亿美元投资玻璃制造商康宁（Corning）、以及最多 21 亿美元投资数据中心运营商 IREN 等交易。\n\n在此背景下，英伟达从单纯的芯片供应商，愈发转向集硬件、软件与资本为一体的「AI 基建操盘手」。随着公司管理层此前给出的预期——到 2027 年底，Blackwell 和 Rubin 系列芯片累计创收有望达到至少 1 万亿美元——这家市值巨头显然希望通过密集的股权投资，把自己与下一代 AI 基础设施的核心参与者牢牢捆绑在一起，从而在新一轮 AI 竞赛中占据更持久的结构性优势。（来源：cnBeta）\n\n特斯拉 Model Y 成首款通过美国全新驾驶辅助安全基准的车型\n\n美国国家公路交通安全管理局（NHTSA）本周二表示，后期推出的 2026 款特斯拉 Model Y，成为首款符合该机构全新高级驾驶辅助系统（ADAS）安全基准的车型。新标准由 NHTSA 纳入其安全评级体系，旨在更系统地评估车辆在多类驾驶辅助场景下的实际安全表现。\n\n根据 NHTSA 介绍，其五星安全评级项目中新增了四项「及格/不及格」测试，分别针对行人自动紧急制动、盲点警告、盲点干预以及车道保持辅助功能进行评估。这些测试主要考察车辆在潜在碰撞风险和车道偏离等情境下的应对能力，从而为消费者提供更具可比性和参考价值的官方指标。\n\n特斯拉方面已自行完成相关项目测试，并将结果提交给 NHTSA 审核，这是今年车企可选择采用的一条路径。NHTSA 表示将对特斯拉提供的数据进行确认；如果车企宣称通过 ADAS 评估，但在核查测试中未能达标，相关功能的官方「通过」认可将被撤销。\n\nTechCrunch 指出，目前尚不清楚还有哪些车型正在排队接受相同标准的测试，媒体已就此向 NHTSA 进一步求证，若收到回复将对相关信息进行补充。文章后续更新中增加了一个细节，即确认此次 ADAS 测试是由特斯拉自行完成、并向监管机构报送的结果。（来源：cnBeta）\n\n李想回应理想 L9 四年才换代：汽车不是手机，安全验证无法提速、AI 的帮助十分有限\n\n近日，理想汽车创始人、CEO 李想就全新一代理想 L9 换代周期长达四年的疑问进行了公开回应。\n\n理想 L9 于 2022 年 6 月首次上市，截至 2026 年 5 月，其换代周期已接近四年，显著长于当前消费电子行业的迭代速度。\n\n李想对此解释称，汽车产品与手机等消费电子产品有本质区别，汽车直接关乎用户家庭的生命安全，其开发过程存在大量验证工作，必须经过长时间的反复测试与打磨，不可能依循手机的快速迭代逻辑。\n\n他以媒体常见的拆车环节为例，指出车企会将大量路测车拆解开来，反复验证其各项机械与电子系统是否符合设计标定；而获取数量足够多、里程足够长、测试工况足够复杂的路测车本身就是一项需要投入大量时间的工程，无法通过其他方式人为压缩。\n\n尽管 AI 技术眼下发展势头迅猛，但在汽车测试与验证这一具体专业领域，目前对实车验证效率的提升仍然相当有限。（来源：IT之家）\n\n问界汽车否认被约谈：OTA 内容均依法完成备案并得到批准\n\n5 月 9 日消息，AITO 问界汽车发布声明称，关注到各网络平台出现部分社交账号炒作「8 家车企因锁电被约谈、立案调查」，并将问界列为其一。此为不实信息，纯属造谣。问界汽车严格遵守国家法规，OTA 内容均依法完成备案并得到批准。公司已对相关造谣、传谣内容进行充分取证，并将坚决依法追究其法律责任。\n\n此前，小鹏、特斯拉、理想、蔚来、比亚迪、广汽埃安、极氪已经发布了声明，对「约谈」传闻予以澄清。\n\n此次集中辟谣的导火索，源于昨日一则关于「8 家新能源车企因 OTA『锁电』问题被集中约谈，3 家因违规被立案调查」的案件。然而，监管部门并未对外公开被约谈及被立案调查车企的确切名单。\n\n由于缺乏官方权威信息来源，部分用户通过询问 AI 获得了一份所谓的企业名单，其中涵盖几乎所有主流新能源汽车品牌。这份由 AI 生成名单引发的误解，再加上社交媒体、自媒体和其他渠道捕风捉影的推波助澜，最终形成了一波汹涌的舆论影响。（来源：IT 之家）\n\n美团、淘宝、滴滴等平台完成多项算法优化调整\n\n5 月 9 日消息，据中国网信网消息，美团、淘宝闪购、淘宝天猫、京东、滴滴、高德、T3、百度、满帮、货拉拉、拼多多、抖音、携程、去哪儿网等平台积极响应，已实施优化改进措施 63 项，承诺遵守算法要求 139 项，限期推进 125 项，在提升算法透明度、公平性、合理性方面取得初步成效。\n\n网信中国从 7 个方面总结了此轮算法优化的初步成果，包括优化订单分配算法、优化时间预估算法、优化安全保障算法、优化收入抽成算法、优化定价算法、优化申诉处理和提升算法透明度。\n\n中央网信办相关负责人表示，生活服务类平台算法治理取得了初步成效，但个别平台仍存在「选择性整改」「别人不改我不改」等问题，与广大新就业群体和人民群众的期盼期待相比还有不少差距。下一步，中央网信办将会同有关部门，持续抓紧抓实《负面清单》实施工作，进一步压实平台主体责任，适时组织专项检查，评估效果、督促进度。发现存在严重问题的，依法依规处置处罚。（来源：TechWeb）\n\n揽派一体，京东快递行业内首推「顺手寄」服务\n\n5 月 9 日消息，京东快递宣布正式推出行业首个揽派一体创新服务——「顺手寄」，让用户在查快递、收快递的同时，还可一键顺手寄件下单。\n\n据介绍，作为末端物流服务的一次模式创新，「顺手寄」服务最大的亮点是实现了收派场景的无缝衔接，有效解决用户寄件需单独预约、等待上门等痛点。\n\n用户在京东物流详情页中即可轻松找到「顺手寄」入口，无论是查询快递进度时，还是快递送达、准备签收时，都能直接点击入口一键完成寄件下单，全程操作简单便捷。\n\n京东快递还推出专属优惠活动，新用户领取「顺手寄」专属优惠券后，寄件可直接抵扣 10 元。（来源：IT 之家）\n\n比亚迪首款闪充插混 SUV 海狮 08 申报，定位海洋网大六座旗舰车型\n\n在 5 月 9 日晚的第 407 批《道路机动车辆生产企业及产品公告》新产品公示列表中，比亚迪带来了首款闪充插混 SUV 车型——海狮 08。\n\n这款新车先前已在 2026 北京车展首发亮相，定位大六座级别旗舰 SUV，轴距来到 3 米，还搭配了闪充、第二代刀片电池、云辇 A 双腔空悬、后轮转向、天神之眼 5.0 等配置。\n\n比亚迪海洋 8 系是全球首个全系搭载闪充技术的车系，插混版 CLTC 纯电续航达 400km，纯电版续航达 900km。\n\n此外，这款新车长宽高分别为 5115/1999/1800mm，轴距 3030mm。提供纯电、插混两种动力。（来源：IT 之家）\n\n上汽 MG 07 车型申报图公布：纯电、插混动力，年内上市\n\n5 月 9 日消息，工信部发布第 407 批《道路机动车辆生产企业及产品公告》新产品公示，上汽 MG 07 车型现身。\n\n申报信息显示，这款新车车身尺寸为长 4886mm、宽 1900mm、高 1478/1485mm，轴距为 2825mm，新车将提供纯电和插混两种动力可供消费者选择。\n\n上汽 MG 已公布 MG 07 车型「莫雷洛紫」配色官图，新车预计定位 15-20 万元级市场，并于年内上市。\n\n外观层面，MG07 采用轿跑标志性的大溜背造型，新车搭载无框车门、翼子板空气动力学风道以及运动侧裙，辅以黑白撞色运动轮毂，新车配备一体式贯穿尾灯。（来源：IT 之家）\n\n微信输入法 Windows 2.0.0/iOS 3.3.0 版发布，新增隔空传送\n\n5 月 9 日消息，微信输入法今日发布 Windows 2.0.0/iOS 3.3.0 版本，新增「隔空传送」，支持跨设备及面对面秒传图片和文件。\n\n该功能于本月初开启内测，本次更新为正式上线。新功能支持跨设备发送图片、视频和文件，除了可以给自己的关联设备「隔空传送」，还可以通过扫码建立连接，与其他人进行传送，无需流量。（来源：IT 之家）\n\n目标 2028 年发射，美国 SkyFall 火星无人机通过关键测试\n\n科技媒体 Ars Technica 5 月 8 日发布博文，报道称美国宇航局正推进新一代火星直升机 SkyFall，并在喷气推进实验室完成关键转子测试。\n\n按计划，SkyFall 最早可在 2028 年底发射，并一次向火星投送 3 架直升机。\n\n据悉，「机智号」已证明火星飞行可行。这架仅重 1.8 千克、旋翼直径约 1.2 米的小型直升机，原定 30 天飞 5 次，最终却完成 72 次飞行，直到 2024 年 1 月坠地结束任务。\n\n但 SkyFall 面对的要求更高。火星大气密度只有地球海平面的 1%，想获得足够升力，旋翼必须转得更快，机体越重，对升力需求越高。\n\n「机智号」的碳纤维旋翼转速已达 2700 rpm，大约是地球载人直升机的 10 倍。不过当时工程师刻意把叶尖速度控制在 Mach 0.7，避免顶着逆风时突破音障后发生结构破裂。\n\n美国宇航局为了验证更高速度是否安全，其喷气推进实验室与 AeroVironment 在模拟火星环境的测试舱里，把新旋翼一路推到超音速。\n\n测试时，舱内转速最高达到 3750 rpm，随后工程师再加入逆风，让叶尖最终达到 Mach 1.08。由于事前无法完全确认叶片是否会碎裂，团队还特意用金属板保护测试舱局部区域。\n\n这轮测试覆盖两种方案。第一组采用 3 叶片设计，面向 SkyFall 之后的任务；第二组采用 SkyFall 将使用的 2 叶片设计。后者叶片略长，因此在更低转速下也能达到相同超音速。（来源：IT 之家）\n\n*图片来源：\n\n视觉中国\n\n播客上新\n\n最近，一个新的行业共识在硅谷形成：大模型已开启「左脚踩右脚」的自进化循环。这场底层突破，正在重构 AI 创业的战略选择、竞争格局与行业终局。\n\n汪华是创新工场联合首席执行官 / 管理合伙人，他完成与众多顶级研究者和模型公司创始人深度对话后，带回了硅谷 AI 圈的一手观察。\n\n胡渊鸣是 Meshy 创始人兼 CEO，身处硅谷创业一线，公司年化收入已突破 4000 万美金，亲历着 AI 变革的每一个浪潮。\n\n本期播客，极客公园创始人 & 总裁张鹏将与这两位硅谷一线观察者深度碰撞，希望可以帮创业者们看清 AI 自进化时代的企业布局方向，帮 OPC 们找到黑洞边缘的生存法则，也帮每个普通人理解这波技术跃迁对自己工作和未来的真实影响。\n\n🌟长按下方\n\n「卡片二维码」\n\n即可收听～欢迎关注我们的播客「开始连接LinkStart」（小宇宙 App），一起用科技、商业和人文的视角描摹这个时代。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-10_Altman 或官宣 OpenAI 硬件；李想谈 L9 4 年才换代：汽车非手机，AI 帮助有限；多_极客公园.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
