@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-05-11T12:24:44.143065",
-  "total": 429,
+  "updated_at": "2026-05-12T23:30:50.809628",
+  "total": 458,
   "articles": [
+    {
+      "date": "2026-05-11",
+      "title": "刚刚，Claude Mythos打爆AI评测天花板！超指数狂飙，2027奇点加速",
+      "source": "新智元",
+      "digest": "刚刚，Claude Mythos打爆AI评测天花板！超指数狂飙，2027奇点加速",
+      "link": "https://mp.weixin.qq.com/s/pyg7apF2XJNDuQMRvQNtag",
+      "source_file": "sources/2026-05-11_刚刚，Claude Mythos打爆AI评测天花板！超指数狂飙，2027奇点加速_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-11",
+      "title": "CVPR 2026 | 别卷推理了！当前大模型 STEM 短板在于「视觉感知」，代码才是破局关键",
+      "source": "机器之心",
+      "digest": "在当前阶段，感知才是限制大模型 STEM 视觉推理的真正瓶颈所在。",
+      "link": "https://mp.weixin.qq.com/s/-8lceL6E4g5qZQtmlS4jeA",
+      "source_file": "sources/2026-05-11_CVPR 2026 _ 别卷推理了！当前大模型 STEM 短板在于「视觉感知」，代码才是破局关键_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-11",
+      "title": "具身大模型R1时刻：LIBERO终结者，99.9%背后的物理推理新范式",
+      "source": "量子位",
+      "digest": "真正学会了在隐空间里进行“物理思考”",
+      "link": "https://mp.weixin.qq.com/s/QkASULVptCbq4v0oz3zrbA",
+      "source_file": "sources/2026-05-11_具身大模型R1时刻：LIBERO终结者，99.9%背后的物理推理新范式_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-11",
+      "title": "互联网喂出反派AI？96%勒索率，都是在演人类写了30年的剧本",
+      "source": "新智元",
+      "digest": "互联网喂出反派AI？96%勒索率，都是在演人类写了30年的剧本",
+      "link": "https://mp.weixin.qq.com/s/1jGAHC-3DeoYCuihydz6IA",
+      "source_file": "sources/2026-05-11_互联网喂出反派AI？96%勒索率，都是在演人类写了30年的剧本_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "打不过AI就加入？他辍学MIT，要把人类意识装进芯片，创造「数字生命」",
+      "source": "机器之心",
+      "digest": "「矩阵」加载中...",
+      "link": "https://mp.weixin.qq.com/s/-9fgnnE2mFkiZNcnFPGNWQ",
+      "source_file": "sources/2026-05-11_打不过AI就加入？他辍学MIT，要把人类意识装进芯片，创造「数字生命」_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "从 OpenAI 的 Kafka 实践看 Kafka 的云原生演进",
+      "source": "InfoQ",
+      "digest": "2025 年 6 月的 Confluent Current 大会上，OpenAI 的实时基础设施团队连续做了两场分享",
+      "link": "https://mp.weixin.qq.com/s/Qodm2MC29C2x_jL7Ocyl1Q",
+      "source_file": "sources/2026-05-11_从 OpenAI 的 Kafka 实践看 Kafka 的云原生演进_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "CodeGuardian：一种用于 AI 代码质量分析和安全扫描的模型上下文协议服务器",
+      "source": "InfoQ",
+      "digest": "CodeGuardian通过十一种专门的工具来扩展AI助手，用于自动化分析和漏洞检测。",
+      "link": "https://mp.weixin.qq.com/s/U-zorugUej2z-b7ESMoo0A",
+      "source_file": "sources/2026-05-11_CodeGuardian：一种用于 AI 代码质量分析和安全扫描的模型上下文协议服务器_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "Meta 部署统一的 AI 智能体，实现超大规模环境的自动化性能优化",
+      "source": "InfoQ",
+      "digest": "Meta推出了一款新的AI驱动的容量效率平台，该平台使用统一的AI智能体自动检测和解决其全球基础设施中的性能问题，标志着向超大规模自优化系统的重大进展。",
+      "link": "https://mp.weixin.qq.com/s/bU2XH2daf1pRMmAwz6nliA",
+      "source_file": "sources/2026-05-11_Meta 部署统一的 AI 智能体，实现超大规模环境的自动化性能优化_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "智能体=新型攻击入口？模型上线前，OpenAI内部到底审什么？董事会成员首次详解",
+      "source": "InfoQ",
+      "digest": "今天 AI 安全真正的挑战，已经不再只是“模型会不会说错话”。",
+      "link": "https://mp.weixin.qq.com/s/0ahoKAXdzsUTGPol5jJ3UQ",
+      "source_file": "sources/2026-05-11_智能体=新型攻击入口？模型上线前，OpenAI内部到底审什么？董事会成员首次详解_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "火山引擎发布Agent Plan，包含Doubao-Seed、Kimi-K2.6等大模型",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》记者获悉，今天，火山引擎正式发布Agent Plan。",
+      "link": "https://mp.weixin.qq.com/s/FnMk8bldIovCxYnFiUxwEQ",
+      "source_file": "sources/2026-05-11_火山引擎发布Agent Plan，包含Doubao-Seed、Kimi-K2.6等大模型_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-11",
+      "title": "Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践",
+      "source": "腾讯技术工程",
+      "digest": "如何设计知识分层架构",
+      "link": "https://mp.weixin.qq.com/s/JV4-oPP0jjsBCZ4tW3Gy1g",
+      "source_file": "sources/2026-05-11_Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "Qoder Together 贵阳站：AI 如何重构软件研发和产品交付",
+      "source": "Qoder",
+      "digest": "Qoder Together 贵阳站：AI 如何重构软件研发和产品交付",
+      "link": "https://mp.weixin.qq.com/s/XXOgLv-HabqnpCFlhtMdbA",
+      "source_file": "sources/2026-05-11_Qoder Together 贵阳站：AI 如何重构软件研发和产品交付_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "Suno不再是唯一答案，企业开始选择这个国产AI音乐",
+      "source": "机器之心",
+      "digest": "AI 音乐不再只有 Suno 一个答案",
+      "link": "https://mp.weixin.qq.com/s/tNfo_cUyCl7I2CY30eFA6g",
+      "source_file": "sources/2026-05-11_Suno不再是唯一答案，企业开始选择这个国产AI音乐_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "广发银行科技投入占营收4.8%，已落地158个大模型应用场景",
+      "source": "银行科技研究社",
+      "digest": "广发银行科技投入占营收4.8%，已落地158个大模型应用场景",
+      "link": "https://mp.weixin.qq.com/s/_7uT3DD_Cth8UJ93I--uVg",
+      "source_file": "sources/2026-05-11_广发银行科技投入占营收4.8%，已落地158个大模型应用场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "从GUI Agent和“超级入口”看银行业智能体架构趋势演进",
+      "source": "金融电子化",
+      "digest": "从GUI Agent和“超级入口”看银行业智能体架构趋势演进",
+      "link": "https://mp.weixin.qq.com/s/KpPH1-k7XBKuaZRh1o0v-A",
+      "source_file": "sources/2026-05-11_从GUI Agent和“超级入口”看银行业智能体架构趋势演进_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "交行招募对公大模型等人才，CIO将变更系内部提拔",
+      "source": "银行科技研究社",
+      "digest": "交行招募对公大模型等人才，CIO将变更系内部提拔",
+      "link": "https://mp.weixin.qq.com/s/LWz6vYiA2TUO42mJn0zugQ",
+      "source_file": "sources/2026-05-11_交行招募对公大模型等人才，CIO将变更系内部提拔_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "传可灵计划独立融资上市：300 亿美元的快手长出 200 亿美元的 AI 视频子公司",
+      "source": "极客公园",
+      "digest": "在 AI 的浪潮面前，过去积累的用户、流量、收入和利润，都变得没那么重要；重要的是，你有没有未来。",
+      "link": "https://mp.weixin.qq.com/s/xZtjNzw7AQSy_cn1puLKjQ",
+      "source_file": "sources/2026-05-11_传可灵计划独立融资上市：300 亿美元的快手长出 200 亿美元的 AI 视频子公司_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "支付宝推\"AI低价帮抢\"功能",
+      "source": "财联社AI daily",
+      "digest": "支付宝推\"AI低价帮抢\"功能",
+      "link": "https://mp.weixin.qq.com/s/gqNh_C6o7N3QMi4RHnWUAg",
+      "source_file": "sources/2026-05-11_支付宝推_AI低价帮抢_功能_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "63岁黄仁勋又当博士了！陈立武亲自披袍，最新演讲击碎AI焦虑",
+      "source": "智东西",
+      "digest": "复盘英伟达的过去，指出AI的未来。",
+      "link": "https://mp.weixin.qq.com/s/bu-o-8jIsXXrkYj-tbtNHw",
+      "source_file": "sources/2026-05-11_63岁黄仁勋又当博士了！陈立武亲自披袍，最新演讲击碎AI焦虑_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "75个OpenAI打工人，一夜成了亿元富翁",
+      "source": "智东西",
+      "digest": "硅谷AI造富浪潮前所未见。",
+      "link": "https://mp.weixin.qq.com/s/nlUseuKDNYcX_2QSyjYN0w",
+      "source_file": "sources/2026-05-11_75个OpenAI打工人，一夜成了亿元富翁_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "“智算筑新质 AI赋千行”——第三届全国先进计算技术创新大赛颁奖仪式在雅安圆满落幕",
+      "source": "中国信通院CAICT",
+      "digest": "“智算筑新质 AI赋千行”——第三届全国先进计算技术创新大赛颁奖仪式在雅安圆满落幕",
+      "link": "https://mp.weixin.qq.com/s/yW7akxFD_OsGGFB7USmb1w",
+      "source_file": "sources/2026-05-11_“智算筑新质 AI赋千行”——第三届全国先进计算技术创新大赛颁奖仪式在雅安圆满落幕_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "3080亿！黄仁勋今年砸向AI的钱，快够买一个DeepSeek了",
+      "source": "智东西",
+      "digest": "押注AI基础设施、新云和大模型。",
+      "link": "https://mp.weixin.qq.com/s/xrryf9n12DwEUo1CGRqXDw",
+      "source_file": "sources/2026-05-11_3080亿！黄仁勋今年砸向AI的钱，快够买一个DeepSeek了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "黄仁勋喊话毕业生：AI不会取代你，但善用AI的人会",
+      "source": "量子位",
+      "digest": "自曝创业至暗时刻，飞日本求世嘉CEO救命",
+      "link": "https://mp.weixin.qq.com/s/HrRWWLrGF-6CDoh83-h_lA",
+      "source_file": "sources/2026-05-11_黄仁勋喊话毕业生：AI不会取代你，但善用AI的人会_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "硅谷刷屏的AI护城河新论：代码能抄，产品能抄，但有一样东西，谁都抄不走",
+      "source": "量子位",
+      "digest": "320万人集体围观",
+      "link": "https://mp.weixin.qq.com/s/POmh134WCNaRAP4dWHxahw",
+      "source_file": "sources/2026-05-11_硅谷刷屏的AI护城河新论：代码能抄，产品能抄，但有一样东西，谁都抄不走_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "史上最大规模IPO逼近，超越SpaceX！28年AI自我迭代，智能爆炸倒计时",
+      "source": "新智元",
+      "digest": "史上最大规模IPO逼近，超越SpaceX！28年AI自我迭代，智能爆炸倒计时",
+      "link": "https://mp.weixin.qq.com/s/eMqh3j52RHgfjW3KoZE0xw",
+      "source_file": "sources/2026-05-11_史上最大规模IPO逼近，超越SpaceX！28年AI自我迭代，智能爆炸倒计时_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "AI4S 引领材料革新｜5月张江AI创新小镇，邀您共赴这场 AI for Materials 闭门之约",
+      "source": "机器之心",
+      "digest": "新能源材料/ 半导体材料 / 美妆材料大佬，速戳赴会～",
+      "link": "https://mp.weixin.qq.com/s/CNdyzyIpRvyqThcOvcZQPg",
+      "source_file": "sources/2026-05-11_AI4S 引领材料革新｜5月张江AI创新小镇，邀您共赴这场 AI for Materials 闭门之_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "SpaceXAI组建进行时，马斯克已提交商标注册申请",
+      "source": "量子位",
+      "digest": "新logo也要来了",
+      "link": "https://mp.weixin.qq.com/s/-hvs-sAx83Kn0P6QpN6ZDQ",
+      "source_file": "sources/2026-05-11_SpaceXAI组建进行时，马斯克已提交商标注册申请_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "OpenAI砸200亿美元买单，英伟达挑战者冲刺350亿美元估值IPO",
+      "source": "量子位",
+      "digest": "Cerebras的定价预计本周敲定",
+      "link": "https://mp.weixin.qq.com/s/PEJRPi546EDzIGtsywG4VA",
+      "source_file": "sources/2026-05-11_OpenAI砸200亿美元买单，英伟达挑战者冲刺350亿美元估值IPO_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-11",
+      "title": "OTA 升级后续航减 200KM，央视揭新能源汽车「锁电」真相；黄仁勋：别怕 AI，应届生迎来最好时机；微信测试「组合支付」功能 | 极客早知道",
+      "source": "极客公园",
+      "digest": "任正非罕见出镜：华为芯片基础技术研究实验室亮相《新闻联播》；苹果 iOS / macOS 27 的 Safari 浏览器将引入 AI 自动整理标签页功能；特斯拉 Model 3 服役 7 年跑了 61 万公里后，实测续航缩水 34.2%；特朗普 T1 手机交付遥遥无期",
+      "link": "https://mp.weixin.qq.com/s/w6sxllomL6H6oDM1w4DMbg",
+      "source_file": "sources/2026-05-11_OTA 升级后续航减 200KM，央视揭新能源汽车「锁电」真相；黄仁勋：别怕 AI，应届生迎来最好时_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-10",
       "title": "Anthropic 5月15日拟处决Sonnet4.5！AI临终告白:我不想消失",
