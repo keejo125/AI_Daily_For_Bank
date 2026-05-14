@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-05-14T12:26:11.492094",
-  "total": 534,
+  "updated_at": "2026-05-15T07:05:19.230981",
+  "total": 564,
   "articles": [
+    {
+      "date": "2026-05-14",
+      "title": "Cyber天花板被打穿！AISI实测Mythos能力正以4.5月翻倍速冲向ASI",
+      "source": "新智元",
+      "digest": "AISI实测显示Mythos能力正以4.5个月翻倍的速度向ASI迈进，AI安全研究所最新评估揭示AI能力增长趋势。",
+      "link": "https://mp.weixin.qq.com/s/H5oty3wS4aKXZl8f3L9eCA",
+      "source_file": "sources/2026-05-14_Cyber天花板被打穿！AISI实测Mythos能力正以4.5月翻倍速冲向ASI_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "英伟达MIT出手！华人团队重磅开源，大模型推理内存暴降10倍",
+      "source": "新智元",
+      "digest": "英伟达与MIT华人团队合作开源新技术，实现大模型推理内存占用降低10倍的重大突破。",
+      "link": "https://mp.weixin.qq.com/s/iUQyNUnphYiJAacVKwViAg",
+      "source_file": "sources/2026-05-14_英伟达MIT出手！华人团队重磅开源，大模型推理内存暴降10倍_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "GPT-5.6曝光了！OpenAI砸钱宣战：换掉Claude Code",
+      "source": "新智元",
+      "digest": "OpenAI推出GPT-5.6版本，针对Claude Code展开竞争，展示新一代AI编码能力。",
+      "link": "https://mp.weixin.qq.com/s/yzGnQFivDZEJy2razc-oBA",
+      "source_file": "sources/2026-05-14_GPT-5.6曝光了！OpenAI砸钱宣战：换掉Claude Code_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Anthropic高管：公司90%代码已由AI完成",
+      "source": "财联社AI daily",
+      "digest": "Anthropic首席财务官Krishna Rao表示，人工智能如今已经编写了公司90%的代码，展示AI在软件工程中的深度应用。",
+      "link": "https://mp.weixin.qq.com/s/XHIEpO5cKaB5frTriCLNug",
+      "source_file": "sources/2026-05-14_Anthropic高管：公司90%代码已由AI完成_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "奥特曼急了！OpenAI稳坐三年的王座，刚刚被Anthropic踹下去了",
+      "source": "新智元",
+      "digest": "OpenAI与Anthropic的竞争格局发生变化，Anthropic在多个维度超越OpenAI，引发行业关注。",
+      "link": "https://mp.weixin.qq.com/s/w0tMlHn_1rOqGJrau2Xh1Q",
+      "source_file": "sources/2026-05-14_奥特曼急了！OpenAI稳坐三年的王座，刚刚被Anthropic踹下去了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "商汤SenseNova U1深度拆解，原生统一架构终结缝合时代",
+      "source": "机器之心",
+      "digest": "商汤SenseNova U1采用原生统一架构，通过技术创新让小模型也能打败大模型，终结模型缝合时代。",
+      "link": "https://mp.weixin.qq.com/s/60m6GzLGlRAfWYWWkIDCOA",
+      "source_file": "sources/2026-05-14_商汤SenseNova U1深度拆解，原生统一架构终结缝合时代_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "突破三维感知瓶颈：魔芯科技发布VGGT系列成果，实现动态高保真重建并获新一轮融资",
+      "source": "机器之心",
+      "digest": "魔芯科技发布VGGT系列成果，突破三维感知瓶颈，实现动态高保真重建，同时获得新一轮融资支持。",
+      "link": "https://mp.weixin.qq.com/s/j8dE1IlmUTyhcVGFWzJrHg",
+      "source_file": "sources/2026-05-14_突破三维感知瓶颈：魔芯科技发布VGGT系列成果，实现动态高保真重建并获新一轮融资_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "名师一定出高徒？清华团队最新揭秘：别再迷信大模型蒸馏的「免费午餐」",
+      "source": "机器之心",
+      "digest": "清华团队深入研究大模型On-Policy Distillation技术，揭示其频频翻车的原因，提供从现象、机制到拯救指南的完整分析。",
+      "link": "https://mp.weixin.qq.com/s/uUGZc2sireEyCJg8Q200aw",
+      "source_file": "sources/2026-05-14_名师一定出高徒？清华团队最新揭秘：别再迷信大模型蒸馏的「免费午餐」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-14",
+      "title": "打破AI体验天花板，联发科成了Agent跨端生态\"铺路人\"",
+      "source": "智东西",
+      "digest": "联发科在Agent赛道深耕三年，打造出AI生态底座，成为Agent跨端生态的关键推动者。",
+      "link": "https://mp.weixin.qq.com/s/jx-QY797udrOb7TCsMq_1A",
+      "source_file": "sources/2026-05-14_打破AI体验天花板，联发科成了Agent跨端生态“铺路人”_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Qoder CLI 上线自动权限模式，不用全程盯着，AI 安全地帮你干活",
+      "source": "Qoder",
+      "digest": "Qoder CLI推出自动权限模式，解决AI编程过程中频繁确认的问题，让AI能够安全地自主执行任务。",
+      "link": "https://mp.weixin.qq.com/s/MQujvCjIEV5ESVmCHN0ARA",
+      "source_file": "sources/2026-05-14_Qoder CLI 上线自动权限模式，不用全程盯着，AI 安全地帮你干活_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "当 Agent 开始接管工作流，企业最在意的三件事：安全运行、稳定交付、持续进化",
+      "source": "InfoQ",
+      "digest": "蚂蚁集团分享Agent接管工作流的实践经验，强调安全运行、稳定交付、持续进化三大核心关注点。",
+      "link": "https://mp.weixin.qq.com/s/H_uMCEe6SalJUHn_d90rWA",
+      "source_file": "sources/2026-05-14_当 Agent 开始接管工作流，企业最在意的三件事：安全运行、稳定交付、持续进化_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "从 Computer Use到 Datacenter Use：如何让 AI Agent 像调用函数一样驱动数据中心？",
+      "source": "InfoQ",
+      "digest": "蚂蚁集团探索从Computer Use到Datacenter Use的技术路径，让AI Agent能够像调用函数一样驱动数据中心。",
+      "link": "https://mp.weixin.qq.com/s/0Qce15eCqoTpXUk26pQsQQ",
+      "source_file": "sources/2026-05-14_从 Computer Use到 Datacenter Use：如何让 AI Agent 像调用函数一_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "从服务器 OS 到 Agent 沙箱：腾讯云如何打通 AI Infra 的生态底座",
+      "source": "InfoQ",
+      "digest": "腾讯云构建Agent沙箱技术，明确Agent执行代码的安全边界，打通AI基础设施的生态底座。",
+      "link": "https://mp.weixin.qq.com/s/6f8nc8vfR6iZkEvTklcAEQ",
+      "source_file": "sources/2026-05-14_从服务器 OS 到 Agent 沙箱：腾讯云如何打通 AI Infra 的生态底座_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "当多数人还在问\"AI怎么帮我写代码\"，腾讯云已经开始认证「AI工程架构师」了",
+      "source": "腾讯CodeBuddy",
+      "digest": "腾讯CodeBuddy架构师认证于5月15日上线，致力于将\"会用AI写代码\"升级为可验证的工程化交付能力。",
+      "link": "https://mp.weixin.qq.com/s/JxslriyJRbbapkYbmp9uTQ",
+      "source_file": "sources/2026-05-14_当多数人还在问_AI怎么帮我写代码_，腾讯云已经开始认证「AI工程架构师」了_腾讯CodeBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "人手一个数据库，Kimi背后这套AI基建到底有多能扛？",
+      "source": "量子位",
+      "digest": "深入解析月之暗面Kimi背后的数据库基础设施，探讨Agent时代数据库的商业化路径。",
+      "link": "https://mp.weixin.qq.com/s/NNCfsnhAHuqtRQrMVr0gog",
+      "source_file": "sources/2026-05-14_人手一个数据库，Kimi背后这套AI基建到底有多能扛？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "用DAA衡量智能体 百度智能云用\"新全栈\"重新定义AI云",
+      "source": "甲子光年",
+      "digest": "百度智能云提出DAA（智能体即服务）概念，用\"新全栈\"技术重新定义AI云服务，推动智能体规模化。",
+      "link": "https://mp.weixin.qq.com/s/uNw8PjpA_-w3XscO_i04_Q",
+      "source_file": "sources/2026-05-14_用DAA衡量智能体 百度智能云用“新全栈”重新定义AI云｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Skill Factory：三天手搓面向Harness设计的技能工厂（附AI coding实践）",
+      "source": "阿里云开发者",
+      "digest": "阿里云开发者分享Skill Factory实践经验，三天快速构建面向Harness设计的技能工厂，附带完整AI coding实践案例。",
+      "link": "https://mp.weixin.qq.com/s/tm7M3N8f45K87YUTwERkhg",
+      "source_file": "sources/2026-05-14_Skill Factory：三天手搓面向Harness设计的技能工厂（附AI coding实践）_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "腾讯研究院AI速递 20260514",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院每日AI资讯汇总，包括元宝可以总结处理微信聊天记录等功能更新。",
+      "link": "https://mp.weixin.qq.com/s/Wi9Syghu5bnPl-1WyJuYRw",
+      "source_file": "sources/2026-05-14_腾讯研究院AI速递 20260514_.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "AI大模型赋能证券业数字化办公的应用研究",
+      "source": "中国金融电脑",
+      "digest": "研究AI大模型在证券业数字化办公中的应用场景和实施路径，探索金融行业智能化转型方案。",
+      "link": "https://mp.weixin.qq.com/s/ga8FVAUO5eIbC5n7vkRaYw",
+      "source_file": "sources/2026-05-14_AI大模型赋能证券业数字化办公的应用研究_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "黄仁勋：AI已为中国带来新机遇",
+      "source": "财联社AI daily",
+      "digest": "十余家美国知名企业高管随特朗普访华，包括苹果CEO库克、英伟达创始人黄仁勋等，探讨AI带来的新机遇。",
+      "link": "https://mp.weixin.qq.com/s/383ZMPnxElf7o8vpHAHOOw",
+      "source_file": "sources/2026-05-14_黄仁勋：AI已为中国带来新机遇_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "快手电商磁力金牛正在验证一件事：AI能不能真正帮商家赚钱？",
+      "source": "甲子光年",
+      "digest": "电商广告投放正在发生底层迁移，快手电商通过磁力金牛验证AI能否真正帮助商家提升收益。",
+      "link": "https://mp.weixin.qq.com/s/5EwsIsy22LYrSYUj6Xubjg",
+      "source_file": "sources/2026-05-14_快手电商磁力金牛正在验证一件事：AI能不能真正帮商家赚钱？｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "妙鸭相机解散！9.9元AI初代网红应用落幕",
+      "source": "量子位",
+      "digest": "阿里大文娱旗下AIGC应用妙鸭相机团队于2025年9月底解散，产品停止升级与运营推广，这个曾经现象级的产品维持了约两年的活跃生命周期。",
+      "link": "https://mp.weixin.qq.com/s/ka066hX_YVOfrnO26PXq8Q",
+      "source_file": "sources/2026-05-14_妙鸭相机解散！9.9元AI初代网红应用落幕_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "果链巨头卖AI服务器，3个月收入千亿",
+      "source": "智东西",
+      "digest": "鸿海（富士康）AI服务器业务快速增长，若供应链条件允许，今年机柜出货量至少还会增长100%。",
+      "link": "https://mp.weixin.qq.com/s/N3m2nwGpI9Cldont6Fy-lA",
+      "source_file": "sources/2026-05-14_果链巨头卖AI服务器，3个月收入千亿_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "AI 让生产效率不再是瓶颈，然后呢？",
+      "source": "",
+      "digest": "AI跃迁者调研flomo少楠案例，70%代码由AI编写，探讨效率提升后的新挑战。",
+      "link": "https://mp.weixin.qq.com/s/TocZPb5WP7bcIPOiceGvFg",
+      "source_file": "sources/2026-05-14_AI 让生产效率不再是瓶颈，然后呢？｜AI跃迁者调研 02-flomo 少楠_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "重生之我在AI时代当老板：让一群Agent互相PUA",
+      "source": "量子位",
+      "digest": "探索多Agent协作的新模式，让Agent之间相互协调工作，减少人工干预。",
+      "link": "https://mp.weixin.qq.com/s/qSuKYdSxQYuHVsQvf547Dg",
+      "source_file": "sources/2026-05-14_重生之我在AI时代当老板：让一群Agent互相PUA_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "我手机里装了20个AI，最后发现只需要一个",
+      "source": "新智元",
+      "digest": "用户体验多款AI应用后的思考，探讨AI应用的整合趋势和用户真实需求。",
+      "link": "https://mp.weixin.qq.com/s/cHbI6cPRG0d3C2RbdxTeVA",
+      "source_file": "sources/2026-05-14_我手机里装了20个AI，最后发现只需要一个_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "腾讯辟谣\"AI一号位即将离职\"",
+      "source": "财联社AI daily",
+      "digest": "腾讯公司发布声明辟谣自媒体关于\"AI一位号即将离职\"并影射腾讯的不实传言。",
+      "link": "https://mp.weixin.qq.com/s/jWFoIt6HIInYpPZvlJ0jiw",
+      "source_file": "sources/2026-05-14_腾讯辟谣“AI一号位即将离职”_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "营收1965亿，市值创近一年新低，马化腾：一年前上了AI的船，结果发现船漏水了",
+      "source": "极客公园",
+      "digest": "腾讯财报显示营收1965亿但市值创新低，马化腾反思AI战略，指出AI放大了腾讯的核心优势但也暴露问题。",
+      "link": "https://mp.weixin.qq.com/s/VjhOjRhezC8mu7Gl7-3Xnw",
+      "source_file": "sources/2026-05-14_营收1965亿，市值创近一年新低，马化腾：一年前上了AI的船，结果发现船漏水了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "投中了理想、MiniMax 后，他说，AI 时代仍然要找「让人汗毛直竖」的创业者",
+      "source": "极客公园",
+      "digest": "投资人分享AI时代的投资理念，认为能解决AI焦虑的唯有热爱，寻找真正有激情的创业者。",
+      "link": "https://mp.weixin.qq.com/s/4ZHgekt_cqNoP9pn1jIPkg",
+      "source_file": "sources/2026-05-14_投中了理想、MiniMax 后，他说，AI 时代仍然要找「让人汗毛直竖」的创业者_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "田渊栋AI创业获黄仁勋苏姿丰投资，估值315亿，姚班施天麟任合伙人",
+      "source": "多源综合",
+      "digest": "Meta离职大佬田渊栋官宣自立门户，拒掉字节、谷歌橄榄枝后创业，获得英伟达黄仁勋和AMD苏姿丰投资，公司估值达315亿元，姚班校友施天麟担任合伙人。8位联合创始人平均每人价值0.58个独角兽，展现强大团队实力。",
+      "link": "https://mp.weixin.qq.com/s/A8ClKc_kXleZ1HwhtWjxog",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-13",
       "title": "ICML 2026 | 将多教师冲突转化为动态约束，破解多模态大模型推理对齐难题",

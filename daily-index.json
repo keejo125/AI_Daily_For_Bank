@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-14",
+      "weekday": "周四",
+      "stats": {
+        "国际": 5,
+        "国内": 13,
+        "同业": 1,
+        "其他": 11,
+        "total": 30
+      },
+      "summary": "Cyber天花板被打穿！AISI实测Mythos能力正以4.5月翻倍速冲向ASI/Anthropic高管：公司90%代码已由AI完成/打破AI体验天花板，..."
+    },
+    {
       "date": "2026-05-13",
       "weekday": "周三",
       "stats": {
