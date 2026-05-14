@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-05-13T13:54:33.057755",
-  "total": 503,
+  "updated_at": "2026-05-14T12:26:11.492094",
+  "total": 534,
   "articles": [
+    {
+      "date": "2026-05-13",
+      "title": "ICML 2026 | 将多教师冲突转化为动态约束，破解多模态大模型推理对齐难题",
+      "source": "机器之心",
+      "digest": "悉尼科技大学新作：APO 实现多源 MLLM 的精准概念对齐",
+      "link": "https://mp.weixin.qq.com/s/v9fNeL-gHM54HhE6pmk7Yg",
+      "source_file": "sources/2026-05-13_ICML 2026 _ 将多教师冲突转化为动态约束，破解多模态大模型推理对齐难题_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Mistral 为 Le Chat 新增远程智能体与 Work 模式",
+      "source": "InfoQ",
+      "digest": "Mistral发布了Mistral Medium 3.5，这是一款1280亿参数的模型，其目标是在单一系统内同时处理指令遵循、推理与编码，并在其Vibe和Le Chat产品中引入了新的云端智能体能力。",
+      "link": "https://mp.weixin.qq.com/s/6KIbyOdMai2ybcj4tiSTuQ",
+      "source_file": "sources/2026-05-13_Mistral 为 Le Chat 新增远程智能体与 Work 模式_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "澳洲放羊大叔引爆AI编程革命！Claude Code急推goal模式，不干完不许停",
+      "source": "新智元",
+      "digest": "澳洲放羊大叔引爆AI编程革命！Claude Code急推goal模式，不干完不许停",
+      "link": "https://mp.weixin.qq.com/s/VwsCC3WNHatLbGBPDw7VOw",
+      "source_file": "sources/2026-05-13_澳洲放羊大叔引爆AI编程革命！Claude Code急推goal模式，不干完不许停_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "苹果画的饼谷歌率先搞定！Gemini全面进驻全家桶，连鼠标都AI上了",
+      "source": "量子位",
+      "digest": "桌面小组件能还能AI生成",
+      "link": "https://mp.weixin.qq.com/s/CSZv0SIt6Xyea3_FbI5nKA",
+      "source_file": "sources/2026-05-13_苹果画的饼谷歌率先搞定！Gemini全面进驻全家桶，连鼠标都AI上了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "谷歌突袭苹果！安卓变身“豆包手机”，首发Gemini电脑，把AI塞进光标",
+      "source": "智东西",
+      "digest": "安卓史上最大更新来了！",
+      "link": "https://mp.weixin.qq.com/s/2j5lju0TlYEgQbycpjTu9w",
+      "source_file": "sources/2026-05-13_谷歌突袭苹果！安卓变身“豆包手机”，首发Gemini电脑，把AI塞进光标_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "GPT-5.5全球首破！0源码盲写程序，编程AI进入新纪元",
+      "source": "新智元",
+      "digest": "GPT-5.5全球首破！0源码盲写程序，编程AI进入新纪元",
+      "link": "https://mp.weixin.qq.com/s/cpPNauxJJHcS8JCm_Uu3AA",
+      "source_file": "sources/2026-05-13_GPT-5.5全球首破！0源码盲写程序，编程AI进入新纪元_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "ICML 2026 | 拒绝盲目猜token，阿里x浙大将投机解码带入弹性预算时代",
+      "source": "机器之心",
+      "digest": "弹性投机机制如何破解大模型推理瓶颈？",
+      "link": "https://mp.weixin.qq.com/s/LpnIXlqICLCsVw3LiSQxTg",
+      "source_file": "sources/2026-05-13_ICML 2026 _ 拒绝盲目猜token，阿里x浙大将投机解码带入弹性预算时代_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "百度李彦宏：软件将走向日抛化",
+      "source": "财联社AI daily",
+      "digest": "在Create2026百度AI开发者大会开幕式上，百度创始人李彦宏表示，随着智能体的出现，一句话就能编程。",
+      "link": "https://mp.weixin.qq.com/s/lf86YetwnvheEdpeKazEPA",
+      "source_file": "sources/2026-05-13_百度李彦宏：软件将走向日抛化_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "深度解析LLM Wiki / Obsidian-Wiki / GBrain：Agent时代知识的“自组织”与“自进化”",
+      "source": "阿里云开发者",
+      "digest": "深度解析LLM Wiki / Obsidian-Wiki / GBrain：Agent时代知识的“自组织”与“自进化”",
+      "link": "https://mp.weixin.qq.com/s/48XpgAMHeaKYj26PrJK-hw",
+      "source_file": "sources/2026-05-13_深度解析LLM Wiki _ Obsidian-Wiki _ GBrain：Agent时代知识的“自_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "当我把 AI 变成一个\"算法\"：Skill 工程化设计的心路历程",
+      "source": "腾讯技术工程",
+      "digest": "给 AI 写了一大堆规则，越写越长，它反而越来越不听话？",
+      "link": "https://mp.weixin.qq.com/s/bD10zbBeTtzMyEKqjIdT1w",
+      "source_file": "sources/2026-05-13_当我把 AI 变成一个_算法_：Skill 工程化设计的心路历程_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Buddy 系产品一周功能更新概览",
+      "source": "腾讯CodeBuddy",
+      "digest": "本周更新亮点👀\n\n🌟 IDE \n设置页新增「帮助与反馈」模块并完成多语言适配，优化对话崩溃场景，提升会话稳定性。\n\n🌟 CLI \nAgent Team 能力对齐：Lead 支持精确感知队员空闲状态，实现按需调度；Plan 审批弹窗自动触发且选项语义明确区分，决策路径更短；队员关停引入握手确认机制，15 秒内无响应自动强制终止，杜绝进程卡死与流程永挂；新增队员进度快照，实时追踪工具调用与文本生成量，为可视化监控奠定基础。\n\n🌟 WorkBuddy \n上线 WorkBuddy 专家团，一句话召唤一个团队（小程序端同步支持），专家资源新增分类筛选与 OPC 类目支持，精准匹配所需能力；对话内搜索、系统代理自动适配，让日常使用更顺滑。\n\n🌐 体验地址：www.workbuddy.cn\n<a class=\"wx_topic_link\" topic-id=\"mp0vfysg-uk12un\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#CodeBuddy</a> <a class=\"wx_topic_link\" topic-id=\"mp0vfysg-uqj27m\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#WorkBuddy</a> <a class=\"wx_topic_link\" topic-id=\"mp0vfysg-36yqyl\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#AI编程</a> <a class=\"wx_topic_link\" topic-id=\"mp0vfysg-19pa6h\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#开发者工具</a> <a class=\"wx_topic_link\" topic-id=\"mp0vfysg-re0gn1\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#产品更新</a> <a class=\"wx_topic_link\" topic-id=\"mp0vfysg-30uz1n\" style=\"color: #576B95 !important;\" data-topic=\"1\" data-recommend=\"\">#效率工具</a>",
+      "link": "https://mp.weixin.qq.com/s/8PiiGrJXVZrlGYQEm7Yrlw",
+      "source_file": "sources/2026-05-13_Buddy 系产品一周功能更新概览_腾讯CodeBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "国内首个！AI 帮你操控浏览器，自动完成网页操作，Qoder Browser Use 三大实测场景来了",
+      "source": "Qoder",
+      "digest": "AI 终于不只是一个“会说话的工具”，它真的能帮你干活了。而 Qoder 和 QoderWork，已经把这个能力做到了可以日常使用的程度。",
+      "link": "https://mp.weixin.qq.com/s/nq-g1SR0-GVbYA4WFsdrbA",
+      "source_file": "sources/2026-05-13_国内首个！AI 帮你操控浏览器，自动完成网页操作，Qoder Browser Use 三大实测场景来_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "众邦银行上线新一代全栈信创大数据平台，已提出“AI First”战略",
+      "source": "银行科技研究社",
+      "digest": "众邦银行上线新一代全栈信创大数据平台，已提出“AI First”战略",
+      "link": "https://mp.weixin.qq.com/s/XGHlAAkW3xoTTZO6I_jCgg",
+      "source_file": "sources/2026-05-13_众邦银行上线新一代全栈信创大数据平台，已提出“AI First”战略_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "日本大型银行最快将于本月启用Anthropic的AI模型",
+      "source": "财联社AI daily",
+      "digest": "日本三菱UFJ金融集团、三井住友金融集团及瑞穗金融集团等三大银行，预计最快将在5月底获得Anthropic最新",
+      "link": "https://mp.weixin.qq.com/s/k9d_KX9O55n8J4FRfwkqGA",
+      "source_file": "sources/2026-05-13_日本大型银行最快将于本月启用Anthropic的AI模型_财联社AI daily.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "腾讯研究院AI速递 20260513",
+      "source": "腾讯研究院",
+      "digest": "新原生视频模型Gemini Omni曝光",
+      "link": "https://mp.weixin.qq.com/s/5xWU-zKd6Cez-Yy0LZv3sQ",
+      "source_file": "sources/2026-05-13_腾讯研究院AI速递 20260513_.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-13",
+      "title": "李彦宏首提 DAA：价值始于非共识",
+      "source": "极客公园",
+      "digest": "​DAA：智能体时代的新价值逻辑。",
+      "link": "https://mp.weixin.qq.com/s/q0yrGqbtCSNYpRlqyzGw-w",
+      "source_file": "sources/2026-05-13_李彦宏首提 DAA：价值始于非共识_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "智谱首破5000亿！六小虎与DeepSeek千亿估值竞赛，谁的拳头最硬？",
+      "source": "智东西",
+      "digest": "扒一扒国产大模型千亿估值的含金量。",
+      "link": "https://mp.weixin.qq.com/s/Ile1ycdRTh7TdUmc4njaxg",
+      "source_file": "sources/2026-05-13_智谱首破5000亿！六小虎与DeepSeek千亿估值竞赛，谁的拳头最硬？_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "8岁小学生idea直接变应用，秒哒3.0刚刚把AI应用门槛打没了",
+      "source": "量子位",
+      "digest": "重新定义“开发应用”",
+      "link": "https://mp.weixin.qq.com/s/z5cwZMMezSbQ2hn-jodsEA",
+      "source_file": "sources/2026-05-13_8岁小学生idea直接变应用，秒哒3.0刚刚把AI应用门槛打没了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "突发！林俊旸被曝创业：新AI Lab估值20亿美元",
+      "source": "机器之心",
+      "digest": "林俊旸的「下一站做什么」有了新的动向",
+      "link": "https://mp.weixin.qq.com/s/m-lScy7wGrs69q7BParyzA",
+      "source_file": "sources/2026-05-13_突发！林俊旸被曝创业：新AI Lab估值20亿美元_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "阿里：第四季度营收同比增长3%，将继续投资AI+云计算",
+      "source": "财联社AI daily",
+      "digest": "阿里：第四季度营收同比增长3%，将继续投资AI+云计算",
+      "link": "https://mp.weixin.qq.com/s/RDpFFwYvWP0KyZl48bCKaw",
+      "source_file": "sources/2026-05-13_阿里：第四季度营收同比增长3%，将继续投资AI+云计算_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "软银：OpenAI累计投资收益达450亿美元",
+      "source": "财联社AI daily",
+      "digest": "软银集团旗下愿景基金全年利润6.44万亿日元，预估3.84万亿日元。软银表示，OpenAI累计投资收益达450亿美元。",
+      "link": "https://mp.weixin.qq.com/s/MJsX_DuKYZighUwdfJosCA",
+      "source_file": "sources/2026-05-13_软银：OpenAI累计投资收益达450亿美元_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "143亿！史上最大AI制药融资诞生",
+      "source": "智东西",
+      "digest": "此次计划融资规模是首轮融资规模的逾三倍。",
+      "link": "https://mp.weixin.qq.com/s/lrwVblKvCU938fjKyoUDVA",
+      "source_file": "sources/2026-05-13_143亿！史上最大AI制药融资诞生_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "甲小姐对话郝景芳：从北京折叠到AI折叠 | 甲子光年",
+      "source": "甲子光年",
+      "digest": "十年前，她写下《北京折叠》，十年后，她亲手进入“AI折叠”。",
+      "link": "https://mp.weixin.qq.com/s/3_2zfgQJD7u5ODpEoICFIg",
+      "source_file": "sources/2026-05-13_甲小姐对话郝景芳：从北京折叠到AI折叠 _ 甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "奥特曼趁马斯克出差爆猛料：他曾想让子女继承OpenAI",
+      "source": "量子位",
+      "digest": "奥特曼曝出这老些瓜",
+      "link": "https://mp.weixin.qq.com/s/PrJoeHPAeh6r6T9BLw4iGg",
+      "source_file": "sources/2026-05-13_奥特曼趁马斯克出差爆猛料：他曾想让子女继承OpenAI_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "谷歌在安卓上全面强化 Gemini AI；宇树发布全球首款载人机甲，售价 390 万元；追觅高管回应「崩老头」｜极客早知道",
+      "source": "极客公园",
+      "digest": "· 市场监管总局附条件批准腾讯收购喜马拉雅股权案",
+      "link": "https://mp.weixin.qq.com/s/RuibbsPiK0JN5TVyjLRSlA",
+      "source_file": "sources/2026-05-13_谷歌在安卓上全面强化 Gemini AI；宇树发布全球首款载人机甲，售价 390 万元；追觅高管回应_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "谷歌首度证实：黑客已开始用AI发动真实网络攻击！",
+      "source": "新智元",
+      "digest": "潘多拉魔盒已开。",
+      "link": "https://mp.weixin.qq.com/s/D5Cy5c1m6RR5agFQan7nfw",
+      "source_file": "sources/2026-05-13_谷歌首度证实：黑客已开始用AI发动真实网络攻击！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Ilya出庭复仇！实锤奥特曼撒谎，手握70亿说「我不想OpenAI被毁」",
+      "source": "新智元",
+      "digest": "Ilya出庭复仇！实锤奥特曼撒谎，手握70亿说「我不想OpenAI被毁」",
+      "link": "https://mp.weixin.qq.com/s/CZx0bEjgjWdLNamlhMMX9Q",
+      "source_file": "sources/2026-05-13_Ilya出庭复仇！实锤奥特曼撒谎，手握70亿说「我不想OpenAI被毁」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "智谱、MiniMax持续飙升",
+      "source": "财联社AI daily",
+      "digest": "港股大模型“双雄”持续飙升，智谱涨幅扩大至20%，MINIMAX涨近12%。",
+      "link": "https://mp.weixin.qq.com/s/9K4VE-xoNBRbNoyF00CGLQ",
+      "source_file": "sources/2026-05-13_智谱、MiniMax持续飙升_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "腾讯官方上线微信聊天记录AI功能：支持爬楼、砍价、整理信息",
+      "source": "多源综合",
+      "digest": "腾讯官方推出微信聊天记录AI处理功能，支持一键转发百条消息到元宝AI，可自动爬楼、砍价、整理会议纪要和脑图表格。",
+      "link": "https://mp.weixin.qq.com/s/t0ShavUeol-4QdE6pj0fhQ",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "阿里Q4财报：年收入破万亿，AI年化收入358亿，未来AI基建投入超3800亿",
+      "source": "多源综合",
+      "digest": "阿里公布2026财年Q4财报，年收入突破10000亿元，AI相关年化收入达358亿元。CEO吴泳铭表示，未来五年AI基建投入将远超3800亿元，AI模型与应用ARR预计6月季度破100亿，年底超300亿。",
+      "link": "https://mp.weixin.qq.com/s/b8ztyRw7Hir94iJFzbu9pw",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-13",
+      "title": "腾讯Q1财报：收入1965亿，AI资本支出持续增长，马化腾反思AI战略",
+      "source": "多源综合",
+      "digest": "腾讯公布2026年Q1财报，营收1965亿元，一季度资本开支付款370亿元主要用于AI相关投入。马化腾表示一年前上的AI船漏水了，乱抢地盘会失败，下半年AI相关资本支出将进一步增加。",
+      "link": "https://mp.weixin.qq.com/s/k0abReDXsz78MN6t23HPVQ",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-12",
       "title": "绝杀！OpenAI正式接管人类耳朵，首个GPT-5级推理音频模型来了",
