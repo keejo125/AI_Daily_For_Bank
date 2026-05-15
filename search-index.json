@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15T07:05:19.230981",
+  "updated_at": "2026-05-15T10:02:22.077885",
   "total": 564,
   "articles": [
     {
@@ -174,16 +174,6 @@
     },
     {
       "date": "2026-05-14",
-      "title": "腾讯研究院AI速递 20260514",
-      "source": "腾讯研究院",
-      "digest": "腾讯研究院每日AI资讯汇总，包括元宝可以总结处理微信聊天记录等功能更新。",
-      "link": "https://mp.weixin.qq.com/s/Wi9Syghu5bnPl-1WyJuYRw",
-      "source_file": "sources/2026-05-14_腾讯研究院AI速递 20260514_.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-14",
       "title": "AI大模型赋能证券业数字化办公的应用研究",
       "source": "中国金融电脑",
       "digest": "研究AI大模型在证券业数字化办公中的应用场景和实施路径，探索金融行业智能化转型方案。",
@@ -299,6 +289,16 @@
       "digest": "Meta离职大佬田渊栋官宣自立门户，拒掉字节、谷歌橄榄枝后创业，获得英伟达黄仁勋和AMD苏姿丰投资，公司估值达315亿元，姚班校友施天麟担任合伙人。8位联合创始人平均每人价值0.58个独角兽，展现强大团队实力。",
       "link": "https://mp.weixin.qq.com/s/A8ClKc_kXleZ1HwhtWjxog",
       "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-14",
+      "title": "腾讯研究院AI速递 20260514",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院每日AI资讯汇总，包括元宝可以总结处理微信聊天记录等功能更新。",
+      "link": "https://mp.weixin.qq.com/s/Wi9Syghu5bnPl-1WyJuYRw",
+      "source_file": "sources/2026-05-14_腾讯研究院AI速递 20260514_.md",
       "category": "其他",
       "is_model_related": false
     },
