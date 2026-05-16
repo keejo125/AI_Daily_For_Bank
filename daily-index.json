@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-15",
+      "weekday": "周五",
+      "stats": {
+        "国际": 7,
+        "国内": 8,
+        "同业": 4,
+        "其他": 12,
+        "total": 31
+      },
+      "summary": "Anthropic最新论文撬开大模型黑箱：隐藏动机发现率提升 4 倍以上/xAI推出Grok Build早期测试版：马斯克在北京发布首款Coding Ag..."
+    },
+    {
       "date": "2026-05-14",
       "weekday": "周四",
       "stats": {
