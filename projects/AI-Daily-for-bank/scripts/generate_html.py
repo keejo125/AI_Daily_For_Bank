@@ -59,30 +59,73 @@ def detect_model_related(title, digest):
     return any(kw.lower() in text for kw in MODEL_KEYWORDS)
 
 
+def normalize_title_for_match(text):
+    """
+    标准化标题用于匹配：将各种引号统一为英文直引号，特殊空格转为普通空格
+    """
+    # 将中文弯引号 (U+201C, U+201D) 替换为英文直引号 (U+0022)
+    text = text.replace('\u201c', '"').replace('\u201d', '"')
+    # 将中文单弯引号 (U+2018, U+2019) 替换为英文直单引号 (U+0027)
+    text = text.replace('\u2018', "'").replace('\u2019', "'")
+    # 将不换行空格 (U+00A0) 替换为普通空格 (U+0020)
+    text = text.replace('\u00a0', ' ')
+    return text
+
+
 def find_markdown_file(sources_dir, title, source):
     """
     在 sources 目录下查找匹配的 markdown 文件
     文件名格式: {日期}_{标题}_{来源}.md
+    
+    匹配策略（三级）：
+    1. 精确匹配：完整的 title + source
+    2. 次优匹配：title 前20个字符 + source
+    3. 兜底：只有一个文件时直接返回
     """
     if not os.path.isdir(sources_dir):
+        print_progress(f"警告: sources 目录不存在 - {sources_dir}")
         return None
 
     # 获取所有 .md 文件
     md_files = [f for f in os.listdir(sources_dir) if f.endswith('.md')]
+    
+    if not md_files:
+        print_progress(f"警告: sources 目录为空 - {sources_dir}")
+        return None
 
+    # 标准化 title 用于匹配
+    normalized_title = normalize_title_for_match(title)
+    
     # 优先精确匹配: 文件名包含 title 和 source
     for fname in md_files:
-        if title in fname and source in fname:
+        normalized_fname = normalize_title_for_match(fname)
+        if normalized_title in normalized_fname and source in fname:
+            print_progress(f"✓ 精确匹配成功: {fname}")
             return os.path.join(sources_dir, fname)
 
-    # 模糊匹配: 文件名包含 source
+    # 次优匹配: 文件名包含 title 的关键部分（前20个字符）和 source
+    title_prefix = normalized_title[:20] if len(normalized_title) > 20 else normalized_title
     for fname in md_files:
-        if source in fname:
+        normalized_fname = normalize_title_for_match(fname)
+        if title_prefix in normalized_fname and source in fname:
+            print_progress(f"✓ 次优匹配成功 (prefix='{title_prefix}'): {fname}")
             return os.path.join(sources_dir, fname)
 
-    # 如果只有一个 .md 文件，直接返回（兜底）
+    # 最后兜底: 如果只有一个 .md 文件，直接返回
     if len(md_files) == 1:
+        print_progress(f"⚠️ 兜底匹配 (唯一文件): {md_files[0]}")
         return os.path.join(sources_dir, md_files[0])
+
+    # 匹配失败，输出调试信息
+    print_progress(f"✗ 文件匹配失败:")
+    print_progress(f"  Title: {title}")
+    print_progress(f"  Normalized: {normalized_title}")
+    print_progress(f"  Source: {source}")
+    print_progress(f"  Available files ({len(md_files)}):")
+    for fname in md_files[:5]:  # 只显示前5个
+        print_progress(f"    - {fname}")
+    if len(md_files) > 5:
+        print_progress(f"    ... 还有 {len(md_files) - 5} 个文件")
 
     return None
 
@@ -91,6 +134,9 @@ def read_article_content(source_file, date_str, title, source):
     """
     读取文章 markdown 内容
     优先使用 source_file，否则尝试查找匹配文件
+    
+    Returns:
+        str: 文章内容，失败时返回空字符串
     """
     # 方案1: 直接使用 source_file（相对 daily/YYYY-MM-DD/ 的路径）
     if source_file:
@@ -101,7 +147,10 @@ def read_article_content(source_file, date_str, title, source):
             path = os.path.join(base_dir, source_file)
         content = read_file(path)
         if content is not None:
+            print_progress(f"✓ 读取原文成功 (source_file): {os.path.basename(path)}")
             return content
+        else:
+            print_progress(f"⚠️ source_file 指定路径不存在: {path}")
 
     # 方案2: 根据 title 和 source 在 sources 目录查找
     sources_dir = os.path.join(PROJECT_DIR, 'daily', date_str, 'sources')
@@ -109,8 +158,10 @@ def read_article_content(source_file, date_str, title, source):
     if matched:
         content = read_file(matched)
         if content is not None:
+            print_progress(f"✓ 读取原文成功 (模糊匹配): {os.path.basename(matched)}")
             return content
 
+    print_progress(f"✗ 无法读取原文: {title[:30]}...")
     return ""
 
 
@@ -134,6 +185,14 @@ def build_articles_json(classification, date_str):
     articles = []
     cats = ["国际", "国内", "同业", "其他"]
     base_dir = os.path.join(PROJECT_DIR, 'daily', date_str)
+    
+    # 统计信息
+    stats = {
+        'total': 0,
+        'with_content': 0,
+        'without_content': 0,
+        'merged': 0
+    }
 
     for cat in cats:
         items = classification.get(cat, [])
@@ -142,6 +201,7 @@ def build_articles_json(classification, date_str):
         items_sorted = sorted(items, key=lambda x: x.get('is_model_related', False), reverse=True)
         
         for item in items_sorted:
+            stats['total'] += 1
             title = item.get("title", "")
             source = item.get("source", "")
             link = item.get("link", "")
@@ -151,6 +211,7 @@ def build_articles_json(classification, date_str):
             merged_articles = item.get("merged_articles", [])
             
             if is_merged and len(merged_articles) > 1:
+                stats['merged'] += 1
                 # 合并文章：构建 source_items
                 source_items = []
                 for merged_art in merged_articles:
@@ -170,6 +231,11 @@ def build_articles_json(classification, date_str):
                     title,
                     source
                 )
+                
+                if content:
+                    stats['with_content'] += 1
+                else:
+                    stats['without_content'] += 1
                 
                 articles.append({
                     "title": title,
@@ -210,6 +276,11 @@ def build_articles_json(classification, date_str):
                 else:
                     is_model_related = detect_model_related(item_title, item_digest)
 
+                if content:
+                    stats['with_content'] += 1
+                else:
+                    stats['without_content'] += 1
+
                 articles.append({
                     "title": item_title,
                     "source": source,
@@ -220,6 +291,13 @@ def build_articles_json(classification, date_str):
                     "is_model_related": is_model_related,
                     "source_file": source_file
                 })
+
+    # 输出统计信息
+    print_progress(f"\n📊 文章读取统计:")
+    print_progress(f"   总文章数: {stats['total']}")
+    print_progress(f"   成功读取: {stats['with_content']} ({stats['with_content']/stats['total']*100:.1f}%)")
+    print_progress(f"   未读取到: {stats['without_content']} ({stats['without_content']/stats['total']*100:.1f}%)")
+    print_progress(f"   合并文章: {stats['merged']}\n")
 
     return articles
 
