@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-05-16</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag a {
+  color: inherit;
+  text-decoration: none;
+}
+.source-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-05-16</div>
+    <div class="banner-stats" id="banner-stats">国际 4 篇 · 国内 2 篇 · 同业 1 篇 · 其他 4 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">AI加速数学研究突破：陶哲轩称千年规则被重启，2小时完成博士论文</div><span class="source-tag">多源综合</span><div class="card-digest">AI生成证明速度已远超数学家消化能力，陶哲轩指出千年数学规则被AI按下重启键；AI仅用2小时搞定博士论文，3天终结40年悬案，引发对数学研究范式变革的讨论。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/8AhuXlt7WmL_so5sly92Mg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">ICML 2026 | 告别「利用率崩溃」：GIPO开启大模型强化学习高效训练新方法</div><span class="source-tag">机器之心</span><div class="card-digest">算法美学与工程力量的共振</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/KmwiBa1HY5_urz6Jh8yjWA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">ChatGPT那一套要过时了？翁荔实测创业首个模型，回合制AI被&quot;原生实时交互&quot;秒了</div><span class="source-tag">InfoQ</span><div class="card-digest">AI 是否正在结束&quot;回合制&quot;聊天的时代？</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/uPfGCiaRMJe3prDjg-zsUQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">OpenAI推出ChatGPT个人理财功能，打通银行API引争议</div><span class="source-tag">多源综合</span><div class="card-digest">OpenAI将ChatGPT接入银行系统，支持个人理财功能，可查询余额但不能直接操作资金；该功能引发全网对数据安全和隐私保护的担忧，被质疑是给黑客发年终奖。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/tOjc1L0XSc-m1VhGqPJm7Q" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">扩散模型也有「Skills」了！魔搭开源11个现成模板，风格、修图、超清一键搞定</div><span class="source-tag">量子位</span><div class="card-digest">魔搭开源Diffusion模型插件，实现即插即用</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/IyMNhU6IY7Ke0o9M_BN-mA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">中国500万医生的新AI：顶刊独家联手，卷的就是证据源</div><span class="source-tag">量子位</span><div class="card-digest">阿里健康发布「氢离子」</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/4CNoFZkLmoneHDLh-YENOQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证</div><span class="source-tag">银行科技研究社</span><div class="card-digest">北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/s-AzhjZLekxBIO3Wp1991w" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动</div><span class="source-tag">中国信通院CAICT</span><div class="card-digest">智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/U5JAmuDKgKEEi2zC57vpWw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">突发！OpenAI大规模重组，总裁Brockman夺权挂帅</div><span class="source-tag">新智元</span><div class="card-digest">突发！OpenAI大规模重组，总裁Brockman夺权挂帅</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/e-gJuit8wxO8wahq0vrWxw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">腾讯研究院AI每周关键词Top50</div><span class="source-tag">腾讯研究院</span><div class="card-digest">一文把握全局AI动态（0511-0515）</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/CnE4iT39XeUy8Y-mj9lOzQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">OpenAI 推出 ChatGPT 个人理财功能；SpaceX 最快将于 6 月 12 日挂牌上市；巴菲特慈善午餐回归，神秘买家 900 万美元拍下 | 极客早知道</div><span class="source-tag">极客公园</span><div class="card-digest">iPhone 17 Pro 大降价；全球存储供应再迎重压</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/0xF8mvmd6_UcPoJnLH27gA" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "AI加速数学研究突破：陶哲轩称千年规则被重启，2小时完成博士论文", "source": "多源综合", "digest": "AI生成证明速度已远超数学家消化能力，陶哲轩指出千年数学规则被AI按下重启键；AI仅用2小时搞定博士论文，3天终结40年悬案，引发对数学研究范式变革的讨论。", "link": "https://mp.weixin.qq.com/s/8AhuXlt7WmL_so5sly92Mg", "content": "", "category": "国际", "is_model_related": true, "source_file": "", "source_items": [{"name": "新智元", "source_file": "", "link": "https://mp.weixin.qq.com/s/8AhuXlt7WmL_so5sly92Mg"}, {"name": "新智元", "source_file": "", "link": "https://mp.weixin.qq.com/s/ar0cSYHBix_wipTcdE3M1A"}]}, {"title": "ICML 2026 | 告别「利用率崩溃」：GIPO开启大模型强化学习高效训练新方法", "source": "机器之心", "digest": "算法美学与工程力量的共振", "link": "https://mp.weixin.qq.com/s/KmwiBa1HY5_urz6Jh8yjWA", "content": "---\npublish_time: 1778921195\n---\n\n# ICML 2026 | 告别「利用率崩溃」：GIPO开启大模型强化学习高效训练新方法\n\n> 原文链接：https://mp.weixin.qq.com/s/KmwiBa1HY5_urz6Jh8yjWA\n> 公众号：机器之心\n\n在现代强化学习系统（如训练视觉语言动作模型 VLA 或大规模机器人控制策略）中，由于策略滞后（Policy Lag）导致数据 Off-policy 现象已成为难以避免的常态。无论是在数据被反复复用迭代的同步更新中，还是在采样与训练解耦的分布式 Actor-Learner 异步架构下，存在数据与当前策略的脱节问题。特别是在\n\n具身\n\n真机场景下，由于物理采集缓慢且高度依赖历史数据回放，这种滞后程度更是被推向了极端。\n\n这种在吞吐量与样本效率之间的权衡会引入策略滞后。随着策略滞后不断积累，数据分布逐渐偏离当前策略，行为策略与目标策略之间的差异持续扩大，重要性采样的方差随之迅速增长，最终可能导致策略梯度估计变得不稳定，直接影响模型的正常训练。当训练器优化当前策略\n\n时，它所利用的数据与当前策略分布之间可能存在偏移，这种不一致性由重要性比率（Importance Ratio）\n\n来量化：\n\n。在依赖回放的场景下，\n\n经常会大幅度偏离 1，展现出严重的\n\n重尾分布（Heavy-tailed distribution）\n\n，这为后续的优化埋下了隐患。\n\n近期，来自树根科技与三一集团团队联合提出了\n\nGIPO\n\n算法，在机器人操控及大语言 / 视觉动作模型（VLA）强化学习训练中，GIPO 既显著缓解了数据短缺导致的策略滞后痛点，又有效改善了 PPO 硬截断引发的 “利用率崩溃（Utilization Collapse）” 问题。\n\nGIPO 论文链接：https://arxiv.org/abs/2603.03955\n\n论文标题 1：\n\nGIPO: Gaussian Importance Sampling Policy Optimization\n\nAcceRL 论文链接：https://arxiv.org/abs/2603.18464\n\n论文标题 2：\n\nAcceRL: A Distributed Asynchronous Reinforcement Learning and World Model Framework for Vision-Language-Action Models\n\nGIPO ：用比例看问题，而不是用绝对差值看问题\n\n核心公式\n\nGIPO 不使用分段常数函数来截断梯度，而是为每一个重要性比率\n\n分配一个基于高斯核的信任权重系数\n\n。首先定义离散的重要性比率\n\n（其中\n\n为停止梯度算子），信任权重定义为：\n\n其中，\n\n是统一的尺度参数，决定了信任区域的宽窄 。由此，将该权重引入策略优化目标，得到 GIPO 的损失函数：\n\n在反向传播中，由于\n\n仅取决于停止梯度的\n\n，它被视为常数系数，从而提升了梯度的稳定性。如图 1 所示，GIPO 的核心动机是用平滑的连续衰减替代硬性的截断，在对数空间内构建一个理论完备且对称的信任区域。\n\n图 1：GIPO 高斯信任权重与对数空间对称性相比于 PPO 的阶跃式截断，GIPO（橙线）展现了平滑的钟形曲线，使每个样本仍然能够贡献微小但有效的梯度信号。更重要的是 GIPO 对于对重要性比率\n\n与其倒数\n\n赋予相同的信任权重，即\n\n，在 log 空间 GIPO 是唯一具备对称性的\n\n对数空间对称性：一种优雅的平衡\n\n为什么选择对数空间？考虑样本的重要性比率\n\n。如果目标策略比行为策略的概率高出\n\n倍\n\n，其对数距离为\n\n。如果概率低\n\n倍（\n\n），其对数距离为\n\n。由于高斯核函数中包含平方项：\n\n这种\n\n对数对称性\n\n(\n\n) 意味着 GIPO 平等且一致地处理了概率的 “高估” 与 “低估”。相比之下，PPO 在线性空间进行截断（如 1.2 与 0.8），其算术距离相等但逻辑比例并不对称，这在处理重尾分布时会导致更新的方向性偏差。如图 1 所示，GIPO 通过对数空间操作，确保了无论策略偏离方向如何，更新幅度在逻辑比例上都是对称且平衡的。\n\n平滑性与非零梯度：拯救 “死样本”\n\nPPO 的硬截断是一把 “双刃剑”：它虽然限制了方差，但其分段函数的特性导致在截断边界处导数不连续，且在截断区外梯度直接归零。在边界外，\n\n增加 0.1 可能导致梯度从 1 骤降至 0，这种不连续性增加了训练不稳定性。而 GIPO 的权重函数\n\n随\n\n的偏离而连续、指数级地衰减。即便样本处于严重的策略滞后区（例如\n\n），GIPO 也不会像 PPO 那样将其贡献抹杀。相反，GIPO 会分配一个微小但非零的权重\n\n。这 “软阻尼” 机制允许那些处于长尾区域的陈旧样本依然能贡献较低方差的梯度信号，从而有效缓解了 “利用率崩溃”，让每一条昂贵的采样轨迹都能参与到策略的迭代中。\n\n偏差 - 方差的 “帕累托旋钮”\n\n在强化学习的理论框架下，偏差（Bias）与方差（Variance）是一对永恒的矛盾。GIPO 通过尺度参数\n\n提供了一个可以平滑调节的 “帕累托旋钮”。可以从两个极限状态来理解\n\n的插值作用：\n\n1. 当\n\n(纯在线模式)：\n\n高斯核坍缩为一个狄拉克\n\n函数，只有\n\n的样本拥有权重。此时算法退化为保守的在线策略更新，拥有\n\n低方差\n\n但面临\n\n高偏差\n\n（因为它无视了所有回放数据）。\n\n2. 当\n\n(标准重要性采样模式)：\n\n权重\n\n，GIPO 恢复为标准的重要性采样目标。此时算法是\n\n无偏\n\n的，但在异步环境下会面临很大的方差。\n\n在实际训练中（如\n\n或\n\n），GIPO 能够获得优秀的偏差 - 方差平衡性。它通过平滑的指数 decay 抑制了长尾部分的方差，同时保留了比 PPO 更多的有效偏差修正。\n\nAdvantage-Aware GIPO\n\n对称性是否会放纵 “坏动作”？在强化学习的实际工程中，正负优势（Advantage）具有不同的物理含义：正优势（A > 0）应在信任区域内受到鼓励。负优势（A < 0）代表差的探索结果，理应受到抑制。当一个 “坏动作” 的重要性比率偏离分布时，GIPO 对其施加的对称阻尼是否过于 “温柔”，从而导致在处理大词表或重尾分布样本时，训练收敛速度受阻？针对正负优势的问题，作者引入了 Advantage-Aware GIPO。通过对\n\n实施基于优势符号的条件化约束：\n\n通过设定\n\n，算法在面对负优势样本时，信任区域会更快收敛。这种设计既保留了 GIPO 平滑可导的数学特性，又在物理直觉上实现了对负向更新的抑制。需要强调的是，GIPO 目标函数中重要性比率的\n\n对数对称性与优势函数引入的非对称控制在数学逻辑上是完全独立的\n\n，两者互不冲突且完美兼容。\n\n理论基石：策略性能下界与有限样本保证\n\n代理目标的理论下界\n\nGIPO 的核心理论贡献之一，是证明了优化其衰减代理目标，依然能提供严格的性能下界保证。假设优势函数有界\n\n。对于任意截断阈值\n\n，GIPO 满足以下性能下界：\n\n注：其中\n\n其中\n\n为实际优化目标，即模型采用新策略后在真实环境中的期望收益，也就是模型采用新策略后，在真实环境里到底能拿多少分。第二项是分布偏移惩罚项（含 C 的项），这一项继承自 Off-policy TRPO，惩罚了行为策略\n\n、当前策略\n\n和候选策略\n\n之间的分布差异。最后一项是 GIPO 特有的惩罚项，GIPO 遇到滞后数据时，为了防止梯度爆炸，会用高斯权重 “温柔地” 把它们的影响力压低，这种 “和稀泥” 的做法虽然保证了训练稳定性，但毕竟扭曲了原始数据的权重，带来了一点点偏差，这一项，就是把这种 “为了稳妥而引入的偏差” 明码标价算了出来。\n\n有限样本控制与稳定性\n\n在真实的 RL 训练中，由于无法计算期望，只能从回放池中抽取有限的 Batch Size（假设为 N）来进行经验估计（Empirical Estimation）：\n\n如果没有良好的方差控制，有限样本下的估计会存在巨大的 “采样噪声”，导致所谓的 “优化错觉”（即经验代理目标上升了，但真实期望反而下降了），这正是模型训练崩盘（Training Collapse）的元凶。GIPO 首先证明了其高斯权重设计赋予了有效乘数\n\n严格的全局上下界：\n\n基于上述全局有界性，可以直接应用 Hoeffding 不等式，得出经验估计与真实期望之间的概率误差界限。 对于任意置信度水平\n\n，以至少\n\n的概率，以下不等式成立：\n\n由于等式右侧的误差项被严格绑定在常数\n\n和批量大小\n\n上，GIPO 能在有限样本下提供高置信度的策略改进保证。 这就是 GIPO 在高难度机器人任务中比 PPO 稳定的数学保证。\n\n实验结果： 方差 - 偏差平衡性能和 7B VLA 工业落地\n\n方差 - 偏差平衡性能帕累托最优\n\n为什么 GIPO 能在宏观表现上优秀？为了在微观层面把逻辑盘透，作者构建了一个完全可枚举的\n\nGridWorld（网格世界）玩具环境。由于环境简单，研究人员可以直接通过贝尔曼方程进行动作枚举，精确计算出梯度估计的真实偏差（Bias）和真实方差（Variance），从而排除了蒙特卡洛采样噪声的干扰。团队模拟了从严重滞后（Case A）到轻度滞后（Case C）的不同场景。\n\n分析结果展现了 GIPO 良好的方差 - 偏差平衡性：在严重滞后的场景（Case A, B）中，PPO 测算出的方差竟然是 0。但这根本不是因为 PPO 稳定，而是因为其硬截断机制将所有样本直接判断为 “越界”，导致\n\n100% 的样本梯度死亡\n\n。没有梯度，自然没有方差，这等同于模型停止了学习。\n\n相比之下，GIPO 的参数\n\n表现出了优秀的 “帕累托旋钮（Pareto knob）” 特性。通过调节\n\n，GIPO 能够压制重尾比率带来的高方差，同时保留可靠更新的方向 。在所有的滞后场景下，GIPO 的表现都贴合偏差 - 方差帕累托前沿（Pareto Frontier）。而 SAPO 的不对称性导致其引入了劣于 GIPO 的偏差分布，无法触及帕累托前沿。\n\n图 2：2x2 网格世界中的偏差 - 方差权衡。GIPO（虚线）真正定义了帕累托前沿（Pareto Frontier），而 PPO 在高滞后场景下完全停止了学习\n\n工业级验证规模\n\n在当前的具身智能领域，受限于高昂的物理交互成本与长视野连续控制的复杂性，能将策略优化算法直接部署到数十亿参数模型上的研究并不多见。GIPO 团队为了验证其算法在真实世界扩展性（Scalability），投入了庞大的计算资源：模型基座使用了 7B 参数量的 OpenVLA-OFT 作为骨干网络，整个评估过程耗费了超过\n\n10,000\n\nH200 GPU 小时，在 LIBERO 机器人多任务操作基准上，处理了超过 7.3 亿次交互采样。\n\n为了评估算法对策略滞后的鲁棒性，研究团队设计了两种数据场景，通过控制采样器（Actors）与训练器（Trainers）的比例来人为制造不同程度的数据滞后。新鲜场景（Fresh Regime）：配置 10 个采样器对 1 个训练器（或类似高吞吐配置），数据收集快，回放池中的样本非常接近当前策略。陈旧场景（Stale Regime）：强制降低吞吐量（例如 1 个采样器对 1 个训练器），导致训练器不得不反复咀嚼回放池中陈旧的历史数据，制造类似于真机场景的策略滞后。\n\n如图 3 所示，在新鲜场景下，GIPO、PPO 与 SAPO 均能取得不错的表现，GIPO 略占优或持平。然而，一旦切换到陈旧场景，算法之间的性能差距就会被拉开。在面对陈旧数据时，PPO 的学习曲线往往在早期就陷入停滞，最终收敛到一个较低的平均回报水平。SAPO 虽然引入了软门控，但在处理高滞后数据时，依然表现出较大的波动和次优的样本效率。而 GIPO 能更快逼近最优成功率，展现出很强的抗滞后能力和稳定性。\n\n图 3：LIBERO 机器人套件学习曲线。在 LIBERO-Spatial 和 LIBERO-10 等复杂任务中，GIPO 的优势被进一步放大，展现了在数十亿参数 VLA 任务中实战价值\n\nMetaworld 多种子实验\n\n在 MetaWorld Stale（陈旧数据环境）下，团队对比了 8 种算法配置（包含优势感知变体），覆盖了 10 个不同的机器人操控任务。为了消除随机性干扰，每一个配置 5 个随机种子，总共运行 400 个独立的训练实例。在统计指标 IQM（Interquartile Mean，分位数均值） 排名中，GIPO 展示出了非常大的优势，如下面的聚合排名表所示，GIPO 系列占据了前 6 名位置，其中 GIPO (1.0, 1.0) 平均归一化得分（0.730）甚至达到了 PPO（0.180）的 4 倍之多。\n\n内部分别为：正负优势对应的\n\n系数\n\nGIPO 变体的 IQM 表现显著高于 SAPO 与 PPO 基准。即便在策略滞后环境下，其展现出的成功率提升曲线依然保持着惊人的平滑度。同时，实验结果有力地验证了 “对数对称性” 与 “优势感知” 可以兼容，而且相得益彰。GIPO 的数学框架可以轻松嵌入非对称逻辑，同时维持其独有的理论稳定性上限。\n\n值得注意的是，GIPO 的卓越性并不局限于应对滞后的 “救场”。在策略滞后轻微的新鲜场景下，GIPO 同样展现出了优良的性能上限。在涵盖 10 个任务、总计 250 次独立训练运行的大规模 MetaWorld Fresh 实验中，GIPO 依然保持了领先优势。如下表所示，即便是在通用配置下，GIPO 的 IQM（分位数均值）得分依然达到了 PPO 的两倍以上。这意味着 GIPO 不仅能处理 “旧数据”，也能更好发挥 “新数据” 的价值，显著提升了在线 RL 的学习效率。\n\n大模型落地的 “稳压器”：GIPO 助推 AcceRL 登顶 SOTA\n\n如何高效地进行数十亿参数规模的视觉 - 语言 - 动作（VLA）模型的强化学习训练是行业公认的难题。为此，团队推出了\n\nAcceRL\n\n—— 首个专为 VLA 模型设计的全异步、解耦式强化学习与世界模型框架。\n\nAcceRL 通过物理隔离训练、推理与采样流，打破了传统框架中的同步屏障，并首次引入了 “即插即用” 的可训练世界模型，实现了惊人的\n\n200 倍（20,000%）\n\n数据效率提升，然而，这种优秀的工程性能对底层算法的稳定性提出了更高要求，这正是 GIPO 大显身手的舞台。\n\n为什么 AcceRL 选择 GIPO？\n\nAcceRL 通过物理隔离设计大幅提升了系统的吞吐量。然而，这种 “全异步” 的分布式架构是一把双刃剑：它在消除硬件闲置、实现吞吐量超线性扩展的同时，不可避免地带来了剧烈的\n\n策略滞后（Policy Lag）\n\n。\n\n在 AcceRL 的非阻塞管道中，训练与采样独立进行，导致回放池中充斥着陈旧的 Off-policy 数据。实验证明，在这种滞后场景下，标准 PPO 会频繁触发硬截断机制，导致大量包含关键修正信号的样本梯度直接归零，沦为毫无贡献的 “死样本”，阻碍训练效率。\n\nGIPO 通过其标志性的平滑高斯信任权重，为 AcceRL 提供了一套具备数学保证的阻尼机制，使其能够稳健地消化这些陈旧样本，成为了整个框架处理异步偏差的核心优化引擎。此外 AcceRL 实现了利用世界模型想象生成强化学习训练数据。虽然这些数据扩展了探索边界，但也存在合成偏差。GIPO 利用对数空间对称性，提取了这些想象数据中的改进信号，使得 “在想象中学习” 不再因梯度不稳定而崩溃。\n\n如下图所示，在针对算法目标的消融实验中，配备 GIPO 的系统表现出了惊人的学习速度。GIPO 在约 8,000 步时达到的性能水平，标准 PPO 需要耗费 60,000 步才能触及。这意味着在相同的硬件环境下，GIPO 将样本利用效率提升了整整 7.5 倍。\n\n图 4：GIPO 和 PPO 在 AcceRL 中效果对比\n\n登顶 LIBERO\n\n在 LIBERO 的长视野（Long-horizon）操控任务中，GIPO 助力 AcceRL 展示了优秀的稳定性。相比于对早期误差敏感的传统监督微调（Success Rate 90.7%），AcceRL 在 GIPO 的支撑下实现了突破：在 LIBERO-Long 任务套件中，AcceRL 达成了\n\n99.1%\n\n的成功率。这种表现源于 GIPO 优异的偏差 - 方差权衡，它确保了模型在执行复杂多步动作时，能够从轻微的扰动中恢复，维持了策略在长周期内的连续性与稳定性。\n\n结语：算法美学与工程力量的共振\n\nAcceRL 框架的成功，验证了 GIPO 在大规模异步训练中的底层基石作用。通过稳健地处理异策略偏差，GIPO 突破了分布式系统的稳定性瓶颈，为‘大规模 VLA + 异步 RL + 世界模型’这一架构提供了可靠的算法护航，并最终在 LIBERO 基准测试中取得了 SOTA 成绩。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-16_ICML 2026 _ 告别「利用率崩溃」：GIPO开启大模型强化学习高效训练新方法_机器之心.md"}, {"title": "ChatGPT那一套要过时了？翁荔实测创业首个模型，回合制AI被\"原生实时交互\"秒了", "source": "InfoQ", "digest": "AI 是否正在结束\"回合制\"聊天的时代？", "link": "https://mp.weixin.qq.com/s/uPfGCiaRMJe3prDjg-zsUQ", "content": "---\npublish_time: 1778907608\n---\n\n# ChatGPT那一套要过时了？翁荔实测创业首个模型，回合制AI被“原生实时交互”秒了\n\n> 原文链接：https://mp.weixin.qq.com/s/uPfGCiaRMJe3prDjg-zsUQ\n> 公众号：InfoQ\n\n整理 | 华卫\n\nAI 是否正在结束“回合制”聊天的时代？\n\n所有在工作或日常生活中经常使用 AI 模型的人都知道，在文本、图像、音频和视频等各种模态下，现在基本的交互模式仍然是一样的：人类用户先提供输入，然后等待从几毫秒到几分钟不等（在某些特别复杂的问题中，甚至需要数小时或数天），随后 AI 模型再给出输出。用 Thinking Machines 的话说，目前大多数 AI 模型都是通过“外挂式”的方式来实现交互，将不同组件拼接在一起以模拟打断、多模态或并发等能力。然而，这类手工构建的系统终将被通用能力的进步所超越。\n\n“如果 AI 真正要承担那些需要自然交互的工作，它就必须超越这种「回合制」的交互方式。最终，它需要能够更流畅、更自然地响应人类输入，甚至在处理下一次人类输入（无论是文本还是其他形式）的同时就做出回应。”这是 Thinking Machines 的观点。去年，前 OpenAI 首席技术官 Mira Murati、前 OpenAI 研究员兼联合创始人 John Schulman 等人创立了这家资金充足的 AI 初创公司，致力于让先进 AI 系统“更易理解、更可定制，并具备更通用的能力”。\n\n今天，Thinking Machines 宣布推出“交互模型”TML-Interaction-Small，将其称为“首个同时具备强大智能 / 指令遵循能力与交互性的模型”。据介绍，这是一个拥有 2760 亿参数的混合专家（MoE）模型，其中活跃参数为 120 亿，可以持续接收音频、视频和文本输入，并在实时中进行思考、响应和行动，不依赖外部“脚手架”来实现交互能力。根据第三方基准测试结果，这种方法在性能上取得了显著提升，同时也降低了延迟。\n\n不过，该模型目前尚未向公众或企业开放，该公司在公告博客中表示：“在接下来的几个月里，我们将开放一个有限的研究预览以收集反馈，并计划在今年晚些时候更广泛发布。”\n\n1\n\n137 页训练日志的交互模型，实力碾压其他前沿模型\n\n在研究预览中，Thinking Machines 展示了 TML-Interaction-Small 模型在交互能力上的质变，以及在智能与响应速度之间达到的当前最先进的综合表现。\n\n“整体体验更像是在协作，而不是在‘下提示词’。”演示视频中，OpenAI 前应用研究副总裁、Thinking Machines 联合创始人翁荔出镜展示了 TML-Interaction-Small 模型的无缝对话管理能力。该模型能够隐式判断说话者是在思考、让出话语权、自我修正，还是在邀请回应，无需单独的对话管理模块。\n\n在 X 上，翁荔表示，“过去几个月，我们玩得很开心，也有很多压力，最终产出了 12 个版本（外加大量子版本）和 137 页的训练日志。事实证明，人与人之间的协作对于提升人机协作非常重要。”\n\n不仅如此，TML-Interaction-Small 模型还解锁了一系列原本需要通过“外部脚手架”实现的能力，包括：\n\n语言与视觉的即时插话：模型可以根据上下文在需要时主动插入，而不仅仅是在用户说完之后才回应。\n\n同时语音（Simultaneous speech）：用户与模型可以同时说话（例如实时翻译）。\n\n时间感知（Time-awareness）：模型对时间流逝具有直接的感知能力。\n\n同时进行工具调用、搜索与生成式 UI：在与用户对话（说与听）的同时，模型可以并行执行搜索、浏览网页或生成界面，并将结果自然地融入对话之中。\n\n为衡量交互质量，该实验室使用了 FD-bench，这是目前少数专门用于衡量交互性的基准之一。为量化智能水平，他们使用 Audio MultiChallenge，这是一个常用的基准，用于评估智能和指令遵循能力。结果显示，TML-Interaction-Small 显著优于现有的实时系统，包括 Gemini-3.1-flash-live 和 GPT-realtime-2.0 minimal。\n\n响应速度：其轮次响应延迟为 0.40 秒，而 Gemini-3.1-flash-live 为 0.57 秒，GPT-realtime-2.0 minimal 为 1.18 秒。\n\n交互质量：在 FD-bench V1.5 上，其得分为 77.8，几乎是主要竞争对手的两倍（GPT-realtime-2.0 minimal 为 46.8）。在 FD-bench v1.5 中，模型会接收预录音频，并需要在特定时刻作出响应。该基准从多个场景评估模型行为，包括用户打断、用户回应性反馈（backchannel）、与他人对话以及背景语音。\n\n同时，该实验室改造了 RepCount-A、ProactiveVideoQA 和 Charades 三个基准来评估模型的视觉主动性。结果显示，在 RepCount-A（视频中物理动作计数）和 ProactiveVideoQA 等专项测试中，Thinking Machines 的模型能够主动参与视觉环境，而其他前沿模型则保持沉默或给出错误答案，包括高推理模型。\n\nThinking Machines 认为，通过将“交互性”内化为模型的一部分，模型规模的扩展将不仅让其更聪明，也会让它成为更高效的协作伙伴。此外，他们表示，虽然预计随着模型规模的扩大，交互能力也会进一步提升，但目前更大规模的预训练模型在这一实时交互场景下仍然过于缓慢，无法投入使用。“今年晚些时候，我们计划发布更大规模的模型。”\n\n2\n\n从零开始训练，200 毫秒为单位实时响应\n\n这次发布的核心，是 AI 在“时间感知”和“存在感”上的一次根本性转变。当前的前沿模型通常以单线程方式体验现实。它们会等待用户完成输入后才开始处理，并且在生成回应时，其“感知”是冻结的。在博客中，Thinking Machines 的研究人员将这种现状描述为一种限制，它迫使人类不得不去“迁就”AI 接口，比如把问题写得像邮件一样，并将思考打包成一整块再输入。\n\n为解决这种“协作瓶颈”，Thinking Machines 从零开始训练了这一交互模型，并放弃了标准的交替式 token 序列。取而代之的是，他们采用了一种多流（multi-stream）、微回合（micro-turn）的设计，可以以 200 毫秒为单位同时处理输入和输出，确保实时响应能力。这种“全双工”（full-duplex）架构使模型能够实时地“听、说、看”，从而在用户说话时进行回应性反馈（backchannel），或在捕捉到视觉线索时主动插话。例如，当用户在代码片段中写出 bug，或者有朋友进入视频画面时。\n\n技术上，该模型采用了无编码器的早期融合（encoder-free early fusion）。系统不再依赖像 Whisper 这样庞大的独立编码器来处理音频，而是通过一个轻量级嵌入层，直接接收原始音频信号（以 dMel 表示）和图像块（40×40），并在 Transformer 架构中从零开始联合训练所有组件。\n\n由于实时交互需要近乎即时的响应速度，而这往往与深度推理能力存在冲突，该实验室因还此设计了一种由两部分组成的系统：\n\n交互模型（Interaction Model）：始终与用户保持持续交互，负责对话管理、存在感维持以及即时响应。\n\n后台模型（Background Model）：作为一个异步代理，负责处理持续性推理、网页浏览或复杂工具调用，并将结果流式传回交互模型，由后者自然地融入对话中。\n\n在整个过程中，交互模型始终保持在线，回答后续问题、接收新的输入、维持对话上下文，并在后台结果返回时将其整合进对话中。当某个任务需要比即时响应更深层的推理时，交互模型会将其委托给异步运行的后台模型。这种分工让用户既能获得高响应速度，又能享受到完整的智能能力，包括推理模型的规划能力、工具使用能力以及代理式工作流，同时又具备非“思考型”模型的低延迟响应。\n\n并且，这种架构使 AI 能够在执行任务（如实时翻译或生成 UI 图表）的同时，继续监听用户反馈。这一功能在发布视频中也得到了展示，模型在生成条形图的同时，给出了类似人类反应时间的多种提示反馈。需要注意的是，后台模型和交互模型本身都具备智能能力。即使单独使用，交互模型在交互性能和智能基准测试上也具有很强的竞争力。\n\n3\n\n一旦开放，将为企业带来巨大价值\n\n如果 Thinking Machines 的交互模型向企业开放，很可能将从根本上改变企业将 AI 融入运营流程的方式。像 TML-Interaction-Small 这样的原生交互模型，可以实现当前标准多模态模型无法做到或极其脆弱的多种企业能力。\n\n当前的企业 AI 必须完成一个“回合”后才能分析数据。而在制造业或实验室环境中，原生交互模型可以持续监控视频流，一旦检测到安全违规或流程偏差，就能主动插入提醒，无需等待工作人员提出问题。该模型在 RepCount-A（精确计数重复动作）和 ProactiveVideoQA（随着视觉证据出现即时回答问题）等视觉基准中的表现，表明它可以作为高风险物理任务的实时审计员。\n\n在语音客服中，主要的摩擦来自于 2026 年标准 API 常见的 1–2 秒“处理延迟”。Thinking Machines 的模型将轮次延迟降低至 0.40 秒，大致相当于自然人类对话的速度。由于其原生支持同时语音处理，企业客服机器人可以在不打断用户的情况下，一边倾听客户情绪，一边提供“回应性反馈”（例如“我明白”“嗯嗯”），并提供实时翻译，使对话更像自然交流，而不是一段段割裂的录音。\n\n标准大模型缺乏“内在时钟”，只有在文本提示中提供时间信息时才“知道时间”。而交互模型天生具备时间感知能力，可以管理时间敏感流程，例如“每 4 分钟提醒我检查一次温度”或“如果这个流程比上一次耗时更长就提醒我”。这对于工业维护和制药研究尤为关键，因为时间是核心变量。\n\n此前，Thinking Machines 表示，将在其发布中坚持“重要的开源组件”，以赋能研究社区。但目前，尚不清楚这些新的交互模型是否会遵循同样的开源策略。\n\n另值得一提的是，此次模型发布前，Meta 已从 Thinking Machines 挖走 7 名创始成员。据外媒报道，挖人前，Meta CEO 马克·扎克伯格曾接触 Mira Murati，试图收购 Thinking Machines Lab，但被拒绝了。\n\n不过，Thinking Machines 并非单向流失人才，公司也聘请了 PyTorch 创始人 Soumith Chintala 担任 CTO，并引入 Neal Wu 等知名技术人才。有外媒报道称，曾在 Meta 工作 8 年、负责多模态感知系统的 Weiyao Wang 也已加入该公司。目前，该公司的规模增长至约 130 人。\n\n参考链接：\n\nhttps://thinkingmachines.ai/blog/interaction-models/\n\n今日好文推荐\n\nH200还没到中国，Anthropic先急了：千亿美元抢芯片，转头涨价让开发者买单\n\n干掉 .md？兜里 Token 不够，没法和 Karpathy 共情\n\n拒掉字节、谷歌橄榄枝，Meta 离职大佬田渊栋官宣自立门户！苏妈老黄追着投\n\n黄仁勋最后一刻登上访华飞机，英伟达中国市场再添变量", "category": "国际", "is_model_related": true, "source_file": "sources/2026-05-16_ChatGPT那一套要过时了？翁荔实测创业首个模型，回合制AI被\"原生实时交互\"秒了_InfoQ.md"}, {"title": "OpenAI推出ChatGPT个人理财功能，打通银行API引争议", "source": "多源综合", "digest": "OpenAI将ChatGPT接入银行系统，支持个人理财功能，可查询余额但不能直接操作资金；该功能引发全网对数据安全和隐私保护的担忧，被质疑是给黑客发年终奖。", "link": "https://mp.weixin.qq.com/s/tOjc1L0XSc-m1VhGqPJm7Q", "content": "", "category": "国际", "is_model_related": false, "source_file": "", "source_items": [{"name": "新智元", "source_file": "", "link": "https://mp.weixin.qq.com/s/tOjc1L0XSc-m1VhGqPJm7Q"}, {"name": "InfoQ", "source_file": "", "link": "https://mp.weixin.qq.com/s/bK8R2XYhpdQxK0YLLeA2oA"}, {"name": "极客公园", "source_file": "", "link": "https://mp.weixin.qq.com/s/oaDgPgNuknEj7OOWvG9w1A"}]}, {"title": "扩散模型也有「Skills」了！魔搭开源11个现成模板，风格、修图、超清一键搞定", "source": "量子位", "digest": "魔搭开源Diffusion模型插件，实现即插即用", "link": "https://mp.weixin.qq.com/s/IyMNhU6IY7Ke0o9M_BN-mA", "content": "---\npublish_time: 1778911200\n---\n\n# 扩散模型也有「Skills」了！魔搭开源11个现成模板，风格、修图、超清一键搞定\n\n> 原文链接：https://mp.weixin.qq.com/s/IyMNhU6IY7Ke0o9M_BN-mA\n> 公众号：量子位\n\n魔搭社区团队 投稿\n\n量子位 | 公众号 QbitAI\n\n在\n\n扩散模型\n\n（Diffusion Models）\n\n横扫图像与视频生成的今天，ControlNet、LoRA、IP-Adapter等工具，早已成了创作者和开发者工作流里的标配。但繁荣背后，一个越来越让人头疼的问题浮出水面：\n\n模型生态，太“碎”了。\n\n相信不少开发者都踩过这样的坑：好不容易跑通一个新模型，想加个控制功能，一看代码结构——完全不兼容；想一次性叠加多个控制条件，结果插件之间在底层“打架”，特征层冲突不断。现在的Diffusion插件生态，更像是一堆需要手工“打补丁”的孤岛。每次拼接，都在考验开发者的耐心和底层功底。\n\n如果能像大语言模型\n\n（LLM）\n\n使用MCP、Skills等标准化插件机制一样，让Diffusion模型也具备即插即用的通用联结方式，AI创作的效率和自由度，会不会迎来一次彻底的爆发？\n\n近期，专为Diffusion模型设计的插件框架——\n\nDiffusion Templates\n\n正式开源发布。这个框架能大幅降低可控生成技术的训练和使用难度，让开发者能够通过丰富的Templates来精准控制模型的生成结果。\n\n以图像编辑为例，通过叠加不同的Template，可以实现对同一画面的多维控制：\n\n使用第一个Template进行图像编辑，把画面风格改为二次元动漫风格\n\n使用第二个Template进行局部重绘，让周围环境保持不变\n\n使用第三个Template进行亮度调节，适当调高亮度保证画面明亮且清晰\n\n输入：\n\nTemplate 1:\n\n图像编辑\n\nTemplate 2:\n\n局部重绘\n\nTemplate 3:\n\n亮度调节\n\nscale: 0.6\n\n输出：\n\n△\n\n二次元的猫猫出现在了三次元的世界\n\n再来看另外一个例子，这是一只模糊的猫猫，可以用两个Template提升画面的清晰度：\n\n使用第一个Template进行超分辨率，渲染出高分辨率的图像\n\n使用第二个Template进行锐利激发，提升画面细节的清晰度\n\n使用第二个Template进行锐利激发，提升画面细节的清晰度\n\n输入：\n\nTemplate 1:\n\n超分辨率\n\nTemplate 2:\n\n锐利激发\n\nscale: 0.8\n\n输出：\n\n△\n\n两个以不同目标训练的模型协同渲染提升画面质量\n\n像搭积木一样组合模型\n\nDiffusion Templates\n\n是一套完善的\n\nDiffusion\n\n模型插件框架，在这个框架中，每一个插件被称为\n\nTemplate\n\n，它可以像模板一样引导模型，模型发挥自身的生成能力向模板中填充信息，最终生成清晰的画面内容。框架的结构如下图所示：\n\n△\n\nDiffusion Template框架结构\n\nDiffusion Template框架包含以下模块设计：\n\nTemplate Input:\n\nTemplate模型的输入，其中的字段由每个Template模型自身决定，为模型开发者提供最大限度的开发自由度。\n\nTemplate Model:\n\nTemplate模型，可从魔搭模型库加载或从本地路径加载，让模型的使用简单易用。\n\nTemplate Cache:\n\nTemplate模型的输出，也是基础模型Diffusion Pipeline的输入，因此其中包含的字段是Diffusion Pipeline的输入参数的子集。\n\nTemplate Pipeline:\n\n用于调度多个Template模型的模块，该模块负责加载Template模型、整合多个Template模型的输出。\n\n其中Template Cache是最核心的框架概念，魔搭社区团队在其中设计了一些模型能力媒介格式，例如KV-Cache等，Template模型通过Template Cache将信息传递给基础模型，对生成内容进行控制。\n\n为了方便开发者快速了解Diffusion Templates，魔搭社区团队基于FLUX.2-klein-base-4B，训练了11个覆盖多个场景的Template模型，并将这些模型一并开源。每个Template模型存储在独立的模型仓库中，保证插件与基础框架解耦，同时方便开发者适配。\n\n目前，Diffusion Templates框架的代码已在DiffSynth-Studio项目下完全开源。\n\n本次开源的代码也包含了模型的训练，团队希望通过这个框架，大幅降低可控生成模型的训练门槛，让模型开发者们能够更方便地探索新奇的模型技术，一起构建丰富的开源模型生态，为AI技术发展添砖加瓦！\n\n模型一览\n\n以下是本次开源的11个Template模型，这些模型基于基础模型FLUX.2-klein-base-4B训练，能够为这一基础模型提供各种可控生成能力，这些Template模型与FLUX.2-klein-base-4B的LoRA和微调版本也是兼容的。未来团队会基于这一框架提供更多基础模型的Templates。\n\n1. 亮度调节\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Brightness\n\n精准控制画面的光照强度，从柔和的晨光到强烈的逆光，随心所欲。\n\nscale = 0.3\n\nscale = 0.5\n\nscale = 0.7\n\n2. 结构控制\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-ControlNet\n\n类似ControlNet的功能，通过输入参考图对生成图像的空间结构、物体轮廓与透视关系进行精准引导，让创作更加可控。\n\nCondition\n\nPrompt: A cat is sitting on a stone, bathed in bright sunshine.\n\nPrompt: A cat is sitting on a stone, surrounded by colorful magical particles.\n\n3. 超分辨率\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Upscaler\n\n将低分辨率图像升级为高清大图，在保持原有构图和语义的基础上，智能重绘并补充丰富的细节纹理。\n\n低清晰度输入\n\n高清晰度输出\n\n4. 锐利激发\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Sharpness\n\n提升画面锐利度与清晰度，可与超分辨率模型叠加使用，获得更加清晰的视觉效果。\n\nscale = 0.1\n\nscale = 0.8\n\n5. 图像编辑\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Edit\n\n基于自然语言指令，对图像中的特定物体、动作或属性进行精准修改。与主流图像编辑模型不同，本模型采用KV-Cache传递输入图像信息，推理速度显著提升。\n\n输入图\n\nPrompt: Put a hat on this cat.\n\nPrompt: Make the cat turn its head to look to the right.\n\n6. 美学对齐\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Aesthetic\n\n通过调整美学参数，优化图像的美学评分，让生成结果更符合人类审美偏好。\n\nscale = 0\n\nscale = 1.0\n\nscale = 2.5\n\n7. 局部重绘\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Inpaint\n\n输入原图和遮罩图，仅在遮罩区域内重新生成新内容，实现精准的局部编辑。\n\n原图\n\n遮罩图\n\nPrompt: An orange cat is sitting on a stone.\n\n8. 年龄控制\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-Age\n\n在生成人像时灵活控制人物年龄，从稚嫩孩童到沧桑老者，一键切换。\n\nAge = 20\n\nAge = 50\n\nAge = 80\n\n9. 色调调节\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-SoftRGB\n\n自由调整画面色调与色彩氛围，营造温暖、冷峻等不同的视觉风格。\n\nColor:\n\n#D0B98A\n\nColor:\n\n#808080\n\nColor:\n\n#5EA3AE\n\n10. 内容参考\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-ContentRef\n\n参考输入图像的风格、构图等特征，生成具有相似特质的新画面，实现风格迁移与内容复用。\n\n参考图\n\n生成图\n\n11. 魔性熊猫\n\n模型链接：https://modelscope.cn/models/DiffSynth-Studio/Template-KleinBase4B-PandaMeme\n\n这是一个彩蛋模型，能够生成各种魔性十足的熊猫头表情包。\n\nPrompt: A meme with a happy expression.\n\nPrompt: A meme with a sleepy expression.\n\nPrompt: A meme with a surprised expression.\n\n相关链接\n\n项目主页：\n\nhttps://modelscope.github.io/diffusion-templates-web/\n\n开源代码：\n\nhttps://github.com/modelscope/DiffSynth-Studio\n\n技术报告：\n\nhttps://arxiv.org/abs/2604.24351\n\n模型集（含11个模型）：\n\nhttps://modelscope.cn/collections/DiffSynth-Studio/KleinBase4B-Templates\n\n数据集（含17个数据集）：\n\nhttps://modelscope.cn/collections/DiffSynth-Studio/ImagePulseV2\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n我们正在招聘一名眼疾手快、关注AI的\n\n学术编辑实习生\n\n🎓\n\n感兴趣的小伙伴欢迎关注 👉\n\n了解详情\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-05-16_扩散模型也有「Skills」了！魔搭开源11个现成模板，风格、修图、超清一键搞定_量子位.md"}, {"title": "中国500万医生的新AI：顶刊独家联手，卷的就是证据源", "source": "量子位", "digest": "阿里健康发布「氢离子」", "link": "https://mp.weixin.qq.com/s/4CNoFZkLmoneHDLh-YENOQ", "content": "---\npublish_time: 1778904000\n---\n\n# 中国500万医生的新AI：顶刊独家联手，卷的就是证据源\n\n> 原文链接：https://mp.weixin.qq.com/s/4CNoFZkLmoneHDLh-YENOQ\n> 公众号：量子位\n\n金磊 发自 杭州\n\n量子位 | 公众号 QbitAI\n\n很反差。\n\n明明是一场AI的发布会，台下却坐满了\n\n医学界\n\n的大佬们：\n\n有北大、清华的，有浙江、上海的，甚至医学顶刊BMJ集团的主编都来围观了……\n\n△\n\n图片由AI生成\n\n为啥会这样？\n\n因为\n\n阿里健康\n\n正式发布了一个新的\n\n医学AI\n\n产品——\n\n氢离子\n\n，主打的就是靠谱的医学AI助手。\n\n或许你还会有疑问，现在通用大模型、医疗AI不是蛮多的么，阿里健康干嘛还要再另起炉灶啊？\n\n好问题。\n\n阿里健康CTO\n\n王祥志\n\n在现场举的例子，就直击了这个问题的七寸。\n\n他用专业的Prompt来约束通用大模型：\n\n你必须要查询专业的文献，告诉我氟泽雷塞的使用注意事项，当病人出现漏服到底怎么办的时候？\n\n结果，通用大模型一本正经地给出了错误的补服建议……\n\n在容错率极低的医学场景下，这绝对是个Big Problem。\n\n除此之外，在“用”这件事上，也有问题。\n\n目前中国50%的医生，会通过4个以上的APP来解决他们的问题，包括查询用药、查询临床指南，查询中英文文献还要再去不同的论文网站……\n\n所以，氢离子要做的事情就一目了然了。\n\n不仅是要更聪明，最重点的是，要让中国500万医生用得\n\n够可靠\n\n、\n\n够方便\n\n。\n\n把靠谱的证据摆到500万医生面前\n\n首先需要厘清一个核心概念。\n\n氢离子不是医生用来给患者看病的那种AI，它是专门解决中国500万医生查证据慢、找文献难、读英文累、不同工具来回切换，以及通用AI容易说胡话等痛点的。\n\n为此，氢离子甩出了三板斧，精准直击痛点。\n\n循证智能问答，每句话都有迹可循\n\n医生可以用自然语言来提问，例如：\n\n糖尿病肾病SGLT2抑制剂最新指南。\n\n甚至医生们还可以通过语音、图片、病例文本等方式表达需求，系统会再根据问题拆解意图、检索证据、组织答案：\n\n但更重要的是，答案可不只是完整回答那么简单。\n\n氢离子强调，每个答案背后都会有指南、文献、说明书等医学证据支撑，并且可以定位到原文中的具体段落：\n\n医生点击对应引用，就能看到证据来自哪篇文献、哪一部分原文，以及原文如何支持这个结论。\n\n这点对医学AI非常关键。\n\n因为医生真正需要的，正是一个能把证据链摆清楚的助手。\n\nAI给出结论之后，医生必须能回头检查：这个结论依据的是指南、RCT研究、真实世界研究，还是某种较弱证据？它适用的人群是谁？样本量多大？是否和眼前患者相似？\n\n如此一来，在查得快，且找得准的基础上，才能把核对证据的权利完完整整地交还给医生。\n\n精准文献搜索，独家牵手国际顶刊\n\n阿里健康正式宣布与英国BMJ集团达成期刊内容独家合作。作为全球最具影响力的医学期刊之一，BMJ集团旗下70本医学期刊过去十年间发表的所有内容和多媒体资源，将独家授权提供给氢离子。\n\n这意味着，氢离子成为了国内唯一一个在站内就能直接阅读BMJ集团海量顶级文献的医学AI助手。\n\n据了解，在此之前，氢离子已经与中华医学会、人民卫生出版社、中国抗癌协会等国内权威机构打通了数据。\n\n一句话搜遍国内外顶刊，氢离子在证据源的丰富度与权威性上，已然筑起了区别于其它AI的护城河。\n\nAI文献速读和医学翻译\n\n对医生来说，找到论文只是第一步，\n\n读懂\n\n才是更费时间的部分。\n\n一篇SCI论文，尤其是临床研究论文，医生往往需要花不少时间拆解，包括研究目的是什么、纳入了哪些人群、干预措施和对照组是什么、对真实临床有什么参考价值等等。\n\n在过去，医生们可能需要1到2小时才能提取一篇文献的核心内容；但有了氢离子，这个时间被压缩到了\n\n3到5分钟！\n\n同时，氢离子还提供医学术语翻译和中英对照阅读，正如王祥志在现场提到的：\n\n团队面对面访谈中，有超过80%的医生表示阅读英文医学内容时需要借助各种翻译工具，尤其是专业术语和生僻表达。\n\n为什么氢离子不会说胡话？\n\n能读懂长难句、能做总结翻译，这在今天的大模型圈似乎已经是基操。\n\n但真正让能台下数百位严苛的医学专家点头认可的，是氢离子在底层逻辑上对医学严谨性的死磕。\n\n通用大模型之所以会说胡话，是因为它的本质是基于概率的文字接龙；但王祥志认为，在容错率极低的医疗行业，\n\nAI必须被戴上紧箍咒，懂得敬畏边界。\n\n为此，氢离子给出了一套完全不同于通用大模型的公式：\n\n医学证据 + 循证医学 + AI = 更可靠的医学AI助手。\n\nAI被放在了最后，而循证医学的框架被前置到了算法的每一个毛细血管中。\n\n具体而言，氢离子打造了一套全链路的四层循证AI架构。\n\n第一层，是证据理解层。\n\n毕竟医学文献不是普通网页，它里面有研究对象、干预措施、对照组、结局指标、样本规模、研究类型、证据等级等一整套结构。\n\n氢离子会基于PICO框架和GRADE标准，对文献和指南进行结构化理解。\n\n（注：PICO是循证医学里常用的问题拆解框架，分别对应Patient/Population、Intervention、Comparison、Outcome，也就是研究人群、干预措施、对照方式和结局指标；GRADE则常用于评价证据质量和推荐强度。）\n\n用更通俗的话说，氢离子是先让AI读懂这条证据到底在研究谁、用了什么方法、和谁比较、得出了什么结果，以及这条证据到底有多强。\n\n这一步决定了后面所有回答的底座。\n\n第二层，是精准检索层。\n\n医生提问往往非常复杂，尤其是带有真实病例背景的问题。模型不能只做关键词匹配，更要理解这个问题对应的医学结构。\n\n比如，一个患者的年龄、疾病阶段、合并症、用药史、不良反应，都可能影响证据是否适用。氢离子在检索阶段引入PICO语义匹配，就是为了把医生的问题和医学证据之间建立更细的连接。\n\n一言蔽之，这类检索是为了找到真正适用的证据。\n\n第三层，是模型微调和强化。\n\n通用大模型训练的是广泛语言能力，而医学AI要额外学会什么叫准确、忠实循证、安全有用。\n\n这意味着模型要学会在证据范围内组织答案，遇到证据不足、指南不一致、适用人群有限的情况，也要把边界说清楚。\n\n这也是氢离子反复强调“助手”二字的原因。\n\n它不替医生做决定，相反，是把可追溯的证据、证据等级、适用范围和可能限制整理给医生。\n\n因此，最终诊断和治疗责任，仍然在医生手里。\n\n第四层，是专家评审层。\n\n氢离子宣布成立医学AI专家委员会，邀请300多位中国临床专家共同参与医学AI评价标准和数据集建设。\n\n这一体系包括学术方向把关、评测标准制定，以及一线医生对AI回答的持续验证和反馈。\n\n这套机制的意义在于，医学AI不能只在技术榜单上自证优秀。\n\n医疗是一个高度依赖专业共识和临床验证的领域，一个回答到底有没有用，不能只看模型分数，更要看临床医生是否认可、证据链是否扎实、边界是否清晰、是否经得起真实问题反复检验。\n\n从这个角度看，氢离子的四层架构更像一个\n\n质量控制系统\n\n——\n\n先理解证据，再精准检索，再训练模型按循证逻辑回答，最后交给专家体系持续校验。\n\n这也是医学AI和普通AI产品最大的分野。\n\n中国医学AI，开始定义标准了\n\n纵观整场发布会，最大的感受不只是阿里健康发了一个新APP，也不只是与BMJ集团达成独家合作。\n\n重点应该在于一个变化——\n\n医学AI正在从能不能回答问题，进入到\n\n答案如何被验证\n\n的阶段。\n\n过去，很多医疗AI产品更像是检索工具、问答工具、辅助写作工具。它们确实提高了效率，但也常常让医生陷入新的不确定，AI说得很像对的，但我怎么知道它真的对。\n\n氢离子的答案是，把AI拉回循证医学框架里。\n\n它不把模型本身包装成权威，而是把权威交还给证据、指南、文献和专家评审；AI在其中扮演的角色，是连接、总结、翻译、定位和推理。\n\n这种定位比较克制，也更符合医学场景。\n\n在圆桌论坛中，北京大学人民医院血液科副主任医师\n\n刘竞\n\n谈到一个很现实的问题：\n\n当AI推荐和现行指南不一致时，医生应该相信谁？\n\n她的回答不是二选一，而是既不固守可能已经过时的指南，也不盲目依赖AI推荐。指南是临床行医的基本框架，AI则可以补充最新证据、特殊人群和复杂病例中的信息缺口。\n\n这其实说出了医学AI最合理的位置：\n\n应当是医生和快速增长的医学证据之间的连接器。\n\n从生产力角度看，它能把医生从大量重复性的资料检索和初步阅读中解放出来。\n\n医生最宝贵的能力，不是记住每篇论文，也不是手动翻遍所有数据库，而是在证据、人群、病情、风险、患者意愿之间做综合判断。AI越能把底层证据整理清楚，医生越能把时间花在真正复杂的临床逻辑和人文沟通上。\n\n从医疗资源角度看，它也有机会缩小不同地区医生之间的信息差。\n\n在大城市三甲医院，医生更容易接触国际会议、前沿文献和高水平学术交流；但在基层或资源相对有限的地区，医生获取顶级医学证据的路径往往更长。氢离子希望解决的，正是这种证据可及性问题。\n\n当然，这件事不能说得太满。\n\n一个医学AI工具能否真正改变医生工作方式，还要看长期使用效果，看证据覆盖是否持续完善，看回答质量是否经得起更多真实临床问题检验，也看它能否在医生群体中建立足够信任。\n\n但至少可以确定的是，医学AI的竞争重点已经变了——\n\n谁能更好地回答“证据从哪来、是否可信、如何验证、适用边界是什么”，谁才更接近医生真正需要的AI。\n\n毕竟，对医生来说，一个AI助手最重要的能力，从来不是说得多漂亮。\n\n而是每一句话，都有迹可循。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": false, "source_file": "sources/2026-05-16_中国500万医生的新AI：顶刊独家联手，卷的就是证据源_量子位.md"}, {"title": "北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证", "source": "银行科技研究社", "digest": "北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证", "link": "https://mp.weixin.qq.com/s/s-AzhjZLekxBIO3Wp1991w", "content": "---\npublish_time: 1778901480\n---\n\n# 北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证\n\n> 原文链接：https://mp.weixin.qq.com/s/s-AzhjZLekxBIO3Wp1991w\n> 公众号：银行科技研究社\n\n《银行科技研究社》（作者\n\n木子剑\n\n）：\n\n综合来看，北京农商银行是在2025年开始全力加速AI大模型布局。不久前，该行首席信息官（CIO）易永丰还曾分享过AI给中小银行带来的机遇与挑战。而在近期发布的2025年报中，北京农商银行进一步介绍了AI大模型相关进展和金融科技建设情况。\n\n2025年开始加速大模型布局，年度十件大事中有2件与大模型相关\n\n在《当代金融家》杂志2025年第12期，易永丰撰文分享“‘人工智能+’给中小银行重塑核心竞争力带来的机遇和挑战”时表示，作为驱动数字化转型的核心引擎，大模型技术已从概念性验证的试水阶段迅速迈向规模化应用的深水区。\n\n在文章中，易永丰从数据、价值、生态、合规、组织等5方面给中小银行的AI大模型布局提供建议。从中可发现，北京农商银行在AI大模型领域已有一定的研究和实践。\n\n据《银行科技研究社》了解，大模型技术是在2022年末开始备受关注，北京农商银行在2022至2024年的报中均未透露大模型相关进展。但是2025年以来，该行行动开始加速。\n\n正是在2025年初，DeepSeek爆火出圈，北京农商银行彼时较快进行了部署。值得一提的是，北京农商银行在2026年1月揭晓行内2025年度十件大事，其中2件与AI大模型有关，分别是“成功完成DeepSeek本地化部署”“斩获大模型应用技术比赛多项荣誉”。\n\n《银行科技研究社》还注意到，在2025年7月，北京农商银行同时启动了大模型平台建设项目、代码助手建设项目以及总行金融科技部的大模型开发岗人才招聘。\n\n易永丰曾对北京农商银行代码助手进行过介绍。据悉，其代码助手具备智能问答、快速提问、自动补全三大核心功能：智能问答功能具备多轮对话能力，还可基于提示词工程，实现建表语句、单元测试案例及测试数据集等内容的高效生成，并通过标准化提示词模板嵌入机制，提高功能复用性；快速提问功能具备对各类文档快速提问的能力，可以支持代码规范审查等场景，如支持对代码规范进行总结提炼与交互式提问，精准定位并修改特定代码的规范性问题等；自动补全功能则依托上下文语义理解，能够根据注释或既有代码逻辑，自动生成符合要求的代码片段，为开发人员提供智能化辅助。\n\n大模型平台则是北京农商银行从数字化转型战略层面，打造的企业级人工智能开发、应用、服务的一体化平台，重点聚焦业务流程自动化、数据分析智能化、代码开发智慧化三大场景，助推“业务+数据+科技”融合。\n\n而作为北京农商银行信息科技领域第一负责人的易永丰正是在2025年正式担任CIO一职。2025年4月25日，北京金融监管局发布批复，核准易永丰北京农商银行首席信息官的任职资格。易永丰曾在华夏银行科技条线任职，曾任该行信息技术部开发一室经理，信息技术部副总经理，先后兼任数据中心、需求中心、运行中心、大数据服务中心主任等职务。\n\n可见，北京农商银行现任CIO的上任时间和该行开始加速大模型布局的时间差不多。\n\n成立数字生态金融部，组织首次数字化人才初级培训和认证\n\n而在最新的2025年报中，北京农商银行提到了AI大模型相关进展，这是在前几年的年报中见所未见的。此外，也介绍了更多科技建设情况。\n\n北京农商银行党委书记白晓东在年度致辞中就提到，\n\n过去一年，\n\n北京农商银行\n\n拥抱AI，让AI真正融入业务、赋能一线，大模型全年调用量达32万次。\n\n在数字金融/金融科技领域，北京农商银行去年取得多方面的新进展。\n\n在明确数字化发展路径上，制定《数字化转型总体行动方案2025-2029》，出台6个条线级行动方案及24个部门级行动方案，全面开启数字化转型新篇章，推动全行数字化转型进入规范化、系统化新阶段。\n\n在能力建设上，五大核心能力有所提升。其中，数字科技技术应用方面，集中运营中心有效应用大模型提升OCR识别准确率。\n\n在工具应用上，\n\n五大工具应用场景达687个，其中低代码平台396个、RPA机器人122个、大模型42个、BI自助数据分析系统105个、业务侧自助建模平台22个\n\n，初步形成“人人会用工具、人人能提效能”的全员数字化推广氛围。报告期内，数字化转型各项指标达成，业务自主办理率97.57%、产品线上化率80.79%、生态获客2030户、数字化营收占比17.27%、智能风控占比77.38%、数字化人才占比14%，自主可控率提升9.2%。\n\n在产业数字金融体系上，成立数字生态金融部，牵头统筹全行产业数字金融发展，制定生态发展指导意见，出台业务管理办法，有效完善制度保障体系。\n\n在科技赋能上，报告期内，金融科技人员同比增加14.9%；投产科技项目1908个，同比增长6.6%；受理需求数同比增长7.1%，需求投产平均时长同比降低6.4%。制定架构管理办法等制度，引导系统建设从部门级向企业级转变。建立技术底座，收敛技术路线，提高可复用能力。按照4层20组规划应用系统201个，规划技术研发平台7个，新增技术组件3个等。\n\n在创新转型上，成立创新工厂，吸纳产业数字金融、知识产权金融生态创新、“随心花”等项目组入驻，重点开展“科创智贷”“科创链贷”“保理数智贷”等特色产品的孵化工作。实施“大模型+”专项行动方案，投产7个企业级知识库、智能客服等功能，报告期内调用量达22.2万次。\n\n而人才是数字化转型的关键，因此，北京农商银行正加快培育数字化人才。该行组织首次数字化人才初级培训和认证，共5871人报名，1324人通过认证，二复合与三复合人才分别为924人和400人。\n\n银行业金融科技社群，有兴趣的朋友请添加群主：\n\nBankFintech666\n\n备注：公司+姓名+职务+银行入群。仅限银行科技工作人员。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-05-16_北京农商银行大模型全年调用32万次，1300多人通过首次数字化人才认证_银行科技研究社.md"}, {"title": "智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动", "source": "中国信通院CAICT", "digest": "智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动", "link": "https://mp.weixin.qq.com/s/U5JAmuDKgKEEi2zC57vpWw", "content": "---\npublish_time: 1778914200\n---\n\n# 智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动\n\n> 原文链接：https://mp.weixin.qq.com/s/U5JAmuDKgKEEi2zC57vpWw\n> 公众号：中国信通院CAICT\n\n2026年5月16日，2026世界电信和信息社会日大会在武汉举行。在“AI智算网络与应用专题研讨会”上，中国人工智能产业发展联盟（AIIA）信息通信业AI创新推进委员会、中国信息通信研究院（简称“中国信通院”）联合中国通信标准化协会、中国电信、中国移动、中国联通等产业伙伴，共同发起“智能IP广域网（AI WAN）应用推进”行动暨中国行活动。\n\n行动将基于基础电信企业已有的创新实践，聚焦四大领域：一是以弹性、高效的企业入算网络赋能行业企业低成本、高效率利用算力资源；二是以灵活、快速的边缘入算网络推动智慧家庭各类算力服务创新；三是以高速、无损的新型城域网络支撑分布式训练、推理等人工智能新型业态；四是以安全、可靠的高速数据网络支持数据要素高效流通和管理。\n\nAIIA信息通信业AI创新推进委员会秘书长、中国信通院技术与标准研究所所长张海懿表示，通过发起此次行动，我们期望协同产业各方力量，加快推动智能 IP 广域网（AI WAN）应用，推进算网融合创新服务模式成熟，强化网络对产业智能化发展的赋能作用。\n\n我国持续推进 “人工智能 +” 行动，推动行业人工智能规模化落地。工业和信息化部、国家发展改革委等部委陆续发布了《算力基础设施高质量发展行动计划》、 “东数西算”公共传输通道等相关行动，智能 IP 广域网（AI WAN）对人工智能产业发展的核心支撑价值愈发凸显。\n\n当前，智能IP广域网已在中国电信、中国移动、中国联通三大运营商规模部署，有力支撑训练推理、数据流通、智能服务发展，广泛赋能交通、医疗、制造、科研等行业应用，有效推动网络与业务向更智能、更高效、更安全的方向演进。\n\n本次AI WAN中国行活动立足行业需求，将走进全国重点城市与重点行业，广泛开展调研，深化案例分析，凝聚产业共识，为人工智能和数字经济高质量发展注入新的动能。\n\n校  审 | 谨\n\n言、\n\n珊  珊\n\n编  辑 |\n\n凌  霄\n\n”\n\n推荐阅读\n\n第九届“绽放杯”5G应用征集大赛正式启动\n\n专家谈", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-16_智能IP广域网（AI WAN）应用推进行动暨中国行活动正式启动_中国信通院CAICT.md"}, {"title": "突发！OpenAI大规模重组，总裁Brockman夺权挂帅", "source": "新智元", "digest": "突发！OpenAI大规模重组，总裁Brockman夺权挂帅", "link": "https://mp.weixin.qq.com/s/e-gJuit8wxO8wahq0vrWxw", "content": "---\npublish_time: 1778913037\n---\n\n# 突发！OpenAI大规模重组，总裁Brockman夺权挂帅\n\n> 原文链接：https://mp.weixin.qq.com/s/e-gJuit8wxO8wahq0vrWxw\n> 公众号：新智元\n\n新智元报道\n\n编辑：Aeneas\n\n【新智元导读】\n\nOpenAI深夜大地震了，ChatGPT、Codex和API三大王牌紧急合并，总裁亲自挂帅！追兵Anthropic的估值已经飙至9000亿，IPO前生死一战，超级应用要来了。\n\n就在刚刚，周六早上的科技圈又曝出重磅消息。\n\nOpenAI官方毫无预兆地宣布了公司历史上在IPO前夕最大规模、最剧烈的一次组织架构大重组。\n\nChatGPT、Codex以及开发者生态的命脉——API，三大核心产品线被全部打碎，原地合并为一个统一的产品组织！\n\n更让人震惊的是，一度隐居幕后的OpenAI联合创始人兼总裁、那个曾经因为奥特曼被罢免而愤然辞职的技术战神Greg Brockman，正式被推向台前，全面接管产品战略！\n\n表面上，这是一次OpenAI为了Agent时代的战略聚焦。\n\n但实质上，这明显是一场惊心动魄的「硅谷权游」：ChatGPT的开国元老被调离、核心高管接连离职、AGI掌门人因病无限期休假……\n\n现在，OpenAI的围剿者们已经虎视眈眈。\n\nAnthropic刚刚敲定300亿美元融资，估值飙升至9000亿美元，完成了对OpenAI的史诗级反超；谷歌更是在下周的I/O大会前磨刀霍霍。\n\n9亿周活用户命悬一线，地表最强AI帝国正迎来属于它的生死存亡之秋！\n\n突然被换掉的掌门人，与走向台前的影子国王\n\n这次调整最让人大跌眼镜的，是OpenAI对核心功臣的挥刀。\n\nChatGPT「生父」被调离\n\n如果要评选OpenAI过去两年里风头最劲的功臣，Nick Turley绝对榜上有名。\n\n作为ChatGPT自上线以来的全权负责人，Nick Turley亲手把ChatGPT从一个无人问津的「全家桶赠品」，喂养成了今天坐拥9亿周活跃用户的全球第一大超级应用。\n\n然而，在这次的权力洗牌中，这位功勋卓著的ChatGPT「生父」却被一纸调令，直接从最核心、最吸睛的消费者产品线移开，去主管相对沉闷的「企业用户」方向。\n\n「他不再负责任何消费者产品。」外媒WIRED用这句话，冷酷地宣告了一位ChatGPT元老在C端大本营的谢幕。\n\n接替他消费者产品一把手位置的，是前Instagram副总裁Ashley Alexander。\n\n这位原本在OpenAI负责医疗健康应用的女将，直接空降到了流量的最核心。\n\n战神归位：Brockman的「垂帘听政」结束了\n\n如果说Nick Turley的调离是「大将换防」，那么Greg Brockman的亲自挂帅，则是OpenAI最高权力层的惊天巨变。\n\n作为OpenAI的联合创始人兼总裁，Brockman在技术圈一直是个狠角色。\n\n他能在奥特曼被董事会清洗时扔下铁饭碗同进退，也能在回归后默默在后台死磕AI基础设施。\n\n前段时间，OpenAI名义上的「AGI部署CEO」Fidji Simo因为严重的慢性疾病复发，自4月初开始持续休假，归期未定。Brockman此前只是代管产品。\n\n但就在这个周五，OpenAI直接向全体员工发布备忘录：Brockman的「代管」正式转正。\n\n他将全面、长期地正式接管OpenAI的所有产品战略！\n\n那个在技术后台修路造桥的「影子国王」，终于被逼到了聚光灯下。\n\n从此，他不仅要管算力、管芯片、管Blackwell的供应链，现在还要管9亿人每天在ChatGPT里聊什么，成为真正的实际掌权者。\n\n三线合一！奥特曼的惊天豪赌：「超级应用」降临\n\n为什么要在这个节骨眼上把三大产品线生生捏在一起？\n\n在流出的内部备忘录中，Brockman用一种极具行业煽动性的语言给出了答案。\n\n「我们正在巩固我们的产品工作，以便以最大的专注力向Agentic Future（智能体时代）进军，在消费者和企业端全面取胜！」\n\n史上第一次，OpenAI高层如此明确地承认：OpenAI原有的产品线，已经到了不得不变的臃肿期。\n\n从「三头马车」到「铁板一块」\n\n在重组之前，OpenAI内部的三大产品线几乎是各自为战的。\n\nChatGPT：\n\n负责貌美如花、搞定C端流量，吸引9亿周活用户；\n\nCodex：\n\n负责闷声发大财、死磕编程和代码生成，是程序员的神器；\n\nAPI：\n\n负责向全世界的开发者抽税，构建生态护城河。\n\n但在Brockman眼里，这种割裂是不可接受的。随着AI能力的进化，这三个东西正在自然收敛。\n\n现在的ChatGPT如果不会写代码、不会自动跑API，那它就是一个聊天花瓶；Codex如果没有ChatGPT的交互界面，就无法变成小白也能用的生产力工具。\n\n因此，现在三大团队原地解散，合体为全新的核心产品与平台团队。而这个巨无霸团队的掌舵人，正是Codex的原负责人——Thibault Sottiaux。\n\n曾经，他把Codex打造成OpenAI历史上增长最快的王牌产品而立下赫赫战功；如今，他成了Brockman麾下的头号大将。\n\n终极王牌：代号「Super App」的桌面吞噬者\n\n伴随着这次重组，OpenAI真正的大招也终于浮出水面。\n\nThibault Sottiaux目前正在秘密主导开发一款内部被称为「超级应用」的终极武器。\n\n这绝不仅仅是一个网页版的ChatGPT升级，而是一个要把ChatGPT、Codex编程智能体、以及OpenAI尚未发布的「Atlas网页浏览器」三合一的统一桌面端应用！\n\n这意味着，OpenAI要彻底跳出「聊天框」的限制。\n\n从此，这个超级应用长在你的电脑桌面上，它有自己的浏览器（Atlas），能自己看网页；它有最强的代码执行能力（Codex），能自己写脚本；它有ChatGPT的大脑，懂你的意图。\n\n它不需要你复制粘贴，它能「自主代替用户执行复杂的数字任务」。\n\n这才是奥特曼和Brockman眼中的「Agentic Future」——智能体时代！\n\n高管空心化：狂欢背后的失血与隐忧\n\n这个新闻看起来，似乎是一次很积极的「主动出击」。\n\n但如果仔细阅读OpenAI最近的人事变动名单，你就会发现这样一个可怕的事\n\n实：\n\nOpenAI的高管层，快要被掏空了。\n\n就在这次重组发生的前一个月，OpenAI内部掀起了一场海啸般的人事震荡。\n\n上个月，OpenAI离职了一批神仙大佬。\n\nKevin Weil，\n\nOpenAI科学家AI工作空间负责人，离职！\n\nBill Peebles，\n\n大名鼎鼎的Sora的联合负责人、核心大牛，离职！\n\nSrinivas Narayanan，\n\n企业应用首席技术官，离职！\n\n更不用说，那个本该运筹帷幄的「AGI部署CEO」Fidji Simo，目前还躺在病床上，只能在病房里隔空跟Brockman对对方案。\n\n所以，这一次大重组的底层逻辑，并不是因为OpenAI兵强马壮，而是因为他们已经无人可用了。\n\n在连续失去多位技术副总裁、CTO和项目负责人后，OpenAI的战线拉得太长了——又要搞Sora视频，又要搞SearchGPT搜索，又要搞Orion大模型，还要搞硬件芯片。\n\nBrockman这次把ChatGPT、Codex和API捏成一团，本质上是一次断臂式的收缩。\n\n把有限的精锐部队合并到同一个战场，用一个通吃C端和B端的「超级应用」，来掩盖内部高管流失的窘境。\n\n估值被反超！追兵已至，资本市场的「致命30秒」\n\n让奥特曼和Brockman如此焦虑、甚至不惜在IPO前夕进行如此剧烈重组的，还有外部那让人喘不过气来的竞争压力。\n\n硅谷的AI王座，在这个星期刚刚易主了。\n\nAnthropic的「背刺」：9000亿美元的巨无霸诞生\n\n就在本周，OpenAI最致命的宿敌、由前员工出走创立的Anthropic，悄然敲定了一笔颠覆行业格局的新融资。\n\n在这轮由顶级财团领投的300亿美元巨额融资中，Anthropic的估值被直接推向了令人窒息的9000亿美元！\n\n9000亿美元是什么概念？它一举超越了OpenAI在非公开市场的最新估值，成为了全球估值最高的独立AI独角兽！\n\n更糟糕的是，Anthropic在编程领域对OpenAI实施了精确的降维打击。Claude系列模型在长文本和代码生成上，把OpenAI压得抬不起头。\n\n技术人员在疯狂逃向Claude，资本在疯狂涌向Anthropic。OpenAI如果再守着那个只会聊天的ChatGPT网页，它的帝国大厦在上市前夜就会崩塌。\n\n5月，Anthropic的年度经常性收入已经飙升至450亿美元，短短5个月内营收增长了500%。这条陡峭的营收曲线，在整个科技商业史上都找不到先例！\n\n谷歌下周开大，留给OpenAI的时间不多了\n\n除了背后的刺客Anthropic，正前方的泰坦巨兽——谷歌，也在死死盯着OpenAI。\n\n下周，Google I/O年度开发者大会就将正式开幕。据硅谷线报，劈柴已经准备好了一箩筐针对ChatGPT的全新AI产品。\n\n去年OpenAI靠在Google I/O前一天发布GPT-4o截胡了谷歌；而今年，高管空心的OpenAI已经没有余力再去搞一场发布会来「截胡」了。\n\n唯一的办法，就是赶在谷歌开大招之前，把自己的组织架构调整好，告诉华尔街：别看Anthropic估值高，我们已经在搞三合一的Super App了。\n\n终局之战：IPO前夜的疯狂自救\n\n根据WIRED的独家起底，这次重组背后，还有一个全硅谷公开的秘密：OpenAI计划在今年年内正式推进IPO。\n\n对于任何一家准备上市的超级独角兽来说，资本市场最忌讳的就是「故事线不清晰」和「高管内斗内耗」。\n\n在上市的关键窗口期，如果OpenAI的招股书上写着：我们有ChatGPT团队、有独立的Codex团队、有API团队，三个团队天天为了算力资源抢得不可开交，那华尔街的分析师会毫不犹豫地给估值狠狠打折。\n\n通过这次重组，奥特曼向资本市场讲了一个极其性感的全新故事。\n\n「我们没有杂乱的产品，我们只有统一的底层能力。我们即将推出一个能统治所有桌面端、拥有9亿周活、能自动帮你干活的超级Agent。」\n\n让Brockman这位在硅谷声望极高的创始人亲自挂帅产品，也是在给摇摇欲坠的投资人信心：看，虽然有人离职，但公司的技术灵魂依然在第一线开荒。\n\n从那个在旧金山公寓里成立的非营利性实验室，到今天为了IPO疯狂重组的商业帝国，OpenAI正在经历它诞生以来最惊险的一段航程。\n\nBrockman的走上前台，是临危受命，也是背水一战。\n\n当ChatGPT、Codex和Atlas浏览器在不久的将来融合成那个恐怖的「Super App」时，我们会看到通往AGI的终极钥匙吗？\n\n硅谷的这场AI王座之争，才刚刚进入最血腥的白刃战阶段。\n\n参考资料：\n\nhttps://www.wired.com/story/openai-reorg-greg-brockman-product/\n\nhttps://www.theinformation.com/briefings/openai-reorganizes-product-teams-around-unified-app-strategy?rc=epv9gi\n\n秒追ASI\n\n⭐点赞、转发、在看一键三连⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-16_突发！OpenAI大规模重组，总裁Brockman夺权挂帅_新智元.md"}, {"title": "腾讯研究院AI每周关键词Top50", "source": "腾讯研究院", "digest": "一文把握全局AI动态（0511-0515）", "link": "https://mp.weixin.qq.com/s/CnE4iT39XeUy8Y-mj9lOzQ", "content": "---\npublish_time: 1778898600\n---\n\n# 腾讯研究院AI每周关键词Top50\n\n> 原文链接：https://mp.weixin.qq.com/s/CnE4iT39XeUy8Y-mj9lOzQ\n> 公众号：\n\nAI前沿每周关键词Top50\n\n（0511-0515）\n\n每周50关键词\n\n把握全局AI动态\n\n点击\n\n关键词\n\n可查看资讯概述\n\n👇\n\n类别\n\nTop关键词\n\n主体\n\n模型\n\nProgramBench\n\nOpenAI\n\n模型\n\nGPT-5.6内测\n\nOpenAI\n\n模型\n\nMETR新测试\n\nAnthropic\n\n模型\n\nTML-\n\nInteraction-Small\n\n翁荔\n\n模型\n\nMiniCPM-V 4.6\n\n面壁智能\n\n应用\n\nHeuristic Learning\n\nOpenAI\n\n应用\n\nHTML输出格式\n\nAnthropic\n\n应用\n\n登顶OpenRouter\n\nHermes Agent\n\n应用\n\n无屏手环\n\nGoogle等\n\n应用\n\nStepAudio 2.5\n\n阶跃星辰\n\n应用\n\nPeekaboo v3\n\nOpenClaw\n\n应用\n\nQClaw文件空间\n\n腾讯\n\n应用\n\n微信支付AI Skill\n\n微信\n\n应用\n\n千问淘宝打通\n\n阿里\n\n应用\n\nAgent视图\n\nAnthropic\n\n应用\n\nGemini Omni\n\n谷歌\n\n应用\n\nGemini Intelligence\n\n谷歌\n\n应用\n\nMCP法律连接器\n\nAnthropic\n\n应用\n\nMavis Agent Teams\n\nMiniMax\n\n应用\n\n微信聊天转发\n\n元宝\n\n应用\n\nClaude小企业版\n\nAnthropic\n\n应用\n\nAI原生指针\n\nD\n\neepMind\n\n科技\n\nFrontier-Eng基准\n\nNavers Lab\n\n科技\n\n载人机甲GD01\n\n宇树科技\n\n科技\n\n轨道数据中心\n\n谷歌等\n\n观点\n\n物理AI路径\n\nJim Fan\n\n观点\n\nAGI具身互动\n\nFigure\n\n观点\n\nAI同一起跑线\n\n黄仁勋\n\n观点\n\n组织形态壁垒\n\nFoundation\n\nCap\n\nital\n\n观点\n\nAI编程Team时代\n\nCursor\n\n观点\n\n长时程Agent\n\n唐杰\n\n观点\n\nAI超级生产者\n\na16z等\n\n观点\n\n超级智能实验室\n\n亚历山大王\n\n应用\n\n开发者大会\n\nAnthropic\n\n事件\n\nDeepSeek融资\n\nD\n\neepSee\n\nk\n\n事件\n\n部署公司\n\nOpenAI\n\n事件\n\n马斯克诉OpenAI\n\nOpenAI等\n\n事件\n\n林俊旸新Lab\n\n林俊旸\n\n事件\n\n田渊栋创业\n\nRecursive SI\n\n👇扫码\n\n加入AGI数据库，AI智能问答\n\n（\n\n腾讯研究院ima AGI知识库二维码）\n\n推荐阅读\n\n腾讯研究院：\n\n《中国公众对生成式AI的看法与使用行为｜年度调研》\n\n👇 点个\n\n“在看”\n\n分享洞见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-16_腾讯研究院AI每周关键词Top50_.md"}, {"title": "OpenAI 推出 ChatGPT 个人理财功能；SpaceX 最快将于 6 月 12 日挂牌上市；巴菲特慈善午餐回归，神秘买家 900 万美元拍下 | 极客早知道", "source": "极客公园", "digest": "iPhone 17 Pro 大降价；全球存储供应再迎重压", "link": "https://mp.weixin.qq.com/s/0xF8mvmd6_UcPoJnLH27gA", "content": "---\npublish_time: 1778892153\n---\n\n# OpenAI 推出 ChatGPT 个人理财功能；SpaceX 最快将于 6 月 12 日挂牌上市；巴菲特慈善午餐回归，神秘买家 900 万美元拍下 | 极客早知道\n\n> 原文链接：https://mp.weixin.qq.com/s/0xF8mvmd6_UcPoJnLH27gA\n> 公众号：极客公园\n\nOpenAI 推出 ChatGPT 个人理财功能 允许用户连接银行账户\n\n本周五，OpenAI 面向美国的 ChatGPT Pro 订阅用户推出了一套全新的个人理财工具预览版，允许用户连接自己的账户，并就从消费分析到未来财务规划等各类问题进行咨询。\n\nOpenAI 与金融连接服务商 Plaid 达成合作，负责管理账户连接事宜。用户可以连接超过 12000 家金融机构，包括嘉信理财、富达投资、摩根大通、Robinhood、美国运通和 Capital One 等。该公司表示计划很快支持 Intuit，这将能够实现诸如股票出售对税务的影响或信用卡批准概率等分析。\n\n一旦用户完成账户连接，他们将看到一个展示投资组合表现、消费情况、订阅服务以及即将到期付款的仪表板。\n\n这一新产品的推出距离 OpenAI 于今年 4 月收购个人理财初创公司 Hiro 的团队仅一个月时间。\n\n据 OpenAI 透露，目前每月已有超过 2 亿用户向 ChatGPT 咨询金融相关问题。该公司还指出，新推出的 GPT-5.5 模型在结合上下文进行推理方面更加强大，这对于回答金融相关问题至关重要。公司表示，他们与金融专家合作创建了一个基准，以提高模型在个人理财问题上的表现。\n\n借助新的金融工具集成，用户可以获得对诸如\"我感觉最近花钱更多了，有什么变化吗?\"或\"帮我制定一个计划，在未来 5 年内准备好在我所在地区买房\"等问题的详细解答。（消息来源：cnBeta）\n\nSpaceX 目标 6 月 11 日在纳斯达克定价，有望创史上最大 IPO\n\n5 月 16 日消息，据华尔街日报、彭博社、路透社消息，SpaceX 正加速其 IPO 进程。\n\n知情人士透露，该公司目前已选定纳斯达克作为上市交易所，并计划最早于 6 月 4 日启动正式路演，最早 6 月 11 日公布发行价，股票将于 6 月 12 日正式挂牌交易，股票代码定为“SPCX”。\n\n马斯克计划下月上市，恰逢罕见行星连珠、其 55 岁生日（6 月 28 日）以及美国建国 250 周年纪念日（7 月 4 日）前夕。尽管估值数字仍在变动，这家火箭公司已讨论以 1.75 万亿美元估值募资约 750 亿美元。\n\n知情人士补充说，美国证券交易委员会（SEC）对该公司上市申请文件的审核速度快于预期，是推动时间表提前的部分原因。\n\n据知情人士透露，在上月提交给美国证监会的保密 S-1 文件中，马斯克将控制 B 类股票的绝对多数，每股投票权为普通股的 10 倍。披露文件显示，这位全球首富已持有该 2002 年创办公司至少 40% 股份、超过 80% 投票权。（消息来源：IT之家环球市场播报）\n\n三星在为期 18 天大罢工前夕逐步关停芯片产线 全球存储供应再迎重压\n\n5 月 15 日，据路透社报道，三星电子的韩国工会周五表示，在有关薪酬与奖金方案的政府调解谈判破裂数日后，这家科技公司已提出「无条件恢复谈判」。\n\n同时，三星电子正在为一场即将到来的大规模工人罢工做准备，开始逐步降低工厂稼动率并关停部分芯片生产线。\n\n据韩国媒体报道，公司正放缓晶圆投片节奏，转入所谓的「紧急经营模式」，实质上就是压缩产能并减少新晶圆进入生产流程。目前约有 43286 名工厂工人加入罢工行动，占其半导体事业群（DS 部门）员工总数的一半以上，人员缺口正直接拖累生产线运转。\n\n在「紧急模式」下，三星将严格控制新的晶圆进入生产，各道工序本身是一个需要全天候运转的长周期流程。得益于高度自动化，即便人力短缺，部分产线仍能维持在最低限度的运转水平，但关键设备依然离不开人工操作和维护。随着罢工临近，更多生产线将因一线操作人员不足而被迫停摆，整体产出预计出现明显下滑。\n\n市调机构 TrendForce 估算，此次事件可能扰动全球约 3% 至 4% 的 DRAM 供应，以及约 3% 的 NAND 闪存供应。当前正值 DRAM 与 NAND 供应紧张、缺货加剧之际，三星的减产和停产将进一步加剧全球存储供应链压力。此次波及的生产线包括 HBM、高低功耗 DDR5（LPDDR5）以及部分定制逻辑芯片等关键产品，一旦供给前景出现不确定性，下游客户可能转向 SK 海力士或美光等竞争对手以分散风险。（消息来源：IT 之家、cnBeta）\n\n算力荒加剧：OpenAI CFO 透露融资计划、回应与苹果关系紧张\n\n5 月 15 日，据彭博社报道，OpenAI CFO 莎拉 · 弗里尔 (Sarah Friar) 周四表示，即使在完成了她所称的史上最大一轮私募融资之后，OpenAI 仍可能进一步筹集更多资金，因为该公司正加紧获取算力，以应对飙升的 AI 需求。\n\n弗里尔在接受彭博电视采访时称，OpenAI 近期完成的 1220 亿美元融资轮为该公司提供了「很大的选择空间」，但她补充说，未来的融资将取决于需求、收入增长、现金流以及公司所需算力与其可负担算力之间的缺口。\n\n她还表示，随着时间的推移，公开市场可能成为一个有吸引力的融资渠道，因为公开市场「规模远超」私募市场，并能让公司获得更多融资选择。\n\n近期还有消息爆出，OpenAI 正考虑以违约为由对苹果采取法律行动，事由涉及双方两年前官宣的 ChatGPT 接入合作协议。该人士称，过去几个月 OpenAI 一直试图修复与苹果的合作关系，但苹果方面态度消极、毫无作为。OpenAI 虽不愿走到起诉这一步，但除非苹果展现出更多合作诚意，否则不排除提起诉讼。\n\n当被问及与苹果公司关系紧张以及可能采取法律行动时，弗里尔表示，OpenAI 希望让这段合作关系顺利运作，但拒绝对诉讼事宜发表评论。（消息来源：环球市场播报、IT 之家）\n\niPhone 17 Pro 大降价！网友：安卓阵营的日子更不好过了\n\n月 15 日消息，今天苹果手机突然官宣降价，iPhone 17 Pro 系列直降 1000 元，价格跌到历史新低。而且这次降价还可以和官方以旧换新活动叠加，双重优惠叠加之后最高补贴能到 2000 元，最终到手价最低仅需 6999 元。\n\n与此同时，iPhone 17 标准版也迎来了上市后的首次官方降价，叠加多重渠道补贴和以旧换新抵扣之后，到手价只要 4499 元，性价比一下子拉了上来。\n\n有苹果线下授权专卖店的工作人员表示，往年很多老果粉就专门等着 5 月这波常规调价，叠加接下来马上开启的 618 大促节点，这波优惠几乎可以确定是今年入手 iPhone 17 系列的最佳窗口期。今年整个手机行业的内存等核心元器件普遍涨价，已经有不少国产品牌的旗舰机型售价上调了 200 到 600 元。\n\n这波苹果逆势降价的操作，直接让不少数码领域博主公开表态，接下来安卓阵营的市场竞争日子只会更不好过。（消息来源：快科技）\n\n雷军欢迎宴会主动找马斯克合影 马斯克参加晚宴被指喝懵了！\n\n5 月 15 日消息，5 月 14 日晚，美国总统特朗普访华欢迎晚宴在北京人民大会堂举行。\n\n这场国宴汇聚了中美两国政商界重量级人物，苹果 CEO 库克、小米董事长雷军、特斯拉 CEO 马斯克等均受邀出席。然而，晚宴开始前的画面中，马斯克的状态却成了社交媒体上的热门话题。\n\n据报道，宴会开始前，美方代表团已陆续抵达现场。画面显示，美国国务卿鲁比奥、苹果 CEO 库克等与会宾客正热烈交谈，马斯克则低头静坐，反应迟缓。\n\n期间雷军主动上前与马斯克合影自拍，马斯克对镜头做出「wink」等表情，有网友形容其「仿佛喝懵了」，引起热议。\n\n对此，优客工场创始人毛大庆在微信群聊中给出了解释。他表示，根据可靠信源，马斯克在晚宴前的表现并非网传的饮酒过量，而是受时差影响。（消息来源：快科技）\n\n腾讯地图上线外卖「骑手模式」：智能推荐少红灯高效路线、提前查看终点实景图 / 门禁区域\n\n5 月 15 日消息，腾讯地图宣布上线「骑手模式」，面向外卖、快递等配送平台骑手提供更专业的导航服务，旨在解决配送末端找路难题，号称跑单场景配送效率可提升 20%，用户只需将腾讯地图更新至最新版，在导航模式中选择「骑手模式」即可体验。\n\n据介绍，在骑手模式下，地图会精简显示关键信息并高亮展示路线，在强光环境下也能更清晰辨认路线，系统还会提前展示前方 150-300 米路况，方便骑手提前判断。骑手可将导航目标直接定位到具体楼栋 / 单元门，目标楼号会在地图上放大并高亮显示，即使进入陌生小区，骑手也能快速判断该往哪里走。\n\n同时，针对大型商场等复杂场景，腾讯地图还可提示从哪个门进入、乘坐哪部电梯，以及店铺位于哪一层、哪个位置，减少商场内绕路找店的情况。\n\n此外，骑手出发前可提前查看终点实景图，例如商家门脸照片，在到达前就能了解目的地外观，不用到现场后再逐个查找门牌。在到达门禁区域前，骑手还能提前查看是否存在刷卡门、收费门，便于提前联系用户下楼取单，节省等待时间。（消息来源：IT 之家）\n\n华为首款超新星手表正式发布！离线定位守护安全、「潮玩相机」记录成长\n\n5 月 15 日，在鸿蒙智行智界 V9 发布会上，华为终端 BG 董事长余承东宣布华为超新星手表 X1 系列正式发布并开启预售，为少儿和青少年提供安全、智能、充满乐趣的全方位陪伴。\n\n针对家长在带孩子出行时常有的安全焦虑，华为超新星手表 X1 系列打造了一张严密的防护网。首先是硬件基石上，手表采用华为自研网络定位服务，支持 GPS、北斗等五模双频卫星定位。最值得家长们重点关注的是，华为超新星手表 X1 系列将精准定位做到了「最强守护」——在关机后 5 天内或无网络连接状态下也能定位。\n\n还新增了贴心的「上学守护」功能，家长可设置学校、家等重点位置，孩子进出时 APP 会自动推送通知；此外，家长还可以手动在智能关怀 APP 的地图中绘制安全区域，一旦孩子超出该区域便会立即收到提醒，全方位守护孩子的每一次出行。\n\n除了时刻掌握孩子的位置动向，华为超新星手表 X1 系列将守护的触角延伸至了身心健康领域，能够全天候记录孩子的心率曲线，方便家长在 APP 端随时查看孩子一天的心率变化；在心理关怀方面，支持情绪监测功能，将孩子的内心情绪转化为「愉悦、平静、一般」三种直观的卡通形象，帮助家长读懂孩子没说出口的「心里话」。\n\n在日常沟通与网络社交层面，华为超新星手表 X1 系列兼顾了孩子的天性与家长的「可感可控」——手表支持跨品牌加好友，实现语音通话、短信交流，满足了孩子的日常社交需求，但加好友过程需经家长审核，牢牢把关交友安全。配合陌生来电自动拒接、陌生短信家长代收、防沉迷及上课禁用模式。（消息来源：IT 之家）\n\n50.98 万元，全新一代理想 L9 Livis 车型上市\n\n5 月 15 日，全新一代理想 L9 Livis 车型正式上市，\n\n定价为 50.98 万元\n\n。赠送 6 月 30 日前锁单现金减 2 万元权益，理想老车主复购减 1 万元。\n\n该车采用旗舰比例，车头采用三色星环灯，同时可选双色车身（紫金 / 绿金 / 棕金 / 黑金），采用「大师级」三重喷漆工艺，还提供了无阶差手工打磨的独立腰线。前后保险杠利用 UWB 近场感知技术取代传统超声波雷达，让车身更加无暇，同时还能降低哨兵模式耗电程度。同时车身还采用了隐藏式电动踏板。\n\n该车使用高通骁龙旗舰版 8797 Elite 芯片，同时内置两颗自研 5nm 制程的马赫 100 芯片，有效算力高达 2560TOPS，号称是英伟达 Thor-U 的 3 倍，并搭载覆盖全车 360 度的激光雷达，号称目前全球最强的智驾大脑且「没有之一」。\n\n该车长 5255mm，宽 2000mm，高 1810mm，轴距 3125mm，车辆搭载理想全自研第三代增程器，号称同级最低能耗，WLTC 工况下的百公里油耗 6.3 升，增程器启动噪音 < 0.1dB；5C 超充电池容量 72.7kWh 同样号称同级最大，CLTC 纯电续航 420 公里、综合续航 1650 公里。（消息来源：IT 之家）\n\n巴菲特慈善午餐回归：900.01 万美元成交，买家未具名\n\n5 月 15 日消息，据路透社昨天报道，一位神秘买家以 900.01 万美元拍下与「股神」巴菲特、篮球巨星斯蒂芬 · 库里共进午餐机会。\n\n据报道，此次拍卖持续一周并于周四结束，中标者身份暂未公开。\n\n按照既定安排，巴菲特、库里将与中标者在美国内布拉斯加州奥马哈共进午餐，这名买家最多可以带 7 名宾客入场。\n\n同时，本次拍卖所得将分配给 Glide Foundation、Eat. Learn. Play. 慈善组织，两家机构还将对拍卖金额进行等额匹配捐赠，总捐款金额将达到 2700 万美元。\n\n之前记录最高的是 2022 年，巴菲特午餐最终成交价为 1900 万美元。（消息来源：IT 之家）\n\n*图片来源：\n\n视觉中国\n\n播客上新\n\n5 月 11 日，Vbot 宣布完成近 5 亿元 Pre-A 轮融资，刷新消费级具身智能赛道单笔融资纪录；与此同时，它的首款超能机器狗也正式开启规模化交付；接下来也将开启人形机器人的产品研发。从 Demo 到量产，从技术验证到真实用户，从四足到人形，这家公司正在尝试走出一条属于自己的路。\n\n这一期节目里，我们和 Vbot维他动力创始人兼CEO余轶南博士聊了聊消费级机器人的量产难题、机器人为什么应该像 PC 和手机一样被重新定义，以及当行业都在卷人形机器人的时候，他们为什么选择先从一只机器狗开始。我们也聊到了 Agent OS、世界模型、家庭场景，以及机器人「如何真正进入生活」。\n\n🌟长按下方\n\n「卡片二维码」\n\n即可收听～欢迎关注我们的播客「开始连接LinkStart」（小宇宙 App），一起用科技、商业和人文的视角描摹这个时代。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-05-16_OpenAI 推出 ChatGPT 个人理财功能；SpaceX 最快将于 6 月 12 日挂牌上市；_极客公园.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
