@@ -1,7 +1,147 @@
 {
-  "updated_at": "2026-05-17T09:43:45.322181",
-  "total": 606,
+  "updated_at": "2026-05-18T08:34:30.303294",
+  "total": 620,
   "articles": [
+    {
+      "date": "2026-05-17",
+      "title": "Hermes团队改写预训练：算力成本降六成，DeepSeek之后提效新路径",
+      "source": "InfoQ",
+      "digest": "模型能力还需往上走，但训练成本却不能再无止境堆砌了——这可能是当前 AI 行业最强烈的共识。",
+      "link": "https://mp.weixin.qq.com/s/g2fD_i3rMDdsMeySdl6Rhw",
+      "source_file": "sources/2026-05-17_Hermes团队改写预训练：算力成本降六成，DeepSeek之后提效新路径_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-17",
+      "title": "谷歌 DORA 团队发布新报告：扎实的工程基础决定了 AI 投资回报",
+      "source": "InfoQ",
+      "digest": "谷歌云DORA团队发布报告，提出软件开发AI投资回报率评估框架，强调AI落地成效重在组织体系而非单纯工具，引入价值实现J曲线模型，并指出留存人才、重构流程是获取长期收益的关键。",
+      "link": "https://mp.weixin.qq.com/s/Bejnn2xvuJbn3wcYGziSNw",
+      "source_file": "sources/2026-05-17_谷歌 DORA 团队发布新报告：扎实的工程基础决定了 AI 投资回报_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "中国机器狗撕开英伟达垄断！70亿大模型跑通，成本仅1/10",
+      "source": "新智元",
+      "digest": "中国机器狗撕开英伟达垄断！70亿大模型跑通，成本仅1/10",
+      "link": "https://mp.weixin.qq.com/s/YfZ-bvXAmMBO3LFQ6eUPKA",
+      "source_file": "sources/2026-05-17_中国机器狗撕开英伟达垄断！70亿大模型跑通，成本仅1_10_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-17",
+      "title": "CVPR 2026 Oral | 清华+阿里发布ViT³：解锁「视觉TTT」新架构，突破Transformer复杂度瓶颈",
+      "source": "机器之心",
+      "digest": "Vision Test-Time Training",
+      "link": "https://mp.weixin.qq.com/s/yJDuMj9gY6JLQtjng2p_FQ",
+      "source_file": "sources/2026-05-17_CVPR 2026 Oral _ 清华+阿里发布ViT³：解锁「视觉TTT」新架构，突破Transf_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-17",
+      "title": "SFT别急着接RL！你的多模态大模型可能一直在\"带伤训练\"",
+      "source": "量子位",
+      "digest": "先把SFT挖的坑填了！",
+      "link": "https://mp.weixin.qq.com/s/2e-lyzzyn6IcfFH05Mm2AQ",
+      "source_file": "sources/2026-05-17_SFT别急着接RL！你的多模态大模型可能一直在\"带伤训练\"_量子位.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-17",
+      "title": "龙虾之父月烧130万美元token账单：OpenAI全包复杂需求还得Claude",
+      "source": "多源综合",
+      "digest": "整合两篇报道：龙虾之父自曝每月消耗130万美元token费用，由OpenAI全额承担；但复杂需求仍需Claude处理，显示不同模型的适用场景差异。",
+      "link": "https://mp.weixin.qq.com/s/mYnv6TEwGK4VsXurvH3URg",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "全球首个全民免费用ChatGPT Plus的国家，OpenAI官宣了",
+      "source": "新智元",
+      "digest": "一场大型社会实验。",
+      "link": "https://mp.weixin.qq.com/s/4CLplE8K_RWcbbs9FMfUaw",
+      "source_file": "sources/2026-05-17_全球首个全民免费用ChatGPT Plus的国家，OpenAI官宣了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "3个人带100个AI程序员，一个月烧掉130万美元！OpenAI：钱我出",
+      "source": "新智元",
+      "digest": "3个人带100个AI程序员，一个月烧掉130万美元！OpenAI：钱我出",
+      "link": "https://mp.weixin.qq.com/s/5O0b8Q0xTKU6_jHq93IUwA",
+      "source_file": "sources/2026-05-17_3个人带100个AI程序员，一个月烧掉130万美元！OpenAI：钱我出_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "贝佐斯380亿物理AI黑马杀出！联手斯坦福科学家，不卷OpenAI",
+      "source": "新智元",
+      "digest": "贝佐斯380亿物理AI黑马杀出！联手斯坦福科学家，不卷OpenAI",
+      "link": "https://mp.weixin.qq.com/s/Ds07QVVYMwsTY7sUwY6Wjw",
+      "source_file": "sources/2026-05-17_贝佐斯380亿物理AI黑马杀出！联手斯坦福科学家，不卷OpenAI_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "皮衣战神认证！黄仁勋胡同狂炫蜜雪冰城；关闭支付仍被扣款184万，支付宝回应；起步即独角兽！林俊旸AI Lab首轮估值136亿",
+      "source": "InfoQ",
+      "digest": "有瓜？！",
+      "link": "https://mp.weixin.qq.com/s/6FmvsRX3gt4W0hWOL76nzA",
+      "source_file": "sources/2026-05-17_皮衣战神认证！黄仁勋胡同狂炫蜜雪冰城；关闭支付仍被扣款184万，支付宝回应；起步即独角兽！林俊旸AI_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "38万应用暴露、2000+应用泄密！AI编程把\"内网\"变公网",
+      "source": "InfoQ",
+      "digest": "整理 | 华卫\"vibe coding 工具正在泄露大量个人和企业数据。",
+      "link": "https://mp.weixin.qq.com/s/NXWpAWhtT73D7cY_fcC_yg",
+      "source_file": "sources/2026-05-17_38万应用暴露、2000+应用泄密！AI编程把\"内网\"变公网_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "鼠标每动一下都在训练AI，Meta员工\"造反\"：不想在\"员工数据提取工厂\"工作",
+      "source": "InfoQ",
+      "digest": "传单上写道：\"不想在'员工数据提取工厂'工作吗？\"",
+      "link": "https://mp.weixin.qq.com/s/jZ2OqTyKcR-9u6h_zGZs7w",
+      "source_file": "sources/2026-05-17_鼠标每动一下都在训练AI，Meta员工\"造反\"：不想在\"员工数据提取工厂\"工作_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "花了1000倍的token，效果可能却没有更好：AI Agent的\"隐性账单\"长什么样",
+      "source": "机器之心",
+      "digest": "分析了 8 个 frontier 模型在 swe-bench-verified 上的轨迹。",
+      "link": "https://mp.weixin.qq.com/s/ulZyoQZgxJfwGhqYwC9KKw",
+      "source_file": "sources/2026-05-17_花了1000倍的token，效果可能却没有更好：AI Agent的\"隐性账单\"长什么样_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-17",
+      "title": "特斯拉解封17 份Robotaxi 碰撞报告；卢伟冰：部分国产旗舰手机售价或突破万元；警告：AI 可轻松从高分辨率自拍照中窃取指纹",
+      "source": "极客公园",
+      "digest": "OpenAI 在美国遭集体诉讼；比尔 · 盖茨基金会出售最后持有的 770 万股微软股票；三星电子会长李在镕就公司「内部问题」公开道歉",
+      "link": "https://mp.weixin.qq.com/s/rbifu5ZEAfb9APRDo2k3Hw",
+      "source_file": "sources/2026-05-17_特斯拉解封17 份Robotaxi 碰撞报告；卢伟冰：部分国产旗舰手机售价或突破万元；警告：AI 可_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-16",
       "title": "AI加速数学研究突破：陶哲轩称千年规则被重启，2小时完成博士论文",
