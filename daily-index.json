@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-19",
+      "weekday": "周二",
+      "stats": {
+        "国际": 2,
+        "国内": 11,
+        "同业": 3,
+        "其他": 19,
+        "total": 35
+      },
+      "summary": "伯克利神作背刺OpenAI：持续学习才是真神！/不换 Kimi 底座，1/10 成本追平 Opus 4.7？Cursor 用 Composer 2.5 反..."
+    },
+    {
       "date": "2026-05-18",
       "weekday": "周一",
       "stats": {

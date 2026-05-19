@@ -1,7 +1,337 @@
 {
-  "updated_at": "2026-05-19T09:49:22.860762",
-  "total": 653,
+  "updated_at": "2026-05-20T07:20:25.651917",
+  "total": 686,
   "articles": [
+    {
+      "date": "2026-05-19",
+      "title": "伯克利神作背刺OpenAI：持续学习才是真神！",
+      "source": "新智元",
+      "digest": "加州大学伯克利分校发表重要研究，挑战OpenAI的技术路线，提出持续学习（Continual Learning）比预训练规模更重要，为大模型训练提供新思路。",
+      "link": "https://mp.weixin.qq.com/s/4bSn0UiTauf_FoMGMS6JBQ",
+      "source_file": "sources/2026-05-19_伯克利神作背刺OpenAI：持续学习才是真神！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "不换 Kimi 底座，1/10 成本追平 Opus 4.7？Cursor 用 Composer 2.5 反击 Claude Code",
+      "source": "InfoQ",
+      "digest": "Cursor 发布了 Composer 2.5，想解决的是 AI 编程里越来越关键的长任务能力。新版本在不更换底层模型的情况下，通过优化架构实现成本降低90%的同时达到Claude Opus 4.7的性能水平。",
+      "link": "https://mp.weixin.qq.com/s/mrWVpVEApZyToIVXWuJzBw",
+      "source_file": "sources/2026-05-19_不换 Kimi 底座，1_10 成本追平 Opus 4.7？Cursor 用 Composer 2._InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "群核科技空间智能大模型正式通过备案",
+      "source": "财联社AI daily",
+      "digest": "5月18日，浙江省互联网信息办公室发布浙江省生成式人工智能服务备案信息的最新公告，群核科技的空间智能大模型成功通过备案，成为国内又一款合规的大模型产品。",
+      "link": "https://mp.weixin.qq.com/s/LQK5gJTnWwzB15fcN77Rew",
+      "source_file": "sources/2026-05-19_群核科技空间智能大模型正式通过备案_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "推荐系统进入\"大模型时刻\"：昇腾NPU如何支撑千亿级生成式推荐落地",
+      "source": "InfoQ",
+      "digest": "在推荐系统跨入大模型时代的当下，如何利用国产算力底座支撑起千亿级参数模型的高效训推，已成为工业界关注的核心课题。文章介绍华为昇腾NPU在生成式推荐系统中的工程实践。",
+      "link": "https://mp.weixin.qq.com/s/-G6f4vHZpbyazSI8EXMWKg",
+      "source_file": "sources/2026-05-19_推荐系统进入\"大模型时刻\"：昇腾NPU如何支撑千亿级生成式推荐落地_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "苏姿丰上海激情演讲！对谈李开复，AMD已适配小米大模型，狂赞中国AI生态",
+      "source": "智东西",
+      "digest": "\"中国是全球最具活力的AI生态系统。\"AMD CEO苏姿丰与李开复对话，透露AMD已适配小米大模型，并高度评价中国AI生态的创新活力。",
+      "link": "https://mp.weixin.qq.com/s/h7qZHhEmR4SR-ybgyI07Ow",
+      "source_file": "sources/2026-05-19_苏姿丰上海激情演讲！对谈李开复，AMD已适配小米大模型，狂赞中国AI生态_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-Taught RLVR",
+      "source": "量子位",
+      "digest": "RLVR后训练系列新作。京东与中科院信工所合作发表三篇论文，提出Self-Taught RLVR方法，让大模型能够通过自我监督学习提升推理能力，无需大量人工标注数据。",
+      "link": "https://mp.weixin.qq.com/s/YsyfW-FMGJ-p5mrEBKA_1g",
+      "source_file": "sources/2026-05-19_让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-Taught RLVR_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "不换 Kimi 底座，1/10 成本追平 Opus 4.7？Cursor 用 Composer 2.5 反击 Claude Code",
+      "source": "InfoQ",
+      "digest": "Cursor 发布了 Composer 2.5，想解决的是 AI 编程里越来越关键的长任务能力。新版本在不更换底层模型的情况下，通过优化架构实现成本降低90%的同时达到Claude Opus 4.7的性能水平。",
+      "link": "https://mp.weixin.qq.com/s/mrWVpVEApZyToIVXWuJzBw",
+      "source_file": "sources/2026-05-19_不换 Kimi 底座，1_10 成本追平 Opus 4.7？Cursor 用 Composer 2._InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "跨越落地鸿沟！清华长三院发布首个真实场景AI竞技场，实战谁是最佳？",
+      "source": "新智元",
+      "digest": "清华大学长三角研究院发布首个面向真实应用场景的AI竞技场平台，旨在通过实战测试评估不同AI系统的实际能力，推动AI技术从实验室走向产业应用。",
+      "link": "https://mp.weixin.qq.com/s/sPal661Ey3mDP6lumDupsg",
+      "source_file": "sources/2026-05-19_跨越落地鸿沟！清华长三院发布首个真实场景AI竞技场，实战谁是最佳？_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "中国信通院携手产业推进端侧智能体\"智能化功能完整度\"检测工作",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院联合产业链伙伴启动端侧智能体\"智能化功能完整度\"检测工作，旨在建立统一的评测标准，推动端侧AI技术的规范化发展。",
+      "link": "https://mp.weixin.qq.com/s/qmK7DjezHwFhPNTk0EXQzw",
+      "source_file": "sources/2026-05-19_中国信通院携手产业推进端侧智能体\"智能化功能完整度\"检测工作_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Auto Research时代，AI Scientist的第一场药企实习考验｜甲子光年",
+      "source": "甲子光年",
+      "digest": "全球首个面向真实生物医药研究场景的过程级评估框架——BiomniBench。文章介绍AI科学家在药物研发中的实际应用案例和评估体系。",
+      "link": "https://mp.weixin.qq.com/s/cMQHiRW0nshhaWeyaRvNpw",
+      "source_file": "sources/2026-05-19_Auto Research时代，AI Scientist的第一场药企实习考验｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "基于浏览器请求录制与AI代码生成的E2E接口自动化测试实践",
+      "source": "阿里云开发者",
+      "digest": "阿里妹导读以阿里云DataWorks为例，介绍如何通过浏览器录制插件捕获真实请求数据，结合AI编程工具自动生成E2E接口自动化测试用例，提升测试效率。",
+      "link": "https://mp.weixin.qq.com/s/wHvOWQspdro3J7aD6O0bsA",
+      "source_file": "sources/2026-05-19_基于浏览器请求录制与AI代码生成的E2E接口自动化测试实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "ICML 2026｜告别「单线程」思维，智能体进化出了原生的并行推理大脑",
+      "source": "机器之心",
+      "digest": "构建原生并行推理器有了更简单、可扩展的框架。ICML 2026发表论文提出智能体并行推理新方法，突破传统串行推理的效率瓶颈。",
+      "link": "https://mp.weixin.qq.com/s/liJD5FDI1_CbK7ZNVkpuwg",
+      "source_file": "sources/2026-05-19_ICML 2026｜告别「单线程」思维，智能体进化出了原生的并行推理大脑_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "四川银行\"深瞳\"AI：构筑金融智能网络安全的进化体系",
+      "source": "金融电子化",
+      "digest": "四川银行推出\"深瞳\"AI系统，构建金融智能网络安全防护体系，通过AI技术提升网络安全威胁检测和响应能力。",
+      "link": "https://mp.weixin.qq.com/s/r7hM6kk9Fi9vhgQQUfhQoA",
+      "source_file": "sources/2026-05-19_四川银行\"深瞳\"AI：构筑金融智能网络安全的进化体系_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "人工智能赋能银行数智化转型的应用研究——以AI法审助手与授信报告助手为例",
+      "source": "金融电子化",
+      "digest": "文章探讨AI技术在银行业务中的应用实践，重点介绍AI法审助手和授信报告助手的实际案例，展示AI如何赋能银行数智化转型。",
+      "link": "https://mp.weixin.qq.com/s/fIgIuLeTxqt6QYIz2kjwiw",
+      "source_file": "sources/2026-05-19_人工智能赋能银行数智化转型的应用研究——以AI法审助手与授信报告助手为例_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "西宁农商银行社招，涉大模型应用岗、系统开发运维岗",
+      "source": "银行科技研究社",
+      "digest": "西宁农商银行发布社会招聘公告，招聘岗位包括大模型应用岗和系统开发运维岗，反映银行业对AI人才的需求增长。",
+      "link": "https://mp.weixin.qq.com/s/R8j3qHjXoK4jsaFQJUJAJQ",
+      "source_file": "sources/2026-05-19_西宁农商银行社招，涉大模型应用岗、系统开发运维岗_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "腾讯研究院AI速递 20260519",
+      "source": "腾讯研究院",
+      "digest": "LLM究竟能否消除幻觉并通往AGI？腾讯研究院每日AI资讯汇总，涵盖大模型技术进展、行业动态和前沿研究。",
+      "link": "https://mp.weixin.qq.com/s/mouqPDubHk0Xmtn7AJY1rg",
+      "source_file": "sources/2026-05-19_腾讯研究院AI速递 20260519_.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-19",
+      "title": "太意外！教皇和Anthropic创始人，要联袂开发布会",
+      "source": "新智元",
+      "digest": "AI 时代，人何以为人？Anthropic创始人Dario Amodei将与教皇方济各共同出席发布会，探讨AI伦理与人类价值。",
+      "link": "https://mp.weixin.qq.com/s/Cbm7FBwD0wBctKx0RYXdOA",
+      "source_file": "sources/2026-05-19_太意外！教皇和Anthropic创始人，要联袂开发布会_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "苹果WWDC26官宣定档！AI仍是重头戏，邀请函里藏了什么彩蛋",
+      "source": "智东西",
+      "digest": "Siri要上\"岛\"。苹果宣布WWDC26定档，AI功能将成为大会核心看点，预计将发布新一代Siri及Apple Intelligence更新。",
+      "link": "https://mp.weixin.qq.com/s/xng0sIyPTOAQstk7SiOAGQ",
+      "source_file": "sources/2026-05-19_苹果WWDC26官宣定档！AI仍是重头戏，邀请函里藏了什么彩蛋_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "OpenAI世纪诉讼落幕：马斯克败诉，法院裁定其违反信托义务",
+      "source": "多源综合",
+      "digest": "马斯克与OpenAI的法律纠纷迎来裁决，法院判定马斯克违反信托义务，支持Altman及OpenAI立场。布罗克曼批评马斯克\"懂火箭和电动车，但不懂AI\"。此事件标志着OpenAI治理结构的重要里程碑。",
+      "link": "https://mp.weixin.qq.com/s/TP3PIyKHTxqquTn3momoVw",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "670 亿美元！AI 崛起，促成美国最大能源并购案",
+      "source": "极客公园",
+      "digest": "GPU烧算力，电网烧钱，最后是普通消费者买单。AI算力需求推动美国能源行业大规模并购，交易金额达670亿美元，反映AI基础设施投资的巨大成本压力。",
+      "link": "https://mp.weixin.qq.com/s/q4qZI3P5RUf6n7h9j4bfXg",
+      "source_file": "sources/2026-05-19_670 亿美元！AI 崛起，促成美国最大能源并购案_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "苏姿丰上海开讲：AI正在重新定义计算的每一层",
+      "source": "量子位",
+      "digest": "AMD持续加码中国开发者生态建设。AMD CEO苏姿丰在上海发表演讲，阐述AI如何重塑计算架构，并宣布AMD对中国AI生态的投入计划。",
+      "link": "https://mp.weixin.qq.com/s/anmeTk4FmqluEA3pdQH4gg",
+      "source_file": "sources/2026-05-19_苏姿丰上海开讲：AI正在重新定义计算的每一层_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "人才缺口彻底爆发！这才是2026年真正的黄金赛道",
+      "source": "51CTO",
+      "digest": "如果你正在使用AI——那么接下来的内容，值得你读完。因为AI安全，不再是未来风险预测，而是每一天都在发生的现实。文章分析AI安全领域的人才需求和职业机会。",
+      "link": "https://mp.weixin.qq.com/s/bTO9dNI0gv63VnPLZ6sD6A",
+      "source_file": "sources/2026-05-19_人才缺口彻底爆发！这才是2026年真正的黄金赛道_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "这张运维AI证书，含金量远超你想象",
+      "source": "51CTO",
+      "digest": "\"现在入局AI还来得及吗？\"\"AI赛道这么卷，普通人还有机会吗？\"来得及，而且现在正是最好的时机。文章介绍运维AI认证的价值和就业前景。",
+      "link": "https://mp.weixin.qq.com/s/GaWpDkPBvf_jSul_zOrnKg",
+      "source_file": "sources/2026-05-19_这张运维AI证书，含金量远超你想象_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "HyperEyes：从「搜得更深」到「搜得更宽」，并行多模态搜索智能体的效率革命",
+      "source": "机器之心",
+      "digest": "在Agent训练中，「准确率」与「效率」完全可以协同进化。文章介绍HyperEyes多模态搜索智能体的技术创新和应用场景。",
+      "link": "https://mp.weixin.qq.com/s/l_q517WQOL2cbwoEPo4Y5w",
+      "source_file": "sources/2026-05-19_HyperEyes：从「搜得更深」到「搜得更宽」，并行多模态搜索智能体的效率革命_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "驾驭AI的人，才是穿越周期的竞争力｜2026极客时间DTDS大会圆满落幕",
+      "source": "InfoQ",
+      "digest": "AI 系统已就位，人才能力为何仍\"卡壳\"？ 这是当前企业 AI 转型最普遍的困境。文章总结DTDS大会关于AI人才培养的核心观点。",
+      "link": "https://mp.weixin.qq.com/s/eCKt3_htXTZ4D6qqonySAw",
+      "source_file": "sources/2026-05-19_驾驭AI的人，才是穿越周期的竞争力｜2026极客时间DTDS大会圆满落幕_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "AI与艺术革命：从\"像\"的解放到\"想\"的让渡",
+      "source": "未知来源",
+      "digest": "在这些盲区里，人的位置还能如何安放。文章探讨AI对艺术创作的影响，分析AI时代艺术创作的本质变化。",
+      "link": "https://mp.weixin.qq.com/s/ike2-opYw24qDbrHwqPJtg",
+      "source_file": "sources/2026-05-19_AI与艺术革命：从\"像\"的解放到\"想\"的让渡_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "30W奖池已就位！手机上的创意AI挑战赛，等你瓜分",
+      "source": "通义实验室",
+      "digest": "全国开发者集结！手机AI创意对决。通义实验室举办手机AI应用创意大赛，设置30万元奖池，鼓励开发者创新。",
+      "link": "https://mp.weixin.qq.com/s/gHT4MHlnkf82YUr6FICvFg",
+      "source_file": "sources/2026-05-19_30W奖池已就位！手机上的创意AI挑战赛，等你瓜分_通义实验室.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "全球首个AI专家市场上线！把你的绝活打包，数字分身7x24小时变现",
+      "source": "新智元",
+      "digest": "全球首个AI专家 marketplace 平台上线，允许用户创建数字分身并提供专业服务，实现7x24小时自动化变现。",
+      "link": "https://mp.weixin.qq.com/s/eti7-5_YdiZ62tLRJy4ZvA",
+      "source_file": "sources/2026-05-19_全球首个AI专家市场上线！把你的绝活打包，数字分身7x24小时变现_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "AI创业一年狂揽800亿美元！Anthropic反杀OpenAI，双雄独吞89%",
+      "source": "新智元",
+      "digest": "AI创业公司在过去一年获得800亿美元收入，Anthropic和OpenAI两家占据89%市场份额，反映AI行业的集中化趋势和商业成功。",
+      "link": "https://mp.weixin.qq.com/s/qGZd65ZbdnPrblMKIvEBvw",
+      "source_file": "sources/2026-05-19_AI创业一年狂揽800亿美元！Anthropic反杀OpenAI，双雄独吞89%_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "你的AI Agent越用越蠢？港中大、浙大戳破「记忆」的谎言",
+      "source": "新智元",
+      "digest": "香港中文大学和浙江大学联合研究发现，当前AI Agent的记忆机制存在严重缺陷，导致长期使用后性能下降，文章揭示问题根源并提出改进方向。",
+      "link": "https://mp.weixin.qq.com/s/X_Ie0rB4T16u4emVH9syOQ",
+      "source_file": "sources/2026-05-19_你的AI Agent越用越蠢？港中大、浙大戳破「记忆」的谎言_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "AMD 苏妈对话李开复：AI 转型只能由 CEO 驱动、未来\"DRI\"（直接负责人）将是企业核心｜直击现场",
+      "source": "InfoQ",
+      "digest": "今天，2026 AMD AI 开发者日上海站正式拉开帷幕。AMD CEO苏姿丰与李开复对话，探讨企业AI转型的组织架构和管理模式。",
+      "link": "https://mp.weixin.qq.com/s/01VSIODV9Fllc1EK-RE8Yw",
+      "source_file": "sources/2026-05-19_AMD 苏妈对话李开复：AI 转型只能由 CEO 驱动、未来\"DRI\"（直接负责人）将是企业核心｜直_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "5.20 明天见！拿好这份参会指南｜AIGC2026峰会",
+      "source": "量子位",
+      "digest": "提前查好路况，定好闹钟，明天现场见！AIGC2026峰会参会指南，包含议程安排和注意事项。",
+      "link": "https://mp.weixin.qq.com/s/4fUtBw-NSDcZmQYkim8RFg",
+      "source_file": "sources/2026-05-19_5.20 明天见！拿好这份参会指南｜AIGC2026峰会_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-19",
+      "title": "从卖token到卖结果，这些公司开始让AI背KPI了",
+      "source": "机器之心",
+      "digest": "RaaS：AI 的价值回归。文章分析AI商业模式从按token计费向按结果付费的转变，探讨Result-as-a-Service的商业逻辑。",
+      "link": "https://mp.weixin.qq.com/s/4BO2pbJnqazdLFehEWCFOQ",
+      "source_file": "sources/2026-05-19_从卖token到卖结果，这些公司开始让AI背KPI了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-18",
       "title": "Anthropic首次揭秘下一代Claude怎么造！用户吐槽直接喂模型，连AI\"做梦\"都被训练",
