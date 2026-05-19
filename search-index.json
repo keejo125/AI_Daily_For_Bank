@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-19T09:39:01.641225",
-  "total": 654,
+  "updated_at": "2026-05-19T09:49:22.860762",
+  "total": 653,
   "articles": [
     {
       "date": "2026-05-18",
@@ -184,31 +184,11 @@
     },
     {
       "date": "2026-05-18",
-      "title": "30万奖金池，这道汉语方言对话题等你来解丨第十一届信也科技杯全球AI算法大赛",
-      "source": "量子位",
-      "digest": "第十一届信也科技杯全球AI算法大赛启动，30万奖金池，更有NLPCC 2026直通名额",
-      "link": "https://mp.weixin.qq.com/s/4uRvpdfJNH5LHzsZ--ba_A",
-      "source_file": "sources/2026-05-18_30万奖金池，这道汉语方言对话题等你来解丨第十一届信也科技杯全球AI算法大赛_量子位.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-18",
       "title": "你的项目你做主——灵码 Project Rules 功能详解",
       "source": "灵码Lingma",
       "digest": "灵码的Project Rules（项目规则）功能，让你把项目的规范、偏好、约定告诉AI，让它按你的规矩来",
       "link": "https://mp.weixin.qq.com/s/qdtUa2fnOVVJR9m5MfYjQA",
       "source_file": "sources/2026-05-18_你的项目你做主——灵码 Project Rules 功能详解_灵码Lingma.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-18",
-      "title": "腾讯研究院AI速递 20260518",
-      "source": "腾讯研究院",
-      "digest": "「小程序成长计划」升级支持Hy3 preview",
-      "link": "https://mp.weixin.qq.com/s/x4Qm1F8CKAgORgxWVUuH1g",
-      "source_file": "sources/2026-05-18_腾讯研究院AI速递 20260518_.md",
       "category": "国内",
       "is_model_related": false
     },
@@ -339,6 +319,16 @@
       "digest": "张雪机车 WSBK 捷克站再夺冠，斩获赛季第五冠；特斯拉两年来首次上调 Model Y 美国售价；真人漫改电影《新 · 驯龙高手 2》杀青",
       "link": "https://mp.weixin.qq.com/s/0paY_xbmbk9zbhiqb0jLhQ",
       "source_file": "sources/2026-05-18_苹果华为小米手机，全线降价最高 3000；电信推 Token 套餐，9.9 元起；知乎 CEO：AI_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-18",
+      "title": "腾讯研究院AI速递 20260518",
+      "source": "腾讯研究院",
+      "digest": "「小程序成长计划」升级支持Hy3 preview",
+      "link": "https://mp.weixin.qq.com/s/x4Qm1F8CKAgORgxWVUuH1g",
+      "source_file": "sources/2026-05-18_腾讯研究院AI速递 20260518_.md",
       "category": "其他",
       "is_model_related": false
     },
