@@ -9,6 +9,7 @@ import json
 import os
 import sys
 from datetime import datetime
+from urllib.parse import quote
 
 # 全局变量
 PROJECT_DIR = ""
@@ -443,7 +444,9 @@ def build_section_html(category, articles):
                 
                 # 优先使用 viewer.html 查看原文
                 if source_file:
-                    viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{source_file}'
+                    # 对文件路径进行 URL 编码，处理中文和特殊字符
+                    encoded_source_file = quote(source_file, safe='')
+                    viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
                     sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
                 elif link:
                     sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
