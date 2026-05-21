@@ -1,6 +1,30 @@
 {
   "issues": [
     {
+      "date": "2026-05-21",
+      "weekday": "周四",
+      "stats": {
+        "国际": 3,
+        "国内": 4,
+        "同业": 0,
+        "其他": 14,
+        "total": 21
+      },
+      "summary": "OpenAI模型首次自主证明80年数学核心猜想，菲尔兹奖得主惊叹/Gemini进手机，Android翻身；Gemini进电脑，全网开喷！/大模型也会想太多..."
+    },
+    {
+      "date": "2026-05-20",
+      "weekday": "周三",
+      "stats": {
+        "国际": 7,
+        "国内": 8,
+        "同业": 3,
+        "其他": 14,
+        "total": 32
+      },
+      "summary": "突发！OpenAI创始成员Andrej Karpathy官宣加入Anthropic，AI人才争夺战升级/Google I/O 2026：Gemini 3...."
+    },
+    {
       "date": "2026-05-19",
       "weekday": "周二",
       "stats": {
