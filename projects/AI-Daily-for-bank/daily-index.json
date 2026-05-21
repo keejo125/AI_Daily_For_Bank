@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-20",
+      "weekday": "周三",
+      "stats": {
+        "国际": 7,
+        "国内": 8,
+        "同业": 3,
+        "其他": 14,
+        "total": 32
+      },
+      "summary": "突发！OpenAI创始成员Andrej Karpathy官宣加入Anthropic，AI人才争夺战升级/Google I/O 2026：Gemini 3...."
+    },
+    {
       "date": "2026-05-19",
       "weekday": "周二",
       "stats": {
