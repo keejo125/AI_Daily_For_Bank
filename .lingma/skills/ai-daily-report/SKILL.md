@@ -7,10 +7,16 @@ description: >
   生成智能研发日报时触发。触发词：早报、日报、AI daily、每日汇总。
 license: MIT
 metadata:
-  version: "1.2"
+  version: "1.3"
   category: productivity
-  updated: "2026-05-14"
+  updated: "2026-05-22"
   changelog: |
+    v1.3 (2026-05-22):
+    - 新增：Step 3.5 中的 1.5步验证 - source_file 路径符号标准化检查
+    - 新增：中文标点符号（引号、书名号等）的 Unicode 转义规范
+    - 新增：文件路径模糊匹配和自动修正机制
+    - 新增：历史案例库（皇马文章、腾讯马维斯文章）
+    - 优化：预防措施代码示例，在生成 classification.json 时自动验证路径
     v1.2 (2026-05-14):
     - 新增：产品功能更新属于技术内容（Qoder Browser Use、Buddy产品迭代）
     - 新增：工具设计/工程实践属于技术内容（Skill工程化、LLM Wiki知识管理）
@@ -85,8 +91,9 @@ python3 filter_articles.py $TARGET_DATE
 # 这一步由 AI 智能体完成，读取 filtered_articles.json 并生成 classification.json
 
 # Step 3.5: 分类与合并验证（重要！）
-# 分两步验证：
+# 分三步验证：
 #   第一步：检查分类和大模型标签
+#   1.5步：检查 source_file 路径的符号标准化（⚠️ 高频问题！）
 #   第二步：检查合并逻辑
 # 根据 skill 中的分类规则重新验证 classification.json 的准确性
 # 检查点：
@@ -95,8 +102,9 @@ python3 filter_articles.py $TARGET_DATE
 # 3. 开发工具、工程实践、技术路线是否被正确识别为技术内容？
 # 4. 公司属地是否正确（Anthropic/Google/CMU等应归入国际）？
 # 5. 大模型打标是否准确？
-# 6. 同主题文章是否正确合并？
-# 7. 合并标记和 merged_articles 字段是否正确？
+# 6. source_file 路径是否正确？中文标点是否已转义？文件是否存在？
+# 7. 同主题文章是否正确合并？
+# 8. 合并标记和 merged_articles 字段是否正确？
 
 # Step 4: 生成 HTML
 python3 generate_html.py $TARGET_DATE
@@ -734,6 +742,193 @@ classification = data['classification']
 - 行业资讯（公司动态、融资新闻）
 - 基础设施讨论（芯片适配、服务器采购）
 - 智能体应用研究（除非直接涉及大模型底层架构）
+
+---
+
+### 🔹 1.5步验证：检查 source_file 路径的符号标准化（⚠️ 高频问题！）
+
+**为什么需要这一步？**
+- ⚠️ **历史问题**：多次出现文件名中的中文引号与 JSON 转义不匹配导致 404 错误
+- ⚠️ **根本原因**：文件系统使用中文标点（""''），但 JSON 中使用了英文引号转义（\"\'）
+- ✅ **解决方案**：统一使用 Unicode 转义序列表示所有非ASCII字符
+
+**必须检查的字段**：
+- `source_file` - Markdown 原文文件路径
+- `title` - 文章标题（可能包含特殊符号）
+- `digest` - 摘要内容（可能包含引号）
+
+**常见符号问题**：
+
+| 符号类型 | 文件系统中的实际字符 | JSON 中错误的写法 | JSON 中正确的写法 |
+|---------|-------------------|-----------------|-----------------|
+| 中文左双引号 | " (U+201C) | `"` 或 `\"` | `\u201c` |
+| 中文右双引号 | " (U+201D) | `"` 或 `\"` | `\u201d` |
+| 中文左单引号 | ' (U+2018) | `'` 或 `\'` | `\u2018` |
+| 中文右单引号 | ' (U+2019) | `'` 或 `\'` | `\u2019` |
+| 中文破折号 | — (U+2014) | `—` | `\u2014` |
+| 中文省略号 | … (U+2026) | `...` | `\u2026` |
+| 中文书名号 | 《》 | `《》` | `\u300a\u300b` |
+
+**检查步骤**：
+
+```python
+import json
+import os
+import re
+
+# 读取 classification.json
+with open('daily/YYYY-MM-DD/classification.json', 'r') as f:
+    data = json.load(f)
+
+errors = []
+
+# 遍历所有分类
+for category in ['国际', '国内', '同业', '其他']:
+    for article in data['classification'][category]:
+        source_file = article.get('source_file', '')
+        
+        if not source_file:
+            continue
+        
+        # 1. 检查文件是否存在
+        full_path = os.path.join('daily/YYYY-MM-DD', source_file)
+        if not os.path.exists(full_path):
+            errors.append({
+                'article': article['title'][:30],
+                'issue': '文件不存在',
+                'path': source_file
+            })
+            continue
+        
+        # 2. 检查路径中是否包含未转义的中文标点
+        # 检测中文引号、书名号等特殊字符
+        chinese_punctuation = re.findall(r'[""''《》【】（）]', source_file)
+        if chinese_punctuation:
+            # 尝试从文件系统获取实际文件名
+            actual_files = os.listdir('daily/YYYY-MM-DD/sources/')
+            
+            # 查找最相似的文件名
+            import difflib
+            base_name = os.path.basename(source_file)
+            matches = difflib.get_close_matches(base_name, actual_files, n=1, cutoff=0.8)
+            
+            if matches:
+                correct_path = 'sources/' + matches[0]
+                if correct_path != source_file:
+                    errors.append({
+                        'article': article['title'][:30],
+                        'issue': '路径符号不匹配',
+                        'current': source_file,
+                        'correct': correct_path,
+                        'hint': '需要使用Unicode转义序列'
+                    })
+
+# 输出检查结果
+if errors:
+    print(f"\n⚠️ 发现 {len(errors)} 个路径问题：")
+    for err in errors:
+        print(f"  - {err['article']}...")
+        print(f"    问题: {err['issue']}")
+        if 'current' in err:
+            print(f"    当前: {err['current']}")
+            print(f"    正确: {err['correct']}")
+else:
+    print("\n✅ 所有 source_file 路径检查通过")
+```
+
+**修复方法**：
+
+当发现路径不匹配时，使用 Python 的 `json.dumps()` 自动处理 Unicode 转义：
+
+```python
+# 方法1：让 json.dump 自动处理（推荐）
+import json
+
+# 读取原始数据
+with open('daily/YYYY-MM-DD/classification.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+# 修正 source_file 路径
+for category in ['国际', '国内', '同业', '其他']:
+    for article in data['classification'][category]:
+        if article.get('source_file'):
+            # 从文件系统获取实际文件名
+            sources_dir = 'daily/YYYY-MM-DD/sources/'
+            actual_files = os.listdir(sources_dir)
+            
+            # 模糊匹配找到正确文件名
+            import difflib
+            base_name = os.path.basename(article['source_file'])
+            matches = difflib.get_close_matches(base_name, actual_files, n=1, cutoff=0.8)
+            
+            if matches:
+                article['source_file'] = 'sources/' + matches[0]
+
+# 保存时使用 ensure_ascii=False 保持可读性，或使用默认设置自动转义
+with open('daily/YYYY-MM-DD/classification.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)  # 保持中文可读
+    # 或者使用默认设置：json.dump(data, f, indent=2)  # 自动转义所有非ASCII
+```
+
+**最佳实践**：
+
+1. **生成 classification.json 时**：
+   - 从 `filtered_articles.json` 复制 `source_file` 字段时，直接使用原始值
+   - 不要手动修改或转义路径字符串
+   - 让 `json.dump()` 自动处理编码
+
+2. **合并文章时**：
+   - 合并后的文章 `source_file` 设为空字符串 `""`
+   - 因为合并文章没有对应的单个 Markdown 文件
+
+3. **验证时**：
+   - 每次生成 classification.json 后，立即运行上述检查脚本
+   - 确保所有 `source_file` 指向的文件真实存在
+   - 特别注意包含中文标点的文件名
+
+**历史案例**：
+
+- ❌ **2026-05-21 皇马文章**：
+  - 错误：`"source_file": "sources/2026-05-21_皇马主席弗洛伦蒂诺居然是\"AI超级大赢家\"！_财联社AI daily.md"`
+  - 实际文件：`2026-05-21_皇马主席弗洛伦蒂诺居然是"AI超级大赢家"！_财联社AI daily.md`
+  - 修复：使用 Unicode 转义 `\u201c` 和 `\u201d` 表示中文引号
+
+- ❌ **2026-05-20 腾讯马维斯文章**：
+  - 错误：路径中使用英文引号 `"`
+  - 实际文件：使用中文引号 `""`
+  - 修复：generate_html.py 已实现模糊匹配容错
+
+**预防措施**：
+
+在 Step 3 生成 classification.json 时，添加以下检查代码：
+
+```python
+# 在保存 classification.json 之前
+import os
+
+print("\n🔍 验证 source_file 路径...")
+for category in ['国际', '国内', '同业', '其他']:
+    for article in classification[category]:
+        source_file = article.get('source_file', '')
+        if source_file:
+            full_path = os.path.join('daily', date, source_file)
+            if not os.path.exists(full_path):
+                print(f"  ⚠️ 文件不存在: {source_file}")
+                print(f"     文章: {article['title'][:40]}...")
+                # 尝试模糊匹配
+                sources_dir = os.path.join('daily', date, 'sources')
+                if os.path.exists(sources_dir):
+                    actual_files = os.listdir(sources_dir)
+                    import difflib
+                    base_name = os.path.basename(source_file)
+                    matches = difflib.get_close_matches(base_name, actual_files, n=1, cutoff=0.7)
+                    if matches:
+                        print(f"     建议: sources/{matches[0]}")
+                        article['source_file'] = 'sources/' + matches[0]
+                        print(f"     ✅ 已修正")
+
+print("✅ 路径验证完成\n")
+```
 
 ---
 

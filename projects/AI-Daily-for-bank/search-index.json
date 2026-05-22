@@ -1,7 +1,237 @@
 {
-  "updated_at": "2026-05-21T07:21:03.643624",
-  "total": 718,
+  "updated_at": "2026-05-22T07:41:56.380771",
+  "total": 741,
   "articles": [
+    {
+      "date": "2026-05-21",
+      "title": "OpenAI模型首次自主证明80年数学核心猜想，菲尔兹奖得主惊叹",
+      "source": "多源综合",
+      "digest": "OpenAI非数学模型成功自主证明了困扰数学界80年的核心猜想，生成125页推演过程。这一里程碑式突破标志着AI科研范式的重大转变，多位菲尔兹奖得主表示震惊。",
+      "link": "https://mp.weixin.qq.com/s/-_ztDFpIfI0eSoxPzm-S5A",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-21",
+      "title": "Gemini进手机，Android翻身；Gemini进电脑，全网开喷！",
+      "source": "InfoQ",
+      "digest": "谷歌正在端侧 AI 上，大力尝试。Android 争了口气，但 AI 笔记本依然让人摸不着头脑。",
+      "link": "https://mp.weixin.qq.com/s/Fr1tKqrkkIM1X-IODXSbpA",
+      "source_file": "sources/2026-05-21_Gemini进手机，Android翻身；Gemini进电脑，全网开喷！_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "Coder Agents 让企业能够在自托管基础设施上运行 AI 编码工作流",
+      "source": "InfoQ",
+      "digest": "Coder Agents是一个与模型中立的平台，旨在让组织在自己的基础设施上运行AI编码智能体，而不是依赖基于云的服务。这使团队能够对代码、数据和执行环境保持完全控制。",
+      "link": "https://mp.weixin.qq.com/s/r06UIltx6FzRyVlesWppfg",
+      "source_file": "sources/2026-05-21_Coder Agents 让企业能够在自托管基础设施上运行 AI 编码工作流_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "大模型也会想太多？清华等提出TaH：跳过93%无效迭代，准确率反而提升",
+      "source": "机器之心",
+      "digest": "Think-at-Hard（TaH）：一种面向小模型的选择性潜空间迭代方法",
+      "link": "https://mp.weixin.qq.com/s/kHyc7zbzb5U53KVOO6oV5Q",
+      "source_file": "sources/2026-05-21_大模型也会想太多？清华等提出TaH：跳过93%无效迭代，准确率反而提升_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-21",
+      "title": "教大模型终身学习！中科大连发两篇顶会，突破「知识注入」双重困境",
+      "source": "新智元",
+      "digest": "教大模型终身学习！中科大连发两篇顶会，突破「知识注入」双重困境",
+      "link": "https://mp.weixin.qq.com/s/eMw6nBmdVdKw9KGmJJJ-SQ",
+      "source_file": "sources/2026-05-21_教大模型终身学习！中科大连发两篇顶会，突破「知识注入」双重困境_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-21",
+      "title": "腾讯宣布：操作系统层级AI助手\"马维斯\"上线",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》21日讯，腾讯宣布旗下操作系统层级AI助手Marvis（马维斯）正式上线，官网（Marvis.q",
+      "link": "https://mp.weixin.qq.com/s/GzSf_ll1DaQgV2K3YZmvxw",
+      "source_file": "sources/2026-05-21_腾讯宣布：操作系统层级AI助手\"马维斯\"上线_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "都是 AI Coding，为什么 Java 体验差了一个量级？五条方法论帮你构建自己的 Harness 环境",
+      "source": "阿里云开发者",
+      "digest": "文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。",
+      "link": "https://mp.weixin.qq.com/s/3-hQ4vHYErfpIzYPC6wJwg",
+      "source_file": "sources/2026-05-21_都是 AI Coding，为什么 Java 体验差了一个量级？五条方法论帮你构建自己的 Harnes_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "小扎凌晨4点裁员8000人，一切为了AI",
+      "source": "机器之心",
+      "digest": "用你的键盘轨迹，训练替代你的 AI。",
+      "link": "https://mp.weixin.qq.com/s/_L2Z4ftgnqjhwEmjH0y5wQ",
+      "source_file": "sources/2026-05-21_小扎凌晨4点裁员8000人，一切为了AI_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "七岁的剪映，长大成人",
+      "source": "极客公园",
+      "digest": "创作方式或许正在被 AI 不停地改变，但剪映是那个让创作者不断回来的「老地方」。",
+      "link": "https://mp.weixin.qq.com/s/P9m12svL97ew8DSnf4WEWg",
+      "source_file": "sources/2026-05-21_七岁的剪映，长大成人_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "断供OpenAI！Anthropic买下全球1/4开发者都在用的工具商",
+      "source": "新智元",
+      "digest": "断供OpenAI！Anthropic买下全球1/4开发者都在用的工具商",
+      "link": "https://mp.weixin.qq.com/s/fnYPL0TTroRiBCt0wCCwTw",
+      "source_file": "sources/2026-05-21_断供OpenAI！Anthropic买下全球1_4开发者都在用的工具商_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026",
+      "source": "量子位",
+      "digest": "AI会放大\"自嗨\"，解药只有交付结果",
+      "link": "https://mp.weixin.qq.com/s/UkWgBvS1pmeIafSVgZNMOg",
+      "source_file": "sources/2026-05-21_风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "对话 Moka CEO 李国兴：AI 不是 SaaS 公司的绝命，是改命",
+      "source": "极客公园",
+      "digest": "没有什么护城河是一定存在的，能构建的壁垒只有两个：速度和 AI 人才密度。",
+      "link": "https://mp.weixin.qq.com/s/11hXj0kCv6uaZ2IrTixZZw",
+      "source_file": "sources/2026-05-21_对话 Moka CEO 李国兴：AI 不是 SaaS 公司的绝命，是改命_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "只需一套神奇的Skills，彻底跑通四个办公场景！",
+      "source": "新智元",
+      "digest": "脏数据进，PPT出，中间不需要人类。",
+      "link": "https://mp.weixin.qq.com/s/2oMizbzhvbKeZvOStW75Jw",
+      "source_file": "sources/2026-05-21_只需一套神奇的Skills，彻底跑通四个办公场景！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "OpenAI冲刺9月IPO，目标估值1万亿，奥特曼急于上市CFO谨慎",
+      "source": "多源综合",
+      "digest": "OpenAI计划最早于本周五秘密递交IPO招股书草案，目标9月上市，估值有望达到1万亿美元。CEO奥特曼希望快速推进，但CFO持谨慎态度。",
+      "link": "https://mp.weixin.qq.com/s/J2MTywZ84FJ8jxiWfb0UxQ",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "皇马主席弗洛伦蒂诺居然是\"AI超级大赢家\"！",
+      "source": "财联社AI daily",
+      "digest": "文|潇湘被中国球迷称呼为\"老佛爷\"的弗洛伦蒂诺·佩雷斯，被公认为是欧洲足坛豪门皇家马德里历史上最成功的主席，尽",
+      "link": "https://mp.weixin.qq.com/s/8JVk3B5fIKJhUNvmWJaitg",
+      "source_file": "sources/2026-05-21_皇马主席弗洛伦蒂诺居然是“AI超级大赢家”！_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "520当天400万AI人，都在量子位听这近20场演讲&对谈｜第四届中国AIGC产业峰会",
+      "source": "量子位",
+      "digest": "核心观点都在这了～",
+      "link": "https://mp.weixin.qq.com/s/tT-K6Ey457EDcBzLLQl0bQ",
+      "source_file": "sources/2026-05-21_520当天400万AI人，都在量子位听这近20场演讲&对谈｜第四届中国AIGC产业峰会_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "得场景者得AI天下，出行赛道跑出了一家值得关注的数据玩家",
+      "source": "量子位",
+      "digest": "全场景数据、全链条服务助力AI大模型高效迭代",
+      "link": "https://mp.weixin.qq.com/s/mMHAf8pmkqYQ4epNWLDEDA",
+      "source_file": "sources/2026-05-21_得场景者得AI天下，出行赛道跑出了一家值得关注的数据玩家_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "AI Coding 很强，为什么企业没提速？| 直播预告",
+      "source": "InfoQ",
+      "digest": "AI Coding 已进入大规模落地阶段，但企业交付效率并未同步提升。",
+      "link": "https://mp.weixin.qq.com/s/ul3BQ9BhUQ0nhpyTFpD9dQ",
+      "source_file": "sources/2026-05-21_AI Coding 很强，为什么企业没提速？_ 直播预告_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "对谈苏妈后，李开复的\"一把手工程\"堪称CEO学习的新圣典",
+      "source": "智东西",
+      "digest": "\"你的AI部署不提升财报数字，就是浪费钱。\"",
+      "link": "https://mp.weixin.qq.com/s/5A0-4-zc-1iSw56as4HTog",
+      "source_file": "sources/2026-05-21_对谈苏妈后，李开复的\"一把手工程\"堪称CEO学习的新圣典_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "惊了！Hassabis才是AI世界的隐藏Boss？黑手党4年卷走140亿",
+      "source": "新智元",
+      "digest": "卧底竟是最高统帅？",
+      "link": "https://mp.weixin.qq.com/s/0tGfBiSDmS0bWDCQXBiEDQ",
+      "source_file": "sources/2026-05-21_惊了！Hassabis才是AI世界的隐藏Boss？黑手党4年卷走140亿_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "上海交大AI教授亲授：半天带你拆解Agent底层逻辑",
+      "source": "量子位",
+      "digest": "周日来北京线下揭秘",
+      "link": "https://mp.weixin.qq.com/s/G5EGS7FGqyFnbBm4tnvAqA",
+      "source_file": "sources/2026-05-21_上海交大AI教授亲授：半天带你拆解Agent底层逻辑_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "雷军：YU7 GT为时代精英设计，小贵；阿里曝光 AI 芯片真武 M890；英伟达 Q1 利润 583.21 亿美元，暴增 211%｜极客早知道",
+      "source": "极客公园",
+      "digest": "DeepSeek 正在组建 Harness 团队，对标 Claude Code；\n大裁员前 Meta 员工疯狂薅公司羊毛；\n英伟达将在新加坡设立首家研发中心，主攻具身智能；\nDeepMind CEO 批评「AI 裁员论」：取代开发者是重大错误",
+      "link": "https://mp.weixin.qq.com/s/9_9PbtCYSf0VI5tq5zsCxA",
+      "source_file": "sources/2026-05-21_雷军：YU7 GT为时代精英设计，小贵；阿里曝光 AI 芯片真武 M890；英伟达 Q1 利润 58_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-21",
+      "title": "腾讯研究院AI速递 20260521",
+      "source": "腾讯研究院",
+      "digest": "谷歌I/O发高性价比模型推进AI商业化",
+      "link": "https://mp.weixin.qq.com/s/BcUgtGPUcR_28PUznQIYTw",
+      "source_file": "sources/2026-05-21_腾讯研究院AI速递 20260521_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-20",
       "title": "Google I/O 2026：Gemini 3.5登场，搜索变智能体，AI眼镜发布",
