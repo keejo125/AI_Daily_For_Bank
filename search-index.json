@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-23T07:50:25.956404",
-  "total": 774,
+  "updated_at": "2026-05-23T11:47:22.908840",
+  "total": 773,
   "articles": [
     {
       "date": "2026-05-22",
@@ -51,36 +51,6 @@
       "source_file": "sources/2026-05-22_首发！Qoder 内置模型已支持 Qwen3.7-Max_Qoder.md",
       "category": "国内",
       "is_model_related": true
-    },
-    {
-      "date": "2026-05-22",
-      "title": "腾讯研究院AI速递 20260522",
-      "source": "腾讯研究院",
-      "digest": "腾讯混元开源全新翻译模型Hy-MT2",
-      "link": "https://mp.weixin.qq.com/s/vjpwWlo01APyvM21XI0xgw",
-      "source_file": "sources/2026-05-22_腾讯研究院AI速递 20260522_.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-22",
-      "title": "腾讯司晓：AI内容时代，人应该成为技术的“掌舵者”｜万字实录",
-      "source": "腾讯研究院",
-      "digest": "AI 要让人放心，把人放大。",
-      "link": "https://mp.weixin.qq.com/s/eGoaLaDKwvLpH2uhwnA8kA",
-      "source_file": "sources/2026-05-22_腾讯司晓：AI内容时代，人应该成为技术的“掌舵者”｜万字实录_.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-22",
-      "title": "刚刚，王小川掏出AI家庭医生：微信里喊你吃药、帮你盯紧全家健康",
-      "source": "智东西",
-      "digest": "AI家庭医生或许有望缓解医疗供给的短缺问题。",
-      "link": "https://mp.weixin.qq.com/s/NogDBIo0pyfOahNKWSEb8Q",
-      "source_file": "sources/2026-05-22_刚刚，王小川掏出AI家庭医生：微信里喊你吃药、帮你盯紧全家健康_智东西.md",
-      "category": "国内",
-      "is_model_related": false
     },
     {
       "date": "2026-05-22",
@@ -214,6 +184,16 @@
     },
     {
       "date": "2026-05-22",
+      "title": "腾讯研究院AI速递 20260522",
+      "source": "腾讯研究院",
+      "digest": "腾讯混元开源全新翻译模型Hy-MT2",
+      "link": "https://mp.weixin.qq.com/s/vjpwWlo01APyvM21XI0xgw",
+      "source_file": "sources/2026-05-22_腾讯研究院AI速递 20260522_.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-22",
       "title": "英特尔推出本地+云端“混合龙虾”，号称能少烧多达7成云端Token",
       "source": "财联社AI daily",
       "digest": "文|史正丞对于担忧AI智能体过于“烧Token/钱”的企业和科技爱好者而言，CPU牛股英特尔提供了一种解决思路",
@@ -324,11 +304,21 @@
     },
     {
       "date": "2026-05-22",
-      "title": "小米 YU7 GT 发布，38.99 万元；比亚迪否认收购玛莎拉蒂；科学家发现隐秘地月航线 | 极客早知道",
-      "source": "极客公园",
-      "digest": "OpenAI 被曝本周启动 IPO，冲刺 9 月上市；人类首个万亿富豪即将诞生！马斯克身家或达 1.1 万亿美元；Google 宣布在 AI 模式下加入更多广告",
-      "link": "https://mp.weixin.qq.com/s/vJCfUFeTMRuhq3x6rfWk6Q",
-      "source_file": "sources/2026-05-22_小米 YU7 GT 发布，38.99 万元；比亚迪否认收购玛莎拉蒂；科学家发现隐秘地月航线 _ 极客_极客公园.md",
+      "title": "腾讯司晓：AI内容时代，人应该成为技术的“掌舵者”｜万字实录",
+      "source": "腾讯研究院",
+      "digest": "AI 要让人放心，把人放大。",
+      "link": "https://mp.weixin.qq.com/s/eGoaLaDKwvLpH2uhwnA8kA",
+      "source_file": "sources/2026-05-22_腾讯司晓：AI内容时代，人应该成为技术的“掌舵者”｜万字实录_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-22",
+      "title": "刚刚，王小川掏出AI家庭医生：微信里喊你吃药、帮你盯紧全家健康",
+      "source": "智东西",
+      "digest": "AI家庭医生或许有望缓解医疗供给的短缺问题。",
+      "link": "https://mp.weixin.qq.com/s/NogDBIo0pyfOahNKWSEb8Q",
+      "source_file": "sources/2026-05-22_刚刚，王小川掏出AI家庭医生：微信里喊你吃药、帮你盯紧全家健康_智东西.md",
       "category": "其他",
       "is_model_related": false
     },
