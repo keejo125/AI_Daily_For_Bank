@@ -1,7 +1,77 @@
 {
-  "updated_at": "2026-05-23T11:47:22.908840",
-  "total": 773,
+  "updated_at": "2026-05-24T02:32:18.018232",
+  "total": 780,
   "articles": [
+    {
+      "date": "2026-05-23",
+      "title": "NUS、牛津、微软等9机构发布音视频智能综述：系统梳理大模型时代的AVI研究全景",
+      "source": "机器之心",
+      "digest": "用一张演化树串起十年发展，给出统一 taxonomy、三条主线与六大未来研究轴。",
+      "link": "https://mp.weixin.qq.com/s/KEj_A7zccbp7NqdqEVZiow",
+      "source_file": "sources/2026-05-23_NUS、牛津、微软等9机构发布音视频智能综述：系统梳理大模型时代的AVI研究全景_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-23",
+      "title": "为什么 LLM 难以直接复刻 AlphaGo 的树搜索奇迹？",
+      "source": "机器之心",
+      "digest": "前 1X Technologies AI 副总裁、前 Google DeepMind 机器人研究科学家 Eric Jang 在休假期间想通了哪些事？",
+      "link": "https://mp.weixin.qq.com/s/Yj4YqkJiMlQ8lmY7P1PGEQ",
+      "source_file": "sources/2026-05-23_为什么 LLM 难以直接复刻 AlphaGo 的树搜索奇迹？_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-23",
+      "title": "AlphaGo之父把AI扔进23年的人造社会：智能体3块最硬骨头全在这",
+      "source": "新智元",
+      "digest": "AlphaGo之父把AI扔进23年的人造社会：智能体3块最硬骨头全在这",
+      "link": "https://mp.weixin.qq.com/s/J_R90ZES2WZniNVuhwm-qQ",
+      "source_file": "sources/2026-05-23_AlphaGo之父把AI扔进23年的人造社会：智能体3块最硬骨头全在这_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-23",
+      "title": "基准测试表明：AI 智能体可修复独立漏洞，却难以理解系统范围影响",
+      "source": "InfoQ",
+      "digest": "Brandon Foley的基准测试研究证实，AI编码代理可修复单一漏洞，却难以把控全局系统影响，进而推翻了靠优化代码检索提升自动修漏洞能力的主流观点。",
+      "link": "https://mp.weixin.qq.com/s/bPe2euoRRDddyt8DtjAT3Q",
+      "source_file": "sources/2026-05-23_基准测试表明：AI 智能体可修复独立漏洞，却难以理解系统范围影响_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-23",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "一文把握全局AI动态（0518-0522）",
+      "link": "https://mp.weixin.qq.com/s/OY5DStBjPgoI3W6Ix8jOUA",
+      "source_file": "sources/2026-05-23_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-23",
+      "title": "豪掷105亿，曾毓群盯上AI算力龙头，还要投DeepSeek",
+      "source": "智东西",
+      "digest": "宁德时代的算电协同布局浮出水面。",
+      "link": "https://mp.weixin.qq.com/s/0fd4wwYYOy8UV5_BAQt7-g",
+      "source_file": "sources/2026-05-23_豪掷105亿，曾毓群盯上AI算力龙头，还要投DeepSeek_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-23",
+      "title": "C++之父开撕AI Coding：资深开发者宁愿退休也不愿伺候AI生成的代码",
+      "source": "InfoQ",
+      "digest": "\"认为下一个版本会解决问题，永远是一个危险的假设。\"",
+      "link": "https://mp.weixin.qq.com/s/3JmvhplfPqEsSa2qhFyAcA",
+      "source_file": "sources/2026-05-23_C++之父开撕AI Coding：资深开发者宁愿退休也不愿伺候AI生成的代码_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-22",
       "title": "LeCun 10亿押注的方向，全球领先视觉大模型团队早已布局",
