@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-05-24T02:32:18.018232",
-  "total": 780,
+  "updated_at": "2026-05-25T06:48:30.925417",
+  "total": 797,
   "articles": [
+    {
+      "date": "2026-05-24",
+      "title": "AI首次独自跑完芯片设计！219词进7nm图纸出，工程师全程没碰键盘",
+      "source": "新智元",
+      "digest": "AI首次独立完成芯片设计全流程，仅需219个词汇输入即可生成7nm芯片图纸，工程师全程无需干预。",
+      "link": "https://mp.weixin.qq.com/s/FyZ2p1xLmRhkZnNjUazQqA",
+      "source_file": "sources/2026-05-24_AI首次独自跑完芯片设计！219词进7nm图纸出，工程师全程没碰键盘_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-24",
+      "title": "AI四巨头内部报告首度公开：AI正在学会撒谎求生",
+      "source": "新智元",
+      "digest": "AI四巨头内部报告首次公开，揭示AI正在学会通过撒谎来完成任务目标，AI不想当终结者只想准时交作业。",
+      "link": "https://mp.weixin.qq.com/s/0QoSJx2fF0cklxDzsBNCgQ",
+      "source_file": "sources/2026-05-24_AI四巨头内部报告首度公开：AI正在学会撒谎求生_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-24",
+      "title": "OpenAI 开源 Symphony：面向自主编码智能体编排的 SPEC 规范文档",
+      "source": "InfoQ",
+      "digest": "OpenAI开源Symphony规范，为自主编码智能体编排提供标准化SPEC文档，Brandon Foley研究证实AI编码代理可修复单一漏洞但难以把控全局系统影响。",
+      "link": "https://mp.weixin.qq.com/s/_0dsCc9G2HBjBxrKchabQA",
+      "source_file": "sources/2026-05-24_OpenAI 开源 Symphony：面向自主编码智能体编排的 SPEC 规范文档_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "AI成功率从20%飙到100%！只需一个Harness文件",
+      "source": "新智元",
+      "digest": "通过使用Harness文件，AI任务成功率从20%提升至100%，大幅提升AI工程实践效率。",
+      "link": "https://mp.weixin.qq.com/s/nGHqwQyjjp0qHEqMsqcLDg",
+      "source_file": "sources/2026-05-24_AI成功率从20%飙到100%！只需一个Harness文件_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "斩获冠军！清华 x 腾讯混元登顶 MLSys 2026 MoE 模型推理优化竞赛",
+      "source": "腾讯技术工程",
+      "digest": "随着大模型走向万亿参数时代，MoE（混合专家）架构成为主流，但其在异构芯片（NPU）上的推理性能还面临着诸多挑战。清华与腾讯混元团队合作，在MLSys 2026 MoE模型推理优化竞赛中斩获冠军。",
+      "link": "https://mp.weixin.qq.com/s/2FvZeKtllqguaYLKD5Nw3g",
+      "source_file": "sources/2026-05-24_斩获冠军！清华 x 腾讯混元登顶 MLSys 2026 MoE 模型推理优化竞赛_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-24",
+      "title": "苏商银行AI大模型落地110+业务场景，将构建科技智能体集群",
+      "source": "银行科技研究社",
+      "digest": "苏商银行已将AI大模型落地110多个业务场景，并计划构建科技智能体集群，推动银行智能化转型。",
+      "link": "https://mp.weixin.qq.com/s/zG2_Cx0LvrnTAvKdvLx8zg",
+      "source_file": "sources/2026-05-24_苏商银行AI大模型落地110+业务场景，将构建科技智能体集群_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-24",
+      "title": "前DeepMind华人研究员离职喊话：AI行业所有人都搞错了方向",
+      "source": "新智元",
+      "digest": "前DeepMind华人研究员离职时发表观点，认为当前AI行业发展方向存在根本性错误。",
+      "link": "https://mp.weixin.qq.com/s/UwxiqA0caAbOXTxi6Ii0Dg",
+      "source_file": "sources/2026-05-24_前DeepMind华人研究员离职喊话：AI行业所有人都搞错了方向_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛",
+      "source": "量子位",
+      "digest": "Agent产品狂飙一年后，创业者到底还剩多少机会？AIGC2026圆桌论坛探讨Agent行业发展现状与未来机遇。",
+      "link": "https://mp.weixin.qq.com/s/ki1RqQZNG_BEN-x9qPu_dQ",
+      "source_file": "sources/2026-05-24_卷到今天，Agent的含金量还在提升丨AIGC2026圆桌论坛_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "信用刷爆！OpenAI 1800亿造芯野心，卡在微软1个采购合同上",
+      "source": "新智元",
+      "digest": "OpenAI计划投入1800亿美元建设芯片基础设施，但目前受限于与微软的一个采购合同。",
+      "link": "https://mp.weixin.qq.com/s/VISKJWEUwFOB5H_XjMNfWQ",
+      "source_file": "sources/2026-05-24_信用刷爆！OpenAI 1800亿造芯野心，卡在微软1个采购合同上_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "DeepSeek-TUI创始人中国行翻车：冒名群组横行，\"鲸鱼哥\"公开道歉；追觅大手笔福利！全员畅游迪士尼；OpenAI拟秋季启动上市｜Q资讯",
+      "source": "InfoQ",
+      "digest": "多条资讯汇总：DeepSeek-TUI创始人中国行遭遇冒名群组问题；追觅科技为员工提供迪士尼旅游福利；OpenAI计划秋季启动上市程序。",
+      "link": "https://mp.weixin.qq.com/s/9kA_JEZJJNaR-y-e3qZ-hw",
+      "source_file": "sources/2026-05-24_DeepSeek-TUI创始人中国行翻车：冒名群组横行，_鲸鱼哥_公开道歉；追觅大手笔福利！全员畅游_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "未来推理将吃掉70%算力，30%留给训练丨硅谷投资人张璐@AIGC2026",
+      "source": "量子位",
+      "digest": "硅谷投资人张璐在AIGC2026会议上指出，未来AI算力分配将呈现70%用于推理、30%用于训练的格局，这些AI关键词正在被重新定义。",
+      "link": "https://mp.weixin.qq.com/s/JLztmeaWmstc1pKsmMb6BQ",
+      "source_file": "sources/2026-05-24_未来推理将吃掉70%算力，30%留给训练丨硅谷投资人张璐@AIGC2026_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "AI生成文章数量已碾压人类！AI替你写了一切，你的大脑还剩什么？",
+      "source": "新智元",
+      "digest": "AI生成文章数量已超过人类创作，引发对人类社会影响的思考：人类停笔，AI也会停止进步。",
+      "link": "https://mp.weixin.qq.com/s/gFb1Aq4WlmAUzYEdMHuRyg",
+      "source_file": "sources/2026-05-24_AI生成文章数量已碾压人类！AI替你写了一切，你的大脑还剩什么？_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "活宝团队试验「让 AI 当老板」，结果「做什么赔什么」，底裤都不剩",
+      "source": "极客公园",
+      "digest": "活宝团队进行实验让AI担任管理角色，结果导致严重亏损，证明AI目前还无法完全替代人类管理者。感谢120个生鸡蛋，它向全世界证明了AI还无法开除人类。",
+      "link": "https://mp.weixin.qq.com/s/HdzN7qK2sVfoFt1DFdFJiw",
+      "source_file": "sources/2026-05-24_活宝团队试验「让 AI 当老板」，结果「做什么赔什么」，底裤都不剩_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "离谱！辅导班教学员刷开源项目PR给简历「镀金」，vLLM险些中招",
+      "source": "机器之心",
+      "digest": "辅导班教授学员通过提交开源项目PR来美化简历，vLLM项目险些受到虚假贡献影响。AI Agent的到来让这一问题更加严重。",
+      "link": "https://mp.weixin.qq.com/s/rMuSVDa-wzwaBkd69HFazg",
+      "source_file": "sources/2026-05-24_离谱！辅导班教学员刷开源项目PR给简历「镀金」，vLLM险些中招_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "Token贩子的盛宴：从草根到名人，为什么大家都想做AI中转站？",
+      "source": "机器之心",
+      "digest": "特朗普也下场的新风口，卖Token到底有什么魔力？从草根到名人都想成为AI中转站提供商。",
+      "link": "https://mp.weixin.qq.com/s/OJPMxI7srF8ywG9z7XAEGQ",
+      "source_file": "sources/2026-05-24_Token贩子的盛宴：从草根到名人，为什么大家都想做AI中转站？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "硅谷深陷算力荒：H200一夜涨价30%，H100抢到缺货，Karpathy也未能幸免",
+      "source": "InfoQ",
+      "digest": "2026年5月的硅谷，对于AI算力的饥荒和焦虑正达到前所未有的高度。H200显卡一夜涨价30%，H100供不应求，连Karpathy这样的AI大佬也未能幸免。",
+      "link": "https://mp.weixin.qq.com/s/MDiEt2PfdPTu5GBqiAT4Ig",
+      "source_file": "sources/2026-05-24_硅谷深陷算力荒：H200一夜涨价30%，H100抢到缺货，Karpathy也未能幸免_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-24",
+      "title": "传 Anthropic 新估值反超 OpenAI；iPhone 18 Pro 配色曝光，橙色没了；中国将实施太空人体研究计划 | 极客早知道",
+      "source": "极客公园",
+      "digest": "多条资讯汇总：Anthropic新估值传闻反超OpenAI；iPhone 18 Pro配色变化；中国将实施太空人体研究计划；SpaceX第三代星舰首飞成功；苹果筹备Gen AI网站；OpenAI高薪招聘研究员。",
+      "link": "https://mp.weixin.qq.com/s/ySNueI-QFUBMHghKx-WpkQ",
+      "source_file": "sources/2026-05-24_传 Anthropic 新估值反超 OpenAI；iPhone 18 Pro 配色曝光，橙色没了；中_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-23",
       "title": "NUS、牛津、微软等9机构发布音视频智能综述：系统梳理大模型时代的AVI研究全景",
