@@ -1,7 +1,347 @@
 {
-  "updated_at": "2026-05-26T12:45:11.907318",
-  "total": 828,
+  "updated_at": "2026-05-27T07:12:08.184684",
+  "total": 862,
   "articles": [
+    {
+      "date": "2026-05-26",
+      "title": "xAI解散，但Grok还在上新，马斯克官宣新模型",
+      "source": "机器之心",
+      "digest": "参数量达 1.5T 的 Grok 基础模型 V9-Medium 已经完成训练",
+      "link": "https://mp.weixin.qq.com/s/3ovCkBfWgxw11c_So-wThw",
+      "source_file": "sources/2026-05-26_xAI解散，但Grok还在上新，马斯克官宣新模型_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "OpenAI 后训练联合负责人：强化学习2年前还被认为行不通，模型越大反而越省Token",
+      "source": "51CTO",
+      "digest": "小编新发现一个宝藏播客，嘉宾是 OpenAI 后训练前沿（post-training frontiers）团队的联...",
+      "link": "https://mp.weixin.qq.com/s/DIoxp7ZafW8MWoR9EQIZZg",
+      "source_file": "sources/2026-05-26_OpenAI 后训练联合负责人：强化学习2年前还被认为行不通，模型越大反而越省Token_51CTO.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "OpenAI 详解规模化低延迟语音 AI 的 WebRTC 架构",
+      "source": "InfoQ",
+      "digest": "OpenAI推出适配全球低延迟语音AI的WebRTC新架构，采用中继收发器设计适配云原生环境，集中存放会话状态，缩减公网端口暴露，拉近媒体传输链路与用户距离。",
+      "link": "https://mp.weixin.qq.com/s/g85Exs9aICbn4Yb4LZDaWg",
+      "source_file": "sources/2026-05-26_OpenAI 详解规模化低延迟语音 AI 的 WebRTC 架构_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "从OpenAI AI Phone到Gemini on Android：AI手机时代需要怎样的Agent Harness？",
+      "source": "机器之心",
+      "digest": "AI手机，并不是简单地把大模型塞进系统。",
+      "link": "https://mp.weixin.qq.com/s/I2ztL6sFiHGxAiCfh_FTqg",
+      "source_file": "sources/2026-05-26_从OpenAI AI Phone到Gemini on Android：AI手机时代需要怎样的Agen_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "Python逆天改命！开源Hermes首次击败OpenAI Codex",
+      "source": "新智元",
+      "digest": "Python逆天改命！开源Hermes首次击败OpenAI Codex",
+      "link": "https://mp.weixin.qq.com/s/QcAi6OMIRwjSjhsh94ycmQ",
+      "source_file": "sources/2026-05-26_Python逆天改命！开源Hermes首次击败OpenAI Codex_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "龙虾之父教你省钱：开源Skill给你的Skill减肥",
+      "source": "量子位",
+      "digest": "\"Skill要像路标，不能像说明书\"",
+      "link": "https://mp.weixin.qq.com/s/l-6ub0r8g0ppKXSv-VD4QQ",
+      "source_file": "sources/2026-05-26_龙虾之父教你省钱：开源Skill给你的Skill减肥_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "马斯克甩出两张王牌，Grok Build杀入AI编程",
+      "source": "新智元",
+      "digest": "马斯克甩出两张王牌，Grok Build杀入AI编程",
+      "link": "https://mp.weixin.qq.com/s/hEDTgzM7mmncy7UG7N2Osw",
+      "source_file": "sources/2026-05-26_马斯克甩出两张王牌，Grok Build杀入AI编程_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "刚刚，中国AI闯入全球编程前二！前面只剩Claude",
+      "source": "新智元",
+      "digest": "刚刚，中国AI闯入全球编程前二！前面只剩Claude",
+      "link": "https://mp.weixin.qq.com/s/AjhFTVAYP2WCAMsb2I-a-w",
+      "source_file": "sources/2026-05-26_刚刚，中国AI闯入全球编程前二！前面只剩Claude_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "刚刚，国产AI自己造了AI，全球首例！",
+      "source": "量子位",
+      "digest": "训练速度比英伟达Megatron快10%",
+      "link": "https://mp.weixin.qq.com/s/Ci0BXKMJHy086MycdqH77w",
+      "source_file": "sources/2026-05-26_刚刚，国产AI自己造了AI，全球首例！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "画数独、烧蜡烛都不翻车了？浙大&阿里让AI先三思再下笔｜ACL 2026",
+      "source": "量子位",
+      "digest": "从数据到算法，构建可执行的思维链",
+      "link": "https://mp.weixin.qq.com/s/ReY_b_MPz_uX6ELqxxtReQ",
+      "source_file": "sources/2026-05-26_画数独、烧蜡烛都不翻车了？浙大&阿里让AI先三思再下笔｜ACL 2026_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "不用人类手写训练框架了！AI自己写代码，训出1B端侧「小钢炮」",
+      "source": "机器之心",
+      "digest": "大模型训练框架被 AI 写出来了",
+      "link": "https://mp.weixin.qq.com/s/2tdHV01FL_YGUmZQ12DS2A",
+      "source_file": "sources/2026-05-26_不用人类手写训练框架了！AI自己写代码，训出1B端侧「小钢炮」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "ACL 2026 Main | 不只是调用地图API，Spatial-Agent让大模型生成可执行地理分析工作流",
+      "source": "机器之心",
+      "digest": "把用户的自然语言问题组织成一段可执行、可验证的地理分析流程。",
+      "link": "https://mp.weixin.qq.com/s/_SXwcjvP8U9Si8wImKR3IQ",
+      "source_file": "sources/2026-05-26_ACL 2026 Main _ 不只是调用地图API，Spatial-Agent让大模型生成可执行地_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "ACL 2026｜证据摊开看，场景图画清：让流式视频大模型拿捏「何时开口」",
+      "source": "机器之心",
+      "digest": "为多模态全能助手、长流式记忆与更复杂的人机协同，提供一个更可组合的底座！",
+      "link": "https://mp.weixin.qq.com/s/7LqkM1aj6GH_5dXR3vkFZA",
+      "source_file": "sources/2026-05-26_ACL 2026｜证据摊开看，场景图画清：让流式视频大模型拿捏「何时开口」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "算法1年翻倍，芯片2年翻倍？重磅实锤：AI正在自我加速，拦不住了",
+      "source": "新智元",
+      "digest": "算法1年翻倍，芯片2年翻倍？重磅实锤：AI正在自我加速，拦不住了",
+      "link": "https://mp.weixin.qq.com/s/BZtLN_3WZTKHL63VGVy0mg",
+      "source_file": "sources/2026-05-26_算法1年翻倍，芯片2年翻倍？重磅实锤：AI正在自我加速，拦不住了_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-26",
+      "title": "华为提出「韬定律」：逻辑折叠突破光刻工艺束缚，芯片密度提升53.5%",
+      "source": "多源综合",
+      "digest": "华为在IEEE ISCAS上正式发表\"韬（τ）定律\"，通过逻辑折叠架构创新，在不改变制造节点的前提下，晶体管密度从155MTr/mm²跃升至238MTr/mm²，提升53.5%。该定律为国产芯片提供绕过EUV光刻机封锁的可行路径，资本市场反应强烈，半导体设备ETF拉升7.59%。",
+      "link": "https://mp.weixin.qq.com/s/5DEpPlznNAUhhV5scmRHQA",
+      "source_file": "sources/2026-05-26_精读华为“韬（τ）定律”论文：逻辑折叠、AI提速与投资转向｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "AI正在重塑安全：华为给出的2026年答案",
+      "source": "51CTO",
+      "digest": "跟石野老师一起学网络安全！",
+      "link": "https://mp.weixin.qq.com/s/6gDxgd0koYqoWsNLNP5qUw",
+      "source_file": "sources/2026-05-26_AI正在重塑安全：华为给出的2026年答案_51CTO.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "让30年沉淀从\"专家经验\"变成\"团队能力\"：亚信科技 AI 研发工具选型的3条铁律",
+      "source": "Qoder",
+      "digest": "我是朱军，亚信科技的首席架构师。亚信科技在通信行业深耕三十多年，研发人员近一万。",
+      "link": "https://mp.weixin.qq.com/s/09mDl3URRC0vHGDhaILIHA",
+      "source_file": "sources/2026-05-26_让30年沉淀从“专家经验”变成“团队能力”：亚信科技 AI 研发工具选型的3条铁律_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "从3632个漏洞看AI时代的评测基准重构！VulnGym基准发布",
+      "source": "腾讯技术工程",
+      "digest": "漏洞检测评测基准是这个行业的\"标尺\"",
+      "link": "https://mp.weixin.qq.com/s/yy_2UQB2NJdkEhDJiKz5kQ",
+      "source_file": "sources/2026-05-26_从3632个漏洞看AI时代的评测基准重构！VulnGym基准发布_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "阿里云发布Qwen Cloud及MuleRun，加速AI出海布局",
+      "source": "多源综合",
+      "digest": "阿里云在新加坡面向海外市场发布AI产品官网Qwen Cloud、Agent产品MuleRun，以及智能体编程平台，加速AI出海战略。",
+      "link": "https://mp.weixin.qq.com/s/RBY6gz8Qx6dZa_MAqAuSow",
+      "source_file": "sources/2026-05-26_阿里云发布Qwen Cloud，加速AI出海！_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "AI公司烧不起Token了！国产Agent杀出，逼近Opus 4.6还免费",
+      "source": "新智元",
+      "digest": "AI公司烧不起Token了！国产Agent杀出，逼近Opus 4.6还免费",
+      "link": "https://mp.weixin.qq.com/s/0W2LseSv3d3C9jID6LdY2A",
+      "source_file": "sources/2026-05-26_AI公司烧不起Token了！国产Agent杀出，逼近Opus 4.6还免费_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "从透明开发到系统工程：AgentScope 2.0 发布",
+      "source": "通义实验室",
+      "digest": "如何让智能体可靠运行？",
+      "link": "https://mp.weixin.qq.com/s/AcBTESODnZqpADRELcK5MQ",
+      "source_file": "sources/2026-05-26_从透明开发到系统工程：AgentScope 2.0 发布_通义实验室.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "Harness Engineering: C 端 AIGC 内容生产自优化实践",
+      "source": "阿里云开发者",
+      "digest": "Harness Engineering: C 端 AIGC 内容生产自优化实践",
+      "link": "https://mp.weixin.qq.com/s/2-bum4w_6xWAnc82fvk-3A",
+      "source_file": "sources/2026-05-26_Harness Engineering_ C 端 AIGC 内容生产自优化实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "支付宝，发布AI钱包和Token Pay",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》从支付宝方面获悉，\"AI支付\"已完成3亿笔AI智能体支付、支持95%通用智能体框架，成为全球首个",
+      "link": "https://mp.weixin.qq.com/s/qOYoW2ekWOuv5bNAC9CzPA",
+      "source_file": "sources/2026-05-26_支付宝，发布AI钱包和Token Pay_财联社AI daily.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "蚂蚁集团：Token消耗将迎来指数级增长，2030年预计消耗量增长超300倍",
+      "source": "财联社AI daily",
+      "digest": "支付宝今日举行AI支付生态大会。会上，蚂蚁集团研究院院长庄蹯表示：\"Token、数据和工具等数字资源成为最重要的生产要素，Token、数据与工具是智能体必不可少的燃料、感官和四肢。",
+      "link": "https://mp.weixin.qq.com/s/MS9FpG2LmdO3nwqZ1Sz81g",
+      "source_file": "sources/2026-05-26_蚂蚁集团：Token消耗将迎来指数级增长，2030年预计消耗量增长超300倍_财联社AI daily.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "罗福莉大干AI的一季度，小米净利润跌43%，研发投入涨33%",
+      "source": "智东西",
+      "digest": "内存涨价压力下，小米在想办法爬起来。",
+      "link": "https://mp.weixin.qq.com/s/Yt2vqMpqOdoxwLEe4DZlww",
+      "source_file": "sources/2026-05-26_罗福莉大干AI的一季度，小米净利润跌43%，研发投入涨33%_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "集体涨价！大模型开始找你\"要钱\"",
+      "source": "智东西",
+      "digest": "DeepSeek降价封神，豆包收费被喷！大模型陷入价格混战。",
+      "link": "https://mp.weixin.qq.com/s/flKM6o9CfmGHZXq69hAsiA",
+      "source_file": "sources/2026-05-26_集体涨价！大模型开始找你“要钱”_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "1.5亿！零一万物获AI大单",
+      "source": "智东西",
+      "digest": "内江高新区目前已初步形成人工智能产业链条。",
+      "link": "https://mp.weixin.qq.com/s/bUDHehk6I6d9v5tNrz8BQQ",
+      "source_file": "sources/2026-05-26_1.5亿！零一万物获AI大单_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "AI Agent来袭：90%的传统开发将被淘汰？",
+      "source": "51CTO",
+      "digest": "埋头敲代码，不如当AI指挥官！",
+      "link": "https://mp.weixin.qq.com/s/6pXdK8m-mjcTV5oUpTonnA",
+      "source_file": "sources/2026-05-26_AI Agent来袭：90%的传统开发将被淘汰？_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "当任何人都能用 AI 把公司告上法庭，法官们慌了",
+      "source": "极客公园",
+      "digest": "​AI 正在把法庭变成一个任何人都能进入的擂台。",
+      "link": "https://mp.weixin.qq.com/s/js_jGiq4lLme1RfsnY4Aqw",
+      "source_file": "sources/2026-05-26_当任何人都能用 AI 把公司告上法庭，法官们慌了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "卡帕西Anthropic最新头衔：技术员工（MTS）",
+      "source": "量子位",
+      "digest": "AI公司把职级玩明白了",
+      "link": "https://mp.weixin.qq.com/s/mQyKAFPys75GaCDcf9G1KQ",
+      "source_file": "sources/2026-05-26_卡帕西Anthropic最新头衔：技术员工（MTS）_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "OpenAI差点没了？总裁亲述：奥特曼被罢免当天，我就辞职了",
+      "source": "新智元",
+      "digest": "OpenAI差点没了？总裁亲述：奥特曼被罢免当天，我就辞职了",
+      "link": "https://mp.weixin.qq.com/s/E3xphCzLWUdnyIVpLAD1Og",
+      "source_file": "sources/2026-05-26_OpenAI差点没了？总裁亲述：奥特曼被罢免当天，我就辞职了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "对话奇点光子谢崇进：当英伟达用 45 亿美元，「烧」火了赛道",
+      "source": "极客公园",
+      "digest": "​AI 算力的下一个增长点，在互连。",
+      "link": "https://mp.weixin.qq.com/s/L0wMsaXYCqgAUQJbhWJpYA",
+      "source_file": "sources/2026-05-26_对话奇点光子谢崇进：当英伟达用 45 亿美元，「烧」火了赛道_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "不止于Copilot：医渡科技超级智能体，想做医疗界的Claude Code",
+      "source": "极客公园",
+      "digest": "当行业还在卷参数和评测榜单时，一家港股 AI 医疗公司用 12 年沉淀，把 AI 真正「焊」进了三甲医院的诊疗工作流——并率先跑通了商业闭环。",
+      "link": "https://mp.weixin.qq.com/s/9qUNrZfTcUGNOInCm19sXA",
+      "source_file": "sources/2026-05-26_不止于Copilot：医渡科技超级智能体，想做医疗界的Claude Code_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-26",
+      "title": "腾讯研究院AI速递 20260526",
+      "source": "腾讯研究院",
+      "digest": "10万人排队的ima copilot全面开放",
+      "link": "https://mp.weixin.qq.com/s/L4oXK7O2KBkhgDCn780yeg",
+      "source_file": "sources/2026-05-26_腾讯研究院AI速递 20260526_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-25",
       "title": "GPT-5.6泄露了！",
