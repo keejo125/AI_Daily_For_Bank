@@ -1,7 +1,387 @@
 {
-  "updated_at": "2026-05-27T07:12:08.184684",
-  "total": 862,
+  "updated_at": "2026-05-28T07:17:07.474266",
+  "total": 900,
   "articles": [
+    {
+      "date": "2026-05-27",
+      "title": "GPT-5.5反杀Claude登顶，AI编码旧榜不准了？",
+      "source": "新智元",
+      "digest": "GPT-5.5在AI编码榜单上反超Claude，引发对现有评测标准的质疑。",
+      "link": "https://mp.weixin.qq.com/s/14wLdrpFhoDQvdX9vW20qQ",
+      "source_file": "sources/2026-05-27_GPT-5.5反杀Claude登顶，AI编码旧榜不准了？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "实锤！GPT-5.5「降智」被抓，OpenAI官方文档认了",
+      "source": "新智元",
+      "digest": "OpenAI官方文档承认GPT-5.5存在性能下降问题。",
+      "link": "https://mp.weixin.qq.com/s/k4GEkAxYfKxnRJd3roOldg",
+      "source_file": "sources/2026-05-27_实锤！GPT-5.5「降智」被抓，OpenAI官方文档认了_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "断网解题，Claude Mythos推翻Erdős 80年猜想！比OpenAI更短更漂亮",
+      "source": "新智元",
+      "digest": "Claude Mythos在离线状态下成功推翻了Erdős长达80年的数学猜想，证明过程比OpenAI的方案更简洁优雅。",
+      "link": "https://mp.weixin.qq.com/s/09Yhrdhjed1N2gKztw3a3g",
+      "source_file": "sources/2026-05-27_断网解题，Claude Mythos推翻Erdős 80年猜想！比OpenAI更短更漂亮_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "Speech LLM 的下一个突破口：你的语音大模型可以是个「带韵律的文本模型」",
+      "source": "机器之心",
+      "digest": "仅需约1000小时语音训练数据，即可在3B和7B参数规模上实现业界最低Modality Gap，为语音大模型提供新方向。",
+      "link": "https://mp.weixin.qq.com/s/V4gAdhGpTDIDGTrxwa5L1A",
+      "source_file": "sources/2026-05-27_Speech LLM 的下一个突破口：你的语音大模型可以是个「带韵律的文本模型」_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "让大模型\"边看边改\"，视觉分割准确率直接上涨9% | ICML 2026",
+      "source": "量子位",
+      "digest": "ICML 2026最新研究提出开放语义分割新方法，通过迭代优化使视觉分割准确率提升9%。",
+      "link": "https://mp.weixin.qq.com/s/LK2AwasT6xWbEDBkHxQK9A",
+      "source_file": "sources/2026-05-27_让大模型“边看边改”，视觉分割准确率直接上涨9% _ ICML 2026_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "统治AI十年的Transformer，要被亲爹亲手砸碎？",
+      "source": "新智元",
+      "digest": "没有什么可以阻挡人类对AGI的向往，探讨Transformer架构的未来演进方向。",
+      "link": "https://mp.weixin.qq.com/s/tw5jBP4Lzbe2-JEpBYIuXQ",
+      "source_file": "sources/2026-05-27_统治AI十年的Transformer，要被亲爹亲手砸碎？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "双榜SOTA！微软ACL2026新作重新定义AI长记忆",
+      "source": "量子位",
+      "digest": "微软在ACL 2026发表AI记忆框架Mnemis，通过图索引与双检索机制突破传统RAG限制，在多项基准测试中达到SOTA。",
+      "link": "https://mp.weixin.qq.com/s/A-xVzjJSmzkfowgGz1Fx7g",
+      "source_file": "sources/2026-05-27_双榜SOTA！微软ACL2026新作重新定义AI长记忆_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "大模型也需要睡觉！让AI打个盹，醒来更聪明",
+      "source": "量子位",
+      "digest": "研究发现让AI模型在推理过程中短暂'休息'可以提升解决复杂问题的能力，难题需要更长的'睡眠时间'。",
+      "link": "https://mp.weixin.qq.com/s/WR1hjcDsFTYrqhUYYfar0Q",
+      "source_file": "sources/2026-05-27_大模型也需要睡觉！让AI打个盹，醒来更聪明_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "7B打败o3、GPT-5！医学AI智能体让模型学会\"看哪里、怎么看\"",
+      "source": "量子位",
+      "digest": "医学AI Agent取得关键突破，7B参数模型通过学会注意力机制，在医学诊断任务上超越o3和GPT-5。",
+      "link": "https://mp.weixin.qq.com/s/MRnLu-3FxqRMxnH68tbtLA",
+      "source_file": "sources/2026-05-27_7B打败o3、GPT-5！医学AI智能体让模型学会“看哪里、怎么看”_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "5秒完成3D场景编辑，北大&港中文&上海AI Lab搞出VGGT-Edit，120倍加速太炸了",
+      "source": "量子位",
+      "digest": "北大、港中文和上海AI Lab联合研发VGGT-Edit，实现5秒完成3D场景编辑，相比传统方法加速120倍，不再需要绕回2D处理。",
+      "link": "https://mp.weixin.qq.com/s/eVWFnY1YNUYv3_OlhsCV5Q",
+      "source_file": "sources/2026-05-27_5秒完成3D场景编辑，北大&港中文&上海AI Lab搞出VGGT-Edit，120倍加速太炸了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-27",
+      "title": "Node.js 拟内置虚拟文件系统，AI 生成代码引争议",
+      "source": "InfoQ",
+      "digest": "Matteo Collina提议为Node.js核心添加node:vfs虚拟文件系统模块，该方案虽获社区支持，但因大量借助AI开发，引发了关于代码审核与功能必要性的争议。",
+      "link": "https://mp.weixin.qq.com/s/UDyjG_DcpTbcYuzTDaT-Vw",
+      "source_file": "sources/2026-05-27_Node.js 拟内置虚拟文件系统，AI 生成代码引争议_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "全球AI工厂4万亿激战！这家国产厂商领先一个身位了",
+      "source": "智东西",
+      "digest": "OpenAI、Anthropic刚下场布局AI工厂，中国企业已提前卡位，在全球4万亿AI基础设施竞争中占据先机。",
+      "link": "https://mp.weixin.qq.com/s/0NvsxjQqZ_151cePGVpPjw",
+      "source_file": "sources/2026-05-27_全球AI工厂4万亿激战！这家国产厂商领先一个身位了_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "阿里云海外重磅发布 Qwen Cloud",
+      "source": "阿里云开发者",
+      "digest": "阿里云在海外正式发布Qwen Cloud服务，专为AI Agent而生的全新服务方式，助力开发者快速构建智能应用。",
+      "link": "https://mp.weixin.qq.com/s/qai2Na6ivJlB7dG8w-aWAw",
+      "source_file": "sources/2026-05-27_阿里云海外重磅发布 Qwen Cloud_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "verify-data：一个端到端的数据验数 Agent Skill",
+      "source": "阿里云开发者",
+      "digest": "阿里云推出verify-data Agent Skill，提供端到端的数据验证能力，简化数据处理流程。",
+      "link": "https://mp.weixin.qq.com/s/CX7H8LUm9PokC19NDDd_WQ",
+      "source_file": "sources/2026-05-27_verify-data：一个端到端的数据验数 Agent Skill_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "研发效能进阶：UU 跑腿如何让 AI 深度融入研发全流程",
+      "source": "Qoder",
+      "digest": "UU跑腿技术负责人分享如何将AI深度融入研发全流程的实践经验，提升研发效能。",
+      "link": "https://mp.weixin.qq.com/s/mQwKrpU17hcCBc2bzmJQ-g",
+      "source_file": "sources/2026-05-27_研发效能进阶：UU 跑腿如何让 AI 深度融入研发全流程_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "企业级Agent 落地，你绕不开的 4 个工程问题 | AICon",
+      "source": "InfoQ",
+      "digest": "AICon大会分享国内头部公司的Agent实践经验，深入解析企业级Agent落地必须解决的4个关键工程问题。",
+      "link": "https://mp.weixin.qq.com/s/-ss1OyMvt7g86MXOtAOcXQ",
+      "source_file": "sources/2026-05-27_企业级Agent 落地，你绕不开的 4 个工程问题 _ AICon_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "AI产业的新胜负手：词元的生产与编排｜甲子光年智库",
+      "source": "甲子光年",
+      "digest": "AI产业正在走向\"代理式执行\"，核心生产逻辑由\"数据驱动\"转为\"词元驱动\"，下一轮竞争焦点将围绕词元的生产与智能编排展开。",
+      "link": "https://mp.weixin.qq.com/s/Ex4v1sggg6z7cIg7qoWTig",
+      "source_file": "sources/2026-05-27_AI产业的新胜负手：词元的生产与编排｜甲子光年智库_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "AI越用越聪明，自主+自进化是关键拼图丨盛大邓亚峰EverMind@AIGC2026",
+      "source": "量子位",
+      "digest": "盛大网络邓亚峰在AIGC2026大会分享EverMind项目，强调AI自主性和自进化能力的重要性，个人数据与记忆所有权将回归用户。",
+      "link": "https://mp.weixin.qq.com/s/h2Uz7XwPxu0OYQpURbq1PA",
+      "source_file": "sources/2026-05-27_AI越用越聪明，自主+自进化是关键拼图丨盛大邓亚峰EverMind@AIGC2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "Marvis 实测：6 个 AI\"牛马\"扎根桌面之后",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术团队实测Marvis工具，展示6个AI代理在桌面环境中的实际应用效果。",
+      "link": "https://mp.weixin.qq.com/s/Va7Zgmz0s_F2uxC8qSCdzw",
+      "source_file": "sources/2026-05-27_Marvis 实测：6 个 AI“牛马”扎根桌面之后_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "DeepSeek研究员让AI自己研究自己：AI执笔99%，6天搞定45页论文",
+      "source": "多源综合",
+      "digest": "DeepSeek研究员陈德里开发自动研究Skill，让人工智能代理完成99%的论文写作工作，人类只需动脑2小时。AI与DeepSeek、GPT联手执笔，76分钟速成初稿，6天完成45页完整论文，展示了AI在科研自动化方面的巨大潜力。",
+      "link": "https://mp.weixin.qq.com/s/I2BYFoJi6VpnyuEjTi0s7w",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "上海：推动AI在金融等场景规模化落地！",
+      "source": "银行科技研究社",
+      "digest": "上海市人民政府发布《关于推进服务业扩能提质的实施意见》，提出实施\"人工智能（AI）+\"行动，加快AI+工业软件研发，推动行业大模型、通用智能体研发与应用，在工业、金融等场景规模化落地。同时稳步拓展供应链金融服务，支持金融机构规范发展各类供应链金融产品。",
+      "link": "https://mp.weixin.qq.com/s/5VZl1KAegboJBhO7EN6pYQ",
+      "source_file": "sources/2026-05-27_上海：推动AI在金融等场景规模化落地！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "南京银行加大数智赋能，已打造121个AI专属助手",
+      "source": "银行科技研究社",
+      "digest": "南京银行持续推进数字化转型，已打造121个AI专属助手，覆盖多个业务场景，提升金融服务智能化水平。",
+      "link": "https://mp.weixin.qq.com/s/JSx9MEg4S72oR50-upjZuQ",
+      "source_file": "sources/2026-05-27_南京银行加大数智赋能，已打造121个AI专属助手_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "你要做旁观者，还是定义者？中关村两院全球寻找「AI时代架构师」",
+      "source": "机器之心",
+      "digest": "诚聘海外高层次人才！",
+      "link": "https://mp.weixin.qq.com/s/RNizfH8TE603TnF8SBZTmA",
+      "source_file": "sources/2026-05-27_你要做旁观者，还是定义者？中关村两院全球寻找「AI时代架构师」_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "AI 手机还没度上「蜜月」，模型厂商和手机厂商就已经开始「闹离婚」",
+      "source": "极客公园",
+      "digest": "3万台只是水花。水花之外，整个AI手机生态正在被重新排位，模型厂商与手机厂商的合作关系出现裂痕。",
+      "link": "https://mp.weixin.qq.com/s/yAQ_ON_toq1xU7Rqe76EaQ",
+      "source_file": "sources/2026-05-27_AI 手机还没度上「蜜月」，模型厂商和手机厂商就已经开始「闹离婚」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "AI商业化的十字路口：为什么广告与订阅都难以单独走通？",
+      "source": "",
+      "digest": "这可能才是AI Agent商业模式真正成熟的起点，探讨AI商业化路径的挑战与机遇。",
+      "link": "https://mp.weixin.qq.com/s/tVGYG2yY1YX8dDGU-YrMaQ",
+      "source_file": "sources/2026-05-27_AI商业化的十字路口：为什么广告与订阅都难以单独走通？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "从数学思维到AI睡眠，于大川在千亿赛道的第二次\"白魔法\"创业｜甲子光年",
+      "source": "甲子光年",
+      "digest": "做睡眠，是真正意义上对所有人都有益的事。讲述于大川从数学思维转向AI睡眠领域的创业历程。",
+      "link": "https://mp.weixin.qq.com/s/js2BAspDI9eflT3Z7CWKOw",
+      "source_file": "sources/2026-05-27_从数学思维到AI睡眠，于大川在千亿赛道的第二次“白魔法”创业｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "股价大涨300%！北大系AI公司冲上赛道第一，今天上市了",
+      "source": "智东西",
+      "digest": "三年净利缩水近85%，北大系AI公司今日上市，股价大涨300%。",
+      "link": "https://mp.weixin.qq.com/s/1Xn2k3UbJ3JyZ_lzrhmeXw",
+      "source_file": "sources/2026-05-27_股价大涨300%！北大系AI公司冲上赛道第一，今天上市了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "月吞100万亿Token！AI中转站OpenRouter赚爆了",
+      "source": "新智元",
+      "digest": "OpenRouter作为AI模型中转站，月处理100万亿Token，商业运营取得成功。",
+      "link": "https://mp.weixin.qq.com/s/rstokGYuH1J19A_ztGqgyw",
+      "source_file": "sources/2026-05-27_月吞100万亿Token！AI中转站OpenRouter赚爆了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "OpenAI挖来了个F1级别车手搞公关",
+      "source": "量子位",
+      "digest": "OpenAI聘请曾在Salesforce干了13年营销的F1级别车手负责公关事务。",
+      "link": "https://mp.weixin.qq.com/s/-2Xyno1uOHR_URI_6mVWNw",
+      "source_file": "sources/2026-05-27_OpenAI挖来了个F1级别车手搞公关_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "三星按下一场史上最长罢工，但揭下了AI时代贫富差距的遮羞布",
+      "source": "InfoQ",
+      "digest": "三星这场还没开始就已经被按住的史上最长罢工，本质上是AI时代芯片产业链\"价值分配机制\"的第一次正面冲突。",
+      "link": "https://mp.weixin.qq.com/s/kLVxHWXQ3tiKqat90_J0jA",
+      "source_file": "sources/2026-05-27_三星按下一场史上最长罢工，但揭下了AI时代贫富差距的遮羞布_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "大模型治不好的「医疗焦虑」，被这家公司用「信任」治愈了",
+      "source": "极客公园",
+      "digest": "真正的医疗AI需要架构重塑，探讨某公司如何通过建立信任机制解决医疗AI应用中的焦虑问题。",
+      "link": "https://mp.weixin.qq.com/s/Y7UMUK0Y7YP8rdfiuCrdQw",
+      "source_file": "sources/2026-05-27_大模型治不好的「医疗焦虑」，被这家公司用「信任」治愈了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "1年暴涨8倍！ 借力AI，存储大厂美光市值突破 1 万亿美元",
+      "source": "极客公园",
+      "digest": "当所有人都在盯着GPU，真正卡住AI脖子的，是另一块芯片。美光凭借AI存储需求，市值在1年内暴涨8倍突破1万亿美元。",
+      "link": "https://mp.weixin.qq.com/s/UXkuN1pQ3lMRnXfZ-Cz7XQ",
+      "source_file": "sources/2026-05-27_1年暴涨8倍！ 借力AI，存储大厂美光市值突破 1 万亿美元_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "4万字《壮丽人性》长文首发！教皇联手Anthropic，警告AI不能统治人类",
+      "source": "新智元",
+      "digest": "教皇首份AI通谕，叩问机器时代的人性，与Anthropic合作发布4万字长文警告AI不能统治人类。",
+      "link": "https://mp.weixin.qq.com/s/IColxYtSASQ8R_WaUDOJnA",
+      "source_file": "sources/2026-05-27_4万字《壮丽人性》长文首发！教皇联手Anthropic，警告AI不能统治人类_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "快手：可灵AI一季度营收同比增长超300%",
+      "source": "财联社AI daily",
+      "digest": "快手可灵AI业务一季度营收同比增长超过300%，展现强劲增长势头。",
+      "link": "https://mp.weixin.qq.com/s/oh-Mu8aOSZrm9e7waUwQvg",
+      "source_file": "sources/2026-05-27_快手：可灵AI一季度营收同比增长超300%_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "小米宣布：降价99%",
+      "source": "财联社AI daily",
+      "digest": "小米旗下MiMo大模型发布公告，对V2.5系列模型API进行永久性降价，最高降幅达99%，不再区分使用场景。",
+      "link": "https://mp.weixin.qq.com/s/Woz6FX6Oioa3FhW-2czElA",
+      "source_file": "sources/2026-05-27_小米宣布：降价99%_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "字节加码AI基建：购入百万颗高通AI芯片，投入超4700亿支持Agent业务",
+      "source": "多源综合",
+      "digest": "字节跳动成为高通首批AI ASIC芯片客户，已订购百万颗芯片用于支持其AI Agent业务，今年AI基建投入预计超过4700亿元，此举推动高通股价大涨8%。",
+      "link": "https://mp.weixin.qq.com/s/oHDIP3lpcn7XCc7U3xODzg",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "美光市值突破 1 万亿美元；三体公司原 CEO 许垚被执行死刑；传字节跳动本月向 Seed 员工开放「豆包股」认购权 | 极客早知道",
+      "source": "极客公园",
+      "digest": "综合资讯：小米Q1财报总营收991亿元经调整净利润61亿元；星巴克试用AI清点糖浆瓶库存却屡屡出现幻觉；美团跑腿发布Skill接入AI Agent生态等多条资讯汇总。",
+      "link": "https://mp.weixin.qq.com/s/A6XAjrvOYv5GRK5MBI9wBQ",
+      "source_file": "sources/2026-05-27_美光市值突破 1 万亿美元；三体公司原 CEO 许垚被执行死刑；传字节跳动本月向 Seed 员工开放_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-27",
+      "title": "腾讯研究院AI速递 20260527",
+      "source": "腾讯研究院",
+      "digest": "Anthropic在梵蒂冈提到的三个思辨问题，腾讯研究院每日AI资讯汇总。",
+      "link": "https://mp.weixin.qq.com/s/CENG2qb0wOInofP2I_0Rag",
+      "source_file": "sources/2026-05-27_腾讯研究院AI速递 20260527_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-26",
       "title": "xAI解散，但Grok还在上新，马斯克官宣新模型",
