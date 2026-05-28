@@ -1,7 +1,287 @@
 {
-  "updated_at": "2026-05-28T07:17:07.474266",
-  "total": 900,
+  "updated_at": "2026-05-29T00:35:49.158476",
+  "total": 928,
   "articles": [
+    {
+      "date": "2026-05-28",
+      "title": "谷歌AI不认识Google",
+      "source": "机器之心",
+      "digest": "AI 很强，但能力分布不均",
+      "link": "https://mp.weixin.qq.com/s/h_22kRlpaelb65JD8mY2qg",
+      "source_file": "sources/2026-05-28_谷歌AI不认识Google_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "ASI决战！OpenAI与Anthropic双雄争霸",
+      "source": "新智元",
+      "digest": "ASI双雄争霸。",
+      "link": "https://mp.weixin.qq.com/s/7U5fYzXh_42UEmLp1o54-A",
+      "source_file": "sources/2026-05-28_ASI决战！OpenAI与Anthropic双雄争霸_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "多变量神经缩放定律迈向大一统：Mila联手DeepMind提出UNSL",
+      "source": "机器之心",
+      "digest": "大模型规模化的「万能公式」？",
+      "link": "https://mp.weixin.qq.com/s/0cJDupDeUGCo_3YEh68Uvw",
+      "source_file": "sources/2026-05-28_多变量神经缩放定律迈向大一统：Mila联手DeepMind提出UNSL_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "让机器人学会番茄炒蛋爆红网络的 Genesis AI，开源了自己的机器人「训练场」",
+      "source": "极客公园",
+      "digest": "​真实世界需要 200 多个小时的模型评测任务，可以在仿真中不到 0.5 小时内完成。",
+      "link": "https://mp.weixin.qq.com/s/uKRwGeic7tjOiR3wU5YZSA",
+      "source_file": "sources/2026-05-28_让机器人学会番茄炒蛋爆红网络的 Genesis AI，开源了自己的机器人「训练场」_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "好抓马！AI删光2.8万行代码，干崩后台，还编造了一份故障修复报告",
+      "source": "智东西",
+      "digest": "Gemini 3.5的闯祸实录。",
+      "link": "https://mp.weixin.qq.com/s/EdeyzB27I7xSAYkfz9mQPg",
+      "source_file": "sources/2026-05-28_好抓马！AI删光2.8万行代码，干崩后台，还编造了一份故障修复报告_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "玻璃里跑AI！华中科大&上交大科研成果登Nature子刊",
+      "source": "量子位",
+      "digest": "把光子神经网络写进玻璃三维空间，6554 TOPS理论吞吐量",
+      "link": "https://mp.weixin.qq.com/s/a340KMj1_sNDw75c24pTtQ",
+      "source_file": "sources/2026-05-28_玻璃里跑AI！华中科大&上交大科研成果登Nature子刊_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "刚刚，国产预训练具身大模型开源了，让后训练不再是必选项！",
+      "source": "机器之心",
+      "digest": "预训练模型到底能不能直接使用？能！",
+      "link": "https://mp.weixin.qq.com/s/N8WlG3OydsmcV_o9lIvaxw",
+      "source_file": "sources/2026-05-28_刚刚，国产预训练具身大模型开源了，让后训练不再是必选项！_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "高分辨率视频生成不再慢半拍：让大模型保留“原味”的同时提速十余倍",
+      "source": "量子位",
+      "digest": "从58分钟到278秒，高分辨率视频生成更接近可用",
+      "link": "https://mp.weixin.qq.com/s/eZmixPtLDVUfNMV1-7Ar-w",
+      "source_file": "sources/2026-05-28_高分辨率视频生成不再慢半拍：让大模型保留“原味”的同时提速十余倍_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "全球首个完全AI编写的训练框架来了，速度反超英伟达：面壁要用 AI 把国产算力软件重写一遍",
+      "source": "InfoQ",
+      "digest": "英伟达最难被替代的，从来不是一张 GPU，而是 CUDA 背后十几年积累出来的软件生态。",
+      "link": "https://mp.weixin.qq.com/s/rl48C-c_1LQMdnJ7ZKDzJw",
+      "source_file": "sources/2026-05-28_全球首个完全AI编写的训练框架来了，速度反超英伟达：面壁要用 AI 把国产算力软件重写一遍_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "全球首次单机降服万亿巨模DeepSeek-V4！RL后训练框架Orbit开源！",
+      "source": "机器之心",
+      "digest": "Orbit的价值并不只在于「让大模型变得可训练」，还在于让小模型的RL后训练变得更容易。",
+      "link": "https://mp.weixin.qq.com/s/M3Q4AnhMa2ymj1JHO1W5ag",
+      "source_file": "sources/2026-05-28_全球首次单机降服万亿巨模DeepSeek-V4！RL后训练框架Orbit开源！_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-28",
+      "title": "物理 AI 的早期答案，可能先出现在工厂里",
+      "source": "极客公园",
+      "digest": "​对话微亿智造：工业具身智能的终局可能在哪里。",
+      "link": "https://mp.weixin.qq.com/s/aDfhpkpIzzyCmoPJtjz41Q",
+      "source_file": "sources/2026-05-28_物理 AI 的早期答案，可能先出现在工厂里_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "阿里Qoder推出Cloud Agents，Agent上线仅需1天",
+      "source": "财联社AI daily",
+      "digest": "阿里Qoder上线全托管AI Agent运行平台Cloud Agents，可提供Agent底座、模型服务及运行",
+      "link": "https://mp.weixin.qq.com/s/GXSvre5bQOMVGBFnuIGmUg",
+      "source_file": "sources/2026-05-28_阿里Qoder推出Cloud Agents，Agent上线仅需1天_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "AI正在重写软件行业？8岁孩子做操作系统，一人公司拿下千万订单丨百度秒哒朱广翔 @AIGC2026",
+      "source": "量子位",
+      "digest": "“87%用户不懂代码，却用AI跑通了一人公司”",
+      "link": "https://mp.weixin.qq.com/s/5U9mKPzimhmILmqO9LLOgg",
+      "source_file": "sources/2026-05-28_AI正在重写软件行业？8岁孩子做操作系统，一人公司拿下千万订单丨百度秒哒朱广翔 @AIGC2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "腾讯ima知识库接入WorkBuddy等Agent产品",
+      "source": "财联社AI daily",
+      "digest": "5月28日，腾讯AI智能平台ima宣布接入WorkBuddy。此前，ima内置的Copilot已能够将用户沉淀的知识接入平台内部Agent工作流程。",
+      "link": "https://mp.weixin.qq.com/s/mW9b1YvUqJP57gnrAShtJg",
+      "source_file": "sources/2026-05-28_腾讯ima知识库接入WorkBuddy等Agent产品_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "AI破晓：生成式AI时代文化产业的重塑、跃迁与守望｜4万字报告",
+      "source": "量子位",
+      "digest": "定义时代、定义文明的，从来不是技术，而是人类自己",
+      "link": "https://mp.weixin.qq.com/s/GmWtoBnZCl_Dbd7nVuUeiA",
+      "source_file": "sources/2026-05-28_AI破晓：生成式AI时代文化产业的重塑、跃迁与守望｜4万字报告_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "Harness 的尽头不是缰绳，是镜子：AI 时代最沉默的那场革命",
+      "source": "腾讯技术工程",
+      "digest": "我们以为自己在给 AI 套缰绳",
+      "link": "https://mp.weixin.qq.com/s/ooTYAzFvxC4PCQ5H82dRhQ",
+      "source_file": "sources/2026-05-28_Harness 的尽头不是缰绳，是镜子：AI 时代最沉默的那场革命_腾讯技术工程.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "前 CEO 被学生嘘“别吹AI”，现 CEO 被追问“会不会被AI取代”：谷歌两代掌门人的AI信仰，同时被质疑",
+      "source": "InfoQ",
+      "digest": "“CEO 这份工作并没有那么复杂，真的”",
+      "link": "https://mp.weixin.qq.com/s/JO2fN_EvpjjoY_OkAPgdUg",
+      "source_file": "sources/2026-05-28_前 CEO 被学生嘘“别吹AI”，现 CEO 被追问“会不会被AI取代”：谷歌两代掌门人的AI信仰，_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "Bintrail：利用索引二进制日志实现 MySQL 时间旅行查询",
+      "source": "InfoQ",
+      "digest": "Bintrail 是一个新推出的数据层，为 MySQL 带来了针对特定时间点的查询和行级历史查询功能。",
+      "link": "https://mp.weixin.qq.com/s/rJAMs4DxCsgVqnEpAXG5Vw",
+      "source_file": "sources/2026-05-28_Bintrail：利用索引二进制日志实现 MySQL 时间旅行查询_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "别在CVPR独自社恐了！来丹佛AI Talent Meetup，只聊你听得懂的技术与理想",
+      "source": "机器之心",
+      "digest": "6月4日，在丹佛遇见你的同频智友～",
+      "link": "https://mp.weixin.qq.com/s/OTc81EZwxjNTBuPGBiUXbA",
+      "source_file": "sources/2026-05-28_别在CVPR独自社恐了！来丹佛AI Talent Meetup，只聊你听得懂的技术与理想_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "QoderWork 实训营第四期！用 AI 做游戏，从脑洞到上线全流程拆解",
+      "source": "Qoder",
+      "digest": "5 月 28 日周四晚 7 点，视频号直播。",
+      "link": "https://mp.weixin.qq.com/s/D2LTzs8utXXkapQbYL7NvQ",
+      "source_file": "sources/2026-05-28_QoderWork 实训营第四期！用 AI 做游戏，从脑洞到上线全流程拆解_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "5篇AI生成的数学论文被接收！00后创始人洪乐潼融资14个亿",
+      "source": "量子位",
+      "digest": "“创业者要选最难的问题，甚至需要5到10年才能解决的那种”",
+      "link": "https://mp.weixin.qq.com/s/5BgGbk1Kist6pGicL7w1BA",
+      "source_file": "sources/2026-05-28_5篇AI生成的数学论文被接收！00后创始人洪乐潼融资14个亿_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "一个 AI 写了自己 90% 的代码，然后估值涨了 25 倍",
+      "source": "极客公园",
+      "digest": "Devin 证明，独立 Vibe Coding 平台依然有机会。",
+      "link": "https://mp.weixin.qq.com/s/0qo1PLHonrUNYMDSdGoCvw",
+      "source_file": "sources/2026-05-28_一个 AI 写了自己 90% 的代码，然后估值涨了 25 倍_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "ICML2026 | AutoMoT : B2D & nuScense双SOTA ，重新思考VLM和端到端驾驶的结合",
+      "source": "机器之心",
+      "digest": "大模型的理解能力，如何真正服务于驾驶决策和轨迹规划？",
+      "link": "https://mp.weixin.qq.com/s/pUgb1Kd-G0Y93eqohKXv4w",
+      "source_file": "sources/2026-05-28_ICML2026 _ AutoMoT _ B2D & nuScense双SOTA ，重新思考VLM和_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "招募｜成为 2026 Qoder 企业培训大使，与 AI Coding 浪潮同行",
+      "source": "Qoder",
+      "digest": "当 AI Coding 从工具进化为生产力底座，谁在企业内部真正把它落地？2026 年，我们要找的，就是这群\"实战派\"。",
+      "link": "https://mp.weixin.qq.com/s/3jOdaTj18cMcnjyl6Z-bZA",
+      "source_file": "sources/2026-05-28_招募｜成为 2026 Qoder 企业培训大使，与 AI Coding 浪潮同行_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "Meta开启“付费时代”：AI聊天机器人、Facebook、Instagram、WhatsApp会员都来了",
+      "source": "财联社AI daily",
+      "digest": "文|史正丞狂砸上千亿美元投资AI后，全球最大社交媒体云供应商Meta终于向股东们展示了赚钱的欲望。",
+      "link": "https://mp.weixin.qq.com/s/YQLs0JmFT-NeyZNFG8wnvA",
+      "source_file": "sources/2026-05-28_Meta开启“付费时代”：AI聊天机器人、Facebook、Instagram、WhatsApp会员_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "老黄不只卖铲子了！英伟达要当AI产业链的「收租人」",
+      "source": "新智元",
+      "digest": "老黄不只卖铲子了！英伟达要当AI产业链的「收租人」",
+      "link": "https://mp.weixin.qq.com/s/7-geHtxM8GrGcNkxlMd9iQ",
+      "source_file": "sources/2026-05-28_老黄不只卖铲子了！英伟达要当AI产业链的「收租人」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "雷军幽默回应武契奇「买不起小米汽车」；2.99 美元起，Meta 推出 AI 聊天机器人订阅服务；段永平增持泡泡玛特，成第二大股东| 极客早知道",
+      "source": "极客公园",
+      "digest": "英伟达 CEO 黄仁勋现身夜市买烤玉米，「付费插队」引热议；华为「韬定律」逻辑折叠芯片设计公布；京东必须想尽一切办法保住兄弟们的饭碗。",
+      "link": "https://mp.weixin.qq.com/s/WT4MeuZvN7nr7JSpSEnsOQ",
+      "source_file": "sources/2026-05-28_雷军幽默回应武契奇「买不起小米汽车」；2.99 美元起，Meta 推出 AI 聊天机器人订阅服务；段_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-28",
+      "title": "腾讯研究院AI速递 20260528",
+      "source": "腾讯研究院",
+      "digest": "自动化agent背后是否还需要人类？",
+      "link": "https://mp.weixin.qq.com/s/8JlAeFeB2oWtBFi5R6cl8Q",
+      "source_file": "sources/2026-05-28_腾讯研究院AI速递 20260528_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-27",
       "title": "GPT-5.5反杀Claude登顶，AI编码旧榜不准了？",
