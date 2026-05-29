@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-05-29T00:35:49.158476",
-  "total": 928,
+  "updated_at": "2026-05-30T07:45:56.194134",
+  "total": 958,
   "articles": [
+    {
+      "date": "2026-05-29",
+      "title": "马斯克也拥抱C语言了！大模型训练堆栈抛弃JAX，提速一个数量级",
+      "source": "量子位",
+      "digest": "Grok5也用它",
+      "link": "https://mp.weixin.qq.com/s/amR7xwsDgwwOIGeq4HFKUw",
+      "source_file": "sources/2026-05-29_马斯克也拥抱C语言了！大模型训练堆栈抛弃JAX，提速一个数量级_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "借助 Android CLI，谷歌正让 Android 工具链更便于代理使用",
+      "source": "InfoQ",
+      "digest": "谷歌推出全新的 Android 开发工具，借助 AI 代理，可以将应用构建速度提升至原来的 3 倍。",
+      "link": "https://mp.weixin.qq.com/s/VZzSV_hcC1AsYLxhuYSItQ",
+      "source_file": "sources/2026-05-29_借助 Android CLI，谷歌正让 Android 工具链更便于代理使用_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Opus4.8 正式发布，AI 第一次会说「我不确定」了",
+      "source": "极客公园",
+      "digest": "Claude Opus 4.8 不是一次跃迁，而是一次聚焦。",
+      "link": "https://mp.weixin.qq.com/s/5-uDH1L-eEljSoep0J-zpg",
+      "source_file": "sources/2026-05-29_Opus4.8 正式发布，AI 第一次会说「我不确定」了_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；Anthropic 推出 Claude Opus 4.8 | 极客早知道",
+      "source": "极客公园",
+      "digest": "SpaceX 早期投资人：SpaceX 与特斯拉合并「只是时间问题」；\n字节跳动据悉正开发定制 CPU 以支持 AI 需求；\n扎克伯格称 Meta 考虑进军云计算市场；\n报道：黄仁勋加入清华大学顾问委员会，与库克、马斯克同列",
+      "link": "https://mp.weixin.qq.com/s/FMaUEqgzKPdQmb4WBfahhw",
+      "source_file": "sources/2026-05-29_小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；An_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行",
+      "source": "量子位",
+      "digest": "距离上一版4.7只过了43天",
+      "link": "https://mp.weixin.qq.com/s/uPiuVhGw5vqo0qJSwaUpnw",
+      "source_file": "sources/2026-05-29_Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元",
+      "source": "机器之心",
+      "digest": "大模型「更诚实了」。",
+      "link": "https://mp.weixin.qq.com/s/-GmUORU8V5PNW0_6A5uNcw",
+      "source_file": "sources/2026-05-29_Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "消耗1830亿token，Meta用AI把数学教材翻译成了一个超大Lean库",
+      "source": "机器之心",
+      "digest": "Meta 开源了当今规模最大的自动数学形式化工程",
+      "link": "https://mp.weixin.qq.com/s/mdEBchFfYbbpQ2Q0UlBy5g",
+      "source_file": "sources/2026-05-29_消耗1830亿token，Meta用AI把数学教材翻译成了一个超大Lean库_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "这家公司用大模型给月嫂派活，周活10万次，前百度副总裁创业",
+      "source": "智东西",
+      "digest": "推出全国首个家政具身平台，要让机器人进家。",
+      "link": "https://mp.weixin.qq.com/s/PudiZhVoYSz2M3zsJqi54w",
+      "source_file": "sources/2026-05-29_这家公司用大模型给月嫂派活，周活10万次，前百度副总裁创业_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "最大开源中文预训练合成数据集来了！面壁清华端出6000亿Token大模型“精饲料”",
+      "source": "智东西",
+      "digest": "高质量数据可在相同训练量下实现更多性能提升。",
+      "link": "https://mp.weixin.qq.com/s/O3ea9lHVUXzSp7wnhkopgQ",
+      "source_file": "sources/2026-05-29_最大开源中文预训练合成数据集来了！面壁清华端出6000亿Token大模型“精饲料”_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体",
+      "source": "阿里云开发者",
+      "digest": "在 AgentScope Java 1.1.0 版本[1]中，我们把 QwenPaw、OpenClaw、Co",
+      "link": "https://mp.weixin.qq.com/s/aZhE0aPDaARxJLDI6ZrSFw",
+      "source_file": "sources/2026-05-29_AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
+      "source": "新智元",
+      "digest": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
+      "link": "https://mp.weixin.qq.com/s/of5KM54T2jRxKKAGIcW2VA",
+      "source_file": "sources/2026-05-29_DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "清华系团队给大模型织了一张“智能算力电网”",
+      "source": "量子位",
+      "digest": "单位Token成本降低40%",
+      "link": "https://mp.weixin.qq.com/s/061E3M87Dn0pi6OnFy0dHw",
+      "source_file": "sources/2026-05-29_清华系团队给大模型织了一张“智能算力电网”_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Tair 联手 SGLang 共建 DeepSeekV4 分层缓存架构",
+      "source": "阿里云开发者",
+      "digest": "阿里妹导读文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。",
+      "link": "https://mp.weixin.qq.com/s/VaTlkUKqlQouQsJlpBwsLg",
+      "source_file": "sources/2026-05-29_Tair 联手 SGLang 共建 DeepSeekV4 分层缓存架构_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "终于，清华快手养出了通人性的AI！",
+      "source": "新智元",
+      "digest": "当推荐算法行业步入深度深耕阶段，行业发展全新增长突破口在哪里？",
+      "link": "https://mp.weixin.qq.com/s/RPle5QiVRYmBbCcp_tSMCA",
+      "source_file": "sources/2026-05-29_终于，清华快手养出了通人性的AI！_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "下限零基础，上限肝大作！腾讯这个AI游戏创作平台，太野了",
+      "source": "量子位",
+      "digest": "下一波AI创作浪潮正在游戏领域发生",
+      "link": "https://mp.weixin.qq.com/s/JCdIWaG271PDNm3KBY7eZg",
+      "source_file": "sources/2026-05-29_下限零基础，上限肝大作！腾讯这个AI游戏创作平台，太野了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "OPPO 小布记忆：全模态碎片化内容的理解与智能整理实践｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "用户每天产生大量碎片化内容——截图、语音、视频、文档、多图……如何让 AI 理解这些异构多模态数据，并自动整理成有价值的\"记忆\"？",
+      "link": "https://mp.weixin.qq.com/s/N-SQ3y6szUtM_h8IzjoOkg",
+      "source_file": "sources/2026-05-29_OPPO 小布记忆：全模态碎片化内容的理解与智能整理实践｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "吉林银行专门建设人工智能生产楼，已针对大模型启动全行知识中心项目",
+      "source": "银行科技研究社",
+      "digest": "吉林银行专门建设人工智能生产楼，已针对大模型启动全行知识中心项目",
+      "link": "https://mp.weixin.qq.com/s/IYTkm0WFTBsP9JWF-MXODw",
+      "source_file": "sources/2026-05-29_吉林银行专门建设人工智能生产楼，已针对大模型启动全行知识中心项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "先进存力重塑底座，驱动金融AI规模化落地",
+      "source": "金融电子化",
+      "digest": "先进存力重塑底座，驱动金融AI规模化落地",
+      "link": "https://mp.weixin.qq.com/s/1Oa6w0RiAbPVYwEEeZXq2A",
+      "source_file": "sources/2026-05-29_先进存力重塑底座，驱动金融AI规模化落地_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Claude双王炸！官宣融资4407亿，最强通用模型Opus 4.8登场",
+      "source": "智东西",
+      "digest": "估值6.5万亿，真超OpenAI了。",
+      "link": "https://mp.weixin.qq.com/s/43UWPA2QgXPelKO4N9tT_w",
+      "source_file": "sources/2026-05-29_Claude双王炸！官宣融资4407亿，最强通用模型Opus 4.8登场_智东西.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-29",
+      "title": "字节跳动AI4S团队调整",
+      "source": "财联社AI daily",
+      "digest": "有传言称，字节Seed旗下AI4S团队，正在讨论新一轮组织调整，包括从字节分拆的可能性。",
+      "link": "https://mp.weixin.qq.com/s/1XlTHpE_apVkUErBNnRt2g",
+      "source_file": "sources/2026-05-29_字节跳动AI4S团队调整_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "教程首发｜让手机拥有视觉感知能力",
+      "source": "通义实验室",
+      "digest": "手机变 AI 之眼 Qwen3-VL+MCP 完全指南",
+      "link": "https://mp.weixin.qq.com/s/AlNKFllxdsdQwKsZg75zRw",
+      "source_file": "sources/2026-05-29_教程首发｜让手机拥有视觉感知能力_通义实验室.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘",
+      "source": "腾讯技术工程",
+      "digest": "非常详尽的笔记",
+      "link": "https://mp.weixin.qq.com/s/49dxdMXEUoWIYlIh8fFqMQ",
+      "source_file": "sources/2026-05-29_OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘_腾讯技术工程.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "AI为什么会“失语”？",
+      "source": "机器之心",
+      "digest": "下一个被挤压的token还在词表里某处。",
+      "link": "https://mp.weixin.qq.com/s/e4RRz-AbiNBq7DLICxzNYw",
+      "source_file": "sources/2026-05-29_AI为什么会“失语”？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "5亿Tokens白送！全球首个商用AI主机发布，终于能放开烧Token了",
+      "source": "量子位",
+      "digest": "让OPC和成长型企业AI落地一步到位",
+      "link": "https://mp.weixin.qq.com/s/ZZoGdACvxzAzu9oWRMuIDA",
+      "source_file": "sources/2026-05-29_5亿Tokens白送！全球首个商用AI主机发布，终于能放开烧Token了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "阿里云 AI 创享日 Qoder 专场·大连站 | AI Coding 企业实践",
+      "source": "Qoder",
+      "digest": "阿里云 AI 创享日 Qoder 专场·大连站 | AI Coding 企业实践",
+      "link": "https://mp.weixin.qq.com/s/CrOGbCd_VRcxMsbhXTFI6w",
+      "source_file": "sources/2026-05-29_阿里云 AI 创享日 Qoder 专场·大连站 _ AI Coding 企业实践_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "AI 版的 Siri，可能长这样",
+      "source": "极客公园",
+      "digest": "Apple 认真思考如何把 AI Siri 变成苹果风格。",
+      "link": "https://mp.weixin.qq.com/s/dL68ZMhkIS03glx3kJcA6w",
+      "source_file": "sources/2026-05-29_AI 版的 Siri，可能长这样_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "「马嘉祺」让大模型翻车，而他一年前洗澡时就发现了问题",
+      "source": "机器之心",
+      "digest": "脸谱心智正以资金、商业落地和技术纵深三个维度同步拉满。",
+      "link": "https://mp.weixin.qq.com/s/ggsDTrCt3N1elArnpLf9uw",
+      "source_file": "sources/2026-05-29_「马嘉祺」让大模型翻车，而他一年前洗澡时就发现了问题_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "1个人 + Qoder 完成20人3个月的活儿，我花几十万 Credits 学会的 AI 指挥术",
+      "source": "Qoder",
+      "digest": "大家好，我是管家婆辉煌 AIMES 产品技术负责人李煜中。在人工智能席卷编程界的今天，许多开发者仍在观望，或是因“AI 生成代码不稳定”而感到沮丧。",
+      "link": "https://mp.weixin.qq.com/s/1hRl6lxQfHvV_pMjqMCqGA",
+      "source_file": "sources/2026-05-29_1个人 + Qoder 完成20人3个月的活儿，我花几十万 Credits 学会的 AI 指挥术_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "1个AI天才值1亿美元？Meta抢人不是疯，45年前一篇论文早算清了",
+      "source": "新智元",
+      "digest": "1个AI天才值1亿美元？Meta抢人不是疯，45年前一篇论文早算清了",
+      "link": "https://mp.weixin.qq.com/s/c9ixVBv4Vz_sYspz3xsHWg",
+      "source_file": "sources/2026-05-29_1个AI天才值1亿美元？Meta抢人不是疯，45年前一篇论文早算清了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "腾讯研究院AI速递 20260529",
+      "source": "腾讯研究院",
+      "digest": "Hy-Memory 专为长期协作型 Agent 设计",
+      "link": "https://mp.weixin.qq.com/s/ExFJI9FENX4fMmV0P1NGmQ",
+      "source_file": "sources/2026-05-29_腾讯研究院AI速递 20260529_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-28",
       "title": "谷歌AI不认识Google",
