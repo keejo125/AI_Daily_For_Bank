@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30T09:39:04.002831",
+  "updated_at": "2026-05-30T10:20:09.653649",
   "total": 956,
   "articles": [
     {
@@ -7,7 +7,7 @@
       "title": "Anthropic Claude Opus 4.8 正式发布：AI首次会说「我不确定」，支持数百子智能体并行",
       "source": "多源综合（极客公园/量子位/机器之心）",
       "digest": "Anthropic发布Claude Opus 4.8，实现重大突破：AI首次能够主动说\"我不确定\"，显著提升准确性。同时支持数百个子智能体并行运行，性能超越Mythos。该版本被视为Claude系列最强模型，引发行业广泛关注。",
-      "link": "https://mp.weixin.qq.com/s/-GmUORU8V5PNW0_6A5uNcw",
+      "link": "https://mp.weixin.qq.com/s/5-uDH1L-eEljSoep0J-zpg",
       "source_file": "sources/2026-05-29_Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元_机器之心.md",
       "category": "国际",
       "is_model_related": true
