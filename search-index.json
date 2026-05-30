@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-05-30T09:36:03.054378",
-  "total": 958,
+  "updated_at": "2026-05-30T09:39:04.002831",
+  "total": 956,
   "articles": [
+    {
+      "date": "2026-05-29",
+      "title": "Anthropic Claude Opus 4.8 正式发布：AI首次会说「我不确定」，支持数百子智能体并行",
+      "source": "多源综合（极客公园/量子位/机器之心）",
+      "digest": "Anthropic发布Claude Opus 4.8，实现重大突破：AI首次能够主动说\"我不确定\"，显著提升准确性。同时支持数百个子智能体并行运行，性能超越Mythos。该版本被视为Claude系列最强模型，引发行业广泛关注。",
+      "link": "https://mp.weixin.qq.com/s/-GmUORU8V5PNW0_6A5uNcw",
+      "source_file": "sources/2026-05-29_Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-05-29",
       "title": "马斯克也拥抱C语言了！大模型训练堆栈抛弃JAX，提速一个数量级",
@@ -24,41 +34,21 @@
     },
     {
       "date": "2026-05-29",
-      "title": "Opus4.8 正式发布，AI 第一次会说「我不确定」了",
-      "source": "极客公园",
-      "digest": "Claude Opus 4.8 不是一次跃迁，而是一次聚焦。",
-      "link": "https://mp.weixin.qq.com/s/5-uDH1L-eEljSoep0J-zpg",
-      "source_file": "sources/2026-05-29_Opus4.8 正式发布，AI 第一次会说「我不确定」了_极客公园.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
-      "title": "Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行",
-      "source": "量子位",
-      "digest": "距离上一版4.7只过了43天",
-      "link": "https://mp.weixin.qq.com/s/uPiuVhGw5vqo0qJSwaUpnw",
-      "source_file": "sources/2026-05-29_Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
-      "title": "Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元",
-      "source": "机器之心",
-      "digest": "大模型「更诚实了」。",
-      "link": "https://mp.weixin.qq.com/s/-GmUORU8V5PNW0_6A5uNcw",
-      "source_file": "sources/2026-05-29_Claude Opus 4.8问世，Anthropic估值暴涨至9650亿美元_机器之心.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
       "title": "消耗1830亿token，Meta用AI把数学教材翻译成了一个超大Lean库",
       "source": "机器之心",
       "digest": "Meta 开源了当今规模最大的自动数学形式化工程",
       "link": "https://mp.weixin.qq.com/s/mdEBchFfYbbpQ2Q0UlBy5g",
       "source_file": "sources/2026-05-29_消耗1830亿token，Meta用AI把数学教材翻译成了一个超大Lean库_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘",
+      "source": "腾讯技术工程",
+      "digest": "非常详尽的笔记",
+      "link": "https://mp.weixin.qq.com/s/49dxdMXEUoWIYlIh8fFqMQ",
+      "source_file": "sources/2026-05-29_OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘_腾讯技术工程.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -84,36 +74,6 @@
     },
     {
       "date": "2026-05-29",
-      "title": "AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体",
-      "source": "阿里云开发者",
-      "digest": "在 AgentScope Java 1.1.0 版本[1]中，我们把 QwenPaw、OpenClaw、Co",
-      "link": "https://mp.weixin.qq.com/s/aZhE0aPDaARxJLDI6ZrSFw",
-      "source_file": "sources/2026-05-29_AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体_阿里云开发者.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
-      "title": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
-      "source": "新智元",
-      "digest": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
-      "link": "https://mp.weixin.qq.com/s/of5KM54T2jRxKKAGIcW2VA",
-      "source_file": "sources/2026-05-29_DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！_新智元.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
-      "title": "清华系团队给大模型织了一张“智能算力电网”",
-      "source": "量子位",
-      "digest": "单位Token成本降低40%",
-      "link": "https://mp.weixin.qq.com/s/061E3M87Dn0pi6OnFy0dHw",
-      "source_file": "sources/2026-05-29_清华系团队给大模型织了一张“智能算力电网”_量子位.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
       "title": "Tair 联手 SGLang 共建 DeepSeekV4 分层缓存架构",
       "source": "阿里云开发者",
       "digest": "阿里妹导读文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。",
@@ -134,6 +94,16 @@
     },
     {
       "date": "2026-05-29",
+      "title": "AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体",
+      "source": "阿里云开发者",
+      "digest": "在 AgentScope Java 1.1.0 版本[1]中，我们把 QwenPaw、OpenClaw、Co",
+      "link": "https://mp.weixin.qq.com/s/aZhE0aPDaARxJLDI6ZrSFw",
+      "source_file": "sources/2026-05-29_AgentScope Builder 快速体验：用 Harness 框架快速构建企业自进化智能体_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
       "title": "下限零基础，上限肝大作！腾讯这个AI游戏创作平台，太野了",
       "source": "量子位",
       "digest": "下一波AI创作浪潮正在游戏领域发生",
@@ -149,6 +119,26 @@
       "digest": "用户每天产生大量碎片化内容——截图、语音、视频、文档、多图……如何让 AI 理解这些异构多模态数据，并自动整理成有价值的\"记忆\"？",
       "link": "https://mp.weixin.qq.com/s/N-SQ3y6szUtM_h8IzjoOkg",
       "source_file": "sources/2026-05-29_OPPO 小布记忆：全模态碎片化内容的理解与智能整理实践｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
+      "source": "新智元",
+      "digest": "DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！",
+      "link": "https://mp.weixin.qq.com/s/of5KM54T2jRxKKAGIcW2VA",
+      "source_file": "sources/2026-05-29_DeepSeek狂吞17万亿Tokens？国产AI算力，最关键一战来了！_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "清华系团队给大模型织了一张“智能算力电网”",
+      "source": "量子位",
+      "digest": "单位Token成本降低40%",
+      "link": "https://mp.weixin.qq.com/s/061E3M87Dn0pi6OnFy0dHw",
+      "source_file": "sources/2026-05-29_清华系团队给大模型织了一张“智能算力电网”_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
@@ -199,16 +189,6 @@
       "digest": "手机变 AI 之眼 Qwen3-VL+MCP 完全指南",
       "link": "https://mp.weixin.qq.com/s/AlNKFllxdsdQwKsZg75zRw",
       "source_file": "sources/2026-05-29_教程首发｜让手机拥有视觉感知能力_通义实验室.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-29",
-      "title": "OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘",
-      "source": "腾讯技术工程",
-      "digest": "非常详尽的笔记",
-      "link": "https://mp.weixin.qq.com/s/49dxdMXEUoWIYlIh8fFqMQ",
-      "source_file": "sources/2026-05-29_OpenClaw与Hermes：源码里的 AI Agent 架构知识大复盘_腾讯技术工程.md",
       "category": "其他",
       "is_model_related": false
     },
