@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30T07:45:56.194134",
+  "updated_at": "2026-05-30T09:36:03.054378",
   "total": 958,
   "articles": [
     {
@@ -29,16 +29,6 @@
       "digest": "Claude Opus 4.8 不是一次跃迁，而是一次聚焦。",
       "link": "https://mp.weixin.qq.com/s/5-uDH1L-eEljSoep0J-zpg",
       "source_file": "sources/2026-05-29_Opus4.8 正式发布，AI 第一次会说「我不确定」了_极客公园.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-05-29",
-      "title": "小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；Anthropic 推出 Claude Opus 4.8 | 极客早知道",
-      "source": "极客公园",
-      "digest": "SpaceX 早期投资人：SpaceX 与特斯拉合并「只是时间问题」；\n字节跳动据悉正开发定制 CPU 以支持 AI 需求；\n扎克伯格称 Meta 考虑进军云计算市场；\n报道：黄仁勋加入清华大学顾问委员会，与库克、马斯克同列",
-      "link": "https://mp.weixin.qq.com/s/FMaUEqgzKPdQmb4WBfahhw",
-      "source_file": "sources/2026-05-29_小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；An_极客公园.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -299,6 +289,16 @@
       "digest": "Hy-Memory 专为长期协作型 Agent 设计",
       "link": "https://mp.weixin.qq.com/s/ExFJI9FENX4fMmV0P1NGmQ",
       "source_file": "sources/2026-05-29_腾讯研究院AI速递 20260529_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-29",
+      "title": "小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；Anthropic 推出 Claude Opus 4.8 | 极客早知道",
+      "source": "极客公园",
+      "digest": "SpaceX 早期投资人：SpaceX 与特斯拉合并「只是时间问题」；\n字节跳动据悉正开发定制 CPU 以支持 AI 需求；\n扎克伯格称 Meta 考虑进军云计算市场；\n报道：黄仁勋加入清华大学顾问委员会，与库克、马斯克同列",
+      "link": "https://mp.weixin.qq.com/s/FMaUEqgzKPdQmb4WBfahhw",
+      "source_file": "sources/2026-05-29_小红书拿下 2026 世界杯转播权；国家大基金领投 DeepSeek，投前估值 450 亿美元；An_极客公园.md",
       "category": "其他",
       "is_model_related": false
     },
