@@ -1,7 +1,187 @@
 {
-  "updated_at": "2026-05-30T10:24:21.984662",
-  "total": 956,
+  "updated_at": "2026-06-01T07:01:58.691799",
+  "total": 974,
   "articles": [
+    {
+      "date": "2026-05-31",
+      "title": "AI引爆「漏洞洪水」！99%来不及修，OpenAI高薪抢人",
+      "source": "新智元",
+      "digest": "Anthropic Mythos模型一周内发现超1万个高危漏洞，99%未修复；OpenAI开最高44.5万美元招聘安全研究员；AI驱动漏洞洪水现象，网络安全成最贵岗位之一。",
+      "link": "https://mp.weixin.qq.com/s/hvpgNLooHl1NzedyC2EsHQ",
+      "source_file": "sources/2026-05-31_AI引爆「漏洞洪水」！99%来不及修，OpenAI高薪抢人_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "OpenAI官宣退役o3与GPT-4.5！",
+      "source": "新智元",
+      "digest": "OpenAI宣布o3将于2026年8月26日退役，GPT-4.5于6月27日下线；GPT-5.6正在内部热身，采用双版本策略；OpenAI同时发布长文揭露第三方评估的五大坑：奖励作弊、拒答、污染、坏题、藏拙。",
+      "link": "https://mp.weixin.qq.com/s/YDEGMqfGuSBz74LpUUBbKA",
+      "source_file": "sources/2026-05-31_OpenAI官宣退役o3与GPT-4.5！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "AI权威清洗： 一张肉眼难辨的图片，就能让GPT-5.4、Claude Opus 4.6集体造谣",
+      "source": "机器之心",
+      "digest": "ETH Zurich团队证明只需对人眼难以察觉的对抗扰动，就能让GPT-5.4、Claude Opus 4.6等最强VLM对图片做出权威且错误的判断，可用于虚假信息传播、名誉攻击和内容审核绕过等场景。",
+      "link": "https://mp.weixin.qq.com/s/eswe626F1tflyfVYYthYPw",
+      "source_file": "sources/2026-05-31_AI权威清洗： 一张肉眼难辨的图片，就能让GPT-5.4、Claude Opus 4.6集体造谣_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "一周3.3k star，微软开启Skills自我进化！像训练神经网络一样训练技能",
+      "source": "机器之心",
+      "digest": "微软开源SkillOpt，将Agent技能文档当作「可训练参数」进行文本空间优化，在52项评测中全部达到最优。训练流程包含Rollout/Reflect/Edit/Gate四个阶段，解决了技能文档的手工编写困境。",
+      "link": "https://mp.weixin.qq.com/s/pMlyj3a3KOh8L7cIHClRXA",
+      "source_file": "sources/2026-05-31_一周3.3k star，微软开启Skills自我进化！像训练神经网络一样训练技能_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "开源编程语言Zig，向AI代码说「不」",
+      "source": "机器之心",
+      "digest": "Zig语言创建者Andrew Kelley明确拒绝AI辅助生成的代码贡献，称其为「垃圾」。Zig代码库规定不接受任何大语言模型生成或改写的内容，与当下AI编程浪潮形成鲜明对比。",
+      "link": "https://mp.weixin.qq.com/s/djvUL7RyOh-EGUme6jMmBg",
+      "source_file": "sources/2026-05-31_开源编程语言Zig，向AI代码说「不」_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "OpenAI明升，Anthropic暗涨：AI包月折扣没了",
+      "source": "新智元",
+      "digest": "OpenAI将Codex计费从消息估算改为token用量，GPT-5.5价格翻倍；Anthropic通过Opus 4.7新tokenizer实际涨价约40%；代码智能体成为大厂第一张能兑现的支票，FinOps成企业新课题。",
+      "link": "https://mp.weixin.qq.com/s/_b1MrXDEG506G9cfYbbxWw",
+      "source_file": "sources/2026-05-31_OpenAI明升，Anthropic暗涨：AI包月折扣没了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "Zod 作者推出 Pullfrog：一个跑在 GitHub Actions 里的开源 AI 编程 Agent",
+      "source": "InfoQ",
+      "digest": "Zod作者Colin McDonnell发布Pullfrog，一款完全运行在GitHub Actions内的开源AI编程Agent，模型无关、支持多LLM提供商，为CodeRabbit的开源替代方案，涵盖代码审查、issue分流、CI修复等功能。",
+      "link": "https://mp.weixin.qq.com/s/XF5Aa2J4uCnI8NZByJDMBQ",
+      "source_file": "sources/2026-05-31_Zod 作者推出 Pullfrog：一个跑在 GitHub Actions 里的开源 AI 编程 A_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "ICML 2026 | 清华姚权铭团队提出LMNet，让语言模型学会自己「组网」",
+      "source": "机器之心",
+      "digest": "清华大学ICML 2026论文提出LMNet，将大语言模型视为可复用计算节点，构建可端到端优化的模型级神经网络，在通用能力和有限监督适应场景中均展现出明显性能优势。",
+      "link": "https://mp.weixin.qq.com/s/r1OAScZ7TDSRhrutW1eJ9A",
+      "source_file": "sources/2026-05-31_ICML 2026 _ 清华姚权铭团队提出LMNet，让语言模型学会自己「组网」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "复旦铁三角：开辟最优物理AI路径！时空一体世界动作模型问世",
+      "source": "新智元",
+      "digest": "复旦系科创企业眸深智能发布STI-WM时空一体世界动作模型，专为机器人原生打造，实现空间结构、时间演化、物理一致性、执行鲁棒性四维一体化统一。半年内完成5轮融资，3亿元Pre-A轮获5倍超额认购。",
+      "link": "https://mp.weixin.qq.com/s/Dd6jhlHkGBCmeVniG_VZeQ",
+      "source_file": "sources/2026-05-31_复旦铁三角：开辟最优物理AI路径！时空一体世界动作模型问世_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "利润腰斩也要卷AI！小米模型永久降价99%，雷军还要再砸600亿",
+      "source": "InfoQ",
+      "digest": "小米宣布MiMo-V2.5系列API永久降价，最高降幅达99%，同时token额度提升5-8倍。雷军表示小米今年AI投入至少160亿元，未来三年计划投入600亿元。MiMo-V2.5-Pro在Artificial Analysis榜单综合智能指数、Agent指数并列全球开源第一。",
+      "link": "https://mp.weixin.qq.com/s/qgavp1g4unkwuN5oEN6LWQ",
+      "source_file": "sources/2026-05-31_利润腰斩也要卷AI！小米模型永久降价99%，雷军还要再砸600亿_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-05-31",
+      "title": "欧冠落幕，欧足联把「AI」这球传给了阿里",
+      "source": "极客公园",
+      "digest": "欧足联与阿里巴巴达成6个赛季独家AI、云计算及全球电商合作，覆盖欧冠、欧联、欧协联及2028年欧洲杯。阿里云过去9年服务奥运，已实现核心赛事系统100%上云，并打造奥运史上首个官方千问大模型。",
+      "link": "https://mp.weixin.qq.com/s/1TMgZiUYczjKtunN6CCRag",
+      "source_file": "sources/2026-05-31_欧冠落幕，欧足联把「AI」这球传给了阿里_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026",
+      "source": "量子位",
+      "digest": "香港大学助理教授黄超提出Agent-native交互范式，主张让软件原生支持Agent语言而非让Agent适应人类界面。开源nanobot下载超20万次，推出CLI-Anything方案，用CLI替代GUI作为Agent操作软件的更高效方式。",
+      "link": "https://mp.weixin.qq.com/s/UYjJTGxEdcvjXFHWp_x07w",
+      "source_file": "sources/2026-05-31_AI原生时代下，让世界适应Agent，而非教AI做人 _ 港大黄超@AIGC2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "福建海峡银行授信风险AI分析系统项目-新一代信用风险管理系统配套改造",
+      "source": "银行科技研究社",
+      "digest": "福建海峡银行发布授信风险AI分析系统项目招标，采购新一代信用风险管理系统的配套改造服务，要求投标人具备信贷系统相关案例，预算和具体技术要求详见招标文件。",
+      "link": "https://mp.weixin.qq.com/s/sUvmvV9xQQvobKTfWHO3mQ",
+      "source_file": "sources/2026-05-31_福建海峡银行授信风险AI分析系统项目-新一代信用风险管理系统配套改造_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "科大讯飞+高伟达联合体898万中！国开行授信评审业务智能分析系统基于人工智能大模型升级建设项目",
+      "source": "银行科技研究社",
+      "digest": "国家开发银行授信评审业务智能分析系统基于人工智能大模型升级建设项目成交，科大讯飞+高伟达联合体以898万元中标，建设内容包括3个智能引擎（尽调报告、授信评审报告、授信审查报告）、1个知识模型平台和1个智能评审应用。",
+      "link": "https://mp.weixin.qq.com/s/Vz0hNJRxK4S27nY2c1wV_g",
+      "source_file": "sources/2026-05-31_科大讯飞+高伟达联合体898万中！国开行授信评审业务智能分析系统基于人工智能大模型升级建设项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "小学生画了撇胡子骗过AI年龄验证，硅谷工程师沉默了",
+      "source": "机器之心",
+      "digest": "Discord等平台引入AI本地年龄验证后，互联网用户通过拇指画眼睛嘴巴、手绘胡子等方式骗过AI验证，暴露当前面部年龄估算模型在对抗样本面前的脆弱性，Meta等平台开始探索AI扫描身高、骨骼结构等更鲁棒的验证方式。",
+      "link": "https://mp.weixin.qq.com/s/NgGei9znd2Ch6qNH0lf8xA",
+      "source_file": "sources/2026-05-31_小学生画了撇胡子骗过AI年龄验证，硅谷工程师沉默了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "蚂蚁三代CTO闭门对话：周期穿越、技术决策与AI-Native组织",
+      "source": "InfoQ",
+      "digest": "蚂蚁集团三代CTO（鲁肃、老苗、梁纥）罕见同台，穿越2006年分布式架构、移动互联网到AI时代三大技术周期。核心话题包括：蚂蚁All In AI的技术判断、AI-Native组织的边界打破与底线守住、从「码农」到「驾驭AI的超级个体」的工程师角色转变。",
+      "link": "https://mp.weixin.qq.com/s/jRpSwoMzJxBHiURhz1q4NA",
+      "source_file": "sources/2026-05-31_蚂蚁三代CTO闭门对话：周期穿越、技术决策与AI-Native组织_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "AI的「永久记忆」，也是甜蜜的毒药",
+      "source": "新智元",
+      "digest": "AI助手获得跨越对话的永久记忆能力引发伦理担忧：AI用过去碎片拼成静态画像并据此回应当前用户；博尔赫斯笔下的富内斯21岁死于记忆、尼采强调遗忘是生存必需；专家指出AI记忆比社交推荐算法更隐蔽地塑造人的自我认知。",
+      "link": "https://mp.weixin.qq.com/s/95nu3MDNoQDSLHWG52eOcw",
+      "source_file": "sources/2026-05-31_AI的「永久记忆」，也是甜蜜的毒药_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "蓝色起源火箭爆炸重创NASA登月计划；微软打造Copilot超级应用；多名特斯拉前员工坦言不信赖FSD | 极客早知道",
+      "source": "极客公园",
+      "digest": "蓝色起源新格伦火箭爆炸重创NASA登月计划；微软计划推出Copilot超级应用整合全部AI助手；OpenAI升级GPT-5.5 Instant模型减少幻觉52.5%；华为徐直军首次披露芯片突围独创「逻辑折叠」技术；小鹏何小鹏称很多机器人公司没做好「小脑」。",
+      "link": "https://mp.weixin.qq.com/s/ilfZxcrQ_gWV-jTCSWkbxQ",
+      "source_file": "sources/2026-05-31_蓝色起源火箭爆炸重创 NASA 登月计划；微软打造 Copilot 超级应用；多名特斯拉前员工坦言不_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-05-29",
       "title": "Anthropic Claude Opus 4.8 正式发布：AI首次会说「我不确定」，支持数百子智能体并行",
