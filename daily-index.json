@@ -5,11 +5,11 @@
       "weekday": "周六",
       "stats": {
         "国际": 10,
-        "国内": 5,
+        "国内": 6,
         "同业": 1,
-        "其他": 28
+        "其他": 13
       },
-      "summary": "国际10篇(Opus 4.8/γ-World/MIT注意力/推理压缩等) | 国内5篇(Pion优化器/Syll/ClawGym等) | 同业1篇(民生银行AI) | 其他28篇(含删除2篇招聘)"
+      "summary": "删除17篇人事/薪酬/财务，保留30篇 | 国际10(Harness/γ-World/Opus4.8/MIT注意力) 国内6(Pion/DeepSeek/Syll/Claw) 同业1(民生豆包) 其他13"
     },
     {
       "date": "2026-05-29",
