@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T07:01:58.691799",
+  "updated_at": "2026-06-01T07:08:19.685817",
   "total": 974,
   "articles": [
     {
@@ -104,16 +104,6 @@
     },
     {
       "date": "2026-05-31",
-      "title": "欧冠落幕，欧足联把「AI」这球传给了阿里",
-      "source": "极客公园",
-      "digest": "欧足联与阿里巴巴达成6个赛季独家AI、云计算及全球电商合作，覆盖欧冠、欧联、欧协联及2028年欧洲杯。阿里云过去9年服务奥运，已实现核心赛事系统100%上云，并打造奥运史上首个官方千问大模型。",
-      "link": "https://mp.weixin.qq.com/s/1TMgZiUYczjKtunN6CCRag",
-      "source_file": "sources/2026-05-31_欧冠落幕，欧足联把「AI」这球传给了阿里_极客公园.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-05-31",
       "title": "AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026",
       "source": "量子位",
       "digest": "香港大学助理教授黄超提出Agent-native交互范式，主张让软件原生支持Agent语言而非让Agent适应人类界面。开源nanobot下载超20万次，推出CLI-Anything方案，用CLI替代GUI作为Agent操作软件的更高效方式。",
@@ -179,6 +169,16 @@
       "digest": "蓝色起源新格伦火箭爆炸重创NASA登月计划；微软计划推出Copilot超级应用整合全部AI助手；OpenAI升级GPT-5.5 Instant模型减少幻觉52.5%；华为徐直军首次披露芯片突围独创「逻辑折叠」技术；小鹏何小鹏称很多机器人公司没做好「小脑」。",
       "link": "https://mp.weixin.qq.com/s/ilfZxcrQ_gWV-jTCSWkbxQ",
       "source_file": "sources/2026-05-31_蓝色起源火箭爆炸重创 NASA 登月计划；微软打造 Copilot 超级应用；多名特斯拉前员工坦言不_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-05-31",
+      "title": "欧冠落幕，欧足联把「AI」这球传给了阿里",
+      "source": "极客公园",
+      "digest": "欧足联与阿里巴巴达成6个赛季独家AI、云计算及全球电商合作，覆盖欧冠、欧联、欧协联及2028年欧洲杯。阿里云过去9年服务奥运，已实现核心赛事系统100%上云，并打造奥运史上首个官方千问大模型。",
+      "link": "https://mp.weixin.qq.com/s/1TMgZiUYczjKtunN6CCRag",
+      "source_file": "sources/2026-05-31_欧冠落幕，欧足联把「AI」这球传给了阿里_极客公园.md",
       "category": "其他",
       "is_model_related": false
     },
