@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-05-30",
+      "weekday": "周六",
+      "stats": {
+        "国际": 13,
+        "国内": 11,
+        "同业": 8,
+        "其他": 16,
+        "total": 48
+      },
+      "summary": "Anthropic估值近万亿美元反超OpenAI，七子集体登榜全球富豪/MiniMax冲刺A股：大模型双雄即将师/Google开源Agent Substrate，打造AI时代的Kubernetes/民生银行宣布打造AI适配型组织，豆包服务超5万人/腾讯研究院发布AI每周Top50关键词"
+    },
+    {
       "date": "2026-05-29",
       "weekday": "周五",
       "stats": {
@@ -470,6 +482,6 @@
       "summary": "Anthropic逼急谷歌！布林下场亲自督战，组「追杀队」围剿Claude/Codex截屏你的桌面！OpenAI建议：开会前记得关/腾讯云宣布：开源Ope..."
     }
   ],
-  "total": 6,
+  "total": 40,
   "updated_at": "2026-04-26T10:56:52.984876"
 }
