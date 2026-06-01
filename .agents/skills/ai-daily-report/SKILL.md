@@ -249,7 +249,7 @@ python3 generate_html.py YYYY-MM-DD
 - 读取 `sources/*.md` 获取文章原文（提取多来源信息和关键词匹配）
 - 基于 `template.html` 模板渲染响应式静态页面
 - **多来源标签**：合并后的文章显示多个公众号来源标签，每个标签可点击跳转到 `viewer.html` 查看对应原文
-- **无"阅读原文"按钮**：已用多来源标签替代
+- **无“阅读原文”按钮**：已用多来源标签替代
 - 生成 `daily/YYYY-MM-DD/index.html`
 - 更新 `daily-index.json` 和 `search-index.json` 索引文件
 
@@ -258,6 +258,22 @@ python3 generate_html.py YYYY-MM-DD
 - 通过 URL 参数 `?file=daily/YYYY-MM-DD/sources/xxx.md` 访问
 - 自动对中文文件路径做 `encodeURIComponent` 编码后 fetch
 - 使用 marked.js 渲染 Markdown，自动提取标题和公众号来源
+
+**⚠️ 重要提示**：在生成 HTML 之前，建议检查是否有文章的全文内容为 `[unavailable]`，如有需要可使用方案一单独获取。
+
+**检查 unavailable 文章的命令**：
+```bash
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+python3 -c "
+from pathlib import Path
+sources_dir = Path('daily/YYYY-MM-DD/sources')
+for md_file in sources_dir.glob('*.md'):
+    with open(md_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+        if '[unavailable]' in content or '暂时无法查看' in content:
+            print(f'需要重新获取: {md_file.name}')
+"
+```
 
 ---
 
@@ -453,6 +469,72 @@ merge_rules = [
 ---
 
 ## 降级方案
+
+### 方案一：单独获取文章全文（推荐）
+
+**使用场景**：当 `fetch_articles.py` 批量导出时，某些文章的全文内容返回 `[unavailable] 暂时无法查看`。
+
+**原因**：微信公众号 API 对部分文章有反爬限制，批量导出接口可能无法获取全文。
+
+**解决方案**：使用 `/api/article/fetch` 接口单独抓取文章全文。
+
+```python
+import requests
+import re
+from pathlib import Path
+
+# 文章链接
+article_link = "https://mp.weixin.qq.com/s/xxx"
+
+# API 地址
+api_url = "https://www.torandom.com/wechat-api/api/article/fetch"
+
+# POST 请求获取全文
+resp = requests.post(api_url, json={"url": article_link}, timeout=60)
+
+if resp.status_code == 200:
+    data = resp.json()
+    if data.get('success') and 'data' in data:
+        content = data['data'].get('content', '')
+        
+        # 清理 HTML 标签并保存
+        text = re.sub(r'<[^>]+>', '', content)
+        text = text.replace('&amp;', '&')
+        text = text.replace('&lt;', '<')
+        text = text.replace('&gt;', '>')
+        text = text.replace('&quot;', '"')
+        text = text.replace('&nbsp;', ' ')
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        
+        # 保存到 Markdown 文件
+        filepath = Path("daily/YYYY-MM-DD/sources/文件名.md")
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write("---\n")
+            f.write("publish_time: 时间戳\n")
+            f.write("---\n\n")
+            f.write(f"# 标题\n\n")
+            f.write(f"> 原文链接：{article_link}\n")
+            f.write("> 公众号：公众号名称\n\n")
+            f.write(text.strip())
+```
+
+**关键参数**：
+- API 端点：`POST /api/article/fetch`
+- 请求体：`{"url": "文章链接"}`（注意字段名是 `url` 不是 `link`）
+- 响应结构：`{"success": true, "data": {"content": "HTML内容", ...}}`
+
+**优点**：
+- ✅ 可以绕过批量导出的限制，单独获取特定文章
+- ✅ 成功率更高，适合处理 unavailable 的文章
+- ✅ 不影响其他已正常获取的文章
+
+**注意事项**：
+- ⚠️ 如果仍然返回空内容或错误，说明该文章确实无法通过 API 获取
+- ⚠️ 此时应依赖摘要（digest）信息，用户可通过原文链接查看完整内容
+
+---
+
+### 方案二：SSH 直接查数据库
 
 如果导出接口不可用（如服务器重启、接口报错），可通过 SSH 直接查数据库：
 

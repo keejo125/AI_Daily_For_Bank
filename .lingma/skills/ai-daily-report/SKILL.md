@@ -7,10 +7,17 @@ description: >
   生成智能研发日报时触发。触发词：早报、日报、AI daily、每日汇总。
 license: MIT
 metadata:
-  version: "1.3"
+  version: "1.4"
   category: productivity
-  updated: "2026-05-22"
+  updated: "2026-05-27"
   changelog: |
+    v1.4 (2026-05-27):
+    - 新增：分类决策流程（三步判断法：技术内容 → 主体归属 → 特殊情况）
+    - 新增：常见分类错误对照表（7种典型错误场景）
+    - 新增：大模型打标决策流程和边界案例判定指南
+    - 新增：强制验证清单（6项检查，含Agent框架/工程优化示例）
+    - 优化：主体归属判断要点（看项目归属，不看报道语言）
+    - 优化：验证失败处理流程和快速验证命令
     v1.3 (2026-05-22):
     - 新增：Step 3.5 中的 1.5步验证 - source_file 路径符号标准化检查
     - 新增：中文标点符号（引号、书名号等）的 Unicode 转义规范
@@ -90,21 +97,58 @@ python3 filter_articles.py $TARGET_DATE
 #   第二步：同主题合并判断
 # 这一步由 AI 智能体完成，读取 filtered_articles.json 并生成 classification.json
 
-# Step 3.5: 分类与合并验证（重要！）
-# 分三步验证：
-#   第一步：检查分类和大模型标签
-#   1.5步：检查 source_file 路径的符号标准化（⚠️ 高频问题！）
-#   第二步：检查合并逻辑
-# 根据 skill 中的分类规则重新验证 classification.json 的准确性
-# 检查点：
-# 1. 国际/国内/同业是否只包含技术内容？
-# 2. 非技术内容是否都归入“其他”？
-# 3. 开发工具、工程实践、技术路线是否被正确识别为技术内容？
-# 4. 公司属地是否正确（Anthropic/Google/CMU等应归入国际）？
-# 5. 大模型打标是否准确？
-# 6. source_file 路径是否正确？中文标点是否已转义？文件是否存在？
-# 7. 同主题文章是否正确合并？
-# 8. 合并标记和 merged_articles 字段是否正确？
+# ⚠️⚠️⚠️ Step 3.5: 分类验证（强制执行！）⚠️⚠️⚠️
+# 
+# 【重要】在生成 HTML 之前，AI 助手必须执行分类验证！
+# 这是强制步骤，不可跳过！
+#
+# 验证目标：
+# 1. ✅ 国际/国内/同业是否只包含技术内容？
+# 2. ✅ 非技术内容是否都归入“其他”？
+# 3. ✅ 开发工具、工程实践、技术路线是否被正确识别为技术内容？
+# 4. ✅ 公司属地是否正确（Anthropic/Google/CMU等应归入国际）？
+# 5. ✅ 大模型打标是否准确？
+# 6. ✅ source_file 路径是否正确？中文标点是否已转义？文件是否存在？
+# 7. ✅ 同主题文章是否正确合并？
+# 8. ✅ 合并标记和 merged_articles 字段是否正确？
+#
+# 验证方法：
+# - AI 助手必须逐项检查 classification.json 中的每篇文章
+# - 对照 skill 中的"技术内容 vs 非技术内容"判定标准
+# - 发现错误立即修正，然后重新保存 classification.json
+# - 验证通过后才能进入 Step 4
+#
+# 常见错误类型：
+# ❌ 人事变动（招聘、离职、薪酬）→ 应归入"其他"
+# ❌ 产品营销（表情包、发布会）→ 应归入"其他"
+# ❌ 会议活动（论坛预告、报名通道）→ 应归入"其他"
+# ❌ 行业资讯（就业数据、融资新闻）→ 应归入"其他"
+# ❌ 企业战略观点 → 应归入"其他"
+# ❌ 消费产品发布 → 应归入"其他"
+# ❌ 行业应用落地（医疗器械认证）→ 应归入"其他"
+#
+# 验证命令示例：
+# cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+# python3 -c "
+# import json, os
+# with open('daily/YYYY-MM-DD/classification.json', 'r') as f:
+#     data = json.load(f)
+# errors = []
+# for category in ['国际', '国内', '同业', '其他']:
+#     for article in data['classification'][category]:
+#         if article.get('source_file'):
+#             full_path = os.path.join('daily/YYYY-MM-DD', article['source_file'])
+#             if not os.path.exists(full_path):
+#                 errors.append(f'{category}: {article[\"title\"][:40]}... - 文件不存在')
+# if errors:
+#     print('❌ 发现问题:')
+#     for error in errors:
+#         print(f'  - {error}')
+# else:
+#     print('✅ 所有文件路径正确!')
+# "
+#
+# 【警告】如果验证发现错误，必须修正后重新验证，直到完全通过！
 
 # Step 4: 生成 HTML
 python3 generate_html.py $TARGET_DATE
@@ -235,9 +279,84 @@ else:
     full_content = None
 ```
 
-**b) 判断分类（四选一）**
+**b) 判断分类(四选一)**
 
-**⚠️ 核心原则：国际/国内/同业仅放技术内容，非技术内容全部归入“其他”**
+**⚠️ 核心原则：国际/国内/同业仅放技术内容，非技术内容全部归入"其他"**
+
+### 📋 分类决策流程（按顺序执行）
+
+**第一步：判断是否为技术内容？**
+
+```
+文章内容 → 是技术内容？ → 是 → 进入第二步
+              ↓
+             否 → 直接归入"其他"
+```
+
+**技术内容判定标准**：
+- ✅ 模型发布、版本更新、架构创新
+- ✅ 算法研究、技术论文、benchmark测评
+- ✅ 工程实践、开发工具、技术标准
+- ✅ 底层技术研究、框架开源
+- ✅ 产品功能更新（如Qoder Browser Use、Buddy产品迭代）
+- ✅ 工具设计/工程实践（如Skill工程化、LLM Wiki知识管理）
+- ✅ 技术路线规划
+
+**非技术内容判定标准**（必须归入"其他"）：
+- ❌ 融资新闻、估值报道、收购合并
+- ❌ 法律纠纷、人事变动、公司动态
+- ❌ 行业应用案例、产品体验评测
+- ❌ 培训认证、会议活动、榜单评选
+- ❌ 基础设施投资、算力建设（纯商业角度）
+- ❌ 纯商业资讯（财报、营收、资本支出、ARR收入）
+- ❌ 招聘类内容（岗位招聘、人才需求）
+
+**第二步：判断主体归属？**
+
+```
+技术内容 → 主体是银行/金融机构？ → 是 → "同业"
+              ↓ 否
+         主体是国内公司/机构？ → 是 → "国内"
+              ↓ 否
+         → "国际"
+```
+
+**主体归属判断要点**：
+- **看项目/作者归属，不看报道语言**
+  - 例：Hermes Agent（NousResearch）→ 国际开源项目 → "国际"
+  - 例：龙虾之父Peter的Skill优化 → 国际开发者 → "国际"
+  - 例：中文媒体报道国外技术 → 仍按技术归属判断
+
+- **国内公司/机构**：阿里、腾讯、百度、字节、华为、智谱、商汤、DeepSeek、月之暗面、MiniMax、阶跃星辰、零一万物、面壁智能、通义、文心；中科院、清华、北大等
+
+- **海外公司/机构**：OpenAI、Anthropic、Google、Meta、Apple、Nvidia、Microsoft、xAI、Stability AI、CMU、哈佛等
+
+- **银行/金融机构**：各大银行、支付宝、蚂蚁集团、保险公司、证券公司等
+
+**第三步：特殊情况处理**
+
+| 情况 | 处理方式 | 示例 |
+|------|---------|------|
+| 同业优先 | 同时涉及同业和其他分类 → 优先"同业" | 银行采用AI技术 → "同业" |
+| 多主题混合 | 标题包含多个不相关新闻 → "其他" | "A公司融资+B公司发布+C公司动态" → "其他" |
+| 主体与场景区分 | 区分"技术研发"与"商业资讯" | OpenAI总裁辞职 → "其他"（人事变动） |
+| 不确定性 | 无法明确判断 → "其他" | - |
+
+---
+
+**⚠️ 常见分类错误对照表**
+
+| 文章类型 | 常见错误 | 正确分类 | 原因 |
+|---------|---------|---------|------|
+| 国际开源项目(Agent框架) | 误判为"国内"(因为中文报道) | 国际 | 看项目归属,不看报道语言 |
+| 国际开发者技术分享 | 误判为"国内" | 国际 | 看作者/主体归属 |
+| OpenAI人事变动 | 误判为"国际" | 其他 | 人事变动是非技术内容 |
+| Agent框架工程优化 | 误标 is_model_related=true | false | 不是大模型本身 |
+| 融资新闻(即使有技术公司) | 误判为技术分类 | 其他 | 融资本身是非技术内容 |
+| 产品营销/表情包 | 误判为技术内容 | 其他 | 属于商业营销 |
+| 会议活动预告 | 误判为技术内容 | 其他 | 属于活动宣传 |
+
+---
 
 | 分类 | 判断标准 | 典型关键词 |
 |------|---------|----------|
@@ -317,6 +436,55 @@ def generate_summary(article):
 **⚠️ 核心原则**：需区分"大模型本身"与"大模型应用场景"
 - ✅ **应该打标**：模型发布、模型测评、模型架构（技术论文、架构创新、底层技术研究）
 - ❌ **不应打标**：AI 应用功能、行业资讯、公司动态、基础设施讨论、应用类文章
+
+### 📋 大模型打标决策流程
+
+```
+文章内容 → 涉及大模型关键词？ → 否 → is_model_related = false
+              ↓ 是
+         是模型本身的技术？ → 是 → is_model_related = true
+              ↓ 否
+         是应用层/框架层？ → 是 → is_model_related = false
+```
+
+**应打标的情况**（is_model_related = true）：
+1. **模型发布**：新模型正式发布、版本更新（如 "GPT-5 发布"、"Claude 3.5 更新"）
+2. **模型测评**：性能对比、实测报告、benchmark 结果（如 "GPT vs Claude 对比测试"）
+3. **模型架构**：技术论文、架构创新、底层技术研究（如 "MoE 架构优化"、"RLHF 新方法"）
+
+**不应打标的情况**（is_model_related = false）：
+- ❌ AI 应用功能（工具集成、行业应用、企业试用）
+- ❌ 行业资讯（公司动态、融资新闻、裁员消息）
+- ❌ 基础设施讨论（芯片适配、服务器采购、算力建设）
+- ❌ 应用类文章（AI CEO、AI 客服、AI 教育等应用场景）
+- ❌ 行业活动报道（开发者日、技术大会、会议资讯）
+- ❌ 公司榜单评选、社会影响分析
+- ❌ **智能体（Agent）相关研究**：除非直接涉及大模型底层架构，否则 Agent 的环境协同、应用进化等通常视为应用层研究，不打标
+- ❌ **Agent 框架工程优化**：如 Hermes Agent 的性能优化、启动速度改进等，属于框架层而非模型层
+
+### ⚠️ 边界案例判定指南
+
+**Q1: Agent 框架算大模型相关吗？**
+- A: ❌ **不算**。Agent 框架是应用层工具，不是大模型本身。
+- 例：Hermes Agent 框架优化 → `false`
+- 例：AgentScope 2.0 发布 → `false`
+
+**Q2: 工程优化算大模型相关吗？**
+- A: ❌ **不算**。除非优化的是模型本身的训练/推理算法。
+- 例：Hermes 启动速度优化（缓存、延迟加载）→ `false`
+- 例：模型训练算法改进 → `true`
+
+**Q3: 产品功能更新算大模型相关吗？**
+- A: 视情况而定:
+  - 底层模型能力升级 → `true`
+  - 应用层功能集成 → `false`
+  - UI/交互改进 → `false`
+
+**Q4: 学术研究一定算大模型相关吗？**
+- A: 不一定。看研究内容:
+  - 模型架构/训练方法研究 → `true`
+  - Agent 应用/环境研究 → `false`
+  - 行业应用研究 → `false`
 
 **应打标的情况**：
 1. **模型发布**：新模型正式发布、版本更新（如 "GPT-5 发布"、"Claude 3.5 更新"）
@@ -911,6 +1079,251 @@ for category in ['国际', '国内', '同业', '其他']:
     for article in classification[category]:
         source_file = article.get('source_file', '')
         if source_file:
+            full_path = os.path.join('daily/YYYY-MM-DD', source_file)
+            if not os.path.exists(full_path):
+                print(f"⚠️ 文件不存在: {article['title'][:40]}...")
+                print(f"   路径: {source_file}")
+                # 尝试模糊匹配修正
+                import difflib
+                base_name = os.path.basename(source_file)
+                actual_files = os.listdir('daily/YYYY-MM-DD/sources/')
+                matches = difflib.get_close_matches(base_name, actual_files, n=1, cutoff=0.8)
+                if matches:
+                    article['source_file'] = 'sources/' + matches[0]
+                    print(f"   ✅ 已修正为: {article['source_file']}")
+```
+
+---
+
+### 🔹 第二步验证：检查合并逻辑
+
+在完成分类和打标后，智能体需要识别报道同一事件的多篇文章并进行合并。
+
+**合并判断标准**：
+1. **主体相同**：涉及相同的公司、机构或人物（如 xAI、DeepSeek、翁家翌）
+2. **事件类型相同**：都是人事变动、融资新闻、产品发布等
+3. **时间窗口相同**：都是当天的报道
+4. **语义相似**：标题关键词高度重合或描述同一核心事件
+
+**合并操作流程**：
+
+```python
+# 示例：检测到3篇关于"DeepSeek融资"的报道
+merged_article = {
+    "aid": "merged_deepseek_funding",
+    "title": "DeepSeek启动创纪录融资：梁文锋出资200亿，总额500亿估值飙至3500亿",
+    "source": "多源综合",
+    "link": "https://mp.weixin.qq.com/s/kfhTyxosjbNAKTvx3FI2Wg",  # 主文章链接
+    "digest": "整合后的摘要，概括各来源关键信息...",
+    "source_file": "",
+    "category_reason": "DeepSeek（国内公司）融资新闻，属于非技术内容",
+    "is_model_related": false,
+    "is_merged": true,  # 标记为合并文章
+    "merged_articles": [  # 记录所有被合并的原始文章
+        {
+            "aid": "2651032137_2",
+            "title": "曝DeepSeek融资500亿元：梁文锋自掏四成，估值飙至3500亿",
+            "source": "机器之心",
+            "link": "https://mp.weixin.qq.com/s/468uA3g9RZCZEepuS_yp4g"
+        },
+        {
+            "aid": "2651283654_1",
+            "title": "DeepSeek被曝融资500亿，阿里或无缘参投",
+            "source": "InfoQ",
+            "link": "https://mp.weixin.qq.com/s/bmiQT8SU8kL-ex4PnqwQrA"
+        },
+        {
+            "aid": "2247889415_1",
+            "title": "梁文锋出资200亿！DeepSeek首轮创纪录融资500亿，V4.1定档6月",
+            "source": "量子位",
+            "link": "https://mp.weixin.qq.com/s/kfhTyxosjbNAKTvx3FI2Wg"
+        }
+    ]
+}
+
+# 从分类列表中移除被合并的原始文章，只保留合并后的条目
+```
+
+**常见合并场景**：
+- 重大融资事件（多家媒体报道）
+- 公司人事变动（离职、加入等）
+- 重要产品发布（GPT新版本、新模型等）
+- 学术研究突破（同一论文被多家媒体解读）
+
+**注意事项**：
+- 合并仅在 `classification.json` 层面进行，Python 脚本负责渲染
+- 合并后的文章使用 `is_merged: true` 标记
+- `merged_articles` 字段保留所有原始文章的元数据（aid、title、source、link）
+- 前端会根据 `source_items` 显示多公众号标签
+
+**最终保存**：
+
+```python
+# 保存最终的分类结果（包含合并）
+result = {
+    "date": "YYYY-MM-DD",
+    "generated_at": datetime.datetime.now().isoformat(),
+    "classification": classification,  # 此时已包含合并后的文章
+    "stats": {
+        "国际": len(classification["国际"]),
+        "国内": len(classification["国内"]),
+        "同业": len(classification["同业"]),
+        "其他": len(classification["其他"]),
+        "total": sum(len(v) for v in classification.values())
+    }
+}
+
+with open('daily/YYYY-MM-DD/classification.json', 'w', encoding='utf-8') as f:
+    json.dump(result, f, ensure_ascii=False, indent=2)
+
+print(f"✅ 第二步完成：合并后共{result['stats']['total']}个展示卡片")
+```
+
+---
+
+## ⚠️⚠️⚠️ 强制验证要求（不可跳过！）⚠️⚠️⚠️
+
+**【重要提醒】** 在完成 Step 3（分类与合并）后，**AI 助手必须执行完整的分类验证**，确认无误后才能进入 Step 4（生成 HTML）。
+
+### 📋 强制验证清单
+
+AI 助手必须逐项检查以下内容（使用 ✅/❌ 标记）：
+
+#### ✅ 1. 技术内容判定（最重要！）
+
+**检查国际/国内/同业分类中的每篇文章**：
+- [ ] 是否为真正的技术内容？（模型发布、算法研究、工程实践、开发工具、技术路线）
+- [ ] 是否混入了非技术内容？（人事变动、产品营销、会议活动、行业资讯、企业战略）
+- [ ] 如有非技术内容，立即移到"其他"分类
+
+**典型错误案例**：
+- ❌ "Anthropic招聘文科生" → 应归入"其他"（人事变动）
+- ❌ "Qoder表情包上线" → 应归入"其他"（产品营销）
+- ❌ "智源大会预告" → 应归入"其他"（会议活动）
+- ❌ "AI就业数据分析" → 应归入"其他"（行业资讯）
+- ❌ "OpenAI总裁辞职" → 应归入"其他"（人事变动）
+- ✅ "面壁智能开源BitCPM-CANN" → 正确（技术研究）
+- ✅ "腾讯AI Infra实践" → 正确（工程实践）
+
+#### ✅ 2. 公司属地判定
+
+**检查国际/国内分类的公司归属**：
+- [ ] 国际分类是否都是海外公司/项目？（OpenAI、Anthropic、Google、Meta等）
+- [ ] 国内分类是否都是国内公司/项目？（阿里、腾讯、华为、字节等）
+- [ ] **关键原则**：看项目/作者归属，不看报道语言
+  - 例：Hermes Agent（NousResearch）→ 国际
+  - 例：龙虾之父Peter的Skill优化 → 国际
+- [ ] 是否有公司属地错误？立即修正
+
+#### ✅ 3. 大模型打标准确性
+
+**检查 `is_model_related` 字段**：
+- [ ] 模型发布/测评/架构研究 → 应该打标 `true`
+- [ ] AI应用/行业资讯/公司动态 → 应该打标 `false`
+- [ ] **Agent框架/工程优化** → 应该打标 `false`（不是大模型本身）
+- [ ] 智能体应用研究（非底层架构）→ 应该打标 `false`
+
+**常见错误**：
+- ❌ Hermes Agent框架优化 → 误标为 `true` → 应为 `false`
+- ❌ AgentScope发布 → 误标为 `true` → 应为 `false`
+
+#### ✅ 4. source_file 路径验证
+
+**运行验证脚本**：
+```bash
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank
+python3 -c "
+import json, os
+with open('daily/YYYY-MM-DD/classification.json', 'r') as f:
+    data = json.load(f)
+errors = []
+for category in ['国际', '国内', '同业', '其他']:
+    for article in data['classification'][category]:
+        if article.get('source_file'):
+            full_path = os.path.join('daily/YYYY-MM-DD', article['source_file'])
+            if not os.path.exists(full_path):
+                errors.append(f'{category}: {article[\"title\"][:40]}...')
+if errors:
+    print('❌ 发现文件路径错误:')
+    for error in errors:
+        print(f'  {error}')
+else:
+    print('✅ 所有文件路径正确!')
+"
+```
+
+- [ ] 所有 source_file 指向的文件是否存在？
+- [ ] 中文标点是否正确使用 Unicode 转义？（\u201c, \u201d 等）
+- [ ] 如有错误，立即修正路径
+
+#### ✅ 5. source 字段完整性
+
+**检查每篇文章的 source 字段**：
+- [ ] 是否有空值的 source 字段？
+- [ ] 综合资讯类是否标注了来源公众号？
+- [ ] 如有空值，根据标题或链接推断并补充
+
+#### ✅ 6. 统计信息一致性
+
+**检查 stats 字段**：
+- [ ] 各分类文章数之和是否等于 total？
+- [ ] 是否与实际情况一致？
+
+```bash
+# 快速验证命令
+python3 -c "
+import json
+data = json.load(open('daily/YYYY-MM-DD/classification.json'))
+total_calc = sum(len(data['classification'][c]) for c in ['国际', '国内', '同业', '其他'])
+if total_calc != data['stats']['total']:
+    print(f'❌ 统计不一致: 计算={total_calc}, stats={data[\"stats\"][\"total\"]}')
+else:
+    print(f'✅ 统计一致: {data[\"stats\"]}')
+"
+```
+
+### 🚨 验证失败处理流程
+
+如果验证发现任何错误：
+
+1. **立即停止**，不要进入 Step 4
+2. **修正错误**：根据验证结果修改 classification.json
+3. **重新验证**：再次运行验证脚本
+4. **循环执行**：直到验证完全通过（无任何错误）
+5. **确认通过**：看到 "✅ 所有文件路径正确!" 和其他验证项都通过后，才能继续
+
+### ⚡ 快速验证命令
+
+复制以下命令，替换 `YYYY-MM-DD` 为实际日期后执行：
+
+```bash
+cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank && python3 -c "
+import json, os
+with open('daily/YYYY-MM-DD/classification.json', 'r') as f:
+    data = json.load(f)
+print('=== 分类验证报告 ===\n')
+errors = []
+for category in ['国际', '国内', '同业', '其他']:
+    for article in data['classification'][category]:
+        if not article.get('source') or article['source'].strip() == '':
+            errors.append(f'{category}: source为空 - {article[\"title\"][:30]}')
+        if article.get('source_file'):
+            full_path = os.path.join('daily/YYYY-MM-DD', article['source_file'])
+            if not os.path.exists(full_path):
+                errors.append(f'{category}: 文件不存在 - {article[\"title\"][:30]}')
+total_calc = sum(len(data['classification'][c]) for c in ['国际', '国内', '同业', '其他'])
+if total_calc != data['stats']['total']:
+    errors.append(f'统计不一致: 计算={total_calc}, stats={data[\"stats\"][\"total\"]}')
+if errors:
+    print(f'❌ 发现 {len(errors)} 个错误:')
+    for e in errors: print(f'  {e}')
+else:
+    print('✅ 验证通过！可以进入 Step 4')
+print(f'\n📊 统计: 国际{data[\"stats\"][\"国际\"]} 国内{data[\"stats\"][\"国内\"]} 同业{data[\"stats\"][\"同业\"]} 其他{data[\"stats\"][\"其他\"]} 总计{data[\"stats\"][\"total\"]}')
+"
+```
+
+**【警告】跳过验证步骤将导致HTML页面出现错误（404链接、分类混乱等），影响用户体验！**
             full_path = os.path.join('daily', date, source_file)
             if not os.path.exists(full_path):
                 print(f"  ⚠️ 文件不存在: {source_file}")

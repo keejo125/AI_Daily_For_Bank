@@ -208,17 +208,16 @@ def build_articles_json(classification, date_str):
             link = item.get("link", "")
             digest = item.get("digest", "")
             is_model_related = item.get("is_model_related", False)
-            is_merged = item.get("is_merged", False)
             merged_articles = item.get("merged_articles", [])
             
-            if is_merged and len(merged_articles) > 1:
+            if merged_articles and len(merged_articles) > 1:
                 stats['merged'] += 1
                 # 合并文章：构建 source_items
                 source_items = []
                 for merged_art in merged_articles:
                     source_items.append({
                         'name': merged_art.get('source', ''),
-                        'source_file': '',  # 合并文章没有单独的 source_file
+                        'source_file': merged_art.get('source_file', ''),
                         'link': merged_art.get('link', '')
                     })
                 
@@ -246,6 +245,7 @@ def build_articles_json(classification, date_str):
                     "content": content,
                     "category": cat,
                     "is_model_related": is_model_related,
+                    "is_merged": True,
                     "source_file": item.get('source_file', ''),
                     "source_items": source_items  # 多来源标签
                 })
@@ -378,11 +378,13 @@ def group_articles_by_topic(articles):
     # 未匹配的文章单独显示
     for article in articles:
         if article.get('aid') not in grouped:
+            # 保留 build_articles_json 设置的 is_merged 标记
+            is_merged = article.get('is_merged', False)
             result.append({
                 'title': article.get('title', ''),
                 'digest': article.get('digest', ''),
                 'articles': [article],
-                'is_merged': False
+                'is_merged': is_merged
             })
     
     return result
@@ -435,25 +437,51 @@ def build_section_html(category, articles):
         card_html += f'<div class="card-title">{escape_html(title)}</div>'
         
         # 如果是合并的卡片，显示多个公众号标签
-        if is_merged and len(article_list) > 1:
-            sources_html = '<div class="source-tags">'
-            for article in article_list:
-                source = article.get('source', '')
-                link = article.get('link', '')
-                source_file = article.get('source_file', '')
-                
-                # 优先使用 viewer.html 查看原文
-                if source_file:
-                    # 对文件路径进行 URL 编码，处理中文和特殊字符
-                    encoded_source_file = quote(source_file, safe='')
-                    viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
-                    sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
-                elif link:
-                    sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
-                else:
-                    sources_html += f'<span class="source-tag">{escape_html(source)}</span>'
-            sources_html += '</div>'
-            card_html += sources_html
+        if is_merged:
+            # 优先使用 article.source_items（来自 build_articles_json）
+            merged_article = article_list[0] if article_list else {}
+            source_items = merged_article.get('source_items', [])
+            
+            if source_items and len(source_items) > 1:
+                sources_html = '<div class="source-tags">'
+                for si in source_items:
+                    source_name = si.get('name', '')
+                    source_link = si.get('link', '')
+                    source_file = si.get('source_file', '')
+                    
+                    # 优先使用 viewer.html 查看原文
+                    if source_file:
+                        # 对文件路径进行 URL 编码，处理中文和特殊字符
+                        encoded_source_file = quote(source_file, safe='')
+                        viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    elif source_link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    else:
+                        sources_html += f'<span class="source-tag">{escape_html(source_name)}</span>'
+                sources_html += '</div>'
+                card_html += sources_html
+            elif len(article_list) > 1:
+                # 回退：使用 article_list 中的多个文章
+                sources_html = '<div class="source-tags">'
+                for article in article_list:
+                    source = article.get('source', '')
+                    link = article.get('link', '')
+                    source_file = article.get('source_file', '')
+                    
+                    if source_file:
+                        encoded_source_file = quote(source_file, safe='')
+                        viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
+                    elif link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
+                    else:
+                        sources_html += f'<span class="source-tag">{escape_html(source)}</span>'
+                sources_html += '</div>'
+                card_html += sources_html
+            else:
+                # 只有单个来源，显示单个标签
+                card_html += f'<span class="source-tag">{escape_html(merged_article.get("source", ""))}</span>'
         else:
             # 单个文章，显示单个标签
             source = article_list[0].get('source', '')
@@ -540,7 +568,7 @@ def get_weekday(date_str):
     return weekdays[dt.weekday()]
 
 
-def update_daily_index(date_str, stats, summary):
+def update_daily_index(date_str, stats, summary, classification_data=None):
     """
     更新 daily-index.json
     
@@ -548,9 +576,10 @@ def update_daily_index(date_str, stats, summary):
         date_str: 文章日期（文件夹名称）
         stats: 分类统计
         summary: 摘要
+        classification_data: classification.json 的完整数据（可选）
         
     Note:
-        前端会自动将 date + 1天作为早报显示日期
+        前端会优先使用 article_date 作为文件夹路径，如果不存在则使用 date
     """
     index_path = os.path.join(PROJECT_DIR, 'daily-index.json')
     index_data = {"issues": []}
@@ -571,6 +600,10 @@ def update_daily_index(date_str, stats, summary):
         "stats": stats,
         "summary": summary
     }
+    
+    # 如果提供了 classification_data，提取 article_date
+    if classification_data and 'article_date' in classification_data:
+        new_entry['article_date'] = classification_data['article_date']
 
     # 查找是否已存在该日期
     found = False
@@ -772,7 +805,7 @@ def main():
     # === 7. 更新 daily-index.json ===
     print_progress("更新 daily-index.json...")
     summary = generate_summary(classification)
-    update_daily_index(date_str, stats, summary)
+    update_daily_index(date_str, stats, summary, data)  # 传入完整的 data，包含 article_date
 
     print_progress("全部完成!")
 
