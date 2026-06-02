@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-06-02",
+      "weekday": "周二",
+      "stats": {
+        "国际": 9,
+        "国内": 9,
+        "同业": 3,
+        "其他": 11,
+        "total": 32
+      },
+      "summary": "Anthropic 在 Code With Claude 上发布托管式智能体、主动式工作流与能力曲线/老黄带着英伟达CPU杀入PC赛道/AI 硬件迎来寒武..."
+    },
+    {
       "date": "2026-06-01",
       "weekday": "周一",
       "stats": {
