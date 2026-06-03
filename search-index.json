@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-03T08:37:11.657605",
-  "total": 1025,
+  "updated_at": "2026-06-03T08:39:41.159097",
+  "total": 1027,
   "articles": [
     {
       "date": "2026-06-02",
@@ -124,11 +124,21 @@
     },
     {
       "date": "2026-06-02",
-      "title": "Qwen3.7-Plus上线千问云+接入Qoder，多模态智能体能力再升级",
-      "source": "Qoder",
-      "digest": "通义千问发布Qwen3.7-Plus多模态升级版，Qoder同步接入提供智能编程支持",
-      "link": "https://mp.weixin.qq.com/s/LolybMdRO3fEpPX7K11Ryw",
-      "source_file": "sources/2026-06-02_首发！Qoder正式接入 Qwen3.7-Plus_Qoder.md",
+      "title": "Qwen3.7-Plus上线千问云，多模态智能体能力再升级！",
+      "source": "阿里云开发者",
+      "digest": "Qwen3.7-Plus上线千问云，多模态智能体能力再升级！",
+      "link": "",
+      "source_file": "sources/2026-06-02_Qwen3.7-Plus上线千问云，多模态智能体能力再升级！_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-02",
+      "title": "Qwen3.7-Plus：把多模态AI变成\"实干家\"",
+      "source": "通义实验室",
+      "digest": "Qwen3.7-Plus：把多模态AI变成\"实干家\"",
+      "link": "",
+      "source_file": "sources/2026-06-02_Qwen3.7-Plus：把多模态AI变成\"实干家\"_通义实验室.md",
       "category": "国内",
       "is_model_related": true
     },
@@ -149,6 +159,16 @@
       "digest": "耗时11小时，阿里新模型用一万行代码复刻\"多邻国\"。",
       "link": "https://mp.weixin.qq.com/s/WSua78t99P83F9l6WAhVBQ",
       "source_file": "sources/2026-06-02_阿里又发了款智能体模型：11小时造出学英语App，还能看懂地铁线路图_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-02",
+      "title": "首发！Qoder正式接入 Qwen3.7-Plus",
+      "source": "Qoder",
+      "digest": "首发！Qoder正式接入 Qwen3.7-Plus",
+      "link": "",
+      "source_file": "sources/2026-06-02_首发！Qoder正式接入 Qwen3.7-Plus_Qoder.md",
       "category": "国内",
       "is_model_related": true
     },
