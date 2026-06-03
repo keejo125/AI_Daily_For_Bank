@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-03T08:39:41.159097",
-  "total": 1027,
+  "updated_at": "2026-06-03T08:41:01.038216",
+  "total": 1026,
   "articles": [
     {
       "date": "2026-06-02",
@@ -126,19 +126,9 @@
       "date": "2026-06-02",
       "title": "Qwen3.7-Plus上线千问云，多模态智能体能力再升级！",
       "source": "阿里云开发者",
-      "digest": "Qwen3.7-Plus上线千问云，多模态智能体能力再升级！",
+      "digest": "通义千问发布Qwen3.7-Plus多模态升级版，支持Agent能力，干活真交付",
       "link": "",
       "source_file": "sources/2026-06-02_Qwen3.7-Plus上线千问云，多模态智能体能力再升级！_阿里云开发者.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-02",
-      "title": "Qwen3.7-Plus：把多模态AI变成\"实干家\"",
-      "source": "通义实验室",
-      "digest": "Qwen3.7-Plus：把多模态AI变成\"实干家\"",
-      "link": "",
-      "source_file": "sources/2026-06-02_Qwen3.7-Plus：把多模态AI变成\"实干家\"_通义实验室.md",
       "category": "国内",
       "is_model_related": true
     },
