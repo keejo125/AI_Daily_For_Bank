@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-06-03T11:41:45.238120",
-  "total": 1026,
+  "updated_at": "2026-06-05T22:33:13.087664",
+  "total": 1055,
   "articles": [
+    {
+      "date": "2026-06-04",
+      "title": "专家预测年底才到，Claude Mythos今天就跑出3小时6分！",
+      "source": "新智元",
+      "digest": "AI加速，超乎想象！",
+      "link": "https://mp.weixin.qq.com/s/PDhIA7wljXVeKHxJDc9jjw",
+      "source_file": "sources/2026-06-04_专家预测年底才到，Claude Mythos今天就跑出3小时6分！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-04",
+      "title": "英伟达宣布：推出全球首款完全开放的全模态物理AI模型NVIDIA Cosmos 3",
+      "source": "财联社AI daily",
+      "digest": "英伟达宣布：推出全球首款完全开放的全模态物理AI模型NVIDIA Cosmos 3",
+      "link": "https://mp.weixin.qq.com/s/kHaWEGnXNb_e2WGfhUFwqg",
+      "source_file": "sources/2026-06-04_英伟达宣布：推出全球首款完全开放的全模态物理AI模型NVIDIA Cosmos 3_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Snowflake 把 AI 带进企业工作流",
+      "source": "InfoQ",
+      "digest": "如果说 Snowflake Summit 26 首日勾勒了“智能体企业（Agentic Enterprise）”的蓝图，次日的 Platform Keynote 则聚焦于技术落地。\n\n正如 Snowflake 联合创始人 Benoit Dageville 在开场中所强调的：“最好的 AI Agent，必须建立在最好的数据平台之上。” Snowflake正在把企业级 AI 深度编织进数据平台、开发流...",
+      "link": "https://mp.weixin.qq.com/s/LNiwLmZGimhcHdMKpQEhfQ",
+      "source_file": "sources/2026-06-04_Snowflake 把 AI 带进企业工作流_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "超越TurboQuant：Together AI把2-bit KV Cache推向真实服务",
+      "source": "量子位",
+      "digest": "不只压得小，也能跑得稳",
+      "link": "https://mp.weixin.qq.com/s/gDnXSTdlEMKgvEXhs6VCGA",
+      "source_file": "sources/2026-06-04_超越TurboQuant：Together AI把2-bit KV Cache推向真实服务_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "「这可能是人类写的最后一篇论文」Stanford、Michigan、CMU 等 37 位学者联手：把论文从 PDF 改写成 AI 能直接执行的研究包",
+      "source": "机器之心",
+      "digest": "当作者和读者都不再是人，沿用了三百年的论文范式还成立吗？",
+      "link": "https://mp.weixin.qq.com/s/3Nt_S1xweNOs4YlOzf1LRA",
+      "source_file": "sources/2026-06-04_「这可能是人类写的最后一篇论文」Stanford、Michigan、CMU 等 37 位学者联手：把_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "谷歌扩大 SynthID 在 AI 水印技术中的应用，并提供内容检测 API 预览",
+      "source": "InfoQ",
+      "digest": "谷歌扩大 SynthID 在 AI 水印技术中的应用，并提供内容检测 API 预览。",
+      "link": "https://mp.weixin.qq.com/s/bMNlkT6a4bkY3SnfrQNx_Q",
+      "source_file": "sources/2026-06-04_谷歌扩大 SynthID 在 AI 水印技术中的应用，并提供内容检测 API 预览_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "规避文献幻觉，准确率提升13.2%！细粒度检索智能体 | ACL'26",
+      "source": "新智元",
+      "digest": "规避文献幻觉，准确率提升13.2%！细粒度检索智能体 | ACL'26",
+      "link": "https://mp.weixin.qq.com/s/tyXWxIS4w6pphRf9BIgLSg",
+      "source_file": "sources/2026-06-04_规避文献幻觉，准确率提升13.2%！细粒度检索智能体 _ ACL'26_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "NeurIPS用AI检测，说我的论文是AI生成的",
+      "source": "机器之心",
+      "digest": "AI辅助审稿，靠谱程度有多高吗？",
+      "link": "https://mp.weixin.qq.com/s/2BkYEpxmEuYdo1rwEID5XA",
+      "source_file": "sources/2026-06-04_NeurIPS用AI检测，说我的论文是AI生成的_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "老黄刚夸完OpenClaw，Hermes反手把智能体搬进电脑桌面",
+      "source": "新智元",
+      "digest": "老黄刚夸完OpenClaw，Hermes反手把智能体搬进电脑桌面",
+      "link": "https://mp.weixin.qq.com/s/TM0kTDMlJyZgvWUTEpE-dA",
+      "source_file": "sources/2026-06-04_老黄刚夸完OpenClaw，Hermes反手把智能体搬进电脑桌面_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "首次系统定义「Token经济学」，浙大&阿里联合发布大模型Agent资源分配新范式",
+      "source": "机器之心",
+      "digest": "一份 Agentic AI 的经济学基础设施蓝图",
+      "link": "https://mp.weixin.qq.com/s/Dw32l2ehwMagg6S5bKSHWw",
+      "source_file": "sources/2026-06-04_首次系统定义「Token经济学」，浙大&阿里联合发布大模型Agent资源分配新范式_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-04",
+      "title": "CVPR 2026 | 破解开放世界“语义盲区”：北大和华为团队携手开源大规模OmniVTG数据集，用“自我反思”机制补齐定位短板",
+      "source": "机器之心",
+      "digest": "为多模态大模型在开放世界视频理解任务中的应用提供了新的范式。",
+      "link": "https://mp.weixin.qq.com/s/7bTqPwrvkrUf9jt6RYVsrg",
+      "source_file": "sources/2026-06-04_CVPR 2026 _ 破解开放世界“语义盲区”：北大和华为团队携手开源大规模OmniVTG数据集，_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-04",
+      "title": "告别盲盒筛选！分子之心发布MMDesign，抗体发现迈入可编程生物工程时代",
+      "source": "机器之心",
+      "digest": "AI蛋白质设计从概念验证走向产业化应用。",
+      "link": "https://mp.weixin.qq.com/s/qAeXpGC6WDumvIXAzqDWmQ",
+      "source_file": "sources/2026-06-04_告别盲盒筛选！分子之心发布MMDesign，抗体发现迈入可编程生物工程时代_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "中国信通院栗蔚等：Agentic Cloud引领云服务范式跃迁，全栈AI云能力重塑云计算价值路径",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院栗蔚等：Agentic Cloud引领云服务范式跃迁，全栈AI云能力重塑云计算价值路径",
+      "link": "https://mp.weixin.qq.com/s/LSpKiKGcuZd_CKgkocVr4Q",
+      "source_file": "sources/2026-06-04_中国信通院栗蔚等：Agentic Cloud引领云服务范式跃迁，全栈AI云能力重塑云计算价值路径_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "接上企查查 MCP，AI 工作搭子 QoderWork 把企业尽调自动化了",
+      "source": "Qoder",
+      "digest": "接上企查查 MCP，AI 工作搭子 QoderWork 把企业尽调自动化了",
+      "link": "https://mp.weixin.qq.com/s/LAf6XOVTju3T2mPsTMoeaA",
+      "source_file": "sources/2026-06-04_接上企查查 MCP，AI 工作搭子 QoderWork 把企业尽调自动化了_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "CVPR 2026，英伟达特斯拉Waymo一块听中国公司讲物理AI",
+      "source": "量子位",
+      "digest": "小鹏进阶物理AI公司",
+      "link": "https://mp.weixin.qq.com/s/pp7aAP_R0avsBVS48r_hiA",
+      "source_file": "sources/2026-06-04_CVPR 2026，英伟达特斯拉Waymo一块听中国公司讲物理AI_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "微信开放手机厂商智能体接入，AI手机迎来“最优解”？",
+      "source": "财联社AI daily",
+      "digest": "微信正在与华为、荣耀、小米、OPPO、vivo等手机厂商合作推出A2A（Agent-to-Agent）助手能",
+      "link": "https://mp.weixin.qq.com/s/5g0XQC-F7W3ddlg_cUDQJw",
+      "source_file": "sources/2026-06-04_微信开放手机厂商智能体接入，AI手机迎来“最优解”？_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "写代码可以 Vibe Coding 了，为什么办公还不能 Vibe Officing？",
+      "source": "InfoQ",
+      "digest": "本文将站在资深研发的视角，从技术层面探讨现在市面上 AI+ 文档的工具与 Vibe Officing 之间的距离，分析为何 HTML 和 Markdown 都无法承载这种工作方式，并给出基于 OOXML 的解决方案。",
+      "link": "https://mp.weixin.qq.com/s/4Ur5cpuUbog3UuGhteKwZA",
+      "source_file": "sources/2026-06-04_写代码可以 Vibe Coding 了，为什么办公还不能 Vibe Officing？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "把数据库运维这件苦差事，交给 AI Agent",
+      "source": "InfoQ",
+      "digest": "诊断引擎怎么进化、安全底座怎么搭、Agent 怎么跑通生产闭环。",
+      "link": "https://mp.weixin.qq.com/s/kVB4FMKNc7L1g0Hfdg5jXQ",
+      "source_file": "sources/2026-06-04_把数据库运维这件苦差事，交给 AI Agent_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "科大讯飞面向超大规模教育场景的 Agent 系统架构演进与工程实践｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "在 Agent 系统里，决定上限的不只是模型能力，调度、工具、权限、记忆与监控这些 harness 设计同样关键",
+      "link": "https://mp.weixin.qq.com/s/q_ZG4WOMK25_CWTZXRyhMw",
+      "source_file": "sources/2026-06-04_科大讯飞面向超大规模教育场景的 Agent 系统架构演进与工程实践｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "AI研发自动化：Wiki知识库+技能包",
+      "source": "阿里云开发者",
+      "digest": "阿里妹导读文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。",
+      "link": "https://mp.weixin.qq.com/s/6hDDkU2z31K67y8Z9dcqhw",
+      "source_file": "sources/2026-06-04_AI研发自动化：Wiki知识库+技能包_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "解码第4期丨深度调研：大模型能否“进核心”？金融智能体能跑完全流程吗？",
+      "source": "金融电子化",
+      "digest": "解码第4期丨深度调研：大模型能否“进核心”？金融智能体能跑完全流程吗？",
+      "link": "https://mp.weixin.qq.com/s/xrv7c-OMFgHNeuEqXN3CeA",
+      "source_file": "sources/2026-06-04_解码第4期丨深度调研：大模型能否“进核心”？金融智能体能跑完全流程吗？_金融电子化.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-04",
+      "title": "国开行建设企业级AI应用平台：预算7000万，最终花费4000多万",
+      "source": "银行科技研究社",
+      "digest": "国开行建设企业级AI应用平台：预算7000万，最终花费4000多万",
+      "link": "https://mp.weixin.qq.com/s/9wTKdWzuQC3c30bv8RG1nA",
+      "source_file": "sources/2026-06-04_国开行建设企业级AI应用平台：预算7000万，最终花费4000多万_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "卖到 190 国、全球第一，这家深圳公司却在为摄影配件的「死亡」做准备",
+      "source": "极客公园",
+      "digest": "​未来的 AI 原生硬件会是什么样？",
+      "link": "https://mp.weixin.qq.com/s/l4Yl63RaL6bMHHnMZcu3yQ",
+      "source_file": "sources/2026-06-04_卖到 190 国、全球第一，这家深圳公司却在为摄影配件的「死亡」做准备_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "不叠衣服、不跳舞，这家AI公司凭什么签下上亿订单？｜甲子光年",
+      "source": "甲子光年",
+      "digest": "这家AI公司究竟做对了什么？",
+      "link": "https://mp.weixin.qq.com/s/PMhMEcbGmMLOTQY52DUUkQ",
+      "source_file": "sources/2026-06-04_不叠衣服、不跳舞，这家AI公司凭什么签下上亿订单？｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "GitHub，被 AI 打穿了",
+      "source": "极客公园",
+      "digest": "Github 被自己养的东西压垮了。",
+      "link": "https://mp.weixin.qq.com/s/lyhHtiao8eOq3_ZGD7Xafw",
+      "source_file": "sources/2026-06-04_GitHub，被 AI 打穿了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "他，雇AI卖房，多赚61万",
+      "source": "智东西",
+      "digest": "狂省24万佣金，买方中介还夸他专业。",
+      "link": "https://mp.weixin.qq.com/s/qVf1ZlMSkH_SS28aOoGYwQ",
+      "source_file": "sources/2026-06-04_他，雇AI卖房，多赚61万_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Vibe Working：这一次，轮到白领了",
+      "source": "机器之心",
+      "digest": "一个 AI 真正参与知识工作日常流程的未来正在到来",
+      "link": "https://mp.weixin.qq.com/s/Qyd8mHuR5ryfztgqQtSgGw",
+      "source_file": "sources/2026-06-04_Vibe Working：这一次，轮到白领了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "一个月烧掉5亿美元账单之后：这项研究在问，Agent到底知不知道自己花了多少?",
+      "source": "机器之心",
+      "digest": "预算这件事，得让智能体学会管好自己。",
+      "link": "https://mp.weixin.qq.com/s/JQA-jQOZgMUYLNy4-l8JJw",
+      "source_file": "sources/2026-06-04_一个月烧掉5亿美元账单之后：这项研究在问，Agent到底知不知道自己花了多少_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-04",
+      "title": "腾讯研究院AI速递 20260604",
+      "source": "腾讯研究院",
+      "digest": "AI批量报告淹没Linux内核安全列表？",
+      "link": "https://mp.weixin.qq.com/s/sKjxiOhF7LtNkSJHxguELQ",
+      "source_file": "sources/2026-06-04_腾讯研究院AI速递 20260604_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-02",
       "title": "Anthropic 在 Code With Claude 上发布托管式智能体、主动式工作流与能力曲线",
