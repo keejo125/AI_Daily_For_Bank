@@ -282,6 +282,11 @@ def build_articles_json(classification, date_str):
                 else:
                     stats['without_content'] += 1
 
+                # 传递 source_items（支持手动指定的多来源标签，如分类阶段合并的文章）
+                extra_fields = {}
+                if item.get('source_items'):
+                    extra_fields['source_items'] = item['source_items']
+
                 articles.append({
                     "title": item_title,
                     "source": source,
@@ -290,7 +295,8 @@ def build_articles_json(classification, date_str):
                     "content": content,
                     "category": cat,
                     "is_model_related": is_model_related,
-                    "source_file": source_file
+                    "source_file": source_file,
+                    **extra_fields
                 })
 
     # 输出统计信息
@@ -483,9 +489,28 @@ def build_section_html(category, articles):
                 # 只有单个来源，显示单个标签
                 card_html += f'<span class="source-tag">{escape_html(merged_article.get("source", ""))}</span>'
         else:
-            # 单个文章，显示单个标签
-            source = article_list[0].get('source', '')
-            card_html += f'<span class="source-tag">{escape_html(source)}</span>'
+            # 单个文章，但可能有多来源标签（classification.json手动指定）
+            single_article = article_list[0] if article_list else {}
+            source_items = single_article.get('source_items', [])
+            if source_items and len(source_items) > 1:
+                sources_html = '<div class="source-tags">'
+                for si in source_items:
+                    source_name = si.get('name', '')
+                    source_link = si.get('link', '')
+                    source_file = si.get('source_file', '')
+                    if source_file:
+                        encoded_source_file = quote(source_file, safe='')
+                        viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    elif source_link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    else:
+                        sources_html += f'<span class="source-tag">{escape_html(source_name)}</span>'
+                sources_html += '</div>'
+                card_html += sources_html
+            else:
+                source = single_article.get('source', '')
+                card_html += f'<span class="source-tag">{escape_html(source)}</span>'
         
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'
