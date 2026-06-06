@@ -1,22 +1,12 @@
 {
-  "updated_at": "2026-06-06T09:30:11.816878",
-  "total": 1092,
+  "updated_at": "2026-06-06T09:47:06.593913",
+  "total": 1083,
   "articles": [
     {
       "date": "2026-06-05",
-      "title": "Anthropic全球警告+RSI：AI递归自我改进已启动，多家呼吁暂停研究",
+      "title": "Anthropic全球RSI预警：AI递归自我改进已启动",
       "source": "新智元",
-      "digest": "Anthropic发布RSI报告：AI已开始自我加速。OpenAI同步发布 frontiersafety blueprint。奥特曼/哈萨比斯呼吁DNA安全立法。",
-      "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
-      "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-05",
-      "title": "Anthropic全球警告+RSI：AI递归自我改进已启动，多家呼吁暂停研究",
-      "source": "新智元",
-      "digest": "Anthropic发布RSI报告：AI已开始自我加速。OpenAI同步发布 frontiersafety blueprint。奥特曼/哈萨比斯呼吁DNA安全立法。",
+      "digest": "Anthropic发布RSI报告：AI开始自我加速。多家呼吁暂停研究。OpenAI/Anthropic联合预警AI可靠性突破阈值。",
       "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
       "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
       "category": "国际",
@@ -29,36 +19,6 @@
       "digest": "英伟达正试图锁定物理AI时代话语权。",
       "link": "https://mp.weixin.qq.com/s/HGVx7gyqwkkORDqn3TWyBg",
       "source_file": "sources/2026-06-05_英伟达甩出物理 AI 王炸！Cosmos 3 全模态模型开源，Agent Tookit 补齐工具短板_InfoQ.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-05",
-      "title": "Anthropic全球警告+RSI：AI递归自我改进已启动，多家呼吁暂停研究",
-      "source": "新智元",
-      "digest": "Anthropic发布RSI报告：AI已开始自我加速。OpenAI同步发布 frontiersafety blueprint。奥特曼/哈萨比斯呼吁DNA安全立法。",
-      "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
-      "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-05",
-      "title": "Anthropic全球警告+RSI：AI递归自我改进已启动，多家呼吁暂停研究",
-      "source": "新智元",
-      "digest": "Anthropic发布RSI报告：AI已开始自我加速。OpenAI同步发布 frontiersafety blueprint。奥特曼/哈萨比斯呼吁DNA安全立法。",
-      "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
-      "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-05",
-      "title": "Anthropic全球警告+RSI：AI递归自我改进已启动，多家呼吁暂停研究",
-      "source": "新智元",
-      "digest": "Anthropic发布RSI报告：AI已开始自我加速。OpenAI同步发布 frontiersafety blueprint。奥特曼/哈萨比斯呼吁DNA安全立法。",
-      "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
-      "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -94,16 +54,6 @@
     },
     {
       "date": "2026-06-05",
-      "title": "奥特曼/哈萨比斯同吁AI病毒实验DNA安全立法",
-      "source": "量子位",
-      "digest": "AI已能指导病毒实验，科技领袖奥特曼/Dario/哈萨比斯呼吁DNA安全立法。",
-      "link": "https://mp.weixin.qq.com/s/HBTe1MTHfRSJJarFShfxUw",
-      "source_file": "sources/2026-06-05_活久见！奥特曼Dario哈萨比斯同仇敌忾：DNA得查了_量子位.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
       "title": "除了 AI Siri 和库克「谢幕演讲」，今年 WWDC 还有什么？",
       "source": "极客公园",
       "digest": "​头条讲的是大脑，注脚讲的是性格。",
@@ -130,6 +80,36 @@
       "link": "https://mp.weixin.qq.com/s/cSiVnwFO531w4ptK3Z4Viw",
       "source_file": "sources/2026-06-05_过程比结果更危险：从模型到Harness，AI Agent的下半场该如何评测安全？_机器之心.md",
       "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "活久见！奥特曼Dario哈萨比斯同仇敌忾：DNA得查了",
+      "source": "量子位",
+      "digest": "AI已能指导病毒实验，科技领袖呼吁DNA安全立法",
+      "link": "https://mp.weixin.qq.com/s/HBTe1MTHfRSJJarFShfxUw",
+      "source_file": "sources/2026-06-05_活久见！奥特曼Dario哈萨比斯同仇敌忾：DNA得查了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
+      "source": "量子位",
+      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。Agent是每家模型公司的主战场，腾讯选择差异化路径。",
+      "link": "https://mp.weixin.qq.com/s/iBxcGIatmvaM0jTmd-zLNA",
+      "source_file": "sources/2026-06-05_刚刚，姚顺雨现身！公开回应腾讯AI落后了吗？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "华为云INSPIRE大会：Agentic Infra通智一体新品+具身智能平台",
+      "source": "财联社AI daily",
+      "digest": "华为云发布Agentic Infra通智一体新品，全球首个全流程具身智能开发平台CloudRobo亮相。",
+      "link": "https://mp.weixin.qq.com/s/a4gxI_MnmZd29icXD-V0Sw",
+      "source_file": "sources/2026-06-05_刚刚！华为发布一系列Agentic AI新品_财联社AI daily.md",
+      "category": "国内",
       "is_model_related": false
     },
     {
@@ -164,71 +144,11 @@
     },
     {
       "date": "2026-06-05",
-      "title": "华为云发布Agentic Infra通智一体新品（10+款）",
-      "source": "财联社AI daily",
-      "digest": "华为云INSPIRE创想者大会发布Agentic Infra通智一体新品，全球首个全流程具身智能开发平台CloudRobo亮相。",
-      "link": "https://mp.weixin.qq.com/s/a4gxI_MnmZd29icXD-V0Sw",
-      "source_file": "sources/2026-06-05_刚刚！华为发布一系列Agentic AI新品_财联社AI daily.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
       "title": "以临床实效为导向，医疗健康行业智能体专项评测正式启动",
       "source": "中国信通院CAICT",
       "digest": "以临床实效为导向，医疗健康行业智能体专项评测正式启动",
       "link": "https://mp.weixin.qq.com/s/_4jdbLU4tGi7k2VzO7rhRA",
       "source_file": "sources/2026-06-05_以临床实效为导向，医疗健康行业智能体专项评测正式启动_中国信通院CAICT.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
-      "source": "智东西",
-      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。核心：Agent是每家模型公司的主战场，腾讯选择差异化路径。",
-      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
-      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "华为云发布Agentic Infra通智一体新品（10+款）",
-      "source": "财联社AI daily",
-      "digest": "华为云INSPIRE创想者大会发布Agentic Infra通智一体新品，全球首个全流程具身智能开发平台CloudRobo亮相。",
-      "link": "https://mp.weixin.qq.com/s/a4gxI_MnmZd29icXD-V0Sw",
-      "source_file": "sources/2026-06-05_刚刚！华为发布一系列Agentic AI新品_财联社AI daily.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
-      "source": "智东西",
-      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。核心：Agent是每家模型公司的主战场，腾讯选择差异化路径。",
-      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
-      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
-      "source": "智东西",
-      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。核心：Agent是每家模型公司的主战场，腾讯选择差异化路径。",
-      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
-      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
-      "source": "智东西",
-      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。核心：Agent是每家模型公司的主战场，腾讯选择差异化路径。",
-      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
-      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
       "category": "国内",
       "is_model_related": false
     },
@@ -249,16 +169,6 @@
       "digest": "百型智能OntoZ押注的是企业「本体竞争」时代。",
       "link": "https://mp.weixin.qq.com/s/IRvH150nyGbKAXdG5akpyQ",
       "source_file": "sources/2026-06-05_国产AI黑马引爆「商战版Palantir」！一键为企业「全自主赚钱」_新智元.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-05",
-      "title": "腾讯AI下半场：汤道生×姚顺雨对谈（万字实录）",
-      "source": "智东西",
-      "digest": "汤道生与姚顺雨对谈50分钟，回应腾讯AI是否落后。核心：Agent是每家模型公司的主战场，腾讯选择差异化路径。",
-      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
-      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
       "category": "国内",
       "is_model_related": false
     },
