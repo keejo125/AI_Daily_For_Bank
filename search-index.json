@@ -1,7 +1,387 @@
 {
-  "updated_at": "2026-06-05T22:33:13.087664",
-  "total": 1055,
+  "updated_at": "2026-06-06T09:23:07.883293",
+  "total": 1093,
   "articles": [
+    {
+      "date": "2026-06-05",
+      "title": "即将IPO的大模型巨头，劝你暂停AI研究",
+      "source": "智东西",
+      "digest": "AI递归自我优化或比多数机构预想中来得更早。",
+      "link": "https://mp.weixin.qq.com/s/UKc27z2L300yDSRjpNAETQ",
+      "source_file": "sources/2026-06-05_即将IPO的大模型巨头，劝你暂停AI研究_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动",
+      "source": "新智元",
+      "digest": "刚过及格线，AI已经开始给自己提速",
+      "link": "https://mp.weixin.qq.com/s/MXUQSGNwsH20qk0QbAVktg",
+      "source_file": "sources/2026-06-05_Anthropic全球警告！OpenAI已跨「可靠性阈值」：AI自我加速启动_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "英伟达甩出物理 AI 王炸！Cosmos 3 全模态模型开源，Agent Tookit 补齐工具短板",
+      "source": "InfoQ",
+      "digest": "英伟达正试图锁定物理AI时代话语权。",
+      "link": "https://mp.weixin.qq.com/s/HGVx7gyqwkkORDqn3TWyBg",
+      "source_file": "sources/2026-06-05_英伟达甩出物理 AI 王炸！Cosmos 3 全模态模型开源，Agent Tookit 补齐工具短板_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "AI自进化过快，Anthropic呼吁全球中止研发",
+      "source": "机器之心",
+      "digest": "AI 自我进化，可能比我们想象得来的要早。",
+      "link": "https://mp.weixin.qq.com/s/7JfdzGtskcXMQwEoKMX63A",
+      "source_file": "sources/2026-06-05_AI自进化过快，Anthropic呼吁全球中止研发_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚，Anthropic向全人类发出警告：停止研究AI！",
+      "source": "新智元",
+      "digest": "刚刚，Anthropic向全人类发出警告：停止研究AI！",
+      "link": "https://mp.weixin.qq.com/s/EaBnFmrk2n3BVWWwqg179w",
+      "source_file": "sources/2026-06-05_刚刚，Anthropic向全人类发出警告：停止研究AI！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "突发！Anthropic呼吁全员停止AI研究",
+      "source": "量子位",
+      "digest": "AI自进化，开始了",
+      "link": "https://mp.weixin.qq.com/s/wsvrOW2wW8tsM_tQ-BfF8A",
+      "source_file": "sources/2026-06-05_突发！Anthropic呼吁全员停止AI研究_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "OpenAI神秘AI硬件预定年底亮相",
+      "source": "财联社AI daily",
+      "digest": "文|赵昊OpenAI首席财务官萨拉·弗里亚尔（Sarah Friar）最新表示，她已经亲自体验过OpenAI的",
+      "link": "https://mp.weixin.qq.com/s/Y8gd5iS8ISTyAjKHh8H37w",
+      "source_file": "sources/2026-06-05_OpenAI神秘AI硬件预定年底亮相_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "PawBench：给通用智能体一把可度量的尺",
+      "source": "通义实验室",
+      "digest": "能测Harness能力的评测新基准",
+      "link": "https://mp.weixin.qq.com/s/Q1fa3KwT63HBOF2fmWKzlg",
+      "source_file": "sources/2026-06-05_PawBench：给通用智能体一把可度量的尺_通义实验室.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "微软推出 MDASH，用于大规模 AI 漏洞研究",
+      "source": "InfoQ",
+      "digest": "微软推出了一款 AI 驱动的新型漏洞发现系统 MDASH。这是一个多模型代理安全平台，用于对 Windows 及其他微软软件环境进行大规模的代码自动化审计。",
+      "link": "https://mp.weixin.qq.com/s/o49KSqFayYPenjWTdcr8UQ",
+      "source_file": "sources/2026-06-05_微软推出 MDASH，用于大规模 AI 漏洞研究_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "活久见！奥特曼Dario哈萨比斯同仇敌忾：DNA得查了",
+      "source": "量子位",
+      "digest": "AI已能指导病毒实验，科技领袖呼吁DNA安全立法",
+      "link": "https://mp.weixin.qq.com/s/HBTe1MTHfRSJJarFShfxUw",
+      "source_file": "sources/2026-06-05_活久见！奥特曼Dario哈萨比斯同仇敌忾：DNA得查了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "除了 AI Siri 和库克「谢幕演讲」，今年 WWDC 还有什么？",
+      "source": "极客公园",
+      "digest": "​头条讲的是大脑，注脚讲的是性格。",
+      "link": "https://mp.weixin.qq.com/s/HoCzKlje3DEUSnPBmTFrbw",
+      "source_file": "sources/2026-06-05_除了 AI Siri 和库克「谢幕演讲」，今年 WWDC 还有什么？_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "给AI立规矩！AI刚破80年数学难题，数学家们慌了",
+      "source": "新智元",
+      "digest": "拒绝数学商业化！",
+      "link": "https://mp.weixin.qq.com/s/77iLAJsz9P0bq7ZtZ6HnBg",
+      "source_file": "sources/2026-06-05_给AI立规矩！AI刚破80年数学难题，数学家们慌了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "过程比结果更危险：从模型到Harness，AI Agent的下半场该如何评测安全？",
+      "source": "机器之心",
+      "digest": "HarnessAudit 是一个针对完整执行轨迹进行审计的安全评测框架",
+      "link": "https://mp.weixin.qq.com/s/cSiVnwFO531w4ptK3Z4Viw",
+      "source_file": "sources/2026-06-05_过程比结果更危险：从模型到Harness，AI Agent的下半场该如何评测安全？_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "又一大厂杀入AI视频生成！5分钟叙事角色不崩，声音不乱，秒出片",
+      "source": "智东西",
+      "digest": "AI视频巨头混战升级：这次，长视频“变脸魔咒”要被打破了。",
+      "link": "https://mp.weixin.qq.com/s/-qNQbQJc5ySqLNWHHFUrxw",
+      "source_file": "sources/2026-06-05_又一大厂杀入AI视频生成！5分钟叙事角色不崩，声音不乱，秒出片_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "如何写好 Skill：一份终极实战经验手册",
+      "source": "腾讯技术工程",
+      "digest": "鹅厂团队积累的知识，帮大家少走弯路",
+      "link": "https://mp.weixin.qq.com/s/SZv3pDXPrL9vwV3Ua_84Kg",
+      "source_file": "sources/2026-06-05_如何写好 Skill：一份终极实战经验手册_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "中国信通院牵头立项两项AI宽带网国际标准",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院牵头立项两项AI宽带网国际标准",
+      "link": "https://mp.weixin.qq.com/s/ow5jZbh_NtHXd2viq2r4UQ",
+      "source_file": "sources/2026-06-05_中国信通院牵头立项两项AI宽带网国际标准_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚！华为发布一系列Agentic AI新品",
+      "source": "财联社AI daily",
+      "digest": "文|黄心怡在今日举行的华为云INSPIRE创想者大会上，华为云发布Agentic Infra通智一体化基础设施",
+      "link": "https://mp.weixin.qq.com/s/a4gxI_MnmZd29icXD-V0Sw",
+      "source_file": "sources/2026-06-05_刚刚！华为发布一系列Agentic AI新品_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "以临床实效为导向，医疗健康行业智能体专项评测正式启动",
+      "source": "中国信通院CAICT",
+      "digest": "以临床实效为导向，医疗健康行业智能体专项评测正式启动",
+      "link": "https://mp.weixin.qq.com/s/_4jdbLU4tGi7k2VzO7rhRA",
+      "source_file": "sources/2026-06-05_以临床实效为导向，医疗健康行业智能体专项评测正式启动_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场",
+      "source": "智东西",
+      "digest": "从QQ秀到Agent，一场跨越二十年的对谈。",
+      "link": "https://mp.weixin.qq.com/s/wR8dlK27YMP33g001pTwyQ",
+      "source_file": "sources/2026-06-05_刚刚！汤道生姚顺雨对谈50分钟，回应腾讯AI慢之疑！讲透AI下半场_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚，华为云一次发布了十几款AI新品",
+      "source": "智东西",
+      "digest": "“全球首个全流程具身智能开发平台CloudRobo”亮相。",
+      "link": "https://mp.weixin.qq.com/s/2ge-ednIG8AzFGUSyEdRUQ",
+      "source_file": "sources/2026-06-05_刚刚，华为云一次发布了十几款AI新品_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "汤道生对谈姚顺雨：AI下半场，腾讯比什么？",
+      "source": "InfoQ",
+      "digest": "“今天 Agent 毫无疑问是每一家模型所发力的重点。”",
+      "link": "https://mp.weixin.qq.com/s/axr2_fvlFgw1isgNDdRhBw",
+      "source_file": "sources/2026-06-05_汤道生对谈姚顺雨：AI下半场，腾讯比什么？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "汤道生对话姚顺雨：腾讯 AI，慢了吗？",
+      "source": "极客公园",
+      "digest": "​大模型并没有太多秘密。",
+      "link": "https://mp.weixin.qq.com/s/kwjh12Zt1GFaCrsZDiKefQ",
+      "source_file": "sources/2026-06-05_汤道生对话姚顺雨：腾讯 AI，慢了吗？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "万字实录现场直出：汤道生、姚顺雨对谈腾讯 AI 下半场",
+      "source": "腾讯研究院",
+      "digest": "腾讯到底如何做 AI？",
+      "link": "https://mp.weixin.qq.com/s/QFwQz-Kqh9t_zssBU_a6Mg",
+      "source_file": "sources/2026-06-05_万字实录现场直出：汤道生、姚顺雨对谈腾讯 AI 下半场_.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "QoderWork新能力：帮你操作电脑桌面应用",
+      "source": "Qoder",
+      "digest": "有些活，AI 一直帮不上忙这两年 AI 助手进步很快。接上各种工具，它能帮你查数据、发消息、建日程、写文档。",
+      "link": "https://mp.weixin.qq.com/s/2NLYHuqFxYWfd-Wd0MWd1A",
+      "source_file": "sources/2026-06-05_QoderWork新能力：帮你操作电脑桌面应用_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "国产AI黑马引爆「商战版Palantir」！一键为企业「全自主赚钱」",
+      "source": "新智元",
+      "digest": "百型智能OntoZ押注的是企业「本体竞争」时代。",
+      "link": "https://mp.weixin.qq.com/s/IRvH150nyGbKAXdG5akpyQ",
+      "source_file": "sources/2026-06-05_国产AI黑马引爆「商战版Palantir」！一键为企业「全自主赚钱」_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "AI Agent 沙箱的网络安全：从流量隔离到智能治理｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "本演讲以阿里云 ACK 在生产环境的实践为主线分三个层次展开",
+      "link": "https://mp.weixin.qq.com/s/TPFWTw55M6gFl0DmfpLY4w",
+      "source_file": "sources/2026-06-05_AI Agent 沙箱的网络安全：从流量隔离到智能治理｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚，姚顺雨现身！公开回应腾讯AI落后了吗？",
+      "source": "量子位",
+      "digest": "现场爆满！干货太密集！",
+      "link": "https://mp.weixin.qq.com/s/iBxcGIatmvaM0jTmd-zLNA",
+      "source_file": "sources/2026-06-05_刚刚，姚顺雨现身！公开回应腾讯AI落后了吗？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "刚刚，姚顺雨现身！公开回应腾讯AI落后了吗？",
+      "source": "量子位",
+      "digest": "现场爆满！干货太密集！",
+      "link": "https://mp.weixin.qq.com/s/lkXgDmbVJ7Of1S6g_rGNwA",
+      "source_file": "sources/2026-06-05_刚刚，姚顺雨现身！公开回应腾讯AI落后了吗？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "大模型在商业银行安全运营领域的应用与研究",
+      "source": "中国金融电脑",
+      "digest": "大模型在商业银行安全运营领域的应用与研究",
+      "link": "https://mp.weixin.qq.com/s/4AnJk7d02oyPlEeX4AQgfQ",
+      "source_file": "sources/2026-06-05_大模型在商业银行安全运营领域的应用与研究_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-05",
+      "title": "AI驱动研发变革：代码安全审计与企业研发体系的深度融合",
+      "source": "中国金融电脑",
+      "digest": "AI驱动研发变革：代码安全审计与企业研发体系的深度融合",
+      "link": "https://mp.weixin.qq.com/s/_2h89t-Es70l1j-8TM8iyQ",
+      "source_file": "sources/2026-06-05_AI驱动研发变革：代码安全审计与企业研发体系的深度融合_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "AI大增量时代开启，华为携伙伴助推金融数智化转型",
+      "source": "金融电子化",
+      "digest": "AI大增量时代开启，华为携伙伴助推金融数智化转型",
+      "link": "https://mp.weixin.qq.com/s/Sz0-Syhs6hVcX0mHPAxqSA",
+      "source_file": "sources/2026-06-05_AI大增量时代开启，华为携伙伴助推金融数智化转型_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "可灵AI全球用户突破1亿",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》记者获悉，截至2026年6月，可灵AI全球用户突破1亿，较2025年底的6000万增长约67%，",
+      "link": "https://mp.weixin.qq.com/s/XTQSBguzpKB-LG269Paqzg",
+      "source_file": "sources/2026-06-05_可灵AI全球用户突破1亿_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "有人靠CPU把AI算力密度卷到了新高度",
+      "source": "量子位",
+      "digest": "Agentic AI的算力焦虑，英特尔给来了一剂「猛药」",
+      "link": "https://mp.weixin.qq.com/s/mVvuw3AuvAPOX_CqL_FJDg",
+      "source_file": "sources/2026-06-05_有人靠CPU把AI算力密度卷到了新高度_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "美企苦高价AI久矣？DeepSeek登上趋势榜第一",
+      "source": "财联社AI daily",
+      "digest": "文|郑远方AI成本居高不下，“烧不动钱”的美国企业客户，开始将目光投向中国大模型。",
+      "link": "https://mp.weixin.qq.com/s/PWVWfJjWtFPQACNiObHSnQ",
+      "source_file": "sources/2026-06-05_美企苦高价AI久矣？DeepSeek登上趋势榜第一_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "特朗普政府，或购入AI公司股份",
+      "source": "财联社AI daily",
+      "digest": "文|马兰美国政府可能进一步扩大对美国企业的投资和控制。据报道，美国高级官员与主要人工智能公司就政府可能购买其部分股份的可能性进行了初步讨论。",
+      "link": "https://mp.weixin.qq.com/s/oxPfG9NwA_55dGrBHuklcw",
+      "source_file": "sources/2026-06-05_特朗普政府，或购入AI公司股份_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "5点和面，11点写代码：一个饺子馆老板的AI实验",
+      "source": "Qoder",
+      "digest": "当“AI推荐”取代“手机种草”，一家开了近20年的传统饺子馆决定先动手。",
+      "link": "https://mp.weixin.qq.com/s/FycHr9RuUsS5y7AWXy2Jrw",
+      "source_file": "sources/2026-06-05_5点和面，11点写代码：一个饺子馆老板的AI实验_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "腾讯研究院AI速递 20260605",
+      "source": "腾讯研究院",
+      "digest": "世界模型功能分类：渲染、模拟、规划",
+      "link": "https://mp.weixin.qq.com/s/xIPrkx3_CnYx4u05gBiGig",
+      "source_file": "sources/2026-06-05_腾讯研究院AI速递 20260605_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-05",
+      "title": "Anthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI 编程越进化越离不开真人兜底",
+      "source": "InfoQ",
+      "digest": "据 Business Insider 报道，Anthropic 正在通过一个由约 1000 名人类软件工程师参与的项目，提升旗下 AI 编程工具 Claude Code 的表现。",
+      "link": "https://mp.weixin.qq.com/s/OSAcd8U7c5T1MKXlgJpYMQ",
+      "source_file": "sources/2026-06-05_Anthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI _InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-04",
       "title": "专家预测年底才到，Claude Mythos今天就跑出3小时6分！",
