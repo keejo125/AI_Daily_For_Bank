@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-07T09:26:35.093975",
-  "total": 1100,
+  "updated_at": "2026-06-07T09:30:34.019878",
+  "total": 1099,
   "articles": [
     {
       "date": "2026-06-06",
@@ -80,16 +80,6 @@
       "link": "https://mp.weixin.qq.com/s/uzasS6q6LAwX8wLXD7KzeA",
       "source_file": "sources/2026-06-06_AI手机时代，Mobile Agent最缺是更真实的世界_机器之心.md",
       "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-06",
-      "title": "河北农信智能信贷风控建设项目（人工智能大模型基础平台）",
-      "source": "银行科技研究社",
-      "digest": "河北农信智能信贷风控建设项目（人工智能大模型基础平台）",
-      "link": "https://mp.weixin.qq.com/s/jrWMdwUnhD_fK_TehcPzJA",
-      "source_file": "sources/2026-06-06_河北农信智能信贷风控建设项目（人工智能大模型基础平台）_银行科技研究社.md",
-      "category": "同业",
       "is_model_related": false
     },
     {
