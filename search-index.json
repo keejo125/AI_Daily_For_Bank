@@ -1,7 +1,167 @@
 {
-  "updated_at": "2026-06-07T09:30:34.019878",
-  "total": 1099,
+  "updated_at": "2026-06-08T06:58:11.793383",
+  "total": 1115,
   "articles": [
+    {
+      "date": "2026-06-07",
+      "title": "AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与",
+      "source": "机器之心",
+      "digest": "AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与",
+      "link": "",
+      "source_file": "sources/2026-06-07_AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-07",
+      "title": "ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态",
+      "source": "机器之心",
+      "digest": "ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态",
+      "link": "",
+      "source_file": "sources/2026-06-07_ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "Anthropic联创亲口承认：AI正自我迭代！",
+      "source": "新智元",
+      "digest": "Anthropic联创亲口承认：AI正自我迭代！",
+      "link": "",
+      "source_file": "sources/2026-06-07_Anthropic联创亲口承认：AI正自我迭代！_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式",
+      "source": "机器之心",
+      "digest": "ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式",
+      "link": "",
+      "source_file": "sources/2026-06-07_ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞",
+      "source": "InfoQ",
+      "digest": "砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞",
+      "link": "",
+      "source_file": "sources/2026-06-07_砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁",
+      "source": "财联社AI daily",
+      "digest": "中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁",
+      "link": "",
+      "source_file": "sources/2026-06-07_中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移",
+      "source": "InfoQ",
+      "digest": "AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移",
+      "link": "",
+      "source_file": "sources/2026-06-07_AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw",
+      "source": "机器之心",
+      "digest": "重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw",
+      "link": "",
+      "source_file": "sources/2026-06-07_重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队",
+      "source": "量子位",
+      "digest": "5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队",
+      "link": "",
+      "source_file": "sources/2026-06-07_5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景",
+      "source": "银行科技研究社",
+      "digest": "江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景",
+      "link": "",
+      "source_file": "sources/2026-06-07_江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "探索构建智能体支付新生态，助力打造智能经济新形态",
+      "source": "金融电子化",
+      "digest": "探索构建智能体支付新生态，助力打造智能经济新形态",
+      "link": "",
+      "source_file": "sources/2026-06-07_探索构建智能体支付新生态，助力打造智能经济新形态_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？",
+      "source": "极客公园",
+      "digest": "「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？",
+      "link": "",
+      "source_file": "sources/2026-06-07_「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "AI真的有意识了吗？《降临》原作万字长文反驳Hinton！",
+      "source": "新智元",
+      "digest": "AI真的有意识了吗？《降临》原作万字长文反驳Hinton！",
+      "link": "",
+      "source_file": "sources/2026-06-07_AI真的有意识了吗？《降临》原作万字长文反驳Hinton！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯",
+      "source": "InfoQ",
+      "digest": "微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯",
+      "link": "",
+      "source_file": "sources/2026-06-07_微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "全球最贵的 AI 公司，面试时禁止使用 AI",
+      "source": "极客公园",
+      "digest": "全球最贵的 AI 公司，面试时禁止使用 AI",
+      "link": "",
+      "source_file": "sources/2026-06-07_全球最贵的 AI 公司，面试时禁止使用 AI_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-07",
+      "title": "黄仁勋押注Token经济：你用的软件正变成AI收费站",
+      "source": "新智元",
+      "digest": "黄仁勋押注Token经济：你用的软件正变成AI收费站",
+      "link": "",
+      "source_file": "sources/2026-06-07_黄仁勋押注Token经济：你用的软件正变成AI收费站_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-06",
       "title": "别卷上下文了？CMU新论文：让AI睡一觉，特定推理飙升52%",
