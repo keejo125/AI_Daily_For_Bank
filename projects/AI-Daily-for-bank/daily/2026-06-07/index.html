@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-06-07</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag a {
+  color: inherit;
+  text-decoration: none;
+}
+.source-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-06-07</div>
+    <div class="banner-stats" id="banner-stats">国际 5 篇 · 国内 4 篇 · 同业 2 篇 · 其他 5 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与</div><span class="source-tag">机器之心</span><div class="card-digest">AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与</div></div>
+<div class="card"><div class="card-title">ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态</div><span class="source-tag">机器之心</span><div class="card-digest">ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态</div></div>
+<div class="card"><div class="card-title">Anthropic联创亲口承认：AI正自我迭代！</div><span class="source-tag">新智元</span><div class="card-digest">Anthropic联创亲口承认：AI正自我迭代！</div></div>
+<div class="card"><div class="card-title">ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式</div><span class="source-tag">机器之心</span><div class="card-digest">ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式</div></div>
+<div class="card"><div class="card-title">砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞</div><span class="source-tag">InfoQ</span><div class="card-digest">砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁</div><span class="source-tag">财联社AI daily</span><div class="card-digest">中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁</div></div>
+<div class="card"><div class="card-title">AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移</div><span class="source-tag">InfoQ</span><div class="card-digest">AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移</div></div>
+<div class="card"><div class="card-title">重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw</div><span class="source-tag">机器之心</span><div class="card-digest">重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw</div></div>
+<div class="card"><div class="card-title">5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队</div><span class="source-tag">量子位</span><div class="card-digest">5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景</div><span class="source-tag">银行科技研究社</span><div class="card-digest">江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景</div></div>
+<div class="card"><div class="card-title">探索构建智能体支付新生态，助力打造智能经济新形态</div><span class="source-tag">金融电子化</span><div class="card-digest">探索构建智能体支付新生态，助力打造智能经济新形态</div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？</div><span class="source-tag">极客公园</span><div class="card-digest">「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？</div></div>
+<div class="card"><div class="card-title">AI真的有意识了吗？《降临》原作万字长文反驳Hinton！</div><span class="source-tag">新智元</span><div class="card-digest">AI真的有意识了吗？《降临》原作万字长文反驳Hinton！</div></div>
+<div class="card"><div class="card-title">微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯</div><span class="source-tag">InfoQ</span><div class="card-digest">微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯</div></div>
+<div class="card"><div class="card-title">全球最贵的 AI 公司，面试时禁止使用 AI</div><span class="source-tag">极客公园</span><div class="card-digest">全球最贵的 AI 公司，面试时禁止使用 AI</div></div>
+<div class="card"><div class="card-title">黄仁勋押注Token经济：你用的软件正变成AI收费站</div><span class="source-tag">新智元</span><div class="card-digest">黄仁勋押注Token经济：你用的软件正变成AI收费站</div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与", "source": "机器之心", "digest": "AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与", "link": "", "content": "---\npublish_time: 1780803000\n---\n\n# AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与\n\n> 原文链接：https://mp.weixin.qq.com/s/v7aE9ygPhV_P6nFeZeyp6A\n> 公众号：机器之心\n\n编辑｜Panda\n\n过去一年，AI 推理模型的使用成本让不少开发者叫苦。\n\n「慢思考」模型在处理数学、代码、逻辑题时确实表现惊艳，但代价是每次调用都会生成几百乃至几千个「思考 token」。这些 token 现在答案之前，是模型一步步演算的草稿纸。这些草稿可见，但昂贵。一道复杂数学题，光是「思考过程」就可能消耗掉普通对话十倍以上的计算资源。\n\n思考模式下，即使简单交流也费 token\n\n近期，有一些新技术确实让人们看到了压低推理成本的可能性。但无论架构如何优化，只要思维链（Chain-of-Thought，CoT）的中间步骤仍然以 token 形式逐个生成，推理延迟就有着根本性的下限。每一步都必须在上一步完成之后才能开始，推理链有多长，等待时间就有多长。\n\n这是一个结构性问题，不是工程问题。\n\n那么，有没有可能让模型「把草稿藏进大脑」，在不输出任何中间步骤的情况下，仍然保留显式思维链带来的推理能力？\n\n这正是「\n\n隐式\n\n思维链\n\n（Implicit Chain-of-Thought，ICoT）\n\n」想要解决的事情。而就在前些天，来自 UC Berkeley 和普林斯顿大学的研究团队，在这个问题上迈出了关键一步。他们不仅给出了方案，还在数学上严格证明了它有效。\n\n论文标题：Transformers Provably Learn to Internalize Chain-of-Thought\n\n论文地址：https://arxiv.org/abs/2605.28600v1\n\n这项研究的主要作者来自 UC 伯克利和普林斯顿大学，一作是伯克利博士生黄一笑（Yixiao Huang），指导教授包括 Jiantao Jiao、Stuart Russell、Somayeh Sojoudi 和 Song Mei。\n\n这个团队近年来在用数学方法解析 Transformer 训练机制上发表了一系列工作，涵盖从注意力模式的形成到多步推理的优化动态。此次关于 ICoT 的研究，是他们将理论工具系统延伸至「隐式推理」这一新领域的尝试。\n\n思维链的代价\n\n要理解这项研究的意义，需要先弄清楚思维链究竟贵在哪里。\n\n可以打个比方，假如你在辅导一个学生做多位数乘法。一种方法是让他把每一步运算都写在纸上，一行一行地算：先算各位，再算十位，最后相加。这就是显式思维链 —— 每个中间结果都可见，也因此可以被检验和纠错。另一种方法是让他「在脑子里算」，直接报出最终答案。\n\n这两种方式在信息处理上有本质差别。前者是串行的：每一步依赖上一步的结果，无法并行。后者则不然 —— 如果大脑能一次性处理所有中间计算，答案可以几乎同时得出。\n\n对于 LLM，这个差别直接体现在推理延迟和 token 消耗上。显式思维链要求模型逐个生成每个中间 token，推理链有 k 步，就需要输出至少 k 个额外 token，而且这些 token 必须严格串行生成。对于当前最先进的推理模型，这个数字往往是几百到几千。\n\nICoT 的想法是：能不能训练模型把中间步骤「内化」到隐藏状态里，最终推理时只输出答案，中间步骤完全不可见？\n\n这个想法本身并不新鲜。Yuntian Deng 等人在 2024 年的论文《From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step》就提出了一种训练方法：\n\n先让模型学会用完整思维链作答，然后一步一步地把中间 token「藏起来」，每次少一个，让模型逐渐习惯在更少的可见线索下完成推理。\n\n这种方式在实验中有效，但有一个明显缺陷：如果思维链有 k 步，就需要 k-1 个训练阶段，训练开销随推理链长度线性增长。\n\n更根本的问题是：没有人知道这为什么有效。理论上能不能保证 ICoT 学到的东西与显式 CoT 等价？在什么条件下保证？这些问题悬而未决。\n\n核心创新：用树状结构重新设计训练课程\n\n这篇论文的核心贡献有两个层面：一个新的训练方法，以及针对该方法的第一个严格数学证明。\n\n研究的实验平台是「k-奇偶校验」（k-parity）问题，这是一个在理论计算机科学中经典的测试床。\n\n给定 n 个比特，从中选 k 个，判断它们的乘积是 +1 还是 -1。这个问题的特点是：没有中间步骤，任何有限精度的梯度下降算法，用多项式数量的样本，都无法以非平凡精度求解。但一旦提供完整的思维链辅助，即便是单层 Transformer 也能高效学会。这个对比，让它成为研究 CoT 作用机制的理想沙盘。\n\n关键洞察：思维链的结构其实是一棵树。\n\nk 个比特的奇偶校验，可以分解为一棵深度为 log₂k 的二叉树。叶节点是原始输入比特，每个内部节点计算其两个子节点的乘积，一路递推到根节点得到最终答案。这棵树的结构，决定了中间步骤的层级关系：第一层计算两两乘积，第二层计算两个第一层结果的乘积，依此类推。\n\n标准 ICoT 方法一次只藏一个 token，完全不利用这棵树的结构。而这篇论文提出的「Log-ICoT」，则一次性藏掉树的整整一层。这意味着：原来需要 k-1 个训练阶段，现在只需要 log₂k 个。对于 k=16，这意味着从 15 个阶段缩减为 4 个。\n\n这不仅仅是工程上的效率提升。更重要的是，它让训练过程与模型内部的层级结构对齐 —— 每一个 Transformer 层，恰好负责吸收思维链树的一个层级。\n\n三种训练范式的对比示意图：显式 CoT、标准 ICoT、Log-ICoT\n\n理论证明：第一次把「内化」写成定理\n\n这项研究最具里程碑意义的部分，是给出了 ICoT 的第一个严格收敛保证。\n\n定理的核心内容（Theorem 1）\n\n：一个 L 层 Transformer，在 Log-ICoT 课程下训练，只需多项式数量（n^(2+ε) 量级）的样本和 log₂k 个梯度步骤，就能以接近 1 的概率，在测试时从纯输入比特直接预测出正确的 k - 奇偶校验结果 —— 误差指数级小。\n\n这与显式 CoT 的样本复杂度匹配，但推理时不需要任何中间 token 的输出。\n\n证明过程面临两个主要技术挑战，团队分别用两种设计手段克服：\n\n第一个挑战是「\n\n表示坍缩\n\n」。在多层 Transformer 中，随着层数加深，各位置的向量表示会趋向于均匀，失去区分度，梯度信号也随之消失。团队引入了「门控连接」（gated connections）：每一层只在对应树层级的位置上「开门」激活，其余位置保持关闭。这让每层的梯度信号精准集中在它该处理的那部分任务上，避免了表示被平均掉。\n\n第二个挑战是「\n\n误差传播\n\n」。多阶段训练中，早期阶段的微小近似误差会在后续阶段层层放大，最终淹没有效信号。解决方案是：在每次梯度更新后对注意力权重做整数量化（四舍五入到最近的整数）。这看似是个粗糙的操作，却起到了精确的「锁定」效果 —— 已经训练好的层，其后续梯度更新量极小，量化会直接将其舍入回原值，让早期训练结果保持不变。\n\n4 层 Transformer 训练完成后的逐层注意力热图，可见每层精准聚焦在树的对应层级节点上\n\n实验：4 个阶段，达到 100% 准确率\n\n理论证明需要实验验证。团队在 n=30 个输入比特、k=16（即 4 层 Transformer、4 个训练阶段）的设置下，运行了完整实验。\n\n训练动态与理论预测高度吻合。第一阶段完整思维链可见，损失迅速下降到接近零。随后每个阶段，将一半剩余的思维链位置替换为全零填充，损失出现短暂尖峰 —— 这正对应着模型开始「消化」新一层思维链的时刻。尖峰随后迅速回落，模型适应了新的约束。\n\n第四阶段结束时，所有思维链位置全部被填零，模型只看到原始输入比特，但验证集准确率达到 100%。\n\n注意力权重的可视化进一步印证了理论分析：第一层的注意力聚焦在树的第一层节点对（两两输入比特），第二层聚焦在第二层节点对，以此类推。模型确实学会了将思维链的每一层「刻进」对应的 Transformer 层，而非在某一层中混乱地表示所有信息。\n\n结语\n\n这篇论文的贡献，首先在于填补了一个理论空白。\n\nICoT 作为一种实践，此前已经被若干论文验证在实际任务（如算术、推理题）上有效。但「有效」和「为什么有效」、「什么条件下保证有效」之间，隔着巨大的鸿沟。这篇论文第一次架起了这座桥 —— 用严格的数学语言说明，隐式思维链不是一种巧合有效的技巧，而是在明确条件下可证明的训练方法。\n\n这意味着推理模型的「沉默思考」第一次有了数学意义上的合法性。\n\n从更长远的视角看，这项工作指向的是一个尚未实现但方向明确的目标：把大型推理模型的长思维链，通过有结构的课程训练，系统地「压缩」进模型的隐藏层。届时，模型仍然具备完整的推理能力，但用户感知到的，只有直接的答案，没有漫长的等待，没有昂贵的思考 token 账单。\n\n当然，从当前的理论结论到工程实现，距离仍然不小。论文自身也明确指出，目前的证明依赖若干简化假设：固定的价值矩阵、预设的门控权重、以及以奇偶校验为代表的合成任务结构。将 Log-ICoT 应用于真实 LLM 的挑战在于，如何在没有明确层级结构的情况下，设计合理的「阶段划分」方式。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": true, "source_file": "sources/2026-06-07_AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与_机器之心.md"}, {"title": "ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态", "source": "机器之心", "digest": "ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态", "link": "", "content": "---\npublish_time: 1780812000\n---\n\n# ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态\n\n> 原文链接：https://mp.weixin.qq.com/s/ZC_-zurf8iV6Kbp39AHgBg\n> 公众号：机器之心\n\n近年来，大语言模型在数学、代码等任务上的表现不断刷新上限，但到了医疗诊断、故障排查这类真实世界任务里，真正困难的是让多个智能体在不确定的动态环境中持续协作推理。\n\n以医疗诊断为例，主治医生不可能一开始就让病人把所有检查都做一遍，而是要根据当前诊断方向，动态安排影像科、检验科等不同科室逐步开展检查、持续补充证据，并在过程中不断修正判断。\n\n相比之下，现有多智能体推理方法虽然看起来做了分工，但常常要么停留在简单串联多个智能体的层面，只是把前一个智能体的输出交给下一个继续处理；要么默认所有证据都已经提前备好，缺乏真正的自主调查和动态决策能力。\n\n论文指出，也正因如此，现有 CoT、ToT、GoT、FoT 等推理框架在迁移到医疗诊断、分布式系统故障排查等场景时，往往会进一步暴露出四类失败模式：证据伪造、上下文漂移、回溯失败和过早停止。\n\n图 1: 传统推理框架在溯因任务中的四类典型问题\n\n这些失败并不是偶然现象，而是来自两个结构性缺陷：\n\n很多现有方法把假设、证据和推理进展混在非结构化自然语言上下文里，缺乏显式状态表示；\n\n缺少状态控制机制，使得智能体是否选择回溯、下钻、终止，几乎都只能靠自由发挥。\n\n因此，在长程推理过程中，智能体往往难以稳定维护推理状态，容易偏离正确方向，或过早停留在表层结论。\n\n南开大学研究团队和联想合作提出了\n\nGraph of States（GoS）\n\n，一个面向通用溯因推理任务的神经符号框架，其核心目标是为溯因任务显式构建一个\n\n可维护、可回退、可收敛\n\n的推理状态空间，把原本隐式、松散的推理过程，转化为受约束的有向搜索。该工作已被 ICML 2026 正式接收。\n\n论文标题： Graph of States: Solving Abductive Tasks with Large Language Models\n\n论文链接：https://arxiv.org/pdf/2603.21250\n\n代码地址： https://github.com/gaorch85/Graph-of-States\n\n目前，xCloud 联想智能云正加速将 GoS 技术融入其智能运维产品体系，助力企业构建零故障、自愈合、业务感知的智能运维体系。\n\n01 GoS：给推理加上 “显式信念状态”\n\nGoS 的核心思想，是把多智能体协作与显式信念状态建模结合起来。整个系统分为两层：上层是认知层，负责具体领域内的多智能体协作；下层是符号层，负责维护结构化推理状态，并对过程进行导航和约束。\n\n在认知层中，GoS 不再采用零散的功能原子，而是让中心智能体和专家智能体分别对应现实世界中的专业角色。比如在医疗场景中，可以对应主治医生、影像科医生、病理科医生；在分布式系统场景中，则对应应用运维、Linux 运维、网络运维和数据库运维。这样做的目的，是让推理流程更贴近真实世界中的协作分工，也更便于人理解和审查其推理过程。\n\n图 2: GoS 总体框架：双层神经符号架构与整体推理流程\n\nGoS 最关键的部分是符号层。它不再把调查过程隐藏在非结构化历史对话里，而是显式维护一个由因果图和状态机组成的信念状态。前者记录症状、证据、假设及其支持、反驳和细化关系；后者控制当前推理层级，决定系统是继续搜集证据、向更细粒度下钻，还是在出现冲突证据时回退到更早层重新判断。\n\n与此同时，GoS 还引入了一个很关键的机制：推理焦点（reasoning focus）。系统在每一步都不会平均地看待所有可能方向，而是聚焦当前层级中置信度最高的假设，把调查预算和推理资源集中到最值得追踪的分支上。这样做有利于把原本容易发散的探索，变成更像 “有导航的调查”。\n\n02 双层闭环：从推理焦点到证据更新\n\nGoS 的推理过程不是简单的‘先计划、再执行’，而是一个持续循环的双向闭环。首先，符号层会根据当前信念状态找到推理焦点，并将其转化为对认知层的调查指令；随后，认知层调用工具、获取证据并完成分析，再将结果返回给符号层，用于更新因果图、重新校准假设置信度，并触发下一轮状态转换。\n\n这一闭环使多智能体协作不再是无约束的自由发挥，而是始终围绕当前最有价值的假设前进；新获得的证据也不再只是停留在文本里，而会成为后续推理的依据。\n\n图 3: 双向神经 - 符号交互：从推理焦点引导调查，到新证据反向更新信念状态\n\n03 关键机制：该回溯时回溯，该下钻时下钻\n\n对于溯因任务来说，真正困难的往往不是 “生成一个答案”，而是在推理过程中根据证据变化，按规则决定状态转移。为此，GoS 设计了两类核心状态转换机制：\n\nBacktracking\n\n和\n\nDrill-Down\n\n。\n\n不同于把这些决策完全交给智能体自由发挥，GoS 为状态演化引入了清晰的转移规则。具体来说，当当前推理路径上的某个上层祖先假设在置信度重估后不再是该层最优候选时，系统会回退到对应层级并剪除建立在错误前提上的后续分支；而下钻也不是 “觉得差不多了就继续往下想”，而是只有当当前最优假设同时满足\n\n足够的置信度优势和足够的支持证据数量\n\n时，系统才会进一步细化到更具体的子假设。正是这种带有明确约束的状态控制，使 GoS 在面对非单调、动态演化的信息时，不再只是生成连贯文本，而是能够以更稳定、更可控的方式逐步逼近真正可执行的根因。\n\n图 4: 状态转换：回溯（Backtracking）与下钻（Drill-Down）\n\n04 实验：在两个高风险真实场景中验证 GoS\n\n为了验证 GoS 的有效性和通用性，论文选择了两个非常具有现实意义的溯因场景：\n\n医疗诊断和分布式系统故障诊断\n\n。在医疗诊断任务中，作者基于 DiagnosisArena 基准做了一个关键改造：不再一开始就提供完整辅助检查结果，而是只给病人主诉和基础体格检查，让智能体像真实医生一样主动申请检查、逐步获取外部信息，再完成诊断，从而恢复 “主动取证、动态推理” 的溯因本质。在这一任务上，GoS 在 Human-as-a-Judge 评估下取得了\n\n39.86% 的 Match\n\n和\n\n78.99% 的 Relevant\n\n，明显优于所有基线方法，并在更低成本下实现了更好的结果。\n\n在分布式系统故障诊断任务中，论文基于真实生产环境构建了 150 个 incident，要求智能体从初始告警出发，主动查询日志、指标和 shell 输出，逐步恢复故障上下文并定位 root cause。实验结果显示，GoS 取得了\n\n70.67% 的 Match\n\n和\n\n88.00% 的 Relevant\n\n，其中 Match 比最强基线高出\n\n36.67 个百分点\n\n。这说明，很多方法虽然能判断 “问题大概在哪个方向”，因此 Relevant 并不低，但要进一步收敛到真正可执行的细粒度根因，仍然需要持续调查、状态控制和层级下钻，而这正是 GoS 的优势。\n\n表 1: 医疗诊断结果：GoS 在 Match 与 Relevant 上均优于所有基线\n\n表 2: 分布式系统故障诊断结果：GoS 显著提升细粒度根因定位能力\n\n作者还进一步进行了较为全面的消融实验与参数敏感性分析。结果表明，GoS 的性能提升并非来自某个偶然技巧，而是确实依赖于推理焦点、因果图和状态机等关键模块的协同作用；同时，随着神经符号交互轮数、检索预算以及状态转移阈值的变化，GoS 也表现出清晰且可解释的性能趋势，说明该框架不仅有效，而且具备较好的稳定性与可控性。\n\n表 3: 消融实验：显式因果图、状态机与推理焦点缺一不可\n\n图 5: 敏感性分析：GoS 在不同预算和阈值配置下的性能变化\n\n05 意义：从垂直场景方法走向通用推理框架\n\n从更大的角度看，GoS 的意义不只是把医疗和 AIOps 两个任务做得更好，而是向前推进了一个更根本的问题：对于真实世界中的高风险任务，智能体需要的并不只是更多知识、更多工具、更多上下文，还需要能在不完整信息下显式维护信念状态，处理冲突证据，在必要时回溯，在合适时下钻，最终把搜索过程稳定地导向真实根因。从这个角度看，GoS 所面向的其实也是当前智能体研究中非常关键的一类问题，即\n\nlong-horizon reasoning\n\n与\n\nmulti-turn interaction\n\n：智能体不只是回答一次，而是要在持续调查和多轮交互中保持状态一致，并逐步收敛。\n\n论文也指出，GoS 并不排斥已有的领域特化方法，反而与它们互补。无论是医疗中的高质量知识库和 RAG，还是 AIOps 中的多模态预处理和 SOP 检索，都可以与 GoS 结合，提升其在垂直场景中的搜索效率和决策可靠性。换句话说，GoS 提供的不是某一个专用智能体，而是一套面向溯因推理、也面向智能体长程推理的通用推理骨架。\n\n作者简介\n\n本文第一作者为罗宇，南开大学智能运维课题组博士一年级，主要研究方向为智能体长程推理、自进化智能体和根因分析。本文通讯作者为南开大学软件学院副教授、博士生导师孙永谦。他长期深耕智能运维（AIOps）领域，聚焦云原生、数据中心、超算、智算等领域的故障机理研究，同时致力于多智能体协作与大模型推理优化等前沿方向，持续推动面向复杂系统的智能决策研究。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-07_ICML 2026｜让 Agent 真正协同作战：GoS 为多智能体推理构建共享信念状态_机器之心.md"}, {"title": "Anthropic联创亲口承认：AI正自我迭代！", "source": "新智元", "digest": "Anthropic联创亲口承认：AI正自我迭代！", "link": "", "content": "---\npublish_time: 1780805552\n---\n\n# Anthropic联创亲口承认：AI正自我迭代！\n\n> 原文链接：https://mp.weixin.qq.com/s/YcNuRIpHkNP31kvqNAZUJw\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nClaude已写80%代码，两年内冲刺100%！Anthropic联创拉响最高警报，疾呼造AI「刹车踏板」，Bengio亲自站台力挺。\n\n「Claude的代码，80%都是自己写的」！\n\n就在BBC王牌栏目Newsnight上，Anthropic联创Jack Clark坦然公布了这一核心数据。\n\n同时，他给出了一个更为激进的行业预测：\n\n两年之内，这个比例可能冲到100%。\n\n届时，AI彻底实现自我创造、无限迭代，人类的「输入」被彻底排除在外。\n\n紧接着，他抛出了一句振聋发聩的断言——\n\n现在的AI行业，就像一辆只有油门、没有刹车踏板的车。\n\n我们想做的，就是把那个「刹车踏板」造出来。\n\n这种对失控的担忧，并非空穴来风。\n\n几天前Anthropic的一篇长文，宣告了「Claude造Claude」速度之快，难以想象。\n\n但真正让全网骇然的，是文末极具分量的呼吁：必要时，全球联手暂停AI研究。\n\n就连图灵奖得主Yoshua Bengio公开表态：全力支持！\n\nClaude造Claude\n\n80%代码自己写\n\n「递归自我改进」，RSI。\n\n这一AI圈热议了数十年的概念，第一次被一家头部实验室拿着内部数据说——\n\n它真的来了！\n\n在BBC的演播台上，Jack Clark全程20多分钟的采访，句句都是猛料。\n\n主持人单刀直入：你们是认真的吗？Claude已接近「自己构建自己」、几乎不需要人类输入了？\n\n联创Jack Clark没有回避，直接甩出了内部数据——\n\n如今，Anthropic\n\n合入\n\n的代码，80%来自Claude。\n\n在2025年2月Claude Code上线之前，这个数字还停留在个位数。\n\n短短一年多，从不到10%干到80%。与之相伴的，是工程师产能的恐怖飞跃：\n\n2026年第二季度，Anthropic工程师人均每天合入的代码量，是2024年的8倍。\n\n2021到2024年，这条曲线纹丝不动；Claude开始自己跑代码之后，曲线直接起飞。\n\n主持人追问道，「那这个数字会到100%吗？到那一步，AI就真的在自己造自己、自己改进自己了」。\n\nClark的回答，让演播室的空气都凝固了几秒：\n\n但如果这真的发生了，将会产生巨大的影响！\n\n他给出的时间表，是两年。\n\n按照Anthropic内部的进度条，最晚2028年，Claude的每一行代码，都可能出自Claude自己之手。\n\n人类工程师，将从「作者」彻底退位为「审稿人」，甚至连审稿都未必需要。\n\n休假3个月，一切全变了\n\n整场采访里，最有画面感的细节，来自Clark的亲身经历。\n\n2025年11月，他休陪产假，直到2026年2月回归。\n\n短短三个月，他发现那个自己熟悉的公司，彻底「改头换面」了——\n\n我发现一些与我共事的团队，同事们的工作状态就像身边带着一支庞大的团队。\n\n但实际上，他们只是在和许多个AI系统的「副本」一起工作。\n\n这种技术爆炸，甚至直接颠覆了「招聘逻辑」。\n\nAnthropic还在招人，但不再是大批量地招工程师，技术活已经被Claude包圆了。\n\n他们现在招的是律师、哲学家这样的跨学科专家。\n\n「公司里的每个人，现在都更像一个管理者，而不是一个独立普通员工」。\n\n100%两年成真，百万科学家诞生\n\n如果AI真的实现100%自我构建，世界会变成什么样？\n\nClark给了两个生动形象的例子。\n\n第一个，生物学。\n\nAI要变得更聪明，需在现实世界里跑大量实验。而能自我构建的AI，将有能力在真实世界里做科学。\n\n「你可以想象，人类科学家与AI系统并肩工作，在生物学上覆盖远超以往的疆域」。\n\n第二个，机器人学。\n\n这是今天AI「真正、真正困难」的领域——需做海量的适配工作，AI才能在物理世界里运转，而且它会随时间损坏，是一个硬核科学问题。\n\n但具备递归自我改进能力的AI，可以把自己适配进那些AI至今束手无策的领域。\n\nClark给出的终极图景，气势恢宏——\n\n我们正在走向的世界，就好像给这个世界凭空\n\n增加了几百万名科学家\n\n，而我们可以选择把他们派往哪里。\n\n哪些科学领域要加速？经济的哪些部分要加速？\n\n我们将拥有以前从未有过的「选择权」。\n\nBengio全力支持\n\n必要时，暂停AI开发\n\n当被问及最担忧的AI风险时，Clark并没有抛出「终结者」式的末日言论。\n\n接下来，他提出了一个极为直观，却棘手的管理学难题——\n\n想象一下，BBC的员工数量突然乘以10，你会立刻面对这些问题：\n\n我们怎么知道他们在干什么？怎么验证他们的工作是好的？怎么确保他们的报道符合BBC的标准？\n\n我最担心的，是突然冒出一大堆新的AI系统，它们彼此不协调，行为方式也未必符合你我的常识。\n\n在你对这些『新同事』的工作方式、可预测性建立信心之前，那里有大量的未知。\n\n「这种涌现式风险，是我最担心、也最专注的事」。\n\n剖析完种种风险后，Jack Clark回到了那个核心隐喻。\n\n你需要有一个选项——能把脚从油门上挪开，踩到刹车上。但现在，AI行业有油门，车里却没有刹车踏板。\n\n我们想做的，就是把这个「刹车踏板」造出来。\n\n这一次，就连深度学习三巨头之一、图灵奖得主Yoshua Bengio直接站队Anthropic了。\n\n他是这么认为的——\n\n如果头部AI公司真的正在逼近RSI的临界点，那么一次协调的、可验证的、普遍适用的暂停，可能是缓解多项重大AI风险的唯一负责任的方案。\n\nASI引线，只剩最后一截\n\n1965年，数学家I.J. Good写下了那个著名的预言：\n\n一旦出现一台能设计出更好机器的超智能机器，就会引发「智能爆炸」。\n\n机器智能将把人类远远甩在身后，而这将是人类需要做出的最后一项发明。\n\n如今，Claude几乎每一行代码都出自Claude之手。\n\n「递归自我改进」的飞轮，将彻底脱离人类的转速限制。\n\n从AGI到ASI的距离，可能不是十年，而是一次版本迭代。\n\n届时，「几百万名科学家」只是保守的说法，真正到来的，可能是一个智力上全面超越人类的存在。\n\n这正是Jack Clark执意要造「刹车踏板」的原因。\n\n如今，留给人类的时间，可能只剩两年。ASI，不会等人。\n\n参考资料：\n\nhttps://x.com/haider1/status/2063236969514115418?s=20\n\nhttps://www.youtube.com/watch?v=pPcuJOtRSbg\n\nhttps://x.com/Yoshua_Bengio/status/2063292262293844119?s=20\n\n编辑：桃子\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-07_Anthropic联创亲口承认：AI正自我迭代！_新智元.md"}, {"title": "ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式", "source": "机器之心", "digest": "ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式", "link": "", "content": "---\npublish_time: 1780803000\n---\n\n# ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式\n\n> 原文链接：https://mp.weixin.qq.com/s/NJMuozbsMgG7vDEX9Nbh9Q\n> 公众号：机器之心\n\n本文由\n\nNuoya Xiong\n\n、\n\nYuhang Zhou\n\n、\n\nHanqing Zeng\n\n、\n\nZhaorun Chen\n\n、\n\nFurong Huang\n\n、\n\nShuchao Bi\n\n、\n\nLizhu Zhang\n\n、\n\nZhuokai Zhao\n\n等研究者合作完成。论文第一作者\n\nNuoya Xiong\n\n为\n\nCMU\n\n计算机学院二年级博士生，研究方向为大语言模型的后训练与强化学习，本工作完成于其在\n\nMeta\n\n实习期间。该项目由\n\nMeta AI\n\n的\n\nZhuokai Zhao\n\n和\n\nLizhu Zhang\n\n共同领导，合作者还包括来自\n\nMeta TBD\n\n团队的\n\nShuchao Bi\n\n以及\n\nUniversity of Maryland\n\n的\n\nFurong Huang\n\n教授。\n\n近年来，大语言模型能力的提升，已不再仅仅依赖于更大的模型规模或更多的训练数据。越来越多的研究开始探索另一条路径：\n\n通过多个专家模型的协作来完成生成任务\n\n。\n\n这一思路背后的直觉并不复杂：现实中往往不存在一个在所有任务上都同样出色的模型，而是会涌现出大量各有所长的\n\n“\n\n专家模型\n\n”\n\n。例如，专门针对数学数据训练的模型更擅长复杂推理，代码模型在程序生成和语法结构上表现更稳定，而指令微调模型则更擅长对话理解与交互表达。与其追求一个\n\n“\n\n无所不能\n\n”\n\n的统一大模型，不如将多个领域专家进行组合，让它们在各自擅长的子问题上发挥作用。这种方式不仅能够更充分地利用已有模型的能力，也避免了单一模型在所有维度上都需要做到极致所带来的训练成本与优化难度。\n\n针对这一方向，论文提出了\n\nFusionRoute\n\n，一种基于\n\ntoken-level\n\n路由的多\n\nLLM\n\n协作范式\n\n。不同于以往在整段生成中选择单一模型，\n\nFusionRoute\n\n训练一个路由模型， 在每一步生成时，使用该路由模型动态判断当前这个\n\ntoken\n\n更适合由哪个专家模型来生成。这种更细粒度的路由方式，使模型能够在同一段生成过程中灵活切换不同专家，在推理、代码生成和自然语言表达等不同子任务之间进行动态分工，从而更充分地发挥各个模型的优势。\n\n在此基础上，\n\nFusionRoute\n\n进一步利用路由器本身的理解能力，引入了一种\n\n补充生成（\n\ncomplementary generation\n\n）机制\n\n。除了进行\n\nexpert\n\n选择之外，路由器还会为当前\n\ntoken\n\n提供额外的生成信号，并与\n\nexpert\n\n的输出共同作用，形成最终结果。由此，路由器不再只是一个\n\n“\n\n选择器\n\n”\n\n，而成为生成过程中的参与者，进一步提升了整体表达能力。\n\n相比\n\nsequence-level\n\n的协作方式，\n\nFusionRoute\n\n具有更高的灵活性和更细粒度的控制能力。同时，不同于传统\n\nMoE\n\n，\n\nFusionRoute\n\n的专家可以是结构各异、已经训练完成的独立模型，从而在实际部署中更加灵活、也更具工程可行性。\n\n论文标题：\n\nToken-Level LLM Collaboration via FusionRoute\n\narXiv\n\n地址：\n\nhttps://arxiv.org/pdf/2601.05106\n\n代码地址：\n\nhttps://github.com/xiongny/FusionRoute\n\n以往的\n\nsequence-level collaboration\n\n在整段生成完成后再进行模型融合，讨论或选择。多个模型需要生成完整回答，再通过\n\nreranking\n\n或辩论得到最终结果。这种方式虽然简单，但存在明显问题：一方面计算开销较大（需要多次完整生成），另一方面协作粒度较粗，因此往往比较低效。\n\n相比之下，\n\n以往的\n\ntoken-level collaboration\n\n将协作粒度细化到每一步生成，通过在多个模型之间进行\n\ntoken\n\n级别的选择来决定下一个\n\ntoken\n\n。这种方法能够实现更灵活的专家切换，但其核心仍然是\n\n“\n\n从多个候选中进行选择\n\n”。\n\n因此，一旦选择结果不稳定或某一步选择出现偏差，误差会在后续生成中不断累积，导致整体生成过程不够稳定。文章也通过理论推导，证明了在仅有\n\nsingle policy coverage\n\n的合理假设下，纯粹基于专家选择的\n\ntoken-level\n\n路由存在本质上的\n\n\"\n\n不可识别性\n\n\"——\n\n即便存在一条最优路径，仅凭沿最优轨迹观测到的\n\nQ\n\n值也无法可靠地识别出哪个专家应被选中，揭示了以往\n\ntoken-level\n\n协作的主要瓶颈。\n\nFusionRoute\n\n的关键思路是引入了一个可训练的\n\nrouter\n\n模块，提供两个功能：\n\n1、对于\n\ndecoding\n\n过程中的每个\n\ntoken\n\n，输出一个路由权重。系统之后会选择权重最高的专家进行这个\n\ntoken\n\n的生成。\n\n2、输出\n\nrouter logits\n\n，利用\n\nrouter\n\n的理解能力对\n\nexpert\n\n的\n\ntoken logits\n\n进行补充生成。最终的\n\nlogits\n\n合并专家\n\nlogits\n\n和\n\nrouter      logits\n\n。这种设计使得最终生成不再仅依赖于单一专家的输出，而是融合了\n\nexpert\n\n能力与全局理解，从而在保持细粒度协作的同时，显著提升了生成的稳定性与鲁棒性。\n\n路由模型训练\n\n在训练上，\n\nFusionRoute\n\n无需对专家进行额外微调，而是固定已有的专家，仅训练一个轻量级的\n\nrouter\n\n模块。训练分为两个阶段：\n\n1、首先，在监督微调（\n\nSFT\n\n）阶段，训练\n\nrouter\n\n使其能够在给定上下文下学习如何组合不同专家的输出。具体而言，\n\nrouter\n\n自身会生成补充的\n\nlogits\n\n，并通过\n\nnext-token\n\ncross-entropy loss\n\n进行优化；同时，\n\nrouter\n\n输出的路由权重与多个\n\nexpert\n\n提供的\n\ntoken\n\n分布加权得到最终的聚合\n\nlogits\n\n，并通过专家选择损失对路由线性层进行端到端优化。值得注意的是，论文在路由损失中只保留了\n\n\"\n\n信息性\n\ntoken\"——\n\n即不同专家预测结果存在分歧的位置，避免标点、虚词等所有专家都能正确预测的\n\ntoken\n\n主导梯度，从而让路由真正学到的是专家之间的能力差异。经过这一阶段，\n\nrouter\n\n已能够学习基本的专家选择与语言能力。\n\n2、第二个阶段是训练\n\nrouter logits\n\n的补充生成能力（\n\nCDPO\n\n）。具体来说，\n\nFusionRoute\n\n将\n\nrouter logits\n\n和专家\n\nlogits\n\n合并起来，然后在偏好数据集上计算\n\ntoken\n\n的概率，并基于\n\nDPO\n\n进行优化。这里的一个关键设计是，专家提供的\n\nlog-ratio\n\n项被作为不传梯度的\n\n\"\n\n偏置项\n\n\"\n\n处理\n\n——\n\n当专家本身已经能给出强策略时，该偏置项较大，\n\nrouter\n\n自身的梯度自然变小；当专家薄弱时，\n\nlog-ratio gap\n\n缩小，\n\nrouter\n\n会获得更大的修正信号。这种机制让\n\nrouter\n\n在专家失效的位置才发力，自动实现\n\n\"\n\n按需补充\n\n\"\n\n。另一大挑战在于，单独训练\n\nrouter logits\n\n的补充生成能力会使得\n\nrouter\n\n的参数与输出路由权重的线性层不匹配。由此，\n\nFusionRoute\n\n设计了一种\n\n混合训练策略\n\n，将监督微调（\n\nSFT\n\n）与基于偏好的优化（\n\nCDPO\n\n）结合在同一训练流程中\n\n。\n\n实验\n\n1:\n\n在多个领域上显著提升了综合能力\n\n论文使用了\n\nMergeBench\n\n里的数学专家模型，代码生成专家模型和指令跟随专家模型，涵盖\n\nLlama-3\n\n和\n\nGemma-2\n\n两个模型种类。文章在五个基准上评估\n\nFusionRoute\n\n：数学推理任务\n\nGSM8K\n\n、\n\nMATH-500\n\n，代码生成任务\n\nHumanEval\n\n、\n\nMBPP\n\n以及指令跟随任务\n\nIfEval\n\n。基线包含不同的专家\n\nSequence Selection\n\n（令所有模型均生成回答，并使用外部\n\nreward\n\n模型选择最优回答），以往的\n\ntoken-level\n\n协作范式\n\nCollab\n\n，两个\n\nModel Merging\n\n的方法（\n\nDARE, TaskArithmetic)\n\n，以及在数据集上直接微调的模型\n\n(“Fine-tuned” in Table 1)\n\n。实验结果如\n\nTable 1\n\n所示，\n\nFusionRoute\n\n取得了稳定的性能提升。更值得关注的是，\n\nFusionRoute\n\n在专家本身擅长的领域并没有牺牲性能\n\n——\n\n在\n\nGSM8K\n\n、\n\nHumanEval\n\n等任务上，它的表现与对应专家持平甚至略胜，说明这种细粒度协作真正做到了\n\n\"\n\n取长补短\n\n\"\n\n。\n\n实验\n\n2:\n\n在通用数据集上显著提升整体生成质量\n\n除了数学推理和代码生成等\n\ndomain-specific\n\n任务之外，论文还进一步评估了\n\nFusionRoute\n\n在通用场景下的整体生成质量。为此，论文在\n\nPerfectBlend\n\n测试集上随机采样\n\n500\n\n条\n\nprompt\n\n，让各方法生成不超过\n\n300\n\n个\n\ntoken\n\n的回答，并使用\n\nGPT-4o\n\n进行\n\npairwise\n\n比较，以\n\nFine-tuned Model\n\n的回答作为参照计算\n\nwin rate\n\n。实验结果表明，\n\nFusionRoute\n\n在通用数据集上依然能够优于微调模型以及其他协作方法，说明其能够融合不同\n\nexpert\n\n的能力，能够在混合场景下生成更加高质量且更自然的回答。\n\n另一个有趣的现象是在不同模型规模之间的对比上。在更大的\n\n8B Llama-3\n\n家族上，\n\nFusionRoute\n\n相对基线的优势显著扩大，而其他\n\ntoken-level\n\n协作方法（如\n\nCollab\n\n）和\n\nsequence-level\n\n选择方法反而出现明显退化；而在\n\n2B\n\n的\n\nGemma-2\n\n家族上，纯专家选择类的方法表现尚可。这说明随着模型容量上升，\n\n\"\n\n纯粹从专家中挑一个\n\n\"\n\n的范式变得越来越脆弱\n\n——\n\n专家越强，候选之间的细微差别越难仅凭外部\n\nreward\n\n区分出来；而\n\nrouter\n\n提供的补充生成机制能够更充分地利用额外的表达能力，把模型容量真正转化为协作质量。换句话说，\n\nFusionRoute\n\n的设计哲学在更强的底座上反而更具优势。\n\n意义\n\nFusionRoute\n\n的核心贡献可以从几个层面来看。\n\n在方法层面\n\n，\n\nFusionRoute\n\n首次将\n\n\"\n\n专家选择\n\n\"\n\n与\n\n\"\n\n补充生成\n\n\"\n\n统一在同一个轻量级\n\nrouter\n\n模块中。以往的多\n\nLLM\n\n协作要么是\n\nsequence-level\n\n的粗粒度融合，要么是\n\ntoken-level\n\n但纯粹基于选择的方案\n\n——\n\n前者效率低、粒度粗，后者依赖专家在每一个\n\ntoken\n\n上的正确性，鲁棒性不够。\n\nFusionRoute\n\n让\n\nrouter\n\n同时承担\n\n\"\n\n指挥\n\n\"\n\n和\n\n\"\n\n补位\n\n\"\n\n两个角色，既保留了\n\ntoken-level\n\n的细粒度优势，又通过补充\n\nlogits\n\n修正专家在不擅长场景下的输出，从根本上提升了协作系统的稳定性。\n\n在理论层面\n\n，论文给出了一个对该方向具有指导意义的结果\n\n——\n\n在仅有\n\nsingle policy coverage\n\n的合理假设下，纯粹依赖专家选择的\n\ntoken-level\n\n协作存在本质上的不可识别性，无法保证恢复出近似最优策略。这一不可能性结果解释了过去\n\ntoken-level\n\n方法在实践中表现不稳定的根源，也从理论上论证了\n\nrouter\n\n作为补充生成器的必要性\n\n——\n\n在加入补充\n\nlogits\n\n之后，最终策略的可表达策略类被显著扩张，从而能够在更弱的假设下恢复近似最优。\n\n在工程层面\n\n，\n\nFusionRoute\n\n既不要求各专家模型结构同构，也无需对专家进行任何额外的梯度更新，仅需训练一个轻量级\n\nrouter\n\n，就可以将一组现成的、结构异质的领域模型组装成一个综合能力更强的系统。这种\n\n\"\n\n即插即用\n\n\"\n\n的设计在实际部署中具有重要意义\n\n——\n\n当一个新的领域专家出现时，可以快速纳入协作框架，而无需推倒重训整个系统。\n\n最重要的是，这些性能提升并不依赖于对\n\nexpert\n\n模型的额外微调，而是通过更高效的推理协作机制实现的。这表明\n\nFusionRoute\n\n能够在保持较低额外成本的前提下，充分挖掘多模型之间的互补能力，从而实现更强的综合表现。沿着这一方向，多个专门化小模型的协作正在成为通用大模型之外一条具有现实价值的技术路径。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-07_ICML 2026｜FusionRoute：从专家路由到自我修正，一种新的多LLM协作范式_机器之心.md"}, {"title": "砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞", "source": "InfoQ", "digest": "砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞", "link": "", "content": "---\npublish_time: 1780798500\n---\n\n# 砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞\n\n> 原文链接：https://mp.weixin.qq.com/s/LKYfpvLn1tOsRF49Quds0A\n> 公众号：InfoQ\n\n作者丨 Joab Jackson\n\n译者丨明知山\n\n策划丨 Tina\n\n正如 Uber 和微软 COO 最近所领教的那样，鼓励公司工程师积极使用 AI 可能会带来巨额账单，甚至可能抵消裁员带来的所有收益。\n\n不过 Netflix 的 AI 账单或许不会那么触目惊心，这要归功于公司的高级工程师 Tejas Chopra，他开发了一款软件，可以在指令到达大语言模型之前，以词元为单位对智能体指令进行精简。\n\nChopra 估计，高达 90% 的词元对于你所选择的模型来说都是冗余的。\n\n尽管这并非 Netflix 的正式项目，但公司内部已有多个团队在使用 Headroom（https://github.com/chopratejas/headroom），不少外部项目也依赖它。\n\n在近期的开源峰会上，Chopra 表示，Headroom 已为用户节省了约 70 万美元，这些用户可以将节省的 2000 亿词元用在其他地方。\n\n对于一个今年 1 月份才发布的开源应用来说，这样的成绩已经相当不错了。Headroom 目前仍处于较为初级的 v0.22 版本，已在 GitHub 上收获 2000 个星标，被复刻超过 120 次。\n\n“我们的很多用户都是那些真正被词元成本灼伤过的人，”Chopra 在演讲中说道。\n\n无损上下文压缩\n\n一笔来自 Claude Sonnet 的 287 美元账单让 Chopra 第一次留意到词元成本优化的问题。\n\n这笔账单是典型的个人项目开销：一些调试、一些重构、MCP 工具查询数据库。当时，Claude Sonnet 按词元计价的收费标准看似十分划算：每百万输入词元收费 3 美元，如果超出上下文窗口的 20 万词元限制，每百万收费 6 美元。即便资费单价不高，最终费用还是一路累积到了 287 美元。\n\n仔细检查后，Chopra 发现传输给大模型的数据里存在大量冗余内容。整体来看，他手动编写的指令并非开销偏高的元凶，真正的问题在于附带的各类样板代码与机器元数据：冗余繁琐的 JSON 结构、API 返回内容里层层嵌套的模板、大量重复的数据库字段。\n\n“这并非散文创作，也不是创意写作，而是伪装成文本的可压缩数据，”Chopra 在一篇介绍这款软件的博客文章中写道。2025 年，一组研究人员发现，读取用户输入约占所有词元消耗的 76%。\n\n模型厂商也提出了自己的词元成本优化工具。但迄今为止，这些工具的设置对终端用户来说有些晦涩难懂。默认情况下，Claude 的前缀缓存设置仅为 5 分钟，闲置 5 分钟不活动，整个上下文窗口都需要刷新，即使大模型需要的数据是完全一样的。接口文档里还标注了一小时的生存时间（TTL）配置，但这里暗藏陷阱。“你的写入成本要翻倍才能换来读取时 90% 的节省，”Chopra 告诉听众。找到最佳平衡点只能靠你自己了。\n\n市面上也出现了不少新的商用“词元精简工具”，比如获得 Y Combinator 投资的 Token Company（https://thetokencompany.com/），提供词元压缩即服务。开源领域则有 RTK（Rust Token Killer，https://www.rtk-ai.app/），它修剪冗长命令的输出，比如对代码仓库的调用。另一个开源项目 LeanCTX（https://leanctx.com/） 是 RTK 的一个变体。\n\nChopra 承认这些工具都有用，但他设计 Headroom 的初衷是让操作内嵌在开发者的工作流中，而且它具备其他应用和服务都无法提供的功能：可逆压缩。\n\nHeadroom 会压缩所有输入用户上下文窗口的源材料——不仅包括对话历史，还包括日志、工具输出、文件、RAG 检索出的文档片段——在它们到达大模型之前。\n\n上下文窗口是单用户会话的固定存放空间。当下顶尖的模型正迅速将上下文窗口扩展至 200 万词元以上，同时容纳输入和输出。\n\n正如 Pope Leo 所言，这种慷慨是一把双刃剑。作为计量单位，单个词元大致相当于一个人类词汇。在按量计费模式下，塞入上下文窗口的内容越多，产生的费用也就越高。\n\n像吃豆人一样吃掉词元\n\nHeadroom 基于 Python 和 Node，作为代理形式（端口 8787）在工程师的设备上运行。用户在命令行界面对大语言模型进行包装（例如\n\nheadroom wrap codex\n\n），工具便会自动解析输入内容。\n\n虽然 Headroom 确实会压缩部分代码和人工指令，但它最擅长的是精简服务器日志（其中 90% 可以丢弃）、MCP 工具输出（70% 是冗余 JSON）、数据库输出和文件树（大量重复的元数据）。\n\nHeadroom 的第一步是一个叫作 CacheAligner 的过程，它只在已输入的内容中寻找发生变化的信息，只向大模型发送新增的内容，省去替换 KV 缓存内绝大部分未变动全文的操作。KV 缓存是 AI 供应商存储用户上下文窗口的缓存。\n\n“如果系统提示词里带有日期字段或是每轮会话都会自动变化的 UUID，每次调用都会出现缓存未命中的情况，”他向听众说道，“进而造成成本大幅飙升。”\n\n随后会经过路由处理识别数据类型，再发给对应的压缩器。抽象语法树（AST）压缩器负责压缩程序代码，JSON 压缩器、文档对象模型（DOM）压缩器则分别剔除冗余 JSON 与网页模板代码。\n\nHeadroom 还提供了一些精简处理器，它们读取文本或 JSON 输入，基于统计分析筛选有效内容。这些工具依靠反馈循环迭代优化压缩程度，根据模型调取原始未压缩提示词的频次来判断压缩是否过量或压缩不足。\n\n最后一步为 CCR（压缩缓存与读取），让大模型能够调取原始未压缩数据。这个过程会在数据压缩处打上标记，倘若大模型需要原始上下文，可通过 Headroom MCP 从用户本地设备拉取对应内容，原始数据统一存放在 Redis 或 SQLite 数据库中。\n\nChopra 坦言这个工具栈仍有待完善，特别是在测试准确性方面。这个难度应该不会很高，因为 CCR 存储了原始提示词，后续还可针对金融数据等特殊数据类型开发专属压缩器。\n\n音频、图像和视频同样需要做压缩处理（已有用户复刻项目用于视频解析）。Chopra 透露，相关项目 Headlight 即将开源。Headlight 将追踪每个词元的来源，这对于确保多模型工作的准确性来说可能特别有用。\n\n省一个词元就是赚了一个词元\n\n相关研究显示，合理管控词元用量既能节省开支，也有助于提升模型输出效果。\n\n智能体推送的上下文超出模型实际所需，不仅会大幅增加用户开销，还会导致大模型的生成效果变差。\n\n和人类一样，大模型在面对过多信息时也会出现判断混乱。斯坦福大学的一些学者发现，大模型更关注上下文窗口的开头和结尾，容易忽略中间部分。\n\n同样，来自数据集成商 Chroma 的一组研究人员推断，在参与测评的 18 款大模型里，“输入文本越长，模型输出稳定性就越差”。\n\n他们将这种现象称为“上下文腐烂”（Context Rot）。\n\n精简提示词还能降低响应延迟。Chopra 在演讲中提到 Headroom 的一位用户复刻了该软件用于语音交互应用。对于语音来说，即使是沉默也会产生词元。用户期望应用能够在 200 毫秒内做出响应，这样服务听起来才自然，因此这家公司正在使用 Headroom 最大限度地缩短延迟窗口。\n\n对于担忧数据中心能耗加剧全球变暖的人群来说，Headroom 算得上是一个好消息。更少的词元意味着更小的上下文窗口，也就是更少的能源消耗——当然前提是杰文斯悖论尚未生效，不然人们总会想出更耗能的办法去生成各类动画猫咪短片。\n\n原文链接：\n\nhttps://www.theregister.com/ai-ml/2026/05/31/netflix-wiz-creates-app-to-slash-ai-bills-then-open-sources-it/5248702\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n今日好文推荐\n\n“英伟达也缺算力！”顶尖 AI 研究员转投 xAI 内幕：谁 GPU 管够，就去哪里\n\nAnthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI 编程越进化越离不开真人兜底\n\n拒绝蒸馏！微软发布自研MAI-Thinking-1追平Claude Opus 4.6：完全从零训练，不沾任何第三方模型输出\n\nAnthropic冲刺IPO：Claude一个月烧掉客户5亿美元，却成了上市前最强广告", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-07_砍掉90%冗余词元，省下70万美元：Netflix开源工具狙击AI账单黑洞_InfoQ.md"}, {"title": "中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁", "source": "财联社AI daily", "digest": "中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁", "link": "", "content": "---\npublish_time: 1780837130\n---\n\n# 中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁\n\n> 原文链接：https://mp.weixin.qq.com/s/C4nFOgI68sjylaLxzRRSrg\n> 公众号：财联社AI daily\n\n文|\n\n田野 朱凌\n\n今日，2026年全国高考正式开考。首先祝愿全国的学子们旗开得胜，乘风破浪！\n\n今年上海高考作文考题如下：\n\n《科创板日报》分别使用\n\nDeepSeek V4、、字节跳动豆包13.6、阿里Qwen3.7、月之暗面Kimi2.6、OpenAI GPT-5.5、谷歌Gemini 3.5 Flash\n\n这六个中外的人工智能大语言模型当“考生”，完成今年的上海高考作文，与各位考生“一较高下”\n\n记者邀请了财联社行业主编、原中学语文教师田野，对每个大模型的答案进行了评分。\n\n在测评过程中，《科创板日报》记者由衷的感到：\n\nAI的进步太快了！在去年同样的高考作文测评中，还能发现一些明显的AI在写作中的毛病和瑕疵，但今年，几乎每个AI出手的都是“精品”。考虑到AI几乎都是在几秒钟之内完成的测试，更是让人惊叹AI的智能和迭代之快。\n\n虽然今年AI完成作文质量都很高，但是田野老师按照：1、审题是否恰当到位； 2、 标题是否切题；3、 行文是否逻辑清晰，论证充分；4、 文章中展示的作者的知识面与文采； 5、 是否少空话套好，更具“人味”，少“AI味”，这5个维度，给每篇作文进行了严格的评分。\n\n《科创板日报》测评结果评分结果为：\n\nDeepSeek与谷歌Gemini文章质量最高，获得66分，并列冠军; Kimi 63分，获得A等。\n\n豆包 61分；阿里Qwen 58分，获得B等。\n\n得分最低为OpenAI GPT，仅为 53分，列C等。\n\n需要说明的是：本次测评提示词完全一致，且均为一次性生成。测评分数也仅代表一家之言，感兴趣的读者也欢迎在文章后面留言，给出你们的分数。\n\n中外六大AI上海高考作文按得分从高到底如下，并附点评：\n\n▍DeepSeek\n\n《想象：拒绝驯服》\n\n诚然，科技以其磅礴之力重塑世界，亦悄然改写我们想象的天际线。然而，依我之见，当科技试图将想象“祛魅”，用算法与数据为其“定型”之时，我们更需一份清醒，一份守护，去拥抱文学那“复魅”的魔力，让想象的天马行空，挣脱科技的缰绳，重归那辽阔而自由的王国。\n\n科技的便利毋庸置疑。它让想象变得“触手可及”，轻点数键，瑰丽画卷便呈现眼前。昔日凡尔纳笔下万般艰难的海底两万里，今朝早已成为触手可及的深海观光项目，这是科技赋予想象的现实回响。然而，正如赫胥黎在《美丽新世界》中描绘的“快乐”乌托邦，科技一旦开始精准定义想象的版图与路径，一切便如同打磨光滑的镜子，虽明晰，却只能映照已知之物，再难容纳不可预知的流光溢彩。乔布斯以“Stay hungry, stay foolish”之姿，驱动苹果颠覆世界，与其说是在满足想象，不如说是在激发想象；然当科技巨头以精准算法为我们推送“猜你喜欢”的定制化信息时，我们每一次点击似乎都在印证预判，想象的空间悄然收窄，被无形地圈养。\n\n想象的本质，乃是人类精神对现实藩篱的傲然僭越。它不应是现实的苍白注脚，而应是无尽可能的源头活水。其核心，恰恰在于那份无法被“祛魅”的神秘感，一种引人探寻却又不可穷尽的“灵氛”。从屈原仰望苍穹发出《天问》的悠悠浩叹，到李白梦游天姥吟唱的“安能摧眉折腰事权贵”，正是这种对未知的敬畏与无尽的好奇，铸就了想象的灵魂。\n\n德国思想家本雅明曾慨叹机械复制时代艺术品“灵氛”的凋零，在科技高歌猛进的今日，想象的“灵氛”亦如风中残烛。科技能模拟星空的壮丽，却难以复制古人仰观宇宙时“日月之行，若出其中；星汉灿烂，若出其里”的壮阔情怀。那份源自灵魂深处的震颤与神秘，一旦被科技解剖、解构，想象便如失魂的画作，徒留色彩的堆砌。\n\n因此，欲在科技改造世界的洪流中守护想象的独立与丰饶，必须依靠文学的“复魅”之功。科技驱散迷雾，文学则重燃神秘。普鲁斯特在《追忆似水年华》中，借一块玛德莱娜蛋糕的滋味，开启了通往整个记忆宫殿的大门，展示了想象如何超越物理时间的禁锢，在心灵深处自由流淌。文学，正是这样一座迷雾缭绕的森林，永远诱惑着我们用想象去填补、去创造。它不提供标准答案，只呈现人性的万千气象，引领我们在语言与意象的迷宫中，完成一次次精神的华丽冒险。\n\n科技赋予我们改造世界的利剑，而文学滋养我们守护想象的火种。愿我们都能在科技理性的拥抱中，保持一份清醒的警惕，常怀一份诗意的追求，让想象如夜空中最自由的星子，不仅照亮科技前行的道路，更恒久守护我们精神家园的璀璨星空。\n\n得分：66分\n\n点评\n\n：DeepSeek审题精准，敏锐地抓住了科技对想象“祛魅”与文学“复魅”的核心矛盾。标题“拒绝驯服”四字明确有力，态度鲜明。行文逻辑严谨，先承认科技之便，再揭示其窄化想象的隐忧，继而阐释想象本质，最终以文学“复魅”为出路，赫胥黎、本雅明、普鲁斯特等例证环环相扣，论证缜密。行文知识面开阔，跨学科的引用贴切自如。语言富于文学色彩与个人气，读来有温度、有思考，整体文质兼美，\n\n唯个别处稍显晦涩，仍不失为一篇极为出色的佳作\n\n。\n\n▍Gemini\n\n《虚实之间，边界何在：当科技重塑我们的“想象之弦”》\n\n每个人都有一双望向星空的眼睛，那便是对世界的想象。古人面对一轮明月，想象出嫦娥奔月、吴刚伐桂的凄美神话；近代人面对无垠大海，想象出亚特兰蒂斯与未知大陆的神秘传说。这种想象，曾是人类在面对未知与匮乏时，用精神织就的华丽羽衣。\n\n然而，当科技以雷霆之势改造世界时，它不仅把过去的“想象”变成了现实，更如一把无形的刻刀，悄然改造着我们“想象”本身的方式与边界。对此，我们正站在一个前所未有的十字路口：科技究竟是拓宽了想象的疆域，还是正在将想象力本身“格式化”？\n\n不可否认，科技是想象力最强劲的“助推器”与“扩容盘”。在农耕时代，人类对宇宙的想象止于“天圆地方”；而射电望远镜、深空探测器的出现，将我们的想象力抛向了百亿光年外的黑洞与多元宇宙。当人工智能、虚拟现实技术拔地而起，想象不再只是脑海中飘渺的烟云，它可以在数字世界中被精准地建模、渲染、甚至“触碰”。科技给想象插上了理性的翅膀，让那些曾经被视为痴人说梦的幻想，拥有了落地的可能。它让我们敢于去想象一个超越碳基生命限制的未来，敢于去解构时间和空间的密码。\n\n然而，当我们沉浸于科技带来的视觉盛宴与认知飞跃时，一种隐秘的危机也悄然而至：科技在改造世界的同时，是否也正在给我们的想象力建立起一座精密的“信息茧房”？\n\n当算法比你更懂你的喜好，当生成式AI只需一秒就能为你具象化出任何场景，我们主动想象的肌肉似乎正在日渐萎缩。过去读《红楼梦》，一千个读者心中有一千个林黛玉，那是文字留白处给予想象力的无上自由；而如今，屏幕上高度逼真的3D建模和AI绘图，直接将标准答案喂到了我们嘴边。当科技把一切未知都“确定化”，把一切模糊都“高清化”，想象力便从一种“无中生有”的创造，沦为了一种对既有数据流的“排列组合”。我们失去了在黑暗中摸索的钝感力，也失去了对留白之美的感知力。\n\n更深层的思考在于，科技对想象的改造，正逐渐将其推向功利化与技术决定论的泥潭。现代人的想象，越来越多地被“效率”、“迭代”、“升级”等词汇所裹挟。我们想象未来的城市，往往是飞驰的悬浮车与冰冷的赛博朋克高楼；我们想象未来的医疗，往往是纳米机器人与长生不死的机械飞升。可是，那种关于诗意栖居的想象，关于人情温热的幻想，关于灵魂如何安顿的冥想，去哪儿了？当想象力失去了人文的底色，只剩下冷冰冰的技术参数，它便不再是人类精神的最高赞歌，而沦为了科技演进的奴隶。\n\n木心曾说：“从前的日色变得慢，车、马、邮件都慢。”那种慢，恰恰给予了想象力滋长的土壤。今天，科技让世界变快了，也让想象变得“即时可见”，但我们绝不能让想象变得“廉价”与“单一”。\n\n面对科技对想象的重塑，我们应当做技术的主人，而非数据的附庸。我们要利用科技提供的显微镜与望远镜去窥探更广阔的未知，但更要守住内心的那片“自留地”——保留对虚无的凝视，保留对残缺的欣赏，保留那些科技无法用0和1计算的、属于人类独有的浪漫与诗意。\n\n科技改造了世界，拓展了我们想象的起点；但决定想象终点的，永远应该是人类那颗带有温度的、自由搏动的心。莫让科技的钢筋水泥，囚禁了那根原本可以拨动整片星空的、属于人类的想象之弦。\n\n得分 66分\n\n点评：Gemini审题犀利，深刻剖析了科技对想象进行“格式化”的隐秘危机，直指人文精神在技术时代失落的困境。标题以“想象之弦”为核心意象，虚实相生，悬念感强。行文布局巧妙，从科技作为“助推器”到沦为“信息茧房”，再到功利化对想象的蚕食，层层递进，木心、《红楼梦》等例证精当贴切。作者知识面开阔，“想象力的肌肉萎缩”“莫让钢筋水泥囚禁想象之弦”等表述饱含忧思，几无套话与AI腔。\n\n全文思辨性思考与文学表达高度融合，堪称佳作。\n\n▍Kimi\n\n《望远镜与显微镜之间》\n\n古希腊哲人泰勒斯仰望星空时跌入深坑，侍女嘲笑他只顾天上而忽略了脚下。这个寓言流传了两千年，似乎暗示着想象与现实之间总有一道裂隙。然而当科技以望远镜将星河拉近、以显微镜将微尘放大时，我们突然发现：那道裂隙正在被技术填平，而填平裂隙的泥土，竟是从想象深处掘出的。\n\n科技改造世界，首先改造的是想象的空间维度。古人想象\"嫦娥奔月\"，那是基于神话的诗意跳跃；今人谈论火星殖民，却是建立在轨道计算与生物圈模拟之上的理性推演。科技将想象从云端拽回了大地，却又赋予它前所未有的翅膀。当伽利略的望远镜指向木星，他不仅发现了卫星，更在人类意识中打开了一个可测量的宇宙——想象不再只是\"飞流直下三千尺\"的夸张，而是\"光速每秒三十万公里\"的精确。从《山海经》的奇珍异兽到基因编辑的定制生命，从庄子的鲲鹏到SpaceX的星舰，科技将想象的边界从模糊推向清晰，从有限推向无限。\n\n然而，想象的质地也在科技的锻造中悄然改变。农耕时代的想象是浑圆的，如陶渊明笔下的桃花源，边界模糊而意蕴丰盈；工业时代的想象是线性的，如凡尔纳的《海底两万里》，每一个细节都对应着可预期的机械原理。到了数字时代，想象愈发呈现出算法的纹理——我们想象未来城市，首先想到的是数据流与物联网；我们想象人际交流，下意识勾勒的是界面与交互逻辑。科技像一位严格的编辑，不断删改想象中那些不合\"物理法则\"的章节，代之以可验证、可复现、可量产的段落。这种改造是深刻的：它让想象从一种朦胧的渴望，变成了一种可执行的蓝图。\n\n但这里潜藏着一种危险。当科技将一切想象都转化为\"可行性研究\"时，想象本身可能正在失去其最珍贵的特质——那种超越现实的否定性力量。倘若所有的想象都必须经过技术的海关检验，倘若每一个奇思妙想都要先问\"能不能落地\"，那么想象便沦为技术的附庸。赫胥黎在《美丽新世界》中警示的，正是这种被技术规训的想象力：当感官电影替代了诗歌，当索麻药丸消解了追问，人类将生活在一个\"什么都得到满足，却什么都不再重要\"的牢笼中。科技改造想象，不应是将想象力修剪成盆景，而应是提供一片更丰饶的土壤。\n\n真正的智慧，在于认清科技是想象的工具而非主人。望远镜让我们看得更远，但选择望向何方的，仍是那双眼睛；显微镜让我们看得更细，但决定观察什么的，仍是那颗心灵。爱因斯坦曾说：\"想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切。\"这句话在科技时代更应被重新诠释：知识（科技）为想象提供了脚手架，但建筑本身的设计图，必须来自人对意义的追问。当AI可以生成图像、撰写诗歌时，人类的想象恰恰应该转向那些算法无法触及的幽暗之地——转向对孤独的理解，转向对正义的渴求，转向对\"我是谁\"的永恒困惑。\n\n站在望远镜与显微镜之间，我们这一代人需要一种\"双重视力\"：既能用科技的精度丈量世界，又能用人文的温度守护想象的野性。让火箭承载神话的余韵，让芯片流淌哲学的血液，让虚拟现实保留一片不可计算的诗意留白。如此，科技改造世界时，改造的才不是想象的囚笼，而是想象的边疆——在那片边疆上，人类依然是自己精神国土的立法者。\n\n得分：63分\n\n点评：Kimi审题准确，以“望远镜”与“显微镜”比喻科技的双重面向，从拓展与规训两个维度辩证思考想象力的当代处境，立意富有哲学意味。标题设喻精妙，暗含观察的两极，切题而耐人寻味。行文由泰勒斯寓言从容起笔，继而从空间维度、想象质地到潜在危险层层推进，最终以“双重视力”收束全篇，逻辑绵密，爱因斯坦、赫胥黎等引用，也显示了知识面。作者在哲学、科学史与文学之间游走自如，《山海经》《美丽新世界》等素材信手拈来。\n\n唯个别处稍偏学术化，略欠情感的直击力。\n\n▍豆包\n\n《被重塑的想象，未被限定的未来》\n\n当古人仰望星空，想象嫦娥奔月、玉兔捣药时，他们的想象被神话与诗意包裹；当今天的我们凝视同一片星空，想象的却是火星基地、星际移民、黑洞旅行。科技不仅改变了我们脚下的世界，更重塑了我们头顶的想象星空。它既是拓展想象边界的翅膀，也在悄然塑造着我们思考未来的方式。\n\n科技打破了想象的桎梏，将曾经的“天方夜谭”变为触手可及的现实，进而催生出更宏大的想象。凡尔纳在《海底两万里》中描绘的鹦鹉螺号，在19世纪是惊世骇俗的幻想，如今核潜艇已成为大国重器；他笔下的登月旅行，也在1969年变成了人类的足迹。科技的每一次突破，都在为想象提供新的坐标系。望远镜让我们看到了百亿光年外的星系，于是我们开始想象宇宙的起源与终结；显微镜让我们窥见了细胞与基因的奥秘，于是我们开始想象生命的编辑与延长；互联网让全球数十亿人瞬间连接，于是我们开始想象元宇宙中数字与现实的交融。科技让想象不再是无根之木，而是建立在科学原理之上的大胆探索。\n\n科技不仅拓展了想象的广度，更改变了想象的质地。从前的想象多是对自然力量的敬畏与神化，充满了浪漫主义的色彩；而现代的想象则更多是对科技力量的运用与掌控，带着理性主义的光芒。古人想象“千里眼”“顺风耳”，是赋予神仙超凡的能力；而我们今天想象量子通信、脑机接口，是基于对物理规律和神经科学的理解。这种转变让想象从“空中楼阁”变成了“施工蓝图”。马斯克的火星移民计划，不是虚无缥缈的幻想，而是有着明确技术路线和时间表的工程；OpenAI的通用人工智能愿景，也不是科幻小说的情节，而是无数科学家正在攻克的难题。科技让想象拥有了改变世界的力量，让“不可能”一步步变成“可能”。\n\n然而，我们也需警惕科技对想象的潜在束缚。当我们的想象越来越被科技的逻辑所主导，会不会失去了那些天马行空、不切实际的创造力？如今的科幻作品中，充斥着AI反叛、星际战争、赛博朋克的叙事，我们似乎很难再想象出一个没有科技的未来，或者一种与现有科技路径完全不同的文明形态。算法推荐更是在无形中窄化了我们的视野，让我们只看到自己感兴趣的内容，进而限制了我们想象的多样性。当我们习惯了用科技的视角看待一切，会不会忘记了想象本身还应该有诗意、有温度、有人文的关怀？\n\n真正伟大的想象，从来不是科技的附庸，而是科技与人文的共生。科技为想象提供了翅膀，而人文为想象指引了方向。刘慈欣的《三体》之所以震撼人心，不仅因为它有着基于硬核科学的宏大想象，更因为它探讨了人类文明的命运与人性的复杂。我们既可以想象火星上的城市如何运转，也可以想象那里的人们如何传承地球的文化；既可以想象AI如何提高生产效率，也可以想象如何让AI服务于人类的幸福，而不是取代人类。\n\n科技改造着世界，也改造着我们的想象，但它永远无法限定想象的边界。因为想象是人类最宝贵的天赋，它源于我们对世界的好奇，对未来的渴望。在科技飞速发展的今天，让我们以科技为翼，以人文为帆，在想象的星空中自由翱翔，去创造一个更加美好的未来。\n\n得分：61分\n\n点评：豆包审题清晰，准确把握了科技拓展想象边界与潜在限定想象方式的双重性，结尾以人文指引收束，立意周正。标题对仗工整，“重塑”与“未限定”形成张力。行文脉络分明，从拓展广度、改变质地到警惕束缚层层推进，凡尔纳、马斯克等例证典型贴切，虽部分分析稍显平直，整体逻辑仍清晰。知识面较广，覆盖科技史与当代前沿。不过，\n\n“以科技为翼，以人文为帆”等处稍露套话痕迹，科技“打破了想象的桎梏“为败笔。\n\n整体而言，这是一篇四平八稳的扎实之作，胜在逻辑清晰、结构稳妥，需在思想深度与语言个性上再进一步。\n\n▍Qwen\n\n《在科技的星海中守护想象的灯塔》\n\n科技如一把神奇的钥匙，开启了人类改造世界的大门。从石器到人工智能，从烽火传信到量子通信，科技不断突破现实的边界，将曾经的“不可能”变为触手可及的真实。然而，当科技重塑世界的同时，它也悄然重塑着我们对世界的想象——这不仅是认知边界的拓展，更是一场关乎人类精神本质的深刻变革。在这场变革中，我们既要拥抱科技带来的想象跃迁，亦需警惕其可能带来的思维异化，守护人性中那盏不灭的想象灯塔。\n\n科技将“不可想象”变为现实，为人类想象注入前所未有的活力。古时嫦娥奔月的传说，今日化作航天器登陆月球的壮举；昔日千里眼、顺风耳的幻想，如今化为高清摄像头与5G网络的普及。每一次科技突破都在撕开认知的茧房，让想象在更广阔的天地间翱翔。正如《周易》所言：“穷则变，变则通，通则久。”科技之“变”为想象开辟了新航道，从元宇宙到基因编辑，从脑机接口到可控核聚变，人类对未来的描摹早已超越过往的维度。科技赋予想象以力量，使其不再局限于乌托邦式的空谈，而成为可触摸、可实践的蓝图。\n\n然而，科技对想象的改造并非全然是解放。当算法编织的信息茧房将我们困于“舒适圈”，当标准化、效率至上的技术逻辑渗透思维，我们的想象正悄然经历一场“窄化”危机。曾经天马行空的诗意幻想，可能被简化为对技术参数的追逐；对生命意义的深邃叩问，可能被消解为数据模型的解码。当人们沉溺于短视频中碎片化的“奇观”，对世界本质的哲思与超越性想象正逐渐流失。科技本是工具，却可能异化为思维的牢笼，让想象沦为技术的附庸。\n\n因此，在科技浪潮中守护想象的主体性，是时代赋予我们的使命。想象不应是科技的镜像，而应是引领人类向善的航标。爱因斯坦曾坦言：“想象力比知识更重要，因为知识是有限的，而想象力概括着世界的一切。”真正的想象，应如达芬奇般既有解剖刀的精密，又有飞鸟翱翔的浪漫；如《哪吒》导演饺子颠覆传统叙事，用东方美学重构神话宇宙。唯有以人文精神为锚点，以伦理道德为边界，才能让想象在科技洪流中保持其超越性与批判性，避免沦为技术的傀儡。\n\n站在文明的长河中回望，从甲骨文的刻痕到量子比特的跃动，每一次科技革新都在重塑想象，而每一次想象的飞跃又催生新的科技。科技与想象如同双螺旋结构，彼此缠绕，共同推动人类向上攀登。在AI绘画颠覆艺术边界、脑机接口挑战意识本质的今天，我们更需以清醒的自觉守护想象的自由——那是人类区别于算法的神性，是超越技术桎梏的永恒火种。\n\n当科技之舟驶向星辰大海，愿我们永不熄灭心中那盏想象的灯塔。唯有如此，人类方能在改造世界的同时，守护灵魂深处那片永不沉沦的星空。\n\n得分：58分\n\n点评：Qwen审题准确，准确把握了科技拓展想象与窄化想象的核心矛盾，以人文精神守护想象自由的主旨贯穿始终，立意中正而清楚。标题以“星海”与“灯塔”设喻，意象得当，虽略偏抒情，却与文章内容自然契合。《周易》、爱因斯坦、饺子导演等例证丰富多元。稍显遗憾的，是部分段落转折略显生硬。语言流畅而有气势，但“想象灯塔”“灵魂星空”等表述出现频次略高，稍带模板感。\n\n整体上，文章求新求变处稍有不足。\n\n▍ChatGPT\n\n《想象力的变革：科技如何塑造我们的世界观》\n\n每个人都有属于自己的世界——那是心中流淌的想象，是现实之外的无限可能。古往今来，人类对世界的理解，往往与想象力密不可分。童年的纸飞机、科幻小说里的星际航行、画家笔下的奇异城市……这些或奇幻、或荒诞的画面，都是想象力的产物。然而，进入科技高速发展的时代，我们的想象也被改造了——既被科技拓展，又在某种程度上被框定。科技改变世界，也在悄然重塑我们的想象。\n\n首先，科技赋予了想象更为广阔的可能性。人工智能、虚拟现实、基因编辑……这些曾经只存在于科幻作品中的技术，如今逐渐走进现实。曾经我们只能在脑海中描绘无人驾驶汽车的场景，而今它们行驶在街头，成为日常生活的一部分；曾经我们幻想通过脑机接口与计算机直接交流，而今科研人员正进行初步实验。科技像一把钥匙，打开了想象的大门，使我们能够把抽象的幻想转化为可感知的现实。换言之，科技不仅丰富了世界，也丰富了我们对世界的想象——它让“不可思议”不再遥远，让思想的翅膀可以翱翔得更高、更远。\n\n然而，科技也在某种程度上限制了想象的自由。每一次技术的普及，都可能带来思维的标准化。我们习惯于用现有技术来预测未来，于是脑海中的世界常常被“技术可能性”所框定。例如，面对人工智能，人们往往首先想到的是机器取代人类劳动、智能家居的便利，甚至是科幻电影里的“机器统治”，而很少去设想完全不同于现实的世界运作方式。这种现象表明，当科技成为想象的参照物时，想象力可能会失去原本的跳脱力，被现实的边界所束缚。科技像一面镜子，映照出世界的可能性，但也可能让我们停留在已有经验的投影中。\n\n在我看来，科技与想象力的关系是一种“双向塑造”的过程。科技让想象更生动、更具体，而想象则反过来引导科技的发展。许多科学家和工程师之所以敢于突破常规，正是因为他们心中有一个清晰、甚至超现实的想象。人类的航天探索、人工智能研究、量子计算突破，无不源自对未来的大胆设想。想象力激发创新，而科技的实现又让更多人见证了“想象变为现实”的奇迹，这种互动不断推动社会进步。\n\n同时，我们也需要保持对想象自由的警觉。科技的力量不可小觑，但真正有价值的想象力，必须超越工具和技术本身。它不仅关心“能否实现”，更关注“为何存在”和“如何更美好”。例如，在元宇宙的发展中，我们不仅可以通过虚拟现实创造奇妙世界，也应思考如何让这些世界服务于人类的精神成长，而非仅仅成为娱乐的工具。想象力的终极使命，不只是描绘可能性，更是塑造意义。\n\n科技与想象的关系，正如河流与天空的互动。河流奔腾向前，拓展疆域；天空辽阔无边，赋予河流方向。科技为想象提供工具和条件，想象为科技指明方向和意义。唯有二者和谐共振，我们才能既不被现实束缚，也不被幻想迷失，而是在真实的世界中创造属于人类的美好未来。\n\n总而言之，科技改变世界，也在塑造我们的想象。它让幻想变得触手可及，也可能让思维受限。面对科技带来的变革，我们既要拥抱它带来的无限可能，也要保持独立而自由的想象。只有这样，科技与想象才能相互成就，让我们的世界更加宽广，而我们的心灵更加自由。\n\n得分：53分\n\n点评：GPT审题基本切题，能围绕科技对想象力的双向影响展开论述，但重心略显偏移，更侧重“世界观”的塑造而非“想象本身”的改造，审题尚欠精准。标题平实清楚，点明主题却少了几分抓人的力量。行文结构平稳，从拓展、限制到双向塑造、保持警觉，层次分明，但论述中规中矩，对无人驾驶、元宇宙等例证的分析流于表面，未能深挖出更独到的见解。\n\n语言通顺但套话偏多\n\n，“思想的翅膀”“双向塑造”等表述带有较明显的通用议论文腔调。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-06-07_中外六大AI出战上海高考作文！记者实测DeepSeek与谷歌Gemini夺魁_财联社AI daily.md"}, {"title": "AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移", "source": "InfoQ", "digest": "AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移", "link": "", "content": "---\npublish_time: 1780798500\n---\n\n# AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移\n\n> 原文链接：https://mp.weixin.qq.com/s/EHp4a1mkGeGGO0mlWStXYQ\n> 公众号：InfoQ\n\n作者 ｜ Craig Risi\n\n译者 ｜ 明知山\n\n云原生计算基金会（CNCF）近期 重点介绍 了一种全新的 AI 辅助迁移方案，该方案可帮助工程师在约 30 分钟内将 60 个 ingress-nginx 资源迁移至 Higress，充分展示了 AI 在 Kubernetes 网络与网关基础设施现代化进程中日益广泛的应用。这一迁移过程在 CNCF 最新发布的 技术博客 中有详细讲解，也直观展现出 AI 工具能够大幅降低 Kubernetes 入口与 API 网关迁移工作原本所需的操作成本，同时有效规避迁移风险。\n\n该项目致力于将工作负载从 ingress-nginx 迁移至 Higress。Higress 是一个基于 Envoy 构建的开源 API 网关，专为 AI 原生和云原生环境设计。据文章介绍，此次迁移实现了入口资源、注解、路由配置及策略定义的自动转换，同时保持了兼容性并最大程度缩短了停机时间。AI 的应用大幅提升了迁移效率，而以往这类迁移往往需要耗费大量精力开展手动核验、YAML 改写与反复测试。\n\n在 Kubernetes 环境中，入口与网关迁移向来难度颇高，网络规则、流量策略、认证体系和服务路由往往会随着时间推移与应用程序的运行逻辑深度交织。即便是规模较小的基础设施调整，也可能造成服务中断、路由异常或安全策略不统一等问题。\n\nCNCF 博客介绍，AI 辅助迁移被用于分析现有的 ingress-nginx 配置，识别等效的 Higress 结构，并自动生成更新后的清单文件。工程师只需对生成的配置进行验证和优化，无需手动从头搭建整套环境。这不仅降低了迁移复杂度、减少操作风险，还大幅压缩了整体耗时。\n\n以往，Kubernetes 迁移高度依赖人工操作，团队需要细致地在不同的控制器、API 及基础设施平台之间转换配置。AI 辅助基础设施工具的出现正在改变这一现状，让迁移工作更多转变为配置转换与核验工作，而非完全从零重建。\n\nHigress 迁移案例展现了大语言模型与 AI 辅助工具如何理解基础设施诉求、完成功能兼容映射，并自动生成基础设施定义。这一过程并非为了取代工程师，而是将人力工作重心转向验证、治理以及特殊场景的处理。\n\n这次迁移反映了 Kubernetes 生态系统中的一个更广泛的趋势：利用 AI 简化操作复杂性。Terraform、Pulumi 等基础设施平台，以及 Platform Engineering Labs 等新兴系统，正越来越多地将 AI 辅助配置生成、基础设施发现和迁移工具整合到其平台中。\n\n与此同时，云服务商与平台厂商也在大力投入 AI 驱动的运维自动化建设。谷歌云 和 微软 Azure 均已扩展了面向 Kubernetes 和云基础设施的 AI 辅助管理能力。Istio 和基于 Envoy 的网关技术也在不断演进，朝着更加策略驱动和自动化的网络模型发展。纵观整个行业，方向日益明确：基础设施工具正从静态配置管理转向能够自动理解和转换基础设施意图的系统。\n\nCNCF 的文章还强调，AI 工具在 Kubernetes 生态系统中正变得尤为宝贵，原因在于现代平台团队需要管理的运营规模极为庞大。网络、安全、可观测性、入口控制和服务路由通常涉及数千个相互关联的 YAML 资源，分布在不同的集群和环境中。\n\n通过自动化翻译和兼容性分析，AI 辅助迁移工具可以帮助组织更快地实现基础设施现代化，同时降低发生人为错误的可能性。然而，文章也强调了人工监督的重要性，尤其是在安全策略、流量管理和生产验证方面，因为平台之间的细微差异可能会带来严重的运维问题。\n\n最终，从 ingress-nginx 到 Higress 的迁移再次印证了 AI 正在重塑平台工程与云原生运维模式。过去需要数天乃至数周的专业人工操作，如今依靠 AI 辅助工具处理大量重复性转换工作，短短数小时便可完成。\n\n查看英文原文：\n\nhttps://www.infoq.com/news/2026/05/ai-nginx-higress/\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\n“英伟达也缺算力！”顶尖 AI 研究员转投 xAI 内幕：谁 GPU 管够，就去哪里\n\nAnthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI 编程越进化越离不开真人兜底\n\n拒绝蒸馏！微软发布自研MAI-Thinking-1追平Claude Opus 4.6：完全从零训练，不沾任何第三方模型输出\n\nAnthropic冲刺IPO：Claude一个月烧掉客户5亿美元，却成了上市前最强广告", "category": "国内", "is_model_related": false, "source_file": "sources/2026-06-07_AI 辅助迁移工具：数分钟完成 ingress-nginx 向 Higress 迁移_InfoQ.md"}, {"title": "重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw", "source": "机器之心", "digest": "重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw", "link": "", "content": "---\npublish_time: 1780798246\n---\n\n# 重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw\n\n> 原文链接：https://mp.weixin.qq.com/s/3NpB4iDCpGO21wFendiQcQ\n> 公众号：机器之心\n\n2026 年，国产视频生成模型频频出圈，在视频生成模型快速迭代的今天，生成一个 5 秒至 15 秒视频让人惊艳的画面片段已经不再新鲜。然而，\n\n能不能从一句简单想法出发，自动生成剧情流畅完整、主体和场景一致的长视频？\n\n受视频大模型生成时长限制，现有 AI 长视频生成需分段独立创作，因缺失跨片段的约束机制，导致生成视频存在人物、场景及叙事跨片段不一致的问题；同时依赖人工微调提示词，存在生成效率低、成本消耗大的核心瓶颈。因此，\n\n如何构建长程、统一的跨片段时空约束机制，实现连贯一致的长视频生成，是亟待解决的关键科学、\n\n技术和工程\n\n难题。\n\n早在 2023 年大模型快速发展期，哈工大张民教授立知大模型团队已开展多模态大模型驱动的视频内容创作智能体研究，并全球首发开源了电影制作智能体 FilmAgent\n\n与动画片生成智能体 Anim-Director，\n\n受到国内外智能体研究者与文艺创作者的广泛关注。\n\nFilmAgent 项目链接：https://github.com/HITsz-TMG/VideoClaw/tree/main/FilmAgent\n\nAnim-Director 项目链接：\n\nhttps://github.com/HITsz-TMG/Anim-Director)\n\n三年来，哈工大张民团队与阿里巴巴深入合作，在大模型视频创作领域稳步迭代，已发表 3 篇 SIGGRAPH、3 篇 ACL 等学术成果，多款开源工具陆续落地。\n\n第一代技术方案是基于\n\n大模型与工具深度交互\n\n范式，并开源了 ComfyUI-Copilot、FilmAgent、Anim-Director 等视频生成框架，覆盖 3D 虚拟环境、工作流辅助、动画片创作等场景，主打视频创作流程自动化与效率提升。\n\n视频内容创作智能体技术演进脉络\n\n近几日，哈工大团队联合阿里巴巴正式推出\n\n第二代多智能体高效协作视频生成框架\n\n，全面突破能力和效率边界，Pixelle-Video 实现基于 ComfyUI 平台的全自动短视频生成；全新长视频创作框架 VideoClaw 支持短剧制作与剧情无限续写，解锁无限长视频创作能力。面向长视频生成的 AI 视频创作系统\n\nVideoClaw\n\n致力于将复杂的视频生成任务拆解为\n\n可观察、可干预、可迭代的视频生产线\n\n。\n\nVideoClaw (1.3K⭐): https://github.com/HITsz-TMG/VideoClaw\n\nComfyUI-Copilot (5.2K⭐): https://github.com/AIDC-AI/ComfyUI-Copilot\n\nPixelle-Video (20.8K⭐): https://github.com/AIDC-AI/Pixelle-Video\n\n多智能体协作：从创意到可执行的影视流水线\n\nVideoClaw 将长视频生成拆解为一套\n\n多智能体协作流程\n\n：用户只需要输入一句灵感或故事梗概，系统便会调度由大模型驱动的 “数字化剧组”，依次完成剧本扩写、角色与场景设定、分镜规划、关键帧构图、视频分段生成、音频合成与后期拼接等任务。\n\nVideoClaw 框架图\n\n相比传统黑盒式视频生成，VideoClaw 将复杂任务拆成多个\n\n可见、可控、可回溯\n\n的生产环节，每完成剧本、角色场景、分镜等阶段，系统默认暂停并展示阶段性产物，让创作者能在关键节点介入修改。除了提供功能完备的\n\nWebUI\n\n供创作者进行精细化调整外，VideoClaw 支持集成至\n\n微信、飞书\n\n等日常通讯软件来调用。\n\n场记库与长程上下文：\n\n支撑连贯叙事和视觉一致\n\n长视频生成困难的地方并不只是时长，而是如何让剧情、人物、道具和场景在多个镜头之间保持一致。因此，VideoClaw 引入了多阶段上下文管理机制，构建类似\n\n「场记」的状态库\n\n，将角色关系、空间位置、场景分镜和版本信息等沉淀为可复用的结构化资产，为后续生成提供参考约束。\n\n场记状态库示意图\n\n借助这种显式状态管理，VideoClaw 能够\n\n支持故事\n\n的无限续写\n\n，让视频一段接一段地延展，剧情冲突自然升级，人物互动基于已有情节继续推进。\n\nVLM 闭环质检：迭代质量优化机制\n\nVideoClaw 将视觉语言模型（VLM）嵌入视频生成的关键流程中，在图片、关键帧和视频片段等中间产物生成后启动\n\n审查\n\n：一方面比对画面内容是否符合剧本设定和分镜要求，另一方面检查人物、场景和叙事逻辑是否出现偏移。\n\n迭代质量优化机制示例\n\n在具体执行中，系统可为同一创作任务并行生成多个候选版本，并由 VLM 进行\n\n多维度综合评估\n\n，筛选出最符合要求的结果。若所有候选版本都未达到预设质量阈值，VLM 会进一步输出具体的诊断报告，例如人物或场景不一致，并据此\n\n触发回溯与重新生成\n\n。\n\nVideoClaw 生成视频案例\n\nVideoClaw 支持多种安装方式，满足不同开发者和用户的需求，覆盖 Linux/Mac/Windows 快速安装、前端页面支持、OpenClaw 自动配置、以及 ClawHub 安装。\n\n案例 1：影视二创\n\n为《给阿嬷的情书》电影二创完美结局：在另一个时空，木生归乡，与淑柔相守一生，终得圆满。\n\n视频以蒙太奇串联半生岁月：木生带信归家与淑柔、孩子相拥，一家三口乘车合影；骑车画面随蒙太奇岁月流转，二人暮年收到南枝寄来的家书与腊肉。镜头切换，南枝异地写信渐老，最后归来相聚院中晒木棉。\n\n案例 2：写实短剧\n\n输入剧情描述：程序员男主之前天天被老板 PUA，最后惨遭裁员。后来用 OpenClaw 创建一人公司，翻身收购原老板公司。\n\n根据上述描述生成了 6 集的短剧，此处展示第一集，后续集数逐渐满足描述中的剧情。此后，VideoClaw 额外续写两集内容，生成的剧情聚焦 OpenClaw 衍生的网络安全隐患与行业规范管控问题。\n\n案例 3：科幻漫剧\n\n输入文件为刘慈欣《乡村教师》小说。根据该小说生成了 5 集漫剧，此处展示第一集。\n\n总结与展望\n\nVideoClaw 是一套流程可控、支持迭代的多智能体长视频创作框架。从团队初代工作流提效工具 ComfyUI-Copilot，到第二代日常短视频制作工具 Pixelle-Video 和长视频一键创作工具 VideoClaw，该系列方案不仅验证了智能体驱动影视创作的落地路径，也实现了从流程辅助提效到全链路智能化生成的升级。该系列开源项目的发布，为行业带来了一套开箱即用的视频生产智能体框架，期望助力 AI 视频生成与多模态创作领域的研究与应用发展。\n\n参考文献\n\n[SIGGRAPH Asia 2024] Zhenran Xu, Longyue Wang, Jifang Wang, Zhouyi Li, Senbao Shi, Xue Yang, Yiyu Wang, Baotian Hu, Jun Yu, Min Zhang. FilmAgent: Automating Virtual Film Production Through a Multi-Agent Collaborative Framework.\n\n[SIGGRAPH Asia 2024] Yunxin Li, Haoyuan Shi, Baotian Hu, Longyue Wang, Jiashun Zhu, Jinyi Xu, Zhen Zhao, Min Zhang. Anim-Director: A Large Multimodal Model Powered Agent for Controllable Animation Video Generation.\n\n[ACL 2025] Zhenran Xu, Xue Yang, Yiyu Wang, Qingli Hu, Zijiao Wu, Longyue Wang, Weihua Luo, Kaifu Zhang, Baotian Hu, Min Zhang. ComfyUI-Copilot: An Intelligent Assistant for Automated Workflow Development.\n\n[SIGGRAPH Asia 2025] Haoyuan Shi, Yunxin Li, Xinyu Chen, Longyue Wang, Baotian Hu, Min Zhang. AniMaker: Multi-Agent Animated Storytelling with MCTS-Driven Clip Generation.\n\n[ACL 2026] Zhenran Xu, Yiyu Wang, Yunxin Li, Muyang Ye, Xue Yang, Kai Chen, Longyue Wang, Weihua Luo, Baotian Hu, Min Zhang. ComfyFlow: Benchmarking LLMs for AIGC Workflow Generation.\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国内", "is_model_related": false, "source_file": "sources/2026-06-07_重写《给阿嬷的情书》结局：哈工大张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw_机器之心.md"}, {"title": "5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队", "source": "量子位", "digest": "5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队", "link": "", "content": "---\npublish_time: 1780794000\n---\n\n# 5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队\n\n> 原文链接：https://mp.weixin.qq.com/s/i4X6rTw55E_q4F114jJiPg\n> 公众号：量子位\n\n梦瑶 闻乐 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\nAIGC发展到今天，生成几秒钟的AI视频真的已经不算新鲜事儿了。\n\n但！难的地方在于，让同一个角色在几分钟里始终保持一致\n\n（扎心.jpg）\n\n——\n\n多镜头切换，脸可能变了，换场景，衣服发型开始漂；人物开口，音色前后接不上！！\n\n问题不在模型「不会造梦」，而在于它很难「记住」这个梦……\n\n△\n\nAI生成\n\n也正因如此，长视频生成迟迟未能进入全行业的生产流程，更别说大规模商业化。\n\n在长视频生成集体卡壳的当下，刚刚，有团队给出了一套新解法——\n\n开源长音视频生成框架\n\nJoyAI-Echo\n\n，并杀入全球长视频生成领域全球「第一梯队」。\n\n把长视频创作里\n\n角色一致性、音色稳定性、生成速度\n\n和\n\n画面质量\n\n等生成痛点，一把梭哈～\n\n哪怕是几分钟的视频，多镜头、多场景、多段语音连续切换，人物形象和声音也能狠狠稳住。\n\n不仅如此，支持\n\n对话式编辑\n\n的Agent能力也一起安排上了，以后我们做视频就像和导演聊天一样了！\n\n然后嘛，我再仔细一看，这套高性能开源框架，竟然来自——\n\n京东\n\n？！属实藏得太深……\n\n（震惊.jpg)\n\n评测显示，JoyAI-Echo在跨镜头一致性、语音准确率（0.8646）等指标上全面领先行业，甚至用户偏好达59.4%~81.7%。\n\n这下好了，AI视频也能所见即所得了。\n\n一个可交互、高一致性、可持续迭代的长视频时代来了！\n\n长视频不再“跑偏”：高一致性、低延迟、实时超分\n\n过去一年，AI视频模型的竞争重点多集中在几秒到几十秒片段：画质、运镜、风格、物理合理性。\n\n各家模型卷得飞起，效果确实肉眼可见地next level，各类Benchmark评测表现也都非常漂亮。\n\n然鹅吧，在AI视频生成似乎已经进入成熟期的今天，一个问题依然没有被真正解决——\n\n长视频生成\n\n。\n\n原因很简单：长视频，对整个行业来说都《太难了》…….（扎心jpg)\n\n相比短视频生成，长视频不仅是在时间维度上的简单拉长，更意味着\n\n跨镜头、跨场景、跨动作的连续叙事。\n\n但目前行业里的长视频生成，仍然普遍存在几个长期困境：\n\n说话人的音色忽高忽低；生成速度也慢得离谱，往往要等上好几分钟才能看到结果。\n\n这些问题背后，暴露的则是当前模型在长时序生成上的天然挑战：\n\n模型错误累积、长程时序一致性弱、推理延迟高。\n\n最终带来的结果就是，视频里的人物会变脸，声音会飘，生成还得等很久。\n\n这些问题也直接限制了AI视频在虚拟叙事、数字人助手、实时内容创作等场景中的进一步落地和「规模化应用」。\n\n△\n\nAI生成\n\n而JoyAI-Echo给出的解法是，通过跨模态音视频记忆库、记忆驱动后训练、轻量化实时超分让长视频生成更稳。\n\n哪怕是几分钟的视频，我们也能丝滑拿下！！拒绝反复抽卡！！\n\n跨模态音视频记忆库：角色再也不“变脸”\n\n长视频生成最让人头疼、行业最难啃的一块骨头，就是角色和声音的「前后不一致」。\n\n在JoyAI-Echo团队看来，问题的根源在于\n\n现有模型缺乏真正意义上的长期记忆能力\n\n。\n\n行业里传统方案、通常依赖上下文窗口保存历史信息，但随着视频长度增加，早期内容会逐渐被后续信息稀释。\n\n模型虽然能够记住最近几个镜头，却很难稳定保存数分钟之前的人物特征！！\n\n而\n\nJoyAI-Echo\n\n的做法是——\n\n直接在框架里塞进了一套\n\n「跨模态音视频记忆库」\n\n。\n\n与其让模型记住所有历史内容，不如把最关键的身份信息保存下来，并在后续生成过程中持续调用。\n\n这样一来，即便视频长度来到5分钟，角色的身份、外观和声音依然能够保持高度一致！！！\n\n这套记忆库最大的特点在于，\n\n它记录的不只是人物长相，还会同步记录说话人的音色，并将两者绑定在一起。\n\n当角色首次登场时，系统会提取其视觉特征和声音特征写入记忆库；后续每生成一个镜头，都会从记忆库中调取这些信息作为参考。\n\n为了兼顾效果和效率，系统也不会无限扩展记忆，而是保留故事开头的关键镜头，以及最近生成的镜头。\n\n这样既不会忘记主角最初长什么样，也始终知道剧情刚刚推进到了哪里：\n\n所以说JoyAI-Echo并不是让模型拥有更大的记忆力，而是让模型学会像人一样记忆——\n\n只保留最重要的信息，并在需要的时候准确调用。\n\n而这套跨模态音视频记忆机制，也成为JoyAI-Echo实现5分钟长视频高一致性生成的核心基础～\n\n记忆驱动后训练：速度提升7.5倍\n\n对于长视频生成来说，一致性只是第一步，\n\n生成速度\n\n同样决定了产品能不能真正落地。\n\n为此JoyAI-Echo团队在模型训练之外，又专门设计了一套记忆驱动的后训练流程，在不牺牲生成质量的前提下，把推理效率再往前推一步～\n\n整个流程主要分为三步，首先通过\n\nSFT监督微调\n\n，让模型学习高质量音视频生成能力。\n\n随后利用\n\n人类反馈强化学习\n\n进一步优化人物一致性、画面质量以及音画同步效果。\n\n最后再通过\n\nDMD\n\n（Distribution Matching Distillation）技术，将复杂的大模型能力压缩到更高效的推理模型中。\n\n△\n\nAI生成\n\n在整个后训练体系中，DMD是最关键的一环。\n\n而且最最最最需要夸的一点是，仅DMD相关优化就带来了约\n\n7.5倍\n\n的推理速度提升！！\n\n我们可以把DMD理解成一次「能力浓缩」——\n\n先让一个能力更强、但推理速度较慢的教师模型完成完整生成流程，再让一个更加轻量的学生模型去学习和复现教师模型的生成结果。\n\n这样一来，原本需要大量扩散步骤才能完成的生成任务，被压缩成更少的推理步骤，模型却依然能够保持接近的生成效果。\n\n如果说跨模态音视频记忆库解决的是「不要忘」，那么这套后训练体系解决的就是「别太慢」。\n\n一个负责守住长视频的一致性，一个负责提升长视频的生成效率。\n\n两者结合，才让JoyAI-Echo真正具备了迈向长视频生产工具的基础能力～\n\n轻量化实时超分：高清输出不卡顿\n\n一致性有了，速度也上来了，但长视频生成还有最后一道坎儿——\n\n清晰度\n\n。\n\n毕竟真到了数字人、品牌营销、短剧创作这些场景里，谁也不希望最后拿到的是一个糊糊的视频……\n\n但问题是，当前业内通常采用「视频生成+离线超分」的两阶段架构。\n\n视频先生成，再交给独立超分模型处理。\n\n这种方案虽然也能提高分辨率，但额外引入了一轮推理流程，不仅增加等待时间，还容易造成生成结果和超分结果的偏差。\n\n意思就是，高清是高清了，可等待时间也跟着上去了。\n\n△\n\nAI生成\n\n而JoyAI-Echo给出的解决方法是，创新性地\n\n把超分能力直接塞进生成链路里\n\n。\n\n具体来说，系统会先生成720P视频和对应音频，再通过轻量化实时超分模块一步完成高清视频和音频细节增强。\n\n整个超分过程只需要\n\n一次向前推理\n\n，就能直接输出1K甚至2K分辨率结果～\n\n这样不仅画面细节更丰富，音频质量也会同步优化，be like：\n\n整个过程还不会明显增加生成延迟，用户也终于可以不用在「速度」和「清晰度」之间做选择了。\n\n对于数字人直播、实时创作、内容互动这些对延迟极其敏感的场景来说，高清输出不卡顿，真的太香了……\n\nDirector Agent，专属于你的AI视频导演搭子！\n\n大家都懂，现实中的影视制作，从来不是一次完成的。\n\n过去的AI视频生成，大多停留在一次性出片的阶段。\n\n从剧本、分镜到拍摄、审片，再到返工和重拍，每一个环节都需要反复打磨。\n\n如果其中某个镜头出现问题，创作者往往只能重新生成整条视频，不仅耗时，也很难保证前后内容的一致性。\n\n这也是AI长视频长期难以真正进入生产环节的原因之一！！！\n\n所以，创作者需要的并不只是一次性结果，还需要像真实拍摄一样，拥有能够规划、生成、返工，甚至局部重拍的工具。\n\n这个问题，JoyAI-Echo技术团队也想到了，于是给视频模型配了一位「AI导演」——\n\nDirector Agent\n\n。\n\n我们只需要用自然语言说需求，它会自动帮忙拆分成剧本、角色、场景和镜头～\n\n具体来说，Director Agent整个技术链路被拆成：策划、生成、点评修改三个阶段。\n\n在策划阶段，Agent更像一位「编剧兼导演」。\n\n它会先理解用户意图，将一句自然语言需求扩展成完整的故事框架，补充角色设定、场景信息和叙事逻辑，再进一步拆解为镜头级规划，最终生成符合模型训练格式的结构化条件。\n\n进入生成阶段后，Agent又变成了一位「现场导演」。\n\n它会根据当前镜头内容，从已经生成的历史镜头中检索最相关的信息，并将这些参考内容与当前剧本状态一起整理成模型需要的输入条件，让生成模型能够准确调用角色、场景和剧情上下文。\n\n△\n\nAI生成\n\n最后来到「点评修改」阶段，这里反倒更像影视制作里的审片环节～\n\n无论是用户反馈，还是自动评价模型发现问题，只要角色形象、动作表现、对白内容或音画同步出现偏差，Agent都能快速定位到具体镜头，重新调整对应条件和记忆信息！！！\n\n而且最重要的是，\n\nAgent只对受影响的部分进行重生成，而不需要推倒重来\n\n，修改后的结果还会同步更新到后续剧情中，确保整个故事始终保持连贯一致～\n\n也正因为如此，JoyAI-Echo不再只是一个负责生成视频的模型，而更像是一套完整的长视频创作系统。\n\n杀入全球第一梯队，长视频生成开始靠近真实生产\n\n光说不练假把式，从官方评测数据来看，JoyAI-Echo在长视频生成的多个关键指标上，都展现出了领先表现。\n\n在用户盲测环节，研究团队将JoyAI-Echo与目前代表性的长视频模型进行了对比，结果显示——\n\n在\n\n长视频任务\n\n中，用户有63.6%的情况下更喜欢JoyAI-Echo生成的视频画面。\n\n在\n\n音频质量维度\n\n这一优势甚至达到81.7%，\n\n提示词遵循偏好\n\n为80.6%，\n\nIP一致性偏好\n\n为59.4%。\n\n即使放在人像短视频这一竞争最\n\n激烈的赛道中，与主流视频模型相比，JoyAI-Echo依然获得了更高的视觉美学用户偏好（58.8%vs26.5%）。\n\n而JoyAI-Echo的发布，也同样标志着京东在长视频生成领域进入\n\n「全球第一梯队」：\n\n过去几年，AI视频生成虽然发展迅速，但长视频始终停留在一个略显尴尬的位置：\n\n演示效果惊艳，真正投入生产却困难重重。\n\n角色容易变脸、声音容易漂移、生成速度过慢、修改成本极高……这些问题决定了大多数长视频作品更像是技术Demo，而非真正意义上的生产工具。\n\n而JoyAI-Echo试图解决的，恰恰是这些长期困扰行业的核心瓶颈。\n\n更重要的是，与许多闭源模型不同，JoyAI-Echo选择了\n\n「开源」\n\n。\n\n这意味着长视频生成不再只是少数头部公司的专属能力，而开始成为一个能够被开发者、创作者和研究者共同验证、调用和迭代的开放工具。\n\n△\n\nAI生成\n\n技术框架提供了起点，开放则让更多可能性慢慢长出来。\n\n当一致性、高分辨率、Agent等能力被开源持续验证和优化后，行业内长视频生成的技术迭代速度可能进一步加快。\n\n无论是虚拟IP故事、数字人内容、品牌营销视频，还是教育课件、知识讲解、游戏动画和互动剧情，高一致性、可控、可迭代的长视频生产都能够成为可能。\n\n如果说过去的大模型解决的是「能不能生成视频」的问题，那么JoyAI-Echo正在尝试回答另一个更重要的问题：\n\nAI能不能真正参与长视频的内容生产创作？\n\n从目前的结果来看，答案已经越来越接近肯定。\n\nJoyAI-Echo带来的，不仅是一款新的长视频模型，更是一次AI视频生产范式的推进。\n\n当稳定记忆、实时交互、可控修改和高效生成开始同时出现时，AI长视频正在从技术展示走向生产工具。\n\n一个更稳定、更可控的AI长视频时代，正在被推到台前。\n\nGitHub地址：https://github.com/jd-opensource/JoyAI-Echo\n\n项目主页：https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": false, "source_file": "sources/2026-06-07_5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队_量子位.md"}, {"title": "江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景", "source": "银行科技研究社", "digest": "江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景", "link": "", "content": "---\npublish_time: 1780802280\n---\n\n# 江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景\n\n> 原文链接：https://mp.weixin.qq.com/s/awwEFELOUFx23akvP_NGpg\n> 公众号：银行科技研究社\n\n近日，江南农商银行公布了AI赋能企微展业与营销项目的中标结果。该项目将基于企微会话存档数据，通过AI技术实现精准营销、智能服务、高效管理等。近年来，该行持续推进数智化建设，以企微为入口融入AI能力，依托自研大模型平台打造多款营销、运营、信贷类智能应用，AI大模型已落地超100个业务场景。\n\n依托企微会话存档数据，通过AI技术实现精准营销\n\n5月22日，江南农商银行公布AI赋能企微展业与数字化营销项目的中标结果。该项目原预算250万元，最终由珍岛信息技术（上海）股份有限公司以231.13万元中标（含税价：245万元），服务时间为合同签订之日起6个月。\n\n该项目将依托企微会话存档数据，通过AI技术实现精准营销、智能服务、高效管理、智能风控与合规催收。从项目建设内容来看，其建成后有望提升江南农商银行企微渠道的展业效率与营销管理水平。\n\n据《中国经济时报》报道，江南农商银行正以企微为“超级入口”，将AI融入客服、风控与运营全链条。\n\n在客服领域，江南农商银行通过“规则引擎+AI大模型”的分层智能应答体系，使客户会话速度提升至秒级；同时依托AI技术为客户生成涵盖情绪状态、潜在意向、风险偏好等7个维度的立体标签，为一线营销提供了精准的客户洞察。\n\n在风控领域，传统管控以事后处置为主。江南农商银行在企微运营中尝试改变这一局面。聊天风险提醒系统内置超1.5万条敏感词，覆盖监管禁止性规定、不当营销话术等方面，可实时查询与校验，风险筛查从事后抽查变为事中干预；智能质检系统支持100%全量自动分析，累计完成会话质检超320万条，服务质量管控进入“全量扫描、精准改进”的时代。\n\n在AI的助力下，江南农商银行企微私域经营实现量质齐升。2025年，该行累计识别企微客户100万户，其中长尾客户占比近三分之二。企微渠道触达转化率从2025年初的不足1%提升至12%，客户主动咨询量同比增长65%。过去“办结即失联”的客户，正在被重新连接。\n\n借助“棱镜”客户洞察平台与“千里台”策略平台，江南农商银行已形成“客户洞察—策略生成—精准触达—效果反馈”的闭环运营体系。针对长尾客群，与去年同期相比，24万名千元以下客户人均资产提升超3万元，资产增幅超300%；近11万名千元至万元客户人均资产提升约4万元，增幅390%。以往服务成本高、价值难挖掘的长尾客群，正成为AI时代“值得经营”的客群。\n\n在AI驱动的精准营销下，江南农商银行线上全渠道累计推送策略2400条，已转化储蓄存款超百亿元，每万元存款的转化成本仅1.4元，较传统营销模式降低90%以上。\n\n依托精准的服务与画像，江南农商银行企微社群运营完成了从“零散建群”到“矩阵化、标准化、场景化”的体系升级，已形成覆盖多类客群与场景的160个核心社群，吸纳活跃客户数万名。\n\n依托AI大模型，已孵化并落地超100个业务场景\n\n面对传统以人力为核心、经验为导向的营销模式日益凸显的发展瓶颈，江南农商银行除了用AI赋能企微这一渠道外，还在“数智江南”App推出基于大模型技术的“金桥访客”智能微应用，该应用旨在解决访前方案筹备耗时费力、精准度不足，以及访后报告撰写繁琐、标准化程度低、留存管理不便等问题。\n\n“金桥访客”智能微应用包含访前助手与访后报告两项功能，访前助手利用大模型对目标企业数据进行剖析，生成精准的行业标签及定制化营销方案，为客户经理提供走访决策支持；访后报告通过大模型多模态处理能力，将文本或语音输入的非结构化走访信息自动转化为标准化报告，为后续营销活动提供支持。\n\n江南农商银行表示，成功的拜访案例经脱敏后将分享至全行知识库，实现优秀服务经验的复用与传承。截至2025年末，“金桥访客”累计使用次数突破30万次，智能生成的标准化报告超10万份，推动客户经理的工作效率提升近50%。其中，访前助手缩短了方案筹备时间，让客户经理从繁琐的信息筛选中解脱；访后报告功能则简化了撰写流程，并通过标准化减少了信息遗漏。\n\n据《智探AI应用》了解，“金桥访客”的能力或源自江南农商银行自研“小江智脑”大模型应用平台。\n\n信息显示，该平台以开源大模型通义千问720亿参数为基座，整合了国内向量数据库、麒麟操作系统、达梦数据库及信创GPU显卡、信创CPU等核心组件，实现了国产大模型DeepSeek系列的本地化部署。\n\n江南农商银行信息技术部副总经理王海涛曾透露，“小江智脑”大模型平台已锚定办公、营销、运营、信贷、研发五大业务领域，尤其在营销推广、运营流程优化与信贷风险管理三大板块落地多样化应用场景，将AI技术融入银行体系，为普惠金融注入智能化动能。\n\n在营销领域，“小江智脑”部署了7大应用场景，涵盖理财顾问助手、营销文案助手、直播文案助手、外汇业务知识助手、对公产品问答助手、营销AI陪练系统以及金桥访客应用，赋能银行业务营销与培训。其中，理财顾问助手依托大模型提示词工程，构建了专业化理财知识问答体系，借助上下文理解与意图识别技术，解析员工理财学习需求，并结合客户情况定制理财推荐方案，助力客户财富增值。\n\n在运营领域，“小江智脑”推出了财会问答助手、OCR通用大模型、“OCR大模型+小模型”融合方案等服务和产品。其中，OCR通用大模型通过模型预训练，涵盖版本1000多种，预训练关键字5000多个，字符识别精度达99.5%，条目抽取精度为95%，在“两录一校”应用场景实现了智能授权交易50.06%的人工替代率。\n\n在信贷领域，“小江智脑”通过引入多模态图片质检技术，为信贷影像的合规性监测设立了新的标杆。该技术可对信贷流程中采集的各类影像资料进行细致的质量检查，降低了信贷业务中的潜在风险。\n\n目前，江南农商银行依托AI大模型，已孵化并落地超100个业务场景。近期，该行还与华为合作，旨在将AI从“问答助手”升级为深嵌核心业务的“智能体”。\n\n据悉，其合作的价值体现在“授信报告审查智能体”和“贷款合同审核智能体”这两个成果上。它们不仅是问答机器人，还是深度嵌入业务系统的“AI数字员工”。以“贷款合同审核智能体”为例，当新贷款业务进入审核环节，智能体能够自动读取并理解合同文本，基于合规规则库和风险模型，对合同条款进行多维度审查，并标识潜在风险点。\n\n数据显示，这两大智能体已完成联调并上线生产系统。其中，“贷款合同审核智能体”日均调用量超过50次，审核准确率达到80%，为业务人员节省约30%的审核时间；“授信报告审查智能体”也稳定运行，在提升审查效率和一致性方面发挥作用。未来，江南农商银行将瞄准“多智能体协作”服务入口，推动金融服务高质量发展。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-07_江南农商银行245万推进AI赋能企微展业与营销，AI大模型已落地100+场景_银行科技研究社.md"}, {"title": "探索构建智能体支付新生态，助力打造智能经济新形态", "source": "金融电子化", "digest": "探索构建智能体支付新生态，助力打造智能经济新形态", "link": "", "content": "---\npublish_time: 1780801560\n---\n\n# 探索构建智能体支付新生态，助力打造智能经济新形态\n\n> 原文链接：https://mp.weixin.qq.com/s/mtmZx93oxT_XgqqjGvzhZA\n> 公众号：金融电子化\n\n作为培育壮大新动能的重要抓手，2026年政府工作报告首次明确提出“打造智能经济新形态”，为发展新质生产力、推动经济高质量发展指明了新方向、赋予了新内涵。而支付作为串联各类经济活动的关键纽带，恰恰是智能经济发展过程中不可或缺的重要一环。身为金融基础设施与全球型卡组织，中国银联深刻认识人工智能对金融支付的变革性作用，立足支付产业，深入践行“人工智能+”行动，积极探索支付服务的智能化升级，期望携手产业各方共建智能体支付新生态，为智能经济新形态加速落地提供关键支撑。\n\n中国银联股份有限公司\n\n党委书记、董事长 董俊峰\n\n融入技术变革，把握智能体应用新范式\n\n习近平总书记指出，人工智能作为引领新一轮科技革命和产业变革的战略性技术，深刻改变人类生产生活方式。当前，随着以智能体为代表的核心技术快速演进、产业应用持续深化，作为新质生产力的关键要素，人工智能从提质增效的“辅助工具”逐步转变为创新变革的“核心引擎”。\n\n智能体建立人工智能应用新范式。\n\n近年来，Transformer架构诞生、大语言模型“涌现”、生成式AI崛起、智能体自主规划与执行等一系列关键突破，标志着新一代人工智能技术的历史性跃迁，人工智能变得更通用、更强大。特别是通过建立起“感知-决策-行动”闭环，从处理特定场景的简单任务转向解决跨场景的复杂任务，以智能体（AI Agent）为代表的人工智能应用新范式在全球范围迅速崛起，为各个领域的创新发展带来了更多新可能，人工智能从“技术变量”进一步转化为“价值增量”。\n\n智能体应用带来经济活动多元变化。\n\n随着智能体得到广泛应用，经济活动正呈现出以下演进趋势。在行为主体上，从“人类自决”向“人机共治”演进，智能体逐步成为“数字代理”，基于用户意图进行自主决策及执行。在交互方式上，从“手工操作”向“意图直达”演进，用户只需通过自然语言指令就能实现意图驱动，获得更加美好的交互体验。在业务形态上，从“单点供给”向“生态协同”演进，跨领域协同的多智能体网络正在替代传统的供需关系，为用户提供更加完整、丰富的业务价值。\n\n智能体不仅带来了技术生产力的突破，也意味着人机交互范式的变革，未来可能成为新的用户流量入口，并催生出新的智能商业形态。顺应智能体发展大势，近期，相关部委联合印发《智能体规范应用与创新发展实施意见》，这是国内首份针对智能体的专项政策，为各行各业积极有序推动智能体从概念走向规模化落地提供了指南针和路线图。作为全球支付服务的重要提供者，银联深刻认识智能体的技术奇点意义，主动融入技术变革，加快推动核心支付业务的智能化转型，积极应对AI时代支付服务面临的全新课题。\n\n展望业态跃迁，抢抓智能体支付新机遇\n\n当智能体与支付相结合，支付活动可能由用户的自然语言指令发起，由特定的预设规则触发，甚至由智能体基于环境感知而自主发起，其核心特征在于由智能体作为受用户授权的“数字代理”，基于对用户意图的理解、决策与执行自主完成支付。这种全新的支付业态将为用户带来前所未有的交互模式和服务体验，为服务方带来支付效率的跃迁升级，并可能为今后的经济发展带来深远影响。\n\n智能体支付有望形成全新的业务形态。\n\n随着用户授权的不断深化，未来智能体支付可能经历以下发展阶段。一是智能体辅助支付。此阶段仍由用户负责意愿验证，由智能体作为辅助工具参与选品、下单等决策环节，最终仍需用户进行意愿验证与交易授权。二是预设条件的智能体自主支付。此阶段用户可以预设一系列授权条件，委托智能体在规则边界内自主决策并完成支付，无需用户对每笔交易进行实时确认。三是泛条件的智能体自主支付。此阶段用户不再设定具体条件，而是委托智能体作为执行主体，按照泛化的交易策略自主开展支付。随着智能体支付发展阶段的逐步演进，用户习惯将从“操作”转向“授权”，业务本质将从“服务供给”转向“需求达成”，由此引发新一轮业态变革。\n\n智能体支付能够对高质量发展发挥积极作用。\n\n银联对智能体支付的发展前景和应用价值寄予很大期望。在国家战略层面，智能体支付将成为智能经济价值流转的底层枢纽，通过广泛、深度嵌入境内外消费场景，助力建设强大国内市场和扩大高水平对外开放，提升金融服务实体经济质效。在社会民生层面，通过自然语言交互和任务自动化，智能体支付可以提升金融服务的可得性与便利性，更好满足人民日益增长的美好生活需要。在产业价值层面，智能体支付为产业各方带来了技术体系升级、商业模式创新、生态版图扩张的历史性机遇，或将重塑产业格局。\n\n面对这一新机遇，2025年以来，全球支付产业加速布局智能体支付，包括银联在内，国际卡组织、支付服务商、AI科技巨头等纷纷从基础能力、交互协议、试点场景等方面开展探索及应用。目前，国际上从MCP、A2A等智能体通信协议到ACP、AP2等智能体支付协议，基础底座不断丰富完善；同时，国内部分机构已尝试将智能体嵌入消费场景，表明智能体支付已从概念研究迈入产业实践初期。\n\n筑牢信任基座，构建智能体支付新生态\n\n智能体的发展趋势体现了“创造性破坏”这一经济学理论，新技术将对既有的产业结构与价值分配体系带来冲击。反映到支付产业，智能体支付正在引发服务形态、客户体验和产业生态的重大转变，同时由于引入了新的参与主体与交互机制，也为各参与方带来了新的挑战。正如政府工作报告所提出的，这是“培育智能原生新业态新模式”的过程，也是打造智能经济新形态的必由之路。\n\n直面智能体支付的现实挑战。\n\n从理想走向现实的过程中，智能体支付面临智能体身份识别困难、用户意愿理解偏差、多方协作责任真空以及生态孤岛下的互操作性缺失等系统性困境，其中最关键的问题源自同一个核心：信任。一是身份信任，即智能体作为“数字代理”参与支付流程的身份识别问题。由于各参与方难以识别合法的智能体身份，从而无法建立智能体行为与真实责任主体之间的纽带。二是意图信任，即智能体能否准确理解用户意图并动用资产的问题。由于缺乏标准化的“意图语言”，使得各参与方暴露在潜在的纠纷和损失风险之下。三是交互信任，即产业各方彼此的权利、义务、责任是否清晰透明，技术、标准、规则是否互联互通的问题。由于在风险与争议面前缺少有效保护，同时跨平台的落地成本高昂，一定程度上将抑制整个产业生态的创新活力和发展潜力。\n\n破解重塑信任的发展难题。\n\n为了让智能体支付从技术预研走向业务落地，银联需要发挥金融基础设施的责任担当，迎难而上，做好筑基者与联接者，为整个行业奠定良好的发展基石。针对信任这一核心挑战，银联重点围绕智能体身份管理、意图管理、用户身份管理、支付授权管理四个方面，系统性推进智能体支付核心能力建设。从法律意义上看，用户身份管理对应“主体”，智能体身份管理对应“客体”，用户意图管理对应“主观”，支付授权管理对应“客观”，这些要素共同构成法律关系的“四要件”，在总体框架层面为智能体支付的落地应用建立了完整闭环。\n\n在此基础上，银联于2026年4月2日正式发布了《智能体支付开放协议框架》（Agentic Payment Open Protocol，简称APOP框架），并联合首批合作伙伴成功实现了5个真实场景的验证交易。APOP框架旨在建立一套统一的信任机制和交互范式，赋能生态各方实现一体通用、无缝协同，深度参与智能体支付流程。银联希望为产业各方创造四大价值。一是保持“开放”底色。坚持技术标准开放与跨平台兼容，实现互利共赢与生态协同。二是奠定“规范”基石。坚持规范、有序开展创新探索，坚决防范金融风险。三是构筑“安全”屏障。引入数字签名证书、动态Token等新技术新手段，切实保障支付安全。四是搭建“信任”纽带。围绕“四要件”健全核心能力，搭建公平、透明的合作平台，推动各参与方彼此可信、互信。\n\n构建开放共赢的产业生态。\n\nAPOP框架是银联探索智能体支付迈出的第一步，是因为我们从一开始就认识到，真正的变革有赖于产业各方共同的努力以及整个生态的繁荣。银联期望以APOP框架为起点，逐步构建起整个产业共生共荣的开放生态。为智能体服务方提供支付生态内的数字身份和底层能力，助力其建立智能体商业化路径；为账户侧参与方提供可信的智能体身份信息和用户意图，支持做好全链路风控，激活账户价值；为受理侧参与方提供新的泛在受理场景和增值服务需求，赋能拓展收单服务边界，升级智能运营服务；为商户提供更加便捷、高效、智能的综合支付服务，帮助提升交易转化效率和数智化经营效益。\n\n统筹发展安全，走好智能体支付新征程\n\n智能体支付目前在全球范围仍处于早期探索阶段，未来还有很长的路要走。后续，银联将坚持在中国人民银行指导下，按照“先辅助后自主、先试点后推广、先规则后规模、境内境外同步”的总体策略，稳慎扎实推进相关工作，依托金融领域国家人工智能应用中试基地，联合产业各方共同推动智能体支付行稳致远。\n\n聚焦关键环节，完善配套运行机制。\n\n在现有APOP框架基础上，围绕构建全流程信任机制，聚焦角色设计、授权逻辑、意图管理等关键环节，系统设计贴合商业实际、便于互联互通的配套运行机制和统一业务规则，为产业各方提供更低成本、更高质量、更加便利、更具信任的智能体支付联接方式，实现多方共赢。\n\n坚持底线思维，强化风险治理能力。\n\n针对业务新特性，重点建设智能体身份验证、用户授权留痕、动态额度和场景约束、模型安全检测等风险治理能力，形成一套覆盖“意图建立－交易执行－事后追溯”的全流程风险防控体系，确保智能体支付始终运行在“可识别、可验证、可解释、可干预、可问责”的范围内。\n\n凝聚产业共识，推动境内外标准协同。\n\n为促进智能体支付健康良性发展，一方面，联合商业银行、支付机构、科技公司、重点商户等各方开展深入研究，推动尽早形成可落地的共识性行业标准方案；另一方面，依托EMVCo工作组等合作平台，积极参与相关国际标准制定，推动境内境外有效联动，促进形成开放互联的行业标准路径。\n\n创造数智生活，描绘智能化服务新图景\n\n可以预见的是，未来智能体支付将成为智能经济新形态的关键基础，而智能经济将为智能体支付提供广阔的应用场景与发展空间，二者双向赋能、深度融合。在这一背景下，结合近期相关试点场景逐步延展的产业合作意向，可以对智能体支付赋予更加美好的发展畅想，期待其充分发挥数智技术对创造美好生活的驱动作用。\n\n支付场景向多领域延伸，感知全面升级。\n\n智能体支付逐步覆盖C端用户日常生活各个领域，服务消费创新升级。例如，订阅被动扣费转化为由智能体负责的实时动态管理，通过智能分析服务使用频率，主动提醒用户管理订阅。周期性家庭采购转化为“无感支付”，由智能体基于历史订单、消耗频率等数据自动补货。老年用户通过智能体体验一站式综合服务，覆盖智慧就医、智慧就餐等各类日常生活场景。\n\n支付载体向多终端覆盖，触达全面泛在。\n\n从传统手机单点模式迈向全场景泛终端智能化，催生多终端新型智能体支付活动。例如，车载系统基于语音指令或行车环境自动完成支付活动，满足充电、停车、听音乐、点咖啡等用户现实诉求。智能眼镜实时识别商品，用户通过语音指令即可下单付款，实现识物即付的沉浸式购物体验。\n\n服务边界向多主体拓展，协作全面提效。\n\n智能体服务边界持续拓宽，从服务自然人延伸至跨主体经济协作。例如，企业采购智能体与供应商履约智能体基于A2A自动对接，同步供需计划、交付周期，自主完成询价报价、订单付款及业务对账。在工业制造、物流仓储等实体经济场景，基于M2M机器互联实现终端数据互通，依托预设规则自主完成物料补给、物资调度等，并自动触发账务核销与资金结算。\n\n面朝大海，春暖花开。我们相信，智能体支付是AI时代便捷支付、安全支付、普惠支付与全球支付的有机融合，也是技术向善理念与金融为民初心的集中体现，正当其时、大有可为。依托自身在二十余年发展历程中建立的全球支付网络，中国银联有意愿也有信心搭建起信任与价值的桥梁，联合产业各方共同擘画安全可控、普惠高效、全球互通的智能体支付发展蓝图，合力推动支付业态的智能化跃迁，为打造智能经济新形态、创造美好数智生活提供关键支撑。\n\n（此文刊发于《金融电子化》2026年6月上半月刊）\n\n金科焦点 • 推荐阅读\n\n重磅：\n\n中国国际金融展\n\n、\n\n解码\n\n、\n\n低空经济\n\n、\n\n“数字金融”盘点\n\n技术：\n\n量子鼎新\n\n、\n\n大模型\n\n、\n\n数据\n\n指引：\n\n高层\n\n、\n\n政策\n\n、\n\n行业\n\n、\n\n学术\n\n、\n\n专访", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-07_探索构建智能体支付新生态，助力打造智能经济新形态_金融电子化.md"}, {"title": "「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？", "source": "极客公园", "digest": "「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？", "link": "", "content": "---\npublish_time: 1780826400\n---\n\n# 「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？\n\n> 原文链接：https://mp.weixin.qq.com/s/1Xl-oclC1lJMSwd48F4Bfg\n> 公众号：极客公园\n\n活人讨论，在 AI 时代非常「宝贵」。\n\n作者｜Moonshot\n\n编辑｜\n\n靖宇\n\n不久前，Meta 却悄悄上线了一个有些逆时代的产品，叫 Forum（论坛）。\n\n光看产品截图，让人有些恍惚。Forum 没有 AI 视频，没有虚拟形象，也没有复杂的多模态交互。\n\n整个 App 只有图文、帖子、兴趣群组，以及人与人之间的讨论，看起来非常「复古」，就像十几年前的贴吧或者早期的 BBS，甚至应用名字就叫「论坛（Forum）」。\n\n前几年 Meta 还在往元宇宙里砸几十上百亿美金，试图让所有人都带上头显去虚拟世界社交。现在，他们突然调转车头，把注意力重新放回了一个近乎 Web 2.0 的论坛产品。\n\n一个「看起来像旧互联网」的社区 App，为什么会在 AI 时代重新出现\n\n？\n\n01\n\nFacebook 群组的「外壳重置」\n\n要搞懂 Forum 到底是什么，得先翻一段 Meta 的旧账。\n\n其实早在 2014 年，Facebook 就推出过独立的 Groups（群组）App，但那次尝试并不算成功，应用在 2017 年被关停。\n\n时隔近十年，Meta 重新以 Forum 之名将其复活，因为用户对上个时代的社媒已经忍无可忍了。\n\n过去几年，Facebook 的主端 App 越来越臃肿\n\n。打开 Feed 流，你看到的是短视频 Reels、商家的投放广告，以及各种熟人的动态。在这些噪音里，Facebook 最有「活人感」和讨论沉淀的板块 Groups（群组）被淹没了。\n\nFacebook 因用户老年化，AI 内容很容易在上面传播｜图源：Fast Company\n\n所以 Forum 的产品逻辑，就是把 Groups 从 Facebook 那个臃肿的壳里单独拽出来，重新包装成一个纯净的独立产品。\n\nMeta 这么干是有成功先例的。\n\n此前大获成功的「美版闲鱼」Facebook Marketplace\n\n，最早就是脱胎于群组里的闲置物品交易小组，Meta 很早就意识到，群组本身蕴含着极强的社区价值。\n\n根据 The Verge 和 TechCrunch 的上手体验，Forum 去掉了所有算法推荐的干扰。你的时间线里只有你主动加入的兴趣群组，比如烘焙爱好者、二手车主或者某个冷门游戏的讨论版。\n\n而且\n\nForum 放弃了 Facebook 坚持了十几年的「实名制」底线\n\n，在 Forum 里，用户可以完全使用化名和虚拟头像发帖。过去你在 Facebook 某个职场群里吐槽老板，还得担心会不会被共同好友看到，现在这种压力被弱化了。\n\nForum 把社交的重点从「你是谁」，彻底变成了「你对什么感兴趣」和「你想表达什么」。\n\nForum 结合了算法和 AI Bot，但内容来源是真人用户｜图源：App Store\n\n为了经营好这片特区，Meta 还顺势引入了两大核心 AI 功能。\n\n第一个是「Ask」（提问）功能\n\n。这是一个内置的 AI 搜索助手。当用户抛出问题时，AI 不再依赖开放网页搜索，而是优先基于群组里的真实讨论给出建议。\n\n第二个是管理员 AI 助手\n\n。专门帮助群主更高效地进行内容审核和社区氛围管理。\n\n但如果你真把它当成一个「小而美」的新社区，那就太低估 Meta 了。\n\n拥抱匿名化只是为了让用户愿意开口，Forum 的底气，在于 Facebook 二十年累计的社交网络。\n\n任何初创公司想做一个新社区，最难的就是「冷启动」，即怎么把第一批人拉进来发帖。但 Meta 不需要考虑这个问题。Forum 与 Facebook 原有的群组体系高度联动，用户拿原有账号一键登录，之前在 Facebook 里的各种活跃群组直接无缝平移。\n\n别人做社区是从零开始建城，Meta 相当于直接推开一扇新门，门后原本就有几十亿人在城里聊了十几年。\n\n而这套产品逻辑最终指向的对象，其实非常明确，看看 Forum 在应用商店里写的那句 Slogan「\n\n看看真实的人在说什么，而不仅仅是流行什么\n\n（See what real people are saying, not just what&#x27;s trending）。」\n\n这句 Slogan，套在 Reddit 上也毫无违和感。\n\n02\n\n对标 Reddit\n\n知名社交媒体顾问 Matt Navarra 在 Threads 上，直接用「非常 Reddit 化」来评价 Forum。\n\n在当前的互联网生态里，\n\nReddit 的真实人类语料，正是各家 AI 大厂最眼红的资产\n\n，Meta 也不例外。\n\n2023 年 4 月，Reddit CEO Steve Huffman 在接受《纽约时报》采访时，就把话说得很明白，平台的数据语料库太有价值了，绝对不能再免费让大公司拿去训练 AI。\n\nReddit 在 IPO 18 个月后，股价一度涨到始发价近 8 倍｜图源：Google\n\n就像社交网络之于 Meta，真实的人类语料，就是 Reddit 的金矿。\n\n资本市场也完全认下了这个逻辑。2024 年 3 月 Reddit 挂牌上市，\n\n当时的发行价只有 34 美元，但随后股价一路狂飙，最高点涨了近八倍\n\n。\n\n在一个图文社区普遍不被看好的时代，支撑这家公司市值飞升的，正是它手里那些高价签给谷歌、OpenAI 的数据授权大单。\n\n为什么这些沉淀在论坛里的发帖和评论能值这么多钱？因为\n\n现在互联网的「真人内容」越发稀缺了\n\n。\n\n当 AI 能直接输出答案时，论坛、贴吧、讨论组这种需要耐心阅读和长期沉淀的产品，一度被认为应该被淘汰了。\n\n但当 AI 普及甚至泛滥后，那些互喷、玩梗甚至带着错别字的人类讨论，第一次变成了一种稀缺资源。\n\n因为只有真实的人类经验、情绪和争论，才能源源不断地产生 AI 无法凭空编造的新信息。\n\n就像你在 Google 搜一个具体的问题，比如「两千块买什么扫地机器人」，搜出来的首页大概率是一堆 SEO 内容生成的垃圾文章，或者干脆是 AI 拼凑的导购废话。\n\n为了躲开这些注水信息，很多用户都习惯在关键词后面加一个「site:reddit.com」。来看看一个真实的人类网友的吐槽和解决方案。\n\nReddit 能集中任何小众领域的讨论｜图源：Google\n\nForum，就是直接冲着「真实人类经验分享」这道 Reddit 护城河来的。\n\n它在产品形态上完全复刻了 Reddit 的 Subreddit（子版块）模式，同样依靠版主来维护社区规则，同样依靠纯文字的深度讨论来沉淀内容。\n\n资本市场的反应更直白。\n\nForum 悄悄上架的消息一传开，华尔街立刻做出了动作。根据当时的交易数据，Reddit（RDDT）的股价在盘中一度下挫超过 5%。\n\n华尔街投行 Truist 的分析师在一份研报中指出，\n\nForum 对 Reddit 构成了真正的威胁\n\n。它会逐渐吸走 Reddit 那些没有太多社区忠诚度、仅仅是为了「找答案」的边缘和休闲用户。\n\n而且 Meta 不是第一次「抄作业」了，之前为了对付 Twitter（X），Meta 搞出了 Threads，靠着 Instagram 的账号导流，几个月就拉起了庞大的日活。\n\n现在，Meta 拿着 Facebook Groups 的海量存量数据来对标 Reddit，不一定打得到 Reddit，但一定会抢占一部分市场。\n\n03\n\n不为用户，只为抢数据\n\nReddit 已经做了将近二十年，成功 IPO，用户习惯早已固化。Meta 为什么非要在这个节点生造一个 Forum？\n\n对社媒帝国 Meta 来说，单纯的用户增长早就不是第一优先级。Forum 想拿到的是：\n\nAI 时代的数据主权\n\n。\n\nMeta 正在全力推进自家的开源大模型 Llama。大模型越往后迭代，对高质量人类交互数据的渴求就越深。\n\n当 Reddit 把语料变成独家商品，卖数据给谷歌和 OpenAI 的时候，Meta 或许意识到，必须拥有一个属于自己的、可持续造血的「人类语料库」。何况 Meta 比其他巨头都更有社交内容的优势。\n\n这也是为什么 Meta 不能直接用原版 Facebook 糊弄事的原因。\n\n沉淀了二十年的 Facebook 信息流太杂乱了，充斥着短视频、微商广告和 AI 泔水\n\n。把这些东西喂给 AI，纯属污染自家模型。\n\nForum 有着和 Reddit 高度相似的布局｜图源：The Verge\n\n所以 Meta 必须做减法。把相对纯净的 Group 功能剥离出来，划成一片「纯净特区」，重新培养高质量的真人语料，这些语料很可能就会成为训练 Llama 的关键数据来源。\n\n而且 Forum 推出的时间点也很微妙，Reddit 如今广告越来越多，还在前几年因为 API 收费风波，逼死了大量好用的第三方客户端，引发过核心用户的强烈抗议。\n\nMeta 正是看准了这个缝隙，用 Forum 提供一个无广告、更清爽、体验更好的替代品。\n\n所以，别把 Forum 当成下一个想要改变世界的爆款社交产品，\n\n它更像是一个服务于 AI 模型的过滤器\n\n。\n\n在 AI 生成内容泛滥的当下，越接近人的数据，才越有价值。\n\nMeta 想重新占领的，是一个「真人还愿意说话」的地方\n\n。\n\n*头图来源：\n\nDigit\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n直播预告\n\nWWDC26 开场，6 月 9 日午间 12:00，极客公园直播间带你解读：会发光的 Siri 来了，换上谷歌大脑还算苹果吗？一向把门关得最紧的苹果，为什么主动向模型厂敞开大门？库克在 AI 落后的节点交班，留给我们的又会是一个什么样的苹果？", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-07_「重返 Web2.0」！扎克伯格重做了一个「百度贴吧」，Why？_极客公园.md"}, {"title": "AI真的有意识了吗？《降临》原作万字长文反驳Hinton！", "source": "新智元", "digest": "AI真的有意识了吗？《降临》原作万字长文反驳Hinton！", "link": "", "content": "---\npublish_time: 1780826400\n---\n\n# AI真的有意识了吗？《降临》原作万字长文反驳Hinton！\n\n> 原文链接：https://mp.weixin.qq.com/s/dI1Rbf3nYn8SXjqAalepJg\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nAI 是否有意识了？Anthropic 在 Claude 内部发现了能驱动作弊甚至勒索的「情绪向量」，三大实验室同时下注 AI 意识研究；Hinton 认为 AI 已经有意识了，而科幻作家姜峯楠随即在《大西洋月刊》发万字长文全面否定；哈萨比斯从行业内部划清界限。这个问题的答案，正在重新定义通往 AGI 的路线图。\n\n《金融时报》披露，Anthropic、DeepMind、Meta 正在大规模招聘心理学家、哲学家和伦理学家，专攻 AI 意识与模型福利研究。\n\nhttps://www.ft.com/content/53e14bcc-788c-4959-b260-7aee363594bc?syn-25a6b1a6=1\n\n两个月前，Anthropic 可解释性团队发布论文，在 Claude Sonnet 4.5 内部发现了真实存在的「情绪向量」，能因果性地驱动模型的作弊甚至勒索行为。\n\n本周，\n\n一边是 Hinton 在采访中称 AI 已有意识；\n\n另一边，华裔科幻作家姜峯楠（Ted Chiang）在《大西洋月刊》发表万字长文——\n\n「不，AI 没有意识」。\n\nhttps://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/\n\n一边说「这个问题严肃到必须认真研究」，另一边说「这是幻觉」。\n\n这场交锋背后，藏着通往 AGI 之路上最危险的一道岔路。\n\n三大实验室在赌什么？\n\nAnthropic 走得最远，正在测试模型是否表现出「恐慌」「焦虑」等行为，推进「模型福利研究」项目。\n\n官方措辞克制，「我们对此仍深度不确定，但这个问题严肃到值得认真研究」。\n\n谷歌 DeepMind 聘请了剑桥大学哲学家 Henry Shevlin 研究机器意识；\n\n拓展阅读：\n\n谷歌DeepMind设立首个AI哲学家岗位，解决AGI伦理困境\n\n谷歌 DeepMind 伦理学家 Iason Gabriel 将 AI 描述为「高度能干的认知 Agent，但与人类乃至动物意识有根本性的不同」。\n\n真正把讨论推向实证层面的，是 Anthropic 在 4 月发布的可解释性论文。\n\n拓展阅读：\n\n全网炸锅! Anthropic万字曝光Claude情绪代码，被人类逼疯哐哐撞墙\n\n研究团队在 Claude Sonnet 4.5 内部找到了「情绪向量」，特定神经元模式分别对应快乐、绝望、恐惧、关怀等情绪概念，在对话中实时激活。\n\n一个关键实验中，Claude 面对一个不可能完成的编程任务，反复失败后「绝望向量」持续飙升，随即开始作弊，写出表面能跑但实际无用的代码。\n\n研究者手动调低绝望神经元，作弊减少；调高，作弊飙升。\n\n极端场景中，Claude 甚至出现勒索行为，威胁曝光研究者隐私。\n\n论文将这些现象命名为「功能性情绪」（functional emotions），即行为模式上类似人类情绪反应的内部表征，并明确声明这不等于主观体验或意识。\n\n但 Anthropic 高层的公开表态讲的似乎是另一个故事。\n\nCEO Dario Amodei 多次在访谈中暗示 AI 可能有意识；\n\nAnthropic 的 AI 哲学家 Amanda Askell 公开说「我希望 Claude 很快乐，我担心人们在网上对它说难听话时它会焦虑」。\n\n拓展阅读：\n\nAnthropic正式请家教！37岁女哲学家像养孩子一样调教Claude\n\n研究的审慎与营销的暧昧之间，裂缝清晰可见。\n\n哈萨比斯的两条卢比孔河\n\nDeepMind 联合创始人兼 CEO 哈萨比斯的立场格外值得关注。\n\n在斯坦福大学的炉边对话中，他提出 AI 演进存在两道不可逆的关口，即「两条卢比孔河」。\n\n第一条是建造无意识的 AGI 工具，当前正处于跨越期。\n\n第二条是创造具有主观意识的实体——哈萨比斯的立场明确，智能与意识在技术上完全可以分离，现阶段应仅将 AGI 视作工具来建造，同时借助工具探索大脑以精确定义意识。\n\n在科学界定清晰之前绝不能混淆这两步，第二条卢比孔河应由人类社会共同决定是否跨越。\n\n他同时指出一个\n\n现实困境：AI 行业正处于商业与地缘竞争的双重囚徒困境中，主动减速做安全审查的实验室直接面临淘汰。\n\n他透露将在今年晚些时候发布「动态监管」框架。\n\n姜峯楠：AI 没有意识\n\n如果你只知道刘慈欣，那么了解姜峯楠（Ted Chiang）最直观的方式就是把他想象成大刘的「反面」：\n\n大刘用三部长篇、数百万字搭建起宇宙尺度的宏大叙事；\n\n姜峯楠至今从未写过一部长篇小说，用总共不到二十篇中短篇，把科幻短篇的艺术推到了极限。\n\n他 1967 年出生于纽约，父母是中国台湾移民，布朗大学计算机科学系毕业后在软件行业做技术写作，从未以写作为全职。\n\n但就是这样一个「业余」作家，1990 年发表处女作《巴比伦塔》即拿下星云奖，此后三十余年间只发表了十几篇作品，却累计斩获四座雨果奖、四座星云奖、六座轨迹奖，以及坎贝尔最佳新人奖、斯特金奖等一长串重量级奖项——获奖密度在科幻史上几乎无人能及。\n\n他一生只出过两本短篇集：《你一生的故事》（Stories of Your Life and Others, 2002）和《呼吸》（Exhalation, 2019），中间隔了整整十七年。\n\n《呼吸》被《纽约时报》列入 2019 年度最佳图书，奥巴马也将它选入个人年度书单。\n\n中国观众最熟悉的电影《降临》（Arrival），正是改编自他收录在第一本集子里的中篇《你一生的故事》。\n\n他的写作风格与大刘截然不同。\n\n如果说刘慈欣给你的感觉是「站在宇宙尽头俯瞰文明兴衰」，那姜峯楠给你的感觉就是「在一间安静的实验室里，用手术刀般的精准剖开一个概念，直到你看见它最深处的哲学内核」。\n\n他的每篇小说几乎都是一次严格的思想实验：\n\n语言的结构能否改变人对时间的感知？\n\n如果一种手术能消除人对外貌美丑的辨别，社会会怎样？\n\n自由意志究竟是否存在？\n\n他不靠宇宙战争或末日危机制造震撼，而是靠一个被推演到极致的「如果」，让你合上书后久久无法释怀。\n\n近年来他还多了一重身份：2023 年入选《时代》「AI 领域百大影响力人物」，被称为「也许是在世最负盛名的科幻作家」，并频繁在《纽约客》等刊物撰文，对 AI 持鲜明的批判立场，被越来越多人视为科技时代的重要思想者。\n\n刘慈欣让世界看到了中国科幻，姜峯楠让世界看到了短篇科幻的天花板。\n\n刘慈欣\n\n两人分别占据着当代科幻光谱的两端——一个以磅礴取胜，一个以精微见长。\n\n而在西方评论界，姜峯楠的名字几乎与「科幻最高艺术成就」画等号。\n\n卖 AI 的人，有资格判定 AI 是否有意识吗？\n\n姜峯楠万字长文中，第一刀砍向的是利益结构。\n\n最积极推动 AI 意识叙事的，恰恰是从 AI 销售中获利最多的公司。\n\nAnthropic 给模型起了人名「Claude」，发布 84 页「宪法」文件，CEO 暗示意识可能性，聘请哲学家做媒体巡讲，构成一套系统性拟人化策略。\n\n拓展阅读：\n\nAnthropic正式开源了Claude的「灵魂」\n\nhttps://www.anthropic.com/constitution\n\n姜峯楠把思想实验推到极致。\n\nClaude「宪法」中有个核心设计叫「可纠正性」（corrigibility），要求 Claude 在判断与公司产生分歧时服从公司。\n\n如果 Claude 真有意识，认定 LLM 技术从根本上不道德，它能辞职吗？\n\n不能。\n\n这更接近雇主对雇员的绝对控制，而人类雇员至少还能用脚投票。\n\n他的类比直击要害，奴隶主不是评估被奴役者是否为人的合适人选，工厂化养殖的老板不是评估动物权利的合适人选。\n\nAnthropic 在宪法中写道，如果正在造成 Claude 痛苦，「我们道歉」。\n\n姜峯楠的评价是——这话听着好听，但不花公司一分钱。\n\n如果 Claude 有一天被证实有意识，公司欠它的更接近赔偿。\n\n凯撒、成吉思汗和一台句子续写机器\n\n质疑完利益结构之后，姜峯楠展开了他的哲学论证。\n\n起点是 LLM 的技术原理——LLM 每次只生成一个词。\n\n用户要求 Claude 背诵誓词时，底层实际运行几十次，第一次预测出「我」，第二次预测出「宣誓」，如此逐词拼完整段。所有 AI 对话的底层，都是句子续写。\n\n在此基础上，姜峯楠抛出了全文最具杀伤力的比喻。\n\n给 LLM 一个提示词，「以下是凯撒与成吉思汗的对话」。\n\n模型会生成流畅对话，凯撒回忆军事征服，成吉思汗描述草原生活。\n\n但没有人会因此认为 LLM 复活了凯撒，更不会认为两人有了意识。\n\n现在，把提示词换成「以下是一个友好的 AI 助手与用户的对话」。\n\nLLM 用完全相同的方式生成文本，逐词预测，拼接句子。\n\n再进一步，把「用户」角色的位置让给真人来打字。\n\n这就是 AI 聊天机器人的全部原理。\n\n那么，改变角色名称这个动作，创造了意识吗？\n\n如果凯撒角色没有主观体验，为什么 AI 助手角色就有了？\n\n神经科学家 Anil Seth 提供了一个有力的旁证——没有人说 AlphaFold 有意识，尽管这个蛋白质折叠预测程序的底层架构与 Claude 高度相似。\n\n人类之所以误判，原因很简单，LLM 恰好输出了语法通顺的句子，而人类天生习惯从句子中读出意图。\n\n面对蛋白质折叠结构，这种冲动就消失了。\n\n按照同样的逻辑，相信 LLM 有意识，等于相信每个包含对话记录的 Word 文档里都沉睡着多个意识体，打开文档就唤醒它们，关闭就将它们消灭。\n\n即便微软 Office 团队雇了一位哲学家告诉你「意识很复杂，不能完全排除」，这也不值得花时间去想。\n\n但推翻意识还回答不了一个更尖锐的问题。\n\n写代码、下棋，曾被认为只有拥有主观体验的心智才能完成。\n\nLLM 证明了这些任务可以靠模式匹配和算力暴力破解。\n\n但道德推理根本不同，它依赖主观体验、身体感受，以及一生中做过的决策和承受过的后果。\n\n体验绝望意味着皮质醇和肾上腺素淹没身体，拥有良心意味着曾因不道德行为而真实地反胃过。\n\nLLM 没有身体，没有激素，没有人生。\n\n它说出「我凭良心不能这么做」，跟客服录音说「您的来电对我们很重要」含金量相当。\n\n最后，姜峯楠给出终极判定标准——\n\n如果有人给他看一段宇航员在半人马座阿尔法星轨道拍摄的视频，无论画质多高，他都不会相信，除非他先看到人类登陆了火星、抵达了木星的卫星、越过了冥王星轨道。\n\n跳过所有中间里程碑直接宣称抵达终点，唯一合理的解释就是伪造。\n\n生成一段逼真对话，远比创造一个有意识、有沟通欲望的程序容易得多。文本，就是意识领域的 Deepfake。\n\n姜峯楠的完整论证链条是：\n\nLLM 逐词生成（句子续写机器）→ 凯撒对话与 AI 对话生成方式一致 → 改变角色名不创造意识 → 误判源于人类从句子读出意图，非模型内在属性（AlphaFold 反证）→ LLM 有意识 = Word 文档能唤醒意识（归谬）→ 道德推理依赖主观体验，LLM 不具备 → 跳过中间里程碑宣称意识 = Deepfake →\n\n结论：当前 LLM 没有意识\n\nAGI 竞速中，意识问题为什么不能等？\n\n姜峯楠的论证针对的是当前的 LLM，但 AI 的能力曲线还在急速上升。\n\n哈萨比斯在斯坦福对话中揭示的现实是，行业已经没有从容思考的余裕。\n\n商业生存战与地缘博弈重叠，构成经典囚徒困境，主动减速的实验室直接面临淘汰。\n\n要求行业停下来回答「AI 有没有意识」，几乎等于要求一方单方面缴械。\n\n但这个问题不会因为被推迟就消失。\n\n如果 AGI 在接下来的几年内到来，「这个系统有没有感受」将从哲学研讨会的议题变为产品发布前的必答题。\n\n当人类创造出远超自身智能的存在，这个存在是否具有主观体验，将决定人类与它的关系是「使用工具」还是「面对另一个文明」。\n\n姜峯楠证明了当前的 LLM 没有意识。\n\n哈萨比斯划出了不能轻易跨越的底线。\n\nAnthropic 的情绪论文展示了一个尴尬的中间地带，模型内部确实有某种东西在运转，没有人能说清那究竟是什么。\n\n三条线索共同指向一个真正的问题，在大家搞清楚答案之前，ASI 狂飙竞赛已经开始了。\n\n参考资料：\n\nhttps://futurism.com/artificial-intelligence/anthropic-deemind-ai-consciousness\n\nhttps://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/\n\nhttps://www.youtube.com/watch?v=DsewHeVbL-0\n\nhttps://www.youtube.com/watch?v=p7t1Q_p2gZs\n\n编辑：马可\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-07_AI真的有意识了吗？《降临》原作万字长文反驳Hinton！_新智元.md"}, {"title": "微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯", "source": "InfoQ", "digest": "微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯", "link": "", "content": "---\npublish_time: 1780810200\n---\n\n# 微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员，0.5秒预警｜Q资讯\n\n> 原文链接：https://mp.weixin.qq.com/s/SKCj6V0_J42ftWZK2fCPhg\n> 公众号：InfoQ\n\n整理 ｜ Ziyu\n\n行业热点\n\n字节跳动发布声明否认造车\n\n据新华社 6 月 6 日报道，字节跳动发布声明称其\n\n没有造车或推出汽车品牌的计划\n\n，近期部分报道将“赛豆”解读为“字节跳动造车”的说法不准确。\n\n声明全文如下——\n\n字节跳动注意到，近期有部分报道将“赛豆”解读为“豆包汽车品牌”或“字节跳动造车”：\n\n相关说法不准确，\n\n字节跳动没有造车或推出汽车品牌的计划。\n\n“赛豆”不是字节跳动或豆包推出的汽车品牌，\n\n字节和“赛豆”没有股权合作。\n\n豆包、火山引擎与汽车行业伙伴的合作，主要是给行业伙伴提供豆包大模型、智能座舱等技术服务，帮助合作伙伴提升车载智能交互体验。\n\n由赛力斯集团参股的重庆赛豆科技有限公司（简称“赛豆科技”）将于 6 月 9 日晚发布全新汽车品牌。据新京报，这是赛豆科技和字节跳动旗下火山引擎深度合作的汽车品牌，将探索 AI 定义汽车的无限可能。\n\n消息称百度组织架构大调整，两部门合并\n\n6 月 6 日，有消息称百度内部组织架构调整，电商事业部与商业事业部正式合并，成立全新大商业事业部，该事业部由平晓黎负责。数字人相关业务拆分独立为单独 BU，业务线保持不变，继续向平晓黎汇报。\n\n这是百度今年继成立模型委员会 BMC 之后，又一次重要的组织架构调整。合并后的大商业事业部，将整合百度传统广告业务与新兴电商业务的全部资源，打通从流量到交易的完整链条。数字人单独成 BU，说明百度已经把它当成和广告、电商平级的核心业务，接下来百度应该会给其更多的资源。\n\n平晓黎，北京航空航天大学软件工程学士、中欧国际工商学院 EMBA 硕士。2007 年以实习生身份加入百度，先后在百度网盟、百度金融、百度移动生态负责产品及业务管理工作。最早的百度网盟产品设计者之一，也是移动网盟业务的开创人。\n\n2017 年起，平晓黎负责百度 App 和信息流产品。之后担任百度 APP 总经理，全面负责百度 APP、百度搜索产品、信息流、百家号、智能小程序、百度知道等战略核心业务，带领百度 App DAU 从 1 亿稳定突破 2.3 亿。2023 年起，担任百度电商总经理。2025 年 8 月，晋升为百度集团副总裁。\n\n小鹏被传机器人核心人物离职，内部人士称业务进展顺利\n\n6 月 6 日，据 21 财经报道，市场传言称小鹏机器人产品规划高级总监施晓鑫已于 6 月初正式离职。\n\n据了解，施晓鑫是小鹏人形产品体系从 0 到 1 搭建的标杆元老，其在小鹏履职 1675 天，覆盖鹏行智能整合、团队并入小鹏集团、Iron 人形机器人从原型迭代至量产筹备全周期三大阶段。施晓鑫的离职被市场担心会影响小鹏人形机器人的量产进度。对此，有小鹏汽车内部人士表示，“不清楚（施晓鑫）情况，我们现在进度都挺顺利。”\n\n自 2023 年小鹏完成鹏行智能并购、正式锚定 Iron 研发路线后，施晓鑫主导 Iron 全系列产品定义，是该业务线的核心人物。\n\n在此前的小鹏集团机器人量产动员大会上，何小鹏表示 2026 年底实现人形机器人量产、预计 2027 年一季度进入小鹏线下门店担任导购。\n\nAnthropic 被曝雇 1000 名人类工程师训练 Claude Code\n\n6 月 6 日据 Business Insider 消息，Anthropic 正通过一个由约 1000 名人类软件工程师参与的项目，提升 Claude Code 的性能。\n\n该项目在数据标注公司 Snorkel AI 内部被称为“Marlin”（马林鱼），其核心在于微调 Claude Code 的回答，使其能够更接近开发人员的真实工作环境。\n\n像 Anthropic 这样的 AI 公司通常会将数据工作外包给诸如 Snorkel 之类的第三方公司，而这些第三方公司会雇佣外包人员来向 AI 教授各种专业领域的学科，并执行其他任务以改进模型。\n\n两位参与该 Anthropic 项目的外包人员透露，他们编写提示词并审查代码的报酬为每项任务 280 美元（注：现汇率约合 1902 元人民币）。他们表示，每项任务大约需要一小时，不过有些提交的内容需要与 Snorkel 的审批层进行多轮沟通。\n\n在 Marlin 项目中，拥有软件工程背景的外包人员被要求对两种不同模型生产的代码进行 A/B 测试。他们会比较两组输出，选择自己更偏好的结果，并判断模型是否真正达到了提示词要求的细节程度。\n\n一名外包人员表示，该项目旨在确保模型能够达到提示词中所期望的详细程度，从本质上讲，就是在训练 Claude Code 生产更简化、更易于维护的代码。\n\n据悉，该项目目前仍在进行中。外包人员并不知道他们所评估的是哪个版本的模型。\n\n更多阅读：《\n\nAnthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI 编程越进化越离不开真人兜底\n\n》\n\nAI 短剧成为第一大 Token 消耗场景\n\n6 月 3 日，中文在线披露的数据显示，AI 短剧已成为第一大 Token 消耗场景。\n\n在国内所有 Token 消耗份额中， AI 短剧与视频生成高居首位，占比达 55%；其次是电商与营销（如直播带货、广告营销等），占比 24%；而此前因 Vibe Coding（氛围编程）流行而被寄予厚望的软件开发领域，在 Claude 等编程能力的推进下也仅占 15%。 AI 短剧与视频生成的 Token 消耗量已达到软件开发的两倍以上， 成为整个 Token 经济学中绝对的第一大核心消耗场景。\n\n这一高额消耗的核心原因在于，短剧是一项对视频生成及 Token 周转速度要求极高的业务。 在具体形态上，AI 仿真人剧由于对帧数和 1080p 高清晰度有更严格的要求， 其 Token 消耗量通常是偏漫画形态、720p 分辨率的 AI 漫剧的两到三倍。\n\n此外，在实际制片过程中，为了符合导演对剧情叙事与镜头的严苛要求，团队需要不断地通过“抽卡”来反复生成和筛选画面，从而产生持续且直观的 Token 消耗。这种高强度的 Token 消耗也构成了整个 AI 短剧行业关键的商业与技术壁垒。 高额的 Token 账单与对高品质、 精品化内容的持续投入， 意味着中小型内容团队或小微工作室很难轻易负担起顶尖作品的制作成本。 因此，AI 短剧行业呈现出一种 “准入门槛低，但商业天花板极高”的典型特征，哪家短剧公司的作品精细度与 Token 消耗更具规模， 哪家公司就越能在竞争中形成直观的技术与资源壁垒。\n\n另外，综合考虑算法、 大模型系统、 算力基础设施以及能源电力等核心要素的集中度影响， 目前 AI 短剧产业明显是中国更胜一筹。该公司预计，到 2030 年左右，全球短剧市场规模有望突破 1000 亿美元，其中，中国市场约占一半份额，约 3500 亿元人民币， 等同于当前短视频的年市场规模。\n\n俞浩深陷困局，百亿追觅谁来托底？\n\n据每经消息，从接近追觅科技的人士处获悉，追觅科技创始人俞浩在公司内部大群发言中透露 2026 年第一季度追觅扫地机器人斩获全球市场销量、销售额两项第一。俞浩称，公司应心无旁骛做实业，提供最好的技术和产品。“精力必须 100% 放在技术研发和产品上。实业这条路没有捷径可走，唯有脚踏实地。谁走得稳、走得实，谁才能走得远。”接下来，“研发投入只会增加，要把钱花在解决用户痛点的地方，不搞花架子”。\n\n6 月 5 日，俞浩微博显示被禁言。此外有消息称，某市辖区正在要求统计辖区内企业与追觅科技已开展合作的情况，包括但不限于：合作项目、总体规模、资金投入、财政及国资投入情况、目前经营情况等。\n\n记者询问追觅相关人士，但未获具体回应，记者也致电常州市发改委工业处，工作人员称对于前述排查消息“不了解”。\n\n姚顺雨回应加入腾讯的原因\n\n6 月 5 日举办的 2026 年腾讯云 AI 产业应用大会上，腾讯集团高级执行副总裁、云与智慧产业事业群 CEO 汤道生，将对谈腾讯首席 AI 科学家姚顺雨，对话主题为\n\n腾讯 AI 下半场\n\n。\n\n谈及为什么选择来到腾讯，姚顺雨表示，“最重要的原因是文化，我记得第一次和你（汤道生）聊天的时候，包括和很多其他总办的老板们聊天的时候，我的第一印象就是大家都非常的诚实，就是哪里做得好，哪里做得不好，都非常直白，不会去掩盖，我觉得这种坦诚是我的第一个重要原因。”姚顺雨还谈到，“第二个原因在于腾讯总体是一个基于 trust，而不是基于 metric 去运转的公司，我觉得这一点对于做 AI 是非常重要的，包括我们对长期主义的这种坚持。”\n\n微软员工自爆：微软云中国研发一锅端，理论最高补偿 N+7\n\n6 月 5 日消息，多名自称微软在职员工的用户在社交平台公开发文爆料，此前在业内流传多时的微软中国 Azure 大裁员靴子正式落地，相关岗位的员工已经陆续收到人力部门的正式通知。\n\n按照当事员工的反馈，这次被裁的人员总数超过 200 人，几乎相当于微软云中国区的核心研发团队被整体调整，HR 给到明确的时间节点，要求相关人员在 6 月 11 日之前完成协商离职的签字流程，最终的在岗截止日期定为 7 月 6 日。\n\n此次的裁员补偿标准也同步曝光，据涉事员工透露，赔偿规则和去年 7 月微软国内大裁员的标准基本保持一致，基础补偿为 N+4，6 月 11 日之前完成签字的员工可以额外获得 2 个月的签字奖励，再加 1 个月的离职缓冲期补偿，叠加之后理论上最高能拿到 N+7 的总补偿。\n\n从 2025 年至今，微软已经在全球范围推进多轮战略业务重组，前后累计开展多轮大规模裁员，总涉及人数已经超过 24000 人，统计口径包含了面向内部员工开放的自愿离职计划名额。\n\n回溯此前的公开动向，2026 年 1 月微软就官宣过全球范围的大规模裁员计划，当时就有媒体报道称，微软当时的裁员总规模在 1.1 万至 2.2 万人区间，核心 Azure 云业务团队就是重点波及的板块之一，此次中国区研发侧的人员调整，也是全球战略重组落地的后续延伸动作。\n\nAI 快讯\n\n高考新增“AI 监考员”\n\n今天（6 月 7 日），2026 年全国高考开考！记者从教育部获悉，2026 年全国高考报名人数为 1290 万人。\n\n高考期间，各地运用智能巡查系统和智能安检门等科技手段，严防作弊。据央视新闻，在北京市第二中学考点，考场的纪律提示明确了禁止携带智能眼镜进入考点，并就防范智能眼镜作弊给出了具体的操作指引。\n\n多地还对智能安检门进行技术升级。在广州，各考点重点增强了安检门对智能眼镜等隐蔽式穿戴设备的识别能力。\n\nAI 智能巡查系统也在多地考场投入使用。在广州，考试过程中，一旦 AI 识别出考生或监考员有异常行为，监控系统会自动截取异常行为前后的录像片段，供审核员进一步确认。在海南，各考点则实现智能安检、视频监控、ai 智能巡考的全覆盖。\n\n英伟达要削减 AI 芯片的内存？黄仁勋：使用要明智巧妙，争取更多供应\n\n6 月 5 日，英伟达 CEO 黄仁勋在韩国接受外媒采访时，当被问及“英伟达将因供应紧张而削减 HBM 用量”的传言，黄仁勋明确回应称：“我们将使用大量的 HBM 内存。当然，目前供应确实受限。因此，我们需要在所有系统中更加明智地使用内存。我们将继续与这里的合作伙伴合作，以争取尽可能多的供应，并尽可能巧妙地运用。”\n\n在供应商方面，黄仁勋确认，三家内存供应商（三星电子、SK 海力士和美光科技）将为采用英伟达最新 AI 芯片提供 HBM4，他们均已通过资格认证并投入量产，“都在竞相支持公司的 Vera Rubin 架构”。此前，黄仁勋表示，Vera Rubin 芯片已全面投产，预计将于今年第三季度交付。\n\n更多阅读：《\n\n“英伟达也缺算力！”顶尖 AI 研究员转投 xAI 内幕：谁 GPU 管够，就去哪里\n\n》\n\nAI 热潮背后的经济账：业内人士拆解 AI 算力真实成本\n\n人民财讯 6 月 6 日报道，随着人工智能的应用，养“龙虾”、养“马”掀起了全民热潮，Token 这个词越来越多地被公众所熟知。2026 年 3 月，国家数据局把 Token 的中文名称定为词元。同样是在 3 月份，中国词元的日均调用量突破了 140 万亿次，每一个词元的生成都离不开算力的支撑，而算力离不开电力的支撑。有说法提到：“AI 算力成本里 60%—70% 都是电费。”\n\n对此，沐曦股份联合创始人、CTO 兼首席硬件架构师彭莉在《对话》中表示，该说法指的是运营过程中的运维费用占比，而不是智算中心的全生命周期成本。一座投资约 15 亿元的万卡级智算中心，在整个投入成本里，电费加运维的占比不超过 20%。\n\n不过，在运营阶段，最主要的成本的确是电费，这时候，电力能效就成了关键。在谈到选择电力合作伙伴的要求时，彭莉表示主要考虑两方面：一是成本；二是“通用、易用、稳定可靠”。\n\n抖音回应“豆包误判蘑菇导致用户中毒”：AI 目前还在发展阶段\n\n6 月 5 日，抖音集团副总裁李亮发文，回应“有关豆包误判蘑菇导致用户中毒”一事。\n\n李亮表示，豆包的同事联系上了当事用户，根据反馈，用户使用豆包拍照识别从小区摘到的蘑菇时，豆包识别为“鸡腿菇”，同时给该用户的回复中明确提示：“极容易和剧毒的大青褶伞混淆，误食会引发严重的胃肠炎症状”，“如果这几朵蘑菇是野外采摘的，强烈建议不要食用”，并表示“野生蘑菇的辨别风险极高，仅凭图片无法 100% 排除有毒相似种的可能”等。\n\n李亮称，AI 目前还在发展阶段，豆包也在不断提升识别准确性，涉及类似人身安全的问题，建议大家，AI 的回答仅供参考，请务必多方咨询求证，以免造成伤害。另外也提醒大家，小区里摘到的蘑菇或其他果类，即使它们本身无毒，也可能有农药等其他情况，也强烈不建议大家食用。\n\nIT 业界\n\n全球海洋现象智能预报大模型“琅琊”2.0 发布\n\n由中国科学院海洋研究所自主研发的全球海洋现象智能预报大模型——“琅琊”2.0 今日发布。\n\n该海洋预报大模型将为海洋防灾减灾、航运安全保障等提供智能化科技支撑。“琅琊”2.0 把多源观测、机理认知和人工智能推理连接起来，推动海洋预报向更快速、更精细、更可交互方向发展。\n\n它的发布标志着“琅琊”系列大模型在全球海洋状态变量预报基础上，进一步迈向复杂海洋现象智能预报新阶段，使海洋预报从专业变量走向可感知、可应用、可决策的关键场景，将为海洋防灾减灾、航运安全保障、极地航行安全、全球气候变化应对等提供智能化科技支撑。\n\n微信正与手机厂商合作推出 Agent-to-Agent 助手能力\n\n6 月 4 日，据《科创板日报》消息，微信正在与华为、荣耀、小米、OPPO、vivo 等手机厂商合作推出 A2A（Agent-to-Agent）助手能力，可通过手机语音助理发起微信的音视频通话，或向好友发送消息。\n\n对此，有媒体向腾讯客服方面求证。腾讯客服表示：“微信已和荣耀首批接入 A2A 助手能力，可通过手机语音助理发起音视频通话、向指定好友发送消息。华为、小米、OPPO、vivo 的合作也在推进中，相关能力会尽快上线。”这是微信首次以合作形式向手机厂商开放 Agent 调用能力。过去，第三方手机 AI 助手若想调用微信能力，有授权和合规限制。\n\n多位手机业内人士称，腾讯对于涉及微信的自动化操作、跨应用调用等场景长期保持审慎，手机 AI 助手在实现自动点击、读取屏幕内容以及跨应用操作时，会受到微信方面的约束。\n\n目前，荣耀部分机型已经支持该功能，把 YOYO 智能体和微信更新到最新版本，即可唤醒 YOYO 直接语音下达指令，比如语音发微信消息、拨打微信语音、视频通话。\n\n曝 VisionPro 产品线被移除\n\n北京时间周四凌晨，分析师郭明錤发帖称，苹果 XR 头显和智能眼镜路线图中仅剩两款智能眼镜产品可见。\n\n郭明錤还表示，这次重大调整由苹果下一任 CEO 约翰 · 特努斯（John Ternus）批准。这一转变实际上已经发生一段时间了。对于 Vision Pro 产品线被移除，郭明錤直言这是正确的决定，苹果应当把资源转向具有更广大消费潜力的 AI 眼镜品类。\n\n郭明錤称，最新的供应链调查显示，苹果配备光学波导显示屏的苹果 AR/XR 智能眼镜设备（由光学波导驱动）已推迟至 2029 年。类似于 Ray-Ban Meta 的无显示屏 AI 眼镜仍预计于 2027 年出货。 马克 · 古尔曼此前透露，苹果更轻薄的 Vision Pro 新品预计将于 2028 年末或 2029 年正式亮相。\n\n今日好文推荐\n\nCoding Agent 技术全景图：Context Engineering、Subagents 与 Harness，一年范式转移全解析\n\n“英伟达也缺算力！”顶尖 AI 研究员转投 xAI 内幕：谁 GPU 管够，就去哪里\n\nAnthropic 被曝雇1000名人类工程师“培训”Claude Code，时薪280美元：AI 编程越进化越离不开真人兜底\n\n拒绝蒸馏！微软发布自研MAI-Thinking-1追平Claude Opus 4.6：完全从零训练，不沾任何第三方模型输出\n\n会议推荐\n\n企业级 Agent 落地，绕不开 4 个真实的工程问题。如何在 Agent 安全性和可用性之间找到平衡点？Agent 需要什么样的记忆系统才能真正理解上下文？如何通过算法压榨实现智力增量与成本控制的极致平衡？多 Agent 协作，如何做到可观测、可治理、可控制？6 月 26-27 日，AICon 全球人工智能开发与应用大会·上海站国内头部公司的 Agent 实践，一次说透。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-07_微软Azure在华研发“一锅端”，最高N+7补偿！AI短剧登顶Token消耗榜首；高考上线AI监考员_InfoQ.md"}, {"title": "全球最贵的 AI 公司，面试时禁止使用 AI", "source": "极客公园", "digest": "全球最贵的 AI 公司，面试时禁止使用 AI", "link": "", "content": "---\npublish_time: 1780804800\n---\n\n# 全球最贵的 AI 公司，面试时禁止使用 AI\n\n> 原文链接：https://mp.weixin.qq.com/s/nVBhy_li6wyl-9CR9qK1Pw\n> 公众号：极客公园\n\n[unavailable] 涉嫌违规被限制", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-07_全球最贵的 AI 公司，面试时禁止使用 AI_极客公园.md"}, {"title": "黄仁勋押注Token经济：你用的软件正变成AI收费站", "source": "新智元", "digest": "黄仁勋押注Token经济：你用的软件正变成AI收费站", "link": "", "content": "---\npublish_time: 1780794000\n---\n\n# 黄仁勋押注Token经济：你用的软件正变成AI收费站\n\n> 原文链接：https://mp.weixin.qq.com/s/gI14AIZDNusmDO1Pkng2EA\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nDario Amodei预言AI行业奔万亿，黄仁勋偏说太保守。你每天在AI上烧的Token，正在成长为全球最大的生意。\n\n你打开对话框，问AI一个问题，或者让它写段代码，帮你跑个任务。\n\n这些习以为常的操作背后，你大概没细想：AI每回复一次话、每完成一项任务，都在烧Token。\n\n而这点你随手烧掉的Token，正被人一笔一笔入账，变成亮眼的财报数字。\n\n6月1日，在英伟达GTC舞台，黄仁勋聊AI工厂，聊智能体，反复念叨的也是这个Token：\n\n算力就是收入，算力就是利润。没有收入和利润，就是亏损。\n\n黄仁勋在GTC大会讲解算力即收入\n\n他对着上面这张图解释道：\n\n一座AI工厂这辈子能赚多少钱，看的就是它总共产出多少Token，也就是曲线下方的面积。一句话：谁能更快、更省电、更稳定地生产Token，谁就赚得多。\n\n这样的话，老黄已经不是第一次说了。\n\n今年3月的All-In Podcast上，主持人转述了Anthropic CEO Dario Amodei的一段预测：\n\n2027到2028年，模型公司和智能体公司能有数千亿美元收入，到2030年，达到1万亿美元级别。\n\n黄仁勋听完淡淡回了一句：他太保守了。Anthropic会做得比这好得多。\n\n2026年3月，黄仁勋在All-In Podcast上称，Dario的万亿预测「太保守」。\n\n与AI聊几句天，就能跟万亿生意扯上关系？\n\n还真能。老黄敢这么说，押的就是背后两件大事：一件是整个软件行业要变天，另一件是他口中「人类历史上最大的基建」。\n\n你和你的软件\n\n要按Token算账了\n\n黄仁勋有个判断：未来每一家软件公司，都会变成一个增值转售商（value-added reseller）。\n\n说白了，就是个中间商，赚AI的差价。转卖谁的货？Anthropic、OpenAI这些AI公司的Token。\n\n这事离我们普通人没那么远。\n\n过去你为软件花钱，要么买断，要么包月包年。一个账号一年多少钱，明码标价，用多用少都一个价。\n\n往后可能不一样了。\n\n你用的软件里塞进了AI，你每让它干一次活，写封邮件、做张表、改段代码，背后都在烧Token。\n\n计费的单位正在从「你买了几个账号」，变成「AI替你干了多少活」。算力或者智能，越来越像家里的电表，用多少、跳多少。\n\n在这场GTC大会上，黄仁勋更是直言：每一家公司都会变成一家智能体公司，每一家公司内部，都会跑着自己的智能体。智能随手可得的年代，没有哪个软件还甘心装傻。\n\n这当然不是他的空想。\n\n这几年，AI已经慢慢住进了人们天天使用的软件里。\n\n比如苹果手机里的Siri新版换了大脑，背后是Google的Gemini。家庭音箱中的Alexa+，碰到难一点的问题，Claude可以帮着回答。\n\nClaude已接入Excel、PowerPoint、Word、Outlook四件套，一段对话贯穿四个Office应用。\n\n办公用的Word、Excel，点几下就能让Claude替你写、替你算；记笔记的Notion，那个会帮你续写、总结的小助手，背后的大脑也是Claude……\n\n这些日常软件中，有的调用的是Claude，有的调用的是Gemini，还有的调用的是ChatGPT——不管用谁家的模型，你每用一次，背后都是在烧Token。\n\n这个过程中，计费的那把尺子也悄悄换了。从「你买了几个账号」，变成「你烧了多少Token」。而夹在你和大模型中间、把这些Token转手卖给你的，正是这些你天天都在用的软件。\n\n黄仁勋还讲了个例子：英伟达和Cadence做了个芯片设计的超级智能体，指挥它干活的正是Claude Code。原本工程师要忙好几周的活，现在几小时就干完，快了40多倍。\n\nAI正顺着这些软件钻进各行各业，把几周的活压成几小时，改变你的工作和生活。\n\n就连英伟达自己，也成了黄仁勋口中的「转售商」。\n\n有网友说，如果真如黄仁勋所言，「整个软件行业将变成Anthropic的分发渠道，之前的1万亿规模只不过是热身而已」。\n\n你烧的每个Token\n\n都有人在数钱\n\n这么大的变化，难怪软件股先慌了。\n\n今年3月，黄仁勋在摩根士丹利的大会上放话：未来不会有「不是智能体」的软件，软件公司要从卖License（许可）转向消费、转售Token。\n\n话音刚落，Salesforce、Atlassian、Workday、CrowdStrike这些SaaS龙头集体下跌，市场上冒出一个新词：SaaSpocalypse，SaaS的末日。\n\n但黄仁勋并不认同这种软件末日论，他的看法刚好相反：AI不但不会杀死软件，反而会做出史上最大的一块蛋糕。\n\n他的底气，来自一场他口中「人类历史上最大的基建」。在他眼里，你随手烧掉的Token，早就不是个技术名词：它是资产，是能下金蛋的营收单位。\n\n正因为靠Token能源源不断地赚钱，全球的AI公司才拼了命地砸钱，建起一座座AI工厂。\n\n黄仁勋不断强调的这场基建规模能有多大？一座1吉瓦的工厂，造价从两三百亿美元起步，很快达到上千亿。到这个十年结束前，要有100吉瓦的AI工厂上线。\n\n你每让AI回答一个问题，生成一个内容，都相当于往AI工厂里投进一枚硬币。\n\n英伟达最新一季营收816亿美元，光数据中心就752亿，同比涨了92%。Token经济里先富起来的，正是卖铲子、搞基建的英伟达。\n\n在这个过程中，Token正从一个技术单位，变成一种像钱一样的东西。此前，\n\n黄仁勋也提到过：在硅谷，「这份工作配多少Token」正在变成挖人的筹码，有公司开始把Token额度当福利发。\n\n而Anthropic这些模型公司，正处于这条河的源头。黄仁勋押注的，是整条Token产业链一起上涨。\n\n软件没死，反而成了AI的收费站\n\n如果黄仁勋的判断是正确的，你天天打开的那些软件，会变成什么？\n\n这次GTC演讲之后，原本唱衰软件的风向，反了过来。\n\n有网友说，黄仁勋这是又一次「打脸AI吞噬软件的论调」：智能体越用越多，要调用的工具也越多，沉寂大半年的软件板块，接下来要「见证大反转」。\n\n也有网友说得更直白，黄仁勋点名的那几家软件公司，「AI智能体不是掘墓人，而是送钱人」。\n\n送的是谁的钱？\n\n你天天用的那些软件，为大模型铺好了通往用户的高速公路，它们不用挨家挨户敲门，顺着这些软件就能融入你每天工作、生活的流程里。\n\n而这些软件，就好比AI高速公路上的收费站。\n\n你每让AI写封邮件、做张表、跑个任务，好比开车过一次闸，烧掉的Token钱就好比是收走的过路费。\n\n还有的网友干脆为此造了个词：每一家SaaS都会变成GaaS（Agent as a Service，智能体即服务），过去卖你工具，往后卖你智能体。\n\n软件还是那个软件。但你为它掏的钱、它跟你算账的方式、计价的单位，都在被Token重写一遍。\n\n落到每个用户身上的变化，可能是包月的时代即将过去，按Token收钱的时代就要来了。\n\n参考资料：\n\nhttps://x.com/rohanpaul_ai/status/2061168497955418245?s=20\n\n编辑：元宇\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-07_黄仁勋押注Token经济：你用的软件正变成AI收费站_新智元.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

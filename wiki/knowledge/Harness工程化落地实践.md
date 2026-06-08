@@ -3,6 +3,8 @@
 > 工程案例：JK Launcher（Unity项目研发桌面启动器）
 > 来源：腾讯云开发者（白家杰）
 
+> 📎 本文是 Harness 的实践落地篇。Harness 的理论体系（Hook/ETCLOVG/NLAH）详见 [AgentSkill体系.md 的 Harness 章节](./AgentSkill体系.md#harness-engineering给agent套上确定性安全网)
+
 ---
 
 ## 核心理念
