@@ -1,7 +1,277 @@
 {
-  "updated_at": "2026-06-08T06:58:11.793383",
-  "total": 1115,
+  "updated_at": "2026-06-09T11:19:15.205181",
+  "total": 1142,
   "articles": [
+    {
+      "date": "2026-06-08",
+      "title": "一个8×8矩阵，让大模型「记住」长对话：Mind Lab联合NTU、复旦推出δ-mem，参数仅0.12%",
+      "source": "机器之心",
+      "digest": "有效的长期记忆不一定要靠扩展显式上下文或部署重型外部检索模块。",
+      "link": "https://mp.weixin.qq.com/s/mvVVHXkUvu7NhQ80NLMsQg",
+      "source_file": "sources/2026-06-08_一个8×8矩阵，让大模型「记住」长对话：Mind Lab联合NTU、复旦推出δ-mem，参数仅0.1_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-08",
+      "title": "刚刚，Mind Lab开源V1系列模型Preview，749B参数，专为Agent 后训练",
+      "source": "机器之心",
+      "digest": "专为 Agent Harness 场景深度后训练的大模型。",
+      "link": "https://mp.weixin.qq.com/s/RwHYeilWaq9cUEuaymFqkg",
+      "source_file": "sources/2026-06-08_刚刚，Mind Lab开源V1系列模型Preview，749B参数，专为Agent 后训练_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-08",
+      "title": "降维打击！数学博士熬秃头，AI数学家：上午出题，下午4点交证明",
+      "source": "新智元",
+      "digest": "数学还是人类最后智力上的荣耀吗？",
+      "link": "https://mp.weixin.qq.com/s/-iJa7uSIUS-64TGXoVQlRg",
+      "source_file": "sources/2026-06-08_降维打击！数学博士熬秃头，AI数学家：上午出题，下午4点交证明_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Anthropic 80%代码AI自已写，人类刹车来得及么？",
+      "source": "新智元",
+      "digest": "AI让全人类「痛并快乐」",
+      "link": "https://mp.weixin.qq.com/s/7lxNI2ptpCRT-0vG1QCWrQ",
+      "source_file": "sources/2026-06-08_Anthropic 80%代码AI自已写，人类刹车来得及么？_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Next.js 16.2 发布：开发提速 4 倍、渲染性能优化，新增深度适配 AI 智能体的开发工具",
+      "source": "InfoQ",
+      "digest": "Vercel推出开源React框架Next.js 16.2新版本，优化性能与调试体验、新增AI智能体配套工具，并完成200余项Turbopack修复优化。",
+      "link": "https://mp.weixin.qq.com/s/Az48sBh1aaDE9tAgUPlE1w",
+      "source_file": "sources/2026-06-08_Next.js 16.2 发布：开发提速 4 倍、渲染性能优化，新增深度适配 AI 智能体的开发工具_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "OpenAI冲刺上市前一搏，ChatGPT被曝迎最大规模改版！",
+      "source": "智东西",
+      "digest": "OpenAI正准备对ChatGPT进行自上线以来最大规模的改版。",
+      "link": "https://mp.weixin.qq.com/s/iP7PfCHJJPRmsifvPIjf6Q",
+      "source_file": "sources/2026-06-08_OpenAI冲刺上市前一搏，ChatGPT被曝迎最大规模改版！_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "OpenAI：Chat已死",
+      "source": "量子位",
+      "digest": "ChatGPT即将迎来史上最大改版",
+      "link": "https://mp.weixin.qq.com/s/R-SpQWncHJOLp4gMRRKIgA",
+      "source_file": "sources/2026-06-08_OpenAI：Chat已死_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "库克“最后一舞”！苹果今晚更新“AI重大进展”",
+      "source": "财联社AI daily",
+      "digest": "文|张真北京时间6月9日凌晨，苹果2026年度全球开发者大会（WWDC26）即将拉开帷幕，这也将是蒂姆·库克作",
+      "link": "https://mp.weixin.qq.com/s/SB7ylosK7jRNk-IJ1euJew",
+      "source_file": "sources/2026-06-08_库克“最后一舞”！苹果今晚更新“AI重大进展”_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "国产大模型第一梯队迎新势力：云知声发了个原生Agent大模型，再次捅破行业天花板",
+      "source": "智东西",
+      "digest": "一场迟到但惊艳的“自我正名”。",
+      "link": "https://mp.weixin.qq.com/s/soqHzNcI9vpLmQD-QxOJpw",
+      "source_file": "sources/2026-06-08_国产大模型第一梯队迎新势力：云知声发了个原生Agent大模型，再次捅破行业天花板_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-08",
+      "title": "迈向高保真与工业化：混元 3D 生成大模型从理论到实践的 SOTA 之路｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "腾讯混元3D生成大模型致力于通过AIGC技术重塑3D内容生产管线",
+      "link": "https://mp.weixin.qq.com/s/oaVuYKhjAyMQm5HPh9PyGQ",
+      "source_file": "sources/2026-06-08_迈向高保真与工业化：混元 3D 生成大模型从理论到实践的 SOTA 之路｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-08",
+      "title": "300个Agent预测104场比赛，Kimi拿世界杯做一场AI公开实验",
+      "source": "智东西",
+      "digest": "国足没进世界杯，Kimi的300个Agent先“下场”了。",
+      "link": "https://mp.weixin.qq.com/s/jShKgJv3lxXuR_SoagW_kw",
+      "source_file": "sources/2026-06-08_300个Agent预测104场比赛，Kimi拿世界杯做一场AI公开实验_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Agent 辅助开发，一站式打通 Qwen3-VL Android 端侧推理",
+      "source": "通义实验室",
+      "digest": "端侧 AI 基建指南",
+      "link": "https://mp.weixin.qq.com/s/VhxGZp9FNCLbi3e_aoBRzg",
+      "source_file": "sources/2026-06-08_Agent 辅助开发，一站式打通 Qwen3-VL Android 端侧推理_通义实验室.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "小红书上线RED Skill，社区长出GitHub式AI能力",
+      "source": "多源综合",
+      "digest": "小红书正式上线AI Skill功能RED Skill，预计7月全量上线，首个将AI Skill与社区深度结合的实践。",
+      "link": "https://mp.weixin.qq.com/s/iccrl0Dz9zv5ql9Yq31D1g",
+      "source_file": "sources/2026-06-08_你天天刷的小红书，正在长出一个GitHub_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "微信AI官宣开发者接入内测，开放平台推出微信AI生态",
+      "source": "多源综合",
+      "digest": "微信AI正式向开发者开放，小程序可一键接入微信AI生态能力。",
+      "link": "https://mp.weixin.qq.com/s/0VDZkio0ve3VMnIMox75Ug",
+      "source_file": "sources/2026-06-08_刚刚，微信AI官宣开发者接入内测_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "腾讯想让企业打开AI的方式只剩一个",
+      "source": "量子位",
+      "digest": "一个入口串起全栈智能体",
+      "link": "https://mp.weixin.qq.com/s/MoM0hjYiOBaX6UdUOReYqw",
+      "source_file": "sources/2026-06-08_腾讯想让企业打开AI的方式只剩一个_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "腾讯打出企业Agent新底牌：WorkBuddy企业版抢占AI办公统一入口",
+      "source": "机器之心",
+      "digest": "7×24 小时超级团队来了",
+      "link": "https://mp.weixin.qq.com/s/xFUhP-b2HBey-Kq784Z7TQ",
+      "source_file": "sources/2026-06-08_腾讯打出企业Agent新底牌：WorkBuddy企业版抢占AI办公统一入口_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "解锁Agent Swarm新潜力，openJiuwen又一力作：多智能体流网络",
+      "source": "机器之心",
+      "digest": "通过将多智能体系统的结构、任务分解与路径选择紧密集成，不仅关注单个智能体的性能，还强调整体工作流的协调优化。",
+      "link": "https://mp.weixin.qq.com/s/Eleh8ZlAVYpgV_4MCq_2vQ",
+      "source_file": "sources/2026-06-08_解锁Agent Swarm新潜力，openJiuwen又一力作：多智能体流网络_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "苏州银行引入五大AI智能体矩阵赋能企微客户平台",
+      "source": "银行科技研究社",
+      "digest": "苏州银行引入五大AI智能体矩阵赋能企微客户平台",
+      "link": "https://mp.weixin.qq.com/s/i7MAiuoKLGtHUXA1QCO8Ow",
+      "source_file": "sources/2026-06-08_苏州银行引入五大AI智能体矩阵赋能企微客户平台_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Token「免费」时代来了？对话 Agnes AI 创始人，全模态免费的生意与野心",
+      "source": "极客公园",
+      "digest": "​当 token 不要钱，人的野心会变大。",
+      "link": "https://mp.weixin.qq.com/s/Cp1EGTHXRouZmQFTwt_dKA",
+      "source_file": "sources/2026-06-08_Token「免费」时代来了？对话 Agnes AI 创始人，全模态免费的生意与野心_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "《AI领航：中国人工智能产业实践先锋图景》正式出版",
+      "source": "中国信通院CAICT",
+      "digest": "《AI领航：中国人工智能产业实践先锋图景》正式出版",
+      "link": "https://mp.weixin.qq.com/s/St_t6M1UZLkraFJ-VBYFBQ",
+      "source_file": "sources/2026-06-08_《AI领航：中国人工智能产业实践先锋图景》正式出版_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "「Token末日」来了！AI正迎来一场定价海啸",
+      "source": "机器之心",
+      "digest": "「Tokenpocalypse」",
+      "link": "https://mp.weixin.qq.com/s/JOlvDu4qL_Aeyrw1EE5MzQ",
+      "source_file": "sources/2026-06-08_「Token末日」来了！AI正迎来一场定价海啸_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "云知声U2，重新计算通用大模型的商业价值",
+      "source": "InfoQ",
+      "digest": "参数规模本身，并不能直接转化为应用价值。",
+      "link": "https://mp.weixin.qq.com/s/K-qq40m7-NDPWzhNkSZy6g",
+      "source_file": "sources/2026-06-08_云知声U2，重新计算通用大模型的商业价值_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "作为一个招蚊体质，这是我第一个真心支持的AI项目",
+      "source": "机器之心",
+      "digest": "高射炮打蚊子，这下子成真了。",
+      "link": "https://mp.weixin.qq.com/s/zteuRpo1nJNxky2ix3Dbag",
+      "source_file": "sources/2026-06-08_作为一个招蚊体质，这是我第一个真心支持的AI项目_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "大模型看Coding，具身看Picking！原力灵机已抢先入局",
+      "source": "量子位",
+      "digest": "轻视它会错过整个具身智能时代",
+      "link": "https://mp.weixin.qq.com/s/gOryl-wfbpAtcImbQt4Mww",
+      "source_file": "sources/2026-06-08_大模型看Coding，具身看Picking！原力灵机已抢先入局_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "腾讯与京东就AI Agent将达成重要合作",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》记者获悉，京东与腾讯将围绕AI Agent展开深度合作。",
+      "link": "https://mp.weixin.qq.com/s/cBzIzzeNsHoy05AtLEkOGQ",
+      "source_file": "sources/2026-06-08_腾讯与京东就AI Agent将达成重要合作_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "腾讯研究院AI速递 20260608",
+      "source": "腾讯研究院",
+      "digest": "AI的下半场，关键在于寻找好问题",
+      "link": "https://mp.weixin.qq.com/s/1x-RRe08HQ6RXNqAthWg1Q",
+      "source_file": "sources/2026-06-08_腾讯研究院AI速递 20260608_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-08",
+      "title": "集成 Coding 和 Agent 工具，ChatGPT 打造超级应用；两部门出台《规范》整治网络测评活动；京东、腾讯围绕 AI Agent 合作 | 极客早知道",
+      "source": "极客公园",
+      "digest": "折叠屏 iPhone 模型更多实拍曝光；孙正义表示超级智能两年内到来；机器人流量首度超越人类",
+      "link": "https://mp.weixin.qq.com/s/5rtvB5DcaQNChCBqLnevxA",
+      "source_file": "sources/2026-06-08_集成 Coding 和 Agent 工具，ChatGPT 打造超级应用；两部门出台《规范》整治网络测_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-07",
       "title": "AI真能学会心算？隐式思维链首次得到理论证明，Stuart Russell参与",
