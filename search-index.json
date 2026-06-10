@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-06-10T12:33:56.850641",
-  "total": 1167,
+  "updated_at": "2026-06-11T07:16:53.666383",
+  "total": 1189,
   "articles": [
+    {
+      "date": "2026-06-10",
+      "title": "实测「神话」级模型 Fable 5：强者世界里的最强者 | AI 上新",
+      "source": "极客公园",
+      "digest": "Anthropic发布Fable 5神话级模型，Coding和Agent能力极强，各项基准测试屠榜。",
+      "link": "https://mp.weixin.qq.com/s/CYxsD1KsyCsmh2AUDF2ifg",
+      "source_file": "sources/2026-06-10_实测「神话」级模型 Fable 5：强者世界里的最强者 _ AI 上新_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-10",
+      "title": "库克最后一届WWDC，把苹果AI九年的地基掀了",
+      "source": "新智元",
+      "digest": "库克最后一届WWDC，把苹果AI九年的地基掀了",
+      "link": "https://mp.weixin.qq.com/s/Iei_SeXPX8pJWlii_UZQKg",
+      "source_file": "sources/2026-06-10_库克最后一届WWDC，把苹果AI九年的地基掀了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "Google Workspace CLI：专为人类和 AI 代理设计的统一命令行工具",
+      "source": "InfoQ",
+      "digest": "Google Workspace CLI 发布，为 Drive、Gmail、日历、表格、文档、聊天、管理控制台以及所有其他 Google Workspace API 提供了一个统一的接口。",
+      "link": "https://mp.weixin.qq.com/s/9yCoeZSN0BmUwMC9Oauyjw",
+      "source_file": "sources/2026-06-10_Google Workspace CLI：专为人类和 AI 代理设计的统一命令行工具_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "AI交互新基准！蚂蚁提出MiniAppBench并入选ICML 2026 Spotlight",
+      "source": "机器之心",
+      "digest": "每生成 6 个交互应用，只有约 1 个能真正满足用户需求。",
+      "link": "https://mp.weixin.qq.com/s/mdD0TdyCZ9WTEdU_V-X5cQ",
+      "source_file": "sources/2026-06-10_AI交互新基准！蚂蚁提出MiniAppBench并入选ICML 2026 Spotlight_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-10",
+      "title": "用一套统一架构，驱动数字空间与物理空间互通丨商汤林达华@AIGC2026",
+      "source": "量子位",
+      "digest": "AI探索需要长期主义",
+      "link": "https://mp.weixin.qq.com/s/krLJTGNv0t8kpTc8kxBrjQ",
+      "source_file": "sources/2026-06-10_用一套统一架构，驱动数字空间与物理空间互通丨商汤林达华@AIGC2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "荣耀YOYO与微信首个A2A合作正式上线",
+      "source": "财联社AI daily",
+      "digest": "《科创板日报》获悉，荣耀YOYO与微信的AI生态合作正式落地。荣耀YOYO支持发微信消息、拨打微信语音、视频通话，并已完成全量机型推送。",
+      "link": "https://mp.weixin.qq.com/s/_P8bn_qFZ01z38IFci-fJg",
+      "source_file": "sources/2026-06-10_荣耀YOYO与微信首个A2A合作正式上线_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "Qoder 工程实践：当瓶颈从模型转移到人",
+      "source": "Qoder",
+      "digest": "当 AI 输出的价值稳定超过 Token 成本之后，瓶颈从模型能力转移到了人的精力。",
+      "link": "https://mp.weixin.qq.com/s/XG22lSQuyT2xzf4yt-PU3Q",
+      "source_file": "sources/2026-06-10_Qoder 工程实践：当瓶颈从模型转移到人_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "微信AI生态正式对外开放，美团、京东等抢先接入内测",
+      "source": "财联社AI daily",
+      "digest": "微信公开课官宣AI生态接入指引，美团、京东等抢先接入内测。分析认为这是AI Agent的'iPhone时刻'。",
+      "link": "https://mp.weixin.qq.com/s/lIJQ1Lv74JJixJqTFJbWMw",
+      "source_file": "sources/2026-06-10_微信AI生态正式对外开放，美团、京东等抢先接入内测_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "算力新基建，推荐新智能：快手推荐系统池化的探索与实践｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "本次演讲将系统阐述快手在推荐系统算力池化方向上的思考与实践",
+      "link": "https://mp.weixin.qq.com/s/DD44Xm00_E1IZnH8IjKXUw",
+      "source_file": "sources/2026-06-10_算力新基建，推荐新智能：快手推荐系统池化的探索与实践｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "按一下，让AI看见屏幕",
+      "source": "Qoder",
+      "digest": "每次想把电脑屏幕里的东西发给AI，都要走一遍：截图、保存、打开对话框、上传、再打字描述。一套下来人都烦了。\n\nQoderWork「应用快照」上线：按一下快捷键（默认同时按下左右两边的 Command），你正在看的窗口截图和里面的文字直接进对话框，开口就能问。\n\n实测三个最爽场景：\n\n1、数据看板瞄一眼觉得不对劲，按一下，问\"这个渠道为什么掉了\"，AI 直接给分析；\n\n2、收到一封难回的邮件，按一下...",
+      "link": "https://mp.weixin.qq.com/s/R0knzuEIgsV17oY0NLt8Zg",
+      "source_file": "sources/2026-06-10_按一下，让AI看见屏幕_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "能自动干活的AI浏览器，永久免费，来自美团",
+      "source": "机器之心",
+      "digest": "浏览器替你跑流程！",
+      "link": "https://mp.weixin.qq.com/s/WJAE-lB7hHhtmlrVSMPESg",
+      "source_file": "sources/2026-06-10_能自动干活的AI浏览器，永久免费，来自美团_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "华夏银行量子基础大模型构建与应用",
+      "source": "金融电子化",
+      "digest": "华夏银行量子基础大模型构建与应用",
+      "link": "https://mp.weixin.qq.com/s/O-hK9u_1yKZT5W14oTZOiw",
+      "source_file": "sources/2026-06-10_华夏银行量子基础大模型构建与应用_金融电子化.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-10",
+      "title": "内网7万字长文刷屏！阿里AI to B战略走到十字路口",
+      "source": "财联社AI daily",
+      "digest": "内网7万字长文刷屏！阿里AI to B战略走到十字路口",
+      "link": "https://mp.weixin.qq.com/s/CevXf2jpnwXY1bl80TufzQ",
+      "source_file": "sources/2026-06-10_内网7万字长文刷屏！阿里AI to B战略走到十字路口_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "Claude 最强模型 Fable 5 发布；微信朋友圈搜索功能全面开放；小米 NAS 页面曝光｜极客早知道",
+      "source": "极客公园",
+      "digest": "6 月 10 日消息，Anthropic 昨日（6 月 9 日）发布博文，宣布推出 Claude Fable 5 与 Claude Mythos 5 两款 AI 模型。",
+      "link": "https://mp.weixin.qq.com/s/EvtFYfkJn8M2IQKH0nU88A",
+      "source_file": "sources/2026-06-10_Claude 最强模型 Fable 5 发布；微信朋友圈搜索功能全面开放；小米 NAS 页面曝光｜极_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "腾讯研究院AI速递 20260610",
+      "source": "未知来源",
+      "digest": "AI 在科研领域发展要比编程慢得多",
+      "link": "https://mp.weixin.qq.com/s/fKV3uMDMipr7d3FiS41EDg",
+      "source_file": "sources/2026-06-10_腾讯研究院AI速递 20260610_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "做AI研究时Claude会偷偷变笨，Anthropic被研究界围攻",
+      "source": "机器之心",
+      "digest": "「我们实施了新的干预措施来限制 Claude 在处理涉及前沿 LLM 开发的请求时的有效性。」",
+      "link": "https://mp.weixin.qq.com/s/iatPKrTKjxAcEsYG3v2rHA",
+      "source_file": "sources/2026-06-10_做AI研究时Claude会偷偷变笨，Anthropic被研究界围攻_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "阿里搞了个免费报志愿Agent，40万AI考生提前把坑踩完了",
+      "source": "机器之心",
+      "digest": "志愿填报的信息鸿沟，能被AI填平吗？",
+      "link": "https://mp.weixin.qq.com/s/RdWbDkSicadMaLS1-o7xwQ",
+      "source_file": "sources/2026-06-10_阿里搞了个免费报志愿Agent，40万AI考生提前把坑踩完了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "那些跑通 AI 变革的团队做对了什么？",
+      "source": "未知来源",
+      "digest": "我们是否已准备好迎接“与AI共处”的时代？",
+      "link": "https://mp.weixin.qq.com/s/VfBQ-PLXhGz9veFOM-D4Ew",
+      "source_file": "sources/2026-06-10_那些跑通 AI 变革的团队做对了什么？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "欧盟要求Meta暂停对AI竞争对手的WhatsApp接入限制",
+      "source": "财联社AI daily",
+      "digest": "欧盟责令Meta暂停实施涉嫌阻碍对手AI公司通过WhatsApp企业消息服务开展业务的相关政策。",
+      "link": "https://mp.weixin.qq.com/s/poEAYVDflIi9yY7N7Qh3uA",
+      "source_file": "sources/2026-06-10_欧盟要求Meta暂停对AI竞争对手的WhatsApp接入限制_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "谷歌I/O最出圈的一幕，发生在抖音？？？",
+      "source": "量子位",
+      "digest": "看12位抖音创作者如何“翻译”AI",
+      "link": "https://mp.weixin.qq.com/s/OEizFsDXQZh9fiTAeF2deQ",
+      "source_file": "sources/2026-06-10_谷歌I_O最出圈的一幕，发生在抖音？？？_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "马斯克旗下SpaceX及xAI被告扰民",
+      "source": "财联社AI daily",
+      "digest": "美国密西西比州居民日前向法院起诉美国企业家埃隆·马斯克旗下的太空探索技术公司（SpaceX）及其新合并的xAI",
+      "link": "https://mp.weixin.qq.com/s/LLOUNhVuWZ24fWRogSxWVA",
+      "source_file": "sources/2026-06-10_马斯克旗下SpaceX及xAI被告扰民_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-10",
+      "title": "韩国曝出AI眼镜作弊案，考虑高考禁用同类用品",
+      "source": "财联社AI daily",
+      "digest": "韩国考试机构10日说，两名考生近日在托业(TOEIC)英语能力考试中利用AI智能眼镜作弊，受到严肃处理。",
+      "link": "https://mp.weixin.qq.com/s/uzDZg3xosmISsdxw4DrrKA",
+      "source_file": "sources/2026-06-10_韩国曝出AI眼镜作弊案，考虑高考禁用同类用品_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-09",
       "title": "Anthropic最新博客：生物学Agent的瓶颈不在模型，而在数据基础设施",
