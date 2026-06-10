@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-06-09T11:19:15.205181",
-  "total": 1142,
+  "updated_at": "2026-06-10T12:33:56.850641",
+  "total": 1167,
   "articles": [
+    {
+      "date": "2026-06-09",
+      "title": "Anthropic最新博客：生物学Agent的瓶颈不在模型，而在数据基础设施",
+      "source": "机器之心",
+      "digest": "Anthropic最新博客指出，生物学Agent的瓶颈不在模型能力，而在数据基础设施——需重修数据库才能让AI Agent做科研",
+      "link": "https://mp.weixin.qq.com/s/k8o0YeREXJtk2wsf2PYvCw",
+      "source_file": "sources/2026-06-09_Anthropic最新博客：生物学Agent的瓶颈不在模型，而在数据基础设施_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "OpenAI RL负责人：拒绝涌现论，思考规模化的方法是从大到小？",
+      "source": "51CTO",
+      "digest": "OpenAI强化学习基础团队负责人Dan Roberts接受采访，探讨规模化思考的新方向：从大到小的思考方法论",
+      "link": "https://mp.weixin.qq.com/s/VdG67CbVvF5h_YaChkUTpQ",
+      "source_file": "sources/2026-06-09_OpenAI RL负责人：拒绝涌现论，思考规模化的方法是从大到小？_51CTO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "OpenAI科学家Noam Brown：AI的真正上限，可能根本没人测得起",
+      "source": "机器之心",
+      "digest": "投入一千万美元计算成本，AI还能聪明到什么程度？OpenAI科学家Noam Brown分享对AI真正上限的看法",
+      "link": "https://mp.weixin.qq.com/s/zHiPUI6oCTRxPr3JqYhidg",
+      "source_file": "sources/2026-06-09_OpenAI科学家Noam Brown：AI的真正上限，可能根本没人测得起_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "一句话策反？你真的懂AI安全吗？",
+      "source": "51CTO",
+      "digest": "Meta AI客服被一句话攻破，文章深入探讨AI安全面临的Prompt注入等威胁及防护技术",
+      "link": "https://mp.weixin.qq.com/s/9DriQ1oAqBckuCCptF76SA",
+      "source_file": "sources/2026-06-09_一句话策反？你真的懂AI安全吗？_51CTO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "大人，AI编程又变天了！Claude Code之父、龙虾创始人同时力捧新范式，杀死提示词工程？",
+      "source": "InfoQ",
+      "digest": "Claude Code之父与龙虾创始人同时力捧AI编程新范式——不再给编程Agent写提示词，提示词工程正被颠覆",
+      "link": "https://mp.weixin.qq.com/s/JKrDuM4jaspm2wL-vJ1qsA",
+      "source_file": "sources/2026-06-09_大人，AI编程又变天了！Claude Code之父、龙虾创始人同时力捧新范式，杀死提示词工程？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "库克谢幕之战苹果放弃自研AI！iPhone求助谷歌Gemini换脑Siri",
+      "source": "量子位",
+      "digest": "库克以CEO身份出席最后一届WWDC，苹果放弃自研AI，Siri换脑求助谷歌Gemini，国行暂不支持",
+      "link": "https://mp.weixin.qq.com/s/40-E59Zj1zGY_PrkNdH0EA",
+      "source_file": "sources/2026-06-09_库克谢幕之战苹果放弃自研AI！iPhone求助谷歌Gemini换脑Siri_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "深入解读 GPUDirect PCIe P2P 驱动代码：Mailbox 和 BAR1 的实现原理及对比",
+      "source": "InfoQ",
+      "digest": "深入解读NVIDIA开源Linux GPU内核模块中GPUDirect PCIe P2P驱动代码的Mailbox和BAR1实现原理与对比",
+      "link": "https://mp.weixin.qq.com/s/X-FAfDRNOCrTmZT1cbwn8A",
+      "source_file": "sources/2026-06-09_深入解读 GPUDirect PCIe P2P 驱动代码：Mailbox 和 BAR1 的实现原理及_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "云知声U2冲进第一梯队，大模型开始比拼“智能密度”｜甲子光年",
+      "source": "甲子光年",
+      "digest": "云知声U2冲进国产通用大模型第一梯队，大模型开始比拼智能密度xToken价值成为下阶段核心竞争力",
+      "link": "https://mp.weixin.qq.com/s/45rWfZu2zbzYqnApcYwezA",
+      "source_file": "sources/2026-06-09_云知声U2冲进第一梯队，大模型开始比拼“智能密度”｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-09",
+      "title": "苹果渴求的端侧AI杀出黑马：首个认知模型诞生，4B打平GPT-5.4！",
+      "source": "新智元",
+      "digest": "Karpathy预言的认知核心新方向已落地，国产首个认知模型以4B参数实现媲美GPT-5.4的能力，专为端侧部署设计",
+      "link": "https://mp.weixin.qq.com/s/CB61SgyDiDJKi0S_wpGCUA",
+      "source_file": "sources/2026-06-09_苹果渴求的端侧AI杀出黑马：首个认知模型诞生，4B打平GPT-5.4！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-09",
+      "title": "AI 写了 60% 的代码，为什么企业研发效率还是没飞起来？",
+      "source": "InfoQ",
+      "digest": "会用AI工具不等于个人提效，个人提效也不等于组织提效——AI代码占比60%为何企业研发效率仍未起飞",
+      "link": "https://mp.weixin.qq.com/s/pOe7JK9o2Og3Wv8y5AAElg",
+      "source_file": "sources/2026-06-09_AI 写了 60% 的代码，为什么企业研发效率还是没飞起来？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "如何更科学、方向可控的实现 Skill 的“自进化”?",
+      "source": "阿里云开发者",
+      "digest": "如何更科学、方向可控地实现AI Skill的自进化——阿里云开发者的技术实践分享",
+      "link": "https://mp.weixin.qq.com/s/2Cq0QR3vcKlMHkI0XyYYrw",
+      "source_file": "sources/2026-06-09_如何更科学、方向可控的实现 Skill 的“自进化”_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "微信AI官宣：开发者内测启动！",
+      "source": "新智元",
+      "digest": "微信AI正式官宣，面向开发者启动内测，开放AI生态接入能力",
+      "link": "https://mp.weixin.qq.com/s/TAp_lz0-wvL4_tH2kJa7xA",
+      "source_file": "sources/2026-06-09_微信AI官宣：开发者内测启动！_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "永久免费！美团AI浏览器来了，10多个顶级模型帮你干活，还附送Agent外挂",
+      "source": "智东西",
+      "digest": "美团推出免费AI浏览器，集成10多个顶级模型并支持Agent外挂功能",
+      "link": "https://mp.weixin.qq.com/s/iTOfy_G73uXHXWEKLGNBfA",
+      "source_file": "sources/2026-06-09_永久免费！美团AI浏览器来了，10多个顶级模型帮你干活，还附送Agent外挂_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "杭州银行自研智能展业AI体系，数字化转型正提速",
+      "source": "银行科技研究社",
+      "digest": "杭州银行自研智能展业AI体系，推进数字化转型提速",
+      "link": "https://mp.weixin.qq.com/s/pmTEvqG6hrEUPb7F__2kkA",
+      "source_file": "sources/2026-06-09_杭州银行自研智能展业AI体系，数字化转型正提速_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "90%传统开发/运维或被淘汰！AI正在重写行业规则",
+      "source": "51CTO",
+      "digest": "AI正在改变每一个技术岗位，传统开发/运维面临重塑，该学习什么、怎么学成为核心问题",
+      "link": "https://mp.weixin.qq.com/s/OMOTNV2iChmPzt0AOIR8Rg",
+      "source_file": "sources/2026-06-09_90%传统开发_运维或被淘汰！AI正在重写行业规则_51CTO.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "AI 泡沫里的硅谷：清醒的赌徒，与疯狂加倍的牌桌",
+      "source": "极客公园",
+      "digest": "比AI泡沫更值得关注的，是泡沫里的人——硅谷从业者的清醒与疯狂",
+      "link": "https://mp.weixin.qq.com/s/JO1Hmr_4tbFaD4GpxbuFVg",
+      "source_file": "sources/2026-06-09_AI 泡沫里的硅谷：清醒的赌徒，与疯狂加倍的牌桌_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "AI时代，一种新经济正在长出来｜智联网·价值篇",
+      "source": "未知来源",
+      "digest": "屏幕时代终结，AI驱动的新经济形态正在生长，未来日活概念或被重新定义",
+      "link": "https://mp.weixin.qq.com/s/mvsbvbTTmznh-MctzUYQfw",
+      "source_file": "sources/2026-06-09_AI时代，一种新经济正在长出来｜智联网·价值篇_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "Meta开免费技校了！毕业包分配进数据中心工地",
+      "source": "财联社AI daily",
+      "digest": "Meta推出免费技校培训数据中心运维人才，毕业包分配到数据中心工地",
+      "link": "https://mp.weixin.qq.com/s/oGbBBq4Jvdj51tbrBeUHCA",
+      "source_file": "sources/2026-06-09_Meta开免费技校了！毕业包分配进数据中心工地_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "内蒙跑通AI逆袭新解法",
+      "source": "量子位",
+      "digest": "全行业Token焦虑何解？内蒙古跑通AI逆袭新解法，探索区域AI应用路径",
+      "link": "https://mp.weixin.qq.com/s/TqzcTEeDmnid2KIPgXeM4g",
+      "source_file": "sources/2026-06-09_内蒙跑通AI逆袭新解法_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "奥特曼认输：全球第一，根本不在OpenAI！",
+      "source": "新智元",
+      "digest": "Sam Altman公开承认OpenAI的全球第一地位不再稳固，竞争格局正在变化",
+      "link": "https://mp.weixin.qq.com/s/isNceFfbLVCVvSlBY26Hww",
+      "source_file": "sources/2026-06-09_奥特曼认输：全球第一，根本不在OpenAI！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "曹操出行，计划组建独立AI事业部",
+      "source": "财联社AI daily",
+      "digest": "曹操出行计划组建独立AI事业部，从移动互联网公司向AI公司转型",
+      "link": "https://mp.weixin.qq.com/s/D6TdxLDdaVuYkbt8BV-eFg",
+      "source_file": "sources/2026-06-09_曹操出行，计划组建独立AI事业部_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "没有星图和蒲公英的海外市场，品牌的百亿预算怎么花？",
+      "source": "极客公园",
+      "digest": "海外营销迎来AI变革，品牌百亿预算在海外市场如何高效投放",
+      "link": "https://mp.weixin.qq.com/s/yrJaBfyop1jcGX1guGYS0w",
+      "source_file": "sources/2026-06-09_没有星图和蒲公英的海外市场，品牌的百亿预算怎么花？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "海外涨、国内守：AI收费双轨制背后的用户与利润博弈",
+      "source": "财联社AI daily",
+      "digest": "海外涨价、国内降价，AI收费双轨制背后的用户与利润博弈分析",
+      "link": "https://mp.weixin.qq.com/s/nPyinezk50cO_QMbfSo-Fw",
+      "source_file": "sources/2026-06-09_海外涨、国内守：AI收费双轨制背后的用户与利润博弈_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "腾讯研究院AI速递 20260609",
+      "source": "未知来源",
+      "digest": "腾讯研究院AI速递：关于开发者接入微信AI生态的指引与当日AI动态",
+      "link": "https://mp.weixin.qq.com/s/nEmkxT8fxGXG5c0XmRkvpw",
+      "source_file": "sources/2026-06-09_腾讯研究院AI速递 20260609_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-09",
+      "title": "苹果发布下一代 Siri AI 和 Apple Intelligence，暂不支持中国；微信 AI 官宣内测；传月之暗面寻求 20 亿美元新融资 | 极客早知道",
+      "source": "极客公园",
+      "digest": "苹果发布Siri AI暂不支持中国；微信AI官宣内测；传月之暗面寻求20亿美元新融资",
+      "link": "https://mp.weixin.qq.com/s/OuQu0ryI9exDIuNc5DWGQA",
+      "source_file": "sources/2026-06-09_苹果发布下一代 Siri AI 和 Apple Intelligence，暂不支持中国；微信 AI _极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-08",
       "title": "一个8×8矩阵，让大模型「记住」长对话：Mind Lab联合NTU、复旦推出δ-mem，参数仅0.12%",
