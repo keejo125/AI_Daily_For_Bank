@@ -1,6 +1,22 @@
 {
   "issues": [
     {
+      "date": "2026-06-11",
+      "weekday": "周四",
+      "stats": {
+        "total_raw": 79,
+        "total_filtered": 38,
+        "removed_filter": 41,
+        "removed_excluded": 4,
+        "international": 5,
+        "domestic": 16,
+        "peers": 0,
+        "others": 11,
+        "total_final": 32
+      },
+      "summary": "OpenAI推理之父掀桌：AI真·满血的样子，你没钱见！/Anthropic宣告「递归自我提升」时代到来，LLM如何实现自我进化？全景综述带你一探究竟/通..."
+    },
+    {
       "date": "2026-06-10",
       "weekday": "周三",
       "stats": {

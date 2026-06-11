@@ -1,7 +1,327 @@
 {
-  "updated_at": "2026-06-11T07:16:53.666383",
-  "total": 1189,
+  "updated_at": "2026-06-12T07:17:53.196789",
+  "total": 1221,
   "articles": [
+    {
+      "date": "2026-06-11",
+      "title": "OpenAI推理之父掀桌：AI真·满血的样子，你没钱见！",
+      "source": "新智元",
+      "digest": "OpenAI o1推理模型核心缔造者Noam Brown发长文炮轰行业：用单一跑分评价AI模型已过时，控制推理预算后发现GPT-5.5能力远超预期。",
+      "link": "https://mp.weixin.qq.com/s/Xz-iwUTMzgfx0_E1wPeh-Q",
+      "source_file": "sources/2026-06-11_OpenAI推理之父掀桌：AI真·满血的样子，你没钱见！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "Anthropic宣告「递归自我提升」时代到来，LLM如何实现自我进化？全景综述带你一探究竟",
+      "source": "机器之心",
+      "digest": "超过80%合并代码已由Claude编写，AI已开始展现自主参与下一代模型设计与训练的潜力，从数据、训练、推理到评估全面解析大模型自我进化。",
+      "link": "https://mp.weixin.qq.com/s/N_qd_beuSQ4zMcJAActTaQ",
+      "source_file": "sources/2026-06-11_Anthropic宣告「递归自我提升」时代到来，LLM如何实现自我进化？全景综述带你一探究竟_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "陶哲轩First Proof二期结果出炉！最低8美元1题，AI烧出7道论文级解法",
+      "source": "量子位",
+      "digest": "AI数学推理基准测试First Proof二期结果发布，新增双盲同行评议机制，最低8美元1题即可获得论文级解法。",
+      "link": "https://mp.weixin.qq.com/s/gFCRUKrNVq0tF9Vn9vJoQA",
+      "source_file": "sources/2026-06-11_陶哲轩First Proof二期结果出炉！最低8美元1题，AI烧出7道论文级解法_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "神话模型Fable 5被曝降智，只为防蒸馏？AI大佬抗议",
+      "source": "新智元",
+      "digest": "Anthropic神话级模型Fable 5被曝降智，疑似为防蒸馏，引发AI大佬抗议。",
+      "link": "https://mp.weixin.qq.com/s/T3LftYFfgJpHiNQw15qHHg",
+      "source_file": "sources/2026-06-11_神话模型Fable 5被曝降智，只为防蒸馏？AI大佬抗议_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "OpenAI 为 Codex 智能体打造安全的 Windows 沙盒",
+      "source": "InfoQ",
+      "digest": "OpenAI公布Codex编码智能体所用的Windows沙盒架构的技术细节。",
+      "link": "https://mp.weixin.qq.com/s/XJL4z0rjY_IL_TC4sRSiGQ",
+      "source_file": "sources/2026-06-11_OpenAI 为 Codex 智能体打造安全的 Windows 沙盒_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "通向AGI的关键拼图！首篇多模态大模型「音频推理」综述出炉，万字拆解四大前沿路径",
+      "source": "机器之心",
+      "digest": "首篇多模态大模型音频推理综述，万字拆解四大前沿路径，AI从音频感知全面进化到音频推理。",
+      "link": "https://mp.weixin.qq.com/s/On1y1-xHx_hU7ImtiXsyhg",
+      "source_file": "sources/2026-06-11_通向AGI的关键拼图！首篇多模态大模型「音频推理」综述出炉，万字拆解四大前沿路径_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "不光答疑提效！中科闻歌的通用决策大模型，还帮我预测了Anthropic、OpenAI谁先上市",
+      "source": "智东西",
+      "digest": "中科闻歌推出通用决策大模型，决策机已推演23万起事件，准确率超90%。",
+      "link": "https://mp.weixin.qq.com/s/jf8MpUkspYpLKGqgLrAmug",
+      "source_file": "sources/2026-06-11_不光答疑提效！中科闻歌的通用决策大模型，还帮我预测了Anthropic、OpenAI谁先上市_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "ACL 2026 Oral｜语义推理如鲠在喉：大模型被「短语」难住了",
+      "source": "机器之心",
+      "digest": "ACL 2026 Oral论文揭示大模型在短语语义理解上的深层缺陷。",
+      "link": "https://mp.weixin.qq.com/s/9FFANBRTCQ5k25d9oNogYg",
+      "source_file": "sources/2026-06-11_ACL 2026 Oral｜语义推理如鲠在喉：大模型被「短语」难住了_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "半月内两次问鼎全球：中国创业公司，在AI图像生成赛道掀了桌子",
+      "source": "机器之心",
+      "digest": "智象未来HiDream-O1-Image-1.5再次实现SOTA，半月内两次问鼎全球。",
+      "link": "https://mp.weixin.qq.com/s/I6O5Hm9EIrnbO3-WH56JmA",
+      "source_file": "sources/2026-06-11_半月内两次问鼎全球：中国创业公司，在AI图像生成赛道掀了桌子_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "实测小米最快1T大模型：吞吐量每秒1000+ Tokens，Vibe Coding七秒交付",
+      "source": "量子位",
+      "digest": "实测小米1T大模型，吞吐量每秒1000+ Tokens，Vibe Coding七秒交付，通用GPU即可实现。",
+      "link": "https://mp.weixin.qq.com/s/UmtvviB5d8liOoTXSGYD8w",
+      "source_file": "sources/2026-06-11_实测小米最快1T大模型：吞吐量每秒1000+ Tokens，Vibe Coding七秒交付_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-11",
+      "title": "端侧 AI 提速 80%？如何让 Qwen3-VL 在手机起飞",
+      "source": "通义实验室",
+      "digest": "通义实验室在MNN推理引擎深度适配Arm SME2技术，让Qwen3-VL在手机端实现推理性能大幅提升。",
+      "link": "https://mp.weixin.qq.com/s/QNl4pn5JzxpEeFAEvq88ZA",
+      "source_file": "sources/2026-06-11_端侧 AI 提速 80%？如何让 Qwen3-VL 在手机起飞_通义实验室.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "人是最慢的节点，还怎么管AI Agent？｜AI跃迁者调研",
+      "source": "腾讯研究院",
+      "digest": "开源Agent协作平台Multica创始人深度访谈：4人团队加几十个Agent的超级小团队如何运转，Agent Native组织中的协作逻辑。",
+      "link": "https://mp.weixin.qq.com/s/tIx02ra7Y58xdchsTtzZtw",
+      "source_file": "sources/2026-06-11_人是最慢的节点，还怎么管AI Agent？｜AI跃迁者调研_.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "Qoder Cloud Agents 中国版来啦！",
+      "source": "Qoder",
+      "digest": "Qoder Cloud Agents中国版正式上线。",
+      "link": "https://mp.weixin.qq.com/s/mopDzFnTxjPJPo3N5txUWA",
+      "source_file": "sources/2026-06-11_Qoder Cloud Agents 中国版来啦！_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "腾讯混元AI Infra进化：HPC-Ops推理核心算子全面升级",
+      "source": "腾讯技术工程",
+      "digest": "腾讯混元AI基础设施HPC-Ops推理核心算子全面升级。",
+      "link": "https://mp.weixin.qq.com/s/f0FBBF0nJQ8S6BRRURPJKA",
+      "source_file": "sources/2026-06-11_腾讯混元AI Infra进化：HPC-Ops推理核心算子全面升级_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "AI智能体走出实验室！中科院等机构联合发布首个OpenClaw系统性综述",
+      "source": "新智元",
+      "digest": "中科院等机构联合发布首个OpenClaw系统性综述，涵盖上下文攻击、供应链渗透等AI智能体开放世界挑战。",
+      "link": "https://mp.weixin.qq.com/s/OwDGIAQ3hBxIfVFmihMgrw",
+      "source_file": "sources/2026-06-11_AI智能体走出实验室！中科院等机构联合发布首个OpenClaw系统性综述_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "斩获15个顶级零日漏洞：0G Lab联合新国立，北大和北邮团队构建的共识协议debug智能体框架",
+      "source": "机器之心",
+      "digest": "0G Lab联合新国立、北大和北邮团队构建共识协议debug智能体框架，斩获15个顶级零日漏洞。",
+      "link": "https://mp.weixin.qq.com/s/Hxm1Ysphb8A65-3RjJCxhg",
+      "source_file": "sources/2026-06-11_斩获15个顶级零日漏洞：0G Lab联合新国立，北大和北邮团队构建的共识协议debug智能体框架_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "3D创作迎来ChatGPT时刻：Meshy发布全球首个3D AI Agent",
+      "source": "量子位",
+      "digest": "Meshy发布全球首个3D AI Agent，让3D模型变为可复用资产。",
+      "link": "https://mp.weixin.qq.com/s/zM60dGcXOP6tuY_Rg_LhFg",
+      "source_file": "sources/2026-06-11_3D创作迎来ChatGPT时刻：Meshy发布全球首个3D AI Agent_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "小米发布AI编程助手MiMo Code",
+      "source": "财联社AI daily",
+      "digest": "小米MiMo技术团队正式发布探索性AI编程助手MiMo Code。",
+      "link": "https://mp.weixin.qq.com/s/vYytOq5J8nWzABmXjAZ4Cg",
+      "source_file": "sources/2026-06-11_小米发布AI编程助手MiMo Code_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "美团，这次“送”了个AI浏览器",
+      "source": "量子位",
+      "digest": "美团推出AI浏览器，基础版永久免费，专业版9.9元一周。",
+      "link": "https://mp.weixin.qq.com/s/grHGvzMzFTXX-9qITXHKig",
+      "source_file": "sources/2026-06-11_美团，这次“送”了个AI浏览器_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "云原生 - AI Native 多智能体数字人架构实践",
+      "source": "阿里云开发者",
+      "digest": "云原生AI Native多智能体数字人架构实践分享。",
+      "link": "https://mp.weixin.qq.com/s/jbYxSyd0GQHcRd2YFWwQmA",
+      "source_file": "sources/2026-06-11_云原生 - AI Native 多智能体数字人架构实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "阿里、腾讯、百度、字节，纷纷推出免费AI高考志愿填报工具",
+      "source": "量子位",
+      "digest": "阿里千问上线国内首个全周期高考志愿填报Agent，腾讯、百度、字节也纷纷推出免费AI高考志愿填报工具。",
+      "link": "https://mp.weixin.qq.com/s/NM3tFnFn2Bz6Q0fVq0ZJNg",
+      "source_file": "sources/2026-06-11_1290万高考生看过来！阿里出了个志愿填报Agent，免费的_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "一份研报引爆AI硬件“惊魂时刻”",
+      "source": "财联社AI daily",
+      "digest": "AI硬件主线波动延续，CPO/光模块等方向承压。",
+      "link": "https://mp.weixin.qq.com/s/yhVN1rVhx9B-bRPSv-DdYQ",
+      "source_file": "sources/2026-06-11_一份研报引爆AI硬件“惊魂时刻”_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "德国法院判决：谷歌应为AI搜索生成的诽谤言论担责",
+      "source": "财联社AI daily",
+      "digest": "德国法院首例判决：谷歌应为AI搜索生成的诽谤言论承担责任。",
+      "link": "https://mp.weixin.qq.com/s/1j_ozPGRXQF8SljWZ3dGjQ",
+      "source_file": "sources/2026-06-11_德国法院判决：谷歌应为AI搜索生成的诽谤言论担责_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "对话安克阳萌：AI 硬件的真门槛，是推翻计算机 80 年的「祖宗家法」",
+      "source": "极客公园",
+      "digest": "安克CEO阳萌对话：AI硬件的真门槛，是推翻计算机80年的祖宗家法。",
+      "link": "https://mp.weixin.qq.com/s/5eI2AXVcMibqmy5oYwEXMg",
+      "source_file": "sources/2026-06-11_对话安克阳萌：AI 硬件的真门槛，是推翻计算机 80 年的「祖宗家法」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "杨国安教授最新力作《智在未来：AI时代的企业创新与转型》",
+      "source": "腾讯研究院",
+      "digest": "杨国安教授全新力作《智在未来：AI时代的企业创新与转型》发布。",
+      "link": "https://mp.weixin.qq.com/s/nQkIWuhGwiuAQ4tU5XJEEw",
+      "source_file": "sources/2026-06-11_杨国安教授最新力作《智在未来：AI时代的企业创新与转型》_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "Anthropic CEO发万字檄文！指数级AI不可逆，不安全必封杀",
+      "source": "新智元",
+      "digest": "Anthropic CEO Dario Amodei发布万字檄文，要求政府实施严厉AI监管，并砸出3.5亿真金白银。",
+      "link": "https://mp.weixin.qq.com/s/kqERm6rSluqESpY7a0cD9A",
+      "source_file": "sources/2026-06-11_Anthropic CEO发万字檄文！指数级AI不可逆，不安全必封杀_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "中国信通院王强等：摸清数据底数，筑牢AI基石——以行业数据资源调查驱动行业高质量数据集建设",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院通过行业数据资源调查推动高质量数据集建设。",
+      "link": "https://mp.weixin.qq.com/s/2P2LqMaDHBmhDwgT4KUB6A",
+      "source_file": "sources/2026-06-11_中国信通院王强等：摸清数据底数，筑牢AI基石——以行业数据资源调查驱动行业高质量数据集建设_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "刚刚，Anthropic道歉了",
+      "source": "机器之心",
+      "digest": "Anthropic道歉，不再偷偷限制AI研究。",
+      "link": "https://mp.weixin.qq.com/s/_87jhx92Mh8dNbvgBPYngA",
+      "source_file": "sources/2026-06-11_刚刚，Anthropic道歉了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "AI教育走出屏幕的第一步，是一台万元机器人",
+      "source": "新智元",
+      "digest": "AI教育机器人产品发布。",
+      "link": "https://mp.weixin.qq.com/s/Nm0C6QGVUAgqMCR_CWDNUw",
+      "source_file": "sources/2026-06-11_AI教育走出屏幕的第一步，是一台万元机器人_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "OpenAI考虑大幅降低token价格",
+      "source": "财联社AI daily",
+      "digest": "OpenAI正考虑大幅下调token收费标准，应对Anthropic竞争。",
+      "link": "https://mp.weixin.qq.com/s/F5QfNZbHqAH1T5cQQGJ8jA",
+      "source_file": "sources/2026-06-11_OpenAI考虑大幅降低token价格_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "Claude Fable 5 拒绝回答基础生物问题；Altman 预估 OpenAI 明年上市；韩国首次查获 AI 智能眼镜考试作弊案｜极客早知道",
+      "source": "极客公园",
+      "digest": "多主题资讯汇总：Fable 5拒绝回答生物问题、Altman预估OpenAI明年上市、韩国AI智能眼镜作弊案等。",
+      "link": "https://mp.weixin.qq.com/s/33xDjOqz3PD92Q8wVwMhFQ",
+      "source_file": "sources/2026-06-11_Claude Fable 5 拒绝回答基础生物问题；Altman 预估 OpenAI 明年上市；韩国_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-11",
+      "title": "腾讯研究院AI速递 20260611",
+      "source": "腾讯研究院",
+      "digest": "AI资讯汇总：数字生命将成为远超人脑的智能形态？",
+      "link": "https://mp.weixin.qq.com/s/14pLTy7HYFnfwpHwY82CpA",
+      "source_file": "sources/2026-06-11_腾讯研究院AI速递 20260611_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-10",
       "title": "实测「神话」级模型 Fable 5：强者世界里的最强者 | AI 上新",
