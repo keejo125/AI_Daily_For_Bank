@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-13T10:49:56.721921",
-  "total": 1244,
+  "updated_at": "2026-06-13T11:04:42.748219",
+  "total": 1243,
   "articles": [
     {
       "date": "2026-06-12",
@@ -35,7 +35,7 @@
     {
       "date": "2026-06-12",
       "title": "「AI春晚」又来了！智源研究院推出的世界模型，成今年最硬一盘菜",
-      "source": "量子位 / 智东西",
+      "source": "量子位 / 智东西 / 机器之心",
       "digest": "智源大会发布世界模型等重磅成果，被称\"AI春晚\"级别的技术盛会。",
       "link": "https://mp.weixin.qq.com/s/tdtxETE9RbK5SdguwGlsZQ",
       "source_file": "sources/2026-06-12_「AI春晚」又来了！智源研究院推出的世界模型，成今年最硬一盘菜_量子位.md",
@@ -120,16 +120,6 @@
       "link": "https://mp.weixin.qq.com/s/HcNouYnGhzr6N5GhxZSqxw",
       "source_file": "sources/2026-06-12_独家！Kimi将与一国有银行发行AI原生信用卡_财联社AI daily.md",
       "category": "同业",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-12",
-      "title": "2026智源大会：一场技术硬核的AI年度盛会",
-      "source": "机器之心",
-      "digest": "2026智源大会记述：从世界模型到具身智能，AI正叩响触达实体世界的大门。",
-      "link": "https://mp.weixin.qq.com/s/dxwnySQD4DQCIRD3xQlHGg",
-      "source_file": "sources/2026-06-12_2026智源大会：一场技术硬核的AI年度盛会_机器之心.md",
-      "category": "其他",
       "is_model_related": false
     },
     {
