@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-13T10:12:13.480103",
-  "total": 1248,
+  "updated_at": "2026-06-13T10:40:14.207191",
+  "total": 1245,
   "articles": [
     {
       "date": "2026-06-12",
       "title": "Claude Fable 5最难档零分！智能体的最后考试来了",
-      "source": "机器之心",
+      "source": "机器之心 / 量子位 / 新智元",
       "digest": "Anthropic发布Fable 5智能体基准测试，最难档所有模型均得零分，揭示当前Agent在复杂任务上的能力边界。",
-      "link": "https://mp.weixin.qq.com/s/zG5OzfD_zZWfUbRHUWP7aA",
+      "link": "https://mp.weixin.qq.com/s/Cl4ZQFq7yqGwwuh2mue1hw",
       "source_file": "sources/2026-06-12_Claude Fable 5最难档零分！智能体的最后考试来了_机器之心.md",
       "category": "国际",
       "is_model_related": true
@@ -21,26 +21,6 @@
       "source_file": "sources/2026-06-12_Anthropic警告的递归AI，田渊栋新公司刚刚走出了「第一步」_机器之心.md",
       "category": "国际",
       "is_model_related": true
-    },
-    {
-      "date": "2026-06-12",
-      "title": "“智能体最后的考试”，Fable 5竟然不敌GPT 5.5",
-      "source": "量子位",
-      "digest": "Fable 5基准测试显示Claude及Anthropic自身Agent最高难度全部零分，GPT-5.5在部分场景表现更优。",
-      "link": "https://mp.weixin.qq.com/s/Cl4ZQFq7yqGwwuh2mue1hw",
-      "source_file": "sources/2026-06-12_“智能体最后的考试”，Fable 5竟然不敌GPT 5.5_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-12",
-      "title": "Claude Fable 5「发疯」！高数算网络攻击，问癌症直接封号？",
-      "source": "新智元",
-      "digest": "Fable 5安全机制引争议：高等数学被视为网络攻击、癌症被封号，AI安全过度管控引讨论。",
-      "link": "https://mp.weixin.qq.com/s/i7BS9mzhanpa5UO0Nlm5SA",
-      "source_file": "sources/2026-06-12_Claude Fable 5「发疯」！高数算网络攻击，问癌症直接封号？_新智元.md",
-      "category": "国际",
-      "is_model_related": false
     },
     {
       "date": "2026-06-12",
@@ -65,7 +45,7 @@
     {
       "date": "2026-06-12",
       "title": "「AI春晚」又来了！智源研究院推出的世界模型，成今年最硬一盘菜",
-      "source": "量子位",
+      "source": "量子位 / 智东西",
       "digest": "智源大会发布世界模型等重磅成果，被称\"AI春晚\"级别的技术盛会。",
       "link": "https://mp.weixin.qq.com/s/tdtxETE9RbK5SdguwGlsZQ",
       "source_file": "sources/2026-06-12_「AI春晚」又来了！智源研究院推出的世界模型，成今年最硬一盘菜_量子位.md",
@@ -89,16 +69,6 @@
       "digest": "面壁智能CEO谈端侧AI模型能力跨越、国产芯片适配与开源生态策略。",
       "link": "https://mp.weixin.qq.com/s/CONdnWgyXGjUNqqBQaz_YA",
       "source_file": "sources/2026-06-12_对话面壁CEO李大海：端侧AI模型赶上GPT-4，国产芯软件要补课_智东西.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-12",
-      "title": "智源连甩1个大脑3个大模型4个智能体，图灵奖得主：2050机器智能将主宰世界",
-      "source": "智东西",
-      "digest": "智源大会集中发布：1个通用大脑+3个大模型+4个智能体。",
-      "link": "https://mp.weixin.qq.com/s/FurwTMx7JlIXjiUqOGY0oQ",
-      "source_file": "sources/2026-06-12_智源连甩1个大脑3个大模型4个智能体，图灵奖得主：2050机器智能将主宰世界_智东西.md",
       "category": "国内",
       "is_model_related": true
     },
