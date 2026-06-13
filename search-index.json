@@ -1,7 +1,137 @@
 {
-  "updated_at": "2026-06-13T11:04:42.748219",
-  "total": 1243,
+  "updated_at": "2026-06-14T07:40:09.363545",
+  "total": 1256,
   "articles": [
+    {
+      "date": "2026-06-13",
+      "title": "交白卷也排第一？Fable 5二百题全部拒答，却登顶最严AI编程基准",
+      "source": "机器之心",
+      "digest": "好比高考白卷上清华",
+      "link": "https://mp.weixin.qq.com/s/example14",
+      "source_file": "sources/2026-06-13_交白卷也排第一？Fable 5二百题全部拒答，却登顶最严AI编程基准_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-13",
+      "title": "严禁手写代码、一天烧不完 10 亿 Token 就是失职：OpenAI 工程师揭秘“零人类编码”的激进实践",
+      "source": "InfoQ",
+      "digest": "Harness Engineering，这个词最近在开发者圈子里引发了激烈讨论",
+      "link": "https://mp.weixin.qq.com/s/example5",
+      "source_file": "sources/2026-06-13_严禁手写代码、一天烧不完 10 亿 Token 就是失职：OpenAI 工程师揭秘“零人类编码”的激_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "刚刚，GPT-5.5被中国纯血AI反超了！",
+      "source": "新智元",
+      "digest": "中国纯血AI模型在基准测试中超越GPT-5.5",
+      "link": "https://mp.weixin.qq.com/s/example8",
+      "source_file": "sources/2026-06-13_刚刚，GPT-5.5被中国纯血AI反超了！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-13",
+      "title": "Qoder 正式接入 Kimi K2.7 Code",
+      "source": "Qoder",
+      "digest": "Qoder 正式接入 Kimi 最新的 K2.7 Code 模型，它不是简单的能力叠加，而是一次面向“长上下文编程”场景的专项进化。",
+      "link": "https://mp.weixin.qq.com/s/example2",
+      "source_file": "sources/2026-06-13_Qoder 正式接入 Kimi K2.7 Code_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "看不清就乱答？多模态大模型的这个毛病终于有解了 | ICML 2026",
+      "source": "量子位",
+      "digest": "港科大团队开源Robust-U1",
+      "link": "https://mp.weixin.qq.com/s/example11",
+      "source_file": "sources/2026-06-13_看不清就乱答？多模态大模型的这个毛病终于有解了 _ ICML 2026_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "争论几十年的水之谜，被AI一举破解！港城大&中石大成果登Nature Physics",
+      "source": "量子位",
+      "digest": "常压水也存在“双组份”",
+      "link": "https://mp.weixin.qq.com/s/example15",
+      "source_file": "sources/2026-06-13_争论几十年的水之谜，被AI一举破解！港城大&中石大成果登Nature Physics_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "200+AI专家集结北京，共议世界模型、智能体、具身智能等话题，这届智源大会释放什么信号？",
+      "source": "智东西",
+      "digest": "在中关村看到中国AI创新活力。",
+      "link": "https://mp.weixin.qq.com/s/example1",
+      "source_file": "sources/2026-06-13_200+AI专家集结北京，共议世界模型、智能体、具身智能等话题，这届智源大会释放什么信号？_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "一文把握全局AI动态（0608-0612）",
+      "link": "https://mp.weixin.qq.com/s/example13",
+      "source_file": "sources/2026-06-13_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "AI定义汽车，先有AI再有车，智能汽车进入新拐点",
+      "source": "智东西",
+      "digest": "智能车的AI困局：不是功能不够多，而是来得太晚。",
+      "link": "https://mp.weixin.qq.com/s/example4",
+      "source_file": "sources/2026-06-13_AI定义汽车，先有AI再有车，智能汽车进入新拐点_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "AI定义汽车：AIVA的造车逻辑革命丨甲子光年",
+      "source": "甲子光年",
+      "digest": "让AI长出身体。",
+      "link": "https://mp.weixin.qq.com/s/example7",
+      "source_file": "sources/2026-06-13_AI定义汽车：AIVA的造车逻辑革命丨甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "Anthropic 5.2万人调查大曝光！美国人对AI已达成共识",
+      "source": "新智元",
+      "digest": "Anthropic 5.2万人调查,美国人对AI的共识调查结果",
+      "link": "https://mp.weixin.qq.com/s/example9",
+      "source_file": "sources/2026-06-13_Anthropic 5.2万人调查大曝光！美国人对AI已达成共识_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "特朗普出手！Claude Fable 5与Mythos 5全停了，美政府禁令来了",
+      "source": "多源综合",
+      "digest": "Anthropic临时关闭Claude Fable 5和Mythos 5全部访问权限，美国政府发布禁令引发AI行业震荡。",
+      "link": "https://mp.weixin.qq.com/s/example10",
+      "source_file": "sources/2026-06-13_特朗普出手！Claude Fable 5与Mythos 5全停了，AI专家：中国才是全人类希望_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "微软不敢给员工用的AI，转头卖给你！法务卡住最强Claude",
+      "source": "新智元",
+      "digest": "微软企业AI授权合规争议",
+      "link": "https://mp.weixin.qq.com/s/example16",
+      "source_file": "sources/2026-06-13_微软不敢给员工用的AI，转头卖给你！法务卡住最强Claude_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-12",
       "title": "Claude Fable 5最难档零分！智能体的最后考试来了",
