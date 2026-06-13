@@ -210,19 +210,32 @@ def build_articles_json(classification, date_str):
             is_model_related = item.get("is_model_related", False)
             merged_articles = item.get("merged_articles", [])
             
-            if merged_articles and len(merged_articles) > 1:
+            # 优先使用 classification.json 中的 source_items（完整包含所有来源）
+            source_items_from_cls = item.get('source_items', [])
+            
+            if merged_articles and len(merged_articles) >= 1:
                 stats['merged'] += 1
                 # 合并文章：构建 source_items
-                source_items = []
-                for merged_art in merged_articles:
+                if source_items_from_cls and len(source_items_from_cls) > 1:
+                    # 使用分类阶段预设的 source_items（包含主文章来源）
+                    source_items = source_items_from_cls
+                    main_link = item.get('link', '')
+                else:
+                    # 自动从 merged_articles 构建
+                    source_items = []
+                    # 包含主文章自己的来源
                     source_items.append({
-                        'name': merged_art.get('source', ''),
-                        'source_file': merged_art.get('source_file', ''),
-                        'link': merged_art.get('link', '')
+                        'name': item.get('source', ''),
+                        'source_file': item.get('source_file', ''),
+                        'link': item.get('link', '')
                     })
-                
-                # 使用第一个合并文章的 link 作为主链接
-                main_link = merged_articles[0].get('link', '')
+                    for merged_art in merged_articles:
+                        source_items.append({
+                            'name': merged_art.get('source', ''),
+                            'source_file': merged_art.get('source_file', ''),
+                            'link': merged_art.get('link', '')
+                        })
+                    main_link = item.get('link', '')
                 
                 # 尝试读取原文（如果有 source_file）
                 content = read_article_content(
