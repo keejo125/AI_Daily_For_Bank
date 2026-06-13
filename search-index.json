@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-13T10:40:14.207191",
-  "total": 1245,
+  "updated_at": "2026-06-13T10:45:09.515615",
+  "total": 1244,
   "articles": [
     {
       "date": "2026-06-12",
@@ -15,7 +15,7 @@
     {
       "date": "2026-06-12",
       "title": "Anthropic警告的递归AI，田渊栋新公司刚刚走出了「第一步」",
-      "source": "机器之心",
+      "source": "机器之心 / 量子位",
       "digest": "Anthropic警示递归自我改进AI风险，同日Recursive发布首个能自主推进AI研究的闭环系统。",
       "link": "https://mp.weixin.qq.com/s/nbR1cfO-p1rd-88TWd-RYQ",
       "source_file": "sources/2026-06-12_Anthropic警告的递归AI，田渊栋新公司刚刚走出了「第一步」_机器之心.md",
@@ -29,16 +29,6 @@
       "digest": "微软Build 2026推出Foundry重大更新，补齐生产级智能体所需的全套能力：运行时、工具链与治理。",
       "link": "https://mp.weixin.qq.com/s/s7ykkr6w4W-Wkj9UVg9QdQ",
       "source_file": "sources/2026-06-12_微软 Foundry 新增生产级智能体运行时、工具链与管控能力_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-12",
-      "title": "田渊栋创业公司首个成果：GPU内核优化，英伟达官方榜单SOTA",
-      "source": "量子位",
-      "digest": "田渊栋创业公司Recursive发布首个成果，AI驱动的GPU内核优化在英伟达官方榜单取得SOTA。",
-      "link": "https://mp.weixin.qq.com/s/Ln8lNGANWg0xy__8whfgIQ",
-      "source_file": "sources/2026-06-12_田渊栋创业公司首个成果：GPU内核优化，英伟达官方榜单SOTA_量子位.md",
       "category": "国际",
       "is_model_related": false
     },
