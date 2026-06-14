@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-14T07:57:24.103817",
-  "total": 1256,
+  "updated_at": "2026-06-14T08:17:19.438872",
+  "total": 1255,
   "articles": [
     {
       "date": "2026-06-13",
@@ -84,26 +84,6 @@
     },
     {
       "date": "2026-06-13",
-      "title": "AI定义汽车，先有AI再有车，智能汽车进入新拐点",
-      "source": "智东西",
-      "digest": "智能车的AI困局：不是功能不够多，而是来得太晚。",
-      "link": "https://mp.weixin.qq.com/s/example4",
-      "source_file": "sources/2026-06-13_AI定义汽车，先有AI再有车，智能汽车进入新拐点_智东西.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-13",
-      "title": "AI定义汽车：AIVA的造车逻辑革命丨甲子光年",
-      "source": "甲子光年",
-      "digest": "让AI长出身体。",
-      "link": "https://mp.weixin.qq.com/s/example7",
-      "source_file": "sources/2026-06-13_AI定义汽车：AIVA的造车逻辑革命丨甲子光年_甲子光年.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-13",
       "title": "Anthropic 5.2万人调查大曝光！美国人对AI已达成共识",
       "source": "新智元",
       "digest": "Anthropic 5.2万人调查,美国人对AI的共识调查结果",
@@ -115,7 +95,7 @@
     {
       "date": "2026-06-13",
       "title": "特朗普出手！Claude Fable 5与Mythos 5全停了，美政府禁令来了",
-      "source": "智东西, InfoQ",
+      "source": "智东西",
       "digest": "Anthropic临时关闭Claude Fable 5和Mythos 5全部访问权限，美国政府发布禁令引发AI行业震荡。",
       "link": "https://mp.weixin.qq.com/s/example10",
       "source_file": "sources/2026-06-13_特朗普出手！Claude Fable 5与Mythos 5全停了，AI专家：中国才是全人类希望_智东西.md",
@@ -129,6 +109,16 @@
       "digest": "微软企业AI授权合规争议",
       "link": "https://mp.weixin.qq.com/s/example16",
       "source_file": "sources/2026-06-13_微软不敢给员工用的AI，转头卖给你！法务卡住最强Claude_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-13",
+      "title": "AI定义汽车，先有AI再有车——智能汽车进入新拐点",
+      "source": "智东西",
+      "digest": "智能汽车行业进入新拐点，AI定义汽车（AIVA模式）正颠覆传统造车逻辑，从硬件优先转向软件定义、AI驱动的全新范式。",
+      "link": "https://mp.weixin.qq.com/s/example4",
+      "source_file": "sources/2026-06-13_AI定义汽车，先有AI再有车，智能汽车进入新拐点_智东西.md",
       "category": "其他",
       "is_model_related": false
     },
