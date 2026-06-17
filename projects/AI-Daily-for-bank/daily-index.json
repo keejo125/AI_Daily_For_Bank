@@ -1,6 +1,92 @@
 {
   "issues": [
     {
+      "date": "2026-06-16",
+      "weekday": "周二",
+      "stats": {
+        "国际": 2,
+        "国内": 13,
+        "同业": 2,
+        "其他": 15,
+        "total": 32,
+        "excluded_count": 10
+      },
+      "summary": "诺奖得主Demis：大模型的下一关是怎么学会提出问题/谷歌首席工程师：二十年自然生长出来的软件工程生态，快被大模型 10 倍提速撑爆/Redis 之父为 ..."
+    },
+    {
+      "date": "2026-06-14",
+      "weekday": "周日",
+      "stats": {
+        "国际": 5,
+        "国内": 7,
+        "同业": 0,
+        "其他": 4,
+        "excluded": 3,
+        "total": 16,
+        "is_model_related": {
+          "国际": 1,
+          "国内": 2,
+          "同业": 0,
+          "其他": 0
+        }
+      },
+      "summary": "啥？Fable 5一出，Skill和Prompt都白学了？/AI圈懵了：一家巴西市政IT公司开源的大模型，杀进了全球第一梯队/清华教授沈阳把AI逼成了会自...",
+      "article_date": "2026-06-14"
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "周六",
+      "stats": {
+        "国际": 2,
+        "国内": 4,
+        "同业": 0,
+        "其他": 6,
+        "total": 12
+      },
+      "summary": "严禁手写代码、一天烧不完 10 亿 Token 就是失职：OpenAI 工程师揭秘“零人类编码”的激进实践/交白卷也排第一？Fable 5二百题全部拒答，..."
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "周五",
+      "stats": {
+        "国际": 3,
+        "国内": 8,
+        "同业": 1,
+        "其他": 10,
+        "total": 22
+      },
+      "summary": "Claude Fable 5最难档零分！智能体的最后考试来了/Anthropic警告的递归AI，田渊栋新公司刚刚走出了「第一步」/「AI春晚」又来了！智源...",
+      "article_date": "2026-06-12"
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "周四",
+      "stats": {
+        "total_raw": 79,
+        "total_filtered": 38,
+        "removed_filter": 41,
+        "removed_excluded": 4,
+        "international": 5,
+        "domestic": 16,
+        "peers": 0,
+        "others": 11,
+        "total_final": 32
+      },
+      "summary": "OpenAI推理之父掀桌：AI真·满血的样子，你没钱见！/Anthropic宣告「递归自我提升」时代到来，LLM如何实现自我进化？全景综述带你一探究竟/通..."
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "周三",
+      "stats": {
+        "国际": 3,
+        "国内": 8,
+        "同业": 1,
+        "其他": 10,
+        "total": 22
+      },
+      "summary": "实测「神话」级模型 Fable 5：强者世界里的最强者 | AI 上新/库克最后一届WWDC，把苹果AI九年的地基掀了/AI交互新基准！蚂蚁提出MiniA..."
+    },
+    {
       "date": "2026-06-09",
       "weekday": "周二",
       "stats": {
