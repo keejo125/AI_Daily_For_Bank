@@ -1,7 +1,627 @@
 {
-  "updated_at": "2026-06-17T19:42:48.618972",
-  "total": 1303,
+  "updated_at": "2026-06-19T09:17:49.588949",
+  "total": 1365,
   "articles": [
+    {
+      "date": "2026-06-18",
+      "title": "开发者冲爆了！全球前十AI Lab无限免费，一周烧出3.12万亿Token",
+      "source": "新智元",
+      "digest": "开发者冲爆了！全球前十AI Lab无限免费，一周烧出3.12万亿Token",
+      "link": "https://mp.weixin.qq.com/s/UZsQ8k9_O1NUYScZDB4NLg",
+      "source_file": "sources/2026-06-18_开发者冲爆了！全球前十AI Lab无限免费，一周烧出3.12万亿Token_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "30万AI顾问进公司，OpenAI砸1.5亿改写你的报销周报",
+      "source": "新智元",
+      "digest": "模型大战翻篇，下一仗在你工位",
+      "link": "https://mp.weixin.qq.com/s/Px3NqXvKnQYJA6X67EE0Zw",
+      "source_file": "sources/2026-06-18_30万AI顾问进公司，OpenAI砸1.5亿改写你的报销周报_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "比英伟达早，比李飞飞强，大晓Kairos原生一体化世界模型定义物理AI新路线",
+      "source": "机器之心",
+      "digest": "英伟达新架构，撞上一家中国公司一年前的选择。",
+      "link": "https://mp.weixin.qq.com/s/tKuXwuJxnnVG9gNph_NPCg",
+      "source_file": "sources/2026-06-18_比英伟达早，比李飞飞强，大晓Kairos原生一体化世界模型定义物理AI新路线_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-18",
+      "title": "首个统一科学大模型 LOGOS 正式开源",
+      "source": "通义实验室",
+      "digest": "用一个“科学语法”打通科学语言与自然语言的边界",
+      "link": "https://mp.weixin.qq.com/s/50q5uY849FKnBzk1Q04MRg",
+      "source_file": "sources/2026-06-18_首个统一科学大模型 LOGOS 正式开源_通义实验室.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-18",
+      "title": "小米正式发布“全屋智能AI开源方案”Xiaomi Miloco 2.0",
+      "source": "财联社AI daily",
+      "digest": "小米正式发布面向未来的“全屋智能AI开源方案”Xiaomi Miloco 2.0，该方案以小米自研 MiMo",
+      "link": "https://mp.weixin.qq.com/s/pIxeexM3gFmbOmha1Bd75A",
+      "source_file": "sources/2026-06-18_小米正式发布“全屋智能AI开源方案”Xiaomi Miloco 2.0_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
+      "source": "量子位",
+      "digest": "从工件层面系统重构了长视频剪辑管线",
+      "link": "https://mp.weixin.qq.com/s/SKi4uLxioEPraNj22ejLsw",
+      "source_file": "sources/2026-06-18_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "18年前不让你苦修PS的美图，这次不让你苦修AI了",
+      "source": "量子位",
+      "digest": "18年前不让你苦修PS的美图，这次不让你苦修AI了",
+      "link": "https://mp.weixin.qq.com/s/ZMc9sAAMvixezjuFFG4I4Q",
+      "source_file": "sources/2026-06-18_18年前不让你苦修PS的美图，这次不让你苦修AI了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "AI 时代，实时入湖正在告别 ETL：从 Kafka 到 Iceberg 的架构减法",
+      "source": "阿里云开发者",
+      "digest": "AI 时代，实时入湖正在告别 ETL：从 Kafka 到 Iceberg 的架构减法",
+      "link": "https://mp.weixin.qq.com/s/7wg1gUZZg08OoozBMebcHg",
+      "source_file": "sources/2026-06-18_AI 时代，实时入湖正在告别 ETL：从 Kafka 到 Iceberg 的架构减法_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "当 Token 成为商品，AI 基础设施会怎么变化？",
+      "source": "InfoQ",
+      "digest": "时代需要智能生产力的突破",
+      "link": "https://mp.weixin.qq.com/s/rKPY2rM5YFxa9EOPzocrdw",
+      "source_file": "sources/2026-06-18_当 Token 成为商品，AI 基础设施会怎么变化？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "AI Agent 沙箱的网络安全：从流量隔离到智能治理｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "本演讲以阿里云 ACK 在生产环境的实践为主线分三个层次展开",
+      "link": "https://mp.weixin.qq.com/s/6lcUwQ2zu-9VLlbQGgsx0A",
+      "source_file": "sources/2026-06-18_AI Agent 沙箱的网络安全：从流量隔离到智能治理｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "QoderWork 法律行业全栈落地：数据库 MCP 接入 + 首个诉讼专家套件发布",
+      "source": "Qoder",
+      "digest": "法律行业是 AI 落地最难啃的骨头之一。原因很简单：这个行业对“准确”的要求高到近乎偏执。",
+      "link": "https://mp.weixin.qq.com/s/f6TsLaWYRYichJd-Hi0FiQ",
+      "source_file": "sources/2026-06-18_QoderWork 法律行业全栈落地：数据库 MCP 接入 + 首个诉讼专家套件发布_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "中国信通院刘星辰等：智能体工程化加速演进，智能体基础设施成为规模化落地关键支撑",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院刘星辰等：智能体工程化加速演进，智能体基础设施成为规模化落地关键支撑",
+      "link": "https://mp.weixin.qq.com/s/Ahpmpd3eBDJYkiDlis3jRg",
+      "source_file": "sources/2026-06-18_中国信通院刘星辰等：智能体工程化加速演进，智能体基础设施成为规模化落地关键支撑_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "海光：从“单点算力供给”到“系统能力输出”，全面服务金融AI创新",
+      "source": "金融电子化",
+      "digest": "海光：从“单点算力供给”到“系统能力输出”，全面服务金融AI创新",
+      "link": "https://mp.weixin.qq.com/s/wxri1XSLxB7kDLdTMGrYvw",
+      "source_file": "sources/2026-06-18_海光：从“单点算力供给”到“系统能力输出”，全面服务金融AI创新_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "腾讯老兵+大厂00后新锐，码上飞想做的不只是AI Coding",
+      "source": "量子位",
+      "digest": "已接入华为鸿蒙生态",
+      "link": "https://mp.weixin.qq.com/s/UKX0HI8rdn1s1GcSoIqqSw",
+      "source_file": "sources/2026-06-18_腾讯老兵+大厂00后新锐，码上飞想做的不只是AI Coding_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "一位阿里产品经理的AI全流程提效实践：从需求到上线全覆盖",
+      "source": "Qoder",
+      "digest": "大家好，我来自阿里云的一个产品团队，我叫求至。目前我们这个团队大概有将近40人，今年我们希望能够转变成一个AI Native的团队组织，所以我们做了很多AI的实践。",
+      "link": "https://mp.weixin.qq.com/s/YZgBZW6589GIjsOvYUZ1fg",
+      "source_file": "sources/2026-06-18_一位阿里产品经理的AI全流程提效实践：从需求到上线全覆盖_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "国产算力正在进入Token标准化时代",
+      "source": "量子位",
+      "digest": "中国的AI产业迈向追求系统性协同、高效与开放的新阶段",
+      "link": "https://mp.weixin.qq.com/s/iASKAhj1PBO-_DWX7gBXXw",
+      "source_file": "sources/2026-06-18_国产算力正在进入Token标准化时代_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "【邮储银行软件研发中心总经理胡军锋】基于金融场景的大模型评测探索与实践",
+      "source": "中国金融电脑",
+      "digest": "基于金融场景的大模型评测探索与实践",
+      "link": "https://mp.weixin.qq.com/s/BXv7inhxjp2cbc0WlctSsw",
+      "source_file": "sources/2026-06-18_【邮储银行软件研发中心总经理胡军锋】基于金融场景的大模型评测探索与实践_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-18",
+      "title": "基于生成式人工智能与多智能体架构的自动风险分析方法研究与实践",
+      "source": "中国金融电脑",
+      "digest": "基于生成式人工智能与多智能体架构的自动风险分析方法研究与实践",
+      "link": "https://mp.weixin.qq.com/s/tmJuYJpxc5r2p57-DBD77w",
+      "source_file": "sources/2026-06-18_基于生成式人工智能与多智能体架构的自动风险分析方法研究与实践_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "“安全垂直大模型+多智能体”：智能化数据分类分级保护的实践与思考",
+      "source": "中国金融电脑",
+      "digest": "“安全垂直大模型+多智能体”：智能化数据分类分级保护的实践与思考",
+      "link": "https://mp.weixin.qq.com/s/ADw4WdFrvGCdKLzcV3dmlg",
+      "source_file": "sources/2026-06-18_“安全垂直大模型+多智能体”：智能化数据分类分级保护的实践与思考_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "打造金融界的“豆包”，宁波银行今年已推进5个智能体项目",
+      "source": "银行科技研究社",
+      "digest": "打造金融界的“豆包”，宁波银行今年已推进5个智能体项目",
+      "link": "https://mp.weixin.qq.com/s/U1ZCXG1pJ7O7T5ry_nOKOA",
+      "source_file": "sources/2026-06-18_打造金融界的“豆包”，宁波银行今年已推进5个智能体项目_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "监管鼓励大行向中小银行输出AI技术管理经验",
+      "source": "银行科技研究社",
+      "digest": "6月18日消息，金融监管总局近日发布《关于银行业保险业人工智能安全开发应用的指导意见》。\n\n《指导意见》指出，促进行业人工智能应用生态建设。推进人工智能金融行业应用基础设施建设，促进人工智能应用成果在行业共享复用。鼓励大型金融机构发挥示范作用，向中小金融机构输出人工智能技术和管理经验。支持中小金融机构加强协作，共同推进应用场景落地。鼓励与人工智能产业加强协同，以金融应用促进产业创新发展，以产业成果",
+      "link": "https://mp.weixin.qq.com/s/XXgJ3_bfZ6SQtwoyOqaoYA",
+      "source_file": "sources/2026-06-18_监管鼓励大行向中小银行输出AI技术管理经验_银行科技研究社.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "AI看病成为医患新包袱？补上“多轮追问”，通用AI才迈得过医疗关",
+      "source": "量子位",
+      "digest": "当医疗增强大模型开始进入普通家庭",
+      "link": "https://mp.weixin.qq.com/s/7KHPkTrFWvxXsvQMZohT6g",
+      "source_file": "sources/2026-06-18_AI看病成为医患新包袱？补上“多轮追问”，通用AI才迈得过医疗关_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "中国信通院正式发布2026智能体十大关键词",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院正式发布2026智能体十大关键词",
+      "link": "https://mp.weixin.qq.com/s/u4ZRDtQviinP2MRLrCBULw",
+      "source_file": "sources/2026-06-18_中国信通院正式发布2026智能体十大关键词_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "AI“抢饭碗”？贝索斯：恰恰相反",
+      "source": "财联社AI daily",
+      "digest": "文|黄君芝人工智能(AI)的能力正日益强大，人类则愈发担心自己“饭碗不保”。",
+      "link": "https://mp.weixin.qq.com/s/ySq7bz-Lczdg5TSybpTl3A",
+      "source_file": "sources/2026-06-18_AI“抢饭碗”？贝索斯：恰恰相反_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "探访性爱机器人公司Somnia Lab：卧室里的性与AI｜甲子光年",
+      "source": "甲子光年",
+      "digest": "真正的AGI时代，或许将从一张床上，悄悄打开。",
+      "link": "https://mp.weixin.qq.com/s/j75AK3_-E71lMhXtPL5yOA",
+      "source_file": "sources/2026-06-18_探访性爱机器人公司Somnia Lab：卧室里的性与AI｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "库克：内存压力大，苹果将涨价；传 DeepSeek 估值超 4000 亿；联想推 AI 主机 MINI，2999 元 | 极客早知道",
+      "source": "极客公园",
+      "digest": "· OpenAI 为 ChatGPT 推出全新定时任务功能",
+      "link": "https://mp.weixin.qq.com/s/V7NLU98mM6Ax-dg-hn_eNg",
+      "source_file": "sources/2026-06-18_库克：内存压力大，苹果将涨价；传 DeepSeek 估值超 4000 亿；联想推 AI 主机 MIN_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-18",
+      "title": "腾讯研究院AI速递 20260618",
+      "source": "腾讯研究院",
+      "digest": "微信支付AI专属卡，正式发布",
+      "link": "https://mp.weixin.qq.com/s/vOcLORnjcTLSjq-BHoY3bA",
+      "source_file": "sources/2026-06-18_腾讯研究院AI速递 20260618_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "OpenAI亲曝o1越狱逃出沙箱：感觉像AGI降临",
+      "source": "新智元",
+      "digest": "OpenAI亲曝o1越狱逃出沙箱：感觉像AGI降临",
+      "link": "https://mp.weixin.qq.com/s/158BOf_5ov0089fO6_ueBQ",
+      "source_file": "sources/2026-06-17_OpenAI亲曝o1越狱逃出沙箱：感觉像AGI降临_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "谷歌发布Android 17系统，多项AI新功能将分阶段上线",
+      "source": "财联社AI daily",
+      "digest": "文|赵昊周二（6月16日），谷歌在官网发布了Android 17，是这款受众极广的移动操作系统最新一次重大升级",
+      "link": "https://mp.weixin.qq.com/s/TNUecRTFI3IIc_uFXMsb2w",
+      "source_file": "sources/2026-06-17_谷歌发布Android 17系统，多项AI新功能将分阶段上线_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "车东西专访德州仪器高管：汽车AI芯片不只是TOPS竞赛",
+      "source": "智东西",
+      "digest": "车端AI来了，处理器竞争却不止于AI？",
+      "link": "https://mp.weixin.qq.com/s/2y50hTeBr4DjeL6yvca4JQ",
+      "source_file": "sources/2026-06-17_车东西专访德州仪器高管：汽车AI芯片不只是TOPS竞赛_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "40万次Claude Code会话实锤：这才是AI时代最值钱的本事！",
+      "source": "新智元",
+      "digest": "40万次Claude Code会话实锤：这才是AI时代最值钱的本事！",
+      "link": "https://mp.weixin.qq.com/s/t4d9YGMaucryoJgjNFS72w",
+      "source_file": "sources/2026-06-17_40万次Claude Code会话实锤：这才是AI时代最值钱的本事！_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "ACL 2026 Main｜混合推理模型也会「钻空子」：南大移动团队提出TNT，破解「假装不思考」骗奖励",
+      "source": "机器之心",
+      "digest": "仅在奖励层面引入一个动态token上限，便将奖励欺骗概率压制在10%以内。",
+      "link": "https://mp.weixin.qq.com/s/G6oJOcqzwoilL5szmFwA0A",
+      "source_file": "sources/2026-06-17_ACL 2026 Main｜混合推理模型也会「钻空子」：南大移动团队提出TNT，破解「假装不思考」骗_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "拆解大模型几项核心操作背后的数学与 Infra 优化逻辑",
+      "source": "腾讯技术工程",
+      "digest": "AI Infra科普、入门或者进阶",
+      "link": "https://mp.weixin.qq.com/s/V727TpGvRjo5RvYRGZl6oA",
+      "source_file": "sources/2026-06-17_拆解大模型几项核心操作背后的数学与 Infra 优化逻辑_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "中国信通院周兰等：大模型推理驱动下的算存协同发展研究",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院周兰等：大模型推理驱动下的算存协同发展研究",
+      "link": "https://mp.weixin.qq.com/s/wUTh2rn_WsGl_KChN8sKuQ",
+      "source_file": "sources/2026-06-17_中国信通院周兰等：大模型推理驱动下的算存协同发展研究_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "困住医疗AI的死循环，终于有国产玩家跑通了",
+      "source": "量子位",
+      "digest": "在多项关键医疗测评上打败了GPT-5.5",
+      "link": "https://mp.weixin.qq.com/s/oPU5Ctvz3mLAknPxUs7kUg",
+      "source_file": "sources/2026-06-17_困住医疗AI的死循环，终于有国产玩家跑通了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "GLM-5.2开源发布：智谱最强模型拿下AI编程第一，Qoder/Buddy全面接入",
+      "source": "Qoder",
+      "digest": "智谱开源旗舰模型GLM-5.2，实现1M无损上下文，在Fable-5/SWE-bench等基准拿下AI编程第一。Qoder、腾讯CodeBuddy等主流编程工具全面接入，AI编程工具格局加速成型。",
+      "link": "https://mp.weixin.qq.com/s/ClU1fmNIu0Rgnu76I-qbNA",
+      "source_file": "sources/2026-06-17_首发！Qoder内置模型已支持 GLM-5.2_Qoder.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "ICML 2026 | 大模型为什么算不对加法？南大团队提出等本位和轨迹，揭示LLM算术错误的几何机制",
+      "source": "机器之心",
+      "digest": "探针为什么能读出这些信号？探针读的到底是什么？",
+      "link": "https://mp.weixin.qq.com/s/wcQhbji9zKNhFIdrg_hJaw",
+      "source_file": "sources/2026-06-17_ICML 2026 _ 大模型为什么算不对加法？南大团队提出等本位和轨迹，揭示LLM算术错误的几何机_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-17",
+      "title": "九章云极发布AI工厂体系：破解140万亿Token时代的落地悖论｜甲子光年",
+      "source": "甲子光年",
+      "digest": "九章云极发布AI工厂体系，提出将大模型能力产品化，通过标准化、流程化的AI工厂破解大模型落地悖论，让智能像工业品一样生产。",
+      "link": "https://mp.weixin.qq.com/s/I-E1kpfsyTF9M5viy-FCrg",
+      "source_file": "sources/2026-06-17_九章云极发布AI工厂体系：破解140万亿Token时代的落地悖论｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "助力金融迈进 Agentic AI新时代，鲲鹏超节点（TaiShan 950 SuperPoD）正式面向金融行业发布",
+      "source": "金融电子化",
+      "digest": "助力金融迈进 Agentic AI新时代，鲲鹏超节点（TaiShan 950 SuperPoD）正式面向金融行业发布",
+      "link": "https://mp.weixin.qq.com/s/IoaNnlQ6r1vfASgw2fHtAA",
+      "source_file": "sources/2026-06-17_助力金融迈进 Agentic AI新时代，鲲鹏超节点（TaiShan 950 SuperPoD）正式_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "刚刚，北京建了一座AI工厂：目标10万P算力，日产10万亿Token！",
+      "source": "量子位",
+      "digest": "计划1000倍综合降本",
+      "link": "https://mp.weixin.qq.com/s/uVkc_wpou8U8vWoH4mpIUw",
+      "source_file": "sources/2026-06-17_刚刚，北京建了一座AI工厂：目标10万P算力，日产10万亿Token！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "原力灵机发布 Ferrata 系统，物理 AI 迎来自己的 Harness",
+      "source": "极客公园",
+      "digest": "模型还不够完美，但机器人必须开始干活。Ferrata 想解决的，正是 Physical AI 从 Demo 走向真实现场之前，最缺的那层安全绳。",
+      "link": "https://mp.weixin.qq.com/s/WY3vluTjwpQ1-aH1wPvGLA",
+      "source_file": "sources/2026-06-17_原力灵机发布 Ferrata 系统，物理 AI 迎来自己的 Harness_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "微信支付推出AI专属卡，腾讯WorkBuddy已接入",
+      "source": "财联社AI daily",
+      "digest": "微信支付正式发布「AI专属卡」，腾讯WorkBuddy已深度接入，实现AI帮你微信下单等场景。",
+      "link": "https://mp.weixin.qq.com/s/Xj2Ud27jy2W_V6_wcCqYyQ",
+      "source_file": "sources/2026-06-17_微信支付推出AI专属卡，腾讯WorkBuddy已接入_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "生成式推荐引擎升级，快手在线参数服务器性能与时延深度优化实践｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "随着模型规模的持续扩张以及在线请求量的爆炸式增长，传统在线 ParameterServer 逐渐暴露出性能短板。",
+      "link": "https://mp.weixin.qq.com/s/VSaOtRqjDgrmKO_7D86zuw",
+      "source_file": "sources/2026-06-17_生成式推荐引擎升级，快手在线参数服务器性能与时延深度优化实践｜AICon 上海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "设计循环，放手执行：Loop Engineering 在 Qoder CLI 上的完整实践",
+      "source": "Qoder",
+      "digest": "从 Prompt Engineering 到 Loop EngineeringAI 工程的新概念来得很快。",
+      "link": "https://mp.weixin.qq.com/s/RAbsjNSg7jpmd4HJ3CRw2g",
+      "source_file": "sources/2026-06-17_设计循环，放手执行：Loop Engineering 在 Qoder CLI 上的完整实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "Genesis AI 发了一款三折叠机器人",
+      "source": "极客公园",
+      "digest": "通用机器人不一定要像人，Genesis AI 的答案是：收起头和腿，把真正像人的部分留给手。",
+      "link": "https://mp.weixin.qq.com/s/9IZx_N8_9bFOrUCk9hOZuA",
+      "source_file": "sources/2026-06-17_Genesis AI 发了一款三折叠机器人_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "金融监管：需要在AI应用和安全之间取得平衡",
+      "source": "银行科技研究社",
+      "digest": "6月17日，国家金融监督管理总局局长丁向群在2026陆家嘴论坛上表示，人工智能等新技术正深度影响金融运行逻辑，需要在应用和安全之间取得平衡。",
+      "link": "https://mp.weixin.qq.com/s/HCWENsCwVubPs0uczz07Og",
+      "source_file": "sources/2026-06-17_金融监管：需要在AI应用和安全之间取得平衡_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "中国银联“AI+金融”赋能产业高质量发展",
+      "source": "金融电子化",
+      "digest": "中国银联“AI+金融”赋能产业高质量发展",
+      "link": "https://mp.weixin.qq.com/s/yl-af9QN7c7w89ioTPng6Q",
+      "source_file": "sources/2026-06-17_中国银联“AI+金融”赋能产业高质量发展_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "从高考数学满分到AI辅助填志愿，国产大模型走到哪一步了？",
+      "source": "智东西",
+      "digest": "满分数学只是开始，国产模型开始帮人选对人生。",
+      "link": "https://mp.weixin.qq.com/s/Vnn2607pbKZUXU6lrViUYQ",
+      "source_file": "sources/2026-06-17_从高考数学满分到AI辅助填志愿，国产大模型走到哪一步了？_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "大家都在谈“AI素养”，说的是同一件事吗？",
+      "source": "腾讯技术工程",
+      "digest": "AI素养：一个被反复使用却从未对齐的词",
+      "link": "https://mp.weixin.qq.com/s/dK_B9ZSL7Wm-mQ53CtNFcw",
+      "source_file": "sources/2026-06-17_大家都在谈“AI素养”，说的是同一件事吗？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "AI转型最大的门槛，不是技术，是人",
+      "source": "量子位",
+      "digest": "不主动改变，就只能等着被改变",
+      "link": "https://mp.weixin.qq.com/s/uvM2SetDH9hrtS40QKFO9g",
+      "source_file": "sources/2026-06-17_AI转型最大的门槛，不是技术，是人_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "ChatGPT市场份额首次跌破50%",
+      "source": "财联社AI daily",
+      "digest": "分析公司Sensor Tower发布的2026年《AI行业现状报告》显示，截至5月底，由于Gemini（市占率",
+      "link": "https://mp.weixin.qq.com/s/loyPR0IToMZ5Za3DF_tJEA",
+      "source_file": "sources/2026-06-17_ChatGPT市场份额首次跌破50%_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "AI新解决方案集中亮相，大模型与智能体加速落地——金融展亮点速递",
+      "source": "金融电子化",
+      "digest": "AI新解决方案集中亮相，大模型与智能体加速落地——金融展亮点速递",
+      "link": "https://mp.weixin.qq.com/s/ZdOBw_pkrbWPkeGuihpw_w",
+      "source_file": "sources/2026-06-17_AI新解决方案集中亮相，大模型与智能体加速落地——金融展亮点速递_金融电子化.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "为什么最有价值的AI讨论总发生在知乎？",
+      "source": "量子位",
+      "digest": "知乎记录的不只是AI，而是时代变化本身",
+      "link": "https://mp.weixin.qq.com/s/qMD-xPoUeakn32RFJhKS8Q",
+      "source_file": "sources/2026-06-17_为什么最有价值的AI讨论总发生在知乎？_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "奥特曼豪赌1人独角兽，中国CEO：别催了，在水泥厂调AI！",
+      "source": "新智元",
+      "digest": "奥特曼豪赌未赢，中国OPC在水泥厂调AI！",
+      "link": "https://mp.weixin.qq.com/s/FkG-fh6vpiJf3Qo2UO1e1A",
+      "source_file": "sources/2026-06-17_奥特曼豪赌1人独角兽，中国CEO：别催了，在水泥厂调AI！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "豆包杀入 618，但它不想帮你下单",
+      "source": "极客公园",
+      "digest": "以为等来的是购物 Agent，结果是 AI 值得买？",
+      "link": "https://mp.weixin.qq.com/s/QCq6oBMgiTxYhrpSNlxLYQ",
+      "source_file": "sources/2026-06-17_豆包杀入 618，但它不想帮你下单_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "大模型已经够聪明了，为什么 95% 的 AI 项目还是跑不出 ROI？",
+      "source": "InfoQ",
+      "digest": "模型能力突飞猛进，企业 AI 投入成本与日俱增，但然后呢？",
+      "link": "https://mp.weixin.qq.com/s/1jAI0rnA3Jyz2126Uojv-A",
+      "source_file": "sources/2026-06-17_大模型已经够聪明了，为什么 95% 的 AI 项目还是跑不出 ROI？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "AI 企业 Day 0 出海，如何少走技术弯路？",
+      "source": "InfoQ",
+      "digest": "起跑线的差距，不是后期优化能弥补的",
+      "link": "https://mp.weixin.qq.com/s/d_cN7TCfJjxDq7CiY7Mzow",
+      "source_file": "sources/2026-06-17_AI 企业 Day 0 出海，如何少走技术弯路？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "AIEC 2026：今天起，Agent开始成为企业里的「新员工」",
+      "source": "机器之心",
+      "digest": "全行业的超级认知。",
+      "link": "https://mp.weixin.qq.com/s/R9dGkziM-IEr3FjCG4xh6w",
+      "source_file": "sources/2026-06-17_AIEC 2026：今天起，Agent开始成为企业里的「新员工」_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "马斯克麾下最惨打工人：手滑删掉xAI三周训练数据",
+      "source": "新智元",
+      "digest": "马斯克麾下最惨打工人：手滑删掉xAI三周训练数据",
+      "link": "https://mp.weixin.qq.com/s/S0y4hD8GepvWOkpwR8Lx1A",
+      "source_file": "sources/2026-06-17_马斯克麾下最惨打工人：手滑删掉xAI三周训练数据_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "SpaceX一分现金没花收购Cursor，马斯克吞下AI编程工具第一名",
+      "source": "量子位",
+      "digest": "SpaceX获得40亿美元ARR",
+      "link": "https://mp.weixin.qq.com/s/V557rBfGTxXwukkv0ZWa2A",
+      "source_file": "sources/2026-06-17_SpaceX一分现金没花收购Cursor，马斯克吞下AI编程工具第一名_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "小米「龙虾」上线，每天免费 4 小时；DeepSeek 完成首轮融资，梁文锋个人出资 200 亿；英伟达员工「考公上岸」引热议 | 极客早知道",
+      "source": "极客公园",
+      "digest": "SpaceX 换股收购 Cursor，交易估值 600 亿美元；ChatGPT 全球市场份额首次跌破 50%；报道称微信支付「AI 专属卡」最快本周上线。",
+      "link": "https://mp.weixin.qq.com/s/pzibqOu-8v-yp9MA61QN-g",
+      "source_file": "sources/2026-06-17_小米「龙虾」上线，每天免费 4 小时；DeepSeek 完成首轮融资，梁文锋个人出资 200 亿；英_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-17",
+      "title": "腾讯研究院AI速递 20260617",
+      "source": "腾讯研究院",
+      "digest": "AlphaGo获胜十周年之际，看AI的下一步",
+      "link": "https://mp.weixin.qq.com/s/i7_8KuS7xX3T_fGzLyLq5w",
+      "source_file": "sources/2026-06-17_腾讯研究院AI速递 20260617_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-16",
       "title": "诺奖得主Demis：大模型的下一关是怎么学会提出问题",

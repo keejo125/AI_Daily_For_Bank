@@ -68,6 +68,8 @@ def normalize_title_for_match(text):
     text = text.replace('\u201c', '"').replace('\u201d', '"')
     # 将中文单弯引号 (U+2018, U+2019) 替换为英文直单引号 (U+0027)
     text = text.replace('\u2018', "'").replace('\u2019', "'")
+    # 将中文角括号「」(U+300C, U+300D) 替换为英文直引号 (U+0022)
+    text = text.replace('\u300c', '"').replace('\u300d', '"')
     # 将不换行空格 (U+00A0) 替换为普通空格 (U+0020)
     text = text.replace('\u00a0', ' ')
     return text
@@ -202,6 +204,11 @@ def build_articles_json(classification, date_str):
         items_sorted = sorted(items, key=lambda x: x.get('is_model_related', False), reverse=True)
         
         for item in items_sorted:
+            # 跳过被合并的条目：is_merged=true且有merged_into字段的条目应在分类阶段被移除
+            # 此处作为防御性检查，避免合并条目重复渲染
+            if item.get('is_merged') and item.get('merged_into'):
+                print_progress(f"⏭️ 跳过已合并条目: {item.get('aid', '?')} → {item.get('merged_into', '?')}")
+                continue
             stats['total'] += 1
             title = item.get("title", "")
             source = item.get("source", "")
