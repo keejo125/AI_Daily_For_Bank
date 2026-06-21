@@ -1,0 +1,172 @@
+{
+  "date": "2026-06-20",
+  "generated_at": "2026-06-21T11:13:00.166047",
+  "classification": {
+    "国际": [
+      {
+        "aid": "2651040186_1",
+        "title": "哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/6v9AfFlzxihU0WmgXPhNgg",
+        "digest": "论文能不能跑起来，AI 可以先替你试试",
+        "source_file": "sources/2026-06-20_哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑_机器之心.md",
+        "category_reason": "提及国际公司（哈？改个URL就行！alphaXiv甩出...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2652708101_1",
+        "title": "OpenAI发布最新里程碑：对齐的本质是「人格」",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/XhOq95fxAYRNcl4_Ne6M2g",
+        "digest": "OpenAI发布最新里程碑：对齐的本质是「人格」",
+        "source_file": "sources/2026-06-20_OpenAI发布最新里程碑：对齐的本质是「人格」_新智元.md",
+        "category_reason": "提及国际公司（OpenAI发布最新里程碑：对齐的本质是...）",
+        "is_model_related": true
+      },
+      {
+        "aid": "2651287414_4",
+        "title": "Pinecone 推出 OneLake 集成方案，让 AI 智能体直连企业数据",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/o4UUUphkoLDHwuqEtnXlgA",
+        "digest": "Pinecone宣布旗下Nexus知识引擎与微软OneLake达成全新集成，旨在从根本上改变企业AI智能体调取企业数据并开展推理运算的方式。",
+        "source_file": "sources/2026-06-20_Pinecone 推出 OneLake 集成方案，让 AI 智能体直连企业数据_InfoQ.md",
+        "category_reason": "提及国际公司（Pinecone 推出 OneLake ...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2652708060_3",
+        "title": "Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/e-cbArpf6-RShpjqBJWB5A",
+        "digest": "Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭",
+        "source_file": "sources/2026-06-20_Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭_新智元.md",
+        "category_reason": "提及国际公司（Anthropic重磅产品线来了！Con...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2652708156_2",
+        "title": "Anthropic安全叙事崩盘，内部员工慌了？",
+        "source": "新智元",
+        "link": "https://mp.weixin.qq.com/s/rd8WB9-rjYwsoFVbRuHWKQ",
+        "digest": "被禁言这天，AI末日预言成了回旋镖",
+        "source_file": "sources/2026-06-20_Anthropic安全叙事崩盘，内部员工慌了？_新智元.md",
+        "category_reason": "提及国际公司（Anthropic安全叙事崩盘，内部员工...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2247898543_2",
+        "title": "Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/Msb8LQt7r2xsqtv5OQmcRQ",
+        "digest": "抢人最猛的Meta，先从内部裂开了",
+        "source_file": "sources/2026-06-20_Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶_量子位.md",
+        "category_reason": "提及国际公司（Meta员工士气跌至20年谷底！内部直播...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2651287414_1",
+        "title": "Meta 几周内毁掉二十年工程文化，给所有“AI 优先”公司上了一课",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/g-OPKe2nmMX-qLnTe_GClw",
+        "digest": "每一个在搞“AI优先”的管理者，都欠自己一个Meta复盘",
+        "source_file": "sources/2026-06-20_Meta 几周内毁掉二十年工程文化，给所有“AI 优先”公司上了一课_InfoQ.md",
+        "category_reason": "提及国际公司（Meta 几周内毁掉二十年工程文化，给所...）",
+        "is_model_related": false
+      }
+    ],
+    "国内": [
+      {
+        "aid": "2651040145_2",
+        "title": "AI接管数字世界！华为Claw-Anything：面向跨设备、跨时间、跨服务的Claw评测与数据引擎",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/rEk33ieaeX0Gg5mmb9LKZQ",
+        "digest": "顶尖闭源模型 GPT-5.5 通过率仅 34.5%。",
+        "source_file": "sources/2026-06-20_AI接管数字世界！华为Claw-Anything：面向跨设备、跨时间、跨服务的Claw评测与数据引擎_机器之心.md",
+        "category_reason": "提及国内公司（AI接管数字世界！华为Claw-Anyt...）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2651287414_3",
+        "title": "昆仑万维天工 3.1 来了：上线设计画布与多智能体工作流，强化复杂项目交付能力",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/zwz_u5H_G62IcqC8OCj8uA",
+        "digest": "“从单次生成向持续交付场景延伸。”",
+        "source_file": "sources/2026-06-20_昆仑万维天工 3.1 来了：上线设计画布与多智能体工作流，强化复杂项目交付能力_InfoQ.md",
+        "category_reason": "提及国内公司（昆仑万维天工 3.1 来了：上线设计画布...）",
+        "is_model_related": false
+      }
+    ],
+    "同业": [
+      {
+        "aid": "2650302613_1",
+        "title": "农行董事长谷澍：对大模型应用风险防范的4大方法",
+        "source": "银行科技研究社",
+        "link": "https://mp.weixin.qq.com/s/ibAE5xFEk0kOtMFUT2l5Aw",
+        "digest": "农行董事长谷澍：对大模型应用风险防范的4大方法",
+        "source_file": "sources/2026-06-20_农行董事长谷澍：对大模型应用风险防范的4大方法_银行科技研究社.md",
+        "category_reason": "银行业大模型应用风险防范",
+        "is_model_related": false
+      }
+    ],
+    "其他": [
+      {
+        "aid": "2247898544_3",
+        "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
+        "digest": "从工件层面系统重构了长视频剪辑管线",
+        "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
+        "category_reason": "通用技术/观点分析（未明确指向国内/国际）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2651287414_2",
+        "title": "让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理",
+        "source": "InfoQ",
+        "link": "https://mp.weixin.qq.com/s/nnjttZuQ5ThSU-o57VmRkQ",
+        "digest": "最好的治理，是治理本身被遗忘；最好的系统，是系统自己照顾自己。",
+        "source_file": "sources/2026-06-20_让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理_InfoQ.md",
+        "category_reason": "通用技术/观点分析（未明确指向国内/国际）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2653109088_1",
+        "title": "面对 AI，人类手里还有「什么牌」？",
+        "source": "极客公园",
+        "link": "https://mp.weixin.qq.com/s/pPTc50UmhjZg49JdYmnQLg",
+        "digest": "​真正的问题是，还有什么是 AI 做不了的？",
+        "source_file": "sources/2026-06-20_面对 AI，人类手里还有「什么牌」？_极客公园.md",
+        "category_reason": "通用技术/观点分析（未明确指向国内/国际）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2247898543_1",
+        "title": "陶哲轩12年前的预言，现在AI帮他兑现了",
+        "source": "量子位",
+        "link": "https://mp.weixin.qq.com/s/vIpoLjSJ4s95uwOInvgX7g",
+        "digest": "全球最聪明的人之一，成了AI最狂热的布道者",
+        "source_file": "sources/2026-06-20_陶哲轩12年前的预言，现在AI帮他兑现了_量子位.md",
+        "category_reason": "通用技术/观点分析（未明确指向国内/国际）",
+        "is_model_related": false
+      },
+      {
+        "aid": "2651040145_1",
+        "title": "隐性知识与 Token 资本如何影响企业生命线？",
+        "source": "机器之心",
+        "link": "https://mp.weixin.qq.com/s/xYNuWg_FYqU46RLJEIFwrg",
+        "digest": "Token 资本视角下，企业如何通过「爬山机器」构建 AI 竞争力？",
+        "source_file": "sources/2026-06-20_隐性知识与 Token 资本如何影响企业生命线？_机器之心.md",
+        "category_reason": "通用技术/观点分析（未明确指向国内/国际）",
+        "is_model_related": false
+      }
+    ]
+  },
+  "stats": {
+    "国际": 7,
+    "国内": 2,
+    "同业": 1,
+    "其他": 5,
+    "total": 15
+  },
+  "excluded": []
+}

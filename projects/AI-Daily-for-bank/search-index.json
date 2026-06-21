@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T11:30:54.163181",
+  "updated_at": "2026-06-21T11:47:24.751098",
   "total": 1396,
   "articles": [
     {
@@ -14,31 +14,11 @@
     },
     {
       "date": "2026-06-20",
-      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
-      "source": "量子位",
-      "digest": "从工件层面系统重构了长视频剪辑管线",
-      "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
-      "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-20",
       "title": "哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑",
       "source": "机器之心",
       "digest": "论文能不能跑起来，AI 可以先替你试试",
       "link": "https://mp.weixin.qq.com/s/6v9AfFlzxihU0WmgXPhNgg",
       "source_file": "sources/2026-06-20_哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑_机器之心.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-20",
-      "title": "让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理",
-      "source": "InfoQ",
-      "digest": "最好的治理，是治理本身被遗忘；最好的系统，是系统自己照顾自己。",
-      "link": "https://mp.weixin.qq.com/s/nnjttZuQ5ThSU-o57VmRkQ",
-      "source_file": "sources/2026-06-20_让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -120,6 +100,26 @@
       "link": "https://mp.weixin.qq.com/s/ibAE5xFEk0kOtMFUT2l5Aw",
       "source_file": "sources/2026-06-20_农行董事长谷澍：对大模型应用风险防范的4大方法_银行科技研究社.md",
       "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
+      "source": "量子位",
+      "digest": "从工件层面系统重构了长视频剪辑管线",
+      "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
+      "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理",
+      "source": "InfoQ",
+      "digest": "最好的治理，是治理本身被遗忘；最好的系统，是系统自己照顾自己。",
+      "link": "https://mp.weixin.qq.com/s/nnjttZuQ5ThSU-o57VmRkQ",
+      "source_file": "sources/2026-06-20_让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理_InfoQ.md",
+      "category": "其他",
       "is_model_related": false
     },
     {
