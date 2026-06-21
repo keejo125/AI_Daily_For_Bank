@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-06-19T09:17:49.588949",
-  "total": 1365,
+  "updated_at": "2026-06-21T09:15:01.396991",
+  "total": 1396,
   "articles": [
+    {
+      "date": "2026-06-20",
+      "title": "OpenAI发布最新里程碑：对齐的本质是「人格」",
+      "source": "新智元",
+      "digest": "OpenAI发布最新里程碑：对齐的本质是「人格」",
+      "link": "https://mp.weixin.qq.com/s/XhOq95fxAYRNcl4_Ne6M2g",
+      "source_file": "sources/2026-06-20_OpenAI发布最新里程碑：对齐的本质是「人格」_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-20",
+      "title": "陶哲轩12年前的预言，现在AI帮他兑现了",
+      "source": "量子位",
+      "digest": "全球最聪明的人之一，成了AI最狂热的布道者",
+      "link": "https://mp.weixin.qq.com/s/vIpoLjSJ4s95uwOInvgX7g",
+      "source_file": "sources/2026-06-20_陶哲轩12年前的预言，现在AI帮他兑现了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-20",
+      "title": "哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑",
+      "source": "机器之心",
+      "digest": "论文能不能跑起来，AI 可以先替你试试",
+      "link": "https://mp.weixin.qq.com/s/6v9AfFlzxihU0WmgXPhNgg",
+      "source_file": "sources/2026-06-20_哈？改个URL就行！alphaXiv甩出论文复现神器，单卡也能跑_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理",
+      "source": "InfoQ",
+      "digest": "最好的治理，是治理本身被遗忘；最好的系统，是系统自己照顾自己。",
+      "link": "https://mp.weixin.qq.com/s/nnjttZuQ5ThSU-o57VmRkQ",
+      "source_file": "sources/2026-06-20_让开关自我消亡：AI 赋能的 Feature Flag 全生命周期治理_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "Pinecone 推出 OneLake 集成方案，让 AI 智能体直连企业数据",
+      "source": "InfoQ",
+      "digest": "Pinecone宣布旗下Nexus知识引擎与微软OneLake达成全新集成，旨在从根本上改变企业AI智能体调取企业数据并开展推理运算的方式。",
+      "link": "https://mp.weixin.qq.com/s/o4UUUphkoLDHwuqEtnXlgA",
+      "source_file": "sources/2026-06-20_Pinecone 推出 OneLake 集成方案，让 AI 智能体直连企业数据_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭",
+      "source": "新智元",
+      "digest": "Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭",
+      "link": "https://mp.weixin.qq.com/s/e-cbArpf6-RShpjqBJWB5A",
+      "source_file": "sources/2026-06-20_Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
+      "source": "量子位",
+      "digest": "从工件层面系统重构了长视频剪辑管线",
+      "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
+      "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "AI接管数字世界！华为Claw-Anything：面向跨设备、跨时间、跨服务的Claw评测与数据引擎",
+      "source": "机器之心",
+      "digest": "顶尖闭源模型 GPT-5.5 通过率仅 34.5%。",
+      "link": "https://mp.weixin.qq.com/s/rEk33ieaeX0Gg5mmb9LKZQ",
+      "source_file": "sources/2026-06-20_AI接管数字世界！华为Claw-Anything：面向跨设备、跨时间、跨服务的Claw评测与数据引擎_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "昆仑万维天工 3.1 来了：上线设计画布与多智能体工作流，强化复杂项目交付能力",
+      "source": "InfoQ",
+      "digest": "“从单次生成向持续交付场景延伸。”",
+      "link": "https://mp.weixin.qq.com/s/zwz_u5H_G62IcqC8OCj8uA",
+      "source_file": "sources/2026-06-20_昆仑万维天工 3.1 来了：上线设计画布与多智能体工作流，强化复杂项目交付能力_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "农行董事长谷澍：对大模型应用风险防范的4大方法",
+      "source": "银行科技研究社",
+      "digest": "农行董事长谷澍：对大模型应用风险防范的4大方法",
+      "link": "https://mp.weixin.qq.com/s/ibAE5xFEk0kOtMFUT2l5Aw",
+      "source_file": "sources/2026-06-20_农行董事长谷澍：对大模型应用风险防范的4大方法_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "Anthropic安全叙事崩盘，内部员工慌了？",
+      "source": "新智元",
+      "digest": "被禁言这天，AI末日预言成了回旋镖",
+      "link": "https://mp.weixin.qq.com/s/rd8WB9-rjYwsoFVbRuHWKQ",
+      "source_file": "sources/2026-06-20_Anthropic安全叙事崩盘，内部员工慌了？_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "面对 AI，人类手里还有「什么牌」？",
+      "source": "极客公园",
+      "digest": "​真正的问题是，还有什么是 AI 做不了的？",
+      "link": "https://mp.weixin.qq.com/s/pPTc50UmhjZg49JdYmnQLg",
+      "source_file": "sources/2026-06-20_面对 AI，人类手里还有「什么牌」？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶",
+      "source": "量子位",
+      "digest": "Meta AI 重组引发内部震荡：员工士气跌至 20 年谷底，CTO 直播承认重组糟糕透顶；几周内毁掉二十年工程文化，给所有「AI 优先」公司上了一课。",
+      "link": "https://mp.weixin.qq.com/s/Msb8LQt7r2xsqtv5OQmcRQ",
+      "source_file": "sources/2026-06-20_Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "隐性知识与 Token 资本如何影响企业生命线？",
+      "source": "机器之心",
+      "digest": "Token 资本视角下，企业如何通过「爬山机器」构建 AI 竞争力？",
+      "link": "https://mp.weixin.qq.com/s/xYNuWg_FYqU46RLJEIFwrg",
+      "source_file": "sources/2026-06-20_隐性知识与 Token 资本如何影响企业生命线？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "宇树机器人登顶 6200 米火山；诺奖得主从谷歌跳槽到 Anthropic；AI 教父杨立昆：马斯克的 xAI 失败了 | 极客早知道",
+      "source": "极客公园",
+      "digest": "扎克伯格承诺 Meta 今年不会再裁员；美国造车新势力 Rivian 遭车主集体起诉；谷歌 AI 建议用户不想看 AI 就用 DuckDuckGo",
+      "link": "https://mp.weixin.qq.com/s/IyC1FVcIkFenNDESqv1y9Q",
+      "source_file": "sources/2026-06-20_宇树机器人登顶 6200 米火山；诺奖得主从谷歌跳槽到 Anthropic；AI 教父杨立昆：马斯克_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "LLM终于学会推公式了！博世x清华推出FunctionEvolve：LLM-SRBench提升3.6倍，AI-Feynman满分",
+      "source": "机器之心",
+      "digest": "LLM终于学会推公式了！博世x清华推出FunctionEvolve：LLM-SRBench提升3.6倍，AI-Feynman满分",
+      "link": "https://mp.weixin.qq.com/s/3L5RTfKz5MI3Sx7nLOfc6Q",
+      "source_file": "sources/2026-06-19_LLM终于学会推公式了！博世x清华推出FunctionEvolve：LLM-SRBench提升3.6_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-19",
+      "title": "终端开发秒变可交互、实时网页！Claude Code 刚刚更新：AI 编程进入看板协作时代",
+      "source": "InfoQ",
+      "digest": "终端开发秒变可交互、实时网页！Claude Code 刚刚更新：AI 编程进入看板协作时代",
+      "link": "https://mp.weixin.qq.com/s/d5OtzQJ8Rb54J1TvCTkArg",
+      "source_file": "sources/2026-06-19_终端开发秒变可交互、实时网页！Claude Code 刚刚更新：AI 编程进入看板协作时代_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "ICML 2026｜Agent通讯的「运营商」哪家强？UIUC团队发布ProtocolBench",
+      "source": "机器之心",
+      "digest": "ICML 2026｜Agent通讯的「运营商」哪家强？UIUC团队发布ProtocolBench",
+      "link": "https://mp.weixin.qq.com/s/vJtD6BIE56RiuEwllu413A",
+      "source_file": "sources/2026-06-19_ICML 2026｜Agent通讯的「运营商」哪家强？UIUC团队发布ProtocolBench_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "GPT发AI原创新成果了",
+      "source": "量子位",
+      "digest": "GPT发AI原创新成果了",
+      "link": "https://mp.weixin.qq.com/s/bXIHfd6RSl8RiOIf6oi7xQ",
+      "source_file": "sources/2026-06-19_GPT发AI原创新成果了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "清华唐杰正面硬刚马斯克：中国AI达到Fable水平，还要更快！",
+      "source": "新智元",
+      "digest": "清华唐杰正面硬刚马斯克：中国AI达到Fable水平，还要更快！",
+      "link": "https://mp.weixin.qq.com/s/FITEAsZxa2p0PZv7MM7Haw",
+      "source_file": "sources/2026-06-19_清华唐杰正面硬刚马斯克：中国AI达到Fable水平，还要更快！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-19",
+      "title": "GLM-5.2全球免费6小时，马斯克点赞，HuggingFace掏钱",
+      "source": "机器之心",
+      "digest": "GLM-5.2全球免费6小时，马斯克点赞，HuggingFace掏钱",
+      "link": "https://mp.weixin.qq.com/s/XSUiALrxwqRAR3sJLzWZDw",
+      "source_file": "sources/2026-06-19_GLM-5.2全球免费6小时，马斯克点赞，HuggingFace掏钱_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-19",
+      "title": "ICML 2026 Spotlight | AI隐私训练时，那个最难控制的「阀门」能自动调节吗？",
+      "source": "机器之心",
+      "digest": "ICML 2026 Spotlight | AI隐私训练时，那个最难控制的「阀门」能自动调节吗？",
+      "link": "https://mp.weixin.qq.com/s/wpSn9gGJwrypssMMomK2QA",
+      "source_file": "sources/2026-06-19_ICML 2026 Spotlight _ AI隐私训练时，那个最难控制的「阀门」能自动调节吗？_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-19",
+      "title": "狂烧 Token 却赚不到钱？这家清华系 AI Infra 独角兽已破解算力成本难题",
+      "source": "InfoQ",
+      "digest": "狂烧 Token 却赚不到钱？这家清华系 AI Infra 独角兽已破解算力成本难题",
+      "link": "https://mp.weixin.qq.com/s/0JFjX5KR0vBdMpdJEn-yTQ",
+      "source_file": "sources/2026-06-19_狂烧 Token 却赚不到钱？这家清华系 AI Infra 独角兽已破解算力成本难题_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "超越SONIC！人形机器人「小脑」的GPT时刻来了，还有史上最大动捕数据，整整20亿帧",
+      "source": "机器之心",
+      "digest": "超越SONIC！人形机器人「小脑」的GPT时刻来了，还有史上最大动捕数据，整整20亿帧",
+      "link": "https://mp.weixin.qq.com/s/C_RJXBFJLetgZdN1catvqA",
+      "source_file": "sources/2026-06-19_超越SONIC！人形机器人「小脑」的GPT时刻来了，还有史上最大动捕数据，整整20亿帧_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "硅谷大厂，员工人均月花 5 万养 AI",
+      "source": "InfoQ",
+      "digest": "硅谷大厂，员工人均月花 5 万养 AI",
+      "link": "https://mp.weixin.qq.com/s/L9TKV99JItq6IiXO2L4Cyg",
+      "source_file": "sources/2026-06-19_硅谷大厂，员工人均月花 5 万养 AI_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "前 OpenAI 高管清华演讲：比失业更可怕的，是 AI 时代我们不知道“我是谁”",
+      "source": "InfoQ",
+      "digest": "前 OpenAI 高管清华演讲：比失业更可怕的，是 AI 时代我们不知道“我是谁”",
+      "link": "https://mp.weixin.qq.com/s/R7AlFR6T6iQsePJHACMHrw",
+      "source_file": "sources/2026-06-19_前 OpenAI 高管清华演讲：比失业更可怕的，是 AI 时代我们不知道“我是谁”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "G7惊魂2.5小时！奥特曼笑坐，达里奥「受审」",
+      "source": "新智元",
+      "digest": "G7惊魂2.5小时！奥特曼笑坐，达里奥「受审」",
+      "link": "https://mp.weixin.qq.com/s/dc9AhFbbDegWNPZRZeJBzw",
+      "source_file": "sources/2026-06-19_G7惊魂2.5小时！奥特曼笑坐，达里奥「受审」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "奥特曼押注2028：让AI学会造AI",
+      "source": "新智元",
+      "digest": "奥特曼押注2028：让AI学会造AI",
+      "link": "https://mp.weixin.qq.com/s/lpna8oF1PH2ndBmaV-e5kg",
+      "source_file": "sources/2026-06-19_奥特曼押注2028：让AI学会造AI_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "DeepSeek 「识图模式」上线，但不认识梁文锋；米哈游 「AI 女友」正式曝光；《GTA 6》6 月 25 日开启预购｜极客早知道",
+      "source": "极客公园",
+      "digest": "DeepSeek 「识图模式」上线，但不认识梁文锋；米哈游 「AI 女友」正式曝光；《GTA 6》6 月 25 日开启预购｜极客早知道",
+      "link": "https://mp.weixin.qq.com/s/nTTQnxSYY2Xdko6zTGy-Fw",
+      "source_file": "sources/2026-06-19_DeepSeek 「识图模式」上线，但不认识梁文锋；米哈游 「AI 女友」正式曝光；《GTA 6》6_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "我把昨晚的梦输入AI，它居然直接把我拉进去玩儿了一把？！",
+      "source": "量子位",
+      "digest": "我把昨晚的梦输入AI，它居然直接把我拉进去玩儿了一把？！",
+      "link": "https://mp.weixin.qq.com/s/J5v3jVnHSdluRKxRz9cCSg",
+      "source_file": "sources/2026-06-19_我把昨晚的梦输入AI，它居然直接把我拉进去玩儿了一把？！_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-19",
+      "title": "金融监管总局：金融机构开发应用AI应坚持谁使用谁负责、自主可控等原则",
+      "source": "银行科技研究社",
+      "digest": "金融监管总局：金融机构开发应用AI应坚持谁使用谁负责、自主可控等原则",
+      "link": "https://mp.weixin.qq.com/s/wC3GECsWW2qVdFn4zgzVqA",
+      "source_file": "sources/2026-06-19_金融监管总局：金融机构开发应用AI应坚持谁使用谁负责、自主可控等原则_银行科技研究社.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-18",
       "title": "开发者冲爆了！全球前十AI Lab无限免费，一周烧出3.12万亿Token",
