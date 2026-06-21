@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-21T09:15:01.396991",
-  "total": 1396,
+  "updated_at": "2026-06-21T11:13:36.328014",
+  "total": 1397,
   "articles": [
     {
       "date": "2026-06-20",
@@ -14,13 +14,13 @@
     },
     {
       "date": "2026-06-20",
-      "title": "陶哲轩12年前的预言，现在AI帮他兑现了",
+      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
       "source": "量子位",
-      "digest": "全球最聪明的人之一，成了AI最狂热的布道者",
-      "link": "https://mp.weixin.qq.com/s/vIpoLjSJ4s95uwOInvgX7g",
-      "source_file": "sources/2026-06-20_陶哲轩12年前的预言，现在AI帮他兑现了_量子位.md",
+      "digest": "从工件层面系统重构了长视频剪辑管线",
+      "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
+      "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
       "category": "国际",
-      "is_model_related": true
+      "is_model_related": false
     },
     {
       "date": "2026-06-20",
@@ -60,16 +60,6 @@
       "link": "https://mp.weixin.qq.com/s/e-cbArpf6-RShpjqBJWB5A",
       "source_file": "sources/2026-06-20_Anthropic重磅产品线来了！Conway永久在线，智能体大军来袭_新智元.md",
       "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-20",
-      "title": "从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用",
-      "source": "量子位",
-      "digest": "从工件层面系统重构了长视频剪辑管线",
-      "link": "https://mp.weixin.qq.com/s/IitbUi8DdYJKwrXzrjKhbQ",
-      "source_file": "sources/2026-06-20_从“一句成片”到“长轨推演”：探究多模态智能体在长视频编辑中的应用_量子位.md",
-      "category": "国内",
       "is_model_related": false
     },
     {
@@ -124,9 +114,19 @@
     },
     {
       "date": "2026-06-20",
+      "title": "陶哲轩12年前的预言，现在AI帮他兑现了",
+      "source": "量子位",
+      "digest": "全球最聪明的人之一，成了AI最狂热的布道者",
+      "link": "https://mp.weixin.qq.com/s/vIpoLjSJ4s95uwOInvgX7g",
+      "source_file": "sources/2026-06-20_陶哲轩12年前的预言，现在AI帮他兑现了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
       "title": "Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶",
       "source": "量子位",
-      "digest": "Meta AI 重组引发内部震荡：员工士气跌至 20 年谷底，CTO 直播承认重组糟糕透顶；几周内毁掉二十年工程文化，给所有「AI 优先」公司上了一课。",
+      "digest": "抢人最猛的Meta，先从内部裂开了",
       "link": "https://mp.weixin.qq.com/s/Msb8LQt7r2xsqtv5OQmcRQ",
       "source_file": "sources/2026-06-20_Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶_量子位.md",
       "category": "其他",
@@ -139,6 +139,16 @@
       "digest": "Token 资本视角下，企业如何通过「爬山机器」构建 AI 竞争力？",
       "link": "https://mp.weixin.qq.com/s/xYNuWg_FYqU46RLJEIFwrg",
       "source_file": "sources/2026-06-20_隐性知识与 Token 资本如何影响企业生命线？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-20",
+      "title": "Meta 几周内毁掉二十年工程文化，给所有“AI 优先”公司上了一课",
+      "source": "InfoQ",
+      "digest": "每一个在搞“AI优先”的管理者，都欠自己一个Meta复盘",
+      "link": "https://mp.weixin.qq.com/s/g-OPKe2nmMX-qLnTe_GClw",
+      "source_file": "sources/2026-06-20_Meta 几周内毁掉二十年工程文化，给所有“AI 优先”公司上了一课_InfoQ.md",
       "category": "其他",
       "is_model_related": false
     },
