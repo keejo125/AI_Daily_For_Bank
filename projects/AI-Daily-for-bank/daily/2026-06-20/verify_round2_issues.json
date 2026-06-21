@@ -1,0 +1,42 @@
+[
+  {
+    "type": "确认删除",
+    "article": "宇树机器人登顶 6200 米火山；诺奖得主从谷歌跳槽到 Anthropic；AI 教父杨立昆：马斯克的 xAI 失败了 | 极客早知道",
+    "action": "delete",
+    "severity": "HIGH"
+  },
+  {
+    "type": "确认删除",
+    "article": "宇树机器人登顶 6200 米火山；诺奖得主从谷歌跳槽到 Anthropic；AI 教父杨立昆：马斯克的 xAI 失败了 | 极客早知道",
+    "action": "delete",
+    "severity": "HIGH"
+  },
+  {
+    "type": "分类异议",
+    "article": "Anthropic安全叙事崩盘，内部员工慌了？",
+    "current": "其他",
+    "suggested": "国际",
+    "severity": "MEDIUM"
+  },
+  {
+    "type": "分类异议",
+    "article": "Meta员工士气跌至20年谷底！内部直播当众开骂，CTO承认AI重组糟糕透顶",
+    "current": "其他",
+    "suggested": "国际",
+    "severity": "MEDIUM"
+  },
+  {
+    "type": "分类异议",
+    "article": "Meta 几周内毁掉二十年工程文化，给所有“AI 优先”公司上了一课",
+    "current": "其他",
+    "suggested": "国际",
+    "severity": "MEDIUM"
+  },
+  {
+    "type": "分类异议",
+    "article": "宇树机器人登顶 6200 米火山；诺奖得主从谷歌跳槽到 Anthropic；AI 教父杨立昆：马斯克的 xAI 失败了 | 极客早知道",
+    "current": "其他",
+    "suggested": "国际",
+    "severity": "MEDIUM"
+  }
+]
