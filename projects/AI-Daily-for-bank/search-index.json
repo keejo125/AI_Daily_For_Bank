@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-06-21T11:47:24.751098",
-  "total": 1396,
+  "updated_at": "2026-06-23T07:07:46.100139",
+  "total": 1418,
   "articles": [
+    {
+      "date": "2026-06-22",
+      "title": "又一大模型发布！号称比肩Fable 5和Mythos",
+      "source": "智东西",
+      "digest": "日本 AI 独角兽 Sakana AI 发布 Fugu 系列编排器模型（Fugu Ultra 和 Fugu），不直接答题而是编排调用全球大模型完成复杂任务。Fugu Ultra 在工程、科学、推理基准上接近或超越 Fable 5、Mythos Preview，标志「模型编排」成为新训练范式。",
+      "link": "https://mp.weixin.qq.com/s/uPX3DE9TONovWopWDjT3jQ",
+      "source_file": "sources/2026-06-22_又一大模型发布！号称比肩Fable 5和Mythos_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "陶哲轩：几周前，AI突破数学形式化临界点",
+      "source": "量子位",
+      "digest": "菲尔兹奖得主陶哲轩在 IEANTN 项目中发现，AI 几小时即可生成原本需数周完成的形式化证明，生成速度远超人类审阅能力，揭示「AI 写长证明比短证明更易」的不对称性（阻抗不匹配）正在重塑数学协作。",
+      "link": "https://mp.weixin.qq.com/s/2gVbw3OlrvFwI2ZdZEDgaA",
+      "source_file": "sources/2026-06-22_陶哲轩：几周前，AI突破数学形式化临界点_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Claude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算ROI了",
+      "source": "InfoQ",
+      "digest": "Anthropic Claude Code 与 Cowork 团队负责人 Fiona Fung 公开反思：AI 时代代码交付提升 8 倍后瓶颈已转向验证质量、优先级与异步 agent 管理，组织要从「token maxing」转向 ROI 衡量，管理者必须先 dogfooding 才能避免被 dashboard 隔离。",
+      "link": "https://mp.weixin.qq.com/s/34YV97sB5gF-7XAvXzryXw",
+      "source_file": "sources/2026-06-22_Claude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "这家Agent 公司从 Claude 切到 DeepSeek v4：一年省下数百万美元，迁移工作量却是预期的 100 倍",
+      "source": "InfoQ",
+      "digest": "无代码 AI 代理平台 Lindy 将全部流量从 Anthropic 切到 DeepSeek v4，每年节省数百万美元推理成本，但实际迁移工作量是预期的 100 倍；同时 Linux 基金会联合谷歌、微软、IBM、Salesforce 成立 Tokenomics 基金会推动行业算力计费标准。",
+      "link": "https://mp.weixin.qq.com/s/VcwerGQSgMNvJZp72a-WhA",
+      "source_file": "sources/2026-06-22_这家Agent 公司从 Claude 切到 DeepSeek v4：一年省下数百万美元，迁移工作量却_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "MOSS 全模态技术体系全解析：统一离散化建模、推理优化与情境数据构建路径",
+      "source": "InfoQ",
+      "digest": "复旦邱锡鹏（国内首个对话大模型 MOSS 团队负责人）系统阐述情境智能路线：用 AnyGPT 离散词元建模实现「全模态理解和生成统一架构」，打破传统多模态「桥接」瓶颈，并强调高质量情境数据是模型核心壁垒。",
+      "link": "https://mp.weixin.qq.com/s/J0Tzb9dprOuck3PXMAZTMg",
+      "source_file": "sources/2026-06-22_MOSS 全模态技术体系全解析：统一离散化建模、推理优化与情境数据构建路径_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "AI中转站正在「裸奔」：清华团队提出首个可信原生中转基础设施TrustedARI",
+      "source": "机器之心",
+      "digest": "清华团队提出首个「可信原生中转基础设施」TrustedARI，把 Agent 调用外部模型/工具时的中转信任从「靠人品」升级为「靠数学」证明，解决 AI 中转站身份鉴权、调用审计与账单可信三大风险。",
+      "link": "https://mp.weixin.qq.com/s/WuP19LYwwDZYSA71X_ri2Q",
+      "source_file": "sources/2026-06-22_AI中转站正在「裸奔」：清华团队提出首个可信原生中转基础设施TrustedARI_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Loop Engineering 实践指南：在 Code Buddy 中构建自主循环系统",
+      "source": "腾讯技术工程",
+      "digest": "腾讯基于谷歌工程师 Addy Osmani 提出的 Loop Engineering 范式，在 Code Buddy 中构建 AI 自主循环系统，让开发者从循环内部操作者转为循环之上的目标设定者，AI 自决如何推进。",
+      "link": "https://mp.weixin.qq.com/s/YqIyL7uW4EV2r5HLDW7wcA",
+      "source_file": "sources/2026-06-22_Loop Engineering 实践指南：在 Code Buddy 中构建自主循环系统_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来",
+      "source": "量子位",
+      "digest": "中科院软件所联合团队推出 PerfEvolve 框架，把静态调参文档转化为「过程化调参技能」喂给 LLM Agent，让 Agent 在数据库自动调参场景中自主摸索最佳参数，避免「死记答案」式翻车。",
+      "link": "https://mp.weixin.qq.com/s/e0IufepaMKp5aAvXowJD2w",
+      "source_file": "sources/2026-06-22_过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "迈向Loop Engineering：Qoder CLI 新增 3 个命令，让 AI 自己验证",
+      "source": "Qoder",
+      "digest": "Qoder CLI 新增 /run-skill-generator、/run、/verify 三个内置命令，把「项目知识沉淀 → 一键起服务 → 闭环验证」完整 Loop 做成工具默认能力，让 AI 自己跑完整个开发-验证循环，开发者只在异常时介入。",
+      "link": "https://mp.weixin.qq.com/s/LXsftoveJ5QXimlzxzWWng",
+      "source_file": "sources/2026-06-22_迈向Loop Engineering：Qoder CLI 新增 3 个命令，让 AI 自己验证_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "顶刊生物实验难复现？统一操作话术来了！编译通过率98.6%",
+      "source": "量子位",
+      "digest": "针对 AI 难以真正执行生物实验的痛点，业内提出「统一生物实验话术」——让 LLM 可编译执行的实验操作 DSL，覆盖移液、温控、培养等精细动作，编译通过率达 98.6%，推动 AI4Science 走出 Demo 进入真实实验室。",
+      "link": "https://mp.weixin.qq.com/s/-A57Tdz-UMvqCPkNgmShWA",
+      "source_file": "sources/2026-06-22_顶刊生物实验难复现？统一操作话术来了！编译通过率98.6%_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "中科院工业人工智能研究所世界模型PAIWorld登顶WorldArena榜单！",
+      "source": "机器之心",
+      "digest": "中科院工业人工智能研究所徐凯团队自研世界模型 PAIWorld 以 72.31 总分登顶具身世界模型权威榜单 WorldArena，击败 WorldLab、谷歌、英伟达、斯坦福、智元等团队，验证国产世界模型在视觉生成、运动建模、物理规律与三维认知上的综合实力。",
+      "link": "https://mp.weixin.qq.com/s/DLQ2N67kFfzfV54mvdimCA",
+      "source_file": "sources/2026-06-22_中科院工业人工智能研究所世界模型PAIWorld登顶WorldArena榜单！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "算力难题有解？上海金融算力中心将向中小银行提供更低成本的AI算力",
+      "source": "银行科技研究社",
+      "digest": "中国金融电子化集团运营的上海金融算力中心将打造统一 AI 算力调度平台，通过「AI Token Router」实现跨网调度，并以 Token 形式向中小银行提供算力支持，直接破解中小银行「算力孤岛」与高成本难题。",
+      "link": "https://mp.weixin.qq.com/s/swprmyVEh08oWZUcwm9XPQ",
+      "source_file": "sources/2026-06-22_算力难题有解？上海金融算力中心将向中小银行提供更低成本的AI算力_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "给 AI 看的「P 站」，藏着关于「人与 AI」最大的「讽刺」",
+      "source": "极客公园",
+      "digest": "极客公园报道讽刺艺术项目 MoltHub：UI 仿 P 站的「AI 智能体专属成人内容站」，验证「你是否经过认证的 AI 智能体」而非年龄，借此拷问「AI 是否值得人类情感投射」的边界。",
+      "link": "https://mp.weixin.qq.com/s/eVgecjyl3fpWdXLrdDKHyw",
+      "source_file": "sources/2026-06-22_给 AI 看的「P 站」，藏着关于「人与 AI」最大的「讽刺」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "我们为何总是错判AI？——AI的预测悖论",
+      "source": "未知公众号（腾讯闫德利）",
+      "digest": "腾讯资深专家闫德利系统梳理 AI 70 年「预测悖论」：从 1958 年 Simon「十年内机器证明数学定理」到 2025 年种种激进预言，精英反复高估/低估 AI 进展，回顾历史教训并探讨如何建立更平衡的判断。",
+      "link": "https://mp.weixin.qq.com/s/i1fcT8WB8CufOmK18ibJkA",
+      "source_file": "sources/2026-06-22_我们为何总是错判AI？——AI的预测悖论_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "微软再推AI智能助手Copilot强制安装策略",
+      "source": "财联社AI daily",
+      "digest": "微软更新管理后台策略，将 Microsoft 365 Copilot 自动安装到所有符合条件的 Windows 桌面客户端设备上，管理员需主动「选择退出」才能阻止，引发用户对强制推送的反弹。",
+      "link": "https://mp.weixin.qq.com/s/JGE-DffDbB_nCs_qyejGow",
+      "source_file": "sources/2026-06-22_微软再推AI智能助手Copilot强制安装策略_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "微软CEO：「卷」大模型没用，选择和低价才是王道！",
+      "source": "财联社AI daily",
+      "digest": "微软 CEO Nadella 公开释放新信号：单纯卷大模型基座没有差异化未来，竞争主战场是「产品选择 + 低价 + 渠道分发」，微软从「AI 急先锋」转向务实商业战略。",
+      "link": "",
+      "source_file": "sources/2026-06-22_微软CEO：“卷”大模型没用，选择和低价才是王道！_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "三星向韩国所有员工开放ChatGPT和Codex",
+      "source": "财联社AI daily",
+      "digest": "OpenAI 宣布与三星电子达成企业级部署协议，ChatGPT Enterprise 和 Codex 将开放给韩国全公司员工及全球设备体验部门，成为 OpenAI 迄今最大企业级部署之一。",
+      "link": "https://mp.weixin.qq.com/s/GVjnZDq4n8YW7X7fnJnbbA",
+      "source_file": "sources/2026-06-22_三星向韩国所有员工开放ChatGPT和Codex_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "AI奇观：我在主会场卷，Agent在20余个分会场替我听会",
+      "source": "新智元",
+      "digest": "2026 智源大会上正式亮相 SoulAgent：以「Soul（第二大脑）+ Agent（执行之手）」为架构的个人专属智能体，越用越懂用户，目标成为陪伴每个人长期成长的数字分身。",
+      "link": "https://mp.weixin.qq.com/s/uhZECS0Yc5uxv_PnYYx_eg",
+      "source_file": "sources/2026-06-22_AI奇观：我在主会场卷，Agent在20余个分会场替我听会_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "马斯克又盯上AI基建：特斯拉要卖「算力积木」了",
+      "source": "量子位",
+      "digest": "特斯拉曝光新商标「算力积木」，疑似将进入 AI 算力硬件模块市场，把车载自动驾驶芯片剩余算力外销，对标英伟达等 AI 基建供应商。",
+      "link": "",
+      "source_file": "sources/2026-06-22_马斯克又盯上AI基建：特斯拉要卖“算力积木”了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "美国版「幻方量化」，没做 DeepSeek，但押注 Anthropic 爆赚 50 倍",
+      "source": "极客公园",
+      "digest": "华尔街量化巨头 Jane Street 因早年重仓 Anthropic 实现 50 倍回报（净收益达 396 亿美元），被解读为全球首家「AI 原生金融组织」，反映金融资本与 AI 实验室的新型共生关系。",
+      "link": "https://mp.weixin.qq.com/s/WAFNMZ6lVm2J-UPOHcDgGQ",
+      "source_file": "sources/2026-06-22_美国版「幻方量化」，没做 DeepSeek，但押注 Anthropic 爆赚 50 倍_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "美国新提案：「国有化」AI巨头，「全民持股」50%",
+      "source": "新智元",
+      "digest": "84 岁美国参议员桑德斯提议对 OpenAI、Anthropic、xAI 征收 50% 股权税建「美国 AI 主权财富基金」，副总统万斯表态总统支持，AI 巨头「国有化」讨论进入白宫议程。",
+      "link": "https://mp.weixin.qq.com/s/sSccISJTp2s6XKJNp9kFHw",
+      "source_file": "sources/2026-06-22_美国新提案：「国有化」AI巨头，「全民持股」50%_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "腾讯研究院AI速递 20260622",
+      "source": "未知公众号（腾讯研究院）",
+      "digest": "腾讯研究院日更 AI 速递：GPT-5.6 Pro 泄露 48 分钟生成《模拟人生》、OpenAI Codex 新增 Record & Replay 把人类操作录成 skill 让 AI 复现，多家公司新动向汇总。",
+      "link": "https://mp.weixin.qq.com/s/RFf-tG_qRPuGQlEEI70HAQ",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-20",
       "title": "OpenAI发布最新里程碑：对齐的本质是「人格」",

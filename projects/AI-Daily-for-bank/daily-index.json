@@ -1,6 +1,23 @@
 {
   "issues": [
     {
+      "date": "2026-06-22",
+      "weekday": "周一",
+      "stats": {
+        "total_raw": 70,
+        "total_filtered": 29,
+        "total_kept": 22,
+        "total_deleted": 7,
+        "merged_count": 0,
+        "国际": 4,
+        "国内": 7,
+        "同业": 1,
+        "其他": 10
+      },
+      "summary": "又一大模型发布！号称比肩Fable 5和Mythos/陶哲轩：几周前，AI突破数学形式化临界点/AI中转站正在「裸奔」：清华团队提出首个可信原生中转基础设...",
+      "article_date": "2026-06-22"
+    },
+    {
       "date": "2026-06-20",
       "weekday": "周六",
       "stats": {
