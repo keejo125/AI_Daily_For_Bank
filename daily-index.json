@@ -16,12 +16,19 @@
       "date": "2026-06-22",
       "url": "daily/2026-06-22/index.html",
       "stats": {
-        "国际": 4,
-        "国内": 7,
+        "total_raw": 70,
+        "total_filtered": 29,
+        "total_kept": 28,
+        "total_deleted": 10,
+        "merged_count": 9,
+        "国际": 9,
+        "国内": 11,
         "同业": 1,
-        "其他": 10,
-        "total": 22
-      }
+        "其他": 7
+      },
+      "weekday": "周一",
+      "summary": "GPT-5.6 Pro泄露：一句话48分钟生成完整《模拟人生》，或6月25日发布/Sakana AI发布Fugu编排模型，性能比肩Claude Fable...",
+      "article_date": "2026-06-22"
     },
     {
       "date": "2026-06-21",

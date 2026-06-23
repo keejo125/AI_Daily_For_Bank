@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-23T12:46:46.779619",
-  "total": 126,
+  "updated_at": "2026-06-23T13:54:11.815048",
+  "total": 154,
   "articles": [
     {
       "date": "2026-06-23",
@@ -79,6 +79,286 @@
       "digest": "桑德斯拟提案对AI公司征收50%股权税，建立AI主权财富基金",
       "link": "https://mp.weixin.qq.com/s/sSccISJTp2s6XKJNp9kFHw",
       "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "GPT-5.6 Pro泄露：一句话48分钟生成完整《模拟人生》，或6月25日发布",
+      "source": "腾讯研究院AI速递",
+      "digest": "GPT-5.6 Pro在隐蔽测试中曝光，仅凭一句自然语言指令48分钟生成带情感AI的完整游戏；推理容量Juice Value提升25%，知识截止推至2025年12月，计划6月25日公开发布。",
+      "link": "https://mp.weixin.qq.com/s/p7QExe-sW1_pLywaUdGTzg",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Sakana AI发布Fugu编排模型，性能比肩Claude Fable 5与Mythos",
+      "source": "智东西",
+      "digest": "Sakana AI提出大模型训练新思路，Fugu编排模型在多个评测上比肩Anthropic的Claude Fable 5和Mythos，展现了一种以编排替代单一超大模型的技术路径。",
+      "link": "https://mp.weixin.qq.com/s/uPX3DE9TONovWopWDjT3jQ",
+      "source_file": "sources/2026-06-22_又一大模型发布！号称比肩Fable 5和Mythos_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Codex推出Record & Replay：录一次操作，打包成可复用AI技能",
+      "source": "腾讯研究院AI速递",
+      "digest": "OpenAI为Codex发布Record & Replay功能，用户演示一遍操作后Codex学习并打包为可复用skill，适用于报销、传视频等重复任务；目前仅支持macOS，首发不覆盖欧盟。",
+      "link": "https://mp.weixin.qq.com/s/bzGBw56hojzHvwWWzlk24A",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Claude Code支持Artifacts：会话过程实时转为可交互网页",
+      "source": "腾讯研究院AI速递",
+      "digest": "Anthropic为Claude Code加入Artifacts功能，终端中与AI的工作过程可实时转化为可交互、可分享的网页，随会话自动刷新，以Beta形式向Team和Enterprise开放。",
+      "link": "https://mp.weixin.qq.com/s/8KrEP4tUCc853WZsL1URkw",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Midjourney进军医疗硬件：超声扫描仪60秒生成全身3D地图",
+      "source": "腾讯研究院AI速递",
+      "digest": "Midjourney官宣进军医疗硬件，推出Midjourney Scanner全身超声扫描仪，50万个微型换能器单元，AI语义分割拼合亚毫米级全身3D地图，目标60秒内完成，计划2031年前全球部署超5万台。",
+      "link": "https://mp.weixin.qq.com/s/Zg1vtipa-gfIjGLYVII2Bw",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "虚幻引擎5.8内置MCP支持：AI原生接入3A游戏开发流程",
+      "source": "腾讯研究院AI速递",
+      "digest": "Epic在虚幻引擎5.8中将MCP做进引擎本体成为官方协议层，AI可用自然语言摆放道具、生成街区、修改光照，并自动生成脚本；UE6路线图明确将Claude、Codex纳入3A制作主流程。",
+      "link": "https://mp.weixin.qq.com/s/ky5WRjb9TM4-8uggFpxx-g",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "陶哲轩：几周前，AI突破数学形式化临界点",
+      "source": "量子位",
+      "digest": "菲尔兹奖得主陶哲轩撰文称AI已突破数学形式化关键临界点，AI辅助数学证明正从实验阶段进入实用阶段，顶级数学家开始重新审视AI在数学研究中的角色。",
+      "link": "https://mp.weixin.qq.com/s/2gVbw3OlrvFwI2ZdZEDgaA",
+      "source_file": "sources/2026-06-22_过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Claude Code工程一号位亲自给Agent热潮降温：狂烧Token时代已过，现在该算ROI了",
+      "source": "InfoQ",
+      "digest": "Anthropic Claude Code工程负责人指出Agent不应追求无限烧Token，而应回归ROI导向的务实路线，强调工程化落地比模型能力更重要。",
+      "link": "https://mp.weixin.qq.com/s/34YV97sB5gF-7XAvXzryXw",
+      "source_file": "sources/2026-06-22_Claude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "特斯拉注册Megapod商标，进军AI数据中心硬件市场",
+      "source": "量子位",
+      "digest": "特斯拉瞄准AI基建市场，推出模块化「算力积木」Megapod，为AI数据中心提供可灵活扩展的硬件基础设施方案。",
+      "link": "https://mp.weixin.qq.com/s/vPnL9ypoL7EU0v_q0XJqTg",
+      "source_file": "sources/2026-06-22_过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "银河通用AstraBrain-WBC 0.5：20亿帧数据验证运控Scaling Law，推理延迟仅0.39ms",
+      "source": "腾讯研究院AI速递",
+      "digest": "银河通用发布8040万参数人形机器人全身运控基座模型，零样本泛化成功率升至92.58%，推理延迟仅0.39ms；系统证明Scaling Law在运动控制上成立，论文已被CVPR 2026接收。",
+      "link": "https://mp.weixin.qq.com/s/C_RJXBFJLetgZdN1catvqA",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "GLM-5.2开源引全球关注：抱抱脸免费算力6小时，马斯克预测明年Q1追平Fable",
+      "source": "腾讯研究院AI速递",
+      "digest": "智谱开源GLM-5.2（MIT协议、支持1M上下文），Code Arena居全球可用模型第一，与Claude Opus 4.8差距收窄至1%-4%；抱抱脸首次自掏腰包提供连续6小时免费算力，唐杰回应追平Fable用不了那么久。",
+      "link": "https://mp.weixin.qq.com/s/7-2sAPVV2x2gkczVOnDZsA",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "MOSS全模态技术体系全解析：统一离散化建模、推理优化与情境数据构建",
+      "source": "InfoQ",
+      "digest": "复旦大学MOSS团队系统解析全模态技术体系，涵盖统一离散化建模、推理优化与情境数据构建路径，展示国产大模型在多模态融合上的最新进展。",
+      "link": "https://mp.weixin.qq.com/s/J0Tzb9dprOuck3PXMAZTMg",
+      "source_file": "sources/2026-06-22_MOSS 全模态技术体系全解析：统一离散化建模、推理优化与情境数据构建路径_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "中科院PAIWorld世界模型登顶WorldArena榜单",
+      "source": "机器之心",
+      "digest": "中科院工业人工智能研究所发布PAIWorld世界模型，在WorldArena评测榜单登顶，展示国产模型在物理世界理解领域的突破。",
+      "link": "https://mp.weixin.qq.com/s/DLQ2N67kFfzfV54mvdimCA",
+      "source_file": "sources/2026-06-22_AI for Computing迎来破局者，国产黑马智子芯元两个月融了两轮！_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-22",
+      "title": "小米发布Miloco 2.0：MiMo大模型驱动的全屋智能AI管家",
+      "source": "腾讯研究院AI速递",
+      "digest": "小米开源以MiMo大模型为核心的全屋智能方案Miloco 2.0，四大升级：多模态感知、主动智能、家庭记忆、持续任务，以Agent形式接入OpenClaw一键部署，开源免费（限非商用）。",
+      "link": "https://mp.weixin.qq.com/s/d07dYCA_hJKzCNDo4J_9Bw",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "清华团队提出TrustedARI：首个可信原生AI中转基础设施，解决API中转「裸奔」问题",
+      "source": "机器之心",
+      "digest": "清华大学团队提出TrustedARI，首个可信原生AI中转基础设施，解决当前AI API中转服务在安全、隐私和可审计性上的系统性风险。",
+      "link": "https://mp.weixin.qq.com/s/WuP19LYwwDZYSA71X_ri2Q",
+      "source_file": "sources/2026-06-22_AI for Computing迎来破局者，国产黑马智子芯元两个月融了两轮！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Loop Engineering实践指南：在Code Buddy中构建自主循环系统",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队分享在Code Buddy中实践Loop Engineering的方法论，通过自主循环系统让AI Agent持续自我改进和纠错。",
+      "link": "https://mp.weixin.qq.com/s/YqIyL7uW4EV2r5HLDW7wcA",
+      "source_file": "sources/2026-06-22_Loop Engineering 实践指南：在 Code Buddy 中构建自主循环系统_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "中科院软件所PerfEvolve：不给标准答案的调参框架，让Agent自主榨取数据库性能",
+      "source": "量子位",
+      "digest": "中科院软件所推出PerfEvolve框架，将静态调参文档转化为Agent可自主执行的过程化技能，解决传统数据库调参文档过时和参数互搏问题。",
+      "link": "https://mp.weixin.qq.com/s/e0IufepaMKp5aAvXowJD2w",
+      "source_file": "sources/2026-06-22_过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Qoder CLI新增3个MCP命令：迈向Loop Engineering，让AI自己验证",
+      "source": "Qoder",
+      "digest": "Qoder CLI推出3个新命令支持Loop Engineering工作流，让AI Agent在开发过程中自主验证和修正代码，闭环提升代码质量。",
+      "link": "https://mp.weixin.qq.com/s/LXsftoveJ5QXimlzxzWWng",
+      "source_file": "sources/2026-06-22_迈向Loop Engineering：Qoder CLI 新增 3 个命令，让 AI 自己验证_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "SoulAgent亮相智源大会：从聊天框到数字分身，Agent替你在20余个分会场听会",
+      "source": "新智元",
+      "digest": "SoulAgent在2026智源大会正式亮相，提出「Soul是第二大脑，Agent是执行之手」的产品架构，实现Agent自主替用户参与多场并行会议。",
+      "link": "https://mp.weixin.qq.com/s/uhZECS0Yc5uxv_PnYYx_eg",
+      "source_file": "sources/2026-06-22_AI奇观：我在主会场卷，Agent在20余个分会场替我听会_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "顶刊生物实验难复现？AI统一操作话术来了，编译通过率98.6%",
+      "source": "量子位",
+      "digest": "Bota Biosciences团队提出Biology Protocol Language（BPL）统一生物实验描述语言及代码自动生成工具BPL-COGEN，让AI可理解和执行生物实验，编译通过率达98.6%。",
+      "link": "https://mp.weixin.qq.com/s/-A57Tdz-UMvqCPkNgmShWA",
+      "source_file": "sources/2026-06-22_过程比结果重要：一个不给标准答案的调参框架，让Agent自己把数据库性能榨出来_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "上海金融算力中心将向中小银行提供更低成本的AI算力",
+      "source": "银行科技研究社",
+      "digest": "上海金融算力中心宣布将向中小银行提供更低成本的AI算力服务，有望解决中小银行AI应用面临的算力瓶颈问题。",
+      "link": "https://mp.weixin.qq.com/s/swprmyVEh08oWZUcwm9XPQ",
+      "source_file": "sources/2026-06-22_算力难题有解？上海金融算力中心将向中小银行提供更低成本的AI算力_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "斯坦福报告：中国本土培养的顶尖AI人才正加速崛起",
+      "source": "腾讯研究院AI速递",
+      "digest": "斯坦福胡佛研究所追踪DeepSeek论文背后356名研究者，发现53.5%从未离开中国，31位核心成员中10人完全由本土体系培养；报告指出中国人才供应链进入产出加速期。",
+      "link": "https://mp.weixin.qq.com/s/oL18415fzXIWlg7TPNXXTQ",
+      "source_file": "sources/2026-06-22_腾讯研究院AI速递 20260622_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "给AI看的「P站」：藏着关于人与AI最大的讽刺",
+      "source": "极客公园",
+      "digest": "一篇关于AI生成内容平台的文化评论，探讨AI内容泛滥背后的人机关系困境和创作者身份危机。",
+      "link": "https://mp.weixin.qq.com/s/eVgecjyl3fpWdXLrdDKHyw",
+      "source_file": "sources/2026-06-22_给 AI 看的「P 站」，藏着关于「人与 AI」最大的「讽刺」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "我们为何总是错判AI？——AI的预测悖论",
+      "source": "",
+      "digest": "深度分析AI发展预测准确率低下的根源：人类倾向用线性思维理解指数级变化、高估短期影响而低估长期颠覆，提出应对AI评估不确定性的认知框架。",
+      "link": "https://mp.weixin.qq.com/s/i1fcT8WB8CufOmK18ibJkA",
+      "source_file": "sources/2026-06-22_我们为何总是错判AI？——AI的预测悖论_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "微软CEO：「卷」大模型没用，选择和低价才是王道",
+      "source": "财联社AI daily",
+      "digest": "微软CEO Satya Nadella在采访中表示，AI竞争不应围绕模型本身内卷，而应在应用选择和成本优势上建立差异化。",
+      "link": "https://mp.weixin.qq.com/s/wJth0LvE9HlOCjvfMokjwQ",
+      "source_file": "sources/2026-06-22_三星向韩国所有员工开放ChatGPT和Codex_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "三星向韩国所有员工开放ChatGPT和Codex",
+      "source": "财联社AI daily",
+      "digest": "OpenAI宣布三星电子将在全球向韩国所有员工及DX部门部署ChatGPT Enterprise和Codex，为OpenAI迄今最大规模企业部署之一，涵盖研发、制造、营销等全业务领域。",
+      "link": "https://mp.weixin.qq.com/s/GVjnZDq4n8YW7X7fnJnbbA",
+      "source_file": "sources/2026-06-22_三星向韩国所有员工开放ChatGPT和Codex_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "Agent公司从Claude切到DeepSeek v4：一年省下数百万美元，迁移工作量却是预期的100倍",
+      "source": "InfoQ",
+      "digest": "一家海外Agent公司从Claude迁移至DeepSeek v4的技术实践复盘：年省数百万美元推理成本，但模型迁移的工程工作量远超预期，揭示模型切换的真实成本。",
+      "link": "https://mp.weixin.qq.com/s/VcwerGQSgMNvJZp72a-WhA",
+      "source_file": "sources/2026-06-22_Claude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-22",
+      "title": "美国新提案：拟对AI公司征50%股权税，建AI主权财富基金",
+      "source": "新智元",
+      "digest": "桑德斯拟提案对AI公司征收50%股权税以建立AI主权财富基金，主张AI财富源于全人类集体知识应惠及全民，引发AI行业广泛争议。",
+      "link": "https://mp.weixin.qq.com/s/sSccISJTp2s6XKJNp9kFHw",
+      "source_file": "sources/2026-06-22_AI奇观：我在主会场卷，Agent在20余个分会场替我听会_新智元.md",
       "category": "其他",
       "is_model_related": false
     },
