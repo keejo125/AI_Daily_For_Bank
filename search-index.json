@@ -1,7 +1,87 @@
 {
-  "updated_at": "2026-04-26T10:59:05.439891",
-  "total": 118,
+  "updated_at": "2026-06-23T12:46:46.779619",
+  "total": 126,
   "articles": [
+    {
+      "date": "2026-06-23",
+      "title": "Anthropic新模型Claude Sonnet-5被曝下周上线",
+      "source": "腾讯研究院",
+      "digest": "Claude Sonnet-5域名已出现在合作伙伴网站，内部代号Fennec，主打编程性能与性价比，支持百万token上下文；新版Mythos疑已内部完成训练",
+      "link": "https://mp.weixin.qq.com/s/kus5Wwb-gMm0iC4hJ7WZag",
+      "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "超越Claude Mythos的AI模型，诞生了？Sakana AI发布Fugu编排模型",
+      "source": "新智元",
+      "digest": "Sakana AI发布Fugu Ultra编排模型，在工程、科学、推理基准上比肩Claude Fable和Mythos，无需承担出口管制风险。Fugu不自行答题而是作为总指挥调度GPT/Claude/Gemini等多模型协作，编排模型时代来临",
+      "link": "https://mp.weixin.qq.com/s/Niybmk8_6k_FPh0rSBW2tg",
+      "source_file": "sources/2026-06-23_超越Claude Mythos的AI模型，诞生了？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "「AI几小时攻破NSA」刷屏，真相竟是一场红队演习？",
+      "source": "新智元",
+      "digest": "「Mythos几小时攻破NSA」刷屏社交平台，真相是一次授权的红队演练而非真实入侵。NSA将Mythos放入机密环境副本中测试漏洞发现能力，远超人类团队速度",
+      "link": "https://mp.weixin.qq.com/s/W28DykYZFmAuJA3UaK9bAw",
+      "source_file": "sources/2026-06-23_「AI几小时攻破NSA」刷屏，真相竟是一场红队演习？_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-23",
+      "title": "阿里上线HappyHorse 1.1视频模型，五大维度提升",
+      "source": "腾讯研究院",
+      "digest": "阿里发布视频生成模型HappyHorse 1.1，在动态表现力、主体一致性、指令遵循、视觉质感与音频五维度提升，1080p价格下调25%",
+      "link": "https://mp.weixin.qq.com/s/qx5reRfHB7GCfq1Zl2zPFA",
+      "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "百度开源Unlimited OCR，3B模型刷新端到端SOTA",
+      "source": "腾讯研究院",
+      "digest": "百度开源Unlimited OCR，3B参数/500M激活，在OmniDocBench刷新端到端SOTA，超越235B的Qwen3-VL；核心技术R-SWA支持一次推理转录数十页文档",
+      "link": "https://mp.weixin.qq.com/s/E2FXmFbPrnasrSoM-oirjw",
+      "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "AI如何「读懂」全球气候系统？清华提出UniCM统一气候模态预测模型",
+      "source": "新智元",
+      "digest": "清华团队在Nature Machine Intelligence发表UniCM模型，统一学习ENSO、IOD等七类气候模态的耦合动力学，ENSO有效预测延长至19个月，首次实现全球多气候模态统一预测",
+      "link": "https://mp.weixin.qq.com/s/tIMlSgi7rUBoZ10P9L7W9Q",
+      "source_file": "sources/2026-06-23_AI如何「读懂」全球气候系统？清华提出统一气候模态预测模型UniCM_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "特斯拉注册Megapod商标，布局模块化AI数据中心",
+      "source": "腾讯研究院",
+      "digest": "特斯拉提交Megapod商标申请，计划销售即插即用模块化AI数据中心硬件，涵盖服务器、网络、配电与冷却系统",
+      "link": "https://mp.weixin.qq.com/s/vPnL9ypoL7EU0v_q0XJqTg",
+      "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-23",
+      "title": "桑德斯拟提案征50%股权税，建AI主权财富基金",
+      "source": "腾讯研究院",
+      "digest": "桑德斯拟提案对AI公司征收50%股权税，建立AI主权财富基金",
+      "link": "https://mp.weixin.qq.com/s/sSccISJTp2s6XKJNp9kFHw",
+      "source_file": "sources/2026-06-23_腾讯研究院AI速递 20260623_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-04-25",
       "title": "谷歌跪了？400亿砸向死敌！AI御三家终结，OpenAI孤立无援",

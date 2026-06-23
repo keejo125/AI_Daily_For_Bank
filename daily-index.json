@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-06-23",
+      "weekday": "周二",
+      "stats": {
+        "国际": 3,
+        "国内": 3,
+        "同业": 0,
+        "其他": 2,
+        "total": 8
+      },
+      "summary": "Anthropic新模型Claude Sonnet-5被曝下周上线/超越Claude Mythos的AI模型，诞生了？Sakana AI发布Fugu编排模..."
+    },
+    {
       "date": "2026-06-22",
       "url": "daily/2026-06-22/index.html",
       "stats": {
