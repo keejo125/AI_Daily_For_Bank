@@ -1,8 +1,3 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
 # OS
 .DS_Store
 Thumbs.db
@@ -13,4 +8,32 @@ Thumbs.db
 *.swp
 *.swo
 
-.history
+# AI tools config
+.agents/
+.codebuddy/
+.lingma/
+.qoder/
+.qwen/
+.history/
+
+# Project config (local paths)
+config.json
+skills-lock.json
+
+# Other local projects (not part of AI Daily)
+projects/业界对标调研/
+projects/个人炼化技能调研/
+projects/前瞻月报/
+projects/算力分配方案调研/
+projects/增强记忆系统-实施计划.md
+
+# 本地调研文档（非早报）
+2026年4月_岗位智能体编码与测试阶段_业界动态调研报告.md
+
+# AI Daily 生成中间产物
+daily/*/articles_raw.json
+daily/*/filtered_articles.json
+daily/*/classification.json
+daily/*/_gen_classify.py
+daily/*/_verify.py
+daily/*/checked_articles_report.md
