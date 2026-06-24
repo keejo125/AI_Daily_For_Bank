@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-06-24",
+      "weekday": "周三",
+      "stats": {
+        "国际": 8,
+        "国内": 5,
+        "同业": 1,
+        "其他": 9,
+        "total": 23
+      },
+      "summary": "Karpathy投了一家AI记忆公司，撞名DeepSeek Engram记忆架构/TRM思考奖励模型上线，大模型推理质量终于能量化了 | ICML'26 ..."
+    },
+    {
       "date": "2026-06-23",
       "weekday": "周二",
       "stats": {

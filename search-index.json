@@ -1,7 +1,237 @@
 {
-  "updated_at": "2026-06-24T13:52:35.429967",
-  "total": 172,
+  "updated_at": "2026-06-25T07:04:52.661580",
+  "total": 195,
   "articles": [
+    {
+      "date": "2026-06-24",
+      "title": "Karpathy投了一家AI记忆公司，撞名DeepSeek Engram记忆架构",
+      "source": "机器之心",
+      "digest": "Karpathy等投资9800万美元的Engram押注AI记忆方向，宣称让模型像人一样从每天接触的资料中持续学习，与DeepSeek Engram记忆架构撞名。",
+      "link": "https://mp.weixin.qq.com/s/YjWhf5c4p8URCwuiin5iaw",
+      "source_file": "sources/2026-06-24_Karpathy投了一家AI记忆公司，撞名DeepSeek Engram记忆架构_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "TRM思考奖励模型上线，大模型推理质量终于能量化了 | ICML'26 Oral",
+      "source": "量子位",
+      "digest": "ICML 2026 Oral：TRM思考奖励模型上线，针对大模型推理过程质量做细粒度评估，区分结果对与思考对。",
+      "link": "https://mp.weixin.qq.com/s/Del4I0ZB_hTKAmJTPoznuw",
+      "source_file": "sources/2026-06-24_TRM思考奖励模型上线，大模型推理质量终于能量化了 _ ICML‘26 Oral_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "从预测到干预，Aether AI为什么押注因果世界模型？",
+      "source": "机器之心",
+      "digest": "Aether AI押注因果世界模型，让模型从相关性预测走向机制建模、主动干预，落地Physical AI场景。",
+      "link": "https://mp.weixin.qq.com/s/no9D3gqUzEKJHIFDW56-7w",
+      "source_file": "sources/2026-06-24_从预测到干预，Aether AI为什么押注因果世界模型？_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "直接从像素到单词：这个原生大模型统一单图、多图、视频和空间智能",
+      "source": "机器之心",
+      "digest": "南洋理工S-Lab、商汤研究院、大连理工联合发布NEO-ov：从原始像素端到端学习的多模态大模型，统一单图、多图、视频与空间智能。",
+      "link": "https://mp.weixin.qq.com/s/wMSPYVv1agmngAsSgS6F3w",
+      "source_file": "sources/2026-06-24_直接从像素到单词：这个原生大模型统一单图、多图、视频和空间智能_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "AWS 的老身份和新角色：做 Agentic AI 时代的基础设施",
+      "source": "极客公园",
+      "digest": "2026 AWS 上海峰会观察：当模型逐渐商品化，AWS 把自身定位为 Agentic AI 时代的基础设施，提供标准化算力服务。",
+      "link": "https://mp.weixin.qq.com/s/MIIlRP-b5GjqDPlwR8jzyQ",
+      "source_file": "sources/2026-06-24_AWS 的老身份和新角色：做 Agentic AI 时代的基础设施_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "ICML 2026｜让AI自动发现前沿风险：创智×复旦×牛津发布AutoControl-Arena",
+      "source": "机器之心",
+      "digest": "复旦、上海创智学院、牛津联合发布AutoControl-Arena：面向前沿AI风险发现与评测的自动化框架，可自动生成可执行测试环境。",
+      "link": "https://mp.weixin.qq.com/s/OtULCQR_RNgQUsSnPFS3ag",
+      "source_file": "sources/2026-06-24_ICML 2026｜让AI自动发现前沿风险：创智×复旦×牛津发布AutoControl-Arena_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "刚刚，Claude进入美国版飞书，成了我的AI新同事",
+      "source": "智东西",
+      "digest": "Anthropic推出Claude Tag企业群聊AI协作助理，首站接入Slack，调用Claude Opus 4.8模型，定位团队协作场景。",
+      "link": "https://mp.weixin.qq.com/s/HG4i51TMHwm16IGX7nSRwg",
+      "source_file": "sources/2026-06-24_刚刚，Claude进入美国版飞书，成了我的AI新同事_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "不安全指令，一拒了之？TRIAD用三路决策：修复AI智能体的危险计划",
+      "source": "新智元",
+      "digest": "墨尔本大学开源TRIAD护栏框架：将Agent安全判断从二分类扩展为Proceed/Update/Refuse三类决策，通过自然语言反馈引导Agent修正计划。",
+      "link": "https://mp.weixin.qq.com/s/wjom-lT9RUH4Pq1Mpp-pQA",
+      "source_file": "sources/2026-06-24_不安全指令，一拒了之？TRIAD用三路决策：修复AI智能体的危险计划_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "开源！阿里甩出首个语言世界模型，能造智能体环境",
+      "source": "智东西",
+      "digest": "阿里千问发布首个语言世界模型：一个模型能模拟7种环境，为智能体提供低成本强化学习沙箱。",
+      "link": "https://mp.weixin.qq.com/s/l9fXdZK5oM8Uz1JcireXFA",
+      "source_file": "sources/2026-06-24_开源！阿里甩出首个语言世界模型，能造智能体环境_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "世界模型来了因果技术标杆！具身大脑真要长脑子了",
+      "source": "量子位",
+      "digest": "因果世界模型成为具身智能新标杆：解决泛化能力瓶颈，让机器理解物理世界规律而非死记特定场景轨迹。",
+      "link": "https://mp.weixin.qq.com/s/gJcvQ56t8cXxoq5HzRmyiw",
+      "source_file": "sources/2026-06-24_世界模型来了因果技术标杆！具身大脑真要长脑子了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-24",
+      "title": "我用 QoderWork「养」了一支团队，文科生都能学会的 AI 团队搭建8步法",
+      "source": "Qoder",
+      "digest": "阿里旗下Qoder分享QoderWork实操：HR用AI团队8步法提升10倍效率，覆盖文案、项目跟进、竞品监控等场景。",
+      "link": "https://mp.weixin.qq.com/s/U2qL_tJXZr3wWFUK0f6uTA",
+      "source_file": "sources/2026-06-24_我用 QoderWork「养」了一支团队，文科生都能学会的 AI 团队搭建8步法_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "Qoder Desktop 插件市场上新：Meoo CLI 让你的项目一步发布上线，国内直接访问",
+      "source": "Qoder",
+      "digest": "Qoder Desktop插件市场上线Meoo CLI：一键发布项目到公网，国内直接访问，降低部署门槛。",
+      "link": "https://mp.weixin.qq.com/s/OYVIBgSI07RMljfvnCFr5w",
+      "source_file": "sources/2026-06-24_Qoder Desktop 插件市场上新：Meoo CLI 让你的项目一步发布上线，国内直接访问_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "Qwen-AgentWorld 开源：让 Agent 学会\"先预测，再行动\"",
+      "source": "通义实验室",
+      "digest": "通义实验室开源Qwen-AgentWorld：让AI先预测环境再行动，替代在真实环境里试错的强化学习路线。",
+      "link": "https://mp.weixin.qq.com/s/NV9WGpGsfFz35jww5agM9g",
+      "source_file": "sources/2026-06-24_Qwen-AgentWorld 开源：让 Agent 学会“先预测，再行动”_通义实验室.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "央行等3部门：银行要充分运用AI等技术手段",
+      "source": "银行科技研究社",
+      "digest": "央行、金融监管总局、全国妇联联合印发意见，要求银行充分运用AI提升获客、风险评估和贷款审批效率，稳妥推进金融大模型应用。",
+      "link": "https://mp.weixin.qq.com/s/CfGWQWqsJ3jldbJWx7nQIw",
+      "source_file": "sources/2026-06-24_央行等3部门：银行要充分运用AI等技术手段_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "重新计量普惠：100位AI创造者的一手实践",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院走访100位AI创造者，重新审视\"普惠\"标准：从参数规模转向创造者的真实使用与价值创造。",
+      "link": "https://mp.weixin.qq.com/s/zCOJ3afqStEoSOs83M-oJQ",
+      "source_file": "sources/2026-06-24_重新计量普惠：100位AI创造者的一手实践_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "「AI 同事」，把人干抑郁了",
+      "source": "极客公园",
+      "digest": "AI同事进入职场后引发的负面心理反应：员工被AI替代焦虑、协作压力等问题，探讨人与AI协作的边界。",
+      "link": "https://mp.weixin.qq.com/s/3hM55fN6xE58lI0qQvhzug",
+      "source_file": "sources/2026-06-24_「AI 同事」，把人干抑郁了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "AI可以用任何手段、写任何东西，但你得是个\"中年老登\"",
+      "source": "InfoQ",
+      "digest": "PingCAP CTO黄东旭：3个月100多万行代码的db9项目证明，AI写代码没有边界，开发者价值在于harness设计与任务拆解。",
+      "link": "https://mp.weixin.qq.com/s/_y1BXuRO9DSmToQEnPHFiw",
+      "source_file": "sources/2026-06-24_AI可以用任何手段、写任何东西，但你得是个“中年老登”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "AI 大模型热潮的第三年，这场直播给出了 4 个值得参考的判断 | 极客时间企业版",
+      "source": "InfoQ",
+      "digest": "极客时间企业版直播回顾：快手、蚂蚁金服等AI落地专家谈AI原生组织——协调税是最贵的成本。",
+      "link": "https://mp.weixin.qq.com/s/nSNoPprVAWpvfaNWOdF3Gw",
+      "source_file": "sources/2026-06-24_AI 大模型热潮的第三年，这场直播给出了 4 个值得参考的判断 _ 极客时间企业版_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "Slack 淘汰 SSH：700+ EMR 作业迁移至基于 REST 的调度架构",
+      "source": "InfoQ",
+      "digest": "Slack将700多个Airflow EMR作业从SSH模式迁移到基于REST API的Quarry统一调度平台，提升安全性与可观测性。",
+      "link": "https://mp.weixin.qq.com/s/jwL5h6hZpgKRJ82CVI_DVg",
+      "source_file": "sources/2026-06-24_Slack 淘汰 SSH：700+ EMR 作业迁移至基于 REST 的调度架构_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "端侧跑大模型，现在也太简单了",
+      "source": "机器之心",
+      "digest": "本地大模型迎来分水岭：可行性、Agent能力、工具链成熟度大幅提升，半年前还复杂的部署现在\"点两下就能跑\"。",
+      "link": "https://mp.weixin.qq.com/s/Ebg7Pj3J170aKPDXxF1wWQ",
+      "source_file": "sources/2026-06-24_端侧跑大模型，现在也太简单了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "豆包推出专业版订阅服务，最高一年6000元",
+      "source": "财联社AI daily",
+      "digest": "字节豆包推出专业版订阅：标准/加强/高级套餐月费68/200/500元，基于豆包2.1系列智能体模型打造。",
+      "link": "https://mp.weixin.qq.com/s/9OaCNqhq7rjSQBrdkrhfuA",
+      "source_file": "sources/2026-06-24_豆包推出专业版订阅服务，最高一年6000元_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "极客早知道｜全球股市黑色星期二，豆包大模型 2.1 上线",
+      "source": "极客公园",
+      "digest": "速递：全球股市\"黑色星期二\"，SpaceX市值跌破2万亿；字节内部大规模落地AI Coding生产流程；豆包大模型2.1上线。",
+      "link": "https://mp.weixin.qq.com/s/ljNsqCtVrp9ZQgbpeOc5jg",
+      "source_file": "sources/2026-06-24_全球股市「黑色星期二」，SpaceX 市值跌破 2 万亿美元；豆包大模型 2.1 上线；孙正义给马斯_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-24",
+      "title": "腾讯研究院AI速递 20260624",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院AI速递：OpenAI发布GPT-5.5-Cyber完整版，Daybreak安全计划扩展；Codex Security插件扫描超3000万次提交。",
+      "link": "https://mp.weixin.qq.com/s/BDcZrXNO_paMcFcyODgc3Q",
+      "source_file": "sources/2026-06-24_腾讯研究院AI速递 20260624_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-23",
       "title": "大模型终于说不出脏话了！有毒子词剪枝ToxPrune，预训练+推理双重防线",
