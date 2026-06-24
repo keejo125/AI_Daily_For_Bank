@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T10:22:10.567669",
+  "updated_at": "2026-06-24T13:52:35.429967",
   "total": 172,
   "articles": [
     {
@@ -9,16 +9,6 @@
       "digest": "港中文/FaceMind团队提出ToxPrune方法，在推理阶段直接从BPE词表里剪除有毒子词，无需训练、不改权重就能给大模型「消毒」。",
       "link": "https://mp.weixin.qq.com/s/hx4kzpGvte1PBG0xut7quA",
       "source_file": "sources/2026-06-23_大模型终于说不出脏话了！有毒子词剪枝ToxPrune，预训练+推理双重防线_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-23",
-      "title": "真机强化学习如何保证安全性？清华团队提出安全探索均衡机制",
-      "source": "机器之心",
-      "digest": "清华大学于IEEE TPAMI发表论文，探讨真机强化学习安全性保障问题，提出「安全探索均衡」机制，揭示安全探索理论最大边界，攻克其收敛性证明难题。",
-      "link": "https://mp.weixin.qq.com/s/IcUuyWDlgpy3_ZbD_rvjlw",
-      "source_file": "sources/2026-06-23_真机强化学习如何保证安全性？清华团队提出安全探索均衡机制_机器之心.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -54,16 +44,6 @@
     },
     {
       "date": "2026-06-23",
-      "title": "AI如何「读懂」全球气候系统？清华提出统一气候模态预测模型UniCM",
-      "source": "新智元",
-      "digest": "清华李勇团队在Nature Machine Intelligence发表UniCM，通过统一框架学习多个气候模态的相互作用，从全球耦合系统视角建模气候动力学。",
-      "link": "https://mp.weixin.qq.com/s/tIMlSgi7rUBoZ10P9L7W9Q",
-      "source_file": "sources/2026-06-23_AI如何「读懂」全球气候系统？清华提出统一气候模态预测模型UniCM_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-23",
       "title": "超越Claude Mythos的AI模型，诞生了？",
       "source": "新智元",
       "digest": "Sakana AI（日本公司）发布Fugu Ultra编排器模型：在工程、科学、推理基准上比肩Claude Fable和Anthropic Mythos；以「无需承担出口管制风险」为核心卖点。",
@@ -79,6 +59,26 @@
       "digest": "火山引擎Force大会发布豆包大模型2.1，日均Token调用量达180万亿；火山引擎占中国公有云MaaS市场49.5%，从技术探索期迈入产业规模化。",
       "link": "https://mp.weixin.qq.com/s/NiLniO_7EEc7DcS-i-PBqQ",
       "source_file": "sources/2026-06-23_刚刚，豆包大模型2.1发布，又一次跨越生产级质变点_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "真机强化学习如何保证安全性？清华团队提出安全探索均衡机制",
+      "source": "机器之心",
+      "digest": "清华大学于IEEE TPAMI发表论文，探讨真机强化学习安全性保障问题，提出「安全探索均衡」机制，揭示安全探索理论最大边界，攻克其收敛性证明难题。",
+      "link": "https://mp.weixin.qq.com/s/IcUuyWDlgpy3_ZbD_rvjlw",
+      "source_file": "sources/2026-06-23_真机强化学习如何保证安全性？清华团队提出安全探索均衡机制_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-23",
+      "title": "AI如何「读懂」全球气候系统？清华提出统一气候模态预测模型UniCM",
+      "source": "新智元",
+      "digest": "清华李勇团队在Nature Machine Intelligence发表UniCM，通过统一框架学习多个气候模态的相互作用，从全球耦合系统视角建模气候动力学。",
+      "link": "https://mp.weixin.qq.com/s/tIMlSgi7rUBoZ10P9L7W9Q",
+      "source_file": "sources/2026-06-23_AI如何「读懂」全球气候系统？清华提出统一气候模态预测模型UniCM_新智元.md",
       "category": "国内",
       "is_model_related": true
     },
