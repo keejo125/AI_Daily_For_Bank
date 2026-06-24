@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-25T07:04:52.661580",
-  "total": 195,
+  "updated_at": "2026-06-25T07:13:39.449338",
+  "total": 194,
   "articles": [
     {
       "date": "2026-06-24",
@@ -89,16 +89,6 @@
       "digest": "阿里千问发布首个语言世界模型：一个模型能模拟7种环境，为智能体提供低成本强化学习沙箱。",
       "link": "https://mp.weixin.qq.com/s/l9fXdZK5oM8Uz1JcireXFA",
       "source_file": "sources/2026-06-24_开源！阿里甩出首个语言世界模型，能造智能体环境_智东西.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-24",
-      "title": "世界模型来了因果技术标杆！具身大脑真要长脑子了",
-      "source": "量子位",
-      "digest": "因果世界模型成为具身智能新标杆：解决泛化能力瓶颈，让机器理解物理世界规律而非死记特定场景轨迹。",
-      "link": "https://mp.weixin.qq.com/s/gJcvQ56t8cXxoq5HzRmyiw",
-      "source_file": "sources/2026-06-24_世界模型来了因果技术标杆！具身大脑真要长脑子了_量子位.md",
       "category": "国内",
       "is_model_related": true
     },
