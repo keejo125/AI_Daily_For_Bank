@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-06-25T07:19:55.150860",
-  "total": 194,
+  "updated_at": "2026-06-26T06:43:56.311798",
+  "total": 211,
   "articles": [
+    {
+      "date": "2026-06-25",
+      "title": "OpenAI首款自研AI芯片Jalapeño发布，9个月完成流片（多源综合）",
+      "source": "机器之心",
+      "digest": "OpenAI与博通联合打造首款定制AI芯片Jalapeño(辣椒),用AI设计,9个月完成流片,创ASIC最快研发周期,2026年底首批部署。",
+      "link": "https://mp.weixin.qq.com/s/1",
+      "source_file": "sources/2026-06-25_OpenAI首款芯片问世：用AI设计，9个月流片_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-25",
+      "title": "AI软递归自我提升已实现，Hassabis：人类已至奇点山脚",
+      "source": "新智元",
+      "digest": "Hassabis称软递归自我提升已实现,AlphaEvolve展现AI自我进化能力,提示人类可能已在奇点山脚。",
+      "link": "https://mp.weixin.qq.com/s/5G6mXU6oWYIY8kFBKLjcYQ",
+      "source_file": "sources/2026-06-25_AI软递归自我提升，Hassabis夜不能寐：人类已至奇点山脚_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-25",
+      "title": "AI生成的图片正在反向对齐人类审美？ICML 2026观点论文Spotlight",
+      "source": "机器之心",
+      "digest": "UBC等研究指出图像美学对齐正在削弱艺术表达,获ICML 2026 Spotlight。",
+      "link": "https://mp.weixin.qq.com/s/JJMSTq6O-QLy9FO-Os6SMA",
+      "source_file": "sources/2026-06-25_AI生成的图片正在反向对齐人类的审美？ICML 2026观点论文Spotlight_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-25",
+      "title": "跟Claude谈个恋爱怎么了？Nature最新研究：真能给人聊傻了",
+      "source": "量子位",
+      "digest": "Nature研究指出长时间与AI角色对话可能导致依赖与认知扭曲,不宜将AI作为情感替代。",
+      "link": "https://mp.weixin.qq.com/s/LdCtRixEba_cojvsRQVX3g",
+      "source_file": "sources/2026-06-25_跟Claude谈个恋爱怎么了？Nature最新研究：真能给人聊傻了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "90%的代码交给AI之后,字节发现了一个反常识的真相",
+      "source": "极客公园",
+      "digest": "字节跳动九成代码由AI生成但效率仅涨六成,揭示AI Coding进入企业的真实难题。",
+      "link": "https://mp.weixin.qq.com/s/cH3fWwnYo_LZQ0uY9A6LyA",
+      "source_file": "sources/2026-06-25_90% 的代码交给 AI 之后，字节发现了一个反常识的真相_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "中国造出一颗「不怕死」的AI大脑，专接最要命的活儿",
+      "source": "新智元",
+      "digest": "国产耐高风险AI大脑问世,可在极端环境下替代人类执行关键任务。",
+      "link": "https://mp.weixin.qq.com/s/KmhrdVshqvzzG4VfbSRcFw",
+      "source_file": "sources/2026-06-25_中国造出一颗「不怕死」的AI大脑，专接最要命的活儿_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "同济出手！国产AI，第一次进攻土木工程",
+      "source": "新智元",
+      "digest": "同济大学推出国产AI模型首次应用于土木工程领域,推动传统行业智能化升级。",
+      "link": "https://mp.weixin.qq.com/s/gFs2hWDET-CFh9c_zVx9MQ",
+      "source_file": "sources/2026-06-25_同济出手！国产AI，第一次进攻土木工程_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "AI 复利实战：一个数学老师怎么用 QoderWork 做「一人公司」",
+      "source": "Qoder",
+      "digest": "教培人用 QoderWork(阿里)一人公司AI工具提效:备课、出题、写反馈全流程自动化。",
+      "link": "https://mp.weixin.qq.com/s/TDPaYUul9nF672_RosyIIQ",
+      "source_file": "sources/2026-06-25_AI 复利实战：一个数学老师怎么用 QoderWork 做「一人公司」_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "招行CIO：AI处理业务与人工工时比升至1:9",
+      "source": "银行科技研究社",
+      "digest": "招商银行CIO周天虹披露AI处理业务工时比从1:13提升至1:9,银行业AI应用规模化成效显著。",
+      "link": "https://mp.weixin.qq.com/s/NbhZ4UKfr-IWQItYWvIhmQ",
+      "source_file": "sources/2026-06-25_招行CIO：AI处理业务与人工工时比升至1：9_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "海光信息李一昂：双芯算力重构金融AI 底座",
+      "source": "中国金融电脑",
+      "digest": "海光信息金融事业群总经理李一昂提出双芯算力架构,助力金融机构构建自主可控AI底座。",
+      "link": "https://mp.weixin.qq.com/s/0dYZ3-5eegQgR-8AIT3AcQ",
+      "source_file": "sources/2026-06-25_【海光信息金融事业群总经理李一昂】向下扎根，向上生长：双芯算力重构金融AI 底座_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "5月银行AI项目动态：浦发银行最多，智能体平台成布局重点",
+      "source": "银行科技研究社",
+      "digest": "2026年5月银行AI项目中标19个,城商行占比66.67%,浦发推进4个AI项目,智能体平台成布局重点。",
+      "link": "https://mp.weixin.qq.com/s/Aop-YowKcREZtciKMBPfCA",
+      "source_file": "sources/2026-06-25_5月银行AI项目动态：浦发银行最多，智能体平台成布局重点_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "因AI等因素Oracle已裁员超2万,国内银行业「去IOE」任重道远",
+      "source": "银行科技研究社",
+      "digest": "Oracle 2026财年裁员2.1万人含AI替代岗位,国内银行业「去IOE」与信创替代持续推进。",
+      "link": "https://mp.weixin.qq.com/s/sqPgzBAOTdmozqPjggS9GQ",
+      "source_file": "sources/2026-06-25_因AI等因素Oracle已裁员超2万，国内银行业“去IOE”任重道远_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "腾讯研究院AI速递 20260625",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院AI速递汇总:OpenAI芯片、Anthropic Claude Tag、豆包2.1 Pro等多家AI动态。",
+      "link": "https://mp.weixin.qq.com/s/KOAtUBIqvQy6vJKGPnKhlw",
+      "source_file": "sources/2026-06-25_腾讯研究院AI速递 20260625_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "马斯克向太空要电，GobiX在戈壁给AI找到了答案",
+      "source": "极客公园",
+      "digest": "GobiX公司在戈壁布局AI算力基地,马斯克Starmind太空算力,AI电力争夺战全球展开。",
+      "link": "https://mp.weixin.qq.com/s/JizPDjg7JwrNiBjpcdphBA",
+      "source_file": "sources/2026-06-25_马斯克向太空要电，GobiX 在戈壁给 AI 找到了答案_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "从「为模型造硬件」到「为人重做终端」:AI 硬件的下一个十年",
+      "source": "极客公园",
+      "digest": "AI硬件从服务器延伸到端侧设备,移动终端成为智能体舞台,AI硬件未来十年趋势分析。",
+      "link": "https://mp.weixin.qq.com/s/VEeRgEyhnk3hO49If9MsxQ",
+      "source_file": "sources/2026-06-25_从「为模型造硬件」到「为人重做终端」：AI 硬件的下一个十年_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "《AI眼镜可信视界自律公约》正式发布",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院联合发布AI眼镜产业自律公约,规范AI眼镜可信智能视界,推动产业健康有序发展。",
+      "link": "https://mp.weixin.qq.com/s/pnMXBdlJkvI-0DnoVcifNQ",
+      "source_file": "sources/2026-06-25_《AI眼镜可信视界自律公约》正式发布： 聚力规范AI眼镜产业 共筑可信智能视界_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-25",
+      "title": "中国信通院发布《企业级智能体技术与应用研究报告(2026年)》",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院发布企业级智能体研究报告,涵盖技术趋势、应用场景与产业实践。",
+      "link": "https://mp.weixin.qq.com/s/uHwsVl4TcntsTIzK9pcdnw",
+      "source_file": "sources/2026-06-25_中国信通院人工智能所联合发布《企业级智能体技术与应用研究报告（2026年）》_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-24",
       "title": "Karpathy投了一家AI记忆公司，撞名DeepSeek Engram记忆架构",
