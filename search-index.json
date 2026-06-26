@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-27T07:15:32.457834",
-  "total": 240,
+  "updated_at": "2026-06-27T07:56:39.552442",
+  "total": 239,
   "articles": [
     {
       "date": "2026-06-26",
@@ -9,16 +9,6 @@
       "digest": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」",
       "link": "https://mp.weixin.qq.com/s/m33hOzr5obCsBIWWrlbTAw",
       "source_file": "sources/2026-06-26_GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-26",
-      "title": "GPT-5.6，可能要重走「Mythos」的老路",
-      "source": "极客公园",
-      "digest": "GPT-5.6，可能要重走「Mythos」的老路",
-      "link": "https://mp.weixin.qq.com/s/8Zr1dlSDFYbzejffrOxC4A",
-      "source_file": "sources/2026-06-26_GPT-5.6，可能要重走「Mythos」的老路_极客公园.md",
       "category": "国际",
       "is_model_related": true
     },

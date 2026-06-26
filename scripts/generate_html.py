@@ -202,6 +202,9 @@ def build_articles_json(classification, date_str):
         items_sorted = sorted(items, key=lambda x: x.get('is_model_related', False), reverse=True)
         
         for item in items_sorted:
+            # 跳过合并的从条（merged_into 指向主条）
+            if item.get('merged_into'):
+                continue
             stats['total'] += 1
             title = item.get("title", "")
             source = item.get("source", "")
@@ -397,6 +400,9 @@ def group_articles_by_topic(articles):
     # 未匹配的文章单独显示
     for article in articles:
         if article.get('aid') not in grouped:
+            # 跳过合并的从条（merged_into 指向主条）
+            if article.get('merged_into'):
+                continue
             # 保留 build_articles_json 设置的 is_merged 标记
             is_merged = article.get('is_merged', False)
             result.append({
