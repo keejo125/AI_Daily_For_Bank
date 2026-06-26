@@ -1,6 +1,21 @@
 {
   "issues": [
     {
+      "date": "2026-06-26",
+      "weekday": "周五",
+      "stats": {
+        "国际": 8,
+        "国内": 9,
+        "同业": 3,
+        "其他": 9,
+        "total": 29,
+        "excluded": 6,
+        "merged": 1
+      },
+      "summary": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」/GPT-5.6，可能要重走「Mythos」的老路/LabVLA：当AI走进科学实验室，浙大x...",
+      "article_date": "2026-06-26"
+    },
+    {
       "date": "2026-06-25",
       "weekday": "周四",
       "stats": {

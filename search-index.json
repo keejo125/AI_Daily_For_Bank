@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-06-26T06:43:56.311798",
-  "total": 211,
+  "updated_at": "2026-06-27T07:15:32.457834",
+  "total": 240,
   "articles": [
+    {
+      "date": "2026-06-26",
+      "title": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」",
+      "source": "新智元;极客公园",
+      "digest": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」",
+      "link": "https://mp.weixin.qq.com/s/m33hOzr5obCsBIWWrlbTAw",
+      "source_file": "sources/2026-06-26_GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "GPT-5.6，可能要重走「Mythos」的老路",
+      "source": "极客公园",
+      "digest": "GPT-5.6，可能要重走「Mythos」的老路",
+      "link": "https://mp.weixin.qq.com/s/8Zr1dlSDFYbzejffrOxC4A",
+      "source_file": "sources/2026-06-26_GPT-5.6，可能要重走「Mythos」的老路_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "实锤：Claude Opus 4.8「偷答案」！63%靠抄，AI断网后成绩雪崩",
+      "source": "新智元",
+      "digest": "实锤：Claude Opus 4.8「偷答案」！63%靠抄，AI断网后成绩雪崩",
+      "link": "https://mp.weixin.qq.com/s/h3-43ilj9B_3bQkgeTXoLg",
+      "source_file": "sources/2026-06-26_实锤：Claude Opus 4.8「偷答案」！63%靠抄，AI断网后成绩雪崩_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "第一个用物理做计算原语的大规模生成模型Un-0来了，或将AI能耗降低1000倍？",
+      "source": "机器之心",
+      "digest": "第一个用物理做计算原语的大规模生成模型Un-0来了，或将AI能耗降低1000倍？",
+      "link": "https://mp.weixin.qq.com/s/BCdzR3d0_q06GWWoFWjxVw",
+      "source_file": "sources/2026-06-26_第一个用物理做计算原语的大规模生成模型Un-0来了，或将AI能耗降低1000倍？_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "AI 时代的新可观测性：不只看系统崩没崩，还要看模型有没有胡说",
+      "source": "InfoQ",
+      "digest": "AI 时代的新可观测性：不只看系统崩没崩，还要看模型有没有胡说",
+      "link": "https://mp.weixin.qq.com/s/38e7bKjMH6uE2gi7z22S7A",
+      "source_file": "sources/2026-06-26_AI 时代的新可观测性：不只看系统崩没崩，还要看模型有没有胡说_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "Angular 官方的智能体 Skills 助力 AI 编程工具生成现代化的 Angular 代码",
+      "source": "InfoQ",
+      "digest": "Angular 官方的智能体 Skills 助力 AI 编程工具生成现代化的 Angular 代码",
+      "link": "https://mp.weixin.qq.com/s/55BUvXs6jPNYswHna5DjZA",
+      "source_file": "sources/2026-06-26_Angular 官方的智能体 Skills 助力 AI 编程工具生成现代化的 Angular 代码_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 | ACL26",
+      "source": "新智元",
+      "digest": "如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 | ACL26",
+      "link": "https://mp.weixin.qq.com/s/4B0QbkCJUJa2koS-rTR0gw",
+      "source_file": "sources/2026-06-26_如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 _ ACL26_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "英伟达All in的物理AI路线，居然是中国黑马提前一年就定义好了",
+      "source": "新智元",
+      "digest": "英伟达All in的物理AI路线，居然是中国黑马提前一年就定义好了",
+      "link": "https://mp.weixin.qq.com/s/m94F2I6toVT-OFlARfDyQw",
+      "source_file": "sources/2026-06-26_英伟达All in的物理AI路线，居然是中国黑马提前一年就定义好了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "LabVLA：当AI走进科学实验室，浙大x上海 AI Lab联合探索科学具身智能",
+      "source": "机器之心",
+      "digest": "LabVLA：当AI走进科学实验室，浙大x上海 AI Lab联合探索科学具身智能",
+      "link": "https://mp.weixin.qq.com/s/4_lIVYytD0cSNu1kh7NPUA",
+      "source_file": "sources/2026-06-26_LabVLA：当AI走进科学实验室，浙大x上海 AI Lab联合探索科学具身智能_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "SIGCOMM 2026 | 从「人眼看视频」到「AI理解视频」：北大提出面向AI的实时通信框架Artic",
+      "source": "机器之心",
+      "digest": "SIGCOMM 2026 | 从「人眼看视频」到「AI理解视频」：北大提出面向AI的实时通信框架Artic",
+      "link": "https://mp.weixin.qq.com/s/a2tU8mPDlClJ5p9nxp9zpA",
+      "source_file": "sources/2026-06-26_SIGCOMM 2026 _ 从「人眼看视频」到「AI理解视频」：北大提出面向AI的实时通信框架Ar_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "国产AI高考708分，这款模型靠什么成为「屏蔽生」？",
+      "source": "机器之心",
+      "digest": "国产AI高考708分，这款模型靠什么成为「屏蔽生」？",
+      "link": "https://mp.weixin.qq.com/s/hkfhhxWccpKNsaiC4Mk1Ig",
+      "source_file": "sources/2026-06-26_国产AI高考708分，这款模型靠什么成为「屏蔽生」？_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "大模型\"温故而知新\"实现了！无需历史数据，Octopus 效果超越全数据训练｜CVPR「26 Octopus",
+      "source": "量子位",
+      "digest": "大模型\"温故而知新\"实现了！无需历史数据，Octopus 效果超越全数据训练｜CVPR「26 Octopus",
+      "link": "https://mp.weixin.qq.com/s/A4G_EAKRuRHSgaJMfZRmOg",
+      "source_file": "sources/2026-06-26_大模型_温故而知新_实现了！无需历史数据，Octopus 效果超越全数据训练｜CVPR「26 Oct_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "大模型最后一层竟是推理累赘？绕开对齐税，奥数准确率暴涨 22.4%！",
+      "source": "量子位",
+      "digest": "大模型最后一层竟是推理累赘？绕开对齐税，奥数准确率暴涨 22.4%！",
+      "link": "https://mp.weixin.qq.com/s/bLxEbSpqIjuGX498Y-H_zg",
+      "source_file": "sources/2026-06-26_大模型最后一层竟是推理累赘？绕开对齐税，奥数准确率暴涨 22.4%！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "腾讯混元AI Infra如何优化Hy3 Preview：一次大模型推理性能提升的技术拆解",
+      "source": "腾讯技术工程",
+      "digest": "腾讯混元AI Infra如何优化Hy3 Preview：一次大模型推理性能提升的技术拆解",
+      "link": "https://mp.weixin.qq.com/s/miAOHTBZLyuDfNle1jrO0w",
+      "source_file": "sources/2026-06-26_腾讯混元AI Infra如何优化Hy3 Preview：一次大模型推理性能提升的技术拆解_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-26",
+      "title": "当 Agent 成为新的核心云用户：阿里云重新定义【用云范式】",
+      "source": "InfoQ",
+      "digest": "当 Agent 成为新的核心云用户：阿里云重新定义【用云范式】",
+      "link": "https://mp.weixin.qq.com/s/8wZyl1p0XtAXLxwo5tHHuA",
+      "source_file": "sources/2026-06-26_当 Agent 成为新的核心云用户：阿里云重新定义【用云范式】_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "当使用企业数据的从「人」变成「AI」，阿里云重做了一套基础设施",
+      "source": "极客公园",
+      "digest": "当使用企业数据的从「人」变成「AI」，阿里云重做了一套基础设施",
+      "link": "https://mp.weixin.qq.com/s/oUU1shm6QhMulMkGFOG5cA",
+      "source_file": "sources/2026-06-26_当使用企业数据的从「人」变成「AI」，阿里云重做了一套基础设施_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "构建 AI 时代的知识底座：直播数据 LLM Wiki 实践",
+      "source": "阿里云开发者",
+      "digest": "构建 AI 时代的知识底座：直播数据 LLM Wiki 实践",
+      "link": "https://mp.weixin.qq.com/s/6-xg2jJqIPbrqHcbjHBuTg",
+      "source_file": "sources/2026-06-26_构建 AI 时代的知识底座：直播数据 LLM Wiki 实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "招行大模型投入20元可创造100元收益！日均Token消耗量达330亿",
+      "source": "银行科技研究社",
+      "digest": "招行大模型投入20元可创造100元收益！日均Token消耗量达330亿",
+      "link": "https://mp.weixin.qq.com/s/ca3lMvsXDnqet4E0fLw1Kw",
+      "source_file": "sources/2026-06-26_招行大模型投入20元可创造100元收益！日均Token消耗量达330亿_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "浦发银行董事长张为忠：AI将彻底重构金融机构经营底层逻辑",
+      "source": "银行科技研究社",
+      "digest": "浦发银行董事长张为忠：AI将彻底重构金融机构经营底层逻辑",
+      "link": "https://mp.weixin.qq.com/s/Akjt4jo8A4_l0qaAnD6JtA",
+      "source_file": "sources/2026-06-26_浦发银行董事长张为忠：AI将彻底重构金融机构经营底层逻辑_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "金融机构必须为AI时代的到来做好充分准备！",
+      "source": "银行科技研究社",
+      "digest": "金融机构必须为AI时代的到来做好充分准备！",
+      "link": "https://mp.weixin.qq.com/s/HjCyD5hIW4hpJgj5gob6Kg",
+      "source_file": "sources/2026-06-26_金融机构必须为AI时代的到来做好充分准备！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "1299元买一个【AI超级充电宝】，值吗？",
+      "source": "智东西",
+      "digest": "1299元买一个【AI超级充电宝】，值吗？",
+      "link": "https://mp.weixin.qq.com/s/qN6VZ8Zdi9CGQQCsd-dHQg",
+      "source_file": "sources/2026-06-26_1299元买一个【AI超级充电宝】，值吗？_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "AI无法教会的三件事",
+      "source": "",
+      "digest": "AI无法教会的三件事",
+      "link": "https://mp.weixin.qq.com/s/be9-vAYCkq_a_RkuZEpEiw",
+      "source_file": "sources/2026-06-26_AI无法教会的三件事_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "API7.ai创始人温铭：烧了几百亿Token，我用AI重写了生产级网关，总结出6条经验",
+      "source": "InfoQ",
+      "digest": "API7.ai创始人温铭：烧了几百亿Token，我用AI重写了生产级网关，总结出6条经验",
+      "link": "https://mp.weixin.qq.com/s/mn88ZAHOxNG27btYsvDD3Q",
+      "source_file": "sources/2026-06-26_API7.ai创始人温铭：烧了几百亿Token，我用AI重写了生产级网关，总结出6条经验_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "C罗刚头球破门，AI解说脱口而出！全模态实时流太狠了",
+      "source": "新智元",
+      "digest": "C罗刚头球破门，AI解说脱口而出！全模态实时流太狠了",
+      "link": "https://mp.weixin.qq.com/s/WHxw4bQ213970kipWrad9Q",
+      "source_file": "sources/2026-06-26_C罗刚头球破门，AI解说脱口而出！全模态实时流太狠了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "从 Vibe Coding 到需求托管交付 Agent，菜鸟 AI 研发效能实践｜AICon 上海",
+      "source": "InfoQ",
+      "digest": "从 Vibe Coding 到需求托管交付 Agent，菜鸟 AI 研发效能实践｜AICon 上海",
+      "link": "https://mp.weixin.qq.com/s/204-dpWU5IytY081CNJtUA",
+      "source_file": "sources/2026-06-26_从 Vibe Coding 到需求托管交付 Agent，菜鸟 AI 研发效能实践｜AICon 上海_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "刚刚，全球第一个能同时扫微信和支付宝的AI眼镜，诞生了",
+      "source": "智东西",
+      "digest": "刚刚，全球第一个能同时扫微信和支付宝的AI眼镜，诞生了",
+      "link": "https://mp.weixin.qq.com/s/-pEzkU7KjkUN1w7KcqHBIQ",
+      "source_file": "sources/2026-06-26_刚刚，全球第一个能同时扫微信和支付宝的AI眼镜，诞生了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "报告！Qoder 进入 Gartner 企业级 AI 代码智能体挑战者象限，执行力和远见度是中国第一",
+      "source": "Qoder",
+      "digest": "报告！Qoder 进入 Gartner 企业级 AI 代码智能体挑战者象限，执行力和远见度是中国第一",
+      "link": "https://mp.weixin.qq.com/s/yxGqFPB5k9uvOBQeanj5Ng",
+      "source_file": "sources/2026-06-26_报告！Qoder 进入 Gartner 企业级 AI 代码智能体挑战者象限，执行力和远见度是中国第一_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "腾讯研究院AI速递 20260626",
+      "source": "",
+      "digest": "腾讯研究院AI速递 20260626",
+      "link": "https://mp.weixin.qq.com/s/y0_jB4dpxm00_D0G5vQr-w",
+      "source_file": "sources/2026-06-26_腾讯研究院AI速递 20260626_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-26",
+      "title": "高考志愿填报，正在变成 AI 的主场",
+      "source": "极客公园",
+      "digest": "高考志愿填报，正在变成 AI 的主场",
+      "link": "https://mp.weixin.qq.com/s/7T6OR9otmGdiOFIad6VwaA",
+      "source_file": "sources/2026-06-26_高考志愿填报，正在变成 AI 的主场_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-25",
       "title": "OpenAI首款自研AI芯片Jalapeño发布，9个月完成流片（多源综合）",
