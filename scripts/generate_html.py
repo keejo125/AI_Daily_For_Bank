@@ -457,7 +457,11 @@ def build_section_html(category, articles):
         digest = group['digest']
         article_list = group['articles']
         is_merged = group['is_merged']
-        
+
+        # 本地上下文: 用于 source_items 兑底按 name 匹配本地 markdown
+        base_dir = os.path.join(PROJECT_DIR, 'daily', DATE_STR)
+        sources_dir = os.path.join(base_dir, 'sources')
+
         card_html = f'<div class="card">'
         card_html += f'<div class="card-title">{escape_html(title)}</div>'
         
@@ -473,6 +477,12 @@ def build_section_html(category, articles):
                     source_name = si.get('name', '')
                     source_link = si.get('link', '')
                     source_file = si.get('source_file', '')
+                    
+                    # 兜底: 按 name 在 sources/ 目录自动匹配 source_file
+                    if not source_file and source_name:
+                        matched = find_markdown_file(sources_dir, '', source_name)
+                        if matched:
+                            source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
                     
                     # 优先使用 viewer.html 查看原文
                     if source_file:
@@ -517,6 +527,13 @@ def build_section_html(category, articles):
                     source_name = si.get('name', '')
                     source_link = si.get('link', '')
                     source_file = si.get('source_file', '')
+
+                    # 兜底: 按 name 在 sources/ 目录自动匹配 source_file
+                    if not source_file and source_name:
+                        matched = find_markdown_file(sources_dir, '', source_name)
+                        if matched:
+                            source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
+
                     if source_file:
                         encoded_source_file = quote(source_file, safe='')
                         viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
