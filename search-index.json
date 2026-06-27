@@ -1,7 +1,27 @@
 {
-  "updated_at": "2026-06-27T09:02:18.414185",
-  "total": 239,
+  "updated_at": "2026-06-27T09:57:07.222275",
+  "total": 241,
   "articles": [
+    {
+      "date": "2026-06-27",
+      "title": "刚刚，OpenAI最强GPT-5.6发布！「太阳系」爆发冲破神话",
+      "source": "新智元",
+      "digest": "OpenAI发布GPT-5.6系列(Sol/Terra/Luna)，旗舰Sol在Terminal-Bench编程基准以91.9%超越Claude Mythos 5(88.0%)，推出ultra推理模式自动拆解任务并行执行。Sol仅向约20家合作伙伴开放，普通用户短期内无缘。",
+      "link": "https://mp.weixin.qq.com/s/FZ_MijBUlmN-8FMTDJgbaQ",
+      "source_file": "sources/2026-06-27_刚刚，OpenAI最强GPT-5.6发布！「太阳系」爆发冲破神话_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-27",
+      "title": "OpenAI又动了数亿人的默认模型：没更聪明，却更黏你",
+      "source": "新智元",
+      "digest": "OpenAI更新GPT-5.5 Instant默认模型，强化意图理解和个性化能力，可主动调用聊天记录与Gmail定制回答。新Instant已不只是模型，更像自动路由系统，标志着ChatGPT从工具向长期入口转变。",
+      "link": "https://mp.weixin.qq.com/s/TUgTFb9LZsi4eANpm7wVcA",
+      "source_file": "sources/2026-06-27_OpenAI又动了数亿人的默认模型：没更聪明，却更黏你_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-06-26",
       "title": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」",
