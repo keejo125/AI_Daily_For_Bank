@@ -546,7 +546,18 @@ def build_section_html(category, articles):
                 card_html += sources_html
             else:
                 source = single_article.get('source', '')
-                card_html += f'<span class="source-tag">{escape_html(source)}</span>'
+                source_file = single_article.get('source_file', '')
+                # 兜底: 按 source name 在 sources/ 目录匹配
+                if not source_file and source:
+                    matched = find_markdown_file(sources_dir, '', source)
+                    if matched:
+                        source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
+                if source_file:
+                    encoded_source_file = quote(source_file, safe='')
+                    viewer_link = f'../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                    card_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
+                else:
+                    card_html += f'<span class="source-tag">{escape_html(source)}</span>'
         
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'
