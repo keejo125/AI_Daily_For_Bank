@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-27T10:13:48.382153",
-  "total": 246,
+  "updated_at": "2026-06-27T10:18:31.958196",
+  "total": 244,
   "articles": [
     {
       "date": "2026-06-27",
@@ -34,21 +34,11 @@
     },
     {
       "date": "2026-06-26",
-      "title": "GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」",
+      "title": "GPT-5.6 紧急叫停，OpenAI 最强模型被迫「一客一审」；极客公园评：可能要重走 Mythos 老路",
       "source": "新智元",
-      "digest": "OpenAI最新模型GPT-5.6被美国政府要求分阶段发布，需进行「逐个审批」才能开放试用权限。这对硅谷大模型行业造成震动——过去十年以快为王的竞争法则被打破。GPT-5.6可能具备150万token上下文，推理budget提升至960，长链条Agent任务token消耗比GPT-5.5节省10%~15%。",
+      "digest": "OpenAI最新模型GPT-5.6被美国政府要求分阶段发布，需进行「逐个审批」才能开放试用权限。这对硅谷大模型行业造成震动——过去十年以快为王的竞争法则被打破。GPT-5.6可能具备150万token上下文，推理budget提升至960，长链条Agent任务token消耗比GPT-5.5节省10%~15%。 | 极客公园评论：美国政府要求OpenAI分阶段发布GPT-5.6，开启AI模型「发布审查」新时代。此前Anthropic的Fable 5和Mythos 5因出口管制令被下线长达",
       "link": "https://mp.weixin.qq.com/s/m33hOzr5obCsBIWWrlbTAw",
       "source_file": "sources/2026-06-26_GPT-5.6紧急叫停！OpenAI最强模型被迫「一客一审」_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-26",
-      "title": "GPT-5.6，可能要重走「Mythos」的老路",
-      "source": "极客公园",
-      "digest": "美国政府要求OpenAI分阶段发布GPT-5.6，开启AI模型「发布审查」新时代。此前Anthropic的Fable 5和Mythos 5因出口管制令被下线长达14天。文章分析认为，AI模型能力一旦越过「能自主发现零日漏洞」的界线，就不再是普通科技产品，而变成战略管控品，竞争优势从「谁更快」转向「谁更受信任」。",
-      "link": "https://mp.weixin.qq.com/s/8Zr1dlSDFYbzejffrOxC4A",
-      "source_file": "sources/2026-06-26_GPT-5.6，可能要重走「Mythos」的老路_极客公园.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -128,7 +118,7 @@
       "source": "量子位",
       "digest": "上海交通大学与vivo团队提出Octopus持续学习框架，首创无需历史数据的梯度正交化（HiFGO）技术解决多模态大模型「灾难性遗忘」问题。模型无需旧数据即可精准捕捉不干扰旧知识的「安全更新方向」。在UCIT基准上平均性能超越SOTA 2.14%，最终性能提升6.82%，论文被CVPR 2026接收。",
       "link": "https://mp.weixin.qq.com/s/A4G_EAKRuRHSgaJMfZRmOg",
-      "source_file": "sources/2026-06-26_大模型_温故而知新_实现了！无需历史数据，Octopus 效果超越全数据训练｜CVPR'26 Oct_量子位.md",
+      "source_file": "sources/2026-06-26_大模型_温故而知新_实现了！无需历史数据，Octopus 效果超越全数据训练｜CVPR‘26 Oct_量子位.md",
       "category": "国内",
       "is_model_related": true
     },
@@ -174,9 +164,9 @@
     },
     {
       "date": "2026-06-26",
-      "title": "当使用企业数据的从「人」变成「AI」，阿里云重做了一套基础设施",
+      "title": "当企业数据的从「人」变成「AI」，阿里云重做了一套基础设施｜InfoQ：Agent 成为新的核心云用户",
       "source": "极客公园",
-      "digest": "阿里云在Flink Forward Asia 2026上宣布Apache Flink 3.0全面进入Agentic Streaming时代，推出全模态数据流处理能力。文章阐述了从「人使用数据」到「AI使用数据」的基础设施变化：Flink的流水线架构、状态管理、水位线机制等能力成为事件驱动型Agent的运行底座。孵化Flink Agents项目作为Streaming Agent-OS。",
+      "digest": "阿里云在Flink Forward Asia 2026上宣布Apache Flink 3.0全面进入Agentic Streaming时代，推出全模态数据流处理能力。文章阐述了从「人使用数据」到「AI使用数据」的基础设施变化：Flink的流水线架构、状态管理、水位线机制等能力成为事件驱动型Agent的运行底座。孵化Flink Agents项目作为Stream | InfoQ 视角：阿里云发布云Skills门户，通过Skills化、MCP化、CLI化三条路径实现标准化工具调用，把300+云产品、20000+API升级为Agent-Ready",
       "link": "https://mp.weixin.qq.com/s/oUU1shm6QhMulMkGFOG5cA",
       "source_file": "sources/2026-06-26_当使用企业数据的从「人」变成「AI」，阿里云重做了一套基础设施_极客公园.md",
       "category": "国内",
@@ -189,16 +179,6 @@
       "digest": "阿里云在Flink Forward Asia 2026大会上宣布Flink 3.0全面进入Agentic Streaming For AI时代，业界首次将视频、音频、图像、文本四类数据统一放进同一条流式pipeline调度。以世界杯AI实时解说为demo展示：实时抓帧理解→喂给大模型生成解说→支持粤语切换→沉淀上下文做跨场次分析，全程事件驱动无需人工触发。",
       "link": "https://mp.weixin.qq.com/s/WHxw4bQ213970kipWrad9Q",
       "source_file": "sources/2026-06-26_C罗刚头球破门，AI解说脱口而出！全模态实时流太狠了_新智元.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-26",
-      "title": "当 Agent 成为新的核心云用户：阿里云重新定义“用云范式”",
-      "source": "InfoQ",
-      "digest": "阿里云发布云Skills门户，通过Skills化、MCP化、CLI化三条路径实现标准化工具调用，把300+云产品、20000+API升级为Agent-Ready能力。核心框架包括三层：Agent Gateway处理行为不确定性、Agent 3A（可认证/授权/审计）处理身份不确定性、Agentic Skills处理能力使用不确定性。引入Spec-Driven Development实现从意图到执行的受控链路。",
-      "link": "https://mp.weixin.qq.com/s/8wZyl1p0XtAXLxwo5tHHuA",
-      "source_file": "sources/2026-06-26_当 Agent 成为新的核心云用户：阿里云重新定义“用云范式”_InfoQ.md",
       "category": "国内",
       "is_model_related": false
     },
