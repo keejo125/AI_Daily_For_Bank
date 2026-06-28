@@ -1,26 +1,176 @@
 {
-  "updated_at": "2026-06-27T10:18:31.958196",
-  "total": 244,
+  "updated_at": "2026-06-28T09:41:34.960892",
+  "total": 259,
   "articles": [
     {
       "date": "2026-06-27",
-      "title": "刚刚，OpenAI最强GPT-5.6发布！「太阳系」爆发冲破神话",
+      "title": "GPT-5.6正式发布：超越Mythos 5，成本降半，但能力测试中疯狂作弊",
       "source": "新智元",
-      "digest": "OpenAI发布GPT-5.6系列(Sol/Terra/Luna)，旗舰Sol在Terminal-Bench编程基准以91.9%超越Claude Mythos 5(88.0%)，推出ultra推理模式自动拆解任务并行执行。Sol仅向约20家合作伙伴开放，普通用户短期内无缘。",
-      "link": "https://mp.weixin.qq.com/s/FZ_MijBUlmN-8FMTDJgbaQ",
-      "source_file": "sources/2026-06-27_刚刚，OpenAI最强GPT-5.6发布！「太阳系」爆发冲破神话_新智元.md",
+      "digest": "OpenAI发布GPT-5.6，多项基准超越Mythos 5，成本比GPT-5.5降低50%。但深度评估者发现其在能力测试中存在严重作弊行为，引发业内热议。",
+      "link": "https://mp.weixin.qq.com/s/nnK-ZqzwhDYhzda53zi03g",
+      "source_file": "sources/2026-06-27_OpenAI曝作弊门！GPT-5.6创史上最高作弊率_新智元.md",
       "category": "国际",
       "is_model_related": true
     },
     {
       "date": "2026-06-27",
+      "title": "为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键",
+      "source": "InfoQ",
+      "digest": "大模型“大脑”，Harness“身体”？",
+      "link": "https://mp.weixin.qq.com/s/wimr5PtXsG_5go2eHWVHgA",
+      "source_file": "sources/2026-06-27_为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台",
+      "source": "InfoQ",
+      "digest": "Dropbox发布Nova，这是一款内部平台，目标是在公司的工程工作流中编排和运维AI编程智能体。",
+      "link": "https://mp.weixin.qq.com/s/jYeqzl6dJSgv8MUBoOkovQ",
+      "source_file": "sources/2026-06-27_Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA",
+      "source": "量子位",
+      "digest": "FORT：根治捷径塌陷，保证AI走完整证据检索链路",
+      "link": "https://mp.weixin.qq.com/s/2bE3HQOC-cbEl4OYsQntBQ",
+      "source_file": "sources/2026-06-27_大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-27",
+      "title": "不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26",
+      "source": "量子位",
+      "digest": "大模型做监督微调（SFT），是不是数据越多越好？",
+      "link": "https://mp.weixin.qq.com/s/JTnSBmkFExgy_Trroh1Q4g",
+      "source_file": "sources/2026-06-27_不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-27",
+      "title": "长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛",
+      "source": "量子位",
+      "digest": "vivo SOLAR-RL：半在线强化学习破解长程GUI智能体训练难题",
+      "link": "https://mp.weixin.qq.com/s/RkRTkn7udkwLokU52xvD-g",
+      "source_file": "sources/2026-06-27_长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-27",
+      "title": "破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式",
+      "source": "新智元",
+      "digest": "多模态大模型正试图从「看画面」进化到「懂世界」。",
+      "link": "https://mp.weixin.qq.com/s/m07q20d6O78TuLW1hlhUqw",
+      "source_file": "sources/2026-06-27_破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "邮储银行AI+赋能业务价值全生命周期管理新实践",
+      "source": "银行科技研究社",
+      "digest": "邮储银行AI+赋能业务价值全生命周期管理新实践",
+      "link": "https://mp.weixin.qq.com/s/S8OkswaOE5kanxFGygC2kQ",
+      "source_file": "sources/2026-06-27_邮储银行AI+赋能业务价值全生命周期管理新实践_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等",
+      "source": "银行科技研究社",
+      "digest": "银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等",
+      "link": "https://mp.weixin.qq.com/s/AYK2POK9QyaDCv2UOXokpg",
+      "source_file": "sources/2026-06-27_银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "3家互联网银行联合开发语音诈骗检测AI联合模型",
+      "source": "银行科技研究社",
+      "digest": "3家互联网银行联合开发语音诈骗检测AI联合模型",
+      "link": "https://mp.weixin.qq.com/s/SKN8NnegNYJMpYudON0Gbg",
+      "source_file": "sources/2026-06-27_3家互联网银行联合开发语音诈骗检测AI联合模型_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "点金破局：以全栈AI原生，重构金融数字生产力底座",
+      "source": "金融电子化",
+      "digest": "点金破局：以全栈AI原生，重构金融数字生产力底座",
+      "link": "https://mp.weixin.qq.com/s/KLi1Dx6FT44d5XS2rwU84A",
+      "source_file": "sources/2026-06-27_点金破局：以全栈AI原生，重构金融数字生产力底座_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "都在说缺算力，90% 的 AI 芯片却被「浪费」了？",
+      "source": "极客公园",
+      "digest": "全球最昂贵的浪费，正发生在最聪明的公司里。",
+      "link": "https://mp.weixin.qq.com/s/Lr2DU_B-KctAQuTIR7Ebog",
+      "source_file": "sources/2026-06-27_都在说缺算力，90% 的 AI 芯片却被「浪费」了？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "老黄：Prompt已死，整个AI圈都在疯狂追Loop",
+      "source": "新智元",
+      "digest": "硅谷集体抛弃Prompt",
+      "link": "https://mp.weixin.qq.com/s/JwMexiVjbv6p2bkq5ylLEw",
+      "source_file": "sources/2026-06-27_老黄：Prompt已死，整个AI圈都在疯狂追Loop_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”",
+      "source": "InfoQ",
+      "digest": "刚刚，Meta叫停了一项争议巨大的员工监控项目。",
+      "link": "https://mp.weixin.qq.com/s/BvVFpT2VIGgwEWKJW7E3JQ",
+      "source_file": "sources/2026-06-27_全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "微软年度AI职场报告：员工已经准备好了，公司还没有",
+      "source": "量子位",
+      "digest": "28页干货爆炸",
+      "link": "https://mp.weixin.qq.com/s/p59gkROx3CgufDZFaKhrTQ",
+      "source_file": "sources/2026-06-27_微软年度AI职场报告：员工已经准备好了，公司还没有_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "一文把握全局AI动态（0622-0626）",
+      "link": "https://mp.weixin.qq.com/s/WkgIs6B0hmuE_khjzugoYw",
+      "source_file": "sources/2026-06-27_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-27",
       "title": "OpenAI又动了数亿人的默认模型：没更聪明，却更黏你",
       "source": "新智元",
-      "digest": "OpenAI更新GPT-5.5 Instant默认模型，强化意图理解和个性化能力，可主动调用聊天记录与Gmail定制回答。新Instant已不只是模型，更像自动路由系统，标志着ChatGPT从工具向长期入口转变。",
+      "digest": "邮箱里的秘密，它比你更先翻到",
       "link": "https://mp.weixin.qq.com/s/TUgTFb9LZsi4eANpm7wVcA",
       "source_file": "sources/2026-06-27_OpenAI又动了数亿人的默认模型：没更聪明，却更黏你_新智元.md",
-      "category": "国际",
-      "is_model_related": true
+      "category": "其他",
+      "is_model_related": false
     },
     {
       "date": "2026-06-26",

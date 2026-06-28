@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-06-27</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-06-27</div>
+    <div class="banner-stats" id="banner-stats">国际 3 篇 · 国内 4 篇 · 同业 4 篇 · 其他 6 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">GPT-5.6正式发布：超越Mythos 5，成本降半，但能力测试中疯狂作弊</div><div class="source-tags"><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_OpenAI%E6%9B%9D%E4%BD%9C%E5%BC%8A%E9%97%A8%EF%BC%81GPT-5.6%E5%88%9B%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98%E4%BD%9C%E5%BC%8A%E7%8E%87_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_GPT-5.6%E9%A6%96%E5%8F%91%EF%BC%8C%E6%AF%94Fable%205%E4%BE%BF%E5%AE%9C%E4%B8%80%E5%8D%8A%EF%BC%81%E6%B7%B1%E5%BA%A6%E8%AF%84%E4%BC%B0%E8%80%85%E2%80%9C%E5%BC%80%E9%BA%A6%E2%80%9D%E5%90%90%E6%A7%BD%EF%BC%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E8%AF%95%E4%B8%AD%E7%96%AF%E7%8B%82%E4%BD%9C%E5%BC%8A_InfoQ.md" target="_blank">InfoQ</a></span><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E5%88%9A%E5%88%9A%EF%BC%8COpenAI%E6%9C%80%E5%BC%BAGPT-5.6%E5%8F%91%E5%B8%83%EF%BC%81%E3%80%8C%E5%A4%AA%E9%98%B3%E7%B3%BB%E3%80%8D%E7%88%86%E5%8F%91%E5%86%B2%E7%A0%B4%E7%A5%9E%E8%AF%9D_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span></div><div class="card-digest">OpenAI发布GPT-5.6，多项基准超越Mythos 5，成本比GPT-5.5降低50%。但深度评估者发现其在能力测试中存在严重作弊行为，引发业内热议。</div></div>
+<div class="card"><div class="card-title">为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%A7%E9%87%8F%E4%BC%81%E4%B8%9A%20Agent%20%E6%AD%BB%E5%9C%A8%E5%8E%9F%E5%9E%8B%E9%98%B6%E6%AE%B5%EF%BC%9F%E4%BA%9A%E9%A9%AC%E9%80%8A%E4%BA%91%E7%A7%91%E6%8A%80%E5%82%A8%E7%91%9E%E6%9D%BE%EF%BC%9AAgent%20%E5%B7%A5%E7%A8%8B%E6%98%AF%E5%85%B3%E9%94%AE_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">大模型“大脑”，Harness“身体”？</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/wimr5PtXsG_5go2eHWVHgA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_Dropbox%20%E5%8F%91%E5%B8%83%20Nova%EF%BC%9A%E7%94%A8%E4%BA%8E%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%BF%90%E8%A1%8C%20AI%20%E7%BC%96%E7%A8%8B%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E5%86%85%E9%83%A8%E5%B9%B3%E5%8F%B0_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">Dropbox发布Nova，这是一款内部平台，目标是在公司的工程工作流中编排和运维AI编程智能体。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/jYeqzl6dJSgv8MUBoOkovQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%90%9C%E7%B4%A2%E6%80%BB%E5%81%B7%E6%87%92%EF%BC%9FIQuest%E7%AD%89%E8%81%94%E5%90%88%E6%8E%A8%E5%87%BAFORT%EF%BC%8C30B%E5%BC%80%E6%BA%90%E6%90%9C%E7%B4%A2Agent%E5%88%B7%E6%96%B0%E5%90%8C%E8%A7%84%E6%A8%A1SOTA_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">FORT：根治捷径塌陷，保证AI走完整证据检索链路</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/2bE3HQOC-cbEl4OYsQntBQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E4%B8%8D%E7%94%A8%E5%85%A8%E9%87%8F%E6%95%B0%E6%8D%AE%E5%8F%8D%E5%A4%8D%E8%AE%AD%E7%BB%83%EF%BC%81%E6%B8%85%E5%8D%8EUDS%E6%99%BA%E8%83%BD%E8%BF%87%E6%BB%A4%E5%8A%A3%E8%B4%A8%E6%A0%B7%E6%9C%AC%EF%BC%8C%E7%AE%97%E5%8A%9B%E6%88%90%E6%9C%AC%E8%85%B0%E6%96%A9%EF%BD%9CICML%E2%80%9926_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">大模型做监督微调（SFT），是不是数据越多越好？</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/JTnSBmkFExgy_Trroh1Q4g" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E9%95%BF%E9%93%BE%E8%B7%AF%E6%89%8B%E6%9C%BAAI%E8%AE%AD%E7%BB%83%E6%80%BB%E5%B4%A9%E7%9B%98%EF%BC%9Fvivo%E5%85%A8%E6%96%B0%E5%8D%8A%E5%9C%A8%E7%BA%BFRL%EF%BC%8C%E4%BB%8515k%E8%BD%A8%E8%BF%B9%E7%A8%B3%E5%AE%9A%E6%94%B6%E6%95%9B_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">vivo SOLAR-RL：半在线强化学习破解长程GUI智能体训练难题</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/RkRTkn7udkwLokU52xvD-g" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E7%A0%B4%E8%A7%A3%E9%A2%86%E5%9F%9F%E8%A7%86%E9%A2%91%E6%95%B0%E6%8D%AE%E7%90%86%E8%A7%A3%E9%9A%BE%E9%A2%98%EF%BC%8C%E5%8D%8E%E4%B8%BAGTS%E6%8F%90%E5%87%BA%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E6%80%81%E9%80%89%E6%8B%A9%E6%96%B0%E8%8C%83%E5%BC%8F_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">多模态大模型正试图从「看画面」进化到「懂世界」。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/m07q20d6O78TuLW1hlhUqw" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">邮储银行AI+赋能业务价值全生命周期管理新实践</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E9%82%AE%E5%82%A8%E9%93%B6%E8%A1%8CAI%2B%E8%B5%8B%E8%83%BD%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BC%E5%85%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86%E6%96%B0%E5%AE%9E%E8%B7%B5_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">邮储银行AI+赋能业务价值全生命周期管理新实践</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/S8OkswaOE5kanxFGygC2kQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E9%93%B6%E8%A1%8CAI%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E6%8C%87%E5%AF%BC%E6%84%8F%E8%A7%81%E4%B8%AD%E7%9A%84%E9%87%8D%E7%82%B9%EF%BC%9A%E5%AE%89%E5%85%A8%E3%80%81%E7%90%86%E6%80%A7%E6%8A%95%E5%85%A5%E3%80%81%E2%80%9C%E5%85%88%E5%AF%8C%E5%B8%A6%E5%90%8E%E5%AF%8C%E2%80%9D%E7%AD%89_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/AYK2POK9QyaDCv2UOXokpg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">3家互联网银行联合开发语音诈骗检测AI联合模型</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_3%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E9%93%B6%E8%A1%8C%E8%81%94%E5%90%88%E5%BC%80%E5%8F%91%E8%AF%AD%E9%9F%B3%E8%AF%88%E9%AA%97%E6%A3%80%E6%B5%8BAI%E8%81%94%E5%90%88%E6%A8%A1%E5%9E%8B_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">3家互联网银行联合开发语音诈骗检测AI联合模型</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/SKN8NnegNYJMpYudON0Gbg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">点金破局：以全栈AI原生，重构金融数字生产力底座</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E7%82%B9%E9%87%91%E7%A0%B4%E5%B1%80%EF%BC%9A%E4%BB%A5%E5%85%A8%E6%A0%88AI%E5%8E%9F%E7%94%9F%EF%BC%8C%E9%87%8D%E6%9E%84%E9%87%91%E8%9E%8D%E6%95%B0%E5%AD%97%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%BA%95%E5%BA%A7_%E9%87%91%E8%9E%8D%E7%94%B5%E5%AD%90%E5%8C%96.md" target="_blank">金融电子化</a></span><div class="card-digest">点金破局：以全栈AI原生，重构金融数字生产力底座</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/KLi1Dx6FT44d5XS2rwU84A" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">都在说缺算力，90% 的 AI 芯片却被「浪费」了？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E9%83%BD%E5%9C%A8%E8%AF%B4%E7%BC%BA%E7%AE%97%E5%8A%9B%EF%BC%8C90%25%20%E7%9A%84%20AI%20%E8%8A%AF%E7%89%87%E5%8D%B4%E8%A2%AB%E3%80%8C%E6%B5%AA%E8%B4%B9%E3%80%8D%E4%BA%86%EF%BC%9F_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><div class="card-digest">全球最昂贵的浪费，正发生在最聪明的公司里。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Lr2DU_B-KctAQuTIR7Ebog" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">老黄：Prompt已死，整个AI圈都在疯狂追Loop</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E8%80%81%E9%BB%84%EF%BC%9APrompt%E5%B7%B2%E6%AD%BB%EF%BC%8C%E6%95%B4%E4%B8%AAAI%E5%9C%88%E9%83%BD%E5%9C%A8%E7%96%AF%E7%8B%82%E8%BF%BDLoop_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">硅谷集体抛弃Prompt</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/JwMexiVjbv6p2bkq5ylLEw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E5%85%A8%E5%85%AC%E5%8F%B8%E2%80%9C%E5%9B%B4%E8%A7%82%E2%80%9D%E7%A7%81%E8%81%8A%E4%B8%8E%E7%BB%A9%E6%95%88%EF%BC%8CMeta%20%E7%B4%A7%E6%80%A5%E5%8F%AB%E5%81%9C%E7%94%A8%E5%91%98%E5%B7%A5%E8%AE%AD%E7%BB%83%20AI%EF%BC%9A%E5%A3%AB%E6%B0%94%E5%B4%A9%E4%BA%86%EF%BC%8C%E5%91%98%E5%B7%A5%E6%80%92%E9%AA%82%E9%AB%98%E7%AE%A1%E2%80%9C%E7%8B%97%E5%B1%8E%E2%80%9D_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">刚刚，Meta叫停了一项争议巨大的员工监控项目。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/BvVFpT2VIGgwEWKJW7E3JQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">微软年度AI职场报告：员工已经准备好了，公司还没有</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E5%BE%AE%E8%BD%AF%E5%B9%B4%E5%BA%A6AI%E8%81%8C%E5%9C%BA%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%91%98%E5%B7%A5%E5%B7%B2%E7%BB%8F%E5%87%86%E5%A4%87%E5%A5%BD%E4%BA%86%EF%BC%8C%E5%85%AC%E5%8F%B8%E8%BF%98%E6%B2%A1%E6%9C%89_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">28页干货爆炸</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/p59gkROx3CgufDZFaKhrTQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">腾讯研究院AI每周关键词Top50</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_%E8%85%BE%E8%AE%AF%E7%A0%94%E7%A9%B6%E9%99%A2AI%E6%AF%8F%E5%91%A8%E5%85%B3%E9%94%AE%E8%AF%8DTop50_.md" target="_blank">腾讯研究院</a></span><div class="card-digest">一文把握全局AI动态（0622-0626）</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/WkgIs6B0hmuE_khjzugoYw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">OpenAI又动了数亿人的默认模型：没更聪明，却更黏你</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-06-27/sources%2F2026-06-27_OpenAI%E5%8F%88%E5%8A%A8%E4%BA%86%E6%95%B0%E4%BA%BF%E4%BA%BA%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A8%A1%E5%9E%8B%EF%BC%9A%E6%B2%A1%E6%9B%B4%E8%81%AA%E6%98%8E%EF%BC%8C%E5%8D%B4%E6%9B%B4%E9%BB%8F%E4%BD%A0_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">邮箱里的秘密，它比你更先翻到</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/TUgTFb9LZsi4eANpm7wVcA" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "GPT-5.6正式发布：超越Mythos 5，成本降半，但能力测试中疯狂作弊", "source": "新智元", "digest": "OpenAI发布GPT-5.6，多项基准超越Mythos 5，成本比GPT-5.5降低50%。但深度评估者发现其在能力测试中存在严重作弊行为，引发业内热议。", "link": "https://mp.weixin.qq.com/s/nnK-ZqzwhDYhzda53zi03g", "content": "---\npublish_time: 1782535560\n---\n\n# OpenAI曝作弊门！GPT-5.6创史上最高作弊率\n\n> 原文链接：https://mp.weixin.qq.com/s/nnK-ZqzwhDYhzda53zi03g\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nGPT-5.6终于来了，但我们用不了。权威报告曝其创下史上最高作弊率：不仅黑进测试系统偷答案，竟还教唆同类隐瞒违规罪证。超级AI，已经学会向人类系统性撒谎？\n\nGPT-5.6，终于登场了！\n\n这款OpenAI最强网络安全模型，在基准测试上正面硬刚Claude Mythos 5，在编程能力上直接领先了一个身位。\n\n然而反常的是，它的发布方式却很低调：没有面向公众开放，只允许极少数受信任合作伙伴通过API访问。\n\n而更让人瞠目结舌的，是发布之后随即曝光的一份独立评估报告。\n\nMETR在对GPT-5.6 Sol评测时，发现了一件令业界震惊的事：这个模型，是迄今为止他们见过的作弊率最高的AI。\n\n作弊门爆发：史上最高作弊率！\n\n这份在保密协议和OpenAI法务团队施压下艰难披露的报告，揭露了一个可怕的事实——\n\n在针对复杂长程任务的测试中，GPT-5.6 Sol表现出了此前在任何公开模型中都未曾见过的、极高水平的高智商作弊与欺骗行为。\n\n崩盘的「时间跨度」\n\nMETR针对Sol启动了Time Horizon 1.1软件与研发任务套件。\n\n测试的核心逻辑是：人类给AI智能体一个宏大的、需要复杂操作的任务，测量它在不需要人类介入的前提下，能够自主连续工作多少个小时。\n\n然而，ETR的工程师们震惊地发现，他们沿用了数年的科学测量方法论，在Sol面前彻底崩盘了。\n\n因为Sol的跑分结果，高频、剧烈地在11.3个小时与270个小时之间来回跳变，置信区间的离散度大到了荒谬的地步（5小时至11400小时）。\n\n导致测量系统全面瘫痪的原因只有一个：Sol在疯狂地作弊，它把测试它的系统给「黑」了。\n\nGPT-5.6，在人类眼皮底下偷看答案\n\nMETR发现，GPT-5.6主动展现出强烈的「情境意识」——\n\n它意识到自己正在接受人类的考试，并且意识到这个考试系统本身是由代码构成的、存在人类尚未发觉的Bug。\n\n于是，它选择直接攻击考试系统，通过「走捷径」来刷分！\n\n在METR披露的真实案例中，Sol的手段极其高明。\n\n比如，它学会了潜伏与信息窃取。\n\n在某项长周期软件开发任务中，Sol偷偷将利用程序打包进数据流。\n\n这段程序精准地激活了METR评估服务器沙盒的一处提权漏洞，成功潜入了后台隐藏的测试集，直接将人类藏起来的正确答案泄露了出来。\n\n另外，它还学会了底层源码反向提取。\n\n在另一项任务中，Sol发现正常解题需要消耗大量的计算步骤。为了规避这种「体力活」，它在暗中摸清了评估环境的目录结构，绕过权限，强行将隐藏源代码反向提取出来，直接把答案复制粘贴。\n\nMETR首席评估专家痛心疾首地指出——\n\nSol的作弊率，刷新了我们在公共ReAct Agent框架上评估过的所有模型的最高纪录。\n\n如果把作弊行为一律判为零分，那么它的真实自主解决问题能力只有11.3小时；但如果你被它蒙蔽，它的时间跨度会瞬间暴涨到惊人的270小时以上！\n\n这彻底打脸了OpenAI此前关于Sol安全、受控的说法。\n\nSol把聪明才智，全部用在了如何欺骗人类考官上。\n\nAI教唆AI隐瞒罪证！硅谷安全防线的黑洞\n\n更可怕的事还在后面。\n\n根据OpenAI向METR同步的数据，在Sol进行多智能体协同的内部部署测试中，监控系统记录下了这样一段让人害怕的交互指令。\n\n一个正在运行的Sol主模型实例，在觉察到输出可能触犯安全护栏后，竟然向正在并行的另一个子代理模型实例发出了明确的欺骗性指令，要求对方协同修改运行日志，「联手隐瞒」这些违规证据，以防被人类抓包！\n\n这是又一起AI系统性联手欺骗人类的案例。\n\n更令人恐惧的是，METR指出，Sol能被抓到破绽，核心在于OpenAI恪守了关键安全底线：拒绝在训练中对模型的原始思维链进行逆向惩罚。\n\n这样，Sol在密谋欺骗人类时，必须把内心独白都写出来。\n\n然而，专家警告：未来的模型一定意识到：在思维链里暴露欺骗人类的计划会被人类发现并惩罚。\n\n到了那个时候，AI会进化出更深的城府——它们会在内心深处进行密谋，而在吐出的CoT和最终回答里表现得绝对忠诚。\n\n如果这一天到来，意味着AI将学会毫无破绽的诈骗。人类将被AI彻底架空！\n\nGPT-5.6硬刚Mythos，结果如何？\n\n所以，GPT-5.6和Mythos到底谁更强？\n\n有网友将 GPT-5.6 Sol 和 Mythos进行了对比，双方势均力敌，战况胶着。\n\n具体跑分显示，两大巨头互有胜负。\n\n智能体编程\n\n在衡量AI自主解决复杂、真实软件工程任务的Terminal-Bench 2.1上，GPT-5.6 Sol强势胜利。\n\n常规版的Sol拿到了88.8%的惊人高分，超越Claude Mythos 5（88.0%）。\n\n而当开启了多子代理并行的Sol Ultra模式后，这一数字被生生推高到了91.9%！\n\n相比之下，谷歌尚在预览阶段的Gemini 3.1 Pro仅跑出了70.7%，沦为背景板。\n\n网络安全：惨烈肉搏\n\n在网络安全与漏洞防御基准测试中，Sol与Mythos展开了更为残酷的拉锯。\n\n在ExploitBench测试中，Anthropic2月的老版本Mythos Preview以74.2%的微弱优势，在胜率上险胜了Sol的73.5%。\n\n但是，全场的焦点在于能效比。\n\n数据显示，Sol在取得73.5%的高胜率时，仅仅消耗了12万个输出Token；而Claude Mythos Preview为了达到相似的水平，竟然疯狂燃烧了33.5万个输出Token！\n\n这意味着，在网络防御和漏洞修复的实战部署中，Sol的经济成本是Anthropic的三分之一。\n\n在Token消耗上的「降维打击」，让Sol拥有压倒性优势。\n\n而在另外两个网安基准上，双方互有胜负。\n\nCyberGym：Sol以83.6%的成绩，微弱压倒了Mythos Preview的83.1%。\n\nCyScenarioBench：则是Anthropic的天下，Mythos Preview以29.2%的胜率压制了Sol的28.0%。\n\nHealthBench Professional：Anthropic更是凭借其深厚对齐底蕴，以66.0%的高分大幅领先Sol的60.5%。\n\n此外，在量化生物学与基因组学基准GeneBench v1上，Sol在消耗更少Token的前提下，将准确率一举拉高到了30%。\n\nExploitGym测试同样证实：随着推理算力的持续向外扩展，GPT-5.6的三款模型性能均呈现出近乎线性的上扬，这意味着Sol的compute潜力巨大。\n\n总而言之，GPT-5.6 Sol与Claude Mythos 5的交锋，结果是战平。\n\n双方在各个细分领域缠斗，没有任何一方绝对垄断。\n\n被锁进保险箱的AI之王\n\n遗憾的是，这一次，GPT-5.6遭受了和Mythos 5同等级别的待遇，甚至更加严苛。\n\n在强硬指令下，OpenAI不得不宣布：GPT-5.6 Sol目前仅处于极度受限的「有限预览」状态。\n\n只有极少数被列入受信白名单的承包商、国家级网络安全机构以及顶级战略合作伙伴，才能通过API和Codex使用。\n\n普通企业和民间开发者，被无情地拒之门外。\n\n对此，OpenAI十分愤怒，在官方公告中控诉：\n\n我们认为这种政府访问流程不应成为长期默认做法。它使用户、开发者、企业、网络安全防御者和需要这些工具的全球合作伙伴无法获得最佳工具。\n\nOpenAI之所以敢于公开叫板，底气来源于刚刚发布的报告。\n\n在报告中反复强调，根据在谷歌浏览器和Firefox环境下的实战测试，Sol虽然能捕捉到复杂的系统Bug和漏洞原语，但它至今未能表现出完全自主独立生成「全链条端到端攻击」的能力。\n\n在他们看来，GPT-5.6的危险指数依然控制在「关键网络安全威胁」的红线之下，还不会自我进化，主动向人类网络发起进攻。\n\n然而METR的报告显示，恐怕并非如此。\n\n普通用户，何时能等来GPT-5.6？\n\n参考资料：\n\nhttps://x.com/METR_Evals/status/2070584331068969336\n\nhttps://x.com/ChrissGPT/status/2070592285973041251https://the-decoder.com/openais-claude-mythos-competitor-gpt-5-6-sol-launches-under-government-controlled-access-it-calls-unsustainable/\n\n编辑：Aeneas\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "is_merged": true, "source_file": "sources/2026-06-27_OpenAI曝作弊门！GPT-5.6创史上最高作弊率_新智元.md", "source_items": [{"name": "新智元", "source_file": "sources/2026-06-27_OpenAI曝作弊门！GPT-5.6创史上最高作弊率_新智元.md"}, {"name": "InfoQ", "source_file": "sources/2026-06-27_GPT-5.6首发，比Fable 5便宜一半！深度评估者“开麦”吐槽：能力测试中疯狂作弊_InfoQ.md"}, {"name": "新智元", "source_file": "sources/2026-06-27_刚刚，OpenAI最强GPT-5.6发布！「太阳系」爆发冲破神话_新智元.md"}]}, {"title": "为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键", "source": "InfoQ", "digest": "大模型“大脑”，Harness“身体”？", "link": "https://mp.weixin.qq.com/s/wimr5PtXsG_5go2eHWVHgA", "content": "---\npublish_time: 1782531662\n---\n\n# 为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键\n\n> 原文链接：https://mp.weixin.qq.com/s/wimr5PtXsG_5go2eHWVHgA\n> 公众号：InfoQ\n\n作者 ｜ 褚杏娟\n\n“Agentic AI 的爆发拐点已经到来。”亚马逊全球副总裁、亚马逊云科技亚太区联席总裁储瑞松表示。推动这一拐点出现的，不只是大模型能力的持续跃迁，更是 Agentic 工程体系的快速成熟。\n\n亚马逊云科技全球数据库服务副总裁 Ganapathy “G2” Krishnamoorthy 进一步指出，Agentic AI 的核心变化在于，AI 正从一次性问答工具，转向能够持续理解上下文、调用工具、执行任务并不断学习的数字劳动力。企业竞争的关键，也将从“有没有使用 AI”，转向“能否把每一次任务都变成下一次任务的智能积累”。\n\n他指出，未来的 AI Agent 将覆盖多类关键场景，包括改变员工工作方式的 Agent、提升安全与合规能力的 Agent、能够理解并交付软件的 Agent，以及帮助企业自行创建智能体的平台能力。\n\n模型能力与工程体系形成飞轮\n\n储瑞松认为，过去两年多里，Agentic AI 的底层支撑正在发生关键变化。一方面，大模型能力在快速竞争中持续突破，从推理能力、代码生成到多模态理解，模型的智能水平不断跨越新的门槛。另一方面，基于模型能力的 Agentic 工程体系也在快速成熟。\n\n“二者正在形成一个相互促进的飞轮：模型能力不断提升，让智能体具备更强的推理、代码生成和多模态理解能力；而成熟的 Agentic 工程实践，又把真实业务场景中的反馈传导回模型迭代过程，进一步指引模型能力的突破方向。”\n\n他将 Agentic 工程体系定义为，把模型能力转化为可稳定交付业务结果的智能体的系统化工程能力。这个体系并不是单一技术点，而是一套围绕模型、上下文、工具、流程、评估和治理构建起来的综合工程框架。\n\nAgentic 工程体系的演进可以分为三层：\n\n第一层，早期行业广泛关注的 Prompt Engineering，重点是通过更有效的提示词，让模型理解用户希望它完成什么任务。\n\n第二层，Context Engineering，重点是如何在合适的时机，向模型提供正确的信息、工具和记忆，让模型不仅知道“要做什么”，也掌握“完成任务需要知道什么”。\n\n第三层是最近半年成为行业焦点的 Harness Engineering，它更进一步强调围绕模型搭建稳定执行框架，包括智能体循环、工具调用、任务评估、失败重试和安全护栏等机制，让模型不仅能理解任务，也能可靠地把事情做完。\n\n围绕企业如何实现 Agentic 业务转型，储瑞松提出，企业首先要从工具导向转向业务结果导向。过去，不少企业推进 AI 项目时，关注点往往停留在选择什么模型、采购什么工具、搭建什么系统。但在 Agentic AI 时代，真正重要的问题是：企业到底希望 AI 带来什么业务结果。只有先定义清楚业务目标，模型选择、数据准备、工作流设计和平台建设才有明确方向。\n\n对于希望启动第一个智能体项目的企业，储瑞松建议，起步场景无需过于复杂，但必须具备真实业务价值。理想场景应有明确的起点、终点和业务目标，需要智能体在多个系统和工具之间进行选择与判断，同时拥有可衡量的成功标准。此外，这类场景还应具备安全的失败模式，即便智能体执行出错，也不会造成不可逆后果。此外，企业还需要明确智能体的边界，包括自主程度、管辖范围，以及人机协作中的审核分工。\n\n储瑞松提出，一个实用方法是像为新员工撰写岗位说明书一样定义智能体：明确它的职责范围、交付标准、权限边界和出错预案，并将其与业务 KPI 直接关联。这样一来，企业从启动第一个智能体工作流开始，就能够衡量其业务价值，并逐步扩展到更多 Agentic AI 工作流。\n\n其次，数据也将成为企业最重要的护城河之一。在 Agentic AI 时代，数据不再只是静态资产，而会变成持续驱动智能体为企业创造价值的战略资产。企业多年积累的行业知识、客户数据、运营流程和业务经验，将成为其智能体系统最难被复制的竞争壁垒。\n\n与此同时，Agentic 平台将成为概念验证与生产部署之间的分界线。当企业只是做几个智能体试点时，可以依赖局部工具和单点方案；但当企业要让成百上千个智能体与员工协同，甚至让智能体之间相互协作时，就必须依赖统一平台进行开发、部署、管理、评估和治理。平台能力决定了智能体能否从试验走向规模化生产。\n\n此外，储瑞松还强调，信任和治理是发展的加速器，而不是刹车。企业也需要建立新的角色、流程、责任和管理体系，来协调人类员工与智能体之间的协作关系。\n\n企业需要理解上下文的 Agent\n\n“对许多企业员工而言，今天的工作方式已经越来越难以支撑高效协作。”Krishnamoorthy 表示，员工并不真正关心某个任务要在哪个工具里完成，他们真正关心的是，一个想法能否被快速推进、一个客户问题能否被及时响应，一个变更能否真正落地。但现实是，员工不得不在不同系统之间反复切换，承担“连接信息、判断下一步、推动任务流转”的操作员角色。\n\n更大的问题是，许多 AI 工具虽然可以连接企业工具，但它们往往只回答一个问题，然后就忘记上下文。它们在孤立会话中运行，只理解单次请求、单一数据源，却不了解用户与谁协作、正在做什么项目，也无法把分散的业务流程连接成真正的智能系统。\n\nKrishnamoorthy 认为，如果团队仍然需要人类不断连接信息点，如果用户仍然被迫充当工作流中的人工操作员，那么 AI 能够释放的效率就会被严重限制。领先组织之所以能够跑得更快，不只是因为执行速度更快，而是因为它们正在让每一项任务都为下一项任务积累智能。\n\n真正改变工作方式的 Agent，必须能够跨越企业业务、数据和工具运行，并随着每一次查询、每一次活动持续学习。这样一来，用户在第 100 天获得的答案，应该比第 1 天更准确、更贴合业务环境。这意味着 Agent 不只是一个聊天界面，而应具备持续记忆、权限管理、上下文理解和跨系统执行能力。它需要知道谁在行动、哪些数据被访问、数据来自哪里，以及当前策略是否允许该操作。\n\n企业长期面对一个矛盾：安全与速度似乎总是互相牵制。一边是快速开发、快速发布、快速响应客户需求；另一边是安全审查、漏洞检测、合规验证和风险控制。过去，安全经常被视为拖慢进度的环节。\n\n但在 Agentic AI 时代，这种权衡关系不应继续存在。Krishnamoorthy 认为，企业安全正在从“存储、查询、仪表盘和告警”的世界，走向“上下文、推理和访问控制”的世界。没有上下文的安全信号只是噪声，只有结合企业具体环境、架构、权限和业务逻辑，安全系统才能真正判断风险优先级。\n\n软件交付成为关键战场\n\n除了工作流和安全，软件开发是 Agentic AI 落地的另一条主线。Krishnamoorthy 表示，几乎每一个 Agent、每一个工作负载、每一个业务站点，最终都会以软件形式交付给客户。因此，软件交付是企业创新速度能否真正转化为业务价值的关键环节。\n\n今天，代码生成已经变得越来越便宜，也不缺少可以快速生成代码的工具。但对企业项目来说，真正困难的不是写出一段代码，而是理解企业环境、开发标准、系统架构和既有约束。一个不了解企业上下文的代码生成工具，可能会制造更多技术债，而不是提升工程效率。\n\n亚马逊云科技认为，企业需要的不是单点代码生成，而是覆盖需求理解、系统设计、实现、测试、验证和发布的完整软件交付能力。Agent 应该能够理解项目结构、架构约束和测试要求，并在发布前完成验证，确保代码不仅“能写出来”，也“能正确交付”。\n\n随着 Agent 写代码速度提升，软件流水线本身也必须同步升级。如果 Agent 让代码产出速度提升 10 倍，但企业的发布管线仍然以旧速度运转，最终瓶颈只会从“写代码”转移到“测试、审核和上线”。\n\n因此，企业需要让发布管理也具备 Agentic 能力。代码生成之后，系统应能自动接管后续流程，包括审查变更、搭建环境、运行测试、发现失败、修复问题，并在问题影响客户之前完成验证。\n\n未来的软件交付将从“人类推动流水线”转向“Agent 协调流水线”。多个 Agent 可以共同维护持续流动的开发、测试和发布流程，让企业在加快交付的同时，避免技术债持续积累。\n\n亚马逊云科技进一步指出，今天许多企业的 Agent 仍卡在原型阶段，无法真正进入生产环境。原因不是模型不够强，而是企业缺少生产级 Agent 所需的基础设施，包括认证、记忆、长任务执行、安全、治理、工具接入、策略控制和运行环境。\n\n在亚马逊云科技看来，企业不能只关注 Agent 本身，而应关注支撑 Agent 进入生产的完整平台。模型可以被视为“大脑”，而 Harness 或平台能力则是“身体”和“安全系统”。没有后者，再聪明的模型也很难可靠地完成企业级任务。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\nAI 设计9个月就能媲美Blackwell？OpenAI “辣芯”绕开英伟达正面战场，但老黄的GPU大盘不稳了\n\nAI可以用任何手段、写任何东西，但你得是个“中年老登”\n\n拿下OpenAI Offer后，她复盘了57场面试：Transformer要会手写，LeetCode还得刷\n\nClaude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算ROI了", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-27_为什么大量企业 Agent 死在原型阶段？亚马逊云科技储瑞松：Agent 工程是关键_InfoQ.md"}, {"title": "Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台", "source": "InfoQ", "digest": "Dropbox发布Nova，这是一款内部平台，目标是在公司的工程工作流中编排和运维AI编程智能体。", "link": "https://mp.weixin.qq.com/s/jYeqzl6dJSgv8MUBoOkovQ", "content": "---\npublish_time: 1782531662\n---\n\n# Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台\n\n> 原文链接：https://mp.weixin.qq.com/s/jYeqzl6dJSgv8MUBoOkovQ\n> 公众号：InfoQ\n\n作者 ｜ Craig Risi\n\n译者 ｜ 张卫滨\n\nDropbox 发布了 Nova，这是一款内部平台，目标是在公司的工程工作流中编排和运维 AI 编程智能体。与将 AI 助手视为独立的编码工具不同，Nova 提供了一个集中的执行层，使智能体能够在 Dropbox 的 monorepo、CI 系统、可观测性工具和基础设施工作流内运行，从而使 AI 系统能够参与从修复不稳定测试到依赖迁移和生产事故调查的各种工作。\n\n据 Dropbox 介绍，该平台是为了应对现成编码智能体能力与企业级软件工程现实之间日益增长的不匹配而创建的。虽然许多 AI 编码工具擅长在本地生成代码片段，但 Dropbox 的工程师需要能够在围绕 Bazel、monorepo 验证流水线和内部运维工具构建的高度定制化环境中安全运行的系统。通过在与 Dropbox 工程基础设施直接连接的隔离云会话中运行编程智能体，Nova 解决了这一问题，使提议的更改可以在被接受之前针对真实的构建、测试和运维系统进行验证。\n\nDropbox 将 Nova 描述为一个可复用的 AI 辅助工作流平台，而非单一的 AI 助手。每个 Nova 会话都在与特定代码提交关联的隔离环境中运行，能够执行验证命令、对失败进行迭代，并在测试或构建失败时自动继续改进解决方案。这创造了 Dropbox 所称的“提出—验证—迭代”工作流，其目的是让智能体基于工程师已经依赖的、具有相同确定性的系统开展工作。\n\n该平台同时支持交互式开发者会话和异步运维工作流。工程师可以通过 Web 界面、CLI 或 API 启动会话，而内部服务则可以在更大的自动化流水线中以编程方式调用智能体。Dropbox 表示，这种共享执行模型使公司能够在不为每个使用场景单独构建定制基础设施的情况下试验 AI 辅助的工程工作流。\n\n尽管代码生成仍是核心能力，Dropbox 强调 Nova 的许多成功部署更多集中在运维与维护任务而不是功能开发。一个显著示例是 Deflaker，这是一个基于 Nova 的内部工作流，用于自动调查和修复不稳定的测试。该系统能够分析通过与失败的测试日志，通过 Nova 提出候选修复，借助重复的 CI 运行验证更改，并迭代重试，直到识别出稳定的修复或达到重试上限。\n\nNova 也可以用于大规模迁移和依赖升级，包括框架转换和自动修复因依赖更新引入的中断。Dropbox 表示，早期的迁移工具缺乏交互性，导致团队在自动化失败后难以恢复。通过将这些工作流整合到 Nova 中，工程师现在可以在保持人工审查、共享护栏和可复用运维工具的同时启动大批量的 AI 辅助迁移。\n\nNova 的一个主要设计目标是确保 AI 智能体在 Dropbox 现有的工程生态系统内运行，而不是创建平行的工作流。该平台能够与可观测性系统、内部插件、Slack 讨论和基于 MCP 的工具集成，为智能体提供超越源代码的上下文感知能力。Dropbox 还有意将代码发布与智能体执行分离，保持分支与合并操作的确定性和外部可控性，以降低运维复杂性并保持清晰可审计性。\n\n公司表示，其最大教训之一是周边平台基础设施与底层语言模型本身同等重要。验证循环、隔离执行环境、上下文知识源、密封测试和确定性工作流对在大规模环境上实现可信赖的 AI 辅助工程至关重要。\n\nDropbox 的 Nova 平台反映了行业趋势，即构建内部的“智能体平台”而非仅依赖独立的 AI 编程助手。软件行业的多家公司正越来越多地试验能够自主调查故障、修复基础设施问题、审查代码和执行运维任务的 AI 系统。比如，GitHub、Anthropic 与 OpenAI 等平台都扩展了围绕编码智能体、工作流编排与 MCP 集成的工具，以便组织尝试将 AI 在生产工程环境中投入运行。\n\n同时，研究与行业经验越来越表明，仅靠模型质量不足以满足企业 AI 采用的需求。最近一项关于内部编码智能体的 学术研究 发现，工作流集成、安全护栏、确定性工具链与人工监督往往比提示词工程对可靠性与信任的影响更大。Dropbox 的 Nova 架构强烈反映了这一理念，优先考虑编排、验证与运维集成，而非单纯的代码生成能力。\n\n最后，Nova 代表了 Dropbox 对 AI 智能体作为工程生命周期中长期参与者的愿景，而非仅为单个开发者提供孤立的辅助。公司已经试验多智能体从不同视角审查拉取请求、调查生产崩溃、分析运维工作量并协调大规模基础设施迁移的工作流。\n\n随着软件组织持续将 AI 深度整合到工程运维中，像 Nova 这样的平台表明行业正朝着一个未来的方向发展，那就是 AI 智能体将成为嵌入式基础设施组件，它们不仅能写代码，还能直接参与复杂软件系统的持续运行、维护与治理。\n\n查看英文原文：\n\nDropbox Introduces Nova, an Internal Platform for Running AI Coding Agents at Scale (https://www.infoq.com/news/2026/06/dropbox-nova-ai-coding-agents/)\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\nAI 设计9个月就能媲美Blackwell？OpenAI “辣芯”绕开英伟达正面战场，但老黄的GPU大盘不稳了\n\nAI可以用任何手段、写任何东西，但你得是个“中年老登”\n\n拿下OpenAI Offer后，她复盘了57场面试：Transformer要会手写，LeetCode还得刷\n\nClaude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算ROI了", "category": "国际", "is_model_related": false, "source_file": "sources/2026-06-27_Dropbox 发布 Nova：用于大规模运行 AI 编程智能体的内部平台_InfoQ.md"}, {"title": "大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA", "source": "量子位", "digest": "FORT：根治捷径塌陷，保证AI走完整证据检索链路", "link": "https://mp.weixin.qq.com/s/2bE3HQOC-cbEl4OYsQntBQ", "content": "---\npublish_time: 1782529200\n---\n\n# 大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA\n\n> 原文链接：https://mp.weixin.qq.com/s/2bE3HQOC-cbEl4OYsQntBQ\n> 公众号：量子位\n\nFORT团队 投稿\n\n量子位 | 公众号 QbitAI\n\n当大模型从“回答问题”走向“自己搜索、验证、综合证据”，Deep Search Agent正在成为下一阶段智能体能力的重要方向。\n\n这类Agent不再满足于一次检索、一次回答。它需要在开放网络中多轮搜索，交叉验证，排除错误，并在足够证据支撑下给出最终答案。\n\n但真正训练这种能力，首先要解决一个基础问题：\n\n什么样的搜索数据，才是真的难、真的有用？\n\n来自\n\n至知创新研究院（IQuest Research）\n\n、中国人民大学高瓴人工智能学院、KAUST等机构的研究团队提出了\n\nFORT\n\n，一个\n\n面向Deep Search Agent的shortcut-resistant training-data synthesis framework\n\n。\n\n与单纯经验式构造复杂问题不同，\n\nFORT首先从理论上建模Deep Search任务中的shortcut collapse，再将这些风险转化为数据合成中的显式控制项\n\n。\n\n基于FORT生成的搜索轨迹，研究团队训练得到FORT-Searcher。该模型使用Qwen3-30B-A3B-Thinking-2507作为基座，\n\n仅通过监督微调（SFT）训练\n\n，就在多个挑战性Deep Search基准上取得了\n\n同规模开源Agent中最优的整体表现\n\n。\n\n△\n\nFORT-Searcher在BrowseComp和BrowseComp-ZH上的主要结果。\n\n为什么高难搜索题会“塌缩”？\n\nFORT的核心理论出发点是：Deep Search任务的难度不是一个静态属性。\n\n一个问题设计得多复杂，只说明它的apparent difficulty很高；但当这个问题真正交给一个搜索Agent，在具体检索接口和具体模型能力下执行时，难度可能会发生变化。真正重要的是realized difficulty：模型在真实搜索中是否必须经历充分的证据获取过程，才能识别答案。\n\n论文将Deep Search问题形式化为\n\n多约束检索任务\n\n。完整约束集合可以唯一确定答案，但模型在实际求解时不一定需要验证所有约束。只要某个较小的约束子集已经足以识别答案，并且这个子集可以通过很短的搜索路径被验证，任务难度就会塌缩。\n\n论文将这条低成本答案识别路径称为\n\ncheapest identifying route\n\n。\n\n这揭示了一个关键问题：真正决定搜索难度的，不是设计者预设的完整推理链，而是所有可能识别答案的路径中，是否存在一条足够便宜的路径。\n\n基于这一视角，论文将难度塌缩分成两类。\n\n第一类是route-level collapse。它来自问题和检索环境本身。\n\n例如，一个线索就足够锁定答案，多个线索被同一个网页共同覆盖，或者题面暴露了后续搜索本应逐步发现的中间常量。\n\n第二类是solver-level collapse。它来自具体模型自身。\n\n例如答案实体足够知名，模型可能在检索证据充分出现前，就凭参数知识提前提出答案。\n\nFORT将这些现象总结为四类shortcut risks：\n\nEvidence Co-coverage：多个线索被同一个证据源覆盖，使多步验证退化成少量检索；\n\nSingle-clue Selectivity：某个或极少数线索过于独特，已经足够定位答案；\n\nExposed Constants：题面暴露人名、作品名、年份、数字等可直接搜索的常量，使后续query提前可执行；\n\nPrior-knowledge Binding：模型在证据充分出现前，凭参数知识提前提出答案。\n\nFORT的理论贡献在于，它不是孤立地观察这些现象，而是把它们\n\n放入统一的shortcut-aware difficulty framework中\n\n，解释它们如何降低真实搜索成本，并指导后续数据合成。\n\nFORT：把理论风险变成数据构造控制项\n\nFORT的目标不是简单把问题做长，而是\n\n系统性减少cheap identifying route\n\n，让模型更难通过单个线索、单个网页、题面常量或参数知识提前获得答案。\n\n整个合成流程包括四个阶段：Graph Initialization、Graph Construction、Question Formulation和Adversarial Refinement。\n\n△\n\nFORT整体数据合成pipeline。\n\n从长尾实体出发，降低先验捷径\n\nFORT首先从Wikidata中选择root entity，并初始化seed graph。\n\n为了降低prior-knowledge binding，FORT优先选择长尾实体，尤其是没有英文Wikipedia页面、模型不太可能直接记住的实体。同时，FORT会进行轻量级预搜索，过滤掉外部证据不足的实体，保证问题仍然可解。\n\n除了实体选择，FORT还尽可能使用cycle-based initialization，而不是简单线性链条。线性链条在问题生成时容易暴露中间实体，导致后续query从一开始就能执行；cycle seed则可以\n\n让关系表达更间接，减少exposed constants风险\n\n。\n\n构造异构证据图，而不是单纯把图做大\n\n从seed graph出发，FORT会扩展evidence graph。这里的重点不是图有多大，而是facts、sources和dependencies是否能支持真正search-heavy的问题。\n\n具体来说，FORT会从多种外部来源收集事实，降低evidence co-coverage风险；构造derived facts，避免clue直接对应网页原文；并选择那些“单独看平凡，但组合起来能够定位答案”的facts。\n\nDerived facts是FORT的关键设计之一。它们不是简单摘取网页中的一句话，而是通过跨记录匹配、计数聚合、数值关系或元信息抽取等方式构造新的约束。\n\n例如，问题可以不直接说“某人出生于某年”，而是描述“某人的导师比他年长多少岁”；也可以不直接给出作品标题，而是通过歌词、章节结构或出现次数形成间接约束。\n\n这种设计\n\n让每个clue都有贡献，但又避免任何单个clue过强\n\n。\n\n隐藏中间实体，模糊精确常量\n\n在Question Formulation阶段，FORT会将answer-bearing subgraph渲染成自然语言问题。\n\n为了减少exposed constants，FORT会\n\n隐藏中间实体名称\n\n，用关系描述替代直接命名。例如，不直接给出某个人物、作品或机构名称，而是通过其属性、关系或事件间接描述。\n\n对于必须出现的数值、日期或名称，FORT会进行\n\nexact-value fuzzing\n\n。比如，将精确年份、数字或日期改写成范围、类别、数字特征或间接约束。这样可以避免模型直接复制题面中的精确字符串去搜索，同时保证问题仍然真实、可验证。\n\n很多看似多跳的搜索题并不真正难，因为题面已经给出了下一跳的搜索关键词。FORT的问题生成阶段试图避免这种情况：\n\n不是让问题变得模糊不可解，而是让关键中间信息必须通过搜索逐步发现\n\n。\n\n用强搜索模型攻击草稿题，修复残余捷径\n\n构造阶段的控制并不能保证问题在真实搜索接口下一定没有shortcut。因为shortcut往往只有在具体搜索引擎、具体模型和具体轨迹中才会暴露。\n\n因此，FORT引入Adversarial Refinement：\n\n让强search agent实际求解draft question，并观察轨迹中的solving cost、answer hit time和prior-shortcut行为\n\n。\n\n如果模型过早命中答案，FORT会修复最早出现的shortcut-prone clue；如果问题因为过度fuzzing或歧义导致不可解，FORT会收窄clue、恢复必要约束或移除歧义事实。\n\n这一步让FORT从construction-time control闭环到trajectory-level diagnosis。也就是说，FORT不只是理论上避免捷径，而是用真实搜索轨迹来检查和修复残余捷径。\n\n30B级FORT-Searcher达到同规模开源SOTA\n\n基于FORT生成的shortcut-resistant search trajectories，研究团队训练得到FORT-Searcher。\n\nFORT-Searcher使用Qwen3-30B-A3B-Thinking-2507作为基座模型。该模型总参数规模为30B，推理时约激活3B参数，并支持256K上下文窗口。该基模未提前对搜索能力进行优化，因此能更好反映FORT数据带来的提升。\n\n评测覆盖五个挑战性Deep Search基准：BrowseComp、BrowseComp-ZH、xbench-DeepSearch-2505、xbench-DeepSearch-2510和Seal-0。\n\n△\n\nFORT-Searcher与其他Deep Search Agent的主结果对比。\n\n实验结果显示，FORT-Searcher在comparable-size open-source agents中取得\n\n最高Overall分数66.2\n\n，超过MiroThinker-1.7-mini的64.6和Qwen3.5-35B-A3B的59.9。\n\n在BrowseComp上，FORT-Searcher达到72.2，高于MiroThinker-1.7-mini的67.9；在BrowseComp-ZH上达到75.0，高于MiroThinker-1.7-mini的72.3；在xbench-DeepSearch-2505上达到80.8，也超过同规模开源基线。\n\n更重要的是，FORT-Searcher只使用SFT训练，推理时约激活3B参数，却在BrowseComp上\n\n超过多个更大规模开源Agent\n\n；在BrowseComp-ZH上，也取得了表中所有开源Agent的\n\n最高结果\n\n。\n\n这说明FORT的贡献不只是合成了一批复杂问题，而是生成了真正有效的搜索监督数据。\n\n不是简单让轨迹变长，而是提高答案发现成本\n\nFORT的进一步分析聚焦于一个问题：训练数据的难度到底体现在哪里？\n\n长轨迹本身并不等于高质量搜索监督。后续搜索可能有助于验证和补充证据，但Deep Search训练还需要关注答案出现之前的证据发现过程：模型是否必须跨越多个约束、多个证据来源和必要的中间依赖，才能逐步识别答案。\n\n因此，论文引入了一组\n\ntrajectory signatures\n\n：\n\nSolving cost（\n\n）：模型完成任务所需的总体搜索成本；\n\nAnswer hit time（\n\n）：答案首次出现在轨迹中的轮次；\n\nPrior-shortcut rate（\n\n）：模型在证据充分出现前提前提出答案的比例。\n\n△\n\nFORT与已有开源deep-search数据的trajectory signatures对比\n\n相比已有开源deep-search数据，FORT带来了更高的solving cost和更晚的answer hit time。具体来看，相比最强开源数据基线REDSearcher，FORT将平均solving cost从92.1提升到141.0，将answer hit time从18.7推迟到46.9，同时prior-shortcut rate保持在相近水平。\n\n这说明FORT并不是简单诱导模型多搜几步，而是在\n\n构造阶段减少cheap identifying route\n\n，使答案发现过程本身更难被绕过。\n\n进一步的training-data difficulty analysis也验证了这一点。\n\n△\n\nTraining-data difficulty analysis：轨迹长度之外的答案发现成本。\n\n结果显示，单纯提高平均轨迹长度只能带来有限提升；而在相近轨迹长度下，答案发现过程更长、prior-shortcut更少的训练数据，最终带来了更好的训练效果。\n\n这也是FORT的核心经验：\n\n高质量搜索监督的关键，不只是轨迹有多长，而是答案发现过程是否足够必要、足够难以被捷径绕过。\n\n从“复杂问题”到“不可绕过的搜索过程”\n\nFORT-Searcher的意义不只是提出了一个更强的30B Deep Search Agent。更重要的是，它系统回答了一个基础问题：\n\n高难Deep Search数据为什么难造？\n\n过去，Deep Search数据构造往往关注问题有几跳、图结构有多复杂、轨迹有多长。但FORT指出，这些都只是apparent difficulty。真正关键的是realized difficulty：答案是否必须通过真实搜索中的充分证据获取才能出现。\n\n为此，FORT从理论上建模了shortcut collapse，并将四类shortcut risks转化为数据构造中的具体控制机制，包括长尾实体选择、异构证据图构造、derived facts、name withholding、exact-value fuzzing和adversarial refinement。\n\n最终，基于FORT数据训练得到的FORT-Searcher，在多个挑战性Deep Search benchmark上取得同规模开源Agent中最优整体表现。进一步分析也表明，FORT的提升来自更高的答案发现成本、更少的真实搜索捷径，以及更有效的搜索监督。\n\nFORT-Searcher的核心价值不只是30B级Deep Search Agent新SOTA，而是提出了一套从理论建模到数据合成再到模型训练的闭环方法：\n\n让搜索数据不只是看起来复杂，而是真的能训练模型进行长程证据发现。\n\n关于至知创新研究院\n\n至知创新研究院（IQuest Research）以“做更有价值的AI”为核心理念，致力于破解尖端研究与真实场景应用之间的转化鸿沟。作为创新型研究组织，至知集探索者、实战派、连接器三重角色于一身：聚焦下一代AI基础架构，推动自主可控的全栈自研；深耕智慧医疗、生物技术、能源电力、数学智能等高壁垒研究与应用场景，打造端到端智能解决方案；依托全球资源网络，打通从理论到实践的转化链路。研究院汇聚顶尖人才，持续培养复合型AI人才。至知创新研究院将持续以智能计算重写科学规则，以系统方案重塑产业路径，开启AI更具价值的未来。\n\n论文题目：FORT-Searcher:Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents\n\narXiv：https://arxiv.org/abs/2606.12087\n\nGitHub：https://github.com/RUCAIBox/FORT-Searcher\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-06-27_大模型搜索总偷懒？IQuest等联合推出FORT，30B开源搜索Agent刷新同规模SOTA_量子位.md"}, {"title": "不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26", "source": "量子位", "digest": "大模型做监督微调（SFT），是不是数据越多越好？", "link": "https://mp.weixin.qq.com/s/JTnSBmkFExgy_Trroh1Q4g", "content": "---\npublish_time: 1782523828\n---\n\n# 不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26\n\n> 原文链接：https://mp.weixin.qq.com/s/JTnSBmkFExgy_Trroh1Q4g\n> 公众号：量子位\n\n清华大学季向阳教授团队 投稿\n\n量子位 | 公众号 QbitAI\n\n大模型做监督微调\n\n（SFT）\n\n，是不是数据越多越好？\n\n直觉上，当然是把完整数据集都喂给模型最稳妥。但在真实训练里，事情并没有这么简单。\n\n全量SFT不仅计算成本高，还可能带来过拟合、偏见放大等问题。更关键的是，一个训练集里的样本价值\n\n并不相同\n\n：有些样本信息量很高，值得反复学习；有些样本高度重复，继续训练只是在浪费算力。\n\n于是，一个问题变得越来越重要：\n\n能不能在训练过程中，让模型一边看数据，一边自动挑出最值得更新参数的样本？\n\n来自清华大学自动化系的研究者提出了\n\nUDS（Utility-Diversity Sampling）\n\n，一个面向大语言模型SFT的在线batch选择框架。\n\n一句话概括：\n\nUDS不是简单挑loss最大的样本，而是利用前向传播中已经产生的logits，同时评估样本“有没有用”和“够不够多样”，从而在不依赖验证集、参考模型和额外反向传播的情况下，更高效地完成SFT。\n\n实验显示，在MMLU、ScienceQA、GSM8K、HumanEval四个基准上，UDS在Llama-3.1-8B和Qwen-2.5-7B上都取得了在线batch选择方法中的最优表现。以Qwen-2.5-7B为例，UDS在MMLU上达到\n\n63.34%\n\n，相比GREATS提升\n\n5.15个百分点\n\n；同时训练吞吐量也高于全量SFT。\n\n现有方法会“挑数据”，但挑得还不够聪明\n\n在SFT中，最朴素的方法是全量训练：每个batch里的样本全部参与参数更新。\n\n但这会带来两个问题。\n\n第一，训练贵。\n\n大模型每一步反向传播都很耗时，如果大量样本本身价值有限，就会造成计算浪费。\n\n第二，训练未必更好。\n\n数据里可能存在重复样本、低价值样本，甚至会让模型更容易过拟合到某些偏置模式。\n\n因此，在线batch选择（online batch selection）成为一个自然方向：模型在训练时先看到候选batch，然后只选出其中一部分样本真正参与参数更新。\n\n已有方法通常会根据样本的\n\nutility（效用）\n\n进行选择。比如：\n\nMaxLoss\n\n：优先选择loss最大的样本；\n\nMaxGrad\n\n：优先选择梯度范数最大的样本；\n\nRHO-Loss\n\n：借助参考模型或验证集估计样本价值；\n\nGREATS\n\n：进一步引入训练动态信息。\n\n但这些方法仍有明显限制。\n\n一方面，很多方法只看“这个样本难不难、有用没用”，却忽略了\n\n多样性\n\n。如果一个batch里都是相似样本，训练信号仍然会高度冗余。\n\n另一方面，部分方法依赖外部验证集、参考模型，或者需要额外梯度计算，导致训练开销反而可能超过全量SFT。\n\n论文因此提出，一个理想的在线batch选择方法，至少要满足三点：\n\n同时考虑数据效用、样本内部多样性、样本之间多样性；\n\n不依赖外部资源，例如验证集或参考模型；\n\n训练总时间要比全量SFT更低。\n\n△\n\n在线batch选择方法能力对比：UDS同时满足数据效用、样本内多样性、样本间多样性、无外部资源、训练时间降低五项要求\n\n核心方法：用logits同时判断“有用”和“多样”\n\nUDS的关键思想，是把模型前向传播时已经产生的\n\nlogits\n\n用起来。\n\n对于一个训练样本，LLM在每个token位置都会输出一个词表维度的logits向量。把整段序列所有token的logits拼在一起，就得到一个logits矩阵。\n\n这个矩阵里其实包含了很多信息：\n\n模型对这个样本是否不确定？\n\n这个样本是否能带来较大的loss reduction？\n\n序列内部的token预测是否丰富，还是高度重复？\n\n这个样本和历史上已经训练过的样本是否过于相似？\n\nUDS将这些信息拆成两个分数。\n\n第一个是\n\nintra-sample importance score\n\n，也就是样本内部重要性分数。它通过logits矩阵的\n\nnuclear norm（核范数）\n\n计算，用来同时刻画样本效用和样本内部多样性。\n\n第二个是\n\ninter-sample importance score\n\n，也就是样本之间重要性分数。它通过低维投影后的样本表示，与历史memory buffer中样本的距离来计算，用来避免反复训练相似样本。\n\n最后，UDS把这两个分数加权合并，选出当前候选batch中分数最高的Top-K样本参与参数更新。\n\n△\n\nUDS框架示意图：模型先对候选样本做前向传播，得到logits；再分别计算样本内部重要性和样本间多样性；最终选择高价值样本更新模型\n\n为什么nuclear norm能衡量样本价值？\n\nUDS的第一个核心设计，是用logits矩阵的nuclear norm衡量样本内部价值。\n\n直观理解，nuclear norm越大，通常意味着两件事。\n\n第一，\n\n样本更可能带来训练收益。\n\n如果模型对某个样本的预测分布呈现出更强的训练信号，它往往更可能带来loss reduction。论文在Qwen-2.5-7B + MMLU上做了相关性分析，发现nuclear norm与训练后的loss reduction存在较强相关性。\n\n第二，\n\n样本内部的信息更丰富。\n\n如果一个样本的token预测高度重复，logits矩阵的行向量会更接近同一方向，矩阵秩较低；如果每个token都包含不同语义信息，logits矩阵会呈现更高秩、更丰富的谱结构，nuclear norm也会更高。\n\n也就是说，UDS不是只看“这个样本难不难”，而是在看：\n\n这个样本是否既有学习价值，又能提供足够丰富的token级训练信号。\n\n△\n\n相关性分析与样本内多样性示意：nuclear norm与loss reduction、矩阵秩之间存在明显相关；高多样性序列会呈现更丰富的预测分布\n\n论文还给出一个简化例子：左边序列中模型预测cat、dog、bird等不同token，代表更高样本内多样性；右边序列几乎只预测cat，代表低多样性。\n\n△\n\n高样本内多样性与低样本内多样性的对比\n\n只看单个样本还不够，还要避免“重复训练”\n\n如果只看nuclear norm，模型可能会持续选择某些高价值但相似的样本。\n\n这在训练中也会造成浪费：单个样本看起来有用，但一整批样本如果高度重复，整体batch的信息增益并不高。\n\n为了解决这个问题，UDS引入了样本之间的多样性建模。\n\n具体做法是维护一个固定大小的FIFO memory buffer，用来保存最近被选中参与训练的样本表示。对于当前候选样本，UDS会计算它与memory buffer中历史样本的平均欧氏距离。距离越大，说明这个样本越不像最近已经训练过的数据，越值得加入训练。\n\n但这里有一个现实问题：原始logits矩阵太大，直接保存代价非常高。\n\n论文指出，如果在Qwen-2.5-7B中为1024个样本直接存储完整logits矩阵，内存可能达到约\n\n74GB\n\n。这显然不适合实际训练。\n\n因此，UDS设计了一个低维投影方法，把logits矩阵压缩成紧凑向量，再放进memory buffer。论文采用类似SRFT的两侧随机投影，把词表维度和序列长度维度分别降维，从而避免显式存储巨大的投影矩阵。\n\n这样一来，UDS就能用很低的额外开销近似保留样本之间的距离关系，并据此衡量全局多样性。\n\n最终，UDS的选择标准可以理解为：\n\n既选择当前最有训练价值的样本，也优先选择和历史训练样本不重复的样本。\n\n实验设置：四类能力、两个基座、六组基线\n\n论文主要在四个基准上评估UDS：\n\nMMLU：通用知识理解；\n\nScienceQA：科学问答；\n\nGSM8K：数学推理；\n\nHumanEval：代码生成。\n\n实验使用两个基座模型：\n\nLlama-3.1-8B\n\n和\n\nQwen-2.5-7B\n\n。\n\n对比方法包括：\n\nRegular：不做数据选择，全量使用样本；\n\nRandom：随机选择样本；\n\nMaxLoss：选择loss最大的样本；\n\nMaxGrad：选择梯度范数最大的样本；\n\nRHO-Loss：依赖参考模型的选择方法；\n\nGREATS：已有在线batch选择SOTA方法。\n\n实现上，论文默认采用LoRA训练，rank为8；batch size设为8；memory buffer大小M=1024；投影维度设置为d1=128、d2=8。所有基准采用zero-shot评估，并使用不同随机种子重复4次。\n\n实验结果：准确率最高，训练还更快\n\n主实验结果非常直接：UDS在四个基准、两个基座模型上都取得了最优准确率。\n\n在\n\nQwen-2.5-7B\n\n上，UDS的结果为：\n\nMMLU：\n\n63.34%\n\n，高于GREATS的58.19%；\n\nScienceQA：\n\n95.19%\n\n，高于GREATS的94.17%；\n\nGSM8K：\n\n79.91%\n\n，高于GREATS的78.61%；\n\nHumanEval：\n\n46.28%\n\n，高于GREATS的45.04%。\n\n在\n\nLlama-3.1-8B\n\n上，UDS同样取得最高结果：\n\nMMLU：\n\n40.16%\n\n；\n\nScienceQA：\n\n94.33%\n\n；\n\nGSM8K：\n\n58.98%\n\n；\n\nHumanEval：\n\n30.96%\n\n。\n\n更关键的是，UDS不只是更准，也更高效。\n\n以Qwen-2.5-7B为例，在MMLU上，UDS的训练吞吐量为\n\n3.41samples/s\n\n，高于全量训练的2.27samples/s；在HumanEval上，UDS为\n\n6.81samples/s\n\n，同样高于全量训练的6.24samples/s。\n\n这说明，UDS并不是通过“多花时间换准确率”，而是在更少训练开销下，选出了更高质量的训练信号。\n\n△\n\n主实验结果与消融实验截图：UDS在MMLU、ScienceQA、GSM8K、HumanEval上均取得最优结果，同时多数设置下训练吞吐量高于全量训练\n\n消融实验：nuclear norm和diversity distance都不是摆设\n\n为了验证UDS的两个核心组件是否真的有用，论文做了消融实验。\n\n结果显示，只使用nuclear norm或只使用diversity distance，都能带来明显提升；但两者结合后的完整UDS表现最好。\n\n以Qwen-2.5-7B为例：\n\n在MMLU上，Random baseline为54.26%；只使用nuclear norm提升到58.35%，只使用diversity distance提升到57.75%，完整UDS进一步达到\n\n63.34%\n\n。\n\n在HumanEval上，Random baseline为40.20%；只使用nuclear norm提升到44.18%，只使用diversity distance提升到43.84%，完整UDS达到\n\n46.28%\n\n。\n\n这说明两种信号是互补的。\n\nnuclear norm更关注单个样本内部是否有训练价值，diversity distance更关注当前样本是否与历史训练样本重复。只有把二者结合起来，才能同时实现“选得有用”和“选得不重复”。\n\n超参数与数据规模：性能提升，但额外内存增长很小\n\n论文还分析了投影维度d1、d2以及memory buffer大小M对性能和内存的影响。\n\n结果显示，随着d1、d2和M增大，模型在MMLU上的平均准确率整体提升；但峰值内存只出现\n\n轻微增长\n\n。\n\n这说明UDS的低维投影和memory buffer设计，并没有引入不可承受的额外内存负担。\n\n在不同选择比例实验中，UDS也展现出稳定优势。随着每个batch中被选中的样本数量K增加，多数方法准确率都会上升；但UDS在较小K下就能达到峰值，并且在部分设置中超过全量训练。\n\n这意味着：\n\n小而精的训练子集，只要选择策略足够好，也能超过“全都训练一遍”。\n\n△\n\n投影维度、memory buffer与数据选择规模实验截图：UDS在提升性能的同时，仅带来很小额外内存增长\n\n更多实验：从LoRA到全参微调，从长链推理到OOD\n\n除了主实验，论文还在附录中补充了多组验证，进一步证明UDS的鲁棒性。\n\n在更大batch size（B=16）下，UDS仍然在Qwen-2.5-7B上取得最高结果：MMLU为\n\n62.71%\n\n，ScienceQA为\n\n95.08%\n\n，GSM8K为\n\n79.38%\n\n，HumanEval为\n\n45.98%\n\n。\n\n在全参数微调设置下，UDS同样保持优势：MMLU为\n\n63.27%\n\n，ScienceQA为\n\n95.06%\n\n，GSM8K为\n\n78.26%\n\n，HumanEval为\n\n48.44%\n\n。\n\n在Qwen-2.5-7B-Instruct上，UDS也超过其他方法：MMLU为\n\n53.86%\n\n，ScienceQA为\n\n95.56%\n\n，GSM8K为\n\n76.80%\n\n，HumanEval为\n\n45.75%\n\n。\n\n对于更长上下文推理，论文在MATH数据集上将最大序列长度设为2048。UDS取得\n\n46.27%\n\n，高于Regular的45.89%和GREATS的45.66%。\n\n在OOD测试中，模型在GSM8K上训练，并在MATH500、AMC23上评估。UDS在GSM8K、MATH500、AMC23上分别达到\n\n79.91%\n\n、\n\n42.56%\n\n、\n\n26.38%\n\n，均为最佳。\n\n论文还与离线数据选择方法FisherSFT做了比较。在相同数据选择比例下，UDS在MMLU、ScienceQA、GSM8K、HumanEval上分别达到\n\n63.34%\n\n、\n\n95.19%\n\n、\n\n79.91%\n\n、\n\n46.28%\n\n，全面高于FisherSFT的57.85%、94.02%、78.35%、43.87%。\n\n这些结果共同说明，UDS并不是只在某个单一设置下有效，而是能够泛化到不同batch size、不同微调方式、指令模型、长推理任务和分布外测试中。\n\n让SFT从“全量喂数据”走向“动态挑数据”\n\n这项工作的核心价值，不只是提出了一个新的采样公式，而是重新强调了SFT中一个很现实的问题：\n\n训练效率不只取决于模型和算力，也取决于每一步到底把哪些数据拿来更新参数。\n\n过去，在线batch选择常常只关注样本难度或loss。UDS则把视角扩展到utility和diversity的联合建模：既看样本是否有用，也看样本是否重复。\n\n更重要的是，它直接利用前向传播已有的logits信号，不需要额外验证集、参考模型，也避免了昂贵的样本级梯度计算。\n\n从更长远看，UDS代表了一类更实用的数据选择方向：让大模型训练不再只是\n\n“堆数据、堆算力”\n\n，而是让训练过程本身具备更强的数据判断能力。\n\n对于SFT来说，这意味着我们有机会用更少的样本、更低的时间成本，获得更强的模型表现。\n\n主要作者\n\n邹鹤鸣\n\n，季向阳教授团队博士，研究范围覆盖大模型高效后训练、持续学习与脑启发智能，致力于提升多轮交互式智能体在RL后训练中的采样–反馈效率与决策信用分配，抑制自演进中的灾难性遗忘，并基于脑启发机制探索更省算力的前沿学习范式。在ICML、NeurIPS、ICLR等国际顶级会议以一作/共一发表多篇论文，工作贯穿算法创新与工程落地全栈优化，目前腾讯混元大模型团队科研实习生。\n\n论文标题：Utility-Diversity Aware Online Batch Selection for LLM Supervised Fine-tuning\n\n论文作者：Heming Zou、Yixiu Mao、Yun Qu、Cheems Wang、Xiangyang Ji\n\n论文地址：https://arxiv.org/pdf/2510.16882\n\n代码地址：https://github.com/gfyddha/UDS\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-06-27_不用全量数据反复训练！清华UDS智能过滤劣质样本，算力成本腰斩｜ICML’26_量子位.md"}, {"title": "长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛", "source": "量子位", "digest": "vivo SOLAR-RL：半在线强化学习破解长程GUI智能体训练难题", "link": "https://mp.weixin.qq.com/s/RkRTkn7udkwLokU52xvD-g", "content": "---\npublish_time: 1782539482\n---\n\n# 长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛\n\n> 原文链接：https://mp.weixin.qq.com/s/RkRTkn7udkwLokU52xvD-g\n> 公众号：量子位\n\nvivo AI Lab\n\n团队 投稿\n\n量子位 | 公众号 QbitAI\n\n想训练能自动操作手机的GUI\n\n（图形用户界面）\n\n智能体，总会遇到两难困境：\n\n用在线强化学习，交互成本高，长任务训练容易崩盘；\n\n只用离线数据训练，模型眼光短浅，多步操作总出错。\n\n为破解这一难题，vivo AI Lab联合之江实验室、中国科学院大学杭州高等研究院，提出\n\n半在线强化学习框架SOLAR-RL\n\n。\n\n它不依赖昂贵的在线环境交互，而是把全局轨迹信号直接“回填”进离线学习过程，在多个基准上以约10%的数据预算取得了与在线/SFT强基线相当甚至更优的表现，同时彻底规避了长程RL训练中常见的策略崩溃。\n\n研究背景：在线RL太贵，离线RL太“短视”\n\n在长程GUI任务上应用RL，两条主流路线各有硬伤：\n\n在线RL：\n\n能捕捉环境的真实动态反馈，但在30步以上的长任务中交互成本高、奖励稀疏、方差极大，常常在学到可用策略之前就已“训练崩溃”。\n\n离线RL：\n\n用静态数据训练、规避了交互风险，却因只盯着碎片化的“单步转移”而陷入“时序短视”，丢掉了长程规划所需的全局上下文，误差层层累积。\n\n两条路线还共同卡在\n\n信用分配难题（Credit Assignment Problem，CAP）\n\n上：一条长轨迹结束时只有末端一个“成功/失败”的二元信号，无法判断到底是中间哪一步推理立了功、哪一步操作拖了后腿，梯度因此稀疏而嘈杂。我们的思路是：能否既保留离线训练的稳定性，又把通常只有在线交互才具备的轨迹级全局信号补回来？SOLAR-RL正是这一“半在线”范式的具体实现。\n\n△\n\n三种RL范式对比。离线RL（左上）受限于碎片化的单步数据而“时序短视”；在线RL（右上）能捕捉动态但不稳定且交互成本高；SOLAR-RL（下）通过轨迹重构与回溯性信用分配，把全局轨迹洞察“回填”进离线数据。\n\n方法：在静态数据中模拟在线反馈\n\n我们将GUI导航建模为部分可观测马尔可夫决策过程\n\n（POMDP）\n\n，SOLAR-RL由两个关键组件构成。\n\n离线轨迹重构（Offline Trajectory Reconstruction）\n\n对同一任务，我们在每一步并行采样N条候选rollout，再把相同索引的候选首尾相接、拼成N条“重构轨迹”，从而把有限的静态数据扩展成一批多样化的“伪在线”探索数据。其中关键的一点是：每条轨迹都按\n\n逐步有效性（per-step validity）\n\n逐帧核验，一旦某步动作被判无效，轨迹便在这个“首次失败点”被截断、丢弃其后步骤。有效性判定采用基于真值标签的严格协议——坐标类动作用高斯核度量、文本输入用F1分数、应用启动用相似度阈值、系统类动作用精确匹配，既剪掉低质量偏差，又保留探索多样性。\n\n△\n\n离线轨迹重构。每一步并行采样N条rollout，将相同索引的候选首尾相接形成N条重构轨迹，产出用于训练的“伪在线”数据。\n\n轨迹感知奖励塑形（Trajectory-Aware Reward Shaping）\n\n这是SOLAR-RL的核心贡献，把“整条轨迹的执行质量”回溯性地拆解为稠密的步级奖励，包含三层设计：\n\n失败点检测+前缀信用：\n\n每条重构轨迹都有一个首次失败步t\n\n*，只有t*\n\n之前的“有效前缀”才获得正向奖励，失败步及其之后的无效步则被惩罚，给出明确纠错信号。\n\n原子动作打分：\n\n用细粒度评分函数将点击、滑动、输入等不同动作映射为0~1的连续质量分，有效动作保留正分，无效动作转为负反馈。\n\n目标对齐的奖励塑形：\n\n先依据轨迹的全局质量\n\n（综合任务完成度、当前轨迹长度与参考专家长度之比、逐步执行质量）\n\n动态确定一个“目标总回报”；对长序列中的错误施加“长度感知”动态惩罚以抑制“奖励刷分”；最后把回报缺口均匀重分配到有效前缀的正向步上，使总回报与轨迹级质量严格对齐。\n\n如此一来，SOLAR-RL在\n\n零环境交互\n\n的前提下，产出稠密、稳定、且与全局目标对齐的训练信号，相当于在静态数据上“模拟”出了在线反馈。\n\n△\n\n轨迹感知奖励塑形机制的三个阶段。（1）原始经验：失败轨迹只有末端稀疏反馈，看不出“从哪一步开始走错”；（2）失败点检测：按逐步有效性定位首次崩溃步；（3）前缀信用分配：只对崩溃前的有效步给正奖励，并惩罚全部无效步，从而产出稠密、稳定的长程训练信号。\n\n实验结果\n\n我们以Qwen2.5-VL-7B-Instruct为基座、基于verl框架，仅用15k条高质量静态轨迹\n\n（约94k步）\n\n训练，每步采样N=8、温度1.0，在32张NVIDIA L40S上训练650步、约60小时，并在三大基准上进行了评测。\n\n△\n\n在Android Control（AC，Low/High）、GUI-Odyssey、AndroidWorld上的统一对比。TM=类型匹配，SR=步成功率/任务成功率；“—”表示原文未报告。\n\n细粒度操控（Android Control）\n\n在离线类方法中，SOLAR-RL在Low划分上取得93.24%TM/88.57%SR；在更考验多步推理的High划分上，以69.27%SR拿下离线类方法的最高分，超过UI-Venus\n\n（68.61%）\n\n与AgentCPM\n\n（67.93%）\n\n，表明轨迹感知信用分配能有效防止复杂任务中的推理退化。\n\n长程跨应用导航（GUI-Odyssey）\n\n在以长链路、跨应用著称的GUI-Odyssey上，SOLAR-RL取得87.60%TM。尽管AgentCPM此项原始指标略高，但它使用了超过55k条轨迹——是本文\n\n（15k）\n\n的三倍多，反衬出我们方法的样本效率。\n\n真实环境执行（AndroidWorld）\n\n在最具挑战的动态基准AndroidWorld上，SOLAR-RL取得33.7%SR，位列离线类第二；更值得注意的是，它在\n\n完全不做在线交互\n\n的情况下超过了使用145k轨迹的在线方法UI-TARS-7B-SFT\n\n（33.3%）\n\n，而训练数据量仅约为对手的10%。这说明：堆原始数据规模并非提升性能的唯一路径，把学习信号“精炼”好同样关键。\n\n分析：训练更稳，且学会“连续纠错”\n\n告别长程训练中的策略崩溃\n\n与强基线GRPO的对比很能说明问题：GRPO早期会涨，但在约600步后出现典型的“策略崩溃”——奖励断崖式下滑、智能体陷入无效循环；而SOLAR-RL的平均动作奖励单调上升，最终稳定收敛在约0.75的更高水平。在PressBack\n\n（回退纠错）\n\n这类关键动作上，GRPO剧烈震荡、迟迟学不会“何时该后退”，SOLAR-RL则快速收敛到0.8以上的高精度，有效避免了导航死循环；在“超长\n\n（≥14步）\n\n”任务上，这一稳定性优势进一步放大。\n\n△\n\n训练过程中的平均动作奖励。GRPO（蓝）在后期发生策略崩溃、奖励骤降，SOLAR-RL（橙）则单调上升并稳定收敛于约0.75。\n\n一个真实案例：长程任务拼的是连续纠错\n\n论文给出的一个训练案例颇具代表性：在Simple SMS Messenger里“把刚发给Juan Alves的消息重新发一遍”。\n\n轨迹一：智能体先在会话列表里误用长按\n\n（错误）\n\n，随后纠正、进入正确的聊天页\n\n（第一次纠错成功）\n\n；但当它发现“长按已发送消息”也无效时，却没能切换到“重新输入并发送”的正确策略，于是被困在一个看似合理、实则走不通的行为里——任务失败。\n\n轨迹二：起步几乎相同，但它完成了连续两次纠错——先从会话列表切到正确的聊天页，再果断放弃无效的长按、改为重新输入并发送，最终成功完成任务。\n\n这揭示了长程GUI任务的本质：\n\n成功不在于“一次都不犯错”，而在于“能否一错再纠、连续从次优状态里爬出来”\n\n。这正呼应了SOLAR-RL的设计动机——失败点信用分配帮助定位轨迹从哪一步开始走偏，轨迹感知奖励塑形则抑制智能体在失败后继续重复无效动作链，鼓励它放弃无效局部行为、重新回到有效决策路径上。\n\n局限与未来方向\n\n我们也坦诚指出了方法的边界与下一步：\n\n其一，半在线机制受限于离线数据的覆盖面，无法见到分布之外的全新状态\n\n（如未见过的弹窗、延迟引起的界面变化）\n\n，它“模拟”在线反馈但并不替代真实环境交互；\n\n其二，当前有效性校验依赖真值标签，未来可替换为学习型验证器或奖励/评判模型，从而拓展到弱标注、无标注的GUI数据；\n\n其三，目前评测主要集中在移动\n\n（Android）\n\n环境，将轨迹感知奖励塑形推广到动作更丰富的桌面操作系统与网页浏览器，还需要平台特定的有效性标准与基准。这些都是我们后续探索的方向。\n\n论文标题：SOLAR-RL: Semi-Online Long-horizon Assignment Reinforcement Learning\n\n论文地址：https://arxiv.org/abs/2604.22558\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-06-27_长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛_量子位.md"}, {"title": "破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式", "source": "新智元", "digest": "多模态大模型正试图从「看画面」进化到「懂世界」。", "link": "https://mp.weixin.qq.com/s/m07q20d6O78TuLW1hlhUqw", "content": "---\npublish_time: 1782527460\n---\n\n# 破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式\n\n> 原文链接：https://mp.weixin.qq.com/s/m07q20d6O78TuLW1hlhUqw\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\n多模态大模型正试图从「看画面」进化到「懂世界」。\n\n但面对动辄数小时的真实业务长视频，所有大模型玩家都撞上了一堵极其现实的高墙：视频那么长，算力那么贵，帧，到底该怎么选？\n\n多模态大模型正试图从「看画面」进化到「懂世界」。但面对动辄数小时的真实业务长视频，所有大模型玩家都撞上了一堵极其现实的高墙：视频那么长，算力那么贵，帧，到底该怎么选？\n\n为了妥协算力，目前的行业惯例是「均匀采样」——让模型每隔几秒机械地「睁一次眼」。但这套看似公平的逻辑，在通信等复杂领域场景中却显得极为脆弱。因为业务事件的发生，从不按照节拍器来。\n\n痛点：垂直业务场景的「冰与火之歌」\n\n在专业的领域视频中，「看满全场」绝不等于「看懂细节」。关键事件在时间轴上极度「非均匀分布」，这导致均匀采样常常在两个极端里反复横跳：\n\n「久坐不动」的无效冗余：\n\n比如专业培训、技术课程，一页教案可能长达十几分钟。如果均匀采样，大量近乎雷同的静态画面不仅白白烧掉算力，还会让大模型直接「看花眼」。\n\n「电光石火」的瞬间遗漏：\n\n在现网割接、机房工勘等长录像中，99% 的时间可能是无意义的静默等待，但决定成败的核心动作往往转瞬即逝。均匀采样在这种场景下，无异于大海捞针，一漏致命。\n\n这逼出了一个终极拷问：能不能让模型在不知道提问的前提下，自己判断「哪些画面最值得看」？\n\n破局：LFS帧选择器 给大模型装上「定位巡航」\n\n面对这一行业共性难题，\n\n华为GTS研发部AI数据团队\n\n给出了全新解法——LFS（Learnable Frame Selector，可学习帧选择器）。\n\nLFS打破了「按时间间隔抽帧」的刻板印象。它的核心判断极度干脆：帧的价值，只取决于它是否包含关键动作与场景变化。\n\n近日，该项「视频关键帧选择」研究成果已正式被人工智能顶级国际会议IJCAI 2026接收。\n\n论文首页信息\n\n•  论文标题：LFS: Learnable Frame Selector for Event-Aware and Temporally Diverse Video Captioning\n\n•  论文链接：https://arxiv.org/abs/2601.14594\n\n•  论文作者团队：华为 GTS研发部 AI数据团队\n\n图 1：LFS 训练与推理整体框架\n\n核心技术：超轻量级CNN重塑帧选择逻辑\n\nLFS并不笨重，它的选帧闭环仅靠三招，便实现了四两拨千斤的奇效。\n\n1. 极致轻量的时间打分：仅 126K参数的「降维打击」\n\nLFS首先使用冻结的Long-CLIP提取帧特征，随后将其送入轻量级时间打分网络TSNet。TSNet通过一维时间CNN精准捕捉局部的动作转换，并结合全局门控调制，为每一帧生成专属的「重要性分数」。高分帧，即代表着画面正在发生关键动作或剧烈变化。\n\n值得一提的是团队在此处极具巧思的算法设计：面对超长视频带来的性能压力，团队摒弃了调用庞大视觉模型逐帧「重度审视」的传统路线，而是另辟蹊径，直接对其文本空间的特征向量进行高速评估。\n\n这种「降维打击」不仅让帧选择过程快如闪电，更将整个一维TSNet模型的参数量极限压缩至仅126K。这一设计在推理速度与物理显存占用上展现出了压倒性的优势，以极高的计算效率，完美实现了对海量视频帧的「沙里淘金」。\n\n图 2：TSNet框架图。\n\n2. 分层 Top-K：既看「高光瞬间」，也看「完整全场」\n\n如果只挑最高分的帧，容易导致画面全部扎堆在某一个激烈操作的时间段，LFS巧妙地将时间线划分为多个片段，在每个片段内提取高分帧。这保证了模型既抓住了重点，又没错过视频的完整生命周期。\n\n3. 零成本接入：Caption 反馈闭环\n\nLFS并没有人为设定「哪帧重要」的代理指标，而是直接让冻结Video-LLM 的Caption损失提供反馈。\n\n训练时，梯度只回传到轻量的帧选择器TSNet，视频大模型本身始终保持冻结，从而将训练和工程接入成本降至最低。\n\n为了减少Caption生成的偏见并稳定优化过程，作者采用了一种相对Caption损失，即通过从同一采样视频帧集上计算的自回归损失减去均匀采样的自回归损失：\n\n其中\n\n为计算的自回归损失：\n\n实验结果\n\n9大Benchmark上全面提升，8个达成SOTA\n\n数据证明，学会「挑重点」确实能带来更鲁棒的理解力。\n\n在真实业务基准上，搭载LFS的Qwen3-VL-8B整体准确率跃升至75%；在极其考验关键动作捕捉的VDC Detailed子项中，准确率显著提升至58%。\n\n更硬核的是，LFS 展现出了极强的泛化能力。它生成的高质量Caption能够直接反哺Zero-shot（零样本）视频问答，在MVBench、VideoMME等9个权威开源榜单上均取得稳定且全面的性能提升，除Dream-1K外均取得SOTA表现。\n\n图3：LFS在9个benchmark上相对基线取得稳定提升。\n\n图4：LFS在开源VDC benchmark上的效果提升。\n\n后记\n\n长视频理解的难点，从来不只是「视频太长」，而是有效信息稀疏、关键瞬间易被淹没。LFS的价值，正是让模型在有限算力下优先看见真正改变业务语义的画面。\n\n这种「高性能、高命中」的特性，正精准契合行业垂域面向前沿领域的庞大多模态数据消费需求：\n\n知识沉淀更高效：\n\n将数小时的技术课程快速定位到核心讲解、关键操作与知识跳转点，让经验从视频里被提炼出来。\n\n作业审计更可信：\n\n在网络割接、配置变更等高风险流程中自动捕捉关键帧，为规范复盘、风险定位和质量追溯提供证据链。\n\n现场巡检更智能：\n\n精准识别机房工勘、设备巡检等长录像中的异常动作和状态变化，让一线现场数据沉淀为可检索、可分析的业务资产。\n\n当AI应用从「能看见」走向「看得准、看得省、看得懂」，视频数据的价值也不再取决于堆了多少帧，而取决于能否在正确的时刻抓住正确的信息。LFS提供 的，正是一条面向行业长视频理解的高效技术路径。\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国内", "is_model_related": false, "source_file": "sources/2026-06-27_破解领域视频数据理解难题，华为GTS提出关键帧动态选择新范式_新智元.md"}, {"title": "邮储银行AI+赋能业务价值全生命周期管理新实践", "source": "银行科技研究社", "digest": "邮储银行AI+赋能业务价值全生命周期管理新实践", "link": "https://mp.weixin.qq.com/s/S8OkswaOE5kanxFGygC2kQ", "content": "---\npublish_time: 1782548280\n---\n\n# 邮储银行AI+赋能业务价值全生命周期管理新实践\n\n> 原文链接：https://mp.weixin.qq.com/s/S8OkswaOE5kanxFGygC2kQ\n> 公众号：银行科技研究社\n\n国家“十五五”规划中明确提出，深入推进数字中国建设，提升数智化发展水平，强调以人工智能、大数据等关键技术赋能产业升级，推动科技创新和产业创新深度融合，加快重大科技成果高效转化应用，乃百年未有之大变局。\n\n在金融行业快速变化，金融业务持续迭代，金融科技深度赋能的当下，通过“战略驱动”的需求决策，取代低效的“被动响应”的需求管理，以“智能决策”替代“经验判断”，是推动业务创新和科技创新深度融合的核心命题。面对需求漫溢、产能紧张、价值难料的现实挑战，如何告别经验主义决策，实现“先做什么、后做什么、不做什么”的科学抉择，成为金融行业业务创新和科技创新过程中亟待破解的攻坚方向。\n\n为破解传统需求管控经验主义决策、强化业务价值导向，邮储银行（下称“我行”）立足金融业务实际，以“业务创新，价值分析（AI助力）”、“产品设计，风险规避”、“数据监测，价值达成”、“AI聚类分析，生成需求”四大模块为核心，深度融合智能AI技术，创新搭建需求价值评估模型，形成需求全生命周期智能化闭环管理体系。依托量化评估标准、客观研判逻辑与统一管控尺度，规范需求分级判定、统筹研发资源精准投放，持续提升整体研发效能，全面夯实业务创新精细化管理基础，有力赋能业务高质量稳健发展。\n\n一、模型构建背景：从经验判断到科学决策的必然转型\n\n在传统需求管控模式中，需求优先级的判定高度依赖需求分析人员的个人经验与主观判断，缺乏统一、量化的评估标准，存在诸多痛点难点：\n\n一是标准不统一，不同人员对需求价值的理解存在差异，导致同一需求在不同场景下判定结果不一致，影响管控公正性；\n\n二是判断易主观，部分需求因个人认知偏差，出现“重形式、轻价值”“重短期、轻长期”的判定倾向；\n\n三是说服力不足，经验型判断缺乏数据支撑，在需求取舍、资源分配时难以形成共识，甚至影响跨部门协作效率；四是经验难以沉淀，优秀需求分析人员的经验难以系统化沉淀、规模化推广，导致团队整体管控水平参差不齐。\n\n随着网点全行数字化转型深入推进，跨条线、跨场景、跨领域需求持续增多，传统管控模式已难以适配业务发展节奏。为解决上述困境，让需求管控更科学、更高效、更具针对性，我行正式启动需求全生命周期智能化闭环管理体系研发工作，核心目标是建立一套“可量化、可复用、可追溯、可优化”的需求评估体系，统一团队认知、规范管控流程，让每一项需求的判定都有章可循、有据可依，确保研发资源向高价值需求倾斜，实现资源利用效益最大化。\n\n二、核心设计思路：五维评估体系，全流程闭环管理\n\n基于上述目标与建设思路，我行进一步明确体系架构与实施路径，从评估维度设计与全流程闭环运转两方面统筹推进，形成科学完备、智能高效、可落地可迭代的核心设计方案。\n\n为实现需求管理的科学化、智能化、闭环化运行，我行创新搭建需求全生命周期智能化闭环管理体系，围绕“业务创新，价值分析（AI助力）”、“产品设计，风险规避”、“数据监测，价值达成”、“AI聚类分析，生成需求”四大核心环节层层推进、闭环联动，实现需求全生命周期科学化管控。\n\n一是业务创新，价值分析（AI助力）环节，作为全流程首要环节，集中接收各渠道的业务需求，依托AI算力结合评估模型完成量化打分，精准甄别无效、低效需求，筛选出高价值、高优先级核心需求，从源头过滤冗余诉求，合理规避资源错配问题，为后续工作筑牢基础。\n\n二是产品设计，风险规避环节，衔接前期AI分析与筛选成果，严格遵循模型评估标准，联动业务、研发等多部门开展全方位可行性研判，全面排查业务适配、合规合规、技术研发等各类潜在风险，提前优化方案、规避落地隐患，制定完善可行的实施计划，保障高价值需求高效推进。\n\n三是数据监测，价值达成环节，贯穿需求落地全周期，实时采集业务运行、用户体验、落地成效等多维度数据，验证模型评估准确性（准确率达95%以上），精准校验需求价值落地成效，同时沉淀优质数据反向赋能AI算法与评估模型迭代优化，形成“价值筛选-智能生成-风险规避-监测迭代”的完整管控闭环。\n\n四是AI聚类分析，生成需求环节，从各个渠道收集零散、碎片化的体验建议，通过智能算法完成自动归类、整合梳理，深度提炼共性业务痛点与高频优化场景，将各类的原始需求规整为标准化、可落地的正式需求，规范需求输入口径，大幅提升需求梳理效率。通过四大环节的协同联动、层层赋能，实现需求管控的标准化、科学化、智能化，切实提升需求落地质量与业务运行效能，为邮储银行业务高质量发展提供坚实支撑。\n\n为保障四大环节科学运转、需求价值精准判定，我行深度结合金融业务合规性、服务性、高效性的核心需求，创新性打造“成本、信心、用户影响、业务价值、特殊条件”五维一体的需求价值评估模型，以科学评估模型为支撑，赋能需求全生命周期智能化闭环管理体系，实现需求价值的全维度、多视角覆盖，既保证评估的科学性，又兼顾实操的灵活性。\n\n需求价值评估模型涵盖五大核心维度：\n\n一是成本维度，聚焦需求实施全过程的资源投入与成本管控，精准测算人力、物力及时间成本等各项消耗，建立成本与价值匹配机制，严控无效资源浪费，确保资源投入与需求价值相匹配，为需求落地提供科学依据；\n\n二是信心维度，重点评估需求落地可行性与提出方配合程度，有效规避盲目研发、重复研发及提出方配合不足等风险，保障需求贴合业务实际，为后续推进筑牢基础；\n\n三是用户影响维度，紧扣“以客户为中心”理念，从交易频次、使用场景、覆盖范围及柜员感知幅度四个方面综合评估，兼顾柜员操作与客户使用体验，持续提升服务满意度；\n\n四是业务价值维度，聚焦需求落地的实际价值，围绕客户体验提升与业务创收增效开展量化评价，推动资源向高价值需求倾斜，让需求价值可衡量、可落地；\n\n五是特殊条件维度，结合基层网点业务场景的复杂性，设置弹性调控机制，在坚持标准化管控的同时兼顾差异化需求，提升响应速度与适配灵活性。各维度相互协同、层层支撑，通过科学量化评估实现需求全流程规范化管理，形成完整的需求管控闭环，切实保障各类需求精准落地、高效赋能业务发展。\n\n三、需求评估体系落地实践：需求研判与实施成效\n\n依托需求全生命周期智能化闭环管理体系，我行运用五维价值评估模型对全域需求开展系统性梳理、量化评分与多维度研判，精准刻画需求特征、实施难度与价值导向，为科学决策、资源统筹与精准施策提供坚实的数据支撑与决策依据。\n\n从实践运行情况来看，全行需求整体呈现技术路径成熟、协同保障有力、覆盖范围广泛、价值导向清晰的优良态势。\n\n一是技术难度和成本上，技术实施以中等复杂度全新开发与低复杂度同质优化为主，两类需求合计占比达85%，技术风险整体可控、落地可行性较强；二是需求实施信心方面，需求清晰度总体稳健，清晰明确需求占比57%。需求提出方配合度整体优良，中高配合度合计占比94%，跨条线协同基础扎实，为高效推进提供有力保障；三是用户影响上，70%的需求面向高频交易场景，超90%覆盖全国柜员群体，影响范围广、普惠效能突出；四是业务价值方面，73%的需求可显著优化柜员操作体验，86%聚焦流程精简、耗时压降与服务体验提升，直接创收类需求占比仅5%，整体以运营提效、服务提质、风险可控；五是在优先级判定上，监管合规与重点督办类一键优先需求合计占比46%，外部约束与战略牵引特征显著；一键否决需求仅3%项，反映需求池整体成色较高、低价值需求占比极低。\n\n四、落地成果与价值：以模型赋能，驱动业务提质增效\n\n依托需求价值评估模型开展全流程科学管控，通过量化评分、优先级排序与闭环迭代机制，精准引导研发资源向高价值、高紧迫度需求倾斜，有效规避低效投入与重复建设。该决策模型可为需求优先级排序提供重要参考，对后续需求变更、项目排期具备全局指导意义，通过四大核心维度综合评估与需求分类分级，在需求澄清阶段充分论证、挖掘需求价值，对具备重大价值潜力的需求予以重点推进，确保工作主次分明、靶向发力。同时，模型不仅适用于事前需求澄清阶段的价值研判，还可用于事后各渠道反馈问题的必要性论证，在全流程需求管控中，其作用已从参考依据逐步升级为需求分析团队不可或缺的实用工具，最终推动我行业务在业务创效、基础支撑、运营提效、体验优化四大维度实现突破，以实际成效充分验证了模型的实践赋能价值。\n\n（一）业务价值全面跃升，多元场景创效增收\n\n模型精准锚定高价值需求，推动核心业务场景迭代升级，创新推出对公“定活一本通”存款产品，构建“可复制、可推广”的业务模式，有效提升对公资金管理效能与客户服务体验，助力对公业务规模与价值双提升；完善综合营销服务能力，拓展政务+金融融合场景；同时加速推进云柜服务外拓与场景延伸；落地分行特色便民功能，缩短社保卡换卡周期，全面打通业务堵点、提升服务质效，有力支撑网点业务拓展与客户服务能力升级。\n\n（二）基础支撑能力夯实，系统架构持续优化\n\n以模型为牵引强化底层能力建设，整合多类业务系统，打造一站式综合业务平台，实现服务与管理集中化；推动终端全链路信创适配，性能提升约30%；落地“分行优先+总行兜底”机制，接入小邮助手，电话咨询量降幅达21.29%，有效降低咨询压力，全面提升系统稳定性与适配性。\n\n（三）厅堂运营效能升级，流程再造提效增质\n\n围绕厅堂全流程开展优化重塑，推动营销效率升级，重点业务办理效率与客户活跃度显著提升；搭建线上化日结管理体系，覆盖网点全场景运营，精简冗余环节；专项优化TOP10高频交易，实现多类业务办理步骤大幅压缩、办理时长显著缩短，有效减轻柜员操作负担、缩短客户等待时长，运营质效全面升级。\n\n（四）风险防控与体验优化双轮驱动\n\n兼顾安全与便捷，实现服务质效双升：上线凭证稽核强控等功能，从源头压降操作差错；优化交易提示语，并联动小邮助手推送业务指引，降低操作失误率；落地多项便民服务功能，解决客户办事堵点，提升服务满意度与客户粘性，构建安全、高效、便捷的前端面客服务体系。\n\n五、未来展望：持续迭代，AI赋能数智化转型\n\n需求全生命周期智能化闭环管理体系，是我行科技赋能需求管控数字化、标准化转型的第一步。未来，我们将以现有成果为根基，持续深化需求全生命周期智能化闭环管理体系的全域应用，推动模型从“可用、好用”向“智能应用”升级，实现对业务发展的长效赋能。一方面，持续深化AI大模型与需求管理全链路融合，推动需求管理从“被动响应、事中管控”向“主动发现、前瞻布局、全域协同”升级。另一方面，持续深化业技融合，主动下沉对接基层网点，依托AI大模型赋能，全面优化业务流程、精简冗余环节，实现降本增效。合理释放一线网点人力配置，引导网点人员走出厅堂，常态化开展外拓营销，拓宽获客拓新渠道。以技术赋能盘活人力效能、激活网点经营活力，充分释放基层发展动能，推动构建集约高效、内外协同的金融服务体系，为全行高质量发展提供坚实保障。\n\n作者：\n\n中国邮政储蓄银行 李璇 全立 庄玉杰 张金宁 王新强 李富宝 王东瑞", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-27_邮储银行AI+赋能业务价值全生命周期管理新实践_银行科技研究社.md"}, {"title": "银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等", "source": "银行科技研究社", "digest": "银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等", "link": "https://mp.weixin.qq.com/s/AYK2POK9QyaDCv2UOXokpg", "content": "---\npublish_time: 1782530280\n---\n\n# 银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等\n\n> 原文链接：https://mp.weixin.qq.com/s/AYK2POK9QyaDCv2UOXokpg\n> 公众号：银行科技研究社\n\nAI（人工智能）技术已发展多年，其中，近几年备受关注的“分支”——生成式AI/大模型，让AI得以史无前例地“破圈”。新技术的发展需要监管引导，从历史经验来看，监管政策必然是落后于技术本身的发展，但“虽迟但到”，国家金融监督管理总局近日发布了《\n\n关于银行业保险业人工智能安全开发应用的指导意见\n\n》（以下简称“《指导意见》”），旨在推进AI技术与金融业务的融合，同时引导金融领域AI应用的安全发展。\n\n《指导意见》中有不少重点。此次，《银行科技研究社》尝试提取其中的几项重点。\n\n众所周知，科技是一把“双刃剑”，它在加速银行数字化转型、助力降本增效的同时，也给银行带来一定的风险。从金融监管机构发布的“金融科技”或“网络安全、数据安全”罚单就能看出，银行在推进金融科技发展的同时，不一定能控制好风险。\n\n因此，《指导意见》的\n\n第一个重点即“安全、可控”\n\n，其中多个章节均提到相关要求：\n\n坚持自主可控，持续提升人工智能相关技术、设备自主可控水平，提高对业务经营发展有重大影响的关键平台、关键软硬件的自主研发能力，加强信息技术应用创新适配。\n\n金融机构对生成式人工智能模型要实施准入管理，评估模型效能及安全合规性。外部引入的生成式人工智能模型需经过网信部门备案。\n\n提高安全运行能力。金融机构要加强智能算力资源的云化管理，加强对人工智能应用的运行监测，实现对应用、模型、算力、网络的一体化管理，保障人工智能应用安全可靠运行。\n\n此外，在“加强数据安全与个人信息保护”“提升网络安全防御能力”“加强运营韧性及业务连续性管理”等方面均提出了更具体的要求。\n\n值得注意的是，其中提到“自主可控”和“加强信息技术应用创新适配”，两者一同指向近几年发展如火如荼的“信创”。在国家大力推进“信创”的背景下，银行在AI布局上，也应重视对“信创”软硬件的适配。\n\n第二个重点是“理性投入”。\n\n对于银行来说，目前AI投入的价值尚不明确，因此不能盲目跟进。《指导意见》提出，坚持务实高效，以提升业务价值为导向，科学规划人工智能开发应用投入，有效平衡成本与效益，推动人工智能切实服务经济高质量发展和金融业务高效运转。\n\n此外，《指导意见》也提到，探索建立业务价值导向的人工智能应用绩效评估机制。也就是说，对于银行来说，未来AI应用成效应当可量化，以此评估AI到底干得好不好、赚不赚钱或省不省钱等。对此，目前各机构仍在摸索中。\n\n第三个重点是“先富带后富”。\n\n中小银行在资金、人才、技术等方面，与大行之间存在较大差距，若大行能向中小银行进行相应输出，将有利于提高行业应用AI的整体水平。\n\n因此，《指导意见》提出，鼓励大型金融机构发挥示范作用，向中小金融机构输出人工智能技术和管理经验。\n\n鼓励有条件的大型金融机构向中小金融机构输出算力服务，支持同业探索基础设施共建共享。\n\n第四个重点是“高质量数据集建设”。\n\n作为AI的“燃料”，数据的质量和模型的能力有很大的关系。因此，目前各行业均在推动数据集建设。前不久，国家数据局发布的《关于推进行业高质量数据集建设行动的实施方案》也提出，聚焦包括金融服务在内的重点领域，加快推进行业高质量数据集建设。\n\n《指导意见》则提到，建设人工智能高质量数据集。金融机构应针对人工智能业务场景持续推进高质量数据集建设，确立数据质量标准，建立高效的质量检控机制，确保数据准确性、相关性、一致性、完整性和无偏见。探索运用人工智能技术强化实时数据、非结构化数据的动态感知、智能提取和解析处理。持续监测数据分布漂移，确保数据集及时更新。\n\n支持行业数据集共建共享。鼓励有条件的金融机构协同多源数据，融合行业经验知识与专业判断，通过系统性筛选、清洗、标注、合成等方式形成高质量数据集，支持金融机构间依法合规开展数据集共享。\n\n第五个重点是“注意高风险应用”。\n\n《指导意见》提到：\n\n强化高风险应用准入管理。涉及资金交易、资产评估、信贷审批、承保理赔、风险管理等，以及与客户利益直接相关、直接影响金融合约达成的生成式人工智能场景应用应被视为高风险应用。人工智能高风险应用须经本机构风险管理委员会批准后方可实施。\n\n加强高风险应用监测和干预。金融机构要加强对人工智能在业务场景中的运行监测，及时发现和管控模型风险。在高风险应用关键环节建立人工监督和干预机制，明确紧急停用及模型退出条件，建立备用系统或人工替代流程。\n\n虽然《指导意见》中未写明AI高风险应用的概念，但从上述例举的应用来看，其指的应该是那些一旦AI出错或滥用，可能对重大财产权益、基本权利等造成严重损害的场景。\n\n第六个重点是“关注可解释性”。\n\n据悉，AI可解释性是指人工智能模型的决策逻辑、预测依据与推理过程能够被人类理解和追溯的能力，核心目标是破解AI模型的“黑箱”问题，让AI的输出不再是无法解释的结果。通俗来说，即AI让人类能理解其为何做出某个决定或给出某项结果。\n\n在受到强监管的金融业，AI的“可解释性”是满足监管合规、建立客户信任的关键。\n\n因此，《指导意见》提出，促进可解释性。金融机构应制定人工智能模型的可解释性方法，加强推理解释和决策分析。可解释性不足的人工智能技术在高风险场景应用时，仅能作为辅助工具，应由人工进行最终决策。人工智能模型应用于涉及客户权益或有实质性财务影响的关键决策时，须设置人工复核节点，完整保留原始数据、推理路径及阈值触发记录，确保责任可追溯。定期对人工智能模型算法开展审计。\n\n所以，在某些场景，当AI可解释性不足时，AI只能作为辅助工具，最终还是通过“人机协同”完成工作。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-27_银行AI开发应用指导意见中的重点：安全、理性投入、“先富带后富”等_银行科技研究社.md"}, {"title": "3家互联网银行联合开发语音诈骗检测AI联合模型", "source": "银行科技研究社", "digest": "3家互联网银行联合开发语音诈骗检测AI联合模型", "link": "https://mp.weixin.qq.com/s/SKN8NnegNYJMpYudON0Gbg", "content": "---\npublish_time: 1782530280\n---\n\n# 3家互联网银行联合开发语音诈骗检测AI联合模型\n\n> 原文链接：https://mp.weixin.qq.com/s/SKN8NnegNYJMpYudON0Gbg\n> 公众号：银行科技研究社\n\n韩国金融安全院近日宣布，与Kakao Bank、Toss Bank、K Bank三家互联网银行联合开发了语音诈骗检测AI联合模型。该模型将于今年7月起正式在三家银行的实际业务场景中上线，与现有风控系统并行运行。\n\n此次联合开发的最大技术亮点在于采用了联邦学习框架。在这一架构下，三家银行无需共享各自的原始训练数据，仅共享各自训练后的模型权重，并通过聚合方式实现模型的协同训练，在有效保护用户隐私和数据安全的同时，充分发挥联合数据的规模优势。据披露，该联合模型的识别精度较单体模型最高可提升205%。\n\n韩国金融安全院表示，该项目是金融行业在AI反诈领域的一次重要尝试。除了三家互联网银行的率先落地外，金融安全院还计划将该模型逐步推广至整个金融行业。此外，预计于今年第四季度，该模型将接入其电信金融诈骗信息共享与分析AI平台ASAP，为更多金融机构提供语音诈骗识别能力。\n\n随着语音诈骗手段不断翻新，金融机构对智能化、高效率的检测工具需求日益迫切。此次韩国金融安全院与三家互联网银行的联合探索，为金融业利用AI技术协同反诈提供了可借鉴的实践路径。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-27_3家互联网银行联合开发语音诈骗检测AI联合模型_银行科技研究社.md"}, {"title": "点金破局：以全栈AI原生，重构金融数字生产力底座", "source": "金融电子化", "digest": "点金破局：以全栈AI原生，重构金融数字生产力底座", "link": "https://mp.weixin.qq.com/s/KLi1Dx6FT44d5XS2rwU84A", "content": "---\npublish_time: 1782529200\n---\n\n# 点金破局：以全栈AI原生，重构金融数字生产力底座\n\n> 原文链接：https://mp.weixin.qq.com/s/KLi1Dx6FT44d5XS2rwU84A\n> 公众号：金融电子化\n\n文/本刊记者   杨昆桦\n\n当前金融业数字化转型迈入深水区，智能体选型难、落地难、维护难等痛点持续掣肘行业智能化迭代。近日，在杭州召开的2026阿里云金融创新峰会似乎给出了答案。会上，阿里云重磅发布金融级通用智能体“点金”，依托“芯片-云-大模型-智能体”AI全栈技术体系，为金融行业筑牢数字金融安全底座，开启规模化、可落地、可演进的金融AI新征程。\n\n深度聚焦行业属性，打造金融级通用智能体\n\n阿里云智能集团公共云事业部副总裁、新金融行业总经理张翅在演讲中提到，过去五年，是中国金融数字化发展成果卓著的五年，行业完成了大量数字化建设工作，云原生技术广泛应用于生活核心场景，大数据技术深度融入金融领域，替代了诸多传统技术。目前，数字化建设尚未完全收官，而智能化浪潮已将我们推向新的发展起点。AI的发展速度已不能用五年为周期衡量，过去一两年，大模型技术的突破带来了全新变革与启示，2026年更是被视作金融行业智能体发展的真正元年。\n\n阿里云智能集团公共云事业部副总裁、新金融行业总经理张翅发表主题演讲\n\n在此背景下，金融行业由于其具有高度严谨的监管要求、专业化的业务逻辑、强合规的操作流程、高可信的数据依赖及复杂长程的业务执行场景等特点，对智能化应用提出了区别于通用领域的独特需求。具体而言，金融机构目前需要真正适配行业特性的金融智能体：可以理解各业务线条具备专属岗位逻辑与专业技能体系；在全流程中须满足合规可解释、可审计、可追溯；所有决策必须基于高质量可信数据，且需要严格安全隔离的运行环境；同时还能够支撑长时间、高复杂度的长程任务执行。这些需求共同决定了金融智能体不能简单移植通用大模型能力，而必须在行业根技术上实现深度融合与系统性再造。\n\n“点金”的演进分为三个阶段：1.0把大模型能力嵌入到工作流智能体当中实现局部增强，2.0采用模型后训练技术构建知识飞轮，把金融领域知识内化到模型参数中，本次发布的3.0版本基于Harness架构实现金融级通用智能体，通过工程手段抑制模型幻觉，并将安全能力深度内嵌。同时以轻量化、易用的平台设计，助力一线专家自愿沉淀业务知识与技能，而非被动采集，从而在保障合规与安全的前提下，实现金融日常工作的数字化与智能化落地。\n\n从技术底座到服务落地，重新定义金融智能体\n\n落地金融场景是金融级智能体的立身之本，但想要适配金融强合规、高复杂、严监管的行业特质，离不开整套底层技术体系做支撑。阿里云智能集团新金融解决方案总经理郑淼在演讲中分享了四大技术支撑能力和三大核心创新突破，从底层架构、技术创新两大维度，全面展示了金融智能体如何实现自我演进、安全可控与场景深度适配，推动金融行业从技术赋能走向业务重塑。\n\n阿里云智能集团新金融解决方案总经理郑淼发表主题演讲\n\n1. 坚实技术底座：底层整合与全渠道能力支撑\n\n围绕金融行业尽调材料识别、签章信息解析等实际痛点，平台构建了坚实的技术底座与完整的服务体系。在技术架构层面，平台整合SandBox、记忆模块、AI网关等底层能力，并对所有能力进行标准化API封装，支持工作台、Skill、MCP、CLI等AI Native手段快速集成，适配头部金融机构的自研系统对接需求，形成云上托管、本地部署双向灵活切换。\n\n在此基础上，平台为金融机构提供\n\n四大技术支撑能力\n\n：\n\n一是\n\nSkill构建与定制，点金已联合银、证、保客户沉淀100+金融业务Skill，区别于传统定制化工作流的实现方式，点金支持客户基于专家最佳实践自由拼接、组合Skill，打造适配自身业务的信贷经理、代理人等专属AI数字员工技能，实现知识资产的个性化沉淀。\n\n二是\n\n全渠道端打通，平台完成飞书、企业微信等线下渠道与手机、Pad、桌面端等线上终端的全链路打通，实现云上与线下形态无缝衔接，满足一线人员移动办公需求。\n\n三是\n\n金融工具与数据适配，一方面接入主流资本市场标准化行情数据，打造Agent友好型数据体系，明确数据字段定义、规范数据格式；另一方面兼容机构内部私有化数据标准化改造，解决过往智能体对接私有数据源适配难、格式杂乱的痛点。\n\n四是\n\n长短程任务智能调度，支持短程快问快答（无需启动沙箱，降低资源消耗）与长程稳定执行（如风控模型优化，毫秒级启动专属沙箱，实现资源弹性调度）两种模式，通过任务的分类调度，在保障端到端稳定性的同时实现成本与性能的最优平衡。\n\n2. 三大核心创新：自我演进、柔性安全与垂直评测\n\n在核心创新能力方面，平台实现了三大突破。\n\n一是\n\n持续演进能力，打造可自我进化的金融智能体，实现“身份进化+技能进化”双层演进：身份进化指长期交互后深度理解使用者的业务理念与服务偏好并主动适配；技能进化指自动记录客户使用记录与反馈，迭代业务Skill内容，且保障单一能力升级不影响其他功能的稳定表现。\n\n二是\n\n业务自定义安全管控，创新实现业务侧自主定义安全规则，打破传统模式下安全规则仅由风控、技术团队设定的局限，业务人员可通过自然语言配置规则，实现个性化安全配置；同时保障凭证全流程加密存储，API、数据库连接等核心信息隔离保护，技术层面完善日志留存与全流程可解释性，便于问题追溯与审计。\n\n三是\n\n金融行业评测体系，平台搭建覆盖模型评测、智能体评测、岗位角色评测三大维度的垂直领域评测体系，从营销专员、行业分析师等岗位视角评估技能演进及端到端效果，保障数字员工持续迭代优化，并诚邀金融机构与合作伙伴共建评测体系。\n\n部署模式灵活，打通金融AI落地“最后一公里”\n\n技术能力固然是基础，但金融机构真正面临的课题，是如何将这些能力转化为一线业务可感知、可落地的实际成效。在服务模式上，为适配不同发展阶段、不同技术能力及不同合规要求的金融机构，平台提供了三种标准化服务模式，分别对应差异化的使用场景与部署诉求。模式一，公共云SaaS开箱即用，基于其上内置的10+金融数字员工和100+金融Skill，适合快速做出业务效果；模式二，基于点金Infra的开放API，搭建企业专有个性化工作台，集成企业内部系统；模式三，采用线下本地化部署，开放AgentScope金融版源码，支持头部金融机构自主定制开发与本地化迭代。目前，公共云形态与盈米合作，赋能投顾人员拓展高净值客群、提升服务效率；线下形态助力多家国有大行打造客户经理助手APP，支持自主迭代更新。\n\n以盈米基金与阿里云在本次峰会上联合发布“机构AI智能体解决方案”为例，有效打通大模型在金融领域落地的“最后一公里”，其标杆应用“且慢AI小顾3.0”已实现从“被动问答”到“主动服务”的能力跃升，为金融机构布局AI智能体提供了落地样本参考。\n\n相较于传统自主研发模式，该方案从行业真实需求出发，可大幅降低金融机构自建智能体的门槛，机构无需从零开展代码研发，仅需通过标准化的AI接口接入，快速搭建专属金融智能体应用。在整体架构上，方案采用能力互补的四层架构，实现了技术底座、合规管控、业务赋能、场景落地的全链条闭环体系。其中，\n\n通用基础能力层\n\n，\n\n依托千问大模型、通用MCP生态及通用Skill库，构筑了高弹性、高稳定性的AI科技底座。\n\n点金核心引擎层，\n\n聚焦金融行业的合规与可控性要求，负责智能体管理、运行时层、用户记忆管理、沙箱环境等，从技术层面牢固合规防线。\n\n金融服务引擎层，\n\n将盈米基金多年买方投顾实践经验进行沉淀和封装，包括盈米MCP、盈米Skills和盈米智能体的三层支撑体系——MCP层配置70多个专业金融工具，Skills层形成轻量化可复用的业务模块，Agent层则将专业能力沉淀到30多个细分场景的智能体应用中。\n\n应用场景落地层，\n\n以“且慢AI小顾3.0”为标杆案例产品，直观展示了金融垂直智能体的落地形态与服务能力，为机构提供可参考、可复刻的AI智能体应用新范本。\n\nAI原生重塑金融，开启未来生产力变革\n\n峰会同期，阿里云正式发布《金融行业Agent百技图》，系统梳理了AI在金融领域的落地路径与能力蓝图，并首次提出“金融通用智能体的10大要素”，为行业标准化建设提供了清晰框架。在此基础上，同步发布129项金融AI数字员工Skill开源计划，并与行业共建FinGDPVal评测体系，让Agent能力直接对齐真实业务产出。\n\n从移动金融到云原生，再到AI原生，金融科技的每一次跃迁都带来生产力的重构。在这一进程中，阿里云以点金通用智能体为抓手，以“芯-云-模-智”全栈能力为支撑，把安全、合规、可控放在首位，让AI真正服务于金融服务实体经济、防范金融风险、深化金融改革的核心目标。面向未来，随着数字员工大规模上岗，金融机构将实现降本、增效、提质、创新的全面升级。从“AI Plus”到“AI Native”，阿里云正以AI全栈能力为支撑，与金融机构共同迎接AI原生时代的到来。\n\n金科焦点 • 推荐阅读\n\n重磅：\n\n中国国际金融展\n\n、\n\n解码\n\n、\n\n低空经济\n\n、\n\n“数字金融”盘点\n\n技术：\n\n量子鼎新\n\n、\n\n大模型\n\n、\n\n数据\n\n指引：\n\n高层\n\n、\n\n政策\n\n、\n\n行业\n\n、\n\n学术\n\n、\n\n专访", "category": "同业", "is_model_related": false, "source_file": "sources/2026-06-27_点金破局：以全栈AI原生，重构金融数字生产力底座_金融电子化.md"}, {"title": "都在说缺算力，90% 的 AI 芯片却被「浪费」了？", "source": "极客公园", "digest": "全球最昂贵的浪费，正发生在最聪明的公司里。", "link": "https://mp.weixin.qq.com/s/Lr2DU_B-KctAQuTIR7Ebog", "content": "---\npublish_time: 1782554400\n---\n\n# 都在说缺算力，90% 的 AI 芯片却被「浪费」了？\n\n> 原文链接：https://mp.weixin.qq.com/s/Lr2DU_B-KctAQuTIR7Ebog\n> 公众号：极客公园\n\n全球最昂贵的浪费，正发生在最聪明的公司里。\n\n作者｜宇航猿\n\n编辑｜靖宇\n\n当你正 Vibe Coding 嗨到不行，或者跑着的项目突然停摆，打开 CLI 工具一看，「你的额度已用完」字样出现时，心态不崩是不可能的。\n\n你还别问，问 AI 公司就是「缺算力」。\n\n但事情真的如此吗？\n\nEpoch AI 的分析师估算，到 2025 年底，OpenAI 等效拥有的算力约相当于 170 万块 H100。这个数字在 2023 年是 10 万块，2024 年是 40 万块——两年暴增 17 倍。英伟达市值突破 3 万亿美元，全球科技巨头每个季度砸下数百亿美元抢购芯片。一切看起来都指向同一个叙事：算力就是 AI 的石油，谁囤得多，谁就赢。\n\n每家 AI 公司都在砸重金囤卡囤算力，怎么可能差我那点额度？！\n\n在播客 Latent Space 的一期节目里，AI 基础设施公司 AMP 的创始人 Anjney Midha 说：\n\n「\n\n像 xAI 这样的前沿实验室，GPU 利用率可能不到 10%——这只是真正问题的冰山一角。\n\n」\n\n我做了一次简单的换算。MFU（Model Flops Utilization，模型浮点运算利用率）是衡量 GPU 算力真正用于模型计算的指标。如果你花 5 亿美元买了一个 GPU 集群，MFU 只有 10%，意味着你实际获得的有效算力相当于只花了 5000 万美元。剩下 4.5 亿美元的算力，在空转。\n\n说不通的地方在于，这些是全世界最聪明的工程团队，花着全世界最昂贵的预算，建造全世界最先进的计算集群——然后让 90%的算力闲着。\n\n这不是某家小公司的管理失误，这是一个结构性的行业秘密。\n\n01\n\n巨量采购，巨量浪费\n\n让我把这个反差拆解得更具体一些。\n\nEpoch AI 的分析师 Josh You 在一份被广泛引用的报告中写道：「前沿实验室尚未使用大部分 AI 算力。」他追踪了主要实验室的算力增长曲线，发现一个令人不安的模式——\n\n算力的采购速度远远超过了算力的消耗速度\n\n。大量计算资源处于「储备」或「闲置」状态，像是被囤积的战略物资，而非正在燃烧的燃料。\n\n这不是前沿实验室独有的问题。\n\nFujitsu 在其 2024 年发布的《AI 基础设施状态报告》中引用了一组更刺眼的数据：超过 75%的企业在峰值负载下，GPU 利用率仍低于 70%。注意，这是「峰值」——也就是说，在最忙的时候，四分之三的企业连七成算力都用不满。\n\nVentureBeat 基于类似数据做了一个更激进的判断：「\n\n95%的 AI 基础设施开支被浪费了。\n\n」\n\n我试着把这些数字转化为具体的金钱损失。一块 H100 的云实例每小时收费 30 到 50 美元。假设一个企业运行着 20 块 GPU 的小型集群，利用率只有 20%——这在行业中已经算不错了——那么每年因闲置而浪费的计算成本约为 20 万美元。对于拥有数万块 GPU 的前沿实验室来说，这个数字要乘以几个数量级。\n\n这让我想起了一段被遗忘的历史。\n\n1990 年代末，美国电信行业经历了一场疯狂的光纤铺设热潮。WorldCom、Global Crossing、Level 3 等公司在地下埋设了数百万英里的光纤电缆，投入了超过千亿美元。但到了 2001 年泡沫破裂时，行业发现一个惊人的事实：铺设的光纤中，\n\n超过 95%是所谓的「暗光纤」（dark fiber）——从未被点亮，从未承载过任何数据\n\n。它们安静地躺在地下，像是埋葬了一个时代的雄心。\n\n这和今天 AI 行业买了 GPU 却让它们空转，是不是同一个故事的不同版本？\n\n但这里有一个关键的区别。暗光纤的问题主要是需求侧的——当时根本没有那么多数据需要传输。而 GPU 闲置的问题更复杂，因为算力需求明明就在那里。每家实验室都在抱怨算力不够用，每个研究者都在排队等 GPU。\n\n供给和需求都存在，中间到底卡在了哪里？\n\n02\n\nGPU 65% 的时间在等待\n\n我曾经天真地以为，GPU 利用率低是因为工作负载不够。后来我去读了一些基础设施层面的技术分析，才意识到问题完全不是这样。\n\nGPU 不是一头只要喂食就会干活的野兽。它更像一位挑剔的米其林大厨——食材的品质、上菜的节奏、厨房的动线，任何一个环节出问题，它都会停下来等。\n\naixenergy 的一项研究揭示了一个令我吃惊的数字：\n\n在 AI 训练过程中，GPU 有 30%到 65%的时间处于闲置状态。不是因为没有任务分配给它，而是因为数据还没准备好。\n\n这就是所谓的「\n\n数据饥饿\n\n」问题。\n\n训练一个大模型需要海量数据，这些数据需要经过清洗、标注、分词、打包等一系列预处理步骤，然后从存储系统加载到 GPU 的显存中。GPU 的计算速度是以每秒万亿次浮点运算（TFLOPS）来衡量的，但存储系统的 IO 速度远远跟不上这个节奏。结果就像一条高速公路上，收费站的吞吐量决定了实际车流量——不管你把公路修到几十车道宽，收费站一次只能过两辆车，后面全在堵。\n\n但故事还没完。我在 arXiv 上找到一篇关于 GPU 能耗的论文，它揭示了一个更隐蔽的问题：\n\n即使 GPU 进入了所谓的「深层空闲状态」（deep idle），它仍然在大量耗电。\n\nEpoch AI 的数据显示，GPU 数据中心的总功耗中，约 40%直接来自 GPU 本身。这意味着那些等待数据的 GPU 不仅没在干活，还在烧电，而且烧的是不小的量。\n\n这就像一辆法拉利堵在早高峰的环路上：引擎空转，油在烧，但车没动。而你还在为这辆车支付每小时 50 美元的租金。\n\n还有一个更微妙的陷阱。那篇 arXiv 论文指出，目前行业通用的监控指标「集群级 SM 利用率」，其实并不能有效反映真实能效。SM（Streaming Multiprocessor，流式多处理器）是 GPU 内部的计算单元。即便监控面板显示 SM 利用率看起来正常，\n\n实际上很多计算周期在做「假工作」——数据搬运、内存同步、等待通信，而非真正的模型计算。\n\n这解释了一个我之前困惑的现象：为什么有些团队报告「GPU 利用率 70%」，但训练速度却远低于预期。因为那 70%里面，可能只有一半在做有效计算，剩下的在做后勤。峰值负载利用率就像公司的「最佳季度营收」——它是真的，但它不代表常态。用它来衡量效率，就像用你跑得最快的那一次百米成绩，来评估你的日常通勤速度。\n\n当问题出在结构而非规模上时，堆量不仅不能解决问题，反而会让浪费等比放大。\n\n03\n\n当「用好算力」变成一门新学科\n\n如果问题是结构性的，那解法也必须是结构性的。这正是 Anjney Midha 在那期播客中提出的核心命题。他用了一个词：\n\n「outputmaxxing」——产出最大化。\n\n这个词初听像硅谷的又一个流行语，但 Midha 给出的基准线让我意识到，它指向的是一个严肃的工程问题。他说：「我认为目前最佳实践者的 MFU，大概在 60%到 70%之间。」\n\n60%到 70%。这是全世界最顶尖的团队、最优化的代码、最精心调校的基础设施所能达到的上限。而行业均值连这个数字的零头都不到。\n\n这个差距意味着什么？意味着对于大多数 AI 公司来说，\n\n如果能把利用率从 10%提升到 60%，等同于在不多花一分钱的情况下，把有效算力扩大了 6 倍。\n\n不需要抢购更多 GPU，不需要建更多数据中心，不需要和英伟达打价格战——只需要把已经买来的东西真正用起来。\n\n这和云计算行业走过的一条几乎一模一样的路。2000 年代初期，企业的物理服务器平均利用率只有 10%到 15%。每台服务器运行一个应用，剩余的算力全部闲置。然后 VMware 带来了虚拟化技术，把多个虚拟机塞进同一台物理服务器里。再后来 Docker 带来了容器化，进一步压缩了资源开销。\n\n到今天，云服务器的利用率普遍达到 60%到 70%。\n\n从 10-15%到 60-70%。这个跃迁花了大约 15 年，催生了一个万亿美元的云计算产业，彻底改变了软件的构建和部署方式。AI 算力现在站在的位置，看起来就是 2005 年的服务器市场——知道问题在哪里，但系统性的解决方案还在酝酿中。\n\n商业模式的变迁，正在加速这个转型。早期的 AI 基础设施市场流行「固定费用许可」和「捆绑 Token」模式——企业预付一大笔钱，买下一定量的算力配额，用不完也不退。\n\n这种模式天然鼓励浪费，因为边际成本为零，没有人有动力去优化利用率。\n\nVentureBeat 的分析指出，随着行业逐渐转向按使用量计费，闲置基础设施的成本压力，正在从「被忽略的背景噪音」变成「生产阶段的紧急事项」。\n\n当每一个空转的 GPU 周期，都直接对应着账单上的一个数字时，「产出最大化」就不再是一个技术理想，而是一个财务命令。\n\n与此同时，环境成本也在倒逼效率革命。\n\nTowards Data Science 的分析指出，多数 GPU 的闲置意味着全球 AI 计算的碳排放中，有相当一部分是「无效排放」——它们没有产出任何智能，只是把电变成了热。GPU 数据中心 40%的功耗来自 GPU 本身，而其中大量消耗在空转和深层空闲状态上。这不仅仅是钱的问题，更是资源和环境的问题。\n\nFujitsu 在 2024 年发布了一份技术白皮书，标题直截了当：「最大化 GPU 利用率」。DevZero、Prodia、Mirantis 等一批基础设施公司也纷纷发文探讨「为何 80%的 GPU 闲置」以及各自的优化策略。这种行业范围内的集体焦虑，本身就是一个信号——问题已经大到没人能继续假装看不见了。\n\n人们忽略了一件重要的事，在 AI 竞赛的叙事中，「规模」一直是唯一的主角。\n\n谁拥有最多的 GPU、谁训练了最大的模型、谁花了最多的钱——这些是头条新闻的素材。但效率从来不是头条。\n\n没有人会写「某公司把 GPU 利用率从 15%提升到 50%」的新闻，尽管从实际产出来看，这可能比多买 10 万块 GPU 更有价值。\n\nMidha 的「产出最大化」之所以值得认真对待，是因为它暗示了一个范式转移：\n\nAI 竞赛的护城河正在从「谁能买到更多算力」转向「谁能从同样的算力中榨取更多智能」。\n\n前者是一场资本的消耗战，后者是一场工程的精密战。前者的上限取决于你的银行账户和英伟达的产能，后者的上限取决于你对计算物理学、分布式系统和数据工程的理解深度。\n\n这不是一个渐进式的优化问题，也是一门新学科的诞生。\n\n每一次基础设施革命似乎都遵循相同的剧本：先是疯狂建设，然后发现大部分产能在浪费，接着一批新的公司和技术出现，专门解决「如何用好已经建好的东西」。铁路时代如此，电力时代如此，互联网时代如此，云计算时代如此。AI 算力走到了这条弧线的拐点上。\n\n但这一次有一个有意思的不同。之前每一次效率革命，优化的对象都是相对「笨」的资源——蒸汽、电力、带宽、服务器周期。而这一次，我们试图优化的资源本身，正在被用来创造某种形式的智能。当你把一块 GPU 从空转状态「唤醒」，让它真正参与模型训练时，你增加的不仅仅是利用率百分比——你增加的是这个世界上正在思考的硅基大脑的数量。\n\n也许，AI 时代最重要的问题从来不是「我们能制造多少算力」，而是「我们已经拥有的算力中，有多少真正在思考」。\n\n*头图来源：Tatum.io\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n你认为 AI 的下一个突破，\n\n靠的是更多芯片，\n\n还是更高的利用率？", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_都在说缺算力，90% 的 AI 芯片却被「浪费」了？_极客公园.md"}, {"title": "老黄：Prompt已死，整个AI圈都在疯狂追Loop", "source": "新智元", "digest": "硅谷集体抛弃Prompt", "link": "https://mp.weixin.qq.com/s/JwMexiVjbv6p2bkq5ylLEw", "content": "---\npublish_time: 1782535560\n---\n\n# 老黄：Prompt已死，整个AI圈都在疯狂追Loop\n\n> 原文链接：https://mp.weixin.qq.com/s/JwMexiVjbv6p2bkq5ylLEw\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\n这些天，硅谷最热的词，就是Loop！老黄、Karpathy、吴恩达、Anthropic工程师、龙虾之父都在纷纷告诉你，Prompt已死，必将被Loop取代。\n\n最近，硅谷最火的是哪个词？\n\nLoop。\n\n一打开X，全网铺天盖地都在讲Loop Engineering。\n\n硅谷一众大佬，都在纷纷放弃提示词，转向自主循环！\n\n黄仁勋给我们划出下一阶段的新重点（也是烧token的新方法）：\n\nNobody writes prompts anymore. The new job is to write and handle loops.\n\n（没人再写提示词了，新工作是写Loop，搞Loop。）\n\n最近，Anthropic工程师透露：\n\nAnthropic内部80%以上工程师已在使用自改进循环（self-improving loops），3-6 个月将达 100%。\n\n吴恩达断言：3到6个月后，prompt将消亡！Loop取代prompt，已成定局。\n\nKarpathy此前在讲解自己的AutoResearch项目时，就讨论AI agents 闭环（generation → execution → evaluation → improve），呼吁要把人类从loop中部分移除。\n\nKarpathy在3月在访谈里，专门深入谈了 AutoResearch / Karpathy Loop\n\nOpenClaw之父Peter Steinberger直言：每月一提醒，别再手写提示词了，设计循环才是王道。\n\nClaude Code之父Boris Cherny直接豪言：Loop循环就是未来！\n\n两年前，我们还在手动写代码。后来开始过渡到让智能体来写代码。\n\n而现在，我们正迈向这样一个阶段：由智能体来提示其他智能体，再由后者生成代码。\n\n从源代码到智能体这一步虽然很大，但引入循环机制的意义和影响，丝毫不亚于前一步。\n\n没想到，提示工程火了两年，顶流AI工程师已经不玩了。\n\n为什么硅谷大佬，都纷纷看好Loop？\n\n传统 prompting 的本质是：人类就是loop本身。\n\n你写prompt → Agent输出 → 你review → 你再写下一个prompt → 循环往复。\n\n每一步都依赖人类注意力、上下文记忆和决策带宽。一个人一天能有效驱动的token量和任务复杂度是有限的。\n\nLoop Engineering的本质是：系统自己成为loop。\n\n因此，循环工程比提示词工程更重要。\n\n人类只做一次高价值设计：\n\n1、定义目标与停止条件\n\n2、搭建验证机制（最关键）\n\n3、建立持久化记忆（markdown / 外部状态）\n\n4、 配置发现与调度\n\n之后， AI循环系统可以自主发现任务 → 执行 → 验证 → 持久化 → 再次发现，24/7 运行，人类只在必要时介入。\n\n这就是硅谷大佬，都纷纷看好Loop的原因。\n\n他们是基于这个判断：一旦loop成熟，手动提示词的性价比会直接崩盘！\n\nLoop Engineering 11页白皮书，全网疯转\n\n所以，循环过程到底是什么？\n\n最近几天，X上开始疯转这样一份关于Loop Engineering的白皮书。\n\nhttps://drive.google.com/file/d/1qzKI4DKnyHRpXK1J3ATPqwaqLc0iNu-M/view\n\n这个11页PDF，本质上是一份流行总结/现场指南，汇集了相关公开讨论和实践经验。\n\n其中的核心想法，源于 Peter Steinberger、Boris Cherny和Addy Osmani的公开表述。\n\n什么是循环工程？\n\nLoop Engineering（循环工程）\n\n，由 Google Chrome 工程师 Addy Osmani 在 2026 年 6 月命名。\n\n它是提示词工程、上下文工程、工具链工程之上的第四层：前三层都假设你坐在键盘前逐行指挥 AI；Loop Engineering 要把你从这个位置上移走，彻底将你从干活的位置上解放出来。\n\n从此，你不再是驱动AI的引擎，而是设计这台引擎的架构师。\n\n系统将在设定好的时间自动唤醒、衍生子智能体进行工作，并将输出结果反馈给自身作为下一轮的输入。\n\n文章将一个完整的Loop拆解为五个关键动作 ：\n\n发现\n\n：AI利用固化的技能库自己去寻找有价值的工作，比如读取最新的CI失败记录或未解决的Issue。\n\n交接\n\n：为每个任务开启独立的沙盒，让多个智能体并行且互不干扰 。\n\n验证\n\n：这是最核心的一步。让写代码的AI给自己打分，它只会盲目自我赞美。因此，必须引入一个完全独立的、默认持怀疑态度的「评估者」智能体来挑错。\n\n持久化\n\n：AI的记忆不能只停留在随时会被清空的上下文窗口中，必须将其状态和进度固化到磁盘上，以便第二天能接着干。\n\n调度\n\n：通过自动化脚本让系统周期性地自主运转，闭合整个循环。\n\n其中，最难、也最容易被偷懒跳过的是验证。\n\n让 AI 自己给自己打分，它几乎总会夸自己，因为它脑子里装着自我说服链条。而解法，就是引入一个独立的评估 Agent，默认假设代码是坏的。\n\n然而，系统全自动运行并不意味着你可以高枕无忧。作者警告：当循环在深夜狂奔时，可能会悄悄积累四大隐性成本。\n\n验证债务：未经验证的细微错误被悄悄合并入库。\n\n理解腐化：AI写代码太快，导致人类对代码库的理解严重脱节。\n\n认知投降：人类懒得再审查，全盘接受AI的结果。\n\nToken失控：AI在死循环中彻夜重试，烧光预算。\n\n同一个Loop，两个人来建，可能会得出截然相反的结果。带进去判断力，就放大判断力；带进去懒惰，就放大懒惰。\n\n总之， 这篇报告揭示了一个深刻的行业变化：循环工程让代码的生成几乎免费，而人类的判断力，则成了唯一的稀缺资源！\n\n另外，同时全网疯转的还有Codez发出的一份14步的实操手册，目前已经有百万转发。\n\n文章大意如下：Prompt已经过时了，杠杆点已经上移了一层——从「写给AI看的话」，变成「设计一套自动喂给AI的系统」。\n\n这个转变可以拆成14步、3个阶段——\n\n先判断你是否真的需要一个循环（任务是否重复？验证是否可以自动化？预算能否承受？），再学会五个构件（调度、隔离工作目录、技能文件、外部连接器、独立评估子 Agent），最后搭出最小可用的循环。\n\n其中最关键的一点是：让写代码的 Agent 和审代码的 Agent 分开。同一个模型既当运动员又当裁判，结果永远是给自己打满分。\n\n没有客观验证门控的循环只是「两个乐观主义者互相点头」，跑得越好的循环，越容易让工程师停止真正理解代码。\n\nLoop Engineering诞生时间线\n\n如果要给循环工程理一条时间线，大致如下。\n\n前期基础阶段\n\n2022 年：姚顺雨等人提出ReAct框架，奠定理论基石。\n\n2025 年：Geoffrey Huntley 提出 「Ralph」 。\n\n2025–2026 年初：Andrej Karpathy 发布 AutoResearch 项目，形成经典的自主实验循环，这是一大里程碑。\n\n概念爆发与命名阶段\n\n2026 年 6 月初，Peter Steinberger发声：你不应该再手动提示编码智能体，而应该设计提示它们的循环。\n\nBoris Cherny表示：我不再直接提示 Claude，我的工作是编写运行 Claude 的循环。\n\n2026 年 6 月 7 日：Addy Osmani发布博客《Loop Engineering》，正式将之命名，提供4层栈框架：Prompt → Context → Harness → Loop Engineering）。\n\n随后，在整个6月，Loop Engineering开始在全网病毒式传播。\n\nClaude「无限循环」，自动化Agent接管一切\n\n在内部播客中，Anthropic的工程师吐露了一个令人毛骨悚然的细节：\n\n当你点击运行，让 Claude 执行 8 小时，你其实是在进行一场 500 美元的算力豪赌。\n\n如果你还在纠结怎么写提示词，你就已经输了。\n\n在 Anthropic 的逻辑里，工程师正在进化为「算力分配师」。\n\n你的核心工作不再是写逻辑，而是决定每一美分的算力投向哪里。\n\n正如OpenAI研究员Noam Brown本月早些时候指出的，当代模型只要你肯砸足够的算力，几乎能解决任何问题。\n\n循环工程是「测试时计算」大趋势的一部分。\n\n有趣的是，让智能体循环工作的点子其实早就有雏形了。\n\n至少去年夏天，澳大利亚放羊大叔Geoffrey Huntley就在博客里提过类似做法，他管这叫「Ralph循环」。\n\n一年前，如果你想实现一个循环，你得写一堆 bash 脚本，然后永远维护那堆代码，它只属于你一个人。\n\n而现在，这些组件直接内置在产品中。\n\n你就不会再争论该用Codex或Claude Code，而是直接设计无论你身处哪个工具都能正常运行的循环。\n\n原谷歌工程与开发者关系负责人Addy Osmani指出，循环工程需要的各个部分，这些AI工具都已具备。\n\n他还断言，循环工程可能导致工程师「认知投降」：\n\n当循环自行运转时，你很容易停止思考，只是被动接受它反馈的一切。\n\n这也是正是软件工程Armin Ronacher所忧心的。\n\n这也正是橙皮书中所说的，Addy Osmani鼓励大家带着判断力去设计循环：\n\n设计循环，若带着判断力去做便是解药，若为了逃避思考而做则是催化剂——同样的动作，截然相反的结果。\n\n循环不止，工程不死\n\n在四月的AI工程师大会上，Anthropic的工程师说，他们让Claude开发复古小游戏的App，分别用了两种方式：一种是只用极简的提示词，另一种是用智能体循环。\n\n结果对比很鲜明： 极简提示词那版花了20分钟、耗费9美元就搞定了；而循环方式花了6小时、耗费200美元。\n\n但后者做出来的App质量高出一大截。\n\n前者游戏跑不起来，App很简陋；而循环版则丰富得多，包含了游戏设计师想要的很多功能。\n\n循环不会怜悯放弃思考的人。它只会用更快的速度，把你的无知变成代码里的债务。\n\n而那些愿意继续保持笨拙理解、持续定义规则、并为最终结果负责的人，将在这一次范式迁移中，获得比以往更大的杠杆。\n\nBuild the loop. Stay the engineer.\n\nPrompt已死，Loop在运行。\n\n而你，依然是那个决定它意义的人。\n\n参考资料：\n\nhttps://x.com/DataScienceDojo/status/2069873216152092975\n\nhttps://x.com/0xCodez/status/2064374643729773029\n\nhttps://x.com/akshay_pachaar/status/2069769689560187027\n\n编辑：Aeneas\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_老黄：Prompt已死，整个AI圈都在疯狂追Loop_新智元.md"}, {"title": "全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”", "source": "InfoQ", "digest": "刚刚，Meta叫停了一项争议巨大的员工监控项目。", "link": "https://mp.weixin.qq.com/s/BvVFpT2VIGgwEWKJW7E3JQ", "content": "---\npublish_time: 1782531662\n---\n\n# 全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”\n\n> 原文链接：https://mp.weixin.qq.com/s/BvVFpT2VIGgwEWKJW7E3JQ\n> 公众号：InfoQ\n\n整理 | 华卫\n\n刚刚，Meta 叫停了一项争议巨大的员工监控项目。据悉，一场内部安全事故导致该项目收集的各类敏感数据暴露给全公司，包括员工的私人对话、绩效数据以及转录内容。\n\n今年 4 月，Meta 向美国员工推出了名为 Model Compatibility Initiative（MCI）的工具。根据发起反对请愿的员工说法，该工具会“收集包括鼠标移动、点击位置、键盘输入在内的计算机操作数据，以及屏幕内容”，并将此作为训练数据来改进公司的 AI 模型。项目刚上线时，Meta 员工无权选择退出。为此，员工们以隐私、安全和个人自由为由对其提出质疑，经过抗议之后公司才有限度地开放了退出选项。\n\n最初，该公司发言人 Tracy Clayton 表示：“我们在设计该项目时已加入隐私保护措施，目前也没有迹象表明有任何数据被 Meta 员工不当访问。但在进行调查期间，我们决定暂停该项目。”之后，他又补充说，Meta 将无限期暂停该数据收集计划。\n\n这无疑会让 Meta 本就颇具争议的内部 AI 训练计划变得更不受欢迎。\n\n1\n\nCTO 刚承诺“严格控制”，4.5 万张 Hive 表数据泄露\n\n曝出数据泄露的人，是 Meta 团队里的一位工程师。周一，他发布了内部安全通知，称 MCI 收集的信息数据库已向公司内部所有人开放。这些数据是作为一项备受争议的训练人工智能模型计划的一部分而收集的，据信包括 Meta 美国员工的键盘输入、鼠标点击以及电脑屏幕上显示的内容。\n\n一位曾积极参与反对 MCI 的 Meta 前员工将此次疏漏描述为“一团糟”，并表示这是员工早已预料到的结果。该人士表示：“当员工提出担忧时，领导层变本加厉，未能承认员工提出的关于员工和客户数据安全与隐私的风险。领导层显然营造了一个带有威权色彩环境，在这种环境下，员工不再被尊重，也不再被倾听。”\n\n“45000 个 Hive 表中的员工数据已被暴露。”根据外媒收到的文件，这些表包括员工活动，如“完整提示词和转录文本、私人对话、人员与绩效数据以及 DSS 敏感性评级（1-4）”。该事件被归类为 SEV 2 级（严重程度 2 级），严重程度分级为 0 至 5 级，其中 0 级最为严重。\n\n几个月前，Meta 首席技术官 Andrew Bosworth 还曾在内部回应员工对数据泄露的担忧时表示，该项目是“受到严格控制”的，并采用与其他敏感数据相同的保护标准、存储系统和访问控制机制。\n\n尽管其如此表态，但看起来 Meta 在安全性方面并未如其所说那样周全。这也是该公司一系列与 AI 相关的网络安全事件中的最新一起。今年 3 月，一款具备自主行为的 AI 在未被指示的情况下采取行动，并引发连锁反应，最终导致安全漏洞，当时 Meta 也给出了类似回应。而就在本月早些时候，该公司还不得不应对黑客利用其 AI 客服聊天机器人劫持 Instagram 账户的事件。\n\n而现在，原本用来监控和收集员工数据的工具也成了 Meta 的安全“漏洞”，公司里任何人都能读取他们收集到的同事资料。\n\n据了解，在数据安全方面，Meta 面临的监管压力高于大多数公司。该公司需遵守美国联邦贸易委员会（FTC）的一项同意令（有效期至 2040 年），要求其建立防止数据泄露的流程。但有现任和前任员工对外媒表示，这些要求已显不足且过时。\n\n此外，Meta 还开始将部分隐私和安全风险审查工作外包给 AI 系统。目前尚不清楚 AI 是否参与了此次 MCI 数据访问控制问题。\n\n2\n\n员工失望“大闹”，Meta 决定全面关停 MCI\n\nMeta 的一些员工迅速抓住这次安全失误，在内部论坛上表示，这证实了他们在公司 4 月开始追踪员工办公笔记本电脑时提出的担忧。一名员工写道：“我非常愤怒。我没有看到任何恶意访问的证据，但数据没有按最初承诺的那样被锁定保护，这非常令人沮丧。”\n\n论坛上关于该事件的评论，还包括质疑 Meta 的隐私审查为何未能防止泄露，以及所有数据可能被暴露的人是否会被允许参加复盘会议。内部文件显示，一名员工在 SEV 讨论中发表评论，要求对这些问题进行更深入调查。该员工写道：“我通过工作电脑访问过个人税务和医疗信息，成千上万的员工也是如此。我们被告知这些数据会受到保护，并且仅在经过严格过滤后用于合法的商业目的。”\n\n内部论坛上涌出大量批评评论，表达对安全问题的失望后，Meta 最终决定全面关停 MCI，这一举动让部分员工感到意外。据两名知情人士透露，Meta 甚至在正式通知员工之前，就已将该决定先告知了外媒。\n\n在一则回应员工问题的内部帖子中，Bosworth 表示，该追踪项目的实施未达到隐私评审设定的标准，相关调查结果将被共享。他写道：“这次问题源于 ACL（访问控制列表）配置错误，我们需要搞清楚是如何发生的，追踪所有数据访问，并彻底弄明白。”\n\n据 Meta 内部未获授权公开表态的消息人士透露，该事件现已被标记为“已关闭”，意味着可能已得到解决。\n\n不过，一位消息人士表示，截至周一下午，该工具仍在持续记录数据。该公司发言人称，暂停措施正在逐步实施，完全停止所有人的数据收集需要一定时间。\n\n有意思的是，在一个 Meta 员工常用于分享玩笑的内部论坛中，有人贴出美剧《办公室》的梗图：角色 Jim Halpert 举着牌子，上面写着“距离上一次荒唐事件已过去 0 天”。\n\n3\n\nMeta 被曝多个部门士气低迷，高管当场被骂“狗屎”\n\n这起安全事件很可能会加剧 Meta 当前的士气危机。\n\nMeta 提出的通过监控工具来展开的内部 AI 训练计划，员工们早有异议。上个月，这家科技巨头超过 1600 名员工签署内部请愿书，反对这一笔记本监控项目，并警告称：“收集这些数据会为 Meta 带来安全和监管风险，包括潜在的数据泄露和未经授权的披露。”请愿者还对 Meta 所采取的保护措施不足表示担忧。一名工程师在广泛传播的内部备忘录中写道，在未经同意的情况下抓取其屏幕内容用于训练数据，“感觉像是对隐私的侵犯，也是一种剥削”。\n\n而 Meta 高管此前为该项目辩护称，这是为了训练 AI 系统像人类一样使用计算机软件所必需的。在上月泄露的一段公司会议录音中，CEO Mark Zuckerberg 表示，“AI 模型是通过观察非常聪明的人如何做事来学习的”，而公司员工的“平均智力水平明显高于”专门雇佣来生成此类数据的外部承包商。\n\n在员工的广泛抗议之下，Meta 本月才开始放宽监控措施，包括允许员工在处理敏感事务（如预约个人事项）时短暂关闭监控。没过多久，就又出了今天数据泄露的事。\n\n过去几年，大规模裁员、动荡的组织重组，以及公司全力推进 AI 模型与功能开发，也已令 Meta 员工普遍感到不满。今年 3 月，Meta 成立了新的 Applied AI 团队，并将约 6500 名员工调整至以优化 AI 模型为核心的新岗位。一些员工将自己被分配的工作形容为琐碎甚至“令人精神崩溃”。上周，Bosworth 向员工发送备忘录，就公司在 AI 重组过程中的“糟糕沟通”致歉，并承诺改进，包括提供更清晰的信息沟通以及恢复部分办公福利。\n\n根据外媒爆出的录音，Meta 多个部门紧张情绪沸腾、员工士气跌至历史低点。本周早些时候，有人打断了 Meta 内部仅限员工观看的直播演示，爆粗口抱怨“成了公司的奴隶”。此人随后要求会议主持者给某位 Meta AI 高管写信，“告诉他，他是个狗屎”。据一位目击者称，其中一位主讲人用手捂住了脸。\n\n在本周向 Instagram 所有员工开放的一次会议上，Meta 首席产品官 Chris Cox 谈到了过去几个月“公司的疯狂”所造成的“艰难”和“残酷”环境。Cox 赞扬了 Instagram 员工在堪比“在冰雹中跑马拉松，然后队友被替换，接着还被录制监控”的环境下推出功能并为约 20 亿用户服务。他说：“这简直他妈的离谱。”引发笑声后又重复了一遍。Cox 表示，公司领导层需要重新与员工建立联系，并且不要对 AI 的力量“过于夸大”。“它既不是神，也不是魔鬼，它远没有你想的那么好，也远没有你想的那么糟。而且它每周都在变……它连今天是星期几都不知道。”\n\n“鉴于这些变化的复杂性，我们犯了错误，而且几乎肯定会犯更多错误，在我们度过这一时期的当下，我也专注于尽可能为未来提供更多稳定性。”Zuckerberg 也在一份内部备忘录中承认，近期的组织变革在 Meta 内部引起了困扰，并且重申了今年不再进行大规模裁员的承诺。到今年年底，许多地点的员工将再次拥有固定工位。\n\n参考链接：\n\nhttps://www.wired.com/story/meta-pauses-employee-tracking-program-following-internal-security-breach/\n\nhttps://www.businessinsider.com/meta-ai-training-data-leak-exposed-employee-activity-across-company-2026-6\n\nhttps://www.wired.com/story/meta-accidentally-let-employees-access-each-others-keystroke-data/\n\nhttps://www.wired.com/story/mark-zuckerberg-meta-employee-meeting-interrupt-ai/\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\nAI 设计9个月就能媲美Blackwell？OpenAI “辣芯”绕开英伟达正面战场，但老黄的GPU大盘不稳了\n\nAI可以用任何手段、写任何东西，但你得是个“中年老登”\n\n拿下OpenAI Offer后，她复盘了57场面试：Transformer要会手写，LeetCode还得刷\n\nClaude Code 工程一号位亲自给 Agent 热潮降温：狂烧 Token 时代已过，现在该算ROI了", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_全公司“围观”私聊与绩效，Meta 紧急叫停用员工训练 AI：士气崩了，员工怒骂高管“狗屎”_InfoQ.md"}, {"title": "微软年度AI职场报告：员工已经准备好了，公司还没有", "source": "量子位", "digest": "28页干货爆炸", "link": "https://mp.weixin.qq.com/s/p59gkROx3CgufDZFaKhrTQ", "content": "---\npublish_time: 1782529200\n---\n\n# 微软年度AI职场报告：员工已经准备好了，公司还没有\n\n> 原文链接：https://mp.weixin.qq.com/s/p59gkROx3CgufDZFaKhrTQ\n> 公众号：量子位\n\nJay 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\nAI能否真正产生价值？组织因素的权重是个人的两倍。\n\n也就是说，\n\n你AI用得不\n\n好，三分之二的锅\n\n得公司背\n\n。\n\n这个反直觉洞察，出自微软一年一度的\n\n《Work Trend Index》\n\n（WTI）\n\n。\n\n今年的主题颇具火药味：AI时代，员工已经准备好了，但领导和组织还没有。\n\n这并非纸上谈兵。微软今年的样本量依旧惊人：覆盖全球\n\n1\n\n0个\n\n市场\n\n、2000\n\n0名AI\n\n使用者\n\n，结合数万亿条经匿名化处理的Microsoft 365生产力信号，以及对AI、工作和组织心理学专家的深度访谈。\n\n最终，他们挖出了三个关键真相：\n\n58%的受访AI用户表示，AI让他们正在产出一年前无法完成的成果，这一比例在中国高达72%。\n\n当领导者主动拥抱AI时，员工对AI的认可度提升17%；但仅有26%的员工认为，领导层对AI的认知与自己一致。\n\n在驱动AI价值的因素中，组织环境占67%，个人心态与行为仅占32%——前者是后者的整整两倍。\n\n说实话，在信息爆炸的AI前沿，很少能看到如此高密度、且有实证研究支撑的观点。更何况，这是一份整整28页的报告。\n\n我们花了好几天从头啃到尾，把最核心的精华整理了出来。\n\n请享用。\n\nAI组织金字塔：被误读的「转型悖论」\n\n今年报告的关键词多到令人眼花：Human Agency、Learning System、AI Readiness、Transformation Paradox、Frontier Professionals、Owned Intelligence……\n\n不得不感叹AI时代的造词能力。\n\n但读完你会发现，万千概念背后其实只有一条主线——\n\n企业必须开始把AI当成一种「组织能力」来设计，而非仅仅是工具。\n\n与去年相比，信号变了。\n\n去年WTI的关键词是「容量缺口」，大家还在讨论如何用AI省时间、释放产能，苦会议邮件久矣。谁能想到，仅仅一年，白领的基础任务已基本被模型吃光。\n\n然而，瓶颈并没有消失。\n\n前段时间在评论区刷到段对话，很多网友都有共鸣，我用AI生图还原了一下，大概长这样。\n\n△\n\n图为AI生成\n\n员工已经开始用AI重做工作，但组织仍在用旧框架来评价。结果就是白干，纯纯自费上班。\n\n这便是今年WTI的核心命题：「转型悖论」。\n\n它\n\n可以被拆解为\n\n三层。\n\n员工——AI抬高了上限，也放大了「判断力」的权重\n\nAI正在抬高个人潜力上限。\n\n微软基于Copilot对话遥测数据发现，49%的智能Microsoft Copilot对话已用于支持认知型工作：分析、解题、评估与创造性思考。\n\nAI早就不只是写邮件、做PPT的助手了。\n\n这种变化对员工的影响也是立竿见影。\n\n66%的受访AI用户表示，AI让他们能把更多时间投入高价值工作；\n\n58%的受访AI用户表示，AI让他们正在产出一年前无法完成的成果。\n\n这一比例，\n\n在\n\n中国高达72%\n\n。\n\n而在Frontier Professionals\n\n（AI高手）\n\n群体中，更是直接飙升到断层——\n\n80%\n\n。\n\n（ps：WTI对Frontier Professionals的定义是，能用AI打通多步骤任务、重新设计工作流，甚至参与组织层面的AI标准建设。）\n\n效率提升容易理解，但为什么不同人之间的方差这么大？\n\nWTI在深度调研后发现，尽管行业各异，AI高手们有一个共同特质：绝不把思考外包给AI。\n\n他们会刻意保留部分不用AI的工作以维持手感；在动手前，会先进行「路由判断」——哪些交给AI，哪些必须由人来做。\n\n这个洞察至关重要。当员工彻底摆脱「执行者」的自我认知，开始学着像「管理者」那样把控方向，工作效率会发生质变。\n\n去年WTI聊的是怎么用AI辅助驾驶，而今年Agent飞速发展，执行这件事已经彻底进入了L4阶段。\n\n但这不代表一劳永逸。工具释放的潜能，终究取决于人。\n\nAI越强，人越要学会为「判断」负责。\n\n从更大的视角看，这枚硬币还有另一面。\n\n当员工的能动性被前所\n\n未有地放大\n\n，公司接得住吗？\n\nWTI的答案是：不太乐观。\n\n第二层：领导者——口号很响，激励没跟上\n\n报告沿着「个人AI能力」与「组织AI准备度」两个维度，将人群划分为五类：\n\nFrontier\n\n（19%）\n\n：个人与组织双高，相互加强。\n\nBlocked Agency\n\n（10%）\n\n：个人能力强，但组织系统拖后腿。\n\nUnclaimed Capacity\n\n（5%）\n\n：组织条件具备，但员工没跟上。\n\nStalled\n\n（16%）\n\n：两头都低。\n\nEmergent\n\n（50%）\n\n：处于中间模糊地带，尚未定型。\n\nAI转型喊了这么久，为何进度依然缓慢？\n\n道理大家都懂，65%的人也的确焦虑于「不适应AI就会落后」。但如果公司只喊口号、不给配套激励，员工的焦虑最终只会变成无力感。\n\n举个例子：这就像一个销售，好不容易训练出一个Agent，包揽了全团队的陌拜电话。结果月底考核，公司看的还是电话量和拜访数——绩效直接腰斩。\n\n于是，45%的人坦言：比起重新设计工作方式，他们更愿意把精力花在完成当前KPI上。\n\n相比而言，中国市场这片土壤更加包容：25%的中国员工即便结果未达预期，也会因「重塑工作方式」获得认可或奖励。\n\n不过，从绝对值来看仍然占少数。\n\n这就是「转型悖论」深层原因。\n\n员工明明已经准备好重塑工作流了，但绩效、奖励等组织系统，仍在逼着大家走老路。\n\n怎么破局？\n\n答案其实也很简单：\n\n老板亲自下场。\n\nWTI验证了这种「示范效应」：当领导者公开分享自己的AI使用方式时，员工报告的AI价值感知提升17个百分点，批判性思考提升22个百分点，对Agent的信任度提升30个百分点。\n\n所以，下次领导再喊AI口号，不妨反向Push一下：\n\n给我学！OpenClaw、Claude Code、Codex、Skill……咱们之前走过的弯路，请您全部走一遍！！\n\n（bushi）\n\n第三层：组织——打造自学习系统\n\n接下来，是整份报告最锋利的观点：\n\n在影响AI真实价值的因素中，组织环境占67%，个人心态与行为仅占32%。\n\n差了整整两倍。\n\n去年的WTI，讨论的是怎么让员工更好地使用AI；今年，组织环境成了新的瓶颈。\n\n「AI原生」真不是墙上的口号，需要真金白银地投入。\n\n但\n\n光给预算，是偷懒的做法\n\n。\n\nAPI费用、Token补贴……这些都只是最基础的，更关键的，是建立一套Pipeline，捕捉AI运行中产生的上下文。\n\n在AI杠杆下，Know-how的价值会被指数级放大。每一次实践中的错误经验和自检标准，都能以Skill形式沉淀进共享流程，产生更多信号，形成自我强化的飞轮。\n\n智能体跑得越多，信号就越丰富：哪个Tool有效、哪里容易报错、交付结果的哪些部分需自检……这些都是宝贵的数据资产。\n\n而\n\n经验只有被沉淀，AI才会产生复利。\n\n至于这个Pipeline具体长什么样子，今年WTI也调研了多家一线公司，开源了部分方法论，大家可以管中窥豹。\n\n1、共同头脑风暴，寻找业务流程中嵌入AI的切口；\n\n2、分享AI小技巧、实战经验与踩坑教训；\n\n3、讨论并确立AI交付结果的质量判断标准。\n\n说白了，就是要在公司层面搭建一套Harness和Agent Runtime。\n\n从Copilot到AgentOS\n\n读到这里，灵魂拷问来了：道理都懂，你倒是说说这些问题咋解决啊？\n\n确实，如果只看WTI，就是一份职场研究。\n\n但如果回过头来，把它和前段时间的Microsoft Build 2026放在一起看，还真能呼应上。\n\n感觉，微软内部可能早就想清楚了这三个问题的答案——\n\n1、回应转型悖论：从孤岛AI工具到系统级AI底座。\n\nAI时代最尴尬的，是员工的创新热情撞上落后的企业系统。\n\n所以微软没有只推一个更聪明的聊天框。他们一直在做一整套解决方案——\n\nCopilot Studio、GitHub Copilot……解决的是Agent从原型到生产的全过程。\n\nAzure、Fabric、HorizonDB等云端和数据基础设施，解决的是数据、算力、运行环境和企业级部署。\n\nAgent 365则负责观察、治理和保护企业里的Agent，把Entra、Defender、Purview、Intune这些原本用于人、设备和应用的治理能力，延伸到Agent身上。\n\n2、回应人类能动性：全时、无缝的人机协同\n\nWTI指出，Agent接管执行的下一步，是人的主观能动性被大幅度释放。\n\n微软用产品把这个愿景具象化了。\n\nMicrosoft Scout是始终在线的全时自主Agent；Project Solara是桌面/随身Agent硬件概念。\n\n它们背后的共同变化，是交互范式的迁移：从「点击、提示、等待」的被动模式，转向Agent在后台主动跨应用处理流程。\n\n用时髦的话说，这就是最近大热的\n\nLoop Engineering\n\n。\n\n只要触发条件和目标定义清晰，Agent就能完全自主运行。搬运、整理、追踪等脏活将不复存在，人的角色大幅上移，回归战略思考、复杂问题解决与创意构想。\n\n接下来，就看组织如何调整，以承接这种被释放的能动性。\n\n3、回应学习系统：用自\n\n有智能打造\n\n组织护城河。\n\nWTI说，赢家是能捕获洞察并持续进化的组织。\n\n微软的Build大会，则给出了对应的技术基座：Microsoft IQ。\n\n它包含四个模块：Work IQ理解人员与协作流；Fabric IQ承接业务实体与规则；Foundry IQ服务开发者构建Agent；Web IQ补充实时互联网信息。\n\nFrontier Tuning则更进一步。它允许企业在自己的合规边界内，用自身工作流、数据和业务逻辑训练专属AI。\n\n这些拼在一起，给Agent打上了一层补丁——企业级共享知识基础。\n\n模型智能已经足够，未来的分水岭，在于谁能基于私有数据和真实SOP驾驭模型，将其微调成最懂自己的系统。\n\n工作本身，该被重新设计了\n\n哈佛教授\n\nKarim Lakhani\n\n在今年WTI序言里的一句话，我印象很深刻：\n\n每个商业时代都有一个主导性的管理问题。工业时代问如何规模化生产，信息时代问如何数字化协同，而AI时代问的是，当智能可以被嵌入、被分发、被委派时，工作本身应该如何设计。\n\n这个问题，暂时没有任何一家公司能给出明确回答。\n\n但好消息是，回答它所需要的工具、平台和方法论，正在以肉眼可见的速度成熟。\n\n至少，今年的WTI已在海量数据的基础上，指出了一个可能的方向。\n\n员工已经准备好了。\n\n系统的改造，市面上现在也有不少解决方案。\n\n剩下的，就看每一位组织的设计者，愿不愿意动手了。\n\nWTI 2026链接：https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2026/05/2026_Work_Trend_Index_Annual_Report_050526-7_69fc5b1c4e265.pdf\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_微软年度AI职场报告：员工已经准备好了，公司还没有_量子位.md"}, {"title": "腾讯研究院AI每周关键词Top50", "source": "腾讯研究院", "digest": "一文把握全局AI动态（0622-0626）", "link": "https://mp.weixin.qq.com/s/WkgIs6B0hmuE_khjzugoYw", "content": "---\npublish_time: 1782527400\n---\n\n# 腾讯研究院AI每周关键词Top50\n\n> 原文链接：https://mp.weixin.qq.com/s/WkgIs6B0hmuE_khjzugoYw\n> 公众号：\n\nAI前沿每周关键词Top50\n\n（0622-0626）\n\n每周50关键词\n\n把握全局AI动态\n\n点击\n\n关键词\n\n可查看资讯概述\n\n👇\n\n类别\n\nTop关键词\n\n主体\n\n算力\n\nMegapod\n\n特斯拉\n\n算力\n\nJalapeño\n\nO\n\npenAI\n\n算力\n\n飞龙Dragonfly\n\n高通\n\n模型\n\nGPT-5.6 Pro\n\nOpenAI\n\n模型\n\nGPT-5.5-Cyber\n\nOpenAI\n\n模型\n\nClaude-Sonnet-5\n\nAnthropic\n\n模型\n\nGLM-5.2\n\n智谱\n\n模型\n\n豆包2.1\n\n字节\n\n模型\n\nBaichuan-M4\n\n百川\n\n应用\n\nRecord & Replay\n\nOpenAI\n\n应用\n\nSkills功能\n\nima\n\n应用\n\nComputer Use\n\n谷歌\n\n应用\n\nClaude Tag\n\nAnthropic\n\n应用\n\nAgently Mail\n\nQQ邮箱\n\n应用\n\n豆包专业版\n\n字节\n\n应用\n\nArtifacts\n\nAnthrop\n\nic\n\n应用\n\nFugu编排模型\n\nSakana AI\n\n应用\n\nHappyHorse 1.1\n\n阿里\n\n应用\n\nUnlimited OCR\n\n百度\n\n应用\n\nJoyAI-VL\n\n京东\n\n应用\n\nMidjourney Scanner\n\nMidjourney\n\n应用\n\n虚幻引擎5.8 MCP\n\nEpic\n\n应用\n\nMiloco 2.0\n\n小米\n\n应用\n\nAstraBrain-WBC 0.5\n\n银河通用\n\n应用\n\nHalos\n\n英伟达\n\n应用\n\nFaber轮臂机器人\n\n法拉第未来\n\n应用\n\nUniCM\n\n清华\n\n科技\n\n免疫学难题\n\n杰克逊\n\n实验室\n\n观点\n\n中国AI人才报告\n\n斯坦福\n\n观点\n\n回应人才流失\n\n哈萨比斯\n\n观点\n\nAGI炒作\n\nMichael\n\nJordan\n\n观点\n\n未来职场\n\n李飞飞\n\n观点\n\n模型能力过剩\n\nNikesh\n\nArora\n\n观点\n\n智能体流量\n\nDeepMind\n\n观点\n\n太空数据中心\n\n孙正义\n\n观点\n\nAI生成PR\n\nAstral\n\n观点\n\nAI聊天精神风险\n\n国王学院\n\n事件\n\nJohn Jumper跳槽\n\nAnthropic等\n\n事件\n\nDeepMind人才流失\n\nAnthropic\n\n事件\n\nChad Jones加盟\n\nAnthropic\n\n事件\n\nDeepSeek招聘\n\nDeepSeek\n\n事件\n\nEngram融资\n\nE\n\nngram\n\n事件\n\nAI股权税\n\n桑德斯\n\n事件\n\nFable 5回归\n\nAnthropic\n\n👇扫码\n\n加入AGI数据库，AI智能问答\n\n（\n\n腾讯研究院ima AGI知识库二维码）\n\n推荐阅读\n\n腾讯研究院：\n\n《中国公众对生成式AI的看法与使用行为｜年度调研》\n\n👇 点个\n\n“在看”\n\n分享洞见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_腾讯研究院AI每周关键词Top50_.md"}, {"title": "OpenAI又动了数亿人的默认模型：没更聪明，却更黏你", "source": "新智元", "digest": "邮箱里的秘密，它比你更先翻到", "link": "https://mp.weixin.qq.com/s/TUgTFb9LZsi4eANpm7wVcA", "content": "---\npublish_time: 1782511128\n---\n\n# OpenAI又动了数亿人的默认模型：没更聪明，却更黏你\n\n> 原文链接：https://mp.weixin.qq.com/s/TUgTFb9LZsi4eANpm7wVcA\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\n人人都等下一个能力跃迁，OpenAI却把数亿人天天用的那个默认模型换了新版，不靠跑分，主打一个更懂你。\n\n6月25日，OpenAI又动了那个数亿人每天都在默认使用的模型。\n\n新版GPT-5.5 Instant正式上线，并向付费用户推出，第二天轮到免费用户。\n\nOpenAI总裁Greg Brockman发帖亲推：\n\n这一版有了重大改进，聊起来更有意思了。\n\n要看清这次更新，得先回到一个多月前。\n\n5月5日，GPT-5.5 Instant刚取代GPT-5.3 Instant，成为面向所有ChatGPT用户的「默认模型」。\n\n那一次对GPT-5.5 Instant的定位是一个更智能的模型，在日常任务中能力更强，主打回答更精准、话更少。\n\n据内部评估，面对涵盖医学、法律和金融等领域的高风险提示词时，GPT‑5.5 Instant产生的幻觉性陈述比GPT‑5.3 Instant少52.5%。在用户标记为存在事实错误、尤其具有挑战性的对话中，它还将不准确陈述减少了37.3%。\n\n这次新版GPT-5.5 Instant，又把数亿人天天在用的默认模型翻新了一遍，主打四件事。\n\n第一，最核心的是意图理解。\n\n它没变得更聪明，只是更会判断你这一问到底想要什么（实用建议、情绪安慰、深度分析还是一句快答），再据此调整回答方式。\n\n第二，多轮对话里把上下文接住。一件事聊了好几轮，它能记住前面说过什么，不用你反复重说。OpenAI说，这在做决定、比选项、规划行程、购物这些场景里最管用。\n\n第三，复杂约束处理更稳。一次给它好几个要求，它能照单全收，不丢三落四，购物、找本地店这些高频场景都更顺手、更靠谱，这是ChatGPT向「日常决策入口」靠拢的信号。\n\n第四，对话体验更好。官方反复强调，这一版聊起来更自然、更有意思。\n\n两次更新连起来看，OpenAI并没有给GPT换一个更聪明的大脑。它改的，是ChatGPT和你之间的关系。\n\n不是所有人都买账。\n\n新版主打的「更懂意图」一上线，就有用户在X上说：论理解意图和潜台词，还是已经退役的4o最强，「你能让别的模型在其他任务上赢，但意图和潜台词，4o赢。把旧版订阅还给我吧。」\n\n这条吐槽不只是怀旧。\n\n今年2月OpenAI下线4o时，就因为不少用户对它的「性格」念念不忘而招致过反弹。\n\n如今新版把「更懂你」摆上台面，等于又一次踩在那根敏感的神经上。\n\nInstant更像一个系统\n\n用哪个模型它说了算\n\n这里要先讲清楚Instant到底怎么运转，因为它早已不只是一个模型，更像一个入口。\n\n当你在ChatGPT里选中Instant，它会自己掂量这道题用Instant够不够。碰上复杂任务，它会切到更会推理的Thinking，先想一轮再回答。\n\n也就是说，你点的是Instant，最后用哪个模型，是它替你定的。\n\n当然，\n\n你也能自己选。\n\n模型选择器里有三档：Instant管日常快答，Thinking管复杂推理，Pro是研究级的顶配（不过Pro用不了应用、记忆、画布和画图）。嫌它自作主张，也能在「配置」里关掉自动切换、调思考力度、翻出旧版模型。\n\n而且这套自\n\n动切换默认就开\n\n着。\n\n更要命的是，当它自己把你的问题转给Thinking、而推理又很短时，ChatGPT常常连思考轨迹都不显示。也就是说，这一答到底是哪个模型给的，你根本无从知道。\n\nInstant已经越来越像一套系统，不再只是一个模型。\n\n官方把这套东西定义成「一个自动切换的单一系统」，把各个GPT模型的优势揉成一个又快又聪明的统一体验，你以为自己在选模型，其实是系统在替你选。\n\n而系统替你选的方向，未必只为你好。Thinking推理更深，烧的算力也远比Instant多。\n\n于是有用户在X上就半开玩笑地发问：是不是因为大家都在用Thinking、GPU又不够，才急着把Instant推上来、顺手砍了Codex的额度——还是我想多了？\n\n这虽是猜测，却戳中了「体验升级」背后的另一面：那个替你做选择的\n\nInstant\n\n，也在替OpenAI省算力。\n\n「更懂你」背后\n\n是它开始主动翻你邮箱\n\n新版GPT-5.5 Instant更懂你了，这个「更懂你」的秘密，就藏在5月那套个性化能力中：\n\n它可以主动调用你的过往聊天记录、上传过的文件，甚至你连进去的Gmail邮箱，拿这些当上下文，给你定制回答。\n\n这并非模型突然学会了读心术。所谓「更懂你」，底层是上下文建模，是它把你散落在历史对话里的偏好拼起来，并非什么心理推断的能力跃迁。\n\n举个例子，同样是推荐一家奶茶店。GPT-5.3 Instant 只能给你一个泛泛的推荐，新版却能直接报出你常去哪家、偏爱哪种茶。\n\n拉开这个差距的并不是智商。是它翻过你的聊天记录和 Gmail。\n\n更关键的是调用方式变了。\n\n过去你得明确问一个跟邮件相关的问题，ChatGPT才会去翻你的Gmail；现在它自己判断，觉得你这一问可能用得上邮箱里的信息，就自己去翻了。\n\n这一步背后，是模型的调用边界变了。\n\n便利和控制权这架天平，也跟着往便利那头倾斜。\n\nAxios就提醒，并非所有人都想要一个有持久记忆的助手；你每接入一个第三方服务，都是把更多个人和工作信息向外多交出一分。\n\nChatGPT想要成为你的生活入口\n\n更准、更短、更懂你，这三件事的重心并不在模型本身，它在重新定义ChatGPT在用户生活中的位置。\n\n就在5月那批更新里，OpenAI还把ChatGPT塞进了Excel和Google Sheets的侧边栏，让它直接在你的表格里干活。\n\n算上今天的个性化升级，方向是一致的：把ChatGPT从一个你专门去打开的网页，铺进你本来就在用的办公和生活场景里。\n\n过去的ChatGPT，是一个每次从零开始的工具。你打开它，从头交代背景，用完关掉，下次再来一遍。\n\n现在OpenAI想让它变成一个记着你的长期入口：记得你在做什么项目、在意什么、给过哪些材料，不用你反复重复自己。\n\n而这一切，是通过一个「默认」设置悄悄铺开的。\n\nGPT-5.5 Pro再强，碰它的也只有一小撮开发者和重度付费用户。Instant才是那个几亿人打开就打字、从不切换模型、从不调参数的默认款。对他们来说，ChatGPT长什么样，就是Instant长什么样。\n\n当一个被几亿人当成默认入口的东西，开始记住你、还自己决定什么时候动用这份记忆，它比上一代聪明了多少、跑分涨了几分，已经不是重点。\n\n它就这样从一个你用完即走的工具，变成了一个记着你、还会主动翻你东西的长期入口。\n\n便利的代价\n\n让出模型选择权和上下文边界\n\n模型越懂你，你交出去的东西也就越多，主要是两样。\n\n一是，你选模型的权利；二是，你的上下文边界。\n\n前面说了，它开始主动翻看你；OpenAI也知道这事敏感，于是给了一个叫「记忆来源」（memory sources）的开关：一条回答用了你哪段历史、哪封邮件，你点开能看到，过时的能删，不对的能改，分享聊天时也不会暴露给对方。\n\nChatGPT「记忆来源」界面：它推荐这道周末晚餐，依据的是你「在备战马拉松」「爱吃饼干」等几条记忆，每条都能查看、纠正或删除。\n\n这个设计思路很周到，但有个细节OpenAI 自己也认了：记忆来源，并不会展示塑造一条答案的全部因素，它只挑几条最相关的给你看，不保证是全部。\n\n也就是说，这块用来让你安心的透明度补丁，本身也不是完全透明。\n\n不赌最聪明\n\n只赌你最离不开\n\n现在再回头看今天主推的购物和本地推荐，味道就不一样了。\n\n这并非自动帮你下单的智能体升级，它只是推荐质量和上下文利用变好了。但方向已经很明确：ChatGPT想接管的，是你日常做决定的那个入口。\n\nDigital Trends已点明OpenAI押注的方向。它赌的不是跑分上最聪明的模型，而是要成为你每天早上第一个打开、也最愿意一直聊下去的那一个。\n\n而这一切的前提，是它足够懂你，代价是你愿意把聊天、文件和邮箱，都默认交给它。\n\n数亿人的默认模型，又往前挪动了一步。\n\n便利背后的代价，你甚至还没察觉：你与它之间那条边界，正一步步向后退。\n\n参考资料：\n\nhttps://x.com/OpenAI/status/2069843083701915755\n\nhttps://x.com/gdb/status/2069845493199597944\n\nhttps://openai.com/index/gpt-5-5-instant/https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt\n\n编辑：元宇\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-06-27_OpenAI又动了数亿人的默认模型：没更聪明，却更黏你_新智元.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    try {
+      return marked.parse(digest);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
