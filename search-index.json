@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T07:06:46.668398",
+  "updated_at": "2026-06-29T07:18:44.411356",
   "total": 280,
   "articles": [
     {
@@ -39,6 +39,16 @@
       "digest": "开源项目实现录制人类操作后转写为Skill并交付Agent执行。用户只需演示一遍网页操作流程，AI即可永久复用该技能，解决大模型每次需重新学习网页交互的问题。",
       "link": "https://mp.weixin.qq.com/s/dMAPeqDszlY0eDopwPAu0w",
       "source_file": "sources/2026-06-28_最强模型每次都在「重新学上网」？这个开源项目实现「人类点一遍，Agent永久复用」_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "一句「你确定吗」，大模型集体暴露「讨好型人格」？",
+      "source": "机器之心",
+      "digest": "强如AI，也遭不住再三的质疑和追问……",
+      "link": "https://mp.weixin.qq.com/s/cvNk-j5QCSF4_gmcjq3Hmg",
+      "source_file": "sources/2026-06-28_一句「你确定吗」，大模型集体暴露「讨好型人格」？_机器之心.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -90,16 +100,6 @@
       "link": "https://mp.weixin.qq.com/s/DqzHxXTw1FMdAx7ix1dxPA",
       "source_file": "sources/2026-06-28_江苏银行依托“智慧小苏”大模型平台，打造风控审批数字行员助手_银行科技研究社.md",
       "category": "同业",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-28",
-      "title": "一句「你确定吗」，大模型集体暴露「讨好型人格」？",
-      "source": "机器之心",
-      "digest": "强如AI，也遭不住再三的质疑和追问……",
-      "link": "https://mp.weixin.qq.com/s/cvNk-j5QCSF4_gmcjq3Hmg",
-      "source_file": "sources/2026-06-28_一句「你确定吗」，大模型集体暴露「讨好型人格」？_机器之心.md",
-      "category": "其他",
       "is_model_related": false
     },
     {
@@ -164,16 +164,6 @@
     },
     {
       "date": "2026-06-28",
-      "title": "与具身一线交流两小时，回顾一下重点",
-      "source": "量子位",
-      "digest": "数据，数据还是数据。\n\n在 <a href=\"https://mp.weixin.qq.com/mp/readtemplate?t=pages/link_mid_jump&amp;biz=MzIzNjc1NzUzMw==\" target=\"_blank\" class=\"js_mention_entry wx_at_link\" data-biz=\"MzIzNjc1NzUzMw==\" data-use...",
-      "link": "https://mp.weixin.qq.com/s/VSMIr3ojjCOswGgrJ182Fg",
-      "source_file": "sources/2026-06-28_与具身一线交流两小时，回顾一下重点_量子位.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-28",
       "title": "她用AI穿越回泰坦尼克号沉船当晚，240万人看哭了",
       "source": "新智元",
       "digest": "AI时空漫游Vlog，封神了",
@@ -209,6 +199,16 @@
       "digest": "AI 不是算力不够，而是 GPU 在空转？",
       "link": "https://mp.weixin.qq.com/s/6tptNZ0YfMvLgHajdL04mA",
       "source_file": "sources/2026-06-28_当内存墙锁住算力，HBM是钥匙还是另一把锁？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "与具身一线交流两小时，回顾一下重点",
+      "source": "量子位",
+      "digest": "数据，数据还是数据。\n\n在 <a href=\"https://mp.weixin.qq.com/mp/readtemplate?t=pages/link_mid_jump&amp;biz=MzIzNjc1NzUzMw==\" target=\"_blank\" class=\"js_mention_entry wx_at_link\" data-biz=\"MzIzNjc1NzUzMw==\" data-use...",
+      "link": "https://mp.weixin.qq.com/s/VSMIr3ojjCOswGgrJ182Fg",
+      "source_file": "sources/2026-06-28_与具身一线交流两小时，回顾一下重点_量子位.md",
       "category": "其他",
       "is_model_related": false
     },
