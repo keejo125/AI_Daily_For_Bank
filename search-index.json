@@ -1,7 +1,217 @@
 {
-  "updated_at": "2026-06-28T09:41:34.960892",
-  "total": 259,
+  "updated_at": "2026-06-29T07:06:46.668398",
+  "total": 280,
   "articles": [
+    {
+      "date": "2026-06-28",
+      "title": "GPT5.6惨遭切脑！Fable 5回归要变弱鸡版?",
+      "source": "新智元",
+      "digest": "美国AI，「闭关锁国」？",
+      "link": "https://mp.weixin.qq.com/s/NEEB53rVSBgvKrw_crcpxg",
+      "source_file": "sources/2026-06-28_GPT5.6惨遭切脑！Fable 5回归要变弱鸡版_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-28",
+      "title": "英伟达年度「最危险」论文！AI自繁衍代码，无限刷级进化",
+      "source": "新智元",
+      "digest": "英伟达年度「最危险」论文！AI自繁衍代码，无限刷级进化",
+      "link": "https://mp.weixin.qq.com/s/LL6JKryhHvcfLKycXi7Yjg",
+      "source_file": "sources/2026-06-28_英伟达年度「最危险」论文！AI自繁衍代码，无限刷级进化_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "谷歌推出 Colab CLI：面向开发者、自动化与 AI 智能体的命令行工具",
+      "source": "InfoQ",
+      "digest": "谷歌发布Google Colab CLI，这是一款允许开发者和AI智能体在本地终端直接与远程Colab运行时交互的命令行工具。",
+      "link": "https://mp.weixin.qq.com/s/7TLq_6vZROeaDJDujPVHCg",
+      "source_file": "sources/2026-06-28_谷歌推出 Colab CLI：面向开发者、自动化与 AI 智能体的命令行工具_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "开源项目实现「人类点一遍，Agent永久复用」：录制一次操作，AI学会填表刷网页",
+      "source": "机器之心",
+      "digest": "开源项目实现录制人类操作后转写为Skill并交付Agent执行。用户只需演示一遍网页操作流程，AI即可永久复用该技能，解决大模型每次需重新学习网页交互的问题。",
+      "link": "https://mp.weixin.qq.com/s/dMAPeqDszlY0eDopwPAu0w",
+      "source_file": "sources/2026-06-28_最强模型每次都在「重新学上网」？这个开源项目实现「人类点一遍，Agent永久复用」_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "大模型推理最高提速85%！DeepSeek发表重磅论文 提出两项互补机制",
+      "source": "财联社AI daily",
+      "digest": "大模型推理最高提速85%！DeepSeek发表重磅论文 提出两项互补机制",
+      "link": "https://mp.weixin.qq.com/s/tFdIuN0fSP_-F--8kE-IwA",
+      "source_file": "sources/2026-06-28_大模型推理最高提速85%！DeepSeek发表重磅论文 提出两项互补机制_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-28",
+      "title": "ICML 2026 Oral｜大模型的能力从哪些训练数据来？北大&智源提出「机理数据归因」",
+      "source": "机器之心",
+      "digest": "标志着可解释性研究的一次角色转变！",
+      "link": "https://mp.weixin.qq.com/s/b_D6k-kKboV9UqptbAdMmw",
+      "source_file": "sources/2026-06-28_ICML 2026 Oral｜大模型的能力从哪些训练数据来？北大&智源提出「机理数据归因」_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-28",
+      "title": "大模型多智能体系统赋能券商高质量发展",
+      "source": "金融电子化",
+      "digest": "大模型多智能体系统赋能券商高质量发展",
+      "link": "https://mp.weixin.qq.com/s/_OL3lMXsrwHF-i746P-dOA",
+      "source_file": "sources/2026-06-28_大模型多智能体系统赋能券商高质量发展_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Agentic Credit Card，这次不是权益卡，真正的AI信用卡来了！",
+      "source": "银行科技研究社",
+      "digest": "Agentic Credit Card，这次不是权益卡，真正的AI信用卡来了！",
+      "link": "https://mp.weixin.qq.com/s/PSUzkSEkdwPxaXgScTIm9Q",
+      "source_file": "sources/2026-06-28_Agentic Credit Card，这次不是权益卡，真正的AI信用卡来了！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "江苏银行依托“智慧小苏”大模型平台，打造风控审批数字行员助手",
+      "source": "银行科技研究社",
+      "digest": "江苏银行依托“智慧小苏”大模型平台，打造风控审批数字行员助手",
+      "link": "https://mp.weixin.qq.com/s/DqzHxXTw1FMdAx7ix1dxPA",
+      "source_file": "sources/2026-06-28_江苏银行依托“智慧小苏”大模型平台，打造风控审批数字行员助手_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "一句「你确定吗」，大模型集体暴露「讨好型人格」？",
+      "source": "机器之心",
+      "digest": "强如AI，也遭不住再三的质疑和追问……",
+      "link": "https://mp.weixin.qq.com/s/cvNk-j5QCSF4_gmcjq3Hmg",
+      "source_file": "sources/2026-06-28_一句「你确定吗」，大模型集体暴露「讨好型人格」？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "4个半月，OpenAI清空了整个GPT-4家族",
+      "source": "新智元",
+      "digest": "GPT-4家族半年清零，退役成了AI圈的日常",
+      "link": "https://mp.weixin.qq.com/s/JHABHNU77wdseb1ZJnyLAg",
+      "source_file": "sources/2026-06-28_4个半月，OpenAI清空了整个GPT-4家族_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "DeepSeek新部门急招人辟谣“不招老外”；苹果Vision Pro高管出走投奔OpenAI；豆包专业版正式上线，字节打响AI“收费战”第一枪｜Q资讯",
+      "source": "InfoQ",
+      "digest": "有瓜？！",
+      "link": "https://mp.weixin.qq.com/s/JC_uLkItdDD8kLJSlkm27w",
+      "source_file": "sources/2026-06-28_DeepSeek新部门急招人辟谣“不招老外”；苹果Vision Pro高管出走投奔OpenAI；豆包_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "从第一性原理看机器人AI：为什么它比大模型更难？",
+      "source": "机器之心",
+      "digest": "AI进入物理世界后，思考3秒都成了奢侈",
+      "link": "https://mp.weixin.qq.com/s/DPgzv2y1Wy0k7O49RoevQA",
+      "source_file": "sources/2026-06-28_从第一性原理看机器人AI：为什么它比大模型更难？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "四大顶级AI对决《文明VI》！Claude「核平」法国，结果还是输了",
+      "source": "新智元",
+      "digest": "四大顶级AI对决《文明VI》！Claude「核平」法国，结果还是输了",
+      "link": "https://mp.weixin.qq.com/s/-Y9Wg5BU6s_7w8_flrK29g",
+      "source_file": "sources/2026-06-28_四大顶级AI对决《文明VI》！Claude「核平」法国，结果还是输了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "DeepSeek V4更新DSpark，推理速度提升80%；Vision Pro 高管加盟 OpenAI 硬件部门；央视曝数码产品网络测评乱象｜极客早知道",
+      "source": "极客公园",
+      "digest": "马斯克获准收购初创公司 Mesh；B站举办17周年庆，5分钟以上视频观看时长占比达65%；阿里千问输入法上线 macOS 版。",
+      "link": "https://mp.weixin.qq.com/s/e6n-nijedxt43YW_7UD2Mg",
+      "source_file": "sources/2026-06-28_DeepSeek V4更新DSpark，推理速度提升80%；Vision Pro 高管加盟 Open_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Dwarkesh Patel：下一代AI，可能是干活干出来的",
+      "source": "机器之心",
+      "digest": "不只训练一次，而是边用边学。",
+      "link": "https://mp.weixin.qq.com/s/GOjDl3pV4ipQlwB8bLpwTA",
+      "source_file": "sources/2026-06-28_Dwarkesh Patel：下一代AI，可能是干活干出来的_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "与具身一线交流两小时，回顾一下重点",
+      "source": "量子位",
+      "digest": "数据，数据还是数据。\n\n在 <a href=\"https://mp.weixin.qq.com/mp/readtemplate?t=pages/link_mid_jump&amp;biz=MzIzNjc1NzUzMw==\" target=\"_blank\" class=\"js_mention_entry wx_at_link\" data-biz=\"MzIzNjc1NzUzMw==\" data-use...",
+      "link": "https://mp.weixin.qq.com/s/VSMIr3ojjCOswGgrJ182Fg",
+      "source_file": "sources/2026-06-28_与具身一线交流两小时，回顾一下重点_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "她用AI穿越回泰坦尼克号沉船当晚，240万人看哭了",
+      "source": "新智元",
+      "digest": "AI时空漫游Vlog，封神了",
+      "link": "https://mp.weixin.qq.com/s/w_gR_SHN0heEFLVqu6YW1A",
+      "source_file": "sources/2026-06-28_她用AI穿越回泰坦尼克号沉船当晚，240万人看哭了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "一周观察 | 招行CIO周天虹谈AI，Oracle因AI等原因裁员超2万，2家银行涉网络安全问题被罚",
+      "source": "银行科技研究社",
+      "digest": "一周观察 | 招行CIO周天虹谈AI，Oracle因AI等原因裁员超2万，2家银行涉网络安全问题被罚",
+      "link": "https://mp.weixin.qq.com/s/uu-zQzmXOK_RNZfEPMBMkA",
+      "source_file": "sources/2026-06-28_一周观察 _ 招行CIO周天虹谈AI，Oracle因AI等原因裁员超2万，2家银行涉网络安全问题被罚_银行科技研究社.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "不靠低价抢客户，月之暗面Kimi出海，凭什么硬刚海外AI“御三家”？",
+      "source": "InfoQ",
+      "digest": "月之暗面 Kimi 正在 C 端爆款产品之外，加速布局 B 端模型服务和全球化市场。",
+      "link": "https://mp.weixin.qq.com/s/ZxYNym0A6YdOL5wTHX5cuA",
+      "source_file": "sources/2026-06-28_不靠低价抢客户，月之暗面Kimi出海，凭什么硬刚海外AI“御三家”？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-28",
+      "title": "当内存墙锁住算力，HBM是钥匙还是另一把锁？",
+      "source": "机器之心",
+      "digest": "AI 不是算力不够，而是 GPU 在空转？",
+      "link": "https://mp.weixin.qq.com/s/6tptNZ0YfMvLgHajdL04mA",
+      "source_file": "sources/2026-06-28_当内存墙锁住算力，HBM是钥匙还是另一把锁？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-27",
       "title": "GPT-5.6正式发布：超越Mythos 5，成本降半，但能力测试中疯狂作弊",
