@@ -7,6 +7,7 @@
 
 import json
 import os
+import re
 import sys
 from datetime import datetime
 from urllib.parse import quote
@@ -14,6 +15,7 @@ from urllib.parse import quote
 # 全局变量
 PROJECT_DIR = ""
 DATE_STR = ""
+VIEWER_HTML = "../../viewer.html"
 
 
 # ===== 大模型关键词列表（不区分大小写） =====
@@ -488,7 +490,7 @@ def build_section_html(category, articles):
                     if source_file:
                         # 对文件路径进行 URL 编码，处理中文和特殊字符
                         encoded_source_file = quote(source_file, safe='')
-                        viewer_link = f'../../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
                     elif source_link:
                         sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
@@ -506,7 +508,7 @@ def build_section_html(category, articles):
                     
                     if source_file:
                         encoded_source_file = quote(source_file, safe='')
-                        viewer_link = f'../../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
                     elif link:
                         sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
@@ -536,7 +538,7 @@ def build_section_html(category, articles):
 
                     if source_file:
                         encoded_source_file = quote(source_file, safe='')
-                        viewer_link = f'../../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                        viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
                     elif source_link:
                         sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
@@ -554,7 +556,7 @@ def build_section_html(category, articles):
                         source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
                 if source_file:
                     encoded_source_file = quote(source_file, safe='')
-                    viewer_link = f'../../viewer.html?file=daily/{DATE_STR}/{encoded_source_file}'
+                    viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                     card_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
                 else:
                     card_html += f'<span class="source-tag">{escape_html(source)}</span>'
@@ -580,9 +582,13 @@ def build_section_html(category, articles):
 
 
 def escape_html(text):
-    """转义 HTML 特殊字符"""
+    """转义 HTML 特殊字符。先剥离 HTML 标签（含 @ 提及链接），再转义特殊字符。"""
     if not text:
         return ""
+    # 剥离 HTML 标签（包括 <a href="...">@xxx</a> 这种 @ 提及）
+    text = re.sub(r'<[^>]+>', '', text)
+    # 解码常见的 HTML 实体（&amp; → &, &nbsp; → 空格）
+    text = text.replace('&amp;', '&').replace('&nbsp;', ' ').replace('&quot;', '"').replace('&#39;', "'")
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
 
 

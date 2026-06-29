@@ -39,3 +39,4 @@ daily/*/_verify.py
 daily/*/checked_articles_report.md
 
 wiki/
+__pycache__/
