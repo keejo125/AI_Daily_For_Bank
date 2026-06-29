@@ -582,12 +582,26 @@ def build_section_html(category, articles):
 
 
 def escape_html(text):
-    """转义 HTML 特殊字符。先剥离 HTML 标签（含 @ 提及链接），再转义特殊字符。"""
+    """转义 HTML 特殊字符。先剥离 HTML 标签（含 @ 提及链接），再转义特殊字符。
+
+    兜底逻辑: digest 摘要可能被截断（如 200 字符）保留了 HTML 头部 <a href=... 但丢了闭合 >,
+    这种情况 re.sub(r'<[^>]+>', '', ...) 无效（找不到 >）。需要进一步剥残余:
+    1. 先按正常 HTML 标签剥
+    2. 再处理已 escape 的 &lt;a ... &gt; (防御性)
+    3. 最后兜底: 如果还有 < 后跟字母（疑似未闭合标签）, 截到该 < 之前
+    """
     if not text:
         return ""
-    # 剥离 HTML 标签（包括 <a href="...">@xxx</a> 这种 @ 提及）
+    # 1. 剥离完整 HTML 标签 (<...>)
     text = re.sub(r'<[^>]+>', '', text)
-    # 解码常见的 HTML 实体（&amp; → &, &nbsp; → 空格）
+    # 2. 剥离已 escape 的标签 &lt;...&gt;
+    text = re.sub(r'&lt;\/?[a-zA-Z][^&]*?&gt;', '', text)
+    # 3. 兜底: 如果还有 < 后面跟字母的疑似未闭合标签开头, 截到该 < 之前
+    if '<' in text:
+        m = re.search(r'<[a-zA-Z/!]', text)
+        if m:
+            text = text[:m.start()].rstrip()
+    # 4. 解码常见的 HTML 实体（&amp; → &, &nbsp; → 空格）
     text = text.replace('&amp;', '&').replace('&nbsp;', ' ').replace('&quot;', '"').replace('&#39;', "'")
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
 
