@@ -553,8 +553,13 @@ body {
 
   function renderDigest(digest) {
     if (!digest) return '';
+    // 先剥离所有 HTML 标签（包括公众号的 @ 提及链接），再转义
+    // 不能用 marked.parse，否则 &lt;a&gt; 会被反 escape 并被解析为真链接
     try {
-      return marked.parse(digest);
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      // 兼容已经被 escape 一次的场景（如 &lt;a&gt;）
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      return escapeHtml(stripped);
     } catch (e) {
       return escapeHtml(digest);
     }
