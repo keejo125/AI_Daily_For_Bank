@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T12:12:12.107897",
+  "updated_at": "2026-06-30T12:38:54.178999",
   "total": 299,
   "articles": [
     {
@@ -29,16 +29,6 @@
       "digest": "全球首个AI Infra运维智能体评测基准AISHPerf开源,基于百亿真实数据,测试头部大模型在真实机房直面\"幽灵故障\"的表现。",
       "link": "https://mp.weixin.qq.com/s/z2Mbg_F6fsMI6U2V0s9jHw",
       "source_file": "sources/2026-06-29_百亿真实数据，首个面向AI Infra的运维智能体评测基准正式开源_机器之心.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-29",
-      "title": "Spring 近期新闻：Boot、Security、Integration、Modulith 发布增量版本及 Spring AI 2.0 正式发布",
-      "source": "InfoQ",
-      "digest": "Spring生态多项组件发布增量版本,其中Spring AI 2.0正式发布,集成模型调用与工作流编排能力。",
-      "link": "https://mp.weixin.qq.com/s/i0usyFj_rNc1X8KlK-8wDw",
-      "source_file": "sources/2026-06-29_Spring 近期新闻：Boot、Security、Integration、Modulith 发布增_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -189,6 +179,16 @@
       "digest": "OpenAI发布GPT-5.6预览版三档模型;Anthropic与英伟达深化合作;Meta开源多模态大模型。",
       "link": "https://mp.weixin.qq.com/s/-IzKyUYOm3hZlTAnu6RyIQ",
       "source_file": "sources/2026-06-29_腾讯研究院AI速递 20260629_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-29",
+      "title": "Spring 近期新闻：Boot、Security、Integration、Modulith 发布增量版本及 Spring AI 2.0 正式发布",
+      "source": "InfoQ",
+      "digest": "Spring生态多项组件发布增量版本,其中Spring AI 2.0正式发布,集成模型调用与工作流编排能力。",
+      "link": "https://mp.weixin.qq.com/s/i0usyFj_rNc1X8KlK-8wDw",
+      "source_file": "sources/2026-06-29_Spring 近期新闻：Boot、Security、Integration、Modulith 发布增_InfoQ.md",
       "category": "其他",
       "is_model_related": false
     },
