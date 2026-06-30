@@ -236,7 +236,7 @@ def build_articles_json(classification, date_str):
                     })
                     for merged_art in merged_articles:
                         source_items.append({
-                            'name': merged_art.get('source', ''),
+                            'name': merged_art.get('name', ''),
                             'source_file': merged_art.get('source_file', ''),
                             'link': merged_art.get('link', '')
                         })
