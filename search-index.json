@@ -1,7 +1,277 @@
 {
-  "updated_at": "2026-06-30T12:38:54.178999",
-  "total": 299,
+  "updated_at": "2026-07-01T07:00:41.965370",
+  "total": 326,
   "articles": [
+    {
+      "date": "2026-06-30",
+      "title": "Codex 1 个月吃掉 150GB 流量，写满 4T 硬盘",
+      "source": "极客公园",
+      "digest": "Codex 1 个月吃掉 150GB 流量，写满 4T 硬盘",
+      "link": "",
+      "source_file": "sources/2026-06-30_Codex，1 个月吃掉 150GB 流量，写满 4T 硬盘，疯了吗？_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
+      "source": "InfoQ",
+      "digest": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
+      "link": "",
+      "source_file": "sources/2026-06-30_OpenAI 和 Anthropic “杀”红了眼，谷歌成为最大受害者_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Snowflake 让 Builder 从想法走向生产",
+      "source": "InfoQ",
+      "digest": "Snowflake 让 Builder 从想法走向生产",
+      "link": "",
+      "source_file": "sources/2026-06-30_Snowflake 让 Builder 从想法走向生产_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Claude Code 之父 Boris Cherny:AI 时代团队分工重写,这「五种人」最吃香",
+      "source": "量子位",
+      "digest": "",
+      "link": "",
+      "source_file": "sources/2026-06-30_Claude Code之父版「职场MBTI」：AI洗牌后只剩5类人，你选哪种？_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "AI 圈刚开始谈 Loop Engineering,两位 95 后博士已经盯上了人类闭环数据",
+      "source": "机器之心",
+      "digest": "AI 圈刚开始谈 Loop Engineering,两位 95 后博士已经盯上了人类闭环数据",
+      "link": "",
+      "source_file": "sources/2026-06-30_AI圈刚开始谈Loop Engineering，两位95后博士已经盯上了人类闭环数据_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "大模型可解释性「唯一机制」可能从一开始就不存在",
+      "source": "机器之心",
+      "digest": "大模型可解释性「唯一机制」可能从一开始就不存在",
+      "link": "",
+      "source_file": "sources/2026-06-30_条条电路通罗马：大模型可解释性的「唯一机制」可能从一开始就不存在_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "马斯克发 Cursor 手机版!撞档 OpenClaw,AI 编程 App 入口战",
+      "source": "智东西",
+      "digest": "马斯克发 Cursor 手机版!撞档 OpenClaw,AI 编程 App 入口战",
+      "link": "",
+      "source_file": "sources/2026-06-30_马斯克发Cursor手机版！撞档OpenClaw，AI编程App入口战打响了_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "JetSpec:大模型解码提速近 10 倍(DeepSeek + 阶跃星辰)",
+      "source": "机器之心",
+      "digest": "",
+      "link": "",
+      "source_file": "sources/2026-06-30_不只DeepSeek，阶跃等开源JetSpec：大模型解码提速近10倍_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-30",
+      "title": "中国第一,直逼 OpenAI!神秘「扫地僧」冲到全球前七",
+      "source": "新智元",
+      "digest": "中国第一,直逼 OpenAI!神秘「扫地僧」冲到全球前七",
+      "link": "",
+      "source_file": "sources/2026-06-30_中国第一，直逼OpenAI！神秘「扫地僧」冲到全球前七_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-30",
+      "title": "DeepSeek V4 正式版高峰价格翻倍",
+      "source": "极客公园",
+      "digest": "DeepSeek V4 正式版高峰价格翻倍",
+      "link": "",
+      "source_file": "sources/2026-06-30_DeepSeek V4 正式版高峰价格翻倍；豆包上线「豆包导航」功能；三星、美光海力士被告「操纵内存_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-30",
+      "title": "前后端一起消失:AI Coding 正在改写大厂工程师分工",
+      "source": "InfoQ",
+      "digest": "前后端一起消失:AI Coding 正在改写大厂工程师分工",
+      "link": "",
+      "source_file": "sources/2026-06-30_前后端一起消失：AI Coding正在改写大厂工程师分工_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "高考志愿填报,成了检验 AI Agent 的一场大考",
+      "source": "智东西",
+      "digest": "高考志愿填报,成了检验 AI Agent 的一场大考",
+      "link": "",
+      "source_file": "sources/2026-06-30_高考志愿填报，成了检验AI Agent的一场大考_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "AI+ Kuikly:7.5 小时落地三端「多模态聊天 App」实战",
+      "source": "腾讯技术工程",
+      "digest": "AI+ Kuikly:7.5 小时落地三端「多模态聊天 App」实战",
+      "link": "",
+      "source_file": "sources/2026-06-30_AI+ Kuikly：7.5小时落地三端「多模态聊天 App」实战_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "中国信通院:金融智能体技术迭代与安全治理协同进化",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院:金融智能体技术迭代与安全治理协同进化",
+      "link": "",
+      "source_file": "sources/2026-06-30_中国信通院何阳等：金融智能体技术迭代与安全治理协同进化_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "给野马套上缰绳:Agent Harness 工程实践 —— 从范式理论到钉钉 AI 招聘的真实落地",
+      "source": "阿里云开发者",
+      "digest": "给野马套上缰绳:Agent Harness 工程实践 —— 从范式理论到钉钉 AI 招聘的真实落地",
+      "link": "",
+      "source_file": "sources/2026-06-30_给野马套上缰绳：Agent Harness 工程实践 ——从范式理论到钉钉AI招聘的真实落地_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "大模型反洗钱可疑报告生成与溯源技术研究",
+      "source": "金融电子化",
+      "digest": "大模型反洗钱可疑报告生成与溯源技术研究",
+      "link": "",
+      "source_file": "sources/2026-06-30_基于大模型的反洗钱可疑报告生成与溯源技术研究_金融电子化.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-06-30",
+      "title": "温州银行单证 AI 智能审单平台,建设三大模块",
+      "source": "银行科技研究社",
+      "digest": "温州银行单证 AI 智能审单平台,建设三大模块",
+      "link": "",
+      "source_file": "sources/2026-06-30_温州银行单证AI智能审单平台项目，建设三大模块_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "又一家银行在'AI 银行卡'上'卷'起来了!",
+      "source": "银行科技研究社",
+      "digest": "又一家银行在'AI 银行卡'上'卷'起来了!",
+      "link": "",
+      "source_file": "sources/2026-06-30_又一家银行在“AI银行卡”上“卷”起来了！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "智能体超 1000 个!IBK 企业银行加速向 AI 原生银行转型",
+      "source": "银行科技研究社",
+      "digest": "智能体超 1000 个!IBK 企业银行加速向 AI 原生银行转型",
+      "link": "",
+      "source_file": "sources/2026-06-30_智能体超1000个！IBK企业银行加速向AI原生银行转型_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "699 块的「货运版」Looki,成了卡车司机的新宠",
+      "source": "极客公园",
+      "digest": "699 块的「货运版」Looki,成了卡车司机的新宠",
+      "link": "",
+      "source_file": "sources/2026-06-30_699 块的「货运版」Looki，成了卡车司机的新宠_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "为什么今天我们需要 AI 内容观?",
+      "source": "未知",
+      "digest": "为什么今天我们需要 AI 内容观?",
+      "link": "",
+      "source_file": "sources/2026-06-30_为什么今天我们需要AI内容观？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "港股新贵押注物理 AI,乐动机器人打造万亿市场空间",
+      "source": "量子位",
+      "digest": "港股新贵押注物理 AI,乐动机器人打造万亿市场空间",
+      "link": "",
+      "source_file": "sources/2026-06-30_港股新贵押注物理AI，乐动机器人打造万亿市场空间的核心基础设施_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "年薪百万,在旧金山开始租不起房了",
+      "source": "新智元",
+      "digest": "年薪百万,在旧金山开始租不起房了",
+      "link": "",
+      "source_file": "sources/2026-06-30_年薪百万，在旧金山开始租不起房了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "OpenAI 首席研究官:留给人类的窗口「很小」",
+      "source": "新智元",
+      "digest": "OpenAI 首席研究官:留给人类的窗口「很小」",
+      "link": "",
+      "source_file": "sources/2026-06-30_AGI倒计时，OpenAI首席研究官重磅表态：留给人类的窗口「很小」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "国内首家万亿市值 AI 芯片公司诞生",
+      "source": "智东西",
+      "digest": "国内首家万亿市值 AI 芯片公司诞生",
+      "link": "",
+      "source_file": "sources/2026-06-30_国内首家万亿市值AI芯片公司诞生！_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "被这个 Pavo 平台硬控了!AI 视频、短剧都能做,完全免费",
+      "source": "机器之心",
+      "digest": "被这个 Pavo 平台硬控了!AI 视频、短剧都能做,完全免费",
+      "link": "",
+      "source_file": "sources/2026-06-30_被这个Pavo平台硬控了！AI视频、短剧都能做，完全免费_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "腾讯研究院 AI 速递 20260630",
+      "source": "未知",
+      "digest": "腾讯研究院 AI 速递 20260630",
+      "link": "",
+      "source_file": "sources/2026-06-30_腾讯研究院AI速递 20260630_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-29",
       "title": "给Transformer变个形，LLM竟能变得更聪明",
