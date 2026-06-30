@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T07:09:47.314068",
+  "updated_at": "2026-07-01T07:11:41.856148",
   "total": 326,
   "articles": [
     {
@@ -9,16 +9,6 @@
       "digest": "Codex 1 个月吃掉 150GB 流量，写满 4T 硬盘",
       "link": "",
       "source_file": "sources/2026-06-30_Codex，1 个月吃掉 150GB 流量，写满 4T 硬盘，疯了吗？_极客公园.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-30",
-      "title": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
-      "source": "InfoQ",
-      "digest": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
-      "link": "",
-      "source_file": "sources/2026-06-30_OpenAI 和 Anthropic “杀”红了眼，谷歌成为最大受害者_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -94,31 +84,11 @@
     },
     {
       "date": "2026-06-30",
-      "title": "DeepSeek V4 正式版高峰价格翻倍",
-      "source": "极客公园",
-      "digest": "DeepSeek V4 正式版高峰价格翻倍",
-      "link": "",
-      "source_file": "sources/2026-06-30_DeepSeek V4 正式版高峰价格翻倍；豆包上线「豆包导航」功能；三星、美光海力士被告「操纵内存_极客公园.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-06-30",
       "title": "前后端一起消失:AI Coding 正在改写大厂工程师分工",
       "source": "InfoQ",
       "digest": "前后端一起消失:AI Coding 正在改写大厂工程师分工",
       "link": "",
       "source_file": "sources/2026-06-30_前后端一起消失：AI Coding正在改写大厂工程师分工_InfoQ.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-06-30",
-      "title": "高考志愿填报,成了检验 AI Agent 的一场大考",
-      "source": "智东西",
-      "digest": "高考志愿填报,成了检验 AI Agent 的一场大考",
-      "link": "",
-      "source_file": "sources/2026-06-30_高考志愿填报，成了检验AI Agent的一场大考_智东西.md",
       "category": "国内",
       "is_model_related": false
     },
@@ -191,6 +161,16 @@
       "source_file": "sources/2026-06-30_智能体超1000个！IBK企业银行加速向AI原生银行转型_银行科技研究社.md",
       "category": "同业",
       "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "DeepSeek V4 正式版高峰价格翻倍",
+      "source": "极客公园",
+      "digest": "DeepSeek V4 正式版高峰价格翻倍",
+      "link": "",
+      "source_file": "sources/2026-06-30_DeepSeek V4 正式版高峰价格翻倍；豆包上线「豆包导航」功能；三星、美光海力士被告「操纵内存_极客公园.md",
+      "category": "其他",
+      "is_model_related": true
     },
     {
       "date": "2026-06-30",
@@ -269,6 +249,26 @@
       "digest": "腾讯研究院 AI 速递 20260630",
       "link": "",
       "source_file": "sources/2026-06-30_腾讯研究院AI速递 20260630_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
+      "source": "InfoQ",
+      "digest": "OpenAI 和 Anthropic '杀'红了眼，谷歌成为最大受害者",
+      "link": "",
+      "source_file": "sources/2026-06-30_OpenAI 和 Anthropic “杀”红了眼，谷歌成为最大受害者_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-06-30",
+      "title": "高考志愿填报,成了检验 AI Agent 的一场大考",
+      "source": "智东西",
+      "digest": "高考志愿填报,成了检验 AI Agent 的一场大考",
+      "link": "",
+      "source_file": "sources/2026-06-30_高考志愿填报，成了检验AI Agent的一场大考_智东西.md",
       "category": "其他",
       "is_model_related": false
     },
