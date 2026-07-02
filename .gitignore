@@ -38,5 +38,5 @@ daily/*/_gen_classify.py
 daily/*/_verify.py
 daily/*/checked_articles_report.md
 
-wiki/
+# wiki/  # 已恢复跟踪，不再忽略
 __pycache__/
