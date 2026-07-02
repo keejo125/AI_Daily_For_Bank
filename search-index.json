@@ -1,7 +1,207 @@
 {
-  "updated_at": "2026-07-02T11:28:36.895418",
-  "total": 354,
+  "updated_at": "2026-07-03T01:21:15.960304",
+  "total": 374,
   "articles": [
+    {
+      "date": "2026-07-02",
+      "title": "Meta杀入公有云，全球AI芯片股大跌",
+      "source": "智东西",
+      "digest": "正面硬刚三大云巨头。",
+      "link": "https://mp.weixin.qq.com/s/8wBrBcugRM7jFQoe9d_mug",
+      "source_file": "sources/2026-07-02_Meta杀入公有云，全球AI芯片股大跌_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "Meta是否已在尖端AI竞赛中率先\"投降\"？华尔街纷纷热议！",
+      "source": "财联社AI daily",
+      "digest": "Meta尖端AI竞赛战略转向引发华尔街热议。",
+      "link": "https://mp.weixin.qq.com/s/ng0kttns0g_rjQ4JoXdffw",
+      "source_file": "sources/2026-07-02_Meta是否已在尖端AI竞赛中率先“投降”？华尔街纷纷热议！_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "卷不赢模型，Meta改行「算力包租公」！一夜炸崩美股AI链",
+      "source": "新智元",
+      "digest": "又来个「算力包租公」。Meta在AI模型竞赛中转向算力租赁业务。",
+      "link": "https://mp.weixin.qq.com/s/HjTUkRf_ZXdMfBOGkIUeyw",
+      "source_file": "sources/2026-07-02_卷不赢模型，Meta改行「算力包租公」！一夜炸崩美股AI链_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "独家内幕：美团如何用5万张国产卡训出\"龙猫\"万亿级模型？",
+      "source": "智东西",
+      "digest": "一文揭秘全国首个国产算力训推万亿大模型。",
+      "link": "https://mp.weixin.qq.com/s/s9GDA7HvdG3Mnc2z2xIAsQ",
+      "source_file": "sources/2026-07-02_独家内幕：美团如何用5万张国产卡训出“龙猫”万亿级模型？_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-02",
+      "title": "满分的「差」，Qwen与复旦等揭示编程智能体奖励设计的结构性困境",
+      "source": "机器之心",
+      "digest": "阿里 Qwen 与复旦等团队揭示编程智能体奖励设计的结构性困境，提出需构建协同演化的验证系统。",
+      "link": "https://mp.weixin.qq.com/s/mrjpgonQZA5Vxi4c2y3cig",
+      "source_file": "sources/2026-07-02_满分的「差」，Qwen与复旦等揭示编程智能体奖励设计的结构性困境_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-02",
+      "title": "大模型推理也能\"智能调度\"：让奖励模型按需分配算力的动态路由机制 | ACL 2026",
+      "source": "InfoQ",
+      "digest": "腾讯混元与新南威尔士大学联合提出 E-GRM 框架，将模型自身的不确定性重新定义为计算资源调度信号，延迟降低 62% 同时精度提升 3.3%。",
+      "link": "https://mp.weixin.qq.com/s/Zd0KHsUh_HFZ6Qc_iSn7LQ",
+      "source_file": "sources/2026-07-02_大模型推理也能“智能调度”：让奖励模型按需分配算力的动态路由机制 _ ACL 2026_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-02",
+      "title": "全球第一！ 中国模型登顶榜首，首个可编辑AI语音来了",
+      "source": "新智元",
+      "digest": "中国模型在全球榜单登顶，同期发布首个可编辑AI语音技术。",
+      "link": "https://mp.weixin.qq.com/s/OP11bu1NhVMN5I9P7tuuMg",
+      "source_file": "sources/2026-07-02_全球第一！ 中国模型登顶榜首，首个可编辑AI语音来了_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-02",
+      "title": "AI视觉创作总差点意思？中科大等综述500+篇文献，系统分析生成一致性",
+      "source": "新智元",
+      "digest": "中科大等团队综述500+篇文献，系统分析AI视觉生成一致性问题。",
+      "link": "https://mp.weixin.qq.com/s/qNtbYjdg3K0gALtw5ZYuuQ",
+      "source_file": "sources/2026-07-02_AI视觉创作总差点意思？中科大等综述500+篇文献，系统分析生成一致性_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-02",
+      "title": "独家对话大晓机器人陶大程：具身机器人大脑，不必装下整个世界｜甲子光年",
+      "source": "甲子光年",
+      "digest": "大晓机器人陶大程提出，Kairos希望把行业评估标准从生成质量推进到控制充分性。",
+      "link": "https://mp.weixin.qq.com/s/r5_zZ1yGlA86DMkCwRzshA",
+      "source_file": "sources/2026-07-02_独家对话大晓机器人陶大程：具身机器人大脑，不必装下整个世界｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "小鹏集团首届 AI 公开赛落幕，Qoder 助力业务人员探索 AI 应用创新",
+      "source": "Qoder",
+      "digest": "从智驾模型训练的算力底座，到全球化部署的基础设施，再到此次AI公开赛中Qoder对业务场景AI创新实践的支持，阿里云正与小鹏在AI全链路持续协同，共同验证AI从研发走向全员、从工具走向生产力的产业路径。",
+      "link": "https://mp.weixin.qq.com/s/Hr4d5YLppKAdgV4AYlxBGQ",
+      "source_file": "sources/2026-07-02_小鹏集团首届 AI 公开赛落幕，Qoder 助力业务人员探索 AI 应用创新_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "Qoder 企业版全球发布：让 AI Coding 从\"个人工具\"长出\"组织能力\"",
+      "source": "Qoder",
+      "digest": "Qoder 全球站正式发布「企业版」，Qoder CN 和 Qoder 的企业版在国内、国际阿里云云市场同步上线，让 AI Coding 从个人工具长出组织能力。",
+      "link": "https://mp.weixin.qq.com/s/kBd5EKUCxy-hYecloIWxcA",
+      "source_file": "sources/2026-07-02_Qoder 企业版全球发布：让 AI Coding 从“个人工具”长出“组织能力”_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "国内首位银行首席AI官已离任，更多银行盯上这一职位：高薪聘请，有无必要？",
+      "source": "银行科技研究社",
+      "digest": "国内首位银行首席AI官已离任，但更多银行正在高薪设立这一职位，行业趋势值得思考。",
+      "link": "https://mp.weixin.qq.com/s/iALMrtbDv7UozULVsErgTA",
+      "source_file": "sources/2026-07-02_国内首位银行首席AI官已离任，更多银行盯上这一职位：高薪聘请，有无必要？_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "突发！阿里AI产线大整合，92年陈宇森统管三大Agent",
+      "source": "智东西",
+      "digest": "阿里两个拳头Agent被兄弟团队\"吞\"了。",
+      "link": "https://mp.weixin.qq.com/s/T6WlVcSuBkKqbBLovcMf2A",
+      "source_file": "sources/2026-07-02_突发！阿里AI产线大整合，92年陈宇森统管三大Agent_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "如果你也想用 AI做一件好事，这里有 40 个灵感支持你开始",
+      "source": "腾讯研究院",
+      "digest": "AI公益应用灵感集锦，40个值得开始的公益创意。",
+      "link": "https://mp.weixin.qq.com/s/0fwYK7sj5WpC7Qs8rzrHZQ",
+      "source_file": "sources/2026-07-02_如果你也想用 AI做一件好事，这里有 40 个灵感支持你开始_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "从实验室到独角兽：WAIC云帆奖得主的创业图谱",
+      "source": "机器之心",
+      "digest": "6年149位顶尖华人AI学者走出实验室，执掌商业方向盘的硬科技创业答卷。",
+      "link": "https://mp.weixin.qq.com/s/h2ODwSK2-1skrLjBe15mjA",
+      "source_file": "sources/2026-07-02_从实验室到独角兽：WAIC云帆奖得主的创业图谱_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "从 AI 取数到智能分析：企业级数据 Agent 的多阶段演进与工程化落地",
+      "source": "InfoQ",
+      "digest": "企业级数据 Agent 从取数工具演进为支持个性化与场景化智能分析的生产力工具。",
+      "link": "https://mp.weixin.qq.com/s/dLtJQ3FRVrYMqpTKiX-iwg",
+      "source_file": "sources/2026-07-02_从 AI 取数到智能分析：企业级数据 Agent 的多阶段演进与工程化落地_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "arXiv脱离康奈尔，正式单飞",
+      "source": "机器之心",
+      "digest": "AI论文第一站 arXiv 脱离康奈尔大学独立运营。",
+      "link": "https://mp.weixin.qq.com/s/IOWUep4XE1DmtOnVp74iOQ",
+      "source_file": "sources/2026-07-02_arXiv脱离康奈尔，正式单飞_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "AI眼镜不再依赖手机！这次真要单飞了",
+      "source": "量子位",
+      "digest": "AI眼镜在AI时代迎来独立操作系统的关键时刻。",
+      "link": "https://mp.weixin.qq.com/s/bIHCw5hE1ml4SBYD9deA_g",
+      "source_file": "sources/2026-07-02_AI眼镜不再依赖手机！这次真要单飞了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "Anthropic 将删除「中国用户检测代码」；马斯克曾展示 AI 手机原型机；索尼：2028 年后不再卖游戏光盘｜极客早知道",
+      "source": "极客公园",
+      "digest": "Anthropic Claude Code 团队回应实验性中国用户检测代码将删除；马斯克展示 AI 手机原型机；索尼宣布 2028 年后不再卖游戏光盘。",
+      "link": "https://mp.weixin.qq.com/s/sfk_Fo7Cz2-JkZHVSZkOGw",
+      "source_file": "sources/2026-07-02_Anthropic 将删除「中国用户检测代码」；马斯克曾展示 AI 手机原型机；索尼：2028 年后_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-02",
+      "title": "腾讯研究院AI速递 20260702",
+      "source": "腾讯研究院",
+      "digest": "AI真正影响答案在行业内部而非技术圈——腾讯研究院AI速递综合资讯汇总。",
+      "link": "https://mp.weixin.qq.com/s/TEFwMFmFBiKUH1B2BPOdPw",
+      "source_file": "sources/2026-07-02_腾讯研究院AI速递 20260702_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-01",
       "title": "从答题到做实验：SciAgentGym让大模型进入科学工作流",
