@@ -1,7 +1,287 @@
 {
-  "updated_at": "2026-07-01T07:11:41.856148",
-  "total": 326,
+  "updated_at": "2026-07-02T11:24:28.251304",
+  "total": 354,
   "articles": [
+    {
+      "date": "2026-07-01",
+      "title": "从答题到做实验：SciAgentGym让大模型进入科学工作流",
+      "source": "机器之心",
+      "digest": "把大模型放进真实科学工作流里考试",
+      "link": "https://mp.weixin.qq.com/s/7d0hdiNAXorHS7LgqYRDzw",
+      "source_file": "sources/2026-07-01_从答题到做实验：SciAgentGym让大模型进入科学工作流_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "黄仁勋的物理AI ChatGPT时刻，正被这家中国公司的“流式多模态”接棒",
+      "source": "智东西",
+      "digest": "物理AI的新答案：三个模型、三层能力、一条链路。",
+      "link": "https://mp.weixin.qq.com/s/Vs77jZxajwp9hM9IOJUt3A",
+      "source_file": "sources/2026-07-01_黄仁勋的物理AI ChatGPT时刻，正被这家中国公司的“流式多模态”接棒_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "具身智能的Skill时刻！英伟达开源机器人技能库，Jim Fan：范式变了",
+      "source": "量子位",
+      "digest": "机器人持续学习迎来新范式！",
+      "link": "https://mp.weixin.qq.com/s/WLOTHCiWI4LgK4GwVpyc6w",
+      "source_file": "sources/2026-07-01_具身智能的Skill时刻！英伟达开源机器人技能库，Jim Fan：范式变了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "冷门新语言AI写不动？IEEE论文：从零到及格线，MoonBit给出完整训练路线",
+      "source": "量子位",
+      "digest": "AI时代的新编程语言，如何被模型学习和理解？",
+      "link": "https://mp.weixin.qq.com/s/Ma_y7a5TNbJy64YK2Fh74Q",
+      "source_file": "sources/2026-07-01_冷门新语言AI写不动？IEEE论文：从零到及格线，MoonBit给出完整训练路线_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "邢波再出手：上次「骂」完世界模型，这次轮到智能体了",
+      "source": "机器之心",
+      "digest": "邢波团队拆解五大软肋后，开出了智能体的「药方」：GIC 架构",
+      "link": "https://mp.weixin.qq.com/s/Yq5ikvFAVJQ9yswm_Rsjjg",
+      "source_file": "sources/2026-07-01_邢波再出手：上次「骂」完世界模型，这次轮到智能体了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Codex技术大佬亲自揭秘：做AI产品最后拼的竟然是“品味”？",
+      "source": "智东西",
+      "digest": "PRD并未过时，AI只是改变产品的工作形态。",
+      "link": "https://mp.weixin.qq.com/s/Cympy--RaPa3ozxUA3sO2Q",
+      "source_file": "sources/2026-07-01_Codex技术大佬亲自揭秘：做AI产品最后拼的竟然是“品味”？_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Codex杀入移动端，OpenAI内部99.8%Token消耗来自Codex",
+      "source": "51CTO",
+      "digest": "Codex正式进入ChatGPT移动App。",
+      "link": "https://mp.weixin.qq.com/s/jVECDdM1hlbUUow-jTLoFw",
+      "source_file": "sources/2026-07-01_Codex杀入移动端，OpenAI内部99.8%Token消耗来自Codex_51CTO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "僵局打开！美国解除对Anthropic两大AI旗舰模型的出口管控",
+      "source": "财联社AI daily",
+      "digest": "僵局打开！美国解除对Anthropic两大AI旗舰模型的出口管控",
+      "link": "https://mp.weixin.qq.com/s/kT03o_SOee4lwTADUJLxKQ",
+      "source_file": "sources/2026-07-01_僵局打开！美国解除对Anthropic两大AI旗舰模型的出口管控_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词",
+      "source": "机器之心",
+      "digest": "「封号」警告。",
+      "link": "https://mp.weixin.qq.com/s/Rpo7Ig3NJmTc7rR6j9q82Q",
+      "source_file": "sources/2026-07-01_实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Loop世界模型论文登顶Hugging Face，来自中国一家初创，周鸿祎陆奇都投了",
+      "source": "量子位",
+      "digest": "重写AI如何反复推演世界",
+      "link": "https://mp.weixin.qq.com/s/WDsXtmbEciNnFY50KShjBw",
+      "source_file": "sources/2026-07-01_Loop世界模型论文登顶Hugging Face，来自中国一家初创，周鸿祎陆奇都投了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "都在卷「让大模型多循环几遍」，这个7B模型LoopCoder v2说：多循环 1 次就够了",
+      "source": "机器之心",
+      "digest": "第 2 遍封顶，第 3 遍跳水。",
+      "link": "https://mp.weixin.qq.com/s/L_Bmxw44h4PFCQTO68lrpg",
+      "source_file": "sources/2026-07-01_都在卷「让大模型多循环几遍」，这个7B模型LoopCoder v2说：多循环 1 次就够了_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-01",
+      "title": "QoderWork 独立站：让 AI 工作助理被更多人看见",
+      "source": "Qoder",
+      "digest": "今天，QoderWork 独立站正式发布。",
+      "link": "https://mp.weixin.qq.com/s/BW_eRg6K1_Zs7B6rjD4AAA",
+      "source_file": "sources/2026-07-01_QoderWork 独立站：让 AI 工作助理被更多人看见_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "五块钱如何花三天...\n\n\n\n\n\nhorsley，一位腾讯应用开发高级工程师\n\n从token 焦虑到系统化治理，horsley这次想分享的不是几个省 token 小技巧，而是额度收紧后，团队怎样更稳定、更可持续地使用 Agent。\n\n要真正管住 Token 成本，不能只靠临时节流，关键是先把这四件事看清楚：\n\n\n一，真正的问题是浪费不可见\n很多 token 不是花在难题上，而是花在黑盒里的绕路上。尤其在 IDE vibe 里，外部只看到结果，却看不到 agent 有没有选错模型、反复读旧上下文、工具失败后重试，或因为环境问题绕远路。\n\n所以第一步不是让每个人更克制，而是先把浪费看清楚。\n\n常见的四类浪费：\n（1）任务和模型不匹配：低复杂度任务也默认上顶级模型。\n（2）上下文越来越厚：长对话里旧信息、工具输出、历史判断不断累积。\n（3）工具和 MCP 太吵：日志、测试、命令输出里大量噪音被原样塞进上下文。\n（4）失败反复重来：依赖缺失、参数错误、工具失败导致 agent 一轮轮尝试。\n\n这些单次看都不大，但每天反复发生，就会成为账单上的大头。\n\n\n二，值得花和该治理要分开\n复杂设计、关键判断、疑难排障、探索新 workflow，这些 token 花得值，因为它们换来真实进展。\n真正该治理的是模型错配、上下文膨胀、工具噪音和失败重试这些低质量消耗。\n\n\n三，个人经验&平台能力\n现在很多节省方式都靠个人经验：谁知道该用便宜模型，谁记得哪个 prompt 稳，谁的机器工具链更顺。但换个人、换机器、换一轮会话，经验就容易归零。团队不能长期靠个人自觉控成本。\n\n长期看，省 token 应该从个人技巧变成系统能力。平台至少要做到：过程可见，能看到 tool call、失败重试和 token 花费位置；经验可沉淀，记录任务适合什么模型、prompt、skill；实验可回放，在同一状态下比较不同方案；环境可统一，减少本地差异带来的绕路。\n\n\n四，两个启发\ncaveman 说明输出也是上下文，少寒暄、少复述、结论优先，可以减少后续语言垃圾。\nRTK 说明工具输出不该原样喂给模型，而应先过滤、聚合、截断和去重。\n它们共同证明：真正有效的 token 优化，不靠人临场克制，而要做进 workflow。\n\n\n最后共识\n先把不同浪费拆开看，再承认只靠个人兜底不可持续，最后再把可观测、经验沉淀、模型分层和工具治理做成平台能力。这样，Token 成本管理才不是一场临时省钱运动，而是一次真正的工程化治理。\n\n五块钱未必能花三天，但至少要让每一块钱花得更明白。",
+      "source": "腾讯技术工程",
+      "digest": "五块钱如何花三天...\n\n\n\n\n\nhorsley，一位腾讯应用开发高级工程师\n\n从token 焦虑到系统化治理，horsley这次想分享的不是几个省 token 小技巧，而是额度收紧后，团队怎样更稳定、更可持续地使用 Agent。\n\n要真正管住 Token 成本，不能只靠临时节流，关键是先把这四件事看清楚：\n\n\n一，真正的问题是浪费不可见\n很多 token 不是花在难题上，而是花在黑盒里的绕路上。...",
+      "link": "https://mp.weixin.qq.com/s/ddwgM_jm1kD9JZyEK4ZTuw",
+      "source_file": "sources/2026-07-01_五块钱如何花三天..._horsley，一位腾讯应用开发高级工程师_从token 焦虑到系统化治理，_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills",
+      "source": "Qoder",
+      "digest": "凌晨两点，一份数据报告在没有任何人值守的情况下，自己跑完了。中途它遇到一个问题——计算资源组被冻结。",
+      "link": "https://mp.weixin.qq.com/s/7-vgulMV3enGixlRw2Vrsg",
+      "source_file": "sources/2026-07-01_用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "飞书让表格变成「AI同事」加入群聊，不打开表就能用表",
+      "source": "机器之心",
+      "digest": "跟团队的新同事交个朋友……",
+      "link": "https://mp.weixin.qq.com/s/tosH4V9nLqYZ0La8LLdRWQ",
+      "source_file": "sources/2026-07-01_飞书让表格变成「AI同事」加入群聊，不打开表就能用表_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Harness 工程之道：Skill 原理与最佳实践",
+      "source": "阿里云开发者",
+      "digest": "Harness 工程之道：Skill 原理与最佳实践",
+      "link": "https://mp.weixin.qq.com/s/yo2f5edeNNkYtCte9P0yhQ",
+      "source_file": "sources/2026-07-01_Harness 工程之道：Skill 原理与最佳实践_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "清华发布智能体社会AgentSociety第二代：让社会科学研究真正「跑起来」",
+      "source": "新智元",
+      "digest": "清华发布智能体社会AgentSociety第二代：让社会科学研究真正「跑起来」",
+      "link": "https://mp.weixin.qq.com/s/kd859W3vsbMRjZ8-HRmHvg",
+      "source_file": "sources/2026-07-01_清华发布智能体社会AgentSociety第二代：让社会科学研究真正「跑起来」_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "从单点工具到全流程数字员工，解码Agentar金融智能体专家团进化之路——专访蚂蚁数科金融事业部总经理曹刚",
+      "source": "金融电子化",
+      "digest": "从单点工具到全流程数字员工，解码Agentar金融智能体专家团进化之路——专访蚂蚁数科金融事业部总经理曹刚",
+      "link": "https://mp.weixin.qq.com/s/acIJ9x73zSnIy7WypnzNBA",
+      "source_file": "sources/2026-07-01_从单点工具到全流程数字员工，解码Agentar金融智能体专家团进化之路——专访蚂蚁数科金融事业部总经_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "大模型赋能投研合规的穿透式风控实践",
+      "source": "金融电子化",
+      "digest": "大模型赋能投研合规的穿透式风控实践",
+      "link": "https://mp.weixin.qq.com/s/EZ153wxVXxtqWJwBcvmdAw",
+      "source_file": "sources/2026-07-01_大模型赋能投研合规的穿透式风控实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "探究银行业AI投入与收益不匹配的深层原因",
+      "source": "银行科技研究社",
+      "digest": "探究银行业AI投入与收益不匹配的深层原因",
+      "link": "https://mp.weixin.qq.com/s/Fv-0EqrVCgB_xDCCW2FARA",
+      "source_file": "sources/2026-07-01_探究银行业AI投入与收益不匹配的深层原因_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "金融AI武道大会开赛！四道业务真题，出题人：猜不到最优解",
+      "source": "量子位",
+      "digest": "Harness大佬速来！",
+      "link": "https://mp.weixin.qq.com/s/4vql9YcPEPB591T63vzUNg",
+      "source_file": "sources/2026-07-01_金融AI武道大会开赛！四道业务真题，出题人：猜不到最优解_量子位.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "AI Safety Benchmark智能体安全测试2026 Q2版（Claw类）结果发布",
+      "source": "中国信通院CAICT",
+      "digest": "AI Safety Benchmark智能体安全测试2026 Q2版（Claw类）结果发布",
+      "link": "https://mp.weixin.qq.com/s/oiJD8bcALzIIG-TFhTB8zQ",
+      "source_file": "sources/2026-07-01_AI Safety Benchmark智能体安全测试2026 Q2版（Claw类）结果发布_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "2 年，他和 AI「聊」出一家智能戒指公司，还盈利了",
+      "source": "极客公园",
+      "digest": "0 个全职员工，做出一款爆品。",
+      "link": "https://mp.weixin.qq.com/s/dImbH-WCDYK9Spu5_C-6Pw",
+      "source_file": "sources/2026-07-01_2 年，他和 AI「聊」出一家智能戒指公司，还盈利了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "如何把超级个体的产能，转化成组织能力？ | AI跃迁者调研",
+      "source": "AI透镜",
+      "digest": "个人真的很累；公司完全跟不上。",
+      "link": "https://mp.weixin.qq.com/s/ywS4Vx2hDdq0BhJbU2CCzw",
+      "source_file": "sources/2026-07-01_如何把超级个体的产能，转化成组织能力？ _ AI跃迁者调研_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "OceanBase湖库一体，重新定义AI数据库",
+      "source": "量子位",
+      "digest": "一套技术栈实现离在线统一",
+      "link": "https://mp.weixin.qq.com/s/-OmGQJcry9T1Tg8vMYRpVw",
+      "source_file": "sources/2026-07-01_OceanBase湖库一体，重新定义AI数据库_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "图灵奖得主首度入局中国物理AI公司：曹操出行凭什么？｜甲子光年",
+      "source": "甲子光年",
+      "digest": "从单车智能走向平台可信。",
+      "link": "https://mp.weixin.qq.com/s/p_1oz9DNepJLhVHQiXEvOg",
+      "source_file": "sources/2026-07-01_图灵奖得主首度入局中国物理AI公司：曹操出行凭什么？｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "智能体互联国标来了：50家企业已试点 业内预计下半年见影响",
+      "source": "财联社AI daily",
+      "digest": "智能体互联国标来了：50家企业已试点 业内预计下半年见影响",
+      "link": "https://mp.weixin.qq.com/s/x-wYI9F8sw86qa2apofLIQ",
+      "source_file": "sources/2026-07-01_智能体互联国标来了：50家企业已试点 业内预计下半年见影响_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-01",
+      "title": "腾讯研究院AI速递 20260701",
+      "source": "腾讯研究院",
+      "digest": "模型能力的终极形态究竟还有多远",
+      "link": "https://mp.weixin.qq.com/s/jB2vCDh4Vd7z-vegAvqruA",
+      "source_file": "sources/2026-07-01_腾讯研究院AI速递 20260701_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-06-30",
       "title": "Codex 1 个月吃掉 150GB 流量，写满 4T 硬盘",
