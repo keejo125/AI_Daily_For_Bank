@@ -1,32 +1,12 @@
 {
-  "updated_at": "2026-07-03T01:21:15.960304",
-  "total": 374,
+  "updated_at": "2026-07-03T06:47:10.408330",
+  "total": 372,
   "articles": [
     {
       "date": "2026-07-02",
-      "title": "Meta杀入公有云，全球AI芯片股大跌",
-      "source": "智东西",
-      "digest": "正面硬刚三大云巨头。",
-      "link": "https://mp.weixin.qq.com/s/8wBrBcugRM7jFQoe9d_mug",
-      "source_file": "sources/2026-07-02_Meta杀入公有云，全球AI芯片股大跌_智东西.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-02",
-      "title": "Meta是否已在尖端AI竞赛中率先\"投降\"？华尔街纷纷热议！",
-      "source": "财联社AI daily",
-      "digest": "Meta尖端AI竞赛战略转向引发华尔街热议。",
-      "link": "https://mp.weixin.qq.com/s/ng0kttns0g_rjQ4JoXdffw",
-      "source_file": "sources/2026-07-02_Meta是否已在尖端AI竞赛中率先“投降”？华尔街纷纷热议！_财联社AI daily.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-02",
-      "title": "卷不赢模型，Meta改行「算力包租公」！一夜炸崩美股AI链",
+      "title": "Meta杀入公有云：算力变现与华尔街分歧",
       "source": "新智元",
-      "digest": "又来个「算力包租公」。Meta在AI模型竞赛中转向算力租赁业务。",
+      "digest": "Meta推出Meta Compute云基础设施业务，对外出售AI算力与模型访问权限，正面硬刚AWS/Azure/谷歌云。CoreWeave/Nebius股价暴跌10-17%，美光闪迪跌超10%。华尔街分裂：悲观派（D.A. Davidson）认为这是\"放弃前沿AI\"，乐观派（Jefferies）认为65%内部利用率有35%剩余产能可变现。",
       "link": "https://mp.weixin.qq.com/s/HjTUkRf_ZXdMfBOGkIUeyw",
       "source_file": "sources/2026-07-02_卷不赢模型，Meta改行「算力包租公」！一夜炸崩美股AI链_新智元.md",
       "category": "国际",
