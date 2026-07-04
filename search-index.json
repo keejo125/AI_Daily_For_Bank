@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-07-03T06:47:10.408330",
-  "total": 372,
+  "updated_at": "2026-07-04T09:43:29.820571",
+  "total": 394,
   "articles": [
+    {
+      "date": "2026-07-03",
+      "title": "Fable 5解题解到破防，一句「啊啊啊」刷屏了",
+      "source": "机器之心",
+      "digest": "Fable 5 重启后引发业内连锁讨论：（1）[机器之心] Fable 5解题解到破防，一句「啊啊啊」刷屏了；（2）[InfoQ] Claude Code 80%的提示词说删就删，Anthropic用Fable 5打了个样：AI行业的「降本」才刚刚开始。两条都聚焦 Anthropic 最新模型 Fable 5 上线后的能力展示与降本策略。",
+      "link": "https://mp.weixin.qq.com/s/WhfJ0cHn9_HRYIVnQp-xkw",
+      "source_file": "sources/2026-07-03_Fable 5解题解到破防，一句「啊啊啊」刷屏了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-03",
+      "title": "AI Agent为什么总是不稳定？终于有了一个系统性基准来拆解",
+      "source": "机器之心",
+      "digest": "三星联合北大等发布LiveClawBench基准，引入三轴复杂度因子体系，系统拆解AI Agent在真实助理任务中不稳定的根因。",
+      "link": "https://mp.weixin.qq.com/s/4y6DaEL1-ViFT81QJ9sl0g",
+      "source_file": "sources/2026-07-03_AI Agent为什么总是不稳定？终于有了一个系统性基准来拆解_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Anthropic被曝造芯！挖OpenAI老兵，密谈三星2nm",
+      "source": "新智元",
+      "digest": "Anthropic启动自研AI芯片早期开发，挖来OpenAI定制芯片团队核心成员，正与三星洽谈2nm制程代工合作。",
+      "link": "https://mp.weixin.qq.com/s/OxZHBPfGVTO4qdwmbq1U4Q",
+      "source_file": "sources/2026-07-03_Anthropic被曝造芯！挖OpenAI老兵，密谈三星2nm_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "刚刚，Vidu S1 重磅来袭，视频生成迈入实时交互时代！",
+      "source": "机器之心",
+      "digest": "生数科技发布实时交互视频模型Vidu S1，支持语音实时控制、无限时长生成、540P+25FPS，消费级显卡即可运行。",
+      "link": "https://mp.weixin.qq.com/s/eIuLWSG6_9RknAIVjO3mQA",
+      "source_file": "sources/2026-07-03_刚刚，Vidu S1 重磅来袭，视频生成迈入实时交互时代！_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-03",
+      "title": "DeepSeek新技术移植苹果芯片！Mac本地大模型加速60%",
+      "source": "量子位",
+      "digest": "DeepSeek开源的DSpark投机解码技术被社区移植至苹果MLX框架，Mac本地推理速度提升60%，且输出与原始模型逐字节相同。",
+      "link": "https://mp.weixin.qq.com/s/0Y3iTxUlAPwUxsgkmQkBkg",
+      "source_file": "sources/2026-07-03_DeepSeek新技术移植苹果芯片！Mac本地大模型加速60%_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-03",
+      "title": "ICML 2026 | 让多模态大模型学会带着时间思考：北大与华为团队开源TaRO框架",
+      "source": "机器之心",
+      "digest": "北大与华为团队提出TaRO时序感知推理优化框架，通过模板化探索和时序敏感奖励显著提升视频大模型的时序定位能力。",
+      "link": "https://mp.weixin.qq.com/s/LA_ghryIni-8FXbTis9tXg",
+      "source_file": "sources/2026-07-03_ICML 2026 _ 让多模态大模型学会带着时间思考：北大与华为团队开源TaRO框架_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-03",
+      "title": "用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills",
+      "source": "阿里云开发者",
+      "digest": "阿里云与Qoder联合展示Cloud Agent用云新范式，将300+产品2万+API封装为Skills，Agent可自主部署、运维和数据分析。",
+      "link": "https://mp.weixin.qq.com/s/srHeQj3PzfNmaS2OymlDPQ",
+      "source_file": "sources/2026-07-03_用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "从AI Coding到Harness Engineering的端到端工程开发实践",
+      "source": "腾讯技术工程",
+      "digest": "腾讯应用宝团队分享Harness工程化实践，构建含800+结构化文档的知识库和端到端AI开发流程，实现需求到提交的自动化闭环。",
+      "link": "https://mp.weixin.qq.com/s/UE-RZH9hnbBd06CVapFGrA",
+      "source_file": "sources/2026-07-03_从AI Coding到Harness Engineering的端到端工程开发实践_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "让 AI 真正「懂时间」：QC-MHM 时序知识图谱问答的全新突破 | AAAI",
+      "source": "InfoQ",
+      "digest": "QC-MHM提出时序知识图谱问答新方法，将时间信息显式建模到表示学习与推理路径中，解决大模型在带时间约束问题上易「翻车」的难题。",
+      "link": "https://mp.weixin.qq.com/s/1i0wqQ7R8CUJzd-PmPJrBQ",
+      "source_file": "sources/2026-07-03_让 AI 真正“懂时间”：QC-MHM 时序知识图谱问答的全新突破 _ AAAI_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "从 Coding 到 Anything，Agent 正在重写工作流",
+      "source": "InfoQ",
+      "digest": "AICon上海站专题报道：从Qoder Desktop多Agent协作、桌面Agent、零售全域Agent到托管运行时，呈现AI Agent从Coding到Anything的工作流重构路径。",
+      "link": "https://mp.weixin.qq.com/s/hY6_dJBsdo0WRC_dxkfMzg",
+      "source_file": "sources/2026-07-03_从 Coding 到 Anything，Agent 正在重写工作流_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Agent 上岗之后，企业如何治理硅基团队？",
+      "source": "InfoQ",
+      "digest": "张江AI论坛专题：从长期记忆工程、ACE Harness系统到Token成本治理，探讨企业如何为Agent建立可控可信的Harness系统。",
+      "link": "https://mp.weixin.qq.com/s/PsI6CyEW3n6Liyg9OLdkxw",
+      "source_file": "sources/2026-07-03_Agent 上岗之后，企业如何治理硅基团队？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "ECCV 2026连发3篇论文背后，群核科技想做物理AI「架桥人」",
+      "source": "甲子光年",
+      "digest": "群核科技在ECCV 2026入选三篇论文，覆盖训练数据生成、高保真仿真器SPEAR和空间智能评测，布局物理AI「数据-仿真-评测」全链路基础设施。",
+      "link": "https://mp.weixin.qq.com/s/yF8unTjVRBHq5zQlXBN3gA",
+      "source_file": "sources/2026-07-03_ECCV 2026连发3篇论文背后，群核科技想做物理AI“架桥人”｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "AI找出4种全新超导体，只用28个GPU时！人类此前完全未知",
+      "source": "量子位",
+      "digest": "阿里达摩院联合人大等发布AI智能体ElementsClaw，仅用28个GPU时从240万种晶体中预测出6.8万种超导体，实验合成验证了4种全新超导材料。",
+      "link": "https://mp.weixin.qq.com/s/H0z5PsPcayPKB6qucCYRoA",
+      "source_file": "sources/2026-07-03_AI找出4种全新超导体，只用28个GPU时！人类此前完全未知_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "黄仁勋说的Physical AI，被这家中国跨界选手带进了生命科学实验室",
+      "source": "量子位",
+      "digest": "涌生智能联合上海AI实验室发布ProtoPilot多智能体系统和BioLab Bench评测体系，率先打通从自然语言实验意图到湿实验物理执行的完整AI for Bio闭环。",
+      "link": "https://mp.weixin.qq.com/s/7_aNUb6YuM4Rc2DcaI3jZQ",
+      "source_file": "sources/2026-07-03_黄仁勋说的Physical AI，被这家中国跨界选手带进了生命科学实验室_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "告别百万级动捕棚！上海交大等提出HAT-4D，单目视频直出4D交互场景",
+      "source": "量子位",
+      "digest": "上海交大联合中科大等提出HAT-4D框架，由多Agent协作仅从单目视频完成多物体4D交互重建，已在ECCV 2026发表。",
+      "link": "https://mp.weixin.qq.com/s/vjBECd9BK6tx7vPkjEc5ig",
+      "source_file": "sources/2026-07-03_告别百万级动捕棚！上海交大等提出HAT-4D，单目视频直出4D交互场景_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "90万人次围观，Agent进入真实直播现场",
+      "source": "机器之心",
+      "digest": "「整点贝果」团队在抖音直播中跑通AI互动直播首秀，曝光93.5万人，展示Agent Runtime在多人实时互动场景中的系统工程能力。",
+      "link": "https://mp.weixin.qq.com/s/C7CexSfkjO3EmcZ8YKTwzQ",
+      "source_file": "sources/2026-07-03_90万人次围观，Agent进入真实直播现场_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Code is cheap. Don't write any.——AI Native，程序员如何提升五倍coding效率",
+      "source": "阿里云开发者",
+      "digest": "阿里云开发者分享AI Native研发方法论——Harness工程实践，提出「人定方向，模型推进」的AI编程新范式，20天提交70万行代码跨10个项目。",
+      "link": "https://mp.weixin.qq.com/s/t04ysxZN2qEc3986r2gyTA",
+      "source_file": "sources/2026-07-03_Code is cheap. Don't write any.——AI Native，程序员如何提升_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "一天之内，Claude封堵、阿里切割",
+      "source": "智东西",
+      "digest": "Anthropic封堵中国公司绕道使用Claude，同日阿里巴巴内部宣布「反向禁用」Claude，中美AI工具生态加速分流。",
+      "link": "https://mp.weixin.qq.com/s/cc8fL8Rc27u_ycC37FGrfw",
+      "source_file": "sources/2026-07-03_一天之内，Claude封堵、阿里切割_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "寻找AI时代的ε：通过五个人，我们看见了一类人｜甲子光年",
+      "source": "甲子光年",
+      "digest": "甲子光年AI Builders专题：讲述五位AI创业者故事——从听障言语康复、一人AI工作室到AI音乐、AI世界模拟和认知教练Agent。",
+      "link": "https://mp.weixin.qq.com/s/aEA65B4KYbzkEIQ_RV0yXg",
+      "source_file": "sources/2026-07-03_寻找AI时代的ε：通过五个人，我们看见了一类人｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "人机对齐？不，是人正在向机器对齐",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院深度分析：研究显示人类正不自觉向AI对齐——语言、思维、工作模式被AI重塑，探讨「双向对齐」的社会影响与风险。",
+      "link": "https://mp.weixin.qq.com/s/eP0PnN8fnDpxFpyfO_rkDw",
+      "source_file": "sources/2026-07-03_人机对齐？不，是人正在向机器对齐_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "特斯拉员工每周 AI 上限 200 美元；快手可灵落地 30 亿美元融资；证监会同意宇树科创板 IPO｜极客早知道",
+      "source": "极客公园",
+      "digest": "极客公园综合资讯早报：涵盖特斯拉AI支出上限、可灵融资、宇树IPO、微软AI部署团队、Anthropic造芯、苹果新机等多条行业动态。",
+      "link": "https://mp.weixin.qq.com/s/ghXNvpwEm_pg8LqQGXcyIg",
+      "source_file": "sources/2026-07-03_特斯拉员工每周 AI 上限 200 美元；快手可灵落地 30 亿美元融资，估值 180 亿美元；证监_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-03",
+      "title": "腾讯研究院AI速递 20260703",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院生成式AI综合速递：涵盖Meta卖算力、美团LongCat万亿模型、Agents-A1发布、阿里整合三大Agent、Palantir炮轰AI收费等多元动态。",
+      "link": "https://mp.weixin.qq.com/s/eRR0jUt9vh9FFaJlmdtrWg",
+      "source_file": "sources/2026-07-03_腾讯研究院AI速递 20260703_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-02",
       "title": "Meta杀入公有云：算力变现与华尔街分歧",
