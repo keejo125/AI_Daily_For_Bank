@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-07-04T09:43:29.820571",
-  "total": 394,
+  "updated_at": "2026-07-05T07:39:45.284644",
+  "total": 416,
   "articles": [
+    {
+      "date": "2026-07-04",
+      "title": "趁火打劫！GPT-5.6三大模型全曝，定档7月7日？",
+      "source": "新智元",
+      "digest": "OpenAI卡点截杀",
+      "link": "https://mp.weixin.qq.com/s/nzb2fAi1oDdBGueU_QzW3w",
+      "source_file": "sources/2026-07-04_趁火打劫！GPT-5.6三大模型全曝，定档7月7日？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Hinton盛赞，Gemini核心贡献者演讲：未来会有数十亿超人级AI爱因斯坦",
+      "source": "机器之心",
+      "digest": "物理学的黄金时代正在到来……",
+      "link": "https://mp.weixin.qq.com/s/p3l4kSgB0k2I11ji3kkBLQ",
+      "source_file": "sources/2026-07-04_Hinton盛赞，Gemini核心贡献者演讲：未来会有数十亿超人级AI爱因斯坦_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-04",
+      "title": "一兆瓦养活6万智能体！英伟达GB300碾压前代20倍",
+      "source": "新智元",
+      "digest": "NVIDIA 推出 GB300，单兆瓦算力可支撑 6 万智能体并发，性能较前代提升 20 倍，重新定义 AI 基础设施能效。",
+      "link": "https://mp.weixin.qq.com/s/UctqWjFE1fS2EHmI2kF1VA",
+      "source_file": "sources/2026-07-04_一兆瓦养活6万智能体！英伟达GB300碾压前代20倍_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Arm CEO：CPU需求已「爆表」！",
+      "source": "机器之心",
+      "digest": "AI新一轮的「战争」号角已经吹响？",
+      "link": "https://mp.weixin.qq.com/s/QS3xSOwlmq2sGgPCqKmTIg",
+      "source_file": "sources/2026-07-04_Arm CEO：CPU需求已「爆表」！_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Token吃掉三成工资！硅谷AI账单失控了",
+      "source": "新智元",
+      "digest": "硅谷 AI 公司发现 Token 成本已占工程员工资 30%，AI 算力支出失控引发行业反思成本控制与定价策略。",
+      "link": "https://mp.weixin.qq.com/s/B9RHcSryvEzLeEw6CBEqJA",
+      "source_file": "sources/2026-07-04_Token吃掉三成工资！硅谷AI账单失控了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "73% PR 由AI生成！Claude Code之父对话Spotify：2900名工程师每天部署4500次，坐地铁都能提交代码",
+      "source": "InfoQ",
+      "digest": "去年 9 月，Anthropic Claude Code 创始人 Boris Cherny 曾与 Spotify 工程副总裁 Niklas Gustavsson 谈到 AI 编程工具的未来。",
+      "link": "https://mp.weixin.qq.com/s/BH1EeCbdp_k2OTfdL5jn5w",
+      "source_file": "sources/2026-07-04_73% PR 由AI生成！Claude Code之父对话Spotify：2900名工程师每天部署45_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Claude Code与Cowork负责人：智能体时代，团队怎么管、人怎么活",
+      "source": "机器之心",
+      "digest": "「和 Agent 一起工作太孤独了」",
+      "link": "https://mp.weixin.qq.com/s/Q5qAYasNuzm0gtXhzqRPnQ",
+      "source_file": "sources/2026-07-04_Claude Code与Cowork负责人：智能体时代，团队怎么管、人怎么活_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "上海交大提出ICRDrag：首个上下文区域拖拽模型，实现精准可控图像编辑",
+      "source": "机器之心",
+      "digest": "让 AI 真正学会「选哪改哪」。",
+      "link": "https://mp.weixin.qq.com/s/kC6nebzABdG9lL7Mto85IQ",
+      "source_file": "sources/2026-07-04_上海交大提出ICRDrag：首个上下文区域拖拽模型，实现精准可控图像编辑_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Vibe一下能自动画工程图、做3D装配的AI来了丨上海AI Lab",
+      "source": "量子位",
+      "digest": "上海AI Lab提出ComAct，开启专业软件操纵新范式",
+      "link": "https://mp.weixin.qq.com/s/CBOnf4oVQL7S12Gss-O67w",
+      "source_file": "sources/2026-07-04_Vibe一下能自动画工程图、做3D装配的AI来了丨上海AI Lab_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "豆包、千问将下线智能体功能",
+      "source": "财联社AI daily",
+      "digest": "字节豆包、阿里千问宣布下线智能体功能，行业大模型 Agent 路线调整，回归基础模型能力建设。",
+      "link": "https://mp.weixin.qq.com/s/w7fRE7nKSCHoTOUcL6WH3g",
+      "source_file": "sources/2026-07-04_豆包、千问将下线智能体功能_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "王嘉尔设计！影目INMO×WHL的AI眼镜凭啥引爆大众消费场？",
+      "source": "量子位",
+      "digest": "开启消费级增长第二曲线",
+      "link": "https://mp.weixin.qq.com/s/qcbIpY5ZFVsWPr75ua_Bxw",
+      "source_file": "sources/2026-07-04_王嘉尔设计！影目INMO×WHL的AI眼镜凭啥引爆大众消费场？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "首个面向 AI Infra 的运维智能体评测基准开源！基于近百亿条真实数据，考验 Agent 的问题解决能力",
+      "source": "InfoQ",
+      "digest": "随着全球智能体加速落地，算力需求呈指数级爆发，以 GPU 为核心的 AI 基础设施正变得愈发关键。",
+      "link": "https://mp.weixin.qq.com/s/ZXnQchyTyYrfthMxRcp1-A",
+      "source_file": "sources/2026-07-04_首个面向 AI Infra 的运维智能体评测基准开源！基于近百亿条真实数据，考验 Agent 的问题_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "这家银行将向全体员工开放AI工具！",
+      "source": "银行科技研究社",
+      "digest": "西班牙桑坦德银行宣布向全球 18.5 万员工开放 AI 工具，已 4 万人在用，AI 优先战略覆盖软件开发、客户服务、风险管理。",
+      "link": "https://mp.weixin.qq.com/s/IJKNwIPdXuUqBRFpjp-l_Q",
+      "source_file": "sources/2026-07-04_这家银行将向全体员工开放AI工具！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "一年100篇论文的超级作者来了，审稿还顶得住吗?",
+      "source": "机器之心",
+      "digest": "难道只能 AI 审稿了？",
+      "link": "https://mp.weixin.qq.com/s/fW1sYtBETslezSBystMwPQ",
+      "source_file": "sources/2026-07-04_一年100篇论文的超级作者来了，审稿还顶得住吗_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "存在 40 年的游戏光盘「被判死刑」，压垮它的最后一根稻草是 AI",
+      "source": "极客公园",
+      "digest": "玩家悼念的或许不是光盘，只是光盘所代表的拥有感。",
+      "link": "https://mp.weixin.qq.com/s/xyracDuEnHoDODH_uR76WA",
+      "source_file": "sources/2026-07-04_存在 40 年的游戏光盘「被判死刑」，压垮它的最后一根稻草是 AI_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "追求 AI 记忆力的路线下，RAG 是否终将被抛弃？",
+      "source": "机器之心",
+      "digest": "如果当前主流的上下文工程本质上是一种伪优化，那 AI 的持续学习能力应当如何实现？",
+      "link": "https://mp.weixin.qq.com/s/F4D1gKBF-W2oScWEQ1c8Fg",
+      "source_file": "sources/2026-07-04_追求 AI 记忆力的路线下，RAG 是否终将被抛弃？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "持续霸榜Github的是一个AI视频剪辑项目",
+      "source": "量子位",
+      "digest": "脚本、素材、配音、字幕、剪辑一全包",
+      "link": "https://mp.weixin.qq.com/s/mBzS1JK_n9pE9DyXMOj00A",
+      "source_file": "sources/2026-07-04_持续霸榜Github的是一个AI视频剪辑项目_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "直击慕尼黑上海电子展：云端AI加速向端侧下放",
+      "source": "财联社AI daily",
+      "digest": "2025 慕尼黑上海电子展聚焦端侧 AI，云端算力加速向终端设备下沉，恩智浦等芯片厂商推动本地推理普及。",
+      "link": "https://mp.weixin.qq.com/s/8KjUTkhgU3ey6fJHFSRRIg",
+      "source_file": "sources/2026-07-04_直击慕尼黑上海电子展：云端AI加速向端侧下放_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "一文把握全局AI动态（0629-0703）",
+      "link": "https://mp.weixin.qq.com/s/Bek8HoR6eaoPrxTkwj43Sw",
+      "source_file": "sources/2026-07-04_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "菲尔兹奖预测出炉：王虹邓煜呼声最高，解决50年难题才够门槛",
+      "source": "量子位",
+      "digest": "网友：千万不要学诺贝尔奖颁给AI",
+      "link": "https://mp.weixin.qq.com/s/vzTTDT6M6D_c9ga8LLv6yA",
+      "source_file": "sources/2026-07-04_菲尔兹奖预测出炉：王虹邓煜呼声最高，解决50年难题才够门槛_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "比 AirPods 贵三倍的「睡眠耳机」，可能是最有用的 AI 硬件",
+      "source": "极客公园",
+      "digest": "​AI 让耳机第一次学会「哄你睡觉」。",
+      "link": "https://mp.weixin.qq.com/s/ZcP1ypvXls2ugJvwDz3HMw",
+      "source_file": "sources/2026-07-04_比 AirPods 贵三倍的「睡眠耳机」，可能是最有用的 AI 硬件_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-04",
+      "title": "阿里内部全面禁用 Claude Code；带摄像头 AirPods Pro 项目「暂停」；黄仁勋黑色皮夹克估价或超 40 万元｜极客早知道",
+      "source": "极客公园",
+      "digest": "微软 GitHub Copilot 接入首个开源模型 Kimi K2.7 Code；\nMeta CEO 扎克伯格：AI 智能体技术发展得比我想象要慢；\n腾讯云：DeepSeek-V4 正式版「原厂直供」模型计划于 7 月中上线；\n三星传获 Meta 超 10 万亿韩元 AI 芯片代工订单，2 纳米中长期积压订单看涨",
+      "link": "https://mp.weixin.qq.com/s/64J9fJXDaMFqzWrdz0vchg",
+      "source_file": "sources/2026-07-04_阿里内部全面禁用 Claude Code；带摄像头 AirPods Pro 项目「暂停」；黄仁勋黑色_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-03",
       "title": "Fable 5解题解到破防，一句「啊啊啊」刷屏了",
