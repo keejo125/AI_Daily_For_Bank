@@ -1,7 +1,157 @@
 {
-  "updated_at": "2026-07-05T07:39:45.284644",
-  "total": 416,
+  "updated_at": "2026-07-06T06:44:48.249767",
+  "total": 431,
   "articles": [
+    {
+      "date": "2026-07-05",
+      "title": "Anthropic造了套AI越狱「刑法」！你的请求，四种死法",
+      "source": "新智元",
+      "digest": "Anthropic公开Fable 5安全降级逻辑(CJS越狱打分系统)，将所有涉安请求分四档处理。美国出口管制首次延伸至模型访问权，多位用户反馈Fable 5安全护栏过于严格导致频繁回退Opus 4.8。",
+      "link": "https://mp.weixin.qq.com/s/lZIGF_OqPSCuYUsGJLfUKQ",
+      "source_file": "sources/2026-07-05_Anthropic造了套AI越狱「刑法」！你的请求，四种死法_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-05",
+      "title": "OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧",
+      "source": "新智元",
+      "digest": "DeepMind研究员爆料OpenAI原始Scaling Law论文存在致命bug，导致全球AI行业在「体量过大、训练不足」的模型上白白烧掉大量算力。当年OpenAI的结论是应优先把模型做大而非喂更多数据，这一方向定义了GPT-3时代的堆参数路线，如今被证伪。",
+      "link": "https://mp.weixin.qq.com/s/2GS2jY-jvfPJm9cP2tqLUA",
+      "source_file": "sources/2026-07-05_OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-05",
+      "title": "Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程",
+      "source": "InfoQ",
+      "digest": "Claude Code团队工程负责人Thariq Shihipar提出HTML相比Markdown在智能体协作中更具优势，可嵌入SVG图表、交互式组件等提升认知效率。引发Hacker News广泛讨论，Simon Willison认同HTML在长上下文时代的价值。",
+      "link": "https://mp.weixin.qq.com/s/urJLVWuuyxD0jBqtJ6VrNw",
+      "source_file": "sources/2026-07-05_Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切",
+      "source": "机器之心",
+      "digest": "Codex桌面应用团队负责人Andrew Ambrosino访谈。Codex周活跃用户已达500万，知识工作者采用速度是开发者3倍以上。讨论Codex与ChatGPT合并缘由，以及实现变便宜后「品味/策展」成为最贵环节的产品思考。",
+      "link": "https://mp.weixin.qq.com/s/Lp9bjQ3lH2oaiBHswoNbXQ",
+      "source_file": "sources/2026-07-05_Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "「我一行代码都没读就发布了」，被OpenAI收购后，uv工具创始人开始反思AI编程",
+      "source": "InfoQ",
+      "digest": "uv/Ruff创始人Charlie Marsh谈AI编程现状：AI写PR成本为零但审查成本更高，开源生态面临AI slop冲击。他坦承曾被同事从「全AI模式」打醒，分享团队对抗AI slop的策略。",
+      "link": "https://mp.weixin.qq.com/s/lXKclvGMaRcW2fNmJCEKug",
+      "source_file": "sources/2026-07-05_“我一行代码都没读就发布了”，被OpenAI收购后，uv工具创始人开始反思AI编程_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "狂揽2.4万星标：一行命令，AI会自己找技能了",
+      "source": "新智元",
+      "digest": "Vercel推出的AI技能包管理器skills，发布五个月GitHub星标达2.4万。它类似于npm，一行命令为AI智能体安装能力包，已支持68+智能体，主打「AI自己找技能」。",
+      "link": "https://mp.weixin.qq.com/s/3iNAdWbdumOX9uJLihtEIg",
+      "source_file": "sources/2026-07-05_狂揽2.4万星标：一行命令，AI会自己找技能了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲",
+      "source": "极客公园",
+      "digest": "Cloudflare宣布自9月15日起默认屏蔽混合用途AI爬虫，将AI爬虫分为Search/Agent/Training三类。bot流量已超人类流量，Cloudflare以基础设施层身份对AI数据获取进行系统性「立法」，Google因此受影响最大。",
+      "link": "https://mp.weixin.qq.com/s/V_j3lh8xaSbkAgWwC2UeFw",
+      "source_file": "sources/2026-07-05_赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "CVPR 2026新作：AI绘画正式迈入「所控即所得」时代",
+      "source": "量子位",
+      "digest": "商汤科技研究团队提出ConsistCompose，将图像生成从「所想即所得」推进到「所控即所得」，通过统一多模态框架原生支持实例级布局控制，解决了商业化模型无法精确指定画面中元素位置的核心痛点。",
+      "link": "https://mp.weixin.qq.com/s/VT54CIFRLHOTyAUiUb8AvA",
+      "source_file": "sources/2026-07-05_CVPR 2026新作：AI绘画正式迈入「所控即所得」时代_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-05",
+      "title": "大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来",
+      "source": "量子位",
+      "digest": "清华大学提出POPO框架，针对LLM强化学习后训练中rollout无效样本问题，用组级回放+解耦式off-policy重要性采样将训练时间从55h降至34h，仅使用约30%的rollout预算即可达到DAPO性能。",
+      "link": "https://mp.weixin.qq.com/s/3vzTIiAgp3BID9E1lO5MhQ",
+      "source_file": "sources/2026-07-05_大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-05",
+      "title": "AI助手APP，阿里千问增速第一了",
+      "source": "量子位",
+      "digest": "量子位智库发布6月AI助手APP数据：千问以2700万下载量居首，豆包DAU超1.5亿蝉联榜首。格局从BAT三足鼎立演变为千问豆包双强争霸，元宝跌至800万以下。千问6月日活环比增长15%，高考志愿填报Agent成增长引擎。",
+      "link": "https://mp.weixin.qq.com/s/cN1b3YrulxpKbhX29UqsUw",
+      "source_file": "sources/2026-07-05_AI助手APP，阿里千问增速第一了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "银联推「AI智算卡」，「消费即算力」成趋势？",
+      "source": "银行科技研究社",
+      "digest": "中国银联推出「AI智算卡」产品，首创「消费即算力」模式，用户在消费同时可获得AI算力积分，探索金融支付与AI算力消费的跨界融合。",
+      "link": "https://mp.weixin.qq.com/s/8PQTe4WB441LdhMstWgxUQ",
+      "source_file": "sources/2026-07-05_银联推“AI智算卡”，“消费即算力”成趋势？_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人",
+      "source": "极客公园",
+      "digest": "6月最「有活儿」的AI硬件都在这里。",
+      "link": "https://mp.weixin.qq.com/s/OqGzck6rKDiHTp0UrINr3w",
+      "source_file": "sources/2026-07-05_6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理",
+      "source": "InfoQ",
+      "digest": "Uber引入AI「首轮审核」机制对PRD做结构化审查，DoorDash开发AI代码审查工具提供精选反馈，Cloudflare用多代理分工评估安全/性能/正确性。AI正从代码生成向软件全生命周期治理层演进。",
+      "link": "https://mp.weixin.qq.com/s/I7PiVW-JxNbnOPCt3V6P2Q",
+      "source_file": "sources/2026-07-05_AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "Loop Engineering 会是 AI 的下个关键词吗？",
+      "source": "机器之心",
+      "digest": "继Harness Engineering后，Loop Engineering进入行业视野。Anthropic Claude Code负责人、OpenClaw开发者、NVIDIA黄仁勋、吴恩达等密集发声，强调Agent开发重心从提示词转向闭环系统设计，引入反馈评估机制使Agent能自主纠错收敛。",
+      "link": "https://mp.weixin.qq.com/s/727vxP13zdmq7QBjU1l1QA",
+      "source_file": "sources/2026-07-05_Loop Engineering 会是 AI 的下个关键词吗？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-05",
+      "title": "iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频繁降级 | 极客早知道",
+      "source": "极客公园",
+      "digest": "豆包、千问宣布7月15日下线智能体功能(《AI拟人化互动服务管理办法》同日施行)；Midjourney要求好莱坞披露自用AI做法；微软将重构Copilot融合企业/消费者版并新增AutoPilot智能体；用户反馈Fable 5重上架后频繁回退至Opus 4.8。",
+      "link": "https://mp.weixin.qq.com/s/FtONXBTdSuBRWU6f1JcGOQ",
+      "source_file": "sources/2026-07-05_iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-04",
       "title": "趁火打劫！GPT-5.6三大模型全曝，定档7月7日？",

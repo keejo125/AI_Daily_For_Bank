@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-07-05",
+      "weekday": "周日",
+      "stats": {
+        "国际": 7,
+        "国内": 3,
+        "同业": 1,
+        "其他": 4,
+        "total": 15
+      },
+      "summary": "Anthropic造了套AI越狱「刑法」！你的请求，四种死法/OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧/CVPR 2026新作..."
+    },
+    {
       "date": "2026-07-04",
       "weekday": "周六",
       "stats": {

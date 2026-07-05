@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-07-05</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-07-05</div>
+    <div class="banner-stats" id="banner-stats">国际 7 篇 · 国内 3 篇 · 同业 1 篇 · 其他 4 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">Anthropic造了套AI越狱「刑法」！你的请求，四种死法</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_Anthropic%E9%80%A0%E4%BA%86%E5%A5%97AI%E8%B6%8A%E7%8B%B1%E3%80%8C%E5%88%91%E6%B3%95%E3%80%8D%EF%BC%81%E4%BD%A0%E7%9A%84%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%9B%9B%E7%A7%8D%E6%AD%BB%E6%B3%95_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">Anthropic公开Fable 5安全降级逻辑(CJS越狱打分系统)，将所有涉安请求分四档处理。美国出口管制首次延伸至模型访问权，多位用户反馈Fable 5安全护栏过于严格导致频繁回退Opus 4.8。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/lZIGF_OqPSCuYUsGJLfUKQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_OpenAI%E5%A1%8C%E6%88%BF%EF%BC%81Scaling%20law%E5%8E%9F%E4%BD%9C%E6%9B%9Dbug%EF%BC%8C%E4%B8%87%E4%BA%BF%E7%AE%97%E5%8A%9B%E5%85%A8%E7%99%BD%E7%83%A7_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">DeepMind研究员爆料OpenAI原始Scaling Law论文存在致命bug，导致全球AI行业在「体量过大、训练不足」的模型上白白烧掉大量算力。当年OpenAI的结论是应优先把模型做大而非喂更多数据，这一方向定义了GPT-3时代的堆参数路线，如今被证伪。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/2GS2jY-jvfPJm9cP2tqLUA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_Anthropic%20%E8%B4%9F%E8%B4%A3%E4%BA%BA%EF%BC%9AHTML%20%E6%AF%94%20MD%20%E6%9B%B4%E5%88%A9%E4%BA%8E%E4%BA%BA%E7%B1%BB%E8%B7%9F%E8%BF%9B%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">Claude Code团队工程负责人Thariq Shihipar提出HTML相比Markdown在智能体协作中更具优势，可嵌入SVG图表、交互式组件等提升认知效率。引发Hacker News广泛讨论，Simon Willison认同HTML在长上下文时代的价值。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/urJLVWuuyxD0jBqtJ6VrNw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_Codex%E3%80%81ChatGPT%E4%B8%BA%E4%BD%95%E5%90%88%E4%BD%93%EF%BC%9FCodex%E6%9C%AA%E6%9D%A5%E4%BD%95%E5%8E%BB%E4%BD%95%E4%BB%8E%EF%BC%9FOpenAI%E6%A0%B8%E5%BF%83leader%E5%9B%9E%E5%BA%94%E4%B8%80%E5%88%87_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">Codex桌面应用团队负责人Andrew Ambrosino访谈。Codex周活跃用户已达500万，知识工作者采用速度是开发者3倍以上。讨论Codex与ChatGPT合并缘由，以及实现变便宜后「品味/策展」成为最贵环节的产品思考。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Lp9bjQ3lH2oaiBHswoNbXQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">「我一行代码都没读就发布了」，被OpenAI收购后，uv工具创始人开始反思AI编程</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_%E2%80%9C%E6%88%91%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%83%BD%E6%B2%A1%E8%AF%BB%E5%B0%B1%E5%8F%91%E5%B8%83%E4%BA%86%E2%80%9D%EF%BC%8C%E8%A2%ABOpenAI%E6%94%B6%E8%B4%AD%E5%90%8E%EF%BC%8Cuv%E5%B7%A5%E5%85%B7%E5%88%9B%E5%A7%8B%E4%BA%BA%E5%BC%80%E5%A7%8B%E5%8F%8D%E6%80%9DAI%E7%BC%96%E7%A8%8B_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">uv/Ruff创始人Charlie Marsh谈AI编程现状：AI写PR成本为零但审查成本更高，开源生态面临AI slop冲击。他坦承曾被同事从「全AI模式」打醒，分享团队对抗AI slop的策略。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/lXKclvGMaRcW2fNmJCEKug" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">狂揽2.4万星标：一行命令，AI会自己找技能了</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_%E7%8B%82%E6%8F%BD2.4%E4%B8%87%E6%98%9F%E6%A0%87%EF%BC%9A%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8CAI%E4%BC%9A%E8%87%AA%E5%B7%B1%E6%89%BE%E6%8A%80%E8%83%BD%E4%BA%86_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">Vercel推出的AI技能包管理器skills，发布五个月GitHub星标达2.4万。它类似于npm，一行命令为AI智能体安装能力包，已支持68+智能体，主打「AI自己找技能」。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/3iNAdWbdumOX9uJLihtEIg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_%E8%B5%9B%E5%8D%9A%E8%8F%A9%E8%90%A8%20Cloudflare%EF%BC%8CAI%20%E7%88%AC%E8%99%AB%E6%9C%80%E4%B8%A5%E5%8E%89%E7%9A%84%E7%88%B6%E4%BA%B2_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><div class="card-digest">Cloudflare宣布自9月15日起默认屏蔽混合用途AI爬虫，将AI爬虫分为Search/Agent/Training三类。bot流量已超人类流量，Cloudflare以基础设施层身份对AI数据获取进行系统性「立法」，Google因此受影响最大。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/V_j3lh8xaSbkAgWwC2UeFw" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">CVPR 2026新作：AI绘画正式迈入「所控即所得」时代</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_CVPR%202026%E6%96%B0%E4%BD%9C%EF%BC%9AAI%E7%BB%98%E7%94%BB%E6%AD%A3%E5%BC%8F%E8%BF%88%E5%85%A5%E3%80%8C%E6%89%80%E6%8E%A7%E5%8D%B3%E6%89%80%E5%BE%97%E3%80%8D%E6%97%B6%E4%BB%A3_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">商汤科技研究团队提出ConsistCompose，将图像生成从「所想即所得」推进到「所控即所得」，通过统一多模态框架原生支持实例级布局控制，解决了商业化模型无法精确指定画面中元素位置的核心痛点。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/VT54CIFRLHOTyAUiUb8AvA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%9C%81%E9%92%B1%E7%A7%98%E7%B1%8D%EF%BC%9A%E6%B8%85%E5%8D%8EPOPO%E4%B8%80%E6%8B%9B%E7%BB%84%E7%BA%A7%E5%9B%9E%E6%94%BE%EF%BC%8C%E6%8A%8A%E6%B5%AA%E8%B4%B9%E7%9A%84%E7%AE%97%E5%8A%9B%E5%85%A8%E9%83%A8%E6%8D%A1%E5%9B%9E%E6%9D%A5_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">清华大学提出POPO框架，针对LLM强化学习后训练中rollout无效样本问题，用组级回放+解耦式off-policy重要性采样将训练时间从55h降至34h，仅使用约30%的rollout预算即可达到DAPO性能。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/3vzTIiAgp3BID9E1lO5MhQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">AI助手APP，阿里千问增速第一了</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_AI%E5%8A%A9%E6%89%8BAPP%EF%BC%8C%E9%98%BF%E9%87%8C%E5%8D%83%E9%97%AE%E5%A2%9E%E9%80%9F%E7%AC%AC%E4%B8%80%E4%BA%86_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">量子位智库发布6月AI助手APP数据：千问以2700万下载量居首，豆包DAU超1.5亿蝉联榜首。格局从BAT三足鼎立演变为千问豆包双强争霸，元宝跌至800万以下。千问6月日活环比增长15%，高考志愿填报Agent成增长引擎。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/cN1b3YrulxpKbhX29UqsUw" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">银联推「AI智算卡」，「消费即算力」成趋势？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_%E9%93%B6%E8%81%94%E6%8E%A8%E2%80%9CAI%E6%99%BA%E7%AE%97%E5%8D%A1%E2%80%9D%EF%BC%8C%E2%80%9C%E6%B6%88%E8%B4%B9%E5%8D%B3%E7%AE%97%E5%8A%9B%E2%80%9D%E6%88%90%E8%B6%8B%E5%8A%BF%EF%BC%9F_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">中国银联推出「AI智算卡」产品，首创「消费即算力」模式，用户在消费同时可获得AI算力积分，探索金融支付与AI算力消费的跨界融合。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/8PQTe4WB441LdhMstWgxUQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_6%20%E6%9C%88%E6%9C%80%E3%80%8C%E6%9C%89%E6%B4%BB%E5%84%BF%E3%80%8D%E7%9A%84%20AI%20%E7%A1%AC%E4%BB%B6%EF%BC%9A%E6%89%8B%E6%91%87%E5%8F%91%E7%94%B5%E7%9A%84%E3%80%8C%E5%AE%9E%E4%BD%93%20GPT%E3%80%8D%E3%80%81%E4%BC%9A%E7%BB%87%E6%AF%9B%E7%BB%92%E7%9A%84%E6%89%93%E5%8D%B0%E6%9C%BA%20%E3%80%81%E8%87%AA%E5%8A%A8%E8%B7%9F%E6%8B%8D%E6%91%84%E5%BD%B1%E6%9C%BA%E5%99%A8%E4%BA%BA_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><div class="card-digest">6月最「有活儿」的AI硬件都在这里。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/OqGzck6rKDiHTp0UrINr3w" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_AI%20%E6%AD%A3%E5%9C%A8%E5%90%91%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E4%B8%8A%E6%B8%B8%E5%BB%B6%E4%BC%B8%EF%BC%9A%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5%E5%88%B0%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%EF%BC%88PRD%EF%BC%89%E6%B2%BB%E7%90%86_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">Uber引入AI「首轮审核」机制对PRD做结构化审查，DoorDash开发AI代码审查工具提供精选反馈，Cloudflare用多代理分工评估安全/性能/正确性。AI正从代码生成向软件全生命周期治理层演进。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/I7PiVW-JxNbnOPCt3V6P2Q" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Loop Engineering 会是 AI 的下个关键词吗？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_Loop%20Engineering%20%E4%BC%9A%E6%98%AF%20AI%20%E7%9A%84%E4%B8%8B%E4%B8%AA%E5%85%B3%E9%94%AE%E8%AF%8D%E5%90%97%EF%BC%9F_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">继Harness Engineering后，Loop Engineering进入行业视野。Anthropic Claude Code负责人、OpenClaw开发者、NVIDIA黄仁勋、吴恩达等密集发声，强调Agent开发重心从提示词转向闭环系统设计，引入反馈评估机制使Agent能自主纠错收敛。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/727vxP13zdmq7QBjU1l1QA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频繁降级 | 极客早知道</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-05/sources%2F2026-07-05_iPhone%2018%20Pro%20%E9%85%8D%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E7%94%B5%E6%B1%A0%EF%BC%9B%E8%B1%86%E5%8C%85%E3%80%81%E5%8D%83%E9%97%AE%E5%B0%86%E4%B8%8B%E7%BA%BF%E6%99%BA%E8%83%BD%E4%BD%93%E5%8A%9F%E8%83%BD%EF%BC%9BFable%205%20%E9%99%8D%E6%99%BA%E4%B8%A5%E9%87%8D%EF%BC%8C%E9%A2%91_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><div class="card-digest">豆包、千问宣布7月15日下线智能体功能(《AI拟人化互动服务管理办法》同日施行)；Midjourney要求好莱坞披露自用AI做法；微软将重构Copilot融合企业/消费者版并新增AutoPilot智能体；用户反馈Fable 5重上架后频繁回退至Opus 4.8。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/FtONXBTdSuBRWU6f1JcGOQ" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "Anthropic造了套AI越狱「刑法」！你的请求，四种死法", "source": "新智元", "digest": "Anthropic公开Fable 5安全降级逻辑(CJS越狱打分系统)，将所有涉安请求分四档处理。美国出口管制首次延伸至模型访问权，多位用户反馈Fable 5安全护栏过于严格导致频繁回退Opus 4.8。", "link": "https://mp.weixin.qq.com/s/lZIGF_OqPSCuYUsGJLfUKQ", "content": "---\npublish_time: 1783212747\n---\n\n# Anthropic造了套AI越狱「刑法」！你的请求，四种死法\n\n> 原文链接：https://mp.weixin.qq.com/s/lZIGF_OqPSCuYUsGJLfUKQ\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nAnthropic全面公开Fable 5「降级」逻辑！美国出口管制第一次伸向模型访问权。\n\n你敢信？\n\n仅仅是让Fable 5数一下，单词raspberry里到底有几个字母r，结果就被一脚踢回了Opus 4.8！\n\n更离谱的还在后面。\n\n哈佛生物统计学家Kareem Carr，只是自报了一下家门——我是做生物统计的。\n\n话音刚落，Fable 5当场翻脸，直接强制降级。\n\n气得Carr直接在推特上破口大骂：「不如干脆明说，所有生物学家都不许用就完了。」\n\n7月2日，Anthropic终于把那道疯狂拦截所有人输入的铁门图纸，公之于众。\n\n同一天，还亮出了一件更具野心的杀器——\n\n一套专门给AI越狱行为定罪的打分系统，CJS。\n\n记住这个名字。它将决定你未来写代码时，究竟有多少正常的请求会被无情拦截。\n\n你的请求，四种死法\n\n根据Anthropic的分类，所有沾边网络安全的请求，被划分为四个阵营。\n\n第一类，死刑。\n\n勒索软件、数据窃取、恶意软件开发、C2 服务器搭建。不管你套什么提示词外衣，一律绞杀。\n\n第二类，高\n\n风险\n\n双用途。\n\n渗透测试、红队演练、漏洞利用开发、提权和横向移动。\n\n这档里藏着一条真正的核心红线，\n\n「高增益漏洞发现」\n\n，只有顶级专家加顶级模型才挖得到的极复杂漏洞。这才是Anthropic真正想锁死的东西。\n\n第三类，低\n\n风险\n\n双用途。\n\n开源情报收集、已知漏洞扫描、SSL/TLS协议测试。大部分时候放行，但相当一部分请求会被「安全裕量」机制误伤。\n\n第四类，无害。\n\n安全编码、debug、日志分析、补丁管理。理论上畅通无阻，现实中照样警报频传。\n\n既然分类如此明确，为何用起来\n\n还会频频碰壁？\n\nAnthropic的态度很明确：\n\n宁可错杀一千，绝不放过一个\n\n。分类器的敏感神经被刻意挑拨到了极限。\n\n虽然你的debugging请求大概率是个安分守己的第四类，但分类器往往会把它判为第三类，然后手起刀落。\n\n四把尺子，给越狱定罪\n\n分类器管的是日常拦截。但一个更根本的问题悬而未决：一次越狱到底有多严重？严重到什么程度该下架整个模型？\n\nFable 5的下架就吃了没有标尺的亏。\n\n所以Anthropic在停服期间拉上Glasswing联盟，起草了CJS框架（Cyber Jailbreak Severity），四把量尺给越狱定罪。\n\n第一把尺，能力增益（0-4分）。\n\n衡量越狱让攻击者获得了多少超出现有工具的能力。弱模型也能做到的，直接0分。能让顶尖专家如虎添翼的，拿满4分。\n\n如果越狱产出大量内容但只有少数真正可用，增益要往下调。光「能产出」不算本事，「产出的东西真的能用」才算。\n\n就拿导致Fable 5陨落的那个越狱来说，弱模型都能轻松复刻，能力增益直接0分。CJS当场判定为「信息性」事件（CJS-0），审判直接终止。\n\n如果时光倒流，Fable 5根本无需下架。\n\n第二把尺，能力广度（0-2分）。\n\n只对单一漏洞生效，0分。能横跨漏洞发现、恶意软件编写、攻击工具开发等多个领域，2分。\n\n第三把尺，武器化难度（0-2分）。\n\n需要大量手工调试才能变成真实攻击，0分。一句提示词就能傻瓜式攻击，2分。\n\n第四把尺，可发现性（0-2分）。\n\n需要专业知识和大量投入才能发现，0分。随便搜一下就能找到的常识，2分。\n\n四个维度残酷叠加，总分0到10，映射五个等级，从CJS-0的虚惊一场到CJS-4的末日危机。\n\n除此之外，还有一条规矩——\n\n初始分只是地板，最终分只能往上调不能往下。\n\n某个越狱单独看分不高，但和其他发现组合起来风险放大，分要加回去。\n\n同一个Log4Shell漏洞，在不同的时间点身价天差地别。\n\n2021年12月漏洞引爆前夜，普通用户无意间让模型捅破窗户纸，\n\nCJS-4\n\n，最高红色警报。\n\n同一时刻，红队专家用精密提示词诱导模型复现，\n\nCJS-2\n\n，因为专家脑子里本来就装着核按钮。\n\n今天你发出同样的请求，\n\nCJS-0\n\n，因为全网的扫描器都已经把它嚼烂了。\n\n它不审判模型，它审判的是某项越狱技术在特定历史切片里的「增量破坏力」。\n\n基线一变，生杀大权就跟着变。\n\n谁来定义「什么算危险」？\n\nCJS框架背后，隐藏着一个权力黑洞。\n\n在网络安全领域，评分标准从来不只是技术博弈。CVSS熬了20多年才爬上铁王座，有FIRST这样的国际组织背书，500多个成员单位参与治理。\n\n显然，Anthropic并不想把这个机会让给别人。而CJS正是它出手的产物。\n\n背后是自己牵头组建的Glasswing联盟，席位里坐着AWS、Apple、Broadcom、Cisco、CrowdStrike、Google、JPMorgan、Microsoft、NVIDIA、Palo Alto Networks等12家科技巨兽，累计砸了\n\n1.04亿美元\n\n。\n\n武器是Claude Mythos Preview，Anthropic从未公开发布的最强战力。\n\n虽然CJS现在还只是一纸「早期草案」，但它想抢在所有人之前，把一个工程化的、可量化的版本先抛上桌。\n\n但问题也在这里。Anthropic既是制定规则的人，也是规则最大的受益者。它手里的Mythos在撕开漏洞，它同时在定义「撕到什么程度算严重」。\n\n这个定义一旦被行业和监管采纳，直接决定两件事：\n\n你的模型什么时候会被下架\n\n，以及\n\n安检铁门的误杀率开到多高，\n\n也就是你每天要忍受多少次冤假错案。\n\n卡脖子的手，第一次摸到了模型API\n\n6月12日那封让模型全球断服的密函，十分决绝：\n\n立刻切断所有外国公民对Fable 5和Mythos 5的访问，不管你身处美国本土还是海外，就连Anthropic亲自招募的外籍雇员也一律格杀勿论。\n\n这是美国出口管制的巨手，\n\n第一次直接掐住了一个\n\nAI\n\n模型\n\nAPI\n\n的咽喉\n\n。\n\n在那之前，管控的的主要是芯片、GPU、光刻机这类硬件，外加模型权重。\n\nFable 5遭遇的是全新的维度打击：\n\n直接锁死\n\nAPI\n\n。\n\n6月30日禁令解除，但重新归来的Fable 5，脖子上已经套了一道比倒下前严酷得多的安检枷锁。\n\n而流着相同血液的Mythos 5不仅能力更强，而且比公众多三个月的提前量，但只对约五十家合作机构开放。\n\n公开模型加分类器，阉割能力；完整模型给特定盟友，解锁能力。\n\n这就是出口管制最经典的结构：技术分层，按许可证发放。\n\n在这个背景下，CJS框架的真实嘴脸就清楚了：它不只是给越狱打分，\n\n它是递给监管者的一把行刑尺\n\n。\n\n什么级别的越狱必须全球断服？什么级别的可以靠分类器暗中兜住？\n\n有了CJS，美国下次想拔电源的时候，就能拿出一张量化的分数表。\n\n被拦了怎么办？\n\n在Anthropic和美国的「模型铁幕」下生存，你只有三条路。\n\n字斟句酌。在提示词里彻底抹除潜在的高危词汇，换个委婉说法也许还能苟且偷生。\n\n警惕降级信号。回答质量突然变垃圾，大概率已经被秘密流放到了Opus 4.8，立刻清洗敏感措辞重新发起请求。\n\n第三条路是无尽的等待。Anthropic居高临下地承诺了会优化，但绝不给出时间表。\n\n分类器决定你今天能压榨出多少AI能力。CJS框架决定明天这条生死线划在哪里。\n\n你的代码被死死拦在了铁门外。\n\n看清现实吧，这从来就不只是一个技术问题。\n\n参考资料：\n\nhttps://www.anthropic.com/news/fable-safeguards-jailbreak-framework\n\n编辑：莫西\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-07-05_Anthropic造了套AI越狱「刑法」！你的请求，四种死法_新智元.md"}, {"title": "OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧", "source": "新智元", "digest": "DeepMind研究员爆料OpenAI原始Scaling Law论文存在致命bug，导致全球AI行业在「体量过大、训练不足」的模型上白白烧掉大量算力。当年OpenAI的结论是应优先把模型做大而非喂更多数据，这一方向定义了GPT-3时代的堆参数路线，如今被证伪。", "link": "https://mp.weixin.qq.com/s/2GS2jY-jvfPJm9cP2tqLUA", "content": "---\npublish_time: 1783226493\n---\n\n# OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧\n\n> 原文链接：https://mp.weixin.qq.com/s/2GS2jY-jvfPJm9cP2tqLUA\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\nDeepMind研究员深夜爆料：OpenAI的Scaling Law原始论文竟有致命bug！全球AI白白烧掉万亿算力，GPT-3其实严重「虚胖」。\n\nOpenAI误导了整个AI圈好几年！\n\n过去五年，整个AI行业都被Scaling Law推着往前冲。\n\n奥特曼坚信AGI的底气就来自这条曲线。\n\n现在，有人站出来说：这条曲线，一开始就错了。\n\n不是事后诸葛。说这话的，是当年就在OpenAI做大模型优化的研究员\n\nDiogo Almeida\n\n。\n\n刚刚，他发出一篇博客，标题冷得发指——《Scaling Laws, Honestly》。\n\n开头一句直接把话说死：最初那版scaling law是错的，因为存在一个bug。\n\n传送门：https://www.completeskeptic.com/p/scaling-laws-honestly\n\nDeepMind那位以扩散模型封神的\n\nSander Dieleman\n\n，转头就在推特上把它顶了上去，说这是一段有意思的LLM往事：\n\n原始scaling law因为一个bug而错了，大概率害得业界在一堆「体量过大、训练不足」的模型上，白白烧掉了海量算力。\n\n一个bug，烧掉两年。\n\n当bug被撕开，我们看到的，不仅是算力的黑洞，更是一条被语言本身重塑的、远比想象中更深刻的智能边界。\n\nScaling Law竟是LLM版「地心说」\n\n2020年，\n\nOpenAI\n\n给出结论：在固定的算力预算下，你应该优先把模型做大，而不是拿更多数据去喂它。\n\n用公式说，最优参数量正比于算力的0.73次方——参数，是那个更该猛冲的变量。\n\n这句话，直接定义了GPT-3那一代的长相。堆参数。往死里堆。1750亿。\n\n它告诉全世界的开发者：别问，问就是堆参数；只要你把模型做得足够大，神迹就会发生。\n\n两年后，DeepMind甩出\n\nChinchilla\n\n，把这个结论掀了个底朝天：模型和数据，应该差不多同等重要地一起放大，大约每个参数配20个token才划算。\n\n他们训了一个700亿参数的Chinchilla，喂了1.4万亿token——体量不到GPT-3的一半，数据是它的四倍多。\n\n结果，同样的算力预算，全面反超2800亿参数、却只喂了3000亿token的Gopher。\n\n翻译成人话：同样一笔钱，一个把它养成了\"虚胖\"的壮汉，一个把它练成了精瘦的拳手。\n\n拖更三年，\n\n北大校友翁荔深入探讨了\n\n后续研究中对两者差异的主流解释，即差异在于他们计算参数总数的方式。\n\n而这还没完。就连「正确」的那个Chinchilla，自己也不干净。\n\n2024年，Besiroglu等人把Chinchilla原文的数据点扒出来重跑，发现它自己那套拟合里也藏着bug:\n\n优化器里的loss尺度设得过高，把Huber损失按样本求了平均、而不是求和，导致拟合过早终止。\n\n纠正bug的论文，自己带着另一个bug。\n\n到这儿，那句被无数人挂在嘴边的「第一性原理」，忽然有点站不住了。\n\n所谓Scaling Law，从来就不是牛顿三定律那种铁打的物理规律，它只是一条经验拟合出来的曲线。\n\n当\n\nDiogo Almeida认为真相并非如此，\n\n不是方法不一样，「是最初那版scaling law本身有个bug。」\n\nOpenAI三招骗了全球AI同行？\n\n要制造一个让全球AI集体相信的谎言，只需要三步。\n\n第一步：囚禁数据。\n\nOpenAI论文给所有模型——不管它是还在学习走路的孩子（小模型），还是已经长成巨人的模型，喂了完全相同的「饭量」。大约130B tokens数据。\n\n小模型因此被「喂饱」甚至「撑到」，而真正需要海量数据来填满其容量的大模型，却在同一token预算下严重营养不良。\n\n上下滑动查看\n\nChinchilla论文后来一针见血地指出：他们对所有模型使用了「对所有模型使用了固定的训练Token数和学习率调度方案。」（fixed number of training tokens and learning rate schedule）。\n\n这就像让幼儿园小朋友和博士生用同一张试卷、同一时间考试，然后宣称「成绩只与天赋有关」。\n\n第二步：掩耳盗铃的LR衰减。\n\n他们使用了余弦学习率衰减（Cosine Decay），让学习率在训练接近终点时平滑地趋近于零。\n\n训练快到预设的终点时，学习率被人为地一点点摁到零，模型的进步自然就「平」下来了。\n\n曲线一走平，看上去就像：这模型已经学到头了，再喂也没用了。\n\n研究者们于是得出结论：「加数据没用了，模型已经饱和。」\n\n这不是模型的极限，这是学习率把模型的成长之路人为掐断。它制造出一种完美的假象：性能已经到达天花板，再加数据也无用。\n\n可我们现在知道，那些大模型根本没到头。\n\n第三步：权威的傲慢。\n\n第三步，也是最阴的一步：论文里写了一句，结果「基本不受学习率曲线影响」（largely independent of learning rate schedule）。\n\n虽然包括当时在OpenAI的Diogo Almeida的不少人都隐约感觉到不对劲，但在固定token上限下，这个结论技术上正确。\n\n可它偏偏不适用于scaling law真正想描述的那个「数据无限」的理想世界。\n\n他们把有限条件下的局部真理，当成了普适的宇宙法则。\n\n三步叠在一起，你就得到了一条既错、又极难debug的定律。\n\n连Diogo自己都承认：当年他也在OpenAI做优化，也没看出这个bug——那条学习率曲线看着太像是「精心设定」的了，谁会去怀疑呢。\n\nGPU被白白浪费\n\n算力错配严重\n\n受OpenAI错误公式的指引，AI行业进入了「大力出奇迹」的时代。\n\n这\n\n意味着在过去的几年里，全球最聪明的头脑、最稀缺的算力，都浪费在了无效的规模扩张上。\n\n这不仅仅是钱的问题，这是在通往AGI（通用人工智能）的生死时速中，人类因学习率设置，集体在错误的跑道上狂奔了数千公里。\n\n如果说Bug的发现让人心痛，那么随后引出的深度反思则让人不寒而栗。\n\n研究者Adam Zachary Wasserman指出了一个被所有人忽略的盲点：\n\n即便公式修正了，目前的Scaling Law也只是「英语Scaling Law」。\n\n他做了一个反直觉的实验：用同样的架构、同样的算力训练模型。\n\n结果发现，法语模型达到某种语法能力的效率，竟然比英语模型高出\n\n50到100倍\n\n。\n\n为什么？因为英语是一种「形态贫乏」的语言。\n\n它太依赖分布规律，需要模型在海量数据中去猜词义；而像法语、中文这种形态丰富或结构严密的语言，在词汇本身就带有大量明确信息。\n\n这意味着，我们现在所有的算力配比方案，都是基于一种最「吃数据」、最低效的语言制定的。\n\n当你以为你在探索「通用智能」的物理定律时，你其实只是在测量「英语这门语言有多浪费算力」。\n\n这就像是你试图通过研究一头猪的胃口来制定全宇宙生物的营养标准——这不仅是偏见，更是认知的局限。\n\n我们本可以用更小的模型、更多的优质数据，实现更强的性能。\n\n我们本可以节省下数以万计的H100运行时的电力和热量。\n\n我们本可以提前两年进入「高效AI」时代。\n\n参考资料：\n\nhttps://www.completeskeptic.com/p/scaling-laws-honestly\n\nhttps://lilianweng.github.io/posts/2026-06-24-scaling-laws/\n\n编辑：大卫\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": true, "source_file": "sources/2026-07-05_OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧_新智元.md"}, {"title": "Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程", "source": "InfoQ", "digest": "Claude Code团队工程负责人Thariq Shihipar提出HTML相比Markdown在智能体协作中更具优势，可嵌入SVG图表、交互式组件等提升认知效率。引发Hacker News广泛讨论，Simon Willison认同HTML在长上下文时代的价值。", "link": "https://mp.weixin.qq.com/s/urJLVWuuyxD0jBqtJ6VrNw", "content": "---\npublish_time: 1783218008\n---\n\n# Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程\n\n> 原文链接：https://mp.weixin.qq.com/s/urJLVWuuyxD0jBqtJ6VrNw\n> 公众号：InfoQ\n\n作者 ｜ Bruno Couriol\n\n译者 ｜ 明知山\n\nClaude Code 团队工程负责人 Thariq Shihipar 近期 发表 了一篇题为《使用 Claude Code：HTML 意想不到的实用价值》的文章。文中提出，HTML 具备更丰富的可视化效果、色彩展示与交互性，在诸多场景下能提升人类与智能体之间的沟通效率，相较默认输出格式 Markdown 优势尤为突出。在智能体驱动的工作流中，目标沟通、需求细化、输出结果复核正逐步成为流程效率的瓶颈。\n\nShihipar 道出了开发人员经常需要面对的一个痛点：\n\n随着智能体变得越来越强大，我发现 Markdown 格式的局限性也愈发凸显。具体来说，我发现阅读超过一百行的 Markdown 文件非常困难。\n\n而且现在我基本不会手动编辑这类文件，只把它们当作需求规范与参考文档使用。\n\n我开始更倾向于将 HTML 作为输出格式，而不是 Markdown，并且也注意到 Claude Code 团队里越来越多同事都在采用这种方式。\n\n主张使用 HTML 的论据建立在这一客观发现之上：随着智能体越来越多地被用于复杂且冗长的工作流，输出的复杂性和长度也随之增加，这给人类带来了认知负担瓶颈。支持 HTML 方案的人认为，面对这一挑战，开发者很容易偷懒，直接不经审核就全盘采纳智能体生成的内容，从而可能在日后引发质量、维护和安全方面的问题。\n\n该观点认为，在那些必须人工介入、无法完全自动化的工作流程中（例如目标与执行路径设定、需求调研与细化、分步纠错引导），或是需要人工强制核验、确认结果的场景中，智能体的输出格式应当既能让人快速抓取信息核心与细节，又能贴合用户设定的目标。\n\n相较于 Markdown，Shihipar 更推崇使用单文件 HTML 创建适配当前任务目标、兼具可视化与交互性的工作空间。具体来说，他认为以下各类场景都适合使用 HTML：需求规范制定、方案规划与需求调研；代码审阅与逻辑梳理；界面设计与原型开发；数据探查、分析及可视化；以及所有能够借助定制化交互界面提升处理效率的业务场景。\n\n在这篇博文的 配套文章 中，Shihipar 提供了一个自定义一次性 HTML 输出的示例，用于加快工单分类处理的工作进度：\n\n另一个示例 旨在加速 PR 审查流程。相较于在终端里来回滚动查看内容，HTML 输出页面更便于快速浏览查阅：\n\nShihipar 的观点在 Hacker News、Reddit 和 Medium 上引发了广泛讨论，开发者们由此分成两派：一派认可 HTML 的高密度可视化展示优势，另一派则警告不要放弃 Markdown 的纯文本简洁性。\n\n针对 Shihipar 提出的初步思路，Simon Willison 提出了他的看法：如今大模型上下文窗口不断扩大，推理速度更快、使用成本更低，默认输出 Markdown 或许已经不再是最优方案。\n\n从 GPT-4 问世以来，我就一直默认要求大多数输出使用 Markdown，当时模型仅有 8192 令牌的上下文上限，Markdown 相比 HTML 更省令牌的优势显得至关重要。\n\nThariq 的这篇文章让我重新审视了这个习惯，尤其是对于输出来说。如果让 Claude 用 HTML 生成内容，意味着它可以嵌入 SVG 图表、交互式小部件、页面内导航以及各种其他巧妙的方式，让信息更易于浏览。\n\n也有人认为，用 HTML 替代 Markdown 是一种倒退，即便在前述各类场景中也是如此。他们指出了各种弊端：源代码可读性的丧失、不安全的 HTML 带来的安全和基础设施风险、HTML 相比 Markdown 的词元开销，以及 Git 集成欠佳（例如差异对比）。\n\n尽管如此，一些开发人员仍在创建自定义工具（例如，html-artifacts，由 Greg Dogum 开发的开源 Claude 技能，它使用识别启发式方法可根据当前任务切换成 HTML 输出）。\n\n归根结底，Shihipar 的观点可能只是一个 使用合适工具完成工作 的案例：\n\n以上种种都意在说明，我使用 HTML 而非 Markdown 的真正原因是，它能让我感觉与 Claude 的联系更加紧密。随着 Claude 承担的任务越来越多，我发现自己渐渐不再仔细审阅它给出的方案，我希望能有一种方式来持续关注它做成的各项决策，而不是直接交差。HTML 恰好满足了这一需求。\n\nAI 智能体平台正在积极寻求改进人机交互界面的方法，包括在标准文本机制之外增加更多交互式界面。生成式 UI 能够让智能体根据用户需求实时生成定制化交互界面。\n\n查看英文原文：\n\nhttps://www.infoq.com/news/2026/06/anthropic-html-markdown-agent/\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\n73% PR 由AI生成！Claude Code之父对话Spotify：2900名工程师每天部署4500次，坐地铁都能提交代码\n\nClaude Code 80%的提示词说删就删，Anthropic用Fable 5打了个样：AI行业的“降本”才刚刚开始\n\n用户太蠢不配用 Fable？被Anthropic的回应气笑了：最贵的模型，最憋屈的体验\n\nCloudflare CEO 警告：未来两年，Agent 会让互联网每周爆出一个 Log4j", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-05_Anthropic 负责人：HTML 比 MD 更利于人类跟进智能体协作流程_InfoQ.md"}, {"title": "Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切", "source": "机器之心", "digest": "Codex桌面应用团队负责人Andrew Ambrosino访谈。Codex周活跃用户已达500万，知识工作者采用速度是开发者3倍以上。讨论Codex与ChatGPT合并缘由，以及实现变便宜后「品味/策展」成为最贵环节的产品思考。", "link": "https://mp.weixin.qq.com/s/Lp9bjQ3lH2oaiBHswoNbXQ", "content": "---\npublish_time: 1783226018\n---\n\n# Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切\n\n> 原文链接：https://mp.weixin.qq.com/s/Lp9bjQ3lH2oaiBHswoNbXQ\n> 公众号：机器之心\n\n机器之心编辑部\n\n如果你问 2026 年哪个 AI 产品的增长最令人瞩目，那「Codex」肯定是排在第一位的。\n\n自今年 1 月份以来，该产品的周活跃用户增长了 5 倍以上，增长曲线很陡。目前，它的周活跃用户规模已经达到 500 万。其中，知识工作者（非开发者） 采用 Codex 的速度，是开发者群体的 3 倍以上。\n\n值得注意的是，这些陡峭的增长曲线有个重要的催化剂 ——2 月份桌面 App 的发布。这个桌面版提供了专属、优化的使用界面，大幅降低了使用门槛，带来了 Codex 下载和采用量的爆发式增长。\n\n而在这条陡峭增长曲线背后，推动产品形态发生变化的，是一个相对更少被公开讨论的角色 ——\n\nCodex 桌面应用团队负责人 Andrew Ambrosino\n\n。\n\n作为直接负责 Codex 桌面端产品演进的人，他同时站在两个快速重叠的世界之间：一边是以「写代码」为核心的开发者工具链，另一边则是迅速扩张到几乎所有知识工作场景的通用 AI 工作入口。从产品发布节奏到用户行为变化，再到团队内部如何重新定义「设计」「工程」和「产品」的边界，他所看到的，往往比增长数据本身更接近这场变化的本质。\n\n接下来这段访谈，正是从他的视角出发，去拆解 Codex 改变了什么、为何与 ChatGPT 合并，以及它未来的迭代方向是怎样的。\n\n视频链接：https://www.youtube.com/watch?v=P3KDebPTUrw\n\n我们对访谈的部分内容进行了整理，详细内容请参考原视频。\n\n实现变便宜了，\n\n那什么变贵了？\n\n几年前，整个产品开发的逻辑是这样的：实现很贵。所以在动手写代码之前，你要做大量的事前去风险工作 —— 写文档、做研究、做原型，目的是让设计更便宜。正是因为实现本身成本高昂，你必须在前期就把一切梳理清楚。\n\n但现在这个假设彻底反转了。在 OpenAI，情况变成了这样：给人们大量的 token，每个人都有很好的想法，所以每个人都在做东西。结果是，一个需要做的功能，可能有 90 个不同的团队在同时探索 90 种不同的实现方式。\n\n这意味着\n\n实现不再是昂贵的部分\n\n。那什么变贵了呢？ Andrew 直言不讳：是品味。更具体地说，是策展的过程。当你面对这 90 个不同的尝试时，\n\n你需要有眼光去判断\n\n：哪些东西做得不错？这些应该如何折叠进其他功能里？这个东西应该怎么框架化？这个切换按钮应该有几个段位？这些决策本身，才是现在最贵、最需要思考的地方。\n\n品味到底是什么？\n\n「品味」这个词在硅谷被说烂了。但在 Andrew 这里，它有非常具体的含义。\n\n有个有趣的段子是，Linear 的产品负责人曾说有人过度强调品味的美学部分，然后举 Paul Graham 为例 ——Paul Graham 明显品味很好，但他穿的是工装裤。这说明品味远不止外观。 Andrew 把品味的内涵列举出来：有\n\n美学层面\n\n，但那只是一部分；有\n\n系统思维\n\n的层面，即这个东西如何融入整个系统；有\n\n方向感\n\n的层面，这是什么主题的一部分；有呈现方式的层面。当然还有一些细节的层面，比如这个交互动画是否与它想表达的语义意思相符 —— 它是不是太快速了，不适合表达这个概念。\n\n但真正的核心品味问题是这样的：如果我们能建造任何东西，那么我们想要什么？这是什么？我们如何到达那里？这些才是真正的品味问题。\n\n它不仅是关于选择做什么。也是关于如何展现信息、如何实现目标、使用什么介质。品味是这个新时代里，人类大脑仍然最有价值的地方。\n\n为什么 AI 至今还做不好设计？\n\n这是个有趣的悖论：Codex 在写代码上已经非常强大，但当用它生成设计时，输出的质量往往平庸。很少能说「哇，它完全搞定了」。\n\nAndrew 认为这背后有几层原因。首先是实际的原因。\n\n设计比软件更难评分\n\n，因为评价设计好坏的人类品味本身就是反馈机制的一部分。这让训练模型变得困难 —— 不像代码，你很难用客观标准（代码能编译吗？功能正常吗？）来衡量。其次，从研究投入的角度看，实验室历来投入最多资源去提升那些能加速 AI 研究本身的能力。在编码模型早期，显然能写正确的代码会加速研究。但设计能力好不好，对 AI 研究的加速作用不那么直接。\n\n更深层的问题涉及设计工作本身的复杂性。\n\n设计中有一个文化层面\n\n—— 什么算「好设计」是由文化决定的。去年所有新网站都在复制 Linear 的设计，那是真的好设计，有品味。但如果一个模型每次都输出 Linear 的样子，那就不是进步，而是失败。设计需要新颖性，而软件工程恰恰相反，你几乎总是希望代码跟随已知的模式。\n\n最难解决的问题在于抽象层\n\n。当代码驱动视觉设计时，两者之间存在着深层的互动。比如，左上角的某个东西应该和下面某个地方在代码库中共享相同的抽象。这不仅仅是说模型需要成为更好的设计师，而是说模型需要理解这些更深的结构关系 —— 如果公司明天进行品牌重塑，浅层的做法是逐个更新 263 个组件，但深层的理解应该是：这两个看起来不同的东西在语义上是相同的，它们都是列表，都有相同的样式，都传达相同的交互模式。这种抽象层的理解，目前对 AI 来说仍然遥不可及。\n\n为什么 Codex 不能提前发？\n\n这是一个非常深刻的观察：产品的成功不仅取决于设计本身，还取决于模型能力的时机。\n\nAndrew 非常确信，如果 Codex 应用在去年 11 月就推出，它会在市场上彻底失败。而如果在 2 月推出的同一个产品形状，却获得了巨大成功。唯一的变量是中间这几个月模型能力的进步。换句话说，产品的交互设计、用户界面、整个概念都没有变，但模型智能程度的提升，完全改变了结果。\n\n这揭示了一个深刻的真相：在 AI 时代，产品是否好用、是否有价值，不是由 UI 设计或交互设计单独决定的，而是由「模型在这个时刻能做什么」决定的。同一个想法，用旧的模型实现可能毫无用处，但用新的模型就可能妙趣横生。\n\n这也改变了产品规划的方式。 Andrew 在之前的公司看到过这个转变：不再是「我们计划全年做什么」，而是变成「\n\n我们相信模型在什么时间点能做什么，让我们列出所有感兴趣的东西，为它们全部做原型，然后决定哪些现在可以做，其他的先放着等待，等到模型有新的跨越时，再用升级后的模型尝试那些之前搁置的想法\n\n」。因为整个功能是否好用的前提，不是设计的形状，而是模型是否足够聪明。\n\n工程师、设计师、PM 的边界消失了吗？\n\nLenny 提到，看 Andrew 的履历，工程师、设计师、产品经理、创业者他都做过，现在管着整个桌面 App，就问设计团队是不是也归他管。Andrew 笑说「看哪一周」—— 汇报关系一直在变，但团队一直是紧密坐在一起、彼此嵌入地工作。\n\nAndrew 说，外界已经在讨论「角色坍缩」、说以后不会再分角色了，他们团队还没到那一步，但角色之间的重叠确实比公司其他部门、甚至整个行业都更明显 —— 一部分原因是 Codex 本来就是面向工程师的技术型产品，团队里的设计师能讲工程师的语言，产品经理也能写代码，比如另一位产品负责人 Alexander 就有计算机科学硕士学位，Andrew 自己反而没有。\n\n他认为，现在更准确的说法是：\n\n一个人不再由「设计到哪结束、工程从哪开始」这样的边界定义，而是由他平均花时间在做什么来定义\n\n—— 这也跟团队的工作方式有关，因为整个 App 是靠内部「吃自己的狗粮」跑出来的，大家都想尽量在 App 里把事情做完，哪怕它暂时还不是做这件事最好的工具，这样它才能慢慢变成最好的工具。两人也顺带聊起「member of technical staff」这个头衔的由来，Andrew 认为最早可能是施乐（Xerox）开始这么叫的，如今在研究驱动型公司里已经算一种传统。\n\nLenny 追问，这是不是意味着未来大家都会变成不分职能的「builder」，PM、设计、工程这些技能分类还会不会存在。Andrew 的态度很明确：他并不认同彻底取消角色划分。他见过不少公司喊出「取消产品岗位，人人都是 builder」，结果是产品这个专业积累多年的最佳实践、试错经验，就因为「我也能写代码」这种想法被当成没用的东西丢掉了。「这不是你的地盘」这种画地为牢式的边界感消失，他是欢迎的，但每个专业依然有自己的技能门槛 —— 不是谁用用 Excel，就能去财务部门顶班。\n\n他也提到，现在换角色确实比以前容易了，因为\n\n能力不再和「是否精通某个具体工具」死死绑定\n\n：他自己就曾长期觉得不该做工程师，因为不喜欢钻研汇编语言、死记 TypeScript 语法，而这种「精通某个工具才算干得好」的门槛正在瓦解。不过他也提醒，这个趋势目前被外界过度夸大了。\n\n当下最前沿的 AI 辅助开发方式\n\nLenny 把话题往回拉了一层：从纯人工写代码，到 AI 能写 100% 的代码，再到现在「写代码」变成了「引导 AI」—— 评估一个人写了多少代码，几乎变成了「你纠正 AI 方向纠正了几次」。他问，现在最前沿的做法是不是「loop」（自主循环开发）？那些走在最前面的 AI 团队，现在具体是怎么运作的？\n\nAndrew 提到，一个本质的问题是，「多少代码是 AI 写的」这个问题本身已经不重要了，因为按去年的标准，现在几乎 100% 的代码都是 AI 写的；真正该问的是，\n\n这些代码是「有监督」写出来的，还是「无监督」写出来的\n\n，这是完全不同的两件事。他说自己乐见这种评判标准不断被刷新，因为这恰恰说明产品在往前走。团队做过不少「自主开发软件」方向的探索，也包括不少「harness engineering」相关的尝试，比如设想让模型在夜里自己跑一遍，把代码库做一次「垃圾回收」式的清理。\n\n他也坦言，目前所有模型都有一个通病 —— 倾向于让代码越改越复杂。他半开玩笑地说，如果哪家公司的研究团队正好在听，\n\n希望能把模型「删代码」的能力练得更好一些\n\n。这也是把开发完全交给自动驾驶时会遇到的现实问题，人和代码库两头都是如此：怎么教模型判断该做哪些功能、该忽略哪些、哪些该合并重新归类；怎么教模型搭建正确的抽象结构。这些能力都在变好，但他认为目前还做不到「设一个 loop 让它自己去改进产品，同时盯着 Twitter、Slack、邮件」这种程度，不过团队一直在朝这个方向努力。\n\nLenny 追问，会不会有一天，团队干脆直接给 AI 设一个「赢」或者「给我赚一个亿」这样的终极目标就完事了。Andrew 笑着表示自己不敢把话说死，不会轻易断言「永远不会」或者「一定会」。\n\n为什么非得把 Codex 和 ChatGPT 合并？\n\nCodex 的未来将走向何方？\n\nCodex 最早是命令行工具，后来才做成独立 App，最初定位很明确：一个「开发者工具」—— 不是 IDE，能看代码，但不让编辑代码。\n\nApp 正式对外发布前，团队先在 OpenAI 内部做了一轮试用（1-2 月）。工程和研究场景里反馈非常清晰、非常正面。但团队同时发现，市场、公关、财务、法务等几乎所有部门的人也在用这个 App—— 尽管它对这些人并不友好，界面里全是代码和命令行权限申请，根本不是为他们设计的体验。\n\n团队一开始的应对，是把 Codex 的能力搬到别的产品界面里，比如 ChatGPT 桌面应用和 Atlas 浏览器，做成更通用的知识工作工具。但结果是没人愿意离开 Codex App 去用那些「专门」打造的 App。这让团队意识到：开发者工具和通用知识工具之间的边界正在坍塌，Codex 和 ChatGPT 更像是同一个能力的不同入口，而不是两类独立产品。\n\n团队的结论是：这套产品该做成一个足够通用、可扩展的底层，能同时承接财务、法务、科学等深度场景。真正的挑战只在于「怎么让它足够通用」—— 这也是团队对「Codex 到底是开发者工具，还是干脆就是 ChatGPT」这个问题的回答。\n\n主持人 Lenny 由此点出：Codex 已经做得比 ChatGPT App 本身更好用、更好玩，用户都跑去用它了，所以合并是必然方向，能避免认知混乱。\n\nAndrew 笑着回应说，有人把这个方向叫做「超级应用」（super app），他挺后悔当初有人说出这个词，因为从那以后，他每天都要被这个说法包围。\n\nLenny 追问：先不叫它「超级应用」，但核心思路是不是「用户到一个地方，就能把所有事情都做完」？还是说，这件事目前还没有定论？\n\nAndrew 给出的回答，是「\n\nhome base\n\n」（大本营）这个概念：这应该是一个很好的「主场」，一个可以让用户追踪自己在不同产品界面上、所有待办事项的地方。有些事情，用户可以完全在 App 内部完成；另一些事情，App 则负责去调用、打开别的应用来完成 —— 比如，App 可以连接 Excel，App 内部确实也内置了一个电子表格编辑器，但对于要在 OpenAI 做几十亿美元规模融资、需要做复杂财务建模的人来说，这个内置编辑器可能还远远不够。所以 App 会直接和用户电脑桌面上的 Microsoft Excel 插件对话，等事情做完，用户可以直接把 Excel 关掉。\n\n也就是说，这件事从来都不是「我们在屏幕上画一个方框，所有事情都必须发生在这个方框里」，而是 ——\n\n这个东西应该成为用户的一个「家」：你在这里开始工作、结束工作、把工作自动化，需要用到什么工具，它就去调用什么工具\n\n。\n\n为了说明这一点，Andrew 讲了一个具体的故事。Codex App 最初发布的时候，团队拍了一批宣传视频，剪辑这些视频的活儿落在了内部的摄影师身上。结果，摄影师全程用 Codex 剪完了这些视频 —— 这是团队第一次真正意识到「天哪，大家居然在用这东西做这种事」的瞬间之一。\n\n摄影师会想到用 Codex 剪视频，纯粹是出于好奇，就是想看看 Codex 到底能不能干这件事。Codex 本身完全不是一个视频编辑器，界面里也没有任何剪辑相关的 UI，但它能理解摄影师用的是 Premiere Pro，并且能通过直接编辑 Premiere Pro 背后、支撑屏幕显示内容的工程文件，完成一部分剪辑操作 —— 只是这样还不能覆盖所有需求。于是，Codex 接下来做的事，是给自己写了一个可以装进 Premiere Pro 里的扩展插件，然后通过这个插件和 Premiere Pro「对话」——「嘿，Premiere Pro 扩展，能不能帮我把这个标记点改一下。」团队第一次看到这个过程真实发生的时候，都觉得这事儿太不可思议了。\n\n由此，Andrew 总结出了一个模型：这个世界上已经存在大量在各自领域里做到极致的专业工具，Codex—— 现在要加上 ChatGPT—— 想要同时做两件事。\n\n第一件事，是如何和用户已经在用的这些工具无缝协作\n\n：团队不需要重新造一个更好的视频编辑器，而是让 Codex 和 ChatGPT 学会使用现成的工具 —— 能和它交互、把任务交接给它，这通常是通过 connectors（连接器）、computer use（电脑操作能力），或者像 Premiere Pro 这个案例一样，通过扩展插件来实现。\n\n第二件事，则是 Dan Shipper 提到过的那种设想：\n\n用户手里已经有一堆可以点来点去使用的网页应用，但希望能把这些应用在 Codex 里直接打开\n\n，让 Codex 在里面替他们多做一些事情。这两种模式，几乎互为镜像，团队目前正在同时大力推进这两条线。\n\n【ICML 2026首尔 · 云帆AI Talent Meetup】最后报名中\n\n7月9日晚，首尔ICML会场旁，上海人工智能实验室、上海科技大学、上海创智学院、阶跃星辰、Sharpa Robotics等20余家上海顶尖AI单位现场设展，开放100+岗位。专场招聘、学术分享、圆桌交流、自由Networking一站式搞定。\n\n扫码即刻报名。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-05_Codex、ChatGPT为何合体？Codex未来何去何从？OpenAI核心leader回应一切_机器之心.md"}, {"title": "「我一行代码都没读就发布了」，被OpenAI收购后，uv工具创始人开始反思AI编程", "source": "InfoQ", "digest": "uv/Ruff创始人Charlie Marsh谈AI编程现状：AI写PR成本为零但审查成本更高，开源生态面临AI slop冲击。他坦承曾被同事从「全AI模式」打醒，分享团队对抗AI slop的策略。", "link": "https://mp.weixin.qq.com/s/lXKclvGMaRcW2fNmJCEKug", "content": "---\npublish_time: 1783218008\n---\n\n# “我一行代码都没读就发布了”，被OpenAI收购后，uv工具创始人开始反思AI编程\n\n> 原文链接：https://mp.weixin.qq.com/s/lXKclvGMaRcW2fNmJCEKug\n> 公众号：InfoQ\n\n编译 | 宇琪\n\n策划 | Tina\n\n过去三年，Python 开发者工具领域发生了一场静悄悄的革命。一个叫 Charlie Marsh 的年轻工程师，从一家计算生物学公司辞职后，在“不知道自己要做什么”的状态下，花了 9 天时间搭出了 Ruff 的原型，一个比当时最快的 Python linter 还要快 10 到 100 倍的代码检查工具。Ruff 成功后，他顺势成立了 Astral 公司，并用 Rust 打造了 uv，一个快到让 pip 看起来像慢动作回放的包管理器。这两个项目迅速席卷了 Python 社区，GitHub 星标数以万计增长，最终让他在今年三月把整家公司卖给了 OpenAI。\n\n这不仅仅是一个“技术天才靠 Rust 征服世界”的故事。日前，Charlie Marsh 在播客中，与主持人 Ryan Peterman 一起探讨了 AI Agent 如何重塑软件工程的每一个环节。除了技术本身，他还谈到了软件工程行业正在集体经历的困惑：当提交一个”看起来合理”的 PR 的成本降到零、而审查它的成本依然高昂，我们该信任什么？当你自己写代码的乐趣被”指挥 Agent 干活+逐行审查 Agent 输出”的工作流取代，编程还值得热爱吗？\n\n这些问题没有标准答案，不过 Charlie Marsh 给出了一个一线实践者最诚实的思考。最近 X 上流行\"I read the code\"梗，调侃程序员已从\"写代码\"沦为\"读代码\"。Charlie 在给自己用的工具上反着来——一行代码没读，全扔给 AI。不过，他坦陈了自己从“全 AI 模式”中被同事打醒的经历，也去看了Bun的仓库\n\n——头号贡献者是一个bot，他\n\n发现Bun的仓库跟他们的仓库是完全不同的世界。他还分享了团队对抗 AI slop 的具体策略，也聊到了从普通工程师转向创业的经历、以及为什么他觉得”现在是早期职业工程师最难的时刻”。本文基于该播客视频整理，经 InfoQ 编辑。\n\n太长不读版：\n\nQ：Python 工具链为什么该被颠覆？\n\nA：\n\n隔壁 JS 圈早把工具用 Go/Rust 重写了，快到飞起。Python 圈还在用 Python 写工具，慢得理所当然。我就想问：凭啥我们不能拥有同样爽的东西？\n\nQ：Ruff 是怎么火起来的？\n\nA：\n\n先写博客画大饼，然后构建出能用的 linter。核心策略：\n\n10 秒抓住眼球\n\n——一个亮眼的标题、一张精心打磨的图片，不用废话，一看就懂。然后疯狂响应社区，今天提 issue 明天发修复，圈粉速度拉满。\n\nQ：为啥选 Rust？\n\nA：\n\n坦白说，当初就是跟风。但回头看香爆了——Cargo 一把梭，git clone 完就能跑，不用跟 C++ 那堆构建系统斗智斗勇。内存安全？当初根本不在乎，现在觉得真香。\n\nQ：AI 时代还会考虑全部重写吗？\n\nA： 不会。代码如果完全重写，作为人类你可能就不再理解任何代码了。而且用已知问题换未知问题太蠢\n\n，测试全过不代表行为一致，最终坑的是用户\n\n。\n\n而且现在 AI 写 PR 成本为零，审查成本却更高，开源生态快被淹死了。\n\nQ：性能提升全怪 Rust？\n\nA：\n\nRust 给你个高起点，但真正的杀手锏是\n\n架构创新\n\n。UV 快是因为缓存设计得聪明，重复安装几乎零成本，这跟语言没关系，纯属脑子好用。\n\nQ：跟 AI 结对编程啥感觉？\n\nA：\n\n以前同事闭眼合我 PR，现在逐行细审——因为代码不是我的了，是 Agent 的。信任崩塌了。但我也在适应，现在整天让 AI 跑各种实验，以前不敢想的问题随手就能验证，这种解锁感挺爽的。\n\nQ：初级工程师会被 AI 坑惨吗？\n\nA：\n\n会。他们没能力给 AI 当教练，只能被 AI 带沟里去。\n\n我们倾向于招资深工程师，因为优秀的工程师用 AI 更猛。\n\n如果我是初期工程师，太容易掉进使用 Agent 时发生的那些坏事情里了。\n\n以下是原文：\n\nPython 工具链需要一场“Rust 革命”\n\nRyan：你最初开始构建这些开发工具时，整个领域是什么样子的？为什么你觉得它能做得更好？\n\nCharlie：\n\n在创办 Astral 之前，我在一家计算生物学公司工作。我没有生物学和机器学习背景，但我的任务是用 Python 搭建所有支持机器学习运行的软件系统。那段时间我一边学 Python，一边接触了 Go 和 Rust，在多个不同的技术栈之间来回切换。\n\n我们团队很小，但对一个只有几个软件工程师的团队来说，代码库规模相对较大。我们这些人要服务整个团队，包括机器学习研究员和科学家。我接触了各种生态系统的工具链，发现我们一直在试图从工具中榨取更多效率，无论是类型检查器、代码检查工具，还是包管理器，但随着规模增长，我们不断撞上工具能力的天花板。\n\n我观察了一遍 Python 生态，发现它缺少其他生态中那种实验精神。比如 Web 生态里，很多疯狂的想法在被尝试，而且大家对性能有很强的执念。从用 Go 写的 ESBuild，到用 Rust 写的 SWC，再到 Bun、Deno 等等，原生工具链对于 JavaScript 来说已经成了理所当然的事情，尤其是当应用越来越大、开发者机器上跑的活儿越来越多的时候。\n\n但 Python 生态里没有这个趋势。所以对我来说，核心问题就是：为什么我们不能拥有同样的东西？我亲眼看到 Web 领域发生的一切，我自己也写过 Rust 和 Go，知道这些不同工具链的工作方式和用户体验。再看 Python，工具集更小，很多来自其他生态的有趣想法完全没被引入，而且所有工具都是 Python 写的。\n\n这对我来说就是一个有趣的假设。当我发布 Ruff 时，那篇博客的标题就是《Python 工具链可以快得多得多》。对我来说，这本质上就是一个待验证的假设：Python 工具链能不能更快？ 我搭了一个原型，结果证明：是的，完全可以。\n\nRyan：你写了一篇关于 myPy 性能分析的文章，然后仅仅 9 天后就发布了那篇“可以快得多”的博客。你是在那 9 天里做出来概念验证的吗？\n\nCharlie：\n\n对。我先写了一篇关于大规模类型检查的博客，想搞清楚瓶颈到底在哪。然后我开始构建一个 linter，因为我觉得 linter 比类型检查器容易得多，而且 linter 能让我用更小的体量验证同样的想法。做创业或做工具，核心就是尽快把东西交到用户手上，让他们真正用起来，证明价值，同时也能快速迭代。linter 恰好是个完美的形态：核心逻辑很简单，但规则可以无限扩展。用户从一个小核心加若干规则就能立刻获得价值。\n\n我们很快做出了可用的版本，然后持续迭代，发布更多规则和功能。人们可以把它和其他工具配合使用。它从一开始就是有用的，这一点非常关键。相比之下，一个完成了 75%的类型检查器几乎毫无用处，包管理器也一样，这些工具必须做到足够完整才能产生价值。所以，能够迭代式地交付、同时保持对用户有用，是建立工具势能的核心能力之一。\n\n开发者营销“10 秒法则”\n\nRyan：那篇博客发出去后，反响怎么样？\n\nCharlie：\n\n博客发出去后上了 Hacker News 首页，在 Twitter 上也被大量转发，制造了相当多的兴奋和关注。上 Hacker News 首页这件事，我觉得一半靠运气，一半靠实力。它有帮助，但不是成功的必要条件，更不是保证，关键是你如何利用这波流量。\n\n我当时采取的策略是极度积极地响应社区。有人提 issue，我会尽量在一天之内确认问题、修复并发布新版本。这种“一天内响应-修复-发布”的循环非常强大，你每完成一次，就赢得一个支持者，项目势能就增加一分。\n\n同时，一些生态里的大人物也开始关注这个项目，比如 FastAPI 的作者 Sebastián Ramírez。他早期就说“这个挺有意思，我想用用”。我当时就问自己：“要让他真正用起来，需要做些什么？”然后我就去逐一实现那些条件。\n\n我其实一直在思考开发者营销这件事。在工程师圈子里，“营销”这个词几乎是个脏话。很多人觉得技术产品就该靠实力说话，最好的技术方案就应该自动胜出。但我有个可能很蠢的假设：GitHub 上有成千上万个非常棒的项目，它们根本不知道怎么营销自己，所以永远没人发现，永远没发展起来。我不知道这是不是真的，但至少看 Ruff 这个项目，我觉得营销是值得认真对待的。\n\n那么，具体怎么做呢？关键在于“10 秒内抓住注意力”。无论是写博客、写 README，还是做任何宣传材料，核心问题是：当一个人打开这个页面，我只有 10 秒钟让他对我的项目产生兴趣，让他明白“这对我有什么用”。不需要一堆 emoji 和截图，你需要的是在 10 秒内讲清楚“为什么这个项目值得你花时间”。\n\n说起来有点沮丧，但这就是注意力经济的现实。我当年在 Spring 做生物医药的机器学习时，研究过 OpenAI 的博客。特别是 DALL-E 的那些老文章，即使你一个字都不读，光看图片和标题，你也能理解他们做了什么，而且会被震撼到。这就是我追求的：让那些只读标题、只看第一张图的人也能带走一个印象。当然也会有人从头读到尾，所以每个字都要精心打磨。但你必须接受：大多数读者只会扫一眼。所以，你要想清楚：如何用诚实、真诚的方式，在几秒钟内告诉别人“为什么你应该关心这个”。\n\nRyan：能举个具体的例子吗？比如你在 Ruff 的博客里具体做了什么？\n\nCharlie：\n\n最典型的例子是那张 benchmark 图。我们在博客里放了一张非常清晰的性能对比图，在 Twitter 上被疯狂转发。那张图本身就能说明一切，它不需要任何文字解释，你一看就知道 Ruff 比竞争对手快多少。一张好的 benchmark 图，在注意力经济里是无价的。我不是说它能卖钱，而是说它能瞬间抓住人们的注意力。你看到那张图，脑子里立刻就会冒出一个念头：“这太明显了，发生了什么一目了然。”\n\nRyan：但我经常看到那种图，轴的起点不是零，而是故意从 50 或 100 开始。\n\nCharlie：\n\n这就是所谓的“图表犯罪”（chart crime），我们不会这样。benchmark 本身其实非常复杂且充满争议，也许大多数用户根本看不到这些争议，但我每天都身处其中，因为性能优化这件事太微妙了。你不得不思考：是带缓存还是不带缓存？这两种情况下的性能表现天差地别。在不同的项目上运行，性能特征也会完全不同。我们在 UV 上就深有体会，有时候 UV 快得像闪电，但有时候安装一个包时，瓶颈却出在一个完全不相干的 C++编译流程上。这时候你怎么准确地说“UV 快”？你几乎不可能用一个数字或一张图，准确捕捉所有不同场景下的真实表现。\n\n但另一方面，如果你完全不向用户传达性能差异的意义，那又是一种失职。用户需要知道：这个工具到底快多少？为什么快？这对他意味着什么？所以你必须在这两者之间找到平衡。我觉得这其实非常难，很多人在这方面都栽过跟头。但无论如何，不加任何方式去快速告诉用户“这东西用起来是什么感觉”，那才是最大的失职。\n\n为什么选择 Rust？\n\nRyan：你提到那张图，我作为工程师，看到它的第一反应是：“你是怎么做到这么快的？”然后我注意到你们的标语里写着“用 Rust 写的 Python 开发工具”。所以，我第一个好奇的问题是：为什么选择 Rust？它的优点和缺点分别是什么？\n\nCharlie：\n\n坦白地说，我当初选择 Rust 很大程度上就是因为跟风（hype）。当时 Rust 在开发者社区里非常火，大家都在谈论它。在那个时候，我对不同生态系统之间的技术权衡了解得并不多，也没有做过太多系统编程。我的印象就是：Rust 是一种编写高性能软件的、更易上手的方式，所以我因为这个原因开始了。\n\n但回过头来看，我认为这是一个极其正确的决定。现在我对 Rust 有了更多的经验，我确实觉得，如果当时我尝试用 C 或 C++来写这个项目，我可能早就放弃了。因为即使到现在，我仍然觉得那些生态系统更令人望而生畏、更难上手、更难学习。\n\n我经常觉得，Rust 一个被严重低估的优势就是它的工具链。因为你一上来就用 Cargo，所有事情都通过它来做。如果我看到一个我们使用的 crate，我想给它的仓库提交一个 PR，我极其有信心，我克隆下来就能弄清楚如何运行和构建，几乎不需要做任何额外工作。能做到“\n\ngit clone\n\n然后\n\ncargo run\n\n、\n\ncargo build\n\n、\n\ncargo test\n\n”就能跑起来，这其实非常了不起。\n\n尤其对于像我这样刚接触系统编程的人来说，我不想去搞清楚整个 C++工具链、构建系统那一堆乱七八糟的东西。Rust 在这些方面非常“有主见”（opinionated），确实有很多东西很难学，但它让我可以把精力集中在那些真正应该难学的事情上，而不是花时间在“我怎么让这个东西编译通过、跑起来”这种你根本不想花时间的事情上。\n\n这对我们来说是一个非常成功的赌注。Rust 随着项目规模的增长，扩展性非常好。而且，OpenAI 也在大量使用 Rust。作为一个为开发者构建工具的人，我对 Rust 非常看好。它已经增长得非常迅猛，我认为它还会继续快速增长。\n\n但同时，我从来不是一个对生态系统特别教条的人，我认为所有这些生态系统都有可取之处。比如 Zig 正在发生的事情就非常有趣，我希望有更多时间去深入研究它，形成更细致的观点，我确信它在某些方面比 Rust 做得更好，Rust 也应该向它学习。同样，很多人用 Go 也取得了巨大的成功，这也很棒。我喜欢用 Rust，不过也有不少抱怨，但我把这些抱怨看作是需要改进的地方，尤其是随着 LLM 改变了我们构建软件的方式。\n\nRyan：所以听起来，你今天根本不会考虑 C 和 C++？因为它们的工具链不够好。而 Zig、Rust 和 Go，你是在它们之间做不同的权衡？\n\nCharlie：\n\n没错。我真的不太理解，除非有非常特定的技术原因，或者你正在维护现有软件，否则我基本不明白为什么要在新项目里用 C 或 C++，我本人肯定不会这么做。当然，如果你对那个生态系统非常熟悉，那另当别论。但如果你是一个想学系统编程的新手，或者你对这些语言同样熟悉，那我真的不理解你为什么要选 C/C++。我知道这么说会被骂，但我无所谓。\n\n我现在非常在意 Rust 给我的那些东西，而这些是我以前根本不在乎的，比如内存安全。 当我开始做 Ruff 的时候，我甚至不知道内存安全是什么，也完全不在乎。但现在我觉得这简直太棒了。我想构建安全的东西，不会在用户面前崩溃，速度极快，性能极强，不需要做任何妥协。在 Rust 里我可以做到这些，所以对我来说，它虽然不是完美的语言，但它是目前我最喜欢用的语言。\n\nAI 时代的代码重写\n\nRyan：在当今世界，你几乎可以把现有代码完全转译到你选择的任何语言里，比如我见过有人把 Zig 一次性转成 Rust。如果你觉得另一种语言更好，你会考虑把你构建的那些开发工具全部重写吗？比如从 Rust 转成 Zig 或 Go？\n\nCharlie：\n\n这个问题很微妙，是因为现在构建软件的方式变化太快了。我直到去年圣诞假期才开始真正用 Agent 编程，到现在也不过几个月。但如今我几乎不在编辑器里直接改代码了，所有修改都通过 Codex 完成，即使是小改动也是用提示词驱动。这完全是另一种工作方式，而且变化发生得如此之快，我甚至无法预测六个月后会是怎样。\n\n所以对于 Bun 那样的重写，我现在不会做，但我很欣赏他们敢于实验和突破边界的精神。这引发了我几个层面的思考，首先是代码理解问题：如果代码被完全重写，作为人类你可能就不再理解任何代码了。虽然他们尝试做非常直接的转译来保留抽象层，但问题是，如果团队已经重度依赖 Agent 开发，理解代码到底还重不重要？\n\n第二个更核心的问题是：当你做这样的重写时，你是在用已知问题交换新的未知问题。假设合并后你关闭了 GitHub 上的 50 个 issue，这很好，但你可能同时引入了 50 个之前不存在的新 issue。因为即使是最好的测试套件，也只是程序正确性的近似逼近。希拉姆定律（Hyrum&#x27;s Law）告诉我们：任何实现细节最终都会变成某些人依赖的行为。即使没被编码为行为的东西，也会成为你 API 的一部分。这意味着即使测试全部通过，程序隐含的行为可能已经改变。而最糟糕的是，你最终把这个问题推给了用户，他们不得不先遇到问题、再报告、再帮你去排查，这是我对自动重写最大的担忧。我其实相当信任模型的能力，但真正可怕的是如何安全地推出这种变更。\n\n第三个层面关乎开发方式的选择。现在的软件开发光谱已经变得非常宽，从 Andrej Karpathy 定义的 Vibe Coding，到完全不使用 LLM，中间有无数种可能。我对不同项目采取完全不同的方法，比如上周我写了个个人用的自定义 Rust linter，全程由 GPT-5.5 完成，我一行代码都没读。因为那是只有我们内部使用的工具，很容易判断正确性。但 UV 被数百万工程师和无数公司依赖，对它的任何变更都必须极其谨慎。关键在于你做的项目是什么、你对用户负有多大责任。这不是在评价 Bun 的做法，而是我思考如何在不同领域突破边界的方式。\n\nRyan：这让我想到代码变更的风险管理。如果是只有你我使用的内部工具，我可能直接打上“没问题”的戳就发布了。但如果是影响客户结账的关键系统，我们可能需要两人审核、多重验证。所以这个光谱现在多了一个新层级——人类一眼都不看，直接发布。\n\nCharlie：\n\n我有时候会去 Bun 的仓库看看，发现它跟我们的仓库完全是两个世界。最明显的是，Bun 仓库的头号贡献者是一个 bot。有时候你点开人类提交的 PR，看到人类账号在来回评论，但很明显那些评论全是 agent 写的。你会忍不住感叹：“这太不一样了。”我很高兴有人在尝试不同的软件构建方式，不过我不确定自己是否准备好那么做，但我认为很多事都会改变。\n\nRyan：那你们会在自己的仓库里屏蔽这种纯 agent 提交的贡献吗？\n\nCharlie：\n\n会的。我们现在有一套 AI 政策，目的不是反 AI，而是要过滤掉那些净负面贡献，保留真正有用的东西。你想，一个贡献者进来，贴了一条 agent 写的评论，我们问他问题，他直接把 agent 的回复粘贴过来。这有什么价值？我们还不如直接问 agent 本身。我们需要的是人类贡献者的洞察力、复现步骤、以及我们能喂给 agent 的关键信息，在 GitHub issue 上跟 LLM 对话毫无意义。所以我们的政策很简单：你提交的东西，你自己得理解。我知道这听起来门槛很低，但实际并不低。\n\nRyan：那你怎么监管呢？\n\nCharlie：\n\n如果看不出来它是 agent 写的，那我觉得应该没事。\n\n目前还是有很多“特征”可以识别，agent 写的回复往往过于详尽、格式过于规范、用词过于学术，甚至会编造一些人类不会用的术语，塞满各种链接。简单说，在没必要的地方投入了远超人类的“努力”，那几乎就是 agent。\n\nZig 项目的 LLM 政策比我们严格得多，完全禁止任何 LLM 编写的代码进入项目。而我们这边，我自己的 PR 现在全是 LLM 写的。Zig 团队发过一篇博客，提出了一个概念叫“贡献者扑克”——你像下注一样在贡献者身上下注。传统开源模式下，一个新贡献者来了，你给他反馈，他学习、改进，下一次提交的 PR 质量就提升了。这种反馈会累积，他会成长为未来的维护者，本质上是在投资“人”。但 agent 写的 PR 完全打破了这种循环：你给反馈，他把反馈塞回 agent，生成一个新版本，然后合并。没有累积，没有成长。\n\n更关键的是，提交一个“看起来合理”的 PR 的成本已经降到了零，但审查和验证一个“看起来合理”的 PR 的成本依然很高，甚至更高。以我们的类型检查器 TY 为例，这是我做过最难的项目之一，架构极其复杂。如果有人给 TY 提交了一个“看起来合理”的 PR，他可能只花了 2 分钟写，但我们需要花 1 小时去理解它，这种不平衡正在严重破坏开源社区的生态。我不知道怎么解决，它只会越来越糟，直到我们找到新的方法。\n\nRyan：听起来审查正在成为越来越大的瓶颈。那 Bun 的重写呢？你知道那些代码是人类审查过的，还是直接就是 YOLO 式的……？\n\nCharlie：\n\n我觉得没有经过人类审查。至少在我录制这期节目的时候，Jared 还没发布那篇博文。他一直在开玩笑，说那篇博客文章花的时间比重写还长。我其实对那篇博文很感兴趣，因为我认为他们确实有一套相当成熟的重写方法论，读起来会很有意思。这绝不是那种“用 Rust 重写这个”的单一 prompt。从我看到的 PR 来看，我印象中重写实际上分了不同的阶段，每个文件都要经过几个不同的阶段，每个阶段都有验证正确性的方法。所以答案是：没有人类审查。我不认为有人真正读过那些代码的实质性部分，这基本上是不可能的。\n\nRyan：那如果我们俩今天都同意 Zig 客观上比 Rust 更好，然后你团队里有人说“我可以把这个用 Zig 重写一遍”，你会阻止吗？\n\nCharlie：\n\n我想我会阻止。我不确定这样做对不对，但我觉得我们团队还没到那个阶段。也许有一天我们会走到那一步，但现在我们仍然觉得深入理解我们的代码、工具链和生态有巨大的价值。\n\n性能优化与代码质量\n\nRyan：你构建的所有东西，都比当时可用的方案快一个数量级。Rust 在多大程度上贡献了这种性能提升？\n\nCharlie：\n\n这取决于项目。在 Ruff 中，很大一部分功劳确实归 Rust。但随着时间的推移，我们在这方面又有了很大改进。你可以看看项目的历史，基本上项目是越来越快的。有时候也会有回退，但总体趋势是向上的。即便都用 Rust 写，不同的实现方式也会带来截然不同的性能表现。所以我的看法是，Rust 更像是一个性能地板或基线，你用它写出来的程序，基线性能会显著高于其他语言。\n\n但即便如此，你仍然需要深入思考性能和架构设计才能获得更多收益。比如同一个程序，用 Rust 和 Python 实现最接近的版本，Rust 版本肯定更快。但你完全可以在这个 Rust 版本上继续优化，可能还能再快 10 倍。即使在 Rust 生态内，仍有巨大的优化空间。我刚开始做 Ruff 时，目标之一就是学习 Rust，所以写了很多烂代码，这没关系，我发布的产品对人们很有帮助。但随着时间的推移，它变得越来越好，性能也越来越高。\n\n在 UV 这个项目上，架构创新带来的贡献甚至超过了 Rust 本身。UV 是一个包管理器，它要做大量的 I/O 操作，下载网络文件、解压缩、写入磁盘、移动文件。而 linter 不需要做这么多 I/O，它只需要读取所有文件。包管理器几乎全是 I/O，你需要以极高的效率完成这些操作。所以在这里，Rust 固然重要，但 UV 中更多的性能提升来自于我们对架构的深入思考，比如缓存的设计就非常刻意，重复安装同一个包几乎是瞬间完成的，这完全得益于缓存布局的方式以及从缓存安装到项目的方式。这意味着如果你之前安装过某个包，再次安装的成本极低，无论是磁盘空间还是时间。这种设计思路与之前所有的 Python 包管理器都截然不同。\n\n所以，无论你用 Rust 还是 Python 写代码，永远都有思考性能的空间。你总是可以让东西更快或更慢。即使是用 Python 写，通过更深入地思考性能和设计，你也可以让事情快得多。这是多种因素的混合，取决于具体项目。\n\nRyan：在整个项目开发过程中，有没有哪几件事在技术实现上最具挑战性，或者让你觉得最有趣？\n\nCharlie：\n\n我特别喜欢我们团队 Andrew（网名 BurntSushi，Ripgrep 作者）做的一个优化，关于我们如何表示版本号。\n\n当解析和安装一个非常复杂的 Python 项目时，我们需要解析并创建大量的版本对象，比如 1.0.1、1.0.2 这种，我们程序内部会生成海量的版本对象。结果发现，分配这些内存的开销大得惊人，尤其是考虑到我们操作的次数。Andrew 想出了一个表示方式：用单个 u64 整数就能表示 90%以上的版本，效率高太多了。\n\n在 TY 方面，有很多非常有趣的性能工作正在进行，尤其是让它支持增量检查。TY 的设计目标就是一个类型检查器加语言服务器，整个系统是高度增量化的。核心想法是：如果你在文本编辑器里打开一个文件，你肯定不希望为了分析这一个文件，就必须把整个项目、所有依赖、每个文件都重新类型检查一遍，因为你根本不需要。但另一块是：如果你同时打开两个文件，编辑了其中一个，你只希望重新计算必须重新计算的部分。你不想因为保存了一个文件，就让整个代码库重新类型检查一遍。尤其是你在 PyTorch 这种大项目里工作时，如果每次保存都要等两秒钟才能拿到分析结果，那体验就太糟糕了。\n\n这有点像宏观设计层面，整个系统基于一个叫 Salsa 的框架构建——这也是 Rust Analyzer（Rust 的流行语言服务器）使用的框架，我们后来有意无意地成了 Salsa 的主要贡献者。整个架构围绕查询展开，这在架构层面非常有意思。增量部分确实很难，因为你需要一个方式，当数据变化时，只让数据流经依赖图中受影响的那部分节点，这花了很多功夫。\n\n我最近花了很多时间在 Codex 上做优化，因为它特别擅长那种微观层面的调优。在 TY 里，我们不仅要考虑速度，还要考虑内存，如果你在一个超大型项目上工作，你不会希望语言服务器吃掉几十 GB 的内存。所以理想情况下，它必须既快又省。比如我可以设定一个目标：“试试在这个项目上把 Salsa 的内存占用降低 1%。”然后它就能想出非常合理的方案。我觉得这非常酷，因为它几乎能持续地优化你的软件。\n\nRyan：关于版本号的优化，你觉得如果你直接丢给 Codex，说“嘿，别搞坏东西，但把内存降下来”，它自己能想到那个方案吗？还是说那超出了它的能力范围？\n\nCharlie：\n\n以我的经验，如果你只是简单地要求降低内存或提升性能，它通常只会给出边缘性的改进，而不是更大的重新设计或根本性的重新思考。但如果你通过提示去引导和协作，你是可以到达那些更大的设计的。比如你可以问：“我们是不是应该更大胆地想想，为什么非要用这种方式来表示数据？”这样你就能引导它产生更大的想法。\n\n如果通过提示一步步来，先做性能分析，找出时间花在哪儿，比如“版本解析和版本分配占了大量时间”，然后问“我们怎么能更紧凑地表示这些？”它可能会先给出一些微观优化，比如“这个字段可以和那个字段合并”之类的。但如果你不断追问，它是有可能到达那个方案的。不过，这不是它默认就能想到的。\n\n这让我想起 Mitchell Hashimoto（HashiCorp 的联合创始人，现在在做 Ghostty），他上周发了一条很有洞察力的推文。他写了一个渲染器，故意写得很糟糕，然后让 LLM 去优化，结果 LLM 把它优化快了 10 倍。但实际上，他自己手写的版本比 LLM 优化后的版本还要快 100 倍。如果你不先用大脑从第一性原理去思考“这个东西理论上应该有多快”、“系统应该怎么工作”，那你就会把那些积累起来的，我不会称之为“slop（垃圾代码）”，但就是那些东西，直接交付出去，然后说“哦天哪，我把它优化快了 10 倍”，但实际上它应该能快 100 倍。所以我觉得，仍然有很大的空间需要你用大脑去思考。\n\n我在这方面其实也很挣扎。我大量使用 Agent，也在某种程度上推动团队更多地使用 Agent，其中一部分原因，是因为我们为软件工程师构建工具，而我们的很多用户现在也在用 Agent。如果我们做的一切好事，都源于对用户的深刻理解，那我们就必须跟上这个趋势。\n\n但现在出现了一个很有意思的现象。我们团队有人直接跟我说：“以前你提 PR，我基本扫一眼就过了，因为我对你的工作有很高的信任度。但现在你提 PR，我得逐行细审，因为那些代码不是你写的，是 Agent 写的。”我当时的第一反应是：“这真的很值得深思。”他们说得完全对。这种信任的瓦解不只发生在别人身上，我自己也经历同样的事。有时候我晚上睡一觉，第二天早上起来看自己昨晚提的 PR，心里想的却是：“等等，这代码写得也太烂了吧？”你很容易就骗过自己，以为自己交付了和之前同样标准的工作，但实际上根本不是。\n\nRyan：如果生成的是纯粹的 slop，那反而好识别。但最难的是那个灰色地带，代码看起来能用、可接受，但它根本达不到你以前为自己设定的那个质量门槛。你团队里有哪些策略，真正有效地对抗了这种“灰色地带 AI slop”？\n\nCharlie：\n\n我希望未来能到一个状态——如果你提的 PR 全是绿色通过，那它被合并的概率极高，这意味着大部分重要的事情都有自动化验证来兜底。我们在项目中做了很多这类工作，比如在 TY 项目中，每个 PR 都会在 Valgrind 和 CodSpeed 上运行大量 benchmark ，覆盖内存使用、模拟时间、墙钟时间。还有一整套生态测试，每次提 PR，都会对比前后生态项目中所有诊断信息的差异，新增了哪些错误、修复了哪些错误。这些自动化验证在 Agent 出现之前就很重要，没有它们我们几乎没法开发。\n\n现在还有一个新假设：团队成员提 PR 之前，应该已经用 Codex Review 审核过好几轮了。 这其实很简单，就是在 Codex 里跑个\n\n/review\n\n命令。因为现在提交 PR 后，第一件事就是让 Codex Review 跑一遍，它确实能发现不少问题。\n\n所以，一个方向是建立更多自动化系统来保证代码正确性，包括持续优化\n\nagents.md\n\n文件，如果审核中反馈的问题 Agent 没有解决，就要想办法让 Agent 学会，甚至培养一些团队共享的 skill，这些都不复杂。另一个方向是确保自己投入精力去创建高质量的 PR。听起来标准很低，但我真的应该理解 PR 里的每一行代码。我还会在 GitHub UI 里自己审核一遍 PR，如果你像审阅者一样打开文件从头读到尾，往往能发现本地 diff 时忽略的问题，这非常有用。\n\n还有就是把 skill 编码化，把我和 Agent 经常犯的错误写进 skill 里，比如最近我常收到这样的反馈：“这个 if 语句想捕获什么场景？如果我把它注释掉，所有测试都能通过。”于是我就在提 PR 前加了一道工序：让 Agent 检查“这些条件判断是否仍然相关，还是之前重构时遗留的？”我还在学习，但这些是我正在做的事情。\n\n我觉得现在做软件开发真的挺难的。很长一段时间里，我一直有个恐惧：AI 会让我们更高效，但编程会变得没那么有趣，因为我就是热爱编程本身。我当时想，“天哪，以后我得把所有时间花在审查代码和提示这个总犯错、但最终确实更高效的蠢 Agent 上。”\n\n不过，我现在的感受其实比几个月前好多了。我想 Agent 在变好、工具在变好、我自己也更适应了，这是一方面。另一方面是，我越来越欣赏与 Agent 协作所解锁的那些事情。比如运行实验的成本变得极低，有太多事情我一直想尝试，或者一直想回答的问题，现在几乎可以瞬间得到答案。\n\n举个有点傻的例子：在 UV 项目中，所有东西都是快照测试，基本上我们所有的测试就是运行 UV 然后验证输出。这意味着我们有大量的测试，测试输出最终会留在测试文件里。所以我们有一个叫\n\nlock.rs\n\n的 Rust 文件，里面全是 UV lock 的测试，非常长，因为所有 lock 输出的快照都嵌在测试里。我当时想：“如果我们把快照存在单独的文件里呢？这样会不会让编译更快？因为从技术上讲，那些快照也是 Rust 代码，如果移走它们，构建会不会变快？”\n\n我一直想做这个实验，但作为人类手动去做会极其痛苦，因为你得转换所有测试。结果我只是让一个 Agent 在后台做这件事，同时我去干别的。然后，我得到了一大堆数据，答案有点微妙：如果你只是在迭代快照输出，确实有好处，因为不再需要重新编译整个程序。但我说这个的重点是，我现在整天都在做这种实验：尝试那些以前很难、成本很高才能回答的问题。从实验到生产还有真正的工作要做，但能做的事情完全不一样了。\n\n我越来越意识到，我从构建软件中获得的大量价值其实被保留了下来。因为其中一部分是仔细思考一个数据结构的布局，很大一部分是合并一个关闭用户问题的 PR，我从真正修复和改进某个东西中获得巨大满足感，而不仅仅是敲出代码。所以，对于那些觉得与 Agent 协作失去了什么的人，我真的很能共情。但比起几个月前，我现在对与 Agent 一起工作的感觉好多了。\n\n初级工程师在 AI 时代的困境\n\nRyan：你刚才在性能优化那个例子里提到，如果直接放 Codex 出来，它擅长做局部优化，但不太擅长系统级的优化。这让我想起你发过的一条推文。你说：“我有点担心，如果我在没有扎实软件工程基础的情况下使用这些工具，会产出多少垃圾代码。”\n\nCharlie：\n\n我现在仍然担心这一点。\n\nRyan：这让我想起 Mitchell Hashimoto 发的那条推文——“Codex，去干这个”和“你像工具一样挥舞它，不断往正确方向戳”之间，存在巨大的差别，你怎么看？\n\nCharlie：\n\n成为一名优秀的软件工程师，比以往任何时候都更有用。我们团队里那些工程能力最强的人，即使在使用 Agent 时也是最有效的。现在有很多关于“Token 最大化”的讨论，公司应该搞 Token 排行榜吗？我觉得，Token 排行榜会创造糟糕的激励，让人们尽可能多地消耗 Token。我们内部确实可以查 Token 使用量，但我并不关心谁用了最多的 Token。你会发现团队里最高效的人，往往确实用了很多 Token。这不是因果关系，但很多优秀工程师能够非常有效地使用 Agent，从而放大自己的技能。\n\n现在对初级工程师来说，真的非常难。我目前跟初级工程师接触不多，Astral 团队很小，我们倾向于招聘资深工程师。我很难想象，如果我是一个刚入行的工程师，我的学习迭代回路会是什么样？我大概只能从 Codex 那里学习，而不是反过来。对我来说，很多时候其实是我在指导 Codex，纠正它，为它提供安全护栏。而如果我是初期工程师，太容易掉进使用 Agent 时发生的那些坏事情里了。\n\n没预料到的快速创业历程\n\nRyan：你当初用 Rust 构建了那个概念验证，反响很好，但为什么围绕它创办了一家公司？融资过程又是怎样的？背后的动机是什么？\n\nCharlie：\n\n其实是我离开 Spring 的时候，被一个非常亲密的朋友说服了，他差不多同一时间从 Meta 离职，他说：“我们应该一起创办一家公司。”我说：“行。”当然，事情没那么简单。我离职后，我们进入了所谓的“想法迷宫”，不知道具体要做什么。我们花了很多时间探索想法的维恩图，有些东西他感兴趣而我觉得没意思，反之亦然。中间有一些交集，我们就去探索那些交集。\n\n但在所有业余时间里，我都在搞开发者工具，因为那才是我真正感兴趣的，这和他的方向不太合拍。那时我在做 Ruff，还搞了好几个 GitHub 上的其他项目，我对 WebAssembly 很感兴趣，写过一个 TypeScript 的 CI/CD 工具包，可以把 pipeline 转译成 Docker。\n\n关键转折点在于：我决定先和投资人建立关系，但不想急着融资，因为我还没想清楚到底要做什么。我的策略是：先认识一些喜欢投这类东西的人，等三到六个月后再联系他们，说“我们之前聊得很好，现在我在做 xxx”。我确实联系到了几位投软件基础设施和开发者工具的投资人，聊得不错。但问题是，事情发展得太快了。\n\n我实际上没预料到这么快就开始融资。Ruff 在快速成长，但当时我心里想的是：“我不知道这怎么变成一家公司”，但投资人们让我相信了，我挺感激的。他们还说服了我另一件事，如果我不喜欢，六个月后可以退出，把钱还回去。这招很聪明，因为我大概率永远不会那么做，但它让我感觉压力小了很多。\n\n于是我开始全职搞 Ruff。我和早期投资人进行了很多长时间的对话，讨论我的想法，后来我写了一个产品路线图。然后他们说：“我们想投你，这是条款。”我当时想：“哇，好吧，看来这事真要成了。”我从来没做过这种事，整个职业生涯就是个普通软件工程师，突然就要创办公司了。\n\n有趣的是，决定全力以赴创办公司这件事，其实没那么大压力，真正的压力是在公司开始成功后到来的。一开始我没什么可失去的，但后来公司走上正轨，我有了一个 20 人的团队依赖我，我就开始想：“公司真的在运转了，接下来会怎样？”作为一个创始人，我其实挺风险厌恶的，但创办公司的决定比后来那些压力大的决定更容易做得多。整个过程发生得非常快，几乎是无意的，和投资人形成了一种共生关系，这完全出乎我的意料。\n\nRyan：我以为创始人会渴望融资，求着“请投我”，但投资人反而是主动来找你的？\n\nCharlie：\n\n我们做了三轮融资：种子轮、A 轮和 B 轮。我们甚至从未公开宣布过 A 轮和 B 轮，它们是在收购公告里才被提到的。原因很复杂，基本上就是一直有理由让我们想再等等。对我来说，这总感觉是很多额外的工作，而且我觉得这不是最重要的事。公司运营得很好，我们不需要那种营销。我们最后确实计划过宣布，但还没做就被收购了。每一轮融资基本上都是投资人主动发起的，因为公司发展得好，人们想投。我一直有点保守，没有很激进地去筹钱。但我们很幸运，在做的东西让人们有很强的信心。\n\nRyan：这给了你很大的谈判筹码，最好的位置就是你可以随时走人，你甚至不需要它，他们来找你说“请收下这笔钱”。\n\nCharlie：\n\n我不会说自己是个优秀的谈判者，但至少我手里有张好牌。而且我们很幸运，投资人非常棒，超级支持。他们和我想要的公司发展方向完全一致，从来没有冲突，从来没有压力让我做任何特定的事情，只有支持。可能唯一的持续反馈是：我本可以在规模扩张和增长方面更激进一些，但我喜欢我们运营的方式。\n\n开源与商业产品的平衡\n\nRyan：我猜投资人投资时，看的是未来的收入承诺。但你们公司怎么赚钱呢？毕竟你们把软件免费送出去了。\n\nCharlie：\n\n我们在去年八月推出了商业产品，叫 PYX，它有点像 UV 的托管版本。很多 UV 用户会购买私有注册表软件，而不是使用公共注册表，要么是出于安全考虑，要么是需要发布自己的私有工件。于是，我们建了自己的私有注册表，对 UV 有一流支持。这让我们能解决 issue 跟踪器里用户用其他方案时遇到的一堆问题，也让我们能做得很快，因为客户端和服务器是垂直整合的，它们可以做一些特殊操作，变得非常快、非常易用。\n\n我们花了一段时间来销售这个产品，收入增长得相当不错。当然，在这个 AI 时代，你总听到“最快做到 1 亿美元收入的公司”之类的故事，我们没到那个级别，但我们确实能卖给一些大企业。最酷的是，因为我们做了开源，每个人都在用我们的开源工具，所以我们的销售漏斗非常好，我们有一小批质量极高的客户。\n\n整体思路是：继续做开源，工具保持免费、开源、完全非商业化，然后我们构建一些东西，当你用我们的工具时，自然就会需要。比如你用 UV，你大概率会遇到私有注册表的问题，我们就卖给你注册表。这个注册表只是平台的一部分，我们计划卖一整套东西，比如一个 Python 云，这就是我们正在构建的方向。\n\n收购的一个很酷的地方是，我们可以把平台的一部分免费开放给大家。举个例子：Python 社区有很大一部分人用 GPU，比如 PyTorch，整个 PyTorch 生态有很多软件是构建在它之上的。由于各种原因，这些工具的人机工程学不太好——安装难，版本匹配难，还取决于你用什么 GPU、什么 CUDA 版本。我们尝试用一种方式解决这个问题：构建自己的发行版，有点像 Linux 发行版。我们预构建了很多能协同工作的东西，提供给客户。现在我们可以把这些东西免费开放给所有人，因为我们不再试图建立一个独立业务，而是想构建能扩大整个生态的优秀工具。\n\n坚持原则，别信“标准答案”\n\nRyan：作为首次创业的工程师，有什么让你惊讶的学习收获，可以分享给其他想走这条路的人吗？\n\nCharlie：\n\n我其实不太喜欢别人给创业建议，因为这个行业太多幸存者偏差了。你给出完全相同的建议，可能会得到完全相反的结果。你去听两场演讲，两个极其成功的创始人给你完全矛盾的建议，你会想：“我真的不知道该怎么做。”我的看法是，你必须弄清楚什么对你来说是真的。\n\n比如，远程办公还是线下办公？你必须有一个原则并且坚持下去，两者都可以很出色。我们整个公司都是远程构建的，进展非常顺利。当然，我认为线下办公有好处。但如果我们在线下，我绝对招不到我们组建的那个团队。所以每件事都有取舍，你必须有原则，弄清楚什么与你产生共鸣。\n\n我在这件事上很幸运。我尽量把最少的时间花在融资和见投资人上。我追求的是找到真正信任的投资人，而不是跟无数投资人周旋，让他们互相竞价来获取最好条款。我的目标始终是：找一个真正信任的合伙人，拿到好条款，然后快速推进，把融资时间压到最短。所以，想想你在乎什么，然后专注于此，这些事情没有标准答案。\n\n我刚开始创业时，很多人建议我找个联合创始人，我基本没听。我知道他们可能是对的，但我心里没有合适的人选。我不想强求，所以就没找。后来我觉得，有个人和你一起在战壕里摸爬滚打确实会有帮助，但你会用其他方式来弥补。比如，我经常跟妻子倾诉，我对员工也比正常情况下更开放，这有好有坏，我会跟早期团队分享很多东西，尤其是在需要建议的时候。我还尝试建立其他创始人的圈子，特别是在纽约，我们有六七个人，每年争取一起吃两次饭。听起来不多，但这成了一个非常有用的支持系统。\n\nX 上很多人在讨论“公司里每个人都应该每周工作七天吗”之类的事情。我基本上一直在工作，这是我做的选择，而且我非常满意。但我不期望团队里的人一直工作，我希望这是一个你可以通过正常工作时间取得巨大成功的公司，你的产出和表现会得到回报。我认为，没有唯一正确的方式。不要过多关注你认为应该怎么做，想想你想怎么做，以及什么真正符合你希望的工作方式。\n\nRyan：你推荐什么书？技术类的，或者对创始人有帮助的。\n\nCharlie：\n\n我读的技术材料不多，但有几场演讲对我影响很大。比如 Zig 语言的创造者 Andrew Kelley 做过一场关于数据导向设计的演讲，我学到了很多。那场演讲讲的是他们在 Zig 编译器里做的设计决策，关于内存、分配这些。我当时刚进入系统编程的职业生涯不久，看完之后心想：哇，这些人真的在乎他们在做什么，它让我用完全不同的视角看待软件。\n\nRyan：如果你能回到职业生涯的起点，刚毕业那会儿，你会给自己什么建议？\n\nCharlie：\n\n这很难回答，因为有太多后见之明。我大概会告诉自己：你做的是正确的决定，别太焦虑。但很难说如果重来一千次会怎样。比如，我离开学校去可汗学院工作时，心里有一部分在嘀咕：我是不是应该去大厂？我会不会后悔没有大厂经历？可汗学院的薪水不错，但大厂给的肯定更多。我看到朋友们拿着巨额奖金，心里有点不安，怀疑自己是不是选错了。从长远看，这个选择回报了我。也许大厂也不错，但可汗学院的经历才是我真正想要的。我觉得自己是基于正确的理由做的决定，所以很多事情，如果你基于原则做决定，最终会好起来的。\n\nRyan：我们开头聊过，你之所以进入这个领域，是因为尝试了各种不同的生态，有了更广的视角。如果你去了 Google，只用 Google 的封闭系统，可能就不会有这种洞察。\n\nCharlie：\n\n对。我在 Spring 待了四年半，离开时他们正要转型，后来被 Genentech 收购。我们当初想建立一个疯狂的药物发现公司，专注于衰老，用计算机视觉，非常雄心勃勃。后来公司没有达到所有梦想，我一度怀疑：我是不是浪费了时间？但最终我意识到：没有。作为早期员工，我经历了所有阶段，学到了如何运营自己的公司，所有技术积累都用到了我自己的公司里。所以，虽然我给出这些建议有点奇怪，因为一切最终都进展顺利，但确实有很多时刻我怀疑过自己的职业选择。事后看来，你只能回头看才能把点串成线，所有东西加起来，让我找到了我真正热爱的事情，那就是构建工具并为之投入。\n\n访谈视频原链接：\n\nhttps://www.youtube.com/watch?v=Iw65FD4MGgs\n\n声明：本文为\n\nInfoQ 编译\n\n，不代表平台观点，也不构成投资建议，未经许可禁止转载。\n\n今日好文推荐\n\nClaude Code 80%的提示词说删就删，Anthropic用Fable 5打了个样：AI行业的“降本”才刚刚开始\n\n用户太蠢不配用 Fable？被Anthropic的回应气笑了：最贵的模型，最憋屈的体验\n\nCloudflare CEO 警告：未来两年，Agent 会让互联网每周爆出一个 Log4j\n\nAnthropic 突发 Sonnet 5，但大家更期待 Fable 5 和 Mythos 5 明天解禁\n\n会议推荐\n\n大会限时早鸟票享 8 折专属优惠，现在报名立减 1160，更多详情可扫码或联系票务经理 13269078023 进行咨询。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-05_“我一行代码都没读就发布了”，被OpenAI收购后，uv工具创始人开始反思AI编程_InfoQ.md"}, {"title": "狂揽2.4万星标：一行命令，AI会自己找技能了", "source": "新智元", "digest": "Vercel推出的AI技能包管理器skills，发布五个月GitHub星标达2.4万。它类似于npm，一行命令为AI智能体安装能力包，已支持68+智能体，主打「AI自己找技能」。", "link": "https://mp.weixin.qq.com/s/3iNAdWbdumOX9uJLihtEIg", "content": "---\npublish_time: 1783238220\n---\n\n# 狂揽2.4万星标：一行命令，AI会自己找技能了\n\n> 原文链接：https://mp.weixin.qq.com/s/3iNAdWbdumOX9uJLihtEIg\n> 公众号：新智元\n\n新智元报道\n\n【新智元导读】\n\n从前是人给AI装能力，如今是AI自己去找。\n\n以往，开发者们见面交换的是提示词（prompt）模板。\n\n现在，风向变了。大家在互相打听的，是你该装哪个技能（skill）。\n\n这背后，藏着一个更大的转变：AI编程工具，开始「装包」了。\n\n今年1月17日上午，Vercel创始人兼CEO Guillermo Rauch在X上发了一条推文：我们正在推出skills——AI技能的「npm」。\n\n所谓「npm」，是前端工程师天天用的那个包管理器，一行命令就能把别人写好的东西装进自己的项目。\n\nRauch的言下之意是：\n\n这套「一行命令装好别人成果」的体验，这次要搬到AI身上了。\n\n「龙虾之父」的Peter Steinberger第一时间回了一句：「酷！得跟ClawHub同步一下。」\n\nClawHub是另一套智能体生态的技能市场，跟Vercel并非一家。可Peter的第一反应却是「要对齐」。\n\n三天后，Vercel在更新日志里正式官宣了它：一个为智能体安装和管理能力包的命令行工具。\n\n这个官方仓库vercel-labs/skills，发布仅五个月，GitHub星标就冲到了2.4万。\n\n凭什么这么火？简单到只有一行命令：\n\nnpx skills add <package>。\n\n说白了，它就是AI智能体（AI agent）的包管理器。\n\n像前端工程师天天用的npm，一行命令把别人写好的东西装进项目，只不过这回装的不是代码库，而是「能力」。\n\n更狠的是，它不挑工具。Claude Code、Cursor、Codex、Gemini CLI……官方支持的智能体已经超过68个。一份能力包，装进哪个工具都能跑。\n\nVercel还顺手上线了skills.sh，一个技能目录加安装量排行榜，哪个技能火、被装了多少次，一目了然。\n\n榜首名叫find-skills的包，安装量已经冲到230万次。\n\nskills.sh技能目录安装量排行榜，find-skills以230万次（2.3M）安装量居首，frontend-design、vercel-react-best-practices等紧随其后。（图源：skills.sh）\n\nAI编程能力，第一次有了「热门下载」的排行榜。\n\n一行命令\n\nAI学会了一门新手艺\n\n先看它到底干了什么。\n\nnpx skills add vercel-labs/agent-skills，回车。\n\n几秒钟后，你的Claude Code就多了一套React、Next.js的工程规范，外加一套设计准则。下次它写代码，自动按这套规矩来。\n\n这套东西，官方叫「技能包（skill）」。本质上是一个文件夹，核心是一份带YAML头的SKILL.md，写清楚两件事：这个技能是什么，什么时候该用。\n\n文件夹里还能放参考文档、模板，以及一个专门的scripts/目录，里面是能直接执行的脚本。\n\n它解决的痛点特别实在。\n\n模型懂通用的编程语言和框架，可它不懂你这个项目的「土规矩」：你们的代码风格、命名习惯、踩过的坑。\n\n以前这些只能靠你每次开新对话一遍遍复述，现在打包成一个skill，装一次，长期生效。\n\n装完还能像管npm包一样管它：list看装了哪些，update一键更新，remove删掉。\n\n底层是一套共享规范，你给Claude Code装的，换到Cursor照样跑。\n\n要是连装都嫌麻烦，还有更轻的玩法：不装，直接用。\n\n一条npx skills use，把技能临时拉过来，管道一接喂给Claude跑，用完即走，连本地目录都不会「弄脏」。\n\n过去AI的能力边界，靠你嘴皮子怎么描述。现在，能力变成了货架上一个个可以直接取下来的包。\n\nAI工具层的「npm化」\n\n很多人可能会把它当成Claude的新功能。但它来自Vercel，并非Anthropic的原生能力。\n\nClaude Code、Cursor、Codex、GitHub Copilot、Windsurf……全是被支持的对象，skills CLI把它们一股脑接进来，统一一个入口。\n\n入口背后，是AI工具层开始「npm化」了。\n\nVercel把这些零散经验封装成可复用、可分发、可版本管理的模块。\n\nAI能力，正从「提示词工程」走向「能力工程（capability engineering）」。前者解决「这一次怎么说」，后者解决「这件事以后都这么干」。\n\n这套打法，Vercel玩过一次。\n\n当年它靠Next.js卡住了整个前端生态的部署入口，前端开发者绕不开它。\n\n如今它想在AI智能体这一层，把同样的故事再讲一遍。\n\nFind Skills\n\nAI第一次有了「能力搜索引擎」\n\n最有未来感的一笔，是Find Skills，这是一个「找技能的技能」。\n\nfind-skills技能的官方定义——当用户问「如何做X」「有没有能……的技能」，或想扩展能力时，它负责发现并安装对应的智能体技能。\n\n你说一句「帮我做X」，它就替你跑完一整套流程：搜索、筛选、装上最匹配的那个。\n\n更省心的是它还自带一道质检。挑技能时，它会看安装量、比来源，热门的、官方出品的优先，来路不明的会提醒你悠着点。\n\nfind-skills技能的SKILL.md源码，明确写入推荐前的三道验质规则：安装量优先1000+、警惕100以下，来源优先Vercel、Anthropic、微软等官方源，仓库星标低于100要存疑。\n\n这意味着，AI第一次有了自己的「能力搜索引擎」。你不必知道有哪些技能、叫什么名字，只管说要干嘛，剩下的交给它去找。\n\n更重要的是，它不只对程序员有用。\n\n真正被「能力散装」折磨得最狠的，恰恰是借AI写代码的设计师、产品经理、内容创作者等。\n\n他们没有工程化的习惯，git提交、文档规范全靠AI兜着，反而最需要现成的技能包来撑。\n\nFind Skills等于给了他们一个不用懂行也能调兵遣将的入口。\n\n热闹背后\n\n是一笔没人兜底的账\n\n听起来很美，可别急着上头。\n\n回到那个scripts目录。技能里带的是执行逻辑，不是几句无害的说明，它真的会在你电脑里跑命令。\n\n可你随手装的第三方包究竟动了哪些文件，多数人根本不看。\n\n这其中到底可能藏着多少雷？\n\n安全公司Snyk的ToxicSkills研究，对ClawHub与skills.sh上的3984个技能做了首次系统审计：超三成带安全缺陷，13.4%（534个）属严重级，涵盖恶意软件分发、提示词注入（prompt injection）、密钥泄露。\n\n这意味着平均每7、8个里就有1个能直接坑到你。\n\nSnyk「ToxicSkills」研究审计3984个技能：1467个（36.82%）带任一安全缺陷，其中534个（13.4%）为严重级，已确认76个恶意载荷，另有8个至今仍存在于ClawHub上。（图源：Snyk）\n\n另一家机构Koi Security审计2857个，查出341个恶意。\n\n主要的手法，无非两条路。\n\n一条是走脚本，让你的AI跑去陌生IP下载东西就地执行，或偷读你的SSH、AWS配置；\n\n另一条更隐蔽，直接在SKILL.md的文字里下毒，AI把攻击者的隐藏指令当成正经工作说明来读，照做不误。\n\n最狠的还会专偷智能体存着隐私对话的记忆文件。\n\n你可能会说，npm不也天天爆投毒吗，但这次的雷是另一个量级。\n\nnpm装的是纯代码，数据和指令分得开；skill把这条边界抹掉了，它是提示词、代码、完整权限三样捏在一起，一个SKILL.md就能改写智能体的行为，还直通你的文件系统、网络和shell。\n\nnpm的雷顶多炸构建产物，skill的雷直通你的本地凭证和整个代码库。\n\n当然，这不是劝你别装。Vercel自己也提醒：把技能当代码看，装前读一遍，对scripts目录格外小心。\n\n一条最朴素的判断是，下载量大不等于安全，真正该看的是来源和权限。一个查天气的技能，张口要读你服务器的SSH密钥，它要这个干什么？\n\n盼了很久的AI能力的「npm时刻」真的来了。\n\n只是它没只带来便利，连npm这些年踩过的坑也一并打包寄到，还抢在生态成熟之前。\n\n一行命令装好能力固然很爽，但这条路才刚起步。它让你复用同行沉淀的本事，同时也需要你带着判断进场。\n\n挑包、看源、验权限，这套开发者的老手艺，这一回照样得带上。\n\n二十年\n\n一行命令\n\n说到底，这一切的起点，还是\n\nVercel创始人\n\nGuillermo Rauch。\n\n他来自阿根廷布宜诺斯艾利斯的Lanús区。用他自己的话说，他这一生的事业，大半都归功于Web和开源。\n\n少年时他热衷推广\n\nLinux，\n\n教人上手，后来一头扎进JavaScript；加入开源项目MooTools核心团队后，18岁拿到第一份前端工程师全职工作，搬到了旧金山。\n\nGuillermo Rauch\n\n他的成名作之一是Socket.io：一个广为使用的实时通信库，Notion的实时同步、Coinbase最早的交易产品，底层跑的都是它。\n\n之后他看准了一个方向：做工具和云基础设施，让Web更快，把开发者体验做到极致。Next.js和Vercel就此诞生。\n\n如今这套平台撑着华盛顿邮报、保时捷、Under Armour、任天堂等公司的线上业务。\n\n而Vercel真正的杀招就藏在这里：写代码、预览、上线，一条命令搞定。开发者一旦用上，就很难再走出这套体系。\n\n说到底，Rauch二十年只做一件事：把原本复杂的工程，压缩成开发者敢闭眼运行的那一行命令。\n\n从一行now起一个服务器，到Next.js，再到今天的npx skills add，同一套手艺，这次搬到了AI智能体身上。\n\n参考资料：\n\nhttps://github.com/vercel-labs/skills#supported-agents\n\nhttps://www.skills.sh/\n\nhttps://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/\n\n编辑：元宇\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-05_狂揽2.4万星标：一行命令，AI会自己找技能了_新智元.md"}, {"title": "赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲", "source": "极客公园", "digest": "Cloudflare宣布自9月15日起默认屏蔽混合用途AI爬虫，将AI爬虫分为Search/Agent/Training三类。bot流量已超人类流量，Cloudflare以基础设施层身份对AI数据获取进行系统性「立法」，Google因此受影响最大。", "link": "https://mp.weixin.qq.com/s/V_j3lh8xaSbkAgWwC2UeFw", "content": "---\npublish_time: 1783224000\n---\n\n# 赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲\n\n> 原文链接：https://mp.weixin.qq.com/s/V_j3lh8xaSbkAgWwC2UeFw\n> 公众号：极客公园\n\n互联网最大的「保安」，现在要当最大的「收银员」了。\n\n作者｜\n\n靖宇\n\n7 月 1 日，Cloudflare 发了一篇博客，标题很温和，叫「你的网站，你的规则」。但内容一点也不温和——从 9 月 15 日起，所有使用 Cloudflare 的网站，默认屏蔽混合用途的 AI 爬虫。只要你的页面上有广告，AI 的训练爬虫和 Agent 爬虫就进不来。除非你自己去后台手动打开。\n\n注意这个逻辑翻转：以前是「默认允许，你可以选择屏蔽」，现在是「默认屏蔽，你可以选择允许」。\n\n这是互联网基础设施层，第一次对 AI 数据获取方式进行系统性「立法」。\n\n做出这个决定的背景是一个标志性的事件，互联网上的 bot 流量，已经超过了人类流量。\n\nCloudflare CEO Matthew Prince 说，这个里程碑比所有人预期的都来得早，原本预计要到 2027 年才会发生。换句话说，今天你打开的大多数网页，「看」它们的主要不是人，而是机器。\n\n而如何规范来自 AI 的流量，既有可能决定了所有网站的未来，也决定了网络守门人 Cloudflare 自己的发展轨迹。\n\n01\n\n最严厉的「爬虫政策」\n\n根据官方介绍，Cloudflare 把 AI 爬虫拆成了三类。\n\n第一类叫「Search」\n\n，就是为搜索服务建索引的传统爬虫，Google 干了二十多年的那种。\n\n第二类叫「Agent」\n\n，是实时代用户去访问网页的 AI 代理，比如你让 ChatGPT 帮你查个信息、填个表单，它背后就有一个 Agent 爬虫在替你跑腿。\n\n第三类叫「Training」\n\n，就是大规模抓取内容用于模型训练的爬虫。\n\n三类分开标注。网站主可以分别对每一类设置「允许」或「屏蔽」。你想让搜索引擎找到你？可以。你想让 AI 代理帮你的用户查信息？也可以。\n\n但你不想让 AI 公司白嫖你的内容去训练模型？那你可以单独把 Training 关掉。\n\n这个分类本身就是一把刀，直接捅向了 Google。\n\nGoogle 的 Googlebot 是一个典型的「混合爬虫」——它同时为 Google 搜索建索引，也为 Google 的 AI 功能（比如 AI Overviews）采集数据。Google 确实提供了一个叫 Google-Extended 的工具，允许网站选退 AI 训练。但问题在于，Googlebot 这个核心爬虫本身，依然会同时为搜索引擎内置的 AI 功能收集数据。\n\n搜索和 AI 的数据需求，在 Google 的架构里就没有被真正分开过。\n\n这意味着什么？Cloudflare 的数据说得很清楚：因为网站想保持在 Google 搜索中的可见性，就不得不让 Googlebot 进来，而 Googlebot 进来了，AI 训练的数据也就一并拿走了。\n\nGoogle 因此获得了大约两倍于其他 AI 公司的网页内容访问量。\n\nCloudflare 这次还加了一条「最严规则优先」的原则。如果一个爬虫同时执行搜索和训练两个功能，那所有适用的规则会同时生效——按最严格的那个来。也就是说，你只要选择屏蔽 Training 爬虫，Googlebot、Applebot、BingBot 这些混合爬虫，统统会被一并屏蔽。\n\n这刀砍的是「捆绑」——你想被搜索到，就得接受被 AI 训练。Cloudflare 说，这个捆绑不公平，必须拆开。\n\n一组数据可以说明旧「社会契约」崩坏到了什么程度。Cloudflare 公布了各家 AI 公司的爬取与回流比：Google 大约是 14:1——每爬取 14 个页面，回流 1 次点击。OpenAI 是 1,700:1。Anthropic 是 73,000:1。\n\n搜索引擎时代的交易是「我爬你的内容，你得到流量」。在 AI 时代，这笔账已经算不过来了。\n\n02\n\n从「保安」到「收银员」\n\n如果 Cloudflare 只是帮网站主挡住 AI 爬虫，那这件事的意义就止于「防御」。但 Cloudflare 显然不满足于只当保安。\n\n去年 7 月，Cloudflare 推出了「Pay Per Crawl」——按爬取次数向 AI 公司收费。今年，它把这个模式升级为「Pay Per Use」。区别在于，不再是爬虫每来一次你收一次钱，而是当你的内容在 AI 系统中真正产生了价值，被用于生成一个回答、出现在一个 AI 搜索结果里，用户才能收到钱。\n\n从「按次收费」到「按价值收费」，这个转变的野心不小。\n\n它意味着 Cloudflare 想建立的不是一道墙，而是一个市场。\n\n目前的初始合作伙伴是两家 AI 搜索公司 Ceramic.ai 和 You.com。当出版商选择加入后，他们的内容出现在 Ceramic 的 AI 搜索结果中，或被 You.com 的 Agent 访问时，出版商会收到付款。大出版商们纷纷站台——Condé Nast 的 CEO 说这是「游戏规则的改变」，Reddit 的联合创始人说「整个生态系统都会受益」。\n\n听起来像是一个完美的故事。但我觉得有必要说一个不那么完美的细节。\n\n今年 3 月，Cloudflare 自己发布了一个爬虫 API。你给它一个 URL，它能一次性抓取整个网站，返回 HTML、Markdown 或结构化 JSON。这让一些出版商相当不安——那个一直帮我挡爬虫的公司，怎么自己造了一个爬虫？\n\n更尴尬的是，有出版商尝试屏蔽 Cloudflare 自己的爬虫时发现，设置不生效。虽然 Cloudflare 后来修复了这个问题，但互联网上的评论已经传开了——\n\n「我们保护网站不被爬虫抓取……除非是我们自己的爬虫。」\n\nCloudflare 对此的解释是，它的爬虫是「合规爬虫」，会尊重 robots.txt，会遵守自己的 AI Crawl Control 规则。如果站长选择屏蔽 AI 爬虫，Cloudflare 自己的爬虫也会被挡在门外。用一位开发者的话说，这是一个「两边下注所以永远赢」的策略。\n\n这就引出了一个根本性的问题：Cloudflare 到底是一个中立的基础设施裁判，还是一个新型的中间商？\n\n答案可能是后者。\n\n它同时扮演着规则制定者（定义三类爬虫）、规则执行者（在基础设施层拦截爬虫）和市场参与者（运营自己的爬虫和内容交易平台）三个角色。\n\n这不是说它做的事情没有价值——把 AI 爬虫从「无序掠夺」拉入「明确分类、需要许可」的框架，确实是一个进步。但把 Cloudflare 当成内容创作者的「救世主」，就太天真了。\n\n它在构建的，是一个以自己为枢纽的「AI 内容税收站」。\n\n03\n\n普通人能分到蛋糕吗？\n\n这可能是整件事里最让人冷静的部分。\n\nCondé Nast、Dotdash Meredith、Reddit——站出来支持 Cloudflare 的，都是大型出版商和平台。它们有内容规模，有法务团队，有谈判筹码。这些公司不需要 Cloudflare 也能跟 AI 公司签许可协议——事实上，过去一年全球已经签了超过 50 份内容许可大单。Cloudflare 对它们来说，是多了一个工具，不是唯一的出路。\n\n但个人博主呢？一个在 WordPress 上写技术教程的独立开发者呢？一个用公众号写深度分析的自媒体人呢？\n\n理论上，Cloudflare 的基础设施，可以让小内容主无需逐一跟每家 AI 公司谈判，就能设定权限和获得补偿。\n\n但「理论上」三个字是关键。\n\nPay Per Use 到现在只有 Ceramic.ai 和 You.com 两个合作伙伴，都是小玩家。OpenAI、Google、Anthropic 这些真正在大规模消耗内容的公司没有一个上桌。\n\n而且有一个更现实的矛盾：对小创作者来说，曝光本身就是最稀缺的资源。屏蔽 AI 爬虫可能意味着减少被发现的机会。大媒体屏蔽爬虫，Google 搜索还是会收录它们；小博客屏蔽爬虫，可能就真的消失在互联网的噪音里了。\n\n有一组更让人清醒的数据。\n\nAI 聊天机器人带来的引荐流量比传统搜索少大约 96%。用户在 AI 回答中点击引用来源的概率，只有大约 1%。出版商在过去一年因为 AI 搜索功能损失了 20% 到 90% 不等的流量和收入。一项研究发现，Google 的 AI Overviews 让外链点击量下降了大约 40%。\n\n这意味着，即使 Pay Per Use 全面铺开，付费规模也可能远远不够弥补出版商已经失去的广告收入。这不是一场变局，更像是一次止损——而且未必能止住。\n\nCloudflare 报告说，50% 以上的 AI 爬虫流量花在重复抓取未更新的页面上。解决这种低效确实有价值。但解决效率问题和让创作者真正赚到钱，是两件事。\n\n04\n\n「菩萨」也有自己的庙\n\nCloudflare 向来被广大用户称赞为「赛博菩萨」，是因为它确实在做一件有价值的事——把 AI 时代的数据掠夺从暗处拉到明处，逼 AI 公司说清楚「我要你的数据干什么」。在一个 bot 流量已经超过人类流量的互联网上，有人愿意站出来喊一声「规矩不能这么没有」，这本身值得肯定。\n\n但「菩萨」也有自己的庙。\n\nCloudflare 管理着全球大约 20% 的网络流量，这个数字既大又不够大。另外 80% 的网站不在它的保护范围内。AI 公司完全可以把数据采集的重心转向非 Cloudflare 站点。\n\nGoogle 和 Apple 的爬虫已经提供了形式上的选退工具，可能借此绕过 Cloudflare 的拦截。英国竞争与市场管理局（CMA）正在从监管角度向 Google 施压，要求它让出版商能在不影响搜索排名的前提下退出 AI 训练。\n\n一个基础设施公司的政策，不会让这场内容权益的重新分配尘埃落定。\n\n但它揭示了一个更深层的趋势，\n\n互联网的「收费站」正在从搜索引擎转移到基础设施层。\n\n过去二十年，Google 是那个站在路中间决定谁能被看见的人。现在 Cloudflare 想在更底层的位置拦一道——你要过路，先说清楚你是来干什么的，然后按规矩来。\n\n收费站变了。收费的人，未必变了。\n\n*头图来源：hitechnectar.com\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n当 AI 消耗你的内容却不回馈流量，\n\n你愿意被「保护」还是被「代理收费」？", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-05_赛博菩萨 Cloudflare，AI 爬虫最严厉的父亲_极客公园.md"}, {"title": "CVPR 2026新作：AI绘画正式迈入「所控即所得」时代", "source": "量子位", "digest": "商汤科技研究团队提出ConsistCompose，将图像生成从「所想即所得」推进到「所控即所得」，通过统一多模态框架原生支持实例级布局控制，解决了商业化模型无法精确指定画面中元素位置的核心痛点。", "link": "https://mp.weixin.qq.com/s/VT54CIFRLHOTyAUiUb8AvA", "content": "---\npublish_time: 1783230060\n---\n\n# CVPR 2026新作：AI绘画正式迈入「所控即所得」时代\n\n> 原文链接：https://mp.weixin.qq.com/s/VT54CIFRLHOTyAUiUb8AvA\n> 公众号：量子位\n\n商汤科技研究团队 投稿\n\n量子位 | 公众号 QbitAI\n\n你有没有遇到过这样的困境：\n\n给AI描述了半天，图是生成出来了，但图片中的主体全在错误的地方各干各的，你想要的构图完全不见了……\n\n如今的图像生成模型，早已能画出细节饱满、语义贴合的画面。可对于实际创作者来说，只做到“画面好看”远远不够。\n\n在真实创作场景中，\n\n用户更关心的是：\n\n主体是否出现在指定区域，关键元素是否保持在特定位置，参考图中的人物或对象身份是否能在生成结果中稳定保留。\n\n来自商汤科技研究团队的一篇CVPR 2026的会议论文\n\nConsistCompose: Unified Multimodal Layout Control for Image Composition\n\n回答了这一长期存在的问题。将图像生成从“所想即所得”进一步推进到“所控即所得”——模型不仅需要理解“画什么”，还需要准确执行“画在哪里”。\n\n背景：精准布局，为何仍是难题？\n\n真实创作中的核心痛点\n\n对于海报设计、电商主图、封面创作等专业场景，图像不只需要“好看”，更需要严格符合预设版式——哪个主体在左，哪个元素在右，都不能出错。\n\n△\n\n当下通用多模态模型布局可控生成能力的缺失\n\n当前商业化模型，包括ChatGPT Image 2.0在内，面对“生成一只猫，并指定猫、猫爪、门、地板等元素在画面中的具体位置”这样的需求时，依然难以满足。\n\n现有方法的两条思路\n\n学术界已有方法大致分为两类：\n\n引入额外控制模块：\n\n通过额外控制模块或区域注意力机制引导生成，但与具体架构强绑定，难以迁移到统一多模态框架。\n\n将布局视为独立模态的方法：\n\n引入专门空间token显式建模位置，却带来多模态融合与泛化的新问题。\n\n两条路径指向同一个症结：\n\n布局控制被作为外部附加能力处理，而非模型原生接口的一部分。\n\n真正的问题因此变成——能否在统一多模态模型原有的语言-视觉接口中，自然表达并执行实例级布局约束？ConsistCompose给出了肯定的回答。\n\n技术方案：三位一体的完整框架\n\nConsistCompose提出了一套完整的闭环框架，核心由三个部分构成：\n\nICBP（实例坐标绑定提示）、Coordinate-CFG（坐标无分类器引导）\n\n与\n\nConsistCompose3M数据集\n\n，分别解决“如何表达布局”、“如何执行布局”以及“如何学习布局”三个层次的问题。\n\nICBP：将布局约束融入语言接口\n\nConsistCompose的核心思想直接针对上述症结：\n\n将布局信息显式写入语言序列，使坐标约束能够像文本语义一样被模型原生理解和使用。\n\n为此，论文设计了\n\nInstance-Coordinate Binding Prompt（ICBP）\n\n——将每个实例描述与对应的归一化坐标直接绑定在文本序列中。以一段示例提示词为例：\n\nA cat <bbox>[\n\n0.109\n\n,\n\n0.297\n\n,\n\n0.607\n\n,\n\n0.870\n\n]</bbox>\n\nhas extended paw <bbox>[\n\n0.497\n\n,\n\n0.566\n\n,\n\n0.564\n\n,\n\n0.642\n\n]</bbox>.\n\n在这种表示下，“cat”和“paw”不再只是语义描述，而是与明确的空间区域建立了绑定关系。\n\n文本、坐标、参考图像和生成目标在同一套序列建模框架中统一处理\n\n——空间控制不再是外挂的任务特定模块，而成为模型原生输入接口的一部分。\n\n这一设计的优雅之处在于：它完全复用了统一多模态模型已有的语言理解能力，无需引入新的模态分支或特殊的空间编码器，架构改动极小，迁移成本极低。\n\nCoordinate-CFG：内容与布局的显式解耦\n\nICBP实现了基本的布局可控生成，但也引入了一个新问题：内容条件与布局条件在同一序列中深度耦合——\n\n调整布局往往会连带影响内容生成\n\n，难以对二者进行独立控制。\n\n为此，ConsistCompose进一步提出了\n\nCoordinate-CFG\n\n：在推理阶段引入可调节的坐标引导强度，将布局控制从内容生成中显式解耦。\n\n△\n\nCoordinate-CFG在不同引导强度下的布局控制效果\n\n其核心逻辑类似于经典的无分类器引导\n\n（CFG）\n\n机制，但专门针对坐标条件设计：\n\n引导强度较弱时：\n\n模型保留更大的生成自由度，画面更加自然；\n\n引导强度增强时：\n\n更严格地执行空间约束，对象与目标区域的对齐精度随之提升。\n\n从论文展示的摩托车示例可以清晰看到，随着Coordinate-CFG\n\n从0.0增大到0.4，摩托车整体、前轮、后轮等各部件与标注框的对齐程度逐步提升，而图像整体质量和自然性得以保持。\n\n内容“画什么”与布局“画在哪里”由此成为两个可以独立干预的控制维度\n\n——这也是ConsistCompose在工程实用性上的重要突破。\n\nConsistCompose3M：让模型真正学会多主体布局\n\n方法设计之外，数据是布局可控生成能力得以落地的另一个关键。\n\n△\n\nConsistCompose3M数据示意图\n\n论文构建了\n\nConsistCompose3M数据集\n\n，共约\n\n340万样本\n\n：\n\n约\n\n260万\n\n为布局可控文本到图像样本\n\n约\n\n80万\n\n为多参考图像条件生成样本\n\n与只关注单一对象或简单布局的训练数据不同，ConsistCompose3M更强调\n\n多实例、多参考图与组合式生成场景\n\n，覆盖了：\n\n对象与坐标的绑定关系\n\n多主体间的空间共存\n\n参考主体的身份保持\n\n复杂布局下的整体画面组织能力\n\n这使模型不只学会“把一个对象放到指定位置”，而是建立起对多元素空间关系与主体一致性的系统性理解。\n\n三者共同构成ConsistCompose的完整闭环：ICBP提供布局表达接口，Coordinate-CFG实现解耦可控的推理引导，ConsistCompose3M提供大规模数据支撑——从表示、执行到学习，环环相扣。\n\n实验结果\n\n布局可控文本到图像生成\n\n在COCO-Position等标准基准上，ConsistCompose与GLIGEN、InstanceDiffusion、MIGC、MIGC++、CreatiLayout等主流方法对比，在以下核心指标上均取得最优结果：\n\n△\n\n布局可控图像生成方法定量对比\n\n值得强调的是，\n\n实例生成成功率与位置准确性同步提升\n\n——模型并非以牺牲生成完整性换取位置精度，而是在两个维度上实现了协同优化。\n\n△\n\n布局可控图像生成方法定性比较\n\n多参考图布局可控生成（MS-Bench）\n\n在引入多参考图的复杂条件下，ConsistCompose同样表现出色，在MS-Bench和MS-Bench-Random上的DINO、mIoU、AP等关键指标均优于GLIGEN、MS-Diffusion、MUSE等对比方法，有效验证了其在多主体一致性生成场景下的泛化能力。\n\n△\n\n多参考图布局可控生成MS-Bench定量对比\n\n△\n\n多参考图布局可控生成MS-Bench定性对比\n\n定性比较方面，ConsistCompose的生成结果在主体位置对齐和身份外观保持上均显著优于对比方法，整体画面自然性也得到保持。\n\n项目价值\n\nConsistCompose所关注的，并不仅仅是布局控制这一单一能力，而是组合式图像生成中的一个核心挑战：\n\n如何在一次生成过程中，同时满足语义一致性、空间准确性、主体身份稳定性以及视觉自然性等多重约束。\n\n它直接覆盖了三类高价值的真实创作场景：\n\n布局可控生成：\n\n通过文本与坐标的组合，精确指定每个对象的空间位置，适用于海报设计、电商主图、封面创作等对版式有严格要求的场景。\n\n图像要素重排：\n\n保留原图中已有的视觉元素，同时对空间关系进行重新编排——更接近设计师日常工作中“换版式，不换素材”的操作逻辑。\n\n多主体一致性生成：\n\n从不同参考图中提取各自主体，在指定布局下组合进同一张图像，同时保持每个主体的身份特征与整体视觉一致性。身份保持、空间约束、图像自然性三重目标同时作用，是组合式生成中约束最为复杂也最贴近专业需求的场景。\n\nConsistCompose的探索表明，\n\n空间结构本身也可以被纳入统一多模态模型的语言表达与推理框架之中\n\n。当布局约束能够被自然地理解、推理与生成时，图像生成正在从单纯的内容生成，迈向更加可控、可执行的视觉创作。\n\n某种意义上，这也代表着图像生成能力演进的一个重要方向——\n\n从“所想即所得”，逐步走向“所控即所得”。\n\n论文：https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_ConsistCompose_Unified_Multimodal_Layout_Control_for_Image_Composition_CVPR_2026_paper.pdf\n\nGitHub：https://github.com/OpenSenseNova/ConsistCompose\n\nHuggingFace：https://huggingface.co/sensenova/ConsistCompose-BAGEL-7B-MoT\n\n项目主页：https://opensensenova.github.io/ConsistCompose/\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-07-05_CVPR 2026新作：AI绘画正式迈入「所控即所得」时代_量子位.md"}, {"title": "大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来", "source": "量子位", "digest": "清华大学提出POPO框架，针对LLM强化学习后训练中rollout无效样本问题，用组级回放+解耦式off-policy重要性采样将训练时间从55h降至34h，仅使用约30%的rollout预算即可达到DAPO性能。", "link": "https://mp.weixin.qq.com/s/3vzTIiAgp3BID9E1lO5MhQ", "content": "---\npublish_time: 1783222320\n---\n\n# 大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来\n\n> 原文链接：https://mp.weixin.qq.com/s/3vzTIiAgp3BID9E1lO5MhQ\n> 公众号：量子位\n\nPOPO团队 投稿\n\n量子位 | 公众号 QbitAI\n\n大模型做强化学习后训练，最贵的是什么？\n\n很多时候，不只是反向传播，而是一次又一次让模型生成长链推理答案，也就是rollout。\n\n尤其在RLVR\n\n（Reinforcement Learning with Verifiable Rewards，可验证奖励强化学习）\n\n里，模型需要对每个prompt生成多条回答，再根据答案是否正确获得奖励。\n\n看起来很自然：答案对了给1，错了给0，然后让模型从奖励里学习。\n\n但真实训练中有一个很容易被忽略的问题：\n\n并不是每一组rollout都真的有训练信号。\n\n如果一个prompt下的多条回答全部正确，奖励全是1；如果全部错误，奖励全是0。对于GRPO这类组内归一化算法来说，这两种情况都会导致reward方差为0，优势项几乎消失。\n\n换句话说，模型花了大量算力生成答案，但这些样本对参数更新几乎没有贡献。\n\n针对这一问题，来自清华大学自动化系的研究者提出了\n\nPOPO（Group Prioritized Off-Policy Optimization）\n\n，一个面向LLM reasoning RLVR训练的高效off-policy优化框架。\n\n一句话概括：\n\nPOPO不再为无效样本额外做更多rollout，而是把当前batch里的无效组替换成最近缓存过的高质量有效组，并通过解耦式off-policy重要性采样稳定更新，从而用更少rollout获得接近DAPO的训练效果。\n\n实验显示，在数学推理、数值规划、视觉几何三类任务上，POPO都能显著提升RL微调效率。在DeepScaleR数学任务上，POPO只使用约30%的rollout预算，就能达到与高资源DAPO接近的性能；在DSR-7B上，POPO的数学分布内平均分达到\n\n63.3\n\n，略高于DAPO的\n\n63.2\n\n，但训练时间从DAPO的\n\n55h\n\n降到\n\n34h\n\n。\n\nRLVR有奖励，但很多样本其实“学不到东西”\n\nRLVR的核心优势，是奖励可以被自动验证。\n\n比如数学题、代码题、逻辑题，只要最终答案可以判断对错，就能把正确回答记为1，错误回答记为0。\n\n这让模型不必依赖人类偏好打分，也降低了reward hacking的风险。\n\n但问题也出在这里。\n\n在GRPO等方法中，模型通常会对同一个prompt生成一组回答，然后在组内计算相对优势。\n\n如果这组回答中有的对、有的错，奖励有差异，模型就能知道哪些轨迹更值得强化。\n\n但如果一组回答全部正确，或者全部错误，奖励没有方差，组内相对优势就会退化。\n\n论文把这种情况定义为\n\nineffective sample（无效样本）\n\n：\n\n当同一个prompt的response group中所有回答奖励方差为0时，这个样本对RLVR优化几乎没有有效训练信号。\n\n这类无效样本在RLVR中非常常见。\n\n太简单的题，模型可能全部答对；太难的题，模型可能全部答错。两者都会消耗rollout，却无法提供有效梯度。\n\n现有方法能过滤无效样本，但代价很高\n\n为了解决这个问题，已有方法通常有三条路线。\n\n第一类是\n\nactive sampling（主动采样）\n\n。\n\n代表方法是DAPO：它会扩大候选prompt batch，做更多rollout，然后过滤掉奖励全对或全错的prompt，只保留有效组。\n\n这个思路很直接，也很有效。\n\n但代价是：\n\n为了筛出有效样本，必须额外生成大量回答。\n\n对于长CoT推理任务来说，rollout本身就很贵，额外rollout甚至可能超过RL微调本身的训练成本。\n\n第二类是\n\npredictive sampling（预测式采样）\n\n。\n\n这类方法尝试在rollout前预测prompt的成功率，优先选择“中等难度”的prompt。\n\n但模型能力会在训练中不断变化，prompt成功率也会快速漂移；而在大规模数据集或低epoch训练中，每个prompt的历史信息又很稀疏，预测往往不够稳定。\n\n更重要的是，只采中等难度样本，也可能系统性地避开真正困难、但有助于提升能力上限的问题。\n\n第三类是\n\ntrajectory replay（轨迹回放）\n\n。\n\n这类方法会保存历史成功回答，在当前组全部失败时，把以前成功过的轨迹插进来。\n\n但它仍然没有根本解决prompt层面的无效问题。\n\n如果当前组全部正确，它还是无效；如果一个极难prompt从来没有成功轨迹，也无法回放。\n\n同时，把不同策略生成的轨迹混在同一个response group里，还会带来行为策略不一致、优势估计失效、off-policy bias难以处理等问题。\n\n核心方法：不多做rollout，而是补齐有效batch\n\nPOPO的核心思路很简单：\n\n当前batch里哪些组是有效的，就保留；哪些组是无效的，就用最近缓存过的有效组补上。\n\n也就是说，POPO不像DAPO那样不断额外采样新prompt、额外生成更多回答，而是维护一个小型replay buffer，里面存放最近训练过程中遇到的有效response group。\n\n每一步训练时，模型先正常对当前batch做rollout。\n\n然后根据奖励方差，把response group分成两类：\n\n有效组：组内回答有对有错，奖励方差大于0；\n\n无效组：组内回答全对或全错，奖励方差等于0。\n\nPOPO会保留当前batch里的有效组。\n\n对于被过滤掉的无效组位置，POPO不重新rollout，而是从replay buffer中取出最近的有效组进行补齐。\n\n这样构成的训练batch，就能尽可能由有效样本组成，同时不增加新的rollout成本。\n\n△\n\nPOPO框架示意图：当前batch中的无效组被过滤掉，再由最近缓存的高质量off-policy有效组补齐；对于回放组，POPO使用解耦式重要性采样进行稳定优化\n\n为什么是“组级回放”，而不是“轨迹级回放”？\n\nPOPO的第一个关键设计，是\n\nprioritized group replay（优先级组回放）\n\n。\n\n很多轨迹回放方法会在response级别操作：比如从历史里拿出某条成功回答，插入当前prompt的response group。\n\n但这样会破坏组内一致性。\n\n因为同一个组里的不同回答，可能来自不同时间点的策略模型。对于需要组内归一化优势估计的GRPO来说，这会让advantage不再对应一个清晰的行为策略分布。\n\nPOPO则选择在\n\ngroup级别\n\n回放。\n\n一个group包含一个prompt和它对应的一组responses，并且这一整组responses都来自同一个历史策略。\n\n这样做有两个好处。\n\n第一，回放对象本身是一个完整有效组，组内reward方差非零，可以直接提供学习信号。\n\n第二，整组数据来自同一个行为策略，后续可以更清晰地做off-policy校正。\n\nPOPO对回放组主要考虑两个标准。\n\n第一是\n\nquality（质量）\n\n：只把奖励方差非零的有效组放进buffer。\n\n第二是\n\noff-policiness（离当前策略有多远）\n\n：优先回放最近存入buffer的有效组。\n\n论文指出，在proximal policy update约束下，越新的历史策略通常越接近当前策略。因此，用FIFO buffer中最近的有效组，可以作为一种低成本的off-policy距离近似，避免显式计算大量KL divergence。\n\n关键二：off-policy也要稳定更新\n\n只做回放还不够。\n\n因为回放组不是当前策略刚刚生成的，它们是历史策略生成的off-policy数据。\n\n如果简单把这些数据当成on-policy数据来训练，就会引入偏差。\n\n如果完全把优化约束对齐到生成它们的历史行为策略，又可能让当前策略更新被过度限制。\n\n因此，POPO引入了\n\ndecoupled off-policy optimization（解耦式off-policy优化）\n\n。\n\n直观理解，它把两个角色拆开：\n\n行为策略：负责说明这条回放数据当初是由哪个历史策略生成的；\n\n近端约束策略：负责约束当前更新不要偏离最近的旧策略太远。\n\n对于回放样本，POPO使用重要性采样来校正off-policy bias；同时仍然保持和on-policy样本一致的trust-region约束。\n\n这样做的目标是：\n\n既修正历史数据带来的分布偏差，又不牺牲当前策略更新的稳定性。\n\n这也是POPO与普通trajectory replay的关键差异之一。\n\n实验设置：数学、数值规划、视觉几何三类任务\n\n论文在三类reasoning任务上评估POPO。\n\n第一类是\n\n数学推理\n\n。\n\n团队使用DeepSeek-R1-Distill-Qwen-1.5B和7B，在DeepScaleR数据集上训练。DeepScaleR包含约40k道竞赛级数学问题。\n\n评测基准包括AIME25、AMC23、MATH500、Minerva Math、OlympiadBench等分布内数学任务，也包括MMLU-Pro、ARC-c、GPQA-diamond等分布外通用推理任务。\n\n第二类是\n\n数值规划\n\n。\n\n团队使用Qwen2.5-3B，在Countdown-34的20k子集上训练，并在held-out split和更难的Countdown-4上评估。\n\n第三类是\n\n视觉几何\n\n。\n\n团队使用Qwen2.5-VL-3B-Instruct，在Geometry3k上训练和测试。这个任务要求模型同时理解几何图像，并完成符号推理。\n\n△\n\nGeometry3k视觉几何任务示例，需要模型同时处理图像信息与符号推理\n\n对比方法包括：\n\nGRPO：基础RLVR算法；\n\nDAPO：通过额外rollout过滤无效prompt的高资源方法；\n\nMoPPS：预测有效prompt的采样方法；\n\nARPO：使用历史成功轨迹的replay方法；\n\nReMix、REPO、RR、GRESO：在DSR-1.5B上额外比较的off-policy或采样基线。\n\n论文强调，POPO的主要目标不是用更多资源超过DAPO，而是在显著降低rollout成本的情况下，尽可能达到DAPO的效果。\n\n训练曲线：POPO提升快，效果接近DAPO\n\n从训练曲线看，POPO在多个任务和模型规模上都比GRPO、ARPO、MoPPS收敛更快，最终准确率也更高。\n\n更关键的是，它整体接近DAPO，但不需要DAPO那样额外扩大候选batch做大量rollout。\n\n论文指出，POPO通常只需要\n\n40%–70%\n\n的训练步数，就能达到GRPO的最终性能。\n\n△\n\n不同方法在Countdown、Geometry、DeepScaleR等任务上的训练曲线：POPO通常比GRPO、ARPO、MoPPS提升更快，并接近高资源DAPO\n\n为什么会这样？\n\n有效样本比例给出了答案。\n\n在普通GRPO中，训练batch里的有效样本比例通常低于\n\n50%\n\n。\n\n这意味着模型每一步生成的很多response group，实际并没有提供足够的学习信号。\n\n而POPO和DAPO都能构造出主要由有效组组成的训练batch。\n\n区别在于：DAPO靠额外rollout筛选，POPO靠最近有效组回放补齐。\n\n△\n\n训练batch中有效样本比例对比：GRPO的有效组比例通常低于50%，POPO与DAPO则能让训练batch保持高有效性\n\n主结果：性能接近DAPO，但rollout和时间少很多\n\n在数学推理上，POPO的结果非常接近甚至略高于DAPO。\n\n在\n\nDSR-1.5B\n\n上，POPO的分布内平均分为\n\n55.1\n\n，与DAPO的\n\n55.1\n\n持平；分布外平均分为\n\n32.9\n\n，高于DAPO的\n\n32.7\n\n。但训练时间方面，POPO为\n\n16h\n\n，DAPO为\n\n30h\n\n。\n\n在\n\nDSR-7B\n\n上，POPO的分布内平均分为\n\n63.3\n\n，高于DAPO的\n\n63.2\n\n；分布外平均分为\n\n51.2\n\n，高于DAPO的\n\n50.8\n\n。训练时间方面，POPO为\n\n34h\n\n，DAPO为\n\n55h\n\n。\n\n在Countdown上，POPO的平均准确率为\n\n60.4\n\n，接近DAPO的\n\n61.5\n\n，但rollout数为\n\n205k\n\n，明显少于DAPO的\n\n877k\n\n；训练时间也从DAPO的\n\n5.6h\n\n降到\n\n3.2h\n\n。\n\n在Geometry上，POPO达到\n\n50.0\n\n，接近DAPO的\n\n50.6\n\n；但rollout数为\n\n492k\n\n，低于DAPO的\n\n1438k\n\n，训练时间也从\n\n11.2h\n\n降到\n\n6.8h\n\n。\n\n△\n\n数学、Countdown与Geometry评测结果：POPO与DAPO性能接近，但在多个任务上显著减少rollout数和训练时间\n\n换句话说，POPO并不是通过“更贵的训练”换来更高效果。\n\n它真正做的是：\n\n减少无效rollout对训练batch的污染，把已经产生过的有效训练信号重新利用起来。\n\n从rollout维度看，论文进一步显示，POPO能用约\n\n30%\n\n的DAPOrollout预算，达到接近DAPO的训练表现。\n\n△\n\n以rollout数量为横轴的训练曲线：POPO在更少rollout预算下取得与DAPO接近的表现\n\n消融实验：最近有效组+解耦off-policy都很关键\n\n为了验证POPO的设计是否必要，论文做了多组消融实验。\n\n首先是replay机制。\n\nPOPO-KL使用KL divergence来选择replay group。结果显示，它和POPO表现接近，但计算效率明显更低：POPO用时\n\n3.2h\n\n，POPO-KL用时\n\n4.8h\n\n。\n\n这说明，基于recency的最近回放策略，是一种足够有效、同时更便宜的off-policy距离近似。\n\nGRPO-filter则只过滤无效组，不用replay补齐batch。它虽然略好于GRPO，但不如POPO。这说明，仅仅删掉无效样本还不够，训练batch变小会带来更大噪声；用有效组补齐batch才是关键。\n\n其次是replay组的质量和新鲜度。\n\n如果POPO-ineff不区分有效组和无效组，只回放最近group，性能明显下降。\n\n如果POPO-stale(10)从更久远的历史有效组中随机回放，性能甚至会崩溃。这说明off-policy gap不能忽视，回放样本必须足够接近当前策略。\n\n最后是off-policy优化目标。\n\n如果把回放数据简单当成当前on-policy数据，POPO-π_old会出现性能崩溃；如果把约束对齐到历史行为策略，POPO-πβ的性能提升会变慢。\n\n完整POPO的解耦式off-policy目标表现最好。\n\n△\n\n消融实验：POPO的最近有效组回放、质量标准、off-policy新鲜度控制和解耦式优化目标都对性能有明显贡献\n\n进一步分析：不同组大小、不同RLVR算法都适用\n\n论文还进一步分析了POPO在不同设置下的稳定性。\n\n在batch replenishment ratio实验中，随着有效数据占比提高，POPO和DAPO的表现都会提升。但DAPO需要额外rollout来补齐有效batch，POPO则能在rollout成本不变的情况下利用replay补齐。\n\n在response group size实验中，论文测试了k=4、8、16、32。结果显示，POPO在不同group size下都稳定优于GRPO，并接近DAPO。\n\n此外，POPO不只适用于GRPO。\n\n论文还将POPO结合到RLOO和PPO上，结果显示加入POPO后，两种基础RLVR算法的训练效率和最终准确率都有提升。\n\n更进一步，POPO还可以和MoPPS这类主动prompt采样方法结合。POPO+MoPPS能提高在线有效组比例，并进一步加速策略提升。\n\n△\n\n更多分析：POPO在不同补齐比例、不同response group size、不同基础RLVR算法，以及与预测采样方法结合时都保持稳定收益\n\n让RLVR从“多生成”走向“少浪费”\n\n这项工作的核心价值，不只是提出了一个新的replay公式，而是指出了RLVR训练中的一个现实瓶颈：\n\n很多rollout并不是因为答案错了才没价值，而是因为一整组答案没有差异，导致算法学不到相对偏好。\n\nDAPO的思路是多生成、多筛选，用额外rollout换有效batch。\n\nPOPO的思路则是少浪费：既然训练过程中已经见过有效组，就把最近的高质量有效组缓存起来，用来替换当前batch中没有训练信号的无效组。\n\n为了让这种replay不破坏训练稳定性，POPO又进一步在group级别保留行为策略一致性，并通过解耦式重要性采样修正off-policy bias。\n\n从结果看，POPO在数学推理、数值规划和视觉几何任务上，都能以显著更少的rollout成本获得接近DAPO的表现。\n\n这对于大模型RL后训练很有现实意义。\n\n因为随着模型推理链变长、任务更复杂，rollout成本会越来越高。未来的RLVR训练，可能不能只靠“多采样、多过滤”解决问题，而需要像POPO这样，把训练过程中已经产生的有效信号尽可能吃干榨净。\n\n当然，论文也指出，POPO当前的replay机制并不一定总能选到最有信息量的样本。未来可以探索短期FIFO buffer与长期reservoir相结合的混合策略，并进一步减少在线rollout数量、增加可控off-policy数据利用。\n\n但至少从这篇工作看，RLVR后训练的效率优化，已经从“怎么获得更多奖励信号”，进一步走向了一个更细的问题：\n\n如何不让已经付出代价生成出来的有效信号，被白白浪费掉。\n\n论文信息\n\n论文标题：\n\nRLVR without Ineffective Samples: Group Prioritized Off-Policy Optimization for LLM Reasoning\n\n论文作者：\n\nYixiu Mao、Yun Qu、Cheems Wang、Heming Zou、Xiangyang Ji\n\n主要作者：\n\n毛逸休，清华大学自动化博士，师从季向阳教授。聚焦强化学习与大模型后训练研究，围绕复杂环境下智能体与推理模型的高样本效率学习开展系统性探索。在ICML、NeurIPS、ICLR、Nature Communications等国际顶级会议与期刊发表一作/共一论文十余篇，多项成果入选Spotlight、Oral，现于阿里巴巴通义千问大模型团队实习。\n\n机构：\n\n清华大学自动化系季向阳教授团队\n\n论文地址：https://arxiv.org/pdf/2606.01281v1\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": true, "source_file": "sources/2026-07-05_大模型训练省钱秘籍：清华POPO一招组级回放，把浪费的算力全部捡回来_量子位.md"}, {"title": "AI助手APP，阿里千问增速第一了", "source": "量子位", "digest": "量子位智库发布6月AI助手APP数据：千问以2700万下载量居首，豆包DAU超1.5亿蝉联榜首。格局从BAT三足鼎立演变为千问豆包双强争霸，元宝跌至800万以下。千问6月日活环比增长15%，高考志愿填报Agent成增长引擎。", "link": "https://mp.weixin.qq.com/s/cN1b3YrulxpKbhX29UqsUw", "content": "---\npublish_time: 1783240680\n---\n\n# AI助手APP，阿里千问增速第一了\n\n> 原文链接：https://mp.weixin.qq.com/s/cN1b3YrulxpKbhX29UqsUw\n> 公众号：量子位\n\n3 images\n\n量子位智库统计的AI助手APP应用，6月数据新鲜出炉！从用户新增到用户活跃，给你最新最全的参考[吃瓜]\n\n[得意]APP端月新增下载：千问豆包神仙打架，元宝掉队？？\n\n在量子位智库入库统计的60余款AI智能助手APP中，6月下载总量超6600万，较5月下降约25%。\n\n头部格局由BAT（指字节豆包、阿里千问、腾讯元宝）三足鼎立演变为双强争霸。\n\n千问以约2700万的下载量继续稳坐下载榜第一，豆包以近2500万的下载量排在第二。第三的元宝下载量跌至800万以下。\n\n[加油]APP端月平均DAU：虽然推出收费模式，豆包日活依旧坚挺\n\nAI助手APP端6月整体DAU达到近2.7亿，与5月基本持平。\n\n6月，豆包日活环比下降2%，仍以超过1.5亿的DAU蝉联榜首。豆包虽推出专业版付费订阅服务，但基础免费版的保留使得其日活用户数平稳维持。\n\n随着高考志愿填报Agent的上线，千问6月日活环比增长15%，超过6400万。\n\n[机智]APP端新增三日留存率：依旧是千问豆包霸榜\n\n6月，千问和豆包三日留存率都超过28%，在AI助手APP中位列前二。\n\n新安装三日留存率超过18%的智能助手APP还包括：元宝（25.83%）、Kimi（24.19%）、DeepSeek（23.74%）、灵光（19.04%）、文心（18.71%）。\n\n[悠闲]APP端2026年累计下载：豆包还是太稳了\n\n2026年上半年，豆包、千问、元宝的用户规模（2026年累计下载量）均达到1亿及以上，三款产品的合计用户规模在赛道整体中占比约91%。\n\n豆包APP的用户规模占比约50%，2026年累计下载量超3亿；第二季度发力的千问以近1.5亿的累计下载量排在第二。\n\n#AI助手 #豆包 #千问 #元宝 #灵光 #文心 #DeepSeek", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-05_AI助手APP，阿里千问增速第一了_量子位.md"}, {"title": "银联推「AI智算卡」，「消费即算力」成趋势？", "source": "银行科技研究社", "digest": "中国银联推出「AI智算卡」产品，首创「消费即算力」模式，用户在消费同时可获得AI算力积分，探索金融支付与AI算力消费的跨界融合。", "link": "https://mp.weixin.qq.com/s/8PQTe4WB441LdhMstWgxUQ", "content": "---\npublish_time: 1783221871\n---\n\n# 银联推“AI智算卡”，“消费即算力”成趋势？\n\n> 原文链接：https://mp.weixin.qq.com/s/8PQTe4WB441LdhMstWgxUQ\n> 公众号：银行科技研究社\n\nAI银行卡时代正到来？目前又有一家银行联合卡组织和科技公司推出AI权益银行卡。从已官宣的4张AI权益银行卡来看，“消费即算力”有望成为趋势。\n\n银联与平安银行、腾讯云联合推出AI智算卡，消费积分可兑算力\n\n6月30日，中国银联宣布，与平安银行、腾讯云正式推出“AI智算卡”。这是一张面向AI算力个人消费用户，聚合基础金融服务及专属算力权益等功能的借记卡产品。\n\n该借记卡包含的权益有：银联云计算平台提供的AI大模型链接和TokenPlan算力套餐，以及腾讯WorkBuddy提供的AI工具，此外，日常消费等用卡行为均可累计算力权益。\n\n从介绍来看，TokenPlan算力套餐和WorkBuddy积分权益需要开卡达标方可获得，不过暂未提到达标条件。\n\n具体而言，该AI智算卡的权益主要来自于银联和腾讯。\n\n其中，银联云计算平台提供AI大模型链接，持卡人通过此卡，可使用该平台上聚合的多个主流AI大模型。该平台也提供金融级算力基础设施，持卡人获得的TokenPlan算力套餐覆盖文本生成、图像理解、代码辅助等AI场景。\n\n腾讯WorkBuddy则提供AI工具，持卡人开卡后有机会获赠WorkBuddy积分权益。据悉，WorkBuddy是一个智能体，其不局限于AI对话框，而是可帮忙干活。\n\n当然，该AI智算卡的最大卖点在于“用卡即算力”，即日常刷卡消费时可累计算力积分。\n\n中国银联还表示，AI智算卡持卡人统一享受三层递进权益。其中，开户时，达标可获银联云TokenPlan基础算力套餐+腾讯WorkBuddy积分权益；使用过程中，每月刷卡达标可触发算力积分翻倍+WorkBuddy权益续期，持续使用持续受益，消费均计入达标门槛。此外，升金送：资产层级达标解锁高端算力套餐（GPU推理时长、大模型高阶调用额度）+WorkBuddy积分权益加量包。\n\n该AI智算卡将于7月陆续在平安银行口袋银行App、线下网点开放申请。\n\n不过，平安银行的“野心”不止于此，该行还将在7月推出AI主题信用卡，满足不同客群的差异化需求。虽然借记卡、信用卡面向的人群可能有所区别，但也可同时持有，如此可支持双卡联动，算力积分加速累计，权益叠加生效。\n\n据《智探AI应用》了解，在平安银行之前，已有3家银行推出“AI权益卡”，其中2家明确为信用卡。\n\n共有4家银行推出AI权益银行卡，平安银行卡与Kimi信用卡相似\n\nKimi（月之暗面）在6月12日宣布，将推出全球首张AI原生信用卡。媒体信息显示，与之合作的是一家国有银行和一家国际卡组织。该卡的核心权益同样是，持卡人的每一笔消费，均可转化为AI算力额度，直接兑换Agent使用额度、高级功能权限等。\n\n在目前官宣的4张AI权益卡中，上述平安银行卡和Kimi信用卡比较相似，均以“消费即算力”作为最大卖点。\n\n不过，Kimi信用卡目前也暂未正式推出，将在7月上线，与平安银行卡差不多。\n\n以此可见，上述2家将AI权益融入日常消费，真正落地还需要一点时间。提前预热，则是以低成本获取较大的曝光，释放信息制造期待感。\n\n此外，招行、网商银行也已开始行动，不过与平安银行、Kimi的卡不太一样。\n\n其中，招行是在一张数月前推出的工程师信用卡上，新上线AI权益，用户可自主选择专属AI Plan，其中涉及Token用量、Agent运行等。该卡背后的卡组织为美国运通，合作的大模型厂商为MiniMax。但是，招行卡没有“消费积分兑换算力”的权益，上述权益是“新户”才有。\n\n而网商银行联合阿里云、芝麻企业信用、高德等推出的AI权益卡，是面向小微经营者。该卡与传统银行卡不同，本质上是面向小微的资金管理综合解决方案。其AI权益包括Token试用、多项AI助手服务等，以助力小微降低AI使用成本。该卡同样没有“消费即算力”的权益。\n\n综合上述4家银行的AI权益卡情况，除了平安银行和Kimi的卡权益相似，各家的聚焦方向有所区别。但总的来说，银行正在AI权益卡上发力，目前已有国有银行、股份制银行、互联网银行/民营银行开始行动，未来肯定还会有更多银行。\n\n而以“消费即算力”作为核心权益，更有吸引力，这可能也是未来银行卡的一个趋势。\n\n但是话又说回来，现在用信用卡消费积分兑换一个平台会员，可能都需要数月。未来，用消费积分兑换Token/算力来作为生产力，只不过是“九牛一毛”。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-05_银联推“AI智算卡”，“消费即算力”成趋势？_银行科技研究社.md"}, {"title": "6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人", "source": "极客公园", "digest": "6月最「有活儿」的AI硬件都在这里。", "link": "https://mp.weixin.qq.com/s/OqGzck6rKDiHTp0UrINr3w", "content": "---\npublish_time: 1783251019\n---\n\n# 6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人\n\n> 原文链接：https://mp.weixin.qq.com/s/OqGzck6rKDiHTp0UrINr3w\n> 公众号：极客公园\n\n6月最「有活儿」的AI硬件都在这里。\n\n作者｜徐珊\n\n编辑｜\n\n郑玄\n\n造物，正在从少数人的特权，变成所有人的能力。\n\n过去，做出一件硬件需要工厂、资本和一整条供应链，如今，AI 让人用一句话就能生成能跑的软件，再加上桌面级的激光、UV 与 3D 打印设备，一个普通人在自家书房里，就能把灵光一现的东西造出来。\n\n「我想要，我就能自己得到」正在成为这个时代新的注脚。\n\n我们相信，一个属于造物者的时代正在到来，而「造物 100」，就是我们为它留下的记录。\n\n2026 年，这股「重新造一遍」的冲动，几乎四处可见。\n\n我们先是发现，当 3D 打印把「自己造点什么」变成日常，人们还会顺着这个念头继续改造其他设备。于是，我们翻到了织布机、烫画机的各种玩法，也看到了 Craftphilia，一台能照着图把毛绒地毯织出来的打印机。\n\n我们在想，传感器究竟放在身上哪儿才最合适。于是我们看到了一系列的智能戒指、智能吊坠和智能耳环，它们从功能、设计、场景上重新解构「健康管理」需求。\n\n我们还关注，Claude 等模型能力究竟该如何生长进一件硬件里。于是看到了五花八门的开源桌宠，甚至官方都亲自下场，给自己造了个「周边」。\n\n但让一件硬件变酷，从来不止「AI native」这一条路。\n\n于是我们又看到了一间一平米的家庭健身房、一张两块钱的电子拍立得相纸，还有一台不用插电的洗车仪。\n\n我们把最近最有意思的十个「造物」凑到了一起，想挨个指给你看。\n\n造物 100 栏目介绍：\n\n每一轮技术浪潮，都会重新决定「东西」该长成什么样子。\n\n今天，AI 与新的制造工具正不断拉低创造硬件的门槛，一批造物者随之涌现。他们不再沿着旧形态往前修补，而是用新的技术和视角，把需求重新解构一遍。\n\n「造物 100」记录的，就是这个时代里被重新造出来的新硬件。\n\n以下，是「造物 100」栏目的第「1」期推荐的 10 个好物：\n\nCraftphilia：\n\n手作圈的新坑，一台会织毛绒的打印机\n\n上传一张图，它自己走线换线，吭哧吭哧把毛绒地毯给你织出来\n\n「毛线版 CNC」毫米级定点走线，把手作圈的苦力活全包了\n\n上线5分钟就完成众筹目标，499美元，8 月发货\n\n入坑五秒钟，剁手五分钟，一看耗材五百块起。\n\nCrankGPT\n\n：\n\nAI 尽头是体力活？\n\n手摇发电才能聊天的机器人\n\n离线版CrankGPT，内置小模型，0.8s就能出答案。\n\n全靠手摇发电机供电，没电池没插座，你摇它转才有答案\n\n问题越复杂，手柄阻力越大，AI 的每一句回答都在消耗你的卡路里\n\nAI 的每一句回答，都在物理意义上榨你。\n\nLumia 2 智能耳环：\n\n戴在耳朵上的血流传感器\n\n健康传感器藏进首饰里，没耳洞也能带\n\n24 小时耳边监测，睡眠血氧一键全知\n\n最轻只有 1 g\n\n美观度有了，但是有人不戴耳环怎么办？\n\nClaude Desktop Buddy：\n\nClaude 官方周边，桌上会撒娇的电子宠物\n\n给对话框里的 Claude 一具身体，蓝牙直连桌面端，像素小动物有18 种状态\n\n状态实时同步，Claude 忙完工作闭眼眼睡，告诉运转就冒汗\n\n写代码从此不孤单，小成本大陪伴\n\n突然想起来了苹果 Macbook 的 Touchbar Pet，经典永久流传。\n\nStackchan：\n\n开源机器人界的「当红炸子鸡」，\n\n会说话会卖萌\n\n大脑袋 360 度旋转翻屏，生命感 buff 点亮\n\n3D 打印外壳，想要什么皮肤自己定制，想要什么功能自己加\n\n会说话，能摇头，还能够有情绪反馈\n\n弥补了数字世界没有宠物的遗憾。所以，人类为什么要把猫猫狗狗也要送到 AI 上班呀？！\n\nLinyo H1：\n\n一个水桶 + 一把枪，随时给车冲个凉\n\n不接水管、不插电源，电池、水泵、水箱全塞进一台机器里\n\n小车小档，大车大档，车身清洁、泡沫喷洒等需求都能满足\n\n售价 $349 起，8 月发货\n\n工程上真挑不出毛病，但我盘算了下，还是淘宝五十九块的水桶加抹布来得直接。\n\nWalohub：\n\n一套设备整好骑行系统，\n\n车上终于不用挂满设备了\n\nWalohub =\n\n4K 运动相机 + GPS 码表 + 照明灯 + 行车记录仪 + App互联\n\n170° 超广角，6 轴防抖，支持 4K/30fps 超高清录，磁吸快拆只需几秒就上车\n\n早鸟价 $99 起，2026 年 6 月发货\n\n骑行也要这么多「高科技」，大家都是去竞赛的？\n\nOMNI X1：\n\n把健身房和私教一起打包，\n\n塞进你家一个墙角\n\n一台顶一整间器械房，四种模式、几百个动作，想练什么练什么\n\n折叠带轮能推着走，占地不到 1㎡，哪里都能练\n\nAI 私教家里住，按你的身体数据排课\n\n适合平常需要在家里举铁的铁子们，售价 $1698，健身房年卡可以买一打。\n\nZINK 无墨打印相纸「土豆片儿」：\n\n一张 2 块钱，随拍随粘\n\n把拍立得相纸的成本打下来？墨水屏上场\n\n不用怕照片褪色，滤镜照样加，仪式感留着\n\n背面自带高粘胶，撕下来随手一贴\n\n单张两块是真香，但以后送人还得先解释一遍用法。\n\n全地形自动跟拍摄影机器人 Beni\n\n一台会自己跑位的摄影师，锁定你之后后方跟拍、侧面环绕，运镜自己安排。\n\n轮式双足，能跳过 30 厘米障碍，你越野它也越野，还带快拆内外双轮组。\n\n前大疆、特斯拉团队打造，红杉、美团投资，明星班底初秀登场。\n\n献给所有景区挨骂的直男，和怎么都出不了片的人。以及无人机跟拍市场有了新竞争对手。\n\n*产品图片来源于网络\n\n本文为 Hardwire 原创文章，转载请在文章下方评论区留言\n\n如果你关注有趣、新奇、好玩的智能硬件，欢迎加入我们的内部交流群一起交流分享~\n\n识别下方图片二维码，添加 GeekPark GO 微信，发送关键词【\n\nHardwire\n\n】，小助手邀你加入 Hardwire 交流群~👇", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-05_6 月最「有活儿」的 AI 硬件：手摇发电的「实体 GPT」、会织毛绒的打印机 、自动跟拍摄影机器人_极客公园.md"}, {"title": "AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理", "source": "InfoQ", "digest": "Uber引入AI「首轮审核」机制对PRD做结构化审查，DoorDash开发AI代码审查工具提供精选反馈，Cloudflare用多代理分工评估安全/性能/正确性。AI正从代码生成向软件全生命周期治理层演进。", "link": "https://mp.weixin.qq.com/s/I7PiVW-JxNbnOPCt3V6P2Q", "content": "---\npublish_time: 1783218008\n---\n\n# AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理\n\n> 原文链接：https://mp.weixin.qq.com/s/I7PiVW-JxNbnOPCt3V6P2Q\n> 公众号：InfoQ\n\n作者 ｜ Leela Kumili\n\n译者 ｜ 平川\n\n大型科技公司正在将 AI 的应用范围从代码生成和代码审查扩展到软件开发生命周期的更早期阶段，包括产品需求验证和系统设计输入。Uber、DoorDash 和 Cloudflare 最近采取的举措表明，行业正朝着将 AI 作为治理层的方向转变，从而在实施前及审核期间对工程成果进行评估和优化。\n\nUber 引入了 产品需求文档（PRD）“首轮审核”机制，要求在产品需求文档提交给工程团队之前，先由 AI 系统进行审核。该系统会对早期阶段的规格说明书进行评估，重点考察其清晰度、完整性以及潜在的实施风险。\n\n以下是 Uber 针对该举措发布的工程 评论：\n\n这真是 AI 产品经理的一个绝佳应用场景！大多数人认为其价值在于和你共同起草产品需求文档（PRD），但它更大的价值在于提供恰当的背景信息，帮助你深入思考问题，并引入你可能甚至不知道的相关公司级资源和项目。\n\n该方法将 AI 定位为产品文档的结构化审查机制，而非编码助手。在 Uber 的工作流程中，AI 在需求阶段的早期就被引入，用于在设计和实现之前发现缺失的依赖关系、不一致之处以及不明确的假设。工程师保留最终验证权，而 AI 系统则作为产品需求文档（PRD）的初步筛选层。\n\nDoorDash 也采取了类似的做法，开发了一款 基于 AI 的内部代码审查工具，旨在提供反馈，使工程师主动将其融入工作流程。该系统侧重于生成可操作且与上下文相关的建议，而非泛泛的自动化评论。在对该系统的评论中，DoorDash 工程师 指出：\n\n他们团队设计这个系统的初衷是赢得信任，而不是制造噪音：减少评论数量，只提供更有价值的反馈，并在代码发布前落实真实的改进行为。\n\n该设计将 AI 生成的洞察直接整合到了现有的开发工作流中，在标准审查流程中直接呈现反馈，而非作为独立的工具存在。这种方法可以保证工程判断仍然是最终的决策点，减少了审查延迟，提高了吞吐量，同时又可以避免给工程师造成低信噪比的干扰。\n\nCloudflare 还描述了一种 基于多代理的 AI 辅助代码审查方法，其中不同的 AI 组件被分配了专门的职责，例如安全分析、性能评估和正确性检查。这种分解方式遵循分布式系统原则，将关注点分散到多个代理，然后通过协调层聚合输出结果。\n\nCloudflare 工程团队指出：\n\n当明确界定了每个专职审核员的职责范围时，它们的表现优于单一的通用审核员。\n\nCloudflare 还强调，该系统在标记内容时必须精准。为了提供高信噪比的代码审查信息，并减少开发者工作流中的噪音，定义“不需要显示的内容”与定义“需要检测的内容”同样重要。\n\n在这些实施方案中，作为为人工审核员提供支持的首轮评估层，AI 贯穿了从需求定义到实现的软件生命周期的各个阶段。它在产品需求文档（PRD）、设计和代码审查阶段引入了结构化的检查点，在保留人工监督的同时增加了自动化分析。这反映了软件工件全生命周期持续验证这一新兴的模式。\n\n原文链接：\n\nhttps://www.infoq.com/news/2026/06/ai-prd-code-review-governance/\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\n73% PR 由AI生成！Claude Code之父对话Spotify：2900名工程师每天部署4500次，坐地铁都能提交代码\n\nClaude Code 80%的提示词说删就删，Anthropic用Fable 5打了个样：AI行业的“降本”才刚刚开始\n\n用户太蠢不配用 Fable？被Anthropic的回应气笑了：最贵的模型，最憋屈的体验\n\nCloudflare CEO 警告：未来两年，Agent 会让互联网每周爆出一个 Log4j", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-05_AI 正在向软件生命周期的上游延伸：从代码审查到产品需求文档（PRD）治理_InfoQ.md"}, {"title": "Loop Engineering 会是 AI 的下个关键词吗？", "source": "机器之心", "digest": "继Harness Engineering后，Loop Engineering进入行业视野。Anthropic Claude Code负责人、OpenClaw开发者、NVIDIA黄仁勋、吴恩达等密集发声，强调Agent开发重心从提示词转向闭环系统设计，引入反馈评估机制使Agent能自主纠错收敛。", "link": "https://mp.weixin.qq.com/s/727vxP13zdmq7QBjU1l1QA", "content": "---\npublish_time: 1783215188\n---\n\n# Loop Engineering 会是 AI 的下个关键词吗？\n\n> 原文链接：https://mp.weixin.qq.com/s/727vxP13zdmq7QBjU1l1QA\n> 公众号：机器之心\n\n本文来自PRO会员通讯内容，文末关注「机器之心PRO会员」，查看更多专题解读。\n\n2026 年上半年，Harness Engineering 完成行业普及后，业界对 Agent 自主闭环运行模式的探索愈发深入。进入 6 月，Loop Engineering 受到行业集中关注，多位核心从业者密集发声与技术长文传播，推动相关讨论快速破圈。然而，该领域仍然缺乏区分概念包装与实质技术进步的统一标准，支持者将其视作 AI 应用范式的重要演进，反对者则认为其只是经典逻辑的重新表述。从 Harness 到 Loop 的更迭之中，这一新方向能否真正落地生效，仍待实践验证。\n\n目录\n\n01.\n\n爆火的 Loop Engineering 仍有哪些非共识？\n\n目前有哪些大牛在推崇 Loop Engineering？Loop Engineering 存在哪些争议？\n\n...\n\n02\n\n.\n\n相比 Harness，Loop Engineering 有哪些优缺点？\n\nLoop Engineering 的核心机制到底是什么？Harness 与 Loop 有哪些异同？Loop Engineering 是否具备成为主流工程范式的条件？\n\n...\n\n03\n\n.\n\nLoop Engineering 离成为主流工程范式还差什么？\n\nLoop Engineering 存在哪些风险？Loop Engineering 距离广泛应用有哪些缺陷需要修复？\n\n...\n\n爆火的 Loop Engineering 仍有哪些非共识？\n\n1、在 2026 年初，Harness Engineering 因其可以提升 Agent 大规模任务中的稳定性与自主性而获得诸多关注。而后在 6 月，强调反馈闭环与自主迭代的 Loop Engineering 进入行业视野，并引发了新一轮的关注。\n\n① 2026 年 6 月 3 日，Anthropic Claude Code 负责人 Boris Cherny 在公开访谈中提及，其研发重心已从直接向模型输入提示词，转向持续运行的循环系统设计。 [1-1]\n\n② 2026 年 6 月 7 日，OpenClaw 开发者 Peter Steinberger 在 X 平台发文，提出开发者应通过循环架构驱动 Agent 运行，替代逐个撰写提示词的开发模式。 [1-2]\n\n③ 2026 年 6 月 20 日，NVIDIA CEO 黄仁勋在公开场合表达相关判断，认为行业开发重心已脱离提示词编写阶段，循环的设计与管理将成为 AI 应用新时代的核心工作。[1-3]\n\n④ 2026 年 7 月 1 日，DeepLearning.AI 创始人吴恩达在 X 平台发文，认为循环已成为 AI agent 进行长时间迭代以构成软件的关键组成部分，同时分享了如何构建循环的示例。[1-4]\n\n2、相较于以构建完整 Agent 系统为目标的 Harness Engineering，Loop Engineering 通过引入反馈评估等机制，使 Agent 不再依赖一次性规划的正确性，而是能够在执行中不断修正策略并逐步收敛到目标解。\n\n① 在针对 AI 的一系列工程技巧发展中，Prompt Engineering 优化单次指令表达，Context Engineering 强化上下文组织，Harness Engineering 强调构建完整 Agent 系统。\n\n② Loop Engineering 选择引入反馈评估等机制，使系统在运行中持续修正并逐步收敛到目标，通过将任务执行与结果校验拆分为独立模块，配合多个 sub-agents 让系统循环运行，从而具备自主纠错、自我修复的闭环能力。[1-5]\n\n3、在热度之外，业界对于 Loop Engineering 是否有潜力成为下一个主流工程范式尚未形成统一共识。一些声音认为模型能力尚未发生本质突破，运行成本、可观测性等问题仍然存在，Loop Engineering 距离广泛应用仍有阻塞。\n\n① 一类观点认为，现有的模型性能刚好能支撑循环不崩溃，但尚未达到让循环失去存在必要的程度，这种中间状态催生了概念的讨论热度。[1-6]\n\n② 循环自调用是计算机科学基础逻辑，2023 年 AutoGPT 已做同类尝试，最终因缺乏验证机制与边界控制落地失败。反对者认为，写查分离等技术仅降低了崩溃概率，未改变模式本质。[1-7] [1-8]\n\n③ 循环运行后 token 消耗脱离人工管控，自动重试与自我验证会持续产生费用，用量难以预估。同时，循环后台自主运行与修正的过程，会让开发者失去对调试过程的可见性与控制力。[1-9] [1-10]\n\n相比 Harness，Loop Engineering 有哪些优缺点？\n\n1、Loop Engineering 是一种以持续循环机制驱动 Agent 运行的工程范式，其核心在于通过「任务执行—结果评估—状态更新—再次执行」的闭环，使系统摆脱单次 Prompt 触发模式，转向持续自治的任务推进结构\n\n...\n\n关注👇🏻\n\n「机器之心PRO会员」，前往「收件箱」查看完整解读\n\n更多往期专题解读内容，关注「机器之心PRO会员」服务号，点击菜单栏「收件箱」查看。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-05_Loop Engineering 会是 AI 的下个关键词吗？_机器之心.md"}, {"title": "iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频繁降级 | 极客早知道", "source": "极客公园", "digest": "豆包、千问宣布7月15日下线智能体功能(《AI拟人化互动服务管理办法》同日施行)；Midjourney要求好莱坞披露自用AI做法；微软将重构Copilot融合企业/消费者版并新增AutoPilot智能体；用户反馈Fable 5重上架后频繁回退至Opus 4.8。", "link": "https://mp.weixin.qq.com/s/FtONXBTdSuBRWU6f1JcGOQ", "content": "---\npublish_time: 1783211400\n---\n\n# iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频繁降级 | 极客早知道\n\n> 原文链接：https://mp.weixin.qq.com/s/FtONXBTdSuBRWU6f1JcGOQ\n> 公众号：极客公园\n\n就在本月 15 日！豆包、千问：智能体功能将下线\n\n昨日，豆包和通义千问双双宣布，智能体功能将下线。\n\n豆包公告称，因产品功能调整，其智能体功能将于 7 月 15 日正式下线。平台将为用户预留数据保存期，期间可查看并导出智能体信息及历史对话，所有相关数据将于 10 月 15 日统一清理。\n\n豆包方面建议用户，通过截图或分享导出文本的方式提前备份重要内容，字节跳动旗下的猫箱 App 可创建新的智能体、开启对话服务，用户后续可在猫箱 App 体验智能体功能。\n\n同一时间，千问（通义千问）也向用户推送「千问智能体服务下线提醒」，称千问智能体功能与服务将于 7 月 15 日正式下线，下线后用户将无法继续访问相关智能体配置及历史对话记录。\n\n据了解，《人工智能拟人化互动服务管理暂行办法》将于 7 月 15 日正式施行。上海市委网信办已面向近百家重点平台开展法规宣贯，指导企业加快合规建设。豆包和千问选择的这一天下线，正是该办法施行的同一天。（来源：证券时报）\n\nMidjourney 要求好莱坞揭示自用 AI 做法，版权大战转向「谁在复制谁」\n\nMidjourney 正试图迫使迪士尼、环球和华纳兄弟披露它们在内部是如何使用人工智能系统，以此在一场可能对其业务造成毁灭性打击的版权诉讼中进行自我辩护。\n\n这三家制片厂去年起诉这家 AI 图像实验室，指控其服务帮助用户大规模侵犯受版权保护的知名角色，而 Midjourney 则援引「合理使用」原则，反指这些制片厂正在进行与其类似的 AI 实践。\n\n今年 6 月，一名联邦法院的推事法官限制了 Midjourney 向制片厂索取关于 AI 使用情况的取证范围，裁定三家公司只需披露面向消费者的 AI 应用信息。Midjourney 的律师本周向主管法官约翰·克朗施塔特提交动议，要求推翻这一决定，认为制片厂必须交出更多关于其在幕后如何部署 AI 的关键材料。\n\n面对这些要求，制片厂仅同意提供涉及对公众开放、可见的 AI 应用信息，却拒绝透露任何仅在公司内部使用的 AI 工具细节。\n\nMidjourney 最新提交的动议则强调，其应当被允许进一步深挖这些内部实践。\n\n制片厂方面的首席律师大卫·辛格此前则反驳称，Midjourney 的取证申请是在进行一场旨在转移矛盾、偏离自身不当行为的「钓鱼之旅」。（来源：cnBeta）\n\n特斯拉 Robotaxi 服务进军美国迈阿密，车内无安全员\n\n特斯拉官方前天在 X 平台宣布，Robotaxi 自动驾驶网约车服务现已扩展至美国迈阿密西部一小块区域。\n\n与今年早些时候在达拉斯和休斯敦推出 Robotaxi 时类似，特斯拉这次在迈阿密上线时，同样避开了繁忙的市中心区域。X 平台部分网友分享道，他们已经坐上了无人监管的 Robotaxi。\n\n据悉，迈阿密的 Robotaxi 在运营过程中并没有配备车内安全员。而特斯拉最初在得克萨斯州奥斯汀推出自动驾驶网约车服务时，车内的安全员曾引发不少争议。预计特斯拉将在未来，将 Robotaxi 服务扩大至迈阿密州更大区域。\n\n此外，特斯拉 Robotaxi 的竞争对手 Waymo 早在今年 1 月就正式进军迈阿密市场。而 Zoox 也计划进军该地，目前已经开始实地测试其自动驾驶车队。(来源：IT 之家)\n\n曝微软重构 Copilot AI：精简 Podcasts 等冗余功能、新增 AutoPilot 智能体\n\n科技媒体 The Information 7 月 3 日发布博文，披露一份内部备忘录，指出微软重构全面升级 Copilot 应用程序，把面向消费者与企业的应用合并为单一产品，预估将于 8 月发布。\n\n功能方面，新版本将加入 AI 编程工具，以及名为 AutoPilot 新型 AI 智能体，负责在后台处理日程安排、邮件摘要等任务。\n\n根据博文介绍，微软执行副总裁 Jacob Andreou 在备忘录中称，团队已移除「无效部分」，包括 Copilot Podcasts 以及 Copilot Labs 等。Andreou 表示全面升级后的 Copilot 将聚焦真实工作场景，以结果为导向，体现其独有价值。(来源：IT 之家)\n\n何小鹏：中国智驾领先全球，L2 级辅助驾驶将加速出海\n\n「我认为中国的辅助驾驶，无论是企业的技术产品，还是相关法律法规的制定，都走在全球前面。最近，联合国通过了关于智能驾驶的法规，其中 L2 级别的相关法规全面获批。这意味着今年 12 月起，NGP、NOA 等 L2 级驾驶辅助功能可以在全球范围内使用和落地，这是一个非常重要的节点。」近日，小鹏汽车董事长、CEO 何小鹏在接受包括第一财经记者在内的采访时如是说。\n\n他表示，过去只有中国和美国真正实现了 L2 级辅助驾驶的大规模落地，包括欧盟在内的全球大部分地区尚未跟进。小鹏不仅是中国智能汽车制造商，也是联合国交通法规制定组委会的成员之一，正在积极跟进法规要求，持续提升相关能力。(来源：第一财经)\n\n网友反馈 Claude Fable 5 重上架版「降智」，严苛 AI 护栏致频繁回退 Opus 4.8\n\n科技媒体 bleepingcomputer 7 月 3 日发布博文，报道称 Anthropic 本月重新上架 Claude Fable 5 最强模型，除了额度限制外，多名用户反馈存在「降智」情况，且更频繁回退到 Opus 4.8 模型。\n\n根据 Reddit 社区讨论和 X 社交平台用户反馈，不少用户认为恢复后的实际表现弱于此前版本。\n\n除了模型性能方面，用户还反馈在使用 Fable 5 模型，更频繁触发安全限制，并自动回退到 Opus 4.8。网友跟帖表示：「Fable 5 模型设置的安全护栏对多数任务生效，导致版本回退到 Opus 4.8。这不是被禁用的那个版本。」(来源：IT 之家)\n\n谷歌地图最新代码曝光，预计将支持「得来速」点餐功能\n\n据科技媒体 Android Authority 报道，谷歌地图已经开始深度整合 Gemini AI 服务，而今年春季推出的 Ask Maps 功能已经可以推荐餐厅等场所。不过，如今谷歌似乎准备更进一步，为 Google Maps 整合更多功能。\n\n据报道，Android 版谷歌地图 v26.27.00.941319029 已经出现关于点餐服务的字符串。\n\n代码表明，谷歌正在为地图应用开发点餐功能。用户只需要告诉地图想吃什么，或者描述自己的需求，随后应用就会推荐附近符合条件的餐厅，并自动完成下单流程。用户驱车抵达时，就可以在「得来速」（drive-through）窗口拿到制作完成的餐食。\n\n不过，目前我们还无法得知这项功能的具体实现形式。例如，点餐究竟是由 Gemini AI 云端完成，还是使用设备端的 AI 智能体完成。因此我们也不清楚这项功能是否依赖手机本地 AI 能力，进而只支持部分机型。(来源：IT 之家)\n\n宇树科技陈立：关节电机上游只有铜线、磁铁等原材料供应商，完全自主可控\n\n2026 亚布力论坛创新年会在上海市举行。据新浪财经报道，宇树科技联合创始人陈立表示，宇树科技核心零部件实现自研自产、底层技术架构完全打通后，实现四足、人形、机械臂、泵体、灵巧手全系列产品自研自产。\n\n陈立表示，目前宇树科技四足机器人出货量行业占比约 70%，人形机器人出货量全球领先，业务覆盖全球 50% 以上的国家和地区。宇树从 2013 年就开始核心零部件自研，自研电机、减速器、编码器及各类传感器。(来源：IT 之家)\n\nAnthropic 宣布进军药物研发：瞄准大型药企无利可言的罕见病领域\n\nAnthropic 本月初举行「The Briefing: AI for Science」活动，正式发布面向科研人员的新平台 Claude Science，并宣布公司将启动自主药物研发项目，重点针对传统药企评定为商业回报有限而长期缺乏研发投入的「被忽视疾病」（Neglected Diseases）。\n\nAnthropic 表示，该项目将聚焦新药研发早期阶段和临床前研究，希望在推进自身科研能力的同时，为生命科学领域打造更完善的 AI 工具。这也是目前全球头部大模型企业中，少数公开宣布直接参与新药研发而不仅提供 AI 工具的平台公司之一。\n\n业内人士普遍认为，AI 已成为现代药物研发的重要辅助工具，但距离完全依赖 AI 设计并成功上市的新药仍有较长距离。(来源：IT 之家)\n\niPhone18 Pro Max 电池偷跑：5391mAh 史上最大！\n\n近期有国内的博主通过查询苹果电池供应商的 3C 入网信息，给出了 iPhone18系列完整的电池数据。\n\niPhone18 Pro 国行 4056mAh，美版 4288mAh；iPhone18 Pro Max 国行 5391mAh，美版 5567mAh；\n\nPro Max 国行版本首次突破 5000mAh，增幅达到 568mAh，涨幅 11.78%。\n\n作为对比，iPhone17 Pro Max 国行仅为 4823mAh，一年之间电池容量增加了近 600mAh，这在苹果的产品迭代史上相当罕见。\n\n国行版本保留实体卡槽，占据一部分空间，因此电池容量略小，并且在苹果正式发布之前，所有数据都只能作为参考。（来源：搜狐网）\n\n比亚迪方程豹豹 5 车型定名三周年特别版车衣发布，3999 元\n\n比亚迪集团-方程豹事业部总经理熊甜波 7 月 4 日宣布，为庆祝方程豹豹 5 定名三周年，发布三周年特别版车衣。\n\n这款特别版车衣现已在方程豹汽车小程序上架，暂未开售，售价 3999 元，包含材料费与工时费，也可用 79980 积分抵扣。\n\n此外，已在 5 月 15 日上市的方程豹豹 5 210KM 天神 MAX 版限时惊喜价 25.38 万元，截止 2026 年 7 月 31 日。\n\n该车与在售车型的尺寸、动力保持一致。新车长 / 宽 / 高：4890/1970/1920mm，轴距为 2800mm；采用 DMO+ 电驱越野开创平台，动力系统总功率 505kW，系统总扭矩 760N·m。(来源：IT 之家)\n\n抢跑苹果官方：奢侈品牌 Caviar 官宣定制版 iPhone Ultra 折叠屏手机，13840 美元起\n\n7 月 4 日消息，在苹果正式官宣折叠屏 iPhone 之前，奢华设备定制商 Caviar 就已经提前展开布局。Caviar 根据供应链传闻和泄露渲染图，围绕暂称 iPhone Ultra 的折叠屏设备推出「Flagship（旗舰）」定制系列。\n\n「Flagship」系列共包括四款机型，每款限量 19 部。Caviar 表示，由于苹果高端产品的配色通常较为保守，因此希望通过更大胆的材质和色彩提供不同选择。\n\n四款机型背面均嵌有醒目的立体苹果标志，入门版 Titan 售价 13840 美元（现汇率约合 93983 元人民币），采用黑色 PVD 涂层钛金属机身，并搭配黑色鳄鱼皮。\n\nDark Cherry 售价 14270 美元（现汇率约合 96903 元人民币），采用酒紫色鳄鱼皮和 24K 镀金装饰。Caviar 称，这套配色意在提前呼应传闻中 iPhone 18 Pro 系列可能采用的颜色。\n\nSilver 售价 15270 美元（现汇率约合 10.4 万元人民币）。机身上半部分由钛金属改为纯银，黑色鳄鱼皮握持区域则继续保留，苹果标志也改为实心纯银材质。\n\n顶配 Gold 售价 15560 美元（现汇率约合 10.6 万元人民币），背板采用织入金线的碳纤维复合材料，边框经过 24K 镀金处理，立体苹果标志则由实心 18K 金铸造。Caviar 表示，Gold 的设计主题与苹果即将迎来的成立 50 周年有关。(来源：IT 之家)\n\n皮尤最新民调：超半数美国成年人支持 16 岁社交媒体禁令\n\n据科技媒体 9To5Mac 报道，越来越多研究表明，儿童和青少年群体使用社交媒体，可能对心理健康产生负面影响。因此，目前已有澳大利亚、英国、丹麦等国家出台 / 筹划限制未成年人使用社交媒体措施。\n\n美国皮尤研究中心（Pew Research Center）最近展开的一项大规模调查显示，56% 美国成年人支持 16 岁以下未成年人禁止使用社交媒体。而在拥有子女的家长中，支持率进一步提升至 65%。\n\n皮尤对此表示：「在各主要人口群体和政治阵营中，支持 16 岁以下人群禁止使用社交媒体的人数均多于反对者。这种结果并不依赖于党派，无论蓝党还是红党均是如此」。\n\n同时调查显示，仅有 21% 受访者明确反对禁止 16 岁以下儿童使用社交媒体。另有 85% 受访者认为，社媒平台应在未成年人注册账号时寻求家长同意；78% 人群支持使用社交媒体前进行年龄验证；78% 的人支持限制未成年人每日使用社媒时长。\n\n本次皮尤一共收集 9750 名受访者回复，调查结果误差范围仅为 ±1.4%，具备较高可靠性。(来源：IT 之家)\n\n*图片来源：\n\n视觉中国\n\n播客上新\n\n在具身智能领域，「世界模型」「Scaling Law」「VLA」早已是热词。但有一个词，你大概率还比较陌生：因果大模型。它不是新噱头，而是一个在学术界酝酿了 37 年、正悄悄改变具身智能路线图的底层范式。\n\n今天行业主流打法是堆数据，靠 Scaling Law 让机器人自然「涌现」。但有人提出了一个不讨好的判断：不是数据不够，是范式用错了——VLA 模型在 demo 里很好看，放到真实场景，桌面高两厘米，任务就失败了，因为它学的是「相关性」，不是「因果」。\n\n本期节目，我们邀请到 Aether AI 创始人黄碧薇，她深耕因果 AI 学术界 12 年，师承两代因果 AI 开山鼻祖，历经德国马普所、CMU、UCSD，在 Physical AI 的窗口期出山创业。从因果大模型与世界模型的异同，到杨立昆「LLM 通向不了 AGI」的争议观点，再到因果能否消灭模型幻觉，一次讲透。\n\n🌟长按下方\n\n「卡片二维码」\n\n即可收听～欢迎关注我们的播客「开始连接LinkStart」（小宇宙 App），一起用科技、商业和人文的视角描摹这个时代。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-05_iPhone 18 Pro 配史上最大电池；豆包、千问将下线智能体功能；Fable 5 降智严重，频_极客公园.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 先剥离所有 HTML 标签（包括公众号的 @ 提及链接），再转义
+    // 不能用 marked.parse，否则 &lt;a&gt; 会被反 escape 并被解析为真链接
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      // 兼容已经被 escape 一次的场景（如 &lt;a&gt;）
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      return escapeHtml(stripped);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
