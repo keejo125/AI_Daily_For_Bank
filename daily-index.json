@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-07-08",
+      "weekday": "周三",
+      "stats": {
+        "国际": 5,
+        "国内": 3,
+        "同业": 0,
+        "其他": 1,
+        "total": 9
+      },
+      "summary": "Anthropic研究：Claude内部现类意识工作空间/Reddit热议：前沿AI能力或两年内下放消费级硬件/腾讯混元Hy3实测，WorkBuddy限时..."
+    },
+    {
       "date": "2026-07-06",
       "weekday": "周一",
       "stats": {
