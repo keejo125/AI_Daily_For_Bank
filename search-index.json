@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-07-07T09:11:05.829806",
+  "updated_at": "2026-07-07T09:28:05.157792",
   "total": 460,
   "articles": [
+    {
+      "date": "2026-07-06",
+      "title": "AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权",
+      "source": "新智元",
+      "digest": "LMArena负责人指出全球84%人口从未接触AI，仅0.3%付费使用高级服务；顶级工程师每天花费1000美元使用Fable推理，精英开发者构建多模型协作矩阵，AI体验正形成巨大的阶层鸿沟。",
+      "link": "https://mp.weixin.qq.com/s/5u3h6ck-7vNzrhS8cUB1PA",
+      "source_file": "sources/2026-07-06_AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-07-06",
       "title": "Claude、GLM、GPT谁才是真正的AI软件工程师？首个持续更新Visual Spec-to-App Benchmark发布",
@@ -279,16 +289,6 @@
       "digest": "中国超六成中小学生用过AI、近两成经常用，AI玩具市场规模达290亿元年复合增长超50%，但专家警告AI陪伴对儿童的风险大于社交媒体，需警惕AI替代而非增强亲子关系。",
       "link": "https://mp.weixin.qq.com/s/tdO3ZJ9nYSumbiV5Bt2EDA",
       "source_file": "sources/2026-07-06_AI，正在替你「养」孩子_极客公园.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-06",
-      "title": "AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权",
-      "source": "新智元",
-      "digest": "LMArena负责人指出全球84%人口从未接触AI，仅0.3%付费使用高级服务；顶级工程师每天花费1000美元使用Fable推理，精英开发者构建多模型协作矩阵，AI体验正形成巨大的阶层鸿沟。",
-      "link": "https://mp.weixin.qq.com/s/5u3h6ck-7vNzrhS8cUB1PA",
-      "source_file": "sources/2026-07-06_AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权_新智元.md",
       "category": "其他",
       "is_model_related": false
     },
