@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-07-06T06:44:48.249767",
-  "total": 431,
+  "updated_at": "2026-07-07T09:11:05.829806",
+  "total": 460,
   "articles": [
+    {
+      "date": "2026-07-06",
+      "title": "Claude、GLM、GPT谁才是真正的AI软件工程师？首个持续更新Visual Spec-to-App Benchmark发布",
+      "source": "机器之心",
+      "digest": "来自University of Arizona、Zoom与Stony Brook University团队推出VISTA Benchmark，首个面向Visual Spec-to-Web-App Coding Agents的端到端评测基准，持续评测Claude、GPT、GLM、Gemini、Cursor等主流Coding Agent从Figma设计稿到完整Web应用的端到端开发能力。",
+      "link": "https://mp.weixin.qq.com/s/RmTNIFfZe1Hyt04Q0oCcsw",
+      "source_file": "sources/2026-07-06_Claude、GLM、GPT谁才是真正的AI软件工程师？首个持续更新Visual Spec-to-A_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-06",
+      "title": "全球第一位AI哲学家，在谷歌DeepMind的9年：为AGI安全奔走",
+      "source": "新智元",
+      "digest": "谷歌DeepMind政治哲学家Iason Gabriel在AI对齐领域的九年历程，其提出的四方对齐框架已成为Gemini训练的实操结构，直接影响了谷歌LLM的设计原则。",
+      "link": "https://mp.weixin.qq.com/s/LLgpIz6GsCat4OSRGzyB0A",
+      "source_file": "sources/2026-07-06_全球第一位AI哲学家，在谷歌DeepMind的9年：为AGI安全奔走_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "企业 AI：方法论易得，交付力难求",
+      "source": "InfoQ",
+      "digest": "企业AI从PoC到生产存在巨大鸿沟，微软投入25亿美元组建6000人Frontier Company，AWS投入10亿设立AI落地部门，OpenAI、Anthropic接连成立AI落地合资公司，FDE（前线部署工程师）模式迅速升温。",
+      "link": "https://mp.weixin.qq.com/s/_DontHFxF4TdaEn_0zVn2g",
+      "source_file": "sources/2026-07-06_企业 AI：方法论易得，交付力难求_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "GitHub 的旧模式被 AI 击穿，Cursor、GitLab、Zed 各自开打",
+      "source": "InfoQ",
+      "digest": "SpaceX以600亿美元全股票交易收购AI编码初创公司Cursor，Cursor推出与Git兼容的代码托管平台Origin专为智能Agent设计；GitLab和Zed也在加速布局AI驱动的开发工具链。",
+      "link": "https://mp.weixin.qq.com/s/RwSxpir9-dVJB3ssjs2mQg",
+      "source_file": "sources/2026-07-06_GitHub 的旧模式被 AI 击穿，Cursor、GitLab、Zed 各自开打_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Linus一句话说透AI局限：代码不能直接用，bug只能创可贴式地修",
+      "source": "InfoQ",
+      "digest": "Linus Torvalds在开源技术会上分享对AI的工程实践判断：AI生成的代码不能直接用于内核，bug修复方式像是创可贴，强调C与Rust语言在Linux内核中的实际取舍。",
+      "link": "https://mp.weixin.qq.com/s/J6YC2K4PDavJ_4j_KN0D3g",
+      "source_file": "sources/2026-07-06_Linus一句话说透AI局限：代码不能直接用，bug只能创可贴式地修_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Karpathy最新开喷：一句话让全场Agent开发者安静了",
+      "source": "新智元",
+      "digest": "Anthropic预训练团队核心研究员Andrej Karpathy指出当前AI领域最大错误是急着逼Agent干活却没把底层大模型搞明白，他本人选择回到预训练底层研究，认为Agent从Demo到产品需要十年。",
+      "link": "https://mp.weixin.qq.com/s/NTwunYHLz8naycDBhFYYKA",
+      "source_file": "sources/2026-07-06_Karpathy最新开喷：一句话让全场Agent开发者安静了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "独家对话希捷科技Jason Feist：AI时代，企业正在“删除删除键”｜甲子光年",
+      "source": "甲子光年",
+      "digest": "希捷科技云存储业务高级副总裁Jason Feist谈AI时代存储行业变革，探讨AI数据中心中的“存储墙”问题——海量训练/推理数据如何低成本、高密度、高可靠地长期保存和分层管理。",
+      "link": "https://mp.weixin.qq.com/s/Xf3WZ0kbhNTT-A_NwMczNA",
+      "source_file": "sources/2026-07-06_独家对话希捷科技Jason Feist：AI时代，企业正在“删除删除键”｜甲子光年_甲子光年.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "腾讯混元Hy3发布并开源！接入元宝，Agent能力全免费",
+      "source": "智东西",
+      "digest": "腾讯混元Hy3正式版发布并开源，MoE架构295B总参数/21B激活参数，支持256K上下文；Coding Agent和Working Agent能力提升20-30%，SWE-bench Pro得分57.9超越DeepSeek V4 Pro；元宝同步接入Agent能力全部免费。",
+      "link": "https://mp.weixin.qq.com/s/5Y_R213hY-TfkqkER6d_UQ",
+      "source_file": "sources/2026-07-06_腾讯混元Hy3发布并开源！接入元宝，Agent能力全免费_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-06",
+      "title": "国内首个国产卡训推万亿大模型，开源！",
+      "source": "智东西",
+      "digest": "国内首个基于国产芯片完成训练和推理的万亿参数大模型正式开源，存量国产卡也能跑万亿模型。",
+      "link": "https://mp.weixin.qq.com/s/SYsnc06JBjM8O0BdrF-i_g",
+      "source_file": "sources/2026-07-06_国内首个国产卡训推万亿大模型，开源！_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-06",
+      "title": "WWW时间检验奖颁给唐建博士：图神经网络的十年远征与AI制药的底层逻辑",
+      "source": "机器之心",
+      "digest": "唐建博士2015年LINE论文获WWW 2026时间检验奖（被引7300+次），其创立的百奥几何从GeoFlow V1到V3逐步实现抗体从头设计，GeoFlow V3加入多步推理后在7个临床靶点上抗体命中率达18.7%，被誉为‘生命科学领域的DeepSeek R1时刻’。",
+      "link": "https://mp.weixin.qq.com/s/DIAgalyLiTmazn5SYkRwrw",
+      "source_file": "sources/2026-07-06_WWW时间检验奖颁给唐建博士：图神经网络的十年远征与AI制药的底层逻辑_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-06",
+      "title": "OpenAI造“星际之门”、马斯克送算力“上天”，中国AI基建走出了一条什么路？",
+      "source": "智东西",
+      "digest": "对比OpenAI“星际之门”5000亿美元项目与SpaceX星链算力布局，中国AI算力基建走出差异化路径：GW级智算中心、原生液冷、448G互联等技术改写游戏规则。",
+      "link": "https://mp.weixin.qq.com/s/OosYRr93Abc_kJZXUTcMDA",
+      "source_file": "sources/2026-07-06_OpenAI造“星际之门”、马斯克送算力“上天”，中国AI基建走出了一条什么路？_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "北京发AI4S十八条！鼓励AI科学家上岗，打造24小时无人实验室",
+      "source": "智东西",
+      "digest": "北京发布《AI4S实施方案（2026-2028年）》18项重点任务，围绕自主实验室、科学模型、科学数据、标杆场景和创新生态五大方向，目标2028年建成辐射全球的科学智能创新中枢。",
+      "link": "https://mp.weixin.qq.com/s/UlsV2G3x7O54l-kR_n-c3w",
+      "source_file": "sources/2026-07-06_北京发AI4S十八条！鼓励AI科学家上岗，打造24小时无人实验室_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "多项创新成果亮相2026年“众智”大模型开放智算生态协同高级别开放日活动",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院发布AISHPerf 3.0开源评测基准，成立“众智”国模国芯协同测试验证平台，首批通过DeepSeek-v4国模国芯适配测试的华为、寒武纪、昆仑芯、阿里云等企业获颁证书。",
+      "link": "https://mp.weixin.qq.com/s/r1QBbTkHkvDPLJtOQy54gA",
+      "source_file": "sources/2026-07-06_多项创新成果亮相2026年“众智”大模型开放智算生态协同高级别开放日活动_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "你的 Agent，终于不用手把手教了",
+      "source": "Qoder",
+      "digest": "Qoder Cloud Agent大版本更新：支持多模态看图/生图、事件驱动主动推送、上下文窗口从200K扩至1M可选、文件上传扩至图片/压缩包/音视频、技能中心支持多选批量导入、MCP服务器新增交互策略选项。",
+      "link": "https://mp.weixin.qq.com/s/l5fuFHZpotY9JGplc_tCfQ",
+      "source_file": "sources/2026-07-06_你的 Agent，终于不用手把手教了_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "【独家】对话汤元科技任冬淳：物理AI的瓶颈，在于训练体系｜甲子光年",
+      "source": "甲子光年",
+      "digest": "汤元科技CEO任冬淳指出物理AI/具身智能的突破瓶颈不在算法，而在于训练体系——如何将真实世界精准表达为AI可训练的环境，公司以世界模型为技术底座构建训练基础设施。",
+      "link": "https://mp.weixin.qq.com/s/O91syVO5eO6yaxriKbVeJA",
+      "source_file": "sources/2026-07-06_【独家】对话汤元科技任冬淳：物理AI的瓶颈，在于训练体系｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年",
+      "source": "新智元",
+      "digest": "零犀科技自2020年起深耕因果AI六年，以因果大模型为底座构建Agentic Sales多智能体体系，将Pearl三级因果阶梯（观察/干预/反事实）融入工程闭环，在商业化场景中实现因果驱动的持续优化。",
+      "link": "https://mp.weixin.qq.com/s/stcgM_ps00Pr6gKOq0g5Pw",
+      "source_file": "sources/2026-07-06_李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "ICML 2026｜如何对Multi-Agent系统进行过程评估？重新认识多智能体系统中的Orchestrator",
+      "source": "机器之心",
+      "digest": "南京大学NLP实验室ICML 2026论文提出基于熵动力学的多智能体Orchestrator评估方法，指出当前多智能体系统失败往往源于调度中枢失去对任务的掌控，而非执行器能力不足。",
+      "link": "https://mp.weixin.qq.com/s/WHee91G1ko4FFJ9_pFp1jA",
+      "source_file": "sources/2026-07-06_ICML 2026｜如何对Multi-Agent系统进行过程评估？重新认识多智能体系统中的Orche_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Claude Code用不了？DeepSeek上新：Deep Code来了",
+      "source": "智东西",
+      "digest": "基于DeepSeek-V4系列模型适配的第三方开源AI编程助手Deep Code发布，支持深度思考、推理强度控制、Agent Skills及MCP集成，提供CLI和VS Code插件两种使用入口，GitHub已获1500+星。",
+      "link": "https://mp.weixin.qq.com/s/2uEb1OA0Y8WkOFXLF12aZA",
+      "source_file": "sources/2026-07-06_Claude Code用不了？DeepSeek上新：Deep Code来了_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "模型不是企业的护城河，那什么才是？",
+      "source": "量子位",
+      "digest": "衔远科技发布EnterpriseClawBench——首个从真实企业工作会话中构建的Agent评测基准（852个可复现任务），论文登Hugging Face Daily Papers日榜第二，揭示私有化评估与可持续进化能力才是企业AI时代的真正护城河。",
+      "link": "https://mp.weixin.qq.com/s/EWUB8PTltK0iM9zf6_dTBg",
+      "source_file": "sources/2026-07-06_模型不是企业的护城河，那什么才是？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "AI大模型跨越生产级“质变点”？",
+      "source": "财联社AI daily",
+      "digest": "2026年7月火山引擎夏季Force原动力大会上，豆包大模型日均调用数据被反复提及，探讨大模型从实验室走向生产级落地的关键阈值。",
+      "link": "https://mp.weixin.qq.com/s/doSfC8uVvefzoIQ2mMYgaw",
+      "source_file": "sources/2026-07-06_AI大模型跨越生产级“质变点”？_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "邮储银行基于大模型的金融数据字段级血缘溯源技术体系探索与实践",
+      "source": "中国金融电脑",
+      "digest": "邮储银行探索基于大模型的金融数据字段级血缘溯源技术体系，实现数据资产全链路可追溯。",
+      "link": "https://mp.weixin.qq.com/s/uH1MynnkqtWPkwWgQRPt9Q",
+      "source_file": "sources/2026-07-06_邮储银行基于大模型的金融数据字段级血缘溯源技术体系探索与实践_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "从“语义检索”到“知识推理”：金融核心系统的智能运维新范式——基于本体与智能体协同的根因分析实践",
+      "source": "金融电子化",
+      "digest": "邮储银行运营数据中心创新构建基于本体、大模型与智能体协同的故障根因分析体系，将运维从“语义检索”推向“知识推理”，已在核心系统验证环境完成多轮验证。",
+      "link": "https://mp.weixin.qq.com/s/T81q9UOrQwXpegJKdh6vDw",
+      "source_file": "sources/2026-07-06_从“语义检索”到“知识推理”：金融核心系统的智能运维新范式——基于本体与智能体协同的根因分析实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "工行原行长：AI幻觉风险将传导至金融全流程",
+      "source": "银行科技研究社",
+      "digest": "工商银行原行长杨凯生指出AI幻觉是结构性问题而非可修补的程序漏洞，该风险将传导至金融全流程，业内目前缺乏成熟的认知框架和有效规避手段。",
+      "link": "https://mp.weixin.qq.com/s/4fhQqJ-wzNz7wKi4v2K90Q",
+      "source_file": "sources/2026-07-06_工行原行长：AI幻觉风险将传导至金融全流程_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "江苏银行建成“1860”AI体系，已上线8大助手，强调“辅助”而非“替代”",
+      "source": "银行科技研究社",
+      "digest": "江苏银行建成“1860”AI体系，已上线8大AI助手覆盖多个业务场景，强调AI定位为“辅助”而非“替代”。",
+      "link": "https://mp.weixin.qq.com/s/E4BhENd2di_kYxaa2kljHw",
+      "source_file": "sources/2026-07-06_江苏银行建成“1860”AI体系，已上线8大助手，强调“辅助”而非“替代”_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "当AI让答案唾手可得，学而思想把学习过程找回来",
+      "source": "机器之心",
+      "digest": "学而思发布2026旗舰学习机新品，推出培优AI家教、国际学院英语学习体系及T6系列旗舰机型，强调AI‘陪你理解、陪你练习、陪你进步’而非替代学习过程。",
+      "link": "https://mp.weixin.qq.com/s/e_ISXfhMah79Xvayeoi5EQ",
+      "source_file": "sources/2026-07-06_当AI让答案唾手可得，学而思想把学习过程找回来_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "中国新能源车主平均 1.8 年换车；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道",
+      "source": "极客公园",
+      "digest": "综合资讯：黑石终止弗吉尼亚数据中心项目；Anthropic拟在澳大利亚布局1.4GW数据中心算力建设成本150亿美元；Meta推出AI社交应用Pocket支持Vibe Coding生成小程序/小游戏；LG Display用AI每年节省超2000亿韩元。",
+      "link": "https://mp.weixin.qq.com/s/t7Wlu6GbZX-nueFkgeCKZg",
+      "source_file": "sources/2026-07-06_中国新能源车主平均 1.8 年换车；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "腾讯研究院AI速递 20260706",
+      "source": "腾讯研究院",
+      "digest": "AI速递汇总：华为何庭波发布韬定律V2版；OpenAI提议向美政府出让5%股权超400亿美元；生数科技发布Vidu S1实时交互视频模型；阿里因后门风险全面禁用Claude；Scaling Law原始论文被曝存在bug。",
+      "link": "https://mp.weixin.qq.com/s/P6yJ7bOX2OvlROXqoCmSiA",
+      "source_file": "sources/2026-07-06_腾讯研究院AI速递 20260706_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "AI，正在替你「养」孩子",
+      "source": "极客公园",
+      "digest": "中国超六成中小学生用过AI、近两成经常用，AI玩具市场规模达290亿元年复合增长超50%，但专家警告AI陪伴对儿童的风险大于社交媒体，需警惕AI替代而非增强亲子关系。",
+      "link": "https://mp.weixin.qq.com/s/tdO3ZJ9nYSumbiV5Bt2EDA",
+      "source_file": "sources/2026-07-06_AI，正在替你「养」孩子_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-06",
+      "title": "AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权",
+      "source": "新智元",
+      "digest": "LMArena负责人指出全球84%人口从未接触AI，仅0.3%付费使用高级服务；顶级工程师每天花费1000美元使用Fable推理，精英开发者构建多模型协作矩阵，AI体验正形成巨大的阶层鸿沟。",
+      "link": "https://mp.weixin.qq.com/s/5u3h6ck-7vNzrhS8cUB1PA",
+      "source_file": "sources/2026-07-06_AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-05",
       "title": "Anthropic造了套AI越狱「刑法」！你的请求，四种死法",

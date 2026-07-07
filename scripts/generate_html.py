@@ -517,8 +517,15 @@ def build_section_html(category, articles):
                 sources_html += '</div>'
                 card_html += sources_html
             else:
-                # 只有单个来源，显示单个标签
-                card_html += f'<span class="source-tag">{escape_html(merged_article.get("source", ""))}</span>'
+                # 只有单个来源（合并主条卡片），显示可点击的 viewer 链接
+                main_source = merged_article.get("source", "")
+                main_source_file = merged_article.get("source_file", "")
+                if main_source_file:
+                    encoded = quote(main_source_file, safe='')
+                    main_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded}'
+                    card_html += f'<span class="source-tag"><a href="{escape_html(main_link)}" target="_blank">{escape_html(main_source)}</a></span>'
+                else:
+                    card_html += f'<span class="source-tag">{escape_html(main_source)}</span>'
         else:
             # 单个文章，但可能有多来源标签（classification.json手动指定）
             single_article = article_list[0] if article_list else {}
