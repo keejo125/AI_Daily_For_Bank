@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-07-08T00:55:04.287772",
-  "total": 469,
+  "updated_at": "2026-07-08T08:45:21.504458",
+  "total": 477,
   "articles": [
+    {
+      "date": "2026-07-07",
+      "title": "刚刚，Anthropic切开Claude大脑！AI自发长出类人「意识器官」",
+      "source": "新智元",
+      "digest": "Anthropic发布长论文与开源工具J-Lens（Jacobian Lens），揭示Claude在执行抄写等任务时，神经网络中间层自发长出与人类大脑『意识』区域惊人相似的内部结构。研究者借此方法可读取模型咽回的中间思考过程，发现其在表层输出与底层计算之间存在完整且可解释的中间表征。",
+      "link": "https://mp.weixin.qq.com/s/a6vWEMgNhHK9OpKzgMfYKA",
+      "source_file": "sources/2026-07-07_刚刚，Anthropic切开Claude大脑！AI自发长出类人「意识器官」_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-07",
+      "title": "个人AGI的理想界面是现在使用的界面？",
+      "source": "51CTO",
+      "digest": "OpenAI 是想成为下一代 AI 操作系统？",
+      "link": "https://mp.weixin.qq.com/s/sXTPy0UBOQYsYNFC80gTSw",
+      "source_file": "sources/2026-07-07_个人AGI的理想界面是现在使用的界面？_51CTO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "刚刚，翁荔博客又上新：通过Harness工程实现AI自我提升",
+      "source": "机器之心",
+      "digest": "前OpenAI资深研究员翁荔发布博客《Harness Engineering for Self-Improvement》，系统梳理从ACE、Meta Context Engineering到Self-Harness、Darwin Gödel Machine等围绕Harness自我优化的研究工作，探讨递归式自我提升（RSI）究竟会先发生在模型权重层面还是Harness脚手架层面。",
+      "link": "https://mp.weixin.qq.com/s/kZrryL8_fxfq2pSFw6LSqg",
+      "source_file": "sources/2026-07-07_刚刚，翁荔博客又上新：通过Harness工程实现AI自我提升_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 | ACL26",
+      "source": "新智元",
+      "digest": "MBZUAI、中国人民大学和哈佛大学联合团队发布五十页综述，提出『事实保真度验证』新目标，从视觉与语言双视角梳理出涵盖底层线索、时空一致性、跨模态核验及世界知识推理的四层检测框架，强调多层证据耦合与可解释性，该论文已被ACL 2026录用。",
+      "link": "https://mp.weixin.qq.com/s/3pk7i90CedJRVNPVeko28g",
+      "source_file": "sources/2026-07-07_如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 _ ACL26_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "76%的性能提升与模型无关？Karpathy 700次 Loop 实验揭开 Agent 最大误区",
+      "source": "InfoQ",
+      "digest": "『今天 AI 行业最大的误区，是大家都在逼 Agent 尽快干活，却没有先把底层模型和系统机制理解吃透。』前OpenAI联合创始人、现Anthropic预训练研究员Andrej Karpathy在播客中警示业界加强模型框架重视，并通过700次Loop实验证明76%的性能提升与模型本身无关，Agent从Demo到产品需要十年。",
+      "link": "https://mp.weixin.qq.com/s/BZOvL_4Uei-zFGY3Ossi9w",
+      "source_file": "sources/2026-07-07_76%的性能提升与模型无关？Karpathy 700次 Loop 实验揭开 Agent 最大误区_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Qoder 企业版全球发布：从知识引擎到企业安全，用 4 个 topic 讲透企业 AI Coding 落地",
+      "source": "Qoder",
+      "digest": "AI Coding 进企业，卡住的通常是两件事：知识太分散、安全没边界。",
+      "link": "https://mp.weixin.qq.com/s/58tx_Ci_KbTGhZivH-Keeg",
+      "source_file": "sources/2026-07-07_Qoder 企业版全球发布：从知识引擎到企业安全，用 4 个 topic 讲透企业 AI Codin_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "从Vibe Coding到Harness—— 一套大仓AI工程化实战",
+      "source": "腾讯技术工程",
+      "digest": "不讲理念，侧重实战",
+      "link": "https://mp.weixin.qq.com/s/LGo7daiYYRf1r_YY3r-cXw",
+      "source_file": "sources/2026-07-07_从Vibe Coding到Harness—— 一套大仓AI工程化实战_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "可复制的 AI Coding 全栈实战：比 OpenSpec 更轻量、更丝滑",
+      "source": "InfoQ",
+      "digest": "AI写代码为什么总显得『差那么点意思』？",
+      "link": "https://mp.weixin.qq.com/s/f7EyhoEWGx6BvmJ1gOr-Mw",
+      "source_file": "sources/2026-07-07_可复制的 AI Coding 全栈实战：比 OpenSpec 更轻量、更丝滑_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "让Skill『有图可依』：openJiuwen首发多模态Skill范式Skill-Omni",
+      "source": "量子位",
+      "digest": "从文字说明书到多模态经验库",
+      "link": "https://mp.weixin.qq.com/s/UnE__7YZeauaKVokkU8CuA",
+      "source_file": "sources/2026-07-07_让Skill“有图可依”：openJiuwen首发多模态Skill范式Skill-Omni_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "银行业AI进入深水区：从辅助工具走向数字员工，体制、人才、治理全面承压",
+      "source": "银行科技研究社",
+      "digest": "德勤中国金融服务业研究中心发布《建基固本 智绘新篇：中国银行业2025年发展回顾及2026年展望》报告，指出银行AI大模型应用面临数据、技术、体制、市场、社会五重挑战，AI正从『辅助工具』走向『数字员工』，技术与组织的错位成为主要矛盾。",
+      "link": "https://mp.weixin.qq.com/s/EidY7ipdSWypc2LqABUyOQ",
+      "source_file": "sources/2026-07-07_银行业AI进入深水区：从辅助工具走向数字员工，体制、人才、治理全面承压_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "刚刚，全球首个加密AI产品完成保险签约！你敢用，它敢赔",
+      "source": "新智元",
+      "digest": "7月7日北京海淀AI原点社区，荆华密算与人保北京市分公司、AI原点社区签下北京市首单、保险行业首个AI企业数据损害赔偿责任保险——全球首次有保险机构为使用AI的用户数据进行承保，华为、海光、火山引擎、智谱等头部AI企业悉数到场。",
+      "link": "https://mp.weixin.qq.com/s/fgwYd5b-UVHM1xYRxY3A8g",
+      "source_file": "sources/2026-07-07_刚刚，全球首个加密AI产品完成保险签约！你敢用，它敢赔_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "AI高端对话：智能体『凉了』？热的是概念，冷下来才是产业",
+      "source": "智东西",
+      "digest": "Agent未来市场空间至少是万亿，甚至更大。",
+      "link": "https://mp.weixin.qq.com/s/7pIECoCLuf9A5qvn8p_5rw",
+      "source_file": "sources/2026-07-07_AI高端对话：智能体“凉了”？热的是概念，冷下来才是产业_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "OpenAI做不出的『中国式私教』！AI重构不可能三角，学而思超级大招",
+      "source": "新智元",
+      "digest": "学而思T6旗舰发布，首发最低价6899元，搭载清北学霸+剑桥RAZ+懂情绪的AI私教，对比OpenAI全球化能力试验、美国小切口深耕、新加坡本土化应试三条全球『AI导师』路径，提出中国式AI私教重构『不可能三角』的教育产品方案。",
+      "link": "https://mp.weixin.qq.com/s/IFMOhArPKjAQQ5RJAx1MjQ",
+      "source_file": "sources/2026-07-07_OpenAI做不出的「中国式私教」！AI重构不可能三角，学而思超级大招_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "289 美元的 AI 语音戒指『火』了：能不能成为下一个 Plaud",
+      "source": "极客公园",
+      "digest": "​『轻声书写，触摸编辑。』",
+      "link": "https://mp.weixin.qq.com/s/x4SFobwtCS-9zRAT2v73Kg",
+      "source_file": "sources/2026-07-07_289 美元的 AI 语音戒指「火」了：能不能成为下一个 Plaud_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "东升西落！华尔街大佬建议押注中国AI",
+      "source": "财联社AI daily",
+      "digest": "华尔街量子策略研究机构罕见喊话『撤出AI、中国除外』，建议做多中国AI应用股票；麦格理首次覆盖五家中国AI芯片企业并给予寒武纪50%以上目标价涨幅。报告指出中美大模型存在1-2个数量级价差，中国AI生态正以极致性价比和本土供应链成为全球资本新绿洲。",
+      "link": "https://mp.weixin.qq.com/s/-lmmZYY5cVGS9xpOSQaq_w",
+      "source_file": "sources/2026-07-07_东升西落！华尔街大佬建议押注中国AI_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "马斯克xAI正式更名为SpaceXAI；字节申请『咕咕嘎嘎』等热梗著作权；三星今年利润超过去 40 年总和 | 极客早知道",
+      "source": "极客公园",
+      "digest": "苹果 iOS 27 家庭新增 AI 摄像头功能；Anthropic 发新论文: AI 的『脑海』J-space",
+      "link": "https://mp.weixin.qq.com/s/ezBqjI3ZS2rB-uLVER8EtA",
+      "source_file": "sources/2026-07-07_马斯克xAI正式更名为SpaceXAI；字节申请「咕咕嘎嘎」等热梗著作权；三星今年利润超过去 40 _极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-07",
+      "title": "腾讯研究院AI速递 20260707",
+      "source": "腾讯研究院",
+      "digest": "混元 Hy3：Agent 能力和产品体验跃升",
+      "link": "https://mp.weixin.qq.com/s/CGrazD2OgxBE8Xz5JW-_nw",
+      "source_file": "sources/2026-07-07_腾讯研究院AI速递 20260707_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-06",
       "title": "AI折叠！Fable 5和GPT-5.6，正沦为少数人的特权",
