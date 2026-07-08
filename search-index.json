@@ -1,7 +1,207 @@
 {
-  "updated_at": "2026-07-08T08:45:21.504458",
-  "total": 477,
+  "updated_at": "2026-07-09T06:53:48.070520",
+  "total": 497,
   "articles": [
+    {
+      "date": "2026-07-08",
+      "title": "当AI开始重写自己：EverMind的自进化智能体框架Raven，正在定义数字生命的下一个形态",
+      "source": "机器之心",
+      "digest": "AI 应该如何拥有记忆，如何通过记忆成长，以及最终，如何成为一个真正意义上的 \"数字生命\"。",
+      "link": "https://mp.weixin.qq.com/s/-mXphRfXeukWNvfUAcG7gQ",
+      "source_file": "sources/2026-07-08_当AI开始重写自己：EverMind的自进化智能体框架Raven，正在定义数字生命的下一个形态_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "维纳智能登上Nature通讯：AI不只会回答问题，开始生成高精度行业数据",
+      "source": "机器之心",
+      "digest": "闭环反馈是引擎，推理数据是燃料！",
+      "link": "https://mp.weixin.qq.com/s/X-ZS8SVKSnkPBI1KeRn4eA",
+      "source_file": "sources/2026-07-08_维纳智能登上Nature通讯：AI不只会回答问题，开始生成高精度行业数据_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "智源悟界·RoboBrain Orca：多模态表征世界模型",
+      "source": "新智元",
+      "digest": "The World is in Your Mind.",
+      "link": "https://mp.weixin.qq.com/s/25B0q0G2elnh1QpeTXHwOg",
+      "source_file": "sources/2026-07-08_智源悟界·RoboBrain Orca：多模态表征世界模型_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "本体厂向上，大模型厂向下，蚂蚁灵波VLA2.0抢到机器人“大脑入口”",
+      "source": "智东西",
+      "digest": "蚂蚁灵波把具身基座模型开源了！",
+      "link": "https://mp.weixin.qq.com/s/FbhNlI08c-eTZv-5n3UDjA",
+      "source_file": "sources/2026-07-08_本体厂向上，大模型厂向下，蚂蚁灵波VLA2.0抢到机器人“大脑入口”_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "DeepSeek、智谱被曝造芯，国产大模型绕开英伟达！",
+      "source": "新智元",
+      "digest": "中国AI双雄集体掀翻牌桌",
+      "link": "https://mp.weixin.qq.com/s/6IAggPm_rLyTeaQuEyUbwQ",
+      "source_file": "sources/2026-07-08_DeepSeek、智谱被曝造芯，国产大模型绕开英伟达！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "AI生图免训练提速1000%，办法：最简洁的“三阶段流水线”",
+      "source": "量子位",
+      "digest": "AI画图能力越来越强，但用户体感还是一个字：慢。",
+      "link": "https://mp.weixin.qq.com/s/auqVphW7fdjGWabJc73zxA",
+      "source_file": "sources/2026-07-08_AI生图免训练提速1000%，办法：最简洁的“三阶段流水线”_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "提示词压缩竟成大模型新漏洞？港科大提出黑盒攻击框架COMA | ASE 2026",
+      "source": "机器之心",
+      "digest": "Agent 系统的安全分析，远不止 LLM 本身。",
+      "link": "https://mp.weixin.qq.com/s/CS4lWmpvOIHtKEwgc3wWdw",
+      "source_file": "sources/2026-07-08_提示词压缩竟成大模型新漏洞？港科大提出黑盒攻击框架COMA _ ASE 2026_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-08",
+      "title": "精打细算虾养成指南： 省 Token 和把 AI 用好，从来就是一件事",
+      "source": "腾讯技术工程",
+      "digest": "更重要的是让 AI 的每一分注意力都用在刀刃上",
+      "link": "https://mp.weixin.qq.com/s/BBySdR4uz9ybhcB0lak3rw",
+      "source_file": "sources/2026-07-08_精打细算虾养成指南： 省 Token 和把 AI 用好，从来就是一件事_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "从个人提效到组织进化：Qoder在中小团队中的AI Coding实践",
+      "source": "Qoder",
+      "digest": "大家好，我是吉力，是悦云科技前端负责人。今天很高兴能在这里跟大家聊一个我近半年以来一直在思考的问题：AI时代我们要怎么从\"个人提效\"走到\"组织进化\"。",
+      "link": "https://mp.weixin.qq.com/s/_261eqcD6UhN7YKKTv1djg",
+      "source_file": "sources/2026-07-08_从个人提效到组织进化：Qoder在中小团队中的AI Coding实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "从日志学习到风洞验证：构建 GPU 集群的 AI Native 稳定性闭环",
+      "source": "阿里云开发者",
+      "digest": "从日志学习到风洞验证：构建 GPU 集群的 AI Native 稳定性闭环",
+      "link": "https://mp.weixin.qq.com/s/vz5AUT8eqsedUeUu7VmIWQ",
+      "source_file": "sources/2026-07-08_从日志学习到风洞验证：构建 GPU 集群的 AI Native 稳定性闭环_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "邮储银行日均Token超百亿，计划年底实现1000个大模型应用场景",
+      "source": "银行科技研究社",
+      "digest": "邮储银行日均Token超百亿，计划年底实现1000个大模型应用场景",
+      "link": "https://mp.weixin.qq.com/s/Q104SjL0-WPgqN6VXD5sig",
+      "source_file": "sources/2026-07-08_邮储银行日均Token超百亿，计划年底实现1000个大模型应用场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "蚂蚁集团、Visa、Mastercard等参与新加坡金融AI智能体安全标准",
+      "source": "银行科技研究社",
+      "digest": "蚂蚁集团、Visa、Mastercard等参与新加坡金融AI智能体安全标准",
+      "link": "https://mp.weixin.qq.com/s/HPjKKOf8pAkgEx2WWsg0JA",
+      "source_file": "sources/2026-07-08_蚂蚁集团、Visa、Mastercard等参与新加坡金融AI智能体安全标准_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "姚顺雨的OpenAI前同事，也加入腾讯了",
+      "source": "智东西",
+      "digest": "腾讯多模态研究迎来人才补强。",
+      "link": "https://mp.weixin.qq.com/s/lpovm1wxGVMvyLsXlPL0YA",
+      "source_file": "sources/2026-07-08_姚顺雨的OpenAI前同事，也加入腾讯了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "从体脂秤到薄荷健康，蚂蚁阿福的稳扎稳打",
+      "source": "极客公园",
+      "digest": "智能硬件+健康 AI 走得通吗？",
+      "link": "https://mp.weixin.qq.com/s/KNgEqSzzhFoPON65SZ3xLw",
+      "source_file": "sources/2026-07-08_从体脂秤到薄荷健康，蚂蚁阿福的稳扎稳打_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "来自硅谷一线创业者的 FDE 非共识和落地指南 | AI透镜-行业圆桌06",
+      "source": "AI透镜",
+      "digest": "中国到底能不能跑通 FDE？",
+      "link": "https://mp.weixin.qq.com/s/w0vNdLLrIoLFx1lSCR3Dcg",
+      "source_file": "sources/2026-07-08_来自硅谷一线创业者的 FDE 非共识和落地指南 _ AI透镜-行业圆桌06_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "可穿戴 AI 硬件新战场，「长」在 Apple Watch 表带上",
+      "source": "极客公园",
+      "digest": "​共生不是认输，是创业公司的生存之道。",
+      "link": "https://mp.weixin.qq.com/s/DL_b6LwW4eh3ATBQL0eDBA",
+      "source_file": "sources/2026-07-08_可穿戴 AI 硬件新战场，「长」在 Apple Watch 表带上_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "AI把代码写崩，再花1周1万美元请人用AI修：Vibe Coding的荒诞闭环出现了",
+      "source": "InfoQ",
+      "digest": "一种新的、因 AI 代码泛滥而出现的生意来了。",
+      "link": "https://mp.weixin.qq.com/s/sdUbJ-aNNy8qiiYfMbUnVg",
+      "source_file": "sources/2026-07-08_AI把代码写崩，再花1周1万美元请人用AI修：Vibe Coding的荒诞闭环出现了_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "AI正在接管企业，不过智能化转型真正管用的不是大模型",
+      "source": "财联社AI daily",
+      "digest": "企业级AI，正在把企业软件推入一次从未有过的范式切换。",
+      "link": "https://mp.weixin.qq.com/s/mi2ZKeDfUjDMv2LFb99xcw",
+      "source_file": "sources/2026-07-08_AI正在接管企业，不过智能化转型真正管用的不是大模型_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "曝 DeepSeek 自研 AI 芯片；小米首款增程 SUV 或改名为澎程；中国人形机器人今年有望破 10 万台 | 极客早知道",
+      "source": "极客公园",
+      "digest": "智谱辟谣撤回 A 股辅导备案；华为天才少年吐槽 DeepSeek 面试：流程拖沓，被面试官指控抄袭；国内首款硬膜下植入式脑机接口产品启动注册临床试验，宣称不伤脑、不烧脑",
+      "link": "https://mp.weixin.qq.com/s/6bEm23_kJfJHBUGvgSqnzw",
+      "source_file": "sources/2026-07-08_曝 DeepSeek 自研 AI 芯片；小米首款增程 SUV 或改名为澎程；中国人形机器人今年有望破_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-08",
+      "title": "腾讯研究院AI速递 20260708",
+      "source": "腾讯研究院",
+      "digest": "腾讯混元Hy3 WorkBuddy限时免费",
+      "link": "https://mp.weixin.qq.com/s/urtDaTe2FE5FgTejnRY1Yw",
+      "source_file": "sources/2026-07-08_腾讯研究院AI速递 20260708_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-07",
       "title": "刚刚，Anthropic切开Claude大脑！AI自发长出类人「意识器官」",
