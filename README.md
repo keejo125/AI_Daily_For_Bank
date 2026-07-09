@@ -56,12 +56,12 @@ Step1   Step2   Step3   Step4   Step5
 
 - Python 3.x
 - `requests` 库：`pip3 install requests`
-- `wechat-query-skill` 导出接口可访问：`https://www.torandom.com/wechat-api/api/health` 返回 healthy
+- `wechat-query-skill` 导出接口可访问：将 `config.json` 中 `server.base_url` 配置为你的 API 地址后，确保服务可访问（返回 healthy）
 
 ### 一键运行
 
 ```bash
-cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/scripts
+cd <PROJECT_DIR>/scripts
 
 # Step 1: 获取昨日文章（不传日期默认昨天，1-3秒完成）
 python3 fetch_articles.py
@@ -99,7 +99,7 @@ python3 generate_html.py 2026-04-22
 ```json
 {
   "server": {
-    "base_url": "https://www.torandom.com/wechat-api"
+    "base_url": "<API_BASE_URL>"
   },
   "keywords": {
     "include": ["AI", "大模型", "智能体", "skill"],
@@ -107,7 +107,7 @@ python3 generate_html.py 2026-04-22
   },
   "categories": ["国际", "国内", "同业", "其他"],
   "output": {
-    "project_dir": "/Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank"
+    "project_dir": "<PROJECT_DIR>"
   }
 }
 ```
