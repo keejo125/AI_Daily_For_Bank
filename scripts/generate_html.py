@@ -194,7 +194,8 @@ def build_articles_json(classification, date_str):
         'total': 0,
         'with_content': 0,
         'without_content': 0,
-        'merged': 0
+        'merged': 0,
+        'skipped_merged': 0
     }
 
     for cat in cats:
@@ -214,10 +215,15 @@ def build_articles_json(classification, date_str):
             digest = item.get("digest", "")
             is_model_related = item.get("is_model_related", False)
             merged_articles = item.get("merged_articles", [])
-            
+
             # 优先使用 classification.json 中的 source_items（完整包含所有来源）
             source_items_from_cls = item.get('source_items', [])
-            
+
+            # SKILL v2.1: 跳过合并组的从条（从条已在主条的 source_items 中合并展示）
+            if item.get('is_merged') is True and not merged_articles:
+                stats['skipped_merged'] += 1
+                continue
+
             if merged_articles and len(merged_articles) >= 1:
                 stats['merged'] += 1
                 # 合并文章：构建 source_items
@@ -322,7 +328,8 @@ def build_articles_json(classification, date_str):
     print_progress(f"   总文章数: {stats['total']}")
     print_progress(f"   成功读取: {stats['with_content']} ({stats['with_content']/stats['total']*100:.1f}%)")
     print_progress(f"   未读取到: {stats['without_content']} ({stats['without_content']/stats['total']*100:.1f}%)")
-    print_progress(f"   合并文章: {stats['merged']}\n")
+    print_progress(f"   合并文章: {stats['merged']}")
+    print_progress(f"   跳过从条: {stats.get('skipped_merged', 0)}\n")
 
     return articles
 

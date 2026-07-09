@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-10T06:50:55.233892",
-  "total": 520,
+  "updated_at": "2026-07-10T07:05:19.553138",
+  "total": 516,
   "articles": [
     {
       "date": "2026-07-09",
@@ -9,16 +9,6 @@
       "digest": "突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟",
       "link": "https://mp.weixin.qq.com/s/Z5NH43sv6WM79IQCRoY01A",
       "source_file": "sources/2026-07-09_突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！",
-      "source": "极客公园",
-      "digest": "Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！",
-      "link": "https://mp.weixin.qq.com/s/iWcjVWcV2ws8-Skvp6lizA",
-      "source_file": "sources/2026-07-09_Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！_极客公园.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -54,16 +44,6 @@
     },
     {
       "date": "2026-07-09",
-      "title": "同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网",
-      "source": "量子位",
-      "digest": "同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网",
-      "link": "https://mp.weixin.qq.com/s/UKbOCJcDJp9D3RSS9CTu9g",
-      "source_file": "sources/2026-07-09_同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-09",
       "title": "GPT-6要来了！OpenAI彻底抛弃4T旧底座",
       "source": "新智元",
       "digest": "GPT-6要来了！OpenAI彻底抛弃4T旧底座",
@@ -89,16 +69,6 @@
       "digest": "HeroUI v3 正式发布，针对 React 和 React Native 从头进行了重写，并基于 Tailwind CSS v4 构建",
       "link": "https://mp.weixin.qq.com/s/4UI3IssxQwmnmYsAhb5uFQ",
       "source_file": "sources/2026-07-09_HeroUI v3 正式发布，针对 React 和 React Native 从头进行了重写，并基于_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-09",
-      "title": "37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆",
-      "source": "量子位",
-      "digest": "37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆",
-      "link": "https://mp.weixin.qq.com/s/P4c5UtT9CbM4FVTtgMPXHQ",
-      "source_file": "sources/2026-07-09_37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆_量子位.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -169,16 +139,6 @@
       "digest": "全球首款AI智能体手机，下周发布",
       "link": "https://mp.weixin.qq.com/s/n12R-vnAcd5YTiPIA4ZGog",
       "source_file": "sources/2026-07-09_全球首款AI智能体手机，下周发布_智东西.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-09",
-      "title": "阶跃星辰将发布AI智能体手机",
-      "source": "财联社AI daily",
-      "digest": "阶跃星辰将发布AI智能体手机",
-      "link": "https://mp.weixin.qq.com/s/fBnG7CYmIqU8iI-UGQlLXw",
-      "source_file": "sources/2026-07-09_阶跃星辰将发布AI智能体手机_财联社AI daily.md",
       "category": "国内",
       "is_model_related": false
     },
