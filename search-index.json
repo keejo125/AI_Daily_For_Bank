@@ -1,7 +1,237 @@
 {
-  "updated_at": "2026-07-09T06:53:48.070520",
-  "total": 497,
+  "updated_at": "2026-07-10T06:50:55.233892",
+  "total": 520,
   "articles": [
+    {
+      "date": "2026-07-09",
+      "title": "突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟",
+      "source": "新智元",
+      "digest": "突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟",
+      "link": "https://mp.weixin.qq.com/s/Z5NH43sv6WM79IQCRoY01A",
+      "source_file": "sources/2026-07-09_突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！",
+      "source": "极客公园",
+      "digest": "Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！",
+      "link": "https://mp.weixin.qq.com/s/iWcjVWcV2ws8-Skvp6lizA",
+      "source_file": "sources/2026-07-09_Utopai PAI 2.0 出圈，好莱坞顶流导演用 AI 拍出 3 分钟大片！_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "马斯克奇袭Claude！速度翻倍，价格腰斩，杀进AI编程牌桌",
+      "source": "智东西",
+      "digest": "马斯克奇袭Claude！速度翻倍，价格腰斩，杀进AI编程牌桌",
+      "link": "https://mp.weixin.qq.com/s/LnDn5qh5LhItrqa64g18Rw",
+      "source_file": "sources/2026-07-09_马斯克奇袭Claude！速度翻倍，价格腰斩，杀进AI编程牌桌_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "现代AI之父新作：13个大模型实测，检索agent真的可信吗？",
+      "source": "新智元",
+      "digest": "现代AI之父新作：13个大模型实测，检索agent真的可信吗？",
+      "link": "https://mp.weixin.qq.com/s/6YJ1is2oSsDVi1ZiX0vAMQ",
+      "source_file": "sources/2026-07-09_现代AI之父新作：13个大模型实测，检索agent真的可信吗？_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "OpenAI深夜放出GPT-Live，ChatGPT终于像真人一样说话",
+      "source": "机器之心",
+      "digest": "OpenAI深夜放出GPT-Live，ChatGPT终于像真人一样说话",
+      "link": "https://mp.weixin.qq.com/s/w9dCLGw8tVDvRHsHXC73uQ",
+      "source_file": "sources/2026-07-09_OpenAI深夜放出GPT-Live，ChatGPT终于像真人一样说话_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网",
+      "source": "量子位",
+      "digest": "同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网",
+      "link": "https://mp.weixin.qq.com/s/UKbOCJcDJp9D3RSS9CTu9g",
+      "source_file": "sources/2026-07-09_同声传译一夜失业！GPT-Live瞬间翻译，老太太现场抬杠AI看傻全网_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "GPT-6要来了！OpenAI彻底抛弃4T旧底座",
+      "source": "新智元",
+      "digest": "GPT-6要来了！OpenAI彻底抛弃4T旧底座",
+      "link": "https://mp.weixin.qq.com/s/aflEagsmfrs_2FPQATpaig",
+      "source_file": "sources/2026-07-09_GPT-6要来了！OpenAI彻底抛弃4T旧底座_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "史上最高调的AI重写：Claude花11天搞定Bun，创始人花一个月才敢交底",
+      "source": "InfoQ",
+      "digest": "史上最高调的AI重写：Claude花11天搞定Bun，创始人花一个月才敢交底",
+      "link": "https://mp.weixin.qq.com/s/H26YZeHvAU3kaDKYA6PDcQ",
+      "source_file": "sources/2026-07-09_史上最高调的AI重写：Claude花11天搞定Bun，创始人花一个月才敢交底_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "HeroUI v3 正式发布，针对 React 和 React Native 从头进行了重写，并基于 Tailwind CSS v4 构建",
+      "source": "InfoQ",
+      "digest": "HeroUI v3 正式发布，针对 React 和 React Native 从头进行了重写，并基于 Tailwind CSS v4 构建",
+      "link": "https://mp.weixin.qq.com/s/4UI3IssxQwmnmYsAhb5uFQ",
+      "source_file": "sources/2026-07-09_HeroUI v3 正式发布，针对 React 和 React Native 从头进行了重写，并基于_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆",
+      "source": "量子位",
+      "digest": "37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆",
+      "link": "https://mp.weixin.qq.com/s/P4c5UtT9CbM4FVTtgMPXHQ",
+      "source_file": "sources/2026-07-09_37.7°C热晕了！剑桥大学AI超算瘫痪，350个科研项目集体停摆_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "对话Mamoda团队：业内首个DiT-MoE视频生成基座是如何炼成的？",
+      "source": "智东西",
+      "digest": "对话Mamoda团队：业内首个DiT-MoE视频生成基座是如何炼成的？",
+      "link": "https://mp.weixin.qq.com/s/OMn7Jw5DDni7UhjIIFELWg",
+      "source_file": "sources/2026-07-09_对话Mamoda团队：业内首个DiT-MoE视频生成基座是如何炼成的？_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "大圆实测 : 你真的需要一个长在企业微信中的AI",
+      "source": "腾讯技术工程",
+      "digest": "大圆实测 : 你真的需要一个长在企业微信中的AI",
+      "link": "https://mp.weixin.qq.com/s/rP23Vjdk33GloywgTuYRMg",
+      "source_file": "sources/2026-07-09_大圆实测 _ 你真的需要一个长在企业微信中的AI_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "智能体互联网关键系统技术验证工程启动",
+      "source": "中国信通院CAICT",
+      "digest": "智能体互联网关键系统技术验证工程启动",
+      "link": "https://mp.weixin.qq.com/s/qtBCAMRbw4V431a6-3hnJw",
+      "source_file": "sources/2026-07-09_智能体互联网关键系统技术验证工程启动_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "中国互联网协会与中国信通院发布首批互联网智能体登记可信清单",
+      "source": "中国信通院CAICT",
+      "digest": "中国互联网协会与中国信通院发布首批互联网智能体登记可信清单",
+      "link": "https://mp.weixin.qq.com/s/q_XPP8kDC1EVYI5PKs2ryw",
+      "source_file": "sources/2026-07-09_中国互联网协会与中国信通院发布首批互联网智能体登记可信清单_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "拿葡萄牙语喂AI，半夜C罗竟用「方言」喊我看球，太魔幻了",
+      "source": "新智元",
+      "digest": "拿葡萄牙语喂AI，半夜C罗竟用「方言」喊我看球，太魔幻了",
+      "link": "https://mp.weixin.qq.com/s/lQEjy1J7aeFc2xP22Yonxw",
+      "source_file": "sources/2026-07-09_拿葡萄牙语喂AI，半夜C罗竟用「方言」喊我看球，太魔幻了_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "AI 时代的编程语言，这次是来自中国的底层创新",
+      "source": "机器之心",
+      "digest": "AI 时代的编程语言，这次是来自中国的底层创新",
+      "link": "https://mp.weixin.qq.com/s/FG_-DEwSw0_ubBE36tMeeA",
+      "source_file": "sources/2026-07-09_AI 时代的编程语言，这次是来自中国的底层创新_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "全球首款AI智能体手机，下周发布",
+      "source": "智东西",
+      "digest": "全球首款AI智能体手机，下周发布",
+      "link": "https://mp.weixin.qq.com/s/n12R-vnAcd5YTiPIA4ZGog",
+      "source_file": "sources/2026-07-09_全球首款AI智能体手机，下周发布_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "阶跃星辰将发布AI智能体手机",
+      "source": "财联社AI daily",
+      "digest": "阶跃星辰将发布AI智能体手机",
+      "link": "https://mp.weixin.qq.com/s/fBnG7CYmIqU8iI-UGQlLXw",
+      "source_file": "sources/2026-07-09_阶跃星辰将发布AI智能体手机_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "淘宝内容生态：GrowBrain - 淘宝Agentic内容成长引擎",
+      "source": "阿里云开发者",
+      "digest": "淘宝内容生态：GrowBrain - 淘宝Agentic内容成长引擎",
+      "link": "https://mp.weixin.qq.com/s/_BIsvH_Z9ofCmQenCfQV6Q",
+      "source_file": "sources/2026-07-09_淘宝内容生态：GrowBrain - 淘宝Agentic内容成长引擎_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "量子基础大模型在商业银行场景微调中的应用研究",
+      "source": "金融电子化",
+      "digest": "量子基础大模型在商业银行场景微调中的应用研究",
+      "link": "https://mp.weixin.qq.com/s/leINHGXkq-sUEnVSowT3kA",
+      "source_file": "sources/2026-07-09_量子基础大模型在商业银行场景微调中的应用研究_金融电子化.md",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-09",
+      "title": "韩国金融情报机构引入AI升级反洗钱筛查",
+      "source": "银行科技研究社",
+      "digest": "韩国金融情报机构引入AI升级反洗钱筛查",
+      "link": "https://mp.weixin.qq.com/s/D8lVRDIxh9PaEfMar0_yjw",
+      "source_file": "sources/2026-07-09_韩国金融情报机构引入AI升级反洗钱筛查_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "智驭风险：大模型重构保险业务安全新边界——泰康保险融合防控体系的探索与实践",
+      "source": "金融电子化",
+      "digest": "智驭风险：大模型重构保险业务安全新边界——泰康保险融合防控体系的探索与实践",
+      "link": "https://mp.weixin.qq.com/s/qAYthzLC3yPZ_VolV0TY1g",
+      "source_file": "sources/2026-07-09_智驭风险：大模型重构保险业务安全新边界——泰康保险融合防控体系的探索与实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-09",
+      "title": "OpenAI最终能否盈利？",
+      "source": "腾讯研究院",
+      "digest": "OpenAI最终能否盈利？",
+      "link": "https://mp.weixin.qq.com/s/1yO-ej14lWyIKJvsIGZV4w",
+      "source_file": "sources/2026-07-09_OpenAI最终能否盈利？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-08",
       "title": "当AI开始重写自己：EverMind的自进化智能体框架Raven，正在定义数字生命的下一个形态",
