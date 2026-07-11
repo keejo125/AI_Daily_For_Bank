@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T08:51:36.824372",
+  "updated_at": "2026-07-11T09:04:20.082798",
   "total": 540,
   "articles": [
     {
@@ -144,6 +144,16 @@
     },
     {
       "date": "2026-07-10",
+      "title": "读懂 Claude Tag，看见 AI 组织下一站",
+      "source": "Qoder",
+      "digest": "读懂 Claude Tag，看见 AI 组织下一站",
+      "link": "https://mp.weixin.qq.com/s/yiybUFYKXflbecC4wisNVQ",
+      "source_file": "sources/2026-07-10_读懂 Claude Tag，看见 AI 组织下一站_Qoder.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
       "title": "【揭秘】如何打造一支凌晨3点还在交付的AI军团",
       "source": "腾讯技术工程",
       "digest": "【揭秘】如何打造一支凌晨3点还在交付的AI军团",
@@ -179,16 +189,6 @@
       "digest": "一个音乐制作人的七年豪赌：做AI写歌，也想抢救中国民乐",
       "link": "https://mp.weixin.qq.com/s/7cQc_XwghkTvnT5IFFsBBQ",
       "source_file": "sources/2026-07-10_一个音乐制作人的七年豪赌：做AI写歌，也想抢救中国民乐_智东西.md",
-      "category": "其他",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-10",
-      "title": "读懂 Claude Tag，看见 AI 组织下一站",
-      "source": "Qoder",
-      "digest": "读懂 Claude Tag，看见 AI 组织下一站",
-      "link": "https://mp.weixin.qq.com/s/yiybUFYKXflbecC4wisNVQ",
-      "source_file": "sources/2026-07-10_读懂 Claude Tag，看见 AI 组织下一站_Qoder.md",
       "category": "其他",
       "is_model_related": true
     },
