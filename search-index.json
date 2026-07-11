@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-07-11T09:04:20.082798",
-  "total": 540,
+  "updated_at": "2026-07-12T06:33:32.123584",
+  "total": 557,
   "articles": [
+    {
+      "date": "2026-07-11",
+      "title": "GPT-5.6一小时解开50年数学猜想，700词Prompt驾驭64个子Agent",
+      "source": "量子位",
+      "digest": "GPT-5.6一小时解开50年数学猜想，700词Prompt驾驭64个子Agent",
+      "link": "",
+      "source_file": "sources/2026-07-11_GPT-5.6一小时解开50年数学猜想，700词Prompt驾驭64个子Agent_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "全球办公AI王座易主！GPT-5.6接管微软全家桶，数亿打工人集体换脑",
+      "source": "新智元",
+      "digest": "全球办公AI王座易主！GPT-5.6接管微软全家桶，数亿打工人集体换脑",
+      "link": "",
+      "source_file": "sources/2026-07-11_全球办公AI王座易主！GPT-5.6接管微软全家桶，数亿打工人集体换脑_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "谷歌Gemma 4论文深夜解封！31B直逼闭源前沿，敲响云端AI丧钟",
+      "source": "新智元",
+      "digest": "谷歌Gemma 4论文深夜解封！31B直逼闭源前沿，敲响云端AI丧钟",
+      "link": "",
+      "source_file": "sources/2026-07-11_谷歌Gemma 4论文深夜解封！31B直逼闭源前沿，敲响云端AI丧钟_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "ICML 2026｜小模型也能「指挥」大模型RL后训练：清华&腾讯提出GPS，最高减少69% Rollout成本",
+      "source": "机器之心",
+      "digest": "ICML 2026｜小模型也能「指挥」大模型RL后训练：清华&腾讯提出GPS，最高减少69% Rollout成本",
+      "link": "",
+      "source_file": "sources/2026-07-11_ICML 2026｜小模型也能「指挥」大模型RL后训练：清华&腾讯提出GPS，最高减少69% Rol_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "Claude Code大升级！一行神级命令，编程原地起飞",
+      "source": "新智元",
+      "digest": "Claude Code大升级！一行神级命令，编程原地起飞",
+      "link": "",
+      "source_file": "sources/2026-07-11_Claude Code大升级！一行神级命令，编程原地起飞_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "仅11天，Claude重写百万行代码，AI史诗级工程却引来愤怒",
+      "source": "机器之心",
+      "digest": "仅11天，Claude重写百万行代码，AI史诗级工程却引来愤怒",
+      "link": "",
+      "source_file": "sources/2026-07-11_仅11天，Claude重写百万行代码，AI史诗级工程却引来愤怒_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "为了「AI iPhone」，苹果正式起诉 OpenAI",
+      "source": "极客公园",
+      "digest": "为了「AI iPhone」，苹果正式起诉 OpenAI",
+      "link": "",
+      "source_file": "sources/2026-07-11_为了「AI iPhone」，苹果正式起诉 OpenAI_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "跟AI说“出片穿搭”，它真能听懂！淘宝ShopX让大模型直接“卖货”了",
+      "source": "量子位",
+      "digest": "跟AI说“出片穿搭”，它真能听懂！淘宝ShopX让大模型直接“卖货”了",
+      "link": "",
+      "source_file": "sources/2026-07-11_跟AI说“出片穿搭”，它真能听懂！淘宝ShopX让大模型直接“卖货”了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-11",
+      "title": "2028年或成AI眼镜行业关键爆发节点",
+      "source": "财联社AI daily",
+      "digest": "2028年或成AI眼镜行业关键爆发节点",
+      "link": "",
+      "source_file": "sources/2026-07-11_2028年或成AI眼镜行业关键爆发节点_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "AI热潮推动，HBM4价格明年或翻倍！",
+      "source": "财联社AI daily",
+      "digest": "AI热潮推动，HBM4价格明年或翻倍！",
+      "link": "",
+      "source_file": "sources/2026-07-11_AI热潮推动，HBM4价格明年或翻倍！_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "中国用十万卡定义下一代AI基建！",
+      "source": "新智元",
+      "digest": "中国用十万卡定义下一代AI基建！",
+      "link": "",
+      "source_file": "sources/2026-07-11_中国用十万卡定义下一代AI基建！_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "传统研发的 AI 化转型：从 AI 原生工程到 AI 原生团队",
+      "source": "Qoder",
+      "digest": "传统研发的 AI 化转型：从 AI 原生工程到 AI 原生团队",
+      "link": "",
+      "source_file": "sources/2026-07-11_传统研发的 AI 化转型：从 AI 原生工程到 AI 原生团队_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "OpenAI女CEO走了！7年病情终恶化，奥特曼：太痛心",
+      "source": "新智元",
+      "digest": "OpenAI女CEO走了！7年病情终恶化，奥特曼：太痛心",
+      "link": "",
+      "source_file": "sources/2026-07-11_OpenAI女CEO走了！7年病情终恶化，奥特曼：太痛心_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "邓文迪&默多克爱女入职Devin，豪门二代优先去AI公司镀金了",
+      "source": "量子位",
+      "digest": "邓文迪&默多克爱女入职Devin，豪门二代优先去AI公司镀金了",
+      "link": "",
+      "source_file": "sources/2026-07-11_邓文迪&默多克爱女入职Devin，豪门二代优先去AI公司镀金了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "孙傲然：父母是道士，学易经，我用AI预测投研｜甲子光年",
+      "source": "甲子光年",
+      "digest": "孙傲然：父母是道士，学易经，我用AI预测投研｜甲子光年",
+      "link": "",
+      "source_file": "sources/2026-07-11_孙傲然：父母是道士，学易经，我用AI预测投研｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "从验证Demo到冲刺IPO，AI企业为何更需要一座「产业小镇」？",
+      "source": "机器之心",
+      "digest": "从验证Demo到冲刺IPO，AI企业为何更需要一座「产业小镇」？",
+      "link": "",
+      "source_file": "sources/2026-07-11_从验证Demo到冲刺IPO，AI企业为何更需要一座「产业小镇」？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-11",
+      "title": "在上海这场顶级赛车比赛，我看到《飞驰人生 3》的 AI 辅助系统走进现实",
+      "source": "极客公园",
+      "digest": "在上海这场顶级赛车比赛，我看到《飞驰人生 3》的 AI 辅助系统走进现实",
+      "link": "",
+      "source_file": "sources/2026-07-11_在上海这场顶级赛车比赛，我看到《飞驰人生 3》的 AI 辅助系统走进现实_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-10",
       "title": "我想跟AI说话了！奥特曼被GPT-Live圈粉，网友吵翻",
