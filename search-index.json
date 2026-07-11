@@ -1,7 +1,247 @@
 {
-  "updated_at": "2026-07-10T07:05:19.553138",
-  "total": 516,
+  "updated_at": "2026-07-11T08:07:53.167275",
+  "total": 540,
   "articles": [
+    {
+      "date": "2026-07-10",
+      "title": "奥特曼撒谎？OpenAI 5.6突发反转，发布无需批准！",
+      "source": "新智元",
+      "digest": "奥特曼撒谎？OpenAI 5.6突发反转，发布无需批准！",
+      "link": "https://mp.weixin.qq.com/s/SO_TZhDOiy7OaTmI0Iu93w",
+      "source_file": "sources/2026-07-10_奥特曼撒谎？OpenAI 5.6突发反转，发布无需批准！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "我想跟AI说话了！奥特曼被GPT-Live圈粉，网友吵翻",
+      "source": "新智元",
+      "digest": "我想跟AI说话了！奥特曼被GPT-Live圈粉，网友吵翻",
+      "link": "https://mp.weixin.qq.com/s/tDu-eP4qNRD1GkonWs-JlA",
+      "source_file": "sources/2026-07-10_我想跟AI说话了！奥特曼被GPT-Live圈粉，网友吵翻_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "AI 公司为何把哲学家请进实验室？",
+      "source": "腾讯研究院",
+      "digest": "AI 公司为何把哲学家请进实验室？",
+      "link": "https://mp.weixin.qq.com/s/VU5HFuKhCnDSSvKUyR276w",
+      "source_file": "sources/2026-07-10_AI 公司为何把哲学家请进实验室？_.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "大模型能写出工业级优化算法吗？MIT提出FrontierOR给AI设下考场",
+      "source": "新智元",
+      "digest": "大模型能写出工业级优化算法吗？MIT提出FrontierOR给AI设下考场",
+      "link": "https://mp.weixin.qq.com/s/eqlu_TYcjcSST7Yu6KUjAg",
+      "source_file": "sources/2026-07-10_大模型能写出工业级优化算法吗？MIT提出FrontierOR给AI设下考场_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "ACL 2026 | 用图异常检测抓出多智能体网络中的内鬼！XG-Guard：首个无监督、可解释、细粒度的MAS安全防线",
+      "source": "机器之心",
+      "digest": "ACL 2026 | 用图异常检测抓出多智能体网络中的内鬼！XG-Guard：首个无监督、可解释、细粒度的MAS安全防线",
+      "link": "https://mp.weixin.qq.com/s/V1NTbaNsWKgwq-iTPaqgSA",
+      "source_file": "sources/2026-07-10_ACL 2026 _ 用图异常检测抓出多智能体网络中的内鬼！XG-Guard：首个无监督、可解释、细_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "虚拟座谈会：机器时代的安全——专家解读 AI 威胁的演变",
+      "source": "InfoQ",
+      "digest": "虚拟座谈会：机器时代的安全——专家解读 AI 威胁的演变",
+      "link": "https://mp.weixin.qq.com/s/esC4lWR_1di6hZUE5NfRSg",
+      "source_file": "sources/2026-07-10_虚拟座谈会：机器时代的安全——专家解读 AI 威胁的演变_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "一夜之间，OpenAI把ChatGPT、Codex、Work缝合了",
+      "source": "智东西",
+      "digest": "一夜之间，OpenAI把ChatGPT、Codex、Work缝合了",
+      "link": "https://mp.weixin.qq.com/s/kbsccIiv71s5J1_mE4_ZFQ",
+      "source_file": "sources/2026-07-10_一夜之间，OpenAI把ChatGPT、Codex、Work缝合了_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "AI推理成本首次算清：GPU利用率不到52%，千万别自建！",
+      "source": "InfoQ",
+      "digest": "AI推理成本首次算清：GPU利用率不到52%，千万别自建！",
+      "link": "https://mp.weixin.qq.com/s/2NSeLfQXTC0k3VVQoyZIMg",
+      "source_file": "sources/2026-07-10_AI推理成本首次算清：GPU利用率不到52%，千万别自建！_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "“十万卡”落地成双，AI新基建跃入超级周期｜甲子光年",
+      "source": "甲子光年",
+      "digest": "“十万卡”落地成双，AI新基建跃入超级周期｜甲子光年",
+      "link": "https://mp.weixin.qq.com/s/PwTENXRXh-fOYEr-3cTSTw",
+      "source_file": "sources/2026-07-10_“十万卡”落地成双，AI新基建跃入超级周期｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "2026全球数字经济大会丨智能体互联网试验网络、标识系统正式启动",
+      "source": "中国信通院CAICT",
+      "digest": "2026全球数字经济大会丨智能体互联网试验网络、标识系统正式启动",
+      "link": "https://mp.weixin.qq.com/s/oqfrulsH4k8Yt1XfeNQFpg",
+      "source_file": "sources/2026-07-10_2026全球数字经济大会丨智能体互联网试验网络、标识系统正式启动_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "「十万卡时代」，谁在定义新标准？",
+      "source": "机器之心",
+      "digest": "「十万卡时代」，谁在定义新标准？",
+      "link": "https://mp.weixin.qq.com/s/BjSwUd0UP-5gyzPxBXAs-g",
+      "source_file": "sources/2026-07-10_「十万卡时代」，谁在定义新标准？_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "AI生物研发进入“操作系统时代”，许锦波团队MoleculeOS正式开放",
+      "source": "量子位",
+      "digest": "AI生物研发进入“操作系统时代”，许锦波团队MoleculeOS正式开放",
+      "link": "https://mp.weixin.qq.com/s/Tzm4AqhrGxFx5t3q0vOXJg",
+      "source_file": "sources/2026-07-10_AI生物研发进入“操作系统时代”，许锦波团队MoleculeOS正式开放_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "杭州这家公司，训了个「最懂中国话」的AI音乐大模型",
+      "source": "机器之心",
+      "digest": "杭州这家公司，训了个「最懂中国话」的AI音乐大模型",
+      "link": "https://mp.weixin.qq.com/s/AcAoo-Z5eY7Rd-Voxjdssw",
+      "source_file": "sources/2026-07-10_杭州这家公司，训了个「最懂中国话」的AI音乐大模型_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "今天，具身智能大模型迈入「具身原生」的新阶段！",
+      "source": "机器之心",
+      "digest": "今天，具身智能大模型迈入「具身原生」的新阶段！",
+      "link": "https://mp.weixin.qq.com/s/73-7shonpfBBWqsTposzsw",
+      "source_file": "sources/2026-07-10_今天，具身智能大模型迈入「具身原生」的新阶段！_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "清华AI数学家来了！从想法一路推到定理，参与完成84页量子算法论文",
+      "source": "量子位",
+      "digest": "清华AI数学家来了！从想法一路推到定理，参与完成84页量子算法论文",
+      "link": "https://mp.weixin.qq.com/s/JDYCwQnGW4RmmtKKutbQrQ",
+      "source_file": "sources/2026-07-10_清华AI数学家来了！从想法一路推到定理，参与完成84页量子算法论文_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "【揭秘】如何打造一支凌晨3点还在交付的AI军团",
+      "source": "腾讯技术工程",
+      "digest": "【揭秘】如何打造一支凌晨3点还在交付的AI军团",
+      "link": "https://mp.weixin.qq.com/s/OV2OqbaDj0hIrBvX1pV_qQ",
+      "source_file": "sources/2026-07-10_【揭秘】如何打造一支凌晨3点还在交付的AI军团_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "十万卡AI超集群落地，光合组织把AI4S推向应用现场",
+      "source": "智东西",
+      "digest": "十万卡AI超集群落地，光合组织把AI4S推向应用现场",
+      "link": "https://mp.weixin.qq.com/s/W2ixrTljoN1V9JGIHvc4vw",
+      "source_file": "sources/2026-07-10_十万卡AI超集群落地，光合组织把AI4S推向应用现场_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "限流比降 10 倍：百炼网关如何用 RocketMQ LiteTopic 重构大模型限流",
+      "source": "阿里云开发者",
+      "digest": "限流比降 10 倍：百炼网关如何用 RocketMQ LiteTopic 重构大模型限流",
+      "link": "https://mp.weixin.qq.com/s/WQ7tWN5F9rwG9eTgDEY0EA",
+      "source_file": "sources/2026-07-10_限流比降 10 倍：百炼网关如何用 RocketMQ LiteTopic 重构大模型限流_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "一个音乐制作人的七年豪赌：做AI写歌，也想抢救中国民乐",
+      "source": "智东西",
+      "digest": "一个音乐制作人的七年豪赌：做AI写歌，也想抢救中国民乐",
+      "link": "https://mp.weixin.qq.com/s/7cQc_XwghkTvnT5IFFsBBQ",
+      "source_file": "sources/2026-07-10_一个音乐制作人的七年豪赌：做AI写歌，也想抢救中国民乐_智东西.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "读懂 Claude Tag，看见 AI 组织下一站",
+      "source": "Qoder",
+      "digest": "读懂 Claude Tag，看见 AI 组织下一站",
+      "link": "https://mp.weixin.qq.com/s/yiybUFYKXflbecC4wisNVQ",
+      "source_file": "sources/2026-07-10_读懂 Claude Tag，看见 AI 组织下一站_Qoder.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-10",
+      "title": "第二代“豆包手机”要来了！",
+      "source": "智东西",
+      "digest": "第二代“豆包手机”要来了！",
+      "link": "https://mp.weixin.qq.com/s/Nrofc3vKyBW2rNVwzEbb9Q",
+      "source_file": "sources/2026-07-10_第二代“豆包手机”要来了！_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "160亿！国产大模型又要融资了",
+      "source": "智东西",
+      "digest": "160亿！国产大模型又要融资了",
+      "link": "https://mp.weixin.qq.com/s/NYo8B4FVEs1kXGXn9cZ34w",
+      "source_file": "sources/2026-07-10_160亿！国产大模型又要融资了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "歌歌 AI 获字节非独家版权合作：AI 音乐的 B 端闭环怎么跑",
+      "source": "极客公园",
+      "digest": "歌歌 AI 获字节非独家版权合作：AI 音乐的 B 端闭环怎么跑",
+      "link": "https://mp.weixin.qq.com/s/vZkgHY8_mWpeVtr1wqSPJA",
+      "source_file": "sources/2026-07-10_歌歌 AI 获字节非独家版权合作：AI 音乐的 B 端闭环怎么跑_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-10",
+      "title": "腾讯研究院AI速递 20260710",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院AI速递 20260710",
+      "link": "https://mp.weixin.qq.com/s/ObErmmLcXYqIpv729W3xaA",
+      "source_file": "sources/2026-07-10_腾讯研究院AI速递 20260710_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-09",
       "title": "突发！全球首个长篇AI视频模型诞生！告别3秒废片，狂飙3分钟",
