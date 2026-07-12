@@ -1,7 +1,107 @@
 {
-  "updated_at": "2026-07-12T07:06:07.440180",
-  "total": 556,
+  "updated_at": "2026-07-13T06:58:09.301777",
+  "total": 566,
   "articles": [
+    {
+      "date": "2026-07-12",
+      "title": "连Claude Code都搞不定的巨型代码库，我们靠一个\"自愈循环\"给盘活了",
+      "source": "InfoQ",
+      "digest": "AI迁移的关键不是让AI变聪明，而是把任务分解到AI能独立完成并验证的粒度。（ServiceTitan 美国公司工程实践）",
+      "link": "https://mp.weixin.qq.com/s/xxx8",
+      "source_file": "sources/2026-07-12_连Claude Code都搞不定的巨型代码库，我们靠一个“自愈循环”给盘活了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "Claude、Cursor、OpenClaw 集体上手机，不摸鱼、不请假、24h 为你打工",
+      "source": "InfoQ",
+      "digest": "手机上的 AI 应用，正在发生一次不太显眼、却可能比模型升级更重要的变化。",
+      "link": "https://mp.weixin.qq.com/s/xxx9",
+      "source_file": "sources/2026-07-12_Claude、Cursor、OpenClaw 集体上手机，不摸鱼、不请假、24h 为你打工_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "老黄RTX Spark真机现身Bilibili World！CPU和GPU直接焊在一起，笔记本跑120B大模型",
+      "source": "量子位",
+      "digest": "NVIDIA Blackwell RTX Spark 芯片真机，CPU+GPU NVLink-C2C 焊一起（NVIDIA 美国主体）",
+      "link": "https://mp.weixin.qq.com/s/xxx14",
+      "source_file": "sources/2026-07-12_老黄RTX Spark真机现身Bilibili World！CPU和GPU直接焊在一起，笔记本跑12_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "Agentic时代推荐系统范式认知或被颠覆？个性化推荐或将从平台中心转向用户主导",
+      "source": "机器之心",
+      "digest": "UIUC/UT Austin/CMU/NYU/UC Berkeley/Northeastern 联合 position paper：用户主导个性化（美国大学研究）",
+      "link": "https://mp.weixin.qq.com/s/xxx5",
+      "source_file": "sources/2026-07-12_Agentic时代推荐系统范式认知或被颠覆？个性化推荐或将从平台中心转向用户主导_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "全球最大数据中心黄了！美国电网卡住AI，GobiX在中国戈壁破局",
+      "source": "新智元",
+      "digest": "GobiX 在中国戈壁建数据中心，对冲美国电网瓶颈",
+      "link": "https://mp.weixin.qq.com/s/xxx12",
+      "source_file": "sources/2026-07-12_全球最大数据中心黄了！美国电网卡住AI，GobiX在中国戈壁破局_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "像聊天一样做CAD建模！浙大开源智能体让建模变打字，已登国际CAD顶刊",
+      "source": "量子位",
+      "digest": "浙大开源 CAD 智能体，CAD 顶刊发表",
+      "link": "https://mp.weixin.qq.com/s/xxx2",
+      "source_file": "sources/2026-07-12_像聊天一样做CAD建模！浙大开源智能体让建模变打字，已登国际CAD顶刊_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "给多智能体LLM装上「图记忆工作流路由器」，搞定调用、协作规划",
+      "source": "新智元",
+      "digest": "图记忆 + 工作流路由，多智能体协同",
+      "link": "https://mp.weixin.qq.com/s/xxx13",
+      "source_file": "sources/2026-07-12_给多智能体LLM装上「图记忆工作流路由器」，搞定调用、协作规划_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "当 AI 浏览器走向「原生」，AI 侧栏会被吞并还是与之共存？",
+      "source": "机器之心",
+      "digest": "美团 GN06 团队发布 Tabbit 1.0 AI 原生浏览器，三种技术路线分析（美团 中国主体）",
+      "link": "https://mp.weixin.qq.com/s/xxx11",
+      "source_file": "sources/2026-07-12_当 AI 浏览器走向「原生」，AI 侧栏会被吞并还是与之共存？_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "价值驱动、体系赋能、安全筑基：工商银行大模型运营战略新范式",
+      "source": "金融电子化",
+      "digest": "工商银行大模型运营战略新范式",
+      "link": "https://mp.weixin.qq.com/s/xxx7",
+      "source_file": "sources/2026-07-12_价值驱动、体系赋能、安全筑基：工商银行大模型运营战略新范式_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-12",
+      "title": "AI打工大排行：Claude Fable 5自动赚钱的能力，是GPT-5.5的2.5倍",
+      "source": "新智元",
+      "digest": "Fable 5 vs GPT-5.5 自动化能力 RLI 测评（benchmark 类）",
+      "link": "https://mp.weixin.qq.com/s/xxx6",
+      "source_file": "sources/2026-07-12_AI打工大排行：Claude Fable 5自动赚钱的能力，是GPT-5.5的2.5倍_新智元.md",
+      "category": "其他",
+      "is_model_related": true
+    },
     {
       "date": "2026-07-11",
       "title": "GPT-5.6一小时解开50年数学猜想，700词Prompt驾驭64个子Agent",
