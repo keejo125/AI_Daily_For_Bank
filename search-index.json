@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-07-13T06:58:09.301777",
-  "total": 566,
+  "updated_at": "2026-07-14T06:51:17.213451",
+  "total": 583,
   "articles": [
+    {
+      "date": "2026-07-13",
+      "title": "小扎“消失”三年后发帖，只为它：Meta最强Agent模型进军编程",
+      "source": "InfoQ",
+      "digest": "Meta正式发布Muse Spark 1.1，定位智能体编程（agentic coding）多模态AI模型，扎克伯格时隔三年首次在X平台发帖力推。",
+      "link": "https://mp.weixin.qq.com/s/?source=InfoQ",
+      "source_file": "sources/2026-07-13_小扎“消失”三年后发帖，只为它：Meta最强Agent模型进军编程_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-13",
+      "title": "刚刚，一个免费AI Coding选手杀入全球第一梯队",
+      "source": "量子位",
+      "digest": "Agnes AI发布新一代文本模型Agnes-2.5-Flash，Coding能力位列全球第一梯队，不限期免费开放。",
+      "link": "https://mp.weixin.qq.com/s/?source=量子位",
+      "source_file": "sources/2026-07-13_刚刚，一个免费AI Coding选手杀入全球第一梯队_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-13",
+      "title": "人类刚赢一次，AI一天就反杀！爆火「幽灵字体」被一句话攻破",
+      "source": "新智元",
+      "digest": "开发者发布Ghost Font反AI字体，人眼秒懂但GPT-5.6和Claude Fable双双翻车；不到一天GPT-5.6被一句话提示词破解。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_人类刚赢一次，AI一天就反杀！爆火「幽灵字体」被一句话攻破_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-13",
+      "title": "AI爆改陶哲轩30年主页，顺手揪出两个藏了20多年的bug",
+      "source": "新智元",
+      "digest": "陶哲轩用AI智能体一天迁移560篇论文、移植29个Java老程序到JavaScript，AI揪出两个他二十多年前亲手写的代码bug。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_AI爆改陶哲轩30年主页，顺手揪出两个藏了20多年的bug_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "项目卡了半年，毫无进展，Claude Fable 5只用一晚找到突破口",
+      "source": "机器之心",
+      "digest": "日本物理学家立川裕二使用Claude Fable 5辅助科研，模型在一个晚上推进了停滞半年的弦理论合作项目。",
+      "link": "https://mp.weixin.qq.com/s/?source=机器之心",
+      "source_file": "sources/2026-07-13_项目卡了半年，毫无进展，Claude Fable 5只用一晚找到突破口_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "OpenAI骑脸输出！仅5分钟，把GPT-5.6塞进Claude老家",
+      "source": "新智元",
+      "digest": "OpenAI高管亲自下场教开发者用CLIProxyAPI将GPT-5.6接入Claude Code，5分钟完成，全网130万人围观。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_OpenAI骑脸输出！仅5分钟，把GPT-5.6塞进Claude老家_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "5秒挖出15年Linux漏洞，AI却让无辜记者成了偷车嫌犯",
+      "source": "新智元",
+      "digest": "AI漏洞挖掘工具VEGA发现Linux内核15年老漏洞CVE-2026-43499；AI摄像头网络Flock误判导致无辜记者被四辆警车围堵。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_5秒挖出15年Linux漏洞，AI却让无辜记者成了偷车嫌犯_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "全球首创！AI看一眼视频就能「读出」双手，三个世界第一",
+      "source": "新智元",
+      "digest": "大晓机器人联合NTU与上海交大发布ACE-ViDiHand，全球首个视频生成模型做4D手部动捕的方法，三大基准SOTA。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_全球首创！AI看一眼视频就能「读出」双手，三个世界第一_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "甲小姐对话董彬：AI for Math，无尽的前沿 | 甲子光年",
+      "source": "甲子光年",
+      "digest": "北大教授董彬团队用自主构建的自动化AI框架解决安德森猜想，国内首次AI自主解决数学开放问题并实现大规模形式化验证。",
+      "link": "https://mp.weixin.qq.com/s/?source=甲子光年",
+      "source_file": "sources/2026-07-13_甲小姐对话董彬：AI for Math，无尽的前沿 _ 甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Agent要数量也要脑子！浪潮信息一边单柜养4万Agent，一边让大模型组队答题",
+      "source": "量子位",
+      "digest": "浪潮信息发布AI一体机，单机柜支持4万Agent部署，同时发布CPU原生液冷整机柜、多模融合超节点，大模型组队答题方案。",
+      "link": "https://mp.weixin.qq.com/s/?source=量子位",
+      "source_file": "sources/2026-07-13_Agent要数量也要脑子！浪潮信息一边单柜养4万Agent，一边让大模型组队答题_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "腾讯Ray团队实践：K8s + Ray如何支撑超大规模AI Workload",
+      "source": "腾讯技术工程",
+      "digest": "腾讯Ray团队分享K8s+Ray支撑超大规模AI Workload的实践经验，大模型时代AI Workload调度新范式。",
+      "link": "https://mp.weixin.qq.com/s/?source=腾讯技术工程",
+      "source_file": "sources/2026-07-13_腾讯Ray团队实践：K8s + Ray如何支撑超大规模AI Workload_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "具身智能的 iPhone时刻要来了吗？｜AI+千行百业洞察",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院圆桌讨论：具身智能的iPhone时刻远未到来，当前更像大哥大时代，技术路线尚未收敛。",
+      "link": "https://mp.weixin.qq.com/s/EvvCBcToZcYsihKLcA-1pA",
+      "source_file": "sources/2026-07-13_具身智能的 iPhone时刻要来了吗？｜AI+千行百业洞察_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "全生命周期法律模拟世界｜一键推演 or 亲自上场？法律界的「模拟人生」来了",
+      "source": "机器之心",
+      "digest": "基于LLM智能体驱动的全生命周期交互模拟法律环境，覆盖从出生到死亡各类法律场景。",
+      "link": "https://mp.weixin.qq.com/s/?source=机器之心",
+      "source_file": "sources/2026-07-13_全生命周期法律模拟世界｜一键推演 or 亲自上场？法律界的「模拟人生」来了_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "宇树科技牵手湖南钢铁，一家物理AI公司浮出水面",
+      "source": "机器之心",
+      "digest": "宇树科技与湖南钢铁签约，联合宸境科技打造钢铁行业首个具身智能机器人创新实验室。",
+      "link": "https://mp.weixin.qq.com/s/?source=机器之心",
+      "source_file": "sources/2026-07-13_宇树科技牵手湖南钢铁，一家物理AI公司浮出水面_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "为什么前沿AI公司都想自己造芯片？",
+      "source": "机器之心",
+      "digest": "DeepSeek、智谱、OpenAI、Anthropic纷纷自研芯片，AI公司造芯成为行业默认动作。",
+      "link": "https://mp.weixin.qq.com/s/?source=机器之心",
+      "source_file": "sources/2026-07-13_为什么前沿AI公司都想自己造芯片？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "OpenAI把达里奥逼上绝路！Claude 5又续命7天",
+      "source": "新智元",
+      "digest": "Anthropic延长Fable 5免费期7天，OpenAI取消Codex五小时限制并庆祝600万用户，双方展开免费额度拉锯战。",
+      "link": "https://mp.weixin.qq.com/s/?source=新智元",
+      "source_file": "sources/2026-07-13_OpenAI把达里奥逼上绝路！Claude 5又续命7天_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-13",
+      "title": "腾讯研究院AI速递 20260713",
+      "source": "腾讯研究院",
+      "digest": "综合资讯拼盘：多公司AI动态汇总。",
+      "link": "https://mp.weixin.qq.com/s/mqSw7EqOMM_YsmaaOFHmog",
+      "source_file": "sources/2026-07-13_腾讯研究院AI速递 20260713_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-12",
       "title": "连Claude Code都搞不定的巨型代码库，我们靠一个\"自愈循环\"给盘活了",
