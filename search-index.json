@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T07:09:58.731427",
+  "updated_at": "2026-07-15T07:23:30.027328",
   "total": 604,
   "articles": [
     {
@@ -59,16 +59,6 @@
       "digest": "2024 图灵奖得主 Richard Sutton 离开 Keen Technologies，与 Khurram Javed 共同创立 Oak Lab，致力于开发能通过自身第一人称经验独立持续学习的 AI 智能体，目标是 20 瓦人脑级运行。",
       "link": "https://mp.weixin.qq.com/s/Ycnwz6fS200BScFal8Q9tA",
       "source_file": "sources/2026-07-14_年近70，强化学习之父Sutton创业了！_机器之心.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-14",
-      "title": "这家银行彻底AI改造，已在3.5万名员工中部署AI工具",
-      "source": "银行科技研究社",
-      "digest": "日本三菱日联银行（MUFG）目标成为「AI 原生银行」：与 OpenAI 合作基础上再联手 IBM、红帽扩大 AI 应用范围。",
-      "link": "https://mp.weixin.qq.com/s/8jZC7BQ7NMYwtH7rqUjyag",
-      "source_file": "sources/2026-07-14_这家银行彻底AI改造，已在3.5万名员工中部署AI工具_银行科技研究社.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -179,6 +169,16 @@
       "digest": "浦发银行已上线超 2500 个智能体，近几个月增长 500 个，并计划推出面客 AI 应用。",
       "link": "https://mp.weixin.qq.com/s/rIKCj0QvVW-1kcmgjuJm6Q",
       "source_file": "sources/2026-07-14_浦发银行上线超2500个智能体！计划推出面客的AI应用_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-14",
+      "title": "这家银行彻底AI改造，已在3.5万名员工中部署AI工具",
+      "source": "银行科技研究社",
+      "digest": "日本三菱日联银行（MUFG）目标成为「AI 原生银行」：与 OpenAI 合作基础上再联手 IBM、红帽扩大 AI 应用范围。",
+      "link": "https://mp.weixin.qq.com/s/8jZC7BQ7NMYwtH7rqUjyag",
+      "source_file": "sources/2026-07-14_这家银行彻底AI改造，已在3.5万名员工中部署AI工具_银行科技研究社.md",
       "category": "同业",
       "is_model_related": false
     },
