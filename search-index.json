@@ -1,7 +1,217 @@
 {
-  "updated_at": "2026-07-15T07:23:30.027328",
-  "total": 604,
+  "updated_at": "2026-07-16T07:24:07.721202",
+  "total": 625,
   "articles": [
+    {
+      "date": "2026-07-15",
+      "title": "国行苹果AI终于通过备案，接入千问！",
+      "source": "新智元",
+      "digest": "国行苹果AI终于通过备案，接入千问！",
+      "link": "",
+      "source_file": "sources/2026-07-15_等了两年，国行苹果AI终于通过备案，接入千问！_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "GPT-5.6仅用1小时攻破50年数学难题！64个AI摘下图论皇冠",
+      "source": "新智元",
+      "digest": "GPT-5.6仅用1小时攻破50年数学难题！64个AI摘下图论皇冠",
+      "link": "",
+      "source_file": "sources/2026-07-15_GPT-5.6仅用1小时攻破50年数学难题！64个AI摘下图论皇冠_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "马斯克杀回智能体战场，Grok 4.5万亿参数撑腰，Cursor接手数字白领项目",
+      "source": "量子位",
+      "digest": "马斯克杀回智能体战场，Grok 4.5万亿参数撑腰，Cursor接手数字白领项目",
+      "link": "",
+      "source_file": "sources/2026-07-15_马斯克杀回智能体战场，Grok 4.5万亿参数撑腰，Cursor接手数字白领项目_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "中文Claude最不哄人，日韩泰全被宠上天！Anthropic亲手撕碎AI人设",
+      "source": "新智元",
+      "digest": "中文Claude最不哄人，日韩泰全被宠上天！Anthropic亲手撕碎AI人设",
+      "link": "",
+      "source_file": "sources/2026-07-15_中文Claude最不哄人，日韩泰全被宠上天！Anthropic亲手撕碎AI人设_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "WorkBuddy成最火龙虾智能体",
+      "source": "量子位",
+      "digest": "WorkBuddy成最火龙虾智能体",
+      "link": "",
+      "source_file": "sources/2026-07-15_WorkBuddy成最火龙虾智能体_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "不是吧OpenAI首款硬件吹半天就是个AI音箱？",
+      "source": "量子位",
+      "digest": "不是吧OpenAI首款硬件吹半天就是个AI音箱？",
+      "link": "",
+      "source_file": "sources/2026-07-15_不是吧OpenAI首款硬件吹半天就是个AI音箱？？_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "腾讯发布两大具身智能基座模型，VLM&RxBrain让机器人更懂现实世界",
+      "source": "机器之心",
+      "digest": "腾讯发布两大具身智能基座模型，VLM&RxBrain让机器人更懂现实世界",
+      "link": "",
+      "source_file": "sources/2026-07-15_腾讯发布两大具身智能基座模型，VLM&RxBrain让机器人更懂现实世界_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "大模型RL训练为何会「越训越窄」？ACL Outstanding Paper从token-level熵变揭示RLVR训练",
+      "source": "机器之心",
+      "digest": "大模型RL训练为何会「越训越窄」？ACL Outstanding Paper从token-level熵变揭示RLVR训练",
+      "link": "",
+      "source_file": "sources/2026-07-15_大模型RL训练为何会「越训越窄」？ACL Outstanding Paper从token-level_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "3步推理生成加速20+倍！CoLT教会多模态大模型用「潜思维链」思考",
+      "source": "机器之心",
+      "digest": "3步推理生成加速20+倍！CoLT教会多模态大模型用「潜思维链」思考",
+      "link": "",
+      "source_file": "sources/2026-07-15_3步推理生成加速20+倍！CoLT教会多模态大模型用「潜思维链」思考_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Xmax AI 发布 X2.0，把视频变成可以「玩」的界面",
+      "source": "极客公园",
+      "digest": "Xmax AI 发布 X2.0，把视频变成可以「玩」的界面",
+      "link": "",
+      "source_file": "sources/2026-07-15_Xmax AI 发布 X2.0，把视频变成可以「玩」的界面_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "超越OpenAI，中国00后团队攻破「记忆」难题！打造下一个AI互联网时刻",
+      "source": "新智元",
+      "digest": "超越OpenAI，中国00后团队攻破「记忆」难题！打造下一个AI互联网时刻",
+      "link": "",
+      "source_file": "sources/2026-07-15_超越OpenAI，中国00后团队攻破「记忆」难题！打造下一个AI互联网时刻_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "国行苹果 AI 终于来了：「AI 手机」首批备案名单公布",
+      "source": "极客公园",
+      "digest": "国行苹果 AI 终于来了：「AI 手机」首批备案名单公布",
+      "link": "",
+      "source_file": "sources/2026-07-15_国行苹果 AI 终于来了：「AI 手机」首批备案名单公布_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "国行苹果AI手机和二代“豆包手机”，一起来了！",
+      "source": "智东西",
+      "digest": "国行苹果AI手机和二代“豆包手机”，一起来了！",
+      "link": "",
+      "source_file": "sources/2026-07-15_国行苹果AI手机和二代“豆包手机”，一起来了！_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？",
+      "source": "机器之心",
+      "digest": "翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？",
+      "link": "",
+      "source_file": "sources/2026-07-15_翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "你选择的基础架构，决定你能长成什么样的 AI 公司",
+      "source": "极客公园",
+      "digest": "你选择的基础架构，决定你能长成什么样的 AI 公司",
+      "link": "",
+      "source_file": "sources/2026-07-15_你选择的基础架构，决定你能长成什么样的 AI 公司_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "联合发布｜阿里云盘企业版 x Cloud Agents",
+      "source": "Qoder",
+      "digest": "联合发布｜阿里云盘企业版 x Cloud Agents",
+      "link": "",
+      "source_file": "sources/2026-07-15_联合发布｜阿里云盘企业版 x Cloud Agents_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "AI原生游戏，体验和玩法变了什么?｜行业圆桌01期",
+      "source": "腾讯研究院",
+      "digest": "AI原生游戏，体验和玩法变了什么?｜行业圆桌01期",
+      "link": "",
+      "source_file": "sources/2026-07-15_AI原生游戏，体验和玩法变了什么_｜行业圆桌01期_.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "“我现在干得还行，但劝你别进来！”AI 蜜月期要结束了：打工人变成“快乐的行尸走肉”",
+      "source": "InfoQ",
+      "digest": "“我现在干得还行，但劝你别进来！”AI 蜜月期要结束了：打工人变成“快乐的行尸走肉”",
+      "link": "",
+      "source_file": "sources/2026-07-15_“我现在干得还行，但劝你别进来！”AI 蜜月期要结束了：打工人变成“快乐的行尸走肉”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "腾讯研究院AI速递 20260715",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院AI速递 20260715",
+      "link": "",
+      "source_file": "sources/2026-07-15_腾讯研究院AI速递 20260715_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "OpenAI 首款硬件或为无屏智能音箱；梁文峰成 AI 公司新首富；内存涨价利好，iPhone 在华市场份额大幅提高",
+      "source": "极客公园",
+      "digest": "OpenAI 首款硬件或为无屏智能音箱；梁文峰成 AI 公司新首富；内存涨价利好，iPhone 在华市场份额大幅提高",
+      "link": "",
+      "source_file": "sources/2026-07-15_OpenAI 首款硬件或为无屏智能音箱；梁文峰成 AI 公司新首富；内存涨价利好，iPhone 在华_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "留给开源模型的时间，就剩6个月？",
+      "source": "InfoQ",
+      "digest": "留给开源模型的时间，就剩6个月？",
+      "link": "",
+      "source_file": "sources/2026-07-15_留给开源模型的时间，就剩6个月？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-14",
       "title": "Scaling Law一招鲜？首个晶体结构操作基准，顶级大模型集体翻车",
