@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-07-16T09:38:31.295530",
-  "total": 625,
+  "updated_at": "2026-07-16T09:45:17.128502",
+  "total": 623,
   "articles": [
-    {
-      "date": "2026-07-15",
-      "title": "国行苹果AI终于通过备案，接入千问！",
-      "source": "新智元",
-      "digest": "刚刚，网信办发布公告：Apple 智能、华为小艺 AI 大模型、OPPO AndesGPT 大模型、vivo 蓝心端侧大模型、小米澎湃 AI、三星盖乐世 AI、努比亚豆包手机大模型，7 款手机端侧生成式 AI 服务通过备案。关于发布7款提供手机端侧生成式人工智能服务已备案信息的公告这是国内手机端侧 …",
-      "link": "",
-      "source_file": "sources/2026-07-15_等了两年，国行苹果AI终于通过备案，接入千问！_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
     {
       "date": "2026-07-15",
       "title": "GPT-5.6仅用1小时攻破50年数学难题！64个AI摘下图论皇冠",
@@ -44,13 +34,13 @@
     },
     {
       "date": "2026-07-15",
-      "title": "WorkBuddy成最火龙虾智能体",
-      "source": "量子位",
-      "digest": "4 imagesAI效率办公赛道应用，6月数据新鲜出炉！从用户活跃到用户规模，给你最新最全的参考[吃瓜][得意]龙虾月访问量增量：你pick哪一只？",
+      "title": "国行苹果AI首批备案名单公布：接入千问，7款端侧大模型+豆包手机齐亮相",
+      "source": "新智元+极客公园+智东西",
+      "digest": "",
       "link": "",
-      "source_file": "sources/2026-07-15_WorkBuddy成最火龙虾智能体_量子位.md",
+      "source_file": "sources/2026-07-15_等了两年，国行苹果AI终于通过备案，接入千问！_新智元.md",
       "category": "国际",
-      "is_model_related": false
+      "is_model_related": true
     },
     {
       "date": "2026-07-15",
@@ -69,6 +59,16 @@
       "digest": "机器之心发布7 月 15 日，腾讯 Robotics X 实验室以及福田实验室联合腾讯混元推出两款具身智能基座模型 —— 具身 VLM 基座模型 Hy-Embodied-VLM-1.0 以及 具身世界认知基座模型 Hy-Embodied-RxBrain-1.0，不仅让具身大脑能够 “看” 懂现实世界…",
       "link": "",
       "source_file": "sources/2026-07-15_腾讯发布两大具身智能基座模型，VLM&RxBrain让机器人更懂现实世界_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
+      "title": "翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？",
+      "source": "机器之心",
+      "digest": "机器之心发布近日，翁荔发布长文 《Harness Engineering for Self-Improvement》，系统梳理了 harness engineering 在 AI 自我改进中的作用。她指出，原始模型与真实世界任务之间的 harness layer 正在变得和模型本身一样重要：它决定模…",
+      "link": "",
+      "source_file": "sources/2026-07-15_翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？_机器之心.md",
       "category": "国内",
       "is_model_related": true
     },
@@ -114,36 +114,6 @@
     },
     {
       "date": "2026-07-15",
-      "title": "国行苹果 AI 终于来了：「AI 手机」首批备案名单公布",
-      "source": "极客公园",
-      "digest": "首批七家已经官宣，七月注定会成为「AI 手机」主战场。作者｜张勇毅7 月 15 日下午，「网信中国」公众号发出一份公告：网信部门会同有关部门按照《生成式人工智能服务管理暂行办法》要求，有序开展生成式人工智能服务备案工作，现将新增的「Apple 智能」等 7 款提供手机端侧生成式人工智能服务备案信息予…",
-      "link": "",
-      "source_file": "sources/2026-07-15_国行苹果 AI 终于来了：「AI 手机」首批备案名单公布_极客公园.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-15",
-      "title": "国行苹果AI手机和二代“豆包手机”，一起来了！",
-      "source": "智东西",
-      "digest": "苹果AI选中了阿里千问。作者 |程茜",
-      "link": "",
-      "source_file": "sources/2026-07-15_国行苹果AI手机和二代“豆包手机”，一起来了！_智东西.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-15",
-      "title": "翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？",
-      "source": "机器之心",
-      "digest": "机器之心发布近日，翁荔发布长文 《Harness Engineering for Self-Improvement》，系统梳理了 harness engineering 在 AI 自我改进中的作用。她指出，原始模型与真实世界任务之间的 harness layer 正在变得和模型本身一样重要：它决定模…",
-      "link": "",
-      "source_file": "sources/2026-07-15_翁荔长文谈Harness自进化：Agent越用越强，评测难点怎么破？_机器之心.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-15",
       "title": "你选择的基础架构，决定你能长成什么样的 AI 公司",
       "source": "极客公园",
       "digest": "当 Agent 走向生产，云与数据库需要被一起重新考虑。作者｜李粒、王黎黎、吴嘉程、鲁超郑玄、",
@@ -174,6 +144,26 @@
     },
     {
       "date": "2026-07-15",
+      "title": "WorkBuddy成最火龙虾智能体",
+      "source": "量子位",
+      "digest": "4 imagesAI效率办公赛道应用，6月数据新鲜出炉！从用户活跃到用户规模，给你最新最全的参考[吃瓜][得意]龙虾月访问量增量：你pick哪一只？",
+      "link": "",
+      "source_file": "sources/2026-07-15_WorkBuddy成最火龙虾智能体_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-15",
+      "title": "留给开源模型的时间，就剩6个月？",
+      "source": "InfoQ",
+      "digest": "作者 | 褚杏娟开源模型，正在经历迄今最严峻的一次生存考验。近日，有外媒报道称，白宫正在考虑出台一项行政命令来限制开源 AI，尤其是由中国公司开发的系统。",
+      "link": "",
+      "source_file": "sources/2026-07-15_留给开源模型的时间，就剩6个月？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-15",
       "title": "“我现在干得还行，但劝你别进来！”AI 蜜月期要结束了：打工人变成“快乐的行尸走肉”",
       "source": "InfoQ",
       "digest": "整理 | 褚杏娟一半的人认为 AI 让自己进入了职业生涯的最佳阶段：他们感觉能力被放大，可以更快构建产品、探索更多可能，真正成为“超级个体”；但另一半的人却陷入完全不同的状态：他们感到岗位正在失稳，价值被削弱，不知道未来几年自己是否仍然需要存在。这或许揭示了现在人们面对不断变化的 AI 的真实矛盾心…",
@@ -199,16 +189,6 @@
       "digest": "iPhone 在华市场份额增长，涨价冲击 Android 竞争对手根据市场调研机构 IDC 在 2026 年 7 月 14 日发布的最新报告显示，在第二季度，中国智能 手机市场出货量为 6600 万部，这已是该市场连续第五个季度出现下滑，同比降幅达到 4.3%。在这一充满挑战的宏观环境下，苹果与华为…",
       "link": "",
       "source_file": "sources/2026-07-15_OpenAI 首款硬件或为无屏智能音箱；梁文峰成 AI 公司新首富；内存涨价利好，iPhone 在华_极客公园.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-15",
-      "title": "留给开源模型的时间，就剩6个月？",
-      "source": "InfoQ",
-      "digest": "作者 | 褚杏娟开源模型，正在经历迄今最严峻的一次生存考验。近日，有外媒报道称，白宫正在考虑出台一项行政命令来限制开源 AI，尤其是由中国公司开发的系统。",
-      "link": "",
-      "source_file": "sources/2026-07-15_留给开源模型的时间，就剩6个月？_InfoQ.md",
       "category": "其他",
       "is_model_related": false
     },
