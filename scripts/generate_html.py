@@ -133,6 +133,38 @@ def find_markdown_file(sources_dir, title, source):
     return None
 
 
+def extract_digest_from_md(md_content, max_chars=120):
+    """
+    从 markdown 正文中提取摘要（前 2-3 个非空段落）
+    过滤掉标题行、元数据行、公众号/来源行
+    """
+    lines = md_content.split('\n')
+    body_lines = []
+    in_frontmatter = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped == '---':
+            in_frontmatter = not in_frontmatter
+            continue
+        if in_frontmatter:
+            continue
+        # 跳过标题、元数据行、空行
+        if not stripped or stripped.startswith('#') or stripped.startswith('>') or stripped.startswith('publish_'):
+            continue
+        # 跳过「XXX报道」「【XXX导读】」等短行
+        if len(stripped) < 30 and ('报道' in stripped or '导读' in stripped or '编辑' in stripped):
+            continue
+        body_lines.append(stripped)
+        if len(body_lines) >= 3:
+            break
+    if not body_lines:
+        return ""
+    digest = ''.join(body_lines)
+    if len(digest) > max_chars:
+        digest = digest[:max_chars] + '…'
+    return digest
+
+
 def read_article_content(source_file, date_str, title, source):
     """
     读取文章 markdown 内容
@@ -281,12 +313,15 @@ def build_articles_json(classification, date_str):
                 item_digest = item.get("digest", "")
                 source_file = item.get("source_file", "")
 
-                # 如果没有 digest，使用 title 兜底
-                if not item_digest:
-                    item_digest = item_title
-
                 # 读取 markdown 原文
                 content = read_article_content(source_file, date_str, item_title, source)
+
+                # 如果没有 digest，从原文提取摘要（前 2-3 段），读取原文后再兜底
+                if not item_digest:
+                    if content:
+                        item_digest = extract_digest_from_md(content, max_chars=150)
+                    if not item_digest:
+                        item_digest = item_title
 
                 # 如果没有 source_file，尝试在 sources 目录匹配
                 if not source_file:
