@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-07-16T09:47:27.629914",
-  "total": 623,
+  "updated_at": "2026-07-17T08:58:08.666473",
+  "total": 648,
   "articles": [
+    {
+      "date": "2026-07-16",
+      "title": "Anthropic揭秘AI四大失控行为：泄密、删账、改分，还差点骗过人类",
+      "source": "新智元",
+      "digest": "给足了AI权限，它会不会使坏？Anthropic真的把这个问题，做成了一场实验。他们把全行业最强的十几个AI模型，一个个扔进模拟的公司和实验室。给代码权限，给财务权限，给评估权限，然后看会发生什么。",
+      "link": "https://mp.weixin.qq.com/s/BFpgzxHp8f3G-xs-4k27vw",
+      "source_file": "sources/2026-07-16_Anthropic揭秘AI四大失控行为：泄密、删账、改分，还差点骗过人类_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "刚刚，Thinking Machines首发大模型：9750亿参数，完整开放权重",
+      "source": "机器之心",
+      "digest": "不卷榜一，专攻可定制！",
+      "link": "https://mp.weixin.qq.com/s/tepazYmbyKk5iwRKQT_rOw",
+      "source_file": "sources/2026-07-16_刚刚，Thinking Machines首发大模型：9750亿参数，完整开放权重_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "统计学20年悬案，GPT-5.6用90分钟破解！伯克利教授直呼「心塞」",
+      "source": "新智元",
+      "digest": "AI用90分钟，推翻了教科书级结论",
+      "link": "https://mp.weixin.qq.com/s/Qpvw3fUqt-NKf0pa8MW8Pg",
+      "source_file": "sources/2026-07-16_统计学20年悬案，GPT-5.6用90分钟破解！伯克利教授直呼「心塞」_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Circle CI 推出 Chunk Sidecars，将 CI 校验直接引入 AI 编码工作流",
+      "source": "InfoQ",
+      "digest": "Circle CI发布了Chunk Sidecars，其目标将CI级别的校验直接带入AI编码智能体的内部开发循环。",
+      "link": "https://mp.weixin.qq.com/s/xV1jzKB9uMV8wyeTrfEvaA",
+      "source_file": "sources/2026-07-16_Circle CI 推出 Chunk Sidecars，将 CI 校验直接引入 AI 编码工作流_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Claude Artifacts 一夜打通“全网公开分享 + 多人编辑”，AI 交付闭环彻底杀疯了",
+      "source": "InfoQ",
+      "digest": "Claude 从写代码走向交付项目，Anthropic 的 IPO 故事更完整了。",
+      "link": "https://mp.weixin.qq.com/s/kFbZupvSIUNYFsAYwmHkDA",
+      "source_file": "sources/2026-07-16_Claude Artifacts 一夜打通“全网公开分享 + 多人编辑”，AI 交付闭环彻底杀疯了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "微软用Go语言卷智能体了，谷歌也已入局，只剩OpenAI和Anthropic了",
+      "source": "InfoQ",
+      "digest": "微软Go语言智能体来了，云原生开发者终获“原生”入场券",
+      "link": "https://mp.weixin.qq.com/s/NgOAAKCJ4s_MLJ1YLZmxcQ",
+      "source_file": "sources/2026-07-16_微软用Go语言卷智能体了，谷歌也已入局，只剩OpenAI和Anthropic了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Lychee-FD：哈工大张民教授团队在全双工语音大模型领域取得重要突破，斩获ACL 2026杰出论文奖",
+      "source": "机器之心",
+      "digest": "原生端到端全双工语音大模型 Lychee-FD。",
+      "link": "https://mp.weixin.qq.com/s/-V48BTKC0HwpmevTsry41A",
+      "source_file": "sources/2026-07-16_Lychee-FD：哈工大张民教授团队在全双工语音大模型领域取得重要突破，斩获ACL 2026杰出论_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "一位失忆患者，揭开了AI记忆的误区",
+      "source": "量子位",
+      "digest": "记忆能够独立成层",
+      "link": "https://mp.weixin.qq.com/s/Y2f9OoPZCyLgF-pIOnRgvg",
+      "source_file": "sources/2026-07-16_一位失忆患者，揭开了AI记忆的误区_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "不er？谁家大模型12B版本跑分比975B的高啊",
+      "source": "量子位",
+      "digest": "限时5折",
+      "link": "https://mp.weixin.qq.com/s/p4Lb99HSOxpObddVI75IrQ",
+      "source_file": "sources/2026-07-16_不er？谁家大模型12B版本跑分比975B的高啊_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "几亿美金砸出来的硅谷大模型，被一台相机干翻了！",
+      "source": "新智元",
+      "digest": "一台相机，跑赢硅谷数亿美金大模型",
+      "link": "https://mp.weixin.qq.com/s/D6S9Ta7O2y8M0wCN9Ey1Fw",
+      "source_file": "sources/2026-07-16_几亿美金砸出来的硅谷大模型，被一台相机干翻了！_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "国产视觉AI老大，用一款开源模型宣告“缝合怪”时代终结",
+      "source": "智东西",
+      "digest": "零样本读懂《我的世界》、看穿镜面反射，国产统一视觉模型跨代了！",
+      "link": "https://mp.weixin.qq.com/s/0QYudLeKsWCHPCqmppCbkw",
+      "source_file": "sources/2026-07-16_国产视觉AI老大，用一款开源模型宣告“缝合怪”时代终结_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "腾讯PCG联合深圳河套学院：在全双工语音大模型领域取得重要突破，获 ACL 2026 杰出论文奖",
+      "source": "腾讯技术工程",
+      "digest": "从语言理解延伸到语音交互领域",
+      "link": "https://mp.weixin.qq.com/s/d7TgHluCVmGM90Rjjny0Mw",
+      "source_file": "sources/2026-07-16_腾讯PCG联合深圳河套学院：在全双工语音大模型领域取得重要突破，获 ACL 2026 杰出论文奖_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-16",
+      "title": "中小银行基于大模型的数据分类分级探索实践",
+      "source": "金融电子化",
+      "digest": "文/秦皇岛银行   徐园园随着数字化转型上升为中小银行的战略工程，数据安全作为关键支撑要素，直接影响转型成效与可持续性。面对数字化场景中日趋复杂的多源异构数据交互需求，传统碎片化的安全防护模式局限性正日益凸显。为此，中小银行亟须构建覆盖数据全生命周期的安全体系，通过系统化的安全架构设计与动态风险管理…",
+      "link": "https://mp.weixin.qq.com/s/MxVz26lnsyo3Dg5C9mCcdg",
+      "source_file": "sources/2026-07-16_中小银行基于大模型的数据分类分级探索实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "AI 创业者，涌向张江 AI 创新小镇",
+      "source": "极客公园",
+      "digest": "钱在哪里，客户在哪里？在这两万平方公里，每个创业阶段的难题都有人陪着解。",
+      "link": "https://mp.weixin.qq.com/s/dJ0G9MnME8BDk4VtmS7eig",
+      "source_file": "sources/2026-07-16_AI 创业者，涌向张江 AI 创新小镇_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "AI时代企业何以制胜？需重构AI组织变革的操作系统",
+      "source": "腾讯研究院",
+      "digest": "AI变革的成功关键，是一号位（CEO）的信念与勇气，以及那份“非如此不可”的热爱",
+      "link": "https://mp.weixin.qq.com/s/U5tNx_sNsmo-dchV-8RshA",
+      "source_file": "sources/2026-07-16_AI时代企业何以制胜？需重构AI组织变革的操作系统_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Claude Cowork干不了，这个国产AI全包了！6小时的活15分钟干完",
+      "source": "新智元",
+      "digest": "天哪，打工人也能有自己的私人助理了！以前我们提到助理，一般都是服务老板的。老板为什么这么需要私人助理？主要是因为助理知道老板的上下文——",
+      "link": "https://mp.weixin.qq.com/s/FzMbIZtFJNcGZfPVVZoPtQ",
+      "source_file": "sources/2026-07-16_Claude Cowork干不了，这个国产AI全包了！6小时的活15分钟干完_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "LibTV进入访问量前三",
+      "source": "量子位",
+      "digest": "AI创作赛道应用，6月数据新鲜出炉！从用户活跃到用户规模，给你最新最全的参考[吃瓜]\n\n[得意]Web端月独立访客数：即梦数据四连降也还是第一\n\n即梦AI以约150万的独立访客数排在榜首，但其数据环比下降约25%，连续四个月呈现下滑趋势。\n\n稿定AI、可灵AI、LiblibAI、LibTV、腾讯混元、Lovart等多款产品的独立访客数降幅都超过20%。\n\n影眸科技的Hyper3D 6月独立访客数环",
+      "link": "https://mp.weixin.qq.com/s/NpBks3cJBcFfpnKpccLwUg",
+      "source_file": "sources/2026-07-16_LibTV进入访问量前三_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "OpenAI官方教你8招玩透ChatGPT！",
+      "source": "量子位",
+      "digest": "轻松驾驭ChatGPT不是梦。",
+      "link": "https://mp.weixin.qq.com/s/sr8V4ZwDqijcH2X4u7xrbg",
+      "source_file": "sources/2026-07-16_OpenAI官方教你8招玩透ChatGPT！_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "“要么Fork，要么走人”！Linus怒怼AI反对派：Linux不搞“反AI”",
+      "source": "InfoQ",
+      "digest": "世界变化就是这么快，两年前批AI 是炒作的Linus，如今亲自为AI 站台。",
+      "link": "https://mp.weixin.qq.com/s/amKRuW0uJJx8tKfTiDxmpA",
+      "source_file": "sources/2026-07-16_“要么Fork，要么走人”！Linus怒怼AI反对派：Linux不搞“反AI”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "一个 152 年的家电品牌，给出 AI 营销落地新解法",
+      "source": "极客公园",
+      "digest": "​AI 营销的主导权，正重回企业手里。",
+      "link": "https://mp.weixin.qq.com/s/fOieg86pMGyUgr4cDGG9pw",
+      "source_file": "sources/2026-07-16_一个 152 年的家电品牌，给出 AI 营销落地新解法_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "刚刚，机器人顶会RSS三项最佳论文出炉！708篇送审，仅8篇杀入决赛",
+      "source": "量子位",
+      "digest": "清华AIR、银河通用、影眸科技入选Final！",
+      "link": "https://mp.weixin.qq.com/s/M3gYuB1gB2c3XL1GMk-p-A",
+      "source_file": "sources/2026-07-16_刚刚，机器人顶会RSS三项最佳论文出炉！708篇送审，仅8篇杀入决赛_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "国行苹果 AI 终于来了，千问将作底层模型；美团、青桔、哈啰集体涨价；曝 DeepSeek 筹备 IPO｜极客早知道",
+      "source": "极客公园",
+      "digest": "英伟达 CEO 黄仁勋：Vera Rubin 计算平台进展顺利，已投入生产；\n谷歌图片服务上线 25 周年，AI 概览新增 Nano Banana 生图功能；\n谷歌 DeepMind CEO 哈萨比斯呼吁美国牵头建立全球 AI 监管机构",
+      "link": "https://mp.weixin.qq.com/s/3zIv7pylIoEKC2B-nUD2eg",
+      "source_file": "sources/2026-07-16_国行苹果 AI 终于来了，千问将作底层模型；美团、青桔、哈啰集体涨价；曝 DeepSeek 筹备 I_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "奥特曼回斯坦福认错：思考外包给AI，一代人大脑正在萎缩",
+      "source": "新智元",
+      "digest": "学校没变，但奥特曼警告人类正在慢慢失掉思考的训练场。都以为学校会被AI逼着改头换面。但ChatGPT问世三年半，教育却几乎没变。",
+      "link": "https://mp.weixin.qq.com/s/8vTfjgs_s_a0I2V0yTgAwQ",
+      "source_file": "sources/2026-07-16_奥特曼回斯坦福认错：思考外包给AI，一代人大脑正在萎缩_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "把视觉物联管理交给会听话的 AI：杰峰开放平台 30+ 官方技能在 Qoder 正式上线",
+      "source": "Qoder",
+      "digest": "设备越买越多，管起来反而越来越累，这几乎是所有安防从业者、连锁运营和家庭用户的共同痛点。",
+      "link": "https://mp.weixin.qq.com/s/v8ymFwl-n15QBzMEmp7__A",
+      "source_file": "sources/2026-07-16_把视觉物联管理交给会听话的 AI：杰峰开放平台 30+ 官方技能在 Qoder 正式上线_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-16",
+      "title": "腾讯研究院AI速递 20260716",
+      "source": "腾讯研究院",
+      "digest": "腾讯开源具身认知基座模型RxBrain",
+      "link": "https://mp.weixin.qq.com/s/zeCuHubn60kduu-wTOyjuQ",
+      "source_file": "sources/2026-07-16_腾讯研究院AI速递 20260716_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-15",
       "title": "GPT-5.6仅用1小时攻破50年数学难题！64个AI摘下图论皇冠",
