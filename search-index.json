@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-07-17T09:05:38.367047",
-  "total": 646,
+  "updated_at": "2026-07-18T06:02:52.718809",
+  "total": 676,
   "articles": [
+    {
+      "date": "2026-07-17",
+      "title": "同一个链接，你和同事打开的不一样：Claude让AI页面活了",
+      "source": "新智元",
+      "digest": "Anthropic Claude上线动态页面生成能力，同一链接不同用户看到的内容因人而异，标志着AI交互从静态文本向个性化实时页面演进。",
+      "link": "https://mp.weixin.qq.com/s/3HQ6z4YtxQpMfcpcXAF_qg",
+      "source_file": "sources/2026-07-17_同一个链接，你和同事打开的不一样：Claude让AI页面活了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "AlloyDB 推出代理模型，用数据库本地推理替代外部大模型调用",
+      "source": "InfoQ",
+      "digest": "谷歌官宣AlloyDB AI函数正式可用，并推出两项全新加速技术，从根本上改变数据库与大语言模型的交互模式。",
+      "link": "https://mp.weixin.qq.com/s/tsgE26vm3yAzQ4yJLqZqqg",
+      "source_file": "sources/2026-07-17_AlloyDB 推出代理模型，用数据库本地推理替代外部大模型调用_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Wan-Streamer v0.2：响应延迟仅550ms，让 AI 真正与你面对面",
+      "source": "通义实验室",
+      "digest": "通义实验室发布Wan-Streamer v0.2实时视频理解模型，响应延迟降至550ms，实现AI与用户的丝滑实时交互。",
+      "link": "https://mp.weixin.qq.com/s/_eaO0wmsiQFGsrE2_zW_Dg",
+      "source_file": "sources/2026-07-17_Wan-Streamer v0.2：响应延迟仅550ms，让 AI 真正与你_面对面_通义实验室.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-17",
+      "title": "在WAIC，十大开源社区『挤』进了一个GPU展台",
+      "source": "量子位",
+      "digest": "WAIC 2026上十大开源AI社区共享一个GPU展台，展示国产算力与开源生态的深度融合。",
+      "link": "https://mp.weixin.qq.com/s/f3yUmIo3cPspKmiPfjD3pQ",
+      "source_file": "sources/2026-07-17_在WAIC，十大开源社区「挤」进了一个GPU展台_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "刚刚，WAIC杀出国产『桌面超算』！150B大模型，放你桌上跑",
+      "source": "新智元",
+      "digest": "WAIC 2026上国产桌面超算亮相，可本地运行150B参数大模型，将大规模模型推理能力从云端数据中心搬到了个人桌面。",
+      "link": "https://mp.weixin.qq.com/s/kC6ly-6mdrYuy5k5J9g1gw",
+      "source_file": "sources/2026-07-17_刚刚，WAIC杀出国产「桌面超算」！150B大模型，放你桌上跑_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "“小而美”李未可，正用“记忆”重写AI眼镜游戏规则",
+      "source": "智东西",
+      "digest": "李未可AI眼镜通过记忆机制实现个性化交互，重新定义了AI眼镜的用户体验范式。",
+      "link": "https://mp.weixin.qq.com/s/xYEBoYAUBvseQ303ZEOefw",
+      "source_file": "sources/2026-07-17_“小而美”李未可，正用“记忆”重写AI眼镜游戏规则_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "全球市占第一后，普渡在WAIC开始回答机器人下一场战争",
+      "source": "量子位",
+      "digest": "普渡机器人在WAIC展示一脑多形新范式，从单一场景机器人向多形态通用机器人平台转型。",
+      "link": "https://mp.weixin.qq.com/s/rhc09-PKz5eDMsegttZ-EQ",
+      "source_file": "sources/2026-07-17_全球市占第一后，普渡在WAIC开始回答机器人下一场战争_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "逛完WAIC 2026我悟了：国产AI芯片的真对手，根本不是英伟达的GPU",
+      "source": "量子位",
+      "digest": "WAIC 2026展出的国产AI芯片表明发布芯片只是入场券，真正的竞争在于软件生态和应用落地。",
+      "link": "https://mp.weixin.qq.com/s/ZD9avzP3T-LW3s2qLpJBEw",
+      "source_file": "sources/2026-07-17_逛完WAIC 2026我悟了：国产AI芯片的真对手，根本不是英伟达的GPU_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Buddy 全系产品内置模型已支持 Kimi K3",
+      "source": "腾讯CodeBuddy",
+      "digest": "腾讯CodeBuddy全系产品内置模型接入Kimi K3，参数规模2.8万亿，原生支持视觉理解，拥有100万token上下文窗口。",
+      "link": "https://mp.weixin.qq.com/s/V_27qPFlM5ODDczODQyhqw",
+      "source_file": "sources/2026-07-17_Buddy 全系产品内置模型已支持 Kimi K3_腾讯CodeBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "星尘智能甩出20+超难家务自主，具身模型圈：不要再卷了",
+      "source": "机器之心",
+      "digest": "星尘智能展示20余项超难家务自主操作能力，推动具身智能从Demo走向实用。",
+      "link": "https://mp.weixin.qq.com/s/GH1PatBqRw8rYUdy19YyhA",
+      "source_file": "sources/2026-07-17_星尘智能甩出20+超难家务自主，具身模型圈：不要再卷了_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "如何为Agent重构操作系统？我们在WAIC看到了答案",
+      "source": "智东西",
+      "digest": "智能体手机竞争进入系统时代，WAIC上展示了为AI Agent重新设计的操作系统方案。",
+      "link": "https://mp.weixin.qq.com/s/9SxJxJtYQx1v-000Vg0oEw",
+      "source_file": "sources/2026-07-17_如何为Agent重构操作系统？我们在WAIC看到了答案_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "给AI发工号、定岗位、做绩效，数字员工终于能落地了",
+      "source": "量子位",
+      "digest": "面壁智能开源StaffDeck数字员工平台，支持为AI分配工号、设定岗位和绩效考核，让数字员工从概念走向企业级落地。",
+      "link": "https://mp.weixin.qq.com/s/FmU7STuJLbDdLr1SwRe2yw",
+      "source_file": "sources/2026-07-17_给AI发工号、定岗位、做绩效，数字员工终于能落地了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "千寻智能最强大脑亮相WAIC：攻克『金鱼记忆』，终结单一任务Demo内卷",
+      "source": "机器之心",
+      "digest": "千寻智能在WAIC展示具备长时记忆能力的机器人，可一口气完成整个客厅整理并中途应对临时任务。",
+      "link": "https://mp.weixin.qq.com/s/sQesJsAAda1T92ZvcOmpVw",
+      "source_file": "sources/2026-07-17_千寻智能最强大脑亮相WAIC：攻克「金鱼记忆」，终结单一任务Demo内卷_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "国芯+国模之间缺一座桥，清程极智连续两年在WAIC架起国产算力跨越之路",
+      "source": "智东西",
+      "digest": "清程极智在WAIC展示前店后厂模式，打通国产芯片与国产大模型之间的适配鸿沟，解决Token供不应求的算力落地难题。",
+      "link": "https://mp.weixin.qq.com/s/aHiLdWxPnvXC2ZNpYPbyaA",
+      "source_file": "sources/2026-07-17_国芯+国模之间缺一座“桥”，清程极智连续两年在WAIC架起国产算力跨越之路_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "驾驭AI Coding：一份面向团队的Harness Engineering落地规范",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程发布团队级Harness Engineering落地规范，提出把代码质量标准写进系统，让AI在约束下自主完成编码工作。",
+      "link": "https://mp.weixin.qq.com/s/g4nTfxm7ebzRwkAVIGdIbg",
+      "source_file": "sources/2026-07-17_驾驭AI Coding：一份面向团队的Harness Engineering落地规范_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Qoder 负责人丁宇在2026世界人工智能大会主旨演讲：打造安全可信的智能体",
+      "source": "Qoder",
+      "digest": "阿里Qoder负责人丁宇在WAIC 2026发表主旨演讲，强调只有安全可信，智能体才能规模化创造价值。",
+      "link": "https://mp.weixin.qq.com/s/HGDG8DB68PTlz4puWmWriw",
+      "source_file": "sources/2026-07-17_Qoder 负责人丁宇在2026世界人工智能大会主旨演讲：打造安全可信的智能体_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Qoder 官方上新：一键部署 ECS Skill，AI Agent 对话一句就能上云",
+      "source": "Qoder",
+      "digest": "Qoder上线ECS一键部署Skill，AI Agent只需对话即可完成环境配置、进程管理和网络调试。",
+      "link": "https://mp.weixin.qq.com/s/4xTjDXr3ebhvfy_BYYY2fw",
+      "source_file": "sources/2026-07-17_Qoder 官方上新：一键部署 ECS Skill，AI Agent 对话一句就能上云_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "PagePilot — PC端AI测试Skill设计与实战",
+      "source": "阿里云开发者",
+      "digest": "阿里云开发者分享PC端AI测试Skill PagePilot的设计思路与实战经验，展示如何用AI Agent实现智能化端到端测试。",
+      "link": "https://mp.weixin.qq.com/s/lO2WKHD-L0dTfHhXV-Um6Q",
+      "source_file": "sources/2026-07-17_PagePilot — PC端AI测试Skill设计与实战_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Kimi K3 现已上线 Qoder",
+      "source": "Qoder",
+      "digest": "月之暗面Kimi K3正式上线Qoder，基于Kimi Delta Attention混合线性注意力机制构建，参数规模达2.8万亿。",
+      "link": "https://mp.weixin.qq.com/s/Nggx0PnV3rXOBNKYMwsF5A",
+      "source_file": "sources/2026-07-17_Kimi K3 现已上线 Qoder_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "WAIC最疯狂挑战！6个机器人，8万积木拼长城",
+      "source": "新智元",
+      "digest": "WAIC 2026上6台机器人协作使用8万块积木搭建长城模型，展示多机器人协作与VLA+WM技术的最佳应用场景。",
+      "link": "https://mp.weixin.qq.com/s/I8Ot3SiWkybj_Vh_-9ixaA",
+      "source_file": "sources/2026-07-17_WAIC最疯狂挑战！6个机器人，8万积木拼长城_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Kimi 正式发布 K3 大模型，能力进阶；12.38 万，小鹏 MONA L03 大定破 4 万台；OpenAI 推出 AI 键盘 | 极客早知道",
+      "source": "极客公园",
+      "digest": "极客早知道综合资讯：Kimi K3发布、小鹏MONA L03大定破4万、OpenAI推出AI键盘、小米具身基座模型发布等多条新闻。",
+      "link": "https://mp.weixin.qq.com/s/eqpqE2-kiT11MyF_khJ3Mw",
+      "source_file": "sources/2026-07-17_Kimi 正式发布 K3 大模型，能力进阶；12.38 万，小鹏 MONA L03 大定破 4 万台_极客公园.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-17",
+      "title": "门票炒到 3000 元的 WAIC，我们找到了 AI 真正的创新",
+      "source": "极客公园",
+      "digest": "WAIC 2026首日观察：梳理20个创新产品中的AI趋势，在火爆场馆中寻找真正的AI创新方向。",
+      "link": "https://mp.weixin.qq.com/s/mGXi5VTIbVXckBwSHdRe6Q",
+      "source_file": "sources/2026-07-17_门票炒到 3000 元的 WAIC，我们找到了 AI 真正的创新_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "从Token Capital到企业认知主权：别把大脑交给大模型公司！",
+      "source": "新智元",
+      "digest": "讨论企业在AI时代应保持认知主权，不应过度依赖大模型公司，从Token Capital视角分析企业AI战略风险。",
+      "link": "https://mp.weixin.qq.com/s/pAtoJwHPQ1lxrNRmGf09GQ",
+      "source_file": "sources/2026-07-17_从Token Capital到企业认知主权：别把大脑交给大模型公司！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "2026WAIC观察：AI应用进入『可体验时代』，AI原生公司与爱为舞给出样本",
+      "source": "机器之心",
+      "digest": "WAIC 2026观察：AI应用从概念展示进入可实际体验的新阶段，AI原生公司在展位展示了落地样本。",
+      "link": "https://mp.weixin.qq.com/s/U9CbR5dS_peZ-SzToK7G6A",
+      "source_file": "sources/2026-07-17_2026WAIC观察：AI应用进入「可体验时代」，AI原生公司与爱为舞给出样本_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "终于用上 AI 的公司，发现业务被大模型公司抢了",
+      "source": "极客公园",
+      "digest": "讨论企业引入AI后面临的困境：大模型公司不仅提供技术服务，还直接切入客户业务领域形成竞争关系。",
+      "link": "https://mp.weixin.qq.com/s/H9X6ytdxT6u3LYODBeTEdA",
+      "source_file": "sources/2026-07-17_终于用上 AI 的公司，发现业务被大模型公司抢了_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "探营WAIC 2026，AI与物理世界开启无界融合",
+      "source": "财联社AI daily",
+      "digest": "WAIC 2026探营报道，展示AI与物理世界加速融合的趋势，从机器人到智能硬件全面渗透。",
+      "link": "https://mp.weixin.qq.com/s/e833elits8NI7MfAxcre8A",
+      "source_file": "sources/2026-07-17_探营WAIC 2026，AI与物理世界开启“无界融合”_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "拆开Claude大脑也没用！AI黑箱真正的钥匙，藏在本体工程",
+      "source": "新智元",
+      "digest": "探讨AI可解释性的新路径：与其拆解Claude等大模型的黑箱，不如从本体工程角度构建理解AI的新框架。",
+      "link": "https://mp.weixin.qq.com/s/Kh7YNpqjk4YOZ8jhRdc1pQ",
+      "source_file": "sources/2026-07-17_拆开Claude大脑也没用！AI黑箱真正的钥匙，藏在本体工程_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "腾讯研究院AI速递 20260717",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院AI速递汇总：元宝与京东购物打通实现全品类覆盖等AI行业动态。",
+      "link": "https://mp.weixin.qq.com/s/dJCJcCWbUV-0bLfFLrjS_w",
+      "source_file": "sources/2026-07-17_腾讯研究院AI速递 20260717_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "仅14.9克！全球最轻AI眼镜开售，16小时长续航，能换39种镜框",
+      "source": "智东西",
+      "digest": "全球最轻AI眼镜正式开售，仅14.9克，支持16小时续航和39种镜框更换，搭载摄像头的Pro版同步亮相。",
+      "link": "https://mp.weixin.qq.com/s/uRvBm6Q3lNGZQXpEEMS--w",
+      "source_file": "sources/2026-07-17_仅14.9克！全球最轻AI眼镜开售，16小时长续航，能换39种镜框_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和",
+      "source": "量子位",
+      "digest": "IDC最新报告显示阿里Qoder在中国AI Coding市场占有率断层第一，超过二三四五名总和。",
+      "link": "https://mp.weixin.qq.com/s/B1HtuSE3TvbW_Wxga_BZGA",
+      "source_file": "sources/2026-07-17_IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-16",
       "title": "Anthropic揭秘AI四大失控行为：泄密、删账、改分，还差点骗过人类",
