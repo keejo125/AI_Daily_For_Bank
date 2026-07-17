@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-17T08:58:08.666473",
-  "total": 648,
+  "updated_at": "2026-07-17T09:05:38.367047",
+  "total": 646,
   "articles": [
     {
       "date": "2026-07-16",
@@ -9,16 +9,6 @@
       "digest": "给足了AI权限，它会不会使坏？Anthropic真的把这个问题，做成了一场实验。他们把全行业最强的十几个AI模型，一个个扔进模拟的公司和实验室。给代码权限，给财务权限，给评估权限，然后看会发生什么。",
       "link": "https://mp.weixin.qq.com/s/BFpgzxHp8f3G-xs-4k27vw",
       "source_file": "sources/2026-07-16_Anthropic揭秘AI四大失控行为：泄密、删账、改分，还差点骗过人类_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-16",
-      "title": "刚刚，Thinking Machines首发大模型：9750亿参数，完整开放权重",
-      "source": "机器之心",
-      "digest": "不卷榜一，专攻可定制！",
-      "link": "https://mp.weixin.qq.com/s/tepazYmbyKk5iwRKQT_rOw",
-      "source_file": "sources/2026-07-16_刚刚，Thinking Machines首发大模型：9750亿参数，完整开放权重_机器之心.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -79,16 +69,6 @@
       "digest": "记忆能够独立成层",
       "link": "https://mp.weixin.qq.com/s/Y2f9OoPZCyLgF-pIOnRgvg",
       "source_file": "sources/2026-07-16_一位失忆患者，揭开了AI记忆的误区_量子位.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-16",
-      "title": "不er？谁家大模型12B版本跑分比975B的高啊",
-      "source": "量子位",
-      "digest": "限时5折",
-      "link": "https://mp.weixin.qq.com/s/p4Lb99HSOxpObddVI75IrQ",
-      "source_file": "sources/2026-07-16_不er？谁家大模型12B版本跑分比975B的高啊_量子位.md",
       "category": "国内",
       "is_model_related": true
     },
