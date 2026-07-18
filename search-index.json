@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T06:02:52.718809",
+  "updated_at": "2026-07-18T09:08:29.155037",
   "total": 676,
   "articles": [
     {
@@ -204,6 +204,16 @@
     },
     {
       "date": "2026-07-17",
+      "title": "IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和",
+      "source": "量子位",
+      "digest": "IDC最新报告显示阿里Qoder在中国AI Coding市场占有率断层第一，超过二三四五名总和。",
+      "link": "https://mp.weixin.qq.com/s/B1HtuSE3TvbW_Wxga_BZGA",
+      "source_file": "sources/2026-07-17_IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
       "title": "Kimi 正式发布 K3 大模型，能力进阶；12.38 万，小鹏 MONA L03 大定破 4 万台；OpenAI 推出 AI 键盘 | 极客早知道",
       "source": "极客公园",
       "digest": "极客早知道综合资讯：Kimi K3发布、小鹏MONA L03大定破4万、OpenAI推出AI键盘、小米具身基座模型发布等多条新闻。",
@@ -289,16 +299,6 @@
       "digest": "全球最轻AI眼镜正式开售，仅14.9克，支持16小时续航和39种镜框更换，搭载摄像头的Pro版同步亮相。",
       "link": "https://mp.weixin.qq.com/s/uRvBm6Q3lNGZQXpEEMS--w",
       "source_file": "sources/2026-07-17_仅14.9克！全球最轻AI眼镜开售，16小时长续航，能换39种镜框_智东西.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-17",
-      "title": "IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和",
-      "source": "量子位",
-      "digest": "IDC最新报告显示阿里Qoder在中国AI Coding市场占有率断层第一，超过二三四五名总和。",
-      "link": "https://mp.weixin.qq.com/s/B1HtuSE3TvbW_Wxga_BZGA",
-      "source_file": "sources/2026-07-17_IDC报告：中国AI Coding市占率阿里Qoder断层第一，超过二三四五名总和_量子位.md",
       "category": "其他",
       "is_model_related": false
     },
