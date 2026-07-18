@@ -1,7 +1,267 @@
 {
-  "updated_at": "2026-07-18T09:44:27.548340",
-  "total": 677,
+  "updated_at": "2026-07-19T07:40:03.998236",
+  "total": 703,
   "articles": [
+    {
+      "date": "2026-07-18",
+      "title": "不打榜的美国开源新王Inkling：975B原生多模态、仅用 1/3 Token 追平英伟达",
+      "source": "InfoQ",
+      "digest": "美国开源模型Inkling以975B参数原生多模态，仅用1/3 Token追平英伟达同级模型",
+      "link": "https://mp.weixin.qq.com/s/9S3vBJV0LF5rlncuicaE3A",
+      "source_file": "sources/2026-07-18_不打榜的美国开源新王Inkling：975B原生多模态、仅用 1_3 Token 追平英伟达_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-18",
+      "title": "ARC-AGI-3近被完美攻破，这个Harness能让AI掌握物理学家思维",
+      "source": "机器之心",
+      "digest": "ARC-AGI-3基准测试被突破，新型Harness让AI掌握物理学家级别的推理能力",
+      "link": "https://mp.weixin.qq.com/s/BbOBM0A-znQtVSDRcDK6zw",
+      "source_file": "sources/2026-07-18_ARC-AGI-3近被完美攻破，这个Harness能让AI掌握物理学家思维_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Claude Code之父的夜班AI军团，Fable 5两个命令搭好",
+      "source": "新智元",
+      "digest": "Claude Code创始团队揭秘夜班AI开发模式，用Fable 5两条命令即可搭建完整AI应用",
+      "link": "https://mp.weixin.qq.com/s/rWNBnX3W1_euakyNxWMueA",
+      "source_file": "sources/2026-07-18_Claude Code之父的夜班AI军团，Fable 5两个命令搭好_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC 进行时 | 图灵奖得主萨顿重磅演讲：大模型不具备原生智能，AI 正迈入「经验时代」",
+      "source": "InfoQ",
+      "digest": "图灵奖得主萨顿在WAIC发表重磅演讲，认为大模型不具备原生智能，AI正迈入经验时代",
+      "link": "https://mp.weixin.qq.com/s/0tDUFYwuEKZty8P057pyeA",
+      "source_file": "sources/2026-07-18_WAIC 进行时 _ 图灵奖得主萨顿重磅演讲：大模型不具备原生智能，AI 正迈入“经验时代”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "「自驱型公司」来了！代码暴增3倍，事故不增加",
+      "source": "机器之心",
+      "digest": "Replit CEO Amjad Masad提出「自驱型公司」概念，AI驱动代码暴增3倍事故不增加，展现美国AI工程实践",
+      "link": "https://mp.weixin.qq.com/s/tCaOkYoteZEDZgzzuHw4bg",
+      "source_file": "sources/2026-07-18_「自驱型公司」来了！代码暴增3倍，事故不增加_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "极佳视界通用世界模型成WAIC焦点：从生成到行动，这才是物理AGI的最佳打开方式",
+      "source": "机器之心",
+      "digest": "极佳视界发布通用世界模型，从感知生成到行动执行，定位为物理AGI的核心技术路径",
+      "link": "https://mp.weixin.qq.com/s/zbx5s6rOkkUmz_E8SRx5LQ",
+      "source_file": "sources/2026-07-18_极佳视界通用世界模型成WAIC焦点：从生成到行动，这才是物理AGI的最佳打开方式_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-18",
+      "title": "中国队交卷，盲测打爆Claude！科学多模态统一AI来了",
+      "source": "新智元",
+      "digest": "中科闻歌磐石团队发布S1-Omni科学多模态统一推理模型，盲测超越Claude Science等国际模型",
+      "link": "https://mp.weixin.qq.com/s/6zOb4_Pi4zIwxoLzcQTZZw",
+      "source_file": "sources/2026-07-18_中国队交卷，盲测打爆Claude！科学多模态统一AI来了_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-18",
+      "title": "腾讯发布多款具身智能基座模型与智能体，钛螺丝平台迎来全面升级",
+      "source": "腾讯技术工程",
+      "digest": "腾讯发布多款具身智能基座模型与智能体，钛螺丝机器人平台全面升级",
+      "link": "https://mp.weixin.qq.com/s/ig-QFQ41WXD7UOnEQVfX_Q",
+      "source_file": "sources/2026-07-18_腾讯发布多款具身智能基座模型与智能体，钛螺丝平台迎来全面升级_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-18",
+      "title": "全球首个云端具身大模型炸场WAIC：一脑控多手、30秒换手，行业首例",
+      "source": "机器之心",
+      "digest": "全球首个云端具身大模型Visics在WAIC发布，实现一脑控多手、30秒快速换手，创行业首例",
+      "link": "https://mp.weixin.qq.com/s/p28byWRpPme-fRr47qbjTQ",
+      "source_file": "sources/2026-07-18_全球首个云端具身大模型炸场WAIC：一脑控多手、30秒换手，行业首例_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC五位首席科学家交锋：多模态是LLM的「外挂」，还是下一代智能的「灵魂」？",
+      "source": "智东西",
+      "digest": "WAIC五位首席科学家围绕多模态与LLM的关系展开交锋，探讨多模态是语言模型的补充还是下一代AI的核心驱动力",
+      "link": "https://mp.weixin.qq.com/s/UbKwS-zBMF0WghStndMpRA",
+      "source_file": "sources/2026-07-18_WAIC五位首席科学家交锋：多模态是LLM的“外挂”，还是下一代智能的“灵魂”？_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "对话腾讯云副总裁：企业智能体火了，今年平台使用量至少翻倍",
+      "source": "智东西",
+      "digest": "腾讯云副总裁表示企业智能体平台使用量今年至少翻倍，产业智能化进程加速",
+      "link": "https://mp.weixin.qq.com/s/i0Uiq1_3LV-6dS7emLPMqg",
+      "source_file": "sources/2026-07-18_对话腾讯云副总裁：企业智能体火了，今年平台使用量至少翻倍_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC 全场少见：极智嘉交出兼顾泛化能力与作业效率的答卷",
+      "source": "极客公园",
+      "digest": "极智嘉在WAIC展出兼顾泛化与效率的机器人方案，展现物流机器人的AI落地能力",
+      "link": "https://mp.weixin.qq.com/s/AVvIvxLR7LiEW_INCzhinw",
+      "source_file": "sources/2026-07-18_WAIC 全场少见：极智嘉交出兼顾泛化能力与作业效率的答卷_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "刚刚，业界首个RISC-V AI算力超节点方案，首秀WAIC 2026",
+      "source": "智东西",
+      "digest": "业界首个RISC-V AI算力超节点方案在WAIC首秀，推动国产芯片在AI基础设施中的突破",
+      "link": "https://mp.weixin.qq.com/s/Q4zD7PdZuOxyBSQYuj1hmQ",
+      "source_file": "sources/2026-07-18_刚刚，业界首个RISC-V AI算力超节点方案，首秀WAIC 2026_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "拿下 WAIC 镇馆之宝，这台「智能体手机」重新定义了什么？",
+      "source": "极客公园",
+      "digest": "智能体手机STEPX Neo拿下WAIC「镇馆之宝」，重新定义AI终端交互形态，从App操作到主动服务",
+      "link": "https://mp.weixin.qq.com/s/GNOcP_QzKaSEhG1TNDjCKQ",
+      "source_file": "sources/2026-07-18_拿下 WAIC 镇馆之宝，这台「智能体手机」重新定义了什么？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC看了一圈，这家公司的机器人在认真打工",
+      "source": "量子位",
+      "digest": "WAIC现场，多家机器人公司展示在真实场景中的落地应用，展现具身智能的工程化进展",
+      "link": "https://mp.weixin.qq.com/s/-ctVh1-ZAZUNdGezO38i1g",
+      "source_file": "sources/2026-07-18_WAIC看了一圈，这家公司的机器人在认真打工_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC直击：200家机器人企业同场竞技，但物理AI的入场券属于闭环玩家",
+      "source": "机器之心",
+      "digest": "WAIC现场200家机器人企业展出，行业共识：物理AI真正入场券属于具备闭环能力的企业",
+      "link": "https://mp.weixin.qq.com/s/nje4TPIljHb-qpbR4tqIpA",
+      "source_file": "sources/2026-07-18_WAIC直击：200家机器人企业同场竞技，但物理AI的入场券属于闭环玩家_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC一间很「主动」的AI小屋，藏着京东通往整个物理世界的野心",
+      "source": "智东西",
+      "digest": "京东在WAIC展示AI小屋，展现从线上零售到物理世界的AI全场景布局野心",
+      "link": "https://mp.weixin.qq.com/s/K_0jT-scyHgdJJi4y9ci7Q",
+      "source_file": "sources/2026-07-18_WAIC一间很“主动”的AI小屋，藏着京东通往整个物理世界的野心_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "帮ChatGPT补足短板的，竟然是一家中国黑马！",
+      "source": "新智元",
+      "digest": "钛动科技发布Navos 2.0多智能体平台，与OpenAI合作布局Agentic Commerce",
+      "link": "https://mp.weixin.qq.com/s/5E8c0bkF6oOF1J9VbZplJg",
+      "source_file": "sources/2026-07-18_帮ChatGPT补足短板的，竟然是一家中国黑马！_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "不换模型，效果提升104%！上海AI Lab让Harness也能自进化了",
+      "source": "量子位",
+      "digest": "上海AI Lab发布Self-Harness，不更换模型即可提升104%效果，降低AI研发门槛",
+      "link": "https://mp.weixin.qq.com/s/7dqygHsvbdsa0J7xaHF6Lw",
+      "source_file": "sources/2026-07-18_不换模型，效果提升104%！上海AI Lab让Harness也能自进化了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "千问AI平台亮相 WAIC：当 Agent 成为新用户",
+      "source": "阿里云开发者",
+      "digest": "千问AI平台在WAIC亮相，以Agent作为新一代用户界面，重新定义AI平台交互范式",
+      "link": "https://mp.weixin.qq.com/s/UZR_HQz9KFZozsHbNQOrqg",
+      "source_file": "sources/2026-07-18_千问AI平台亮相 WAIC：当 Agent 成为新用户_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Jiuwen Symbiosis深度解析：从数字世界走向物理世界，为Physical AI打造Symbiosis (共生)",
+      "source": "InfoQ",
+      "digest": "Jiuwen Symbiosis深度解析：为Physical AI打造从数字到物理世界的共生架构",
+      "link": "https://mp.weixin.qq.com/s/e5rj_oFfy7frgQ8v5tzCiA",
+      "source_file": "sources/2026-07-18_Jiuwen Symbiosis深度解析：从数字世界走向物理世界，为Physical AI打造Sym_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "量子基础大模型赋能NL2DSL2SQL意图识别应用研究",
+      "source": "金融电子化",
+      "digest": "华夏银行量子基础大模型在金融NL2DSL2SQL意图识别中的应用研究，探索大模型赋能金融智能化",
+      "link": "https://mp.weixin.qq.com/s/k94Oat-Sd_e5fNauJ2XZTg",
+      "source_file": "sources/2026-07-18_量子基础大模型赋能NL2DSL2SQL意图识别应用研究_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC信息爆炸！大佬们都在说什么，笔记看这里",
+      "source": "量子位",
+      "digest": "WAIC现场信息汇总：整理大会上各界专家和企业领袖的核心观点与发言笔记",
+      "link": "https://mp.weixin.qq.com/s/Bo3wY2L8tijTdOBbDtiqnQ",
+      "source_file": "sources/2026-07-18_WAIC信息爆炸！大佬们都在说什么，笔记看这里_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院发布本周AI领域关键词Top50，汇总行业热点趋势",
+      "link": "https://mp.weixin.qq.com/s/AzZ6h3OBWbtD01l8qpEIxQ",
+      "source_file": "sources/2026-07-18_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "苹果重回全球市值第一宝座；影视飓风 AI 课单日营收 500 万；华强北内存价格暴涨 320%",
+      "source": "极客公园",
+      "digest": "苹果重回全球市值第一；影视飓风AI课程单日营收500万；华强北内存价格暴涨320%",
+      "link": "https://mp.weixin.qq.com/s/76di7q9yX6KYiwgzrwl1-Q",
+      "source_file": "sources/2026-07-18_苹果重回全球市值第一宝座；影视飓风 AI 课单日营收 500 万；华强北内存价格暴涨 320%_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-18",
+      "title": "WAIC 2026大洗牌：机器人遍地，Agent干活，国产算力崛起，基础大模型只剩18家｜甲子光年",
+      "source": "甲子光年",
+      "digest": "WAIC 2026全景回顾：机器人遍地、Agent干活、国产算力崛起，基础大模型仅剩18家竞争",
+      "link": "https://mp.weixin.qq.com/s/kmIponLZfw6Vm5PzJ9rXGA",
+      "source_file": "sources/2026-07-18_WAIC 2026大洗牌：机器人遍地，Agent干活，国产算力崛起，基础大模型只剩18家｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-17",
       "title": "同一个链接，你和同事打开的不一样：Claude让AI页面活了",

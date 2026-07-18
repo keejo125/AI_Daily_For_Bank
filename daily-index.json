@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-07-18",
+      "weekday": "周六",
+      "stats": {
+        "国际": 5,
+        "国内": 17,
+        "同业": 1,
+        "其他": 4,
+        "total": 27
+      },
+      "summary": "不打榜的美国开源新王Inkling：975B原生多模态、仅用 1/3 Token 追平英伟达/ARC-AGI-3近被完美攻破，这个Harness能让AI掌..."
+    },
+    {
       "date": "2026-07-17",
       "weekday": "周五",
       "stats": {
