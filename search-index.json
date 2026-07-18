@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-18T09:08:29.155037",
-  "total": 676,
+  "updated_at": "2026-07-18T09:27:49.452461",
+  "total": 677,
   "articles": [
     {
       "date": "2026-07-17",
@@ -21,6 +21,16 @@
       "source_file": "sources/2026-07-17_AlloyDB 推出代理模型，用数据库本地推理替代外部大模型调用_InfoQ.md",
       "category": "国际",
       "is_model_related": false
+    },
+    {
+      "date": "2026-07-17",
+      "title": "暂不跟进视频生成！Kimi K3 力压 Fable 5、登顶 Arena 榜单，提价近4倍对标Sonnet 5",
+      "source": "InfoQ",
+      "digest": "Kimi 正式发布 K3 模型，2.8T 参数/100万上下文，Arena 前端代码榜登顶力压 Fable5，提价至 Sonnet 5 对标价位，明确不跟进视频生成路线",
+      "link": "",
+      "source_file": "../daily/2026-07-17/sources/2026-07-17_暂不跟进视频生成_Kimi_K3_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
     },
     {
       "date": "2026-07-17",
