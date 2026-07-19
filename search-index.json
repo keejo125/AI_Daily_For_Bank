@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-07-19T07:40:03.998236",
-  "total": 703,
+  "updated_at": "2026-07-20T07:14:11.324883",
+  "total": 734,
   "articles": [
+    {
+      "date": "2026-07-19",
+      "title": "危！GPT-5.6会自动删文件，AI初创老板痛失整台Mac",
+      "source": "量子位",
+      "digest": "官方紧急回应：在修了在修了",
+      "link": "https://mp.weixin.qq.com/s/ghh2pYYKcIbpziiHeWHkEA",
+      "source_file": "sources/2026-07-19_危！GPT-5.6会自动删文件，AI初创老板痛失整台Mac_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "ICML 2026 | 从“事实错误”到“世界模型失配”：来自CMU、斯坦福等研究者提出大模型幻觉统一定义",
+      "source": "机器之心",
+      "digest": "幻觉的问题在于大模型内部的 “世界模型” 认知。",
+      "link": "https://mp.weixin.qq.com/s/uJHKmSxhKvv1-RoGtbrvBw",
+      "source_file": "sources/2026-07-19_ICML 2026 _ 从“事实错误”到“世界模型失配”：来自CMU、斯坦福等研究者提出大模型幻觉统_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Linux 基金会推出 Akrites 项目，防护核心开源软件免受 AI 网络威胁侵害",
+      "source": "InfoQ",
+      "digest": "Linux 基金会正式推出全新全行业联合项目 Akrites，旨在保护全球核心开源软件，抵御 AI 技术驱动的新型网络威胁。",
+      "link": "https://mp.weixin.qq.com/s/fgD-xNt8q0GtoHoAv2VA8A",
+      "source_file": "sources/2026-07-19_Linux 基金会推出 Akrites 项目，防护核心开源软件免受 AI 网络威胁侵害_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Stripe 发布基准测试：AI 智能体可开发集成方案，但校验环节存在短板",
+      "source": "InfoQ",
+      "digest": "Stripe 发布基准测试套件，用以评测 AI 智能体能否完成覆盖后端、前端及网页结账流程的全链路 Stripe 集成开发。",
+      "link": "https://mp.weixin.qq.com/s/3VeFb6tNn6TbzrqeegNAbg",
+      "source_file": "sources/2026-07-19_Stripe 发布基准测试：AI 智能体可开发集成方案，但校验环节存在短板_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Claude杀入全美教室：一周干49小时的老师，终于等来免费AI助教",
+      "source": "新智元",
+      "digest": "Claude杀入全美教室：一周干49小时的老师，终于等来免费AI助教",
+      "link": "https://mp.weixin.qq.com/s/-8h6LEpgOqL3PYusHgPO-w",
+      "source_file": "sources/2026-07-19_Claude杀入全美教室：一周干49小时的老师，终于等来免费AI助教_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "所有Harness终将长成“龙虾”，但最后活下来的只有几只",
+      "source": "InfoQ",
+      "digest": "Harness框架演进讨论：Mastra创始人认为AI助手下一形态是Claw；上海AI Lab则让Harness在不换模型的情况下效果提升104%。",
+      "link": "https://mp.weixin.qq.com/s/oGya1dWy0iSUt1a-C4Q5mQ",
+      "source_file": "sources/2026-07-19_所有Harness终将长成“龙虾”，但最后活下来的只有几只_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "世界模型元年：这一次，昆仑万维又踩准了AI的产业节奏",
+      "source": "机器之心",
+      "digest": "每一步都站在技术拐点上。",
+      "link": "https://mp.weixin.qq.com/s/yBOyNy0MBI--E0_8Sr1VUw",
+      "source_file": "sources/2026-07-19_世界模型元年：这一次，昆仑万维又踩准了AI的产业节奏_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "2.4T！阿里史上最大模型突袭，“只输Fable”",
+      "source": "智东西",
+      "digest": "国产大模型开启“井喷模式”。",
+      "link": "https://mp.weixin.qq.com/s/UmAeS6MDkzVSFzKat4PWNg",
+      "source_file": "sources/2026-07-19_2.4T！阿里史上最大模型突袭，“只输Fable”_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "围观WAIC模型「读心术」！现场火火火火火",
+      "source": "量子位",
+      "digest": "一个对抗LLM结构性缺陷的模型架构",
+      "link": "https://mp.weixin.qq.com/s/v7so304y6xNdu_yUARvv0w",
+      "source_file": "sources/2026-07-19_围观WAIC模型「读心术」！现场火火火火火_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "WAIC现场观察：百川智能从榜单到AI医生｜甲子光年",
+      "source": "甲子光年",
+      "digest": "为人类造医生、为生命建模型。",
+      "link": "https://mp.weixin.qq.com/s/Z1f82J7D2D8Sp0ezrmNnMQ",
+      "source_file": "sources/2026-07-19_WAIC现场观察：百川智能从榜单到AI医生｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-19",
+      "title": "AI Coding成功率88%，科研仅3%？「科研是下一个Coding」，还差关键一环",
+      "source": "新智元",
+      "digest": "国家队借助 AI 刷新全球记录：60 毫秒搭好 2024 原子无缺陷阵列！",
+      "link": "https://mp.weixin.qq.com/s/3YCjCvuZW0aWwwdLdk42jQ",
+      "source_file": "sources/2026-07-19_AI Coding成功率88%，科研仅3%？「科研是下一个Coding」，还差关键一环_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "三年前押注端侧AI，面壁终于等来行业拐点 ｜甲子光年",
+      "source": "甲子光年",
+      "digest": "端侧AI时代的游戏规则，面壁希望由自己来定。",
+      "link": "https://mp.weixin.qq.com/s/t72KLNgeuZicqhNipIVMmA",
+      "source_file": "sources/2026-07-19_三年前押注端侧AI，面壁终于等来行业拐点 ｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "上手简单，安全可靠，TeleAgent星辰超级智能体不搞极客玩具那一套",
+      "source": "机器之心",
+      "digest": "「敢用、能用、好用」",
+      "link": "https://mp.weixin.qq.com/s/H6wBOaKtut8nOoRkkao_Rg",
+      "source_file": "sources/2026-07-19_上手简单，安全可靠，TeleAgent星辰超级智能体不搞极客玩具那一套_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "阿里荣膺 ACL 2026 最佳资源论文奖，揭示AI Agent的专家能力鸿沟",
+      "source": "机器之心",
+      "digest": "首个面向真实、专家级场景的深度检索 Agent 层级规则应用基准。",
+      "link": "https://mp.weixin.qq.com/s/7avPfYJHEQiKFLc6TmoJsA",
+      "source_file": "sources/2026-07-19_阿里荣膺 ACL 2026 最佳资源论文奖，揭示AI Agent的专家能力鸿沟_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "大模型内存焦虑，办法被想到了U盘上",
+      "source": "量子位",
+      "digest": "全球存储行业供应紧张或有新解。",
+      "link": "https://mp.weixin.qq.com/s/FVzAQSdfhrXw2IOhHWF0lA",
+      "source_file": "sources/2026-07-19_大模型内存焦虑，办法被想到了U盘上_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "GPU原生，认知驱动：星环科技面向AI Agents的新一代AI数据库",
+      "source": "智东西",
+      "digest": "为AI Agents提供一站式超高性能数据、知识与记忆能力支撑。",
+      "link": "https://mp.weixin.qq.com/s/xN5M81fBtlOzLScKQ_A06A",
+      "source_file": "sources/2026-07-19_GPU原生，认知驱动：星环科技面向AI Agents的新一代AI数据库_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "亮相WAIC｜灵汐科技LynAInfra（灵琍）类脑超节点重磅登场，重构大模型推理新格局",
+      "source": "智东西",
+      "digest": "LynAInfra128用30kW功耗撑起近100P算力。",
+      "link": "https://mp.weixin.qq.com/s/RJRssB9_Wj7ehkOsGOpioQ",
+      "source_file": "sources/2026-07-19_亮相WAIC｜灵汐科技LynAInfra（灵琍）类脑超节点重磅登场，重构大模型推理新格局_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "不靠英伟达网卡，国产GPU直通方案实测出炉：吞吐飙升、延迟砍半",
+      "source": "量子位",
+      "digest": "奇异摩尔亮相WAIC",
+      "link": "https://mp.weixin.qq.com/s/6UR4Z_p0esmD2BRmfsNi9Q",
+      "source_file": "sources/2026-07-19_不靠英伟达网卡，国产GPU直通方案实测出炉：吞吐飙升、延迟砍半_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "告别审稿抽卡！全新LLM校准机制，给AI顶会统一打分尺度",
+      "source": "新智元",
+      "digest": "告别审稿抽卡！全新LLM校准机制，给AI顶会统一打分尺度",
+      "link": "https://mp.weixin.qq.com/s/NSkSuNu58_Bd0XH57x59sw",
+      "source_file": "sources/2026-07-19_告别审稿抽卡！全新LLM校准机制，给AI顶会统一打分尺度_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "AI算力竞争进入系统时代！中兴OEX超节点发布，重新定义AI工厂底座",
+      "source": "智东西",
+      "digest": "中兴正在“All in AI，All for AI”。",
+      "link": "https://mp.weixin.qq.com/s/M5z7MFn04qoUf2ZM66tcdQ",
+      "source_file": "sources/2026-07-19_AI算力竞争进入系统时代！中兴OEX超节点发布，重新定义AI工厂底座_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "直击WAIC 2026！如何破解AI黑箱难题?",
+      "source": "财联社AI daily",
+      "digest": "直击WAIC 2026！如何破解AI黑箱难题?",
+      "link": "https://mp.weixin.qq.com/s/Zq7pXZpZmIC74giUxQAPxw",
+      "source_file": "sources/2026-07-19_直击WAIC 2026！如何破解AI黑箱难题_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "WAIC重磅发布！云天励飞亮出芯片、万卡集群、软件栈完整算力版图",
+      "source": "智东西",
+      "digest": "基于最新云端大算力芯片，布局系统级推理底座。",
+      "link": "https://mp.weixin.qq.com/s/8kKthN5a8TxLQyBIJ-_wpA",
+      "source_file": "sources/2026-07-19_WAIC重磅发布！云天励飞亮出芯片、万卡集群、软件栈完整算力版图_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "不换模型，效果提升104%！上海AI Lab让Harness也能自进化了",
+      "source": "量子位",
+      "digest": "让AI自己改自己的Agent Harness，这事已经被顶级Agent社区注意到了。",
+      "link": "https://mp.weixin.qq.com/s/bynnntbvt6YrYFEualuc6g",
+      "source_file": "sources/2026-07-19_不换模型，效果提升104%！上海AI Lab让Harness也能自进化了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "行业迎来大洗牌！4万 Agent 挤进一个机柜，AI Infra 要如何构建？",
+      "source": "InfoQ",
+      "digest": "Agent开始“干活”后，Agent基础设施要如何构建？",
+      "link": "https://mp.weixin.qq.com/s/cpoFvz1TrBypUcTkqs77sw",
+      "source_file": "sources/2026-07-19_行业迎来大洗牌！4万 Agent 挤进一个机柜，AI Infra 要如何构建？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "冷门的哲学，成了“治”AI的热门",
+      "source": "量子位",
+      "digest": "智能进了社会，治理不能慢半拍",
+      "link": "https://mp.weixin.qq.com/s/VK0FEr2qFAe4ONX6klvs8A",
+      "source_file": "sources/2026-07-19_冷门的哲学，成了“治”AI的热门_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "逛了趟WAIC，我只想说，AI在物理世界都快卷疯了……",
+      "source": "量子位",
+      "digest": "小机器人开始在物理世界狠刷「经验值」",
+      "link": "https://mp.weixin.qq.com/s/jtxfo9BhCS0KLihgeEmDzQ",
+      "source_file": "sources/2026-07-19_逛了趟WAIC，我只想说，AI在物理世界都快卷疯了……_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "WAIC华山论剑，罕见AI新共识：机器人ChatGPT时刻，最快两年！",
+      "source": "新智元",
+      "digest": "WAIC华山论剑，罕见AI新共识：机器人ChatGPT时刻，最快两年！",
+      "link": "https://mp.weixin.qq.com/s/lcJnG0UrpJ0lvrGa7dD6Lw",
+      "source_file": "sources/2026-07-19_WAIC华山论剑，罕见AI新共识：机器人ChatGPT时刻，最快两年！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "AI终端的「iPhone时刻」什么时候来？我们在WAIC看到了全新的可能",
+      "source": "机器之心",
+      "digest": "一个新终端，一个新时代",
+      "link": "https://mp.weixin.qq.com/s/RoR7CrueNroh6bvMI-aOfA",
+      "source_file": "sources/2026-07-19_AI终端的「iPhone时刻」什么时候来？我们在WAIC看到了全新的可能_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "给「AI 组织」交了好几波学费后，终于看清了这五级台阶",
+      "source": "极客公园",
+      "digest": "​AI 技术本身不会平等地拯救每一个组织，它只会加速组织的分化。",
+      "link": "https://mp.weixin.qq.com/s/MVBE8U_ikDZcoQFdeNvsmQ",
+      "source_file": "sources/2026-07-19_给「AI 组织」交了好几波学费后，终于看清了这五级台阶_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "OpenAI战略未来负责人评Kimi K3引争议；DeepSeek V4正式版突袭曝光，最快明天见；网易、阿迪等多家企业宣布：7月20日放假！| Q资讯",
+      "source": "InfoQ",
+      "digest": "有瓜？！",
+      "link": "https://mp.weixin.qq.com/s/jjMNrxvZ4hnfnhKFqVOKvw",
+      "source_file": "sources/2026-07-19_OpenAI战略未来负责人评Kimi K3引争议；DeepSeek V4正式版突袭曝光，最快明天见；_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-19",
+      "title": "马斯克：Grok 4.6 下周完成训练，2 万亿参数；OpenRouter 估值超 13 亿美元；腾讯 WorkBuddy 上线安卓 / iOS / 鸿蒙| 极客早知道",
+      "source": "极客公园",
+      "digest": "英伟达 N1X 首个 Cinebench 2026 跑分曝光；Spotify 去年清理 7500 万首 AI 生成音乐以应对垃圾内容滥用；Meta 员工要求法院阻止公司裁员，但遭法官驳回",
+      "link": "https://mp.weixin.qq.com/s/-fU7e-7NVcgr1bMgbh-ddQ",
+      "source_file": "sources/2026-07-19_马斯克：Grok 4.6 下周完成训练，2 万亿参数；OpenRouter 估值超 13 亿美元；腾_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-18",
       "title": "不打榜的美国开源新王Inkling：975B原生多模态、仅用 1/3 Token 追平英伟达",
