@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T07:09:03.453331",
+  "updated_at": "2026-07-21T07:16:51.146948",
   "total": 768,
   "articles": [
     {
@@ -19,16 +19,6 @@
       "digest": "ECCV 2026收录IQA-T1方法：让多模态大模型在评估图像质量时用结构图、频谱图等视觉证据替代传统文字描述，评分更客观可靠。",
       "link": "https://mp.weixin.qq.com/s/rqYcu5ouwl04ucqxBxdMDQ",
       "source_file": "sources/2026-07-20_大模型给图片打分不再“靠嘴说”！结构图、频谱图当“物证”，用“视觉证据”来给图片打分 _ ECCV‘_量子位.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-20",
-      "title": "2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻",
-      "source": "新智元",
-      "digest": "2026 IMO中国代表队全员满分夺金，同时GPT-5.6在数学推理上取得突破性进展，被业界比作AlphaGo时刻。",
-      "link": "https://mp.weixin.qq.com/s/xtq9iqUeFNfpHBMgKLjSBg",
-      "source_file": "sources/2026-07-20_2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻_新智元.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -260,6 +250,16 @@
       "link": "https://mp.weixin.qq.com/s/Wur52D7S9LlowfbIexIuBA",
       "source_file": "sources/2026-07-20_Mureka V9.5重磅发布，AI音乐告别“AI味”｜甲子光年_甲子光年.md",
       "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻",
+      "source": "新智元",
+      "digest": "2026 IMO中国代表队全员满分夺金，同时GPT-5.6在数学推理上取得突破性进展，被业界比作AlphaGo时刻。",
+      "link": "https://mp.weixin.qq.com/s/xtq9iqUeFNfpHBMgKLjSBg",
+      "source_file": "sources/2026-07-20_2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻_新智元.md",
+      "category": "其他",
       "is_model_related": false
     },
     {
