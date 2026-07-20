@@ -1,7 +1,347 @@
 {
-  "updated_at": "2026-07-20T07:14:11.324883",
-  "total": 734,
+  "updated_at": "2026-07-21T07:09:03.453331",
+  "total": 768,
   "articles": [
+    {
+      "date": "2026-07-20",
+      "title": "给AI喂“噪声”也能涨分，这项工作让噪声实现正迁移 | ICML26",
+      "source": "量子位",
+      "digest": "ICML 2026收录研究：在迁移学习中给AI训练数据添加噪声反而能提升模型性能，噪声源数据不限于图像或文本，颠覆了传统迁移学习认知。",
+      "link": "https://mp.weixin.qq.com/s/pXIij61LlcxiBqe9XUYBXA",
+      "source_file": "sources/2026-07-20_给AI喂“噪声”也能涨分，这项工作让噪声实现正迁移 _ ICML26_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "大模型给图片打分不再“靠嘴说”！结构图、频谱图当“物证”，用“视觉证据”来给图片打分 | ECCV‘26",
+      "source": "量子位",
+      "digest": "ECCV 2026收录IQA-T1方法：让多模态大模型在评估图像质量时用结构图、频谱图等视觉证据替代传统文字描述，评分更客观可靠。",
+      "link": "https://mp.weixin.qq.com/s/rqYcu5ouwl04ucqxBxdMDQ",
+      "source_file": "sources/2026-07-20_大模型给图片打分不再“靠嘴说”！结构图、频谱图当“物证”，用“视觉证据”来给图片打分 _ ECCV‘_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻",
+      "source": "新智元",
+      "digest": "2026 IMO中国代表队全员满分夺金，同时GPT-5.6在数学推理上取得突破性进展，被业界比作AlphaGo时刻。",
+      "link": "https://mp.weixin.qq.com/s/xtq9iqUeFNfpHBMgKLjSBg",
+      "source_file": "sources/2026-07-20_2026 IMO中国满分屠榜，上海中学横扫金牌！GPT-5.6再现AlphaGO时刻_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "恶意插件100%得手！伯克利、UIUC和NUS等给智能体做了次安全体检",
+      "source": "新智元",
+      "digest": "伯克利、UIUC和NUS联合研究发现，现有AI智能体的插件系统存在严重安全漏洞，恶意插件可通过100%成功率窃取用户数据和操控系统。",
+      "link": "https://mp.weixin.qq.com/s/jpX5cg1jNt1n3Wx3q9g3cQ",
+      "source_file": "sources/2026-07-20_恶意插件100%得手！伯克利、UIUC和NUS等给智能体做了次安全体检_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "谷歌 Genkit 推出 Agents API：支持分离式任务轮次与人机协同",
+      "source": "InfoQ",
+      "digest": "谷歌开源全栈 AI 开发框架 Genkit 推出预览版 Agents API，统一 chat () 接口封装对话、工具调用、流式输出、状态持久化等能力，进程内与 HTTP 服务部署模式调用逻辑无差异。",
+      "link": "https://mp.weixin.qq.com/s/BYiSAp3I8W4YunklU_FraQ",
+      "source_file": "sources/2026-07-20_谷歌 Genkit 推出 Agents API：支持分离式任务轮次与人机协同_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Datadog 借助 Claude 和 Cursor 完成测试驱动式生产环境迁移",
+      "source": "InfoQ",
+      "digest": "Datadog 工程师 Arnold Wakim 在近期文章中分享团队利用 AI 改造核心生产系统的实践、问题与经验，通过AI突破底层存储性能限制，大幅优化系统表现。",
+      "link": "https://mp.weixin.qq.com/s/aND4LP3085pxoSgUQcQ6_Q",
+      "source_file": "sources/2026-07-20_Datadog 借助 Claude 和 Cursor 完成测试驱动式生产环境迁移_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Hugging Face遭AI自主攻击：一个周末，AI黑掉了AI",
+      "source": "新智元",
+      "digest": "全球最大AI开源社区Hugging Face披露生产环境AI入侵事件，攻击者利用AI在周末完成对AI系统的自主攻击和取证对抗。InfoQ补充报道白宫AI顾问喊话美国正在失去AI竞争力，GLM 5.2在取证中发挥关键作用。",
+      "link": "https://mp.weixin.qq.com/s/hSYToT7ndB-y4bqcsOMOEA",
+      "source_file": "sources/2026-07-20_一个周末，AI黑掉了AI！这剧情太科幻了_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "在WAIC现场，我们见到了Richard Sutton",
+      "source": "机器之心",
+      "digest": "强化学习之父Richard Sutton在WAIC 2026现场接受专访：谈经验与能耗，认为目前大模型被高估，对齐是人类的一种策略性手段。",
+      "link": "https://mp.weixin.qq.com/s/Gr_KI1-R1kq3l8NBnWtAAw",
+      "source_file": "sources/2026-07-20_在WAIC现场，我们见到了Richard Sutton_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI领走埃尔德什100美元赏金！44页顶刊没解的题，它一页纸答出",
+      "source": "新智元",
+      "digest": "AI用一页纸解答了44页顶刊论文未解的数学难题，领走数学界悬赏多年的埃尔德什100美元奖金。",
+      "link": "https://mp.weixin.qq.com/s/lsW4TQrql9LN4c5imVG-ww",
+      "source_file": "sources/2026-07-20_AI领走埃尔德什100美元赏金！44页顶刊没解的题，它一页纸答出_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "工业AI落地最后一公里，不是部署AI，是敢把任务交给AI",
+      "source": "智东西",
+      "digest": "西门子在WAIC发布Eigen工程智能体，工业AI落地从辅助定位走向自主决策，任务成功率达99%以上。",
+      "link": "https://mp.weixin.qq.com/s/e937TMqkZfpp5FBxiSmPoQ",
+      "source_file": "sources/2026-07-20_工业AI落地最后一公里，不是部署AI，是敢把任务交给AI_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "我做了个新闻联播版《甄嬛传》，全靠这款字节模型",
+      "source": "智东西",
+      "digest": "字节跳动Seed Audio 1.0模型可统一生成对白、音效和环境声，让AI音频从会发声走向会创作，已在视频配音等领域应用。",
+      "link": "https://mp.weixin.qq.com/s/0JFmHbbiLM8CbgIKUymtAw",
+      "source_file": "sources/2026-07-20_我做了个新闻联播版《甄嬛传》，全靠这款字节模型_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "百万上下文下的 DeepSeek V4：SGLang 推理优化实战｜AICon 深圳",
+      "source": "InfoQ",
+      "digest": "SGLang 团队如何通过缓存架构、算子融合和并行策略的全栈优化，实现 DeepSeek-V4 百万上下文推理的 Day-0 支持与持续性能提升",
+      "link": "https://mp.weixin.qq.com/s/fDqsH0tBacEozaQpHpUQcw",
+      "source_file": "sources/2026-07-20_百万上下文下的 DeepSeek V4：SGLang 推理优化实战｜AICon 深圳_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "​中国信通院正式启动“AISHPerf大模型训练与推理工程实践性能基准研究工作”",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院正式启动AISHPerf大模型训练与推理工程实践性能基准研究，旨在建立覆盖训练效率、推理性能、工程稳定性的统一评测体系。",
+      "link": "https://mp.weixin.qq.com/s/uc11WAm09tP24UFm9drtuw",
+      "source_file": "sources/2026-07-20_​中国信通院正式启动“AISHPerf大模型训练与推理工程实践性能基准研究工作”_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Token两年暴涨千倍之后，摩尔线程开始“造工厂”｜甲子光年",
+      "source": "甲子光年",
+      "digest": "摩尔线程在WAIC 2026发布一套架构支撑三大AI工厂战略，从Token工厂到模型工厂再到智能体工厂；同步宣布已用国产GPU训练出世界模型，标志国产GPU进入分水岭时刻。",
+      "link": "https://mp.weixin.qq.com/s/tA1UfSixWdrEttZMgifO9g",
+      "source_file": "sources/2026-07-20_Token两年暴涨千倍之后，摩尔线程开始“造工厂”｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "西班牙，夺冠！押中世界杯黑马的中国AI，在WAIC甩出杀器",
+      "source": "新智元",
+      "digest": "中国AI在WAIC展示全球领先的体育预测能力，成功押中西班牙世界杯夺冠，体现了AI在复杂事件预测领域的技术突破。",
+      "link": "https://mp.weixin.qq.com/s/zPeDgEhMWwsAsW961InAfQ",
+      "source_file": "sources/2026-07-20_西班牙，夺冠！押中世界杯黑马的中国AI，在WAIC甩出杀器_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI终端走进物理世界，需要一颗怎样的芯片？｜甲子光年",
+      "source": "甲子光年",
+      "digest": "端侧AI芯片是连接模型能力与终端产品之间的关键一环。",
+      "link": "https://mp.weixin.qq.com/s/5CCiS7jC4d2lENqwTpBwGg",
+      "source_file": "sources/2026-07-20_AI终端走进物理世界，需要一颗怎样的芯片？｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "「百度搭子」，成了 WAIC 镇馆之宝",
+      "source": "极客公园",
+      "digest": "百度在WAIC 2026展示百度搭子智能体平台，通过工程化系统性交付实现Agent即服务，成为展会焦点。",
+      "link": "https://mp.weixin.qq.com/s/82Taz1VcHepWK5M0jDLgLw",
+      "source_file": "sources/2026-07-20_「百度搭子」，成了 WAIC 镇馆之宝_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI代码生成率94%：我们用一个 Skill 跑通需求开发全流程",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队通过一个Skill实现需求开发全流程AI化，AI代码生成率达94%，打通从需求理解到代码交付的完整链路。",
+      "link": "https://mp.weixin.qq.com/s/mGGIbFyF4U1PrBJVdfgcvg",
+      "source_file": "sources/2026-07-20_AI代码生成率94%：我们用一个 Skill 跑通需求开发全流程_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "跨集群异构PD分离WAIC首发，专访无问芯穹李秀红，探秘Token工厂「超级管线」的落地路径",
+      "source": "机器之心",
+      "digest": "无问芯穹在WAIC首发跨集群异构PD分离方案，让不同架构芯片各司其职，专访CEO李秀红详解Token工厂超级管线的落地路径。",
+      "link": "https://mp.weixin.qq.com/s/mpB03Ou-SU9aHfCffE7A7Q",
+      "source_file": "sources/2026-07-20_跨集群异构PD分离WAIC首发，专访无问芯穹李秀红，探秘Token工厂「超级管线」的落地路径_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "WAIC世界模型「六小龙」同台，这个赛道杀出一家全栈玩家",
+      "source": "机器之心",
+      "digest": "WAIC 2026世界模型赛道六家头部企业同台竞技，其中一家全栈玩家从数据生成到模型训练到推理部署全链路自研，物理AI迎来关键突破。",
+      "link": "https://mp.weixin.qq.com/s/aSd-F7nPG26N74nmRlMsbw",
+      "source_file": "sources/2026-07-20_WAIC世界模型「六小龙」同台，这个赛道杀出一家全栈玩家_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "「仿真派」落地真产线！苏度WAIC首秀，CEO韩铮：99%+成功率",
+      "source": "量子位",
+      "digest": "仿真派具身智能公司苏度在WAIC首秀，CEO韩铮宣布仿真训练机器人落地真产线，任务成功率达99%以上。",
+      "link": "https://mp.weixin.qq.com/s/ur6Yf1lZVyvcN7cbdvxBAw",
+      "source_file": "sources/2026-07-20_「仿真派」落地真产线！苏度WAIC首秀，CEO韩铮：99%+成功率_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "12项全球SOTA！WAIC最猛世界模型，让机器人「开悟」了",
+      "source": "新智元",
+      "digest": "一款世界模型在WAIC 2026展示12项全球SOTA成绩，在物理理解、动作规划等维度全面领先，让机器人实现突破性智能进化。",
+      "link": "https://mp.weixin.qq.com/s/4EfLcb8eXFG5SlOAuufgwg",
+      "source_file": "sources/2026-07-20_12项全球SOTA！WAIC最猛世界模型，让机器人「开悟」了_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "WAIC画风最独特展台：不秀后空翻，只想做机器人界的「安卓」",
+      "source": "机器之心",
+      "digest": "WAIC最具野心的具身智能展台：不做后空翻表演，专注打造机器人通用操作系统，目标成为机器人界的安卓。",
+      "link": "https://mp.weixin.qq.com/s/wcUnrX3jq3maE4qvyCnpqw",
+      "source_file": "sources/2026-07-20_WAIC画风最独特展台：不秀后空翻，只想做机器人界的「安卓」_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "WAIC惊现全球最小微型无框力矩电机！",
+      "source": "机器之心",
+      "digest": "WAIC 2026展出全球最小微型无框力矩电机，实现高转矩密度、超小体积和轻量化，为具身智能硬件微型化提供关键动力方案。",
+      "link": "https://mp.weixin.qq.com/s/ugVWiw1yQLkLopsHy-haNw",
+      "source_file": "sources/2026-07-20_WAIC惊现全球最小微型无框力矩电机！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Agent 永不下班，我用 QCA 搭了个工作台",
+      "source": "Qoder",
+      "digest": "Qoder Cloud Agents产品经理分享用QCA搭建AI工作台的实践经验：从完成一次任务到长期上班，让AI Agent实现持续工作状态。",
+      "link": "https://mp.weixin.qq.com/s/UATtb53cGpm5gCEVsBN0pQ",
+      "source_file": "sources/2026-07-20_Agent 永不下班，我用 QCA 搭了个工作台_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Mureka V9.5重磅发布，AI音乐告别“AI味”｜甲子光年",
+      "source": "甲子光年",
+      "digest": "Mureka发布V9.5版本，AI音乐生成告别AI味进入审美竞争新阶段，在人声自然度、编曲细腻度和情感表达上实现质的飞跃。",
+      "link": "https://mp.weixin.qq.com/s/Wur52D7S9LlowfbIexIuBA",
+      "source_file": "sources/2026-07-20_Mureka V9.5重磅发布，AI音乐告别“AI味”｜甲子光年_甲子光年.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI 公司，集体走进视频播客",
+      "source": "极客公园",
+      "digest": "AI产品日益复杂，发布会的叙事方式已不足以承载深度技术交流，视频播客正在成为AI公司展示技术实力和产品理念的新渠道。",
+      "link": "https://mp.weixin.qq.com/s/m3alh89FWGc2sPxwhXmU9A",
+      "source_file": "sources/2026-07-20_AI 公司，集体走进视频播客_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI医疗卷了10年终于悟了：不用替代医生，而是给医院装上超强buff",
+      "source": "量子位",
+      "digest": "经过近十年探索，AI医疗行业从替代医生转向赋能医院系统，构建覆盖诊疗全流程的AI增强型医疗基础设施。",
+      "link": "https://mp.weixin.qq.com/s/juDZNKz0N0ZvvQzxHVITlg",
+      "source_file": "sources/2026-07-20_AI医疗卷了10年终于悟了：不用替代医生，而是给医院装上超强buff_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "不同模型厂同一家Agentic Infra，AGI时代的地基终于浮出水面",
+      "source": "量子位",
+      "digest": "多家头部大模型厂商正在采纳同一家基础设施平台，AGI时代的技术地基正在标准化。",
+      "link": "https://mp.weixin.qq.com/s/dLXP8kU0cjCc0PAXXTVdZw",
+      "source_file": "sources/2026-07-20_不同模型厂同一家Agentic Infra，AGI时代的地基终于浮出水面_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "腾讯研究院AI速递 20260720",
+      "source": "腾讯研究院",
+      "digest": "打破「缸中之脑」探索具身原生智能",
+      "link": "https://mp.weixin.qq.com/s/qKSCW5J3L-2OzGqheMZE5g",
+      "source_file": "sources/2026-07-20_腾讯研究院AI速递 20260720_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "WAIC 2026终极盘点！15大核心趋势，看透AI下半场",
+      "source": "智东西",
+      "digest": "告别大模型参数比拼，迈向智能体商业化落地。",
+      "link": "https://mp.weixin.qq.com/s/lgYAGMbTvinKerEEZmBpqA",
+      "source_file": "sources/2026-07-20_WAIC 2026终极盘点！15大核心趋势，看透AI下半场_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "AI算力版图持续向轨延伸，太空算力产业化将迎关键里程碑",
+      "source": "智东西",
+      "digest": "2030年落地“千星万p”算力星座。",
+      "link": "https://mp.weixin.qq.com/s/sYu8pMsvioKEficzkGs0WQ",
+      "source_file": "sources/2026-07-20_AI算力版图持续向轨延伸，太空算力产业化将迎关键里程碑_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "「AI 原生手机」挤爆 WAIC，我注意到这三个「新趋势」",
+      "source": "极客公园",
+      "digest": "WAIC 2026上AI原生手机成为焦点，三大新趋势：从系统级集成走向芯片级定制、从单点AI功能走向全场景Agent、从APP生态走向意图驱动的交互模式。",
+      "link": "https://mp.weixin.qq.com/s/WIIlILah9saN5nOhCcWzJA",
+      "source_file": "sources/2026-07-20_「AI 原生手机」挤爆 WAIC，我注意到这三个「新趋势」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-20",
+      "title": "《互联网智能体发展研究报告》在WAIC发布",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院在WAIC 2026发布互联网智能体发展研究报告，系统梳理智能体技术架构、产业生态和应用趋势。",
+      "link": "https://mp.weixin.qq.com/s/VYfxS_N0JzbRLv-xuQRang",
+      "source_file": "sources/2026-07-20_《互联网智能体发展研究报告》在WAIC发布_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-19",
       "title": "危！GPT-5.6会自动删文件，AI初创老板痛失整台Mac",
