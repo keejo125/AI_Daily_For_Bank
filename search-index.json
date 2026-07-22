@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-23T07:02:01.209330",
-  "total": 828,
+  "updated_at": "2026-07-23T07:04:18.669692",
+  "total": 826,
   "articles": [
     {
       "date": "2026-07-22",
@@ -24,16 +24,6 @@
     },
     {
       "date": "2026-07-22",
-      "title": "一次测试，逼 OpenAI 最高模型，黑进了全球最大 AI 开源平台",
-      "source": "极客公园",
-      "digest": "AI 安全领域最魔幻的一周。",
-      "link": "https://mp.weixin.qq.com/s/3F2L-l8QM2aasj82411lcw",
-      "source_file": "sources/2026-07-22_一次测试，逼 OpenAI 最高模型，黑进了全球最大 AI 开源平台_极客公园.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-07-22",
       "title": "Claude重磅上新：录屏+语音，一键蒸馏Skill替自己干活",
       "source": "新智元",
       "digest": "来自打工人的一声叹息。",
@@ -49,16 +39,6 @@
       "digest": "OpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏洞。",
       "link": "https://mp.weixin.qq.com/s/Z_znwhRQq9jYtUnwrAo3Gg",
       "source_file": "sources/2026-07-22_OpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-22",
-      "title": "OpenAI官方回应GPT-5.6 Sol 一路“杀进”生产系统：AI自主攻击时代真的来了",
-      "source": "InfoQ",
-      "digest": "OpenAI 今天正式回应了 Hugging Face 上周报告的生产基础设施遭 AI 入侵事件。",
-      "link": "https://mp.weixin.qq.com/s/DqqB98abJh5KgFC0KiRZbg",
-      "source_file": "sources/2026-07-22_OpenAI官方回应GPT-5.6 Sol 一路“杀进”生产系统：AI自主攻击时代真的来了_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
