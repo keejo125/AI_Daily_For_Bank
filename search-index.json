@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-23T06:52:15.169670",
-  "total": 827,
+  "updated_at": "2026-07-23T06:59:33.958035",
+  "total": 826,
   "articles": [
     {
       "date": "2026-07-22",
@@ -79,16 +79,6 @@
       "digest": "Qoder 知识引擎的核心价值，正是将一次性的项目搜索与理解过程转化为可持续维护和复用的工程能力。",
       "link": "https://mp.weixin.qq.com/s/Vv3bE2s0Hv9q2wXkEALImw",
       "source_file": "sources/2026-07-22_AI-Native 软件工程领域自迭代知识引擎_Qoder.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-22",
-      "title": "AI改代码的那几分钟，你在做什么？",
-      "source": "腾讯技术工程",
-      "digest": "这几种类型，你是哪一种？",
-      "link": "https://mp.weixin.qq.com/s/aHQIB8Pyz_WH-MRBCzP1_A",
-      "source_file": "sources/2026-07-22_AI改代码的那几分钟，你在做什么？_腾讯技术工程.md",
       "category": "国内",
       "is_model_related": false
     },
