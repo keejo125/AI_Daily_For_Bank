@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-07-22T07:12:03.497524",
-  "total": 805,
+  "updated_at": "2026-07-23T06:52:15.169670",
+  "total": 827,
   "articles": [
+    {
+      "date": "2026-07-22",
+      "title": "刚刚，全球三大AI包揽IMO满分！击败99%人类",
+      "source": "新智元",
+      "digest": "上海的七月，热浪滚滚。第67届国际数学奥林匹克正式落幕，中国队以232分斩获桂冠。三名少年拿下42分满分。现场掌声还未散尽，GitHub上悄然浮现了另一份亮眼的成绩单。",
+      "link": "https://mp.weixin.qq.com/s/nErJ2pqvIIXOt6T8TNuR_Q",
+      "source_file": "sources/2026-07-22_刚刚，全球三大AI包揽IMO满分！击败99%人类_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-22",
+      "title": "谷歌「史上最差」AI模型发布！ Gemini 3.5 Pro延期",
+      "source": "新智元",
+      "digest": "谷歌，急了？寄了！",
+      "link": "https://mp.weixin.qq.com/s/oQN0SESTlxn92kXJqLZqHw",
+      "source_file": "sources/2026-07-22_谷歌「史上最差」AI模型发布！ Gemini 3.5 Pro延期_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Claude重磅上新：录屏+语音，一键蒸馏Skill替自己干活",
+      "source": "新智元",
+      "digest": "来自打工人的一声叹息。",
+      "link": "https://mp.weixin.qq.com/s/4k_y9i4IWWMnUa6rfdF0fg",
+      "source_file": "sources/2026-07-22_Claude重磅上新：录屏+语音，一键蒸馏Skill替自己干活_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "OpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏洞",
+      "source": "InfoQ",
+      "digest": "OpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏洞。",
+      "link": "https://mp.weixin.qq.com/s/Z_znwhRQq9jYtUnwrAo3Gg",
+      "source_file": "sources/2026-07-22_OpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "打通感知-理解-交互链路，全栈视频理解大模型VideoChat3开源了",
+      "source": "机器之心",
+      "digest": "兼顾短视频、长视频和在线视频理解",
+      "link": "https://mp.weixin.qq.com/s/1eq7KseWtxpdbnWJ8tLFSQ",
+      "source_file": "sources/2026-07-22_打通感知-理解-交互链路，全栈视频理解大模型VideoChat3开源了_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-22",
+      "title": "给AI喂“噪声”也能涨分，这项工作让噪声实现正迁移 | ICML26",
+      "source": "量子位",
+      "digest": "迁移学习里的“源数据”，未必非得是图像、文本或音频。",
+      "link": "https://mp.weixin.qq.com/s/B_M9YH-WuawNdZgM62cTTQ",
+      "source_file": "sources/2026-07-22_给AI喂“噪声”也能涨分，这项工作让噪声实现正迁移 _ ICML26_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-22",
+      "title": "行业纷纷涌向世界模型之际，Video Rebirth选择了「视频原生」这条路",
+      "source": "机器之心",
+      "digest": "世界模型从来不是终点，而是通往下一代智能体的地基。",
+      "link": "https://mp.weixin.qq.com/s/ZrjalrK7FjvGWWiYxViiew",
+      "source_file": "sources/2026-07-22_行业纷纷涌向世界模型之际，Video Rebirth选择了「视频原生」这条路_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-22",
+      "title": "AI-Native 软件工程领域自迭代知识引擎",
+      "source": "Qoder",
+      "digest": "Qoder 知识引擎的核心价值，正是将一次性的项目搜索与理解过程转化为可持续维护和复用的工程能力。",
+      "link": "https://mp.weixin.qq.com/s/Vv3bE2s0Hv9q2wXkEALImw",
+      "source_file": "sources/2026-07-22_AI-Native 软件工程领域自迭代知识引擎_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "AI改代码的那几分钟，你在做什么？",
+      "source": "腾讯技术工程",
+      "digest": "这几种类型，你是哪一种？",
+      "link": "https://mp.weixin.qq.com/s/aHQIB8Pyz_WH-MRBCzP1_A",
+      "source_file": "sources/2026-07-22_AI改代码的那几分钟，你在做什么？_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Cortex：自主切分规划subtask，上海AI Lab提出双向协同Agent实现长程化学操作任务",
+      "source": "机器之心",
+      "digest": "用统一的结构化子任务描述连接高层规划与低层执行。",
+      "link": "https://mp.weixin.qq.com/s/_Dkk116WPqO-F8GdCaOvDQ",
+      "source_file": "sources/2026-07-22_Cortex：自主切分规划subtask，上海AI Lab提出双向协同Agent实现长程化学操作任务_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "纠偏率98.15%！方向感觉醒，第一视角认路的国产AI开挂了",
+      "source": "新智元",
+      "digest": "星源智提出DA-Nav，一套面向城市级长程场景的方向感知视觉语言导航框架。",
+      "link": "https://mp.weixin.qq.com/s/CNur7qu5NRwKwN3ZU-eG1w",
+      "source_file": "sources/2026-07-22_纠偏率98.15%！方向感觉醒，第一视角认路的国产AI开挂了_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "30+ 家企业组团参展 WAIC，张江 AI 小镇藏不住了",
+      "source": "InfoQ",
+      "digest": "当 600 家 AI 公司聚在两平方公里，会涌现什么？",
+      "link": "https://mp.weixin.qq.com/s/CGCWa81yl_ldmN-vxUjDaQ",
+      "source_file": "sources/2026-07-22_30+ 家企业组团参展 WAIC，张江 AI 小镇藏不住了_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "AI Agent 要自己刷卡了，但「AI 支付宝」比想象中更难做，为什么？",
+      "source": "极客公园",
+      "digest": "AI 代理正在学会花钱，而给它们用的「钱包」，还没造好。",
+      "link": "https://mp.weixin.qq.com/s/Q-9ksK8e8ygXOXvwRP6uBA",
+      "source_file": "sources/2026-07-22_AI Agent 要自己刷卡了，但「AI 支付宝」比想象中更难做，为什么？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "AI办公平权：灵犀专业版让普通人不必成为AI专家｜甲子光年",
+      "source": "甲子光年",
+      "digest": "懂你的上下文、高质量交付、专业Office操作。",
+      "link": "https://mp.weixin.qq.com/s/EnLYVjvVKP5oZ7cNQyUy3Q",
+      "source_file": "sources/2026-07-22_AI办公平权：灵犀专业版让普通人不必成为AI专家｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "WAIC 2026落幕，海康威视首秀留下三个信号",
+      "source": "智东西",
+      "digest": "AI如何落地物理世界？智能物联龙头给了一个具象答案。",
+      "link": "https://mp.weixin.qq.com/s/pR-Ivus-ZMO3hxgZDYyOGw",
+      "source_file": "sources/2026-07-22_WAIC 2026落幕，海康威视首秀留下三个信号_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "WAIC最狠展台打爆工业「深水区」！它石智航首发具身原生大脑AWE 3.5，具身Scaling全面释放",
+      "source": "量子位",
+      "digest": "丁文超：永远不要低估模型",
+      "link": "https://mp.weixin.qq.com/s/_C2x8T1wbYT_4jvBfKtWXA",
+      "source_file": "sources/2026-07-22_WAIC最狠展台打爆工业「深水区」！它石智航首发具身原生大脑AWE 3.5，具身Scaling全面释_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "WAIC现场，这家公司让一群不同的机器人共用一个大脑",
+      "source": "机器之心",
+      "digest": "身体不同，智能复用。",
+      "link": "https://mp.weixin.qq.com/s/SSPP3wiNm8VtvpGuemyAQA",
+      "source_file": "sources/2026-07-22_WAIC现场，这家公司让一群不同的机器人共用一个大脑_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "宁王稳定常态化应用，WAIC抗干扰封王：银河通用的高估值底气何来？｜甲子光年",
+      "source": "甲子光年",
+      "digest": "机器人展示的多任务更长、更复杂了，而机器人的动作连续性和针对不同环境的泛化性更强了。",
+      "link": "https://mp.weixin.qq.com/s/diCTiYbAZROZRl5l1qUx6g",
+      "source_file": "sources/2026-07-22_宁王稳定常态化应用，WAIC抗干扰封王：银河通用的高估值底气何来？｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "对话联影集团薛敏：医疗AI正在从模型竞争，走向医疗体系的重构",
+      "source": "智东西",
+      "digest": "医疗AI需要在真实医疗场景中进化。",
+      "link": "https://mp.weixin.qq.com/s/LXB3jKeexUe8wW3o9tOyjQ",
+      "source_file": "sources/2026-07-22_对话联影集团薛敏：医疗AI正在从模型竞争，走向医疗体系的重构_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "我在WAIC 2026看见的十大趋势",
+      "source": "量子位",
+      "digest": "人，是AI发展最宝贵的资源",
+      "link": "https://mp.weixin.qq.com/s/MdgE7b4zRg4m5CFeuCGMXw",
+      "source_file": "sources/2026-07-22_我在WAIC 2026看见的十大趋势_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "腾讯研究院AI速递 20260722",
+      "source": "腾讯研究院",
+      "digest": "腾讯混元发布科学发现智能体Hyra 1.0",
+      "link": "https://mp.weixin.qq.com/s/zHsGACD044U4P6M7pRu9Hg",
+      "source_file": "sources/2026-07-22_腾讯研究院AI速递 20260722_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-22",
+      "title": "苹果将推「iPhone 月租」计划；SpaceX 股价大跌，马斯克警告做空机构；谷歌发布 3.6 Flash 等模型 | 极客早知道",
+      "source": "极客公园",
+      "digest": "设计师 3D 打印餐盒：想吃零食先走完指定步数；消息称智谱建成大型 AI 数据中心：全部采用国产芯片",
+      "link": "https://mp.weixin.qq.com/s/6wsKSYrkeDkhZSoyDU-ufw",
+      "source_file": "sources/2026-07-22_苹果将推「iPhone 月租」计划；SpaceX 股价大跌，马斯克警告做空机构；谷歌发布 3.6 F_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-21",
       "title": "OpenAI紧急叫停GPT-6！",
