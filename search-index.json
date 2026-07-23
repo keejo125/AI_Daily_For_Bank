@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-07-23T07:15:13.395148",
-  "total": 827,
+  "updated_at": "2026-07-24T07:05:33.390151",
+  "total": 844,
   "articles": [
+    {
+      "date": "2026-07-23",
+      "title": "GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？",
+      "source": "量子位",
+      "digest": "四轮疯狂催更，硬是从AI嘴里催出了反例",
+      "link": "https://mp.weixin.qq.com/s/aTWWfcGIUV_6MBEI5TviwQ",
+      "source_file": "sources/2026-07-23_GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-23",
+      "title": "谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI",
+      "source": "InfoQ",
+      "digest": "谷歌发布了A2UI v0.9，这是一种与框架无关的标准，允许AI智能体声明用户界面意图并在Web、移动与桌面平台上原生渲染，而无需传输任意代码。该版本强调与现有设计系统的一致性，新增Python SDK、改进的错误处理与多种传输方式，并提供迁移与演进规范。",
+      "link": "https://mp.weixin.qq.com/s/Gqf0y9uEwAlH2AA4KSLrGA",
+      "source_file": "sources/2026-07-23_谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案",
+      "source": "量子位",
+      "digest": "构建可信时序推理系统的关键拼图",
+      "link": "https://mp.weixin.qq.com/s/_gO4JsSr3Iwwe1VRe9-jbw",
+      "source_file": "sources/2026-07-23_模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "Qoder Mobile 上线：开启新的工作方式",
+      "source": "Qoder",
+      "digest": "Qoder 是全平台覆盖的 AI 编程助手。手机不只是辅助——它具备桌面端的大部分能力，还能远程向电脑发起任务。",
+      "link": "https://mp.weixin.qq.com/s/xGHyuIWHOQtizYON_WO-yw",
+      "source_file": "sources/2026-07-23_Qoder Mobile 上线：开启新的工作方式_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准",
+      "source": "机器之心",
+      "digest": "从训练数据入手，为模型适应航拍几何 3D 视觉任务提供了新的支撑。",
+      "link": "https://mp.weixin.qq.com/s/UEBMrVEyj98DBuVDSP7lnQ",
+      "source_file": "sources/2026-07-23_ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "一年减少1.5万人！这家银行正加大金融科技与AI领域的投入",
+      "source": "银行科技研究社",
+      "digest": "7月16日，富国银行发布2026年第二季度财报，数据显示该行营收与净利润同比双增长。同时，该行表示，将持续通过技术升级、流程自动化与AI提升运营效率，员工规模仍有进一步下降空间。在人员规模方面，截至第二季度末，富国银行员工总数约为19.7万人，较去年同期减少1.5万人，较上一季度减少3500人。据悉…",
+      "link": "https://mp.weixin.qq.com/s/4xq6qaYBAvRFbaVu8mqMHw",
+      "source_file": "sources/2026-07-23_一年减少1.5万人！这家银行正加大金融科技与AI领域的投入_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景",
+      "source": "银行科技研究社",
+      "digest": "2026年，银行AI大模型布局加速。对于全国性银行来说，AI应用场景的规模化落地，或让“智慧银行”的目标不再遥不可及。近日，工行介绍了其最新的AI大模型进展，AI应用场景数进一步增加。值得一提的是，工行重视AI人才的引进和培养，全行AI核心技术人才近两年增长较快。科技条线组建“领航AI+”专项工作团…",
+      "link": "https://mp.weixin.qq.com/s/C6w70LyXOpSE-y9U4XSWtw",
+      "source_file": "sources/2026-07-23_工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "AI技术在商业银行零售领域应用研究",
+      "source": "金融电子化",
+      "digest": "文/江苏银行泰州分行党委书记、行长 李晨江苏银行泰州分行 戴云飞随着金融科技的迅猛发展，商业银行正经历着从“以",
+      "link": "https://mp.weixin.qq.com/s/soCbrnUfPFnNtYmkFtj4gA",
+      "source_file": "sources/2026-07-23_AI技术在商业银行零售领域应用研究_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？",
+      "source": "新智元",
+      "digest": "7月23日，第30届国际数学家大会（ICM）将在费城开幕，菲尔兹奖将在开幕式上颁出。而在这之前的18日，Anthropic技术员工Alek Dimitriev在X上发帖称：下周颁发的菲尔兹奖，将是人类最后一次拿到这个奖。Alek此前在Google做高级机器学习工程师，参与过Gemini的微调和推理系…",
+      "link": "https://mp.weixin.qq.com/s/tZ44rXrMDJJldRt5ZP8GPA",
+      "source_file": "sources/2026-07-23_AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙",
+      "source": "新智元",
+      "digest": "「我们已进入奇点。」7月22日，马斯克在X上转发OpenAI研究员、Sora核心开发者之一Will DePue的一条帖子时，配上了这句话。DePue在帖子中，以略带调侃的语气写道：这大概是我这几天读到最疯狂的东西了……看来是进奇点了。",
+      "link": "https://mp.weixin.qq.com/s/sZgsH8IxosURlFqTZlSx_g",
+      "source_file": "sources/2026-07-23_马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "从展团到生态：WAIC 2026揭示的北京AI“系统能力”",
+      "source": "智东西",
+      "digest": "WAIC 2026上的“北京答卷”。",
+      "link": "https://mp.weixin.qq.com/s/cocd5Joklu2Ivajz8rzYsw",
+      "source_file": "sources/2026-07-23_从展团到生态：WAIC 2026揭示的北京AI“系统能力”_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "重磅！全国首部省级智能体专项政策来了",
+      "source": "智东西",
+      "digest": "北京发“智能体十条”：力推Token经济，支持一人公司发展……",
+      "link": "https://mp.weixin.qq.com/s/csxmKg_Qyr78B5ErofZPUg",
+      "source_file": "sources/2026-07-23_重磅！全国首部省级智能体专项政策来了_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "独立AI原生的办公助手，治好了我的打工焦虑",
+      "source": "机器之心",
+      "digest": "原生交付+项目记忆，办公智能体的正确打开方式。",
+      "link": "https://mp.weixin.qq.com/s/VnApKTY5rV0ObEFRzCHWXw",
+      "source_file": "sources/2026-07-23_独立AI原生的办公助手，治好了我的打工焦虑_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！",
+      "source": "财联社AI daily",
+      "digest": "文|刘蕊在AI热潮推动美国科技巨头大举兴建数据中心之际，数据中心的巨额电力消耗正引起越来越多美国民众的不满。据白宫官员透露，美国总统特朗普将于美东时间周四发起一项非约束性倡议，要求数据中心为运行人工智能模型所需的电力支付更高费用，希望借此平息美国民众抗议AI数据中心建设的反对浪潮，并保护美国家庭免受…",
+      "link": "https://mp.weixin.qq.com/s/RfiZp5MZhVLz843xQB9svg",
+      "source_file": "sources/2026-07-23_AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "AI幻觉最可怕的人类副作用出现了",
+      "source": "量子位",
+      "digest": "GPT、Claude、Gemini都没逃过“翻车”。",
+      "link": "https://mp.weixin.qq.com/s/lT9QEh7pcsLK8h38mkr7Zw",
+      "source_file": "sources/2026-07-23_AI幻觉最可怕的人类副作用出现了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》",
+      "source": "新智元",
+      "digest": "一段3分钟的AI短片，炸了。X上一个叫Heavy Pulp的创作者，用Grok Imagine生成了一段《奥德赛》的对话场景——卡吕普索挽留奥德修斯的那场戏。海风、岩洞、光影、人物的微表情，几个机位来回切，镜头语言竟然像模像样。",
+      "link": "https://mp.weixin.qq.com/s/K6pn3350vTHuCI1lD4U9_Q",
+      "source_file": "sources/2026-07-23_IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-23",
+      "title": "腾讯研究院AI速递 20260723",
+      "source": "腾讯研究院",
+      "digest": "腾讯多智能体协作创意平台Miora上线",
+      "link": "https://mp.weixin.qq.com/s/gVaZHx0xTF7CgTTj-7dNrA",
+      "source_file": "sources/2026-07-23_腾讯研究院AI速递 20260723_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-22",
       "title": "刚刚，全球三大AI包揽IMO满分！击败99%人类",

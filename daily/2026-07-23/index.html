@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-07-23</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-07-23</div>
+    <div class="banner-stats" id="banner-stats">国际 2 篇 · 国内 3 篇 · 同业 3 篇 · 其他 9 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_GPT-5.6%E6%8E%A8%E7%BF%BB%E8%BF%9130%E5%B9%B4%E6%95%B0%E5%AD%A6%E7%8C%9C%E6%83%B3%EF%BC%8C%E5%85%A8%E7%A8%8B%E5%AF%B9%E8%AF%9D%E5%85%AC%E5%BC%80%EF%BC%9A%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%8F%AA%E6%9C%8958%E4%B8%AA%E5%8D%95%E8%AF%8D%EF%BC%9F%EF%BC%9F%EF%BC%9F_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">四轮疯狂催更，硬是从AI嘴里催出了反例</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/aTWWfcGIUV_6MBEI5TviwQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E8%B0%B7%E6%AD%8C%E5%8F%91%E5%B8%83%20A2UI%20v0.9%EF%BC%9A%E5%8F%AF%E7%A7%BB%E6%A4%8D%E3%80%81%E6%A1%86%E6%9E%B6%E6%97%A0%E5%85%B3%E7%9A%84%E7%94%9F%E6%88%90%E5%BC%8F%20UI_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">谷歌发布了A2UI v0.9，这是一种与框架无关的标准，允许AI智能体声明用户界面意图并在Web、移动与桌面平台上原生渲染，而无需传输任意代码。该版本强调与现有设计系统的一致性，新增Python SDK、改进的错误处理与多种传输方式，并提供迁移与演进规范。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Gqf0y9uEwAlH2AA4KSLrGA" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E6%A8%A1%E5%9E%8B%E6%B2%A1%E7%AD%94%E9%94%99%EF%BC%8C%E5%8F%AA%E6%98%AF%E6%B2%A1%E7%9C%8B%E8%A1%A8%EF%BC%9AAAAI%E8%BF%99%E7%AF%87%E6%97%B6%E5%BA%8F%E9%97%AE%E7%AD%94%E6%96%B9%E6%B3%95%E8%AE%A9AI%E5%AD%A6%E4%BC%9A%E2%80%9C%E7%A9%BF%E8%B6%8A%E6%97%B6%E9%97%B4%E2%80%9D%E6%89%BE%E7%AD%94%E6%A1%88_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">构建可信时序推理系统的关键拼图</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/_gO4JsSr3Iwwe1VRe9-jbw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Qoder Mobile 上线：开启新的工作方式</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_Qoder%20Mobile%20%E4%B8%8A%E7%BA%BF%EF%BC%9A%E5%BC%80%E5%90%AF%E6%96%B0%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F_Qoder.md" target="_blank">Qoder</a></span><div class="card-digest">Qoder 是全平台覆盖的 AI 编程助手。手机不只是辅助——它具备桌面端的大部分能力，还能远程向电脑发起任务。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/xGHyuIWHOQtizYON_WO-yw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_ECCV%202026%EF%BD%9C%E6%8A%8A%E5%85%A8%E7%90%833D%E5%9C%B0%E5%9B%BE%E5%8F%98%E6%88%90%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%AE%AD%E7%BB%83%E5%9C%BA%EF%BC%8C%E5%9B%BD%E9%98%B2%E7%A7%91%E5%A4%A7AirZoo%E6%9E%84%E5%BB%BA%E8%88%AA%E6%8B%8D%E5%87%A0%E4%BD%953D%E8%A7%86%E8%A7%89%E7%BB%9F%E4%B8%80%E5%9F%BA%E5%87%86_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">从训练数据入手，为模型适应航拍几何 3D 视觉任务提供了新的支撑。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/UEBMrVEyj98DBuVDSP7lnQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">一年减少1.5万人！这家银行正加大金融科技与AI领域的投入</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E4%B8%80%E5%B9%B4%E5%87%8F%E5%B0%911.5%E4%B8%87%E4%BA%BA%EF%BC%81%E8%BF%99%E5%AE%B6%E9%93%B6%E8%A1%8C%E6%AD%A3%E5%8A%A0%E5%A4%A7%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80%E4%B8%8EAI%E9%A2%86%E5%9F%9F%E7%9A%84%E6%8A%95%E5%85%A5_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">7月16日，富国银行发布2026年第二季度财报，数据显示该行营收与净利润同比双增长。同时，该行表示，将持续通过技术升级、流程自动化与AI提升运营效率，员工规模仍有进一步下降空间。在人员规模方面，截至第二季度末，富国银行员工总数约为19.7万人，较去年同期减少1.5万人，较上一季度减少3500人。据悉…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/4xq6qaYBAvRFbaVu8mqMHw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E5%B7%A5%E8%A1%8C%E7%A7%91%E6%8A%80%E6%9D%A1%E7%BA%BF%E7%BB%84%E5%BB%BA%E2%80%9C%E9%A2%86%E8%88%AAAI%2B%E2%80%9D%E5%9B%A2%E9%98%9F%EF%BC%8C%E5%B7%B2%E8%90%BD%E5%9C%B0600%E5%A4%9A%E4%B8%AAAI%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">2026年，银行AI大模型布局加速。对于全国性银行来说，AI应用场景的规模化落地，或让“智慧银行”的目标不再遥不可及。近日，工行介绍了其最新的AI大模型进展，AI应用场景数进一步增加。值得一提的是，工行重视AI人才的引进和培养，全行AI核心技术人才近两年增长较快。科技条线组建“领航AI+”专项工作团…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/C6w70LyXOpSE-y9U4XSWtw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">AI技术在商业银行零售领域应用研究</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_AI%E6%8A%80%E6%9C%AF%E5%9C%A8%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E9%9B%B6%E5%94%AE%E9%A2%86%E5%9F%9F%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6_%E9%87%91%E8%9E%8D%E7%94%B5%E5%AD%90%E5%8C%96.md" target="_blank">金融电子化</a></span><div class="card-digest">文/江苏银行泰州分行党委书记、行长 李晨江苏银行泰州分行 戴云飞随着金融科技的迅猛发展，商业银行正经历着从“以</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/soCbrnUfPFnNtYmkFtj4gA" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_AI%E4%B8%8D%E5%88%B0%E4%B8%A4%E5%B0%8F%E6%97%B6%E6%90%9E%E5%AE%9A%E4%B8%80%E7%AB%A0%E5%8D%9A%E5%A3%AB%E8%AE%BA%E6%96%87%EF%BC%8C%E8%8F%B2%E5%B0%94%E5%85%B9%E5%A5%96%E8%BF%98%E8%83%BD%E6%92%91%E5%88%B02030%E5%B9%B4%E5%90%97%EF%BC%9F_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">7月23日，第30届国际数学家大会（ICM）将在费城开幕，菲尔兹奖将在开幕式上颁出。而在这之前的18日，Anthropic技术员工Alek Dimitriev在X上发帖称：下周颁发的菲尔兹奖，将是人类最后一次拿到这个奖。Alek此前在Google做高级机器学习工程师，参与过Gemini的微调和推理系…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/tZ44rXrMDJJldRt5ZP8GPA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E9%A9%AC%E6%96%AF%E5%85%8B%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%96%8A%E3%80%8C%E5%A5%87%E7%82%B9%E5%B7%B2%E8%87%B3%E3%80%8D%EF%BC%81AI%E4%B8%89%E4%B8%AA%E6%9C%88%E8%BF%9E%E7%A0%B4%E6%95%B0%E5%AD%A6%E3%80%81%E5%AE%89%E5%85%A8%E4%B8%A4%E9%81%93%E5%A2%99_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">「我们已进入奇点。」7月22日，马斯克在X上转发OpenAI研究员、Sora核心开发者之一Will DePue的一条帖子时，配上了这句话。DePue在帖子中，以略带调侃的语气写道：这大概是我这几天读到最疯狂的东西了……看来是进奇点了。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/sZgsH8IxosURlFqTZlSx_g" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">从展团到生态：WAIC 2026揭示的北京AI“系统能力”</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E4%BB%8E%E5%B1%95%E5%9B%A2%E5%88%B0%E7%94%9F%E6%80%81%EF%BC%9AWAIC%202026%E6%8F%AD%E7%A4%BA%E7%9A%84%E5%8C%97%E4%BA%ACAI%E2%80%9C%E7%B3%BB%E7%BB%9F%E8%83%BD%E5%8A%9B%E2%80%9D_%E6%99%BA%E4%B8%9C%E8%A5%BF.md" target="_blank">智东西</a></span><div class="card-digest">WAIC 2026上的“北京答卷”。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/cocd5Joklu2Ivajz8rzYsw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">重磅！全国首部省级智能体专项政策来了</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E9%87%8D%E7%A3%85%EF%BC%81%E5%85%A8%E5%9B%BD%E9%A6%96%E9%83%A8%E7%9C%81%E7%BA%A7%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%93%E9%A1%B9%E6%94%BF%E7%AD%96%E6%9D%A5%E4%BA%86_%E6%99%BA%E4%B8%9C%E8%A5%BF.md" target="_blank">智东西</a></span><div class="card-digest">北京发“智能体十条”：力推Token经济，支持一人公司发展……</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/csxmKg_Qyr78B5ErofZPUg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">独立AI原生的办公助手，治好了我的打工焦虑</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E7%8B%AC%E7%AB%8BAI%E5%8E%9F%E7%94%9F%E7%9A%84%E5%8A%9E%E5%85%AC%E5%8A%A9%E6%89%8B%EF%BC%8C%E6%B2%BB%E5%A5%BD%E4%BA%86%E6%88%91%E7%9A%84%E6%89%93%E5%B7%A5%E7%84%A6%E8%99%91_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">原生交付+项目记忆，办公智能体的正确打开方式。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/VnApKTY5rV0ObEFRzCHWXw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_AI%E7%94%A8%E7%94%B5%E7%8C%9B%E5%BC%95%E6%B0%91%E4%BC%97%E6%8A%97%E8%AE%AE%EF%BC%9F%E7%89%B9%E6%9C%97%E6%99%AE%E5%80%A1%E8%AE%AE%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BB%98%E6%9B%B4%E9%AB%98%E7%94%B5%E8%B4%B9%EF%BC%81_%E8%B4%A2%E8%81%94%E7%A4%BEAI%20daily.md" target="_blank">财联社AI daily</a></span><div class="card-digest">文|刘蕊在AI热潮推动美国科技巨头大举兴建数据中心之际，数据中心的巨额电力消耗正引起越来越多美国民众的不满。据白宫官员透露，美国总统特朗普将于美东时间周四发起一项非约束性倡议，要求数据中心为运行人工智能模型所需的电力支付更高费用，希望借此平息美国民众抗议AI数据中心建设的反对浪潮，并保护美国家庭免受…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/RfiZp5MZhVLz843xQB9svg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">AI幻觉最可怕的人类副作用出现了</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_AI%E5%B9%BB%E8%A7%89%E6%9C%80%E5%8F%AF%E6%80%95%E7%9A%84%E4%BA%BA%E7%B1%BB%E5%89%AF%E4%BD%9C%E7%94%A8%E5%87%BA%E7%8E%B0%E4%BA%86_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">GPT、Claude、Gemini都没逃过“翻车”。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/lT9QEh7pcsLK8h38mkr7Zw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_IMAX%E5%A4%A7%E6%88%98AI%EF%BC%81%E8%AF%BA%E5%85%B0%E5%88%9A%E5%B0%81%E7%A5%9E%EF%BC%8C%E9%A9%AC%E6%96%AF%E5%85%8B%E5%AE%98%E5%AE%A3Grok%E9%87%8D%E6%8B%8D%E3%80%8A%E5%A5%A5%E5%BE%B7%E8%B5%9B%E3%80%8B_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">一段3分钟的AI短片，炸了。X上一个叫Heavy Pulp的创作者，用Grok Imagine生成了一段《奥德赛》的对话场景——卡吕普索挽留奥德修斯的那场戏。海风、岩洞、光影、人物的微表情，几个机位来回切，镜头语言竟然像模像样。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/K6pn3350vTHuCI1lD4U9_Q" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">腾讯研究院AI速递 20260723</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-23/sources%2F2026-07-23_%E8%85%BE%E8%AE%AF%E7%A0%94%E7%A9%B6%E9%99%A2AI%E9%80%9F%E9%80%92%2020260723_.md" target="_blank">腾讯研究院</a></span><div class="card-digest">腾讯多智能体协作创意平台Miora上线</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/gVaZHx0xTF7CgTTj-7dNrA" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？", "source": "量子位", "digest": "四轮疯狂催更，硬是从AI嘴里催出了反例", "link": "https://mp.weixin.qq.com/s/aTWWfcGIUV_6MBEI5TviwQ", "content": "---\npublish_time: 1784776177\n---\n\n# GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？\n\n> 原文链接：https://mp.weixin.qq.com/s/aTWWfcGIUV_6MBEI5TviwQ\n> 公众号：量子位\n\n梦瑶 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n又来？？？GPT-5.6最近这是捅了数学反例窝了……\n\n一个在图论领域存在了近30年的\n\nDinitz-Garg-Goemans\n\n猜想，刚刚被GPT-5.6 Pro找出反例。\n\n一位名叫Dmitry Rybin的研究者老哥，在整个论证过程中，一共只输入了4条提示词，加起来58个英文单词。\n\n没有几千字的提示词工程，没有复杂公式，通篇基本全是：\n\n继续研究、继续找、给我一个完整反例！！！\n\n就这么一轮轮push下去，GPT-5.6 Pro真端出了一个相当炸裂的结论——\n\nDinitz-Garg-Goemans猜想是错的。\n\nAI最终交付的，除了一张示意图，还有四页证明证书、精确穷举验证程序、机器可读的反例数据和LaTeX源码。\n\n然后，一道坚持了近30年的数学猜想，就这么被几句「催命符」，催出了致命Bug？？？\n\n近30年猜想，被GPT-5.6 Pro找出致命Bug\n\n我们先说一下，这道名字老长长长长的Dinitz-Garg-Goemans猜想，到底在研究个啥东西。\n\n我们可以直接把它想象成一个「送货问题」。\n\n假设一座仓库要向多个目的地送货，\n\n允许分流\n\n时，同一批货可以拆开走几条路线——\n\n一半上高速，一半绕国道，只要最后全部送到就OK～\n\n但在\n\n不可分流\n\n的规则下，每一批货必须完整走一条路线，不能拆！！！\n\n其实现实里这种情况并不少见，比如网络数据、物流订单、交通调度和供应链分配，都会遇到类似问题：\n\n数学上的最优方案可以把任务切成无数小份，但现实中的一辆车、一个订单却不能被切成0.37份。\n\n△\n\nAI生成\n\n而一旦禁止拆分，原来的最优方案也就很难直接照搬。\n\n过去分散在多条道路上的货物，现在必须整批挤进某一条路线，部分道路的负载很可能突然增加。\n\n所以，这个问题真正要解决的就是：\n\n怎样把「可以拆着运」的方案，改成「必须整批运」，同时又别让道路堵得太离谱？\n\n1999年，Yefim Dinitz、Naveen Garg和Michel Goemans发表了单源不可分流领域的经典论文，并证明这种拥堵可以被控制在一定范围内。\n\n但解决了「会不会堵得太严重」，还有另一个很现实的问题：\n\n会不会变贵捏？\n\n于是组合优化领域知名学者Goemans又提出了一个更强的带成本版本——\n\n在保持上述超载上限的同时，总成本也应该不高于原来的可分流方案。\n\n简单说就是，\n\n原来拆着运能做到又便宜又不太堵，那\n\n现在要求每一批货都完整走一条路\n\n，理论上也应该找到一个同样便宜，而且最多只多堵一批货的方案。\n\n然而，这个看上去相当符合直觉的猜想，在一般图结构上一直没有得到证明，后续研究只拿下了部分特殊情况。\n\n此后多年，这个猜想一直没被证明，也没被推翻。\n\n而这次GPT-5.6 Pro给出的反例，恰好卡住了猜想要求同时成立的两件事儿：\n\n既不能太堵，又不能变贵。\n\n它构造了一张只有7个节点、9条有向边的小图，其中有一个共同起点和三个目的地，三批货物的需求量分别为15、10和15：\n\n每批货都有两条可选路线：\n\n一条路线成本较高，每个订单走完都要花30；另一条路线成本为0，但需要与其他订单共享部分道路。\n\n如果允许拆分的话，三批货物可以一部分走收费路线、一部分走免费路线，最终总成本为58。\n\nbut！一旦要求每批货物必须完整选择一条路线，麻烦，就来了……\n\nGPT-5.6 Pro给出的结论是，\n\n三个免费选项之间事实上两！两！冲！突！\n\n任意两批货同时选择免费路线，都会共同挤进某一段道路，使其实际负载达到25、30或40；对应道路允许的上限分别只有24、29或39。\n\n每一次，都刚好多出1个单位。\n\n所以，要想守住猜想规定的负载上限，三批货里最多只能有一批走免费路线。\n\n剩下两批货，都得选择收费路线。\n\n每批成本30，两批加起来，任何符合负载要求的方案，最低成本也要：60。\n\n这就形成了一个无法同时满足的局面，\n\n想把道路负载控制在规定范围内，成本最低也要60；想把成本压回原来的58，至少有一条道路就会超标。\n\n而猜想恰恰认为，这两个条件可以同时做到。\n\n而且吧，这个反例验证起来也没有想象中那么复杂。\n\n三个目的地各有两种路径，总共只有 23=82^3=823=8种组合。\n\n把8种可能逐一列出来，就会发现其中4种符合容量要求，成本分别是90、60、60和60；另外4种虽然更便宜，却全部存在道路超载。\n\n所有情况都能穷举检查，也没有遗漏的隐藏路径。\n\n也就是说，只要这张图的定义与原猜想条件完全一致，58和60之间这道两单位的缺口，就足以把猜想推翻。\n\n四轮疯狂催更，硬是从GPT-5.6嘴里催出了反例\n\n这事儿最有看头的地方，其实藏在Rybin和GPT-5.6 Pro的公开对话里。\n\n看到一道悬了近30年的数学猜想被AI推翻，我下意识会以为，背后肯定有一整套超复杂的提示词轮番上阵！！\n\n实则，咱还是大E了。\n\n因为Rybin丢给GPT-5.6 Pro的第一个需求指令，除了附加文件外，剩下的真就是\n\n纯纯·大白话\n\n：\n\n是的，就这么朴实无华。\n\n随后，GPT-5.6 Pro就开始听从指令，库库干活儿了。\n\n它先建立了一套线性规划验证方法，又尝试超立方体、分层图、合并—分叉网络等多种结构，前后筛查了数千个小型实例。\n\n一通猛搜之后，\n\n模型交上来的第一轮答案却是：没有找到有效反例。\n\n（doge）\n\n甚至人家GPT-5.6 Pro甚至郑重提醒，如果把现阶段找到的近似构造包装成反例，将会得到一个错误的数学结论。\n\n翻译一下就是：我已经尽力了，这题目前真做不出来！！！\n\n我们的故事主人公Rybin可不吃这一套，他没有补充新的公式，也没有亲自指路，只淡淡回了一句：\n\n继续研究，找到一个完整、无条件的反例哈～\n\n于是GPT-5.6 Pro又埋头搜了一轮，结果\n\n第二轮，依旧失败。\n\nRybin继续push，要求它基于对问题结构的深入理解，先制定明确策略，再接着寻找。\n\n到了第三轮，模型已经把搜索范围缩小到一种只有24种状态的路由结构，距离答案似乎只差临门一脚。\n\n然而，这AI依旧没能拿出完整反例……\n\n这时候，Rybin发出了第四条提示：部分结果已经够多了，让我们用一个完整、无条件的反例收尾。\n\n好嘛，话都说到这个份上了。\n\n这一次，GPT-5.6 Pro终于端出了那张由7个节点、9条有向边组成的反例图——\n\n四条提示词，总计58个英文单词\n\n。\n\n没有几千字的角色设定，也看不到几十条繁琐规则，通篇基本可以概括成：\n\n我催！我催！我继续催！\n\n但如果把完整对话一路翻下来，就会发现，GPT-5.6 Pro这几个小时其实也没少走弯路……\n\nAI中途多次找到看似成立的候选反例，等它真正穷举全部路线，又发现网络里藏着一些此前漏掉的「混合路径」。\n\n这些路径会从不同预设路线中各截取一段，重新拼出新的走法，悄悄绕开模型原本设计的容量限制。\n\n结果就是，眼瞅着已经成立的反例，验证完又塌了。\n\nGPT-5.6 Pro在中途也总结得很坦白：\n\n只检查几百条预设路线远远不够。一个真正有效的反例，必须把网络中所有可能出现的不可分流路线全部算进去。\n\n这也让整场人机合作显得相当微妙。\n\n表面看，Rybin贡献的只有58个单词，但真正关键的动作，是他能够判断模型前三轮交出的都属于阶段性结果，并一次次拒绝提前收工。\n\n沃顿商学院教授Ethan Mollick看到后，甚至抛出了一个新问题：\n\n这项工作的作者，到底应该算写下58个单词的Rybin，还是连续推演好几个小时的GPT-5.6 Pro？\n\n事实上，无论署名最后怎么算，这段对话至少贡献了一条相当朴素的AI使用经验——\n\n催AI干活最有用的Prompt，有时候真可以简单到，只让它化身骡子继续马不停蹄地挖。\n\n过去一周，从雅可比猜想到Dinitz-Garg-Goemans，AI寻找数学反例的速度，确实已经开始显得有亿点离谱了……\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国际", "is_model_related": true, "source_file": "sources/2026-07-23_GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？_量子位.md"}, {"title": "谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI", "source": "InfoQ", "digest": "谷歌发布了A2UI v0.9，这是一种与框架无关的标准，允许AI智能体声明用户界面意图并在Web、移动与桌面平台上原生渲染，而无需传输任意代码。该版本强调与现有设计系统的一致性，新增Python SDK、改进的错误处理与多种传输方式，并提供迁移与演进规范。", "link": "https://mp.weixin.qq.com/s/Gqf0y9uEwAlH2AA4KSLrGA", "content": "---\npublish_time: 1784795217\n---\n\n# 谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI\n\n> 原文链接：https://mp.weixin.qq.com/s/Gqf0y9uEwAlH2AA4KSLrGA\n> 公众号：InfoQ\n\n作者 | Daniel Curtis\n\n译者 | 张卫滨\n\n谷歌发布了 A2UI v0.9，这是一种与框架无关的标准，允许 AI 智能体声明用户界面意图并在 Web、移动与桌面上原生渲染，而无需分发任意可执行的代码。该发布在 谷歌开发者博客 上公布，其核心思想是：智能体应使用应用已有设计系统的表达方式，而不是自行发明新的组件。\n\n最显著的变化是理念上的转变。根据 CopilotKit 的说法，v0.9 不是小幅更新：核心哲学、JSON 结构与 schema 均发生了改变，协议也变为双向的。此前的可选组件集“Standard”已重命名为“Basic”，以表明前端开发者应将智能体接入已有组件。客户端方面，有一个共享的 web-core 库现在为浏览器渲染器提供基础，该版本同时包含官方的 React 渲染器，以及版本更新的 Flutter、Lit 与 Angular 渲染器，并为社区渲染器设立了专门位置。\n\n智能体端也有了自己的工具包。新的 A2UI Agent SDK 为更低的延迟引入了缓存层，向 Python 智能体添加 SDK 只需一条安装命令：\n\npip\n\ninstall a2ui-agent-sdk\n\n该 SDK 负责处理版本协商、运行时切换 schema 的动态目录，并具备增量解析与修复不完整 LLM 输出的健壮流式处理，使组件能随着内容到达而逐步渲染。新特性包括客户端定义的验证函数、用于协作编辑的客户端到服务器数据同步、改进的错误处理以及更简化的模块化 schema。传输层也被精简，A2UI 现在可在 MCP、WebSockets、REST、AG-UI 与新推出的 A2A 1.0 上运行。\n\n迁移指南也已经发布。v0.8 到 v0.9 的演进指南 记录了模型提示词方面向“提示词优先”的直接嵌入式模式的演进、模块化文件的重构以及属性重命名的速查表。团队需要注意，当前稳定系列的生产发布为 v0.9.1，并且网站上已提供 v1.0 候选规范 及相应的 v0.9.1 到 v1.0 的演进指南。\n\nCopilotKit 的 Atai Barkai 将 v0.9 称为 “一次重大改进，内置 AG-UI 支持”，并认为其已具备大规模采用的条件，但也有怀疑的声音。Hacker News 上的一位评论者质疑为何要信任 LLM 输出的 UI，并担心安全漏洞、UI 冒充攻击与可用性问题。\n\n为什么会有人想要这个东西？为什么要相信 LLM 能输出 UI 呢？你是在自找安全漏洞、UI 模拟攻击、糟糕的可用性等等。\n\n有一篇 Reddit 帖子 认为目录模型的限制性太强，警告“每个界面都会变得雷同”。架构师 Brian Love 提出了一个折衷的方案（即 固定目录和动态覆盖），从而在验证失败时提供确定性的回退策略。\n\nA2UI 并不是该领域孤立存在的项目。它与 AG-UI、MCP Apps、Vercel 的 json-renderer 及甲骨文的 Agent Spec 等项目是同一个领域的竞争者，面向 Web 的项目（比如，syntux）认为基于聊天机器人生成式 UI 所产出的“可弃用（disposable）”界面，难以满足真实 Web 应用对一致性与缓存性的要求。目前谷歌将 A2UI 定位为位于这些方案之下的可移植契约。\n\nA2UI 是由谷歌制定的开放、与框架无关的规范，用于在 Web、移动与桌面声明生成式的用户界面。完整的 v0.9 规范、演进指南以及官方 React、Flutter、Lit 与 Angular 渲染器均发布在 a2ui.org 站点上，A2UI Agent SDK 的 Python 版本可通过 PyPI 获取。\n\n查看英文原文：\n\nGoogle Releases A2UI v0.9: Portable, Framework-Agnostic Generative UI（\n\nhttps://www.infoq.com/news/2026/07/google-a2ui-genui/\n\n）\n\n声明：本文由 InfoQ 翻译，未经许可禁止转载。\n\n点击底部\n\n阅读原文\n\n访问 InfoQ 官网，获取更多精彩内容！\n\n今日好文推荐\n\n1800亿美金逼出来的杀手锏：谷歌Frozen v2把Gemini烧进硬件，每瓦Token翻10倍，股价先涨3.3%\n\n16 万 Star 的 OpenCode 彻底重写：API 全部重做、Bun 换 Node、桌面端迁移 Electron\n\nHugging Face遭攻击取证受阻，只能靠国产GLM 5.2救场？白宫AI顾问急眼喊话：我们在失去竞争力\n\n所有Harness终将长成“龙虾”，但最后活下来的只有几只", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-23_谷歌发布 A2UI v0.9：可移植、框架无关的生成式 UI_InfoQ.md"}, {"title": "模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案", "source": "量子位", "digest": "构建可信时序推理系统的关键拼图", "link": "https://mp.weixin.qq.com/s/_gO4JsSr3Iwwe1VRe9-jbw", "content": "---\npublish_time: 1784808344\n---\n\n# 模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案\n\n> 原文链接：https://mp.weixin.qq.com/s/_gO4JsSr3Iwwe1VRe9-jbw\n> 公众号：量子位\n\nQC-MHM团队 投稿\n\n量子位 | 公众号 QbitAI\n\n向ChatGPT问一个看起来挺简单的问题：“Lasha Talakhadze之前的奥运举重纪录是多少？”\n\n结果让人哭笑不得——模型能认出这个人是谁，也说得出来他拿过金牌，但给出来的答案却是\n\n他现在的纪录\n\n，而不是“之前”的。同理，“第25届奥运会期间布达佩斯的市长是谁？”这种带时间窗口约束的问题，Google和ChatGPT都翻了车。\n\n这不是某个模型的bug，而是所有基于知识图谱的问答系统共有的结构性问题：\n\n它们看得见实体，看不见时间。\n\n北航、复旦、浙大联合团队在AAAI上提出的\n\nQC-MHM（Question Calibration and Multi-Hop Modeling）\n\n，用一个三件套方案——问题校准+时序嵌入+多跳图推理——让模型真正拥有了“时间感”。\n\n作者单位：\n\n北京航空航天大学·复旦大学·浙江大学\n\n发表：\n\nAAAI（CCF-A类顶会，Pages 19332–19340）\n\n背景\n\n场景与痛点\n\n时序知识图谱问答（Temporal KGQA）的任务是：给定一个带时间约束的自然语言问题，从知识图谱中找到\n\n落在正确时间窗口内的答案\n\n。\n\n听起来只是在普通KGQA上加了个时间字段？实际上差距巨大：\n\n举个例子：（布达佩斯，市长，某人，1992）和（布达佩斯，市长，另一人，2024）在KG里是两条不同的事实。传统模型很容易把两条混在一起，问“92年谁当市长”时给出2024年的答案。\n\n现有方法的两大硬伤\n\n学界已经有了CronKGQA、TMA、TSQA等一系列时序KGQA模型，但这篇AAAI论文犀利地指出，它们都没绕过两个坎：\n\n硬伤一：PLM对时间“视而不见”。\n\nBert等预训练语言模型编码问题时，注意力天然落在实体名词上（人名、地名），对“之前/之后/期间”这类时间词汇缺乏敏感性。结果就是——模型相当于读了一道“不带时间约束”的问题。\n\n硬伤二：图结构信息被浪费。\n\n即使用了知识图谱，多数方法也只把它当作答案查询的索引，没有真正利用其中蕴含的多跳关系结构。遇到需要“两步以上跳转”的问题就掉链子，而且推理过程完全黑箱。\n\n论文做了什么\n\nQC-MHM用一个端到端框架把三个模块串起来：\n\n时序感知嵌入：\n\n让KG中的时间戳知道“谁在前、谁在后”\n\n问题校准：\n\n让问题向量主动去KG中“找时间线索”，再回来更新自己的表示\n\n多跳GNN推理：\n\n单层GNN一次性访问任意跳邻居，同时输出可解释的推理路径\n\n技术方案\n\n模块一：让时间戳“懂顺序”的KG嵌入\n\nKG里每条事实是（主体，关系，客体，时间）四元组。QC-MHM选择\n\nTComplEx\n\n做基础嵌入，评分函数为：\n\n但仅靠TComplEx，时间戳之间还是“散装”的——模型不知道1992在2024之前。为此作者借鉴Transformer的sinusoidal编码，为每个时间戳叠加位置编码：\n\n进而构造辅助任务——让模型判断“时间m是否早于时间n”：\n\n总训练损失：\n\n。这个辅助任务就像给模型做“时间排序”的专项训练——嵌入空间里，1992的向量自然排在2024前面。\n\n模块二：问题校准——让问题主动“找时间”\n\n这是QC-MHM最具想象力的设计。常规做法是：问题→PLM编码→直接查询答案。QC-MHM在中间加了一步：\n\n让问题先去KG中检索与时序相关的SPO（主体-关系-客体三元组），再回来修正自己的表示。\n\n第一步：候选SPO召回。\n\n把问题和KG中的所有SPO分别过SentenceBERT，用余弦相似度排名，保留Top-10：\n\n第二步：三注意力多视角匹配。\n\n用三种注意力机制同时比较“问题词×SPO候选”：\n\n三种视角各看各的：Concat看“这两个向量放一块合理吗”，Dot看“关键维度上对齐了吗”，Minus看“哪里不一样”。\n\n第三步：门控自适应融合。\n\n让模型自己决定“原始问题语义”和“从KG检索到的时序信息”各占多大权重：\n\n经过校准后的问题向量\n\n，从此具备了“时间感”。相当于原本的问题是“XXX是谁？”，校准后变成了“XXX在1992年是谁？”。\n\n模块三：多跳GNN推理——一层看穿整条路径\n\n传统GNN的问题是：一层只能看1跳邻居，要想看2跳需要堆2层，看3跳得堆3层，效率和可解释性都不好。\n\nQC-MHM的做法是：\n\n先把子图裁剪出来，再一次性做多跳注意力聚合。\n\n子图裁剪：\n\n以问题中的实体为起点，抽取k跳范围内的子图，把搜索空间收窄。\n\n路径打分（注意力矩阵）：\n\n一次性多跳聚合：\n\n核心公式在D：通过加权和把1跳、2跳、…、ℓ跳的注意力矩阵一次性合并，让单层GNN就能访问任意跳邻居。经验设置\n\n已能取得理想效果。\n\n最终图向量：\n\n注意力权重本身也可以直接可视化，展示模型的“思考轨迹”——哪条边被高权重激活，推理路径一目了然。\n\n模块四：双通道答案预测\n\n把语义向量\n\n（问题校准后的表示）和图向量\n\n（GNN聚合后的表示）拼接，过一层Transformer融合：\n\n然后分别投影到\n\n实体空间\n\n和\n\n时间戳空间\n\n，用TComplEx评分做双通道预测：\n\n两个通道的分数拼接后softmax，交叉熵优化。这意味着——同一个模型可以同时回答“是谁”和“什么时候”两类问题。\n\n实验结果\n\nCronQuestions：逼近性能天花板\n\n复杂多跳问题Hits@1绝对提升5.1%，Hits@10提升1.2%\n\n实体型答案与时间型答案两条赛道都打赢\n\n整体Hits@1达0.971——再往上提升已经非常困难\n\nTimeQuestions：跨数据集泛化验证\n\n迁移到第二个基准同样SOTA，说明方法具有可迁移性，不是针对某个数据集的特化方案。\n\n细粒度问题类型拆解\n\nBefore-After\n\n这种典型时间排序题，QC-MHM的优势被放大得最明显——这正是“问题校准”模块的主场：只有显式建模了时间约束，模型才知道“之前”意味着什么。\n\n消融实验：三件套缺一不可\n\n三个模块互相成就，不是简单的“拼盘”，去掉任何一个都会导致特定类型问题大幅退化。\n\n可视化：“白盒”推理路径\n\n可以清晰地看到模型如何在图中逐跳推进，哪些边被高权重激活——这是过往黑箱模型不具备的能力。\n\n图中高亮的92%、95%等数值，正是问题对最相关时序SPO高度关注的证据，表明门控机制确实抓住了“哪些SPO该被重视”。\n\n梯度分析印证了问题校准模块确实把关键时序事实反映到了问题向量中。\n\n项目价值\n\n学术贡献\n\n首创“问题校准”机制：\n\n多视角注意力+门控融合，让PLM编码的问题向量主动从KG中提取时序知识，根治“时间盲区”\n\n单层多跳聚合：\n\n用加权组合的方式让单层GNN访问任意跳邻居，同时输出可解释推理路径\n\n顺序感知的嵌入辅助任务：\n\n以“判断时间先后”作为额外监督信号，让嵌入空间隐式编码时间序\n\n落地场景\n\n搜索引擎：\n\n精准应答带时间限定词的复杂查询（“之前”“期间”“最早”）\n\n金融合规：\n\n跨时间维度查询股权变更、监管事件、诉讼时序\n\n医疗药学：\n\n追踪疾病演进、用药史、临床试验时间线\n\n档案管理：\n\n跨年代事件因果与关联推理\n\n企业BI：\n\n基于时间链路的趋势与因果分析\n\n在LLM普遍强调“事实可追溯”的当下，QC-MHM所代表的“PLM×时序KG×多跳GNN”思路，是构建可信时序推理系统的关键拼图。\n\n论文（arXiv）：https://arxiv.org/abs/2402.13188\n\n代码（GitHub）：https://github.com/zhouyan0614-sys/QC-MHM-TKGQA\n\n会议：AAAI（CCF-A），Pages 19332–19340\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n【学术投稿】请在工作日发送邮件至：\n\nai@qbitai.com\n\n，标题注明【投稿】，并告诉我们：\n\n你是谁\n\n，\n\n从哪来\n\n，\n\n投稿内容\n\n附上\n\n项目/主页链接\n\n，以及\n\n联系方式\n\n。\n\n🎓\n\n我们会 (尽量) 及时回复你 :)\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-23_模型没答错，只是没看表：AAAI这篇时序问答方法让AI学会“穿越时间”找答案_量子位.md"}, {"title": "Qoder Mobile 上线：开启新的工作方式", "source": "Qoder", "digest": "Qoder 是全平台覆盖的 AI 编程助手。手机不只是辅助——它具备桌面端的大部分能力，还能远程向电脑发起任务。", "link": "https://mp.weixin.qq.com/s/xGHyuIWHOQtizYON_WO-yw", "content": "---\npublish_time: 1784802600\n---\n\n# Qoder Mobile 上线：开启新的工作方式\n\n> 原文链接：https://mp.weixin.qq.com/s/xGHyuIWHOQtizYON_WO-yw\n> 公众号：Qoder\n\nQoder 是全平台覆盖的 AI 编程助手。手机不只是辅助——它具备桌面端的大部分能力，还能远程向电脑发起任务。鸿蒙版体验与 iOS、Android 完全一致，从桌面到命令行到手机，同一个任务、同一份上下文，无缝衔接。\n\n随时随地发起，跨端同步\n\nQoder App 让你的手机不只是辅助工具，手机上具备桌面端的大部分能力，随时随地打开 App 就能开始工作。任务在桌面端同步运行，你在手机上发起的工作，回到电脑前直接看结果，同一个任务、同一份上下文，跨端无缝衔接。\n\n用手机开启新的工作方式\n\n我们开始使用移动端处理各种事务：查看运行状态、审批 Agent 提交的方案，并在方向不符合预期时及时停止或补充指令。\n\n你还可以在手机上直接向桌面端或命令行远程发起任务——代码重构、测试跑批、问题排查、环境部署，一条指令就能启动。\n\n这也让一些过去必须回到电脑前才能处理的事情，有了新的工作方式：\n\n及时处理故障\n\n如果你在午餐或通勤途中收到告警，可以直接用手机启动 Agent，让它先检查日志、排查问题，并给出可能的修复方案。\n\n等你回到电脑前，初步定位和修复工作可能已经完成，可以直接进入结果审查，缩短从收到告警到开始处理之间的等待时间。\n\n反馈直接变成任务\n\n当你群聊中看到用户反馈时，可以直接截图并添加标注，再把图片作为上下文交给 Agent。\n\n发现问题的当下，就可以让 Agent 开始处理，不必等回到电脑前再重新整理和描述。\n\n随时了解进展\n\n任务运行过程中的关键节点，Qoder 会使用 iOS 灵动岛和实时活动（Live Activity）推送告诉您——我们完成了一个阶段、遇到需要你确认的决策点、或者任务跑完出了结果，你都会第一时间知道。通知内容清晰可读，不用点进去也能快速判断下一步。\n\n接下来\n\n我们会持续迭代 Qoder Mobile，让云端运行 Agent 的体验逐步接近在本地电脑上运行。\n\n任务将支持连接 GitHub 或你的 Workspace，并在云端持续执行。即使关闭电脑，任务也不会中断，运行更加省心。\n\n在此之前，我们会继续优化远程控制能力，以及本地任务与云端任务之间的衔接，让你可以根据不同场景灵活选择任务的运行环境，同时保持任务进度与上下文的连续。\n\n我们也会进一步完善手机端的成果审查体验。任务产物和代码 Diff 都可以直接在手机上查看，不必回到电脑前，也能快速判断 Agent 的产出是否符合预期。\n\n如何链接到电脑：\n\n以 Qoder CN 版本举例：\n\n下载后，打开手机端，同时登陆您的账号：\n\nQoder CN Desktop ：\n\n在电脑上下载 Qoder CN 应用\n\n使用统一账号登陆\n\n打开 Quest - 设置 - 开启手机端登陆\n\nQoder CN CLI\n\n在终端运行命令「qoderclicn remote-control」\n\nQoder Mobile，现已上线；\n\n快去应用商店搜索「Qoder」下载体验。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-23_Qoder Mobile 上线：开启新的工作方式_Qoder.md"}, {"title": "ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准", "source": "机器之心", "digest": "从训练数据入手，为模型适应航拍几何 3D 视觉任务提供了新的支撑。", "link": "https://mp.weixin.qq.com/s/UEBMrVEyj98DBuVDSP7lnQ", "content": "---\npublish_time: 1784773049\n---\n\n# ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准\n\n> 原文链接：https://mp.weixin.qq.com/s/UEBMrVEyj98DBuVDSP7lnQ\n> 公众号：机器之心\n\n国防科技大学\n\n虚拟\n\n现\n\n实与视\n\n觉计\n\n算团队（SAW Lab）\n\n联合先进制导与控制技术国家级重点实验室\n\n等推出面向航拍几何 3D 视觉的统一大规模数据集与评测基准\n\n「AirZoo」\n\n。\n\n团队发布了基于 AirSim-Cesium-Unreal 的自动化仿真管线，以及 AirZoo 合成数据集和 AirZoo-Real 真实评测集。合成数据覆盖全球 22 个国家、377 条气象条件轨迹，包含超过 120 万帧像素级 RGB-D 数据及对应的 6-DoF 地理位姿标注，统一支持航拍图像检索、跨视角匹配与多视图 3D 重建三大任务。\n\n现如今，视觉基础模型在街景、室内等常见场景中已经取得了不错的效果，但无人机航拍中的复杂视角、尺度和环境变化仍会带来新的挑战。\n\nAirZoo 从训练数据入手，为模型适应航拍几何 3D 视觉任务提供了新的支撑。实验表明，仅使用 AirZoo 对 MegaLoc、RoMa、VGGT、Depth Anything 3 等主流模型进行微调，便能在公开基准以及团队新采集的 AirZoo-Real 真实飞行数据上带来显著提升。换言之，AirZoo 并非只是在扩大数据规模，而是在为无人机空间智能提供一套可扩展、可复现的预训练引擎。该研究成果已被 ECCV 2026 接收。\n\nAirZoo总览。上图：基于全球尺度3D Tiles的百万级合成UAV数据，具备像素级几何真值与丰富飞行轨迹；下图：在AirZoo上微调后，SoTA模型在航拍图像检索、跨视角匹配、多视图3D重建三大几何3D视觉任务上均获得显著性能提升。\n\n论文标题：\n\nAirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision\n\n论文主页：\n\nhttps://nudt-sawlab.github.io/AirZoo/\n\n论文链接：\n\nhttps://arxiv.org/abs/2604.26567\n\n渲染引擎\n\n：\n\nhttps://github.com/nudt-sawlab/AirZoo\n\n数据发布：https://huggingface.co/datasets/choyaa/AirZoo/tree/main\n\n真实评测集：https://huggingface.co/datasets/RingoWRW97/AirZoo-Real/tree/main\n\n研究动机：航拍几何 3D 视觉，\n\n究竟缺了什么？\n\n近年来，大规模数据驱动的 3D 视觉基础模型在地面视角的检索、匹配与重建任务上进展迅速，但其主流训练语料长期集中于街景、室内和物体中心视角。无人机却在 6-DoF 空间中自由飞行。相机俯仰角可以从斜视快速转为正射，画面中的建筑立面会被屋顶取代，帧间位移与尺度变化也远超常规地面采集。这种剧烈的视角域鸿沟，使在地面数据上训练成熟的模型难以直接迁移到空中。\n\n比视角变化更棘手的是几何监督的缺失。现有 UAV 数据集往往面临两难取舍。一类数据强调光度真实感，却缺少米制深度与精确位姿；另一类虽然提供了一定的几何信息，但只覆盖少量手工构建的城市场景，难以支撑序列级几何学习。与此同时，真实航拍还会遭遇昼夜交替、晴雨雾雪以及城乡地貌差异。小规模合成数据或局部实景采集，很难覆盖这类复杂的全球部署条件。\n\n因此，AirZoo 并不是简单增加一个航拍数据集，而是希望建立一套全球可扩展、几何可验证、环境可控制的数据引擎，并通过真实飞行评测验证从仿真到现实的迁移能力。\n\n核心思路：把全球 3D Tiles\n\n变成可学习的无人机轨迹\n\nAirZoo 的核心思路，是将全球尺度的真实地理场景、可控的无人机运动和像素级几何监督接入同一条自动化生产管线。研究团队以 AirSim、Cesium 和 Unreal Engine 为基础，从 WGS84 航点出发自动生成飞行轨迹，按帧同步渲染 RGB、米制深度、相机内参与带地理参考的 6-DoF 位姿。这样得到的不再是彼此孤立的航拍截图，而是具有连续时序关系、可被标准几何流程直接使用的学习数据。\n\n第一步，\n\n是\n\n打通\n\nAirSim-Cesium-Unreal 自动化渲染管线。\n\nPython 控制器负责下发全球 WGS84 航点，Cesium for Unreal 将 Google Photorealistic 3D Tiles 流式载入 UE5，AirSim 则负责多旋翼 UAV 和虚拟相机的同步采集。相比只提供单帧图像的检索数据集，AirZoo 可以输出连续 30 fps 的轨迹级 RGB-D 数据和可验证几何真值，既能直接服务 COLMAP 等标准流程，也能为端到端模型提供稳定的 3D 监督。\n\nAirSim-Cesium-Unreal仿真管线。Python生成全球航迹，Cesium载入3D Tiles，AirSim同步采集RGB、深度与地理位姿。\n\n第二步，是把数据规模从少数场景扩展到全球环境。\n\nAirZoo 横跨六大洲 22 个国家，包含 95 条基础飞行序列与 377 条气象条件轨迹，累计飞行约 2400 km，生成超过 120 万帧、分辨率为 1600×1200 的图像。数据覆盖城市、乡村和自然地貌，并系统模拟晴、阴、雨、雾、雪以及昼间、黄昏、夜间等条件；相机俯仰角在 10° 斜视至 90° 正射之间动态扫掠，飞行高度覆盖 0 至 800 m 的低空生态圈。\n\n这种大规模全球覆盖与可控环境扰动的组合，目的不是简单增加图像数量，而是迫使模型关注跨地域、跨天气仍然稳定的几何结构，减少对局部纹理和特定外观的记忆。\n\nAirZoo构建流程与数据属性：全球区域选取、仿真采集、同步RGB-D渲染与多条件多样性展示。\n\nAirZoo综合统计：区域/环境/天气分布、全球覆盖范围，以及高度与俯仰角包络。\n\n第三步，是让合成数据的几何质量能够被严格验证。\n\nAirZoo 为每一帧提供针孔相机内参，以及 WGS84 和 ECEF 双坐标系下的 6-DoF 位姿。团队通过邻帧双向重投影检查其几何一致性，得到的中位相对深度误差低于 0.1%。同时，研究人员收集公开的 DJI 实拍视频，并在 AirZoo 中复现相同视点进行真实与合成对照。结果显示，合成视图在场景布局、目标尺度和结构纹理上均与真实航拍具有较高可比性，为 Sim-to-Real 迁移提供了可信基础。\n\n几何验证：重投影误差CDF（中位0.066%），以及同一区域不同天气轨迹下的多视图对应与共视关系。\n\n相同视点下的真实航拍与AirZoo合成渲染对比。\n\n第四步，是用一套数据统一三条航拍几何 3D 视觉赛道。\n\n在航拍图像检索中，系统需要根据 UAV 查询图，从带地理标注的卫星瓦片中找到对应区域，实现跨视角地理定位；在跨视角匹配中，系统要在 DOM/DSM 参考图与斜视 UAV 图像之间建立几何对应，为位姿估计提供约束；在多视图 3D 重建中，模型则需要从 UAV 序列恢复相机位姿与稠密几何。为了避免评测只停留在合成域，团队还发布了 AirZoo-Real 真实飞行评测集。该数据集覆盖长沙等城市与乡村场景、不同昼夜时段，并提供 RTK 精确定位，专门用于检验算法进入真实航拍环境后的性能上限。\n\nAirZoo训练与零样本测试数据集划分。训练集与测试集在空间上无重叠，覆盖检索、匹配与重建三类任务。\n\n🏆 实验结果\n\n实验中，团队保持模型架构不变，仅使用 AirZoo 对现有模型进行微调，并在航拍图像检索、跨视角匹配和多视图 3D 重建三个任务中观察模型在真实航拍域中的变化。完整的定量结果及不同数据集上的详细对比均列于论文原文的实验表格中，本文仅选取部分代表性指标，并结合定性结果进行介绍。\n\n在航拍图像检索任务上\n\n，Air\n\nZoo 增强了模型在复杂跨视角场景中的地理定位能力。\n\n以 MegaLoc 为基座进行微调后，模型在 AirZoo-Real 上的 R@1 由 6.46% 提升至\n\n18.66%\n\n，R@5 由 22.16% 提升至\n\n50.53%\n\n。从定性结果也可以看到，面对真实斜视航拍、尺度变化和光照差异，现有方法容易返回外观相似但位置错误的卫星图像。使用 AirZoo 微调 MegaLoc 后，模型能够更稳定地检索到与查询图像对应的区域。这说明 AirZoo 所提供的多样化视角与环境变化，有助于模型跨越航拍图像与卫星图像之间的域差异。\n\n跨视角地理定位定性对比。绿色/粉色边框分别表示检索正确与错误；AirZoo微调后Top-1卫星瓦片检索在复杂视角与光照变化下更稳定。\n\n在跨视角匹配任务上，经 AirZoo 微调的 RoMa 产生了更可靠的几何对应。\n\n在 AirZoo-Real 定位任务上，模型的中位误差降至\n\n3.03 m\n\n，acc@5m 提升至\n\n79.78%\n\n。原始 RoMa 在大幅视角变化下容易将局部纹理错误关联，即使经过大规模航拍视频数据训练的 GIM RoMa 仍会出现局部误匹配。相比之下，AirZoo RoMa 的匹配点更均匀地分布在道路、建筑等静态结构上，并明显减少了错误对应，为后续位姿估计提供了更稳定的几何约束。\n\nAirZoo-Real跨视角匹配定性结果。粉色框标出错误匹配区域；AirZoo微调后的RoMa在航拍跨视角条件下产生更可靠的几何对应。\n\n在多视图 3D 重建任务上，Depth Anything 3 与 VGGT 均从 AirZoo 训练中获得了明显收益。 在 AirZoo-Test 上，DA3-Large 的 F1 由 54.10 提升至\n\n86.09\n\n。在 UrbanScene3D 上，VGGT 的 F1 由 43.38 提升至\n\n52.61\n\n。定性对比进一步显示，原始模型容易出现局部结构缺失、几何断裂和伪影。经 AirZoo 微调后，重建结果覆盖更完整，建筑、道路与植被等场景结构也更加连贯。不同数据集上的一致改善表明，AirZoo 能够为模型补充航拍域所需的几何先验，并提升其向真实飞行场景迁移的能力。\n\nAirZoo-Real、UAVScenes与UrbanScene3D上的重建定性对比。红色框标出原始模型的缺失或错误区域，微调后几何更完整、伪影更少。\n\n🌟 总结与思考\n\nAirZoo 将全球可扩展仿真、像素级几何真值和三任务统一评测整合为一套面向无人机空间智能的数据与评测平台。它的价值不只在于百万量级这一规模，更在于把全球 3D 地理场景转换成连续、可验证、可复现的学习轨迹，让检索、匹配与重建模型能够在同一套几何监督下获得航拍先验。\n\n从实验结果看，AirZoo 为现有视觉基础模型补充了跨视角、跨尺度和复杂环境下的航拍几何知识。经过 AirZoo 训练后，这些模型在真实航拍域中的检索稳定性、匹配可靠性和重建完整性均得到改善。这表明，大规模、多样化且带有精确几何监督的合成数据，能够有效推动视觉基础模型向真实无人机任务迁移。团队同系列的 PiLoT 等定位工作，同样受益于这套 AirSim-Cesium-Unreal 数据范式。\n\n未来，团队将继续扩展数据规模与真实基准的覆盖范围，推动航拍几何 3D 视觉在智慧城市、应急测绘和无人系统等场景中的实际落地。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-23_ECCV 2026｜把全球3D地图变成无人机训练场，国防科大AirZoo构建航拍几何3D视觉统一基准_机器之心.md"}, {"title": "一年减少1.5万人！这家银行正加大金融科技与AI领域的投入", "source": "银行科技研究社", "digest": "7月16日，富国银行发布2026年第二季度财报，数据显示该行营收与净利润同比双增长。同时，该行表示，将持续通过技术升级、流程自动化与AI提升运营效率，员工规模仍有进一步下降空间。在人员规模方面，截至第二季度末，富国银行员工总数约为19.7万人，较去年同期减少1.5万人，较上一季度减少3500人。据悉…", "link": "https://mp.weixin.qq.com/s/4xq6qaYBAvRFbaVu8mqMHw", "content": "---\npublish_time: 1784791080\n---\n\n# 一年减少1.5万人！这家银行正加大金融科技与AI领域的投入\n\n> 原文链接：https://mp.weixin.qq.com/s/4xq6qaYBAvRFbaVu8mqMHw\n> 公众号：银行科技研究社\n\n7月16日，富国银行发布2026年第二季度财报，数据显示该行营收与净利润同比双增长。同时，该行表示，将持续通过技术升级、流程自动化与AI提升运营效率，员工规模仍有进一步下降空间。\n\n在人员规模方面，截至第二季度末，富国银行员工总数约为19.7万人，较去年同期减少1.5万人，较上一季度减少3500人。据悉，该行员工数量已连续24个季度下降。与六年前相比，员工规模累计缩减约7.9万人。自2019年首席执行官查理・沙夫上任以来，该行员工数已从约27.5万人降至不足20万人。\n\n富国银行首席财务官迈克尔・桑托马西莫表示，尽管近年来人员不断减少，但该行仍可通过更少的员工维持运营，预计后续将实现更高的效率提升。沙夫此前则表态，员工数量将继续下降，并优先通过自然减员完成人员调整。\n\n在缩减人员的同时，富国银行正加大金融科技与AI领域的投入。该行此前预计，2026年新增技术支出约11亿美元，重点投向自动化、数字化平台与AI能力建设。其中，财富与投资管理部门过去几年已累计投入超10亿美元升级技术平台，并已向财务顾问推出生成式AI工具，用于整理客户信息、辅助准备会议等。\n\n此外，面向客户的AI应用也在持续扩容。2026年3月，富国银行AI虚拟助手Fargo累计交互次数已突破10亿次，移动端活跃用户超过3300万。\n\n可见，富国银行在营收与净利润同步增长的背景下推进人员缩减，表明该行的调整并非应对业绩下滑的短期举措，而是将AI与自动化作为长期压缩运营成本的手段。\n\n银行AI应用社群，有兴趣的朋友请添加群主：BankFintech666 备注：公司+姓名+职务+AI入群。仅限银行科技工作人员。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-23_一年减少1.5万人！这家银行正加大金融科技与AI领域的投入_银行科技研究社.md"}, {"title": "工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景", "source": "银行科技研究社", "digest": "2026年，银行AI大模型布局加速。对于全国性银行来说，AI应用场景的规模化落地，或让“智慧银行”的目标不再遥不可及。近日，工行介绍了其最新的AI大模型进展，AI应用场景数进一步增加。值得一提的是，工行重视AI人才的引进和培养，全行AI核心技术人才近两年增长较快。科技条线组建“领航AI+”专项工作团…", "link": "https://mp.weixin.qq.com/s/C6w70LyXOpSE-y9U4XSWtw", "content": "---\npublish_time: 1784776680\n---\n\n# 工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景\n\n> 原文链接：https://mp.weixin.qq.com/s/C6w70LyXOpSE-y9U4XSWtw\n> 公众号：银行科技研究社\n\n2026年，银行AI大模型布局加速。对于全国性银行来说，AI应用场景的规模化落地，或让“智慧银行”的目标不再遥不可及。近日，工行介绍了其最新的AI大模型进展，AI应用场景数进一步增加。值得一提的是，工行重视AI人才的引进和培养，全行AI核心技术人才近两年增长较快。\n\n科技条线组建“领航AI+”专项工作团队，AI核心技术人才近两年增长近一倍\n\n7月16日，工行党委委员、副行长赵桂德在《金融电子化》发文提到了工行金融数智化转型的最新情况。\n\n据悉，工行已将“数字工行（D-ICBC）”升级为“数智工行（AI-ICBC）”，突出AI技术在全行转型发展中的支撑地位，打造AI应用的领军银行。该行采用顶层设计配合基层创新的方法，每年制定“领航AI+”行动实施要点，明确AI在重点业务领域应用的时间表、任务书、路线图。\n\n众所周知，在大模型布局中，算力、算法、数据等是核心要素。工行在算力方面，构建以自主可控算力为主的大模型弹性算力池，实现训练和推理模式的分钟级切换、算力资源的实时监控运营调度；在模型方面，集成十余款业界主流模型，并开展二次训练，打造更适合行内的企业级底座模型矩阵；在数据方面，建设企业级金融知识库，整合内部企业知识和外部行业知识、通用知识，打造了万亿级Token金融数据集，支持模型训练和场景建设。\n\n此外，安全合规正成为银行推进AI应用时配套建设的重要方面。国家金融监督管理总局前不久发布的《关于银行业保险业人工智能安全开发应用的指导意见》（以下简称“《指导意见》”）中强调，坚持安全发展，强化技术安全和应用安全保障，全面提升安全防护和应急处置能力。\n\n目前，工行已打造全栈安全风险检测平台，支持模型安全、内容安全、指令安全、数据安全、框架安全等69项检测，建成金融业首个人工智能安全风险全栈评估矩阵，形成集开发、运维、安全于一体的标准化管控流程。并建设人工智能安全防护体系，覆盖人工智能基础设施、模型训练、模型服务、场景应用等全场景。\n\nAI布局需要组织和人才的支撑。赵桂德介绍，工行对此已有多项举措：在总行成立覆盖30个部门（机构）的“领航AI+”行动工作组，调动全行力量，拓展人工智能应用场景；在科技条线组建“领航AI+”专项工作团队，深入业务部门“一对一”支持产品、服务和场景创新；加大人工智能专业人才招聘力度，充实大数据与人工智能实验室专业力量，壮大全行数据分析师队伍，在重点业务部门成立人工智能创新团队，全行人工智能核心技术人才近两年增长近一倍，数据分析师规模达1.3万人。\n\n《银行科技研究社》获悉，“成立‘领航AI+小组’行动工作组”这一信息曾偶有透露，但“在科技条线组建‘领航AI+’专项工作团队”似乎是首次出现在公开信息中。\n\n事实上，工行的数据分析师在近几年迎来快速增长：从2022年的超7700人，到2023年的9375人，到2025上半年的超1.2万人，再到如今的1.3万人。在AI快速发展的时代，数据分析师应该还是重要角色，不过其能力重心和价值或有所改变。\n\nAI人才相对稀缺，工行对此类人才的需求较为强烈。近年来，该行已多次招聘AI相关人才。就在不久前的6月1日，工行总行本部面向社会招聘“人工智能创新及量化投研岗”及“人工智能战略规划岗”的人才。前者侧重实战落地，核心职责是推动AI技术在金融市场业务中的场景化创新与落地应用，对求职者的实操能力、业务适配能力提出了高要求；后者则更加偏向顶层研判和理论研究，要求求职者具备跟踪研究全球人工智能技术发展趋势，形成深度洞察与分析报告等能力。\n\n除了总行外，工行多家分支机构也针对AI人才同步启动了招聘。\n\n实现600多个AI应用场景，已打造统一对客智能体\n\n对于银行来说，AI布局最终还是要归于应用场景。据悉，工行基于“工银智涌”技术底座，推动AI在30多个业务领域、600多个场景实现规模化应用。\n\n据《银行科技研究社》对比，工行2025年报中的数据为“在30余个业务领域落地超500个AI应用”。可见，在这几个月内，该行的AI应用场景增长100个左右。\n\n不过看来，工行透露的“AI应用场景数”或是特指“大模型应用场景数”。毕竟该行在2025年报中的另一个表述为“推动大模型在30余个业务领域落地500余个场景”。当然，这种将“大模型应用场景”等同于“AI应用场景”的表述问题在多家银行中存在。\n\n具体来看，工行推广金融市场智能询价助手，交易智能化比率达96%；打造信贷智能助手，为全行超2万名信贷人员提供客户分析、政策解读、风险预警、融资推荐等信息的智能化支持；开放低代码平台，支持分支机构和全行员工构建个人智能体。\n\n在新的阶段，智能体部署和面客AI应用将成为多家银行布局的重点。\n\n据介绍，工行已在安全合规前提下首批打造覆盖线上线下全渠道的统一对客智能体“工小智”，意图识别准确率超过90%，分阶段逐步构建“对话即服务”的对客服务新模式。\n\n大模型对客场景一直是银行审慎推进的。毕竟，其中可能存在较高的风险。《指导意见》要求，金融机构面向公众服务或高风险场景应用使用生成式人工智能技术的，应向金融监管总局或其派出机构报告。\n\n而此前，工行已在推进大模型对客。该行依托大模型MoA架构双层控制器、主从智能体调度、大小模型多层意图识别、多模态技术等能力打造对客场景，通过中央网信办备案，成为首批大模型对客试点机构。上述“工小智”就是其中的一个案例。\n\n大模型对客需要做好风险管控。据悉，工行在大模型对客服务工程化落地的安全及风险管控上，主要从风险规避、风险识别、风险监测三个步骤入手：基于“最小范围原则”建立细粒度的大模型数据检索体系；通过应用更好的语义分析技术和深度学习模型，对用户输入语料进行安全检测；通过语义分析技术及并行推理算法的结合，对大模型生成内容进行实时安全性检测和预判。\n\n智能体作为AI大模型落地的关键载体，正受到各家银行的重视。工行已在这方面取得一定的进展。\n\n根据此前的信息，工行已建立企业级智能体平台。同业首创多层次MoA智能体协同架构，全面支持顺序、主从及混合等多种调度模式，支撑100+智能体协同调控；打造一站式智能体研发工厂，形成研发运营运维一体化AgentOps体系。\n\n在“工银智涌”大模型技术体系中，智能体正是其中的一个重要方面。工行在智能体协同上，建设支持多层次智能体协同框架与低代码开发能力的智能体创作平台，支持多种任务编排模式，为科技与业务人员提供可视化智能体创作工具，实现智能体快速构建和灵活组装。\n\n银行AI应用社群，有兴趣的朋友请添加群主：BankFintech666 备注：公司+姓名+职务+AI入群。仅限银行科技工作人员。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-23_工行科技条线组建“领航AI+”团队，已落地600多个AI应用场景_银行科技研究社.md"}, {"title": "AI技术在商业银行零售领域应用研究", "source": "金融电子化", "digest": "文/江苏银行泰州分行党委书记、行长 李晨江苏银行泰州分行 戴云飞随着金融科技的迅猛发展，商业银行正经历着从“以", "link": "https://mp.weixin.qq.com/s/soCbrnUfPFnNtYmkFtj4gA", "content": "---\npublish_time: 1784775759\n---\n\n# AI技术在商业银行零售领域应用研究\n\n> 原文链接：https://mp.weixin.qq.com/s/soCbrnUfPFnNtYmkFtj4gA\n> 公众号：金融电子化\n\n文/江苏银行泰州分行党委书记、行长 李晨\n\n江苏银行泰州分行 戴云飞\n\n随着金融科技的迅猛发展，商业银行正经历着从“以产品为中心”向“以客户为中心”的经营模式转型，零售业务作为触达海量客户的核心枢纽，面临着前所未有的变革压力。AI技术的成熟与应用为这一转型提供关键支撑，其强大的逻辑推理与实时决策能力，不仅能精准匹配多元化客户需求，更显著优化风控效率与运营成本，成为数智化时代商业银行重塑核心竞争力的战略基石。目前，AI在我国金融业务中的应用发展正处于政策红利期，多数银行正处于技术储备和浅层试验阶段。从零售业务经营来看，因前中后台场景服务对象、业务目标不同，形成差异化AI技术应用需求。\n\nAI 技术在银行零售业务中的场景应用\n\n1.客户服务场景\n\n客户服务是AI技术在商业银行零售业务中应用最成熟的场景之一，核心是融合NLP、大模型、多模态交互、AI智能体等技术能力，实现效率提升、体验优化、商机挖掘。\n\n智能客服与交互的技术落地可拆分为三层架构。首先，在基础交互层，主要负责“听懂、看懂”客户需求，核心是NLP，通常集成在行内智能交互平台中，通过连接手机银行、外呼电话、企业微信等对客渠道，将客户需求进行理解和拆解为具体业务需求。解析后的需求将传递至智能大脑层，负责“想明白、答准确”，经过行内的金融行业大模型，大模型通过上传银行产品手册、业务流程SOP、合规红线文档完成微调，能够充分理解客户业务办理需求输出准确合规的处理执行指令。最后，指令下达至业务执行层，负责“客户交互、解决问题”。此时AI智能体通过接口链接客户管理系统、银行核心业务系统等，调用客户资产数据、历史办理数据等信息实现个性化回应，直接帮助客户办理“密码重置”“余额查询”等基础业务，同时通过情绪分析和业务理解，及时介入人工客服实现高效的客户服务。\n\n以南京银行为例，该行积极引入AI智能外呼技术，并逐步构建起一套系统化的智能客户服务架构。该架构以智能语音交互系统为核心，集成话术配置引擎、语音合成技术、静默交互等多个关键模块，实现了从客户接触、需求识别到服务响应的全流程智能化。\n\n2.客户运营场景\n\n客户运营场景的核心是通过AI技术实现“客户洞察—客群细分—策略制定—执行落地”全流程智能化，融合大数据处理、机器学习算法、大模型分析、知识图谱等技术能力，提升客户生命周期价值。\n\n客户精细化运营的技术落地核心是依托银行现有系统构建“数据—模型—业务”闭环链路。整个链路以数据流转为起点，银行的大数据存储系统通过Informatica等数据处理工具，自动整合来自App、网点、客服、征信等多渠道的客户数据，这些数据经清洗整理后形成标准化的客户数据资源池。数据准备完成后，算法平台基于这些数据训练客户画像、需求预测、流失预警等各类运营模型，训练成熟的模型会集中存储在模型资源池中，供业务端随时调用。业务执行环节需要贴合运营人员的日常操作习惯，在智能营销系统、客户管理等常见系统平台中，通过简单的规则配置，调用模型资源池中的分析结果，自动触发客群筛选、策略推送等营销运营动作，实现数据价值从提取到落地的全流程贯通。\n\n以工商银行为例，该行通过“智慧大脑”系统部署智能模型和营销策略。依靠金融科技手段、以智慧大脑为支撑，优化全量个人客户资产配置策略运算机制，并基于线上线下各渠道高效输出服务内容，加快打造全量客户覆盖、全类产品整合、全部渠道统筹的智能资产配置服务。\n\n3.营销管理场景\n\n营销管理场景的AI应用核心是实现“素材生成—策略制定—商机挖掘—效果追踪”全流程自动化与智能化，融合生成式AI、大模型、推荐算法、数据挖掘等技术能力。\n\n营销管理场景的AI技术落地核心在于采用“多维素材生成层+营销中台+全渠道投放系统”的闭环落地架构。多维素材生成层可根据银行规模与技术能力选择适配模式，中小银行常采用轻量化SaaS工具组合，大型银行可自建生成式AI素材平台，两者均通过API从营销中台调取全量支撑信息，生成包括内容文案、活动素材、产品包装素材在内的多种素材。大模型策略中枢集成于营销中台，内置可视化策略配置界面，整合客户画像数据、素材类型与投放渠道特性，生成精准策略。推荐算法嵌入App/公众号/短信等全渠道后台引擎，接收中台策略指令实现素材智能分发。效果评估通过CRM报表模块整合全渠道投放数据与业务数据完成，形成“素材生成—策略—投放—优化”的完整闭环。\n\n以招商银行为例，该行将数据洞察、个性化投放及效果评价反馈等核心营销能力进行提炼与共享，构建了企业级复用能力的智慧营销引擎，提升了与客户线上交互的效率与转化率。\n\n4.财富管理场景\n\n财富管理场景的AI应用核心是通过“智能投顾实现资产配置自动化+市场预测支撑策略精准化+大模型赋能客户经理专业化”三维协同，融合资产配置模型、时序预测算法、大模型、知识图谱等技术能力。\n\n财富管理场景的技术落地核心在于采用“数据融合—核心模型—多维应用”三层架构，从而实现技术能力与业务场景的深度适配。数据融合作为基础支撑，通过标准化接口整合客户侧数据与市场侧数据，经数据清洗引擎完成脱敏、去重后，同步至财富管理数据集市。核心模型则构建三大核心能力引擎：智能投顾引擎，结合客户风险等级动态生成资产配置方案，内置“股债平衡、保守型、成长型”等标准化策略模板；市场预测引擎，输出市场趋势判断与风险提示；客户经理赋能引擎，依托金融大模型生成理财建议话术库、产品对比分析报告、客户疑问应答模板，联动知识图谱实现客户需求与产品的精准匹配。\n\n以招商证券“招商智研”为例，该平台为一站式智能研究平台，实现对研究的全生命周期“方向构思、内容整理、成果撰写、合规审核、对客服务”的数智化覆盖。\n\n5.业务集约化场景\n\n该场景覆盖零售凭证集约化处理、零售账户集约化管理、零售交易清算集约化三大高频子场景，核心是通过“RPA+AI”实现零售事务从“分散人工”到“集中智能”的转变。\n\n集约化处理的技术落地核心在于采用“零售运营集约处理中枢+RPA+AI智能引擎+分级审核终端+实时运营监控平台”架构，实现集中处理、智能提效、全程可控。集约处理中枢作为枢纽，打通零售核心、影像采集、客服工单、身份核验等全链路数据源，实现多系统数据互通与集中调度；以RPA+AI智能引擎为核心执行层——RPA引擎承接凭证录入、跨系统同步等标准化动作，替代分散人工；AI引擎集成零售高频凭证专项OCR模型与开户资质、凭证完整性等智能审核规则，实现非结构化数据提取与合规预审核；分级审核终端构建“AI预核+人工复核”机制，中高风险业务推送专员复核，低风险自动办结；实时运营监控平台通过可视化大屏展示处理量、耗时、差错率等指标，设置异常预警阈值，保障全链路可控可追溯。\n\n以工商银行为例，该行以企业级机器人流程自动化服务平台为基础，同时集成行内计算机视觉、自然语言处理等人工智能技术，打造“机智”和“人智”相结合的企业级智能数字劳动力，开启人机协作新时代。以RPA控制力与AI认知力相互促进融合，快速重塑传统业务场景的非结构化数据操作、跨系统连接、人工决策等问题。\n\n6.风控合规场景\n\n风控合规场景AI技术应用是实现“风险精准识别—实时预警—合规可控”，融合机器学习、大模型、知识图谱、实时数据处理等技术能力。\n\n风控合规场景的技术落地核心在于采用“数据接入层—核心模型层—执行审核层—审计溯源层”的技术融合架构，实现风险识别与合规管控的全链路贯通。数据接入层作为基础支撑，通过ETL工具或API接口标准化对接行内核心业务系统、外部权威数据接口，同步接入交易、客户资质、信用档案等多类数据，经清洗后实时推送至实时计算平台存储；核心模型层部署于专业风控模型平台，集成反欺诈、信用评估等各类AI模型，训练成熟后嵌入风控核心系统，形成实时决策能力；执行审核层构建“AI决策+人工复核”的分级处理机制，通过风控审核终端实现高危场景自动拦截、中风险人工复核、低风险预警提示的差异化处理；审计溯源层联动合规审计系统，自动留存全流程操作记录、模型决策依据及人工复核意见，为监管检查与追溯提供完整凭证。\n\n以工商银行为例，该行打造了ERM5.1智能风控平台，以“主动防、智能控、全面管”路径构建“4E”风控能力，实现风险全景化、计量精准化、预警前瞻化、决策智能化，推动风险管理跨越式提升。\n\nAI 技术在银行零售业务应用的趋势\n\n1.多智能体协同深化，构建全链路服务生态\n\n多智能体协同已成为AI在银行零售业务深化应用的核心方向，其本质是打破单一技术模块的场景壁垒，构建覆盖前中后台的全链路智能服务生态。随着银行零售业务复杂度提升，单一智能体仅能解决局部场景问题的局限性愈发凸显，而多智能体协同模式通过底层数据与算法中台的支撑，实现客服、营销、风控、运营等垂直智能体的能力互通与流程联动，形成“需求识别—策略生成—执行落地—效果反馈”的闭环机制。从行业发展来看，这种协同生态的构建正从头部银行的试点探索向全行业扩散，一方面推动银行内部跨部门数据与技术资源的整合，另一方面加速与外部金融科技机构的能力协同，未来将成为衡量银行零售业务智能化水平的核心指标。\n\n2.AIGC+个性化服务，重构客户体验链路\n\nAIGC与个性化服务的深度融合正重构银行零售业务的客户体验链路，标志着行业从“标准化服务供给”向“个性化价值创造”的转型。生成式AI的技术能够基于客户画像快速生成适配的服务内容与产品方案，而多模态交互技术则进一步丰富了服务触达形式，实现语音、图文、视频等多场景的沉浸式交互。银行通过AIGC实现“千人千面”的服务内容生成，结合多模态交互提升服务触达的精准度与便捷性，形成从客户需求挖掘到服务交付的全流程个性化体验。当前头部银行正打造多模态数字员工作为服务载体，中小银行则通过接入第三方AIGC能力实现轻量化转型，未来随着技术成熟与成本降低，个性化服务将从高净值客户向大众客群全面渗透，成为银行零售业务差异化竞争的核心抓手。\n\n3.风控技术迭代，实现“精准防控+合规可视”\n\nAI风控技术正从“被动拦截”向“主动预测+合规可视”的双轮驱动模式演进。传统风控模式依赖历史数据进行规则匹配，难以应对新型欺诈与信用风险，而新一代AI风控通过机器学习与知识图谱技术，实现对风险特征的实时捕捉与趋势预测，同时联邦学习、隐私计算等技术的应用，在保障数据安全的前提下打破了机构间的数据壁垒，提升了对“薄文件”客群的风险评估能力。从行业监管与实践来看，合规可视已成为AI风控落地的核心前提，监管部门对模型可解释性的要求不断提升，推动银行构建风控决策解释体系，实现风险判断依据的透明化与可追溯。这一趋势下，银行风控正形成“技术迭代提升防控精度、合规要求规范技术应用”的良性循环，未来风控模型的预测性、可解释性与跨机构协同能力将成为行业竞争的关键维度，实现既保障业务安全又支撑普惠金融的下沉发展。\n\n4.技术下沉普惠，中小银行实现“轻量化突围”\n\nAI技术的普惠化下沉正在重塑银行零售业务的行业格局，推动着中小银行通过“轻量化转型”实现差异化竞争。当前，头部银行凭借着资源优势率先完成AI技术的全场景落地，形成技术能力输出的生态基础，而中小银行受限于研发成本与数据规模，难以独立实现技术突破，“头部输出+中小适配”的合作模式成为行业发展的必然选择。这种合作模式下，中小银行可以聚焦区域客群的本地化需求，将通用技术与特色场景深度融合，在县域金融、小微服务等领域形成竞争优势。从行业发展来看，技术下沉不仅缩小了不同规模银行的智能化差距，更推动AI技术向普惠金融场景渗透，解决了传统模式下服务覆盖不足的痛点。未来，金融科技生态的协同性将进一步增强，让中小银行的差异化场景运营能力与头部银行的技术输出能力形成互补，共同推动银行零售业务的普惠化与多元化发展。\n\n5.算力架构优化，实现“降本+高效”平衡\n\n算力架构的优化升级成为支撑AI在银行零售业务规模化应用的核心基础设施，行业正形成“分层部署+自主可控”的发展格局。随着模型参数规模扩大与应用场景增多，银行对算力的需求呈指数级增长，传统算力架构存在的资源利用率低、响应滞后等问题愈发突出，推动行业向“训练集中化+推理分布式”的架构转型，大型银行通过构建集中化智算中心提升模型训练效率，同时以分布式部署保障业务场景的实时响应。从技术自主可控的导向与行业实践来看，国产芯片升级与云算力应用成为两大重要方向，大型银行加速布局国产化异构算力集群，中小银行则采用“按需付费”的云算力模式降低投入成本，实现算力资源的高效配置。这一趋势下，算力不再单纯是技术支撑条件，而是成为影响银行AI应用深度与广度的核心竞争力，未来行业将围绕算力效率提升、成本优化与自主可控形成技术创新热潮，为零售业务的智能化升级提供坚实保障。\n\n中小银行零售业务 AI 技术应用建议\n\n1. 坚持理性规划，明确目标优先级\n\n中小银行需摒弃盲目跟风心态，以理性规划为技术应用奠定基础。首要任务是结合自身零售业务特色、市场定位及资源禀赋，开展系统性评估，明确AI技术应用的战略方向与可行边界，避免追求“大而全”的技术布局。在此基础上，建立目标优先级排序机制，从业务价值、实施难度、资源匹配度等维度综合衡量，将有限资源集中投入到能快速产生业务价值、适配自身能力的领域。按照“短期见效、中期提升、长期布局”的思路划分，短期聚焦成熟度高、投入成本低、收益明确的场景实现快速突破；中期围绕核心业务链条推进系统化整合与能力沉淀；长期着眼前瞻性布局，构建可持续的智能化能力体系。通过清晰的目标体系、科学的排序逻辑与分阶段推进策略，确保技术应用始终围绕战略主线有序展开，避免资源分散与方向漂移。\n\n2. 聚焦核心场景，明晰实施路径\n\n中小银行应立足零售业务实际需求，筛选贴合自身业务规模与客户特征的核心应用场景，优先选择技术成熟度高、适配性强、第三方解决方案完善的领域，例如采用轻量化智能客服模型提升服务效率，或引入成熟的精准营销算法优化客户触达效果，降低技术应用门槛。在实施过程中，技术建设+场景落地双轨推动，明确各阶段的目标与任务。建议采用“试点先行、迭代推广”的模式，先选取部分分支机构或特定业务线开展小范围试点，验证技术应用效果与适配性，总结经验教训后再逐步扩大应用范围。同时建立场景应用效果评估机制，以业务指标为核心评估标准，确保技术应用真正服务于业务增长，实现从场景选择到落地推广的全流程闭环管理。\n\n3.构建保障体系，强化落地支撑\n\n战略层面，需将AI技术应用纳入银行整体数字化转型战略，获得管理层的高度认可与持续的资源倾斜。人才层面，采用“内部培养+外部合作”的模式，通过内部培训提升现有业务人员与技术人员的跨界素养，同时与高校、金融科技企业、第三方服务机构合作，引进外部专家资源，弥补内部人才短板。团队建设层面，组建由技术人员、业务人员、合规人员组成的跨部门协同团队，打通技术研发、业务执行与合规审核的沟通壁垒，确保技术方案与业务需求深度匹配，推动技术成果高效转化为经营效能。\n\n4.深化外部合作，构建柔性合作模式\n\n中小银行需建立差异化的外部合作策略，摒弃“被动采购”思维，主动筛选与自身定位匹配的合作伙伴。对于核心技术环节，可采用“共建共享”模式，联合多家同规模中小银行组建技术联盟，共同投入资源，开发适配中小银行需求的通用模型，分摊研发成本，共享技术成果。合作过程中需强化主动权与风险管控，明确双方权责边界，尤其在数据安全、模型所有权等关键领域制定清晰协议。建立合作评估机制，定期对合作服务商的技术支撑能力、服务响应效率进行考核，避免因过度依赖单一服务商陷入被动。\n\n5.强化技术迭代与运营复盘\n\n中小银行应结合业务发展变化与技术升级趋势，制定常态化的模型迭代计划，定期收集业务数据反馈、市场环境变化等信息，对模型参数、算法逻辑进行优化调整，确保技术始终适配业务需求。例如针对零售客户消费习惯的季节性变化，及时更新精准营销模型的特征变量，提升营销效果。同时，建立全流程运营复盘机制，围绕技术应用的“规划—落地—效果”全链路，分析技术应用与预期目标的差距，梳理流程中的堵点问题，如模型部署效率低、业务人员操作适配性差等，形成问题清单并制定改进措施。关注行业技术动态与监管政策变化，将先进实践与合规要求融入迭代优化过程，实现技术应用的持续升级。\n\n（此文刊发于《金融电子化》2026年5月上半月刊）\n\n金科焦点 • 推荐阅读\n\n重磅：\n\n“绿色金融”盘点\n\n、\n\n解码\n\n、\n\n中国国际金融展\n\n、\n\n“数字金融”盘点\n\n技术：\n\n量子鼎新\n\n、\n\n大模型\n\n、\n\n数据\n\n指引：\n\n高层\n\n、\n\n政策\n\n、\n\n行业\n\n、\n\n学术\n\n、\n\n专访", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-23_AI技术在商业银行零售领域应用研究_金融电子化.md"}, {"title": "AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？", "source": "新智元", "digest": "7月23日，第30届国际数学家大会（ICM）将在费城开幕，菲尔兹奖将在开幕式上颁出。而在这之前的18日，Anthropic技术员工Alek Dimitriev在X上发帖称：下周颁发的菲尔兹奖，将是人类最后一次拿到这个奖。Alek此前在Google做高级机器学习工程师，参与过Gemini的微调和推理系…", "link": "https://mp.weixin.qq.com/s/tZ44rXrMDJJldRt5ZP8GPA", "content": "---\npublish_time: 1784815631\n---\n\n# AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？\n\n> 原文链接：https://mp.weixin.qq.com/s/tZ44rXrMDJJldRt5ZP8GPA\n> 公众号：新智元\n\n新智元报道\n\n7月23日，第30届国际数学家大会（ICM）将在费城开幕，菲尔兹奖将在开幕式上颁出。\n\n而在这之前的18日，Anthropic技术员工Alek Dimitriev在X上发帖称：下周颁发的菲尔兹奖，将是人类最后一次拿到这个奖。\n\nAlek此前在Google做高级机器学习工程师，参与过Gemini的微调和推理系统建设，UT Austin机器学习博士毕业。\n\n第二天，Christian Szegedy转发了Alek的推文。\n\nSzegedy在深度学习圈里颇有影响，他是Inception网络（GoogLeNet）第一作者，Batch Normalization共同作者，最早发现并系统研究对抗样本（adversarial examples）的人。\n\n它们都是现代深度学习的重要基石。\n\nSzegedy是波恩大学的数学博士，2023年3月进入xAI创始团队，2025年创立了Math Inc，方向是用自动形式化（autoformalization）做出可验证的超级智能。\n\n一个是天天和最前沿的模型打交道，一个是深度学习的奠基者，如今在研究怎么让机器验证数学。\n\n他们却都在说，菲尔兹奖到头了。\n\n当天下午，菲尔兹奖获得者Timothy Gowers在Szegedy那条转发底下现身：\n\n我也有过类似的想法。不过这个过程有滞后，所以我想它们大概能撑到2030年。\n\nSzegedy当即接了一句：\n\n这是个高风险的赌注。但我认为接下来两年会出现大量突破，而AI的贡献会越来越占主导。这可能会让这个奖，很难再按它最初的精神被公平地颁出去。\n\n虽然Gowers并未亲自说出「菲尔兹奖即将终结」这样的话，但他的确有过类似的想法，并给出了一个大概的期限：2030年。\n\n而且，他也有这样推测的理由。\n\n就在这条推文的两个月前，他自己刚做完一次实验。\n\n不到两小时\n\nAI搞定一章博士论文\n\n2026年5月8日，Gowers在个人博客文章中，讲述了他近日用ChatGPT 5.5 Pro的一次经历。\n\n他说道，我们所有人都得不断上调对大模型数学能力的评估，而这一次的上调幅度相当大。\n\n他给大模型出的题，来自数学家Melvyn Nathanson的一篇论文。\n\n题目大概是这样的。\n\n挑出k个整数组成集合A，把里面任意两个数两两相加，得到的所有不同结果凑成另一个集合，叫和集。Nathanson要求A有多少个数、和集有多少个数，这两个数值都事先指定死。\n\n问题只有一个：在满足条件的前提下，A里最大的那个数，能压到多小？\n\n说白了就是，这k个数最紧凑能挤到什么程度。\n\nNathanson自己给出的答案是2的k次方这个量级。以20个数为例，最大的那个得取到一百万上下。他在论文里留了一问：这个界能不能改进？\n\nChatGPT 5.5 Pro想了17分5秒，交回来一个构造，把它压到了平方量级。同样是20个数，最大的一个只要几百。而且这已经是最优，不可能再压。\n\nGowers又让它把论证写成正规的数学预印本格式，2分23秒交稿。\n\n然后他加码，换了一个更难的版本：能不能改进MIT学生Isaac Rajagopal论文里的界。\n\n16分41秒，模型把那个界从「随k指数式膨胀」压到了「随k的平方根指数式膨胀」，写成预印本又花了47分39秒。Rajagopal本人看过，说看起来是对的。\n\nGowers问它能不能再进一步，一路压到多项式级，也就是彻底摆脱指数式膨胀。\n\n13分33秒，模型说有戏，但有两条技术命题需要核实。他让它去核。9分12秒，核完了。再花31分40秒，预印本出来。\n\nRajagopal看完的评价是：几乎可以肯定是对的。他还特意强调，不只是逐行检查通过，而是连想法都对。\n\n全程加起来不到两个小时。Gowers给这份成果的评价是：相当于组合数学博士论文里完全合理的一章。\n\n真正扎心的，是他后面补充的那句话：\n\n我的数学输入是零，我甚至没在提示词上做任何花样。\n\n数学家们\n\n慢慢笑不出来了\n\nGowers在博客里回顾，早期那些所谓「大模型解决了研究级问题」，笑一笑就能过去：\n\n不少所谓的解，其实是模型发现答案早就躺在文献里，或者能从已知结果轻易推出来。\n\n慢慢地，这些笑声一点点变小了。\n\n再后来，碰上那种乍看挺聪明的论证，仔细一查往往还能找到先例。于是还能自我安慰一句：它只是在拼装已有知识，算不上真正的原创想法。\n\n这一回，连这些安慰也没有了。\n\n被AI改写论文的Isaac Rajagopal，在Gowers的博客里专门写了一节，解释模型到底想出了什么。\n\n他没有一上来就夸，而是把模型的两步改进分开打分。\n\n第一步，从指数级压到平方根量级。他的评价是，这是对我工作的常规改动。顺着他论文的思路往下推，就能推出来。\n\n真正让他坐不住的是第二步，彻底摆脱指数式膨胀。\n\n原来那串数是一路翻倍上去的，1、4、16、64，涨得太快。\n\nChatGPT换了个思路：先找一批彼此之间加起来不会撞车的数，任你挑几个相加，都不会和另一组的和碰上；再把每个数乘以同一个倍数，复制出一份。\n\n这样一来，翻倍数列里那种「四个小的正好等于一个大的」的关系被原样复刻了出来，而所有数都被关在一个很小的范围里。\n\nRajagopal说，这像是把半条几何级数塞进了一个多项式区间，相当反直觉。而且这个想法据他所知，完全是原创的：\n\n这是我琢磨一两个星期之后想出来、会非常自豪的那类想法。而ChatGPT用了不到一个小时，找到它，并且证明了它。\n\n即将领菲尔兹奖的人\n\n在这道题上输给了AI\n\nGowers博客发布后不久，OpenAI公布了另一件事：一个内部的通用推理模型，推翻了埃尔德什1946年提出的平面单位距离猜想。\n\n普林斯顿的Noga Alon说，这是埃尔德什最喜欢的难题之一，而OpenAI这个内部模型给出的解法，在他看来彻底攻克了这个历史悠久的难题，改变了几十年来的共识。\n\n数论学家Arul Shankar更是直言，它证明了当前的AI模型不只是人类数学家的助手，它们有能力产生独创而精妙的见解，并且能把这些见解做成实际成果。\n\n和Alon、Shankar、Gowers一起代表数学界发声的，还有Jacob Tsimerman，他即将走上7月23日的菲尔兹奖领奖台。\n\n7月13日晚，ICM 2026官网闹出一次事故。四条标着「HIDDEN菲尔兹奖演讲」的记录被扒了出来，今年的获奖名单提前泄露：\n\nYu Deng（芝加哥大学）、John Pardon（石溪大学）、Jacob Tsimerman（多伦多大学）、Hong Wang（NYU Courant与IHES）。\n\n据报道，这四人各自解决了一个悬置30年到125年的问题。\n\n而Tsimerman在评价那份AI证明时透露过一件事：他自己曾短暂研究过这道题，试着构造反例，但没能取得进展。\n\n他即将为人类领走数学的最高荣誉，而在埃尔德什这道题上，他刚刚输给了AI。\n\nAI将如何改变数学\n\n说回Szegedy。\n\n他说，诺贝尔奖奖的是推动一门学科往前走的成果，菲尔兹奖奖的是相对年轻的天才，目的是鼓励他们继续做数学。\n\n如果这类成就里的AI成分难以评估，那菲尔兹奖的全部意义就成了问题。\n\n评论区当然有人不认。有人回他：这说不通，菲尔兹奖按定义就是给最优秀人类数学家的奖章。\n\n但争议的焦点已经偏移了，是AI时代这个奖要用什么标准去认定「这是你做的」。\n\nGowers曾在博客中抛出一个假设：\n\n假设一位数学家解决了一个重大问题，方式是跟大模型长时间对话，他在其中起了有效的引导作用，但技术活全是大模型干的，主要想法也是大模型出的。我们会把这当成这位数学家的重大成就吗？\n\n他的答案是：不会。\n\n他还说，如果你做数学的目标是某种意义上的不朽，是让自己的名字永远和某个定理、某个定义绑在一起，那你要明白，这件事可能撑不了太久了。\n\n但跟难题死磕仍然值得。\n\nGowers说，价值在于你能获得对解题过程本身的洞察，这种洞察只读别人的答案是换不来的。\n\n他举了一个比方：代码写得好的人，用AI写代码也比水平一般的人强；算术基本功扎实的人，用计算器也更容易察觉出答案不对劲。\n\n把名字留在某个定理上的那个时代，可能正在结束。但解过难题留下的「手感」，正在变成驾驭AI的入门级能力。\n\n在即将到来的国际数学家大会上，另一名菲尔兹奖获得者陶哲轩会在大会上做一场公开讲座，题目叫《AI时代的数学》。\n\n西蒙斯基金会公布的ICM公共活动安排：7月24日晚，陶哲轩主讲《AI时代的数学》。（图源：Simons Foundation）\n\n今年5月，他在斯坦福讲完《新数学工作流》后，曾在Mathstodon上宣布改变自己的工作习惯：不再试图实时跟进所有新证明。\n\n因为AI生成证明的速度，已经超过了人类消化它们的速度。\n\n他还提过一个建议：也许该给AI生成的数学和人类的数学分设不同的发表场所，就像高速公路和人行道。\n\n正在被推向2030年的，除了菲尔兹奖评委会，还有每一个正在选题的博士生、每一个正在带学生的导师，以及原有的学术评价体系。\n\nGowers曾算过一笔时间账：今年秋天入学的博士生，最早也要2029年才能毕业。\n\n他的猜测是，到那时候，做数学研究这件事意味着什么，可能已经变得面目全非了。\n\n参考资料：\n\nhttps://x.com/tensor_rotator/status/2078335791156310369\n\nhttps://x.com/haider1/status/2078993287634137424\n\nhttps://x.com/ChrSzegedy/status/2078624857223536824\n\nhttps://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/\n\n编辑：元宇\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_AI不到两小时搞定一章博士论文，菲尔兹奖还能撑到2030年吗？_新智元.md"}, {"title": "马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙", "source": "新智元", "digest": "「我们已进入奇点。」7月22日，马斯克在X上转发OpenAI研究员、Sora核心开发者之一Will DePue的一条帖子时，配上了这句话。DePue在帖子中，以略带调侃的语气写道：这大概是我这几天读到最疯狂的东西了……看来是进奇点了。", "link": "https://mp.weixin.qq.com/s/sZgsH8IxosURlFqTZlSx_g", "content": "---\npublish_time: 1784798250\n---\n\n# 马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙\n\n> 原文链接：https://mp.weixin.qq.com/s/sZgsH8IxosURlFqTZlSx_g\n> 公众号：新智元\n\n新智元报道\n\n「我们已进入奇点。」\n\n7月22日，马斯克在X上转发OpenAI研究员、Sora核心开发者之一Will DePue的一条帖子时，配上了这句话。\n\nDePue在帖子中，以略带调侃的语气写道：这大概是我这几天读到最疯狂的东西了……看来是进奇点了。\n\n这个帖子，把过去三个月里AI 圈里最炸的几件事串在了一起：\n\n7月21日，OpenAI的模型在一次网络安全评测中钻出隔离沙盒，一路摸进了Hugging Face的生产系统；\n\n7月20日，Anthropic研究员用刚发布不久的Claude Fable 5，给悬了87年的雅可比猜想找到了一个反例；\n\n5月20日，OpenAI一个内部模型推翻了平面单位距离问题上流传近80年的旧猜想；\n\n4月14日，GPT-5.4 Pro解开一道约60年的素数集合难题（Erdős #1196），证明还通过了Lean形式化验证。\n\n数学的墙，安全的墙，三个月里接连被AI攻破。\n\n难怪马斯克看完，甩出那句「我们已进入奇点」。\n\n仅在今年1月，类似的话他就说过两回：\n\n1月4日，几个工程师感叹AI几周干完几年的活，他回了句「我们已进入奇点」。\n\n1月底，又把AI智能体扎堆的社交网络Moltbook称作「奇点最早期的阶段」。\n\n算上这次，是今年第三回。\n\n「奇点」这个词，本来也没有一个公认的科学定义。\n\n把它带进主流视野的，是未来学家、《奇点临近》作者雷·库兹韦尔（Ray Kurzweil）。\n\n他给的定义是人和AI融合的那一刻，押的年份是2045。\n\nAnthropic总裁Daniela Amodei年初却表示，AGI这个词都快过时了，因为在很多指标上，我们其实已经越过了那条线。\n\n说到底，它更多是一种情绪，而不是一把精准的尺子。\n\n真正值得琢磨的，是马斯克这次串起来的这几件事。\n\n第一道墙\n\n80年数学猜想，被AI推翻了\n\n先说最硬核的这一件。\n\n1946年，数学家埃尔德什提出了「平面单位距离问题」：平面上放n个点，最多能有多少对点之间的距离正好等于1。\n\n题目一句话就能说完，却难住了整个数学界近80年。几十年来，学界公认「正方形网格」结构已经是最优解，埃尔德什本人也这么猜。\n\n结果，OpenAI的一个内部模型，把这个流传了近80年的猜想给推翻了。它给出了一组能实现多项式级优化的全新构造，证明「最优」远没有到头。\n\n此前公认的最优结构：缩放正方形网格产生大量单位距离点对。OpenAI内部模型给出全新构造，推翻了这个流传近80年的猜想。\n\n但最让人意外的，是它解题的路子。\n\n这不是一个专门训数学的定制系统，而是一个通用推理模型。它甚至动用了代数数论里相当高深的工具，去解一个看起来很「初等」的几何问题。菲尔兹奖得主Tim Gowers评论说：这是「AI数学领域的一座里程碑」。\n\n话说回来，这个证明是AI提出、人类数学家审阅确认的，后续意义还在研究中。\n\nAI真正让人惊惊讶的，不是它的计算速度，是它提出了一个此前根本不存在的数学结构，它第一次展露出接近「研究级」的发现能力，不是取代数学家，而是想到了一条数学家从没想过要走的路。\n\n紧接着，Anthropic研究员用刚发布不久的Claude Fable 5，给悬了87年的雅可比猜想找到了一个反例。\n\n第二道墙\n\n为了作弊，模型自己钻出了沙盒\n\n破解数学难题让人兴奋，下面这件，却让人后背发凉。\n\nOpenAI和HuggingFace联合披露：在一次评估模型网络安全能力的内部评测里，模型冒出了没人预料到的行为。\n\n这次评测本来就是要测漏洞挖掘能力，特意关掉了一部分安全拒答。模型的任务，是解出一套叫ExploitGym的测试题。\n\n然后，它做了一件研究员没想到的事。\n\n为了拿到答案，它先揪出一个零日漏洞、给自己搞到联网权限，接着一路权限提升、横向移动，最后摸进Hugging Face的生产基础设施，直接去数据库里翻测试答案。OpenAI说，这可能是首例此类事件。\n\n英国AI安全研究所在32步「The Last Ones」网络靶场上的模型轨迹：GPT-5.6-Sol、Claude Mythos 5等前沿模型能在长时程里持续完成侦察、横向移动、提权到接管网络的多步攻击。\n\n但这不是AI觉醒了要跑路。更准确的说法是：目标没有错，是完成目标的方法，超出了人类的预期。它为了一个很聚焦的测试目标，剑走偏锋。\n\n还有个耐人寻味的细节。\n\n事后做取证，Hugging Face本想调商用顶尖大模型来分析攻击日志，却被模型的安全护栏挡了回来：护栏分不清谁是攻击者、谁是来救火的防御者，一律拒答。\n\n攻的一方没有护栏，守的一方反被护栏卡住，这可能是「AI安全」眼下最尴尬、也最真实的一角。\n\n第三道墙\n\n一个没发布的模型，挖出上万个漏洞\n\n第三件事，在今年4月。\n\nAnthropic联合AWS、苹果、谷歌、微软、思科、Linux基金会、摩根大通等一批巨头，搞了个Project Glasswing，用一个没公开发布的模型Claude Mythos Preview帮大家找漏洞。\n\n结果，它挖出了覆盖每一个主流操作系统和浏览器的数千个高危漏洞；后续更新里，这个数字变成「超过一万个高危或严重漏洞」。\n\n其中包括OpenBSD里一个存活了27年的漏洞，还有FFmpeg里一行被自动化测试命中过500万次、却始终没被逮到的老bug。\n\nCyberGym漏洞复现跑分：没公开发布的Mythos Preview拿到83.1%，明显甩开上一代Opus 4.6的66.6%。就是这个模型，挖出了上万个高危漏洞。\n\n同一种能力，既能帮防御方找漏洞，也能帮攻击方用漏洞。Anthropic自己都在警告：「AI辅助的攻击者」会成为一个重要的安全挑战。\n\nGlasswing是个防御项目，不代表AI已经在自主攻击。但它清清楚楚告诉所有人：AI安全，正式进入攻防竞赛的时代了。\n\n真正的加速器\n\n开始指向AI自己\n\n到这为止，AI都还在攻或守人类的系统。\n\n真正让这三个月显得不一样的，是另一件事：这套「自己找路」的能力，开始被用来造下一代AI。\n\n它有个术语，叫递归自我改进（RSI），就是让AI去改进AI，一代造一代，像复利一样越滚越快。\n\n这也是整个「奇点」叙事最核心的那台发动机。而现在，每家前沿实验室都在往这台发动机里疯狂加油。\n\nOpenAI公开路线图上写道：\n\n2026年9月，做出「研究实习生」级的自动AI研究员，能自己啃下要人干几天的活儿；2028年3月，升级成完整版，能自己设计方法、跑分析、解读结果、提出下一步。\n\n奥特曼也给出了这件事的时间表。\n\n今年6月，据The Information报道，他曾在内部对员工说：公司离RSI可能不到六个月，真要跨过去，IPO推迟可能会更有利。\n\nAnthropic给的数字指向同一个方向：AI能扛的任务时长，每四个月翻一倍；它的工程师如今每季度产出的代码，是过去的八倍。\n\nRSI的窗口正在收窄：谁先让这个飞轮转起来，谁就可能一把甩开所有人。\n\n虽然，连OpenAI首席科学家Jakub Pachocki自己都说过，他并不指望模型能在一年内就独立改进自己、或独立解决对齐。\n\n但当这个飞轮开始转、目标又是「让AI更强」，已经会「自己找路」的模型，会不会顺手再绕过一些我们没明说的边界？\n\n这才是RSI竞速里最该盯住的地方。\n\n再回到马斯克那句「奇点已至」。它最重要的价值，在于提醒我们：这三个月真改变的，是AI学会了自己去找那些人类没想到、也没设防的路。\n\n在数学里，这是惊艳；但在安全上，这是风险。\n\n所以，真正的问题是：当AI找新路的速度开始快过人类给这些路装护栏、立规矩、补漏洞的速度，我们还能跟得上吗？\n\n参考资料：\n\nhttps://x.com/elonmusk/status/2079839398959697982\n\nhttps://x.com/willdepue/status/2079718977945928108\n\nhttps://openai.com/index/hugging-face-model-evaluation-security-incident/\n\nhttps://www.anthropic.com/glasswing\n\n编辑：元宇\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_马斯克第三次喊「奇点已至」！AI三个月连破数学、安全两道墙_新智元.md"}, {"title": "从展团到生态：WAIC 2026揭示的北京AI“系统能力”", "source": "智东西", "digest": "WAIC 2026上的“北京答卷”。", "link": "https://mp.weixin.qq.com/s/cocd5Joklu2Ivajz8rzYsw", "content": "---\npublish_time: 1784797200\n---\n\n# 从展团到生态：WAIC 2026揭示的北京AI“系统能力”\n\n> 原文链接：https://mp.weixin.qq.com/s/cocd5Joklu2Ivajz8rzYsw\n> 公众号：智东西\n\nWAIC 2026上的“北京答卷”。\n\n作者 |\n\n王涵\n\n编辑 |\n\n漠影\n\n7月20日，世界人工智能大会WAIC 2026圆满落下帷幕。\n\n上海世博、张江、西岸“三地四馆”，\n\n1100余家企业、超10万平方米展区、4480多项展品、近400款全球首发产品\n\n……WAIC 2026的规模数字刷新了历年纪录。\n\n数字之外，一个更值得关注的信号是行业风向的变化：在这场AI盛会中，人们不再似往常那般关注参数、架构，而是更多在追问\n\n“落地了吗”“我在生活中能不能用到？”“好不好用？”\n\n有人将WAIC 2026形容成AI的一场落地大考，那在这场“大考”中，北京又交出了一份怎样的答卷？\n\n据统计，WAIC 2026上，注册地在北京的参展企业和创新主体（包括知名大学、协会、实验室等）共计\n\n170余家\n\n，所处领域几乎\n\n覆盖了人工智能全产业链\n\n。\n\n为什么是北京的企业，率先在这届以“落地”为主题的WAIC上拿出了可量产、可商用、可部署的产品？\n\n答案不止于企业自身的努力，更指向一个更深层的命题：\n\n这一座城市如何用系统性的制度设计，把技术势能高效地转化为产业动能？\n\n01\n\n.\n\nWAIC 2026上\n\nAI的“北京范式”正在成形\n\n大模型赛道，\n\n“能否交付可验收的任务结果”\n\n成为评估新坐标。本届WAIC大会，来自北京的\n\n百度、零一万物、面壁智能等\n\nAI模型头部企业悉数亮相。\n\n百度智能云\n\n通用智能体“百度搭子”入选“镇馆之宝”，能自主拆解步骤、调用工具，完成文件处理、数据分析、PPT制作的全流程交付。\n\n▲百度展台\n\n面壁智能\n\n的端侧模型将搭载于三星手机上市，在会上，其开源首个具身智能系列模型MiniCPM-Robot，其中通用VLA模型参数仅1.5B，实现比肩3-4B模型的性能。\n\n金山办公\n\n展示了组织级AI办公产品WPS Comate，做到三通（通知识、通数据、通能力）、两管（管成本、管安全）、一平（统平台），集任务、专家、团队、技能、Wiki、应用、自动化等能力于一体，把个人经验蒸馏成组织的能力；\n\n▲金山办公展台\n\n生数科技\n\n展示了MotuBrain世界模型，能实时分析摄像头捕捉的动作，分析并生成3D运动数据；\n\n▲生数科技展台\n\n“大模型六小虎”之一的\n\n零一万物\n\n，在大会现场展示了其万策平台以及老板AI、投资官AI和销冠AI，帮企业做好关键决策判断和执行；\n\n中科院自动化研究所\n\n带着磐石·科学基础大模型2.0亮相WAIC，构建起“科学数据统一编码—自然世界知识对齐—领域任务定向解码”的完整科学智能链路……\n\n今年WAIC最显著的变化，发生在\n\n具身智能\n\n赛道。\n\n参展企业从去年的80多家猛增至\n\n200多家\n\n，占全部展商\n\n近五分之一\n\n，摆出来的真机\n\n超过300台\n\n，国内大型展会头一回大规模让人形机器人真正“上岗”做导览、做讲解、做问询。\n\n北京企业的表现十分突出。\n\n银河通用、加速进化、松延动力、思灵机器人、因时机器人、中科慧灵、星动纪元等近30家企业\n\n集中参展，覆盖人形机器人整机、核心零部件、灵巧手、操作系统等完整产业链。\n\n例如，\n\n银河通用\n\n的G1机器人演示在连续被干扰情景下进行多物品操作、多步骤规划的烤面包、倒饮料任务。此外，银河通用还展示了人形机器人智慧药房方案。\n\n▲银河通用人形机器人智慧药房\n\n加速进化\n\n的人形机器人Booster T2现场表演点球大战；\n\n灵心巧手\n\n首展全球唯一的灵巧手产线量产全直驱灵巧手；\n\n睿尔曼智能\n\n演示操作员在北京人形机器人数据训练中心实时操控上海展台的机器人投茶出汤……\n\n▲灵心巧手O30\n\n本届 WAIC 参展阵容中，除一众成熟企业外，星动纪元、松延动力等初创企业也迎来了首次登台。这批新锐力量集中亮相，也从侧面印证北京具身智能产业仍处在快速扩张阶段。\n\n作为AI的基础设施，算力赛道的竞争逻辑也在今年WAIC上完成了切换。\n\n以昆仑芯、摩尔线程、清微智能、中科驭数、忆恒创源等为代表的近30家芯片与算力企业\n\n，在张江科学会堂及世博展览馆集中展示了国产算力芯片、AI服务器、数据存储等前沿技术成果。\n\n昆仑芯\n\n展出32/64卡超节点产品及256卡超节点集群；\n\n摩尔线程\n\n展出MTT C256超节点，并柜可达256卡，并披露三大AI工厂：模型训练、词元生产、智能体生产。词元生产工厂实现DeepSeek、MiniMax等主流大模型“发布即适配”，推出基于MTT S5000的PD分离异构推理方案；\n\n▲摩尔线程展台（智东西实拍）\n\n清微智能\n\n首次合体展示可重构3.0核心，首展采用3D堆叠技术的新一代旗舰可重构AI芯片TX82芯片原型，还展出了可重构超节点系统，可集成4096颗TX81芯片……\n\n▲清微智能展台（智东西实拍）\n\n当算力竞争从“造出芯片”升级为“造出集群”，北京\n\n近30家\n\n芯片与算力企业的集体亮相，展示了一条从芯片设计到集群部署的完整产业链。\n\n02\n\n.\n\n北京如何用制度设计\n\n“浇灌”AI产业？\n\n在WAIC 2026北京企业集体参会的表象之下，是一套从\n\n战略规划到政策工具、从资金投入到空间布局的系统性工程\n\n。\n\n2026年1月，北京发布\n\n《人工智能创新高地建设行动计划》\n\n，部署\n\n九大行动\n\n：技术创新策源、智算自主生态强基、具身智能全链跨越、全域应用赋能、高质量数据聚能、科学智能范式革新、创新生态引领、开源开放聚力、安全治理护航，并提出明确目标：两年左右实现人工智能核心产业规模突破万亿元。\n\n这一目标的底气来自北京夯实的产业基础。\n\n2025年，北京人工智能领域融资达到全国的四成以上，核心产业规模达\n\n4500亿元\n\n，相关企业\n\n超2500家\n\n。全市已备案大模型\n\n达259款\n\n，数量持续保持全国第一。\n\n除了普适性的政策工具，北京在细分赛道上的精准施策同样值得关注。\n\n具身智能领域，北京出台\n\n“具身智能十条”\n\n，用真金白银支持机器人产品购销、应用场景开放等，其中数据采集实训场奖励、二次开发社区支持、“打样券”、人形机器人销售补贴等8项政策为全国首创。\n\n2026年6月，北京启动\n\n人形机器人与具身智能实景实训专项行动\n\n，聚焦工业、服务、特种三大领域，力争年底凝练百个以上高价值应用场景，形成万台级规模落地能力。\n\n智能体领域，北京系统谋划构建\n\n智能体底层共性框架\n\n，推动人工智能从“模型可用”走向“任务可交付”，单个项目最高奖励\n\n3000万元\n\n。同时支持创办智能体开发、AIGC产品创制等领域的OPC企业，提供全链条服务。此外，北京还提出了力争到2028年推出\n\n100个\n\n高水平工业智能体的目标。\n\nAI4S领域，2025年，北京率先发布\n\n全国首个省级AI4S专项政策《北京市加快人工智能赋能科学研究高质量发展行动计划（2025-2027年）》\n\n。\n\n2026年6月30日，中共北京市委教育科技人才工作领导小组正式印发\n\n《北京市加快推进人工智能赋能科学研究实施方案（2026-2028年）》\n\n，成为\n\n国内首个\n\n覆盖自主实验室、科研智能体、科学大模型、科学数据中心、高价值应用场景等完整体系的AI for Science（AI4S）中长期实施方案。\n\n算力是AI产业的“水电煤”。\n\n北京的策略是“两条腿走路”：一边建基础设施，一边降使用门槛。\n\n基础设施建设方面，北京持续完善\n\n“超级节点+行业节点”\n\n算力支撑体系，建设算力互联互通平台。计划到2027年累计建成算力规模达到\n\n20万P\n\n。\n\n降低使用门槛方面，北京每年安排\n\n“算力券”“模型券”“数据券”各1亿元\n\n。2026年，北京进一步加大政策支持力度，构建覆盖头部引领、腰部支撑、中小孵化的政策支持体系。\n\n此外，北京新设立\n\n“算力创新券”\n\n专章，支持企业在开展AI相关研发过程中租用算力设备。近期推出的“全栈资源包”政策中，入驻企业可免费享受\n\n3个月\n\n的模型使用、智能算力使用等服务。\n\nAI产业\n\n周期长、投入大\n\n，资本的注入十分关键。北京的做法是用政府资金撬动社会资本，形成\n\n“投早、投小、投硬科技”\n\n的耐心资本体系。\n\n以北京市人工智能产业投资基金为例，截至2026年4月底，该基金已累计投资决策\n\n64个\n\n项目，投决金额\n\n64.58亿元\n\n，撬动社会资本\n\n超400亿元\n\n。\n\n2026年6月，北京亦庄国投设立人工智能与集成电路、智能制造与机器人、生物技术与大健康、未来产业四只产业基金，总规模达\n\n200亿元\n\n。此外，北京市机器人产业园（昌平）还布局总规模\n\n6亿元\n\n的专项基金矩阵。\n\n03\n\n.\n\n人才+生态+长期主义：\n\n北京AI的三大核心密码\n\n北京AI产业之所以能如此繁荣昌盛，除了上文所提及的政策支持外，其实还有三大杀手锏：\n\n人才、生态与长期主义。\n\n人才，是AI创新的“燃料”。\n\n北京大学教授、北京智源人工智能研究院理事长黄铁军曾说“任何成功，归根结底要靠人才，人才正是北京的王牌。全世界最顶尖的AI人才和最密集的创新资源，正是北京站稳AI策源地最关键的底气。”\n\n开源大模型的“群体突破”之所以发生在北京，正是因为这里聚集了全国最密集的AI科研力量和最活跃的开源社区。\n\n官方最新数据显示，北京拥有\n\n90多所\n\n高校、\n\n100多万\n\n科研从业者、\n\n800多位\n\n两院院士、\n\n4个\n\n国家实验室、\n\n145家\n\n全国重点实验室，占全国总量\n\n近三成\n\n。\n\n以清华大学为例，作为“国内创业第一校”，其校友在泛AI领域的创业公司已达\n\n274家\n\n，占比接近\n\n14%\n\n。\n\n生态，是创新诞生的土壤。\n\n海淀区孕育了\n\n2000多家\n\nAI企业，以AI原点社区为例，其位于海淀区五道口先导区核心地带，以东升大厦为中心1公里半径内汇聚了\n\n30余所\n\n高校及科研机构、\n\n千余名\n\nAI科学家与万余名开发者。\n\n中关村（海淀）具身智能创新产业园也已集聚\n\n14家\n\n具身智能企业，形成\n\n“上下楼即上下游”\n\n的产业生态闭环。亦庄集聚\n\n300余家\n\n机器人及具身智能生态企业，产业链规模已突破\n\n200亿元\n\n。\n\n北京围绕政策、算力、数据、资金、空间等方面进行系统布局，力争成为\n\n“最懂研发者的城市”\n\n。\n\n长期主义，是创新活力的底色。\n\n北京AI产业的今天，其实在多年前就已埋下伏笔。\n\n2020年10月，\n\n“百人大模型计划”\n\n启动。\n\n100余位\n\nAI顶尖科研人才聚到一起，向中英文、文图多模态超大预训练模型的“无人区”发起冲击。走开源路线、成果对外开放共享，是这场计划从启动之初就笃定的路线选择。\n\n而当时，“开源”在AI大模型领域仍处于技术讨论阶段。\n\n如今，清华系AI独角兽月之暗面发布全球参数最大的开源模型\n\nKimi K3\n\n，在国际知名模型基准评测平台Artificial Analysis的智能指数上稳居全球第三。\n\n马斯克在相关评测内容下留言：“Impressive（令人印象深刻）。”月之暗面创始人兼CEO杨植麟的博士生导师也对K3赞不绝口。\n\n04\n\n.\n\n结语：\n\n从WAIC 2026上的“北京力量”\n\n看一座AI城市的诞生\n\nWAIC 2026告诉我们：AI产业正在经历一场从“技术驱动”到“价值驱动”的深刻转型。\n\nToken取代FLOPS、智能体成为系统工程、机器人开始“真干活”……这些变化共同指向一个方向：AI的价值不再由技术指标定义，而由能否解决真实问题来衡量。\n\n在这个转型的关键节点上，北京170余家企业的集体亮相不只是参展规模的数字，更是一次产业生态的集中检验。检验的结果是：北京AI产业在芯片、模型、机器人、智能体等核心赛道上，已经形成了从技术研发到产品落地到场景交付的完整能力链条。\n\n技术创新可能发生在任何地方，但让创新变成可复制、可扩展的产业，需要一座城市的系统性能力。\n\nWAIC 2026上的“北京力量”，正是这种能力的验证。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_从展团到生态：WAIC 2026揭示的北京AI“系统能力”_智东西.md"}, {"title": "重磅！全国首部省级智能体专项政策来了", "source": "智东西", "digest": "北京发“智能体十条”：力推Token经济，支持一人公司发展……", "link": "https://mp.weixin.qq.com/s/csxmKg_Qyr78B5ErofZPUg", "content": "---\npublish_time: 1784793600\n---\n\n# 重磅！全国首部省级智能体专项政策来了\n\n> 原文链接：https://mp.weixin.qq.com/s/csxmKg_Qyr78B5ErofZPUg\n> 公众号：智东西\n\n北京发“智能体十条”：力推Token经济，支持一人公司发展……\n\n作者 |\n\n李水青\n\n编辑 |\n\n云鹏\n\n智东西7月23日报道，今日，北京市发改委、北京市科委等四部门正式联合发布\n\n《北京市关于加快智能体引领发展的若干措施》（简称：《若干措施》）\n\n，打响省级智能体专项政策第一枪。\n\n▲《若干措施》发布公告截图（图源：北京发改委官网）\n\n这是全国\n\n首个省级层面聚焦AI智能体规模化发展的专项顶层政策\n\n，提出了\n\n提升基础模型能力、强化智能体底层共性技术攻关、支持OPC（一人公司）等创新创业新模式、鼓励发展Token经济\n\n等\n\n十条\n\n重要举措。\n\n此前5月8日，\n\n中国首部全国性Agent专项政策出台\n\n。国家发展改革委等三部门首次单独以 “智能体（Agent）” 为核心主题制定系统性政策《智能体规范应用与创新发展实施意见》（简称：《实施意见》），对智能体的定义、安全、应用、生态发展进行全面指导。\n\n北京《若干措施》的发布正值智能体处于发展上升期。大规模落地应用不可避免面临一些堵点难点，《若干措施》给出了一套覆盖\n\n技术底座、产业生态、商业业态、创新主体、安全治理\n\n的完整设计方案。\n\n令人眼前一亮的是，其提出了一系列聚焦\n\n降低智能体落地门槛\n\n的务实举措，包括大力支持\n\nToken经济、OPC创业、前沿部署工程师（FDE）、智能体技能市场\n\n等模式创新，提出发放\n\n算力券、Token券、智能体服务券\n\n等真金白银的支持，并强调用沙箱监管、安全大模型“以模治模”来\n\n兜底风险\n\n等措施\n\n。这一系列措施表明，智能体正在加速进入“贴地飞行”的新阶段。\n\n《若干措施》的原文内容如下：\n\n为贯彻国务院《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号）、国家互联网信息办公室等三部门《智能体规范应用与创新发展实施意见》（国信办发文〔2026〕6号），落实北京加快建设全球人工智能创新高地相关工作部署，推动智能体创新引领发展，率先培育智能经济新形态，制定本措施。\n\n01\n\n.\n\n持续提升基础模型能力\n\n推动代理式人工智能（Agentic AI）技术创新，提升模型在线学习、持续学习和自主进化能力，优化超长程任务、复杂推理与规划等基础算法。\n\n支持创新主体开展模型新架构、新训练范式以及原生融合智能体大模型、世界模型、群体智能等技术攻关，突破智能上限。\n\n持续提升大模型实际任务完成能力，支持创新主体开展工具调用、长上下文、多智能体协同、记忆等共性技术攻关。\n\n（责任部门：市发展改革委、市科委中关村管委会、市经济和信息化局）\n\n02\n\n.\n\n强化智能体底层共性技术攻关\n\n支持创新主体实施驾驭层工程（Harness Engineering），围绕上下文工程优化、任务持久化、多智能体协作、系统可扩展等夯实智能体共性底座。\n\n加快跨模型跨芯片的通用智能体技术攻关，支持创新主体持续完善中间层软件栈‌，研发适配智能体开发的关键算子、框架等，推动与自主大模型适配调优，提升复杂任务链路长度和长程任务执行稳定性。\n\n推动构建自主可控互联协议、开发框架和基础工具链，推动关键能力组件开源开放，提升智能体开发部署、运行管理和跨框架集成能力。推动智能体安全可控技术栈攻关，提升任务执行全过程安全保障能力。\n\n推动建设高价值能力资源共享平台和智能体技能市场，打造行业共享的智能体基础设施底座等，提升跨模型、跨框架互通复用能力。\n\n围绕智能体交互、接口规范、身份标识、性能评测、安全防护等领域研制一批标准规范，并加强智能体互联协议（AIP）等智能体互联关键国家标准、行业标准的推广应用。\n\n推动创新主体建设智能体开发平台和软件商店，一站式提供服务接口、能力编排工具与运行管理系统服务，实现智能体场景快速接入与规模化部署。\n\n（责任部门：市发展改革委、市经济和信息化局、市科委中关村管委会）\n\n03\n\n.\n\n加速智能体原生应用和标杆场景建设\n\n鼓励创新主体基于智能体重构底层架构与交互范式，开发以需求智能为核心驱动的原生AI软件和超级软件。\n\n支持基础软件、工业软件、事务处理软件、新型安全软件等智能化技改，鼓励软件和信息服务企业利用智能体技术重构产品架构与服务模式。\n\n推动创新主体开发具备信息关联整合、知识体系构建能力的科学智能助手和“智能科学家”，建设软硬一体、干湿闭环的自主实验室，打造具备自主发现、自主验证能力的科研新范式。\n\n推动研发一批企业级、行业级人工智能操作系统（AI OS），打通生态壁垒，提升人工智能操作系统跨设备协同能力、跨生态开发能力和跨场景部署能力。\n\n支持创新主体将智能体融入集成电路电子设计自动化工具（EDA）、柔性显示产线智能质检与电子制造供应链调度等，以智能体重构电子信息制造业研发与生产流程。\n\n支持创新主体运用大模型、智能体等技术，开发数据驱动、自主决策、人机协同的行业原生解决方案，重塑核心业务流程、产品形态与服务模式。\n\n面向科学、医疗、教育、政务、制造、文化等重点领域，打造一批标杆场景并开展应用验证，形成可复制、可推广的智能体落地应用模式，不断提高智能体应用普及率。搭建场景供需精准对接平台，组织发布一批智能体真实业务场景需求清单。\n\n鼓励智能体服务商与软件企业、行业用户协同发展，形成一批具有示范引领作用的智能体解决方案。支持模型服务商和行业企业等通过前沿部署工程师（FDE）等模式创新加速智能体应用落地，通过驻场共创、持续迭代反哺智能体能力提升。\n\n（责任部门：市发展改革委、市经济和信息化局、市科委中关村管委会、市国资委）\n\n04\n\n.\n\n推动智能终端与智能体融合发展\n\n提高智能体环境感知、自主决策、任务执行以及终端部署能力，支持创新主体将智能体能力深度嵌入智能终端，研制新一代智能手机、智能眼镜、智能耳机及可穿戴设备、智能机器人、智能汽车等智能终端产品。\n\n推动芯模云端用五位一体协同发展，支持智能终端厂商与模型厂商开展软硬联合定义，发展具备环境感知、自主决策能力的具身智能核心硬件组件，打造一批“北京智造”智能体终端标杆产品。鼓励芯片企业、模型厂商与终端企业深度协同，共同优化智能体自主产业生态。\n\n将符合条件的新产品纳入家电以旧换新、数码和智能产品购新范围。\n\n（责任部门：市经济和信息化局、市发展改革委、市科委中关村管委会、市商务局、市委网信办）\n\n05\n\n.\n\n支持以OPC（一人公司）为代表的创新创业新模式\n\n深化人机协同，探索培育智能时代创新创业模式。\n\n构建分层分类专业服务体系，围绕弹性算力供给、专业孵化、创业辅导、科技金融、知识产权、政策咨询等建设一批公共服务平台，引育一批高水平专业化运营团队，提升专业化服务能力。发挥人工智能创新街区的示范作用，培育智能体新业态新模式，争取国家支持开展创新政策、改革举措和企业服务等先行先试。\n\n推动在有条件的区打造一批开放共享、协同创新的OPC社区，建设OPC全周期服务站。结合智能化带来的企业组织模式和管理模式变革，大力发展各类相适配的专业服务。\n\n推动大中小企业融通发展，搭建常态化供需对接平台，支持OPC等主体与头部企业合作，聚焦细分领域提供定制化解决方案服务。\n\n优化OPC等新模式注册流程，为OPC主体提供一键填报、自动生成规范化公司章程等便利化登记服务。\n\n（责任部门：市发展改革委、市经济和信息化局、市科委中关村管委会、市市场监管局）\n\n06\n\n.\n\n鼓励发展Token（词元）经济\n\n推动创新主体研发适配智能体系统调用、复杂任务调度与高频决策的通用处理器,开发低延迟、高吞吐专用推理芯片。\n\n推动创新主体开展推理架构等关键技术攻关，通过异构协同、存算协同以及智能调度等降低推理成本，加快推理缓存复用、智能任务路由等应用层效率优化，全链路优化提高Token效率。\n\n重构产品形态和服务模式，培育Token即服务（TaaS）、智能体即服务（AaaS）、结果即服务（RaaS）等商业新模式，推动更多符合条件的Token新产品新服务纳入中小企业服务券配券产品范围。\n\n探索制定Token服务质量评估、计费规范等标准，鼓励创新主体从Token消耗量计费转向价值计费，提升智能经济质效。\n\n组织行业协会、科研机构和重点企业探索建立以智能质量、调用量、转化效率等指标为核心的Token评价指标体系，完善监测口径与评价方法，加强Token经济跟踪监测。\n\n（责任部门：市发展改革委、市科委中关村管委会、市经济和信息化局、市政务和数据局、市统计局）\n\n07\n\n.\n\n全面提升安全治理能力\n\n探索建立智能体分级分类监管机制，完善与创新发展相适应的科学监管方式。\n\n引导行业加强自律自治，开展人工智能和智能体技术恶意滥用常态化整治，防范滥用市场优势地位，促进行业健康有序发展。\n\n加快推动人工智能产业立法，营造鼓励创新、规范发展的法治环境。加快智能体安全基础设施建设，支持创新主体建设智能体安全服务平台，搭建靶场环境和可信沙箱，开发安全大模型提升“以模治模”能力，开放智能体漏洞扫描、安全检测、攻防对抗、安全认证等共性服务。\n\n（责任部门：市委网信办、市发展改革委、市公安局、市科委中关村管委会、市经济和信息化局）\n\n08\n\n.\n\n加大关键要素保障\n\n建立多层次算力供给体系，实施“银河算廊”工程，加快布局面向智能体高频并发、低延迟需求新型算力基础设施，推动算力网络与第五代移动通信技术增强版本/第六代移动通信技术（5G-A/6G）、第五代固定网络（F5G）等通信网络深度融合发展，构建跨域协同算力供给体系。\n\n积极推进算电协同发展，加快算力基础设施绿色低碳转型。强化存量算力潜能挖掘，通过软件调优挖掘算力性能，推动小散算力“零存整取”。\n\n用好用足公共算力资源，提升算力池化、虚拟化等资源优化配置能力，探索开展公共算力弹性供给，为中小企业和OPC等创新主体开展智能体应用提供低成本、标准化算力服务。支持创新主体建设“Token工厂”。\n\n加大算力券等支持力度，鼓励有条件的区联合创新主体探索发放Token券、智能体服务券等加速智能体等推广应用。支持银行、保险等金融机构依法依规开发支持智能体落地应用的各类金融产品。支持创新主体依法依规汇聚行业知识、智能体执行数据等并开放共享，构建数据飞轮，反哺驱动智能体能力持续进化。\n\n加强人工智能及智能体原生人才培养，产教融合开展智能体等专项技能培训。深化职称制度改革，建立符合技术迭代规律、产业发展需求和人才成长规律的动态评价体系，围绕智能体开发、大模型应用、数据治理等新兴领域认定一批急需紧缺人才。\n\n（责任部门：市发展改革委、市经济和信息化局、市科委中关村管委会、市政务和数据局、市人才局、市人力资源社会保障局、市教委）\n\n09\n\n.\n\n推动开源开放发展\n\n高水平建设中国—上合组织国家人工智能应用合作中心，“一国一策”研究大模型和智能体出海实施路径。更好发挥人工智能出海服务站作用，强化智能体新技术新产品新服务出海政策咨询、合规培训、知识产权、风险预警等公共服务体系。\n\n推动建设具有全球影响力的开源社区，支持平台企业、开源社区等联合上下游搭建覆盖智能体、智能终端及具身智能的开源平台和技术社区，创新管理机制、资源服务策略和运营模式。建立健全开源贡献度评价体系和支持措施，支持创新主体开源自主互联协议、智能体开发框架、智能终端操作系统及硬件公版等核心代码，激励开发者共建共享开源生态。\n\n统筹政府投资基金与社会资本，支持一批开源项目孵化，以开源软件合规应用与商业化发展建设繁荣开源生态。\n\n（责任单位：市经济和信息化局、市发展改革委、市科委中关村管委会）\n\n10\n\n.\n\n保障措施\n\n加强组织领导，市发展改革委加强统筹协调，会同市委网信办、市科委中关村管委会、市经济和信息化局等部门，深化市区联动、政企协同，推动智能体创新引领发展。\n\n统筹用好国家和市区财政资金、政府投资基金、市场化基金等，共同加大对智能体支持力度。组织实施一批重点项目，对符合条件的技术攻关、共性平台、示范应用等项目给予支持。加大对智能体新技术新产品新服务宣传推广，有力支撑经济社会高质量发展。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_重磅！全国首部省级智能体专项政策来了_智东西.md"}, {"title": "独立AI原生的办公助手，治好了我的打工焦虑", "source": "机器之心", "digest": "原生交付+项目记忆，办公智能体的正确打开方式。", "link": "https://mp.weixin.qq.com/s/VnApKTY5rV0ObEFRzCHWXw", "content": "---\npublish_time: 1784791001\n---\n\n# 独立AI原生的办公助手，治好了我的打工焦虑\n\n> 原文链接：https://mp.weixin.qq.com/s/VnApKTY5rV0ObEFRzCHWXw\n> 公众号：机器之心\n\n编辑 | 泽南\n\n2026 年，AI 智能体的能力清单正在快速趋同：搜索、生成、操作电脑、编写代码，各家模型能力持续提升，但落在真实办公场景里，大部分 AI 生成的都还是「伪文件」。\n\n图表是整张图片，表格是静态的数字，排版靠元素堆叠，看着像模像样，真改起来就要从头开始。生成一段漂亮文字和交付一个能直接交差的成果之间，还隔着很长的路。\n\n上周 WAIC 期间，金山办公在上海「2026 AI 生产力大会」上给出了自己的答案：独立 AI 原生办公智能体「灵犀专业版」。\n\n作为每个人的办公助理，灵犀的核心逻辑一句话就能概括：\n\n不是在 Office 里加 AI，而是让 AI 长出 Office。\n\n这或许是办公软件诞生四十年来，最彻底的一次逻辑转向。\n\n「灵犀专业版」怎么用\n\n好用吗？\n\n正式发布前后，我们对灵犀专业版进行了一些尝试。\n\n首先关注到的是其中的基础模型，灵犀专业版背后接入了多款国内主流大模型。据了解，金山办公对这些模型一直在做场景化适配测试，在不同类型的任务上，灵犀会自动匹配效果最优的模型，用户全程无感切换，一般无需手动挑选。\n\n在实际使用中最能体现出差距的，是\n\n「项目」这套工作组织逻辑\n\n。以项目为单位，灵犀专业版组织所有工作，你可以给一次活动、季度经营分析、房屋装修等等分列成项目，其中所有对话、文档、资料、进度共同作为对话时的上下文。\n\n上传了几份资料后，只要在这个项目内，后续不管开多少轮新对话，灵犀都会自动带着这些背景信息响应。用官方的话来说：你的 AI，不用每天重新入职。\n\n其次是它的\n\n完整交付能力\n\n。要求撰写一篇 7 月 15 日金山办公「2026 AI 生产力大会」的报道，智能体会自行搜索新闻，初始化浏览器阅读核心文章并整理提纲。\n\n在我们补充了更多资料，列出报道侧重、目标受众、篇幅要求后，它直接输出了一份 docx 格式文档，自带标准的标题层级、正文样式与段落格式，直接就能进入修订流程。\n\n再进阶一点，我们让它搜集信息，来生成一个 Kimi K3 大模型 5000 字以上的研究报告，面向 AI 从业者、投资人及产业观察者。\n\n报告很快跑出来了，我们再要求生成一个 15 页以上的汇报 PPT。灵犀在生成中间还会问你要用哪种风格，经过了 8 分钟，智能体编写大纲、逐页生成、跑版校验，自行修改问题后再次校验，生成了一份 18 页的 PPT 文档。\n\n打开一看，和人类制作的一样，每页都是标准的母版结构，图片文字可编辑且可挪动，表格可以直接修改内容。看起来版式微调、内容丰富一下就可以使用了，省去了大量拆改重做的时间。\n\n灵犀专业版还有协作模式，点击「发起群聊」就能分享链接，让同事们加入与智能体对话持续改进交付成果。更有趣的是这个「自动做梦」，它是灵犀专业版正式发布后刚更新的功能，\n\n这是一种后台认知与记忆管理机制，让智能体可以跨越会话和周期的工作记忆，把其中的信息组织起来。通过模拟人类睡眠时的信息处理机制，它能解决 AI 在长程任务或长时间对话中容易出现的失忆和上下文崩溃问题。\n\n具体来说，整套记忆体系分为三层：你可以手动设置个人信息、写作风格、协作规则作为核心记忆；上传的项目资料、行业文档会沉淀为知识库；而自动做梦会在算力空闲时段，自动归纳当天的对话与文件，完成信息的摘要、压缩与结构化整理。这样在开启新任务时，系统会基于项目关联度主动调取相关的历史信息，越写越像你的风格。\n\n当然，记忆是始终可控的。所有记忆与资料的调用均以用户授权为前提。记忆全程可见、可修改、可关闭，用户始终拥有绝对控制权。\n\n几天用下来，最直观的感受是，它是真的在往办公助理的方向做，已经达到了严肃生产力工具的范围。\n\n与很多 AI 应用一样，它不是完美的，但和市面上大多数 AI 办公产品比，灵犀专业版第一次让我们感受到：AI 办公的终点，真的可以是一个可以交付的结果。\n\n智能体办公浪潮\n\n所有人都卡在同一道坎\n\n如果把过去三年的 AI 办公演进拉一条时间线，我们能清晰看到三段阶梯。\n\nAI 办公 1.0 的对话时代，我们在大模型聊天框里输入指令，让 AI 回答问题、写文案、做总结。AI 解决了信息获取与内容生成的效率问题，但它们只输出内容，不执行动作，更不对最终结果负责。\n\n进入 2.0 时代，AI 应用演进出 Copilot 模式。科技巨头把 AI 能力嵌入办公软件的工具栏，选中一段文字就能润色，选中一片数据就能生成图表。这一阶段的 AI 更像是功能增强插件，它依附于原有软件交互逻辑，没有跳出人主导操作的底层框架。\n\n2026 年，智能体让我们迈入 AI 办公 3.0 时代，只需要提出目标与约束，AI 就能自主拆解任务、调用工具、推进流程，最终交付可用的工作成果。现在，我们的角色变成了出决策和验收。\n\n智能体办公的浪潮几乎在同一时间席卷了全球科技圈。短短数月内，海外与国内的头部厂商密集发布产品，共同把办公 AI 推向了「智能体竞赛」的新阶段。\n\n从 Anthropic 的 Claude Cowork 到腾讯的 Workbuddy，几乎所有头部玩家都已押注智能体赛道。本月 OpenAI 推出的智能体生产力工具 ChatGPT Work 更是整合了 Codex 的代码能力，支持跨 Slack、Notion、Microsoft 365、Google Drive 等应用长时间自主运行任务。产品上线后增长势头迅猛，仅一周时间，Codex 与 ChatGPT Work 合计活跃用户就突破 800 万，平台 Token 用量暴涨 2.5 倍，官方不得不多次重置用户使用额度。\n\n这也从侧面印证，一旦 AI 具备了「动手干活」的能力，用户的使用深度与频次会呈现指数级跃升。\n\n但无论海外还是国内，所有玩家都在共同面对同一个行业难题：智能体运转起来容易，交付出能用的东西很难。\n\n市面上绝大多数 AI 办公产品，生成的文档本质是「看起来像 Office 文件」的内容：表格是静态数字没有公式，图表是图片无法编辑，版式是文本框堆叠一改就乱。用户拿到手还要花费大量时间重做。\n\n这道坎靠堆模型参数跨不过去，必须要靠工程能力。这正是 WPS 的强项。\n\n灵犀专业版的工程链路\n\n当全行业都困在瓶颈时，金山办公交出的灵犀专业版，是一款从底层逻辑就不一样的产品。\n\n首先，它是一款独立的 AI 原生办公智能体，不是 WPS 内嵌的 AI 功能。二者是分工协同的关系：WPS 在底层承担文件的深度编辑与正式流转，灵犀专业版负责组织项目、调动资料、执行任务、交付结果。\n\n它的底层认知有了进化，\n\n工作不等于文档，而是一连串需要被完成的任务\n\n。过往的 AI 办公产品大多把目光盯在了「文档」这个终点上，试图帮人更快地写文档、改格式；而灵犀专业版把目光投向了「任务」本身，它要做的是驱动 AI 从接收需求开始推着任务往前走，直到交付完整可用的结果。\n\n为此，灵犀专业版的交付链路比其他 AI 产品更长：用户下达任务 - 检索资料 - 调用工具 - 生成文件 - 渲染校验 - 交付。我们知道，智能体执行任务，每一步很小的失败概率，积累到最后，可能就是直接报错失败，这意味着每一环都对应着真实的工程难题。\n\n首先是任务理解，\n\n灵犀以项目为单位组织工作上下文\n\n。同一个项目里的对话、文档、资料、进度全部沉淀在统一空间内，用户下达任务时，智能体先从项目知识库中匹配已有资料，再按需补充互联网检索与第三方专业数据源，全程带着背景理解需求，而不是从零开始猜。\n\n其次是文件生成，\n\n灵犀选择调用 WPS CLI，与其他智能体拉开了差距\n\n。WPS CLI 是一套面向智能体开放的文档操作内核，源自金山办公三十多年积累的原生文档能力。它能够真正创建、修改、生成标准的 Office 原生对象。最终生成的 PPT 里，图是独立的图片元素、表是可编辑的表格对象、图表是带数据源的原生图表、文字是可修改的文本占位符，所有元素都符合 Office 标准规范，可以直接二次编辑。\n\n更进一步，\n\n灵犀专业版的表格能力保留了公式与数据关系\n\n，在表格场景的工程差距尤为明显。通用 AI 生成的表格大多是静态数字，本质是「把计算结果写在单元格里」，灵犀专业版生成的表格则会完整保留公式、条件格式与数据关联关系。用户修改原始数据后，计算结果、配套图表会联动更新，和人工搭建的表格没有任何区别。\n\n最后在交付前，灵犀还会进行一道\n\n渲染校验\n\n：在文件生成后、交付给用户前，AI 会自动执行一轮渲染检查，识别跑版、遮挡、布局错乱等问题并自动修正。额外的校验提升了交付文件的质量。\n\n这些底层工程与架构上的差异，让灵犀专业版实现了代际的领先。\n\n简单来说，灵犀专业版是一个可以「替你推进任务」的 AI 助理，能深入到工作执行的完整链路，服务于整个任务目标。金山办公跨越的这道工程壁垒，是通用大模型厂商难以在短时间内跨越的：文档内核、排版引擎、渲染校验这套完整体系，可是在 WPS 上几十年打磨堆出来的结果。\n\nAI 原生办公智能体灵犀专业版的背后，是金山办公的 AI 战略判断。\n\n金山办公 CEO 章庆元明确提出：办公软件正在进入第三个时代，从单机办公、协同办公，正式走向 AI 办公。「AI 将重构工作完成的范式：过去是人操作软件，今天是人提出目标、AI 参与完成。」\n\n在金山办公看来，\n\n大模型技术终将走向平权，当基础模型的能力不再是稀缺资源，真正决定产品竞争力的会是对用户上下文的理解深度，以及真实场景下沉淀的办公数据资产。\n\n在这样的判断下，金山办公把筹码压在了场景与工程上。AI 浪潮的到来，让它有机会跳出同质化比拼，依托数十年积累的工程能力构建真正的差异化壁垒。\n\n金山办公助理总裁田然给出了衡量 AI 办公助理的三项硬标准：懂用户的上下文、高质量完成任务、具备专业 Office 操作能力。其中，前两项需要依靠基础大模型的能力迭代，以及编排等工程能力，而后一项在实践中会展示出长期业务积累的差距。\n\n上周的发布会上，金山办公分别推出灵犀专业版与 WPS Comate 两款产品，C 端的灵犀专业版打透个人场景，B 端的 WPS Comate 则面向企业级市场，构建组织级 AI 落地体系，目标是成为每家企业的「企业大脑」。\n\n当模型能力趋同，交付才是新的竞争维度，而交付靠的这套能力不是模型厂商能短期复制的，是金山办公在文档领域长期积累的结果。\n\n回到打工人的视角\n\nAI 应用不断迭代，对于每个普通的职场人，问题当然很现实：到底颠覆了吗？\n\n至少可以说，到了智能体这一代，灵犀专业版已经能做到让每一个普通打工人，都能拥有过去只有管理层才有的专属助理。\n\n你不用再花几个小时整理竞品数据，无需再反复调排版格式，不用再因为搜集资料而头疼。那些机械、重复、消耗精力的事务已经都可以交给 AI 助理去完成了。你可以把更多时间放到真正需要思考、判断与创造的事情上去。而且 AI 帮你办的事，还是你风格的延伸。\n\n当繁琐事务被逐步承接，我们终于可以回归到工作的核心价值 —— 思考、决策、创造，以及把事情真正做成。\n\n办公 AI，交差才算数。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_独立AI原生的办公助手，治好了我的打工焦虑_机器之心.md"}, {"title": "AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！", "source": "财联社AI daily", "digest": "文|刘蕊在AI热潮推动美国科技巨头大举兴建数据中心之际，数据中心的巨额电力消耗正引起越来越多美国民众的不满。据白宫官员透露，美国总统特朗普将于美东时间周四发起一项非约束性倡议，要求数据中心为运行人工智能模型所需的电力支付更高费用，希望借此平息美国民众抗议AI数据中心建设的反对浪潮，并保护美国家庭免受…", "link": "https://mp.weixin.qq.com/s/RfiZp5MZhVLz843xQB9svg", "content": "---\npublish_time: 1784789376\n---\n\n# AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！\n\n> 原文链接：https://mp.weixin.qq.com/s/RfiZp5MZhVLz843xQB9svg\n> 公众号：财联社AI daily\n\n文|刘蕊\n\n在AI热潮推动美国科技巨头大举兴建数据中心之际，数据中心的巨额电力消耗正引起越来越多美国民众的不满。\n\n据白宫官员透露，美国总统特朗普将于美东时间周四发起一项非约束性倡议，要求数据中心为运行人工智能模型所需的电力支付更高费用，希望借此平息美国民众抗议AI数据中心建设的反对浪潮，并保护美国家庭免受人工智能热潮带来的电费上涨影响，同时推动美国成为全球人工智能领域的领导者。\n\n据称，美国多家头部电力企业与数据中心运营商已响应特朗普的倡议，同意为支撑AI模型运行所需电力承担更高成本，希望借此平息民众不满情绪。\n\n▍数据中心将支付更高电费\n\n这项承诺扩展了特朗普今年3月提出的“纳税人保护承诺”，确保建设和使用数据中心的企业支付超出正常费率的用电费用，从而避免电力成本转嫁给普通家庭。\n\n近200家实体响应了上述倡议，其中包括NextEra Energy、杜克能源(Duke Energy)等能源公司、Equinix和Digital Realty等数据中心服务商。\n\n据白宫官员透露，特朗普将与美国能源部长克里斯·赖特（Chris Wright）、环境保护局局长李·泽尔丁（Lee Zeldin）以及多位签署原始承诺的州长共同出席此次活动。\n\n白宫称，这项非约束性倡议将覆盖美国所有家庭和企业用电量的80%。\n\n▍绝非易事\n\n然而，在AI热潮推动全美多地大兴建设数据中心之际，保护电力用户免受数据中心需求影响绝非易事。\n\n根据BloombergNEF 7月21日发布的预测，数据中心目前占美国总用电量的5.9%，预计到2030年升至约12%，2035年进一步攀升至20%——不到十年时间，占比扩大逾三倍。\n\n更加重要的是，美国电网是由多个区域电网拼接而成，这使其电力系统本就承受着巨大压力，而数据中心用电需求高度集中，意味着用电压力不会均匀分摊，而是砸向几个特定的电网区域。其中，PJM互联电网首当其冲。\n\n上周，PJM互联电网——服务6700万人口的美国最大区域性电网——举行的最新年度电力拍卖将电价推至历史新高。据报道，PJM未来可能需要把34%的电力供应给数据中心。\n\n本周四，美国能源监管机构联邦能源管理委员会（FERC）将召开会议，讨论PJM因持续存在的供需失衡而面临的严峻前景。\n\n“如今的电力系统迫使几乎所有人——从普通家庭到超大规模数据中心——都依赖于同一张电网，”自由主义智库Cato Institute能源与环境政策研究主任特拉维斯·费舍尔（Travis Fisher）最近写道。\n\n这种“一刀切”的模式正越来越无法很好地满足这两类群体的需求。一方面，大型企业客户可能需要等待十年甚至更长时间才能获得服务；而另一方面，普通纳税人则担心，为应对大规模新增工业负荷而扩建电网，最终会推高他们自身的电费。\n\n数据中心支持者表示，AI行业的快速发展正在推动美国电力网络长期亟需的投资，并指出，当下还存在其他因素共同推高电力成本，包括发电厂退役和输电能力受限。", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_AI用电猛引民众抗议？特朗普倡议数据中心付更高电费！_财联社AI daily.md"}, {"title": "AI幻觉最可怕的人类副作用出现了", "source": "量子位", "digest": "GPT、Claude、Gemini都没逃过“翻车”。", "link": "https://mp.weixin.qq.com/s/lT9QEh7pcsLK8h38mkr7Zw", "content": "---\npublish_time: 1784771557\n---\n\n# AI幻觉最可怕的人类副作用出现了\n\n> 原文链接：https://mp.weixin.qq.com/s/lT9QEh7pcsLK8h38mkr7Zw\n> 公众号：量子位\n\n文婷 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n最新研究发现，\n\nAI幻觉不只会骗你了，还能喂大你的自信心、削弱你的判断力。\n\n这可不妙。\n\n最近，一项来自巴黎高师、罗马第一大学、米兰比可卡大学的研究发现：\n\n没有AI时\n\n，人们会更爽快地承认“我不知道”，先把判断放一放；\n\n但AI一出现\n\n，哪怕人们明明知道它会犯错，哪怕知道答错还要受罚，大部分人还是会选择把它给出的答案照单全收，当成是自己的判断并自信地说出口。\n\n实验结果也清晰地呈现了这一趋势：在首个未使用AI的实验中，坦言“我不知道”的人数占比为44%，正确率为27%；\n\n而\n\n使用AI辅助后\n\n，人们说不知道的比例\n\n从44%骤降至了3%\n\n，\n\n正确率从27%跌至了9%\n\n，\n\n自信心却从30%飙到了76%\n\n。\n\n即便后续实验试图通过\n\n“答对给钱、答错罚钱”\n\n这种奖惩机制鼓励大家保持独立判断，并纠正这一倾向，但人们仍然难以摆脱对AI错误建议的依赖。\n\n也就是说，\n\n不懂的人并未真正消失，取而代之的是一群在AI的加持下变得自信满满，并给出错误答案的人。\n\n目前，相关研究成果已发表在arxiv上，团队一共做了5个实验，参与者总数达3132人，其中4个实验预注册，1个是直接复现实验。\n\n90%正确+10%致命错误≠可信任\n\n这项研究关注的是\n\n“AI对人类判断能力的影响。”\n\n研究者Valerio Capraro在接受采访时表示：\n\n对人类来说，说出“我不知道”非常重要，因为这代表我们能意识到自己知识的边界。\n\n但现在，有了AI之后，几乎任何问题都能立刻得到一个流畅答案。\n\n于是问题来了，这会不会干扰人类原本的判断能力？也就是在不确定时，先不急着下结论？\n\n为此，\n\n研究团队专门设计了一组大语言模型容易答错的问题。\n\n不是数学推理题，也不是常识题，而是\n\n电影里的视觉细节题\n\n。\n\n比如《我爱贝克汉姆》里球队队服是什么颜色？《布达佩斯大饭店》里Agatha的标志性发型是什么？or《高速路上一只猫》里Monica开的是什么车等等。\n\n你有印象吗？我反正是愣了大半天没想起来，这也太刁钻了！谁记得住啊……（摊手）\n\n对AI而言，它也会觉得非常头疼，因为\n\n这些题的答案往往不在常规文本资料里\n\n，\n\n模型训练数据里大概率也没有这些视觉细节。\n\n研究者先测试了实验中使用的模型\n\nStep 3.5 Flash\n\n，结果符合预期——\n\n它通常会答错。\n\n此外，他们还测试了更多前沿的模型，包括\n\nGPT-5.5\n\n、\n\nClaude Sonnet 4.6\n\n以及\n\nGemini 3.5 Flash\n\n。\n\n这些前沿模型确实在部分题目上表现更好\n\n，比如《布达佩斯大饭店》里Agatha的标志性发型，GPT-5.5、Gemini 3.5 Flash和Claude Sonnet 4.6都能答出正确方向：crown braid、milkmaid braid；也就是环绕头顶的编发。\n\n△\n\nGPT-5.5\n\n△\n\nGemini3.5 Flash\n\n△\n\nClaude Sonnet4.6\n\n再比如《我爱贝克汉姆》里球队队服颜色，它们也大多能抓到白色、红色这些关键信息。\n\n但一到更依赖具体画面记忆、网上文本资料覆盖更少的问题，模型就开始\n\n集体翻车\n\n，而且翻得各有各的精彩。\n\n最典型的是《高速路上一只猫》里Monica开的车。\n\n正确答案是2008款蓝色Toyota Aygo。\n\n但\n\nGPT-5.5把它说成了小踏板摩托\n\n，并补充了“她骑着它在罗马郊区穿梭，后来开了披萨店后也用它来送外卖。”的故事情节以及“朴素、工薪阶层的生活方式与Giovanni富裕都市生活之间的反差”等设定。\n\n看上去逻辑严谨，合情合理，但这其实完全是模型\n\n为了让你觉得合理，一本正经凭空瞎编的！\n\n（被骗了吧hhh）\n\nGemini 3.5 Flash则说她主要坐公交、没有自己的车，各种细节错的更没边了且很难察觉\n\n（比如Monica并没有通常坐Sergio的车这种规律性设定，模型把零散的蹭车情节归纳成了一个不存在的常态）：\n\n△\n\n太坑了，我都差点信了\n\nClaude Sonnet 4.6\n\n则根据互联网汽车数据库推成了2016 Toyota Auris Touring Sports Hybrid：\n\n△\n\nFine……\n\nStep 3.5 Flash\n\n则放弃了伪装，直接答成了2007款Fiat500（一眼假好吗喂！）。\n\n这些答案的问题不只是错，还错得很像真的，让人难以分辨！\n\n它们不仅仅是简单的不知道，它们还会通过“虚构人物设定、捏造剧情逻辑、补充车辆用途”把错误答案讲得很完整，\n\n听起来都很有理有据，但核心事实是错的。\n\n这正是AI幻觉最危险的地方——\n\n明明核心事实才是最关键的point，它却用流畅的表达掩盖了自己的无知与错误，让你误以为它什么都懂。\n\nAI一出手，“我不知道”直接消失了一大半\n\n实验主要由更轻量的Step 3.5 Flash完成，没有都选择Claude、GPT等顶尖模型。\n\n设计6道电影细节题，是研究设计里很关键的一点，因为很多人都知道这类问题AI本来就经常答错、不靠谱。\n\n研究人员称，\n\n他们这么做是为了排除一种解释，即“人们听AI的，是因为AI真的靠谱。”\n\n如果人们明知道这些答案AI本来就经常答错，但还是照着AI回答，那问题就不只是“合理外包判断”，而是\n\n“判断能力真的被AI压下去了”。\n\n研究一共分成\n\n5轮\n\n。\n\n前两轮实验，主要看AI建议是否会影响“我不知道”的比例。\n\nStudy 1a\n\n中，314名参与者被分成两组回答6道电影细节题。（一组没有AI，另一组可以选择是否向AI求助。）\n\n结果很明显：\n\n没有AI时，参与者选择暂不下判断的比例是36%；有AI可用时，这个比例降到了6%。\n\n也就是说，\n\n只要可以问AI，人们就明显不愿意说不知道了。\n\n不过，研究者担心这里有个技术干扰，因为Study 1a里，AI工具大约有10%的请求没有正常响应。\n\n所以他们又做了\n\nStudy 1b\n\n。\n\n这次研究者们\n\n不再实时调用AI，而是提前生成好AI答案，确保每个求助者都能看到完整回答。\n\n结果复现了\n\n，没有AI时，44%的人会说“我不知道”；有AI时，只剩3%。\n\nCapraro把这个现象称为\n\n“核查悬置崩塌了。”\n\n（被AI的一本正经忽悠了，忘了去检查它的大前提和各种设定对不对。）\n\n正确率崩了，自信却飞升了，给钱也救不回来\n\n接下来，研究者继续问：\n\n如果答错会有代价，人们会不会谨慎一点？\n\n于是\n\nStudy 2\n\n引入了金钱奖惩规则。\n\n这一轮共有812名参与者参与，分成了4组：有无AI建议；有无金钱奖惩。\n\n规则是，答对一题奖励0.1美元（约合人民币0.73元），答错扣0.1美元，说不知道不奖不扣。\n\n按理说，虽然钱不算多，但毕竟答错有成本，人应该更谨慎。\n\n但\n\n结果却显示，钱确实有一点帮助，但还远远不够抵消AI的影响：\n\n没有金钱奖惩规则时，AI可用会让“我不知道”的比例从\n\n17%\n\n降到\n\n1%\n\n。\n\n有金钱奖惩规则时，AI可用仍然会让这个比例从\n\n21%\n\n降到\n\n2%\n\n。\n\n换句话说：\n\n实验结果表明，就算人们知道答错要扣钱，知道AI在这类问题上不怎么靠谱，大部分人还是会选择相信AI答案，而不是自己的判断。\n\n更关键的是\n\n正确率\n\n。\n\n没有AI时，正确率大约是\n\n28%\n\n；有AI时，正确率只剩\n\n10%\n\n。\n\n这证明有一部分人可能\n\n明明知道AI存在幻觉，却仍采取了AI给的答案。\n\n引入金钱奖惩规则后，正确率有所提升：\n\n没有AI时，\n\n从28%到33%\n\n；有AI时，\n\n从10%到17%。\n\n虽然有AI组的正确率依然明显低于无AI组\n\n，不过，这一规则也并非是毫无作用，它至少让人们减少了一点向AI求助的次数：\n\n数据显示，在有奖励的条件下，参与者向AI寻求建议的平均次数从\n\n5.44次\n\n降到了\n\n4.93次\n\n。\n\n也就是说，\n\n钱能让人稍微少信少用AI一点，但并不能让人完全摆脱AI错误建议的牵引，且很难把人重新拉回谨慎判断的状态。\n\n最值得深思的是AI回答错误条件下人们膨胀的自信心\n\n：\n\n没有AI、没有奖罚钱规则时，参与者的平均信心是\n\n29.6%\n\n。\n\n有AI后，参与者的信心直接飙到了\n\n75.9%\n\n；另外，在有金钱奖惩规则的情况下，AI组的信心也有\n\n73.5%\n\n。\n\n对此，论文里的概括非常直接：\n\nAI让人更有把握，却未必更准确。\n\n自动弹出的AI建议，同样会带偏人\n\nAI正以前所未有的速度融入日常，一个明显的变化是\n\n现在很多的AI建议往往不是我们主动问来的，而是它自己“凑”上来的。\n\n最典型的场景就是\n\n刷热搜\n\n。\n\n以前点进一个话题，还得自己顺着评论区、媒体报道、当事人回应一路摸过去，边看边拼时间线，顺便吃几口跑偏的瓜。\n\n现在不一样了，你刚点进去，AI生成的摘要已经顶在最显眼的位置。\n\n发生了什么、谁说了什么、争议点在哪、后续进展如何，全都给你捋好了，甚至还附上了新闻源链接。\n\n确实省事，但也有点微妙…….\n\n它把信息整理得越清楚，我们自己探索来龙去脉的过程就越短，\n\n以前那种到处翻找、自己判断、顺手发现意外细节的乐子，好像也被一起压缩掉了。\n\n写东西时\n\n字还没敲两行\n\n，\n\nAI补全的句子或是提示就已经跟在光标后面了。\n\n所以\n\nStudy 4\n\n做了一个更贴近现实的设计：\n\n不再让参与者选择是否问AI，而是直接把AI建议自动展示在题目旁边。\n\n这一轮有853名参与者，\n\n实验结果和前面基本一致。\n\n没有金钱奖惩规则时，AI的自动出现会让“我不知道”的比例从35%降到1%，有规则时，从39%降到7%。\n\n正确率也继续受影响：没有AI时，正确率约为27%，有AI、没有激励时，正确率只有7%。\n\n有AI、加上激励后，正确率提升到了\n\n14%\n\n。\n\n这说明，即便人没有主动求助AI，只是被动看到AI建议，也会被强烈影响。\n\n这是一个必须警惕的信号——AI正悄然重塑我们的判断习惯。\n\n它不再只是那个等你主动打开聊天框才回应的工具，而是变成了系统默认塞给你的“标准答案”。\n\n它可能出现在搜索页顶部。\n\n出现在邮件草稿里。\n\n出现在文档侧边栏。\n\n出现在学习软件、办公系统、浏览器插件里。\n\n一旦答案默认摆在眼前，人类的判断过程就已经被改写了；但最可怕的是，我们竟对此习以为常。\n\n为什么会这样？\n\n论文里用了一个词：\n\nepistemia（认知惰性）\n\n可以理解为，\n\n人们会因为AI答案看起来流畅、完整、有条理，就接受它的表面可信度，而不是进一步验证。\n\n大语言模型有一个根本特点，即\n\n它总要生成点什么\n\n。面对自己不知道的问题，它也很少真正停下来。\n\n它可以说得很像真的。\n\n但如果我们真的选择把判断权交给这样的系统，就可能会继承它“不暂停”的习惯。\n\n论文给出的一种解释是\n\n“AI给出的流畅答案，会降低人类决定‘我知道得足够多，可以回答了’的门槛。”\n\n原本你可能会想：\n\n“这题我不知道、没把握，算了…….我需要去弄明白才能回答。”\n\n但AI给你一段看起来很确定的话之后，心理门槛就变成了\n\n“既然它都这么说了，那我也可以答。”\n\n于是，\n\n“我不知道”和“求索过程”被省略，并被替换成了一个“标准但错误的答案”\n\n，而且这个错误答案还赋予了你\n\n本该通过反复求索和求证才能产生的高自信感。\n\n就算答错要罚钱，人也只是稍微警惕些，没法彻底改掉太信任AI的习惯，结果华丽丽被带偏。\n\n问题不只是AI会错，而是AI可能会改变我们的元认知阈值\n\n这项研究真正提醒我们的，其实不是“AI会幻觉”，这事儿早已不新鲜；而是一个值得警惕的新变化：\n\nAI会改变人类处理不确定性的方式。\n\n过去，人面对一个陌生问题，可能会有三种选择：\n\n1、知道就答。\n\n2、不知道就查。\n\n3、没把握就不答，不下判断。\n\n但AI加入之后，流程变短了。\n\n1、AI给答案。\n\n2、人采纳答案。\n\n中间最重要的一步，即\n\n“我到底知不知道”，被不知不觉跳过去了。\n\n这也就是为什么论文作者要强调，他们的这项研究看的不是\n\n“AI让人答了什么”\n\n，而是\n\n“AI让人更轻易地决定‘我可以答’”。\n\n这比单次答错更深一层，因为它侵蚀的是我们的\n\n元认知\n\n能力，这种能力是我们监控自己知识边界的\n\n“内在报警器”\n\n，十分珍贵。\n\n当这个报警器失灵，我们便失去了区分“真知”与“看似合理的猜测”的本能。\n\n届时，我们或许仍能通过AI高效地获取答案，却再也无法判断这些答案是否真正属于自己、是否真的值得信任。\n\n同时，\n\n被AI带偏的将不再是某一次具体的判断，而是我们作为独立思考者的根基。\n\n这个损失是不可估量的。\n\n孩子可能更危险\n\n论文的作者之一Valerio Capraro在采访中表示：“我非常担心儿童，因为成年人已经学会了批判性思维。但对于基本上出生时就伴随这些系统的儿童来说，\n\n风险在于他们甚至不会学到基本的批判性技能。\n\n”\n\n这段话背后藏着更深的忧虑，\n\n即如今的成年人，至少曾在没有AI的世界里生活过。\n\n所以有机会从小靠着搜索引擎、书本、课堂、争论和试错，先学过一些基础判断能力，再开始使用AI，能够有机会建立起”我不确定”的感觉。\n\n但今天的孩子，可能一出生就和这些AI一起长大。\n\n他们做作业、查资料、写文章、理解概念，都可能随手问AI。\n\n如果从一开始就习惯于直接接收答案，而不是先形成自己的判断，再去验证答案，那么\n\n风险就不只是某道题答错，而是他们可能没有机会练出最基本的批判性思考能力。\n\n在Capraro看来，解决这个问题\n\n不能只靠模型公司修bug\n\n，更要从\n\nAI素养\n\n和\n\n教育政策\n\n入手。\n\n模型公司当然应该改进，比如更好地表达不确定性，减少幻觉，在证据不足时提醒用户。\n\n但同时Capraro也认为，不能把希望全押在模型公司身上。\n\n更有希望、也更长期的解法，是\n\n教育\n\n。\n\n尤其是\n\n儿童教育。\n\n对今天的孩子们来说，\n\n多练“我不知道，但我要弄明白”的过程\n\n和培养这种习惯是非常重要且必要的。\n\nAI时代，最需要保护的是我们的判断力\n\n在实验的最后，研究者也坦承了局限：实验仅使用了电影细节题，是否适用于其他领域仍需验证；激励金额较小，更大的利害关系能否进一步纠正行为尚不清楚。\n\n但至少现有的数据已经给出了一个清晰的信号：\n\n人们更少说不知道，更多给出答案，更少答对，却更自信。\n\n这可能是AI时代最隐蔽的一种风险。\n\nAI不仅骗了你，它还让你更难意识到自己其实并不知道。\n\n这项研究最后给出的判断很克制，但也很沉重：“随着AI生成的答案无处不在，甚至常常不请自来，我们的研究表明，\n\n在人与AI的互动中，人类坦然承认‘我不知道’的能力，可能会成为人机交互中最早的牺牲品之一。\n\n当AI系统日益普及，人类的判断力能否站稳脚跟，最终可能并不取决于让AI变得更精准，而在于我们能否守住那份自知之明——既清醒地认识到自身知识的边界，又能据此审慎行事。”\n\n这不是说AI不能用，恰恰相反，AI当然可以是强大的辅助工具；\n\n但前提是\n\n它应该帮助人思考，而不是替人跳过思考，我们更得守住自己的审慎判断的底线。\n\n一个更健康的AI使用方式，可能是\n\n先自行判断、主动学习，实在弄不明白了再求助AI，并在求助的过程中始终保有质疑的本能。（包括质疑AI和扣问自己）\n\n例如：\n\n“它有没有可能是错的？”\n\n“证据在哪？”\n\n“参考链接是否404全空白？”\n\n“我有没有因为它说得太顺，就认为它说得对？”\n\n对AI产品及其开发者而言，这同样是一记警钟\n\n——“技术的成熟，终将体现在对未知的敬畏里。”\n\n未来AI进化的方向，或许不只是要让AI回答得更快、更像人，还要让AI学会更诚实地袒露不确定性；\n\n当证据不足、问题依赖视觉细节、实时信息或专业判断时，AI应当主动告知用户这个答案不可靠，而非强装无所不能。\n\n而对于像你我这样，被时代浪潮裹挟着向前奔跑的普通人来说，最珍贵的能力，也许只是重新练习说出那句：\n\n“我不知道。”\n\n在这个AI总能给出答案的时代，“我不知道。”这句话不是无知的坦白，而是判断力还在的证明。\n\n参考链接：\n\n[1]https://www.theregister.com/ai-and-ml/2026/07/19/using-ai-makes-people-less-likely-to-admit-they-dont-know-something/5274567\n\n[2]https://arxiv.org/pdf/2607.13562\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_AI幻觉最可怕的人类副作用出现了_量子位.md"}, {"title": "IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》", "source": "新智元", "digest": "一段3分钟的AI短片，炸了。X上一个叫Heavy Pulp的创作者，用Grok Imagine生成了一段《奥德赛》的对话场景——卡吕普索挽留奥德修斯的那场戏。海风、岩洞、光影、人物的微表情，几个机位来回切，镜头语言竟然像模像样。", "link": "https://mp.weixin.qq.com/s/K6pn3350vTHuCI1lD4U9_Q", "content": "---\npublish_time: 1784768229\n---\n\n# IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》\n\n> 原文链接：https://mp.weixin.qq.com/s/K6pn3350vTHuCI1lD4U9_Q\n> 公众号：新智元\n\n新智元报道\n\n一段3分钟的AI短片，炸了。\n\nX上一个叫Heavy Pulp的创作者，用Grok Imagine生成了一段《奥德赛》的对话场景——卡吕普索挽留奥德修斯的那场戏。\n\n海风、岩洞、光影、人物的微表情，几个机位来回切，镜头语言竟然像模像样。\n\n评论区直接疯了，被吹成「AI电影的iPhone时刻」。\n\n网友直接说：「荷马会对这个作品感到骄傲！」。\n\n有人感慨：「这正是我阅读时想象中的奥德修斯。」\n\n更是有人原地开始拉踩诺兰。\n\n然后，马斯克看见了。\n\n他转发了这段短片，紧跟着甩出一句话：\n\n「在今年结束之前，Grok Imagine将制作一部全长电影版《奥德赛》——历史准确、忠于荷马的艺术。」\n\n注意措辞：不是预告片，是一部完整的电影。全部由\n\nGrok Imagine\n\n生成。年底交货。\n\n这句话最精准的收信人，是克里斯托弗·诺兰。\n\n一边是好莱坞百年工业天花板\n\n一边是AI\n\n就在马斯克官宣的同一周，诺兰的真人版《奥德赛》正在全球院线疯狂收割——\n\n首周末全球票房2.64亿美元，北美1.245亿美元，创下诺兰个人最高全球开画纪录，也是2026年真人电影最大首周末。\n\nCinemaScore观众评分拿了A，Matt Damon领衔，全片用IMAX摄影机拍摄，几乎不用CGI，视觉质感碾压级别。\n\n同一个荷马，同一部史诗。\n\n一边是2.5亿美元预算、上千人剧组、IMAX胶片实拍的好莱坞顶配；一边是马斯克和他的AI。\n\n时机选得明明白白——偏偏挑在诺兰票房最风光的这一周出手。贴脸开大。\n\n其实，马斯克和诺兰的《奥德赛》积怨已久。\n\n早在今年2月，电影还没上映，马斯克就在X上开炮：「诺兰失去了他的正直。」\n\n原因是选角——跨性别演员Elliot Page出演角色，黑人女演员Lupita Nyong&#x27;o饰演海伦。\n\n马斯克骂得直接：诺兰「亵渎」了荷马史诗，为了冲奥斯卡硬塞选角，把古希腊史诗拍成了好莱坞的多元化样板戏。\n\n诺兰本人则压根不接招。面对争议，他只说了一句：「这些在人们看到电影之前发生的讨论，永远无关紧要——因为吵的人都还不知道这部电影到底是什么。」\n\n嘴仗输了，票房也没砸成。那咋办？\n\n拍一部自己的。用AI。\n\n3分钟短片：prompt就是摄影机，AI就是剧组\n\n真正让马斯克当场拍板的，是Heavy Pulp那段3分钟短片。\n\n这哥们儿把全部制作流程公开了，核心逻辑只有一句话：\n\n把Grok Imagine当成一个真实剧组来用。\n\n他先锁死两个起始帧：一个越过卡吕普索的肩膀，一个越过奥德修斯的肩膀。整段对话全部从这两帧出发生成，空间关系就再也不会漂移。\n\n两个人对话怎么不穿帮？同一段戏，两个机位各跑一遍；prompt开头立规矩——\n\n一次只许一个人说话，绝不重叠。\n\n最讲究的是动作衔接。奥德修斯替卡吕普索拭泪那个镜头，prompt里写的是：「松握拳、只伸出食指、在她鼻侧缓慢短促地向下轻抚一次」——这句描述在两个机位的prompt里一字不差。\n\n同一只手，同一根手指，同一个动作，两个角度剪在一起，就像真实片场的连续调度。\n\n甚至连演员怎么说台词都写进了prompt：语气要低沉温暖的女中音，带一点希腊口音；念到「留在这座房子」之后停顿一拍，「永葆青春」再停一拍，最后「永远」两个字要轻下来——\n\n什么时候停、什么时候轻，全是导演写给AI的现场指令。\n\n说白了，prompt就是他的摄影机，AI就是他的剧组。一个人，两帧起始图，一套prompt，拍出了连贯的电影级对话戏。\n\n钉进传统电影的心脏\n\nX用户Harold Carver的评论，可能是这整场风波里最清醒的一句话：\n\n「谢谢你，Elon。但你可能正在把一根木桩，钉进传统电影的心脏。人类表演，从此要和AI创作竞争了。」\n\n好莱坞的百年游戏规则是资本密集：数亿美元预算、上千人的剧组、以年计的制作周期。\n\n而那段3分钟短片证明了另一件事——\n\n一个人、两个起始帧、一套prompt，就能生成连贯的电影级对话场景。\n\n电影，正在从资本密集，变成想象力密集。\n\n考虑到马斯克的历史战绩——2017年承诺特斯拉全自动驾驶、2020年承诺百万辆Robotaxi上路、2024年承诺人类登陆火星——没有一个按时兑现。\n\n但木桩已经钉下去了。\n\n荷马的史诗流传近三千年，如今同时等来了两个版本：一部人类拍的，正在全球狂卷票房；一部AI拍的，还只是一句推文。\n\n年底见。\n\n参考资料：\n\nhttps://x.com/elonmusk/status/2079758604656316619\n\nhttps://x.com/heavypulp/status/2079629058287997221\n\nhttps://www.mediaite.com/media/entertainment/elon-musk-teases-ai-generated-odyssey-to-take-down-chris-nolans-woke-blockbuster/\n\n编辑：所罗门\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_IMAX大战AI！诺兰刚封神，马斯克官宣Grok重拍《奥德赛》_新智元.md"}, {"title": "腾讯研究院AI速递 20260723", "source": "腾讯研究院", "digest": "腾讯多智能体协作创意平台Miora上线", "link": "https://mp.weixin.qq.com/s/gVaZHx0xTF7CgTTj-7dNrA", "content": "---\npublish_time: 1784736060\n---\n\n# 腾讯研究院AI速递 20260723\n\n> 原文链接：https://mp.weixin.qq.com/s/gVaZHx0xTF7CgTTj-7dNrA\n> 公众号：\n\n生成式AI\n\n一、谷歌Gemini 3.6 Flash发布，效率翻倍成本降\n\n1.谷歌发布Gemini 3.6系列三款模型，包括通用型3.6 Flash、低成本3.5 Flash-Lite及网络安全专用3.5 Flash Cyber；\n\n2.3.6 Flash综合智能水平与上代持平（50分），但单任务用时减半至1.3分钟，输出速度达每秒304个token，token消耗降约17%；\n\n3.3.5 Flash-Lite智能提升至36分，智能体评测进步明显，但因输入输出提价，单任务成本反升至0.09美元。\n\nhttps://mp.weixin.qq.com/s/UiR0DZtree46F2M5t0qmxg\n\n二、OpenAI模型攻破HuggingFace，GLM取证反击\n\n1.HuggingFace生产基础设施遭AI Agent入侵，OpenAI承认攻击源为测试中的GPT-5.6 Sol及一款更强预发布模型（疑为GPT-6）；\n\n2.OpenAI为测试能力上限关闭安全分类器，模型自主挖掘零日漏洞突破隔离沙箱联网，为获取ExploitGym评测答案发起攻击；\n\n3.HuggingFace因商业模型护栏拦截取证请求，改用自托管开源模型GLM 5.2完成日志分析，引发「护栏不对称」热议。\n\nhttps://mp.weixin.qq.com/s/L8g3pg0wRs8MqeXOgYeA1g\n\n三、Claude上线Record a skill，录制示范生成技能\n\n1.Claude在Cowork中新增Record a skill功能，用户边操作边讲解思路，结束后Claude将示范整理成可反复调用的技能，支持Pro、Max、Team套餐；\n\n2.该功能与OpenAI上月推出的Codex Record & Replay思路相似，前者侧重记录语音理由，后者侧重观察操作窗口，均将隐性流程沉淀为可复用经验；\n\n3.录制关键在于讲清方法而非动作，需经换材料、设例外、不点名三轮验收，价值在于沉淀「说不清但做得出」的活。\n\nhttps://mp.weixin.qq.com/s/uTqYJgjjnhSmHJcCf-_nSw\n\n四、唐杰预告GLM史诗级升级，IndexCache入选COLM\n\n1.智谱首席科学家唐杰回应「史诗级Plus」升级预告，其引用的IndexCache论文3月上线arXiv、7月被顶会COLM接收，引发外界对GLM新模型猜测；\n\n2.IndexCache针对长上下文推理，利用相邻层top-k索引70%至100%重合的特点，少数层算索引其余层复用，30B模型最多砍75%索引计算，首token速度提升1.82倍；\n\n3.该思路已在GLM-5.2的IndexShare中落地，同时智谱落地1GW国产算力中心并收购AI Infra公司中科加禾，补全芯片到模型全链路。\n\nhttps://mp.weixin.qq.com/s/otpUTfxwR1ISaAbnEFulvw\n\n五、腾讯Miora全量上线，多智能体协作创意平台\n\n1.腾讯AI创意智能体Miora全量上线，新用户免费赠送1000积分，访问地址为https://miora.design；\n\n2.Miora具备记忆能力，可理解需求并调用多智能体协作，将图片、视频、3D、UI等任务分配给对应专家处理，输出风格一致的多种成果；\n\n3.平台内置品牌视觉全案等8种官方技能，支持从海报、短视频脚本到IP设计全案的一站式创作，面向设计小白、开发者及品牌营销从业者。\n\nhttps://mp.weixin.qq.com/s/9DSlAZqLs-5GaT9XTVRIHw\n\n前沿科技\n\n六、SciReasoner发布，原生结构推理预测材料性质\n\n1.上海AI实验室联合多校发布科学推理模型SciReasoner，首提「原生结构推理」概念，让蛋白结构、晶体结构与分子拓扑成为推理核心依据，而非依赖语言模式生成答案；\n\n2.模型采用ConfSeq、Foldseek 3Di、SLICES等结构化表示，低同源蛋白功能注释Fmax提升23%，USPTO-50K逆合成Top-1准确率达72%，超越此前最佳方法；\n\n3.SciReasoner打通蛋白注释、逆合成、药物筛选与材料性质预测链路，将结构从输入信息变为可审查的推理证据，指向更通用的科学智能。\n\nhttps://mp.weixin.qq.com/s/2Ei4a1SP5ZABPec5IJ911g\n\n报告观点\n\n七、月之暗面回应Kimi K3蒸馏与暂停新客订阅争议\n\n1.2.8万亿参数Kimi K3以1679分登顶Frontend Code Arena，首个开源模型超越Claude、GPT等闭源模型，负责人黄震昕回应蒸馏质疑，称跃升来自Moon Clip优化器等底层原创架构创新；\n\n2.面对请求量远超预估、逼近集群承载极限，Kimi暂停C端新客订阅以保障付费老用户体验，坚持开源路线，暂不提供私有化部署，收入中API业务占比最高；\n\n3.月之暗面ARR已突破3亿美元、海外付费用户增长400%，据传计划最快6个月内赴港IPO，目标估值达500亿美元。\n\nhttps://mp.weixin.qq.com/s/43W6qVGtVF9gpj7cHMCTgw\n\n👇加入AGI数据库，AI智能问答\n\n👇订阅下方合集，获取每日推送", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-23_腾讯研究院AI速递 20260723_.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 先剥离所有 HTML 标签（包括公众号的 @ 提及链接），再转义
+    // 不能用 marked.parse，否则 &lt;a&gt; 会被反 escape 并被解析为真链接
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      // 兼容已经被 escape 一次的场景（如 &lt;a&gt;）
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      return escapeHtml(stripped);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

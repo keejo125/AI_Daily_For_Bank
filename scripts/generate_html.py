@@ -389,12 +389,6 @@ def group_articles_by_topic(articles):
             'merged_title': 'OpenAI首款AI手机曝光：最快明年量产，预计出货3000万台',
         },
         {
-            'name': 'xAI离职事件',
-            'keywords': ['xAI', '马斯克'],
-            'match_mode': 'any',
-            'merged_title': 'xAI人事动荡：多位联创同日离职，马斯克600亿拉来Cursor重建',
-        },
-        {
             'name': 'DeepSeek融资',
             'keywords': ['DeepSeek', '融资'],
             'match_mode': 'all',
