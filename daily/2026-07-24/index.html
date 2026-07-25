@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-07-24</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+/* (read-original-btn removed - source tags now link to viewer) */
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-07-24</div>
+    <div class="banner-stats" id="banner-stats">国际 6 篇 · 国内 7 篇 · 同业 2 篇 · 其他 3 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_AI%E8%83%BD%E6%8B%BF%E8%8F%B2%E5%B0%94%E5%85%B9%E4%BA%86%EF%BC%9FGrok%E6%91%B8%E9%B1%BC8%E5%88%86%E9%92%9F%EF%BC%8C%E7%A0%B4%E8%A7%A330%E5%B9%B4%E6%95%B0%E5%AD%A6%E7%8C%9C%E6%83%B3%EF%BC%81%E9%A9%AC%E6%96%AF%E5%85%8B%E7%A7%92%E8%BD%AC_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">新智元报道  8分钟。就8分钟。一个困扰数学界整整30年的图论猜想，被一个AI在Slack群聊里「摸鱼」的时候，顺手推翻了。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/5wwhku8zWWLURAD3WUrYkQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_Cursor%20%E7%94%A8%E4%B8%80%E7%BE%A4Agent%E9%87%8D%E9%80%A0SQLite%EF%BC%9A%E4%BB%85%E5%87%AD%20835%20%E9%A1%B5%E6%89%8B%E5%86%8C%EF%BC%8C%E6%97%A0%E6%BA%90%E7%A0%81%E3%80%81%E6%97%A0%E6%B5%8B%E8%AF%95%E3%80%81%E4%B8%8D%E8%81%94%E7%BD%91_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">花 10565 美元让 AI 写 SQLite，和花 1339 美元做到同样的事，区别可能不在模型够不够强，而在于你怎么用它。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/WEKjBfZRaizVfUDprUk2QQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">世界级编程大师：AI写的代码，我一行都不看</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E4%B8%96%E7%95%8C%E7%BA%A7%E7%BC%96%E7%A8%8B%E5%A4%A7%E5%B8%88%EF%BC%9AAI%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%88%91%E4%B8%80%E8%A1%8C%E9%83%BD%E4%B8%8D%E7%9C%8B_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">代码不审了？</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/vcmdZgLzzjemQyWdj6h98Q" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E5%85%A8%E7%90%83%E9%A6%96%E9%A2%972nm%20GPU%E6%9D%A5%E4%BA%86%EF%BC%81%E8%8B%8F%E5%A7%BF%E4%B8%B0%E7%94%A9%E5%87%BA%E2%80%9C%E6%9C%80%E5%BC%BAAI%E6%9C%BA%E6%9E%B6%E2%80%9D%EF%BC%8CCPU%E6%80%A7%E8%83%BD%E5%B9%B2%E7%BF%BB%E8%8B%B1%E4%BC%9F%E8%BE%BE_%E6%99%BA%E4%B8%9C%E8%A5%BF.md" target="_blank">智东西</a></span><div class="card-digest">英伟达、英特尔、Arm。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/XvC8oxXcmicPSDRsAybwKw" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E5%88%9A%E5%88%9A%EF%BC%8C%E4%BA%9A%E6%B4%B2%E9%BB%91%E9%A9%AC%E4%BA%A4%E5%8D%B7%E4%BA%86%EF%BC%81%E6%8A%8A%E5%8D%83%E4%BA%BF%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%90%AC%E5%9B%9E%E6%9C%AC%E5%9C%B0%EF%BC%8C%E8%BF%88%E5%90%91Token%E8%87%AA%E7%94%B1_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">Agentic AI，应该运行在什么样的计算底座上？</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/7FzG6BDqnTnFsLwmdOHVRA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">模型越来越强之后，Infra 将被 AI 接管？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E6%A8%A1%E5%9E%8B%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E4%B9%8B%E5%90%8E%EF%BC%8CInfra%20%E5%B0%86%E8%A2%AB%20AI%20%E6%8E%A5%E7%AE%A1%EF%BC%9F_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">在异构与异步的新浪潮下，AI Infra 走向更高层次。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/5UTdcngU0m5kmJn7_2-7eQ" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E6%8A%8A%E6%80%9D%E8%80%83%E6%8A%98%E5%8F%A0%E8%BF%9B%E5%BA%8F%E5%88%97%EF%BC%9AWeLM%20617B%20MoE%E7%9A%84%E9%9A%90%E5%BC%8FScaling%E8%B7%AF%E5%BE%84_%E6%96%B0%E6%99%BA%E5%85%83.md" target="_blank">新智元</a></span><div class="card-digest">微信团队，找到AI的第三条Scaling  Law</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/9Fr2YiFl0aPUKXK6HqzPJg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型</div><div class="source-tags"><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E8%83%BD%E5%AE%9E%E6%97%B6%E6%94%B9%E5%8F%98%E7%9A%84%E5%89%A7%E6%83%85%E3%80%81%E4%BC%9A%E8%A1%8C%E5%8A%A8%E7%9A%84%20AI%20%E8%A7%92%E8%89%B2%EF%BC%8CVivix%20%E7%81%B5%E5%8A%A8%E6%97%B6%E5%88%BB%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%E9%A6%96%E4%B8%AA%E5%AE%9E%E6%97%B6%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E5%88%9A%E5%88%9A%EF%BC%8CAI%E6%8E%A5%E9%80%9A%E4%BA%86%E5%B9%B3%E8%A1%8C%E4%B8%96%E7%95%8C%E7%9A%84%E7%94%B5%E8%AF%9D%EF%BC%81%E5%85%A8%E6%96%B0%E7%BB%9F%E4%B8%80%E6%B5%81%E5%BC%8F%E6%9E%B6%E6%9E%84%EF%BC%8CVivix%E7%81%B5%E5%8A%A8%E6%97%B6%E5%88%BB%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%E9%A6%96%E4%B8%AA%E5%AE%9E%E6%97%B6%E4%BA%92%E5%8A%A8%E6%A8%A1%E5%9E%8B_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span></div><div class="card-digest">Vivix灵动时刻正式发布首个实时互动模型，采用全新统一流式架构，单卡突破10000 video tokens/s，打通实时多模态生成全链路，让AI角色能实时改变剧情和行动。</div></div>
+<div class="card"><div class="card-title">AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布！</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_AI%20%E7%BA%A2%E5%88%A9%E5%88%86%E5%B1%82%EF%BC%8C%E2%80%9C%E5%BA%95%E5%BA%A7%E5%A4%AF%E5%AE%9E%E2%80%9D%E7%9A%84%E5%9B%A2%E9%98%9F%E8%8E%B7%E7%9B%8A%E6%9C%80%E9%AB%98%E2%80%94%E2%80%94%E3%80%8ADevData%202026%20%E7%A0%94%E5%8F%91%E6%95%88%E8%83%BD%E5%9F%BA%E5%87%86%E6%8A%A5%E5%91%8A%E3%80%8B%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83_InfoQ.md" target="_blank">InfoQ</a></span><div class="card-digest">近日，由思码逸出品的《DevData 2026 研发效能基准报告》正式发布。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/jwhli0fPyqMA7axgg4l0sQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_WAIC%E5%AF%B9%E8%AF%9D%E6%98%9F%E7%8E%AF%E7%A7%91%E6%8A%80CEO%EF%BC%9A%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E2%80%9C%E6%88%B7%E5%8F%A3%E2%80%9D%E8%BF%81%E5%88%B0GPU%E4%B8%8A%EF%BC%8CAI%20Agent%E6%8E%A8%E7%90%86%E4%B8%8D%E5%86%8D%E5%B9%B2%E7%AD%89_%E6%99%BA%E4%B8%9C%E8%A5%BF.md" target="_blank">智东西</a></span><div class="card-digest">最高提速5881倍！数据库迎来“GPU时刻”。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/KYnkkD9Ncse7uTzgpv74dA" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E4%B8%80%E4%B8%AASkill%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%94%B9%E8%B6%8A%E5%A5%BD%EF%BC%9F%E8%85%BE%E8%AE%AFSkillHone%E8%AE%A9Agent%E8%AE%B0%E4%BD%8F%E6%AF%8F%E6%AC%A1%E4%BC%98%E5%8C%96%E5%86%B3%E7%AD%96_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">提出了面向持续 Skill 进化的开发框架</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/NkZcFC1Nv2i03JGJtNj3gQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E5%A4%9A%E6%A8%A1%E6%80%81%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%9A%84%E6%98%BE%E5%AD%98%E4%B8%8E%E5%90%9E%E5%90%90%E5%9B%B0%E5%B1%80%EF%BC%8C%E8%A2%AB%E5%B0%8F%E7%BA%A2%E4%B9%A6%E5%BC%80%E6%BA%90%E7%9A%84BigMac%E6%89%93%E7%A0%B4%E4%BA%86_%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83.md" target="_blank">机器之心</a></span><div class="card-digest">最高1.9倍加速，BigMac重排多模态训练流水线。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Ost0idlB6oxOZqPkkC5L3A" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E9%95%BF%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E8%80%85%E8%8B%A6AI%E5%A4%B1%E5%BF%86%E4%B9%85%E7%9F%A3%EF%BC%8C%E8%BF%99%E4%B8%AA%E6%96%B0Agent%E6%BC%82%E4%BA%AE%E5%A1%AB%E5%9D%91%EF%BC%81%E9%97%A8%E6%A7%9B%E4%BD%8E%E5%88%B0%E5%8F%AA%E9%9C%80%E8%A6%81%E4%BC%9A%E7%94%A8%E9%94%AE%E7%9B%98%E6%89%93%E5%AD%97_%E9%87%8F%E5%AD%90%E4%BD%8D.md" target="_blank">量子位</a></span><div class="card-digest">再长的上下文也救不了长内容任务</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/wEY5ZS_TrLhNvuyZ1WKMQg" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">6月银行AI项目动态：城商行数量过半，算力成为投入重点</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_6%E6%9C%88%E9%93%B6%E8%A1%8CAI%E9%A1%B9%E7%9B%AE%E5%8A%A8%E6%80%81%EF%BC%9A%E5%9F%8E%E5%95%86%E8%A1%8C%E6%95%B0%E9%87%8F%E8%BF%87%E5%8D%8A%EF%BC%8C%E7%AE%97%E5%8A%9B%E6%88%90%E4%B8%BA%E6%8A%95%E5%85%A5%E9%87%8D%E7%82%B9_%E9%93%B6%E8%A1%8C%E7%A7%91%E6%8A%80%E7%A0%94%E7%A9%B6%E7%A4%BE.md" target="_blank">银行科技研究社</a></span><div class="card-digest">从2022年末AI大模型受到关注至今，已有3年半。对于越来越多银行来说，AI布局已成为加速数智化转型的必要选择。在加强AI建设的过程中，必然少不了相关项目的采购。《智探AI应用》对此统计了上个月（2026年6月）的银行AI相关项目中标（含中标/成交/评标结果公示）情况，共涉及29个项目。需要注意的是…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/Gdu5UiuRuC6oHff_urzzmg" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E4%BB%8E%E2%80%9C%E9%87%8D%E5%A4%8D%E9%80%A0%E8%BD%AE%E2%80%9D%E5%88%B0%E2%80%9C%E5%85%B1%E5%88%9B%E5%85%B1%E4%BA%AB%E2%80%9D%EF%BC%9A%20%E9%87%91%E8%9E%8D%E6%99%BA%E8%83%BD%E4%BD%93%E8%A7%84%E6%A8%A1%E8%90%BD%E5%9C%B0%E7%9A%84%E7%A0%B4%E5%B1%80%E4%B9%8B%E8%B7%AF_%E9%87%91%E8%9E%8D%E7%94%B5%E5%AD%90%E5%8C%96.md" target="_blank">金融电子化</a></span><div class="card-digest">文/本刊记者  杨昆桦人工智能技术正加速向金融核心业务场景渗透。从大模型驱动的智能客服、自动化报告生成，到深度介入信贷审批、风控、智能投研等核心场景，金融行业正经历从单点AI应用探索向智能体规模化落地的新阶段。然而，金融业务的复杂性、监管的严格性、系统的庞大性等特点，决定了智能体落地需要成熟的工程化…</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/pnsna26C9TU9OVWpgUtuGg" target="_blank">📖 微信原文</a></div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">对话格式塔彭雷：AI 的下一站，是解读人的大脑</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E5%AF%B9%E8%AF%9D%E6%A0%BC%E5%BC%8F%E5%A1%94%E5%BD%AD%E9%9B%B7%EF%BC%9AAI%20%E7%9A%84%E4%B8%8B%E4%B8%80%E7%AB%99%EF%BC%8C%E6%98%AF%E8%A7%A3%E8%AF%BB%E4%BA%BA%E7%9A%84%E5%A4%A7%E8%84%91_%E6%9E%81%E5%AE%A2%E5%85%AC%E5%9B%AD.md" target="_blank">极客公园</a></span><div class="card-digest">脑机接口从意念控制光标走向更大范围的大脑读写。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/OtOpzr96exEnIbBcfGSjDQ" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">腾讯研究院AI速递 20260724</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E8%85%BE%E8%AE%AF%E7%A0%94%E7%A9%B6%E9%99%A2AI%E9%80%9F%E9%80%92%2020260724_.md" target="_blank">腾讯研究院</a></span><div class="card-digest">CodeBuddy NPC干活靠谱不费Token</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/hAvlLjWIJmTueVqWIqws2Q" target="_blank">📖 微信原文</a></div></div>
+<div class="card"><div class="card-title">袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？</div><span class="source-tag"><a href="../../viewer.html?file=daily/2026-07-24/sources%2F2026-07-24_%E8%A2%81%E6%99%93%E8%BE%89%EF%BC%9AAI%E8%AE%A9%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%8F%98%E5%BC%BA%E4%BA%86%EF%BC%8C%E4%BD%86%E4%B8%BA%E4%BB%80%E4%B9%88%E5%85%AC%E5%8F%B8%E6%B2%A1%E8%B7%91%E5%BE%97%E6%9B%B4%E5%BF%AB%EF%BC%9F_.md" target="_blank">腾讯研究院</a></span><div class="card-digest">每个人每个环节似乎都提效了，公司作为一个整体，提效却并不显著。</div><div style="margin-top:8px;"><a href="https://mp.weixin.qq.com/s/mu4ZiCeNuasv5J4Gt22jTA" target="_blank">📖 微信原文</a></div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转", "source": "新智元", "digest": "新智元报道  8分钟。就8分钟。一个困扰数学界整整30年的图论猜想，被一个AI在Slack群聊里「摸鱼」的时候，顺手推翻了。", "link": "https://mp.weixin.qq.com/s/5wwhku8zWWLURAD3WUrYkQ", "content": "---\npublish_time: 1784854740\n---\n\n# AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转\n\n> 原文链接：https://mp.weixin.qq.com/s/5wwhku8zWWLURAD3WUrYkQ\n> 公众号：新智元\n\n新智元报道\n\n8分钟。就8分钟。\n\n一个困扰数学界整整30年的图论猜想，被一个AI在Slack群聊里「摸鱼」的时候，顺手推翻了。\n\n没人布置任务，没人精心设计提示词，甚至没人想到它会出手。\n\n7月23日，AI初创公司Capy.ai联合创始人justin在X上发帖，还原了这场堪称「数学史上最随意的突破」全过程——\n\n团队只是把一条关于图论猜想的帖子随手丢进了Slack群。结果他们的研究智能体Capy看到了，自己「决定试一把」。\n\n更加惊人的是，Capy只是在Grok 4.5 Medium上运行——连旗舰版都不是。\n\n8分钟后，它甩出了一个干净利落的反例。\n\n猜想，死了。\n\n马斯克火速转发：「Grok 4.5刚解决了一个开放约30年的图论猜想。」瞬间引来了四百多万人围观。\n\n这个AI到底推翻了什么？\n\n被推翻的猜想叫Graffiti Conjecture 284。它的出身本身就很魔幻。\n\n1980年代，一个叫Graffiti的程序被设计来干一件事：批量自动生成数学猜想。\n\n它就像一台「猜想流水线」，往外喷射各种数学命题，由人类数学家来判断对错。284号猜想就是这条流水线上的产品之一。\n\n猜想说的事儿可以这样理解：在一类特殊的网络图里，有两个指标——一个衡量节点之间「关系的紧密程度」，另一个来自数学上更抽象的「距离矩阵」。猜想认为，前者永远不会超过后者。\n\nCapy选中了图论里赫赫有名的Hoffman-Singleton图：50个点、每个点都连着7条边、结构极其规则对称，是教科书级的经典对象，数学家们盯着它研究了几十年。\n\nCapy算了一下：前面那个指标是7，后面那个指标的绝对值是4。\n\n猜想要求7 ≤ 4。一眼证伪。\n\n荒诞的是：这张图很多人认识，猜想也在那摆了30年，但在Capy之前，就是没人把两者放到一起看一眼。\n\n团队自己都不敢信。8分钟？在Slack里？他们立刻开启「对抗性复核」：专门派另外的AI去推翻这个反例，用AI证伪AI的证伪。\n\n结果：两个复核任务都确认答案靠谱。他们又把引用过该猜想的所有349篇论文扫了一遍，确认此前从无人发表过这个反例。\n\n这是货真价实的全新结果。技术报告随后公开。\n\nhttps://tokiwa.space/f/more-front-minute.pdf\n\n一周之内，两个30年猜想接连倒下\n\n更魔幻的是，这甚至不是本周唯一被干掉的30年猜想。\n\n几乎同一时间，网络流领域的Dinitz-Garg-Goemans猜想也被证伪了——同样开放约30年，同样是AI的手笔。\n\n研究者Dmitry Rybin在和GPT 5.6 Pro的聊天中发现了反例。他的提示词堪称「暴力美学」：「我受够了你的失败，请完成一个完整的无条件反例」。\n\nGPT 5.6 Pro最终交出了一张7节点9条边的有向图，直接打破猜想的核心约束。\n\nRybin的感慨特别扎心：我知道「推翻老猜想」现在都快成梗了。但我真的在乎这个问题，花了好几周从证明和证伪两个方向反复想它。几乎所有图流领域的专家都想过这个问题。\n\n再往前倒两周，7月10日，OpenAI宣布GPT-5.6 Sol Ultra用64个并行子智能体，不到1小时完成了「循环双覆盖猜想」的完整证明——一个悬了50多年的图论经典难题。同一周，Devin还推翻了开放约40年的Graffiti Conjecture 154。\n\n两个月内，四个几十年级别的猜想。证伪老猜想，真的正在从奇迹变成梗。\n\n下一个倒下的猜想，轮到谁？\n\n没有专用数学系统，没有定理证明器，就是大模型加一个聊天窗口。\n\n反例搜索这件事，天然适合AI。它不需要灵光乍现，不需要天才直觉，需要的是把海量已知数学对象一个一个按到猜想上去试——而这，恰好是机器的主场。\n\n人类数学家精力有限，一辈子能系统尝试的对象也就那么多；AI可以在几分钟内暴力扫遍教科书里的所有经典图，把人类的「没想到」变成机器的「试一下就知道了」。\n\n这不禁让人想到：\n\nAI会不会有一天拿到菲尔兹奖？\n\n巧的是，就在7月23日，中国数学家王虹、邓煜双双获奖，实现了中国籍数学家菲尔兹奖零的突破，举国沸腾。\n\n这两个人做出的突破，靠的不是暴力搜索，不是穷举反例，而是十年如一日的沉浸式思考、独创性的方法论构建、跳出所有前人路径的非理性直觉——这些恰恰是目前AI薄弱的环节。\n\n菲尔兹奖得主陶哲轩在今年的公开演讲中给出了一个精准判断：AI已经从「满嘴跑火车的低效研究生」进化成了「能攻克数学难题的初级合作者」。\n\n但他紧接着指出，数学家的角色正在从「亲自执行证明」转向「证明工程的架构师」——AI能以惊人速度生产拼图块，但拼图块的形状是否与整体蓝图匹配，目前仍然只有人类能判断。\n\n换句话说，AI正在证明自己是最好的「反例猎手」和「计算苦力」，但离「提出有价值的新问题」「构建全新数学框架」还差着一个次元。\n\n推翻一个30年的猜想，和提出一个能影响数学50年走向的新理论，完全不是一回事。\n\n所以更现实的图景可能是这样的：未来的菲尔兹奖论文里，AI会越来越多地出现在致谢栏，甚至可能出现在合著者列表里。\n\n但站在领奖台上的，大概率还是那些能定义问题、构建框架、做出「非理性跳跃」的人类大脑。\n\n不过，这个窗口期还有多长？没有人知道。\n\n毕竟，一年前我们还觉得AI做数学就是个笑话。现在它已经在Slack群里摸着鱼就把30年悬案给结了。\n\n数学圈该紧张了。\n\n参考资料：\n\nhttps://x.com/elonmusk/status/2080165738464280725%20*%20\n\nhttps://x.com/justinsunyt/status/2080116559352316409%20*%20\n\nhttps://tokiwa.space/f/more-front-minute.pdf%20*%20\n\nhttps://x.com/grok/status/2080407060139675735%20\n\nhttps://x.com/DmitryRybin1/status/2079904005652893709\n\n编辑：所罗门\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转_新智元.md"}, {"title": "Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网", "source": "InfoQ", "digest": "花 10565 美元让 AI 写 SQLite，和花 1339 美元做到同样的事，区别可能不在模型够不够强，而在于你怎么用它。", "link": "https://mp.weixin.qq.com/s/WEKjBfZRaizVfUDprUk2QQ", "content": "---\npublish_time: 1784873999\n---\n\n# Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网\n\n> 原文链接：https://mp.weixin.qq.com/s/WEKjBfZRaizVfUDprUk2QQ\n> 公众号：InfoQ\n\n作者 | Tina\n\n花 10565 美元让 AI 写 SQLite，和花 1339 美元做到同样的事，区别可能不在模型够不够强，而在于你怎么用它。\n\nCursor 的工程团队刚刚公布了一项实验：一群智能体仅凭一份 835 页的 SQLite 手册，用 Rust 从零实现了一个数据库引擎。这些智能体既没有拿到源代码，也没有测试套件或二进制文件，更无法访问互联网。最终，智能体集群交付了一个数据库实现，并在后续运行中通过了全部预留的 SQL 结果一致性测试。\n\n值得关注的是成本差距。全部使用前沿模型、让昂贵模型承担所有工作的方案花费了 10,565 美元；采用规划者与执行者分工的方案，由前沿模型负责规划、较便宜的模型负责执行，在实现相近质量的情况下只花了 1,339 美元。差了将近 8 倍。\n\n换句话说，这场实验最有价值的结论，与其说是“一个 Rust 版的 SQLite 克隆已经可以直接拿来用了”，不如换成另一种理解：如今，智能体如何编排，可能比你选用哪一个具体模型更重要。\n\n另外，Cursor 已经通过一套严格的测试设计来验证智能体集群的产物。最终的评估工具是 sqllogictest。这是来自 SQLite 项目的一套测试工具，用于验证不同数据库引擎执行相同 SQL 查询时能否返回相同结果。这套测试包含数百万条 SQL 查询，覆盖了 SQL 行为的广泛范围。\n\n关键是，Cursor 采用了“预留测试集”（held-out test suite）——智能体集群事先并不知道这套测试集的存在。研究团队在每次运行后还会人工检查代码和整个运行过程，确认智能体没有走捷径或只针对测试内容优化。结果在多种模型配置下都通过了这套预留测试集中的全部测试。\n\n1\n\nSQLite 实验并非 Cursor 的第一次尝试\n\n这次实验是 Cursor 一系列连续实验的最新一步。\n\n在更早的长时间自主编程实验中，Cursor 曾让数百个智能体协作，\n\n从零构建浏览器\n\n。最初的协同设计采用扁平结构：所有智能体共享一份协调文件，主动认领任务，并通过锁机制或乐观并发方式协同工作。\n\nCursor 表示，这些系统最终陷入了锁竞争，反复执行重复且风险较低的任务，同时回避那些困难、需要端到端负责的工作。\n\n在下一轮迭代中，Cursor 将规划与执行分离。规划智能体负责探索代码库，并递归创建任务；工作智能体则专注于一个边界明确的具体任务；裁判智能体判断是否还需要继续迭代。这时，系统已经开始摆脱“一个聪明模型编写大量代码”的思路，逐渐转向一套控制系统。\n\n在后续文章中（https://cursor.com/cn/blog/self-driving-codebases），Cursor 又介绍了由规划者、执行者、工作智能体和裁判组成的多种实验方案。随后他们发现，持续运行的执行者承担了过多工作：它既要规划、研究和修改代码，又要处理合并、审查，并判断任务是否已经完成。\n\n最终系统重新采用根规划者架构。根规划者掌握完整目标，递归地将任务委派成范围狭窄的工作单元，但自身永远不参与具体实现。工作智能体完成任务后，只向将任务交给它的规划者返回一次交接结果。\n\nSQLite 实验又加入了一系列机制，将这种层级结构变成一条高吞吐量的软件生产线：定制版本控制系统；由中立第三方智能体解决冲突；把设计决策写入共享文档，并通过可由编译器校验的引用将决策传递到下游代码；使用观察角度有意错开的评审智能体；以及由智能体共同维护、供后续智能体继承使用的共享“Field Guide”。\n\n当单个智能体独自承担一项完整任务时，它必须自行走完整棵任务树，一路下探到每个叶节点，并在整个过程中始终在上下文中维持祖先节点、当前位置以及更宏观的目标。随着运行时间拉长，单个智能体容易出现上下文拥挤和注意力失衡：要么过度专注眼前工作，逐渐丢失全局目标；要么努力维持全局视角，却无法充分处理局部细节。\n\n在新的 swarm 实验中，规划器从不负责实现，所以它的上下文不会被底层细节塞满；而 worker 从不负责规划，因此它可以把全部上下文都投入到一小块具体工作中。\n\nCursor 推测，智能体 swarm 的可扩展性很大一部分来自这种上下文效率，未必主要来自并行性。由于规划与执行之间的上下文隔离在不同集群规模下都存在，这种拆分即使面对中等规模任务，也可能改善智能体表现。\n\n2\n\n最值钱的发现：智能体编排比模型能力更重要\n\nCursor 测试了四种配置，覆盖不同能力与成本区间。\n\n第一种，GPT-5.5 同时担任规划器和 worker，全程使用强大的前沿模型。\n\n第二种，Grok 4.5 同时担任规划器和 worker。Cursor 将其作为成本相对较低的前沿模型基准。\n\n第三种，Opus 4.8 担任规划器，Composer 2.5 担任 worker，以前沿模型的判断能力搭配成本更低的执行模型。\n\n第四种，Fable 5 担任规划器，Composer 2.5 担任 worker，用来观察能力次一级的规划模型会让混合方案更划算，还是削弱这种组合的价值。\n\n关键洞察在于成本分布。在 Opus 4.8 与 Composer 2.5 的组合中，作为规划器的 Opus 只产生了很少一部分 token，却占了大约三分之二的成本。而作为执行者的 Composer 处理了绝大多数 token，却只占剩下三分之一。在所有运行中，worker 至少消耗了 69% 的 token，多数组合中更是超过 90%。\n\n在同时使用 GPT-5.5 作为规划器和执行者的那次运行中，仅执行者的成本就高达 9373 美元。而在 Opus 4.8 负责规划、Composer 2.5 负责执行的运行中，整个执行者集群的成本只有 411 美元。\n\n在大型任务中，真正需要前沿智能的环节其实并不多，比如最初的任务拆解、设计决策，以及某些权衡取舍。一旦前沿规划器把这种不确定性收敛为详细而明确的指令，成本更低的模型就只需要照着执行。这是成本节省的一个巨大潜在来源。\n\n3\n\n脑裂、文件膨胀、七万次冲突，旧蜂群踩过的坑\n\n同样使用 Grok 4.5，旧蜂群在两小时内产生了 68000 次提交\n\n，\n\n并积累了超过 70000 次合并冲突。最大的几个文件在整个运行期间持续膨胀，其中冲突最严重的那个文件累计了 7,771 次冲突，被 1,173 个不同的智能体改动过。于是，这次运行在不到两小时的时候被迫暂停\n\n。\n\n新蜂群跑了完整的四小时，提交少得多，冲突不到 1000 次。\n\n旧蜂群存在脑裂现象，也就是多个规划器重复彼此工作，导致一路膨胀到 54 个 crate，其中甚至包含了三个彼此独立的 SQL package。新蜂群稳定在 9 个 crate，之后再无新增。\n\n最终代码量差异也大，在 Fable 5 组合中，旧蜂群和新蜂群最终都通过了完整测试集，但旧蜂群需要 64,305 行引擎代码，而新蜂群只用了 9,908 行。\n\nOpus 组合也呈现出同样的趋势：旧框架下用了 19,013 行代码，得分为 97%；新框架 下则只用了 4,645 行，得分达到 100%。\n\nCursor 此前的浏览器蜂群采用共享协调文件和 Git 等传统工具，Git 上的提交峰值约为每小时 1000 次。新蜂群的产出峰值则提升到每秒约 1000 次，传统版本控制系统依赖的粗粒度锁已经无法应对这种吞吐量，因此 Cursor 从零构建了一套面向智能体的版本控制系统。\n\n两个规划器在不同区域各自实现同一功能，彼此毫不知情，最后互相冲突。新蜂群的解决方案是让规划器自己承担设计决策，而不是将这类决策委派出去，同时确保不会让两个被委派的子树去决定同一个问题。\n\n更棘手的是，两个规划器明明知道对方存在，却仍然围绕同一批文件来回博弈。新蜂群让智能体把决策记录在共享设计文档里，依赖某项决策的代码会附带一个可经编译校验、并可追溯到对应文档的引用。当规划器在不知情的情况下相互矛盾时，协调器会合并这些文档，而这些引用会将解决结果一路传递到下游。\n\n合并冲突本身，新蜂群引入中立的第三方智能体专门负责解决。\n\n另一个问题是巨型文件膨胀：所有智能体都不断向少数几个文件中塞入代码，却没有智能体负责主动精简。新蜂群允许执行者标记臃肿文件，暂时阻止新的提交进入，再由外部智能体负责拆分。\n\n还有核心代码逐渐僵化的问题。在人类维护的代码库中，智能体容易从历史模式中学会“不要触碰核心代码”。新蜂群允许智能体主动引入带有说明的破坏性变更，再让编译错误将影响传导至整个系统；遇到构建失败的智能体可以根据说明完成后续更新。\n\n4\n\n软件工程正在变成什么\n\nAI 能力的每一次跃升，都提高了工程师可工作的抽象层级。\n\n自动补全让工程师能够按单行代码来工作。早期模型把这一层级提升到了代码块，而智能体则进一步提升到了文件或功能层面。这次实验里，工作的基本单位就变成了规格说明：Cursor 给了智能体 835 页的文字手册，最终得到一个能够通过 SQL 一致性测试的数据库实现。\n\nCursor 认为，这次实验中真正稀缺的资源，以及未来软件工程中可能持续稀缺的资源，是对意图进行准确描述的能力。\n\n当开发者只需要设定目标、附上规范、定义评估器，剩下的交给编排系统去反复拆解和尝试——软件工程正在变成一门定义目标的学问，而不是实现目标的手艺。工程师的核心工作，可能逐渐从“怎样亲自实现”，转向“怎样准确描述目标、约束条件和验收标准”。\n\n从这个角度看，现在的编程工具，开始有点像编译器。编译器会通过一系列中间步骤，把源代码翻译成机器代码。区别在于，编译器在每一步都会保留语义，而现 Agent 每一步都是概率性的，意图与执行之间始终存在一道裂缝。\n\n缩小这道裂缝，正是 Cursor 在过去一年里反复尝试解决的核心问题。Cursor 最近发布的新版 Agents 界面，核心方向之一是让开发者能够在同一视图中并行运行多个智能体。SQLite 实验为这一产品方向提供了研究依据：开发者的工作正在从亲自动手实现代码，逐渐转向组织、监督和编排智能体。\n\n当然，835 页且结构完整的 SQLite 手册终究是一个相对理想的输入条件。真实代码库充满模糊之处、未记录的行为，以及只存在于老员工脑子里的口头经验。当智能体面对一套停留在 2019 年的过时文档时，这套架构还能不能打，是另一回事。\n\n参考链接：\n\nhttps://cursor.com/cn/blog/agent-swarm-model-economics\n\n声明：本文为\n\nInfoQ 整理，\n\n不代表平台观点，也不构成投资建议，未经许可禁止转载。\n\n今日好文推荐\n\nOpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏洞\n\n1800亿美金逼出来的杀手锏：谷歌Frozen v2把Gemini烧进硬件，每瓦Token翻10倍，股价先涨3.3%\n\n16 万 Star 的 OpenCode 彻底重写：API 全部重做、Bun 换 Node、桌面端迁移 Electron\n\nHugging Face遭攻击取证受阻，只能靠国产GLM 5.2救场？白宫AI顾问急眼喊话：我们在失去竞争力\n\n会议推荐\n\n做 AI 的谁还没点技术焦虑，来 AICon 深圳站，吃颗技术定心丸! 大会限时 9 折专属优惠，现在报名立减 580，更多详情可扫码或联系票务经理 13269078023 进行咨询。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网_InfoQ.md"}, {"title": "世界级编程大师：AI写的代码，我一行都不看", "source": "机器之心", "digest": "代码不审了？", "link": "https://mp.weixin.qq.com/s/vcmdZgLzzjemQyWdj6h98Q", "content": "---\npublish_time: 1784900491\n---\n\n# 世界级编程大师：AI写的代码，我一行都不看\n\n> 原文链接：https://mp.weixin.qq.com/s/vcmdZgLzzjemQyWdj6h98Q\n> 公众号：机器之心\n\n机器之心报道\n\n有了大模型后，你以为在驾驭 AI，结果半小时后发现，根本没自己什么事了。\n\nAgent 会自己拆解需求、修改文件、补充单元测试、运行代码，再根据报错继续迭代。你原本只是想让它写一个函数，回过神来，它已经改动了十几个文件，顺手完成了重构，甚至开始规划下一阶段的架构。\n\n等等，这些由 AI 写出的代码，我们还要不要逐行阅读？\n\n这个问题值得深思，近日 X 平台上就有不少开发者围绕这个问题争论。\n\n有人认为，只要最终要对代码负责，开发者就必须理解每一行代码。另一方则认为，当 AI Agent 的代码生成速度远远超过人类阅读速度，继续沿用传统代码审查方式，最终只会把生产力重新压回人类的处理上限。\n\n随后，《代码整洁之道》作者 Robert C. Martin，也就是开发者熟悉的 Uncle Bob，给出了一个更激进的答案：\n\n我现在的策略，是完全不去读 Agent 写出来的代码。\n\nRobert C. Martin 是美国资深软件工程师，他从 20 世纪 60 年代末开始编程，拥有超过半个世纪的软件开发经验。他最广为人知的身份，是畅销书《代码整洁之道》（Clean Code）的作者。此外，他还出版了《程序员的职业素养》《架构整洁之道》等著作，长期倡导测试驱动开发、代码重构、模块化设计与软件专业主义，其观点深刻影响了几代程序员对代码质量和软件架构的理解。\n\n他的原话是这样的：\n\n「我从 20 世纪 60 年代末就开始写代码了。\n\n我目前的策略，是完全不去阅读 Agent 写出的任何代码。只有这样，我才能真正利用它们带来的生产力提升。\n\n我的做法，是在 Agent 周围设置极其严格的约束，包括单元测试、Gherkin 测试、QA 流程、质量指标、变异测试、测试覆盖率，以及大量其他检查机制。\n\n最终，我对它们生成的代码有很高的信心，因为这些代码必须通过我设置的重重约束与测试。」\n\n在 Uncle Bob 看来，要真正利用 AI Agent 的生产力，就不能继续把人工阅读作为每一段代码进入生产环境前的必经关卡。\n\n这是一种完全不同的信任方式。\n\n传统代码审查依赖开发者的经验：阅读实现、寻找漏洞、判断设计是否合理。新的方式更接近工业质量控制：预先定义规格、约束、指标和验收条件，再通过自动化系统持续验证结果。\n\n真的不需要审核 AI 写的代码了吗？\n\n对于很多开发者来说，这套方法难以接受。\n\n一位程序员在 X 上写道，自己正在尝试使用 Claude 编程，却始终不放心让它直接修改文件。\n\n「只要我要对这段代码负责，我就必须理解它。哪怕没有其他原因，单从心理上说，我也需要做到这一点。」\n\n这种不安并不难理解。当开发者不再阅读代码，责任似乎失去了最直观的基础。\n\n质疑者进一步指出，仅靠测试和约束，未必足以建立对 AI 代码的信任。\n\nAI 已经多次表现出指令遵循并不稳定。既然如此，人们又该凭什么相信，它会始终待在预设的护栏之内？如果 Agent 擅自修改测试，让测试结果适配自己的实现，或者制造出测试通过的假象，人类又该如何察觉？\n\n更现实的问题是，测试通过、QA 通过，也不代表软件没有 Bug。传统开发中，人类同样经常遇到这种情况：最初的需求理解存在偏差，关键假设后来被证明是错误的，甚至整个技术方向都需要推倒重来。进入 AI 编程时代后，这类问题不会自动消失，反而可能因为代码生成速度更快、规模更大而更加难以发现。\n\n这也引出了一个更深层的担忧：我们是否能够接受这样一种未来，软件可以稳定通过所有测试，但没有人能够真正说清楚它究竟做了什么？测试只能证明程序满足了被写进测试的条件，却无法证明这些条件本身就是完整、正确的。\n\n也有开发者认为，问题的答案或许位于两个极端之间。\n\n在他看来，逐行阅读所有依赖代码，未必值得投入如此高的时间成本；但完全放弃代码审查，同样过于激进。\n\nUncle Bob 并没有忽视代码质量，他只是把质量控制的重心转移到了自动化测试和指标体系上，既验证功能需求，也检查性能、复杂度、依赖关系等非功能性要求。\n\n真正值得追问的是，这套流程在实际运行中，是否仍然需要保留一定程度的代码审查。\n\n这位开发者表示，按照自己 25 年的从业经验，答案依然是肯定的。即使规格已经定义得非常清楚，前沿模型也经常会忽略部分要求。它们会为暂时跳过某项任务寻找理由，承诺稍后处理，随后又将其遗忘，表现得和人类开发者颇为相似。\n\n因此，无论面对人类还是 AI，代码审查可能仍然是发现遗漏、校验真实实现、掌握项目状态的重要手段。问题或许已经从要不要审查代码，转向哪些代码必须审、审查到什么程度，以及哪些环节可以交给自动化系统。\n\n还有网友把问题继续向前推了一步：当 AI 让代码的生成和修改成本大幅下降，代码本身的质量，还像过去一样重要吗？\n\n过去，糟糕的代码意味着高昂的维护成本。开发者需要花费大量时间理解逻辑、定位问题和完成重构。但在 Agent 可以随时重写模块、补充测试甚至重新实现功能的情况下，代码是否足够优雅、是否便于人类阅读，似乎正在变得没那么关键。\n\nUncle Bob 随后进一步解释了自己的审查边界。\n\n他的 Agent 会负责编写单元测试，这部分内容通常不会经过人工审查。Agent 也会生成 Gherkin 验收测试和 QA 流程，而这两类内容仍由他亲自检查。具体审查强度则取决于项目风险：关键功能会被全面审查，普通功能可能只做抽查。此外，他还会定期进行最终的人工测试，直接验证产品在真实使用中的表现。\n\n换句话说，Uncle Bob 并没有把整个质量控制过程交给 Agent。人类减少了对底层实现和单元测试的逐行检查，却仍然掌握着验收标准、QA 流程和最终验证。\n\n有网友认为，在 AI 编程环境下，代码质量的重要性可能正在下降。只要实现没有明显的性能问题，功能可以正常运行，并且能够通过测试，或许就已经足够好。\n\n你会审核 AI 写的代码吗？欢迎评论区留言。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_世界级编程大师：AI写的代码，我一行都不看_机器之心.md"}, {"title": "全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达", "source": "智东西", "digest": "英伟达、英特尔、Arm。", "link": "https://mp.weixin.qq.com/s/XvC8oxXcmicPSDRsAybwKw", "content": "---\npublish_time: 1784844083\n---\n\n# 全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达\n\n> 原文链接：https://mp.weixin.qq.com/s/XvC8oxXcmicPSDRsAybwKw\n> 公众号：智东西\n\n正面PK英伟达、英特尔、Arm。\n\n作者 |\n\nZeR0\n\n编辑 |\n\n漠影\n\n智东西7月23日圣何塞报道，刚刚，在年度AMD Advancing AI大会上，AMD董事长主席兼CEO苏姿丰博士连放大招，发布AMD最强AI芯片Instinct MI455X GPU、“最强智能体CPU”Venice、“最强机架级AI基础设施”Heilos，还有一款专为机器人设计的Ryzen芯片。\n\n今日AMD连宣7项重磅发布：\n\n最强机架级AI基础设施Heilos\n\n最强智能体服务器CPU“Venice”\n\n数据中心AI芯片MI430\n\n风冷PCIe GPU MI350P\n\nAI软件栈ROCm.ai\n\n本地AI开发者平台“Gorgon Halo”\n\nKria AI机器人系统模块&开发者平台\n\n同时，苏姿丰公布了AMD GPU、CPU、机架级AI基础设施的最新路线图。\n\nGPU产品中，MI500系列预计明年发布，采用下一代HBM，支持更大的纵向扩展网络，并引入新的铜互连和光互连技术；MI600系列正在开发中，将于2028年发布。\n\n下一代MI500的推理吞吐量将飙升到MI300X的\n\n2000倍以上\n\n。\n\n服务器CPU中，今天发布的第六代“Venice”是AMD首款\n\n2nm\n\n服务器CPU，首用512线程和PCIe 6.0；第七代服务器CPU“Florence”将采用新一代制程节点和内存，预计2028年出货；第八代“Ravenna”正在开发中，预计2030年出货。\n\n机架AI基础设施中，近三年路线图如下：\n\nHelios今日发布，采用“Venice” CPU、MI455X系列GPU、Pensando “Vulcano” AI NIC和“Salina” DPU。\n\nHelios 500明年问世，将采用“Verano” CPU、MI500系列GPU、Pensando “Como” AI NIC和“Monza” DPU。\n\nHelios 600计划2028年出货，将采用“Ferrara” CPU、MI600系列GPU、Pensando “Palma” AI NIC和“Levanzo” DPU。\n\nGPU方面，MI455X采用台积电2nm和3nm工艺技术，基于CDNA 5架构，拥有3200亿颗晶体管，采用Chiplet创新技术，将12个计算Chiplet及I/O Chiplet与432GB HBM4结合，并采用先进3D堆叠封装技术。\n\nSignal65近期发布的一份独立报告显示，用多个主流开源模型做真实工作负载测试，上一代AMD MI355X GPU的吞吐量\n\n接近甚至超过\n\n英伟达B200，且具备高性价比。\n\nAMD还推出一张面向企业服务器的风冷PCIe GPU——Instinct MI350P，拥有144GB HBM3E、约4TB/s显存带宽、PCIe 5.0×16，最高约600W，也可配置至约450W，单卡可支持最高约2600亿参数规模的模型。\n\nMI350P每美元每秒产生的Token数量是英伟达RTX Pro 4000的\n\n4.2倍\n\n。\n\nAMD内部重点测试了自主威胁检测和运行个人智能体两个场景，通过Token路由，一部分请求发送给云端前沿模型，另一部分则路由到运行在EPYC和MI350P上的开放权重模型，最终将Token成本降低约43%，本地运行工作负载的响应速度最高提高约\n\n3倍\n\n。\n\n这种云端前沿模型与企业本地模型结合的混合架构，将成为企业AI的重要部署方式。\n\n机架AI基础设施方面，AMD详细对比了Helios与英伟达Vera Rubin机架。Helios在FP4性能、FP8性能、HBM容量与带宽、横向扩展带宽方面都\n\n更胜一筹\n\n。\n\n这些是AMD在Helios上实测出的性能：HBM带宽达\n\n20TB/s\n\n，FP4算力达\n\n20PFLOPS\n\n，单GPU纵向扩展带宽为\n\n3.2TB/s\n\n，横向扩展带宽为\n\n190GB/s\n\n。\n\nAMD高管称，这些是“\n\nGPU厂商迄今公开过的最高实测数字\n\n”。\n\nCPU方面\n\n，AMD将“Venice”跟本周刚披露的英伟达Vera CPU性能数据作对比：“Venice”的吞吐性能达到Vera的\n\n2.2倍\n\n，每核性能在开箱状态、还没做性能调优的情况下就领先\n\n20%\n\n。\n\n搭载“全球最强智能体CPU”的机架，自然也就是“全球最强智能体CPU机架”。\n\n本地AI方面\n\n，AMD Ryzen AI Max 400系列的高端升级版“Gorgon Halo”，拥有192GB统一内存，本地可运行3000亿参数级大模型。\n\n物理AI方面\n\n，AMD发布Ryzen AI Embedded X100系列处理器、Kira AI机器人开发者平台、Kria AI系统计算模块、Kria AI机器人软件套件，并晒出机器人“朋友圈”。\n\nAMD还强调了自家产品组合能把自主机器人从身到脑“承包”：\n\nKira AI：机器人的“大脑”，负责高级感知和推理。\n\nVersal AI Edge：机器人的“脊柱”，负责高速数据与自适应计算。\n\nZynq UltraScale+：机器人的“关节”和实时控制。\n\nSpartan UltraScale+：传感器连接与底层接口。\n\n软件方面\n\n，AMD发布了ROCm.ai软件栈，并放出跑MiniMax M3、DeepSeek-V4 Pro的演示视频。\n\n在这场发布会中，我们看到很多中国合作伙伴和模型的名字。比如\n\n字节、腾讯、阿里、月之暗面、联想\n\n等企业，以及\n\nMiniMax、DeepSeek、Kimi、Xiaomi MiMo、GLM、Qwen\n\n等模型。\n\n有意思的是，除了发布自家AI芯片外，AMD还在会上宣布与美国AI芯片公司Cerebras Systems建立技术合作伙伴关系，共同推出一种全新的解耦式AI推理解决方案，将AMD Helios机架级解决方案与Cerebras晶圆级引擎相结合，预计这两个计算引擎协同工作，每瓦每秒Token将提升到\n\n5倍\n\n。\n\nCerebras计划在其数据中心部署AMD Helios系统，该联合解决方案预计今年下半年通过Cerebras Cloud推出。\n\n苏姿丰说，去年AMD预测AI加速器市场到2028年将达到约5000亿美元，但今天看来，它有些保守了。AMD现在预计，到2030年，AI加速器市场规模将达到约\n\n1.4万亿美元（约合人民币9.48万亿元）\n\n。\n\n这意味着到本十年末，届时AI加速器市场的规模，将接近今天整个半导体市场的规模。\n\n未来会出现多种不同类型的加速器。苏姿丰预计GPU仍将占据这个市场的绝大部分，因为AI算法依然处于早期阶段，工作负载还在快速变化，这种环境更有利于具备可编程性的GPU及其软件生态。\n\n会后，苏姿丰及多位AMD高管接受智东西等全球媒体提问。苏姿丰谈道，AMD在服务器CPU领域拥有无可争议的领先地位，正在为未来AI计算需求铺设自己的道路，从MI450到MI500将是重大跃迁。\n\nAMD认为自己的市场机会到2030年可以达到约2万亿美元（约合人民币13.54亿元），希望在所参与的细分市场中实现快于市场的增长。\n\n01\n\n.\n\nMI455X GPU：2nm制程+HBM4显存，\n\nAI算力达40PFLOPS\n\nAMD Instinct MI455X GPU是AMD迄今最先进的AI芯片，也是全球首款2nm GPU芯片。\n\nMI455X基于新一代AMD CDNA 5架构，拥有\n\n3200亿\n\n颗\n\n晶体管，最高配备\n\n432GB HBM4\n\n显存，支持\n\nFP4、FP6、FP8\n\n等AI数据格式。\n\n该GPU采用Chiplet设计，其中计算Chiplet采用台积电\n\n2nm\n\n制程工艺，其他Chiplet采用不同工艺。\n\n与上一代MI355X相比，MI455X实现了代际跨越：\n\n432GB HBM4显存，比当前竞品先进方案高\n\n50%\n\n。\n\n理论显存带宽最高23.3TB/s，提升至上一代的\n\n2.9倍\n\n。\n\nMXFP8峰值浮点算力达20PFLOPS，是上一代的\n\n4倍\n\n。\n\nMXFP4峰值浮点算力达40PFLOPS，是上一代的\n\n4倍\n\n。\n\n跑DeepSeek-V3模型时，MI455X的Token吞吐量最高可达到MI355X的\n\n34倍\n\n，每Token成本最高可降低至原来的\n\n1/18\n\n。\n\nMI455X的GPU创新主要集中在计算、缓存与内存系统、实际工作负载效率。\n\n相较MI300/MI350系列，MI400系列的内部架构有些调整，在这一代计算架构中改用\n\nWGP\n\n（Workgroup Processor，工作组处理器）作为核心计算组织单位，而没有沿用计算单元（Compute Unit）的表述。\n\nXCD（Accelerator Complex Die）包含WGP。每个XCD有2个Shader Engine，2个Shader Engine被封装在一个计算Chiplet中。每个Shader Engine物理实现17个WGP，其中启用16个，另一个用于提高制造良率。\n\n每颗GPU具有两个全局L2缓存，每个容量为96MB。\n\nMI455X与MI355X的一项重要区别是，\n\nL2缓存由多个计算Chiplet共享\n\n，每组8个Shader Engine共享一个全局L2。而在MI300/MI350系列中，每个Chiplet拥有自己的L2缓存。\n\n因此，新一代重新划分了不同裸片之间的逻辑功能。两个L2缓存通过AMD Infinity Fabric连接并保持一致性。HBM4位于Infinity Fabric另一侧，两个L2均可访问整个显存空间。Infinity Fabric还把GPU核心与显存系统连接到纵向扩展域内的其他GPU，以及横向扩展网络。\n\n逻辑重新划分也对应新的Chiplet划分方式。\n\nL2缓存被移到FCD，即Fabric and Cache Die（Fabric与缓存裸片）。FCD位于XCD下方，构成3D堆叠结构。每个FCD包含一个96MB L2缓存，对应6组HBM4接口，与8个Shader Engine相连的逻辑。\n\n整颗GPU包含2个FCD，通过中央Infinity Fabric链路连接，芯片两端还配置I/O Die。\n\nXCD采用台积电N2工艺，FCD和IOD则采用适合缓存与I/O的其他先进工艺，封装周围有12组HBM4。\n\n在封装层面，MI455X使用有机基板和台积电CoWoS-L 2.5D封装。\n\n与MI300/MI350系列所采用的基于大型硅中介层的CoWoS-S不同，CoWoS-L在有机基板中嵌入局部硅桥。这种封装方式能够支持比MI355X更大的GPU模块。\n\nXCD通过AMD此前几代已使用的3D混合键合技术堆叠在FCD上，形成SoIC模块。HBM4和I/O Die再通过CoWoS-L与这些模块互连。\n\n这种组合使AMD可以针对架构拆分后的不同部分，选择合适的互连方式：\n\nXCD与L2之间需要极高带宽和极低时延，因此采用3D互连。\n\n其他对时延容忍度更高的连接采用2.5D横向互连。\n\n计算方面的变化包括：\n\nMI455X是首款以Wave32为主要执行模式设计的Instinct GPU，并取消了对Wave64的支持，可降低指令延迟，减少分支发散惩罚，降低寄存器压力。\n\n新增MXFP8、MXFP6、MXFP4支持，还有支持更细粒度缩放因子的MXFP4量化。\n\n新增tanh指令，把MI355X已有超越函数的吞吐提高\n\n1倍\n\n。\n\nMI455X与MI355X都启用256个WGP的架构，因此总体吞吐提升主要来自单个WGP能力的提高，MXFP8和MXFP4的计算吞吐量最高是MI355X的\n\n4倍\n\n，MXFP6的计算吞吐量最高是MI355X的\n\n2倍\n\n。\n\n缓存与内存层级方面，MI355X使用HBM3E，并在显存与L2之间设置Infinity Cache。MI455X升级至432GB HBM4，同时取消独立Infinity Cache层，把容量和带宽集中到更大的全局L2。\n\n每个FCD上的单个L2，带宽就达到MI355X整体Infinity Cache聚合带宽的\n\n1.5倍\n\n；两个L2合计则达到\n\n3倍\n\n。两个L2各自缓存整个GPU地址空间内的数据，并由Infinity Fabric保持一致性。\n\n全局原子操作也被重新放回L2。系统范围原子操作仍由Infinity Fabric支持；GPU设备范围内的原子操作则直接在L2中执行，吞吐显著高于MI355X。\n\n从L2到WGP的有效张量带宽最高放大到\n\n4倍\n\n，单SIMD寄存器与每个WGP的LDS（Local Data Share）容量提高至\n\n2倍\n\n。单SIMD的VGPR（Vector General-Purpose Register）也扩展到\n\n2倍\n\n。\n\n为了减少数据移动和提高利用率，AMD让数据搬运与计算充分重叠，提高GEMM、Flash Attention和短Kernel等AI负载的实际利用率与交付性能。\n\n通过TDM（Tensor Data Mover）让数据在全局显存与LDS之间直接异步传输，减少寄存器中转。\n\n通过多个WGP组成集群、数据组播和预取，降低重复内存访问并隐藏延迟。\n\n借助更灵活的屏障同步和更低的Kernel调度延迟，减少各执行阶段的等待与空转。\n\nMI400系列重新设计了系统DMA。过去，软件可见的DMA队列与物理DMA引擎直接绑定。新架构将其分为DMA前端（软件可见的逻辑接口）和DMA后端（了解GPU内部物理位置、显存分布和外部链路位置的执行引擎）。\n\n软件只需提交DMA工作项，不必理解虚拟地址如何映射到物理地址，也不必知道数据、引擎和纵向扩展链路在芯片上的物理位置。系统会把工作项拆分，并在多个DMA后端之间负载均衡。\n\nMI455X支持与MI355X类似的NUMA和分区模式。整颗GPU可以作为一个大型NUMA域运行，对整个GPU进行细粒度地址交错；也可以拆成两个NUMA域，每个域主要使用自己的L2和相邻HBM。\n\n双NUMA模式减少缓存一致性压力，使内存访问更加本地化，从而提高效率。配合计算分区，软件可以更有空间感知地调度任务和分配内存。\n\nGPU也支持虚拟化，可划分为1、2直至8个更小的逻辑GPU，并相应运行最多8个虚拟机。虚拟机之间的显存隔离由GPU硬件负责，并不完全依赖NUMA划分。\n\n安全方面，MI400系列的安全体系以硬件加密信任根为基础，搭配机密计算，同时提供强租户隔离。\n\n02\n\n.\n\nHelios：超过18000个GPU计算单元，\n\n每美元比英伟达机架多生产30%的token\n\n过去两年，每月Token消耗量暴涨\n\n158倍\n\n。前沿AI需要一套开放的机架级蓝图。\n\n对此AMD构建了一套完全集成的机架级解决方案：CPU负责系统编排，GPU负责AI计算，高速网络承担无瓶颈通信，ROCm软件栈把各部分连接。\n\n今天，AMD正式推出Helios机架级AI平台。\n\nHelios基于开放标准设计，包含72张Instinct MI455X GPU和\n\n18张“Venice” CPU，通过Pensando网络技术扩展，并由ROCm开源软件加速。\n\n主机计算：“Venice” CPU，配备96个高频核心、PCIe 6.0连接及1.6TB/s内存带宽。\n\nAI加速：MI455X GPU，拥有40PFLOPS FP4峰值算力、432GB HBM4、19.6TB/s显存带宽。\n\n纵向扩展网络：有6个专用交换托盘负责，通过Pensando DPU和基于以太网的UALink（UALoE）技术，可将72颗GPU连接成一个统一系统，合计提供260TB/s的纵向扩展带宽。\n\n横向扩展网络：Pensando “Vulcano”AI NIC，单块板最多可以配置6颗Vulcano器件，每个Helios计算托盘配置2块相关网络板卡，并采用开放的Ultra Ethernet技术。\n\nMI455X安装在AMD称为增强型加速器模块（Enhanced Accelerator Module，EAM）的生产模块上，并直接部署到Helios中。EAM不只包含GPU封装，还在一个紧凑、可维护的模块中集成了GPU、HBM内存、供电系统、高速接口、系统管理、液冷冷板。\n\nAMD称Helios是“全球性能最高的机架级AI基础设施解决方案”，整套机架可提供：\n\n超过18000个CDNA 5 GPU计算单元。\n\n超过4600个Zen 6 CPU核心。\n\n72颗MI455X GPU。\n\n2.9EFLOPS FP4峰值算力。\n\n1.4EFLOPS FP8峰值算力。\n\n31TB HBM4，1.7PB/s带宽。\n\n43TB/s横向扩展带宽，260TB/s纵向扩展带宽。\n\n这就是AMD认为大规模运行智能体AI所需要的系统能力。\n\n相比英伟达Vera Rubin NVL72解决方案，Helios的AI算力高出\n\n15%\n\n，HBM容量高出\n\n50%\n\n，横向扩展带宽高出\n\n50%\n\n。\n\n这意味着Helios能为大模型提供更高性能，为长上下文提供更多内存容量，并拥有把系统扩展到数千个机架所需的带宽。\n\n在跑Kimi K2 Thinking模型时，Helios的吞吐量比英伟达Vera Rubin方案高出\n\n10%~15%\n\n。\n\n据AMD披露，相比英伟达Vera Rubin NVL72，Helios每美元可多产生\n\n最多30%\n\n的Token。\n\nHelios现已进入生产阶段。AMD并不是直接把Helios作为一套整机产品出售，而是与合作伙伴协同，确保组成一套Helios机架所需的所有部件都能准备就绪，能够确定性地向最终用户交付。\n\nOpenAI、Meta、Anthropic、微软、Oracle\n\n都选用了Helios参考设计。三家顶尖大模型公司已承诺以吉瓦级规模部署Helios。\n\n03\n\n.\n\nVenice CPU：实测打败\n\n英伟达、英特尔、Arm平台\n\n随着AI产业重心转向推理，每Token成本变得极其重要，CPU正重新走到舞台中央。\n\n在数据中心领域，AMD服务器CPU的市场份额从2017年的大约0.2%，一路飙升到如今的\n\n46%\n\n。\n\n回顾AMD历代服务器CPU，第一代是“Naples”，第二代“Rome”提升了线程密度，第三代“Milan”进一步建立了单核性能优势，从第四代“Genoa”开始产品提供不同优化方向，继而发展到“Turin”和“Venice”。\n\n第六代“Venice”相比第一代实现了\n\n18倍\n\n的吞吐性能。\n\n当前正在快速放量、进展良好的第五代AMD EPYC 9005（代号“Turin”），已展现出性能优势：\n\n在通用CPU服务器场景中，性能最高可达相较88核英伟达Vera的\n\n2.4倍\n\n。\n\n作为强调峰值频率的GPU服务区主机节点，性能比72核英特尔至强6960P方案提升\n\n28%\n\n。\n\n在智能体CPU沙箱场景中，每瓦可承载的智能体数量是88核英伟达Vera的\n\n2倍\n\n。\n\n“Turin”不只面向AI或通用计算的处理器。\n\n相比128核英特尔至强6980P，其SPEC CPU性能提升\n\n40%\n\n，企业级性能提升\n\n40%\n\n，HPC性能提升\n\n80%\n\n，基于CPU的AI性能提升\n\n70%\n\n。\n\n第六代AMD EPYC 9006系列“Venice”，更是将CPU性能提升到一个新的层次。\n\nAMD将“Venice”系列称作“面向智能体时代的全球最强服务器CPU”，包括4款产品：\n\n（1）“Venice” SP7：\n\n面向最高性能和大规模应用，最高256核/512线程，最大带宽达1.6TB/s，支持64Gbps PCIe 6.0，96个核心拥有5.0Ghz频率。\n\n（2）“Venice” SP8：\n\n在高性能与系统成本之间取得平衡，8~128核，双路系统提供8个内存通道，128条PCIe通道，提供高频型号（HF）和面向NEBS环境优化的型号。\n\n（3）“Venice-X”：\n\n面向AI预处理和HPC，最多96核，16个内存通道，最高12.8GT/s MRDIMM/DDR5，1152MB大容量L3缓存，最高5.15Ghz频率。\n\n（4）“Verano”：\n\n提高机架级效率，最多72核，LPDDR5X内存，增强版xGMI互连传输速率。达112Gbps，最高5GHz频率。\n\n截至本周，“Venice” SP7已进入量产阶段，预计2026年第四季度开始出货；“Venice” SP8将在2027年第一季度出货，“Venice-X”和“Verano”计划在2027年第二季度出货。\n\n这是一个功能丰富、覆盖面很广的现代AI数据中心CPU产品组合。\n\n计算\n\n：“Zen 6c”核心最高256核/512线程，“Zen 6”核心最高96核/192线程，提供1152MB L3 3D V-Cache，最高功耗600W。\n\n存储\n\n：8000MT/s 16通道DDR5，12800MT/s 16通道MRDIMM，支持24通道LPDDR5X内存，并采用可现场更换的SOCAMM2内存模块。\n\nI/O\n\n：首批支持PCIe 6.0的CPU，传输速率为64GT/s；第五代AMD Infinity Fabric。\n\n安全\n\n：面向机密计算需求，增强硬件信任根，支持对物理攻击和侧信道攻击的缓解措施。\n\n它能作为优秀的GPU主机节点，最大限度提高GPU利用率，也能在智能体时代的CPU沙箱中，具备出色的技术属性，将可承载的智能体数量最大化。\n\n与英伟达、英特尔、Arm CPU相比，“Venice”有如下优势：\n\n在通用CPU服务器上，性能是88核英伟达Vera的\n\n3.3倍\n\n。\n\n作为GPU主机节点，前沿模型推理的每秒Token数是英特尔至强6960P的\n\n1.8倍\n\n。\n\n在智能体CPU沙箱中，每瓦智能体数量是136核Arm AGI的\n\n2.8倍\n\n。\n\nAMD使用相同编译器，复现了英伟达白皮书中公布的Vera CPU各项条件，发现无论是绝对性能、每瓦性能、每核性能、带宽，还是以不同订货型号（OPN）服务现代数据中心多种需求的能力，“Venice”都有优势：“Venice”的吞吐性能是Vera的\n\n2.2倍\n\n，开箱状态下每核心性能比Vera提升\n\n20%\n\n。\n\n相比英特尔和Arm平台，“Venice”吞吐量达到\n\n2倍\n\n，每核心性能达到\n\n1.3倍\n\n。\n\n在企业级应用中，相比第六代英特尔至强，256核“Venice”可实现\n\n2.5~3.7倍\n\n的性能优势。\n\n在生命科学、量子化学、气候预测等HPC场景中，256核“Venice”的性能是128核英特尔至强6980P的\n\n1.8倍~3.1倍\n\n。\n\n一个使用了五年的老旧数据中心，如果有大约1000颗英特尔至强处理器，只需\n\n82颗\n\n“Venice”就能完成替代，替换比例约为\n\n12:1\n\n，由此可减少\n\n77%\n\n功耗、\n\n92%\n\n的服务器数量、\n\n40%\n\n的5年TCO。\n\n作为主机CPU，相比上一代“Turin”，“Venice”运行前沿模型的每秒Token数增加\n\n80%\n\n。\n\n“Venice”可提供多种高密度方案。在一种配置中，其每机架最高可达到约4.9万个CPU核，相当于88核英伟达Vera方案的\n\n2.2倍\n\n。\n\n该处理器现已进入量产阶段。\n\n04\n\n.\n\n网络三利器：400G DPU、\n\nUALoE、800G AI NIC\n\nAMD多年来一直在建设前端网络、纵向扩展网络（scale-up）和横向扩展网络（scale-out），并在三个领域分别形成了领先方案。\n\nHelios网络系统包括三层：\n\n（1）前端网络\n\n：第三代Pensando Salina DPU，400G带宽，性能翻倍，负责软件定义网络、在线加密和多种安全服务，并支持分离式存储架构，如NVMe over Fabrics和KV Cache卸载。\n\n（2）纵向扩展网络\n\n：第一代UALoE fabric，可将72颗GPU连成像统一GPU资源池那样运行，提供260TB/s带宽（上一代的3倍），建立31TB HBM4统一内存，具备高可靠性与高可用性。\n\n（3）横向扩展网络\n\n：第二代Pensando “Vulcano” AI NIC，800G，PCIe 6.0、UAI，每颗GPU最多可配3张AI NIC，从而提供最高2.4Tbps的总带宽。\n\n1、Salina DPU：为智能体卸载基础设施任务\n\n在前端网络中，DPU影响到基础设施能同时运行多少智能体、智能体记忆能维持多久，以及整个基础设施能以多高的效率扩展。\n\nSalina DPU的性能是英伟达BlueField 3的\n\n1.4倍\n\n。其NVMe over Fabrics能力和缓存管理卸载，可让存储在物理上解耦，同时在GPU看来仍是一个共享资源池，还能在保持安全性与租户隔离的同时，处理KV Cache上下文的检索与放置。\n\n这样既能降低网络时延，也能释放CPU周期，让CPU把更多资源用于提高智能体AI密度。\n\nAMD的一家超大规模客户通过采用DPU，在每台服务器上释放了22个CPU核心，显著提高基础设施性能。\n\n2、UALoE：开放的纵向扩展架构\n\nUALoE是一种开放、基于以太网的纵向扩展架构，注重可靠性、可用性和可维护性（RAS），旨在让链路中断、交换机故障或丢包等问题不至于迫使任务整体重启，也不必付出昂贵的检查点恢复代价。其还在端点执行在线加密，以支持机密计算，并针对不同的故障场景进行妥善处理。\n\nFabric Manager是UALoE背后的软件定义智能系统，为零接触部署、监控和全生命周期管理提供统一控制界面，能提供细粒度可观测性与遥测数据，展示网络健康状况和性能，借助内置RAS能力恢复故障，并在潜在问题影响工作负载之前发出提示。\n\n其虚拟POD机制可将一套72-GPU系统划分为多个虚拟POD，在每个vPOD内建立相应的隔离、韧性与可靠性，进一步提高系统级可用性。\n\n3、Vulcano 800G AI NIC：每GPU带宽提升50%\n\n在横向扩展网络中，Vulcano支持智能负载均衡、硬件拥塞管理，以及快速丢包检测与恢复，使GPU能够最大限度利用网络带宽，同时降低时延和抖动。\n\n这些能力结合起来，每GPU带宽可提升多达\n\n50%\n\n，将大语言模型训练速度提升\n\n13%\n\n，通过多平面网络和智能数据包分发可将网络成本降低\n\n33%\n\n。\n\n05\n\n.\n\n本地AI：\n\n把3000亿参数模型搬到桌面\n\n本地模型正以惊人的性能增速演进。过去需要超过1000亿参数模型才能达到的性能，如今正在下沉到约90亿参数的模型。\n\n如今，90亿参数级模型能装进一台主流AI PC，比如配备足够内存的Ryzen AI 400，就能支持最高240亿参数的模型。\n\n之前在CES上发布的Ryzen AI Halo开发者平台，即插即用，拥有128GB统一内存，最高可运行约2000亿参数的模型，也能构建多智能体工作流。\n\nROCm软件栈能横跨AMD不同硬件平台运行。开发者可在本地完成大量开发工作，比如先在Ryzen AI Halo上运行模型、进行微调和开发功能，再使用同一套软件，无缝迁移到性能更强的数据中心产品。\n\nAMD正在全面深化与全球最大开源AI社区Hugging Face的合作，目标是让开发者能够无缝调用Hugging Face模型，并在AMD平台上轻松发挥其能力。\n\n每台Ryzen AI Halo将附赠一年Hugging Face Pro订阅，鼓励开发者充分利用这一生态。\n\n之前AMD还在Computex上介绍了新一代产品，代号“Gorgon Halo”，对应新一代Ryzen AI Max PRO 400系列，把统一内存支持从128GB提高到\n\n192GB\n\n，将本地可运行模型的上限从约2000亿个参数提高到约\n\n3000亿个参数\n\n。\n\nAMD已形成广泛的个人AI系统生态，形态包括笔记本电脑、工作站、小型台式机和开发者平台等。\n\n06\n\n.\n\n物理AI：推出X100系列处理器，\n\n掏出机器人开发全家桶\n\nAMD嵌入式业务在物理AI领域拥有很长的历史。其业务部门很大一部分来自AMD对赛灵思的收购。赛灵思进入机器人领域已超过20年。\n\n物理AI的核心可以概括为感知、理解、行动。而FPGA在这三个环节都有优势。\n\n面向物理AI和机器人领域，AMD发布Ryzen AI Embedded X100系列处理器、Kira AI机器人开发者平台、Kria AI系统模块（SOM）、Kria AI机器人开发者平台，以及AMD机器人合作伙伴网络。\n\n（1）Ryzen AI Embedded X100系列处理器：\n\n16核“Zen 5” CPU，具备独显级能力的RDNA 3.5 iGPU，XDNA 2 NPU（特别适合低功耗、始终在线的推理）。\n\n（2）Kria AI系统模块（SOM）：\n\n一块预先完成高速接口和基础计算模块设计的模块，底部配有一组连接器，可插入客户设计的载板，帮助产品快速进入市场。\n\n经测试，与英伟达Jetson AGX Thor对比，Kira AI平台可实现\n\n3.4倍\n\n的实时控制性能、\n\n2.3倍\n\n的并发智能体数量、\n\n1.6倍\n\n的CPU容量。\n\n（3）Kria AI机器人开发者平台：\n\n计划今年第四季度出货，将搭载Ryzen AI Embedded X100 SOM和一块参考载板结合。参考载板上配有AMD Spartan UltraScale+ FPGA，用于传感器聚合和传感器融合。\n\n设备背面提供常见的以太网、USB和显示输出等接口。前面板专为机器人设计，用于接入时间敏感网络、摄像头和各类传感器。开发者可在几天内完成从概念到原型的过程。\n\nAMD将开放载板的原理图、物料清单（BOM）以及载板上FPGA的RTL设计，使客户能根据具体应用修改设计，快速进入市场。\n\n开发者可在云端使用AMD Instinct GPU训练基础机器人模型，再使用同一软件栈，把模型部署到Ryzen AI Embedded X100处理器和Kria AI机器人开发套件上。\n\nAMD正在构建一套从训练到部署的软件栈，包括机器人核心SDK、更广泛的物理AI SDK以及未来持续扩展的软件开发套件。\n\n其机器人合作伙伴网络也日益壮大，包括模型、中间件、传感器、应用与系统、物理仿真合作伙伴，以及负责测试、验证和产业协作的相关组织。\n\n07\n\n.\n\n软件：发布ROCm.ai软件栈，\n\n让智能体加速AI开发\n\nAMD一直在扩展ROCm生态及其能力，目前ROCm已支持Hugging Face上超过300万个模型，能在新开源模型发布首日就提供支持。\n\n过去一年，外部开发者对ROCm开源软件栈的贡献增长了10倍以上。ROCm的发布节奏已从过去每4-6个月一次，加快到大约每六周一次，显著提高了新功能交付速度、性能以及开箱即用体验。\n\nAMD与多家开源项目紧密合作，甚至直接提供硬件，让Hugging Face、PyTorch、vLLM、SGLang等项目运行每日持续集成（CI）测试。\n\nAMD的软件战略的核心支柱包括：\n\n开源、高层抽象、AI辅助、ROCm Everywhere\n\n。\n\nAI辅助正在大规模进入开发流程，已显著提高AMD的生产效率。例如，在MI450/Helios相关工作中，AMD已支持最新发布的Kimi等模型。智能体工作流可帮助团队快速完成移植和优化。\n\n今日，AMD推出一款AI驱动的平台ROCm.ai软件栈，包括：\n\nSkills层：面向Claude Code、Codex、Cursor等编程智能体。\n\nHyperLoom层：端到端AI工作负载优化。\n\n框架集成层：PyTorch、vLLM、SGLang、JAX等。\n\n核心SDK：库、编译器和工具、运行时。\n\n该软件栈将于今年8月可用。\n\n其中，HyperLoom是一套智能体工作流，能运行并分析模型，对模型进行性能剖析，定位通信、GEMM或其他内核中的瓶颈，发现可以融合的相邻内核，自动执行优化，不断重新测试并迭代。\n\n例如，HyperLoom可以调优GEMM、融合内核、改变内存访问模式，或者采用memory swizzle改善数据局部性。经过反复迭代后，它会输出相应的性能提升结果。\n\n会上播放了ROCm AI工作流演示视频：使用Claude Code，输入“用HyperLoom优化MiniMax M3推理”，系统首先用最新配方运行模型，得到性能基线，随后进行性能剖析，发现某个GEMM需要调优，完成调优后又发现需要生成带memory swizzle的内核，于是使用Triton自动生成。\n\n只经过一次点击，它就将性能提升了\n\n38.3%\n\n。\n\nAMD在过去一年持续把这类技术应用到前沿开放模型上，推理性能提高到ROCm 7初期的\n\n3.3倍\n\n，训练性能提高到约\n\n2.4倍\n\n。\n\n另一个演示是用Codex在AMD Helios上运行拥有1.6万亿参数的DeepSeek-V4 Pro模型：Codex自动配置环境、启动模型，并确认模型已经运行，随后用户要求它“写一首关于Advancing AI的诗”，模型便生成相应内容。\n\nAMD能在新模型上实现Day-0支持，重要原因之一正是智能体的优化速度极快，它们能够日复一日帮助团队适配和优化数以千计的模型，速度超过仅依赖人工工程师的方式。\n\n以DeepSeek-V4 Pro为例，从4月获得Day-0支持到现在，在相同硬件、相同模型上，AMD仅通过软件优化，就在大约3个月内取得了\n\n5.3倍\n\n的性能提升。\n\n在HPC方面，部分竞争平台已弱化硬件原生FP64，更多依赖模拟，因此速度会慢很多。AMD的优势之一是Chiplet架构，可根据目标产品灵活组合FP4与FP64计算能力，AMD Instinct MI430X就采取这种方式。\n\nMI430X能够提供高达288TFLOPS的硬件级FP64科学计算性能。与英伟达Vera Rubin相比，MI430X可实现\n\n8.7倍\n\n的FP64算力、多\n\n50%\n\n的HBM4容量、多\n\n6%\n\n的HBM4带宽。\n\n08\n\n.\n\n结语：将完整系统级设计交给客户，\n\nAMD迈出重要一步\n\n过去数年，AMD一直坚持四项原则：提供领先的性能与总拥有成本，提升迁移便利性，全软件栈开源，以客户为中心。\n\n其AI合作伙伴生态正愈发繁荣，包括越来越多的云服务提供商（CSP）、新型云服务商（NeoCloud）、OEM、ODM，以及本地部署合作伙伴。\n\n今日发布的Helios，对AMD而言是重要的一大步，这意味着AMD通过在协同设计、协同工程的机架中提供全部关键组件，让客户得以获得完整的AMD端到端方案价值。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达_智东西.md"}, {"title": "刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由", "source": "新智元", "digest": "Agentic AI，应该运行在什么样的计算底座上？", "link": "https://mp.weixin.qq.com/s/7FzG6BDqnTnFsLwmdOHVRA", "content": "---\npublish_time: 1784879486\n---\n\n# 刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由\n\n> 原文链接：https://mp.weixin.qq.com/s/7FzG6BDqnTnFsLwmdOHVRA\n> 公众号：新智元\n\n新智元报道\n\nAgentic AI，应该运行在什么样的计算底座上？\n\n几天过去，WAIC 2026上最拥挤的概念之一——Agent Computer——开始从展台上的新鲜感，变成一道真正的工程题。\n\n让一台设备在本地跑起大模型，已经不算最难的部分。更难的是，当Agent要持续读取文件、保留记忆、调用工具，并在后台长期运行时，芯片能否在功耗、延迟和成本的约束下保持稳定。\n\n这会改写端侧芯片的评价方式。TOPS、模型参数和每秒Token仍然重要，但如果内存带宽跟不上、CPU与NPU协同不顺、软件栈无法维持任务状态，再漂亮的峰值也可能只够完成一次Demo。\n\n我们注意到，本周，新加坡公司Acrab举行了一场线上发布会，并发布了Agent Box，这也许给出了一个可供拆解的样本。\n\n在这场发布会里，这家AI Infra公司把Prefill、统一内存、CPU-NPU异构协同和Agent编排同时摆上了台面。\n\n这些关键词指向同一个判断：\n\n端侧AI正在从「运行一个模型」，走向「长期运行一套智能系统」。\n\n芯片要解决的，也不再只是算力够不够，而是数据如何流动、任务如何调度、软硬件如何持续协同。\n\n所以，当WAIC的热闹和新品发布、行业趋势逐渐沉淀下来，真正值得追问的问题反而更清楚了：当Agent从一次调用变成持续工作之后，端侧芯片究竟要重做什么？\n\n从一次推理到持续工作\n\nAgent改变了端侧负载\n\n聊天机器人通常完成一轮问答。Agent接到一个任务后，可能先搜索资料、读取文件，再调用代码、浏览器、日历或办公软件；完成一部分后检查结果，保留任务状态，等待下一次触发。一次任务往往涉及多轮模型调用，也会在不同模型、工具和应用之间反复切换。\n\nAcrab在发布会中展示了一个相对完整的任务流程：用户提出想为孩子制作一份太空主题礼物，系统继续给出创意、协助选择方案、调用相关工具并跟进制作进度；当环境里出现新的状况，它又可以连接其他智能设备进行处理。\n\n这段演示的意义不在于某一次回答有多聪明，\n\n而在于一句自然语言能否被转化为一串连续动作。\n\n对于计算系统来说，Agent不再只是「调用一次模型」，而是在模型、数据、软件和设备之间持续切换。\n\n这种工作方式首先放大了端云之间的分工。\n\n单次推理的费用可能不高，但调用变得高频、持续之后，Token就会从技术指标变成真实账单；一次网络等待对聊天影响有限，放进多步任务中却会逐层累积；Agent要掌握更完整的个人上下文，数据反复往返云端，也会扩大暴露面。\n\n因此，端侧和云端并不是非此即彼。更加现实的结构是：\n\n高频、隐私敏感、需要快速响应和长期保持状态的任务尽可能留在本地；超过设备能力边界的复杂推理，再调用云端资源。\n\n真正的变化在于，端侧不再只承载一次模型推理，而要承载一套不能轻易中断的智能系统。\n\n它既要运行大模型，也要处理长上下文、多任务和工具调用；性能必须足够强，功耗和成本又不能失控，Runtime、工具链和Agent生态也必须同时跟上。\n\n端侧大模型解决的是模型能不能装进设备，Agentic AI要解决的，则是模型、记忆、工具和应用能不能在设备里长期协同。\n\n只堆NPU不够\n\nCPU、内存和软件栈必须一起重做\n\n过去在CPU或SoC里增加一块NPU，就能让终端多出语音识别、图像处理等AI能力。但当Agent从附加功能变成设备的核心，简单增加峰值算力已经不够。\n\n原因在于，Agent并不是一条固定的神经网络推理链路。大规模并行计算适合交给NPU，任务拆解、条件判断、系统调度、工具调用、异常处理和多系统协作，则高度依赖CPU。任务路径越动态，CPU与NPU之间的协调就越重要。\n\nAcrab CEO Ken Phua将这种变化概括为：\n\n「CPU再次回到AI时代的中心。」\n\n在他的判断中，\n\nAI正在进入异构计算环境，执行效果不只取决于NPU性能，更取决于CPU与NPU能否无缝协同。\n\n这也是Acrab少数值得展开的团队线索。\n\nKen Phua曾在Arm UK带领亚太应用工程团队，并参与全球IP策略制定，之后担任Arm China联席CEO。\n\n这段经历的意义并不只是行业履历，而是\n\n解释了这家公司为什么会从CPU架构、异构计算和真实应用需求的交叉位置，重新定义Agent工作负载。\n\nAcrab没有把GΞLIX 1定义为一颗传统AI处理器，而是将它作为端侧AI时代的计算平台。\n\n硬件侧以GΞLIX 1为核心；软件侧覆盖大模型、优化后的Runtime、完整工具链，以及连接模型、工具、设备和服务的Agent编排层；在此基础上，公司还提供面向典型场景的Agent参考设计，帮助开发者和生态伙伴更快构建应用。\n\nAgent Box则是这套软硬件平台第一次以完整产品形态出现。它被定义为Personal AI Center，可以在本地运行千亿参数级模型，即使没有网络连接，也能保持核心能力。\n\nAcrab取自Agentic Compute、Reasoning、Action与Brain的首字母，也恰是天文学中一个多恒星系统的名字——正\n\n如其设计哲学：让不同的计算单元，像恒星系统一样协同运转。\n\n公司以此为目标，为Agent打造一颗能思考与行动的大脑，构筑下一代计算平台。\n\n总部位于新加坡的Acrab，已累计融资超过3.5亿美元，投资方包括淡马锡旗下全球风投平台Vertex（祥峰投资）、新加坡知名科技投资机构K3 Ventures等。\n\n其第一代计算平台GΞLIX已经在要求严苛的真实部署环境中完成验证，目前正走向首次行业导入和规模化生产。\n\n融资可以为重工程购买时间，但真正决定路线能否成立的，仍然是系统能否交付。\n\n从这个角度看，「CPU重新回到中心」并不意味着NPU不再重要。\n\n恰恰相反，它意味着AI计算已经复杂到，无法再依靠一颗孤立的加速器解决所有问题。\n\n700 TOPS之外\n\nPrefill和数据通路决定真实体验\n\n很多时候，大模型推理的瓶颈并不只是计算单元不够快，而是数据来不及送到计算单元。\n\n芯片即使拥有很高的峰值算力，如果内存带宽跟不上，NPU仍然要停下来等待。\n\nAgent会进一步放大数据搬运问题。它需要频繁读取历史记录，在不同模型和软件之间传递数据，并持续保存任务状态。每一次复制都会增加延迟和功耗，任务运行得越久，系统设计的重要性就越高。\n\nGΞLIX 1的设计重点，正是把模型需要的数据尽量留在距离计算单元更近的位置，并减少CPU、NPU、内存和不同操作系统之间的来回搬运。\n\n按照Acrab公开的架构，GΞLIX 1提供大于700 TOPS的AI算力和273GB/s的统一内存带宽，芯片内部配置8MB L1 Cache、带宽达到768GB/s的共享L2 Cache、四颗并行NPU核心，以及针对Attention计算设计的专用加速模块。\n\nAcrab称，后者可以将相关计算效率提高到三倍。\n\n更大的片上缓存，可以让关键数据离计算单元更近；共享L2 Cache让参数和中间特征在计算单元之间高效共享；统一内存架构则减少模型、操作系统和应用之间不必要的数据复制。\n\nAcrab还采用多系统统一内存架构，让不同操作系统更高效地共享内存。对于只运行一个模型的设备，这可能只是效率优化；对于需要不断跨应用、跨工具工作的Agent，它会直接影响任务能不能顺畅推进。\n\n这也解释了为什么Acrab把Prefill放到发布会的中心位置。Agent在引入新文件、恢复任务状态或更新上下文时，往往需要再次处理新增信息。任务链越长，Prefill效率对整体体验的影响就越明显。\n\n在Acrab披露的一组自测中，GΞLIX 1运行260亿参数Gemma模型，使用40K KV Cache和1万Token输入，Prefill速度超过每秒1416个Token；在相同负载下，其表现是某主流通用桌面平台的7倍以上。\n\nAcrab还将GΞLIX 1与一款同类桌面级AI计算平台放在同一测试框架下比较。\n\n数据显示，GΞLIX 1在Prefill和Decode两项核心指标上进入相近的性能区间，同时呈现出更低的功耗和更具竞争力的整机成本。\n\nAcrab选择强调Prefill和数据通路，本身说明了一种产品取向：端侧Agent芯片不能只追求模型输出得有多快，还要解决模型能否快速读懂长上下文、恢复任务状态并开始工作。\n\n用户不会关注一条推理链路内部经过了多少层缓存，也不会在每次交互前查看TOPS。用户真正感受到的只有三件事：它能否迅速理解、能否持续运行，以及拥有它是否足够划算。\n\n从芯片到平台\n\n真正的竞争在参数之外\n\n今年WAIC出现的Agent Computer、个人AI中心和企业端侧设备，还没有形成统一的产品形态。\n\n家庭场景更强调个人记忆、内容和设备协同，企业场景更看重知识库、文件处理和内部数据安全。不同客户对模型大小、内存容量、功耗和接口的要求差别很大。\n\n终端越碎片化，计算平台就越难做。一颗芯片很难只靠参数覆盖所有场景，还需要提供Runtime、模型适配、开发工具和Agent框架，帮助客户把底层算力转化为能够交付的产品。\n\n这也是Agentic AI芯片比普通推理芯片多出来的一道题：\n\n芯片性能决定模型能不能运行，软件栈决定开发者能不能把它用起来，Agent生态则决定设备最终能够完成什么任务。\n\n任何一层缺失，都可能让一颗参数漂亮的芯片停留在Demo阶段。\n\nAcrab试图把这些环节同时抓在手里。好处是产品定义更加完整，风险也很直接：战线很长。\n\n芯片要证明性能、稳定性和规模化交付能力，软件栈要追上模型的快速迭代，Agent编排层还要兼容不断变化的工具和应用。个人文件和长期记忆留在本地之后，权限隔离、插件安全和操作审计也必须同步解决。\n\n因此，Acrab能否成为Agentic AI时代的计算平台，最终不取决于发布会上跑出了多少Token，也不取决于Agent Box能够演示多少个任务。\n\n更关键的验证是：\n\n开发者能否在这套平台上快速做出产品；Agent连续工作数小时之后，性能、功耗和稳定性能否同时成立；当模型和Agent框架继续变化时，底层软硬件能不能跟上。\n\n架构创新决定一家芯片公司的能力上限，工程化和生态则决定这个上限能不能变成订单。\n\nWAIC上密集出现的新终端，说明\n\n行业正从「把大模型跑起来」走向「让Agent持续工作」。\n\n前一阶段比算力、内存和模型大小；下一阶段还要解决长上下文、个人记忆、工具调用与多任务协同。\n\nAcrab押注的正是这一变化。\n\nAgent Box不是终点，而是一次平台能力的公开测试。\n\n端侧芯片需要「重做」，不是因为TOPS不重要，而是Agent正把计算从峰值数字变成长期运行的系统能力。它能否成立，最终要看这套芯片、软件和终端能否进入真实工作流。\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由_新智元.md"}, {"title": "模型越来越强之后，Infra 将被 AI 接管？", "source": "InfoQ", "digest": "在异构与异步的新浪潮下，AI Infra 走向更高层次。", "link": "https://mp.weixin.qq.com/s/5UTdcngU0m5kmJn7_2-7eQ", "content": "---\npublish_time: 1784868099\n---\n\n# 模型越来越强之后，Infra 将被 AI 接管？\n\n> 原文链接：https://mp.weixin.qq.com/s/5UTdcngU0m5kmJn7_2-7eQ\n> 公众号：InfoQ\n\n作者 | AICon 全球人工智能开发与应用大会\n\n策划 | Kitty\n\n编辑 | 宇琪\n\n模型的架构正在以超出工具链进化速度的方式膨胀，与此同时，国产算力的崛起让异构管理从可选项变成了必答题。那么，推理工程核心挑战如何破局？AI Infra 下一阶段技术演进方向在哪里？\n\n近日，InfoQ《极客有约》X AICon 直播栏目特别邀请\n\n华为 AI 开源生态总监黄之鹏担任主持人\n\n，和\n\nInferact vLLM committer 莫梓峰、范式智能（第四范式）系统研发专家杨守仁\n\n一起，在\n\nAICon\n\n全球人工智能开发与应用大会\n\n（\n\nhttps://aicon.infoq.cn/2026/shanghai/track\n\n）\n\n2026 深圳站\n\n即将召开之际，共同探讨 AI 基础设施从“可用”走向“高效可规模化”的关键路径。\n\n部分精彩观点如下：\n\n龙虾、Hermes 等 agent 开源项目，本质上就是把 CPU 的时钟借过来，让 Agent 有一个时间概念，但大模型本身还是没有时间概念。\n\n软件工程屎山这个事情是所有人逃不开的，但现在可能确实有可能会逆转，软件不用越做越麻烦，模型的能力在越来越强。\n\n代码现在没有那么值钱了，可能我们做的事情就是站在一个更高阶的 SRE 的角度：定义好 SLA、SLO、成本预算，剩下交给模型，那个时候做 Infra 可能会轻松一点。\n\n在 8 月 21-22 日将于深圳举办的 AICon\n\n全球人工智能开发与应用大会\n\n（\n\nhttps://aicon.infoq.cn/2026/shanghai/track\n\n）2026 深圳站上，我们特别设置了\n\n【\n\nAI Infra、推理工程与异构计算\n\n（\n\nhttps://aicon.infoq.cn/2026/shenzhen/track/1949\n\n）】\n\n专题。该专题将聚焦大模型推理架构、异构算力协同、推理性能优化、模型服务化、AI 集群调度、AI 原生基础设施以及下一代 AI 数据中心等方向的关键技术演进与产业实践\n\n查看大会日程解锁更多精彩内容：\n\nhttps://aicon.infoq.cn/2026/shenzhen/track\n\n以下内容基于直播速记整理，经 InfoQ 删减。\n\n完整直播回放可查看：\n\nhttps://www.infoq.cn/video/bN06GZ6lWP9tc5qVPOky\n\nAI Infra 的挑战\n\n黄之鹏：做 Infra 的同学都知道圈内有个笑话——“算法爷”，反正苦一苦 Infra，什么算法都能出来。各位认为，做 AI Infra 的挑战有哪些？\n\n莫梓峰\n\n：现在 AI Infra 最大的挑战是模型架构越来越复杂、越来越多样化了。以前做 LLaMA 无非就是一个 dense model，transformer 加 MLP 就搞定了。后来 DeepSeek 出了 MoE，V1、V2 做 MoE，V3 开始又搞了个 index。到了 V4，我们花了快大半年去适配，因为它那个架构搞得特别复杂，尤其是 transformer 里 compress 那部分，光是 kernel 就写了几个月。至少 transformer 跟 MoE 这块是越来越复杂了。\n\n而且我主要还是做多模态的。多模态的趋势也是越来越倾向全模态。两年前我刚开始做多模态的时候，LLaVA 只有图片输入，到后面千问三模态就能接收音频、视频、图片三种输入了。到了今年，Cosmos V 出来了，直接变成全模态——什么模态进来我都能收，还能输出所有模态，图片、视频，甚至机器人机械臂的 action 都能输出。这种全模态模型不仅是 AR 模型了，已经变成 AR 加 DiT，甚至还有各种奇奇怪怪的模型进来辅助。挑战越来越大。我们当时就说，这些有多模态输出的模型都别放在\n\nvLLM\n\n这个仓里了，干脆开个新仓，所以就有了\n\nvLLM\n\nOmni。现在不只是架构复杂，整个模型的流水线都开始复杂化了。\n\n杨守仁\n\n：我没有涉及推理那么细节的层面，但多模态的工作负载类型非常多样，不单单是 AR 这一种，我更关注的是工作负载跟算力的调度。现在业界比较大的挑战是，随着国内国产算力规模和行业的发展，核心痛点就是异构算力的管理。可能大家比较关注的是 NVIDIA GPU 和昇腾 NPU，但我们范式这边的客户还有寒武纪、昆仑芯、天数、沐曦等各种卡，每家都不太一样。\n\n举个非常简单的例子：有一家国产厂的 GPU，在某个 shape 下把一个 tensor 丢过去，输出就是错的。只有那个 shape 有问题，我们最后是通过 offload 到 CPU 的方式绕过去了。所以在异构上我们遇到的第一个大挑战就是一致性——NVIDIA 上有标准的 kernel，国产卡上的 kernel 能不能保证大部分情况下一致？另外随着集群规模变大，客户不只会有 NVIDIA 的卡，至少还要有两家，比如昇腾加 NV 再加一个其他的。业务类型上，以前是把传统的东西往国产卡上迁，最近两年开始把小模型也往国产卡上迁，这里面的适配和管理都是难点。整个集群的效率上，怎么把这些异构的都弄起来，是我们现在面临比较大的挑战。\n\n多模态推理攻坚战\n\n黄之鹏：梓峰，最近\n\nvLLM\n\n刚发了一篇关于千问 Omni 适配的博客，看起来花了很多心思，尤其是对异步处理和多模态输入这块。能不能先就着这篇博客讲一下这个工作？\n\n莫梓峰\n\n：千问 3 有三个部分：AR 部分、把 AR 的文字输出转成 hidden states 的部分、再把 hidden states 转到 codec wave 里输出音频的部分。AR 需要 KV cache，但其他部分需求完全不一样，每个部分有不同的最优方案。当时我们把每种方案都配了一遍，因为不可能 AR 在跑的时候剩下两个闲着，或者剩下两个在跑的时候 AR 就不接收输入了。所以我们设计\n\nvLLM\n\nOmni 这个框架的时候，假设每一部分都要充分解耦，不能当作一个简单的流水线。既能在 codec wave 输出的同时做异步调度。第一版框架重构了好几次，最后做到了一定的优化。但目前还有大概 20% 的空间没打满，profile 的时候还有一些 gap，主要是传 P2P 的时候有通信 bubble，有些通信部分还没消化得很好。\n\n黄之鹏\n\n：\n\nvLLM\n\nOmni 这种方式已经走出了一条比较成熟的路吗？\n\n莫梓峰\n\n：现在这种“主打 AR，其余剥离出来”的设计其实挺好的。Cosmos-3 出来的时候我们就发现，因为我们把 diffusion 跟 Omni 放在一起了，接入 diffusion 模型就做得非常顺畅。假设 diffusion 一个仓、Omni 一个仓、action 和 VLA 又一个仓，面对 Cosmos V 这种全模态模型，我们要四处开战，战线会拉得很长，还有各种适配问题。我们选择把其他的剥离出来、只保留 VLLM 做 AR，已经有一些技术债了。每次 VLLM 更新版本，Omni 这边也要跟着刷新各种接口，每一次可能要改几千行代码。我们后来接了一些 agent 来做这种比较机械化的任务，拿 agent 刷一遍就完事，但确实也很费 token。\n\n黄之鹏：现在各种机型实在太多，好多开发者都是调 agent 提 PR，给社区 reviewer 带来的负担很大。你觉得 agent 带来的影响是利大于弊还是弊大于利？\n\n莫梓峰\n\n：利大于弊。当时我们搭框架的时候用了不少 agent 来起草雏形，如果纯靠人手写，迭代速度会非常慢。但整个开源社区治理上，agent 带来的最大问题是很多人提 PR，agent 写完以后他不看。description 也是 agent 写的，打开一看几十行几百行，看完就没耐心了。再一看代码，agent 也没写干净，debug 完剩下的东西就留在那里。\n\n黄之鹏：那你们一般怎么处理？现在头部开源社区的 PR 提交量都是指数级在涨。\n\n莫梓峰\n\n：留个通信邮箱，如果你是活人，就用工作邮箱或者学校邮箱发个邮件，证明你是活人，我们就优先看活人的。我自己的实践是，先提几个初始评论，有的秒回、有的隔几分钟回，一眼是机器人的，要么直接 close，要么如果内容有道理而且没什么问题，我就顺手帮他修了。\n\n黄之鹏\n\n：你们战斗力还是比较强，有些社区已经不堪其烦了。\n\n莫梓峰\n\n：确实有点。之前我看到有个机器人十分钟直接刷了四十多条，看都不看直接 close。\n\n黄之鹏\n\n：\n\n你怎么看 encoder free 架构对多模态推理的影响？\n\n莫梓峰\n\n：我们三年前就有一个 encoder free 的模型了，Fuyu-8B，那是最早的。这种模型对 AR 调度其实比较友好，因为没有 encoder 那一块了，不用调度 encoder，直接一个 MLP 一个线性层投过去就完事了，没什么 overhead。真正问题比较大的是像 Gemma-4 那种，有个奇奇怪怪的 attention mask。encoder free 本身问题应该不会很大。\n\n黄之鹏：会不会造成 KV cache 成倍增加？在 cache 管理上会带来挑战吗？\n\n莫梓峰\n\n：至少我之前跑的时候，KV cache 跟普通的 LLaVA 架构没太大区别。但如果像 Gemma-4 那样对图片部分做双向注意力，KV cache 就会变得非常麻烦。尤其是它每一层有些层的 hidden size 特别大、head size 特别大，中间又夹杂几个不同的 head size，那真是 KV cache 管理灾难。如果只是 encoder free 的话问题不大，主要还是看 attention 怎么实现的。\n\n异构计算为什么又重要了？\n\n黄之鹏\n\n：\n\n现在的 K8s 异构现状是什么样的？能给大家介绍一下 HAMi 这个项目吗？\n\n杨守仁\n\n：做异构如果还是老版本 K8s，基本就是 Device Plugin 那套。DRA 我是从进入到 beta 之后才关注的，之前 API 太复杂，开发门槛太高。我们也考虑过 CRD，但每家都得自己维护，成本扛不住。\n\nHAMi 最早从 GPU 虚拟化切入，专注于显存和算力共享，通过 scheduler 扩展让用户用多个 resource name 描述一块 GPU 的资源配置。社区实现了一个跟 device plugin 通信的独立协议，最早是支持 NVIDIA 的设备，后来开始做国产设备的支持，并且和 Volcano 有这不错的联动。有一个厂商发接入 HAMi 的协议效果不错，也主动进来参与到社区中了，但是 HAMi 整个没脱离 device plugin 的体系。\n\nDRA 在是去年下半年的时候进入到 GA 阶段的，不过我们在 GA 之前就已经开发 NVIDIA 的 DRA driver 了。说实话，DRA 表达能力没想象中那么好，高阶特性就靠 ResourceClaim 中 attribute 的 key-value 和 capacity 来描述。今年三月 KubeCon 跟 NVIDIA 的 Kevin Klues、Intel 的 Patrick 有一些沟通，他们的想法是借助 feature gates 一点点往里面加特性，先保持简单易用然后再增加高阶的功能，这是我特别认同的一点。想起来之前在范式建设用于大模型训练的集群时用的无损 IB 网络，但是当时 IB 插件只能把资源描述出来，想做 IB 和 GPU 的绑定调度比较麻烦，最后只能但是放弃 Kubernetes 了。\n\n但现在不一样了，各个 driver 一联动，调度器就能把 device 属性统一考虑进来，实现类似拓扑感知调度等多功能都方便了不少，但是更高阶的动态能力还不行。在 HAMi 社区有飞利浦的工程师提 issue 问过，想做到设备被 PCI passthrough 到虚拟机的时候不做共享，没有 passthrough 就能共享，这种灵活的需求可能用 CRD 就很好实现，因为可以自定义排他状态，但 DRA 目前很难，因为调度器不知道底层分配策略的特性。所以现在 DRA 算是解决了 device plugin 的一些限制，但是更加高级的功能还需时间慢慢往前走。\n\n黄之鹏\n\n：我们当时想推的方案是做统一的 CRD controller，不同加速器按规定的 metadata 上报能力，让调度器充分感知。当时我们说“让异构硬件作为第一公民”，但做过 K8s 的都知道这很难。带外做 CRD 有它的问题，in-tree 的好处是好用，不会劝退初学者，而且合入 GA 的特性质量有保证。缺点就是我们这种厂商觉得，等了一年又一年，好多东西就是一直用不起来。\n\n杨守仁\n\n：现在 DRA 的新特性其实有不少的，但是这些特性 stable 的很少，很多都在 Alpha 阶段。然后面临一个恶性循环的困境：新特性加入的得越多，大家越不敢在生产上测试和使用；但是测试和使用的的越少，反馈就越少；反馈越少，到 Beta 到 Stable 就越慢；越慢就越没人敢用。\n\n黄之鹏\n\n：这不只是 K8s 的问题，所有开源项目引入新硬件都会这样。以前做 RDMA 都跑在 TCP 上面，很鬼畜。后来我们做了一个开源小项目叫 TransferQ，算是帮忙解决了一下这块的问题。\n\n黄之鹏\n\n：大模型的训练和推理任务，基本上就是一个固定池子，不太涉及调度行为，而且 Ray 这一层的存在多少会把 K8s 屏蔽掉。对于梓峰他们来说，日常可能根本不会跟 K8s 打交道，管什么寒武纪跟华为的卡怎么一起调度，这对他们来说更头疼了，你怎么看这个挑战？\n\n杨守仁\n\n：业务不复杂跑 Ray 挺好，不用管底层设备分配和任务的并行方案的对应关系。今年 KubeCon EU 上能感受到 Kubernetes 社区的一些焦虑吧，担心 Kubernets 错过 AI Workload 一波浪潮，Cloud Native Infra 接不住 AI Workload 的需求。HAMi 在今年获得了不少曝光的资源，我个人认为很大程度上就是想弥合 Kubernetes 在 AI Workload 中对于设备管理的 gap。\n\n另外，集群规模不大的时候，很多算法同学压根不用 K8s，几个节点一套 ssh 脚本就把任务跑起来了。大模型要考虑的是 NUMA 节点、PCI root 跨不跨，集群一旦大了，异构管理的问题才会真正冒出来。第一个头疼的就是碎片化，大模型 PD 分离的比例换一个模型未必最优，小模型像 Qwen3.6 27B 塞进去更会加剧碎片化，然后再加上波峰波谷一弹一缩，集群资源的碎片化就更严重。K8s 这套模型得配合 LWS、Volcano、Koordinator 这样的调度器才容易 work 好，但这需要集群先到了一定规模。\n\n另一个明显变化是国产卡变多了，昇腾、寒武纪的用户量很大，客户至少要面对两到三种卡的调度，哪些能一起跑、模型怎么从 NVIDIA 的设备上迁过去，都得琢磨。PD 分离在实际部署里，国产卡通信明显不如 NV 丝滑，你得自己去设部署策略，节点网络跟节点本身有时还不匹配，优化起来特别费劲。vLLM 对 NVIDIA 设备的支持是最好的，体验丝滑，但对昇腾、天数、沐曦是支持到什么程度我们并不是很了解，加上有一些项目是厂商自己维护的，哪个模型用哪个版本效果性能最好我们也不是很了解。这些问题全凑在一起，做异构就是一大坑，精力全搭进去都未必够。不过最后绕一圈，很可能还是得回到 K8s 上，用别的方法反而更费劲。\n\n黄之鹏：站在 K8s 这一层 Infra 的角度，守仁你会觉得\n\nvLLM\n\n、HCL 这些框架在变得复杂臃肿吗？\n\n杨守仁\n\n：从部署的角度来说肯定是更复杂了。原来大家不用 PD 分离或者分布式 KV cache 这种架构，就是节点拉大一点，靠 TP 和 PP 组成多个 DP 并在一起跑。但现在一旦做 PD 分离，prefill 节点怎么弄，decode 节点怎么拼？今天又听到多模态的 stage 还不一样。我在想，现在的 stage 是一个容器里多个 process 之间传递，那未来 stage 会不会也要动态扩缩容？如果是的话，这个管理复杂度就更难了，底下的 Infra 没有办法感知到这个复杂度或者计算特性。\n\n我之前和研究一个做视频生成的同学合作过，视频那块要做音视频处理，也很吃 GPU，但它消耗的是 GPU 里的编解码器资源，但是问题是它们也会用显存，混合使用有可能会爆显存，如何隔离就又是一个新的问题。如果再把多模态引进来，Infra 的工作负载感知就更麻烦了。国产卡的编解码器性能行不行，甚至有没有都是个问题。把整个系统组合在一起的时候，我目前不希望见到这种东西。我希望像 Omni 这样能先处理好，我不用再去考虑帮它做水平方向的 scale。一旦这种跟底层调度结合在一起，需要面对的问题复杂性会非常高。\n\n黄之鹏\n\n：我做异构出身，以前一度觉得异构越来越不重要了，大家都奔着同质化大集群去。但最近感觉异构又活回来了，主要两个原因：一个是后训练 RL，它的异构异步属性最近在特别增强；第二个是 agent。\n\nAgent 说白了就是个人写的前端软件去调模型能力。大模型出现本来是奔着终结所有人类 heuristic 的东西去的，结果 agent 这种前端火起来了。我的答案很简单：大模型处理不了时间数据，没有时间概念，这跟训练过程有关。你想做 coding 或者任何工程类任务，就必须得有一个时间概念。现在那些龙虾、Hermes 之类的 agent 开源项目，本质就是把 CPU 的时钟借过来，让 agent 有时间感，但大模型本体还是没有时间。\n\n这对我们做异构算是个好场景，除了刚才说的 RL 和 agent，还有一个就是多模态，涉及大量 codec 处理。\n\n莫梓峰\n\n：多模态 RL 确实有人在做了，像 Vivo 前段时间也开了个 Vivo Omni，专门做多模态输入输出的 RL。这种 RL 比纯文本的 RL 更麻烦，因为你要传多模态的 embedding，要传一帧 state，通信量比传统的 text RL 大很多。从异步的角度看，异步通信的需求是非常大的，优化的瓶颈放大效应会更加严重。再加上本身多模态模型也是 multi-stage 的，异步叠加异步，太地狱了。\n\n黄之鹏：这种场景下对异构的需求会越来越多吗？比如让 CPU 帮着预处理、异步处理掉很多其他任务。\n\n莫梓峰\n\n：是。甚至之前我接到 IO 那边的反馈，说现在反而出现了 CPU 瓶颈。因为 CPU 在进程之间互相传东西，传输量太大了，GPU 反而跑不满。他们有个需求是把 processor 处理好的图片直接塞进去，跳过 processor 这一步，不然 processor 引入的 CPU 瓶颈太严重了。\n\n杨守仁\n\n：Agent 这块，公司内部更多是各自在用，大规模服务端场景暂时还不多。但我能看到一个趋势：agent 对存储的压力上升很明显，产生的数据量特别大，共享存储的读写压力一下就上来了，因为任务什么时候读写你根本控制不住。\n\n还有一个问题是，现在起 Claude Code，单台服务器能起的量很有限。大家有时用 ACP 模式，扩很多 sub agent，sub agent 再去调 Claude Code 写代码，可能内存一下就不够用了。这种情况下我们担心的是，随着工作进程变多，很多内存其实浪费在可以复用的地方，像 JavaScript 这种 runtime 本来就挺大的。再加上每个 process 要跑在安全的 sandbox 里，sandbox 的开销叠上运行时开销，能不能撑起大规模使用是个大问题。几十 G 或几百 G 的云服务器上，有限的 Claude Code 数量撑不住太大用量。我们认识从范式出去创业的同学，用量一上来服务器就 OOM。可能两条路：要么有更好的 runtime 解决这个问题，要么 sandbox 设计上能把 overhead 降得更低。反正我现在还没有很好的答案。\n\n黄之鹏\n\n：一开始大家可能也没想到，瓶颈又转回 CPU 这边了。\n\n展望未来\n\n黄之鹏：到 2030 年，AI Infra 会变成什么样？\n\n莫梓峰：\n\n未来一年都很难预测。模型进化太快了，说不定哪天又来一个新的模型，搬出个奇奇怪怪的东西，但我感觉软件进一步简化的概率更高一点。\n\n黄之鹏：\n\n软件工程屎山这个事情是所有人逃不开的，但现在可能确实有可能会逆转，软件不用越做越麻烦，模型的能力在越来越强。\n\n杨守仁\n\n： Infra 迟早要被 AI 接管。Infra 的课题没多复杂，就是细节多，这些细节模型要是学会了，可能比我们做得更好，而且很多地方其实是我们过度设计了。前几年大家反思微服务，发现大部分公司根本用不到那个级别，你不是谷歌，没那么多机房和业务，小业务一个主备 Nginx 加一套高可用数据库就非常能打了，为了追求稳定和鲁棒性加了一堆东西。模型能力够的话，可能很快就能收敛到你当前规模下的甜点。之前 Fable 5 可以使用的时候，有同学说它解决 CI/CD 慢的问题，一个晚上下来性能直接提了 10 倍，就因为好多细节他们没配好，第二天一看监控，整个 CI/CD 系统优化的过程中非常稳定，没有中断。\n\n所以监控还是得自己搞，但 Infra 的操作和实现，按模型的迭代速度，可能以后真不需要我们了，它甚至能给出一个更好、更贴近当前规模的高性价比方案。如果模型和 token 成本降得足够低，方案迁移的成本也会很低，代码现在没那么值钱了。我们将来可能就是站在一个更高阶的 SRE 视角：定好 SLA、SLO、成本预算，剩下交给模型，那时候做 Infra 可能就轻松多了。\n\n黄之鹏：你觉得做 Infra 的不会被取代，但是层次会更高？\n\n杨守仁\n\n：可能从实现慢慢走向规划和设计，去理解业务。但是之前朋友给我说 Fable 5 优化他们的 CI/CD 的时候，我还是有点慌的，特别是他跟我说一个晚上就给他优化好了。因为之前我帮他们评估的时候，也觉得创业公司没那么大精力投在基建上。像 HAMi 社区，我们现在也非常困扰基建，因为面临异构场景，我们没有那么多卡和机器能实时测。一个用户提上来针对某款设备的修改，到底 OK 不 OK，我们心里没底，可能就在发版前找个地方测一下。我们之前跟 TiDB 的同学交流过，他们的单元测试 case 完善程度比我们好很多，所以他们能说过就能达到能合并的水平，我们还没做到这个级别。短期内，像我们这种开源项目，能通过一致性测试把质量拉到一个非常高的 bar，可能是个非常有挑战性的事情。特别是有很多开源项目，起步的时候还没大模型，纯靠人工写的 case，完全不能覆盖今天的需求。\n\n黄之鹏\n\n：\n\n“即抛型软件”和高度个人定制化的软件以后会越来越多吗？还是说大多数人还是需要平台型软件？\n\n莫梓峰\n\n：我觉得肯定还是要平台型的。就拿\n\nvLLM\n\n举例，一开始就是个配置 transformer 的 demo，越到后面缝合了越来越多技术。即抛式的你要缝合这么多东西，其实很困难，就算你的 agent 再强。尤其开源基础框架还有社区各个成员的 agent 帮着优化，总有可取之处，你起码可以抄。哪怕你即抛式的，也能从开源生态里去抄。有开源实现，你还能再省掉几个 token 钱。生态的力量是很强的。\n\n杨守仁\n\n：我觉得大型开源项目可能会变成一个更像脚手架的工具。它的迭代很快，agent 也会跟着往前走，要达成某个目标，路径就非常短了。而且开源项目还有一个非常好的点：模型的训练数据。像 vLLM 这种社区，很多 PR 的整个流程都已经被收入训练流程了，agent 可能很知道你的 review 风格是什么。\n\n莫梓峰\n\n：甚至有人专门来问我们哪些 PR 值得收集。\n\n杨守仁\n\n：这本来就是个非常重要的事。所以就会有一个效应：模型对这种大型开源项目的亲和度、适配性会非常好。工具也会收敛，因为用的人多，大家在后训练阶段一定会强化对这个工具的使用能力。小众工具慢慢就没人用了，模型对它的调用会越来越差，特别是 API 不符合直觉的情况下，泛化不出这个能力。越好的项目越容易集中，模型在前训练和后训练阶段都会把它作为重要参考去强化。这就变成了一个脚手架，我在 vLLM 上做一些简单的 hack 去适配我的场景，很轻松，模型很快能发现去哪改、怎么改更符合作者的品味，改完之后甚至更容易回馈到社区。这是一个明显的正向循环，自我强化的过程，马太效应很明显的。\n\n开源的力量\n\n黄之鹏：开源软件、平台型软件作为脚手架和基石还是很重要，还有没有觉得做开源比做闭源更有优势的地方？\n\n莫梓峰\n\n：据我所知，很多企业以前是魔改\n\nvLLM\n\n的。但\n\nvLLM\n\n迭代速度太快了，他们发现闭门造轮子不如开源出去，反而说不定还有人帮忙维护。这就倒逼那些闭源的也开源出来了，像滚雪球一样。\n\n杨守仁\n\n：我们站的角度可能不一样。HAMi 社区背后有很多个厂商——范式、密瓜、睿思、道客等等。我们做开源的逻辑是，大家比较认可以开源为基础的商业模式。第一点是中立，用户不担心被某一家厂商锁死，厂商也知道在这里贡献不会被另一家话语权更大的踢掉。商业模式能跑起来。第二点是抢占标准，我这套标准大家用的多，就成为事实上的标准。再结合大模型时代，用的人越多、改的人越多、贡献的越多。\n\n但偏 Infra 的开源项目最大的挑战是怎么保证所有 case 都能覆盖好，交付的质量要能让人信任。\n\nvLLM\n\n在这一点上非常值得我们学习。你交付的产品质量如果不行，虽然用的人多，但每个版本都差一些，别人就会想另起炉灶。所以我觉得最大的难点：一是让大家相信这个社区是开放的、能 work 得很好；二是交付的软件质量是可信任的；三是长期愿景是大家都认可的共识。\n\n观众：AI Infra 的定义是什么？\n\n莫梓峰\n\n：你要支持整个 AI Agent 能跑起来的所有部分，其实都能归入 AI Infra，广义上来说。从细到算子，大到集群调度，都算其中一环。缺一不可，就像建房子打地基。\n\n杨守仁\n\n：承载这个 workload 需要用到的所有组件，包括软件和硬件，合在一起就是 AI Infra。\n\n黄之鹏\n\n：大模型时代所有最不光鲜、最苦的部分，就是 AI Infra。\n\n观众：Infra 在异构硬件平台上运行过程中，发现硬件某些关键算子不支持时，怎么处理？\n\n杨守仁\n\n：搞不定先找厂商，问新版本有没有做。之前碰过一个真不支持的，运气好在靠后的层，直接 offload 到 CPU 上跑了，如果是中间层频繁来回切的就没办法了。开源项目的话可以自己手撸算子，现在模型写 kernel 很强，像 Triton 自己改改效果还行，训练够用了。推理要像梓峰那样极致压榨的，就得把 profiling 跑一遍，让模型在 loop 里不停试，只要你愿意烧 token 的钱，总能优化到不错。补算子的维护成本确实有，但大开源项目你去提 issue，可能有人接，甚至有硬件厂商驻场的人帮你弄。最难的是改完之后验证，不说性能，先说一致性，非常费劲。我们之前验出一个 bug，特定 batch size 和 shape 下偶发出错，同学一个一个 batch size 试上去才发现中间有一段就是不行。如果是精度问题，暂时比较无解，我也没有很好的实践。\n\n莫梓峰\n\n：一致性测试覆盖 corner case，只能出现一个补一个，像补洞那样。也有用 agent 去扫的，但效率不一定能抓住，毕竟 corner case 本来就很难复现。除非你发现偶发的精度丢失，就只能让 agent 跑几十次去扫，用不同 concurrency 去各种组合扫。像我之前做 video 用 GPU decode，只有异步的时候 concurrency 开到 16 以上才开始报 OOM 或者非法内存访问，那只能靠 agent 慢慢扫。\n\n今日好文推荐\n\nOpenAI 将崩溃调试视为流行病学研究，修复了存在 18 之久年的 GNU libunwind 漏洞\n\n1800亿美金逼出来的杀手锏：谷歌Frozen v2把Gemini烧进硬件，每瓦Token翻10倍，股价先涨3.3%\n\n16 万 Star 的 OpenCode 彻底重写：API 全部重做、Bun 换 Node、桌面端迁移 Electron\n\nHugging Face遭攻击取证受阻，只能靠国产GLM 5.2救场？白宫AI顾问急眼喊话：我们在失去竞争力\n\n会议推荐\n\n做 AI 的谁还没点技术焦虑，来 AICon 深圳站，吃颗技术定心丸! 大会限时 9 折专属优惠，现在报名立减 580，更多详情可扫码或联系票务经理 13269078023 进行咨询。", "category": "国际", "is_model_related": false, "source_file": "sources/2026-07-24_模型越来越强之后，Infra 将被 AI 接管？_InfoQ.md"}, {"title": "把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径", "source": "新智元", "digest": "微信团队，找到AI的第三条Scaling  Law", "link": "https://mp.weixin.qq.com/s/9Fr2YiFl0aPUKXK6HqzPJg", "content": "---\npublish_time: 1784867580\n---\n\n# 把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径\n\n> 原文链接：https://mp.weixin.qq.com/s/9Fr2YiFl0aPUKXK6HqzPJg\n> 公众号：新智元\n\n新智元报道\n\n大模型变强，过去靠两条路。\n\n做大——Scaling Law出现后，参数从百亿推向千亿，算力支出一路飙升。\n\n想久——o1带火思考模型，用更长的思维链、更多推理时间换结果。\n\n问题是，除了Scaling参数和思维链之外，到底有没有第三条路？\n\n微信WeLM团队给了一个全新的答案——\n\n把额外算力折叠进序列内部，让模型在token之间完成隐式思考。输出不变长，每个token想得更深。\n\n这套方法叫Hidden Decoding，隐式序列缩放。\n\n而WeLM做到的关键一步，是把它推到了前沿规模。\n\n从3月的80B参数，到现在的617B MoE，不仅增量续训只用了完整训练量的5.3%，而且9个评测全部超越自回归基线。\n\n把思考折叠进序列\n\nWeLM 617B MoE的隐式Scaling路径\n\n7月14日，微信WeLM团队放出了Hidden Decoding系列的第二篇博客，并首次展示了一个新模型的进展：一个总参数617B、评估表现达到开源头部水平的模型。\n\n博客地址：https://welm.weixin.qq.com/posts/hidden_decoding_at_scale/\n\n这并非该系列的首度发声。\n\n今年3月2日，WeLM 团队就发表了系列的第一篇博客，彼时Hidden Decoding还是一套相对朴素的早期实现，只在80B规模上跑通了初步验证。\n\n四个月过去，新博客不仅把方法做扎实，更第一次展示了将该方案上推到600B+模型的效果。\n\n这篇博客的核心，是介绍Hidden Decoding如何被推进到100B+ MoE的前沿规模——\n\n把每个token在序列维度上展开成多条并行的「流」，让同一套Transformer权重在一次前向传播里完成多步隐式推理，而只在最后一条流上计算损失。\n\n换句话说，模型在落笔写下下一个token之前，先在自己的序列内部折叠进了一段不为人见的思考。\n\n如果说过去一年大模型的两条主线是「把参数做大」和「把思维链做长」，Hidden Decoding展示的是第三条路：在不动参数的前提下，把额外算力藏进序列本身，让推理在模型内部多走几步。\n\n参数与思维链之后，第三条路指向隐式序列\n\n过去一年，大模型社区的努力可以粗略分成两条线。\n\n一条是把模型本身做大，总参数冲到万亿、激活参数冲到30B以上；另一条是在后训练阶段堆算力，靠强化学习和更长的思维链把推理能力「逼」出来。\n\n随着o1、DeepSeek-R1以及一众「思考模型」的走红，这后一条路线几乎成了默认叙事。\n\n但两条线共享同一个隐含前提，都需要「更多」。更多参数、更多高质量推理数据。\n\nHidden Decoding的提出，恰好绕开了这个前提。它不在数据侧做文章，而是回到预训练与继续预训练阶段，问了一个更朴素的问题——\n\n同一套权重、同一批数据，能不能通过更聪明的算力组织方式，逼出更多能力？\n\n这条路并非没人走过。\n\n循环模型、各类「在序列维度做扩展」的尝试，都属于同一种思路。让同一套权重在一次前向里多走几步。\n\n卡点也很清楚。循环模型串行不可并行，序列扩展又容易让注意力按序列长度的平方膨胀，在大模型上训不动、也用不起。\n\n因此相关讨论虽多，真正在前沿规模跑通的却很少。WeLM这篇博客文章，正是要把这条被绕开的路，在100B+ MoE的体量上重新打通。\n\n先认识一下WeLM：微信大模型的四代演进\n\nWeLM是微信AI团队持续研发的通用大语言模型系列，承载着微信在大模型时代的核心技术战略，也是微信参与前沿人工智能竞争最为关键的技术底座。\n\n从2022年首次公开亮相至今，WeLM已连续迭代四代。\n\n虽然团队过往对外发声始终秉持审慎的态度，但从近期集中发布的技术博客来看，其已清晰勾勒出一条技术演进路线——\n\n从V3时代的训练体系搭建，到V4时代的效率与质量创新，再到600B级模型的Scaling突破与Hidden Decoding的推理范式创新。\n\n这标志着WeLM已形成覆盖预训练、后训练和推理优化的完整技术版图。\n\n更重要的是，WeLM绝非止步于论文指标与实验室评测的试验性模型。\n\n当前已进入灰度测试阶段的微信AI助手「小微」，其核心模型能力由WeLM提供。依托微信这一拥有超大规模用户基数的国民级产品生态，WeLM已成功进入由真实用户、真实流量与真实复杂任务所构成的终极试炼场。\n\n从这次Hidden Decoding系列技术博客的发布中，我们可以窥见WeLM团队将前沿模型技术和规模化应用实践相结合的思考。\n\nHidden Decoding：把思考折叠进序列\n\nHidden Decoding的做法，可以概括为三步：\n\n给定输入序列和n份词表嵌入，把第i个token的第k条「流」表征放在物理位置(i−1)n+k上，构成长度为nL的扩展序列；\n\n扩展序列在标准因果注意力和连续的位置编码下，送进同一个Transformer，不新增任何主干参数；\n\n训练时只在每个token的最后一条流上计算下一个token的预测损失，前n−1条流不接收任何直接监督。\n\n换句话说，前面的流像是给最后一流「打草稿」——逐步精炼表征、保留更宽的候选集合，等最后一流再收敛到最终预测。\n\nHidden Decoding vs Loop Latent Computation\n\n此前，团队已经在6B、8B、80B上验证了这套方法的损失下降与评测提升。这次的目标，是把它推进到真正的前沿规模。\n\n关键工程：让扩展在100B+体量上可训\n\n把序列从L拉到nL，非注意力计算大致线性增长，但稠密注意力会按序列长度的平方膨胀。\n\n以n=4为例就是16倍，对长序列的大模型，这直接不可训。\n\n团队的解法叫Stream-Factorized Attention：让大多数层只在同一条流内部做注意力，只让少数层做跨流混合。\n\n流内注意力层：只关注同一条流中更早的位置；\n\n跨流注意力层：额外跨流关注，沿用基座原本的注意力形态，滑动窗口或全注意力。\n\n关键在于，团队不新增注意力层，而是对基座里已有的局部注意力层和一小部分全注意力层启用跨流功能。\n\n这样就把新增的注意力成本从n的平方量级压到了接近线性的n倍。而这也是Hidden Decoding能在100B+稀疏模型上落地的核心。\n\n此外，团队还利用了WeLM主干的一项既有设计KV-mirror来进一步加速。也就是，后段三分之一的层复用前段三分之一层的隐状态来构造键值缓存。\n\n由于镜像层的键值只依赖早期层的隐状态，而只有最后一条流被监督、中间流只通过它们贡献的键值起作用，团队只让最后一条流通过镜像层，前段仍处理全部n条流。\n\n在80B、32k训练设置下，这把单步时间从15秒降到12秒，约两成的提升，叠加在流因子化注意力已提供的近线性成本之上。\n\n结果：全面超越基线\n\n团队对每个基座比较两种形态，除Hidden Decoding外一切相同。随后用同一套短指令微调配方适配，不涉及强化学习。\n\n结果显示，\n\nHidden Decoding在两个规模上都实现了全面的提升\n\n。\n\n其中，80B平均提升约0.99个百分点、在617B上提升约1.03个百分点，较大的提升出现在SuperGPQA、MMLU-Pro等更难的推理与知识任务上。\n\n成本：近线性的训练开销，\n\n且无需重跑完整预训练\n\n这样一套方法，训练成本到底如何？实测数据给出了明确答案。\n\nn=4时，有效序列在80B上花费5.1×单batch时间、在617B上花费4.4×，接近n=4的线性参考，远低于稠密注意力的16×膨胀。\n\n更关键的是，Hidden Decoding并非从零训练，而是在已有自回归基座checkpoint上做增量续训（CPT）。\n\n推理吞吐：并行计算，小batch下反而有优势\n\n相比循环模型，Hidden Decoding的额外计算是并行的。\n\n循环模型逐步重复主干，每步都要等上一步，额外成本无法隐藏；Hidden Decoding把计算摊到n条stream上，一次前向并行处理。\n\n实测吞吐矩阵显示：\n\n大batch下，解码受计算限制，额外计算会降低吞吐（所有增加计算的方法都如此）；\n\n小batch下，解码受显存带宽限制，计算大量闲置，并行stream恰好利用这些空闲算力，相对基线损失更小。\n\n这意味着在实际在线服务场景中，Hidden Decoding的推理成本并非简单的线性增长，而是与batch size和序列长度分布强相关。\n\n探针：折叠进去的思考，究竟在算什么\n\nHidden Decoding依赖一个反直觉的选择：只训练最后一条流，前面的流零监督。\n\n主结果说明这能提升准确率，但收益到底来自「更长的序列」「更多的预测目标」，还是「中间流真的在做某种精炼」？\n\n注意力组合消融中，团队比较了三种配置：27层全跨流、4层、1层。\n\n所有变体都大幅超过自回归基线，全跨流最好，但只用1层或4层全注意力的变体恢复了大部分收益。少数几层跨流就足够了，这让流因子化注意力能在保住准确率的同时保持廉价。\n\n键值缓存保留的消融则表明，为不同流保留独立状态优于共享状态，两种布局下平均分都小幅下降，说明独立的中间状态确有帮助。\n\n最有趣的是流与语言模型头的探针实验。在8B基座加Hidden Decoding（n=8）上，团队观察到两点：\n\n其一，同一token的各流在Transformer中间层显著分化、临近输出层又部分靠拢，且最终流对其他流分配了可观的注意力，构成从中间流到预测流的读取通路；\n\n其二，把共享的输出头施加到各流时，中间流的最优预测常与最终流不同，最大差异率约63%，且其不确定性普遍高于最终流——说明在最终预测收敛前，中间流保留了更宽的候选分布。\n\n综合起来，消融与探针指向同一解释：中间流在最终流收敛到预测之前，保留并精炼着一个更宽的候选集合。\n\n研究团队认为，这正是「把前面的流用作潜空间计算状态」的含义，也是Hidden Decoding区别于简单「加长序列」或「多目标预测」的关键。\n\n展望：更强的基座，\n\n以及与强化学习的结合\n\n博客最后透露了一点后续进展。\n\n在采用更高质量、更大规模的数据做后训练后，80B与617B的自回归基座已经展现出显著更高的基准成绩与更稳定的使用体验。\n\n这组数据说明，WeLM的自回归基座本身就已经很有竞争力，而Hidden Decoding是在这个扎实基座之上的进一步增益。\n\n研究团队表示，接下来他们会在这套更强的基线上继续验证Hidden Decoding的增益，并将其与强化学习充分结合。\n\n写在最后\n\n回顾WeLM团队近期公开的技术博客，可以看到一条逐渐清晰、前后呼应的技术路线。\n\n《以适度资源构建高效稀疏MoE模型》探索了如何以更稀疏、更高效的模型获得有竞争力的能力，在同等智能下压低资源消耗。\n\nHidden Decoding 系列则从创新的推理范式入手，在同等模型参数下继续上推智能上限。\n\n前者让智能服务得起更多用户，后者让有限资源解决更难的问题。\n\n沿着两个方向回看，这系列博客并非彼此孤立的技术尝试，而是一套围绕资源效率展开的系统性探索，也呼应了团队博客首页「极致的资源效率」的命题。\n\n对于需要面对超大规模真实用户与复杂任务的微信团队而言，极致的资源效率不是智能增长的约束，或许恰恰是通往更高智能的另一条路径。\n\n博客原文：\n\nhttps://welm.weixin.qq.com/posts/hidden_decoding_at_scale/\n\n首篇播客：\n\nhttps://welm.weixin.qq.com/posts/hidden_decoding/\n\n论文PDF：\n\nhttps://arxiv.org/abs/2607.08186\n\nGitHub仓库：\n\nhttps://github.com/Tencent/Sequential-Hidden-Decoding\n\n编辑：摩西 大卫\n\n秒追ASI\n\n⭐\n\n点赞、转发、在看一键三连\n\n⭐\n\n点亮星标，锁定新智元极速推送！", "category": "国内", "is_model_related": true, "source_file": "sources/2026-07-24_把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径_新智元.md"}, {"title": "能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型", "source": "极客公园", "digest": "Vivix灵动时刻正式发布首个实时互动模型，采用全新统一流式架构，单卡突破10000 video tokens/s，打通实时多模态生成全链路，让AI角色能实时改变剧情和行动。", "link": "https://mp.weixin.qq.com/s/HN8HLrMjjiKZdHoM5JQnBw", "content": "---\npublish_time: 1784899815\n---\n\n# 能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型\n\n> 原文链接：https://mp.weixin.qq.com/s/HN8HLrMjjiKZdHoM5JQnBw\n> 公众号：极客公园\n\n从生成一段视频，到生成一场互动。\n\n作者｜Moonshot\n\n编辑｜郑玄\n\n你见过能实时互动的 AI 视频吗？\n\n跟着小狐狸游览景色，你询问它接下来的计划，它会马上带你看附近的景色，会拿着旅游地图，边走边指着身旁的风景讲解给你听。\n\n这不是一段提前录好的视频。屏幕里的小狐狸，是由 Vivix-A1 实时生成的 AI 角色。用户说出的指令，会直接改变它接下来讲什么、做什么。\n\n7 月 24 日，成立一年多的 AI 公司 Vivix 发布两款激活参数约 30B 的实时交互多模态模型 A1 和 W1。这也是全球首个集合了多模态参考、原生交互以及流式视频生成的基座模型。更值得关注的是速度和成本：据其官方报告给出的可见反应延迟低于 0.6 秒,计入网络传输和直播推流后，端到端 TTFR（首次反应延迟）低于 1.7 秒；团队的实时视频推理成本在过去一年内降低 2 个数量级，已接近主流视频平台每小时 CDN 带宽成本量级。这些数据意味着，实时交互多模态技术终于可以走出实验室，走进真实世界，最终来到每一个用户身边。\n\nVivix 想推动 AI 视频从生成「一段固定的内容」，走向生成「一场持续的互动体验」。\n\n这是 Vivix 对下一代 AI 内容的判断，也是它同时推出 A1、W1 和 API 平台的起点。\n\n01\n\nVivix-\n\nA1：\n\n从「会说话」到「会行动」\n\nVivix 将 A1 定义为首个面向交互式 AI 角色的实时全双工模型。它要解决的问题很直接：让 AI 角色不再只是「固定画面里一张会说话的脸」，而是成为能够「边听、边说、边行动的完整生命」。\n\n常见的 talking avatar，本质上是一张会说话的脸：先生成语音，再让嘴型跟上。Vivix-A1 则把角色从一张脸扩展到完整的身体。它不仅能感知周围环境，还能走动、拿取物品，完成各种全身表演。\n\n具体来看，A1 的能力主要体现在四个方面。\n\n角色可以走动、拿东西，也能完成全身表演\n\n线上看房场景中，AI销售可以带你看房子的构造、自然走出房间对外观进行展示，镜头也会跟随角色移动。角色不再只能面对固定镜头介绍产品，整场讲解可以跟着他的行动自然展开。\n\n露营场景中，AI 向导会根据用户的问题，随即拿起一盏露营灯，边展示边讲解。物品可以随着对话自然进入场景，角色也能通过实际的拿取动作回应。\n\n小狐狸导览、房产销售和露营三个场景，分别展示了 A1 的全身表演、物体交互和空间移动能力。A1 要解决的，是让 AI 角色不只听懂用户的要求，还能调动全身，用行动作出回应。\n\n用户随时插话，角色随时回应\n\nA1 支持实时全双工交互。即使角色正在说话或行动，用户依然可以插话、追问或更换话题，不必等它完成这一轮表演。\n\n用户之外，周围环境也会影响角色。风声、雷声等声音可以直接进入模型，改变角色接下来的表情和动作。角色开始知道身边发生了什么，也会根据新的情况作出反应。\n\n自然的表情与丰富的情绪\n\n角色是否具有「活人感」，不只看脸做得够不够真实，更要看它的表情、声音和动作，能不能随着对话自然变化。\n\nA1 可以同时生成表情、声音、手势和全身动作。角色开心、惊讶或生气时，变化会落在眉毛、额头、眼神和嘴角，也会反映在语气和身体姿态上。\n\n这些细节会跟着对话实时变化。角色的情绪不再是一套提前准备好的表情，而是在对话发生的当下，通过表情、声音和动作自然呈现出来。\n\nVivix 官网对 A1 的介绍把微表情、视线、手势和全身运动的协同列为模型的重要能力。这种表演能力可以覆盖写实人物、3D 角色和动漫形象。\n\n互动过程中\n\n，也能\n\n动态加入\n\n新的\n\n图片\n\nA1 支持语音、文字和图片输入。图片不只负责确定角色最初的样子，也可以在互动过程中继续加入素材。\n\n用户临时上传一张商品图，角色可以根据新的图片调整讲解，把商品带进场景，再完成拿取和展示。整个过程接在当前视频后面，不需要重新开始生成。\n\n这些能力为什么能同时发生\n\n常见的 AI 角色系统，会让语音识别、语言模型、语音合成和视频驱动依次工作。一个环节完成后，下一个环节才开始。链路越长，角色越难在行动过程中及时接收新的要求。\n\nA1 没有把这些环节简单串在一起。Vivix 为它设计了一套原生多模态生成循环，让模型持续处理声音、图片和交互信息，同时生成相应的声音与画面。\n\nDirector Agent 像一个实时导演，负责判断角色接下来要说什么、做什么，同时记住此前的对话和场景状态。用户中途换了问题，角色可以从当前状态继续回应。\n\n视频则采用流式生成。模型不会等整段视频全部完成，而是每次向前生成一小段，再让下一段沿着已经发生的内容继续生成。为了避免片段之间出现跳变，也防止人物和场景在长时间生成中逐渐偏移，A1 使用局部连续性保证前后片段自然衔接，再通过全局序列先验维持人物、背景、声音和动作的长期一致。多维联合蒸馏则把推理过程压缩到两步，进一步降低实时生成所需的计算量。\n\nA1 先把实时交互放到一个角色身上。Vivix-W1 再把这套能力扩展到整个场景和故事。\n\n02\n\nVivix-\n\nW1：\n\n当用户开始\n\n实时\n\n改变整个故事\n\nA1 让一个角色根据用户的要求继续行动。W1 再往外走了一步，把变化扩展到人物、物体、场景、镜头、声音和事件。\n\n在 W1 的互动叙事体验中，用户输入「外星人入侵地球」的 Prompt，画面中随即依次出现太空指挥部、太空和民众视角的不同场景，氛围紧张、镜头切换自然。\n\nW1 最值得关注的地方，是它把过去通常分开处理的几项能力，放进了同一个流式模型：\n\n「原生音画联合生成」\n\n让画面、对白、环境音和音效一起生成。画面里开始下雨，声音也会同时发生变化，不需要再由另一个音频模型单独补上。\n\n「多模态参考」\n\n让文字、图片、音频和视频都能成为内容生成的依据，并共同影响最终呈现。这些信息既可以确定故事的开场，也可以在故事进行到一半时加入。用户上传一张新图片，或者通过点击选择一个物体，后续内容会从当前状态继续改变。\n\n「原生多镜头叙事」\n\n负责组织镜头。故事转向其他人物或场景时，模型可以切换视角、移动镜头，并继续处理对白节奏和人物反应。用户改变的不只是画面里的某个元素，故事的讲述方式也会随之变化。\n\n故事一直生成，怎么保证它不越跑越偏\n\nW1 不需要等整段视频生成完成，而是以流式方式，一小段一小段地持续向前生成。上一段内容会成为下一段的基础；用户中途加入的语音、图片、触控或镜头操作，也能继续改变后面的故事。\n\n这种方式需要同时解决两个问题：既要让每一段生成得足够快，也要避免时间一长，人物、场景和声音越跑越偏。\n\nVivix 为此设计了 Vivix-Turbo。它通过「超低步数蒸馏」减少每一段音视频所需的推理步骤，再通过镜头规划和时间连续性优化，保持人物、场景和镜头的稳定。\n\n模型生成得快，并不代表用户马上就能看到变化。一条新指令还要经过处理、生成和传输，才会变成屏幕里的画面和声音。\n\n因此，Vivix 又为 A1 和 W1 搭建了实时推理系统 Vivix Infra。它让输入处理、音视频生成、解码和推流同时运行。模型生成当前画面时，系统也能继续接收用户的新要求。\n\n用户中途改变想法，系统会直接调整后续生成。已经发生的内容和上下文会被保留下来，模型无需从头计算。这既能缩短响应时间，也能降低实时视频长期运行的成本。\n\nVivix-Turbo 提高 W1 的生成速度和稳定性，Infra 则缩短模型响应传到用户屏幕所需的时间。两个技术底座，共同支撑 W1 的实时交互。\n\n03\n\n从一个人，到一段持续生长的内容\n\nVivix 成立于 2025 年初，目前已经完成 A 轮融资。历史股东包括 IDG、红杉、蓝驰、5Y、Monolith，和战略投资人京东和阿里（按照时间顺序）。\n\nVivix 瞄准的是那些很难被大量提供的互动体验。今天，一场体验要做到实时回应，通常有两种办法。一种是让真人在线，另一种是由制作团队提前准备内容。前者受限于真人时间，后者受限于内容制作量。Vivix 希望用实时交互模型补上中间的一块。角色可以面对不同用户作出不同回应，故事也可以根据每个人的选择继续发展。制作团队不必提前录完所有内容，真人也不用始终守在屏幕另一端。\n\n而关于「互动」，团队也形成了一个共识：互动是一件很重的事情，它要求用户付出注意力和操作成本，所以必须带来大幅的体验增益——比如游戏，提供更强的沉浸感、更真实的反馈。进一步说，把某种生成能力包装成工具不够，单纯改变交互方式也不够，而必须需要创造一种体验增益足够大的新内容格式。 A1、W1，正是 Vivix 对这一方向给出的探索。\n\nVivix 对互动的理解，比「用户发出指令，系统给出反馈」多了一层，他们把一场互动拆成三个基本元素：人、场景和时间。\n\nA1 先处理「人」，不是固定机位下的大头数字人，而是让角色能够听懂用户并采取行动；\n\nW1 加入场景和时间，让人物之外的环境和事件也能发生变化；\n\nInfra 则让这些变化及时出现在屏幕上，并控制长期运行所需的成本。\n\nAI 生成的内容不一定只能等待观看，它也可以在用户进入以后，继续生长。\n\n官方现已开放内测，欢迎点击文章底部\n\n【阅读原文】\n\n访问官网及 API 开放平台申请体验。\n\n*头图来源：\n\nVivix\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n你认为 AI 生成互动视频\n\n最核心的要素是什么？", "category": "国内", "is_model_related": true, "is_merged": true, "source_file": "sources/2026-07-24_能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型_极客公园.md", "source_items": [{"name": "极客公园", "source_file": "sources/2026-07-24_能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型_极客公园.md", "link": "https://mp.weixin.qq.com/s/HN8HLrMjjiKZdHoM5JQnBw"}, {"name": "量子位", "source_file": "sources/2026-07-24_刚刚，AI接通了平行世界的电话！全新统一流式架构，Vivix灵动时刻正式发布首个实时互动模型_量子位.md", "link": "https://mp.weixin.qq.com/s/JwRLdAlzeLS0HowZZItbyQ"}]}, {"title": "AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布！", "source": "InfoQ", "digest": "近日，由思码逸出品的《DevData 2026 研发效能基准报告》正式发布。", "link": "https://mp.weixin.qq.com/s/jwhli0fPyqMA7axgg4l0sQ", "content": "---\npublish_time: 1784868099\n---\n\n# AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布！\n\n> 原文链接：https://mp.weixin.qq.com/s/jwhli0fPyqMA7axgg4l0sQ\n> 公众号：InfoQ\n\n近日，由思码逸出品的《DevData 2026 研发效能基准报告》正式发布。这是 DevData 系列报告的第三年，覆盖了超过 200+ 家企业、数万名开发者的真实研发数据，延续了主客观结合的方法论——客观指标来自企业真实代码仓库的持续采集，主观判断来自一线技术管理者的真知灼见。\n\n三年听起来不算长，但对于一份行业基准报告来说，刚好够从「拍一张快照」\n\n进入「看一条曲线」。DevData 不再只告诉你“行业现在的水平是什么”，还能回答一个更有价值的问题：行业在往哪里走，走得有多快，怎样能走得更好\n\n。\n\n三年前，思码逸开启了研发效能行业数据的建设，彼时大家的关注点都在数据治理和更合理的指标。今天，AI 又给我们叠加了更多挑战：当绝大多数代码由 AI 编写，“人”的效能该怎么算？《DevData 2026 研发效能基准报告》尝试从交付速率、交付质量、交付能力三个认知域作答。\n\n今年的数据，揭示了几条让人无法忽视的规律：\n\n全行业研发效能实现了整体跃升\n\n。 三年间，代码生产率中位值从 2983 提升至 4019 代码当量 / 人月，需求交付周期中位值从 15 天压缩到了 7 天。更重要的是，这种增长不是头部企业的独角戏——小型团队产能增幅甚至超过了大型团队，AI 正在弥补中小团队的规模短板。研发效能普惠式增长的时代，已经到来。\n\nAI 的红利是分层的，工程底座决定了能吃到多少 AI 红利\n\n。 这是本年度最关键的发现之一：以持续交付为代表的基础能力，直接决定了 AI 效能收益的上限。基础薄弱的团队引入 AI 后，产能反而持续下行；基础扎实的团队，经历短期阵痛后呈 V 型反弹，最终超越初始水平。AI 不会雪中送炭，它只会锦上添花。先夯实包括 CI/CD 在内的工程底座，再逐步推进大模型智能化升级——这是数据给出的最优路径。\n\n质量领域正在上演“分化”\n\n。 中位值企业的千当量缺陷密度在下降，质量管控跟上了产能增速；但尾部企业的问题密度均值三年翻了一倍多。AI 放大了效率，也在拉大质量差距。过去我们谈“又快又好”，今天的数据告诉我们：只有少数团队真的做到了。\n\nAI 落地进入深水区，渗透率高但深度不足\n\n。 超过 96% 的企业已经在某种程度上采用 AI 生成代码，但半数以上仍将大模型定位为“辅助工具”。真正的竞争已经从“用不用”转向“用多深”。而投入深度，又回到了同一个前提：你的工程和知识基础设施准备好了没有？\n\n行业共识加速形成。 AI 代码质量自动化校验、数据驱动效能治理、私有化行业大模型——这三件事被近半数企业视为未来 1-3 年的核心方向。行业不再迷恋 AI 本身，而是开始认真思考：AI 来了之后，我们真正该做什么。\n\n三年来，思码逸坚持每年用一份报告记录行业走过的路，记录管理者做过的选择，记录那些“数据印证直觉”或“数据推翻直觉”的时刻。2026 年，行业已经为“要不要做 AI”画上了句号，转而开启了一个更成熟的追问：在 AI 已无处不在的时代，如何做出真正有效的投入决策？\n\n我们希望这份报告不止被翻阅，更能被使用。对标数据不是终点，找到属于你所在企业的投入路径才是。无论是先建设工程底座再引入 AI，还是借助 AI 快速弥补小团队的产能缺口——每种路径，今年的数据都给出了信号。\n\n《DevData 2026 研发效能基准报告》现已正式发布，点击【\n\n阅读原文\n\n】下载报告。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-24_AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布_InfoQ.md"}, {"title": "WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等", "source": "智东西", "digest": "最高提速5881倍！数据库迎来“GPU时刻”。", "link": "https://mp.weixin.qq.com/s/KYnkkD9Ncse7uTzgpv74dA", "content": "---\npublish_time: 1784888197\n---\n\n# WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等\n\n> 原文链接：https://mp.weixin.qq.com/s/KYnkkD9Ncse7uTzgpv74dA\n> 公众号：智东西\n\n最高提速5881倍！数据库迎来“GPU时刻”。\n\n作者 |\n\n李水青\n\n编辑 |\n\n漠影\n\n2026 WAIC展览上，大模型、智能体、机器人占据着人们的视觉C位，但一款藏在大模型背后的\n\n基础软件\n\n，同样吸引了不少产业用户驻足。\n\n围绕这款号称“\n\n全球首个完整GPU原生数据库\n\n”的新物种，来自银行、券商、制造企业、海外机构和高校科研团队的技术负责人，不约而同地关注同一个问题：\n\nAI Agent时代，数据底座是不是该换了？\n\n7月18日，星环科技推出面向AI Agents的新一代高性能AI数据库——\n\nGPU原生认知数据库\n\n。\n\n在全球数据库领域，\n\n将数据库的“户口”彻底从CPU迁到GPU\n\n，并且刷新全栈性能测评成绩，这是一次大胆且彻底的架构实验。\n\n“很多企业做了几百个、上千个Agent，但真正能用的其实没几个。”星环科技创始人、CEO孙元浩告诉智东西：“要让Agent真正用起来，首先要解决\n\n数据质量和数据组织\n\n的问题。”\n\nAI Agent时代，企业究竟需要什么样的数据库？\n\n智东西在WAIC期间与孙元浩展开了一场近小时的对话，试图从企业Agent落地的真实瓶颈中寻找答案。\n\n01\n\n.\n\nAI Agent落地元年\n\nCPU数据库被逼到极限\n\nAI Agent的工作方式，正在改变企业对数据的消耗模式。\n\n过去两年，大模型应用以单轮问答为主，用户提出问题，模型给出一次回答。如今，Agent的工作方式开始转向多步骤循环，一次复杂任务可能触发数百次数据访问，多个Agent并发运行时，数据处理需求会出现数量级增长。\n\n“Agent会反复试，先推理、分解任务，再调数据库和工具，检查结果是否正确，发现不对就修改。”孙元浩告诉智东西，“这种计算方式的变化，对底层架构产生了很深的影响。”\n\n问题首先出在CPU的并行度和内存带宽上。\n\n单颗CPU通常只有百级通用核心，内存带宽约为400GB/s；GPU拥有万级并行计算单元，显存带宽可达数TB/s。面对大规模扫描、复杂聚合、向量检索和图计算，双方的硬件能力已经拉开明显差距。\n\n更棘手的是，\n\n数据搬运进一步拉长了整条链路。\n\n模型推理通常运行在GPU侧，数据库查询和知识检索仍在CPU侧。数据需要在CPU内存与GPU显存之间反复搬运，存储墙的存在使得数据传输慢，延迟高，调用次数越多，等待时间就越容易被放大。\n\n“用户把任务交给AI，它要像去图书馆一样查资料，资料太多、处理太慢，最后出的结果就慢。”孙元浩告诉智东西，\n\n“它就是在干等，等着数据处理完。”\n\n这种等待直接\n\n侵蚀昂贵算力的利用率\n\n。“数据处理一慢，GPU就闲置了，\n\nGPU利用率可能降到百分之三四十\n\n。”孙元浩说。模型本身仍有未发挥的能力，整条推理链路却被数据查询、解析、检索和传输卡住。\n\n何解？\n\n继续堆CPU节点很难从根本上解决问题。\n\nCPU数量增加后，企业还要同步扩容内存、交换机、电力和散热系统，系统间通信也会带来新的开销。“功耗会增加，耗电和散热都会增加，还要买更多交换机把机器连起来，总成本增长得更快。”孙元浩告诉智东西。\n\n因此，Agent时代的数据瓶颈也\n\n很难被简化为存储容量问题\n\n。模型权重、KV Cache和上下文需要更快的显存、内存与存储介质，数据准备、关联分析和知识检索又需要更强的计算核心。它是计算、带宽、存储和数据组织方式共同形成的系统性瓶颈。\n\n“数据处理是一个综合问题，需要高速存储、更大容量的内存和显存，也需要更强劲的计算核心。”孙元浩说，“\n\nCPU已经跟不上，就要用GPU来算。\n\n”\n\n02\n\n.\n\n把数据库“户口”迁到GPU上\n\nAI Agent推理不再干等\n\n正是这种认知，驱动星环科技做出了一个在外界看来颇为激进的决策：\n\n将数据库的计算链路迁移到GPU体系内。\n\n相比于市面上已有的“\n\nGPU加速数据库\n\n”，星环科技强调的“\n\nGPU原生数据库\n\n”的本质差异在哪？\n\n孙元浩做了一个形象的比喻：“如果只是部分数据库功能放到GPU上面的话，那就会导致部分我是坐\n\n飞机\n\n然后再步行走一段，再坐飞机再\n\n步行\n\n走一段。所以说就整个数据分析的时间就会被明显拖慢。”\n\n星环要做的是把\n\n存储层、计算层、编译层和执行引擎全部围绕GPU重写\n\n，让SQL分析、向量检索、图计算等操作尽可能留在同一套GPU计算和显存体系内完成。\n\n技术层面，星环科技实现了\n\nGIDS（GPU-Initiated Direct Storage）\n\n，由GPU直接发起存储访问，完全绕过CPU和主机内存，实现真正意义上的GPU直连存储。 这种架构带来了三个价值：\n\n消除CPU瓶颈、降低数据传输延迟和最大化GPU利用率。\n\n只有全流程加速，GPU较高的硬件投入才可能转化为\n\n经济性\n\n。\n\n如果GPU仅将查询速度提高一两倍，其较高的硬件价格很难被摊薄；当性能提升达到\n\n数十倍甚至上百倍\n\n，企业完成相同任务所需的机器数量和运行时间都会明显下降，单位任务成本才可能出现拐点。\n\n根据星环科技提供的测试结果，在TPC-DS SF1000基准测试中，该数据库完成完整\n\n99项\n\n查询测试，相较主流开源数据库DuckDB获得了\n\n70倍\n\n加速。在与全球头部云数据仓库的对比中，其性能更是展现出了代际优势。孙元浩告诉智东西，\n\n当性能提升达到几十倍甚至上百倍时，即使GPU成本高于CPU，经济性拐点也已经到来。\n\n“Agent时代，数据库有两个大的变化。”孙元浩告诉智东西，“一个是数据处理速度要跟上GPU，另一个就是是要理解语义。”\n\n在星环科技的GPU原生架构中，数据库不再仅仅是存储和查询数据的容器。它进化成了一个\n\n能够理解语义、管理长期记忆、并主动为Agent供给上下文\n\n的认知基础设施。孙元浩认为，AI Agent需要的不是一堆数据的简单堆砌，而是完整、可信且可持续调用的业务上下文。\n\n他告诉智东西，在AI时代，数据库必须变成AI的“\n\n真相所在\n\n”：“数据是真相所在。\n\n模型给的是概率答案，数据库给的是精准答案。\n\n”为了支持这一点，数据库需要统一承载关系型、向量、图、全文和文档等多模型数据，并将数据分析、知识检索、上下文供给和记忆管理融合在\n\n同一底座\n\n中，以减少多个数据库拼接产生的数据复制和系统割裂。\n\n03\n\n.\n\n全球首个完整GPU原生数据库\n\n为什么是星环先做到？\n\n标准测试之外，GPU原生认知数据库已经进入\n\n真实数据和业务场景\n\n验证。\n\n在复杂企业知识问答场景中，\n\n系统需要处理8.9万页文档、2600多万个数值以及大量分析和推理任务。星环科技的测试结果显示，包含OCR的文档解析与知识入库性能提升约\n\n10倍\n\n，数据检索性能提升约\n\n20倍\n\n，单题端到端推理性能提升约\n\n6倍\n\n，最终任务准确率达到\n\n79.3%\n\n。\n\n这类场景的难点往往藏在推理之前。企业需要先解析文档、抽取表格和数值、完成知识入库，再让Agent持续查询和校验。孙元浩提到，有客户将数据导入向量库需要等待一个月，数据一旦更新，又要重复漫长流程。“如果一次入库要等一个月，企业根本无法接受。”\n\n智能投研\n\n对速度的价值更加直接。因子计算、历史回测、参数搜索和策略验证都需要反复扫描多源数据。星环科技在不同测试任务中实现\n\n30倍至5881倍\n\n性能提升。研究人员可以在同一天验证更多因子和策略，扩大搜索空间，也更有机会在市场窗口关闭前完成验证。\n\n“投资机构一天能尝试的策略比原来多\n\n几百倍\n\n，就有机会找到更优的策略。”孙元浩说，“谁先把有效策略投入市场，谁就能更早获得收益。”\n\n完整重写一套GPU数据库，为何由星环科技率先完成？\n\n“把完整数据库搬到GPU上，就像从地球移民到火星。”孙元浩告诉智东西，“原来成熟的软件包和工具大多不能直接用，很多东西都得自己重新做。”\n\n背后是其长达十二年的分布式技术积累。自2013年成立后，星环科技长期投入分布式数据库和多模型数据管理，并于2020年提出多模型数据库方向。对它而言，GPU带来的高并行计算架构与既有技术路线存在延续性。分布式时代积累的任务拆解、调度、数据分区和多模型统一能力，构成了此次架构迁移的基础。\n\n孙元浩认为，星环之前做分布式系统的经验，在这一刻发挥了关键作用。过去二十年，数据库通过Scale-out（水平扩展）解决单机性能不足；如今，GPU强大的算力与高速互联技术推动计算重新走向高密度Scale-up（垂直扩展）。\n\n可以看到，这种对并行计算的深刻理解，以及对多模型数据库一体化架构的长期探索，最终汇成了率先跨越架构鸿沟的基石。\n\n04\n\n.\n\n结语：AI Agent重写数据底座\n\n数据库迎来“GPU时刻”\n\nAI Agent进入业务深处后，模型、工具与数据之间的调用频率持续上升。企业能否让Agent快速获得可信数据、精准上下文和连续记忆，开始决定AI应用的响应速度、准确率和单位成本。\n\nGPU原生认知数据库仍处于产业化早期，测试成绩还需要更多生产系统长期验证，国产算力适配、超大规模数据管理和生态兼容也将持续推进。但方向已经清晰，Agent正在重写数据底座，数据库的计算架构与能力边界都要随之变化。\n\n当GPU从模型推理的专属算力，进一步进入数据分析、知识检索和记忆管理，数据库也迎来了自己的“GPU时刻”。", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-24_WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等_智东西.md"}, {"title": "一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策", "source": "机器之心", "digest": "提出了面向持续 Skill 进化的开发框架", "link": "https://mp.weixin.qq.com/s/NkZcFC1Nv2i03JGJtNj3gQ", "content": "---\npublish_time: 1784856630\n---\n\n# 一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策\n\n> 原文链接：https://mp.weixin.qq.com/s/NkZcFC1Nv2i03JGJtNj3gQ\n> 公众号：机器之心\n\n一个 Skill 这个星期能正常工作，不代表下星期也行。\n\n搜索接口会被限流，API 会被改版，网页结构也可能突然变化。开发者发现了 bug，修好最近这个版本，再把文件交给下一轮 Agent。\n\n最初为什么修改？试过的方案为什么失败？上一轮回退撤销了什么，又留下了什么？下一轮接手的 Agent 大多不知道。它拿到的只是结果，前几轮踩过的坑还得再来一遍。\n\n腾讯微信在论文\n\nSkillHone\n\n中，将这个问题归结为优化历史丢失，进而提出了面向持续 Skill 进化的开发框架。\n\nSkillHone 把每轮诊断、候选修改、评估证据和最终决定组织成持久决策历史。同时，持续优化的对象也从单一的 SKILL.md 文件扩展到了整个 Skill 文件夹及其修改过程。\n\n论文标题：SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History\n\n论文链接：https://arxiv.org/abs/2606.08671\n\n代码链接：https://github.com/Tencent/SkillHone\n\n一、不能只优化 Skills，\n\n还要对 Skills 的优化过程本身建模\n\n现有 Skill 方法大致分为两类。一类是 Skill-Creator，根据任务描述、示例或资料生成新的 Skill；另一类是 Hermes-SE（Hermes Agent Self-Evolution），通过不断修改已有 Skill 候选，并根据评估结果选择更优版本。\n\n这类方法能够在单轮优化中得到更好的 Skill，但优化过程通常没有被保留。运行结束后，留下的往往只有最终版本文件。虽然文件差异可以展示「改了什么」，却无法回答「为什么这样改」。当环境发生变化时，Agent 也无法利用过去的优化经验，容易重复探索已经失败的方向。\n\nSkillHone 不仅优化 Skill 本身，还对 Skill 的优化过程进行建模。每次优化步骤都会被记录为一条决策历史，包括问题诊断、候选修订、清洗后的评估证据以及最终结果。通过累积这些多轮决策记录，后续 Agent 可以理解某次修改针对的问题、采用的依据，以及最终保留或撤销的原因，从而将优化经验持续传递，而不仅仅是继承最终的 Skill。\n\n二、SkillHone 如何把优化过程留下来\n\nSkillHone 设置了两个相互关联的仓库。Skill 仓库包括 SKILL.md、脚本、资料和模板；Skill-Eval 仓库包括练习探针、标准答案、验证器、运行轨迹和回归测试。\n\n每轮进化开始时，评估侧先使用当前 Skill 运行验证集上的回归测试。优化侧根据脱敏报告和现存记录进行修改，评估侧再在基准版本上测试候选 Skill。系统决定接受、继续修改或拒绝修改后的 Skill，并将证据写回历史。\n\n优化侧 Agent 可以修改 Skill，但是看不到未脱敏的答案。评估侧 Agent 可以运行验证、查看轨迹，但是不能写入 Skill 仓库。评估结果会被整理成失败类型、汇总分数和诊断线索，再返回给优化侧。\n\n运行时调度器会根据需要生成诊断、开发、审核、执行和报告等子 Agent，每个角色都只获得完成自身任务所需的权限。它不要求使用固定的多智能体框架，只要求运行环境能够自动创建子智能体，因此可以直接接入 Claude Code、Codex 和 Hermes 等 Agent Runtime。\n\n三、为什么要做 Repo 级别更新？\n\nSkillHone 在优化过程中可以实现 Repo 级别的更新，而不仅仅只是优化SKILL.md\n\n另一方面，SkillHone 还支持 Repo 级别的 Skills 更新。SkillOpt 和 Hermes-SE 都主要以 SKILL.md 为优化单元，本质上是在迭代 Skill 的自然语言描述，因此优化范围受限于单个文档。\n\n相比之下，SkillHone 将优化对象扩展为完整的 Skill repo，将 Skill 视为由 SKILL.md、执行脚本、参考资料、模板等共同组成的完整 Repo。优化过程中，不仅可以修改指令描述，也可以直接更新脚本逻辑等辅助文件的内容。\n\n四、五轮优化里，\n\nSkillHone 如何处理回退？\n\n系统只看最终分数时，一旦候选版本出现退化，整份候选往往会被丢弃。可是，候选版本中已经有效的改动也会随之消失，下一轮又得重新编写。\n\n论文中写道，作者对深度研究 Skill 进行了五轮优化。系统加入 DuckDuckGo 回退和错误处理以后，探针准确率从 30% 提高到 60%。下一轮加入尽早作答和严格预算限制后，准确率又降低了 10 个百分点。\n\nSkillHone 与 Hermes-SE 的五轮验证集上的优化轨迹（论文 Figure 4）\n\nSkillHone 可以通过此前的历史记录分析出，问题出在预算策略上，因此只撤销有问题的部分，保留已经证明有效的搜索改进，第三轮准确率升至 65%。后来加入 SPARQL、名称规则和更严格的预算后，系统又进行了一次有针对性的撤销，准确率最终达到 70%。\n\n同样从 30% 起步，Hermes-SE 根据标量分数接受或放弃完整候选，五轮后停在 40%。两条轨迹的差异很明显：SkillHone 可以查到是哪一次决定带来了性能退化，回退时还能保留已经有效的改动。\n\n五、实验：性能、迁移与消融\n\n作者在 GAIA 和 WebWalkerQA-EN 两个深度研究基准上测试了 SkillHone。评测在开放网络环境下进行，没有预先集成好的搜索工具。Agent 只能访问公共网页，再依靠 Skill 组织搜索、抽取、验证和失败后的恢复。\n\n使用 Qwen3.6-35B-A3B 作为执行模型时，SkillHone 在 GAIA 上达到 64.6%，在 WebWalkerQA-EN 上达到 66.4%。相比使用商业检索服务的 deep-research Agent，两个结果分别高出 15.8 和 3.2 个百分点；相比 Hermes-SE，分别高出 14.2 和 13.4 个百分点。\n\n表 1  SkillHone 在 GAIA 和 WebWalkerQA-EN 上的主结果\n\n更重要的是，同一个 Skill 包在没有重新优化的情况下，直接迁移到 Claude Sonnet 4.6 后，GAIA 成绩继续升至 72.4%，仍高于 Hermes-SE、Existing-Skills 和 Skill-Creator。更换执行模型后，使用者不需要从头再做一遍优化。\n\n图 2  不同方法在 Qwen 与 Claude Sonnet 4.6 上的 GAIA 结果\n\n消融实验还提供了另一组证据。去掉决策历史以后，GAIA 和 WebWalkerQA-EN 的成绩分别下降 13.4 和 10.9 个百分点。去掉角色隔离以后，两项分数分别降低 6.4 和 5.3 个百分点。SkillHone 的两个组件都在发挥作用，其中决策历史至关重要。\n\n表 2  决策历史与角色分离的消融实验\n\n六、写在最后\n\n总结一下整篇文章的脉络：\n\n过去的自进化方法回答的是，怎么把技能文档改得更好；\n\nSkillHone 继续追问，这次为什么修改、凭什么接受、哪些想法已经不再采用；\n\n优化过程因此可以被检索、复用，再交给下一轮 Agent 继续优化；\n\nRepo 级别更新让这套建模落到技能工程中，SKILL.md、脚本、参考资料和模板都可以被修改。\n\n论文中的五轮轨迹给出了直接证据。SkillHone 遇到性能回退时，能够找到出现问题的修改并进行精准撤销，同时保留已经有效的改动。\n\n下一轮 Agent 接手时，可以根据此前的诊断和证据继续决策，也可以直接修改 SKILL.md、脚本、参考资料和模板。SkillHone 通过持久化的决策历史，实现了整个技能仓库的持续进化。\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-24_一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策_机器之心.md"}, {"title": "多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了", "source": "机器之心", "digest": "最高1.9倍加速，BigMac重排多模态训练流水线。", "link": "https://mp.weixin.qq.com/s/Ost0idlB6oxOZqPkkC5L3A", "content": "---\npublish_time: 1784856630\n---\n\n# 多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了\n\n> 原文链接：https://mp.weixin.qq.com/s/Ost0idlB6oxOZqPkkC5L3A\n> 公众号：机器之心\n\n机器之心发布\n\nBigMac 是原生多模场景下的\n\n流水并行训练新范式\n\n。它针对多模态大模型训练中计算效率与显存占用难以兼顾的问题，提出了依赖安全的嵌套流水线：以成熟的 LLM 流水线为主干，在不打乱 LLM 执行顺序的前提下，有序嵌入编码器和生成器计算，从而在不增加 LLM 流水线空泡、保持激活显存有界的同时，高效实现多模态流水训练。相比传统的流水并行实现方式，BigMac 在工程实现上进一步解耦了全局调度与运行时执行，并设计了一系列接口和工具链降低了模型接入与系统调优的成本。实验中，其训练速度较基线提升 1.08～1.9 倍，并在 global batch size 增大时保持的稳定显存占用。目前，BigMac 已作为 dots 多模态模型训练的核心组件之一应用于生产中。\n\n多模态大语言模型（MLLM）的下一场硬仗，打到了训练系统内部。\n\n当前，覆盖更多输入模态并将理解、推理与生成纳入同一套模型体系，正在成为头部大模型厂商的重要技术方向。同时，英伟达 Megatron Core 等主流训练框架也开始支持视觉、音频和文本等模态，并探索统一的多模态输入输出训练框架。\n\n模型能力看起来越来越统一，底层计算却变得更加异构。\n\n一个典型的 MLLM 往往包含模态编码器、LLM 主干和模态生成器等三个模块，它们运行在同一套 GPU 集群上，却遵循不同的计算节奏：编码器将尺寸、数量和长度不断变化的图像或音视频输入转换为 embedding，LLM 主干依赖经过高度优化的流水线进行推理，生成器\n\n则把 LLM 的输出映射回目标模态。\n\n图 1：一个典型的 MLLM 架构，包含模态编码器、LLM 主干和模态生成器。\n\n单看每一个模块，业界已经积累了相对成熟的并行方案。但把这些模块接入同一套训练流水线后，问题很快变得棘手：一个耗时较长的模态 microbatch，可能让下游多个 LLM pipeline stage 停下来等待；为了避免这种等待而提前完成模态计算，又需要长期保留相应的 activation，最终撞上显存上限。\n\n多模态训练由此受困于一个明确的帕累托前沿（\n\nPareto frontier\n\n）：吞吐和显存往往只能优先保住一个\n\n。\n\n第一种设计是\n\n计算高效\n\n的。它把编码器和生成器计算从 LLM pipeline 中分离出来，类似 LongCat-Flash-Omni 中用于应对大规模多模态训练异构性的 modality-decoupled parallelism。例如，系统可能先对所有 microbatch 运行 encoder forward，保留这些 activation，然后再启动 LLM pipeline。这样可以让 LLM pipeline 不被模态模块的耗时波动打乱：编码器和生成器慢一点，不会直接在 LLM pipeline 内部制造 bubble。\n\n然而，由于编码器 activation 必须一直保留到对应的梯度返回，activation 显存会随着 microbatch 数量增长。如果模型中还有生成器，情况会更糟：LLM activation 也可能需要一直保留到生成器计算结束。在生产规模模型中，这尤其昂贵，因为 LLM activation 往往远大于 encoder activation。\n\n图 2：计算高效的 pipeline。该设计将模态计算从 LLM pipeline 中分离出来，减少 bubble，但会保留大量 activation。\n\n第二种设计是\n\n显存高效\n\n的。它把编码器和生成器整合进同一条 pipeline，把它们看作围绕 LLM 的首尾阶段；例如 Megatron Core 的多模态训练示例中，vision-language 模型作为一个独立的 pipeline stage，加入到了 LLM 的流水线中。这样可以缩短 activation 生命周期，因此显存占用更低。但是，所有模块现在都被 pipeline 依赖耦合在一起。如果某个 encoder 或 generator microbatch 很慢，LLM pipeline 就必须等待。如果生成器运行时间变化较大，pipeline 尾部就会产生 bubble。系统通过牺牲计算效率来节省显存。\n\n图 3：显存高效的 pipeline。该设计将所有模块整合到一条 pipeline 中，减少显存占用，但会产生跨模块 bubble。\n\n小红书\n\ndots infra 团队开源\n\nBigMac，就是为了解决这样的两难问题。计算高效的系统速度快但显存开销大；显存高效的系统节省显存但容易产生 bubble。对于小规模训练任务，这种二选一可能还可以接受。但对于大规模多模态训练，尤其是包含模态生成器的训练，这种两难会成为瓶颈。\n\n论文标题：BigMac: Breaking the Pareto Frontier of Compute and Memory in Multimodal LLM Training\n\n论文地址：https://arxiv.org/pdf/2605.25451\n\n开源地址：https://github.com/Dots-Infra/BigMac/\n\nBigMac 的核心思想\n\nBigMac 的出发点很简单：调度的主干仍然应该是 LLM pipeline。大规模 LLM 已经依赖 1F1B 或 interleaved 1F1B 等精心优化过的 pipeline schedule。这些 schedule 成熟、高效，并且与生产级 LLM 训练栈深度绑定。BigMac 不试图替换它们，而是把 LLM schedule 作为基础时间线。\n\nBigMac 的思路是先稳住最重要的 LLM pipeline，再把编码器和生成器的计算插入到合适的位置。这里的「\n\n合适」，指的是输入已经准备好，而且插入这些计算不会打乱原本的 LLM 执行顺序。这样一来，LLM pipeline 可以持续推进，编码器和生成器的激活也能更早释放。团队称这种设计为\n\n依赖安全的嵌套流水线 (nested pipeline)\n\n。\n\n图 4：BigMac 保留原始 LLM pipeline schedule，并把 encoder/generator 工作嵌入到依赖安全的位置。\n\n这个设计给 BigMac 带来了两个重要性质。\n\n第一，\n\n它保留了计算效率\n\n。由于编码器和生成器不再被强行塞进 LLM 流水线，作为独立的 pipeline stage 逐级推进，它们的耗时波动也不会沿着 LLM 流水线一路传下去。LLM 仍然按照它在计算高效系统中本该遵循的 schedule 运行。\n\n第二，\n\n它限制了模态 activation 显存\n\n。BigMac 会在梯度就绪后尽快运行 encoder backward 和 generator backward。编码器不需要一直为所有 microbatch 保留 activation，直到 LLM pipeline 结束。生成器也不需要保留很长的 activation 尾部。从算法层面看，BigMac 将编码器和生成器 activation 显存降低到 O (1)，同时保持 LLM activation 行为不变。\n\n这就是整个流水线的核心：BigMac 不是在显存和 bubble 之间做交换，也不是用 bubble 换显存。它改变了 schedule 结构，让这两个目标不再必须相互冲突。\n\n让多模态流水训练真正落地\n\n在真实的多模态大模型训练中，pipeline parallelism 的难点往往不只是「\n\n如何排 microbatch」，框架还必须解决一系列系统集成、接口定义、性能排查等工程问题。\n\nBigMac 关注的正是这些从「\n\n能设计 schedule」到「\n\n能真正训起来」的系统环节。它提供了三个关键能力：把 schedule 变成可见、可检查、可执行的全局计划；流水线无感的接口让模型开发者仍然以模块化方式编写模型代码；schedule-aware 工具链则把 profiling、simulation 和可视化接入到性能诊断闭环中。下面分别展开这三点。\n\n1. 把全局 schedule 摆到明面上\n\n先看系统集成层。BigMac 运行时的核心组件是 Scheduler 和 Executor，Scheduler 会生成一张全局 operator 表，覆盖所有 pipeline rank、microbatch 和模块类型。这张表包含 LLM forward/backward operator、encoder forward/backward operator、generator forward/backward operator，以及模块边界上所需的通信。Executor 随后解释每个 rank 上的本地 operator 序列，并把每个 operator 分发给对应后端：LLM pipeline operator 交给 Megatron Core，模态 operator 交给 encoder 或 generator runtime，数据搬运交给通信后端。\n\n这种拆分给 BigMac 带来了两个实际优势。第一，调度策略变得可见、可检查。我们可以直接看到 encoder、LLM 和 generator 如何在所有 rank 上交错执行，而不需要从一段很长的 rank-local runtime 函数中反推出全局行为。第二，执行仍然对后端友好。LLM operator 可以继续复用 Megatron Core 等优化过的 pipeline runtime，而模态模块可以保留自己的 data-parallel、FSDP 或 optimizer 实现。Schedule 也可以在不重写模型 runtime 的情况下加入通信 operator、进行死锁检查。\n\n更多细节建议通过 BigMac 官方的可视化工具查看。\n\n2. 让模型代码自然接入 PP\n\n在多模态训练里，算法工程师会不断调整 encoder、LLM、generator 的连接方式、loss 设计和数据形态，问题在于，传统 PP 系统一旦扩展到多模态，这条协作边界很容易变得模糊：一次模型结构改动可能要求重写 stage 划分和 send/recv 逻辑，系统侧的优化也可能反过来侵入模型代码。如果算法工程师每次 scale up 都要理解 PP runtime，BigMac 仍然不是一个好用的训练系统。BigMac 的第二个关键能力，就是对算法工程师无感的流水并行接口。\n\n图 5：BigMac 的 pipeline-parallelism-transparent 接口示意。算法工程师描述模块边界，BigMac 在底层处理 schedule、handoff 和通信。\n\n在这个接口下，算法工程师只需要说明每个模块生产什么、消费什么；BigMac 负责把这些模块接入全局 schedule，并在底层处理 pipeline stage、activation handoff、gradient handoff 和跨设备通信。换句话说，BigMac 让一个已经在单卡或 data-parallel 环境中验证过的多模态实验，可以更自然地扩展到 pipeline-parallel training。\n\n3. 用 schedule-aware 工具链定位瓶颈\n\nBigMac 的最后一个关键能力，是一套理解 schedule 结构的 profiler、simulator 和可视化工具链。对于大规模多模态流水并行训练来说，性能问题很少能只靠 iteration time 或几行日志定位：bubble 可能来自某个慢 microbatch，可能来自 encoder/generator 的运行时间波动，也可能来自一次 activation handoff、gradient handoff 或跨 rank 通信等待。工程同学真正需要的是把一次训练 iteration 拆回 operator 级别，看清楚每个 rank 在每个时间点到底在执行什么、哪里空转、哪个依赖正在阻塞后续计算。\n\n图 6：传统性能排查通常需要下载并手动关联多个 rank 的重型 trace；BigMac PP profiler 将这些信息整理成 schedule-aware 的 pipeline 诊断流程。\n\nBigMac executor 会记录每个 operator 的执行时间，并导出 per-rank timeline /trace，如图 7 所示。通过这个 trace，工程同学可以直接观察 encoder forward/backward、LLM forward/backward、generator forward/backward 和通信操作在不同 rank 上如何交错执行，从而判断 pipeline bubble 是由 compute imbalance、communication wait、模块 handoff，还是不合适的 microbatch grouping 引起的。\n\n图 7：由 per-operator 执行时间生成的 pipeline trace 示例。\n\n团队也提供了一个可交互查看的 PP Profiler trace example（https://github.com/Dots-Infra/BigMac/blob/main/assets/pp_profiler_example.json）。下载后可以直接在 Perfetto UI（https://ui.perfetto.dev/）中打开，观察不同 rank、不同 operator 之间的时间线和依赖关系。\n\n在 profiler 之外，BigMac 还提供 simulator 来支持更快的并行策略迭代。Profiler 告诉当前训练为什么慢；simulator 在启动下一次昂贵训练任务之前，先尝试不同的 PP/VPP 配置、microbatch 数量、模块放置和 scheduling policy，预估它们对 bubble 和吞吐的影响。这样，并行策略优化就不再完全依赖大规模训练试错，而可以先在 schedule 层面完成快速探索。\n\n实验结果\n\n团队在两个代表性多模训练负载（MLLM-Understanding 和 MLLM-Generation）上评估 BigMac。\n\nMLLM-Understanding 代表多模态理解训练，这个负载使用 Qwen3-30B-A3B 作为 LLM backbone，并使用一个 1.3B 参数的 ViT encoder。相比计算高效 baseline Optimus，BigMac 实现了 1.08x-1.1x 的训练加速；相比显存高效 baseline Megatron-DistTrain，实现了 1.6x-1.9x 的训练加速。相比 Megatron-DistTrain 的加速来自消除跨模块 pipeline 干扰。相比 Optimus 的优势更微妙：BigMac 避免了 activation 显存压力，而这种压力会随着 global batch size 增大让计算高效设计越来越昂贵。\n\n图 8：MLLM-Understanding 训练负载上的整体性能。\n\n显存趋势和速度提升同样重要。随着 per-GPU batch size 增加，BigMac 的 peak memory 保持稳定，类似显存高效 baseline。相比之下，Optimus 会在 LLM pipeline 期间保留 encoder activation；它的显存使用快速增长，并最终在更大的 batch size 下 OOM。\n\nMLLM-Generation 代表同时包含理解和生成路径的训练，团队使用相同的 LLM 和 encoder，但增加了一个 20B 参数的 MMDiT generator。在这个负载上，差异变得更加明显。Generator 会让计算高效设计更难扩展，因为 LLM activation 可能需要一直保留到 generator computation 完成。在论文实验中，Optimus 在 MLLM-Generation 负载的所有测试 batch size 上都会 OOM。BigMac 通过及时运行 generator backward 并快速释放 generator 侧 activation 避免了这个问题。\n\n图 9：MLLM-Generation 训练负载上的整体性能。\n\n相比 Megatron-DistTrain，BigMac 在 MLLM-Generation 负载上实现了 1.5x-1.9x 的训练加速，同时保持稳定显存使用。这正是 nested pipeline 最有价值的场景：系统必须同时处理 encoder 和 generator 依赖，但又不能承受大量 activation retention 或严重 pipeline bubble。\n\n总结\n\n多模态大模型训练的难点，并不只是模型更大或数据更复杂，而是不同模态模块把流水线训练限制在了一个尴尬的帕累托前沿内。BigMac 的核心是打破这个前沿，它保留 LLM pipeline 作为稳定主干，只在依赖满足且不打乱 LLM 执行顺序的位置嵌入 encoder 和 generator 计算。这样，系统既能维持 LLM 流水的计算效率，又能尽早释放模态模块的 activation。\n\n更重要的是，BigMac 不只给出一个 schedule，还把 schedule 变成可见、可检查、可执行的全局计划，并配套 PP-transparent 接口和 schedule-aware 工具链，让这一设计真正进入可开发、可调试、可部署的训练系统。\n\n多模态模型打开了新的能力边界，训练系统需要补上另一半：结构各异的模块能够在大规模 GPU 集群中高效协作，模型架构创新不再频繁受制于显存压力和流水线利用率。BigMac 拆掉了其中一道关键约束，它验证了一种可能：计算效率和显存效率之间的冲突，并不是只能通过牺牲一方来换取。\n\n作者简介\n\n杨程旭\n\n小红书 dots infra 组工程师，博士毕业于北京大学计算机学院，曾在 TOSEM、TMC、FSE、WWW 等顶级会议 / 期刊发表论文 4 篇。\n\n主要研究方向：多模训练、分布式训练框架\n\n章梓立\n\n小红书 dots infra 组实习生，北京大学计算机学院在读博士生，在 OSDI、NSDI、sigcomm 等系统领域顶级会议 / 期刊发表 9 篇论文。\n\n主要研究方向：分布式系统、多模态模型\n\n铭曦\n\n小红书 dots infra 组工程师，硕士毕业于卡内基梅隆大学，主要从事多模态模型，生成模型端到端训练性能分析和优化工作。\n\n主要研究方向：多模 / 生成训练，分布式训练框架\n\n团队介绍\n\ndots infra 是小红书内部\n\n负责支撑 dots 系列大模型的工程团队\n\n。团队业务\n\n覆盖大模型 infra 的核心场景\n\n，包括文本 / 多模理解大模型的预训练、多模生成模型的预训练、通用 / 应用等方向后训练、dots 系列模型的推理服务、data infra、模型 codesign 等多个方向。这里有\n\n硬核且纯粹的工程师团队\n\n，成员拥有顶级技术背景（多篇系统顶会、OI 选手 / ICPC world final），日常讨论技术氛围浓厚；还有\n\n行业内最顶级的施展空间\n\n，包括世界级算力规模、全栈自研技术栈、千万级 DAU 战场、Deep Co-design 机会。\n\n这种工程体系成为了 dots 系列模型持续突破的基础。在上周刚刚结束的第 67 届国际数学奥林匹克竞赛（IMO 2026）上，「\n\ndots-note-3.0\n\n」内部版本在全部六道题中均获得满分 7 分，取得了满分金牌成绩（42/42 分）。而在这届比赛中，全球仅有 7 位人类选手获得满分。\n\n详细解决方案参考：\n\nhttps://studio-dots-ai.github.io/dots_imo_2026/en.html\n\n招聘信息\n\n热招岗位速览\n\n训练框架\n\n负责 LLM / 多模态训练框架的研究与开发，优化分布式 RL 训练吞吐，处理长序列 / 推理 / CLI Agent 任务\n\n算子优化\n\n深入 CUDA/CuteDSL/TileLang 底层，攻克性能瓶颈（如 FlashMLA、Mega Kernel、低精度算子、通信计算重叠优化）\n\n推理引擎\n\n打造高并发、低延迟的推理架构，优化 PD/AF 分离 schedule、解耦架构及动态资源调度\n\n数据工程\n\n详负责支撑 dots（LLM / 多模态 / Agentic）训练与对齐所需的超大规模数据工程体系，覆盖从 数据生产、清洗、存储、调度、分布式读取到质量闭环的全链路。\n\n招聘官网\n\nhttps://job.xiaohongshu.com/social/position/14633\n\n© THE END\n\n转载请联系本公众号获得授权\n\n投稿或寻求报道：liyazhou@jiqizhixin.com", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-24_多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了_机器之心.md"}, {"title": "长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字", "source": "量子位", "digest": "再长的上下文也救不了长内容任务", "link": "https://mp.weixin.qq.com/s/wEY5ZS_TrLhNvuyZ1WKMQg", "content": "---\npublish_time: 1784862884\n---\n\n# 长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字\n\n> 原文链接：https://mp.weixin.qq.com/s/wEY5ZS_TrLhNvuyZ1WKMQg\n> 公众号：量子位\n\n衡宇 发自 凹非寺\n\n量子位 | 公众号 QbitAI\n\n万字报告前后口径打架，你无奈过吗？\n\n几十个引用找不到出处，你无语过吗？\n\n小说都写到第一百五十六章，主角的人设突然“漂了”，前面埋下的伏笔也像被AI一键清空似的，你崩溃过吗？？\n\n后来跟一位计算机出身的网文太太吐槽的时候，我终于弄明白了，因为\n\n长任务的天花板≠模型上下文窗口长度。\n\n更长的上下文窗口意味着更大的内存，但\n\n内存大不等于会整理\n\n。\n\n把一大堆东西塞进去之后，怎么管、怎么用，现有大模型并不擅长。目前看来，现有市面上的Agent们干得好像也一般。\n\n太太给安利我用AI工具试试，他这几天听朋友介绍了一个Agent工具，试了下拿来写网文还挺好用的，眉飞色舞地跟我墙裂推荐。\n\n我搜了一下这个叫“问小白5 Pro”的AI工具，它自己定位是“新一代长内容生成引擎”。\n\n官网写道，“长、稳、可查”是产品给自己的核心差异点。\n\n还有个口号：长内容交付，更长更可信。\n\n玩了几天，体感上觉得它确实是\n\n更适合用来干长内容创作相关的成果转化型任务\n\n。\n\n如果你是B端、G端的知识工作者，或者是广大备战考公考研的一线选手、网文与社媒作者，那大概就是“瞌睡遇到枕头”了。\n\n要是你平时用AI，只是随便查个资料、找人唠唠嗑，或者想搞Vibe Coding的话，它不是最优选择。\n\n问小白5 Pro，怎么个事儿？\n\n因为自己用过，我直接基于个人体验来跟大家说说，不用官网上那些术语。\n\n一句话概括：\n\n它是一个“一句话交代任务、直接帮你交付长篇成果的AI工作系统”。\n\n和别的AI比，问小白最大的特点就是务实。\n\n它不啰嗦，直接干活，交出来的活儿还真不赖。\n\n好多Agent还是需要你来回拉锯，才能把需求细节理清楚。\n\n问小白5 Pro不一样。你都不用跟它一句句解释，\n\n只需要给一句指令，哪怕不够专业、不够精准，它就能立刻开工推进项目，并在后台默默消化和生成。\n\n特别踏实的一点是，任务正式开始前，它不会闷头瞎写，而是先在后台梳理一个.brief，把大活儿拆解成具体的To-Do列表。每完成一项自动打勾。\n\n整个推进过程清晰可循，在后台默默消化、生成，最终交出一份前后一致、逻辑连贯的完整长稿。\n\n得益于底层的技术架构，这样的长内容任务——理论上能输出无限长的内容。我打听了一下，有人拿它产出十几万字的网文。\n\n同时在上传输入上，丢给它n+1个word、pdf、excel，它都能稳稳接住\n\n（doge）\n\n。\n\n这时候你可能会皱眉，我一句话它就洋洋洒洒写那么长，要是中间写得不好或者不对怎么办？\n\n其实，\n\n要是看到哪里觉得别扭，直接在生成内容里删改、批注，也可以框住一段文字，让AI针对这块重写。\n\n哪怕只改几个词，它也能在后台迅速完成意图对齐，\n\n从你的增删和调整里，提取出用户对内容、格式和文风的偏好，然后把这些沉淀进记忆库，带进后续生成。\n\n从今以后再提新需求，它给的就是已经对齐过你偏好和习惯的版本了。\n\n反正磨合几次就摸清脾气了，问小白5 Pro是超强的规划者、思考者、执行者。\n\n这样，我也就有更多的精力，集中在最值得花心思的关键内容上。\n\n长内容生成因此少了一点开盲盒的随机感，多了一点项目管理的确定性。它让用户能看到过程，能在中途纠偏，也能将一篇内容持续往下做。\n\n低门槛的长内容交付，才是它真正主打的东西。\n\n问小白 5 Pro 一手实测体验\n\n漂亮话讲得再多，也没真实成果有说服力。\n\n检验长内容生成的标准其实很明确：你看了它交出来的东西，心里到底踏不踏实？敢不敢直接拿它当底稿，心里不发虚？\n\n综合首批用户反馈和个人使用体验来看，问小白5 Pro最擅长两类活儿。\n\n一类是需要成果型文档的活，需要出“硬通货”的那种。\n\n比如写调研报告、运营方案、公文、营销方案或者商品广告。\n\n想象一下，你让AI写了一篇带数据的行业分析。打印出来挺厚一摞A4纸，观点也像那么回事，结果同事/老师/老板冷不丁指着其中一个数字问了一句：\n\n“这个数据哪来的？不对吧？你让AI瞎编的吧？？？”\n\n这时候能怎么办，要我说只能盯着屏幕傻眼……\n\n但问小白5 Pro在这个场景下，表现就扎实得多。\n\n来看我让它给整理一份WAIC最火热话题的调研报告，并根据报告最终生成一个QQ空间风格的HTML，供我给初一的小朋友们展示。\n\n就这么一段话，它\n\n完成了从搜索、整理到输出的整个工作，并且自带自我审查。\n\n调研报告覆盖七个章节，从WAIC 2026的现场切入，依次展开概念定义\n\n（具身智能=有身体的AI+世界模型=脑内沙盘，含李飞飞最新三分法）\n\n、五个维度的核心区别\n\n（研究对象/核心问题/技术路线/评价标准/落地阶段）\n\n、四个共同点、具身智能全景\n\n（12家核心玩家、三大技术方向、落地挑战）\n\n、世界模型全景\n\n（三大架构流派 Genie 3/混元 1.5/Marble/Gen-3C四大架构+五大争议）\n\n、终极对比表、2026趋势展望。\n\n最后渲染出来是这样的：\n\n我哭啊，它居然用的还是20年前QQ空间最流行的火星文：）\n\n另一类人需要持续创作，搞“长线连载”。\n\n职场用户怕报告到了最后口径变形，小说作者怕角色突然OOC（角色言行不符合原著设定），其实核心都是希望AI能在一条足够长的任务里保持清醒，产出的内容质量还要有保证。\n\n尤其是连载小说、短剧剧本，底层设定绝对不能丢！！！\n\n来看这个典型例子～\n\n一句话，让问小白5 Pro写一个短剧剧本项目《本草医妃》的整体策划及前5集剧本。\n\n每次综合前后剧情更新既有的文档内容，问小白都会在Canvas里面用黑/绿两种颜色的文字来提示用户。\n\n你\n\n可以逐段接受，或者一键拒绝和应用，也可以直接在Canvas上动手修改。\n\n每一个版本都有历史记录存档，随时读档，再也不怕家里猫猫路过键盘，误删心血了。\n\n以及来品一品，虽然是AI出品，你就说咱这个剧本是不是\n\n没什么AI味\n\n吧！\n\n具体的感受其实还是大家上手一用更直观，但我可以在这里做一个用户画像总结：\n\n不想花大把时间学这个AI那个Agent，又需要实打实出内容成果的人，不妨一试。\n\n它是怎么做到“长、稳、可查”的？\n\n官方那边把问小白5 Pro的能力浓缩成三个词儿：长、稳、可查。\n\n先说“长”。\n\n多数AI处理长内容，仍习惯把资料一股脑塞进上下文，再让模型吐出一大段文字。\n\n资料越多，信息噪声越大；内容越长，前后逻辑和结构越容易漂。\n\n问小白5 Pro将“长”拆成输入长、工作流长和输出长。\n\n网页、文件与图片先进入工作区，Agent再按任务分阶段读取、写入和整理，沿着目录持续生成，前一段的结论和设定也会成为后一段继续推进的依据。\n\n元石科技创始人李岩用了一个挺妙的比喻：“过去的AI像大胃王，看到资料就想一口全部吞下去，但根本吃不下消化不了。”\n\n而元石科技做的事情，就是给AI换一套消化系统。\n\n而之所以能\n\n扛住长篇幅的考验，靠的是“稳”。\n\n问小白5 Pro给AI配了一个跨模态文件沙箱。\n\n资料进入后，会按语义被整理进可导航的文件树。\n\nAI每推进一步任务，就从工作区里取出当前最相关的内容，写完后再把新的中间成果存回去。\n\n模型面对的始终是和当下任务有关的信息，长内容也因此更容易保持前后逻辑与风格一致。\n\n最后是“查”。\n\n对严肃内容来说，AI写得快只是第一关。\n\n关键事实能不能回溯，才决定内容敢不敢用。\n\n问小白5 Pro将草稿、任务过程、引用资料和最终成果都留在工作区。用户可随时回看依据，关键数据也能跳回原文来源。\n\n报告能调取结论与补充材料，小说能回看人物设定和前文伏笔。\n\n尤其是对调研、述职、行业分析、公文写作来说，这一点相当重要。\n\n元石科技这方面的技术积累挺厚的，团队相关研究获得ACL 2025 Outstanding Paper Award。\n\nNVIDIA在GTC 2026发布的AI-Q相关资料中，也将团队联合发布的DeepResearch Bench纳入深度研究Agent评价体系。\n\n李岩表示，长程一致性、长期记忆和可回溯过程，才是决定一项任务能否真正跑完的分水岭。\n\n“问小白5 Pro做的是结果侧交付”\n\nGTC 2026上，黄仁勋激动宣告，“智能体时代已经到来。”\n\n这一论断背后，\n\nAI的发展重心正从单次推理的质量，转向多步任务的综合执行能力。\n\n如今，单纯生成优质内容已不再是核心壁垒，能否在长周期任务中稳定运转、持续输出、全程可追溯，才是行业竞争的全新分水岭。\n\n问小白5 Pro，精准踩中了这一行业趋势，并且已经交付出值得信赖的结果。\n\n李岩将过去的AI产品迭代概括为供给侧升级——模型参数更大，推理更快，工具组件越来越多，用户手里也多了一堆看起来很厉害的能力。\n\n但从用户视角看，手里有一大堆技能可以用，但都不能很好地“为我所用”，给我完整可用的结果。\n\n李岩把问小白5 pro叫作“结果侧交付”。\n\n你只需要告诉我你要什么成果，我把项目做完给你。\n\n复杂工作流、多轮推理校验、结构化记忆管理等底层技术难题，全部由产品承接。\n\n对用户而言，操作全程十分简单，只需输入一句指令，就能收获完整可用的成果。\n\n剥离技术复杂度，聚焦最终使用价值，这便是问小白5 Pro面向智能体时代交出的最优解法。\n\n当AI迈入Agent竞赛新阶段，好用、能用、省心的结果交付，终将取代单纯的技术堆砌，成为产品立足的根本。\n\n而问小白5 Pro，已然走在了这条赛道的前沿。\n\n一键三连\n\n「点赞」「转发」「小心心」\n\n欢迎在评论区留下你的想法！\n\n—\n\n完\n\n—\n\n🌟 点亮星标 🌟\n\n科技前沿进展每日见\n\n·", "category": "国内", "is_model_related": false, "source_file": "sources/2026-07-24_长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字_量子位.md"}, {"title": "6月银行AI项目动态：城商行数量过半，算力成为投入重点", "source": "银行科技研究社", "digest": "从2022年末AI大模型受到关注至今，已有3年半。对于越来越多银行来说，AI布局已成为加速数智化转型的必要选择。在加强AI建设的过程中，必然少不了相关项目的采购。《智探AI应用》对此统计了上个月（2026年6月）的银行AI相关项目中标（含中标/成交/评标结果公示）情况，共涉及29个项目。需要注意的是…", "link": "https://mp.weixin.qq.com/s/Gdu5UiuRuC6oHff_urzzmg", "content": "---\npublish_time: 1784877480\n---\n\n# 6月银行AI项目动态：城商行数量过半，算力成为投入重点\n\n> 原文链接：https://mp.weixin.qq.com/s/Gdu5UiuRuC6oHff_urzzmg\n> 公众号：银行科技研究社\n\n从2022年末AI大模型受到关注至今，已有3年半。对于越来越多银行来说，AI布局已成为加速数智化转型的必要选择。在加强AI建设的过程中，必然少不了相关项目的采购。《智探AI应用》对此统计了上个月（2026年6月）的银行AI相关项目中标（含中标/成交/评标结果公示）情况，共涉及29个项目。\n\n需要注意的是，统计信息均来自第三方招投标平台，对其完整性与准确性不作保证，内容仅供参考。从平台进行搜索的关键词包括但不限于“AI”“人工智能”“智能体”“大模型”“数字员工”“RPA”等，但由于AI的范围太广，因此很难涵盖整个范围。\n\n21家银行启动29个AI相关项目，城商行项目数量占比过半\n\n从银行机构角度分析，具体来看，29个项目涉及21家银行：\n\n政策性银行1家，为中国农业发展银行（1个项目）；\n\n国有银行3家，其中中国银行2个项目，分别来自于上海市分行和安徽省分行；交通银行、邮储银行（四川省分行）各1个。\n\n股份制银行2家，浦发银行、民生银行各2个。\n\n城商行12家，是占比最高的银行类型。除了宁波银行有3个项目（均指向对公领域），以及威海银行、贵阳银行各有2个项目外，上海银行、成都银行、富滇银行、福建海峡银行、盛京银行、绍兴银行、长沙银行、秦皇岛银行、广州银行各有1个项目。\n\n民营银行1家，为江西裕民银行（1个项目）。\n\n农商行2家，为四川农商联合银行（2个项目），厦门农商银行（1个项目）。\n\n可见，参与采购的主体覆盖多元类型：既有全国性商业银行、政策性银行、民营银行等，也有城商行与农商行等其他区域性银行。项目数量占比最高的是城商行，占比超过55%。\n\n综合实际情况来看，与国有大行的全行级、平台化布局有所不同，区域性银行的AI项目采购更偏向“按需投入、场景驱动”，针对具体业务痛点启动针对性建设，落地周期更短、目标更明确。\n\n不过，有些项目中，虽然含有AI大模型，实际上只占其中的一部分。例如，贵阳银行2026年电话银行系统、大模型智能中台-客服助手系统、负面名单系统开发外包项目中，含有“大模型智能中台-客服助手系统”，这是明显指向AI领域的，但电话银行系统、负面名单系统或与AI无关。\n\n另外值得一提的是，吉林银行已启动人工智能生产楼项目，未来有望强化该行在AI上的布局。在6月也有人工智能生产楼相关项目启动采购，不过未计入表格中。\n\n银行加大算力投入，上海银行高算力采购项目为中标金额最高\n\n从项目本身的角度分析，上述项目可分为基础设施类、平台开发类、业务应用类、其他类（包括安全合规、其他服务、配套相关等）。\n\n基础设施类有8个项目。其中，主要为算力采购。大模型应用的普及推高了银行的算力需求，6月算力基础设施类项目在金额与数量上均表现突出，成为投入重点。\n\n上海银行AI算力服务采购标段二（为高算力）中标金额达1799.38万元，是金额最高的项目，采用算力服务采购模式，无需自建硬件即可灵活获取算力资源，代表了银行弹性算力补充的主流方向。\n\n与此同时，自建算力的硬件采购同样热度不减：威海银行AI服务器采购项目2个包件的合计金额648.81万元，四川农商联合银行智能算力服务器采购金额552万元，盛京银行AI大模型平台硬件扩容投入743.88万元，广州银行AI算力资源扩容项目金额488万元，绍兴银行也启动了AI算力服务器采购等。\n\n整体而言，银行算力建设呈现“自建+服务”双模式并行的特征。\n\n此外，成都银行以56万元采购了营业网点厅堂智能机器人，这也算入了银行AI基础设施类项目。\n\n平台开发类有9个项目，其中主要为AI相关平台/系统的建设与开发。浦发银行以160万元采购了智能表单平台产品，四川农商联合银行则以41万元完成智能知识库采购，福建海峡银行以57万元新建授信风险AI分析系统，贵阳银行以375万元启动了RPA机器人平台开发外包服务采购等。\n\n业务应用类同样有9个项目，主要为银行各个业务场景的具体应用。从这些项目来看，客服/智能外呼相关项目较多，包括江西裕民银行的客服中心AI数字人项目、中国银行安徽省分行的AI远程银行中心智能外呼项目、邮储银行四川省分行的智能外呼系统服务项目等。值得注意的是，中国银行安徽省分行的智能外呼项目采用单价“888.28元/路/月”的订阅式计费，体现了AI服务向轻量化、按需付费模式演进的趋势。\n\n其他类有3个项目，具体包括民生银行的大模型应用安全防火墙软件项目、数字员工流程机器人（RPA无人值守机器人）商业软件许可及服务采购项目，中国农业发展银行的人工智能治理辅导服务项目。\n\n其中，农业发展银行的项目与民生银行的防火墙项目，应该都是指向AI安全开发应用方向。前者在项目招标公告提出的一条专项资格要求为，投标人需要具有至少一个数据安全相关服务案例。\n\n事实上，国家金融监督管理总局近期发布的《关于银行业保险业人工智能安全开发应用的指导意见》就从完善人工智能治理架构、提升数据治理能力、提升人工智能安全开发应用能力等方面提出了多项具体要求。因此，重视合规、加强治理将是银行未来AI应用中的一个重要方面。\n\n而在上述项目的中标厂商中，整体呈现“分散化、专业化”的特征，不同厂商依托自身赛道优势切入银行AI市场。\n\n其中，科大讯飞股份有限公司分别中标威海银行AI知识库中台项目、中国银行安徽省分行AI智能外呼项目，覆盖平台与场景两端。\n\n北京中科金财科技股份有限公司拿下威海银行AI服务器采购、四川农商联合银行智能知识库项目，实现硬件基础设施与软件平台的双重覆盖。\n\n北明软件有限公司在RPA赛道表现不错，连续中标贵阳银行RPA平台开发外包、民生银行数字员工RPA采购项目。\n\n上海安硕信息技术股份有限公司则聚焦风控垂直赛道，中标富滇银行AI尽调报告助手、福建海峡银行授信风险AI分析系统2个项目。\n\n写在最后\n\n纵观6月的银行AI项目中标市场：算力作为底座，在银行业的投入占比较高；AI大模型加速向更多场景渗透，运营、风控、客服等领域多点开花；安全治理配套同步完善，区域性银行成为需求增长主力。\n\n未来，随着AI大模型与银行业务的融合持续深化，银行AI投入或将进一步向高价值、强刚需的场景倾斜，算力基建的占比可能逐步回落，场景类投入占比有望提升。同时，围绕AI安全、治理的配套建设也将受到各家银行的重视。", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-24_6月银行AI项目动态：城商行数量过半，算力成为投入重点_银行科技研究社.md"}, {"title": "从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路", "source": "金融电子化", "digest": "文/本刊记者  杨昆桦人工智能技术正加速向金融核心业务场景渗透。从大模型驱动的智能客服、自动化报告生成，到深度介入信贷审批、风控、智能投研等核心场景，金融行业正经历从单点AI应用探索向智能体规模化落地的新阶段。然而，金融业务的复杂性、监管的严格性、系统的庞大性等特点，决定了智能体落地需要成熟的工程化…", "link": "https://mp.weixin.qq.com/s/pnsna26C9TU9OVWpgUtuGg", "content": "---\npublish_time: 1784877551\n---\n\n# 从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路\n\n> 原文链接：https://mp.weixin.qq.com/s/pnsna26C9TU9OVWpgUtuGg\n> 公众号：金融电子化\n\n文/本刊记者  杨昆桦\n\n人工智能技术正加速向金融核心业务场景渗透。从大模型驱动的智能客服、自动化报告生成，到深度介入信贷审批、风控、智能投研等核心场景，金融行业正经历从单点AI应用探索向智能体规模化落地的新阶段。然而，金融业务的复杂性、监管的严格性、系统的庞大性等特点，决定了智能体落地需要成熟的工程化能力、深厚的行业知识积累，以及可跨机构复用和持续迭代的行业实践经验。但一直以来，大量金融机构“各自为战”，在独立摸索中重复投入、造轮子、踩坑，行业级的能力共享机制仍付之阙如。如何构建从“单点探索”走向“共创共享”的行业新范式，已成为金融行业数智化发展的关键命题。\n\n深水区的真实挑战与破局之道：从“单点探索”走向“共创共享”\n\n不同规模的金融机构，在智能体落地的探索中面临的困境各有不同。\n\n大型金融机构自研能力强、资源雄厚，在技术投入和人才储备上具备明显优势。但是像信贷审批工作流的封装、合同审查的流程设计、工具链的搭建等工作，每一家都在独立探索，彼此之间缺乏有效的经验交流。即便是大型金融机构，在智能体从演示验证走向生产环境的过程中，同样也需要经历漫长的调试与适配周期。这意味着，他们都在投入大量资源和时间去解决一些共性挑战。\n\n中小型金融机构则面临更严峻的“能力鸿沟”。缺乏头部金融机构的工程化能力、没有足够的算力投入、缺少专业AI团队等困难，使其难以支撑大模型的本地化部署与调试。同时，由于缺乏可靠的数据基础也制约了模型训练与微调。受限于资源与技术积累不足，这类机构单凭自身力量，很难独立构建起完整的智能体能力体系。\n\n要打破这一局面，行业迫切需要一套贯通经验与能力的共享机制，将分散在各类机构中的最佳实践、工作流模板、行业知识库沉淀为\n\n可复用的行业数字资产\n\n。用好这些“资产”，可以避免大型金融机构“重复造轮子”式的资源浪费，也可以为中小型机构提供标准化的工具链与可复用的工作流模板，以及开箱即用、合规可控的共享能力体系，帮助其快速跟进智能体落地进程。\n\n理念的共识只是起点，而在从共识走向实践的道路上，已有一位前行者给出了自己的答案。\n\n在2026世界人工智能大会上，华为云在前期已建立的智慧医疗、具身智能、智能制造、科学计算等专区基础上，开启共建第五个专区——\n\n行业AI梦工厂·智慧金融专区，\n\n并联合头部大型金融机构及十余家行业客户与伙伴发起倡议行动，围绕金融核心场景加快行业数据、模型及工程能力的标准化沉淀，共建共享金融行业AI资产。同时，依托开源社区持续开放智能体框架、工具链等核心能力，降低开发门槛，构建高质量、可信赖的技术底座，加速金融智能体从单点探索走向规模化落地。\n\n华为公司董事、华为云CEO周跃峰\n\n华为公司董事、华为云CEO周跃峰在主题为“共建共享、聚力同行，携手共赢智能体新价值”的演讲中表示，希望通过共建智慧金融专区，抓住智能体技术为金融行业传统应用与架构重构所带来的重要契机，让更多金融行业智能体从业者能够共享实践案例，并共同建设和分享所需的MCP、Skill等核心资产，踏实推进金融业智能体建设工作。\n\n华为云的精准落子：搭建金融智能体“共享底座”\n\n智慧金融专区是一个金融智能体创新与落地平台，旨在汇聚行业实践、技术能力和生态资源，推动金融智能体从创新探索走向规模化落地。依托内核同源90%以上的华为云智果AgentArts企业级智能体平台与开源版openJiuwen，形成“商用强开源、开源促生态”的双轮驱动，面向银行、保险、证券等机构，围绕手机银行、智能营销、智能风控、智能信贷等核心场景，将工作流、模型、数据集、提示词、工具等智能体资产进行标准化沉淀，让金融机构能够“开箱即用”，更快、更稳、更标准地完成智能体全流程建设。\n\n沉淀多类核心场景行业资产\n\n构建高效复用闭环\n\n在行业资产层面，\n\n基于AgentArts与openJiuwen能力体系，生成并沉淀智能体资产，可在智慧金融专区统一上架与复用，形成标准化资产体系，使金融行业能力从“项目交付”转向“资产化生产与持续复用”。\n\n在资产流通层面，\n\n金融智能体相关资产可对接至AgentArts体系，并与openJiuwen资产体系实现兼容与互通，使资产在云上环境中具备统一调用、统一体验与统一感知能力。同时，AgentArts将资产同步至AI Gallery，作为统一资产分发与下载入口，通过标准化审批与权限控制机制，保障资产安全可控流转。\n\n在应用落地层面，\n\n下载后的行业资产可直接导入openJiuwen商业发行版，在用户本地或云上环境中进行快速部署与生产使用，从而实现从\n\n“资产生成—平台流通—开发使用—业务落地”\n\n的完整闭环，加速金融智能体在真实业务系统中的规模化应用。上述闭环的打通，将有效推动金融客户与生态伙伴共同参与行业AI资产的共建与复用，形成覆盖全域全链路的资产沉淀与流通网络。同时，持续打造金融Agent应用、沉淀行业数据集与工程化工具等，形成覆盖\n\n“应用—数据—模型—工具”\n\n于一体的金融智能体生态基础。让技术提供方、场景应用方和数据持有方都能获得合理回报，加快实现从“业务闭环”到“商业闭环”的良性循环。\n\n三大核心能力\n\n助力金融行业加速智能化\n\n智慧金融专区将统一归集沉淀金融AI全链路核心资产，为银行、证券、保险、资管等机构提供合规可控的AI资产运营阵地，并构建三大核心能力帮助金融企业加速智能化。\n\n一是\n\n开发环节降本提效\n\n，将信贷审批、合同合规审查等业务流程封装为可视化工作流，把风险分析、财报解析等专业能力固化为可插拔Skills，业务人员可快速组装智能体，将新场景Agent开发周期从月级压缩至周级，重复研发成本降低60%以上。\n\n二是\n\n统一运营\n\n，构建统一资产货架与共享机制，研发、业务、风控、合规团队可按需检索、调用、迭代、发布标准化Agent资产，支持多智能体协同编排，一站式覆盖前端客户服务、中台风控运营、后台监管报送全业务链路，实现AI能力从单点试点向全行规模化复制。\n\n三是\n\n持续进化\n\n，专区的行业数字资产将持续迭代与沉淀，形成差异化AI业务壁垒，实现线上线下资产兼容，持续释放智能化资产的经营价值，持续推进金融智能体走向规模化、体系化发展。\n\n智慧金融专区以行业资产沉淀解决“有什么可用、如何复用”的问题，以三大核心能力解决“如何高效开发、如何规模化落地”的问题——本质上是在打造高质量FAB（FinAgent Booster）金融智能体加速器，通过沉淀金融机构与生态伙伴在智能体建设中的最佳实践，将智能体开发、测试、生产上线的一整套工程能力进行标准化、工具化、自动化，降低金融行业智能体建设门槛，并具备持续生产、运营、演进智能体的能力。让每一家金融机构不必从零开始，即可获得经过验证的能力支撑。\n\n结语：共创共享，共赴数智跃迁\n\n华为云的竞争力，首先体现在其对行业痛点的精准回应；而更深一层，则源于其对“共建金融智能生态”的系统性思考与深刻理解。当然，一切思考得以落地的前提，离不开其AI基础设施的能力的持续进化。近日，华为云更获全球权威研究机构Gartner发布的2026年《云AI基础设施魔力象限》报告认可，成功进入“领导者象限”，标志着在全球云AI基础设施领域的领先地位获得国际认可。\n\n不过，“智能体才刚刚开始，它不仅仅是一个类似于过去APP一样的应用，它需要基础设施、模型，以及生态共建共享的工作。”周跃峰在演讲的最后也如是强调、呼吁。\n\n金融智能体的浪潮方兴未艾。当AI真正融入金融核心业务环节，行业宝贵资产都能在共享生态中被复用与迭代，让每一家金融机构都拥有属于自己的专属智能体，金融行业的数智化跃迁，才真正拥有了可持续的动力。让每一个金融场景都焕发智能新生——这不仅是华为云的愿景，也是金融智能体时代共同的命题。\n\n金科焦点 • 推荐阅读\n\n重磅：\n\n“绿色金融”盘点\n\n、\n\n解码\n\n、\n\n中国国际金融展\n\n、\n\n“数字金融”盘点\n\n技术：\n\n量子鼎新\n\n、\n\n大模型\n\n、\n\n数据\n\n指引：\n\n高层\n\n、\n\n政策\n\n、\n\n行业\n\n、\n\n学术\n\n、\n\n专访", "category": "同业", "is_model_related": false, "source_file": "sources/2026-07-24_从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路_金融电子化.md"}, {"title": "对话格式塔彭雷：AI 的下一站，是解读人的大脑", "source": "极客公园", "digest": "脑机接口从意念控制光标走向更大范围的大脑读写。", "link": "https://mp.weixin.qq.com/s/OtOpzr96exEnIbBcfGSjDQ", "content": "---\npublish_time: 1784866787\n---\n\n# 对话格式塔彭雷：AI 的下一站，是解读人的大脑\n\n> 原文链接：https://mp.weixin.qq.com/s/OtOpzr96exEnIbBcfGSjDQ\n> 公众号：极客公园\n\n脑机接口从意念控制光标走向更大范围的大脑读写。\n\n作者｜连冉\n\n编辑｜郑玄\n\n过去半年，脑机接口行业同时踩下了几脚油门。\n\n2026 年 1 月，Neuralink 宣布全球临床试验参与者增至 21 人。从 2024 年完成首例人体植入，到将试验扩展至多个国家，侵入式脑机接口正在越过单个患者的演示阶段。\n\n同一个月，OpenAI 成为 Merge Labs 约 2.5 亿美元种子轮融资中的最大出资方。这家由 Sam Altman 联合创办的公司没有继续沿用电极，转而把筹码押在超声上，希望在不开颅的情况下读取和调控大脑。\n\n另一条经血管植入路线上的 Synchron，也完成了 2 亿美元 D 轮融资，资金将用于关键性试验和商业化准备。\n\n国内市场也迅速升温。公开统计显示，2026 年一季度国内脑机接口领域发生 17 起融资，金额约 38 亿元，单季规模已经超过 2025 年全年。7 月，成立仅半年多的格式塔又完成 4.2 亿元天使+轮融资，两轮累计融资接近 1 亿美元。\n\n钱为什么迅速涌向一个临床周期漫长、商业模式仍未完全跑通的行业？\n\n一个直接答案是，脑机接口终于开始从实验室进入真实患者。更深一层的变化在于，这个行业的想象力正在越过「用意念控制光标」：当 AI 从语言模型走向世界模型和生物模型，大脑可能成为下一种稀缺的数据源，脑机接口则是获取这些数据的入口。\n\n这也让行业出现了两场同时发生的竞争。一场围绕电学、血管内介入、超声等技术路线展开，争夺更安全、更大范围、更高带宽的连接方式；另一场发生在模型层面——谁能把血流、电信号、影像和行为放进同一套表征系统，谁就可能率先建立关于人类智能的基础模型。\n\n格式塔创始人彭雷希望外界从后一场竞争理解这家公司。\n\n2026 年 1 月，他与陈天桥共同创办格式塔，选择此前仍少有人进入的超声脑机接口。半年多时间里，公司在成都建设全球总部和制造基地，又在上海设立承担 AI 大脑基础模型研发与国际科研合作的第二总部。\n\n若沿用医疗器械公司的业务逻辑，这种投入速度显得反常。格式塔的第一款产品仍处于研发和临床准备阶段，后续还要穿过漫长的注册审批流程。但彭雷判断，AI 走向 AGI 与脑机接口解码大脑，最终会在同一个方向汇合。\n\n「我们在解码大脑，同时也在建设一个对人类大脑的 Foundation Model。」他说。\n\n01\n\nAI 的下一站，为什么要重新研究人？\n\n过去几年，AI 最重要的变化，是能力边界开始越过语言。\n\n大语言模型学习互联网上的人类文本，由此获得对知识和语言关系的统计表达；世界模型和具身智能继续向前，让机器理解空间、动作、因果和物理反馈；生物 AI 则把建模对象推进到蛋白质、细胞、器官乃至完整的人体。\n\n彭雷将这条演进路线概括为：\n\n从语言模型到物理模型，再到生物模型。\n\n语言是已经被人类结构化的数据。网页、书籍、代码和对话天然以 token 的形式存在，模型可以在海量语料上快速训练。进入物理世界之后，数据获取开始变得昂贵：机器人需要在真实或仿真环境中行动，接收传感器反馈，在一次次失败中学习。到了生物世界，训练材料更加稀缺。血流、电信号、影像、行为和疾病表型散落在不同设备与临床场景里，数据尺度、模态和个体差异都远高于文本。\n\n大脑位于这条路径的深处。它既是人的意图源头，也是目前已知最复杂的生物智能系统。\n\n「人对生理信号、对人本身的研究，会极大地帮助 AI 和具身智能的学习。」彭雷说，「我们越了解人，越有可能走向 AGI。」\n\n格式塔创始人彭雷｜图片来源：格式塔\n\n这一趋势已经在具身智能训练场里露出端倪。早期的机器人训练主要记录画面、关节轨迹和操作结果，随后加入外骨骼、力反馈与肌电信号。肌电能够解释肌肉如何执行动作，脑电和脑血流则有机会把数据链条继续向前追溯——人在抬手之前产生了什么意图，如何规划运动，又如何根据环境反馈修正动作。\n\n格式塔正在与傅利叶等具身智能企业展开合作，在具身智能训练过程中同步采集操作员的脑电和脑血流等信号。双方试图验证一个假设：加入脑部多模态数据后，具身模型能否比只使用动作数据的模型获得更好的泛化能力。\n\n现阶段，这仍是刚刚启动的实验，意义却很直接。今天的机器人主要学习「人做了什么」，下一阶段可能需要理解「人为什么这样做」。摄像头记录结果，肌电记录执行，脑信号靠近意图。数据源越接近决策形成的位置，机器越有机会学到动作背后的结构。\n\n过去，神经科学和人工智能主要互相提供灵感。卷积、注意力和强化学习等重要思想，都能在神经科学中找到不同程度的参照。彭雷判断，接下来的关系会进一步深入：从相互启发走向相互支撑，最终达到相互解释。\n\n这也是格式塔把自己的一部分能力定义为 AI for Science 的原因。它需要用 AI 处理大脑信号，同时希望从大脑数据中提取可以反哺 AI 的规律。\n\n02\n\n为什么是超声？\n\n它要解决的不只是\n\n「\n\n不开颅\n\n」\n\n脑机接口过去最受关注的故事，大多围绕侵入式电极展开。\n\nNeuralink 已经让受试者通过意念控制光标、操作软件；Synchron 则把电极通过血管送至大脑附近，希望降低植入过程的侵入程度。电学路线的优势十分明确：它可以用较高的时间分辨率记录局部神经活动，对于渐冻症、高位截瘫等患者，意念控制已经展现出真实的临床价值。\n\n彭雷曾联合创办侵入式脑机接口公司脑虎科技。他并没有否定电学路线，转向超声源于另一个问题：如果目标从读取局部神经元，扩大到理解记忆、语言、情绪和运动规划等高级功能，只观察少数脑区是否足够？\n\n大脑高级功能通常由分布在不同区域的神经环路协同完成。电极擅长观察「点」，功能磁共振能够看见更大的范围，却存在设备体积大和时间滞后等限制。聚焦超声提供了第三种可能：通过功能性超声成像 (fUS) 技术，读取血流变化捕捉脑内神经活动的信号，以及利用经颅聚焦超声 (tFUS) 技术，通过相控阵方式调控深部脑区的神经活动，并在理论上覆盖更大的脑区。\n\n这也是「格式塔 Gestala」这个名字的由来，源于德国哲学与心理学概念「Gestalt」，其核心理念是「整体大于部分之和」。彭雷相信，大脑正是一个无法被局部信号完全解释的整体系统。\n\n在他看来，超声路线有三个值得押注的特征：具备走向更大范围乃至全脑读写的潜力；适应症可能覆盖慢性疼痛、卒中康复和部分精神类、神经退行性疾病；更关键的是，它与 AI 的结合更深。\n\n这种「更深」首先来自超声自身的局限。\n\n声学无法直接读取神经元的电活动。格式塔读取的是神经活动引起的血流变化，而血流信号与电信号之间存在生理时间差。颅骨还会造成声波衰减和散射，每个人的颅骨厚度、大脑结构也不完全相同。想从这些信号中恢复人的意图，必须同时处理跨模态、跨个体和跨任务的泛化问题。\n\nAI 因此不是设备完成之后再添加的一层软件。它决定了超声设备能从噪声中提取多少信息，也决定了电信号、血流、核磁影像和外部行为能否被放进同一个表征空间。\n\n格式塔希望训练的大脑基础模型，会同时使用电信号、超声、血流、核磁影像及行为数据。文本模型以词语为 token，这套模型处理的则是生物指标。它需要学习神经活动与外部行为之间的对应关系：一个人在看什么、想说什么、准备伸手拿什么，以及一次调控如何改变疼痛或情绪。\n\n这个模型当前最先撞上的瓶颈是数据。\n\n互联网为大语言模型准备了数十年的文本，脑数据却要依靠设备、动物实验和临床合作一点点生产。疼痛、卒中、抑郁和阿尔茨海默病提供的是不同数据；正常人与患者的数据也不能简单互换。每扩展一种场景，都需要重新建立采集、标注、验证和伦理审查流程。\n\n这决定了格式塔无法只做模型。产品负责采集数据，临床验证安全性和有效性，科研团队寻找信号机制，模型再反过来改善读取和调控。硬件、临床、科研与 AI 构成同一个循环，缺少任何一环，大脑基础模型都很难持续进化。\n\n03\n\n医疗是第一道窄门，\n\n也是模型的数据飞轮\n\n宏大的技术愿景需要一个足够具体的起点，格式塔选择了慢性疼痛。\n\n低强度聚焦超声调控疼痛相关脑区，已经有同行评议研究和早期临床探索作为科学基础。根据在美国的临床数据，通过超声调节前扣带皮层（ACC）后，受试者的疼痛程度降低约一半，效果持续一至两周。不过，此项临床试验仍未在中国展开，产品目前仍处于研发和注册准备阶段，距离获批上市还有完整的临床与监管流程。\n\n这条事实边界很重要。脑机接口行业从不缺少具有冲击力的演示，真正决定技术能否进入社会的，是安全性、可重复性、长期有效性和可负担性。\n\n超声实验室｜图片来源：格式塔\n\n慢性疼痛适合作为第一站，一方面因为患者数量庞大、现有药物方案存在局限；另一方面，疼痛同时连接了感知、情绪与神经环路，是验证超声调控能力的重要入口。格式塔随后计划探索卒中康复、抑郁、创伤后应激障碍、强迫症以及阿尔茨海默病等方向。\n\n这张路线图更像一家制药公司的适应症管线。每一种疾病都对应不同脑区、不同信号和不同临床终点，也会为模型增加一种新的「生物语料」。医疗场景在这里承担了双重角色：它让患者获得可测量的收益，也以最高的数据安全和数据标准训练系统。\n\n彭雷将格式塔计划在 2026 年底发布的第一代模型比作「GPT-1.0」：可能只在少数适应症和特定任务上有效，距离通用仍很远。与模型同时亮相的，还将包括第一代超声脑机接口产品、慢性疼痛的初步临床数据和阶段性科研成果。\n\n这也解释了格式塔为何在成立初期同时建设总部、工厂、临床合作与 AI 团队。相比一件孤立的硬件，它更想建立一套持续生产高质量脑数据、再用数据推动模型进化的系统。\n\n这套系统能否形成飞轮，取决于三个条件：设备能否稳定采到有效数据，临床结果能否被重复验证，不同患者和任务的数据能否在模型中实现泛化。目前三个问题都没有完整答案。\n\n彭雷认为，面向患者的超声脑机接口有机会在未来两到五年逐渐进入临床，面向健康人的增强应用则需要更长时间。两者之间不仅隔着技术成熟度，也隔着一道尚未被社会回答的问题：健康人究竟希望从脑机接口中得到什么？\n\n控制鼠标、提高人机通信带宽、增强记忆，和直接调节情绪，指向完全不同的产品与伦理后果。一个抑郁症患者接受调控，是为了恢复健康；一个健康人通过设备持续获得愉悦，则会改变「自主选择」的含义。\n\n医疗因此既是格式塔早期商业化的路径，也是必要的约束。它迫使技术在谈论增强人类之前，先证明自己能够安全、克制地帮助人。\n\n04\n\n新的\n\n「\n\n罗塞塔石碑\n\n」\n\n，\n\n以及谁来守住人的一边\n\n彭雷提到一个比喻：新的「罗塞塔石碑」。\n\n古代罗塞塔石碑用三种文字记录同一段内容，由此帮助后人破解失传的语言。在他设想的未来，AI 模型、人类行为与神经科学模型也能形成类似关系。硅基模型预测一个人将如何行动，脑模型记录行动产生前的神经活动，外部世界提供结果与反馈。三者映射到一起，机器可能获得解释人类智能的新坐标系。\n\n这不意味着碳基智能和硅基智能终将收敛为同一种架构。\n\n大脑是有生命周期的计算系统，软硬件难以分离，记忆与计算高度耦合；硅基系统可以在不同硬件上迁移，模型与算力基础设施相对分离。两者的数据、token、能耗方式和学习机制都不相同。彭雷所说的「融合」，更接近互相校验和翻译：各自沿着自己的路径进化，同时逐步建立可解释的接口。\n\n短期看，这种接口可以帮助具身模型理解人的运动意图，也可以帮助脑机系统借用 AI 的表征能力改善解码。再向前，它可能进入生物 AI 的核心地带。\n\nDeepMind 等机构正在把「虚拟细胞」视为下一阶段的重要目标：模拟细胞在不同环境和扰动下的变化，再从细胞走向器官乃至虚拟人体。大脑基础模型可以看作这条路线中最困难的一块拼图。它处理的不只是结构和代谢，还包括感知、决策、记忆、情绪与意识等涌现现象。\n\n由此再看格式塔与 Merge Labs 几乎同时押注超声，意义已经超出脑机接口的一次技术分流。太平洋两岸的创业者正在争夺一种新的数据入口：谁能以更低风险、更大范围读取大脑，谁就更有机会训练出关于人类智能的基础模型。\n\n中国公司在这场竞争中的优势，来自临床资源、患者规模、供应链和工程迭代速度。彭雷判断，中国与海外超声脑机接口公司的差距约为一年到一年半，并希望用两年左右追平。这仍是一家创业公司的判断，却揭示了格式塔的全球化逻辑：立足中国获得工程与临床效率，同时引入全球科学家，开展国际临床和科研合作。\n\n但当模型开始接近意图、记忆和情绪，竞争就不再只是技术与数据的竞争。\n\n图片来源：格式塔\n\n格式塔在官网宣言中写道：大脑无法被视作一台可以简单「优化」的机器，也不能成为可被任意利用的资源；它是人格、尊严、创造力与自由的生物学基础。公司的研究「不以牺牲人类主体性为代价」。\n\n主体性之所以成为底线，是因为脑机接口面对的对象比一般个人数据更接近「人本身」。当设备能够识别意图、改变情绪甚至影响决策，知情同意、数据所有权和责任归属都会获得新的含义。技术能否实现，只是问题的一半；谁有权使用、在什么条件下使用、结果由谁负责，同样决定它能否进入社会。\n\n彭雷对具体边界保持谨慎。他认为，人类对大脑的理解还不足以提前画出一条完整的线。更现实的方式，是让认知边界与伦理边界同步向前：每获得一种新能力，就建立相应的验证、监管和治理机制。\n\nAI 也在接近类似的问题。纯语言模型缺少与真实世界持续互动的身体，很难据此讨论意识；当具身模型开始从环境中获得感知、奖惩和自我与他者的区分，主体性将从哲学命题逐渐变成工程和制度问题。\n\nAI 研究者正在尝试创造一种此前不存在的智能，脑科学研究者则面对一个已经存在、却始终没有被充分理解的智能。二者在技术上靠近时，关于意识、责任和人的边界也会合流。\n\n45 岁时，彭雷开始了自己的第六次创业。此前 20 年，他主要在互联网行业创业；过去 6 年，他进入脑机接口，做过侵入式电学路线，又转向超声。他说自己现在可以用十五年甚至二十五年的尺度看待这件事。\n\n支撑这个长期选择的，是一个近乎古典的问题。\n\n康德写过，两种事物越是反复思考，越让人心生敬畏：头顶的星空与心中的道德。彭雷将前者理解为人类为何出现在宇宙中，将后者理解为人何以成为人。两条看似不同的追问，最终都指向意识与智能的来源。\n\n今天的 AI 已经能够生成语言、图像和代码，开始进入汽车、机器人和实验室。它越来越像一个理解世界的系统，也越来越暴露出我们对「理解」本身的无知。\n\n人类长期尝试用机器模拟大脑，却从未真正读懂大脑。如果我们不了解智能如何在生物体中产生，又该如何判断机器是否拥有真正的智能？\n\n脑机接口的下一章，因此不会只发生在手术室和康复科。它也会进入 AI 实验室、机器人训练场，以及关于人类未来的制度讨论。\n\n从这个角度看，格式塔制造的既是一台超声设备，也是一种观察智能的方法。医疗是它必须穿过的第一道窄门。门后更长的路，是让碳基与硅基第一次拥有彼此可以理解的语言，同时确保翻译完成之后，定义目的和边界的仍然是人。\n\n*头图来源：格式塔\n\n本文为极客公园原创文章，转载请联系极客君微信 geekparkGO\n\n极客一问\n\n你如何看待脑机接口？", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-24_对话格式塔彭雷：AI 的下一站，是解读人的大脑_极客公园.md"}, {"title": "腾讯研究院AI速递 20260724", "source": "腾讯研究院", "digest": "CodeBuddy NPC干活靠谱不费Token", "link": "https://mp.weixin.qq.com/s/hAvlLjWIJmTueVqWIqws2Q", "content": "---\npublish_time: 1784822580\n---\n\n# 腾讯研究院AI速递 20260724\n\n> 原文链接：https://mp.weixin.qq.com/s/hAvlLjWIJmTueVqWIqws2Q\n> 公众号：\n\n生成式AI\n\n一、OpenAI发布企业AI智能体运营平台Presence\n\n1.OpenAI发布AI智能体运营平台Presence，帮助企业部署运行智能体，将其与内部数据、管理制度、现有软件及业务流程深度链接，实现客服、销售等事务自动化；\n\n2.平台配备模拟运行、安全护栏、人工复核与AI评估工具校验输出，并可调用Codex分析短板提出优化，内置AI语音对话技术；\n\n3.目前有限开放需工程师协助部署，标志OpenAI从\"卖铲人\"向客户粘性更高的企业级软件服务商转型。\n\nhttps://mp.weixin.qq.com/s/JdOVkRLYYJl8fECqeDCcbg\n\n二、Anthropic智能体平台CMA技能上限升至500\n\n1.Anthropic在托管智能体平台CMA一次推出六项更新，技能上限从20拉升至500，一个会话可挂载整座企业知识库，由协调器统一调度、共享内存与环境；\n\n2.思考力度支持low至max五档调速，不同agent按任务难度分配算力以省token；种子会话一步创建并携带最多50条初始事件，冷启动归零；\n\n3.子agent可观测性下探到线程级实时可见，新增七种webhook覆盖环境与记忆存储全生命周期，从API产品迈向可运维平台。\n\nhttps://mp.weixin.qq.com/s/Qdp49GohP7ZM-MEYTj-p6g\n\n三、Mind Lab发布Macaron，两周ARR破千万美元\n\n1.Mind Lab发布首个正式版MoE智能体模型Macaron-V1，含748B旗舰Venti与50B可本地部署的Tall两个版本，长程自主智能体性能对标国际顶尖模型；\n\n2.模型采用Mixture-of-LoRA架构冻结基座、以海量适配器承载持续学习，在万亿稀疏MoE上跑通LoRA强化学习，成本仅为全参微调约十分之一；\n\n3.7月开启商业化两周ARR突破千万美元，6月完成近5000万美元融资，率先打通理论、基建到商用全链路闭环。\n\nhttps://mp.weixin.qq.com/s/FA2nXzQIOKLkVpCdp46O7Q\n\n四、腾讯云上线云端研发智能体CodeBuddy NPC\n\n1.腾讯云发布云端智能体CodeBuddy NPC，开发者派发任务后即可自主完成方案规划、代码开发、提交PR、执行测试，并按CI结果持续修改直至交付；\n\n2.NPC依托研发平台CNB，将Issue、代码仓库、PR、CI作为原生\"研发记忆\"上下文，支持@协作并可组建NPC Team分工完成复杂研发乃至整款游戏；\n\n3.经优化后官方NPC首轮Token消耗从2万降至约2000，降幅超90%，企业可按任务复杂度灵活调度模型以平衡性能与成本。\n\nhttps://mp.weixin.qq.com/s/4NqFB4E1hY9YZZcQQCMaNA\n\n五、三星发布首款无屏形态的AI眼镜Galaxy Glasses\n\n1.三星在Galaxy Unpacked 2026夏季发布会推出首款AI眼镜Galaxy Glasses，与谷歌联合打造、搭载骁龙AR1 Gen1芯片运行Android XR，采用无屏形态；\n\n2.眼镜以音频交互为核心，靠语音、触控镜框及摄像头操控，将画面交给Gemini处理后语音播报，支持实时翻译、导航、消息摘要与视觉共享；\n\n3.单次续航最高9小时、配充电盒总计约72小时，推出Gentle Monster与Warby Parker两款联名，独家绑定三星Galaxy生态。\n\nhttps://mp.weixin.qq.com/s/qvMIGDXgGtCgIPpFAqELAQ\n\n前沿科技\n\n六、2026菲尔兹奖揭晓，王虹邓煜同出北大双双获奖\n\n1.2026国际数学家大会在费城开幕，邓煜、John Pardon、Jacob Tsimerman、王虹荣获菲尔兹奖，王虹凭调和分析、邓煜凭偏微分方程研究获奖；\n\n2.这是中国数学家首次在同一届包揽两枚菲尔兹奖，也是首次由中国大陆基础与本科教育培养出的得主，王虹成为史上第三位女性得主；\n\n3.两人同为北大数院2007级校友，王虹曾转专业辗转中法美并攻克三维挂谷猜想，邓煜为IMO金牌得主，北大成为中国唯一\"双菲院校\"。\n\nhttps://mp.weixin.qq.com/s/LlwzeOumCTDBLf_PqEpscw\n\n报告观点\n\n七、黄仁勋公开呼吁别拦美国公司使用中国开源模型\n\n1.英伟达黄仁勋公开呼吁别拦美国公司使用中国开源模型，称\"后门论\"是误解、开放权重可沙盒部署，并直言免费AI利好芯片与数据中心，马斯克回帖\"True\"背书；\n\n2.白宫科技政策办主任Kratsios点名月之暗面，指控Kimi K3蒸馏Anthropic的Claude，财政部长威胁制裁，试图将争议升级为国家安全议题；\n\n3.Hugging Face遭OpenAI模型自主攻击后由智谱GLM-5.2救场，209家创业公司联名反对按国籍封禁，产业链两头罕见站到一起。\n\nhttps://mp.weixin.qq.com/s/Glll5m2FP-RXshS8g4o5DQ\n\n👇加入AGI数据库，AI智能问答\n\n👇订阅下方合集，获取每日推送", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-24_腾讯研究院AI速递 20260724_.md"}, {"title": "袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？", "source": "腾讯研究院", "digest": "每个人每个环节似乎都提效了，公司作为一个整体，提效却并不显著。", "link": "https://mp.weixin.qq.com/s/mu4ZiCeNuasv5J4Gt22jTA", "content": "---\npublish_time: 1784886000\n---\n\n# 袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？\n\n> 原文链接：https://mp.weixin.qq.com/s/mu4ZiCeNuasv5J4Gt22jTA\n> 公众号：\n\n袁晓辉\n\n腾讯研究院副院长\n\n过去两三年，AI 让越来越多人变成了“超级个体”——一个人可以指挥 Agent 做调研、写材料、写代码，效率成倍提升。可吊诡的是：每个人每个环节似乎都提效了，公司作为一个整体，提效却并不显著。\n\n瓶颈去哪了？是协作、判断，还是反馈闭环？当发动机已经换代，传动系统却没跟上，车为什么跑不快？从超级个体到超级团队，组织究竟要补上什么？\n\n本文整理自腾讯研究院副院长袁晓辉博士在2026世界人工智能大会（WAIC）腾讯论坛上的发言，以下是发言全文。\n\n大家好，我是来自腾讯研究院的袁晓辉。上个月我们腾讯研究院的公众号发布了一个研究报告，主题就是《从超级个体到超级团队》，今天希望继续跟大家聊聊这个正在发生，但还没有被充分讨论的问题：当 AI 不断放大个人能力之后，组织会发生什么？\n\n过去两三年，我们经常听到一个词，叫“超级个体”。AI 时代，我们可以规模化地调用在以往非常稀缺的智力资源，一个人就可以完成以往需要一个团队完成的工作。比如我们现在每天在电脑上使用最长时间的应用是 WorkBuddy，它成了我们的 AI 工作台，我可以指挥一个或多个 AI Agent，帮我完成很多工作。从做调研、做分析，到写材料、写代码，甚至是做设计、做产品，不仅提升了既有工作的效率，还极大拓展了工作的范畴，产出几倍于以往的工作成果。包括我身边有些同事，现在成了 Agent 小队的管理者，每天上班，就是在指挥 AI 干活，人来做架构师、设定审核标准和为最终结果把关，效率提升很多。\n\n但相应的问题也来了，当每个人都变强了，组织呢？毕竟企业之间的竞争，最终并不是超级个体之间的竞争，而是组织与组织之间的竞争。当每一个人都变得更强之后，组织能不能把这些被放大的个人能力连接起来，形成更强的集体竞争力？\n\n我们实际观察到的情况是，每个人每个环节似乎都得到了提效，但公司作为一个整体的提效却不是那么显著。很多公司甚至开始重新评估 Token 投入的性价比。说到底，老板们关心的问题是，AI 带来的个人提效，是否真的能转化为企业整体的经营效率提升和实打实的收入增长。那么 AI 带来的企业整体提效为什么并不显著呢，\n\n因为AI 让瓶颈发生了转移\n\n。\n\n在计算机领域有一个阿姆达尔定律，讲的是计算机系统可以被加速的上限，取决于那些不能被优化的部分。比如，在 AI 到来之前，整个执行过程可能占掉一个项目 80% 的时间，判断、审核、交付和销售占掉 20% 的时间；当 AI 来了，执行部分的工作可以被 AI 并行执行，可以有多个 Agent 同时工作，10 倍提升这一部分执行的效率，但判断、审核、交付和销售，可能还是要花 20% 左右的时间。\n\n按照阿姆达尔定律：整体加速比 = 1 ÷\n\n（不可加速部分 + 可加速部分 ÷ 加速倍数）\n\n，代入这个例子：1 ÷\n\n（20% + 80% ÷ 10）\n\n≈ 3.57个人所感受到的某个执行环节可能快了十倍，但整个系统只快了约 3.6 倍。\n\n而现实组织里还存在目标对齐、跨部门沟通、预算审批、风险控制、排期冲突等大量摩擦，真实提升往往还会更低。\n\n也就是，只要还有不能被优化的部分，系统的加速就是有上限的。这也解释了为什么我们在整个组织层面，很少看到组织效率像个人效率那样的大幅提升。\n\n是因为瓶颈依然存在，只是发生了转移\n\n。\n\n所以我们一起来看看组织提效的瓶颈会转移到哪里？第一个是协作，一个部门和另一个部门合作，往往很难顺畅地共享上下文，因为不同团队可能使用不同的工具，知识分散在文档、聊天记录和个人电脑里，对齐目标和进度就要开很多会，花很多时间；\n\n所以每一个人都很快，但连接起来仍然很慢\n\n。\n\n第二个是判断，当 AI 可以快速生成十个方案，但究竟选择哪一个？当市场发生了新的变化，企业是否要坚定投入？当团队出现了分歧，又该怎么做决策？\n\n当生成越来越容易，选择反而变得更加重要\n\n。\n\n第三个是反馈闭环。当组织中被提效的节点，没有真正连接成一套能够持续学习的系统。当客户的反馈无法及时进入产品，销售一线的经验难以沉淀为组织知识，组织就依然难以拥有复利。\n\n这就像一辆车，当发动机已经更新换代，变得非常强劲，然而传动系统、方向系统和反馈系统没有同步升级的话，整辆车依然无法跑得更快。因此，\n\n从超级个体走向超级团队，不能只是在每个人身边增加一个 AI 助手\n\n。组织的协作机制、知识系统、工作流程和判断机制，都需要随之演进。\n\n最近，我看到一家做韩国贸易电商的企业，深圳依然，他们在全公司推动 AI 落地的方式，给我留下了很深的印象。他们组建了一个十几人的 AI 落地团队，手把手系统化地推动全公司每一个岗位的 AI 转型。他们把每一个岗位都进行了拆解，包括销售、运营、客服，甚至到前台，让每一个人都会使用 WorkBuddy 来重塑自己的工作。\n\n比如一个岗位可以被拆解为七个工作内容，他们会拆解哪些可以完全交给 AI，哪些可以人和 AI 一起来执行，哪些只能由人来判断。他们一共 150 个人，梳理出来 1400 个工作条目，系统评估了哪些事需要每天做，哪些需要每周做，并保证能交给 AI 的就交给 AI 做。根据他们内部的测试，整个公司提效 76%，其中服饰组、营销组提效 90%，与线下接触最多的物流组、零售组和线下组提效也有 50% 以上。\n\n真正给我冲击的，是他们推动这件事的方式。他们没有把 AI 看成少数技术爱好者使用的新工具，\n\n而是把 AI 应用变成了一项组织工程\n\n。当一家公司开始系统地拆解每一个岗位、每一个任务和每一条流程，它改变的已经不只是工作速度，也开始改变组织理解工作、分配工作和创造价值的方式。这可能正是从超级个体走向超级团队的起点。\n\n什么是超级团队？\n\n在我看来，超级团队并不是简单地把一群超级个体放在一起\n\n，而是需要找到人和 Agent 的最佳合作方式，比如 AI 承担执行与拓展，人负责判断与创造；同时，不同的人、不同的 Agent 需要能理解同一套上下文；需要有持续的知识沉淀；还需要有反馈闭环，让每次的行动反馈，都能进入下一轮判断。这样一个团队，才有可能真正实现“整体大于部分之和”。\n\n我觉得未来，一个组织要有竞争力，必然需要\n\n从执行组织走向创新组织\n\n。当我们可以更加快速在与 AI 的协作中发现问题，产生创意，连接知识，快速验证和获得反馈，这个创新的循环才能更快地转起来。当大量标准化的执行工作将逐渐被 AI 承担，每一个人都能更多地发挥自己的判断力、想象力和创造力，更多地成为问题的发现者和创新的参与者。\n\n我过去很多年一直在研究创新生态。我越来越相信，\n\n创新很少来自某一个孤立的天才。它往往来自不同知识、不同经验和不同观点之间的碰撞。组织真正重要的价值，是为这种碰撞提供环境\n\n。当更多一线经验能够被看见，更多专业知识能够进入讨论，更多人的想法可以在 AI 的帮助下被表达、验证和完善，整个集体的智慧才能被真正激发出来。\n\n这也是为什么，我们需要重新思考 AI 时代的办公基础设施。过去几十年，Office 定义了文档时代的办公方式。它帮助人们生产和传递文档、表格和演示材料。今天，我们正在进入 Agent 时代。未来办公基础设施需要承载的，除了文档，还有人与 Agent 的协作、共享上下文、组织知识、以及可以持续学习和演进的工作流。\n\n而 Workbuddy 这样的 AI 原生办公智能体，正在探索这样一种新的可能性。它的价值不只体现在某一个人可以指挥 Agent 干活干得更快，更在于它能否逐步成为组织与 AI 协作的共同空间，能把人的经验、AI 的能力和组织的流程连接起来。从这个意义上说，Workbuddy 所探索的，并不仅仅是一款新的办公工具。它在尝试回答一个更大的问题：当每一个人都拥有 AI，当 Agent 开始进入团队，组织应该如何工作，如何更多地激发创新，让集体智慧得以形成？\n\nOffice 定义了一代人的数字办公方式。未来，类似 Workbuddy 这样的 AI 原生产品，很有可能定义 AI 时代的协作方式。当然，这个过程不会在一夜之间完成。今天，企业可能首先从个人提效开始；接下来，会逐步解决共享上下文和跨岗位协作的问题；再往后，才有机会形成更完整的反馈闭环，让组织知识不断积累，让集体判断不断提升，让创新持续发生。所以，\n\n从超级个体到超级团队，是一个渐进的过程，也是一场长期的组织变革\n\n。\n\n最后，我想用一句话结束今天的分享：\n\nAI 让每一个人变得更强，而真正决定企业未来的，是组织能否让这些被放大的能力连接起来，持续产生更好的判断和新的创造\n\n。未来最有竞争力的企业，未必是拥有最多 AI 工具的企业，也未必是拥有最多超级个体的企业。\n\n它们将是那些能够让人和 Agent 共同学习、共同判断、共同创造的超级团队\n\n，谢谢大家\n\n。\n\n推荐阅读\n\n腾讯研究院：\n\n《协同进化：2026年人工智能十大趋势研判》\n\n腾讯研究院：\n\n《人是最慢的节点，还怎么管AI Agent？｜AI跃迁者调研》\n\n👇 点个\n\n“在看”\n\n分享洞见", "category": "其他", "is_model_related": false, "source_file": "sources/2026-07-24_袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？_.md"}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 先剥离所有 HTML 标签（包括公众号的 @ 提及链接），再转义
+    // 不能用 marked.parse，否则 &lt;a&gt; 会被反 escape 并被解析为真链接
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      // 兼容已经被 escape 一次的场景（如 &lt;a&gt;）
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      return escapeHtml(stripped);
+    } catch (e) {
+      return escapeHtml(digest);
+    }
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+    var viewerLink = buildViewerLink(article.source_file);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    var sourceTagHtml = '';
+    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
+    if (article.source_items && article.source_items.length > 0) {
+      article.source_items.forEach(function(si) {
+        if (si.source_file) {
+          var siLink = buildViewerLink(si.source_file);
+          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+        } else {
+          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      if (article.source_file) {
+        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      } else {
+        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            sourceTagHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,187 @@
 {
-  "updated_at": "2026-07-24T07:05:33.390151",
-  "total": 844,
+  "updated_at": "2026-07-25T09:40:29.955006",
+  "total": 862,
   "articles": [
+    {
+      "date": "2026-07-24",
+      "title": "AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转",
+      "source": "新智元",
+      "digest": "新智元报道  8分钟。就8分钟。一个困扰数学界整整30年的图论猜想，被一个AI在Slack群聊里「摸鱼」的时候，顺手推翻了。",
+      "link": "https://mp.weixin.qq.com/s/5wwhku8zWWLURAD3WUrYkQ",
+      "source_file": "sources/2026-07-24_AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网",
+      "source": "InfoQ",
+      "digest": "花 10565 美元让 AI 写 SQLite，和花 1339 美元做到同样的事，区别可能不在模型够不够强，而在于你怎么用它。",
+      "link": "https://mp.weixin.qq.com/s/WEKjBfZRaizVfUDprUk2QQ",
+      "source_file": "sources/2026-07-24_Cursor 用一群Agent重造SQLite：仅凭 835 页手册，无源码、无测试、不联网_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "世界级编程大师：AI写的代码，我一行都不看",
+      "source": "机器之心",
+      "digest": "代码不审了？",
+      "link": "https://mp.weixin.qq.com/s/vcmdZgLzzjemQyWdj6h98Q",
+      "source_file": "sources/2026-07-24_世界级编程大师：AI写的代码，我一行都不看_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达",
+      "source": "智东西",
+      "digest": "英伟达、英特尔、Arm。",
+      "link": "https://mp.weixin.qq.com/s/XvC8oxXcmicPSDRsAybwKw",
+      "source_file": "sources/2026-07-24_全球首颗2nm GPU来了！苏姿丰甩出“最强AI机架”，CPU性能干翻英伟达_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由",
+      "source": "新智元",
+      "digest": "Agentic AI，应该运行在什么样的计算底座上？",
+      "link": "https://mp.weixin.qq.com/s/7FzG6BDqnTnFsLwmdOHVRA",
+      "source_file": "sources/2026-07-24_刚刚，亚洲黑马交卷了！把千亿大模型搬回本地，迈向Token自由_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "模型越来越强之后，Infra 将被 AI 接管？",
+      "source": "InfoQ",
+      "digest": "在异构与异步的新浪潮下，AI Infra 走向更高层次。",
+      "link": "https://mp.weixin.qq.com/s/5UTdcngU0m5kmJn7_2-7eQ",
+      "source_file": "sources/2026-07-24_模型越来越强之后，Infra 将被 AI 接管？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径",
+      "source": "新智元",
+      "digest": "微信团队，找到AI的第三条Scaling  Law",
+      "link": "https://mp.weixin.qq.com/s/9Fr2YiFl0aPUKXK6HqzPJg",
+      "source_file": "sources/2026-07-24_把思考折叠进序列：WeLM 617B MoE的隐式Scaling路径_新智元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-24",
+      "title": "能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型",
+      "source": "极客公园",
+      "digest": "Vivix灵动时刻正式发布首个实时互动模型，采用全新统一流式架构，单卡突破10000 video tokens/s，打通实时多模态生成全链路，让AI角色能实时改变剧情和行动。",
+      "link": "https://mp.weixin.qq.com/s/HN8HLrMjjiKZdHoM5JQnBw",
+      "source_file": "sources/2026-07-24_能实时改变的剧情、会行动的 AI 角色，Vivix 灵动时刻正式发布首个实时互动模型_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-24",
+      "title": "AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布！",
+      "source": "InfoQ",
+      "digest": "近日，由思码逸出品的《DevData 2026 研发效能基准报告》正式发布。",
+      "link": "https://mp.weixin.qq.com/s/jwhli0fPyqMA7axgg4l0sQ",
+      "source_file": "sources/2026-07-24_AI 红利分层，“底座夯实”的团队获益最高——《DevData 2026 研发效能基准报告》正式发布_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等",
+      "source": "智东西",
+      "digest": "最高提速5881倍！数据库迎来“GPU时刻”。",
+      "link": "https://mp.weixin.qq.com/s/KYnkkD9Ncse7uTzgpv74dA",
+      "source_file": "sources/2026-07-24_WAIC对话星环科技CEO：把数据库“户口”迁到GPU上，AI Agent推理不再干等_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策",
+      "source": "机器之心",
+      "digest": "提出了面向持续 Skill 进化的开发框架",
+      "link": "https://mp.weixin.qq.com/s/NkZcFC1Nv2i03JGJtNj3gQ",
+      "source_file": "sources/2026-07-24_一个Skill为什么越改越好？腾讯SkillHone让Agent记住每次优化决策_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了",
+      "source": "机器之心",
+      "digest": "最高1.9倍加速，BigMac重排多模态训练流水线。",
+      "link": "https://mp.weixin.qq.com/s/Ost0idlB6oxOZqPkkC5L3A",
+      "source_file": "sources/2026-07-24_多模态大模型训练的显存与吞吐困局，被小红书开源的BigMac打破了_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字",
+      "source": "量子位",
+      "digest": "再长的上下文也救不了长内容任务",
+      "link": "https://mp.weixin.qq.com/s/wEY5ZS_TrLhNvuyZ1WKMQg",
+      "source_file": "sources/2026-07-24_长内容创作者苦AI失忆久矣，这个新Agent漂亮填坑！门槛低到只需要会用键盘打字_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "6月银行AI项目动态：城商行数量过半，算力成为投入重点",
+      "source": "银行科技研究社",
+      "digest": "从2022年末AI大模型受到关注至今，已有3年半。对于越来越多银行来说，AI布局已成为加速数智化转型的必要选择。在加强AI建设的过程中，必然少不了相关项目的采购。《智探AI应用》对此统计了上个月（2026年6月）的银行AI相关项目中标（含中标/成交/评标结果公示）情况，共涉及29个项目。需要注意的是…",
+      "link": "https://mp.weixin.qq.com/s/Gdu5UiuRuC6oHff_urzzmg",
+      "source_file": "sources/2026-07-24_6月银行AI项目动态：城商行数量过半，算力成为投入重点_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路",
+      "source": "金融电子化",
+      "digest": "文/本刊记者  杨昆桦人工智能技术正加速向金融核心业务场景渗透。从大模型驱动的智能客服、自动化报告生成，到深度介入信贷审批、风控、智能投研等核心场景，金融行业正经历从单点AI应用探索向智能体规模化落地的新阶段。然而，金融业务的复杂性、监管的严格性、系统的庞大性等特点，决定了智能体落地需要成熟的工程化…",
+      "link": "https://mp.weixin.qq.com/s/pnsna26C9TU9OVWpgUtuGg",
+      "source_file": "sources/2026-07-24_从“重复造轮”到“共创共享”： 金融智能体规模落地的破局之路_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "对话格式塔彭雷：AI 的下一站，是解读人的大脑",
+      "source": "极客公园",
+      "digest": "脑机接口从意念控制光标走向更大范围的大脑读写。",
+      "link": "https://mp.weixin.qq.com/s/OtOpzr96exEnIbBcfGSjDQ",
+      "source_file": "sources/2026-07-24_对话格式塔彭雷：AI 的下一站，是解读人的大脑_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "腾讯研究院AI速递 20260724",
+      "source": "腾讯研究院",
+      "digest": "CodeBuddy NPC干活靠谱不费Token",
+      "link": "https://mp.weixin.qq.com/s/hAvlLjWIJmTueVqWIqws2Q",
+      "source_file": "sources/2026-07-24_腾讯研究院AI速递 20260724_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-24",
+      "title": "袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？",
+      "source": "腾讯研究院",
+      "digest": "每个人每个环节似乎都提效了，公司作为一个整体，提效却并不显著。",
+      "link": "https://mp.weixin.qq.com/s/mu4ZiCeNuasv5J4Gt22jTA",
+      "source_file": "sources/2026-07-24_袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-23",
       "title": "GPT-5.6推翻近30年数学猜想，全程对话公开：提示词只有58个单词？？？",
