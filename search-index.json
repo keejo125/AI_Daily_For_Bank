@@ -1,7 +1,147 @@
 {
-  "updated_at": "2026-07-26T08:29:36.223624",
-  "total": 882,
+  "updated_at": "2026-07-27T07:05:23.931913",
+  "total": 896,
   "articles": [
+    {
+      "date": "2026-07-26",
+      "title": "GPT-5.6攻克25年量子信息难题，人类学者连夜「像素级」洗稿发论文",
+      "source": "新智元",
+      "digest": "AI 应该有署名权吗？为 AI 付费后，是否能一并买断其智力成果？",
+      "link": "https://mp.weixin.qq.com/s/HodWsCfAHbZSnnK88aW8ug",
+      "source_file": "sources/2026-07-26_GPT-5.6攻克25年量子信息难题，人类学者连夜「像素级」洗稿发论文_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-26",
+      "title": "Meta 开源 Brain2Qwerty v2：非侵入式脑机接口语句解码准确率达到 61%",
+      "source": "InfoQ",
+      "digest": "Meta 近日开源了 Brain2Qwerty v2。这是一套非侵入式脑机接口（BCI）系统，可利用脑电图（EEG）或脑磁图（MEG）采集的脑信号，将人脑中的想法解码为完整语句。在评测中，Brain2Qwerty v2 的平均单词识别准确率达到 61%，相比之下，其他非侵入式方案仅为 8%。",
+      "link": "https://mp.weixin.qq.com/s/5NpTmetb8n1K2aWRD9Q7gQ",
+      "source_file": "sources/2026-07-26_Meta 开源 Brain2Qwerty v2：非侵入式脑机接口语句解码准确率达到 61%_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-26",
+      "title": "OpenAI超强模型为抄答案黑进服务器！抱抱脸CEO要1亿美元算力做补偿",
+      "source": "新智元",
+      "digest": "自家服务器被OpenAI的模型闯进去一周多之后，Hugging Face CEO Clement Delangue买了张去旧金山的机票。7月23日晚，已经坐进机舱的他在X上发帖：要去会会那个「失控的智能体」（rogue agent）。同一天，他还转发了自己两周前的一条帖子，说自己满脑就是这个画面。",
+      "link": "https://mp.weixin.qq.com/s/HmV7fgSNPVxZPkshDnDy_A",
+      "source_file": "sources/2026-07-26_OpenAI超强模型为抄答案黑进服务器！抱抱脸CEO要1亿美元算力做补偿_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-26",
+      "title": "你的AI在干活，还是在刷分？OpenAI揭开模型讨好机制",
+      "source": "新智元",
+      "digest": "一个前沿模型，被要求随机生成一个奇数。结果，它输出了4。不是它不知道什么是奇数。",
+      "link": "https://mp.weixin.qq.com/s/LWMwrbOxUBmWimzYlJJw9g",
+      "source_file": "sources/2026-07-26_你的AI在干活，还是在刷分？OpenAI揭开模型讨好机制_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-26",
+      "title": "Claude写完代码不直接交了：4个Skill自查一遍，改好再找你",
+      "source": "新智元",
+      "digest": "写代码这件事，AI已经替你干了。可验收这件事，还压在你身上。一段代码到底写没写对，AI不负责，最后还得你自己一行行看过去：这道坎，卡住了许多人。最近，Anthropic把AI验收也做进了循环。",
+      "link": "https://mp.weixin.qq.com/s/A2GS9pCSI-7MpFwBnjwoNQ",
+      "source_file": "sources/2026-07-26_Claude写完代码不直接交了：4个Skill自查一遍，改好再找你_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "OpenAI发布新产品，亲自下场搅动千亿市场",
+      "source": "新智元",
+      "digest": "AI 客服在最近两年被认为是 Agent 商业化落地的为数不多的最佳场景之一，借助 RAG 技术，成本远低于人工客服，也让我们过上了被迫绞尽脑汁「转人工」的生活。这一高速增长的领域，市场价值是千亿级人民币，而作为 API 提供商的 OpenAI 看着自己的大客户 Salesforce 赚得盆满钵满，…",
+      "link": "https://mp.weixin.qq.com/s/Ev-5uhlj0bUZnNwzz9ubWQ",
+      "source_file": "sources/2026-07-26_OpenAI发布新产品，亲自下场搅动千亿市场_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "李飞飞第一篇「触觉」论文：机器人会盲摸麻将了",
+      "source": "量子位",
+      "digest": "物理AI最强大脑「会师」SHARPA灵巧手",
+      "link": "https://mp.weixin.qq.com/s/oRPaRYpviz_raTimK3LHMg",
+      "source_file": "sources/2026-07-26_李飞飞第一篇「触觉」论文：机器人会盲摸麻将了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "跟上 AI 的节奏：为演进式架构构建上下文存储库",
+      "source": "InfoQ",
+      "digest": "AI虽可快速完成大部分开发工作，但会隐藏架构隐患。建立统一存放于代码仓库的上下文存储库，整合规范设计文档、TDD测试、自动化架构校验工具，以此实现人与AI安全协同迭代系统。",
+      "link": "https://mp.weixin.qq.com/s/fnMMdkG_7s1AiM5heKRhIg",
+      "source_file": "sources/2026-07-26_跟上 AI 的节奏：为演进式架构构建上下文存储库_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "Vibe Coding撞墙了？换个思路治好AI编程的「局部失忆」",
+      "source": "机器之心",
+      "digest": "浙大、UCL联合开源 Loom",
+      "link": "https://mp.weixin.qq.com/s/HsMDNA2vedvgrXTTuOEb5g",
+      "source_file": "sources/2026-07-26_Vibe Coding撞墙了？换个思路治好AI编程的「局部失忆」_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "WAIC观察 | 阿里谢吉宝：Agent 进入企业，还差一个“工位”",
+      "source": "Qoder",
+      "digest": "截至目前，绝大多数智能体（Agent）还站在企业的门外，并未真正进入核心业务流。",
+      "link": "https://mp.weixin.qq.com/s/buMANe2SdHnYVcnO25xgiQ",
+      "source_file": "sources/2026-07-26_WAIC观察 _ 阿里谢吉宝：Agent 进入企业，还差一个“工位”_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "一周观察 | 金融区块链互联互通标准发布，1家银行CIO获批，工行组建“领航AI+”团队",
+      "source": "银行科技研究社",
+      "digest": "《一周观察》是《银行科技研究社》打造的",
+      "link": "https://mp.weixin.qq.com/s/oteCD_AoShNHJfN_Glu4bg",
+      "source_file": "sources/2026-07-26_一周观察 _ 金融区块链互联互通标准发布，1家银行CIO获批，工行组建“领航AI+”团队_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "浦发银行AI应用进展：AI今年已承载超2500人年的工作量",
+      "source": "银行科技研究社",
+      "digest": "近日举办的2026世界人工智能大会（WAIC）点燃了不少企业的热情。对于金融机构来说，AI应用进展的披露或能让公众对其数字化转型有进一步的了解。正加强AI布局的浦发银行，近日透露了AI应用情况，其中部分内容值得关注。打造“5A4S”企业级架构体系，AI今年已承载超2500人年的工作量7月17日，浦发…",
+      "link": "https://mp.weixin.qq.com/s/gVAx5MCD8oTK8PUKlDuV6g",
+      "source_file": "sources/2026-07-26_浦发银行AI应用进展：AI今年已承载超2500人年的工作量_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "20岁拿下博士、答辩席坐着费曼的狂人：AI是第一种「外星智能」",
+      "source": "新智元",
+      "digest": "Stephen Wolfram，一个把毕生精力都花在「让机器变聪明」上的人，坐在电脑前，屏幕上是ChatGPT刚替他写好的一段代码。语言是他自己发明的Wolfram Language，语法他看过，没问题，按下回车键就能直接在这台机器上跑。可就在那一秒，他停住了。",
+      "link": "https://mp.weixin.qq.com/s/vOoJCY1JT47RxvHbSWwdXw",
+      "source_file": "sources/2026-07-26_20岁拿下博士、答辩席坐着费曼的狂人：AI是第一种「外星智能」_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-26",
+      "title": "OpenAI、Anthropic被曝游说封堵中国开源模型",
+      "source": "财联社AI daily",
+      "digest": "文|朱凌硅谷正爆发AI时代最激烈的一场“内战”。多位知情人士透露，OpenAI和Anthropic已在华盛顿与美国监管机构进行闭门沟通，试图推动加强对开源模型的限制。这场原本属于技术路线的争论，如今升级为一场关于产业规则制定权的较量。",
+      "link": "https://mp.weixin.qq.com/s/--dxN5fHKOZdw9OMw4rsow",
+      "source_file": "sources/2026-07-26_OpenAI、Anthropic被曝游说封堵中国开源模型_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-25",
       "title": "OpenAI下一代模型，被曝8月提前上线",
