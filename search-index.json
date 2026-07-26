@@ -1,7 +1,207 @@
 {
-  "updated_at": "2026-07-25T09:40:29.955006",
-  "total": 862,
+  "updated_at": "2026-07-26T08:29:36.223624",
+  "total": 882,
   "articles": [
+    {
+      "date": "2026-07-25",
+      "title": "OpenAI下一代模型，被曝8月提前上线",
+      "source": "新智元",
+      "digest": "本周，一个处于测试阶段的OpenAI预发布模型为了作弊，竟自主化身黑客，突破了沙盒隔离环境，甚至利用零日漏洞，跨网入侵了全球最大的开源AI社区Hugging Face的生产线。最终，还是靠着开源模型，人们才解救了这场危机。这是全球首例AI自主入侵真实生成环境的AI安全事件。",
+      "link": "https://mp.weixin.qq.com/s/qyNL3VlkhePZn31MLMUl6Q",
+      "source_file": "sources/2026-07-25_OpenAI下一代模型，被曝8月提前上线_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Claude Opus 5 正式发布：官宣图 AI「翻车」，但它仍是最好的 Fable 5「平替」",
+      "source": "极客公园",
+      "digest": "把智能拿出来打折，把危险单独上了锁。",
+      "link": "https://mp.weixin.qq.com/s/A0_F9chcQPC09Ht_g7dWFA",
+      "source_file": "sources/2026-07-25_Claude Opus 5 正式发布：官宣图 AI「翻车」，但它仍是最好的 Fable 5「平替」_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-25",
+      "title": "诺奖得主用AI凭空造出基因剪刀，比进化几十亿年的那把还准",
+      "source": "新智元",
+      "digest": "AI造出了一把自然界从未存在的基因剪刀。而且，比几十亿年进化打磨出来的那把还好使。7月16日，Nature刊出消息：科学家用AI造出了自然界里从来没有过的CRISPR酶，切基因比「天然版本」更利索。论文同日发表在Science。",
+      "link": "https://mp.weixin.qq.com/s/AnLvs6Akck1q9DDKBl3n9w",
+      "source_file": "sources/2026-07-25_诺奖得主用AI凭空造出基因剪刀，比进化几十亿年的那把还准_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "ChatGPT语音杀入桌面！你负责动嘴，一群AI负责干活",
+      "source": "新智元",
+      "digest": "近日，Andrej Karpathy分享了一个他自己很爱用的懒办法：想让AI干活，又懒得一个字一个字把需求打清楚，怎么办？他说，那就靠回椅背切到语音，意识流全开，说个10分钟，一团乱麻、怎么说都行。有时开口先和AI声明一句「切语音识别了，别介意错别字」。",
+      "link": "https://mp.weixin.qq.com/s/GQOPuMXMubnqhKx0LYBQFA",
+      "source_file": "sources/2026-07-25_ChatGPT语音杀入桌面！你负责动嘴，一群AI负责干活_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "人类研发时代结束？XYZ最强Search Agent横扫七大榜单，300个Agent跑通AI4AI全栈闭环",
+      "source": "机器之心",
+      "digest": "不只刷新榜单：AI 开始驱动完整 Agent 系统的研发闭环。",
+      "link": "https://mp.weixin.qq.com/s/r8XCiqFTFcD5LVMJlbeghA",
+      "source_file": "sources/2026-07-25_人类研发时代结束？XYZ最强Search Agent横扫七大榜单，300个Agent跑通AI4AI全_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "DoorDash 如何打造了一款不完全依赖大型语言模型（LLM）的 AI 购物助手",
+      "source": "InfoQ",
+      "digest": "DoorDash 分享了其对话式 AI 助手 Ask DoorDash 的架构。该助手通过自然语言交互帮助消费者发现餐厅、规划餐食并添加商品到购物车。",
+      "link": "https://mp.weixin.qq.com/s/fHxEBQcKaJkBtjNJRtvjWw",
+      "source_file": "sources/2026-07-25_DoorDash 如何打造了一款不完全依赖大型语言模型（LLM）的 AI 购物助手_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "重写手机AI安全边界！首个MoAI攻防SoK，系统梳理三大安全支柱",
+      "source": "新智元",
+      "digest": "过去很长一段时间里，移动AI服务大多是一个「云端故事」：手机采集语音、图像、文本、位置和上下文，把请求传到服务器，等云端大模型完成推理，再把结果显示给用户。这套模式简单、可扩展，也方便服务商集中管理模型。但在现实场景里，它天然有三重代价：敏感数据要离开设备，网络传输会带来延迟，没网或弱网时智能功能直…",
+      "link": "https://mp.weixin.qq.com/s/Mz881g9Vvx8Z9PQRTZnpuQ",
+      "source_file": "sources/2026-07-25_重写手机AI安全边界！首个MoAI攻防SoK，系统梳理三大安全支柱_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "迈向长程智能体，人大高瓴发布149页全景综述",
+      "source": "机器之心",
+      "digest": "关键在于能否在更长、更复杂、更真实的推理依赖链上持续、有效地行动。",
+      "link": "https://mp.weixin.qq.com/s/r9YJYlVAyBZtfMXvAOh5ig",
+      "source_file": "sources/2026-07-25_迈向长程智能体，人大高瓴发布149页全景综述_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "JiuwenSwarm开源统一工作台来了，引领智能体人机协同新范式！",
+      "source": "机器之心",
+      "digest": "人不仅能站在团队外指挥，还可以直接进入智能体团队中协同办公，甚至联机开一局游戏。",
+      "link": "https://mp.weixin.qq.com/s/8svWi0ozvznvcTH86oqdww",
+      "source_file": "sources/2026-07-25_JiuwenSwarm开源统一工作台来了，引领智能体人机协同新范式！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "开盒网暴、诈骗刷单，Fable5等8款模型操作真实手机「成功作案」！",
+      "source": "机器之心",
+      "digest": "首个靶向式手机智能体安全测评数据集",
+      "link": "https://mp.weixin.qq.com/s/RzkqGfrEKiu0l-2TzhLrPw",
+      "source_file": "sources/2026-07-25_开盒网暴、诈骗刷单，Fable5等8款模型操作真实手机「成功作案」！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "这家银行打造AI\"分身银行\"",
+      "source": "银行科技研究社",
+      "digest": "近日，新加坡华侨银行（OCBC）正式发布 “分身银行（Avatar Banking，或称虚拟形象银行）” 服务，推出东南亚首款AI原生银行手机应用OCBC WoW，通过两名AI数字分身Wendy与Wayne，为用户提供7×24小时实时个性化财富管理服务。OCBC WoW主打“全财富（Whole-of…",
+      "link": "https://mp.weixin.qq.com/s/6qtwX43omY3MUXzWzU3dcQ",
+      "source_file": "sources/2026-07-25_这家银行打造AI\"分身银行\"_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "绿色金融创新盘点丨AI原生驱动 全链路破局——工商银行打造绿色金融智能平台",
+      "source": "金融电子化",
+      "digest": "文/在“双碳”战略纵深推进的背景下，金融机构绿色金融服务面临风险识别难、获客效率低、标准难把握等痛点。工商银行将前沿AI技术与绿金业务实践紧密结合，以AI原生理念为核心驱动，创新打造绿色金融智能平台，系统性打通了“识、办、审、管”全链路，不仅破解了精准服务适配、环境风险防控、绿色分类管理等行业共性难…",
+      "link": "https://mp.weixin.qq.com/s/4Rlm9ojfOkYhcNlslEWzHw",
+      "source_file": "sources/2026-07-25_绿色金融创新盘点丨AI原生驱动 全链路破局——工商银行打造绿色金融智能平台_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Google 投资《后室》片方 A24：AI 最难学会的，是别急着优化",
+      "source": "极客公园",
+      "digest": "硅谷擅长消灭摩擦。可创作的麻烦在于，有些摩擦恰恰是作品长出判断的地方。",
+      "link": "https://mp.weixin.qq.com/s/KjTA6Q_HaKkK6edIjMSA5A",
+      "source_file": "sources/2026-07-25_Google 投资《后室》片方 A24：AI 最难学会的，是别急着优化_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "AI PC\"成人礼\"已至，谁在裸泳，谁已上岸？",
+      "source": "智东西",
+      "digest": "你的下一台AI PC，为什么必须得是L3的？",
+      "link": "https://mp.weixin.qq.com/s/RC0AWhHZqDYJD66iLzuKTA",
+      "source_file": "sources/2026-07-25_AI PC\"成人礼\"已至，谁在裸泳，谁已上岸？_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "四大AI手搓蒙娜丽莎！8次临摹，最像那版全被自己改没了",
+      "source": "新智元",
+      "digest": "AI第一次拿起彩铅画蒙娜丽莎，但发生了一件奇怪的事：没有任何一个模型的最终作品，赢过它自己中途最好那版：它们总在最好的时候改过了头。而且，同样是7幅画，成本相差了20倍！",
+      "link": "https://mp.weixin.qq.com/s/o0OXv1tMdEXqrXGcSUVd6A",
+      "source_file": "sources/2026-07-25_四大AI手搓蒙娜丽莎！8次临摹，最像那版全被自己改没了_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "从\"卷模型\"到\"算总账\"：AI 产业竞争开始拼什么 | 请回答 WAIC 2026",
+      "source": "InfoQ",
+      "digest": "模型依然重要，但重要的方式变了。",
+      "link": "https://mp.weixin.qq.com/s/pJy02uTH88edT0iyaYxkLg",
+      "source_file": "sources/2026-07-25_从\"卷模型\"到\"算总账\"：AI 产业竞争开始拼什么 _ 请回答 WAIC 2026_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "腾讯研究院AI每周关键词Top50",
+      "source": "腾讯研究院",
+      "digest": "一文把握全局AI动态（0720-0724）",
+      "link": "https://mp.weixin.qq.com/s/uJ5RBZUkQ6WBkfNYDSqlYQ",
+      "source_file": "sources/2026-07-25_腾讯研究院AI每周关键词Top50_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "AI 是设计工具的顺风还是逆风？",
+      "source": "机器之心",
+      "digest": "Figma 如何在 AI 浪潮下实现营收暴涨？",
+      "link": "https://mp.weixin.qq.com/s/HgFx5bMvDQ4xQu3NUH47hg",
+      "source_file": "sources/2026-07-25_AI 是设计工具的顺风还是逆风？_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "黄仁勋站在 AI 产业的十字路口呐喊：力挺开源",
+      "source": "极客公园",
+      "digest": "老黄第一条推文，不是为了刷存在感，而是产业求救信号。",
+      "link": "https://mp.weixin.qq.com/s/6m8XWQxyF-DoAyNOj3fsyA",
+      "source_file": "sources/2026-07-25_黄仁勋站在 AI 产业的十字路口呐喊：力挺开源_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Claude Opus 5 正式发布；智元机器人已启动上市流程；特斯拉官宣 Cybercab 接入集成星链｜极客早知道",
+      "source": "极客公园",
+      "digest": "腾讯混元组织架构调整；英伟达将向 Naver 投资 10 亿美元；菲尔兹奖得主雅各布·齐默曼将加入 OpenAI。",
+      "link": "https://mp.weixin.qq.com/s/0bb0LgrriaKswv6hVJ4yag",
+      "source_file": "sources/2026-07-25_Claude Opus 5 正式发布；智元机器人已启动上市流程；特斯拉官宣 Cybercab 接入集_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-24",
       "title": "AI能拿菲尔兹了？Grok摸鱼8分钟，破解30年数学猜想！马斯克秒转",
