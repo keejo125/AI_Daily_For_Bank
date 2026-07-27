@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-07-27T07:05:23.931913",
-  "total": 896,
+  "updated_at": "2026-07-28T07:04:31.606299",
+  "total": 913,
   "articles": [
+    {
+      "date": "2026-07-27",
+      "title": "新榜单出炉，单周处理量破8万亿Token：Agnes公布大模型最新成绩单",
+      "source": "智东西",
+      "digest": "Agnes AI发布Agnes-2.5 Flash上线、旗舰模型Agnes-2.5 Pro Alpha即将开放体验及AgnesCode功能升级，单周处理量破8万亿Token。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_新榜单出炉，单周处理量破8万亿Token：Agnes公布大模型最新成绩单_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-27",
+      "title": "三分之一arXiv沦陷！CS论文65%被判「AI味」，数学仅0.7%",
+      "source": "新智元",
+      "digest": "最新研究显示arXiv计算机科学论文中65%被判定具有AI生成特征，数学领域仅0.7%，反映AI辅助研究在CS领域已极为普遍。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_三分之一arXiv沦陷！CS论文65%被判「AI味」，数学仅0.7%_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "老黄首推引爆开源论战：Anthropic 员工催 CUDA 开源，吴恩达反击：你可以不开源，但别阻止别人",
+      "source": "InfoQ",
+      "digest": "英伟达CEO黄仁勋X首秀引发开源论战，Anthropic员工呼吁CUDA开源，吴恩达反驳称不应阻止他人开源。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_老黄首推引爆开源论战：Anthropic 员工催 CUDA 开源，吴恩达反击：你可以不开源，但别阻止_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "Pinecone 推出 Nexus 引擎：为 AI 智能体整合业务上下文并生成结构化数据",
+      "source": "InfoQ",
+      "digest": "Pinecone Nexus正式可用，可将企业数据转为结构化查询层，跨智能体复用，提升回答精度同时降低Token开销。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_Pinecone 推出 Nexus 引擎：为 AI 智能体整合业务上下文并生成结构化数据_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "腾讯研究院AI速递 20260727",
+      "source": "腾讯研究院",
+      "digest": "本期涵盖：Claude Opus 5发布性能接近Fable 5价格减半、Claude Code系统提示词精简八成倡导上下文减法、ChatGPT Health上线可同步Apple Health与电子病历、OpenAI为Codex上线实时语音、黑森林实验室发布FLUX 3多模态模型。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_腾讯研究院AI速递 20260727_.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "世界模型再迎新突破，兔展智能UniWorld-View登顶WorldScore榜单",
+      "source": "机器之心",
+      "digest": "兔展智能联合北京大学、鹏城实验室研发的UniWorld-View登顶李飞飞团队WorldScore榜单，给AI一张图片即可推断未拍摄空间并生成全新视角视频。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_世界模型再迎新突破，兔展智能UniWorld-View登顶WorldScore榜单_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-27",
+      "title": "AI最尴尬的短板，中国科学院出手了",
+      "source": "量子位",
+      "digest": "中科院计算所发布知境社会心智大模型技术体系，将社会心智作为独立工程能力，解决AI在社交场景中读懂人心的能力缺失。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_AI最尴尬的短板，中国科学院出手了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-27",
+      "title": "搜索智能体也需要「操作系统」：SearchOS 开源多智能体协作框架",
+      "source": "机器之心",
+      "digest": "SearchOS将搜索状态做成可调度的基础设施，开源多智能体协作框架，为搜索智能体提供统一编排能力。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_搜索智能体也需要「操作系统」：SearchOS 开源多智能体协作框架_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "从 HAMi 到 HAMi-DRA：异构环境的算力资源管理实践｜AICon 深圳",
+      "source": "InfoQ",
+      "digest": "随着国产算力发展，异构算力集群管理问题浮出水面，HAMi-DRA提供异构环境算力资源管理实践方案。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_从 HAMi 到 HAMi-DRA：异构环境的算力资源管理实践｜AICon 深圳_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "这家银行将加大AI投入，每位员工或将拥有专属智能体",
+      "source": "银行科技研究社",
+      "digest": "星展银行计划加大AI投入,AI应用已创造约10亿新加坡元经济价值,将为每位员工配备专属智能体,客户姓名筛查时间缩短75%。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_这家银行将加大AI投入，每位员工或将拥有专属智能体_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "开泰银行CIO获批，其科技子公司已上线AI工具、开发成本压降90%",
+      "source": "银行科技研究社",
+      "digest": "开泰银行(中国)新任CIO林敏获批,其科技子公司已上线AI工具,开发成本压降90%,两任CIO均为行外引进科技型高管。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_开泰银行CIO获批，其科技子公司已上线AI工具、开发成本压降90%_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "英伟达集结产业链成立“开放安全AI联盟”",
+      "source": "财联社AI daily",
+      "digest": "英伟达联合产业链多方成立开放安全AI联盟，推动AI安全生态建设。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_英伟达集结产业链成立“开放安全AI联盟”_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "OpenAI 和 Anthropic，正在砸钱抢这个市场",
+      "source": "极客公园",
+      "digest": "OpenAI和Anthropic先后推出教师免费计划，以免费策略攻占教育市场，AI公司正效仿互联网模式跑马圈地。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_OpenAI 和 Anthropic，正在砸钱抢这个市场_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "企业出海，被中国信通院和腾讯重新定义了一次",
+      "source": "量子位",
+      "digest": "中国信通院联合腾讯推出企业出海AI解决方案，22位AI专家率先上岗WorkBuddy，重新定义出海服务模式。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_企业出海，被中国信通院和腾讯重新定义了一次_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "出海企业苦等的可信任AI营销产品，飞书深诺做出来了",
+      "source": "量子位",
+      "digest": "飞书深诺推出可信任AI营销产品，将AI接入真实业务流程，解决出海企业营销中ROI和增长决策的痛点。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_出海企业苦等的可信任AI营销产品，飞书深诺做出来了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "聚力数智政务 共建可信生态——可信政务智能体共性技术服务平台建设正式启动",
+      "source": "中国信通院CAICT",
+      "digest": "中国互联网协会联合中国信通院及7家科技企业启动可信政务智能体共性技术服务平台建设，搭建全国统一政务智能体公共服务底座。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_聚力数智政务 共建可信生态——可信政务智能体共性技术服务平台建设正式启动_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "梁文锋不满会谈纪要外流，DeepSeek 第二轮融资紧急叫停；特斯拉 20 亿美金收购 AI 硬件公司",
+      "source": "极客公园",
+      "digest": "DeepSeek第二轮融资因梁文锋不满会谈纪要外流而紧急叫停；特斯拉完成近20亿美元AI硬件公司收购；Hugging Face向OpenAI索要1亿美元算力。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_梁文锋不满会谈纪要外流，DeepSeek 第二轮融资紧急叫停；特斯拉 20 亿美金收购 AI 硬件公_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-26",
       "title": "GPT-5.6攻克25年量子信息难题，人类学者连夜「像素级」洗稿发论文",
