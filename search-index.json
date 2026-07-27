@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T07:04:31.606299",
+  "updated_at": "2026-07-28T07:10:52.661769",
   "total": 913,
   "articles": [
     {
@@ -39,16 +39,6 @@
       "digest": "Pinecone Nexus正式可用，可将企业数据转为结构化查询层，跨智能体复用，提升回答精度同时降低Token开销。",
       "link": "https://mp.weixin.qq.com/s/xxx",
       "source_file": "sources/2026-07-27_Pinecone 推出 Nexus 引擎：为 AI 智能体整合业务上下文并生成结构化数据_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-27",
-      "title": "腾讯研究院AI速递 20260727",
-      "source": "腾讯研究院",
-      "digest": "本期涵盖：Claude Opus 5发布性能接近Fable 5价格减半、Claude Code系统提示词精简八成倡导上下文减法、ChatGPT Health上线可同步Apple Health与电子病历、OpenAI为Codex上线实时语音、黑森林实验室发布FLUX 3多模态模型。",
-      "link": "https://mp.weixin.qq.com/s/xxx",
-      "source_file": "sources/2026-07-27_腾讯研究院AI速递 20260727_.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -169,6 +159,16 @@
       "digest": "DeepSeek第二轮融资因梁文锋不满会谈纪要外流而紧急叫停；特斯拉完成近20亿美元AI硬件公司收购；Hugging Face向OpenAI索要1亿美元算力。",
       "link": "https://mp.weixin.qq.com/s/xxx",
       "source_file": "sources/2026-07-27_梁文锋不满会谈纪要外流，DeepSeek 第二轮融资紧急叫停；特斯拉 20 亿美金收购 AI 硬件公_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-27",
+      "title": "腾讯研究院AI速递 20260727",
+      "source": "腾讯研究院",
+      "digest": "本期涵盖：Claude Opus 5发布性能接近Fable 5价格减半、Claude Code系统提示词精简八成倡导上下文减法、ChatGPT Health上线可同步Apple Health与电子病历、OpenAI为Codex上线实时语音、黑森林实验室发布FLUX 3多模态模型。",
+      "link": "https://mp.weixin.qq.com/s/xxx",
+      "source_file": "sources/2026-07-27_腾讯研究院AI速递 20260727_.md",
       "category": "其他",
       "is_model_related": false
     },
