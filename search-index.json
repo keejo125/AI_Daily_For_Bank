@@ -1,7 +1,187 @@
 {
-  "updated_at": "2026-07-28T07:10:52.661769",
-  "total": 913,
+  "updated_at": "2026-07-29T06:57:50.636882",
+  "total": 931,
   "articles": [
+    {
+      "date": "2026-07-28",
+      "title": "两小时复现顶会网络系统！厦大团队让论文自动变成可运行代码｜SIGCOMM 2026",
+      "source": "机器之心",
+      "digest": "厦门大学团队提出面向网络研究复现的多智能体框架RepLLM，可在两小时内将顶会论文自动转化为可运行代码，入选SIGCOMM 2026。",
+      "link": "https://mp.weixin.qq.com/s/1ATNL-syy29yKcxk89gPIg",
+      "source_file": "sources/2026-07-28_两小时复现顶会网络系统！厦大团队让论文自动变成可运行代码｜SIGCOMM 2026_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "国产AI登上《Cell》主刊！搭建统一生物表征空间实现虚拟试药",
+      "source": "量子位",
+      "digest": "国内首个登上《Cell》主刊的AI虚拟细胞研究，搭建统一生物表征空间实现虚拟试药，标志着AI for Science取得重大突破。",
+      "link": "https://mp.weixin.qq.com/s/fKDRskz3olzSKwmJXRAqHw",
+      "source_file": "sources/2026-07-28_国产AI登上《Cell》主刊！搭建统一生物表征空间实现虚拟试药_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Qoder Voice 全新发布，国内首个实时语音交互智能体",
+      "source": "Qoder",
+      "digest": "Qoder Voice全面升级，支持全双工实时语音交互，常驻聊天气泡可在任意位置唤起，为国内首个实时语音交互智能体产品。",
+      "link": "https://mp.weixin.qq.com/s/v8dKt6vdoHvwiVCeLhItAw",
+      "source_file": "sources/2026-07-28_Qoder Voice 全新发布，国内首个实时语音交互智能体_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "最新！Kimi K3上线阿里千问AI平台",
+      "source": "阿里云开发者",
+      "digest": "月之暗面开源模型Kimi K3正式上线阿里千问AI平台，用户可通过千问平台直接调用K3的推理与代码能力。",
+      "link": "https://mp.weixin.qq.com/s/aWfAyvtr_1xjUurMHhKnEw",
+      "source_file": "sources/2026-07-28_最新！Kimi K3上线阿里千问AI平台_阿里云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "「业务宪法」：作为银行AI隐形底座的本体论架构与实践",
+      "source": "中国金融电脑",
+      "digest": "探讨银行AI系统中本体论架构的应用，将业务规则构建为「业务宪法」作为智能系统的隐形底座，确保AI决策符合业务逻辑与合规要求。",
+      "link": "https://mp.weixin.qq.com/s/A9TGTjHCOLg4600fktqlbQ",
+      "source_file": "sources/2026-07-28_“业务宪法”：作为银行AI 隐形底座的本体论架构与实践_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "超越效率工具，智能体驱动的新一轮业态变革——访中关村智联软件服务业质量创新联盟秘书长肖然",
+      "source": "中国金融电脑",
+      "digest": "中关村智联秘书长肖然访谈：智能体正从效率工具升级为驱动新一轮业态变革的核心力量，企业需构建智能体时代的组织与技术能力。",
+      "link": "https://mp.weixin.qq.com/s/J1dFOjbM5dVTJIq-xLpFXw",
+      "source_file": "sources/2026-07-28_超越效率工具，智能体驱动的新一轮业态变革——访中关村智联软件服务业质量创新联盟秘书长肖然_中国金融电脑.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "月之暗面开源 Kimi K3 模型，2.8 万亿参数；英伟达牵头成立开放安全 AI 联盟；QQ 宠物宣布回归，接入混元大模型｜极客早知道",
+      "source": "极客公园",
+      "digest": "极客早知道综合资讯：Kimi K3开源2.8万亿参数模型；英伟达牵头成立开放安全AI联盟；谷歌正训练Gemini 4；奥尔特曼称人类已进入奇点时代。",
+      "link": "https://mp.weixin.qq.com/s/l8D-lNi4xmnWHR_XkKvpXg",
+      "source_file": "sources/2026-07-28_月之暗面开源 Kimi K3 模型，2.8 万亿参数；英伟达牵头成立开放安全 AI 联盟；QQ 宠物_极客公园.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-28",
+      "title": "《政务智能体发展研究报告（2026年）》发布",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院发布政务智能体发展研究报告，系统梳理政务领域智能体应用现状、技术架构与发展趋势。",
+      "link": "https://mp.weixin.qq.com/s/grvr3RXdVOMwOpIATi7ETw",
+      "source_file": "sources/2026-07-28_《政务智能体发展研究报告（2026年）》发布_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "AI创作的下半场：从模型之战到系统之战｜甲子光年",
+      "source": "甲子光年",
+      "digest": "AI创作赛道正从模型层转移到系统层，各家围绕协作编排、上下文管理和Agent调度构建创作系统能力。",
+      "link": "https://mp.weixin.qq.com/s/oHMnUBzo1NNMFa27Ga7_lA",
+      "source_file": "sources/2026-07-28_AI创作的下半场：从模型之战到系统之战｜甲子光年_甲子光年.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "不止Kimi K3，北京AI正在补上Action拼图",
+      "source": "智东西",
+      "digest": "北京AI产业同时押中Token与Action两条路线，以Kimi K3开源和多个Agent产品为代表，构建从模型到行动的完整AI产业链。",
+      "link": "https://mp.weixin.qq.com/s/ONzE7XEnxpC69GPkLz9gPA",
+      "source_file": "sources/2026-07-28_不止Kimi K3，北京AI正在补上Action拼图_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "微软CEO纳德拉最新警告：单押一个大模型，是把公司命门交出去",
+      "source": "量子位",
+      "digest": "微软CEO纳德拉警告企业不应把所有希望押在单一模型上，最聪明的模型可以租但公司的「脑回路」必须自己留着，应构建多模型策略和自主技术护城河。",
+      "link": "https://mp.weixin.qq.com/s/CzKQCZsuAqGHD5k5K6NBUQ",
+      "source_file": "sources/2026-07-28_微软CEO纳德拉最新警告：单押一个大模型，是把公司命门交出去_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "中国信通院程莹等：关于智能体治理的十项基本判断",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院发布关于智能体治理的十项基本判断，涵盖安全、责任、透明度、可控性等核心治理维度。",
+      "link": "https://mp.weixin.qq.com/s/AkEq2FNLrYQgIoBd5vwtEQ",
+      "source_file": "sources/2026-07-28_中国信通院程莹等：关于智能体治理的十项基本判断_中国信通院CAICT.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "中国医疗AI拿下全球第一！14亿人的微信「私人医生」重磅升级",
+      "source": "新智元",
+      "digest": "微信「私人医生」AI功能重磅升级，中国医疗AI在全球评测中排名第一，实现个性化健康管理与辅助问诊。",
+      "link": "https://mp.weixin.qq.com/s/p9-RRmE1oPJVrpDJsD8tWQ",
+      "source_file": "sources/2026-07-28_中国医疗AI拿下全球第一！14亿人的微信「私人医生」重磅升级_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "奥尔特曼最新访谈：别指望AI开启每周4小时工作制",
+      "source": "智东西",
+      "digest": "OpenAI CEO奥尔特曼在最新访谈中表示AI不会开启每周4小时工作制，AI将改变工作本质而非减少工作时长。",
+      "link": "https://mp.weixin.qq.com/s/bXVJcuZK659bO8NLCovQ-Q",
+      "source_file": "sources/2026-07-28_奥尔特曼最新访谈：别指望AI开启每周4小时工作制_智东西.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "卖Token还是卖结果：AI商业模式的几个悖论",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院分析AI商业模式中的成本、层级、责任与开闭源四大悖论，指出智能正在快速商品化而利润仅停留在少数环节。",
+      "link": "https://mp.weixin.qq.com/s/BAbLOZrw1D-48iYp9SJung",
+      "source_file": "sources/2026-07-28_卖 Token还是卖结果：AI 商业模式的几个悖论_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "斯坦福新研究：AI尚未冲击就业，但应届生得注意了",
+      "source": "量子位",
+      "digest": "斯坦福大学最新研究发现AI尚未造成大规模就业冲击，但应届毕业生进入职场的难度和竞争正在增加。",
+      "link": "https://mp.weixin.qq.com/s/-YMAQaUhgJ2umfb4SugPXA",
+      "source_file": "sources/2026-07-28_斯坦福新研究：AI尚未冲击就业，但应届生得注意了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "菲尔兹奖得主预警：AI可能杀死数学！",
+      "source": "新智元",
+      "digest": "菲尔兹奖得主警告AI对数学研究的潜在冲击，认为数学家正面临AlphaGO时刻，AI可能从根本上改变数学研究的范式。",
+      "link": "https://mp.weixin.qq.com/s/tTm0p8_4Wb261Ja20kbO8w",
+      "source_file": "sources/2026-07-28_菲尔兹奖得主预警：AI可能杀死数学！_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "腾讯研究院AI速递 20260728",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院每日AI速递，汇总当日AI领域重要动态，强调明确人机边界才能让Agent高效工作。",
+      "link": "https://mp.weixin.qq.com/s/WyEL4r9pYK5kaiEy9joK_Q",
+      "source_file": "sources/2026-07-28_腾讯研究院AI速递 20260728_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-27",
       "title": "新榜单出炉，单周处理量破8万亿Token：Agnes公布大模型最新成绩单",
