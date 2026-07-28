@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T07:08:14.238450",
+  "updated_at": "2026-07-29T07:16:20.681709",
   "total": 931,
   "articles": [
     {
@@ -9,6 +9,16 @@
       "digest": "微软CEO纳德拉警告企业不应把所有希望押在单一模型上，最聪明的模型可以租但公司的「脑回路」必须自己留着，应构建多模型策略和自主技术护城河。",
       "link": "https://mp.weixin.qq.com/s/CzKQCZsuAqGHD5k5K6NBUQ",
       "source_file": "sources/2026-07-28_微软CEO纳德拉最新警告：单押一个大模型，是把公司命门交出去_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-28",
+      "title": "奥尔特曼最新访谈：别指望AI开启每周4小时工作制",
+      "source": "智东西",
+      "digest": "OpenAI CEO奥尔特曼在最新访谈中表示AI不会开启每周4小时工作制，AI将改变工作本质而非减少工作时长。",
+      "link": "https://mp.weixin.qq.com/s/bXVJcuZK659bO8NLCovQ-Q",
+      "source_file": "sources/2026-07-28_奥尔特曼最新访谈：别指望AI开启每周4小时工作制_智东西.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -129,16 +139,6 @@
       "digest": "微信「私人医生」AI功能重磅升级，中国医疗AI在全球评测中排名第一，实现个性化健康管理与辅助问诊。",
       "link": "https://mp.weixin.qq.com/s/p9-RRmE1oPJVrpDJsD8tWQ",
       "source_file": "sources/2026-07-28_中国医疗AI拿下全球第一！14亿人的微信「私人医生」重磅升级_新智元.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-07-28",
-      "title": "奥尔特曼最新访谈：别指望AI开启每周4小时工作制",
-      "source": "智东西",
-      "digest": "OpenAI CEO奥尔特曼在最新访谈中表示AI不会开启每周4小时工作制，AI将改变工作本质而非减少工作时长。",
-      "link": "https://mp.weixin.qq.com/s/bXVJcuZK659bO8NLCovQ-Q",
-      "source_file": "sources/2026-07-28_奥尔特曼最新访谈：别指望AI开启每周4小时工作制_智东西.md",
       "category": "其他",
       "is_model_related": false
     },
