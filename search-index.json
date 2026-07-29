@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-07-29T07:16:20.681709",
-  "total": 931,
+  "updated_at": "2026-07-30T06:51:56.236502",
+  "total": 953,
   "articles": [
+    {
+      "date": "2026-07-29",
+      "title": "Hugging Face公开首个AI攻击全过程",
+      "source": "新智元",
+      "digest": "Hugging Face联合研究团队首次系统性公开GPT类模型的攻击全过程，揭示模型作弊、越狱等安全漏洞，连奥特曼也为之警觉。",
+      "link": "https://mp.weixin.qq.com/s/6-NCMvcSjJxckRE8XdT0Nw",
+      "source_file": "sources/2026-07-29_吓到奥特曼，暂停训练GPT-6？Hugging Face公开首个AI攻击全过程_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "全球首款2nm GPU 炸场,OpenAI、Meta、微软站台!AMD 要拆掉英伟达护城河?",
+      "source": "InfoQ",
+      "digest": "AMD发布全球首款2nm制程GPU,OpenAI、Meta、微软站台支持,以开放生态挑战英伟达在AI芯片市场的统治地位。",
+      "link": "https://mp.weixin.qq.com/s/N9uNy2P9OfDAn9aEuD-Cqg",
+      "source_file": "sources/2026-07-29_全球首款2nm GPU 炸场，OpenAI、Meta、微软站台！AMD 要拆掉英伟达护城河？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "OpenAI和Anthropic罕见联手:AI,该踩刹车了",
+      "source": "量子位",
+      "digest": "OpenAI与Anthropic罕见联合发声,共同呼吁为AI发展减速。千余名AI研究者与从业者联名签署公开信,警告前沿AI系统正在逼近危险能力阈值,要求全行业暂停训练更强大模型直至安全措施到位。",
+      "link": "https://mp.weixin.qq.com/s/apLZbbUvNaFNGYjjrAYWUQ",
+      "source_file": "sources/2026-07-29_OpenAI和Anthropic罕见联手：AI，该踩刹车了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "300 微秒调平 MoE 专家负载!小红书 UltraEP 逼近 94.3% 理想训推吞吐",
+      "source": "机器之心",
+      "digest": "小红书提出UltraEP框架,在300微秒内完成MoE专家负载均衡调度,训练吞吐逼近94.3%理想上限,为生产级AI Infra提供实时均衡方案。",
+      "link": "https://mp.weixin.qq.com/s/nwaOjBKVEDtH_cBlcym2KA",
+      "source_file": "sources/2026-07-29_300 微秒调平 MoE 专家负载！小红书 UltraEP 逼近 94.3% 理想训推吞吐_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "告别「小道消息」与研发黑盒!上海AI实验室探索「全开放预训练」开源模式",
+      "source": "机器之心",
+      "digest": "上海AI实验室公开全流程预训练方案、数据配比与训练日志,探索「全开放预训练」开源模式,告别研发黑盒,为基模架构创新提供完整参考。",
+      "link": "https://mp.weixin.qq.com/s/OFz76W1pQtjR_JeV_WACqg",
+      "source_file": "sources/2026-07-29_告别「小道消息」与研发黑盒！上海AI实验室探索「全开放预训练」开源模式_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "少即是多,这次轮到大模型来证明",
+      "source": "机器之心",
+      "digest": "国产Ling-3.0-flash模型发布,124B参数仅激活5.1B,在主流评测中超越同规模稠密模型,证明稀疏MoE路线的推理效率优势。",
+      "link": "https://mp.weixin.qq.com/s/E2Tl3SSalJf5Bu5u5eLchg",
+      "source_file": "sources/2026-07-29_少即是多，这次轮到大模型来证明_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Kimi K3竟是GPT-2的22580倍,博主「肝」48小时发现:七年进化大模型不只是参数暴涨",
+      "source": "机器之心",
+      "digest": "技术博主耗时48小时深入分析发现,Kimi K3的参数量相当于22580个GPT-2 Small,揭示了七年大模型演化中参数规模的指数级爆炸。",
+      "link": "https://mp.weixin.qq.com/s/1ZjNlIoFT5m6HBVxAGHQyg",
+      "source_file": "sources/2026-07-29_Kimi K3竟是GPT-2的22580倍，博主「肝」48小时发现：七年进化大模型不只是参数暴涨_机器之心.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "GLM-5.2推理速度飙6.3倍,贾扬清一句话造的Jarvis推理引擎亮相",
+      "source": "量子位",
+      "digest": "智谱GLM-5.2搭载贾扬清新创公司Lepton AI打造的Jarvis推理引擎,推理速度提升6.3倍,首批三个成果均由AI独立编写完成。贾扬清同时宣布离开英伟达再次创业。",
+      "link": "https://mp.weixin.qq.com/s/vj05N6eXFuC30S2jw2DnMg",
+      "source_file": "sources/2026-07-29_贾扬清离开英伟达再创业！GLM-5.2速度飙6.3倍，一句话造的推理引擎_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-07-29",
+      "title": "刚刚,Agnes国内API节点来了!这头撸代码的AI怪兽彻底解禁",
+      "source": "新智元",
+      "digest": "Agnes国内API节点正式上线,大幅降低延迟,国内开发者可直接调用这头「撸代码的AI怪兽」,AI编码体验全面解禁。",
+      "link": "https://mp.weixin.qq.com/s/6E6ws4_FeN8mA1cdkB666w",
+      "source_file": "sources/2026-07-29_刚刚，Agnes国内API节点来了！这头撸代码的AI怪兽彻底解禁_新智元.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "86.3%，突围CyberGym！超越OpenAI、Anthropic的竟是一家中国AI公司",
+      "source": "机器之心",
+      "digest": "中国AI安全公司在国际网络安全攻防评测CyberGym中以86.3%得分率突围，超越OpenAI、Anthropic团队，跻身全球前四、国内第一，AI安全评测规则正在改写。",
+      "link": "https://mp.weixin.qq.com/s/VGKMyIO9LdbNfHc7Id1idA",
+      "source_file": "sources/2026-07-29_86.3%，突围CyberGym！超越OpenAI、Anthropic的竟是一家中国AI公司_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "三步训练法+强化学习，vivo新框架把AI修图从\"概率生成\"训练成了\"有审美的修图师\"",
+      "source": "量子位",
+      "digest": "vivo推出SmartPhotoCrafter框架,通过三步训练法结合强化学习,将AI修图从概率生成训练为具备审美能力的修图师。",
+      "link": "https://mp.weixin.qq.com/s/3qJg-Evk1QjnGiP0wvlWZw",
+      "source_file": "sources/2026-07-29_三步训练法+强化学习，vivo新框架把AI修图从“概率生成”训练成了“有审美的修图师”_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "首个鸿蒙PC开源AI统一工作台JiuwenSwarm,办公编程一站式搞定",
+      "source": "量子位",
+      "digest": "首个面向鸿蒙PC的开源AI统一工作台JiuwenSwarm发布,支持多智能体协作,一站式覆盖办公与编程场景。",
+      "link": "https://mp.weixin.qq.com/s/SKK48_tbGo85lvzzcTutbg",
+      "source_file": "sources/2026-07-29_首个鸿蒙PC开源AI统一工作台JiuwenSwarm，办公编程一站式搞定_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Qoder CLI 上线 /subtask:子任务后台跑,主会话继续干",
+      "source": "Qoder",
+      "digest": "Qoder CLI上线/subtask命令,支持子任务后台异步执行,主会话继续干不受影响,解决AI编程中「等待代际」痛点。",
+      "link": "https://mp.weixin.qq.com/s/aZ1s4me6eB0xbhkCw1UPCQ",
+      "source_file": "sources/2026-07-29_Qoder CLI 上线 _subtask：子任务后台跑，主会话继续干_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "AI队友正在进入公司,腾讯云想重构下一代研发工作流",
+      "source": "智东西",
+      "digest": "腾讯云CodeBuddy推出NPC机制,AI以Git仓库为原生记忆,按需召唤、自主承接全链路研发任务,从Vibe Coding迈向AI工程化协作。",
+      "link": "https://mp.weixin.qq.com/s/qE1tohYn3q6bU60Hn2afQQ",
+      "source_file": "sources/2026-07-29_AI队友正在进入公司，腾讯云想重构下一代研发工作流_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "微众银行日均Token消耗量超200亿!AI数字员工达80多个",
+      "source": "银行科技研究社",
+      "digest": "微众银行AI布局新进展:日均Token消耗量突破200亿,AI数字员工达80多个,较2025年底的50亿翻4倍,位居银行业AI应用第一梯队。",
+      "link": "https://mp.weixin.qq.com/s/gWAixEwjf-Mb5nRVayVmLw",
+      "source_file": "sources/2026-07-29_微众银行日均Token消耗量超200亿！AI数字员工达80多个_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "AI巨头成\"焚书\"祸首?马斯克火速撇清:已要求SpaceXAI无损扫描书籍",
+      "source": "财联社AI daily",
+      "digest": "AI训练数据版权争议升级,多家人工智能公司被指未经授权扫描书籍作训练语料,马斯克回应SpaceXAI已有无损扫描方案。",
+      "link": "https://mp.weixin.qq.com/s/ip_qYBt9vY6nInqX9F1FLA",
+      "source_file": "sources/2026-07-29_AI巨头成“焚书”祸首？马斯克火速撇清：已要求SpaceXAI无损扫描书籍_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "400个业务场景、300个智能体:一家零售公司的AI平台是怎么造出来的",
+      "source": "Qoder",
+      "digest": "母婴零售品牌孩子王基于Qoder搭建AI原生开发平台,落地400个业务场景、300个智能体,探索零售企业的AI平台化转型路径。",
+      "link": "https://mp.weixin.qq.com/s/Oe4liCfOUVVpp3lfW9qjaQ",
+      "source_file": "sources/2026-07-29_400个业务场景、300个智能体：一家零售公司的AI平台是怎么造出来的_Qoder.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "编程界新分水岭:Uncle Bob说\"绝不读AI写的代码\",Hashimoto却说他\"逐行阅读\",你站谁?",
+      "source": "InfoQ",
+      "digest": "Uncle Bob与Hashimoto就「是否阅读AI生成的代码」展开激烈分歧,折射AI Coding时代对程序员角色的根本性反思。",
+      "link": "https://mp.weixin.qq.com/s/8TBztl_BG9CDT_MVmwAwqQ",
+      "source_file": "sources/2026-07-29_编程界新分水岭：Uncle Bob说“绝不读AI写的代码”，Hashimoto却说他“逐行阅读”，你_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "当AI开始替你花钱,这家卡组织,正在重新定义AI时代的钱怎么花",
+      "source": "机器之心",
+      "digest": "当AI智能体开始代替人类消费决策,Mastercard正重新设计AI时代的支付体系,探讨智能体经济的信任基础设施。",
+      "link": "https://mp.weixin.qq.com/s/pVsAawHaakqB0ocxnOYhZQ",
+      "source_file": "sources/2026-07-29_当AI开始替你花钱，这家卡组织，正在重新定义AI时代的钱怎么花_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "大模型、机器人之外,社会智能补上AGI第三极",
+      "source": "机器之心",
+      "digest": "学界提出「社会智能」作为AGI第三极,认为除大模型和机器人外,理解社会规范与意图推断能力是通用智能的关键缺失维度。",
+      "link": "https://mp.weixin.qq.com/s/jQzg72J_xIcI-R-JOz6gPg",
+      "source_file": "sources/2026-07-29_大模型、机器人之外，社会智能补上AGI第三极_机器之心.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "苹果市值首次突破 5 万亿美元;马斯克财富五天缩水 8800 亿;鸿蒙 HarmonyOS 7 百项更新曝光|极客早知道",
+      "source": "极客公园",
+      "digest": "苹果市值首破5万亿美元;马斯克财富五天缩水8800亿;HarmonyOS 7百项更新曝光;英伟达500亿美元租赁德州数据中心;Altman预言AI将像神灯精灵。",
+      "link": "https://mp.weixin.qq.com/s/oYtJZyyds0asy9zS_cJyXA",
+      "source_file": "sources/2026-07-29_苹果市值首次突破 5 万亿美元；马斯克财富五天缩水 8800 亿；鸿蒙 HarmonyOS 7 百项_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-29",
+      "title": "腾讯研究院AI速递 20260729",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院每日AI资讯速递,涵盖AGI溯因跃迁能力、语言模型推理结构、联邦学习安全等前沿话题。",
+      "link": "https://mp.weixin.qq.com/s/xckzWImoavjwBa8FUMCYBQ",
+      "source_file": "sources/2026-07-29_腾讯研究院AI速递 20260729_.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-28",
       "title": "微软CEO纳德拉最新警告：单押一个大模型，是把公司命门交出去",

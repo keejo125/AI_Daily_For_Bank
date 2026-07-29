@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-07-29",
+      "weekday": "周三",
+      "stats": {
+        "国际": 3,
+        "国内": 11,
+        "同业": 1,
+        "其他": 7,
+        "total": 22
+      },
+      "summary": "Hugging Face公开首个AI攻击全过程/全球首款2nm GPU 炸场,OpenAI、Meta、微软站台!AMD 要拆掉英伟达护城河?/300 微秒..."
+    },
+    {
       "date": "2026-07-28",
       "weekday": "周二",
       "stats": {
