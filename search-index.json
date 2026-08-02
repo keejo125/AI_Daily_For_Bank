@@ -1,7 +1,187 @@
 {
-  "updated_at": "2026-07-30T06:51:56.236502",
-  "total": 953,
+  "updated_at": "2026-08-02T23:51:18.499204",
+  "total": 971,
   "articles": [
+    {
+      "date": "2026-08-01",
+      "title": "AI大厂，打起了“Token 奶茶大战”",
+      "source": "36氪",
+      "digest": "AI公司集体降价。OpenAI将GPT-5.6 Luna API价格下调80%，Anthropic紧随其后。这场Token奶茶大战反映了AI大模型市场从技术竞赛转向商业竞争的拐点。\n\n对银行研发团队而言，API调用成本急剧下降意味着AI应用的ROI门槛大幅降低。",
+      "link": "https://36kr.com/p/3920563948852870?channel=skills",
+      "source_file": "sources/2026-08-01_AI大厂，打起了“Token 奶茶大战”_36氪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-01",
+      "title": "奥特曼承认：高估了AI抢饭碗！黄仁勋：失业论完全搞反了",
+      "source": "36氪",
+      "digest": "OpenAI CEO奥特曼坦承高估了AI短期内对就业市场的冲击速度。NVIDIA CEO黄仁勋则认为AI失业论完全搞反了方向——AI不是来抢饭碗的，而是来创造更多饭碗的。\n\n对于银行等金融机构而言，AI转型不应以减员为目标，而应以增效为核心。",
+      "link": "https://36kr.com/p/3920419961007492?channel=skills",
+      "source_file": "sources/2026-08-01_奥特曼承认：高估了AI抢饭碗！黄仁勋：失业论完全搞反了_36氪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-01",
+      "title": "AI来了，大厂中层不好混了",
+      "source": "36氪",
+      "digest": "AI正在重塑大厂的管理层级。字节跳动率先更新领导力原则，强调管理者必须下一线；腾讯压缩汇报层级。当AI可以承担信息汇总、进度追踪等传统中层职能时，纯粹管人的中层价值被大幅稀释。\n\n未来中层需要转型为AI增强型领导者——不仅管理团队，更要管理人+AI的混合工作流。对银行研发团队而言，技术管理者的核心价值将从分配任务转向定义问题和把控质量。",
+      "link": "https://36kr.com/p/3920274115866249?channel=skills",
+      "source_file": "sources/2026-08-01_AI来了，大厂中层不好混了_36氪.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-01",
+      "title": "这家银行设立AI转型战略集团、负责人确定，内部使用的智能体已超1000个",
+      "source": "银行科技研究社",
+      "digest": "韩国IBK企业银行将原数字集团重组为人工智能转型战略集团，内部使用的AI智能体已超1000个。展示了银行业AI转型从工具应用走向组织重构的深层趋势。",
+      "link": "https://mp.weixin.qq.com/s/dkLc6mMvYlqdUVL-JwVDuA",
+      "source_file": "sources/2026-08-01_这家银行设立AI转型战略集团、负责人确定，内部使用的智能体已超1000个_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-01",
+      "title": "9点1氪丨马斯克回应特斯拉剥离中国业务；国内航线燃油附加费将再次下调；中国最高薪本科专业易主",
+      "source": "36氪",
+      "digest": "综合简讯，包含多条科技快讯",
+      "link": "https://36kr.com/p/3920241240419720?channel=skills",
+      "source_file": "sources/2026-08-01_9点1氪丨马斯克回应特斯拉剥离中国业务；国内航线燃油附加费将再次下调；中国最高薪本科专业易主_36氪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "JetBrains Open-Sources KotlinLLM: Smart Macros That Generate Kotlin Source Code at Runtime and Hot-Reload It Through JDI",
+      "source": "MarkTechPost",
+      "digest": "JetBrains Research开源了KotlinLLM，这是一个为Kotlin/JVM项目设计的IntelliJ IDEA插件，引入了\"Smart Macros\"语言特性，允许在运行时通过LLM生成Kotlin源代码并通过JDI（Java调试接口）进行热重载。\n\n其公共API设计精简：asLlm<F,T>(from, hint)将输入转换为类型化值，mockLlm<T>()生成接口的有状态实现。运行时循环中，插件扫描asLlm和mockLlm调用，在JDI下启动运行配置并注册断点。当生成逻辑不匹配运行时场景时，插件捕获运行时值和类型信息，LLM代理提交代码更新，编译后通过类重定义重试原始调用。\n\n在适配的Spring Petclinic项目评估中，18个asLlm调用点的24个应用场景全部完成，热重载成功率100%，编译/重定义仅增加约1%运行时开销。该工具需要IntelliJ IDEA 2025.2.x、JDK 21和OpenAI API密钥，以Apache 2.0许可发布。\n\nKotlinLLM定位为研究原型而非生产运行时，但其输出是可部署的——行为生成后，目标项目可独立编译运行而无需再次LLM请求。最适合拥有大量JVM/Kotlin代码库的金融科技和银行行业。",
+      "link": "https://www.marktechpost.com/2026/07/31/jetbrains-research-open-sources-kotlinllm-intellij-plugin-kotlin-runtime-llm/",
+      "source_file": "sources/2026-07-31_JetBrains Open-Sources KotlinLLM_ Smart Macros Tha_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Nous Research Ships Three Integration Paths for Hermes Agent and Buzz, Block’s Open Source Nostr Workspace for Humans and Agents",
+      "source": "MarkTechPost",
+      "digest": "Nous Research发布了Hermes Agent与Buzz的三种集成路径。Buzz是Block公司（Square母公司）推出的开源、可自托管工作空间，构建于Nostr协议之上，让人类和AI代理共享同一频道。在Nostr架构中，每条消息都是中继上的签名事件，每个参与者都是密钥对，消除了传统bot-token模型，代理拥有独立身份、频道成员资格和审计轨迹。\n\n三种集成方式分别是：一、Buzz Desktop托管运行时，在本地启动Hermes作为预设harness，通过ACP over stdio通信；二、中继桥接，通过buzz-acp harness经WebSocket连接频道到Hermes ACP；三、原生网关平台，通过内置插件使Buzz成为Hermes的标准消息平台，支持频道、私信、mention gating、线程回复、反应、图片和定时投递。\n\n在网关路径上，入站通过NIP-42认证的Nostr WebSocket，使用BIP-340签名，自动降级到CLI轮询（默认4秒间隔）。默认配置注重隐私：require_mention开启、allow-list强制执行、工具日志抑制。Buzz为Apache-2.0许可（18.8k stars），Hermes Agent为MIT许可，均可自托管部署。",
+      "link": "https://www.marktechpost.com/2026/07/31/nous-research-ships-three-integration-paths-for-hermes-agent-and-buzz-blocks-open-source-nostr-workspace-for-humans-and-agents/",
+      "source_file": "sources/2026-07-31_Nous Research Ships Three Integration Paths for He_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "OpenAI 硬件路线图曝光：第一台硬件没有屏幕，手机 2027 上半年量产",
+      "source": "极客公园",
+      "digest": "OpenAI硬件生态版图加速曝光，核心战略是构建围绕agent的多形态设备矩阵。首款产品是与苹果前首席设计师Jony Ive合作的便携无屏音箱，定价200-300美元，配备摄像头和自主运动机械结构，预计2027年初上市。手机量产时间提前至2027上半年，采用定制联发科天玑9600、台积电N2P制程。\n\n手机规格的核心不是屏幕而是ISP——增强HDR管线和两颗独立AI处理器（分别处理视觉和语言），设计理念从\"人如何看设备\"转向\"设备如何看世界\"。供应链方面，立讯精密独家代工，舜宇光学拿下两款设备摄像头模组订单，硬件团队已超400名前苹果员工。\n\nOpenAI硬件负责人Richard Ho指出，手机不是为agent设计的，agent需要在操作系统层有完整权限来获取用户实时状态。郭明錤预测2027-2028两年合计出货约3000万台。主要风险来自苹果7月10日的商业机密诉讼及禁令申请，可能拖慢进度。OpenAI的目标不是市场份额，而是证明\"agent优先的系统跑得起来\"。",
+      "link": "http://www.geekpark.net/news/368198",
+      "source_file": "sources/2026-07-31_OpenAI 硬件路线图曝光：第一台硬件没有屏幕，手机 2027 上半年量产_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "图灵奖得主朱迪亚·珀尔：大模型会讲因果，因为人类替它解释过世界，但无法通向AGI",
+      "source": "Solidot",
+      "digest": "图灵奖得主朱迪亚·珀尔在2026年7月27日发布的长篇播客访谈中，系统阐述了他对大语言模型与通用人工智能关系的判断。访谈涵盖其科学启蒙、贝叶斯网络、因果阶梯等核心学术思想。\n\n珀尔认为，当前LLM表面上能够进行因果推理，但实际上只是在复述训练数据中人类已有的因果解释，并不真正理解干预和反事实推理。他提出的因果阶梯包含三个层级：观察（相关性）、干预（行动）和反事实（想象），当前LLM主要停留在第一层级。\n\n珀尔强调，要实现AGI，需要让机器自主从观察中构建因果模型，而非仅在相关性层面做模式匹配。真正的因果推理要求机器能回答\"如果当时采取不同行动会怎样\"这类反事实问题，这需要内在的世界模型。他对仅靠扩大语言模型规模实现AGI持悲观态度，认为需要在因果表征和推理机制上取得根本性突破。",
+      "link": "https://www.solidot.org/story?sid=84970",
+      "source_file": "sources/2026-07-31_图灵奖得主朱迪亚·珀尔：大模型会讲因果，因为人类替它解释过世界，但无法通向AGI_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "自构建智能体：一项 LangChain4j 实验",
+      "source": "InfoQ",
+      "digest": "LangChain4j团队进行了一项元实验：将框架文档交给代码助手，要求其参照自身构建一个多智能体系统。实验验证了LangChain4j的两大优势：API足够清晰使模型可直接使用，框架提供充分协调能力使生成系统能端到端运行。\n\n代码助手选择了LangChain4j的监督者模式（Supervisor Agent），设计了包含代码探索、实现规划、代码编写/编辑和构建/测试的多智能体编码系统。实验还对LangChain4j新增的监控工具进行了压力测试，在让一个AI构建另一个AI的过程中深入了解框架内部运作机制。\n\n该项目已开源发布，展示了\"氛围编码\"（Vibe Coding）在智能体系统构建中的应用潜力。实验表明，当框架API设计足够清晰时，LLM可以仅凭文档完成复杂系统的自我克隆，这对框架设计者具有重要启示：API的可理解性直接影响AI辅助开发的效率上限。",
+      "link": "https://www.infoq.cn/article/QSMNwS8RolhIE9sA2MbE",
+      "source_file": "sources/2026-07-31_自构建智能体：一项 LangChain4j 实验_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Agent 形态一天一个样，Infra 到底该为谁而建？| 请回答 WAIC 2026",
+      "source": "InfoQ",
+      "digest": "在WAIC 2026 InfoQ直播间，清程极智联合创始人师天麾提出判断：Agent Infra长期看一定会变得重要，但现在还没有到真正爆发的阶段。当前AI Infra最确定的方向仍是围绕每一次模型调用，提高Token生产和交付效率。\n\n师天麾认为Agent发展不及预期的原因并非模型能力不足，而是模型迭代过快——企业投入数月搭建的Agent系统可能被下一代模型的原生能力部分替代，工程折旧速度加快。但Agent仍有两个现实优势：稳定和成本可控。企业可选择较小开源模型叠加行业数据和微调，在特定任务上接近更大通用模型，同时显著降低推理成本。\n\n当前Agent Infra更多以传统推理基础设施形式存在：缩短API延迟、提高吞吐量和成功率、降低单次调用成本。不同业务的输入输出比例差异明显，Coding场景可能达数十比一。企业不能只设Token上限，还需理解输入输出结构，才能有效控制成本。",
+      "link": "https://www.infoq.cn/article/spxwy17ZcfM3BIctR4PL",
+      "source_file": "sources/2026-07-31_Agent 形态一天一个样，Infra 到底该为谁而建？_ 请回答 WAIC 2026_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Agent 成本失控背后：上下文、人工审核与维护成本正在被低估｜请回答 WAIC 2026",
+      "source": "InfoQ",
+      "digest": "在WAIC 2026 InfoQ直播间，优刻得CTO王凯和焱融科技CTO张文涛深入讨论了Agent基础设施成本问题。他们指出，Agent任务背后包含目标理解、任务拆解、信息检索、工具调用、上下文读取、记忆存储和结果验证等多环节，任何偏差都可能导致重新规划和执行，模型单价虽不断下降，但企业调用总量和维护成本持续上涨。\n\n从基础设施角度看，Agent系统带来四重压力：并发量提高、上下文变长、调用链变长、成本结构复杂化。其中缓存命中率是最容易被低估的成本指标——缓存命中部分输入成本仅为重新计算的约十分之一，但命中率从90%降至80%时，未命中比例从10%增至20%，实际成本增加远超数字表面。\n\n低价Token不一定意味着更低最终成本，频繁超时和重试会带来额外开销。成熟的多模型路由系统不能只选\"此刻最便宜\"的服务，需同时考虑实时负载、请求成功率、模型质量和缓存亲和性，在一段时间内保持会话黏性。",
+      "link": "https://www.infoq.cn/article/x4PTF8mgDBvtQQYa8B97",
+      "source_file": "sources/2026-07-31_Agent 成本失控背后：上下文、人工审核与维护成本正在被低估｜请回答 WAIC 2026_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "枫清科技高雪峰：AI正在进入材料研发与化工生产全流程",
+      "source": "InfoQ",
+      "digest": "枫清科技创始人兼CEO高雪峰在中国油气人工智能科技大会上介绍了公司在AI for Science与新材料研发领域的实践。公司已与中国中化等企业合作，利用第一性原理模型、逆合成模型、模型蒸馏等技术辅助高通量实验筛选。\n\n其AI4S智能科研平台以科研数据为基础，建立知识图谱和统一语义层，将物理信息神经网络PINN、物理信息神经算子PINO等机理模型与神经网络结合。平台引入多智能体机制对科研任务拆解调度，调用不同科研工具和材料领域大模型完成文献分析、方案设计、性质预测、实验规划和结果分析。\n\n公司正尝试打通从分子设计、配方开发、检测表征、工艺模拟到中试放大的完整链路，将生产数据反馈到模型中形成循环。后续计划与企业共建高通量智能实验室，推动实验自动运行和数据自动回传。此前已与中国中化、吉林大学、火山引擎等成立联合实验室。",
+      "link": "https://www.infoq.cn/article/zIm0P8HWsWHWuGC54BsU",
+      "source_file": "sources/2026-07-31_枫清科技高雪峰：AI正在进入材料研发与化工生产全流程_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Univé builds an AI-ready workforce",
+      "source": "OpenAI",
+      "digest": "荷兰合作保险集团Univé通过部署ChatGPT Enterprise构建AI就绪的员工队伍。案例展示了Univé如何将领导力推动、负责任AI治理和员工主导的创新三者结合，实现规模化的工作方式转型。\n\n这是OpenAI企业级产品的行业应用案例，展示了传统保险行业拥抱AI的路径：不仅是技术工具的引入，更需要组织文化变革、治理框架建设和员工能力培养的系统推进。",
+      "link": "https://openai.com/index/unive",
+      "source_file": "sources/2026-07-31_Univé builds an AI-ready workforce_OpenAI.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "AIGC 的中场，我们需要创作领域的「Codex」",
+      "source": "极客公园",
+      "digest": "文章探讨AI影像创作从\"生成工具\"向\"项目管理系统\"演进的趋势。TapNow推出Creative OS，定位为\"世界首个AI原生创作系统\"，被创作者类比为\"创作界的Codex\"。\n\nAI影像已进入真实生产三个阶段：个人内容创作、企业内容生产、电影级表达。传统AI视频工具默认用户已想清楚一切，但真实创作是从模糊想法逐步清晰的过程。Creative OS试图让创作者在创意开发、视觉设定、分镜、素材生成各环节都获得系统支持。\n\n文章指出AI影像不缺会生成的工具，缺的是能把项目做完的系统。车企、游戏公司和消费品牌正增加视频内容使用，需要的是完整制作能力而非单点生成。影视飓风与TapNow合作推出AI影像创作教程，说明AI影像正走出\"展示奇观\"阶段，开始形成可学习、可复用的创作方法。",
+      "link": "http://www.geekpark.net/news/368267",
+      "source_file": "sources/2026-07-31_AIGC 的中场，我们需要创作领域的「Codex」_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Advancing responsible AI across Europe",
+      "source": "OpenAI",
+      "digest": "OpenAI发布关于欧洲负责任AI治理的实践分享，介绍其安全、安保、透明度和溯源（provenance）实践如何支持欧洲的AI治理框架。文章表示随着欧盟AI法案（EU AI Act）的推进，OpenAI将持续完善其负责任AI治理措施。\n\n这是OpenAI在全球监管环境日趋严格背景下的合规性沟通，展示其在模型安全评估、内容审核、部署阶段安全基础设施等方面的工作。文章属于企业治理与政策层面的信息披露，反映了大型AI公司面对区域性监管（特别是欧盟AI法案）时的应对策略和合规路径。",
+      "link": "https://openai.com/index/advancing-responsible-ai-across-europe",
+      "source_file": "sources/2026-07-31_Advancing responsible AI across Europe_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Building abundant intelligence",
+      "source": "OpenAI",
+      "digest": "OpenAI发布关于其基础设施战略的阐述，提出\"全栈方法\"（full-stack approach）使高级AI更强大、更经济、更广泛可用。文章概述了OpenAI在计算资源扩展、模型效率优化和服务交付方面的整体战略方向。\n\n这反映了OpenAI在算力建设和平台化方面的长期规划，属于公司基础设施投资和战略层面的沟通。\"充裕智能\"的概念指向OpenAI希望通过规模化基础设施建设，降低高级AI能力的使用门槛，使更多用户和场景能够受益于先进AI技术。",
+      "link": "https://openai.com/index/building-abundant-intelligence",
+      "source_file": "sources/2026-07-31_Building abundant intelligence_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-07-31",
+      "title": "从金融专业到资深Builder：我如何借多Agent开发工作流，一周做出MVP、一个月上线",
+      "source": "InfoQ",
+      "digest": "在WAIC 2026 InfoQ直播间，资深Builder手工川分享了借助多Agent开发工作流进行独立产品开发的实践。他从金融专业转向开发，自2024年10月起将99%的编码工作交给AI，采用\"99%的AI+1%的方向\"模式。\n\n手工川认为AI降低了开发门槛，但真正决定产品成败的是需求发现、产品判断和传播能力。不会写代码的人反而更接近真实大众需求，因为程序员容易陷入只服务程序员的思维。他主张\"爱生活的人更容易发现大众需求\"。\n\n在产品落地策略上，他采用渐进式Vibe Coding：一周做出59分MVP，一个月稳定上线。面对不同模型和Agent，开发者需要学会准确表达需求、与AI交流、判断模型是否真正完成任务。技术基础仍有价值——能判断AI生成代码是否合理、出问题时定位方向，是激进采用AI编程的前提。",
+      "link": "https://www.infoq.cn/article/DHDOQWmDXa4obvC4l99E",
+      "source_file": "sources/2026-07-31_从金融专业到资深Builder：我如何借多Agent开发工作流，一周做出MVP、一个月上线_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-07-29",
       "title": "Hugging Face公开首个AI攻击全过程",
