@@ -1,6 +1,12 @@
 {
   "issues": [
     {
+      "date": "2026-08-02",
+      "weekday": "周日",
+      "stats": {},
+      "summary": "AMD Releases Instella-MoE-16B-A3B: A Fully Open Mixture-of-Experts LLM With 2..."
+    },
+    {
       "date": "2026-08-01",
       "weekday": "周六",
       "stats": {
