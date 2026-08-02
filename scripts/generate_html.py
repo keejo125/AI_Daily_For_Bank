@@ -136,7 +136,7 @@ def find_markdown_file(sources_dir, title, source):
 def extract_digest_from_md(md_content, max_chars=120):
     """
     从 markdown 正文中提取摘要（前 2-3 个非空段落）
-    过滤掉标题行、元数据行、公众号/来源行
+    过滤掉标题行、元数据行、来源行
     """
     lines = md_content.split('\n')
     body_lines = []
@@ -214,8 +214,9 @@ def build_stats_string(stats):
 def build_articles_json(classification, date_str):
     """
     构建 ARTICLES_JSON 数据
-    每个对象包含: title, source, digest, link, content, category, is_model_related, source_file
-    支持多来源合并：source_items 字段（从 classification.json 中读取）
+    每个对象包含: title, source, digest, link, category, is_model_related
+    digest 为 AI 生成的~500字摘要，是卡片的主要展示内容。
+    不再嵌入原始全文（用户通过"查看原文"链接跳转原文）。
     """
     articles = []
     cats = ["国际", "国内", "同业", "其他"]
@@ -224,8 +225,8 @@ def build_articles_json(classification, date_str):
     # 统计信息
     stats = {
         'total': 0,
-        'with_content': 0,
-        'without_content': 0,
+        'with_digest': 0,
+        'without_digest': 0,
         'merged': 0,
         'skipped_merged': 0
     }
@@ -260,13 +261,10 @@ def build_articles_json(classification, date_str):
                 stats['merged'] += 1
                 # 合并文章：构建 source_items
                 if source_items_from_cls and len(source_items_from_cls) > 1:
-                    # 使用分类阶段预设的 source_items（包含主文章来源）
                     source_items = source_items_from_cls
                     main_link = item.get('link', '')
                 else:
-                    # 自动从 merged_articles 构建
                     source_items = []
-                    # 包含主文章自己的来源
                     source_items.append({
                         'name': item.get('source', ''),
                         'source_file': item.get('source_file', ''),
@@ -280,55 +278,34 @@ def build_articles_json(classification, date_str):
                         })
                     main_link = item.get('link', '')
                 
-                # 尝试读取原文（如果有 source_file）
-                content = read_article_content(
-                    item.get('source_file', ''),
-                    date_str,
-                    title,
-                    source
-                )
-                
-                if content:
-                    stats['with_content'] += 1
+                if digest:
+                    stats['with_digest'] += 1
                 else:
-                    stats['without_content'] += 1
+                    stats['without_digest'] += 1
                 
                 articles.append({
                     "title": title,
                     "source": source,
                     "digest": digest,
                     "link": main_link,
-                    "content": content,
+                    "content": "",
                     "category": cat,
                     "is_model_related": is_model_related,
                     "is_merged": True,
                     "source_file": item.get('source_file', ''),
-                    "source_items": source_items  # 多来源标签
+                    "source_items": source_items
                 })
             else:
-                # 单个文章，保持原有逻辑
+                # 单个文章
                 item_title = item.get("title", "")
                 source = item.get("source", "")
                 link = item.get("link", "")
                 item_digest = item.get("digest", "")
                 source_file = item.get("source_file", "")
 
-                # 读取 markdown 原文
-                content = read_article_content(source_file, date_str, item_title, source)
-
-                # 如果没有 digest，从原文提取摘要（前 2-3 段），读取原文后再兜底
+                # 如果没有 digest，用标题兜底
                 if not item_digest:
-                    if content:
-                        item_digest = extract_digest_from_md(content, max_chars=150)
-                    if not item_digest:
-                        item_digest = item_title
-
-                # 如果没有 source_file，尝试在 sources 目录匹配
-                if not source_file:
-                    sources_dir = os.path.join(base_dir, 'sources')
-                    matched = find_markdown_file(sources_dir, item_title, source)
-                    if matched:
-                        source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
+                    item_digest = item_title
 
                 # 优先使用 classification.json 中的 is_model_related 标签
                 if 'is_model_related' in item:
@@ -336,12 +313,12 @@ def build_articles_json(classification, date_str):
                 else:
                     is_model_related = detect_model_related(item_title, item_digest)
 
-                if content:
-                    stats['with_content'] += 1
+                if item_digest and item_digest != item_title:
+                    stats['with_digest'] += 1
                 else:
-                    stats['without_content'] += 1
+                    stats['without_digest'] += 1
 
-                # 传递 source_items（支持手动指定的多来源标签，如分类阶段合并的文章）
+                # 传递 source_items（支持手动指定的多来源标签）
                 extra_fields = {}
                 if item.get('source_items'):
                     extra_fields['source_items'] = item['source_items']
@@ -351,7 +328,7 @@ def build_articles_json(classification, date_str):
                     "source": source,
                     "digest": item_digest,
                     "link": link,
-                    "content": content,
+                    "content": "",
                     "category": cat,
                     "is_model_related": is_model_related,
                     "source_file": source_file,
@@ -359,10 +336,10 @@ def build_articles_json(classification, date_str):
                 })
 
     # 输出统计信息
-    print_progress(f"\n📊 文章读取统计:")
+    print_progress(f"\n📊 文章统计:")
     print_progress(f"   总文章数: {stats['total']}")
-    print_progress(f"   成功读取: {stats['with_content']} ({stats['with_content']/stats['total']*100:.1f}%)")
-    print_progress(f"   未读取到: {stats['without_content']} ({stats['without_content']/stats['total']*100:.1f}%)")
+    print_progress(f"   有摘要: {stats['with_digest']} ({stats['with_digest']/max(stats['total'],1)*100:.1f}%)")
+    print_progress(f"   无摘要: {stats['without_digest']}")
     print_progress(f"   合并文章: {stats['merged']}")
     print_progress(f"   跳过从条: {stats.get('skipped_merged', 0)}\n")
 
@@ -503,7 +480,7 @@ def build_section_html(category, articles):
         card_html = f'<div class="card">'
         card_html += f'<div class="card-title">{escape_html(title)}</div>'
         
-        # 如果是合并的卡片，显示多个公众号标签
+        # 如果是合并的卡片，显示多个来源标签
         if is_merged:
             # 优先使用 article.source_items（来自 build_articles_json）
             merged_article = article_list[0] if article_list else {}
@@ -613,7 +590,7 @@ def build_section_html(category, articles):
             if link:
                 card_html += (
                     f'<div style="margin-top:8px;">'
-                    f'<a href="{escape_html(link)}" target="_blank">📖 微信原文</a>'
+                    f'<a href="{escape_html(link)}" target="_blank">📖 查看原文</a>'
                     f'</div>'
                 )
         
@@ -749,17 +726,62 @@ def update_daily_index(date_str, stats, summary, classification_data=None):
             print_progress(f"更新 daily-index.json 中 {date_str} 的条目")
             break
 
-    # 不存在则插入到首位
+    # 不存在则插入
     if not found:
-        issues.insert(0, new_entry)
+        issues.append(new_entry)
         print_progress(f"在 daily-index.json 中插入 {date_str} 的新条目")
 
+    # 按日期降序排列
+    issues.sort(key=lambda x: x.get('date', ''), reverse=True)
     index_data["issues"] = issues
 
     if write_file(index_path, json.dumps(index_data, ensure_ascii=False, indent=2)):
         print_progress("daily-index.json 更新完成")
     else:
         print_progress("daily-index.json 更新失败")
+
+
+def sync_inline_daily_index():
+    """
+    将 daily-index.json 同步到根 index.html 的 INLINE_DAILY_INDEX 变量。
+    用于 file:// 协议下浏览器无法 fetch 本地 JSON 的 fallback。
+    """
+    import re as _re
+    index_path = os.path.join(PROJECT_DIR, 'daily-index.json')
+    html_path = os.path.join(PROJECT_DIR, 'index.html')
+
+    content = read_file(index_path)
+    if not content:
+        print_progress("  ⚠️ daily-index.json 读取失败，跳过内联同步")
+        return
+
+    # 压缩 JSON
+    try:
+        data = json.loads(content)
+        inline_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+    except json.JSONDecodeError:
+        print_progress("  ⚠️ daily-index.json 解析失败，跳过内联同步")
+        return
+
+    html_content = read_file(html_path)
+    if not html_content:
+        print_progress("  ⚠️ index.html 读取失败，跳过内联同步")
+        return
+
+    # 替换 INLINE_DAILY_INDEX
+    pattern = r'var INLINE_DAILY_INDEX = \{.*?\};'
+    replacement = f'var INLINE_DAILY_INDEX = {inline_json};'
+    new_html = _re.sub(pattern, replacement, html_content, count=1, flags=_re.DOTALL)
+
+    if new_html == html_content:
+        print_progress("  ⚠️ 未找到 INLINE_DAILY_INDEX，跳过")
+        return
+
+    if write_file(html_path, new_html):
+        issues_count = len(data.get('issues', []))
+        print_progress(f"  index.html 内联索引已同步 ({issues_count} 条)")
+    else:
+        print_progress("  ⚠️ index.html 写入失败")
 
 
 def update_search_index(date_str, articles):
@@ -941,6 +963,10 @@ def main():
     print_progress("更新 daily-index.json...")
     summary = generate_summary(classification)
     update_daily_index(date_str, stats, summary, data)  # 传入完整的 data，包含 article_date
+
+    # === 8. 同步根 index.html 的 INLINE_DAILY_INDEX（file:// fallback） ===
+    print_progress("同步 index.html 内联索引...")
+    sync_inline_daily_index()
 
     print_progress("全部完成!")
 

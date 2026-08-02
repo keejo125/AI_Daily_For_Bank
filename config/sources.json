@@ -1,0 +1,117 @@
+{
+  "wechat_api": {
+    "enabled": false,
+    "comment": "微信原始通道(fetch_articles.py)，待平台恢复后启用"
+  },
+  "article_fetch_api": "https://www.torandom.com/wechat-api/api/article/fetch",
+  "comment_sources": "统一信源数组：编排层通过 type 字段经工厂实例化适配器，新增信源只需加一条配置+注册适配器类",
+  "sources": [
+    {
+      "id": "rsshub_36kr",
+      "name": "36氪",
+      "type": "rss",
+      "url": "https://www.torandom.com/rsshub/36kr/information/web_news",
+      "enabled": true,
+      "full_text_in_feed": true,
+      "comment": "自建RSSHub，全文在feed中(5000-8000字)，首次请求~10s"
+    },
+    {
+      "id": "rsshub_infoq",
+      "name": "InfoQ",
+      "type": "rss",
+      "url": "https://www.torandom.com/rsshub/infoq/topic/AI",
+      "enabled": true,
+      "full_text_in_feed": true,
+      "comment": "自建RSSHub，AI频道全文(7000-11000字)，行业深度报道"
+    },
+    {
+      "id": "rsshub_meituan",
+      "name": "美团技术",
+      "type": "rss",
+      "url": "https://www.torandom.com/rsshub/meituan/tech",
+      "enabled": true,
+      "full_text_in_feed": false,
+      "comment": "自建RSSHub，feed无正文需爬原文，无pubDate用URL路径日期兜底"
+    },
+    {
+      "id": "rsshub_kuaishou",
+      "name": "快手技术",
+      "type": "rss",
+      "url": "https://www.torandom.com/rsshub/csdn/blog/kuaishoutech",
+      "enabled": true,
+      "full_text_in_feed": true,
+      "comment": "自建RSSHub，CSDN博客全文，低频源(有则收录)，首次请求较慢"
+    },
+    {
+      "id": "geekpark",
+      "name": "极客公园",
+      "type": "rss",
+      "url": "https://www.geekpark.net/rss",
+      "enabled": true,
+      "full_text_in_feed": true
+    },
+    {
+      "id": "qbitai",
+      "name": "量子位",
+      "type": "rss",
+      "url": "https://www.qbitai.com/feed",
+      "enabled": true,
+      "full_text_in_feed": false
+    },
+    {
+      "id": "solidot",
+      "name": "Solidot",
+      "type": "rss",
+      "url": "https://www.solidot.org/index.rss",
+      "enabled": true,
+      "full_text_in_feed": true
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "type": "rss",
+      "url": "https://openai.com/news/rss.xml",
+      "enabled": true,
+      "full_text_in_feed": false
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "type": "rss",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "enabled": true,
+      "full_text_in_feed": false
+    },
+    {
+      "id": "tldr_ai",
+      "name": "TLDR AI",
+      "type": "rss",
+      "url": "https://tldr.tech/api/rss/ai",
+      "enabled": true,
+      "full_text_in_feed": true
+    },
+    {
+      "id": "marktechpost",
+      "name": "MarkTechPost",
+      "type": "rss",
+      "url": "https://www.marktechpost.com/feed/",
+      "enabled": true,
+      "full_text_in_feed": true
+    },
+    {
+      "id": "36kr_legacy",
+      "name": "36氪(旧API)",
+      "type": "kr36_api",
+      "url": "https://openclaw.36krcdn.com/media/hotlist",
+      "enabled": false,
+      "comment": "已废弃：改用RSSHub标准RSS，保留做fallback"
+    }
+  ],
+  "settings": {
+    "max_articles_per_source": 30,
+    "fetch_timeout": 30,
+    "retry_count": 3,
+    "dedup_by_title_similarity": true,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+  }
+}
