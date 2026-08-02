@@ -3,14 +3,26 @@
     {
       "date": "2026-08-01",
       "weekday": "周六",
-      "stats": {},
+      "stats": {
+        "国际": 2,
+        "国内": 1,
+        "同业": 1,
+        "其他": 1,
+        "total": 5
+      },
       "summary": "AI大厂，打起了“Token 奶茶大战”/奥特曼承认：高估了AI抢饭碗！黄仁勋：失业论完全搞反了/AI来了，大厂中层不好混了/这家银行设立AI转型战略集团...",
       "article_date": "2026-08-01"
     },
     {
       "date": "2026-07-31",
       "weekday": "周五",
-      "stats": {},
+      "stats": {
+        "国际": 5,
+        "国内": 3,
+        "同业": 1,
+        "其他": 4,
+        "total": 13
+      },
       "summary": "JetBrains Open-Sources KotlinLLM: Smart Macros That Generate Kotlin Source Co..."
     },
     {
