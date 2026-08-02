@@ -3,7 +3,13 @@
     {
       "date": "2026-08-02",
       "weekday": "周日",
-      "stats": {},
+      "stats": {
+        "国际": 12,
+        "国内": 1,
+        "同业": 2,
+        "其他": 4,
+        "total": 19
+      },
       "summary": "AMD Releases Instella-MoE-16B-A3B: A Fully Open Mixture-of-Experts LLM With 2..."
     },
     {

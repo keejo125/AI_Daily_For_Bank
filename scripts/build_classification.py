@@ -133,6 +133,7 @@ def main():
         category = fm.get("category", "")
         digest = fm.get("digest", "")
         is_model_related = fm.get("is_model_related", "false").lower() == "true"
+        is_merged = fm.get("is_merged", "false").lower() == "true"
         publish_time = fm.get("publish_time", "0")
 
         article = {
@@ -143,6 +144,7 @@ def main():
             "digest": digest,
             "source_file": f"sources/{md_file.name}",
             "is_model_related": is_model_related,
+            "is_merged": is_merged,
             "publish_time": int(publish_time) if publish_time.isdigit() else 0,
         }
 
@@ -159,12 +161,25 @@ def main():
         else:
             classification["其他"].append(article)
 
+    # 排序: model_related 排前, merged 排后
+    for cat in ["国际", "国内", "同业", "其他"]:
+        classification[cat].sort(key=lambda x: (
+            x.get("is_merged", False),
+            not x.get("is_model_related", False),
+            x.get("aid", 999)
+        ))
+
     # 重新编号 aid
     aid = 1
     for cat in ["国际", "国内", "同业", "其他"]:
         for art in classification[cat]:
             art["aid"] = aid
             aid += 1
+
+    # stats
+    stats = {cat: len(classification[cat]) for cat in ["国际", "国内", "同业", "其他"]}
+    stats["total"] = sum(stats.values())
+    classification["stats"] = stats
 
     # 保存
     out_path = PROJECT_DIR / "daily" / date_str / "classification.json"

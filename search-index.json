@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-03T02:27:44.565969",
-  "total": 983,
+  "updated_at": "2026-08-03T07:20:55.015779",
+  "total": 989,
   "articles": [
     {
       "date": "2026-08-02",
@@ -44,6 +44,26 @@
     },
     {
       "date": "2026-08-02",
+      "title": "GitHub AI Agent翻车：攻击者只写一句话就能窃取数据",
+      "source": "InfoQ",
+      "digest": "Noma Security发现GitHub新推出的Agentic Workflows存在提示注入漏洞GitLost。攻击者无需编程技能，只需在公开仓库创建Issue嵌入隐藏指令，即可诱骗AI Agent泄露私有仓库数据。漏洞利用关键词\"Additionally\"绕过了GitHub部署的防护机制——它将攻击载荷从\"新指令\"重新归类为\"当前任务的延续\"。研究人员指出，Agentic系统中信任边界部分依赖模型行为，提示注入正在变成AI时代的SQL注入。建议：用户控制的内容绝不应视为可信指令输入，Agent权限应严格限制在最小必要范围。社区评论：\"私有仓库从来不是安全边界——当读取代码的不再是你雇佣的人类时，它只是组织边界。\"",
+      "link": "https://mp.weixin.qq.com/s/Cq-em2gvtSrNtk0oSKD2gQ",
+      "source_file": "sources/2026-08-02_GitHub AI Agent翻车：攻击者只写一句话就能窃取数据_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
+      "title": "MCP迎来最大更新：砍掉握手和会话，重回上古HTTP时代",
+      "source": "InfoQ",
+      "digest": "MCP（Model Context Protocol）发布自诞生以来最大更新：移除会话与初始化握手，彻底实现无状态化。每个请求独立携带完整上下文，远程MCP服务器可像传统HTTP服务一样用轮询调度，无需会话亲和性。核心变化包括：协议版本和客户端能力通过_meta每次传递；新增server/discover方法支持按需能力查询；TTL缓存机制提升提示词缓存命中率。代价是：基于实验性Tasks API构建的系统需迁移，采样和日志机制被弃用。维护者设置了十周验证期和12个月弃用过渡期，新旧协议将共存。开发者评价两极：有人认为解决了长期痛点，也有人批评\"把好不容易从SSE迈向WebSocket的协议又拽回了上古世界观\"。",
+      "link": "https://mp.weixin.qq.com/s/2oofgGKGIDDGhq68CquiKQ",
+      "source_file": "sources/2026-08-02_MCP迎来最大更新：砍掉握手和会话，重回上古HTTP时代_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
       "title": "NVIDIA AI Releases Molt: A PyTorch-Native Agentic Reinforcement Learning Framework",
       "source": "MarkTechPost",
       "digest": "NVIDIA NeMo团队发布Molt，一个PyTorch原生的Agent强化学习框架。其核心设计目标极为独特：代码库仅约8600行（对比verl的6.2万行、slime的2.5万行），精简到研究者可将整个框架装进大脑、AI编程助手能完整阅读和理解。Molt由Ray负责资源调度、vLLM负责rollout、NVIDIA AutoModel+FSDP2负责训练，三个组件均未fork上游，可直接获取最新改进。默认配置需2节点×8 H100 GPU（8训练+8rollout），适用于多轮工具调用Agent、代码执行Agent、视觉语言环境和LLM-as-judge奖励循环等场景。采用Apache 2.0开源协议。",
@@ -59,6 +79,16 @@
       "digest": "AI行业正从\"造芯\"转向\"榨芯\"——提高现有GPU利用率成为新热点。CMU研究显示，756块GPU集群中近20%执行时间处于空转状态，Azure Code负载高达65%能耗浪费在无效等待上。推理引擎赛道火热：Baseten一年收入增长20倍、估值达130亿美元；fireworks七个月估值翻四倍至175亿；开源双子星vLLM和SGLang先后商业化，种子轮均超1亿美元。文章由SGLang孵化的RadixArk联合创始人深度解读AI Infra四层架构（能源→硬件→分布式系统→推理引擎），指出全栈协同优化是将每瓦算力效率榨到极限的关键路径。",
       "link": "https://www.36kr.com/p/3920675282163337",
       "source_file": "sources/2026-08-02_“榨”出硅的极限：怎么让GPU不“闲着”？_36氪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
+      "title": "中层消失，Token狂热退潮：硅谷AI工程师的10个观察",
+      "source": "36氪",
+      "digest": "Cognition资深AI工程师马培元分享硅谷10个前沿观察：①通才碾压专才——\"六边形战士\"成为最抢手画像；②AI原生技能可在短时间内碾压资历年限；③面试标准被重写，LeetCode重要性下降，work trial兴起；④公司对\"AI原生\"渴求远超想象，要求新人推动团队AI转型；⑤AI倒逼组织架构转型——AI写代码2-3小时，流程却要走一个月；⑥People manager正在消亡，管理者必须自己写代码；⑦Token-Maxxing狂热退潮，大公司开始关心效率，Uber全年AI预算前四月基本烧完；⑧模型崇拜被推翻——Cognition内部推出fusion mode，融合多模型调度替代无脑调用最贵模型；⑨围绕Token监控和Agent安全隔离的新AI infra赛道兴起；⑩\"不可训练的东西\"成为新生意——垂直行业里无法被模型抽象掉的复杂流程。",
+      "link": "https://mp.weixin.qq.com/s/FEWJEPhf7_-clBTU11NB0A",
+      "source_file": "sources/2026-08-02_中层消失Token狂热退潮：硅谷AI工程师的10个观察_36氪.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -80,6 +110,36 @@
       "link": "https://www.36kr.com/p/3921846871676806",
       "source_file": "sources/2026-08-02_贝索斯用 AI 寻找下一块硅_36氪.md",
       "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
+      "title": "畅捷通可观测与智能运维实践：从看得见到自己治",
+      "source": "阿里云云原生",
+      "digest": "畅捷通分享从传统运维到AI驱动智能运维的四阶段演进实践。初期面临\"看不见（指标陷阱）、管不住（告警泛滥）、动不了（依赖经验）\"三大痛点。通过五层一体化监控模型（基础→中间件→APM→业务→用户体验）和阿里云云监控2.0平台，实现30秒内全链路分析。核心方法\"0-2-5-10\"应急体系：0事故预防、2分钟感知、5分钟定位、10分钟止损。第四阶段全面叠加AI能力：智能巡检（预防）、故障自愈（\"AI识别+人工审核\"模式）、容量预测与成本管控，从\"以人为主\"转向\"AI为主、人审核\"。整体SLA从99.9%跃升至99.995%，故障定位时间从10分钟压缩至30秒以内。建立了\"可观测数据→AI分析→自动化动作→知识沉淀\"的持续正循环。",
+      "link": "https://mp.weixin.qq.com/s/3b34j-J5_rag9luBSzrhdA",
+      "source_file": "sources/2026-08-02_畅捷通可观测与智能运维实践：从看得见到自己治_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
+      "title": "农业银行构建高质量数据集推动AI深化赋能金融",
+      "source": "金融电子化",
+      "digest": "农业银行智慧银行建设办公室常务副主任赵焕芳撰文，阐述农行以数据工程、知识工程为抓手，通过深层次多维度的数据采集、整合萃取、持续运营和安全管控，以用带建，逐步建立具有农行特色的金融高质量数据集。文章呼应\"十五五\"规划\"建设高质量数据集\"要求和金融监管总局数字金融实施方案，强调高质量数据集是驱动AI技术创新、赋能产业升级的重要抓手。农行实践覆盖数据标准建设、质量源头管控、多源数据安全合规获取、标注增强、质量评估、版本管理等全流程。",
+      "link": "https://mp.weixin.qq.com/s/EMkhOXm-is2299xI7rRd7A",
+      "source_file": "sources/2026-08-02_农业银行构建高质量数据集推动AI深化赋能金融_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-02",
+      "title": "韩国IBK企业银行设立AI转型战略集团，内部智能体超1000个",
+      "source": "银行科技研究社",
+      "digest": "韩国IBK企业银行完成组织架构调整，将原数字集团重组为\"人工智能转型战略集团（AX战略集团）\"，建立统筹AI战略制定与执行的指挥中心。任命Lee Dongun为AX战略集团长，同步调整数据利用及内部控制组织。该行行长张敏英提出\"AI原生银行\"战略，内部使用的智能体数量已超1000个。员工通过生成式AI平台\"IBK GenAI\"（学习12万条内部业务知识）自主创建业务智能体。2026年上半年约1000名员工接受Vibe Coding培训，后续扩展至全国网点。AI应用不限于客服，已延伸至智能信贷审查和风险管理，同时建设了\"One-Click取数+One-Stop分析+One-Insight共享\"数据门户。",
+      "link": "https://mp.weixin.qq.com/s/dkLc6mMvYlqdUVL-JwVDuA",
+      "source_file": "sources/2026-08-02_韩国IBK企业银行设立AI转型战略集团，内部智能体超1000个_银行科技研究社.md",
+      "category": "同业",
       "is_model_related": false
     },
     {
