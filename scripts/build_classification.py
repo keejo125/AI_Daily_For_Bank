@@ -161,6 +161,51 @@ def main():
         else:
             classification["其他"].append(article)
 
+    # 将 is_merged=True 的从条链接到同主题主条
+    # 匹配规则：同一分类下，同为 is_model_related，标题关键词重叠
+    merged_main_map = {}  # merged_aid -> main_aid
+    for cat in ["国际", "国内", "同业", "其他"]:
+        articles = classification[cat]
+        mains = [a for a in articles if not a.get('is_merged')]
+        mergeds = [a for a in articles if a.get('is_merged')]
+        for merged in mergeds:
+            merged_title = merged.get('title', '')
+            merged_source = merged.get('source', '')
+            # 按标题关键词匹配主条
+            best = None
+            best_score = 0
+            for main in mains:
+                if main.get('is_model_related') == merged.get('is_model_related'):
+                    main_title = main.get('title', '')
+                    main_source = main.get('source', '')
+                    # 不同来源 + 有共同关键词
+                    if merged_source != main_source:
+                        words = set(merged_title) & set(main_title)
+                        score = len([w for w in words if ord(w) > 127])  # 中文字符重叠数
+                        if score > best_score:
+                            best_score = score
+                            best = main
+            if best and best_score >= 3:
+                merged_main_map[merged['aid']] = best['aid']
+    
+    # 构建 source_items（多来源标签）
+    for cat in ["国际", "国内", "同业", "其他"]:
+        for art in classification[cat]:
+            if not art.get('source_items'):
+                art['source_items'] = [{
+                    'name': art.get('source', ''),
+                    'link': art.get('link', '')
+                }]
+        # 将合并从条的来源追加到主条
+        for merged_aid, main_aid in merged_main_map.items():
+            main_art = next((a for a in classification[cat] if a['aid'] == main_aid), None)
+            merged_art = next((a for a in classification[cat] if a['aid'] == merged_aid), None)
+            if main_art and merged_art:
+                main_art['source_items'].append({
+                    'name': merged_art.get('source', ''),
+                    'link': merged_art.get('link', '')
+                })
+    
     # 排序: model_related 排前, merged 排后
     for cat in ["国际", "国内", "同业", "其他"]:
         classification[cat].sort(key=lambda x: (

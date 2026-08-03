@@ -10,7 +10,13 @@
       "source_file": "sources/2026-08-02_AMD Releases Instella-MoE-16B-A3B_ A Fully Open Mi_MarkTechPost.md",
       "is_model_related": true,
       "is_merged": false,
-      "publish_time": 1785610902
+      "publish_time": 1785610902,
+      "source_items": [
+        {
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/01/amd-instella-moe-16b-a3b-fully-open-mixture-of-experts-llm/"
+        }
+      ]
     },
     {
       "aid": 2,
@@ -21,7 +27,17 @@
       "source_file": "sources/2026-08-02_突发！OpenAI下一代AI攻克10项菲尔兹奖级难题_36氪.md",
       "is_model_related": true,
       "is_merged": false,
-      "publish_time": 1785632755
+      "publish_time": 1785632755,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3921682068172419"
+        },
+        {
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/aEdlcd1Vkeu0C1ZtYrxcTw"
+        }
+      ]
     },
     {
       "aid": 3,
@@ -32,21 +48,16 @@
       "source_file": "sources/2026-08-02_谷歌机器人整了波大活儿，要攻克「最后几厘米」的行业难题？_36氪.md",
       "is_model_related": true,
       "is_merged": false,
-      "publish_time": 1785652403
+      "publish_time": 1785652403,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3921809960425350"
+        }
+      ]
     },
     {
       "aid": 4,
-      "title": "OpenAI官宣下一代模型Astra！取得10大未解难题突破",
-      "source": "智东西",
-      "link": "https://mp.weixin.qq.com/s/aEdlcd1Vkeu0C1ZtYrxcTw",
-      "digest": "OpenAI官宣下一代模型Astra，公布其取得的10项数学与理论计算机科学新成果，涉及高维几何、编码理论、群论、量子复杂性、格密码学和极值组合学等方向。全部解法消耗Token约2000美元。OpenAI将论证整理成249页论文和62页解题思路说明，已向白宫官员预览。公司参与论文整理和Lean形式化验证，对正确性负责，但数学论证由AI生成。此前5月Astra已发现厄尔多什单位距离猜想反例。",
-      "source_file": "sources/2026-08-02_OpenAI官宣下一代模型Astra_智东西.md",
-      "is_model_related": true,
-      "is_merged": true,
-      "publish_time": 0
-    },
-    {
-      "aid": 5,
       "title": "Accelerating Transformer Training with NVIDIA Transformer Engine, Fused Kernels, BF16, FP8, and GPU Benchmarking",
       "source": "MarkTechPost",
       "link": "https://www.marktechpost.com/2026/08/01/accelerating-transformer-training-with-nvidia-transformer-engine-fused-kernels-bf16-fp8-and-gpu-benchmarking/",
@@ -54,10 +65,16 @@
       "source_file": "sources/2026-08-02_Accelerating Transformer Training with NVIDIA Tran_MarkTechPost.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785609075
+      "publish_time": 1785609075,
+      "source_items": [
+        {
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/01/accelerating-transformer-training-with-nvidia-transformer-engine-fused-kernels-bf16-fp8-and-gpu-benchmarking/"
+        }
+      ]
     },
     {
-      "aid": 6,
+      "aid": 5,
       "title": "GitHub AI Agent翻车：攻击者只写一句话就能窃取数据",
       "source": "InfoQ",
       "link": "https://mp.weixin.qq.com/s/Cq-em2gvtSrNtk0oSKD2gQ",
@@ -65,10 +82,16 @@
       "source_file": "sources/2026-08-02_GitHub AI Agent翻车：攻击者只写一句话就能窃取数据_InfoQ.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/Cq-em2gvtSrNtk0oSKD2gQ"
+        }
+      ]
     },
     {
-      "aid": 7,
+      "aid": 6,
       "title": "MCP迎来最大更新：砍掉握手和会话，重回上古HTTP时代",
       "source": "InfoQ",
       "link": "https://mp.weixin.qq.com/s/2oofgGKGIDDGhq68CquiKQ",
@@ -76,10 +99,16 @@
       "source_file": "sources/2026-08-02_MCP迎来最大更新：砍掉握手和会话，重回上古HTTP时代_InfoQ.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/2oofgGKGIDDGhq68CquiKQ"
+        }
+      ]
     },
     {
-      "aid": 8,
+      "aid": 7,
       "title": "NVIDIA AI Releases Molt: A PyTorch-Native Agentic Reinforcement Learning Framework",
       "source": "MarkTechPost",
       "link": "https://www.marktechpost.com/2026/08/01/nvidia-ai-releases-molt-a-pytorch-native-agentic-reinforcement-learning-framework/",
@@ -87,10 +116,16 @@
       "source_file": "sources/2026-08-02_NVIDIA AI Releases Molt_ A PyTorch-Native Agentic _MarkTechPost.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785651686
+      "publish_time": 1785651686,
+      "source_items": [
+        {
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/01/nvidia-ai-releases-molt-a-pytorch-native-agentic-reinforcement-learning-framework/"
+        }
+      ]
     },
     {
-      "aid": 9,
+      "aid": 8,
       "title": "“榨”出硅的极限：怎么让GPU不“闲着”？",
       "source": "36氪",
       "link": "https://www.36kr.com/p/3920675282163337",
@@ -98,10 +133,16 @@
       "source_file": "sources/2026-08-02_“榨”出硅的极限：怎么让GPU不“闲着”？_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785637950
+      "publish_time": 1785637950,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3920675282163337"
+        }
+      ]
     },
     {
-      "aid": 10,
+      "aid": 9,
       "title": "中层消失，Token狂热退潮：硅谷AI工程师的10个观察",
       "source": "36氪",
       "link": "https://mp.weixin.qq.com/s/FEWJEPhf7_-clBTU11NB0A",
@@ -109,10 +150,16 @@
       "source_file": "sources/2026-08-02_中层消失Token狂热退潮：硅谷AI工程师的10个观察_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://mp.weixin.qq.com/s/FEWJEPhf7_-clBTU11NB0A"
+        }
+      ]
     },
     {
-      "aid": 11,
+      "aid": 10,
       "title": "李飞飞教机器人摸麻将挤牙膏，AI终于有“手感”了",
       "source": "36氪",
       "link": "https://www.36kr.com/p/3921955573542533",
@@ -120,10 +167,16 @@
       "source_file": "sources/2026-08-02_李飞飞教机器人摸麻将挤牙膏，AI终于有“手感”了_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785659974
+      "publish_time": 1785659974,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3921955573542533"
+        }
+      ]
     },
     {
-      "aid": 12,
+      "aid": 11,
       "title": "贝索斯用 AI 寻找下一块硅",
       "source": "36氪",
       "link": "https://www.36kr.com/p/3921846871676806",
@@ -131,7 +184,30 @@
       "source_file": "sources/2026-08-02_贝索斯用 AI 寻找下一块硅_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785648742
+      "publish_time": 1785648742,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3921846871676806"
+        }
+      ]
+    },
+    {
+      "aid": 12,
+      "title": "OpenAI官宣下一代模型Astra！取得10大未解难题突破",
+      "source": "智东西",
+      "link": "https://mp.weixin.qq.com/s/aEdlcd1Vkeu0C1ZtYrxcTw",
+      "digest": "OpenAI官宣下一代模型Astra，公布其取得的10项数学与理论计算机科学新成果，涉及高维几何、编码理论、群论、量子复杂性、格密码学和极值组合学等方向。全部解法消耗Token约2000美元。OpenAI将论证整理成249页论文和62页解题思路说明，已向白宫官员预览。公司参与论文整理和Lean形式化验证，对正确性负责，但数学论证由AI生成。此前5月Astra已发现厄尔多什单位距离猜想反例。",
+      "source_file": "sources/2026-08-02_OpenAI官宣下一代模型Astra_智东西.md",
+      "is_model_related": true,
+      "is_merged": true,
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/aEdlcd1Vkeu0C1ZtYrxcTw"
+        }
+      ]
     }
   ],
   "国内": [
@@ -144,7 +220,13 @@
       "source_file": "sources/2026-08-02_畅捷通可观测与智能运维实践：从看得见到自己治_阿里云云原生.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "阿里云云原生",
+          "link": "https://mp.weixin.qq.com/s/3b34j-J5_rag9luBSzrhdA"
+        }
+      ]
     }
   ],
   "同业": [
@@ -157,7 +239,13 @@
       "source_file": "sources/2026-08-02_农业银行构建高质量数据集推动AI深化赋能金融_金融电子化.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "金融电子化",
+          "link": "https://mp.weixin.qq.com/s/EMkhOXm-is2299xI7rRd7A"
+        }
+      ]
     },
     {
       "aid": 15,
@@ -168,7 +256,13 @@
       "source_file": "sources/2026-08-02_韩国IBK企业银行设立AI转型战略集团，内部智能体超1000个_银行科技研究社.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 0
+      "publish_time": 0,
+      "source_items": [
+        {
+          "name": "银行科技研究社",
+          "link": "https://mp.weixin.qq.com/s/dkLc6mMvYlqdUVL-JwVDuA"
+        }
+      ]
     }
   ],
   "其他": [
@@ -181,7 +275,13 @@
       "source_file": "sources/2026-08-02_AI短剧取代真人剧，从不跟演员打招呼 _ 专访谭飞_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785661427
+      "publish_time": 1785661427,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3921687819185539"
+        }
+      ]
     },
     {
       "aid": 17,
@@ -192,7 +292,13 @@
       "source_file": "sources/2026-08-02_如何让自己变得让人工智能永远也无法取代_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785630605
+      "publish_time": 1785630605,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3889181574625798"
+        }
+      ]
     },
     {
       "aid": 18,
@@ -203,7 +309,13 @@
       "source_file": "sources/2026-08-02_观众需要AI明星吗？_36氪.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785634641
+      "publish_time": 1785634641,
+      "source_items": [
+        {
+          "name": "36氪",
+          "link": "https://www.36kr.com/p/3920791686026884"
+        }
+      ]
     },
     {
       "aid": 19,
@@ -214,7 +326,13 @@
       "source_file": "sources/2026-08-02_马斯克和 Altman 达成共识：人类已迈入 AI 奇点时代；小米手机多款涨价 300 元起；苹果警_极客公园.md",
       "is_model_related": false,
       "is_merged": false,
-      "publish_time": 1785633237
+      "publish_time": 1785633237,
+      "source_items": [
+        {
+          "name": "极客公园",
+          "link": "http://www.geekpark.net/news/368277"
+        }
+      ]
     }
   ],
   "stats": {

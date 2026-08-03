@@ -499,14 +499,13 @@ def build_section_html(category, articles):
                         if matched:
                             source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
                     
-                    # 优先使用 viewer.html 查看原文
-                    if source_file:
-                        # 对文件路径进行 URL 编码，处理中文和特殊字符
+                    # 优先使用原文链接，回退到 viewer.html
+                    if source_link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    elif source_file:
                         encoded_source_file = quote(source_file, safe='')
                         viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
-                    elif source_link:
-                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
                     else:
                         sources_html += f'<span class="source-tag">{escape_html(source_name)}</span>'
                 sources_html += '</div>'
@@ -519,24 +518,27 @@ def build_section_html(category, articles):
                     link = article.get('link', '')
                     source_file = article.get('source_file', '')
                     
-                    if source_file:
+                    if link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
+                    elif source_file:
                         encoded_source_file = quote(source_file, safe='')
                         viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
-                    elif link:
-                        sources_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
                     else:
                         sources_html += f'<span class="source-tag">{escape_html(source)}</span>'
                 sources_html += '</div>'
                 card_html += sources_html
             else:
-                # 只有单个来源（合并主条卡片），显示可点击的 viewer 链接
+                # 只有单个来源（合并主条卡片），显示可点击链接
                 main_source = merged_article.get("source", "")
+                main_link = merged_article.get("link", "")
                 main_source_file = merged_article.get("source_file", "")
-                if main_source_file:
-                    encoded = quote(main_source_file, safe='')
-                    main_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded}'
+                if main_link:
                     card_html += f'<span class="source-tag"><a href="{escape_html(main_link)}" target="_blank">{escape_html(main_source)}</a></span>'
+                elif main_source_file:
+                    encoded = quote(main_source_file, safe='')
+                    fallback_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded}'
+                    card_html += f'<span class="source-tag"><a href="{escape_html(fallback_link)}" target="_blank">{escape_html(main_source)}</a></span>'
                 else:
                     card_html += f'<span class="source-tag">{escape_html(main_source)}</span>'
         else:
@@ -556,25 +558,28 @@ def build_section_html(category, articles):
                         if matched:
                             source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
 
-                    if source_file:
+                    if source_link:
+                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
+                    elif source_file:
                         encoded_source_file = quote(source_file, safe='')
                         viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                         sources_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source_name)}</a></span>'
-                    elif source_link:
-                        sources_html += f'<span class="source-tag"><a href="{escape_html(source_link)}" target="_blank">{escape_html(source_name)}</a></span>'
                     else:
                         sources_html += f'<span class="source-tag">{escape_html(source_name)}</span>'
                 sources_html += '</div>'
                 card_html += sources_html
             else:
                 source = single_article.get('source', '')
+                link = single_article.get('link', '')
                 source_file = single_article.get('source_file', '')
                 # 兜底: 按 source name 在 sources/ 目录匹配
                 if not source_file and source:
                     matched = find_markdown_file(sources_dir, '', source)
                     if matched:
                         source_file = os.path.relpath(matched, base_dir).replace('\\', '/')
-                if source_file:
+                if link:
+                    card_html += f'<span class="source-tag"><a href="{escape_html(link)}" target="_blank">{escape_html(source)}</a></span>'
+                elif source_file:
                     encoded_source_file = quote(source_file, safe='')
                     viewer_link = f'{VIEWER_HTML}?file=daily/{DATE_STR}/{encoded_source_file}'
                     card_html += f'<span class="source-tag"><a href="{escape_html(viewer_link)}" target="_blank">{escape_html(source)}</a></span>'
@@ -583,16 +588,6 @@ def build_section_html(category, articles):
         
         if digest:
             card_html += f'<div class="card-digest">{escape_html(digest)}</div>'
-        
-        # 添加查看原文链接（仅对未合并的或使用第一个文章的链接）
-        if not is_merged:
-            link = article_list[0].get('link', '')
-            if link:
-                card_html += (
-                    f'<div style="margin-top:8px;">'
-                    f'<a href="{escape_html(link)}" target="_blank">📖 查看原文</a>'
-                    f'</div>'
-                )
         
         card_html += '</div>'
         cards_html.append(card_html)

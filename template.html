@@ -269,11 +269,13 @@ body {
   margin-top: 10px;
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.7;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.8;
+}
+.card-digest p {
+  margin: 0 0 8px 0;
+}
+.card-digest p:last-child {
+  margin-bottom: 0;
 }
 
 .card-date {
@@ -317,7 +319,24 @@ body {
   opacity: 0.85;
   transform: scale(1.02);
 }
-/* (read-original-btn removed - source tags now link to viewer) */
+.original-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: transparent;
+  color: var(--cat-intl, #3b82f6);
+  border: 1px solid currentColor;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition);
+  min-height: 32px;
+}
+.original-link:hover {
+  background: var(--cat-intl, #3b82f6);
+  color: #fff;
+}
 
 /* ===== Empty State ===== */
 .empty-state {
@@ -553,22 +572,29 @@ body {
 
   function renderDigest(digest) {
     if (!digest) return '';
-    // 先剥离所有 HTML 标签（包括公众号的 @ 提及链接），再转义
-    // 不能用 marked.parse，否则 &lt;a&gt; 会被反 escape 并被解析为真链接
+    // 剥离 HTML 标签，支持多段落渲染（\n\n 分段）
     try {
       var stripped = digest.replace(/<[^>]+>/g, '');
-      // 兼容已经被 escape 一次的场景（如 &lt;a&gt;）
       stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
-      return escapeHtml(stripped);
+      // 按双换行分段，每段一个 <p>
+      var paragraphs = stripped.split(/\n\s*\n/);
+      return paragraphs.map(function(p) {
+        var trimmed = p.replace(/\n/g, '<br>').trim();
+        return trimmed ? '<p>' + escapeHtmlLite(trimmed) + '</p>' : '';
+      }).join('');
     } catch (e) {
-      return escapeHtml(digest);
+      return '<p>' + escapeHtml(digest) + '</p>';
     }
+  }
+
+  function escapeHtmlLite(str) {
+    // 保留已插入的 <br> 和 <p>，只转义其他特殊字符
+    return str.replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   function renderCard(article) {
     var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
     var digestHtml = renderDigest(article.digest);
-    var viewerLink = buildViewerLink(article.source_file);
 
     var modelTagHtml = '';
     if (article.is_model_related) {
@@ -584,22 +610,23 @@ body {
       timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
     }
 
-    var sourceTagHtml = '';
-    // 多来源标签：每个来源单独可点击，进入对应 viewer 页面
-    if (article.source_items && article.source_items.length > 0) {
-      article.source_items.forEach(function(si) {
-        if (si.source_file) {
-          var siLink = buildViewerLink(si.source_file);
-          sourceTagHtml += '<a href="' + escapeAttr(siLink) + '" class="source-tag" title="查看 ' + escapeAttr(si.name) + ' 原文">' + escapeHtml(si.name) + '</a>';
+    // 多来源标签（可点击跳转）
+    var actionsHtml = '';
+    var sourceItems = article.source_items;
+    if (sourceItems && sourceItems.length > 0) {
+      sourceItems.forEach(function(si) {
+        if (si.link) {
+          actionsHtml += '<a href="' + escapeAttr(si.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(si.name) + '</a>';
         } else {
-          sourceTagHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+          actionsHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
         }
       });
     } else if (article.source) {
-      if (article.source_file) {
-        sourceTagHtml = '<a href="' + escapeAttr(viewerLink) + '" class="source-tag" title="查看原文">' + escapeHtml(article.source) + '</a>';
+      // fallback: single source
+      if (article.link) {
+        actionsHtml += '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(article.source) + '</a>';
       } else {
-        sourceTagHtml = '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+        actionsHtml += '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
       }
     }
 
@@ -612,9 +639,9 @@ body {
             modelTagHtml +
           '</div>' +
           timeHtml +
-          (article.digest ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          (digestHtml ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
           '<div class="card-actions">' +
-            sourceTagHtml +
+            actionsHtml +
           '</div>' +
         '</div>' +
       '</div>' +
