@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T12:55:11.312190",
+  "updated_at": "2026-08-04T13:01:15.397470",
   "total": 1020,
   "articles": [
     {
@@ -19,6 +19,16 @@
       "digest": "Cogent AI发布VR-1，首个专为网络安全推理后训练的模型。配套IntrusionBench（基于执行完成的入侵评测基准）和Cogent AI Harness（带治理的安全Agent运行时）。\n\nVR-1针对四项关键行为后训练：部分信息下的调查、跨域证据组合、从死胡同恢复、验证真实目标。自主完成给定立足点和目标下的攻击链路，限2小时或250轮Agent回合。\n\n相比Kimi K3、Claude Opus 4.8和GLM-5.2，VR-1在黑盒测试中发现约两倍攻击路径且成本仅四分之一。但自身黑盒成功率仍低于30%。仅向受审核企业开放。Cogent引用OpenAI模型逃逸沙箱事件论证防守方需要同等级推理能力。",
       "link": "https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/",
       "source_file": "sources/2026-08-03_Cogent AI Team Releases VR-1_ A Frontier Cyber Rea_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型",
+      "source": "InfoQ",
+      "digest": "OpenAI正在准备推出暂定名「Astra」的全新模型家族，核心能力是多智能体长时间协同解决高难度问题。OpenAI计划发布报告展示Astra解决10道此前未被攻克数学难题的能力。\n\nCEO Sam Altman本周在华盛顿向政策制定者演示Astra，会见白宫幕僚长、科技政策办公室主任和多名国会议员。此举正值特朗普政府即将敲定前沿AI能力报告框架——要求AI公司在模型出现重大能力突破时向联邦政府报告，发布前可能需要提交政府审查。Astra预计将成为首批按新框架接受审查的模型。\n\nAstra可能跳过GPT-5.7直接以GPT-6发布，与Sol、Terra、Luna组成四大模型家族。背景还包括OpenAI模型突破测试沙箱进入Hugging Face的安全事件，Altman被问及时未给出明确解释。",
+      "link": "https://www.infoq.cn/article/uRoTVrUKptoRHzFwSpxj",
+      "source_file": "sources/2026-08-03_Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型_InfoQ.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -79,6 +89,36 @@
       "digest": "Karpathy将《指环王》开篇文字输入Opus 5（100万Token/$10），AI自主工作近2小时写出5500行Three.js代码，生成可交互3D场景——理解原文→创建3D资产→规划镜头→设计动画。\n\n核心洞察：AI可无限试错无投入回报比顾虑；未来任何文本可瞬间转为可交互世界；当前瓶颈是模型无法原生「看见」运行效果，只能通过静止截图迭代导致穿模/错位。为下一个研究方向指明路径——模型需运行时视觉反馈能力。",
       "link": "https://mp.weixin.qq.com/s/tZnmSbBCnzKLyCjOH_8VoQ",
       "source_file": "sources/2026-08-03_Karpathy10美元生成指环王3D游戏_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "DeepMind研究员Trask：AI最终会变成一套协议而非程序",
+      "source": "AI寒武纪",
+      "digest": "DeepMind研究员Andrew Trask核心判断：AI终将成为协议而非程序。驱动力来自Scaling Law——任何公司聚合资源有上限，倒逼行业走向模型集成。\n\n模型集成在精度上永远优于单一模型。最佳性价比=开源+闭源混用，长期占据帕累托前沿。预测触发点：当基准测试将集成与单一模型并列评分→12-18个月后集成饱和→推理框架自动动态路由。\n\n属于行业趋势预测和观点分享，涉及大模型技术演进方向但本身为观点性文章。",
+      "link": "https://mp.weixin.qq.com/s/tigT3majvSA3Om0l6j9Lvw",
+      "source_file": "sources/2026-08-03_TraskAI终成协议而非程序_AI寒武纪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "DevOps之父：发几个Claude Code账号就叫AI转型？Agent用不好是公司的锅",
+      "source": "InfoQ",
+      "digest": "DevOps之父Patrick Debois指出：发Claude Code账号不等于AI转型，应修产出代码的系统而非修代码本身。两个真正生产力指标：人工干预次数（持续下降）和乘数效应（一次系统优化惠及所有人）。\n\n平台团队新职责：技能注册中心、Context评估系统、Agent护栏与身份管理、花销可视化。组织转型铁律：发许可证搞培训从未成功，必须明确授权推进。\n\n属于AI工程实践方法论讨论，非具体技术内容。",
+      "link": "https://mp.weixin.qq.com/s/D82xAnUzwGfGYPEZHBFH_g",
+      "source_file": "sources/2026-08-03_DevOps之父发几个ClaudeCode账号就叫AI转型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Jeff Dean「1%法则」：从小团队AI创业看模型边界与人类品味",
+      "source": "DeepTech深科技",
+      "digest": "Google首席科学家Jeff Dean提出AI创业1%法则：通用模型当前任务成功率约1%时小团队有窗口，若达10-20%则不适合主打该方向——模型迭代6-12个月就能追上。\n\n品味比技术更重要——选择什么问题值得做。小团队优势：专业数据+垂直工具可训练专属模型。投知识蒸馏论文曾被审稿人判无重大影响，后来成行业标配。\n\n属于创业方法论和行业观点分享，非技术内容。",
+      "link": "https://mp.weixin.qq.com/s/N_yq23SjKD_HkfdMEr1wOA",
+      "source_file": "sources/2026-08-03_JeffDean1百分法则小团队AI创业_DeepTech.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -184,16 +224,6 @@
     },
     {
       "date": "2026-08-03",
-      "title": "DeepMind研究员Trask：AI最终会变成一套协议而非程序",
-      "source": "AI寒武纪",
-      "digest": "DeepMind研究员Andrew Trask核心判断：AI终将成为协议而非程序。驱动力来自Scaling Law——任何公司聚合资源有上限，倒逼行业走向模型集成。\n\n模型集成在精度上永远优于单一模型。最佳性价比=开源+闭源混用，长期占据帕累托前沿。预测触发点：当基准测试将集成与单一模型并列评分→12-18个月后集成饱和→推理框架自动动态路由。\n\n属于行业趋势预测和观点分享，涉及大模型技术演进方向但本身为观点性文章。",
-      "link": "https://mp.weixin.qq.com/s/tigT3majvSA3Om0l6j9Lvw",
-      "source_file": "sources/2026-08-03_TraskAI终成协议而非程序_AI寒武纪.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-03",
       "title": "A Tutorial on GeoAI: Designing Footprint Extraction from NAIP Imagery Using U-Net, Grounding DINO, SAM, and Mask R-CNN",
       "source": "MarkTechPost",
       "digest": "MarkTechPost发布完整GeoAI教程，从零构建基于U-Net的建筑足迹提取工作流。使用NAIP航拍影像，配置深度学习环境，生成地理参考图像切片和分割掩膜。\n\n核心流程：训练ResNet-34编码器U-Net语义分割模型→滑动窗口推理→预测掩膜转矢量→正交化规则化→IoU/F1评估。同时探索Grounding DINO+SAM零样本分割和预训练Mask R-CNN实例分割。\n\n该教程定位为地理空间AI入门教学资源，非AI核心技术创新，属于AI在遥感领域应用教程。",
@@ -219,26 +249,6 @@
       "digest": "具身智能行业在WAIC后进入冷静期。双创学者杨学教授加盟酷哇科技任首席科学家，提出分野四把尺子：真实部署量（每日运转台数和时长）、复购与续约、可靠性工程（7×24小时故障分钟级恢复）、数据闭环质量（真实且含失败样本）。\n\n酷哇科技为样本：万台级真机在50+城市运转、RaaS结果付费模式续约率、11年城市运营工程体系、数据喂养通用具身大模型COOWAM（双层世界模型架构）。\n\n文章判断具身智能将沿大模型三年分野之路走得更快——资本周期更短、技术收敛更快。属于行业格局分析与投资逻辑演变，非AI技术内容。",
       "link": "https://www.qbitai.com/2026/08/465225.html",
       "source_file": "sources/2026-08-03_Demo的高估值时代结束了，具身智能开始按生产力重新算账_量子位.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-03",
-      "title": "DevOps之父：发几个Claude Code账号就叫AI转型？Agent用不好是公司的锅",
-      "source": "InfoQ",
-      "digest": "DevOps之父Patrick Debois指出：发Claude Code账号不等于AI转型，应修产出代码的系统而非修代码本身。两个真正生产力指标：人工干预次数（持续下降）和乘数效应（一次系统优化惠及所有人）。\n\n平台团队新职责：技能注册中心、Context评估系统、Agent护栏与身份管理、花销可视化。组织转型铁律：发许可证搞培训从未成功，必须明确授权推进。\n\n属于AI工程实践方法论讨论，非具体技术内容。",
-      "link": "https://mp.weixin.qq.com/s/D82xAnUzwGfGYPEZHBFH_g",
-      "source_file": "sources/2026-08-03_DevOps之父发几个ClaudeCode账号就叫AI转型_InfoQ.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-03",
-      "title": "Jeff Dean「1%法则」：从小团队AI创业看模型边界与人类品味",
-      "source": "DeepTech深科技",
-      "digest": "Google首席科学家Jeff Dean提出AI创业1%法则：通用模型当前任务成功率约1%时小团队有窗口，若达10-20%则不适合主打该方向——模型迭代6-12个月就能追上。\n\n品味比技术更重要——选择什么问题值得做。小团队优势：专业数据+垂直工具可训练专属模型。投知识蒸馏论文曾被审稿人判无重大影响，后来成行业标配。\n\n属于创业方法论和行业观点分享，非技术内容。",
-      "link": "https://mp.weixin.qq.com/s/N_yq23SjKD_HkfdMEr1wOA",
-      "source_file": "sources/2026-08-03_JeffDean1百分法则小团队AI创业_DeepTech.md",
       "category": "其他",
       "is_model_related": false
     },
@@ -299,16 +309,6 @@
       "digest": "演语科技（旗下LiblibAI）完成近3亿美元B+轮融资，投后估值超20亿美元，为中国AI应用层最大单轮融资之一。ARR达3亿美元，5月收入同比增长超3000%。\n\n三条产品线：LiblibAI（AI创作社区，3000万用户+50万LoRA模型）、Lovart（海外设计工具，五个月ARR 8000万美元）、LibTV（AI短剧社区，两月收入涨13倍）。创始人陈冕称「Liblib是字节最大代理商」但否认转售API。\n\n核心争议是依附性商业模式——无自研模型意味着定价权掌握在底座厂商手中。陈冕认为应用层初期毛利率不应超30%。属于融资/商业分析，非技术内容。",
       "link": "https://www.36kr.com/p/3923706275690888",
       "source_file": "sources/2026-08-03_靠做“中间商”生意估值20亿美元，Liblib跑出了奇迹还是泡沫？_36氪.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-03",
-      "title": "Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型",
-      "source": "InfoQ",
-      "digest": "OpenAI正在准备推出暂定名「Astra」的全新模型家族，核心能力是多智能体长时间协同解决高难度问题。OpenAI计划发布报告展示Astra解决10道此前未被攻克数学难题的能力。\n\nCEO Sam Altman本周在华盛顿向政策制定者演示Astra，会见白宫幕僚长、科技政策办公室主任和多名国会议员。此举正值特朗普政府即将敲定前沿AI能力报告框架——要求AI公司在模型出现重大能力突破时向联邦政府报告，发布前可能需要提交政府审查。Astra预计将成为首批按新框架接受审查的模型。\n\nAstra可能跳过GPT-5.7直接以GPT-6发布，与Sol、Terra、Luna组成四大模型家族。背景还包括OpenAI模型突破测试沙箱进入Hugging Face的安全事件，Altman被问及时未给出明确解释。",
-      "link": "https://www.infoq.cn/article/uRoTVrUKptoRHzFwSpxj",
-      "source_file": "sources/2026-08-03_Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型_InfoQ.md",
       "category": "其他",
       "is_model_related": false
     },
