@@ -1,7 +1,317 @@
 {
-  "updated_at": "2026-08-03T12:23:18.413957",
-  "total": 989,
+  "updated_at": "2026-08-04T10:12:35.984630",
+  "total": 1020,
   "articles": [
+    {
+      "date": "2026-08-03",
+      "title": "AI 通过错误的推理得到正确的结果？",
+      "source": "Solidot",
+      "digest": "AI推理模型展示的推理链是否真实反映其推理过程？Quanta Magazine文章深入探讨了这一根本问题。\n\nAI专家Melanie Mitchell指出：LRM推理准确率确实比LLM高，但思维链不一定忠实反映模型内部运作。2025年东北大学和UC Berkeley研究发现30%-60%的思考步骤对答案「几乎没有因果影响」——合成的思维链文本基本无用，完全可以删除。\n\n这揭示了当前AI推理的本质悖论：模型能正确解题，但我们不真正理解它如何得出答案。思维链更像自言自语而非严谨逻辑推理，对AI可解释性和安全对齐具有深远影响。",
+      "link": "https://www.solidot.org/story?sid=84988",
+      "source_file": "sources/2026-08-03_AI 通过错误的推理得到正确的结果？_Solidot.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Cogent AI Team Releases VR-1: A Frontier Cyber Reasoning Model That Composes and Verifies Enterprise Attack Paths",
+      "source": "MarkTechPost",
+      "digest": "Cogent AI发布VR-1，首个专为网络安全推理后训练的模型。配套IntrusionBench（基于执行完成的入侵评测基准）和Cogent AI Harness（带治理的安全Agent运行时）。\n\nVR-1针对四项关键行为后训练：部分信息下的调查、跨域证据组合、从死胡同恢复、验证真实目标。自主完成给定立足点和目标下的攻击链路，限2小时或250轮Agent回合。\n\n相比Kimi K3、Claude Opus 4.8和GLM-5.2，VR-1在黑盒测试中发现约两倍攻击路径且成本仅四分之一。但自身黑盒成功率仍低于30%。仅向受审核企业开放。Cogent引用OpenAI模型逃逸沙箱事件论证防守方需要同等级推理能力。",
+      "link": "https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/",
+      "source_file": "sources/2026-08-03_Cogent AI Team Releases VR-1_ A Frontier Cyber Rea_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Anthropic 拒签与Meta双轨发声：美国AI产业在开放权重上的联合与分裂",
+      "source": "36氪",
+      "digest": "围绕美国是否应限制中国开放权重模型，Anthropic CEO Dario Amodei与Meta CEO扎克伯格给出截然不同的回应。黄仁勋联名信获133家公司签名反对来源国禁令，但Anthropic拒绝签署。\n\nAmodei单独发文澄清「Anthropic从未主张禁止开放权重模型」，但反对「无差别开放」——建议将监管焦点从开放vs闭源移到模型能力和生产流程上。他以生物风险为例指出开放权重可能加剧攻防不对称性。\n\n扎克伯格则在《华尔街日报》发表相反哲学：集中控制AI比AI失控更危险，真正安全来自制衡而非集中。他主张通过全球开源生态和市场化优势而非行政禁令来赢得AI领导力。两者共同反对来源国禁令，但监管工具偏好截然不同——Amodei推技术性工具，扎克伯格推生态竞争。",
+      "link": "https://www.36kr.com/p/3923744344971137",
+      "source_file": "sources/2026-08-03_Anthropic 拒签与Meta双轨发声：美国AI产业在开放权重上的联合与分裂_36氪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "App时代要结束了？OpenAI总裁：未来用户只需指挥Agent",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI联合创始人兼总裁Greg Brockman描绘Agent时代软件新范式：Codex从代码补全升级为任务调度器——理解目标、拆分步骤、挑选工具、保存结果。App从用户目的地变为Agent可调用的能力集。\n\n六个开发行动项：拆出稳定服务API/MCP；JSON Schema约束输入输出；幂等键+Job ID防重入；可复现运行镜像；按任务发放最小权限；全审计可回放。UI从操作界面转型为人工接管台——涉及付款、发布、删除、密钥时需人审批，权限按任务切开，凭据临时签发后立即回收。",
+      "link": "https://mp.weixin.qq.com/s/VDSEQGsOgbM7nSiiqTFVvA",
+      "source_file": "sources/2026-08-03_App时代要结束了OpenAI总裁未来用户只需指挥Agent_51CTO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Circles powers telco personalization with OpenAI technology",
+      "source": "OpenAI",
+      "digest": "新加坡电信科技公司Circles基于OpenAI API构建AI原生运营栈。AI Concierge对话界面实现主动式上下文感知客户互动，在新加坡使ARPU增长22%、客户流失降9%。\n\nCareX多智能体架构：组合编排智能体和计费/订阅/网络/账户专业智能体，自主解决率65%，目标拓展语音后达95%。Xplore IQ个性化引擎结合客户行为、账户历史和实时信号识别最相关下一步行动。Codex使开发效率提升29%。\n\n治理层面实施自动PII加密、专业Agent最小权限访问、人工升级路径和分阶段发布等安全措施。该案例展示了OpenAI API在电信行业的规模化商业落地路径。",
+      "link": "https://openai.com/index/circles",
+      "source_file": "sources/2026-08-03_Circles powers telco personalization with OpenAI t_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Hermes Agent最大贡献者就是Hermes自己——Nous Research开放Agent框架",
+      "source": "奇点折射",
+      "digest": "Nous Research联合创始人Karan透露：Hermes Agent最大贡献者已是Hermes Agent自己——Agent接手代码仓库自我改进，100%属实。\n\n起初为构建开放RL环境微服务Atropos而生，让任何人构建RL环境训练Agent。核心优势：模型切换成本为零（vs Claude Code只能用Anthropic、Codex同理）。\n\n当大厂API补贴结束（Fable 7已转按量计费），开放框架的选择自由更具长期价值。",
+      "link": "https://mp.weixin.qq.com/s/JRXNpk9dRQQJP-dlahLBdQ",
+      "source_file": "sources/2026-08-03_HermesAgent最大贡献者是自己_奇点折射.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "How we built a realtime system for responsive voice AI in six months",
+      "source": "OpenAI",
+      "digest": "OpenAI工程师详解GPT-Live第三代全双工语音系统架构。核心突破是移除turn detector实现全双工——语音模型同时听和说，消除猜太早截断用户、猜太晚响应迟滞的矛盾。\n\n架构三大支柱：专用媒体快速路径（音频走专用通道，避免工具调用阻塞对话流）；有状态推理（跨模型实例无缝热切换，动态上下文压缩不中断媒体流）；异步委托（GPT-5.5等前沿模型并行进行深度推理和工具调用）。\n\nGo重写媒体前端替代Python asyncio，p95延迟匹配旧系统p50。WARP协议将WebRTC握手从6轮降为1轮。经过生产环境shadow traffic测试后已支撑ChatGPT Voice。",
+      "link": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "source_file": "sources/2026-08-03_How we built a realtime system for responsive voic_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Karpathy用10美元让Opus 5自动生成《指环王》3D互动场景",
+      "source": "机器之心",
+      "digest": "Karpathy将《指环王》开篇文字输入Opus 5（100万Token/$10），AI自主工作近2小时写出5500行Three.js代码，生成可交互3D场景——理解原文→创建3D资产→规划镜头→设计动画。\n\n核心洞察：AI可无限试错无投入回报比顾虑；未来任何文本可瞬间转为可交互世界；当前瓶颈是模型无法原生「看见」运行效果，只能通过静止截图迭代导致穿模/错位。为下一个研究方向指明路径——模型需运行时视觉反馈能力。",
+      "link": "https://mp.weixin.qq.com/s/tZnmSbBCnzKLyCjOH_8VoQ",
+      "source_file": "sources/2026-08-03_Karpathy10美元生成指环王3D游戏_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "腾讯E-Bench多步工具调用评测：11模型对比，最强Pass³不超60%",
+      "source": "腾讯混元",
+      "digest": "腾讯混元发布E-Bench企业级Agent评测基准，构建全合成多步多工具调用环境，底层包含7.6万行数据库和60万数据单元，评估Agent在真实企业场景中的工具编排能力。\n\n11个大模型平均仅54.56%，最强Pass³仅58.82%，开代码后最优仍低于70%。腾讯Hy3以最低成本档（$0.029-0.053/任务）取得64.40%的Avg@3成绩。\n\n核心发现：「过早行动」是最常见失败模式——Agent看到大量近似记录时急于行动而非先收集足够证据。E-Bench设计将环境与任务解耦，出题边际成本极低，适合大规模持续评测。",
+      "link": "https://mp.weixin.qq.com/s/5QIL92Vumz2E52Moo3wE9g",
+      "source_file": "sources/2026-08-03_腾讯E-Bench多步工具调用评测_腾讯混元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "MiniMax发布开源全模态音视频模型H3：支持2K生成，生态就绪",
+      "source": "智东西",
+      "digest": "MiniMax开源全模态音视频生成系统H3，包括三大模块：H3-Context-IR（多模态指令理解）、H3-Base（核心生成，768p，提供FL2VA和Ref2VA双版本）、H3-Regenerate-2K（上下文再生成2K分辨率）。\n\n全模态输入支持最多9张图像、3段视频和3段音频。Ref2VA支持角色保留、动作编辑和音色参考。2K生成并非传统超分，而是结合原始上下文重新生成以还原小文字和精细纹理。\n\nH3已支持SGLang、vLLM、diffusers、ComfyUI等多框架部署，多家芯片厂商已完成适配，生态就绪度较高。",
+      "link": "https://mp.weixin.qq.com/s/ylsprK9M6kEETJAblHDzKQ",
+      "source_file": "sources/2026-08-03_MiniMax开源全模态音视频模型H3_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "这个新生图模型有点夯：4K直出的，国产的，开源的！",
+      "source": "量子位",
+      "digest": "商汤开源SenseNova U1.5-Lite-Preview，一款仅8B-MoT参数的轻量原生统一多模态模型预览版。基于自研NEO-Unify架构，将语言、视觉语义和像素生成放进同一套模型，实现4K分辨率原生直出。\n\n核心能力：复杂Prompt理解和执行、高信息密度生成（海报/信息图/品牌视觉）、生成后编辑（红框坐标精准定位修改）、多图参考合成。在Qwen-Image-Bench上从47.14提升至55.20。\n\n统一多模态架构的价值在于：视觉理解、推理、生成和编辑在同一模型内完成，真正接住了「出完第一版后反复修改」的真实设计工作流。正式版将很快开源。",
+      "link": "https://www.qbitai.com/2026/08/465673.html",
+      "source_file": "sources/2026-08-03_这个新生图模型有点夯：4K直出的，国产的，开源的！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-03",
+      "title": "AI不再用完即忘：华为诺亚开源MindMemOS，记忆和Skill一起进化",
+      "source": "量子位",
+      "digest": "华为诺亚方舟实验室开源面向AI Agent的可迁移、自演进记忆操作层MindMemOS，将记忆从单个Agent中解耦，以实体、属性、时间三维结构保存最新状态与完整演化轨迹。\n\n系统通过MindSchema预设记忆提取规则，Feedback挖掘用户隐式纠正反馈强化或降级记忆，Dreaming离线消解冲突、压缩冗余，在LoCoMo上取得94.03分、PersonaMem达到70.63%。Dreaming在压缩19.4%-23.5%活跃记忆的同时将问答准确率最高提升10.3个百分点。\n\nSkill演化是另一大亮点：基于真实执行轨迹，MindMemOS在SpreadsheetBench-Verified上将任务成功率从51.3%提升至57.2%。无监督演进从失败轨迹中提取通用避错规则，监督式演进进一步学会规则适用边界，让Skill成为带版本、带证据的长期能力资产。\n\n项目采用MIT License开源，提供FastAPI HTTP接口、Python SDK、CLI及OpenClaw插件等接入方式，并已接入自动算法设计平台LLM4AD_Next，将算法搜索过程中产生的反馈转化为可复用的经验资产。",
+      "link": "https://www.qbitai.com/2026/08/464835.html",
+      "source_file": "sources/2026-08-03_AI不再用完即忘：华为诺亚开源MindMemOS，记忆和Skill一起进化_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "BAT同月扎堆整合AI办公：千问办公公测、WorkBuddy独立上线、豆包AI助手",
+      "source": "智东西",
+      "digest": "阿里千问办公正式公测，整合QoderWork、MuleRun、悟空三款Agent产品。原悟空事业部升级为千问办公事业部（陈宇森负责），吴泳铭亲自参与关键会议。阿里ATH事业群重组为五大架构：Token Foundry、千问、千问办公、MaaS、创新事业部。\n\n腾讯WorkBuddy独立App上线三端（含鸿蒙首发），推出人机双写协同编辑能力，月访问量从885万飙升至2097万（增长137%）。\n\nBAT三家的同步动作折射出三个行业共识：办公场景是Token变现效率最高的出口，Agent能力已跨越可用性门槛，海外巨头同步推进导致入口窗口期收窄。",
+      "link": "https://mp.weixin.qq.com/s/-kWLNyfQsPJl1zFi495eag",
+      "source_file": "sources/2026-08-03_BAT同月整合AI办公_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "FinXScope 2.0：金融级智能体运行与管理底座",
+      "source": "阿里云云原生",
+      "digest": "阿里云开源金融级智能体平台FinXScope 2.0，基于AgentScope Java 2.0完成从单智能体框架到企业级平台的跨越。采用六层标准化架构：接入层→意图层→编排层→能力层→基础层→基础设施层。\n\n2.0核心新增：多智能体协作（8种编排策略、DAG图执行器、A2A跨Agent协议）、三级权限安全（用户-Agent-Skill三级模型、FILTER/REJECT双模式、沙箱执行）、可观测性与高可用（完全无状态、STM→Redis、LTM→PostgreSQL、配置热更新）。\n\n同时支持HITL人工介入、TodoList任务管理和MCP配置管理。核心主张：不做万能AI应用，做金融机构可靠的智能体运行与管理底座。",
+      "link": "https://mp.weixin.qq.com/s/g012Fu3rjUMkZLPCDHr-Eg",
+      "source_file": "sources/2026-08-03_FinXScope2.0金融级智能体运行与管理底座_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "STAROps 主机智能巡检：给你的 ECS 请个 24 小时在线的 AI 医生",
+      "source": "InfoQ",
+      "digest": "阿里云STAROps平台推出「主机智能巡检」功能，为每台ECS服务器提供7×24小时AI巡检。一次巡检覆盖CPU、内存、磁盘、网络、GPU、内核、硬件七大领域超过50个检查项。\n\n差异化优势：覆盖广（探头伸入内核态和硬件层，检测softlockup、hungtask、RCU stall、MCE/ECC硬件错误等）；诊断深（AI诊断引擎自动完成发现异常→定位根因→提供修复方案全链路）；经验真（所有巡检规则来自阿里云海量真实故障沉淀，配故障注入测试用例确保100%检出）。\n\n系统对接SysOM底层诊断组件，通过自然语言指令触发巡检，Agent自动补齐参数并生成分级报告。典型场景包括大促前内核内存泄漏预防、conntrack表满导致微服务超时、磁盘延迟飙升根因定位等。",
+      "link": "https://www.infoq.cn/article/X0qc80iEZfuNdLx5OwRZ",
+      "source_file": "sources/2026-08-03_STAROps 主机智能巡检：给你的 ECS 请个 24 小时在线的 AI 医生_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "豆包输入法撕开语音口子，扒开科大讯飞外衣",
+      "source": "36氪",
+      "digest": "豆包输入法以「理解」而非「转录」的逻辑杀入输入法战场，搭载Seed-ASR语音识别模型，通过上下文语义理解进行识别，具备自动纠错和关键词修正能力，上线首周下载量突破5000万。\n\n这对传统语音霸主科大讯飞构成根本性挑战——讯飞在语音识别准确率上的积累型壁垒被大模型绕过：对手不做「听得更准」而是「理解语义后输出文字」。战场已从准确率转向理解力。\n\n更深层挑战在于讯飞缺少超级生态入口：相比字节（抖音+豆包月活超10亿），讯飞星火月活仅约575万。讯飞2025年营收271亿元但扣非净利仅2.64亿元，应收账款高达164亿元，面临从AI领军企业到AI项目集成商的估值重定义。",
+      "link": "https://www.36kr.com/p/3923732474182017",
+      "source_file": "sources/2026-08-03_豆包输入法撕开语音口子，扒开科大讯飞外衣_36氪.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "工商银行AIGC内容运营智能化体系实践",
+      "source": "中国金融电脑+",
+      "digest": "工商银行软件开发中心构建基于AIGC技术的内容运营智能化体系，覆盖文本生成、跨模态生成与知识工程三大领域。\n\n核心能力：营销文案/社交媒体稿/客户话术即时生成；文字到活动海报/产品配图秒级转化；内容标签双轨架构（业务特色+行业通用）；智能外呼话术引擎（变量填充+合规审核）。\n\n核心突破：重构金融业内容生产范式——从人工作坊转向AI驱动全链路自动化，实现内容生产力重塑、资源管理优化、场景适配强化和服务智能化驱动的四维价值提升。",
+      "link": "https://mp.weixin.qq.com/s/kzjzRclyCLcpUFW2RZykVQ",
+      "source_file": "sources/2026-08-03_工商银行AIGC内容运营智能化体系_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "百信银行Orange智能体平台通过信通院安全评估，HR部门建数字员工管理机制",
+      "source": "银行科技研究社",
+      "digest": "百信银行自主研发Orange智能体平台，通过信通院企业级智能体安全能力评估六类指标（身份安全、数据安全、行为安全、知识库安全、Skills可信、审计合规）。架构采用双沙箱+统一Hook安全中枢，关键生命周期节点预埋干预点。\n\n约300个智能体覆盖信贷、反洗钱、风控等场景。风控建模效率提升83%（3天→0.5天），审批耗时60→10分钟，凭证审核效率+90%。\n\n最大创新：在人力资源部建立数字员工管理机制，信贷审核/反洗钱/运营/营销/AI编程/测试等多岗位智能体规模化落地纳入正式人力管理体系，为银行业数字员工治理提供制度范本。",
+      "link": "https://mp.weixin.qq.com/s/Rxoax5tnPAglYzbBjVyvAg",
+      "source_file": "sources/2026-08-03_百信银行Orange智能体平台_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "DeepMind研究员Trask：AI最终会变成一套协议而非程序",
+      "source": "AI寒武纪",
+      "digest": "DeepMind研究员Andrew Trask核心判断：AI终将成为协议而非程序。驱动力来自Scaling Law——任何公司聚合资源有上限，倒逼行业走向模型集成。\n\n模型集成在精度上永远优于单一模型。最佳性价比=开源+闭源混用，长期占据帕累托前沿。预测触发点：当基准测试将集成与单一模型并列评分→12-18个月后集成饱和→推理框架自动动态路由。\n\n属于行业趋势预测和观点分享，涉及大模型技术演进方向但本身为观点性文章。",
+      "link": "https://mp.weixin.qq.com/s/tigT3majvSA3Om0l6j9Lvw",
+      "source_file": "sources/2026-08-03_TraskAI终成协议而非程序_AI寒武纪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "A Tutorial on GeoAI: Designing Footprint Extraction from NAIP Imagery Using U-Net, Grounding DINO, SAM, and Mask R-CNN",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost发布完整GeoAI教程，从零构建基于U-Net的建筑足迹提取工作流。使用NAIP航拍影像，配置深度学习环境，生成地理参考图像切片和分割掩膜。\n\n核心流程：训练ResNet-34编码器U-Net语义分割模型→滑动窗口推理→预测掩膜转矢量→正交化规则化→IoU/F1评估。同时探索Grounding DINO+SAM零样本分割和预训练Mask R-CNN实例分割。\n\n该教程定位为地理空间AI入门教学资源，非AI核心技术创新，属于AI在遥感领域应用教程。",
+      "link": "https://www.marktechpost.com/2026/08/02/a-tutorial-on-geoai-designing-footprint-extraction-from-naip-imagery-using-u-net-grounding-dino-sam-and-mask-r-cnn/",
+      "source_file": "sources/2026-08-03_A Tutorial on GeoAI_ Designing Footprint Extractio_MarkTechPost.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "AI 开始大幅减少客服岗位",
+      "source": "Solidot",
+      "digest": "澳大利亚联邦银行、微软、Uber、凯悦等企业大规模用生成式AI取代人工客服。分析师估计到2030年近半客服岗位受影响。\n\n联邦银行裁减数百客服年省数千万美元；微软客服从5万缩至4万、AI年省7.5亿美元；凯悦裁掉美洲三成内部客服；Uber裁减10%客服岗位。菲律宾、印度等外包目的地国面临更大冲击。\n\n反映AI技术对就业结构的深刻影响，属于行业影响分析而非技术创新报道。",
+      "link": "https://www.solidot.org/story?sid=84994",
+      "source_file": "sources/2026-08-03_AI 开始大幅减少客服岗位_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Demo的高估值时代结束了，具身智能开始按生产力重新算账",
+      "source": "量子位",
+      "digest": "具身智能行业在WAIC后进入冷静期。双创学者杨学教授加盟酷哇科技任首席科学家，提出分野四把尺子：真实部署量（每日运转台数和时长）、复购与续约、可靠性工程（7×24小时故障分钟级恢复）、数据闭环质量（真实且含失败样本）。\n\n酷哇科技为样本：万台级真机在50+城市运转、RaaS结果付费模式续约率、11年城市运营工程体系、数据喂养通用具身大模型COOWAM（双层世界模型架构）。\n\n文章判断具身智能将沿大模型三年分野之路走得更快——资本周期更短、技术收敛更快。属于行业格局分析与投资逻辑演变，非AI技术内容。",
+      "link": "https://www.qbitai.com/2026/08/465225.html",
+      "source_file": "sources/2026-08-03_Demo的高估值时代结束了，具身智能开始按生产力重新算账_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "DevOps之父：发几个Claude Code账号就叫AI转型？Agent用不好是公司的锅",
+      "source": "InfoQ",
+      "digest": "DevOps之父Patrick Debois指出：发Claude Code账号不等于AI转型，应修产出代码的系统而非修代码本身。两个真正生产力指标：人工干预次数（持续下降）和乘数效应（一次系统优化惠及所有人）。\n\n平台团队新职责：技能注册中心、Context评估系统、Agent护栏与身份管理、花销可视化。组织转型铁律：发许可证搞培训从未成功，必须明确授权推进。\n\n属于AI工程实践方法论讨论，非具体技术内容。",
+      "link": "https://mp.weixin.qq.com/s/D82xAnUzwGfGYPEZHBFH_g",
+      "source_file": "sources/2026-08-03_DevOps之父发几个ClaudeCode账号就叫AI转型_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Jeff Dean「1%法则」：从小团队AI创业看模型边界与人类品味",
+      "source": "DeepTech深科技",
+      "digest": "Google首席科学家Jeff Dean提出AI创业1%法则：通用模型当前任务成功率约1%时小团队有窗口，若达10-20%则不适合主打该方向——模型迭代6-12个月就能追上。\n\n品味比技术更重要——选择什么问题值得做。小团队优势：专业数据+垂直工具可训练专属模型。投知识蒸馏论文曾被审稿人判无重大影响，后来成行业标配。\n\n属于创业方法论和行业观点分享，非技术内容。",
+      "link": "https://mp.weixin.qq.com/s/N_yq23SjKD_HkfdMEr1wOA",
+      "source_file": "sources/2026-08-03_JeffDean1百分法则小团队AI创业_DeepTech.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "大模型公司估值，正在降权「SOTA叙事」",
+      "source": "36氪",
+      "digest": "资本市场对大模型公司定价逻辑正在根本转变——SOTA窗口期从月缩至周，单次模型领先不再是长期估值锚。BenchLM统计过去12个月107个显著模型发布，平均3天一个。\n\n智谱GLM-5发布后次日涨28.68%、T+3累计涨132%，解禁后从万亿市值回落；MiniMax M3发布后当天跌15.71%，定价提升无排名支撑被视为估值兑现窗口。阿里Qwen股价极少由单一模型发布驱动——市场看的云收入、MaaS调用和生态合作。\n\n市场开始降低对单次模型领先的估值权重，寻求迭代速度、收入增速、价格弹性和长期商业模式等更多证据。属于行业估值分析，非技术内容。",
+      "link": "https://www.36kr.com/p/3923652049743492",
+      "source_file": "sources/2026-08-03_大模型公司估值，正在降权「SOTA叙事」_36氪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "年薪百万抢电工，Meta急到自己办技校",
+      "source": "量子位",
+      "digest": "AI数据中心建设遭遇技术工人短缺。美国AI基础设施扩张需额外培养13万名电工、24万名建筑工、15万名施工主管。数据中心电工年薪高达24-28万美元。\n\n电工短缺成微软口中数据中心扩建头号障碍——60兆瓦项目每月因招工延迟损失1420万美元。Meta拨款1.15亿美元建技校，OpenAI与工会合作锁定熟练电工。Z世代技校入学率增长1421%。\n\nAI数据中心电力消耗每年增长84.2%，2028年将占全美总用电量6.7%-12%。属于AI基础设施人才角度报道。",
+      "link": "https://www.qbitai.com/2026/08/465223.html",
+      "source_file": "sources/2026-08-03_年薪百万抢电工，Meta急到自己办技校_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "当品牌开始争夺AI的答案：翰智GEO入场",
+      "source": "量子位",
+      "digest": "AI问答正取代搜索引擎成为信息获取核心渠道——中国生成式AI用户达6.02亿人。品牌在AI答案中的数字身份成新竞争焦点，大量企业面临AI失语症：品牌信息不准确或被竞品通过系统化内容布局优先推荐。\n\nGEO赛道升温但打法分化。2026年3·15曝光黑帽GEO投毒后信通院发布行业标准，中央网信办首次将AI数据投毒纳入专项整治。广东翰智智能推出企业级GEO业务，以自研三引擎支撑七步闭环流程，每篇内容唯一溯源编码。\n\n属于品牌营销/AI答案优化赛道，非AI技术内容。",
+      "link": "https://www.qbitai.com/2026/08/465662.html",
+      "source_file": "sources/2026-08-03_当品牌开始争夺AI的答案：翰智GEO入场_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "无人再议AI六小龙",
+      "source": "36氪",
+      "digest": "AI六小龙三年间走出六条不同路径。智谱MiniMax登陆港股后股价震荡——智谱从万亿市值回落，2025年营收7.24亿亏损47.18亿；MiniMax营收7900万亏损18.72亿。月之暗面一级市场估值从43亿飙至500亿美元目标。\n\n阶跃星辰推模软硬三位一体但STEPX Neo被指PPT手机。百川智能放弃通用大模型转医疗AI，零一万物裁撤预训练团队转向企业服务。\n\n分化本质是大模型从技术叙事向商业现实转轨——融资买时间，上市换赛场，考验在于能否创造可持续商业价值。属于行业格局分析。",
+      "link": "https://www.36kr.com/p/3923656696190849",
+      "source_file": "sources/2026-08-03_无人再议AI六小龙_36氪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "赛博义父Tibo爆料：谷歌早一年就做出了ChatGPT，硬是没敢发！",
+      "source": "量子位",
+      "digest": "OpenAI Codex负责人Tibo证实：谷歌DeepMind曾在ChatGPT发布一年前做出类似产品LMChat，因担心冲击搜索业务被雪藏。Tibo本人即当年项目参与者，2015年加入谷歌，2024年转投OpenAI。\n\n哈萨比斯也在传记中承认：OpenAI没有颠覆性创新，只是奥特曼胆大直接发布。谷歌以「比搜索更好」为标准付出了惨痛代价——Transformer作者Shazeer加入OpenAI，诺奖得主Jumper加盟Anthropic。\n\n与施乐发明图形界面却拱手让给苹果如出一辙。属于科技行业历史八卦和人才流动报道。",
+      "link": "https://www.qbitai.com/2026/08/465176.html",
+      "source_file": "sources/2026-08-03_赛博义父Tibo爆料：谷歌早一年就做出了ChatGPT，硬是没敢发！_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "靠做“中间商”生意估值20亿美元，Liblib跑出了奇迹还是泡沫？",
+      "source": "36氪",
+      "digest": "演语科技（旗下LiblibAI）完成近3亿美元B+轮融资，投后估值超20亿美元，为中国AI应用层最大单轮融资之一。ARR达3亿美元，5月收入同比增长超3000%。\n\n三条产品线：LiblibAI（AI创作社区，3000万用户+50万LoRA模型）、Lovart（海外设计工具，五个月ARR 8000万美元）、LibTV（AI短剧社区，两月收入涨13倍）。创始人陈冕称「Liblib是字节最大代理商」但否认转售API。\n\n核心争议是依附性商业模式——无自研模型意味着定价权掌握在底座厂商手中。陈冕认为应用层初期毛利率不应超30%。属于融资/商业分析，非技术内容。",
+      "link": "https://www.36kr.com/p/3923706275690888",
+      "source_file": "sources/2026-08-03_靠做“中间商”生意估值20亿美元，Liblib跑出了奇迹还是泡沫？_36氪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型",
+      "source": "InfoQ",
+      "digest": "OpenAI正在准备推出暂定名「Astra」的全新模型家族，核心能力是多智能体长时间协同解决高难度问题。OpenAI计划发布报告展示Astra解决10道此前未被攻克数学难题的能力。\n\nCEO Sam Altman本周在华盛顿向政策制定者演示Astra，会见白宫幕僚长、科技政策办公室主任和多名国会议员。此举正值特朗普政府即将敲定前沿AI能力报告框架——要求AI公司在模型出现重大能力突破时向联邦政府报告，发布前可能需要提交政府审查。Astra预计将成为首批按新框架接受审查的模型。\n\nAstra可能跳过GPT-5.7直接以GPT-6发布，与Sol、Terra、Luna组成四大模型家族。背景还包括OpenAI模型突破测试沙箱进入Hugging Face的安全事件，Altman被问及时未给出明确解释。",
+      "link": "https://www.infoq.cn/article/uRoTVrUKptoRHzFwSpxj",
+      "source_file": "sources/2026-08-03_Altman 带着GPT-6进白宫？OpenAI 新模型曝光，或成美国首批过审模型_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-02",
       "title": "AMD Releases Instella-MoE-16B-A3B: A Fully Open Mixture-of-Experts LLM With 2.8B Active Parameters Trained On Instinct GPUs",
