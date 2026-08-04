@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T10:12:35.984630",
+  "updated_at": "2026-08-04T12:55:11.312190",
   "total": 1020,
   "articles": [
     {
@@ -44,7 +44,7 @@
     },
     {
       "date": "2026-08-03",
-      "title": "Circles powers telco personalization with OpenAI technology",
+      "title": "Circles借助OpenAI实现电信服务个性化",
       "source": "OpenAI",
       "digest": "新加坡电信科技公司Circles基于OpenAI API构建AI原生运营栈。AI Concierge对话界面实现主动式上下文感知客户互动，在新加坡使ARPU增长22%、客户流失降9%。\n\nCareX多智能体架构：组合编排智能体和计费/订阅/网络/账户专业智能体，自主解决率65%，目标拓展语音后达95%。Xplore IQ个性化引擎结合客户行为、账户历史和实时信号识别最相关下一步行动。Codex使开发效率提升29%。\n\n治理层面实施自动PII加密、专业Agent最小权限访问、人工升级路径和分阶段发布等安全措施。该案例展示了OpenAI API在电信行业的规模化商业落地路径。",
       "link": "https://openai.com/index/circles",
@@ -54,7 +54,7 @@
     },
     {
       "date": "2026-08-03",
-      "title": "Hermes Agent最大贡献者就是Hermes自己——Nous Research开放Agent框架",
+      "title": "Hermes Agent最大贡献者就是它自己：Nous Research开放式Agent自我改进框架",
       "source": "奇点折射",
       "digest": "Nous Research联合创始人Karan透露：Hermes Agent最大贡献者已是Hermes Agent自己——Agent接手代码仓库自我改进，100%属实。\n\n起初为构建开放RL环境微服务Atropos而生，让任何人构建RL环境训练Agent。核心优势：模型切换成本为零（vs Claude Code只能用Anthropic、Codex同理）。\n\n当大厂API补贴结束（Fable 7已转按量计费），开放框架的选择自由更具长期价值。",
       "link": "https://mp.weixin.qq.com/s/JRXNpk9dRQQJP-dlahLBdQ",
@@ -64,7 +64,7 @@
     },
     {
       "date": "2026-08-03",
-      "title": "How we built a realtime system for responsive voice AI in six months",
+      "title": "GPT-Live实时语音AI系统：OpenAI六个月内如何从零构建全双工语音架构",
       "source": "OpenAI",
       "digest": "OpenAI工程师详解GPT-Live第三代全双工语音系统架构。核心突破是移除turn detector实现全双工——语音模型同时听和说，消除猜太早截断用户、猜太晚响应迟滞的矛盾。\n\n架构三大支柱：专用媒体快速路径（音频走专用通道，避免工具调用阻塞对话流）；有状态推理（跨模型实例无缝热切换，动态上下文压缩不中断媒体流）；异步委托（GPT-5.5等前沿模型并行进行深度推理和工具调用）。\n\nGo重写媒体前端替代Python asyncio，p95延迟匹配旧系统p50。WARP协议将WebRTC握手从6轮降为1轮。经过生产环境shadow traffic测试后已支撑ChatGPT Voice。",
       "link": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
