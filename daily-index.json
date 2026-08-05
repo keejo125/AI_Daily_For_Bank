@@ -1,6 +1,19 @@
 {
   "issues": [
     {
+      "date": "2026-08-05",
+      "weekday": "周三",
+      "stats": {
+        "国际": 7,
+        "国内": 11,
+        "同业": 2,
+        "其他": 4,
+        "total": 24,
+        "merged_items": 2
+      },
+      "summary": "Cursor开源MoK：确定性MoE训练方案Mixture-of-Kittens/近 300万人围观卡帕西亲测 Opus 5：两小时写完 5500 行代码..."
+    },
+    {
       "date": "2026-08-04",
       "weekday": "周二",
       "stats": {
