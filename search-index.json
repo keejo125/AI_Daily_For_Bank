@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-08-04T13:01:15.397470",
-  "total": 1020,
+  "updated_at": "2026-08-05T14:34:08.342752",
+  "total": 1039,
   "articles": [
+    {
+      "date": "2026-08-04",
+      "title": "数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”",
+      "source": "量子位",
+      "digest": "OpenAI 近日宣称其下一代模型成功解决了数学家 Terence Tao 等人提出的一个公开猜想。然而仅 24 小时后，数学家团队即发布论文回应：AI 生成的证明中每一步推导在形式上都是正确的，但整体论证并未指向原始猜想，属于\"正确但无关\"的推理。\n\n该事件引发学界对 AI 数学能力的深层反思：当前模型在符号推导层面已展现出惊人能力，但在理解数学问题的语义本质和证明方向性上仍存在根本缺陷。",
+      "link": "https://www.qbitai.com/2026/08/465792.html",
+      "source_file": "sources/2026-08-04_数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-04",
+      "title": "AI Skill 安全审计流水线：NVIDIA SkillSpector + YARA + SARIF + CI 门禁实战",
+      "source": "MarkTechPost",
+      "digest": "本教程展示了如何构建 AI Skill 安全审计流水线，使用 NVIDIA SkillSpector 结合 LangGraph、YARA 规则、SARIF 标准和 CI 策略门禁。\n\n该流水线通过静态分析检测 AI Skill 中的安全漏洞和恶意模式，将检查结果输出为标准 SARIF 格式，并在 CI/CD 流水线中设置策略门禁，确保只有通过安全审计的 Skill 才能部署到生产环境。方案为 AI 技能工程化落地提供了可操作的安全防护体系。",
+      "link": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/",
+      "source_file": "sources/2026-08-04_Building an Advanced AI Skill Security Auditing Pi_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "FDE 又不够了",
+      "source": "InfoQ",
+      "digest": "继前线部署工程师(FDE)之后，业界出现了一种新角色：前线部署高管(FDX)。MIT 博士 Rick Manelius 提出，FDE 能弥补技术差距但往往距离核心决策层太远，而 FDX 兼具技术理解、管理协调和组织推动能力，是 AI 项目的\"外置 CEO\"。\n\nFDX 需要理解 AI 能力边界、掌控预算分配、推动组织变革，本质上是在填补 AI 技术落地与业务决策之间的鸿沟。这一概念的提出反映了 AI 工程化落地正从纯技术问题演变为组织治理问题。",
+      "link": "https://mp.weixin.qq.com/s/LRTi7KLBXrf3fcwBDc1R-w",
+      "source_file": "sources/2026-08-04_FDE 又不够了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "Genspark 开源 AI 原生办公套件 GenOffice，免费替代 Office",
+      "source": "MarkTechPost",
+      "digest": "Genspark 以 Apache 2.0 许可证开源了 GenOffice，一款 AI 原生的免费办公套件，支持 macOS 和 Windows 平台，涵盖文档、表格、幻灯片和 PDF 功能。\n\nGenOffice 将 AI 能力深度嵌入办公流程，用户可通过自然语言指令完成文档撰写、数据分析、演示生成等任务。与微软 Office、Google Workspace 等传统套件相比，GenOffice 完全免费且无广告，定位为 AI 时代的轻量级办公替代方案。",
+      "link": "https://www.marktechpost.com/2026/08/03/genspark-open-sources-genoffice-a-free-ad-free-ai-office-suite-for-macos-and-windows-with-docs-sheets-slides-pdf/",
+      "source_file": "sources/2026-08-04_Genspark Open Sources GenOffice_ A Free, Ad-Free A_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "生产环境 AI Agent、MCP 服务器与 LLM 应用安全防护实践",
+      "source": "MarkTechPost",
+      "digest": "随着 AI Agent、MCP 集成和 LLM 应用以前所未有的速度进入代码库，安全防护往往跟不上部署节奏。本文系统梳理了生产环境中保护 AI 系统安全的实践方法。\n\n涵盖输入/输出安全过滤、模型访问控制、Agent 权限最小化、MCP 服务器认证与授权、以及对 LLM 应用的持续监控与异常检测。强调了在 AI 原生化部署中安全左移的重要性，并提出了一套可落地的安全防护框架。",
+      "link": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/",
+      "source_file": "sources/2026-08-04_How to Secure AI Agents, MCP Servers, and LLM Apps_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "程序员远没到“完了”的时候！Sam Altman：OpenAI不包办一切，模型只是底座，开发者仍是AI生态的主角",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI CEO Sam Altman 在《Invest Like The Best》访谈中明确表示：\"软件工程师完了\"的说法并未成真，开发者的工作只是从写代码上移到了更高层——定义目标、审核结果、管理系统。\n\nAltman 将当前 AI 能力描述为\"有时像天才，有时像孩子\"，强调模型能生成代码但企业仍需要人来决策、验收和担责。他还明确了 OpenAI 不做垂直应用，只提供模型、算力和平台的边界，留给开发者的是将 AI 能力嵌入具体业务场景的巨大空间。",
+      "link": "https://mp.weixin.qq.com/s/mS-XRDHDaXE0SU0aiux8cA",
+      "source_file": "sources/2026-08-04_程序员远没到完了的时候Sam AltmanOpenAI不包办一切模型只是底座开发者仍是AI生态的主角_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "多模态视觉模型评测：Moonshot PerceptionBench 自动评判工作流",
+      "source": "MarkTechPost",
+      "digest": "本文介绍了一个端到端的多模态视觉模型评测工作流，基于 PerceptionBench 基准测试。PerceptionBench 是一个衡量多模态模型细粒度视觉感知能力的评测集，覆盖图像识别、空间推理、视觉问答等任务。\n\n教程展示了如何使用鲁棒数据加载和自动评判系统来构建可复现的评测流程，通过自动化裁判减少人工评估的主观偏差。该工作流适用于各类视觉语言模型的系统性对比评测。",
+      "link": "https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/",
+      "source_file": "sources/2026-08-04_Evaluating Multimodal Vision Models with Moonshot _MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-04",
+      "title": "All in AI全面冲刺：夯实智能体时代AI基建底座，安谋科技三大业务线集体交卷",
+      "source": "智东西",
+      "digest": "安谋科技展示了面向智能体时代的全栈 AI 芯片 IP 布局，三大业务线集体交卷：CPU 方面推出新一代高性能核心，GPU 方面发布支持端侧大模型推理的图形处理器，NPU 方面升级了面向 Transformer 架构优化的神经网络加速器。\n\n安谋强调从边缘到云端的全栈 IP 战略，覆盖物理 AI、端侧部署和云端训练推理场景，旨在为 AI Agent 的大规模落地提供底层算力基础设施支撑。",
+      "link": "https://mp.weixin.qq.com/s/w6FnDYalZZYKSYNdg1IY_w",
+      "source_file": "sources/2026-08-04_All in AI全面冲刺夯实智能体时代AI基建底座安谋科技三大业务线集体交卷_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "一位资深 Builder的自述：我如何借多 Agent 开发工作流，一周做出 MVP、一个月上线",
+      "source": "InfoQ",
+      "digest": "独立开发者手工川分享了借助多 Agent 开发工作流，一周完成 MVP、一个月上线的实战经验。他从金融专业自学转型，从 2024 年 10 月起几乎将所有编码工作交给 AI。\n\n核心方法论包括：用多个模型和 Agent 分工协作（设计、编码、测试、部署）、注重上下文传递和成本控制、在 Vibe Coding 降低技术门槛后更聚焦用户需求验证。手工川认为 AI 不会取代开发者，但\"一个人借助 AI 完成团队工作\"正在成为现实，传统公司组织形态可能因此改变。",
+      "link": "https://mp.weixin.qq.com/s/2Ww5cO6NzUx1s3aUwNxC1A",
+      "source_file": "sources/2026-08-04_一位资深 Builder的自述我如何借多 Agent 开发工作流一周做出 MVP一个月上线_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群",
+      "source": "量子位",
+      "digest": "亿级日活 AI 应用面临\"推理成本倒挂\"困境：用户越多亏损越大。某出海 AI 应用团队分享了通过跨云架构优化，将 GPU 集群成本削减 75% 的实践。\n\n三重算力锁链包括：单一云厂商锁定导致议价能力不足、模型推理请求波动带来的资源闲置、以及多区域部署的高昂网络成本。跨云方案通过统一调度层实现多云资源动态分配。",
+      "link": "https://www.qbitai.com/2026/08/465732.html",
+      "source_file": "sources/2026-08-04_亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "别让 Agent 每次都重新开始",
+      "source": "InfoQ",
+      "digest": "TencentDB Agent Memory 团队提出了 AI Agent 研发记忆的四层架构：什么值得记、团队经验如何拆解、资产如何治理、如何开源评测。\n\n核心要解决的是 Agent 在真实研发场景中\"每次对话都像重新开始\"的痛点——个人经验、团队上下文、技术取舍、任务过程无法跨会话复用。方案从\"记更多\"转为\"记有用的状态\"，将散落在 Wiki、代码仓库、聊天记录中的信息结构化，让 Agent 在后续任务中能准确召回团队知识。",
+      "link": "https://mp.weixin.qq.com/s/_2y4TzSTmxX852e3RDWEuQ",
+      "source_file": "sources/2026-08-04_别让 Agent 每次都重新开始_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟",
+      "source": "量子位",
+      "digest": "HarmonyOS 7 引入了 Skill 和 Agent 封装机制，将系统底层能力（如相机、传感器、AI 推理引擎等）标准化为可被 AI 直接调用的接口模块。\n\n开发者不再需要为不同设备适配写重复代码，AI Agent 可以直接通过统一的 Skill 接口调度系统能力。这一设计大幅降低了跨设备开发的复杂度。",
+      "link": "https://www.qbitai.com/2026/08/466262.html",
+      "source_file": "sources/2026-08-04_开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills",
+      "source": "量子位",
+      "digest": "北京大学与元空 AI Agent 联合实验室正式开源 OpenAI4S（Open AI for Scientist），一个复刻 Anthropic Claude Science 的科研智能体项目，采用 MIT 许可证。\n\nOpenAI4S 沿着 Code-as-Action 思路独立实现了引擎、持久内核、host-RPC 协议和安全层，内置 30 余项科研 Skills，支持自有算力接入和版本化科研产物。区别于传统 Agent 的\"工具菜单\"模式，它让 AI 真正融入科研工作流：查文献、写代码、调 GPU、跑分析、出图出报告全流程自动化。",
+      "link": "https://www.qbitai.com/2026/08/466386.html",
+      "source_file": "sources/2026-08-04_开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "从人工到智能：大模型驱动的银行法律风险管理新范式",
+      "source": "金融电子化",
+      "digest": "邮储银行软件研发中心分享了基于大模型的银行法律风险管理新范式。传统银行法律风控依赖规则驱动和人工研判，难以应对法规频繁更新、跨境合规多元化和海量非结构化数据的挑战。\n\n新范式利用大模型实现法律文档智能解析、法规变更自动追踪、合同风险自动审查和诉讼案例智能比对。系统将法律条文、监管文件和行内制度纳入统一知识库，通过 RAG 增强检索实现合规意见的精准生成，覆盖效率提升数倍。",
+      "link": "https://mp.weixin.qq.com/s/JWLaYu1LZhOz5YzK3VUQqQ",
+      "source_file": "sources/2026-08-04_从人工到智能大模型驱动的银行法律风险管理新范式_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "基于指标语义层改进NL2SQL的ChatBI商业银行应用研究",
+      "source": "中国金融电脑+",
+      "digest": "华夏银行联合华银数科和数巅科技，提出基于指标语义层的 NL2SQL 改进方案，用于商业银行 ChatBI 场景。\n\n传统 NL2SQL 直接将自然语言转为 SQL 查询，存在语义歧义和准确性瓶颈。该方案引入指标语义层作为中间抽象，将业务指标（如不良率、存贷比）预定义为标准化语义对象，再映射到底层数据库查询。实验表明，语义层方案在银行复杂业务场景下的查询准确率显著优于端到端 NL2SQL 方法。",
+      "link": "https://mp.weixin.qq.com/s/mpvvER8c3qW7ZeFKXueHvQ",
+      "source_file": "sources/2026-08-04_基于指标语义层改进NL2SQL的ChatBI商业银行应用研究_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "扬数智云帆，启高质量发展新航——邮储银行高质量数据集建设",
+      "source": "金融电子化",
+      "digest": "邮储银行副行长牛新庄撰文，系统阐述高质量数据集建设的规划与实践。随着金融数智化转型深入，数据规模激增、来源多元、监管趋严，构建覆盖全面、标准统一的高质量数据集成为释放数据潜能的关键。\n\n文章从企业级规划、标准体系、多源数据安全合规采集、清洗标注、质量评估与偏差审计等维度，分享了邮储银行的数据治理路径，为金融同业的数据集建设提供了参考框架。",
+      "link": "https://mp.weixin.qq.com/s/b9cmnFcwXRP03CIfIHEQyw",
+      "source_file": "sources/2026-08-04_扬数智云帆启高质量发展新航邮储银行高质量数据集建设_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "传新 iPhone 最高涨价 1350 元；阿里发 Qwen3.8，2.4 万亿参数；DuckDuckGo 推「反科技」太阳镜",
+      "source": "极客公园",
+      "digest": "综合简讯，包含8条快讯",
+      "link": "http://www.geekpark.net/news/368341",
+      "source_file": "sources/2026-08-04_传新 iPhone 最高涨价 1350 元；阿里发 Qwen3.8，2.4 万亿参数；DuckDuc_极客公园.md",
+      "category": "其他",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-04",
+      "title": "DeepSeek低价风暴打服硅谷！海外平台争相倒贴V4 Flash",
+      "source": "量子位",
+      "digest": "综合简讯，包含多条快讯",
+      "link": "https://www.qbitai.com/2026/08/465814.html",
+      "source_file": "sources/2026-08-04_DeepSeek低价风暴打服硅谷！海外平台争相倒贴V4 Flash_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-04",
+      "title": "Reflex 开源高性能 Python 图表库 XY：Rust 后端驱动，亿级数据点流畅交互",
+      "source": "MarkTechPost",
+      "digest": "Reflex AI 以 Apache 2.0 许可证开源了 XY，一款基于 Rust 后端加速的 Python 图表库，支持交互式 2D 可视化，在百万级数据点场景下仍能保持流畅交互。该工具定位于科学计算和数据探索场景，为 Python 生态提供了高性能可视化选项。",
+      "link": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/",
+      "source_file": "sources/2026-08-04_Reflex Open Sources XY_ A Rust-Backed Super-Fast P_MarkTechPost.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-03",
       "title": "AI 通过错误的推理得到正确的结果？",

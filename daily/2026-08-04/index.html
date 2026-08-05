@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-08-04</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.card-digest p {
+  margin: 0 0 8px 0;
+}
+.card-digest p:last-child {
+  margin-bottom: 0;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+.original-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: transparent;
+  color: var(--cat-intl, #3b82f6);
+  border: 1px solid currentColor;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition);
+  min-height: 32px;
+}
+.original-link:hover {
+  background: var(--cat-intl, #3b82f6);
+  color: #fff;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-08-04</div>
+    <div class="banner-stats" id="banner-stats">国际 6 篇 · 国内 7 篇 · 同业 3 篇 · 其他 3 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/465792.html" target="_blank">量子位</a></span><div class="card-digest">OpenAI 近日宣称其下一代模型成功解决了数学家 Terence Tao 等人提出的一个公开猜想。然而仅 24 小时后，数学家团队即发布论文回应：AI 生成的证明中每一步推导在形式上都是正确的，但整体论证并未指向原始猜想，属于&quot;正确但无关&quot;的推理。
+
+该事件引发学界对 AI 数学能力的深层反思：当前模型在符号推导层面已展现出惊人能力，但在理解数学问题的语义本质和证明方向性上仍存在根本缺陷。</div></div>
+<div class="card"><div class="card-title">AI Skill 安全审计流水线：NVIDIA SkillSpector + YARA + SARIF + CI 门禁实战</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/" target="_blank">MarkTechPost</a></span><div class="card-digest">本教程展示了如何构建 AI Skill 安全审计流水线，使用 NVIDIA SkillSpector 结合 LangGraph、YARA 规则、SARIF 标准和 CI 策略门禁。
+
+该流水线通过静态分析检测 AI Skill 中的安全漏洞和恶意模式，将检查结果输出为标准 SARIF 格式，并在 CI/CD 流水线中设置策略门禁，确保只有通过安全审计的 Skill 才能部署到生产环境。方案为 AI 技能工程化落地提供了可操作的安全防护体系。</div></div>
+<div class="card"><div class="card-title">FDE 又不够了</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/LRTi7KLBXrf3fcwBDc1R-w" target="_blank">InfoQ</a></span><div class="card-digest">继前线部署工程师(FDE)之后，业界出现了一种新角色：前线部署高管(FDX)。MIT 博士 Rick Manelius 提出，FDE 能弥补技术差距但往往距离核心决策层太远，而 FDX 兼具技术理解、管理协调和组织推动能力，是 AI 项目的&quot;外置 CEO&quot;。
+
+FDX 需要理解 AI 能力边界、掌控预算分配、推动组织变革，本质上是在填补 AI 技术落地与业务决策之间的鸿沟。这一概念的提出反映了 AI 工程化落地正从纯技术问题演变为组织治理问题。</div></div>
+<div class="card"><div class="card-title">Genspark 开源 AI 原生办公套件 GenOffice，免费替代 Office</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/03/genspark-open-sources-genoffice-a-free-ad-free-ai-office-suite-for-macos-and-windows-with-docs-sheets-slides-pdf/" target="_blank">MarkTechPost</a></span><div class="card-digest">Genspark 以 Apache 2.0 许可证开源了 GenOffice，一款 AI 原生的免费办公套件，支持 macOS 和 Windows 平台，涵盖文档、表格、幻灯片和 PDF 功能。
+
+GenOffice 将 AI 能力深度嵌入办公流程，用户可通过自然语言指令完成文档撰写、数据分析、演示生成等任务。与微软 Office、Google Workspace 等传统套件相比，GenOffice 完全免费且无广告，定位为 AI 时代的轻量级办公替代方案。</div></div>
+<div class="card"><div class="card-title">生产环境 AI Agent、MCP 服务器与 LLM 应用安全防护实践</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/" target="_blank">MarkTechPost</a></span><div class="card-digest">随着 AI Agent、MCP 集成和 LLM 应用以前所未有的速度进入代码库，安全防护往往跟不上部署节奏。本文系统梳理了生产环境中保护 AI 系统安全的实践方法。
+
+涵盖输入/输出安全过滤、模型访问控制、Agent 权限最小化、MCP 服务器认证与授权、以及对 LLM 应用的持续监控与异常检测。强调了在 AI 原生化部署中安全左移的重要性，并提出了一套可落地的安全防护框架。</div></div>
+<div class="card"><div class="card-title">程序员远没到“完了”的时候！Sam Altman：OpenAI不包办一切，模型只是底座，开发者仍是AI生态的主角</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/mS-XRDHDaXE0SU0aiux8cA" target="_blank">51CTO技术栈</a></span><div class="card-digest">OpenAI CEO Sam Altman 在《Invest Like The Best》访谈中明确表示：&quot;软件工程师完了&quot;的说法并未成真，开发者的工作只是从写代码上移到了更高层——定义目标、审核结果、管理系统。
+
+Altman 将当前 AI 能力描述为&quot;有时像天才，有时像孩子&quot;，强调模型能生成代码但企业仍需要人来决策、验收和担责。他还明确了 OpenAI 不做垂直应用，只提供模型、算力和平台的边界，留给开发者的是将 AI 能力嵌入具体业务场景的巨大空间。</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">多模态视觉模型评测：Moonshot PerceptionBench 自动评判工作流</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/" target="_blank">MarkTechPost</a></span><div class="card-digest">本文介绍了一个端到端的多模态视觉模型评测工作流，基于 PerceptionBench 基准测试。PerceptionBench 是一个衡量多模态模型细粒度视觉感知能力的评测集，覆盖图像识别、空间推理、视觉问答等任务。
+
+教程展示了如何使用鲁棒数据加载和自动评判系统来构建可复现的评测流程，通过自动化裁判减少人工评估的主观偏差。该工作流适用于各类视觉语言模型的系统性对比评测。</div></div>
+<div class="card"><div class="card-title">All in AI全面冲刺：夯实智能体时代AI基建底座，安谋科技三大业务线集体交卷</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/w6FnDYalZZYKSYNdg1IY_w" target="_blank">智东西</a></span><div class="card-digest">安谋科技展示了面向智能体时代的全栈 AI 芯片 IP 布局，三大业务线集体交卷：CPU 方面推出新一代高性能核心，GPU 方面发布支持端侧大模型推理的图形处理器，NPU 方面升级了面向 Transformer 架构优化的神经网络加速器。
+
+安谋强调从边缘到云端的全栈 IP 战略，覆盖物理 AI、端侧部署和云端训练推理场景，旨在为 AI Agent 的大规模落地提供底层算力基础设施支撑。</div></div>
+<div class="card"><div class="card-title">一位资深 Builder的自述：我如何借多 Agent 开发工作流，一周做出 MVP、一个月上线</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/2Ww5cO6NzUx1s3aUwNxC1A" target="_blank">InfoQ</a></span><div class="card-digest">独立开发者手工川分享了借助多 Agent 开发工作流，一周完成 MVP、一个月上线的实战经验。他从金融专业自学转型，从 2024 年 10 月起几乎将所有编码工作交给 AI。
+
+核心方法论包括：用多个模型和 Agent 分工协作（设计、编码、测试、部署）、注重上下文传递和成本控制、在 Vibe Coding 降低技术门槛后更聚焦用户需求验证。手工川认为 AI 不会取代开发者，但&quot;一个人借助 AI 完成团队工作&quot;正在成为现实，传统公司组织形态可能因此改变。</div></div>
+<div class="card"><div class="card-title">亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/465732.html" target="_blank">量子位</a></span><div class="card-digest">亿级日活 AI 应用面临&quot;推理成本倒挂&quot;困境：用户越多亏损越大。某出海 AI 应用团队分享了通过跨云架构优化，将 GPU 集群成本削减 75% 的实践。
+
+三重算力锁链包括：单一云厂商锁定导致议价能力不足、模型推理请求波动带来的资源闲置、以及多区域部署的高昂网络成本。跨云方案通过统一调度层实现多云资源动态分配。</div></div>
+<div class="card"><div class="card-title">别让 Agent 每次都重新开始</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/_2y4TzSTmxX852e3RDWEuQ" target="_blank">InfoQ</a></span><div class="card-digest">TencentDB Agent Memory 团队提出了 AI Agent 研发记忆的四层架构：什么值得记、团队经验如何拆解、资产如何治理、如何开源评测。
+
+核心要解决的是 Agent 在真实研发场景中&quot;每次对话都像重新开始&quot;的痛点——个人经验、团队上下文、技术取舍、任务过程无法跨会话复用。方案从&quot;记更多&quot;转为&quot;记有用的状态&quot;，将散落在 Wiki、代码仓库、聊天记录中的信息结构化，让 Agent 在后续任务中能准确召回团队知识。</div></div>
+<div class="card"><div class="card-title">开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/466262.html" target="_blank">量子位</a></span><div class="card-digest">HarmonyOS 7 引入了 Skill 和 Agent 封装机制，将系统底层能力（如相机、传感器、AI 推理引擎等）标准化为可被 AI 直接调用的接口模块。
+
+开发者不再需要为不同设备适配写重复代码，AI Agent 可以直接通过统一的 Skill 接口调度系统能力。这一设计大幅降低了跨设备开发的复杂度。</div></div>
+<div class="card"><div class="card-title">开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/466386.html" target="_blank">量子位</a></span><div class="card-digest">北京大学与元空 AI Agent 联合实验室正式开源 OpenAI4S（Open AI for Scientist），一个复刻 Anthropic Claude Science 的科研智能体项目，采用 MIT 许可证。
+
+OpenAI4S 沿着 Code-as-Action 思路独立实现了引擎、持久内核、host-RPC 协议和安全层，内置 30 余项科研 Skills，支持自有算力接入和版本化科研产物。区别于传统 Agent 的&quot;工具菜单&quot;模式，它让 AI 真正融入科研工作流：查文献、写代码、调 GPU、跑分析、出图出报告全流程自动化。</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">从人工到智能：大模型驱动的银行法律风险管理新范式</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/JWLaYu1LZhOz5YzK3VUQqQ" target="_blank">金融电子化</a></span><div class="card-digest">邮储银行软件研发中心分享了基于大模型的银行法律风险管理新范式。传统银行法律风控依赖规则驱动和人工研判，难以应对法规频繁更新、跨境合规多元化和海量非结构化数据的挑战。
+
+新范式利用大模型实现法律文档智能解析、法规变更自动追踪、合同风险自动审查和诉讼案例智能比对。系统将法律条文、监管文件和行内制度纳入统一知识库，通过 RAG 增强检索实现合规意见的精准生成，覆盖效率提升数倍。</div></div>
+<div class="card"><div class="card-title">基于指标语义层改进NL2SQL的ChatBI商业银行应用研究</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/mpvvER8c3qW7ZeFKXueHvQ" target="_blank">中国金融电脑+</a></span><div class="card-digest">华夏银行联合华银数科和数巅科技，提出基于指标语义层的 NL2SQL 改进方案，用于商业银行 ChatBI 场景。
+
+传统 NL2SQL 直接将自然语言转为 SQL 查询，存在语义歧义和准确性瓶颈。该方案引入指标语义层作为中间抽象，将业务指标（如不良率、存贷比）预定义为标准化语义对象，再映射到底层数据库查询。实验表明，语义层方案在银行复杂业务场景下的查询准确率显著优于端到端 NL2SQL 方法。</div></div>
+<div class="card"><div class="card-title">扬数智云帆，启高质量发展新航——邮储银行高质量数据集建设</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/b9cmnFcwXRP03CIfIHEQyw" target="_blank">金融电子化</a></span><div class="card-digest">邮储银行副行长牛新庄撰文，系统阐述高质量数据集建设的规划与实践。随着金融数智化转型深入，数据规模激增、来源多元、监管趋严，构建覆盖全面、标准统一的高质量数据集成为释放数据潜能的关键。
+
+文章从企业级规划、标准体系、多源数据安全合规采集、清洗标注、质量评估与偏差审计等维度，分享了邮储银行的数据治理路径，为金融同业的数据集建设提供了参考框架。</div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">传新 iPhone 最高涨价 1350 元；阿里发 Qwen3.8，2.4 万亿参数；DuckDuckGo 推「反科技」太阳镜</div><span class="source-tag"><a href="http://www.geekpark.net/news/368341" target="_blank">极客公园</a></span><div class="card-digest">综合简讯，包含8条快讯</div></div>
+<div class="card"><div class="card-title">DeepSeek低价风暴打服硅谷！海外平台争相倒贴V4 Flash</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/465814.html" target="_blank">量子位</a></span><div class="card-digest">综合简讯，包含多条快讯</div></div>
+<div class="card"><div class="card-title">Reflex 开源高性能 Python 图表库 XY：Rust 后端驱动，亿级数据点流畅交互</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/" target="_blank">MarkTechPost</a></span><div class="card-digest">Reflex AI 以 Apache 2.0 许可证开源了 XY，一款基于 Rust 后端加速的 Python 图表库，支持交互式 2D 可视化，在百万级数据点场景下仍能保持流畅交互。该工具定位于科学计算和数据探索场景，为 Python 生态提供了高性能可视化选项。</div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”", "source": "量子位", "digest": "OpenAI 近日宣称其下一代模型成功解决了数学家 Terence Tao 等人提出的一个公开猜想。然而仅 24 小时后，数学家团队即发布论文回应：AI 生成的证明中每一步推导在形式上都是正确的，但整体论证并未指向原始猜想，属于\"正确但无关\"的推理。\n\n该事件引发学界对 AI 数学能力的深层反思：当前模型在符号推导层面已展现出惊人能力，但在理解数学问题的语义本质和证明方向性上仍存在根本缺陷。", "link": "https://www.qbitai.com/2026/08/465792.html", "content": "", "category": "国际", "is_model_related": true, "source_file": "sources/2026-08-04_数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/465792.html"}]}, {"title": "AI Skill 安全审计流水线：NVIDIA SkillSpector + YARA + SARIF + CI 门禁实战", "source": "MarkTechPost", "digest": "本教程展示了如何构建 AI Skill 安全审计流水线，使用 NVIDIA SkillSpector 结合 LangGraph、YARA 规则、SARIF 标准和 CI 策略门禁。\n\n该流水线通过静态分析检测 AI Skill 中的安全漏洞和恶意模式，将检查结果输出为标准 SARIF 格式，并在 CI/CD 流水线中设置策略门禁，确保只有通过安全审计的 Skill 才能部署到生产环境。方案为 AI 技能工程化落地提供了可操作的安全防护体系。", "link": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-04_Building an Advanced AI Skill Security Auditing Pi_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/"}]}, {"title": "FDE 又不够了", "source": "InfoQ", "digest": "继前线部署工程师(FDE)之后，业界出现了一种新角色：前线部署高管(FDX)。MIT 博士 Rick Manelius 提出，FDE 能弥补技术差距但往往距离核心决策层太远，而 FDX 兼具技术理解、管理协调和组织推动能力，是 AI 项目的\"外置 CEO\"。\n\nFDX 需要理解 AI 能力边界、掌控预算分配、推动组织变革，本质上是在填补 AI 技术落地与业务决策之间的鸿沟。这一概念的提出反映了 AI 工程化落地正从纯技术问题演变为组织治理问题。", "link": "https://mp.weixin.qq.com/s/LRTi7KLBXrf3fcwBDc1R-w", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-04_FDE 又不够了_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://mp.weixin.qq.com/s/LRTi7KLBXrf3fcwBDc1R-w"}]}, {"title": "Genspark 开源 AI 原生办公套件 GenOffice，免费替代 Office", "source": "MarkTechPost", "digest": "Genspark 以 Apache 2.0 许可证开源了 GenOffice，一款 AI 原生的免费办公套件，支持 macOS 和 Windows 平台，涵盖文档、表格、幻灯片和 PDF 功能。\n\nGenOffice 将 AI 能力深度嵌入办公流程，用户可通过自然语言指令完成文档撰写、数据分析、演示生成等任务。与微软 Office、Google Workspace 等传统套件相比，GenOffice 完全免费且无广告，定位为 AI 时代的轻量级办公替代方案。", "link": "https://www.marktechpost.com/2026/08/03/genspark-open-sources-genoffice-a-free-ad-free-ai-office-suite-for-macos-and-windows-with-docs-sheets-slides-pdf/", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-04_Genspark Open Sources GenOffice_ A Free, Ad-Free A_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/03/genspark-open-sources-genoffice-a-free-ad-free-ai-office-suite-for-macos-and-windows-with-docs-sheets-slides-pdf/"}]}, {"title": "生产环境 AI Agent、MCP 服务器与 LLM 应用安全防护实践", "source": "MarkTechPost", "digest": "随着 AI Agent、MCP 集成和 LLM 应用以前所未有的速度进入代码库，安全防护往往跟不上部署节奏。本文系统梳理了生产环境中保护 AI 系统安全的实践方法。\n\n涵盖输入/输出安全过滤、模型访问控制、Agent 权限最小化、MCP 服务器认证与授权、以及对 LLM 应用的持续监控与异常检测。强调了在 AI 原生化部署中安全左移的重要性，并提出了一套可落地的安全防护框架。", "link": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-04_How to Secure AI Agents, MCP Servers, and LLM Apps_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/"}]}, {"title": "程序员远没到“完了”的时候！Sam Altman：OpenAI不包办一切，模型只是底座，开发者仍是AI生态的主角", "source": "51CTO技术栈", "digest": "OpenAI CEO Sam Altman 在《Invest Like The Best》访谈中明确表示：\"软件工程师完了\"的说法并未成真，开发者的工作只是从写代码上移到了更高层——定义目标、审核结果、管理系统。\n\nAltman 将当前 AI 能力描述为\"有时像天才，有时像孩子\"，强调模型能生成代码但企业仍需要人来决策、验收和担责。他还明确了 OpenAI 不做垂直应用，只提供模型、算力和平台的边界，留给开发者的是将 AI 能力嵌入具体业务场景的巨大空间。", "link": "https://mp.weixin.qq.com/s/mS-XRDHDaXE0SU0aiux8cA", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-04_程序员远没到完了的时候Sam AltmanOpenAI不包办一切模型只是底座开发者仍是AI生态的主角_51CTO技术栈.md", "source_items": [{"name": "51CTO技术栈", "link": "https://mp.weixin.qq.com/s/mS-XRDHDaXE0SU0aiux8cA"}]}, {"title": "多模态视觉模型评测：Moonshot PerceptionBench 自动评判工作流", "source": "MarkTechPost", "digest": "本文介绍了一个端到端的多模态视觉模型评测工作流，基于 PerceptionBench 基准测试。PerceptionBench 是一个衡量多模态模型细粒度视觉感知能力的评测集，覆盖图像识别、空间推理、视觉问答等任务。\n\n教程展示了如何使用鲁棒数据加载和自动评判系统来构建可复现的评测流程，通过自动化裁判减少人工评估的主观偏差。该工作流适用于各类视觉语言模型的系统性对比评测。", "link": "https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-08-04_Evaluating Multimodal Vision Models with Moonshot _MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/"}]}, {"title": "All in AI全面冲刺：夯实智能体时代AI基建底座，安谋科技三大业务线集体交卷", "source": "智东西", "digest": "安谋科技展示了面向智能体时代的全栈 AI 芯片 IP 布局，三大业务线集体交卷：CPU 方面推出新一代高性能核心，GPU 方面发布支持端侧大模型推理的图形处理器，NPU 方面升级了面向 Transformer 架构优化的神经网络加速器。\n\n安谋强调从边缘到云端的全栈 IP 战略，覆盖物理 AI、端侧部署和云端训练推理场景，旨在为 AI Agent 的大规模落地提供底层算力基础设施支撑。", "link": "https://mp.weixin.qq.com/s/w6FnDYalZZYKSYNdg1IY_w", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_All in AI全面冲刺夯实智能体时代AI基建底座安谋科技三大业务线集体交卷_智东西.md", "source_items": [{"name": "智东西", "link": "https://mp.weixin.qq.com/s/w6FnDYalZZYKSYNdg1IY_w"}]}, {"title": "一位资深 Builder的自述：我如何借多 Agent 开发工作流，一周做出 MVP、一个月上线", "source": "InfoQ", "digest": "独立开发者手工川分享了借助多 Agent 开发工作流，一周完成 MVP、一个月上线的实战经验。他从金融专业自学转型，从 2024 年 10 月起几乎将所有编码工作交给 AI。\n\n核心方法论包括：用多个模型和 Agent 分工协作（设计、编码、测试、部署）、注重上下文传递和成本控制、在 Vibe Coding 降低技术门槛后更聚焦用户需求验证。手工川认为 AI 不会取代开发者，但\"一个人借助 AI 完成团队工作\"正在成为现实，传统公司组织形态可能因此改变。", "link": "https://mp.weixin.qq.com/s/2Ww5cO6NzUx1s3aUwNxC1A", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_一位资深 Builder的自述我如何借多 Agent 开发工作流一周做出 MVP一个月上线_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://mp.weixin.qq.com/s/2Ww5cO6NzUx1s3aUwNxC1A"}]}, {"title": "亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群", "source": "量子位", "digest": "亿级日活 AI 应用面临\"推理成本倒挂\"困境：用户越多亏损越大。某出海 AI 应用团队分享了通过跨云架构优化，将 GPU 集群成本削减 75% 的实践。\n\n三重算力锁链包括：单一云厂商锁定导致议价能力不足、模型推理请求波动带来的资源闲置、以及多区域部署的高昂网络成本。跨云方案通过统一调度层实现多云资源动态分配。", "link": "https://www.qbitai.com/2026/08/465732.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/465732.html"}]}, {"title": "别让 Agent 每次都重新开始", "source": "InfoQ", "digest": "TencentDB Agent Memory 团队提出了 AI Agent 研发记忆的四层架构：什么值得记、团队经验如何拆解、资产如何治理、如何开源评测。\n\n核心要解决的是 Agent 在真实研发场景中\"每次对话都像重新开始\"的痛点——个人经验、团队上下文、技术取舍、任务过程无法跨会话复用。方案从\"记更多\"转为\"记有用的状态\"，将散落在 Wiki、代码仓库、聊天记录中的信息结构化，让 Agent 在后续任务中能准确召回团队知识。", "link": "https://mp.weixin.qq.com/s/_2y4TzSTmxX852e3RDWEuQ", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_别让 Agent 每次都重新开始_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://mp.weixin.qq.com/s/_2y4TzSTmxX852e3RDWEuQ"}]}, {"title": "开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟", "source": "量子位", "digest": "HarmonyOS 7 引入了 Skill 和 Agent 封装机制，将系统底层能力（如相机、传感器、AI 推理引擎等）标准化为可被 AI 直接调用的接口模块。\n\n开发者不再需要为不同设备适配写重复代码，AI Agent 可以直接通过统一的 Skill 接口调度系统能力。这一设计大幅降低了跨设备开发的复杂度。", "link": "https://www.qbitai.com/2026/08/466262.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/466262.html"}]}, {"title": "开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills", "source": "量子位", "digest": "北京大学与元空 AI Agent 联合实验室正式开源 OpenAI4S（Open AI for Scientist），一个复刻 Anthropic Claude Science 的科研智能体项目，采用 MIT 许可证。\n\nOpenAI4S 沿着 Code-as-Action 思路独立实现了引擎、持久内核、host-RPC 协议和安全层，内置 30 余项科研 Skills，支持自有算力接入和版本化科研产物。区别于传统 Agent 的\"工具菜单\"模式，它让 AI 真正融入科研工作流：查文献、写代码、调 GPU、跑分析、出图出报告全流程自动化。", "link": "https://www.qbitai.com/2026/08/466386.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-04_开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/466386.html"}]}, {"title": "从人工到智能：大模型驱动的银行法律风险管理新范式", "source": "金融电子化", "digest": "邮储银行软件研发中心分享了基于大模型的银行法律风险管理新范式。传统银行法律风控依赖规则驱动和人工研判，难以应对法规频繁更新、跨境合规多元化和海量非结构化数据的挑战。\n\n新范式利用大模型实现法律文档智能解析、法规变更自动追踪、合同风险自动审查和诉讼案例智能比对。系统将法律条文、监管文件和行内制度纳入统一知识库，通过 RAG 增强检索实现合规意见的精准生成，覆盖效率提升数倍。", "link": "https://mp.weixin.qq.com/s/JWLaYu1LZhOz5YzK3VUQqQ", "content": "", "category": "同业", "is_model_related": false, "source_file": "sources/2026-08-04_从人工到智能大模型驱动的银行法律风险管理新范式_金融电子化.md", "source_items": [{"name": "金融电子化", "link": "https://mp.weixin.qq.com/s/JWLaYu1LZhOz5YzK3VUQqQ"}]}, {"title": "基于指标语义层改进NL2SQL的ChatBI商业银行应用研究", "source": "中国金融电脑+", "digest": "华夏银行联合华银数科和数巅科技，提出基于指标语义层的 NL2SQL 改进方案，用于商业银行 ChatBI 场景。\n\n传统 NL2SQL 直接将自然语言转为 SQL 查询，存在语义歧义和准确性瓶颈。该方案引入指标语义层作为中间抽象，将业务指标（如不良率、存贷比）预定义为标准化语义对象，再映射到底层数据库查询。实验表明，语义层方案在银行复杂业务场景下的查询准确率显著优于端到端 NL2SQL 方法。", "link": "https://mp.weixin.qq.com/s/mpvvER8c3qW7ZeFKXueHvQ", "content": "", "category": "同业", "is_model_related": false, "source_file": "sources/2026-08-04_基于指标语义层改进NL2SQL的ChatBI商业银行应用研究_中国金融电脑+.md", "source_items": [{"name": "中国金融电脑+", "link": "https://mp.weixin.qq.com/s/mpvvER8c3qW7ZeFKXueHvQ"}]}, {"title": "扬数智云帆，启高质量发展新航——邮储银行高质量数据集建设", "source": "金融电子化", "digest": "邮储银行副行长牛新庄撰文，系统阐述高质量数据集建设的规划与实践。随着金融数智化转型深入，数据规模激增、来源多元、监管趋严，构建覆盖全面、标准统一的高质量数据集成为释放数据潜能的关键。\n\n文章从企业级规划、标准体系、多源数据安全合规采集、清洗标注、质量评估与偏差审计等维度，分享了邮储银行的数据治理路径，为金融同业的数据集建设提供了参考框架。", "link": "https://mp.weixin.qq.com/s/b9cmnFcwXRP03CIfIHEQyw", "content": "", "category": "同业", "is_model_related": false, "source_file": "sources/2026-08-04_扬数智云帆启高质量发展新航邮储银行高质量数据集建设_金融电子化.md", "source_items": [{"name": "金融电子化", "link": "https://mp.weixin.qq.com/s/b9cmnFcwXRP03CIfIHEQyw"}]}, {"title": "传新 iPhone 最高涨价 1350 元；阿里发 Qwen3.8，2.4 万亿参数；DuckDuckGo 推「反科技」太阳镜", "source": "极客公园", "digest": "综合简讯，包含8条快讯", "link": "http://www.geekpark.net/news/368341", "content": "", "category": "其他", "is_model_related": true, "source_file": "sources/2026-08-04_传新 iPhone 最高涨价 1350 元；阿里发 Qwen3.8，2.4 万亿参数；DuckDuc_极客公园.md", "source_items": [{"name": "极客公园", "link": "http://www.geekpark.net/news/368341"}]}, {"title": "DeepSeek低价风暴打服硅谷！海外平台争相倒贴V4 Flash", "source": "量子位", "digest": "综合简讯，包含多条快讯", "link": "https://www.qbitai.com/2026/08/465814.html", "content": "", "category": "其他", "is_model_related": false, "source_file": "sources/2026-08-04_DeepSeek低价风暴打服硅谷！海外平台争相倒贴V4 Flash_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/465814.html"}]}, {"title": "Reflex 开源高性能 Python 图表库 XY：Rust 后端驱动，亿级数据点流畅交互", "source": "MarkTechPost", "digest": "Reflex AI 以 Apache 2.0 许可证开源了 XY，一款基于 Rust 后端加速的 Python 图表库，支持交互式 2D 可视化，在百万级数据点场景下仍能保持流畅交互。该工具定位于科学计算和数据探索场景，为 Python 生态提供了高性能可视化选项。", "link": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/", "content": "", "category": "其他", "is_model_related": false, "source_file": "sources/2026-08-04_Reflex Open Sources XY_ A Rust-Backed Super-Fast P_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/"}]}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 剥离 HTML 标签，支持多段落渲染（\n\n 分段）
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      // 按双换行分段，每段一个 <p>
+      var paragraphs = stripped.split(/\n\s*\n/);
+      return paragraphs.map(function(p) {
+        var trimmed = p.replace(/\n/g, '<br>').trim();
+        return trimmed ? '<p>' + escapeHtmlLite(trimmed) + '</p>' : '';
+      }).join('');
+    } catch (e) {
+      return '<p>' + escapeHtml(digest) + '</p>';
+    }
+  }
+
+  function escapeHtmlLite(str) {
+    // 保留已插入的 <br> 和 <p>，只转义其他特殊字符
+    return str.replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    // 多来源标签（可点击跳转）
+    var actionsHtml = '';
+    var sourceItems = article.source_items;
+    if (sourceItems && sourceItems.length > 0) {
+      sourceItems.forEach(function(si) {
+        if (si.link) {
+          actionsHtml += '<a href="' + escapeAttr(si.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(si.name) + '</a>';
+        } else {
+          actionsHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      // fallback: single source
+      if (article.link) {
+        actionsHtml += '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(article.source) + '</a>';
+      } else {
+        actionsHtml += '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (digestHtml ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            actionsHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

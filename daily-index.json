@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-04",
+      "weekday": "周二",
+      "stats": {
+        "国际": 6,
+        "国内": 7,
+        "同业": 3,
+        "其他": 3,
+        "total": 19
+      },
+      "summary": "数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”/AI Skill 安全审计流水线：NVIDIA SkillSpector..."
+    },
+    {
       "date": "2026-08-03",
       "weekday": "周一",
       "stats": {
