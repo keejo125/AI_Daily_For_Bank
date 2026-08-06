@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-06",
+      "weekday": "周四",
+      "stats": {
+        "国际": 7,
+        "国内": 11,
+        "同业": 2,
+        "其他": 2,
+        "total": 22
+      },
+      "summary": "OpenAI发布WeatherNext：AI台风预测准确率创纪录/Google DeepMind CEO Demis Hassabis卸任，Koray K..."
+    },
+    {
       "date": "2026-08-05",
       "weekday": "周三",
       "stats": {

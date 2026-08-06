@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-08-06T07:54:06.163317",
-  "total": 1062,
+  "updated_at": "2026-08-07T01:56:03.930583",
+  "total": 1084,
   "articles": [
+    {
+      "date": "2026-08-06",
+      "title": "OpenAI发布WeatherNext：AI台风预测准确率创纪录",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind发布WeatherNext气象AI模型，在台风路径预测上实现重大突破。模型基于图神经网络架构，将物理模拟与AI推理深度融合，在5天台风预测中准确率显著优于传统数值预报。WeatherNext每小时滚动更新一次全球预报，已在NOAA等机构投入试用。AI气象预测不是替代物理建模而是与传统方法互补——物理模型约束保证物理一致性，AI模型则大幅降低推理延迟（从数小时降至分钟级）和算力成本。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Google DeepMind CEO Demis Hassabis卸任，Koray Kavukcuoglu接棒",
+      "source": "Solidot",
+      "digest": "Google DeepMind联合创始人兼CEO Demis Hassabis宣布卸任，转为GDM董事长兼Alphabet首席科学家。联合创始人Koray Kavukcuoglu接任CEO，负责GDM日常运营。此次调整标志着DeepMind从研究驱动的AI实验室向产品驱动的工程组织转型。Hassabis卸任后将继续聚焦科学前沿。报道指出，Gemini 3.5 Pro发布节奏不如预期，谷歌AI面临开源阵营追赶压力——此次换帅或是谷歌加速AI商业化的关键组织信号。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "微软要求工程师停止Tokenmaxxing：从狂刷Token到追求Token ROI",
+      "source": "Solidot",
+      "digest": "微软执行副总裁Jay Parikh向工程师发邮件提醒「Tokenmaxxing不是我们追求的目标」。微软将低成本GPT-5.6设为内部默认模型，同时探索部分M365 AI请求优先调用自家MAI模型降本。工程师月耗Token达数百至数千美元。亚马逊、Adobe、Atlassian、花旗集团等均已开始限制员工过度消耗Token。微软强调：目标不是减少Token，而是提高每个Token的影响力——AI基础设施提供商都扛不住产品成本时，Token成本管控已成企业AI化的必答题。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "ChatGPT从对话到执行：全球用户如何将AI真正落地",
+      "source": "OpenAI",
+      "digest": "OpenAI发布企业用户报告，展示ChatGPT从「对话工具」到「执行系统」的演进轨迹。某电商平台将ChatGPT嵌入订单路由系统，某CRM公司替代400人客服团队中30%的重复咨询。关键趋势：用户不再满足于对话，要求Agent执行真实任务（订票、退款、故障排查）；ChatGPT与企业API深度集成后从「更好的搜索」变为「可调度的工作节点」；高价值场景从C端咨询迁移到B端工作流执行。OpenAI提出「Agentic ChatGPT」概念，计划将ChatGPT打造成企业的数字员工平台底座。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "微软SkillOpt：Agent技能工件可跨模型迁移，降低Skill开发成本",
+      "source": "MarkTechPost",
+      "digest": "微软研究院发布SkillOpt，一种优化Agent技能工件跨模型迁移的技术。核心思路：企业从GPT-4迁移到新模型时，原有Skill定义（提示词、工具调用模式）通常需重写。SkillOpt自动分析Skill在新模型上的行为差异，识别失效模式，生成适配优化版本，开发者仅需少量微调。论文在多个模型间迁移测试中，SkillOpt将适配工作量降低了60%-80%。这一技术有望解决Agent生态的锁定问题——企业切换底层模型时Skill资产无需从零重建。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Claude Code创始人Boris：每半年清空一次claude.md、Skills和Hooks，模型自己会想办法",
+      "source": "InfoQ",
+      "digest": "Claude Code创始人Boris Cherny分享颠覆性Agent维护哲学：每六个月清空一次CLAUDE.md、Skills和Hooks。核心洞察是每一代模型有不同「性格」和认知偏好——Opus 5发布后Claude Code团队一次删除了超过80%的系统提示词，新模型上线先清空再逐行加回，通过消融实验验证每条提示词的边际价值。快速失效的不只是提示词——Harness代码、工具集合乃至团队对Agent能力的心理模型都需每半年「清空重算」。Boris建议将模型视为活着的生物而非固定接口。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Jeff Dean离职前最后访谈：我低估了AI，也看清了创业者的唯一生路",
+      "source": "InfoQ",
+      "digest": "Jeff Dean在Google最后一天接受Diana专访。核心观点：大规模语言模型的涌现能力超出了他预期；与Sanjay Ghemawat、Oriol Vinyals、Quoc Le共同创立Discovery Loop公司（Google是创始投资方）。2027年两大预测：全自动问题分解框架将问世、自动化实验循环将进入产品。Context Engineering是下一前沿——知识检索、Skill组织、工具编排将成为Agent能力提升的核心杠杆。Agent时代的稀缺技能是「品味」——写下未来12个月最重要的十件事一年后复盘。他还设想延迟改善50倍、能效提升30-80倍的专用推理芯片。",
+      "link": "",
+      "source_file": "",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "快手AI生产力体系成形：角色边界重塑，全栈取代分工",
+      "source": "InfoQ",
+      "digest": "快手2026上半年将命题从「让研发人员更快」转向「用AI重新设计交付流程、角色分工和组织结构」。三大卡点：人（32%人员AI生成率<10%）、流程分工（参与人员越多提效越小，存在四种AI效率黑洞）、烟筒型组织结构难复制。以银行业60年变迁为镜：L0→L1计算机替代算盘但组织不变→L1→L2 ATM倒逼组织变革→L2→L3移动支付彻底重构业务形态。快手提出「研发效能的终点是AI生产力的起点」——从AI×研发人员转向AI×所有人员。Kwaipilot→CodeFlicker+KATE→MyFlicker三阶段演进。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "2026 Data+AI中场纪实：Snowflake本体论、企业级智能体与认知跃迁",
+      "source": "InfoQ",
+      "digest": "Snowflake全球AI架构负责人贾天下等共话Agentic Enterprise关键分水岭。核心：Snowflake提出「数据本体论」——结构化企业数据为可被Agent理解的语义图层，使Agent能执行跨系统业务流程。企业级智能体四层成熟度：回答→动作→交付→完成（对应腾讯WorkBuddy Bench的假完成vs真完成）。贾天下指出「大部分企业Agent还停在回答级，核心障碍不是模型而是数据组织颗粒度」。数势科技在金融领域构建超500个业务语义本体。圆桌共识：2026下半年是企业Agent从「能回答」到「能执行」的分水岭。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Azure首席工程师：技能与子代理之间如何做出恰当选择",
+      "source": "InfoQ",
+      "digest": "Azure首席工程师Kishorekumar Pattabiraman发文阐述Agent系统构建的核心抉择：技能vs子代理。四维度决策框架：①迭代模型——需多轮交互→技能，一次性输入输出→子代理；②语音保真度——需保持自然对话→技能；③人工干预点——需中途审核→技能，全自动→子代理；④任务频率——一次性手工→技能，可重复批量→子代理。Pattabiraman强调「第一个真正的抉择不是模型而是架构」，选错架构用哪种模型都无济于事。此文已成为Agent系统设计的实用决策指南。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "别再修代码了，去修系统：DevOps之父论Agent时代的组织变革",
+      "source": "InfoQ",
+      "digest": "DevOps之父Patrick Debois核心观点「修系统而非修代码」——AI提效瓶颈不在工具而在组织结构。三大洞察：①干预次数减少带来乘数效应——每减少一次AI输出的干预，连锁发现流程中的冗余环节被消除；②平台团队新职责：Skill注册中心、Context评估、护栏管理、成本可视化；③企业AI转型的组织心理学——最难的不是引入AI工具而是放下「工程师必须掌控每个细节」的执念。Debois认为Agent时代的平台工程正从管道工程演变为系统工程。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "BAT重逢AI办公：从赛马到阵地战，胜负手在数据",
+      "source": "36氪",
+      "digest": "一周内百度/阿里/腾讯齐聚AI办公：腾讯WorkBuddy+CodeBuddy合并升格、阿里千问办公三合一公测、百度搭子成AI Work旗舰。三条路径：腾讯连接「人」（微信关系链→协作者角色）、阿里连接「组织」（钉钉→Agent融入企业审批/知识管理）、百度连接「数据」（网盘10亿用户1000亿GB文件→理解文件+执行任务）。百度搭子集团军架构：桌面旗舰+GenFlow深度场景+秒哒无代码，WAIC 2026通用Agent唯一「镇馆之宝」。预判：Agent演进速度是上一代十倍，两年见分晓。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "字节跳动年中战略会：梁汝波定调AI全面化",
+      "source": "财联社AI daily",
+      "digest": "财联社报道：字节跳动2026年中战略会上CEO梁汝波定调AI全面化——AI不能只是一条产品线而是所有业务的基础能力。核心决策：成立跨BG的AI委员会由梁汝波直管；各业务线3个月内提交AI改造方案（「不做AI就是不做业务」）；内部AI平台「字节大脑」升级为企业级Agent平台。信号：字节从单点AI产品尝试进入全面AI化阶段，与腾讯、阿里的AI办公竞争同频。字节差异化优势在海量内容数据和推荐算法的工程化能力。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "MCP协议重回HTTP无状态范式：架构设计和工程实践才是AI时代稀缺资源",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生解读MCP协议最新修订：从有状态长连接重回无状态请求/响应模型。核心改动包括退役initialize/initialized握手和Mcp-Session-Id，每个请求自描述可落到负载均衡任意实例无需共享存储。Streamable HTTP强制携带Mcp-Method/Mcp-Name供网关按header路由计量。社区槽点未解决：工具定义前置加载仍占大量token且无压缩方案，迁移是破坏性变更。文末点睛：AI时代真正稀缺的不是模型能力而是架构设计和工程实践。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "AI Native混沌工程：从故障注入到智能自愈",
+      "source": "千问AI平台",
+      "digest": "千问AI平台分享AI Native混沌工程实践：从传统混沌工程（人工设计故障→手动注入→观察）演进为AI驱动的智能闭环。三层架构：AI故障生成器（基于历史故障自动生成高覆盖场景）、Agent执行与观测（多Agent协同注入+监控+建立故障-症状因果图谱）、智能自愈引擎（检测后自动修复→验证→沉淀为防御规则）。在某金融系统试点中，每周自动发现2-3个人工难覆盖的隐患，30%故障实现无人干预自动修复。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "斯坦福教授：AI时代程序员必须掌握的3大基本功",
+      "source": "51CTO技术栈",
+      "digest": "斯坦福教授Chris Ré提出AI时代程序员「反脆弱」能力三角：①系统思维——从编码细节升维到系统架构，AI能写代码但无法替代人类做系统权衡；②判断力——决定让AI做什么比AI做得多快更重要，包括任务分解、验证策略设计、成本管理评估每个AI调用的ROI；③持续学习——不是「学一门语言管十年」，而是每隔几个月重新审视工具栈和思维模型。Chris Ré指出「最危险的程序员是去年很厉害但今年没有清零重学的」。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "个人AI知识库什么时候该接RAG？4个信号+5种反模式",
+      "source": "AI破壁实验室",
+      "digest": "AI破壁实验室探讨个人知识库接入RAG的决策时机。四个正面信号：反复提出跨笔记问题/难以记住资料位置/答案需带出处/需求长期重复。五种反模式：知识库还是收藏夹时先别上RAG/单笔记可回答不需要/笔记<200篇检索增益有限/高频探索期过早结构化反限制/只用一种文档格式检索质量差。核心观点：RAG不是知识库起点而是检索压力的答案——先在手动搜索中找痛点，再决定接RAG，从小处开始渐进式迭代。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "腾讯智能体驱动企业管理变革：从个体工具到组织能力",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院分析AI智能体从个体提效工具到组织核心能力的演进路径。三阶段：个体工具（AI提效个人工作）→团队协作（AI参与工作流）→组织能力（AI重塑企业运行模式，招聘/培训/评估体系改变，决策从层级型转向网状）。腾讯分享千问办公+钉钉融入Agent的探索。关键洞察：组织变革不是等AI足够强后才发生，而是与AI能力同步生长——ATM问世时银行组织结构也同时被重塑。",
+      "link": "",
+      "source_file": "",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "浙银理财AIIR智能投研平台：大模型驱动投研新范式",
+      "source": "金融电子化",
+      "digest": "浙银理财推出AIIR智能投研平台，以大模型驱动投研全链路智能化。投前自动化行业研究（多源异构数据提取趋势/政策/竞争格局）；投中智能风控（实时监控+大模型分析舆情异动+自动关联持仓敞口）；投后动态监测与自动复盘。技术亮点：行业知识本体模型——200+行业分类、3000+业务实体关系，使大模型基于金融知识本体做精准分析。效果：报告初稿时间从3天压缩至4小时，风险指标监控从T+1到准实时。",
+      "link": "",
+      "source_file": "",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "贵阳银行推进大模型智能中台与OCR技术中台建设",
+      "source": "银行科技研究社",
+      "digest": "贵阳银行AI基础设施投入：大模型智能中台二期算力服务器采购600万元，支撑财富知识助手/柜员知识助手/运营知识助手。累计投入超733万元——硬件先进数通中标，合规火山引擎，信贷润和，客服中电金信。OCR技术中台中科金财中标5台OCR大模型AI服务器，自动化测试一期357万元，核心系统上云近3500万元。贵阳银行采用模块化多供应商策略——底层算力+OCR+RPA+自动化测试+上云各自招标，是典型城商行梯度式AI建设样本。",
+      "link": "",
+      "source_file": "",
+      "category": "同业",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-06",
+      "title": "从会聊天到能管钱：Agent进入交易时代",
+      "source": "极客公园",
+      "digest": "AGI Playground 2026大会上Airwallex全球首席营收官吴恺演讲。核心：Agent终局不是更聪明的对话界面而是能真正运转企业资金的执行系统。Airwallex构建「AI原生的金融操作系统」，识别两个核心机会：自主金融（Agent管理对账/分账/付款路由）和智能体商业（消费者授权Agent比价/下单/支付）。吴恺判断市场已到拐点：消费者会授权Agent比较、协商和完成交易，支付基础设施必须为此做好准备。此话题处于科技×金融交叉，属支付基础设施前沿探索。",
+      "link": "",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-06",
+      "title": "科维斯AI多Agent协同发现Linux内核隐藏18年漏洞SCTPhantom",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程报道：安全公司科维斯使用多Agent协同系统发现Linux内核隐藏18年的高危漏洞SCTPhantom。三Agent协作：代码分析Agent（静态扫描SCTP协议处理函数）、动态验证Agent（自动构建PoC验证可利用性）、归因分析Agent（Git历史追溯，漏洞引入点为2008年某提交）。从代码扫描到PoC生成不到2小时。多Agent分工使漏洞发现效率大幅提升——「潜伏十年」级漏洞越来越难隐藏。本文属安全/内核技术领域。",
+      "link": "",
+      "source_file": "",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-05",
       "title": "Cursor开源MoK：确定性MoE训练方案Mixture-of-Kittens",

@@ -1,0 +1,134 @@
+[
+  {
+    "title": "角色边界重塑，全栈取代分工：快手AI生产力体系成形",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_角色边界重塑，全栈取代分工：快手AI生产力体系成形_InfoQ.md"
+  },
+  {
+    "title": "2026 Data+AI 中场纪实：Snowflake 本体论、企业级智能体与 Agent 的认知跃迁",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_2026 Data+AI 中场纪实：Snowflake 本体论、企业级智能体与 Agent 的认知跃_InfoQ.md"
+  },
+  {
+    "title": "如何在技能与子代理之间做出恰当的选择",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_如何在技能与子代理之间做出恰当的选择_InfoQ.md"
+  },
+  {
+    "title": "Jeff Dean离职前最后一次对话：我低估了AI，也看清了创业者的唯一生路",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_Jeff Dean离职前最后一次对话：我低估了AI，也看清了创业者的唯一生路_InfoQ.md"
+  },
+  {
+    "title": "别再修代码了，去修系统：DevOps 之父说 Agent 时代的组织变革比技术更难",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_别再修代码了，去修系统：DevOps 之父说，Agent 时代的组织变革比技术更难_InfoQ.md"
+  },
+  {
+    "title": "Claude Code之父：每半年清空一次claude.md、skills和hooks，模型自己会想办法",
+    "source": "InfoQ",
+    "type": "rss",
+    "filename": "2026-08-06_Claude Code之父：每半年清空一次claude.md、skills和hooks，模型自己会想_InfoQ.md"
+  },
+  {
+    "title": "从会聊天到能管钱：Agent 进入交易时代",
+    "source": "极客公园",
+    "type": "rss",
+    "filename": "2026-08-06_从会聊天到能管钱：Agent 进入交易时代_极客公园.md"
+  },
+  {
+    "title": "Google DeepMind CEO Demis Hassabis 卸任",
+    "source": "Solidot",
+    "type": "rss",
+    "filename": "2026-08-06_Google DeepMind CEO Demis Hassabis 卸任_Solidot.md"
+  },
+  {
+    "title": "微软要求工程师不要最大化 AI Token 使用",
+    "source": "Solidot",
+    "type": "rss",
+    "filename": "2026-08-06_微软要求工程师不要最大化 AI Token 使用_Solidot.md"
+  },
+  {
+    "title": "ChatGPT从对话到执行：全球用户如何将AI落地",
+    "source": "OpenAI",
+    "type": "rss",
+    "filename": "2026-08-06_From asking to doing_ How the world is putting Cha_OpenAI.md"
+  },
+  {
+    "title": "WeatherNext：AI气象预报突破性预测台风能力",
+    "source": "Google DeepMind",
+    "type": "rss",
+    "filename": "2026-08-06_WeatherNext_ AI model achieves breakthrough in for_Google DeepMind.md"
+  },
+  {
+    "title": "微软SkillOpt：优化Agent技能工件跨模型迁移",
+    "source": "MarkTechPost",
+    "type": "rss",
+    "filename": "2026-08-06_Microsoft's SkillOpt Shows Optimized Agent Skill A_MarkTechPost.md"
+  },
+  {
+    "title": "BAT重逢AI办公：从赛马到阵地战，胜负手在数据",
+    "source": "36氪",
+    "type": "wechat",
+    "filename": "2026-08-06_BAT重逢AI办公_36氪.md"
+  },
+  {
+    "title": "字节跳动年中战略会：梁汝波定调AI全面化",
+    "source": "财联社AI daily",
+    "type": "wechat",
+    "filename": "2026-08-06_字节跳动年中会_财联社AIdaily.md"
+  },
+  {
+    "title": "浙银理财AIIR智能投研平台：大模型驱动投研新范式",
+    "source": "金融电子化",
+    "type": "wechat",
+    "filename": "2026-08-06_浙银理财AIIR智能投研_金融电子化.md"
+  },
+  {
+    "title": "科维斯AI多Agent协同发现Linux内核18年漏洞SCTPhantom",
+    "source": "腾讯技术工程",
+    "type": "wechat",
+    "filename": "2026-08-06_科维斯AI内核漏洞_腾讯技术工程.md"
+  },
+  {
+    "title": "贵阳银行推进大模型智能中台与OCR技术中台建设",
+    "source": "银行科技研究社",
+    "type": "wechat",
+    "filename": "2026-08-06_贵阳银行大模型OCR中台_银行科技研究社.md"
+  },
+  {
+    "title": "个人AI知识库什么时候该接RAG？4个信号+5种反模式",
+    "source": "AI破壁实验室",
+    "type": "wechat",
+    "filename": "2026-08-06_个人AI知识库RAG_AIP破壁实验室.md"
+  },
+  {
+    "title": "MCP协议重回HTTP无状态范式：架构设计才是AI时代稀缺资源",
+    "source": "阿里云云原生",
+    "type": "wechat",
+    "filename": "2026-08-06_MCP重回HTTP范式_阿里云云原生.md"
+  },
+  {
+    "title": "AI Native混沌工程：从故障注入到智能自愈",
+    "source": "千问AI平台",
+    "type": "wechat",
+    "filename": "2026-08-06_AINative混沌工程_千问AI平台.md"
+  },
+  {
+    "title": "斯坦福教授：AI时代程序员必须掌握的3大基本功",
+    "source": "51CTO技术栈",
+    "type": "wechat",
+    "filename": "2026-08-06_斯坦福AI编程基本功_51CTO.md"
+  },
+  {
+    "title": "智能体驱动企业管理变革：从个体工具到组织能力",
+    "source": "腾讯研究院",
+    "type": "wechat",
+    "filename": "2026-08-06_智能体企业管理变革_腾讯研究院.md"
+  }
+]
