@@ -41,3 +41,5 @@ daily/*/checked_articles_report.md
 # wiki/  # 已恢复跟踪，不再忽略
 __pycache__/
 wiki/
+三驾马车日视图/
+wiki/
