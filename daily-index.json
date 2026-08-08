@@ -1,6 +1,19 @@
 {
   "issues": [
     {
+      "date": "2026-08-08",
+      "weekday": "周六",
+      "stats": {
+        "国际": 6,
+        "国内": 9,
+        "同业": 1,
+        "其他": 1,
+        "total": 17,
+        "excluded": 2
+      },
+      "summary": "Anthropic产品方法论：Evals正在替代PRD成为产品核心/Jeff Dean创业BP曝光：Discovery Loop引硅谷VC抢投/阿里云Ag..."
+    },
+    {
       "date": "2026-08-07",
       "weekday": "周五",
       "stats": {
