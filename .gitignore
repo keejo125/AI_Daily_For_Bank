@@ -30,13 +30,24 @@ projects/增强记忆系统-实施计划.md
 # 本地调研文档（非早报）
 2026年4月_岗位智能体编码与测试阶段_业界动态调研报告.md
 
-# AI Daily 生成中间产物
+# AI Daily 生成中间产物（临时脚本/文件）
 daily/*/articles_raw.json
 daily/*/filtered_articles.json
 daily/*/classification.json
+daily/*/classification_task.txt
+daily/*/combined_articles.json
+daily/*/merge_plan.json
 daily/*/_gen_classify.py
 daily/*/_verify.py
+daily/*/_classify.py
+daily/*/build_classification_*.py
 daily/*/checked_articles_report.md
+
+# 临时脚本（git add -A 误伤防护）
+scripts/update_frontmatter_*.py
+
+# 空目录残留
+daily/--date/
 
 # wiki/  # 已恢复跟踪，不再忽略
 __pycache__/

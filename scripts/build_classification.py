@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """
-从 sources/*.md 的 front matter 汇总生成 classification.json
+从 sources/*.md front matter + merge_plan.json 纯聚合生成 classification.json
 
 用法: python3 build_classification.py YYYY-MM-DD
 
-工作原理:
-- 扫描 daily/YYYY-MM-DD/sources/*.md
-- 解析每个文件的 YAML front matter（status, category, digest, is_model_related 等）
-- 只有 status=confirmed 的文章才会进入 classification.json
-- status=pending 的文章会被列出提醒（尚未被AI处理）
-- 输出 daily/YYYY-MM-DD/classification.json（供 generate_html.py 消费）
+v3.5 架构（根治 field 丢失问题）:
+  - 单篇文章的所有字段（category, digest, is_model_related, link, source）全部来自 front matter
+  - 跨文章合并信息（is_merged, source_items）来自 merge_plan.json
+  - 本脚本只做聚合 + 排序 + 重新编号 aid，不做任何"猜测"或"补全"
+  - AI Agent 在 Step 3 将分类/摘要写回 front matter，合并信息写入 merge_plan.json
+  - 然后运行本脚本一键生成 classification.json
 
-架构定位:
-- 本脚本是"派生索引生成器"，classification.json 不再由AI手写
-- AI Agent 在 Step 3 中将分类/摘要结果写回每个 md 的 front matter
-- 然后运行本脚本自动聚合
+优势:
+  - 不再从正文推断 title/link/source（前端 matter 已有，不会丢）
+  - link 不会因为 JSON 被覆盖而丢失（源在 front matter）
+  - 合并信息独立存储（merge_plan.json 人类可读可检查）
 """
 import json
 import re
@@ -35,7 +35,6 @@ def parse_front_matter(filepath: Path) -> dict:
     except Exception:
         return {}
 
-    # 提取 --- ... --- 之间的内容
     m = re.match(r'^---\s*\n(.*?)\n---', text, re.S)
     if not m:
         return {}
@@ -46,63 +45,87 @@ def parse_front_matter(filepath: Path) -> dict:
     multiline_lines = []
 
     for line in fm_text.split('\n'):
-        # 多行值续行（以空格开头）
         if current_key and (line.startswith('  ') or line.startswith('\t')):
             multiline_lines.append(line.strip())
             continue
 
-        # 保存上一个多行值
         if current_key and multiline_lines:
             result[current_key] = '\n'.join(multiline_lines)
             current_key = None
             multiline_lines = []
 
-        # 解析 key: value
         kv = re.match(r'^(\w[\w_]*)\s*:\s*(.*)', line)
         if kv:
             key, value = kv.group(1), kv.group(2).strip()
-            if value == '|' or value == '>':
-                # 多行文本开始
+            if value in ('|', '>'):
                 current_key = key
                 multiline_lines = []
             else:
                 result[key] = value
 
-    # 处理最后一个多行值
     if current_key and multiline_lines:
         result[current_key] = '\n'.join(multiline_lines)
 
     return result
 
 
-def extract_title_and_meta(filepath: Path) -> dict:
-    """从 markdown 正文提取标题、链接、来源"""
+def extract_title_from_body(filepath: Path) -> str:
+    """从正文提取标题（仅兜底，front matter 无 title 时用）"""
     try:
         text = filepath.read_text(encoding='utf-8')
     except Exception:
-        return {}
+        return ""
 
-    # 去掉 front matter
     body = re.sub(r'^---\s*\n.*?\n---\s*\n', '', text, count=1, flags=re.S)
-
-    title = ""
-    link = ""
-    source = ""
-
-    for line in body.split('\n')[:10]:
+    for line in body.split('\n')[:5]:
         line = line.strip()
-        if line.startswith('# ') and not title:
-            title = line[2:].strip()
-        elif '原文链接' in line:
-            m = re.search(r'原文链接[：:]\s*(.+)', line)
-            if m:
-                link = m.group(1).strip()
-        elif '来源' in line and not source:
-            m = re.search(r'来源[：:]\s*(.+)', line)
-            if m:
-                source = m.group(1).strip()
+        if line.startswith('# '):
+            return line[2:].strip()
+    return ""
 
-    return {"title": title, "link": link, "source": source}
+
+def load_merge_plan(date_str: str) -> dict:
+    """
+    读取 merge_plan.json（如果存在）
+    
+    格式:
+    {
+      "merged_groups": [
+        {
+          "main": "sources/主文章.md",
+          "items": [
+            {"source_file": "sources/从条1.md", "name": "来源A", "link": "..."},
+            {"source_file": "sources/从条2.md", "name": "来源B", "link": "..."}
+          ]
+        }
+      ]
+    }
+    
+    返回: {从条source_file -> 主条source_file} 映射 + {主条source_file -> source_items}
+    """
+    plan_path = PROJECT_DIR / "daily" / date_str / "merge_plan.json"
+    if not plan_path.exists():
+        return {}, {}
+    
+    try:
+        with open(plan_path, 'r', encoding='utf-8') as f:
+            plan = json.load(f)
+    except Exception:
+        return {}, {}
+    
+    merged_to_main = {}   # merged source_file -> main source_file
+    main_items = {}       # main source_file -> [source_items]
+    
+    for group in plan.get("merged_groups", []):
+        main_sf = group.get("main", "")
+        items = group.get("items", [])
+        main_items[main_sf] = items
+        for item in items:
+            merged_sf = item.get("source_file", "")
+            if merged_sf:
+                merged_to_main[merged_sf] = main_sf
+    
+    return merged_to_main, main_items
 
 
 def main():
@@ -122,30 +145,28 @@ def main():
         print(f"❌ 无 markdown 文件: {sources_dir}")
         sys.exit(1)
 
+    # 加载合并计划
+    merged_to_main, main_items = load_merge_plan(date_str)
+
     confirmed = []
     pending = []
 
     for md_file in md_files:
         fm = parse_front_matter(md_file)
-        meta = extract_title_and_meta(md_file)
-
+        sf = f"sources/{md_file.name}"
+        
         status = fm.get("status", "pending")
         category = fm.get("category", "")
-        digest = fm.get("digest", "")
-        is_model_related = fm.get("is_model_related", "false").lower() == "true"
-        is_merged = fm.get("is_merged", "false").lower() == "true"
-        publish_time = fm.get("publish_time", "0")
-
+        
+        # 从 front matter 读取所有字段（不再从正文推测）
         article = {
-            "aid": len(confirmed) + len(pending) + 1,
-            "title": meta.get("title", md_file.stem),
-            "source": meta.get("source", ""),
-            "link": meta.get("link", ""),
-            "digest": digest,
-            "source_file": f"sources/{md_file.name}",
-            "is_model_related": is_model_related,
-            "is_merged": is_merged,
-            "publish_time": int(publish_time) if publish_time.isdigit() else 0,
+            "title": extract_title_from_body(md_file) or md_file.stem,
+            "source": fm.get("source", ""),           # 公众号名称/router
+            "link": fm.get("link", ""),                # 原文 URL
+            "digest": fm.get("digest", ""),
+            "source_file": sf,
+            "is_model_related": fm.get("is_model_related", "false").lower() == "true",
+            "publish_time": int(fm.get("publish_time", "0")),
         }
 
         if status == "confirmed" and category:
@@ -156,62 +177,40 @@ def main():
     # 按分类分组
     classification = {"date": date_str, "国际": [], "国内": [], "同业": [], "其他": []}
     for category, article in confirmed:
-        if category in classification:
-            classification[category].append(article)
-        else:
-            classification["其他"].append(article)
+        bucket = category if category in classification else "其他"
+        classification[bucket].append(article)
 
-    # 将 is_merged=True 的从条链接到同主题主条
-    # 匹配规则：同一分类下，同为 is_model_related，标题关键词重叠
-    merged_main_map = {}  # merged_aid -> main_aid
-    for cat in ["国际", "国内", "同业", "其他"]:
-        articles = classification[cat]
-        mains = [a for a in articles if not a.get('is_merged')]
-        mergeds = [a for a in articles if a.get('is_merged')]
-        for merged in mergeds:
-            merged_title = merged.get('title', '')
-            merged_source = merged.get('source', '')
-            # 按标题关键词匹配主条
-            best = None
-            best_score = 0
-            for main in mains:
-                if main.get('is_model_related') == merged.get('is_model_related'):
-                    main_title = main.get('title', '')
-                    main_source = main.get('source', '')
-                    # 不同来源 + 有共同关键词
-                    if merged_source != main_source:
-                        words = set(merged_title) & set(main_title)
-                        score = len([w for w in words if ord(w) > 127])  # 中文字符重叠数
-                        if score > best_score:
-                            best_score = score
-                            best = main
-            if best and best_score >= 3:
-                merged_main_map[merged['aid']] = best['aid']
-    
-    # 构建 source_items（多来源标签）
+    # 应用合并计划：从条标记 is_merged=True，主条注入 source_items
     for cat in ["国际", "国内", "同业", "其他"]:
         for art in classification[cat]:
-            if not art.get('source_items'):
-                art['source_items'] = [{
-                    'name': art.get('source', ''),
-                    'link': art.get('link', '')
-                }]
-        # 将合并从条的来源追加到主条
-        for merged_aid, main_aid in merged_main_map.items():
-            main_art = next((a for a in classification[cat] if a['aid'] == main_aid), None)
-            merged_art = next((a for a in classification[cat] if a['aid'] == merged_aid), None)
-            if main_art and merged_art:
-                main_art['source_items'].append({
-                    'name': merged_art.get('source', ''),
-                    'link': merged_art.get('link', '')
-                })
-    
+            sf = art["source_file"]
+            if sf in merged_to_main:
+                # 从条：标记跳过
+                art["is_merged"] = True
+                art["merged_into"] = merged_to_main[sf]
+            elif sf in main_items:
+                # 主条：注入 source_items
+                items = main_items[sf]
+                art["source_items"] = items
+                # 主条自己的 source 也要放进列表开头
+                own = {
+                    "name": art.get("source", ""),
+                    "link": art.get("link", "")
+                }
+                art["source_items"] = [own] + items
+            else:
+                # 普通文章：构建单元素 source_items
+                if not art.get("source_items"):
+                    art["source_items"] = [{
+                        "name": art.get("source", ""),
+                        "link": art.get("link", "")
+                    }]
+
     # 排序: model_related 排前, merged 排后
     for cat in ["国际", "国内", "同业", "其他"]:
         classification[cat].sort(key=lambda x: (
             x.get("is_merged", False),
             not x.get("is_model_related", False),
-            x.get("aid", 999)
         ))
 
     # 重新编号 aid
@@ -222,7 +221,8 @@ def main():
             aid += 1
 
     # stats
-    stats = {cat: len(classification[cat]) for cat in ["国际", "国内", "同业", "其他"]}
+    stats = {cat: len([a for a in classification[cat] if not a.get("is_merged")]) 
+             for cat in ["国际", "国内", "同业", "其他"]}
     stats["total"] = sum(stats.values())
     classification["stats"] = stats
 
@@ -231,12 +231,13 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(classification, f, ensure_ascii=False, indent=2)
 
-    # 统计
+    # 统计输出
     total_confirmed = len(confirmed)
+    merged_count = sum(1 for art in (a for _, a in confirmed) if art.get("is_merged"))
     print(f"📊 build_classification [{date_str}]")
-    print(f"   已确认: {total_confirmed} 篇")
+    print(f"   已确认: {total_confirmed} 篇（含合并从条 {merged_count} 篇）")
     for cat in ["国际", "国内", "同业", "其他"]:
-        count = len(classification[cat])
+        count = stats[cat]
         if count:
             print(f"     {cat}: {count}")
     if pending:

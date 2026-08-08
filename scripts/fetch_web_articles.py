@@ -90,10 +90,12 @@ def save_article_md(filepath, title, link, source, content, publish_time=0):
 
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
-        # Front matter
+        # Front matter — v3.5 强制写入 link 和 source，缺一不可
         f.write("---\n")
         if publish_time:
             f.write(f"publish_time: {publish_time}\n")
+        f.write(f"link: {link}\n")
+        f.write(f"source: {source}\n")
         f.write("status: pending\n")
         f.write("---\n\n")
 

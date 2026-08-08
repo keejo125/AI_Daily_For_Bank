@@ -764,9 +764,11 @@ def sync_inline_daily_index():
         return
 
     # 替换 INLINE_DAILY_INDEX
-    pattern = r'var INLINE_DAILY_INDEX = \{.*?\};'
-    replacement = f'var INLINE_DAILY_INDEX = {inline_json};'
-    new_html = _re.sub(pattern, replacement, html_content, count=1, flags=_re.DOTALL)
+    # v3.5: 用贪婪匹配 + 定位到后面的 </script> 标签，解决嵌套 JSON 里 .*? 提前截断的 bug
+    prefix = 'var INLINE_DAILY_INDEX = '
+    pattern = _re.escape(prefix) + r'\{.*\};\s*$'
+    replacement = prefix + inline_json + ';'
+    new_html = _re.sub(pattern, replacement, html_content, count=1, flags=_re.MULTILINE)
 
     if new_html == html_content:
         print_progress("  ⚠️ 未找到 INLINE_DAILY_INDEX，跳过")

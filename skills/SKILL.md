@@ -1,42 +1,46 @@
 ---
 name: ai-daily-for-bank
 description: >
-  生成每日 AI 智能研发早报。从多个来源（自建RSSHub、官网RSS、手动投稿）获取文章，
-  按关键词过滤，智能分类（国际/国内/同业/其他）并生成~500字摘要，
-  渲染为响应式静态 HTML 页面。支持增量处理（已确认文章不重复消耗token）。
-  使用场景：当用户要求生成今日/昨日AI早报、获取AI文章汇总、
-  生成智能研发日报时触发。触发词：早报、日报、AI daily、每日汇总。
+  生成每日 AI 智能研发早报。从多个来源(自建RSSHub、官网RSS、手动投稿)获取文章,
+  按关键词过滤,智能分类(国际/国内/同业/其他)并生成~300字摘要,
+  渲染为响应式静态 HTML 页面。支持增量处理(已确认文章不重复消耗token)。
+  使用场景:当用户要求生成今日/昨日AI早报、获取AI文章汇总、
+  生成智能研发日报时触发。触发词:早报、日报、AI daily、每日汇总。
 license: MIT
 metadata:
-  version: "3.2"
+  version: "3.3"
   category: productivity
-  updated: "2026-08-03"
+  updated: "2026-08-05"
   changelog: |
+    v3.3 (2026-08-05):
+    - 新增:铁规6 标题中文化(所有英文标题必须翻译为中文)
+    - 改变:摘要从~300字精简为~300字中文
+    - 改变:其他分类不做非技术自动判定(范式/工程实践内容可能在其中,由人工审核上调)
     v3.2 (2026-08-03):
-    - 新增：build_classification.py 自动匹配 is_merged 从条到主条（关键词重叠算法）
-    - 新增：classification.json 每篇文章自动生成 source_items 数组
-    - 新增：generate_html.py 来源标签优先链接真实原文URL（回退到 viewer.html）
-    - 新增：合并主条渲染多来源标签（如 36氪+智东西），各标签独立点击跳转原文
-    - 改变：移除独立「查看原文」按钮（来源标签已可点击）
-    - 改变：template.html JS 渲染改用 source_items 数组（支持任意数量来源）
-    - 改变：Git 推送策略 — HTTPS 和 SSH 均可能超时，优先 HTTPS，失败则切换 SSH
+    - 新增:build_classification.py 自动匹配 is_merged 从条到主条(关键词重叠算法)
+    - 新增:classification.json 每篇文章自动生成 source_items 数组
+    - 新增:generate_html.py 来源标签优先链接真实原文URL(回退到 viewer.html)
+    - 新增:合并主条渲染多来源标签(如 36氪+智东西),各标签独立点击跳转原文
+    - 改变:移除独立「查看原文」按钮(来源标签已可点击)
+    - 改变:template.html JS 渲染改用 source_items 数组(支持任意数量来源)
+    - 改变:Git 推送策略 - HTTPS 和 SSH 均可能超时,优先 HTTPS,失败则切换 SSH
     v3.1 (2026-08-02):
-    - 新增：generate_html.py Step 8 自动同步根 index.html INLINE_DAILY_INDEX
-    - 新增：daily-index.json 插入后自动按日期降序排列
-    - 新增：Step 5 索引数量检查（stats 为空 bug 教训）
-    - 新增：Step 6 git add 补充 search-index.json + index.html
-    - 改变：Git remote 从 SSH 切换为 HTTPS（端口22超时教训）
+    - 新增:generate_html.py Step 8 自动同步根 index.html INLINE_DAILY_INDEX
+    - 新增:daily-index.json 插入后自动按日期降序排列
+    - 新增:Step 5 索引数量检查(stats 为空 bug 教训)
+    - 新增:Step 6 git add 补充 search-index.json + index.html
+    - 改变:Git remote 从 SSH 切换为 HTTPS(端口22超时教训)
     v3.0 (2026-08-02):
-    - 重构：信源架构升级为自建RSSHub + 官网RSS统一接入（废弃微信公众号通道）
-    - 新增：InfoQ、快手技术信源（via RSSHub）
-    - 新增：增量处理机制（front matter status: pending/confirmed，已确认不重跑）
-    - 新增：build_classification.py 从 front matter 自动聚合 classification.json
-    - 新增：手动投稿支持微信短链直接抓取（fetch_wechat_page）
-    - 改变：摘要升级为~500字中文多段落，存入 source md front matter
-    - 改变：HTML展示改为“AI摘要 + 查看原文↗”，不再嵌入全文（132KB→37KB）
-    - 废弃：fetch_articles.py 微信原始通道、decemberpei公众号RSS、kr36_api适配器
+    - 重构:信源架构升级为自建RSSHub + 官网RSS统一接入(废弃微信公众号通道)
+    - 新增:InfoQ、快手技术信源(via RSSHub)
+    - 新增:增量处理机制(front matter status: pending/confirmed,已确认不重跑)
+    - 新增:build_classification.py 从 front matter 自动聚合 classification.json
+    - 新增:手动投稿支持微信短链直接抓取(fetch_wechat_page)
+    - 改变:摘要升级为~300字中文多段落,存入 source md front matter
+    - 改变:HTML展示改为"AI摘要 + 查看原文↗",不再嵌入全文(132KB→37KB)
+    - 废弃:fetch_articles.py 微信原始通道、decemberpei公众号RSS、kr36_api适配器
     v2.4 (2026-07-16):
-    - 新增:铁规 5 补充 spawn 完成后必查 JSON mtime（静默空跑 R2 教训）
+    - 新增:铁规 5 补充 spawn 完成后必查 JSON mtime(静默空跑 R2 教训)
     - 新增:Step 4 R2 合并检查拆为独立子项
     - 新增:Step 5 HTML 生成后抽样 3 篇摘要 ≠ 标题
     v2.3 (2026-07-12):
@@ -46,12 +50,12 @@ metadata:
     v2.1 (2026-07-03):
     - 新增:Step 6 部署权限检查、Step 3 强合并检查清单
     v2.0 (2026-07-03):
-    - 重构:1533行→800行(-48%)，新增铁规章节
+    - 重构:1533行→800行(-48%),新增铁规章节
 ---
 
 # AI Daily Report Skill
 
-生成每日 AI 智能研发早报。从自建RSSHub、官网RSS、手动投稿等多源获取文章，按关键词过滤后由智能体分类并生成~500字摘要，最终渲染为响应式静态 HTML 页面。支持增量处理，已确认文章不重复消耗token。
+生成每日 AI 智能研发早报。从自建RSSHub、官网RSS、手动投稿等多源获取文章,按关键词过滤后由智能体分类并生成~300字摘要,最终渲染为响应式静态 HTML 页面。支持增量处理,已确认文章不重复消耗token。
 
 ---
 
@@ -74,7 +78,7 @@ metadata:
 **Git 操作硬性约束**:
 - 🚫 **严禁 `git push --force` / `git push -f` / `--force-with-lease`** 等任何 force 变体:会覆盖远程历史,造成数据丢失
 - 🚫 **严禁 `git reset --hard`**:会丢弃未提交的工作
-- 🚫 **严禁 `git reset --mixed HEAD~` 回滚提交**:会变成"假汇报"——已推 commit 被偷偷回滚
+- 🚫 **严禁 `git reset --mixed HEAD~` 回滚提交**:会变成"假汇报"--已推 commit 被偷偷回滚
 
 **遇到 push 冲突时,正确做法**:
 1. ✅ `git fetch origin` 拉取最新
@@ -91,32 +95,58 @@ metadata:
 - 发现违反铁规的操作要执行前,**先停下报告老板**,等批准
 - 已经误执行了,要**主动报告**,不要隐瞒或事后回滚
 
-### 铁规 4:合并从条渲染铁规(2026-07-10 老板新增)
+### 铁规 4:合并从条渲染铁规(2026-07-10, v3.2 更新)
 
 **问题**:合并组中从条(`is_merged=true`)如果只作为独立文章 append,会与主条重复显示
 
+**v3.2 机制变更**:`build_classification.py` 自动处理合并--
+1. 扫描所有文章,找到 `is_merged=true` 从条
+2. 通过标题关键词重叠算法匹配到同主题主条
+3. 将从条(name + link)追加到主条的 `source_items` 数组
+4. `generate_html.py` 跳过从条渲染,主条卡片渲染多来源标签(每标签可点击跳转对应原文)
+
 **铁规**:
-- ✅ 主条(`is_merged=false` + 带 `source_items`):**正常渲染**,双源/多源标签
-- ✅ 从条(`is_merged=true`):**不渲染**——其内容已合并入主条的 `source_items`
+- ✅ 主条:**正常渲染**,`source_items` 数组渲染为多来源标签
+- ✅ 从条(`is_merged=true`):**不渲染**--其内容已合并入主条的 `source_items`
 - ❌ 不允许从条作为独立文章显示(会与主条重复)
 
 **generate_html.py 实现点**(`build_articles_json`):
 ```python
-# SKILL v2.1: 跳过合并组的从条(从条已在主条的 source_items 中合并展示)
-if item.get('is_merged') is True and not merged_articles:
+# v3.2: 跳过合并从条(已并入主条 source_items)
+if item.get('is_merged') is True:
     stats['skipped_merged'] += 1
     continue
 ```
 
 **验证标准**:
-- 合并 3 组 → 实际渲染 = (保留数 - 合并数) + 3 主条 × source_items 多标签
-- 22 个 viewer 链接 = 19 主条(独立+合并主条) + 3 主条 source_items
-- 渲染时不能出现 23 篇(出现 = 从条未跳过)
-- 输出日志必须有 `跳过从条: 3`
+- 输出日志必须有 `跳过从条: N`(N = 从条数)
+- 主条卡片的 source-tag 链接指向真实原文 URL(优先),回退到 viewer.html
+- 渲染卡片数 = 总文章数 - 从条数(不重复不遗漏)
+
+### 铁规 6:标题中文化(2026-08-05 老板新增)
+
+**规则**:所有英文标题必须翻译为中文,HTML 中不得出现英文标题。
+
+**适用范围**:`classification.json` 中 `title` 字段为纯英文或含英文的标题
+
+**执行时机**:Step 3 分类完成后,主 Agent 逐篇检查,英文标题→翻译为中文→写回 `classification.json`
+
+**示例**:
+- ❌ `Cogent VR-1: A 3D Object Hallucination Benchmark` → ✅ `3D物体幻觉评测基准 Cogent VR-1`
+- ❌ `Circles: A Self-Organizing Multi-Agent System` → ✅ `自组织多智能体系统 Circles`
+- ❌ `Hermes Agent 3.0 Released with Self-Improvement` → ✅ `自我改进型智能体 Hermes 3.0 发布`
+- ❌ `GPT-Live Real-Time Voice API Now Available` → ✅ `GPT-Live 实时语音 API 上线`
+
+**要点**:
+- 保留核心产品/项目名(如 Cogent VR-1、Circles、Hermes、GPT-Live)
+- 正文描述部分翻译为中文
+- 翻译后标题需保持语义准确,不能丢失关键信息
+
+**验证方式**:Step 4 第 3 轮增加检查项 13:所有 title 字段不含全英文(允许含英文专有名词)
 
 ### 铁规 5:3 轮 fork 验证不可省略(2026-07-12 老板新增)
 
-**问题**:主 Agent 分类自查后,直接跳到 Step 5 生成 HTML——**违反了 Step 4 的 3 轮 fork 验证强制要求**。本次自查漏判 6 处错误(1 漏删 + 1 国际国内互换 + 1 产业调其他 + 3 模型打标),幸被老板发现,补做 3 轮 fork 才纠正。
+**问题**:主 Agent 分类自查后,直接跳到 Step 5 生成 HTML--**违反了 Step 4 的 3 轮 fork 验证强制要求**。本次自查漏判 6 处错误(1 漏删 + 1 国际国内互换 + 1 产业调其他 + 3 模型打标),幸被老板发现,补做 3 轮 fork 才纠正。
 
 **铁规**:
 - ✅ Step 4 的 3 轮 fork 验证**不可省略、不可由主 Agent 自查替代**
@@ -129,7 +159,7 @@ if item.get('is_merged') is True and not merged_articles:
 
 **spawn 完成后必查 JSON mtime**(2026-07-16 静默空跑教训):
 - 子智能体存在两种失败模式:
-  - **模式 A(活跃错误)**:做错但修改了 JSON(7-12 6 处错误)，通过 diff 检出
+  - **模式 A(活跃错误)**:做错但修改了 JSON(7-12 6 处错误),通过 diff 检出
   - **模式 B(静默失败)**:跑了但未修改 JSON(7-15 R2 空跑 5 分钟仅输出半句话)
 - **每轮 spawn 完成后必须立即检查 `classification.json` 的修改时间**:
   ```bash
@@ -140,8 +170,8 @@ if item.get('is_merged') is True and not merged_articles:
 
 **本次教训量化**(7-12 + 7-15 早报):
 - 主 Agent 一次性分类:看似零错误
-- 7-12 子智能体 3 轮 fork:发现 6 处错误(1 + 4 + 0)（模式 A）
-- 7-15 R2:静默空跑，mtime 未变 → 主 Agent 接管 5 项修正（模式 B）
+- 7-12 子智能体 3 轮 fork:发现 6 处错误(1 + 4 + 0)(模式 A)
+- 7-15 R2:静默空跑,mtime 未变 → 主 Agent 接管 5 项修正(模式 B)
 - 修正耗时:6 分钟(子智能体 2-3 分钟 × 3 轮)
 - 节省后续返工:老板指出前已推送 6 处错误,影响行业认知
 
@@ -176,7 +206,7 @@ Step 7  反思与优化  → 写反思 / 改 skill
 
 ---
 
-## Step 1: 获取文章（多源统一接入）
+## Step 1: 获取文章(多源统一接入)
 
 **命令**:
 ```bash
@@ -184,16 +214,16 @@ cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/scripts
 python3 fetch_web_articles.py [YYYY-MM-DD]  # 不传参数则用昨天
 ```
 
-**信源架构（v3.0 重构）**:
+**信源架构(v3.0 重构)**:
 
-所有信源统一输出标准 RSS，经工厂模式适配器转换为统一文章结构：
+所有信源统一输出标准 RSS,经工厂模式适配器转换为统一文章结构:
 
 | 信源 | 类型 | 接入方式 | 内容特点 |
 |------|------|----------|----------|
 | 36氪 | RSSHub | `torandom.com/rsshub/36kr/information/web_news` | 全文在feed(5000-8000字) |
 | InfoQ | RSSHub | `torandom.com/rsshub/infoq/topic/AI` | 全文在feed(7000-11000字) |
-| 美团技术 | RSSHub | `torandom.com/rsshub/meituan/tech` | feed无正文，需爬原文 |
-| 快手技术 | RSSHub | `torandom.com/rsshub/csdn/blog/kuaishoutech` | 全文在feed，低频源 |
+| 美团技术 | RSSHub | `torandom.com/rsshub/meituan/tech` | feed无正文,需爬原文 |
+| 快手技术 | RSSHub | `torandom.com/rsshub/csdn/blog/kuaishoutech` | 全文在feed,低频源 |
 | 极客公园 | 官网RSS | `geekpark.net/rss` | 全文在feed |
 | 量子位 | 官网RSS | `qbitai.com/feed` | 需爬原文 |
 | Solidot | 官网RSS | `solidot.org/index.rss` | 全文在feed |
@@ -203,24 +233,31 @@ python3 fetch_web_articles.py [YYYY-MM-DD]  # 不传参数则用昨天
 | MarkTechPost | 官网RSS | `marktechpost.com/feed/` | 全文在feed |
 | 手动投稿 | 微信短链 | `manual_links.json` | 直接抓取mp.weixin.qq.com |
 
-**配置文件**：`config/sources.json`（统一sources数组 + 工厂模式适配器）
+**配置文件**:`config/sources.json`(统一sources数组 + 工厂模式适配器)
 
 **输出**:
-- `daily/YYYY-MM-DD/sources/*.md` — 每篇文章 Markdown（带 front matter，`status: pending`）
-- `daily/YYYY-MM-DD/articles_raw.json` — 文章元数据汇总
+- `daily/YYYY-MM-DD/sources/*.md` - 每篇文章 Markdown(带 front matter,`status: pending`)
+- `daily/YYYY-MM-DD/articles_raw.json` - 文章元数据汇总
 
-**增量保护**：已存在且 `status: confirmed` 的文件不会被覆盖（保护AI已处理的结果）
+**增量保护**:已存在且 `status: confirmed` 的文件不会被覆盖(保护AI已处理的结果)
 
 **手动投稿**:
 ```bash
 python3 add_manual_link.py "https://mp.weixin.qq.com/s/xxx" "来源名称"
 ```
-链接存入 `manual_links.json`，下次执行 fetch 时自动抓取微信页面全文。
+链接存入 `manual_links.json`,下次执行 fetch 时自动抓取微信页面全文。
 
-**RSSHub 运维**（详见 `RSSHUB-DEPLOY.md`）:
-- 地址：`https://www.torandom.com/rsshub/<路由>`
-- 服务器：阿里云 115.29.206.55，Docker + Redis 缓存
-- 首次请求较慢（冷启动），缓存后 <1s
+**wechat-to-wiki 集成(v3.2 新增)**:
+用户每天手工发的公众号文章(经 wechat-to-wiki skill 处理入库时),同步写入对应日期的 `sources/` 目录:
+- 按**文章发布日期**(`publish_time`)归入 `daily/{文章日期}/sources/`
+- 写入标准 front matter(`status: pending`),由早报流程 Step 3 自动分类
+- 该日期早报已生成时→提示用户是否重建;未生成→静默纳入下次生成
+- 详见 wechat-to-wiki skill 的 Step 8
+
+**RSSHub 运维**(详见 `RSSHUB-DEPLOY.md`):
+- 地址:`https://www.torandom.com/rsshub/<路由>`
+- 服务器:阿里云 115.29.206.55,Docker + Redis 缓存
+- 首次请求较慢(冷启动),缓存后 <1s
 
 ---
 
@@ -242,21 +279,21 @@ python3 filter_articles.py YYYY-MM-DD
 
 ---
 
-## Step 3: 智能分类与摘要（增量处理，LLM 主导）
+## Step 3: 智能分类与摘要(增量处理,LLM 主导)
 
-**目标**：对 `sources/*.md` 中 `status: pending` 的文章分类、打标、生成摘要，写回 front matter
+**目标**:对 `sources/*.md` 中 `status: pending` 的文章分类、打标、生成摘要,写回 front matter
 
-**核心原则（v3.0 新增）**：
+**核心原则(v3.0 新增)**:
 - 分类和摘要结果写回每篇文章的 Markdown front matter
-- 已确认的文章（`status: confirmed`）直接跳过，不消耗token
-- classification.json 由 `build_classification.py` 自动从 front matter 派生，不再手写
+- 已确认的文章(`status: confirmed`)直接跳过,不消耗token
+- classification.json 由 `build_classification.py` 自动从 front matter 派生,不再手写
 
-**增量处理流程**：
-1. 扫描 `daily/YYYY-MM-DD/sources/*.md`，找出 `status: pending` 的文章
-2. 对每篇 pending 文章：读取原文 → 判断分类 → 生成~500字摘要 → 写回 front matter
+**增量处理流程**:
+1. 扫描 `daily/YYYY-MM-DD/sources/*.md`,找出 `status: pending` 的文章
+2. 对每篇 pending 文章:读取原文 → 判断分类 → 生成~300字摘要 → 写回 front matter
 3. 运行 `python3 build_classification.py YYYY-MM-DD` 聚合生成 classification.json
 
-**写回 front matter 格式**：
+**写回 front matter 格式**:
 ```markdown
 ---
 publish_time: 1785548482
@@ -265,7 +302,7 @@ category: 国内
 is_model_related: false
 digest: |
   AI正在重塑大厂的管理层级。字节跳动率先更新领导力原则...
-  
+
   未来中层需要转型为AI增强型领导者...
 ---
 ```
@@ -330,12 +367,21 @@ digest: |
 | 综合资讯(2026-07-01 新增) | 多公司动态拼盘(如"OpenAI/Anthropic/谷歌三角战")→ "其他" |
 | 不确定性 | 无法明确判断 → "其他" |
 
+**⚠️ 研发范式/工程实践类内容必须识别上调(v3.3 新增)**:
+- 研发范式、工程实践、系统思维、技术方法论等内容属于技术内容,**必须主动识别并归入国际/国内/同业**,不得归入"其他"
+- 分类时遇到以下类型 → 直接归前三类,不走"其他":
+  - 研发范式讨论(如「AI终成协议」、软件工程方法演进)
+  - 工程实践/系统思维(如「组织级AI转型」、DevOps实践)
+  - 技术方法论/行业影响力(如「1%法则」、AI应用架构设计)
+- 主 Agent 在 Step 3 分类 + Step 4 第 1 轮验证中**双重确认**无此类误归
+- 人工审核为兜底确认,不作为首轮分类的依赖
+
 **基础设施边界案例**(2026-07-10 老板明确):
 - ✅ **基础设施讨论**(Kubernetes、芯片适配、Agent 编排平台架构)→ 归前三类
-- ✅ **基础设施投资/算力建设**（纯商业角度）→ "其他" 或删除
-- ❌ **基础设施物理事故**（如 AI 超算高温瘫痪、机房故障、服务器宕机事件）→ **不属技术内容,直接删除**
-  - 依据：纯运维/事件报道,无 AI 技术突破,不符合"技术内容"定义
-  - 案例(7-9):《37.7°C 热晕了！剑桥大学 AI 超算瘫癈》→ 虽出现"AI 超算"关键词,但内容是散热/运维事故,删除
+- ✅ **基础设施投资/算力建设**(纯商业角度)→ "其他" 或删除
+- ❌ **基础设施物理事故**(如 AI 超算高温瘫痪、机房故障、服务器宕机事件)→ **不属技术内容,直接删除**
+  - 依据:纯运维/事件报道,无 AI 技术突破,不符合"技术内容"定义
+  - 案例(7-9):《37.7°C 热晕了!剑桥大学 AI 超算瘫癈》→ 虽出现"AI 超算"关键词,但内容是散热/运维事故,删除
 
 ### 3.3 大模型打标(is_model_related)
 
@@ -367,13 +413,14 @@ digest: |
 - ✅ 世界模型/学术基准突破 → True
 - ✅ 训练技术研究(重卷 ImageNet)→ True
 
-### 3.4 摘要生成（v3.0 升级）
+### 3.4 摘要生成(v3.3 升级)
 
-**规则**：
-- 每篇文章生成 **~500字中文摘要**，可分多段（用空行分段）
-- 外文文章（OpenAI、DeepMind、TLDR AI、MarkTechPost等）摘要必须用**中文**撰写
-- 简讯综合类文章（“9点1氪”“极客早知道”等）不做摘要，digest填“综合简讯，包含N条快讯”
-- 摘要存入 front matter 的 `digest: |` 字段（多行 YAML）
+**规则**:
+- 每篇文章生成 **~300字中文摘要**,可分多段(用空行分段)
+- 外文文章(OpenAI、DeepMind、TLDR AI、MarkTechPost等)摘要必须用**中文**撰写
+- 简讯综合类文章("9点1氪""极客早知道"等)不做摘要,digest填"综合简讯,包含N条快讯"
+- 摘要存入 front matter 的 `digest: |` 字段(多行 YAML)
+- **不补充原文没有的信息,不添加主观评价**(v3.3 新增)
 
 ### 3.5 同主题合并(方式 A,唯一推荐)
 
@@ -432,13 +479,13 @@ digest: |
 
 ### 3.6 输出格式
 
-**重要：classification.json 不再手写**，由 `build_classification.py` 自动从 front matter 派生：
+**重要:classification.json 不再手写**,由 `build_classification.py` 自动从 front matter 派生:
 
 ```bash
 python3 build_classification.py YYYY-MM-DD
 ```
 
-生成的 classification.json 结构：
+生成的 classification.json 结构:
 ```json
 {
   "date": "YYYY-MM-DD",
@@ -448,7 +495,7 @@ python3 build_classification.py YYYY-MM-DD
       "title": "文章标题",
       "source": "信源名",
       "link": "原文链接",
-      "digest": "~500字摘要（从 front matter 读取）",
+      "digest": "~300字摘要(从 front matter 读取)",
       "source_file": "sources/xxx.md",
       "is_model_related": false,
       "publish_time": 1785548482
@@ -460,7 +507,7 @@ python3 build_classification.py YYYY-MM-DD
 }
 ```
 
-**注意**：只有 `status: confirmed` 的文章才会进入 classification.json，pending 文章会被列出提醒。
+**注意**:只有 `status: confirmed` 的文章才会进入 classification.json,pending 文章会被列出提醒。
 
 ### 3.7 排序强制要求
 
@@ -564,6 +611,7 @@ for round_num in [1, 2, 3]:
 1. `filtered_articles.json` 中有应删除但未删除的?→ 移除并记到 `excluded`
 2. 「国际/国内/同业」中有非技术内容?→ 移到「其他」或删除
 3. 「其他」中有技术内容被误归入?→ 根据公司属地移到国际/国内/同业
+   - ⚠️ **v3.3**：重点检查研发范式、工程实践、系统思维类是否被误归"其他"，必须主动上调
 
 **通过条件**:3 项全 ✅,无任何移动/删除。
 
@@ -574,30 +622,31 @@ for round_num in [1, 2, 3]:
 5. 国内分类中有国际公司/项目内容?→ 移到「国际」
 6. 金融同业内容不在「同业」?→ 移到「同业」
 7. `is_model_related` 字段错误?→ 修正
-8. 同主题文章未合并?→ 合并（参照 3.5 方式 A）
-   - 必须跨分类扫描：同一事件/同一产品/同一报告，不同公众号同天发布
-   - 多篇报道同一事件时，以最早 publish_time 为主线，其他为 source_items
+8. 同主题文章未合并?→ 合并(参照 3.5 方式 A)
+   - 必须跨分类扫描:同一事件/同一产品/同一报告,不同公众号同天发布
+   - 多篇报道同一事件时,以最早 publish_time 为主线,其他为 source_items
 
 **通过条件**:5 项全 ✅。
 
-**⚠️ 重要**:合并检查是独立子项(第 8 项)，不可因归属/打标检查通过就跳过。由于合并需要跨分类看同主题文章，子智能体必须完整阅读所有文章标题+摘要才能判断。
+**⚠️ 重要**:合并检查是独立子项(第 8 项),不可因归属/打标检查通过就跳过。由于合并需要跨分类看同主题文章,子智能体必须完整阅读所有文章标题+摘要才能判断。
 
-### 第 3 轮:排序 + source 字段 + 统计自洽
+### 第 3 轮:排序 + source 字段 + 统计自洽 + 标题中文化
 
 **检查项**:
 9. 每分类内模型打标文章排在前面?→ 重排序
 10. `source` 字段空值?→ 推断补充
 11. `source_file` 路径无效?→ 修正
 12. `stats` 各分类之和 == `total`?→ 重新计算
+13. **所有 title 字段不含全英文**?→ 翻译为中文(v3.3 新增,参照铁规 6)
 
-**通过条件**:4 项全 ✅ → 输出最终报告后进入 Step 5。
+**通过条件**:5 项全 ✅ → 输出最终报告后进入 Step 5。
 
 ### 最终确认报告
 
 ```
 ✅ 第 1 轮通过(删除/技术内容判断)
 ✅ 第 2 轮通过(分类归属/模型打标/合并检查)
-✅ 第 3 轮通过(排序/source字段/统计)
+✅ 第 3 轮通过(排序/source字段/统计/标题中文化)
 ───────────────────────────
 📊 最终统计: 国际{N} 国内{M} 同业{K} 其他{L} 总计{T}
 🗑️  已删除: {D} 篇
@@ -617,18 +666,20 @@ python3 generate_html.py YYYY-MM-DD          # 再生成 HTML
 ```
 
 **做了什么**:
-1. `build_classification.py`：扫描所有 `status: confirmed` 的 md 文件，汇总生成 classification.json
-2. `generate_html.py`：读 classification.json，渲染 template.html 模板
+1. `build_classification.py`:扫描所有 `status: confirmed` 的 md 文件,汇总生成 classification.json
+2. `generate_html.py`:读 classification.json,渲染 template.html 模板
 3. 生成 `daily/YYYY-MM-DD/index.html`
 4. 更新 `daily-index.json` 和 `search-index.json` 索引
-5. 同步根 `index.html` 的 `INLINE_DAILY_INDEX`（file:// 协议 fallback，2026-08-02 新增）
+5. 同步根 `index.html` 的 `INLINE_DAILY_INDEX`(file:// 协议 fallback,2026-08-02 新增)
 
-**注意**：`daily-index.json` 按日期降序自动排列，补生成历史日期不会打乱顺序。
+**注意**:`daily-index.json` 按日期降序自动排列,补生成历史日期不会打乱顺序。
 
-**展示方式（v3.0）**：
-- 每篇文章显示 AI 摘要（~500字，多段落）+ “查看原文 ↗”链接
-- **不嵌入原文全文**：HTML 体积小（~37KB），加载快
-- 摘要从 classification.json 的 digest 字段读取（来源于 front matter）
+**展示方式(v3.2)**:
+- 每篇文章显示 AI 摘要(~300字,多段落)+ **来源标签(可点击跳转原文)**
+- **不嵌入原文全文**:HTML 体积小(~37KB),加载快
+- 摘要从 classification.json 的 digest 字段读取(来源于 front matter)
+- 合并主条显示多个来源标签(如 36氪 + 智东西),每个标签独立可点击
+- 已移除独立「查看原文」按钮(来源标签已可直接跳转)
 
 **验证**:
 ```bash
@@ -647,7 +698,7 @@ for item in d['issues'][:3]:
 "
 ```
 检查标准:
-- ✅ stats 非空，total > 0
+- ✅ stats 非空,total > 0
 - ❌ stats={} → 检查 `generate_html.py` 的 `update_daily_index` 是否正确传入 stats
 
 **摘要质量检查**(2026-07-16 摘要=标题 bug 教训):
@@ -667,7 +718,7 @@ for i, d in enumerate(digests[:3], 1):
 - ✅ 摘要 ≠ 标题(不是标题的重复)
 - ✅ 摘要包含正文实质内容(事实/数据/引述)
 - ✅ 摘要 ≥ 20 字符
-- ❌ 摘要=标题=检测到 bug → 检查 `classification.json` 是否缺 `digest` 字段，修 `generate_html.py`
+- ❌ 摘要=标题=检测到 bug → 检查 `classification.json` 是否缺 `digest` 字段,修 `generate_html.py`
 
 ---
 
@@ -728,18 +779,18 @@ git pull --rebase origin master
 git push origin master
 ```
 
-**Git remote 使用 HTTPS**（2026-08-03 v3.2 更新）:
+**Git remote 使用 HTTPS**(2026-08-03 v3.2 更新):
 ```bash
 # 默认使用 HTTPS
 git remote set-url origin https://github.com/keejo125/AI_Daily_For_Bank.git
 ```
-若 HTTPS(443) 超时（如 2026-08-03 实际发生），**临时切换 SSH 推送后立即切回**:
+若 HTTPS(443) 超时(如 2026-08-03 实际发生),**临时切换 SSH 推送后立即切回**:
 ```bash
 git remote set-url origin git@github.com:keejo125/AI_Daily_For_Bank.git
 GIT_SSH_COMMAND="ssh -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new" git push origin master
 git remote set-url origin https://github.com/keejo125/AI_Daily_For_Bank.git
 ```
-**不要永久切换到 SSH**（端口22不稳定），SSH 仅作为 HTTPS 失败时的临时后备。
+**不要永久切换到 SSH**(端口22不稳定),SSH 仅作为 HTTPS 失败时的临时后备。
 
 **在线预览**:`https://keejo125.github.io/AI_Daily_For_Bank/daily/YYYY-MM-DD/`
 
@@ -773,7 +824,7 @@ git remote set-url origin https://github.com/keejo125/AI_Daily_For_Bank.git
 ```
 AI-Daily-for-bank/                   # ← 项目根目录(铁规1)
 ├── scripts/                          # Python 脚本
-│   ├── fetch_web_articles.py        # 多源获取（工厂模式适配器）
+│   ├── fetch_web_articles.py        # 多源获取(工厂模式适配器)
 │   ├── filter_articles.py           # 关键词过滤
 │   ├── build_classification.py      # 从 front matter 聚合 classification.json
 │   ├── generate_html.py             # 生成 HTML
@@ -781,17 +832,17 @@ AI-Daily-for-bank/                   # ← 项目根目录(铁规1)
 │   └── sources/                     # 适配器模块
 │       ├── __init__.py              # ADAPTER_REGISTRY + create_adapter()
 │       ├── base.py                  # 基类 + fetch_wechat_page()
-│       ├── rss_adapter.py           # 标准RSS适配器（主力）
-│       └── kr36_adapter.py          # 36氪API适配器（已废弃）
+│       ├── rss_adapter.py           # 标准RSS适配器(主力)
+│       └── kr36_adapter.py          # 36氪API适配器(已废弃)
 ├── config/
 │   └── sources.json                 # 统一信源配置
 ├── daily/                            # 早报数据
 │   └── YYYY-MM-DD/
 │       ├── index.html               # 最终产出
-│       ├── sources/                  # Markdown 原文（带 front matter）
+│       ├── sources/                  # Markdown 原文(带 front matter)
 │       ├── articles_raw.json
 │       ├── filtered_articles.json
-│       └── classification.json      # 派生索引（build_classification生成）
+│       └── classification.json      # 派生索引(build_classification生成)
 ├── template.html                     # HTML 模板
 ├── daily-index.json
 ├── search-index.json
