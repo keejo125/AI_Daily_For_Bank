@@ -1,7 +1,8 @@
 ---
 publish_time: 1786070308
 status: pending
----
+
+link: https://www.infoq.cn/article/sQW5F63ZP4QMyhlWAzQi---
 
 # HBM 不够用了，AI SSD 迎来爆发前夜
 

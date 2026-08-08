@@ -1,7 +1,8 @@
 ---
 publish_time: 1786090334
 status: pending
----
+
+link: https://www.infoq.cn/article/t0wslR8w8H7yeRD2MwO6---
 
 # 从回答问题到把事办完，消费Agent还缺什么？飞猪新一代 AI 产品 V10 的一次探索
 

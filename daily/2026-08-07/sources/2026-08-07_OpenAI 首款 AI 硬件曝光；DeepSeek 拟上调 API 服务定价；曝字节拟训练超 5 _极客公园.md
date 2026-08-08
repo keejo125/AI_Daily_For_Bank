@@ -1,7 +1,8 @@
 ---
 publish_time: 1786061922
 status: pending
----
+
+link: http://www.geekpark.net/news/368504---
 
 # OpenAI 首款 AI 硬件曝光；DeepSeek 拟上调 API 服务定价；曝字节拟训练超 5 万亿超大参数模型｜极客早知道
 

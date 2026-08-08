@@ -1,7 +1,8 @@
 ---
 publish_time: 1786083531
 status: pending
----
+
+link: https://www.qbitai.com/2026/08/468305.html---
 
 # openJiuwen发布业界首个企业级智能体分布式蜂群架构，联合邮储成功落地金融生产环境
 

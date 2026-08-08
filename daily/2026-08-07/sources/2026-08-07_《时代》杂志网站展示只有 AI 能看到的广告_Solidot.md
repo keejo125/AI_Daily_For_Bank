@@ -1,7 +1,8 @@
 ---
 publish_time: 1786090615
 status: pending
----
+
+link: https://www.solidot.org/story?sid=85031---
 
 # 《时代》杂志网站展示只有 AI 能看到的广告
 

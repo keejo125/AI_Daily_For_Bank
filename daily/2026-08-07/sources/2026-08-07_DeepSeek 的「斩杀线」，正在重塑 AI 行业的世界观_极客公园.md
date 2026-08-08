@@ -1,7 +1,8 @@
 ---
 publish_time: 1786096619
 status: pending
----
+
+link: http://www.geekpark.net/news/368556---
 
 # DeepSeek 的「斩杀线」，正在重塑 AI 行业的世界观
 

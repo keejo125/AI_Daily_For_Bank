@@ -1,7 +1,8 @@
 ---
 publish_time: 1786093200
 status: pending
----
+
+link: https://openai.com/index/hsp-gruppe---
 
 # How HSP GRUPPE builds AI capabilities for tax advisory
 

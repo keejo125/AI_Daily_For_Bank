@@ -1,7 +1,8 @@
 ---
 publish_time: 1786091115
 status: pending
----
+
+link: https://www.infoq.cn/article/ZvwSZ2U61Q8uBMerbYD9---
 
 # Demo 能跑，项目却落不了地：企业真正缺的是 FDE 能力
 

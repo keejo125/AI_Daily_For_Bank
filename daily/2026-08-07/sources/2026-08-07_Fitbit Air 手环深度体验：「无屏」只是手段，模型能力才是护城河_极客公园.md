@@ -1,7 +1,8 @@
 ---
 publish_time: 1786116249
 status: pending
----
+
+link: http://www.geekpark.net/news/368562---
 
 # Fitbit Air 手环深度体验：「无屏」只是手段，模型能力才是护城河
 

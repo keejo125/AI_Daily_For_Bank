@@ -1,7 +1,8 @@
 ---
 publish_time: 1786074147
 status: pending
----
+
+link: https://www.marktechpost.com/2026/08/06/liquid-ai-lfm2-5-2-6b-on-device-agentic-model/---
 
 # Liquid AI Releases LFM2.5-2.6B: An On-Device Agentic Model With 128K Context, Tool Calling, And Open Weights
 

@@ -1,7 +1,8 @@
 ---
 publish_time: 1786080815
 status: pending
----
+
+link: https://www.infoq.cn/article/5DEAabOIcvRrEMhAbCyz---
 
 # DeepSeek要涨价，小扎立马“拼命”：Meta新模型打出更低“骨折价”，只要一点数据税
 

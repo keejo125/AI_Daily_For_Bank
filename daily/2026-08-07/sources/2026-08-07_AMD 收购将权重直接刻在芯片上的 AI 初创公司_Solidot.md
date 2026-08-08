@@ -1,7 +1,8 @@
 ---
 publish_time: 1786116228
 status: pending
----
+
+link: https://www.solidot.org/story?sid=85035---
 
 # AMD 收购将权重直接刻在芯片上的 AI 初创公司
 

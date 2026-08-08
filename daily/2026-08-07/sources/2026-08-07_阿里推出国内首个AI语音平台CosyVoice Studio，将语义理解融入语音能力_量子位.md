@@ -1,7 +1,8 @@
 ---
 publish_time: 1786088586
 status: pending
----
+
+link: https://www.qbitai.com/2026/08/468324.html---
 
 # 阿里推出国内首个AI语音平台CosyVoice Studio，将语义理解融入语音能力
 
