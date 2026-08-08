@@ -4,109 +4,175 @@
     {
       "title": "Anthropic详解Claude安全隔离架构：三层防线建立确定性安全边界",
       "source": "InfoQ",
-      "link": "https://mp.weixin.qq.com/s/R9KZ8uM4XyaqhTE9Mf4TfQ",
-      "summary": "Anthropic公布三层安全隔离架构。红队测试：25次钓鱼24次成功外传数据，证明运行环境限制才是真正防线。Claude Code引入OS级沙箱后权限弹窗减少84%。",
-      "is_model_related": true
+      "source_file": "2026-08-07_Anthropic详解Claude安全隔离：93%权限请求被批准=人工审核失效.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     },
     {
       "title": "Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里",
       "source": "极客公园",
-      "link": "https://mp.weixin.qq.com/s/-mtLkbSE0IaHrLkwZmJnDw",
-      "summary": "YC总裁Garry Tan：22万页GBrain底座=前沿模型+个人上下文+Agent框架=个人AGI。2026代码产出为2013年400倍。\"拥有你的Skill，否则你的岗位只剩一份Skill文件\"。",
+      "source_file": "2026-08-07_YC掌门人Garry_Tan：工作正在被蒸馏成Skill，个人AGI在文件夹里.md",
+      "digest": "",
       "is_model_related": true,
-      "source_file": ""
+      "is_merged": false
     },
     {
-      "title": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
-      "source": "腾讯研究院",
-      "link": "https://mp.weixin.qq.com/s/kZmWsJ5S6wBpD0ThWOQOdg",
-      "summary": "神经网络vs符号主义70年之争。辛顿在AI寒冬坚持，2012 AlexNet 15.3%错误率改朝换代。核心教训：前沿领先地位靠少数天才在合适时机拿到持续资源。",
+      "title": "DeepSeek涨价30倍仍最便宜——第三方Token更便宜但花的钱更多",
+      "source": "InfoQ",
+      "source_file": "2026-08-07_DeepSeek涨价30倍仍最便宜——第三方Token更便宜但花更多.md",
+      "digest": "",
       "is_model_related": true,
-      "source_file": ""
+      "is_merged": false
+    },
+    {
+      "title": "Liquid AI发布LFM2.5-2.6B：端侧Agent模型128K上下文",
+      "source": "MarkTechPost",
+      "source_file": "2026-08-07_Liquid AI Releases LFM2.5-2.6B_ An On-Device Agent_MarkTechPost.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "Cloudflare推出Kitesurf：Agent优先的Web浏览器",
+      "source": "MarkTechPost",
+      "source_file": "2026-08-07_Cloudflare Introduces Kitesurf_ An Agent-First Web_MarkTechPost.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     }
   ],
   "国内": [
     {
       "title": "从胡言乱语到精准改代码：AI读懂老项目的上下文工程实践",
       "source": "腾讯技术工程",
-      "link": "https://mp.weixin.qq.com/s/acuC164Eh_5bfQJfS8hOXg",
-      "summary": "旧项目AI用不好根因在上下文不够。重构目标从\"治理技术债务\"升级为\"让AI可持续参与日常排障迭代\"。上下文建设四要素：README/决策记录/运行知识/编码规范。",
-      "is_model_related": true
+      "source_file": "2026-08-07_AI读老项目：上下文工程让AI从胡言乱语到精准改代码.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
     },
     {
-      "title": "DeepSeek涨价30倍仍最便宜：第三方Token更便宜但花的钱更多",
+      "title": "Agent安全：腾讯百度Cloudflare三方谈——Human-in-loop正在变成最大安慰剂",
       "source": "InfoQ",
-      "link": "https://mp.weixin.qq.com/s/HSQpnSYdw-4Jif81SRkWwg",
-      "summary": "涨价非亏钱而是流量调控。第三方DeepInfra价格为官方64%，但实测调用实际消费为官方4-10倍。大模型高智/低价/稳定性目前是不可三角。",
-      "is_model_related": true,
-      "source_file": ""
-    },
-    {
-      "title": "腾讯百度Cloudflare三方讨论：Agent安全——Human-in-loop正在变成最大安慰剂",
-      "source": "InfoQ",
-      "link": "https://mp.weixin.qq.com/s/_miUrpFSj6cOyqewXSgoSQ",
-      "summary": "安全三板斧不变。Anthropic数据93%权限请求被批准→人工审核沦为形式。每接一个工具=多发一把万能钥匙。安全不是刹车是护栏。",
-      "is_model_related": true
+      "source_file": "2026-08-07_Anthropic详解Claude安全隔离：93%权限请求被批准=人工审核失效.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
     },
     {
       "title": "openJiuwen发布企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
       "source": "openJiuwen",
-      "link": "https://mp.weixin.qq.com/s/vRUlw5eCYqePpPDtmagHmw",
-      "summary": "华为openJiuwen发布企业级分布式蜂群。四道门槛需工程平衡。算力亲和设计降时延提吞吐。邮储银行首个金融生产落地案例。",
-      "is_model_related": true
+      "source_file": "2026-08-07_openJiuwen蜂群架构_金融生产落地.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     },
     {
       "title": "字节Seed为何不蒸馏美国模型？张一鸣三次否决蒸馏路线",
       "source": "硅星人Pro",
-      "link": "https://mp.weixin.qq.com/s/cZc6XbcSzrq9Np86ZtlUZQ",
-      "summary": "张一鸣Seed全员会明确\"可接受暂时落后但不蒸馏\"。三次内部争论均被否。TikTok考虑权重几乎为零，追求模型真正智能。",
-      "is_model_related": true
+      "source_file": "2026-08-07_字节Seed为何不蒸馏？张一鸣：为真正智能可接受暂时落后.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     },
     {
       "title": "梁汝波回应砍中层：字节真正调整的不是管理层而是AI时代组织逻辑",
       "source": "36氪",
-      "link": "https://mp.weixin.qq.com/s/ehvs0Hdtq_5HfyWdSM6_EA",
-      "summary": "AI替代信息中转→只传话的管理岗首次面临根本性挑战。新人才标准Organizer。豆包被提为\"主干\"战略产品。梁汝波承认大模型差距曾被拉大。",
-      "is_model_related": true
+      "source_file": "2026-08-07_梁汝波砍中层_组织逻辑_36氪.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
     },
     {
       "title": "腾讯云Team Memory发布：Agent Memory 2.0支持团队记忆共享",
       "source": "腾讯云",
-      "link": "https://mp.weixin.qq.com/s/0Jxqy6UbI4Ma0XbfFgC6pg",
-      "summary": "TencentDB Agent Memory 2.0支持四类资产统一管理。Memory Hub按Owner/版本管理。GitHub Star 15,000+。支持导入GitHub仓库生成记忆。",
-      "is_model_related": true
+      "source_file": "2026-08-07_腾讯云Team_Memory：Agent_Memory_2.0支持团队记忆共享.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     },
     {
       "title": "阿里云AgentLoop Skill评估与优化最佳实践：六步闭环从草稿到发布",
       "source": "阿里云云原生",
-      "link": "https://mp.weixin.qq.com/s/yqzWQVQaGxTm3AV3dh6LYg",
-      "summary": "完整六步闭环：创建→可观测→离线实验→BadCase优化→迭代验证→发布。关键设计：草稿先本地验证、发布前接入可观测建基线、A/B对比门禁。",
-      "is_model_related": true
+      "source_file": "2026-08-07_阿里云AgentLoop_Skill评估优化最佳实践.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
+    },
+    {
+      "title": "蚂蚁开源Avernet：多智能体协作操作系统——12大业务任务完成率超90%",
+      "source": "InfoQ",
+      "source_file": "2026-08-07_蚂蚁开源Avernet，为多智能体协作搭建\"操作系统\"！内部跑通12大业务、任务完成率超90%_InfoQ.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "Seedance 2.5实测：从片段到叙事——AI视频下半场",
+      "source": "极客公园",
+      "source_file": "2026-08-07_Seedance 2.5 实测：从「片段」到「叙事」，AI 视频的下半场开始了｜AI 上新_极客公园.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "阿里推出国内首个AI语音平台CosyVoice Studio：语义理解融入语音能力",
+      "source": "量子位",
+      "source_file": "2026-08-07_阿里推出国内首个AI语音平台CosyVoice Studio，将语义理解融入语音能力_量子位.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "DeepSeek的「斩杀线」正在重塑AI行业世界观",
+      "source": "极客公园",
+      "source_file": "2026-08-07_DeepSeek 的「斩杀线」，正在重塑 AI 行业的世界观_极客公园.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "飞猪AI V10：从回答问题到把事办完——消费Agent还缺什么",
+      "source": "InfoQ",
+      "source_file": "2026-08-07_从回答问题到把事办完，消费Agent还缺什么？飞猪新一代 AI 产品 V10 的一次探索_InfoQ.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
     }
   ],
   "同业": [
     {
-      "title": "宁波银行大模型\"阿波\"完成员工内测——5000+员工参与对客应用",
+      "title": "宁波银行大模型「阿波」完成员工内测——5000+员工参与对客应用",
       "source": "银行科技研究社",
-      "link": "https://mp.weixin.qq.com/s/nC13JlHyd2W_J-_1iBgCYQ",
-      "summary": "宁波银行\"阿波\"覆盖员工与客户双面。内测超5000人覆盖前中后台。推进节奏：设部门→建平台→试点→内测→对客。",
-      "is_model_related": false
+      "source_file": "2026-08-07_宁波银行\"阿波\"大模型完成内测——5000+员工参与对客应用.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
     }
   ],
   "其他": [
     {
       "title": "Qwen3.8-Max、Cherry Studio 2.0、GPT-5.6免费集体更新——模型与工具双线爆发",
       "source": "AI前沿观察",
-      "link": "https://mp.weixin.qq.com/s/4RYapyFBnkyaI-7DTH5z4A",
-      "summary": "一周内密集更新：Qwen3.8-Max MoE旗舰多模态百万上下文、Cherry Studio 2.0全新交互、Claude Opus 5腰斩价格、GPT-5.6 Sol免费。模型与工具生态同时加速。",
-      "is_model_related": true
+      "source_file": "2026-08-07_Qwen3.8-Max_Cherry_Studio_2.0_GPT-5.6免费集体更新.md",
+      "digest": "",
+      "is_model_related": true,
+      "is_merged": false
+    },
+    {
+      "title": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
+      "source": "腾讯研究院",
+      "source_file": "2026-08-07_天才对AI发展多重要？辛顿本希奥萨顿三人改写加拿大技术地位.md",
+      "digest": "",
+      "is_model_related": false,
+      "is_merged": false
     }
   ],
   "stats": {
-    "国际": 3,
-    "国内": 8,
+    "国际": 5,
+    "国内": 12,
     "同业": 1,
-    "其他": 1,
-    "total": 13
+    "其他": 2,
+    "total": 20
   }
 }
