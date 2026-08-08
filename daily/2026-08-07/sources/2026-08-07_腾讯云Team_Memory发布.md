@@ -1,4 +1,10 @@
-# 腾讯云Team Memory来了！
+---
+title: 腾讯云Team Memory来了！
+source: 腾讯云Team
+link: https://mp.weixin.qq.com/s/0Jxqy6UbI4Ma0XbfFgC6pg
+publish_date: 2026-08-07
+status: confirmed
+---
 
 > 来源：微信公众号 | 2026-08-07
 

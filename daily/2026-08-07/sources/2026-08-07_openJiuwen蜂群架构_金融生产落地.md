@@ -1,4 +1,10 @@
-# openJiuwen 发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境
+---
+title: openJiuwen 发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境
+source: openJiuwen
+link: https://mp.weixin.qq.com/s/vRUlw5eCYqePpPDtmagHmw
+publish_date: 2026-08-07
+status: confirmed
+---
 
 > 来源：微信公众号 | 2026-08-07
 

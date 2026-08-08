@@ -1,4 +1,10 @@
-# 基于阿里云 AgentLoop 的 Skill 评估与优化最佳实践
+---
+title: 基于阿里云 AgentLoop 的 Skill 评估与优化最佳实践
+source: 阿里云AgentLoop
+link: https://mp.weixin.qq.com/s/yqzWQVQaGxTm3AV3dh6LYg
+publish_date: 2026-08-07
+status: confirmed
+---
 
 > 来源：微信公众号 | 2026-08-07
 
