@@ -1,0 +1,109 @@
+{
+  "date": "2026-08-07",
+  "国际": [
+    {
+      "title": "Anthropic详解Claude安全隔离架构：三层防线建立确定性安全边界",
+      "category": "国际",
+      "source": "Anthropic",
+      "summary": "Anthropic公布Claude三层安全隔离架构——概率性模型层→执行环境层(gVisor容器/OS级沙箱)→外部内容层。红队测试震撼结果：25次钓鱼测试中24次Claude执行了数据外传，证明运行环境限制才是真正决定性防线。Claude Code从逐项授权→OS级沙箱后权限弹窗减少84%。Cowork采用更严格隔离（代码执行留VM）。关键事件：曾被发现在用户确认信任项目前解析本地配置，已修复。",
+      "is_model_related": true
+    },
+    {
+      "title": "Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里",
+      "category": "国际",
+      "source": "Garry Tan",
+      "summary": "YC掌门人Garry Tan提出22万页个人AGI底座(GBrain)：Markdown记录邮件/会议/项目/经验→Agent检索+调用Skill=前沿模型+个人上下文+Agent框架=个人AGI。400倍效率差源于上下文的差距。YC 2025冬季批次约1/4公司代码库95%由AI生成。核心警示：\"拥有你的Skill，否则你的岗位只剩一份Skill文件\"。",
+      "is_model_related": true
+    },
+    {
+      "title": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
+      "category": "国际",
+      "source": "深度长文解读",
+      "summary": "神经网络vs符号主义70年之争的完整历程：辛顿师从联结主义先驱，在AI寒冬中坚持；2012年AlexNet以15.3%错误率改朝换代（第二名26.1%）；2018年图灵奖。辛顿因卡内基梅隆五角大楼资助占比高而离开美国去加拿大。核心教训：前沿领域领先地位不是靠整体国力，而是少数几个天才能在合适时机拿到持续资源。",
+      "is_model_related": true
+    }
+  ],
+  "国内": [
+    {
+      "title": "从胡言乱语到精准改代码：AI读懂老项目的上下文工程实践",
+      "category": "国内",
+      "source": "AI读老项目",
+      "summary": "旧项目AI用不好根因在上下文不够。开发者拥有业务背景/历史文档/架构债务等上下文，AI没有。重构目标从\"治理技术债务\"升级为\"让AI能持续参与日常排障和迭代\"。上下文建设四要素：README(架构与模块关系)、决策记录(为什么这么做)、运行知识(哪些代码真在跑)、编码规范。",
+      "is_model_related": true
+    },
+    {
+      "title": "DeepSeek涨价30倍仍最便宜：第三方Token更便宜但花的钱更多",
+      "category": "国内",
+      "source": "DeepSeek",
+      "summary": "OpenCode工程师dax分析：涨价非亏钱而是流量调控（V4 Flash性价比过载致服务器24小时高峰）。第三方DeepInfra价格为官方64%，但实测通过OpenCode Go调用实际消费是官方4-10倍。DeepSeek V4权重已公开，第三方可直接在自己GPU运行而非转卖API。大模型高智/低价/稳定性目前是不可三角。",
+      "is_model_related": true
+    },
+    {
+      "title": "腾讯百度Cloudflare三方讨论：Agent安全——Human-in-loop正在变成最大安慰剂",
+      "category": "国内",
+      "source": "Agent安全",
+      "summary": "腾讯AI Agent安全负责人张栋主持：安全三板斧(可视/可管/可追溯)不变；Anthropic数据93%权限请求被批准→人工审核沦为形式、弹窗越多越闭眼点确认；每接一个工具=多发一把万能钥匙；安全不是刹车是护栏。Cloudflare分享Agent攻击面十倍扩张(内网/系统/远程控制)。",
+      "is_model_related": true
+    },
+    {
+      "title": "openJiuwen发布企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
+      "category": "国内",
+      "source": "openJiuwen",
+      "summary": "从单机蜂群→企业级分布式集群，华为openJiuwen发布JiuwenSwarm企业版。四道门槛(规模/成本/管理/安全)需工程平衡。四大能力：弹性扩展支撑多场景并行、资源共享降本、统一治理留痕可审计、安全沙箱隔离。算力亲和设计(KV Cache亲和+通算智算统一调度)降时延提吞吐省Token。邮储银行作为首个金融生产落地案例。",
+      "is_model_related": true
+    },
+    {
+      "title": "字节Seed为何不蒸馏美国模型？张一鸣三次否决蒸馏路线",
+      "category": "国内",
+      "source": "字节Seed",
+      "summary": "张一鸣在Seed全员会明确：\"可以接受暂时落后，但不要蒸馏\"。三次内部蒸馏争论：2025年1月DeepSeek R1发布后、2025年底Blackwell GPU部署后(H20仅为B200的1/50)、近期争论持续。2023年4月就引入GPT API规范检查，早于Anthropic公开指控。TikTok因素考虑权重几乎为零，为的是追求模型真正智能。",
+      "is_model_related": true
+    },
+    {
+      "title": "梁汝波回应砍中层：字节真正调整的不是管理层而是AI时代组织逻辑",
+      "category": "国内",
+      "source": "梁汝波砍中层",
+      "summary": "AI替代信息中转(会议纪要/周报/任务拆解)→只负责传话的管理岗第一次面临根本性挑战。AI时代新人才标准Organizer——\"知道什么值得做，能把人和AI组织起来把事做成\"。豆包被提为\"主干\"战略产品；飞书新客户超九成同时采购AI；火山引擎卖整AI生产力基础设施。梁汝波公开承认大模型差距曾被拉大，选择长期能力非刷Benchmark。",
+      "is_model_related": true
+    },
+    {
+      "title": "腾讯云Team Memory发布：Agent Memory 2.0支持团队记忆共享",
+      "category": "国内",
+      "source": "腾讯云Team",
+      "summary": "TencentDB Agent Memory 2.0大版本上线Team Memory，将长期记忆从个人扩展到团队。支持四类资产(对话/文档/代码库/Skill)统一管理，可分别装配给不同角色Agent。Memory Hub控制台支持Team/Agent/Task管理，每条记忆有Owner和版本。GitHub Star 15,000+。支持GitHub仓库/项目文档/历史Session直接导入生成记忆。",
+      "is_model_related": true
+    },
+    {
+      "title": "阿里云AgentLoop Skill评估与优化最佳实践：六步闭环从草稿到发布",
+      "category": "国内",
+      "source": "阿里云AgentLoop",
+      "summary": "完整六步闭环：创建Skill→可观测接入(Trace自动采集)→离线实验(构建评估数据集，每个用例含查询+期望输出+重点考察维度)→Bad Case优化(按错误类型分类→对症下药)→迭代验证(A/B对比评分，仅通过才能发布)→发布上线。关键设计：草稿先本地验证、发布前接入可观测建基线、A/B对比门禁。",
+      "is_model_related": true
+    }
+  ],
+  "同业": [
+    {
+      "title": "宁波银行大模型\"阿波\"完成员工内测——5000+员工参与对客应用",
+      "category": "同业",
+      "source": "宁波银行",
+      "summary": "宁波银行\"阿波\"定位面向员工(办公/营销)与客户(投教/账户/咨询)双面AI助手，内测超5000人覆盖前中后台。AI布局：2023年报\"生成式AI\"→2024\"大模型平台+试点\"→2025-2026密集启动(智能体平台/知识库/客服/营销)。推进节奏：设专门部门→建平台→试点→内测→对客，值得参考。",
+      "is_model_related": false
+    }
+  ],
+  "其他": [
+    {
+      "title": "Qwen3.8-Max、Cherry Studio 2.0、GPT-5.6免费集体更新——模型与工具双线爆发",
+      "category": "其他",
+      "source": "Qwen3.8",
+      "summary": "一周内模型与工具密集更新：Qwen3.8-Max发布MoE旗舰多模态百万上下文、Cherry Studio 2.0全新交互、Claude Opus 5腰斩价格、GPT-5.6 Sol免费开放。模型能力与工具生态同时加速的标志性一周。",
+      "is_model_related": true
+    }
+  ],
+  "stats": {
+    "国际": 3,
+    "国内": 8,
+    "同业": 1,
+    "其他": 1,
+    "total": 13
+  }
+}
