@@ -7,7 +7,8 @@
       "source_file": "2026-08-07_Anthropic详解Claude安全隔离：93%权限请求被批准=人工审核失效.md",
       "digest": "Anthropic安全团队详解Claude三层安全隔离：概率模型层拦截高风险指令、执行环境层用Seatbelt/bubblewrap沙箱约束、外部内容层过滤含指令注入的网页。红队测试中25次有24次凭证被外传——仅靠权限确认远不够。沙箱使确认弹窗减少84%，但隔离不等于零信任，安全设计需向确定性收敛。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/R9KZ8uM4XyaqhTE9Mf4TfQ"
     },
     {
       "title": "Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里",
@@ -15,7 +16,8 @@
       "source_file": "2026-08-07_YC掌门人Garry_Tan：工作正在被蒸馏成Skill，个人AGI在文件夹里.md",
       "digest": "YC总裁Garry Tan判断：前沿模型+个人上下文+Agent框架=个人AGI，藏在文件夹而非云端。其GBrain已积累约22万页Markdown，代码产出约2013年400倍（扣除水分下限8倍）。YC 2025冬季约1/4公司代码库95%由AI生成。\"Own your skills, or your job becomes a skill file\"已在硅谷引发热议。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/-mtLkbSE0IaHrLkwZmJnDw"
     },
     {
       "title": "DeepSeek涨价30倍仍最便宜——第三方Token更便宜但花的钱更多",
@@ -23,7 +25,8 @@
       "source_file": "2026-08-07_DeepSeek涨价30倍仍最便宜——第三方Token更便宜但花更多.md",
       "digest": "DeepSeek API涨价30倍但仍是国内最便宜模型。有趣发现：第三方推理平台（DeepInfra等）自产Token比官方便宜36%，但OpenCode Go实测消费反比官方API高2-10倍（效率差）。涨价背后是流量调控而非亏损——当用户成本仅为美国竞品几十分之一时，价格锚点本身也有战略价值。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/HSQpnSYdw-4Jif81SRkWwg"
     },
     {
       "title": "Liquid AI发布LFM2.5-2.6B：端侧Agent模型128K上下文",
@@ -31,7 +34,8 @@
       "source_file": "2026-08-07_Liquid AI Releases LFM2.5-2.6B_ An On-Device Agent_MarkTechPost.md",
       "digest": "Liquid AI发布LFM2.5-2.6B端侧Agent模型：总参数2.69B、30层架构（22个双门控短卷积+8个GQA注意力），支持128K上下文，预训练约34T tokens。模型完全在设备端运行，推理数据不离开设备，边际成本接近零。在ToolSandbox、Multi-IF、IFStruct等基准上击败Gemma-4-E4B-it（8B）和Qwen3.5-9B（9.7B）等4倍参数量模型。M5 Max上解码220 tok/s、内存不到2.5GB，支持GGUF/MLX/ONNX格式，可在llama.cpp、vLLM等框架运行。适用于车载、消费电子、机器人、医疗、金融等需本地部署场景，不推荐用于编程和知识密集型任务。采用四阶段后训练流程：SFT、领域教师RL、策略蒸馏和GRPO强化学习，以lfm1.0协议开源。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://www.marktechpost.com/2026/08/06/liquid-ai-lfm2-5-2-6b-on-device-agentic-model/"
     },
     {
       "title": "Cloudflare推出Kitesurf：Agent优先的Web浏览器",
@@ -39,7 +43,8 @@
       "source_file": "2026-08-07_Cloudflare Introduces Kitesurf_ An Agent-First Web_MarkTechPost.md",
       "digest": "Cloudflare推出Kitesurf——专为AI Agent打造的轻量级浏览器，完全运行在Workers的V8沙箱中，不依赖Chromium。去除传统浏览器为人类设计的UI层，保留机器可读内容、低Token开销和沙箱隔离。在14个URL测试集上，截图CPU占用仅380ms（Chromium的1/3.1），内存从271MB降至57.8MB（4.7倍）；HTML提取CPU 229ms（1/3.8），内存从273.7MB降至39.4MB（7.0倍）。已有Puppeteer/Playwright/MCP客户端只需加browser=kitesurf参数即可切换，beta期免费。已通过21.5万+Web平台测试，计划开源。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://www.marktechpost.com/2026/08/06/cloudflare-introduces-kitesurf-an-agent-first-web-browser-that-runs-entirely-in-v8-isolates-on-cloudflare-workers/"
     }
   ],
   "国内": [
@@ -49,7 +54,8 @@
       "source_file": "2026-08-07_AI读老项目：上下文工程让AI从胡言乱语到精准改代码.md",
       "digest": "腾讯技术工程团队分享重构实战：AI与开发差异不在能力而在上下文。四种关键上下文（业务历史/协作方式/运行实况/架构债务）补足后，AI从胡言乱语变为高效助力。核心洞察：AI铲屎官时代来临，上下文工程是让AI读懂老项目的决定性因素。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/acuC164Eh_5bfQJfS8hOXg"
     },
     {
       "title": "Agent安全：腾讯百度Cloudflare三方谈——Human-in-loop正在变成最大安慰剂",
@@ -57,7 +63,8 @@
       "source_file": "2026-08-07_Anthropic详解Claude安全隔离：93%权限请求被批准=人工审核失效.md",
       "digest": "Agent安全正从防说错话升级为管住行为。腾讯、百度、Cloudflare三方专家指出，Agent拥有身份、工具和自主行动能力后，攻击面急剧扩大——提示词注入不再只是让模型说错话，而是能操纵Agent删库、转账、泄露数据。三人一致认为行业流行的Human-in-loop正在沦为最大安慰剂：弹窗越多人越疲劳，最终闭眼睛点确认。真正解法是将人只用在刀刃上，其余交给可追溯、可拦截的自动策略。安全三板斧——可视、可管、可追溯——方法论未变，但防护边界已从静态入口转向动态行为约束。Skill安全被视为未来深水区，建议采用沙箱隔离、最小权限、临时token等机制。专家预测一年内将有可信Skill中心出现，类似应用商店通过数字签名解决信任根问题。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/R9KZ8uM4XyaqhTE9Mf4TfQ"
     },
     {
       "title": "openJiuwen发布企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
@@ -65,7 +72,8 @@
       "source_file": "2026-08-07_openJiuwen蜂群架构_金融生产落地.md",
       "digest": "华为2012实验室等联合推出企业级分布式蜂群架构openJiuwen，内置算力亲和（昇腾/鲲鹏）。邮储银行基于此构建金融蜂群智能体平台并落地生产环境（金融合规行业首次）。需跨四道门槛：规模/成本/管理/安全。四层架构：接入/框架/分布式运行时/系统服务。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/vRUlw5eCYqePpPDtmagHmw"
     },
     {
       "title": "字节Seed为何不蒸馏美国模型？张一鸣三次否决蒸馏路线",
@@ -73,31 +81,35 @@
       "source_file": "2026-08-07_字节Seed为何不蒸馏？张一鸣：为真正智能可接受暂时落后.md",
       "digest": "张一鸣在Seed全员会上明确禁止模型蒸馏，不仅针对美国闭源模型也包括Kimi K3等开放权重模型。硅星人Pro独家还原Seed内部至少三次蒸馏路线争论：R1发布后因推理能力落后提议蒸馏、Blackwell部署后中美算力差距拉大蒸馏换时间声音再起、K3进入全球第一阵营后内部动摇达顶点。张一鸣三次否决理由始终一致：追求真正智能的长远目标，可接受暂时落后。字节对蒸馏的警惕早于中美AI竞争叙事——2023年就禁止将GPT生成数据加入训练集。张一鸣逻辑核心：模型可通过蒸馏进入前沿，但实验室不能通过蒸馏成为前沿实验室。蒸馏虽能快速补齐benchmark差距，却无法告诉研究者能力究竟是怎样产生的。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/cZc6XbcSzrq9Np86ZtlUZQ"
     },
     {
       "title": "梁汝波回应砍中层：字节真正调整的不是管理层而是AI时代组织逻辑",
       "source": "36氪",
-      "source_file": "2026-08-07_梁汝波砍中层_组织逻辑_36氪.md",
+      "source_file": "2026-08-07_梁汝波砍中层_组织逻辑.md",
       "digest": "字节CEO梁汝波在年中全员会回应砍中层争议，指出真正的调整对象不是管理层职级而是AI时代的组织逻辑。过去中层核心价值在于获取、加工和传递信息，但AI已能自动完成会议纪要、周报生成、任务拆解、数据汇总——只剩信息中转价值的岗位正遭遇根本性挑战。梁汝波定义AI时代优秀人才为Organizer：能够发现价值、定义问题、协调资源、创造价值、善用AI。新管理者不再只是管人，而是同时组织人、组织AI、组织资源。他还提出粗主干战略，明确希望豆包成为继抖音后的第二条主干，从聊天机器人升级为字节产品矩阵的智能入口。梁汝波主动承认在大语言模型上与海外领先模型差距曾被拉大，选择坚持自研而非快速补课。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/ehvs0Hdtq_5HfyWdSM6_EA"
     },
     {
       "title": "腾讯云Team Memory发布：Agent Memory 2.0支持团队记忆共享",
       "source": "腾讯云",
-      "source_file": "2026-08-07_腾讯云Team_Memory：Agent_Memory_2.0支持团队记忆共享.md",
+      "source_file": "2026-08-07_腾讯云Team_Memory发布.md",
       "digest": "腾讯云Agent Memory发布2.0版本，核心升级为Team Memory，将长期记忆从个人扩展到团队协作场景。新版本统一管理对话、文档、代码库和Skill四类资产：历史Agent Session整理为Chat Memory，项目文档生成可查询Wiki，代码仓库自动生成CodeGraph展示调用关系，成功经验沉淀为可复用Skill。四类记忆可在团队内跨Agent共享，按角色按需装配。全新Memory Hub控制台支持创建Team、Agent和Task，实现记忆的生成、审核、授权、分享和装配全流程管理，每条记忆都有Owner和版本追踪。项目开源80天即突破15000 GitHub Stars，多次登Trending日榜第一。该方案同时适配一人多Agent和多人团队两种场景。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/0Jxqy6UbI4Ma0XbfFgC6pg"
     },
     {
       "title": "阿里云AgentLoop Skill评估与优化最佳实践：六步闭环从草稿到发布",
       "source": "阿里云云原生",
-      "source_file": "2026-08-07_阿里云AgentLoop_Skill评估优化最佳实践.md",
+      "source_file": "2026-08-07_阿里云AgentLoop_Skill评估最佳实践——六步闭环从草稿到发布.md",
       "digest": "阿里云AgentLoop平台提供Skill评估与优化的六步闭环流程：创建Skill并接入可观测→构建评估数据集→运行离线实验多维度评分→Bad Case根因分析→迭代优化→达标发布。评估维度覆盖任务完成度、证据支持度、工具调用成功率、安全性、幻觉检测等8项指标，支持有Skill vs 无Skill对照实验。核心理念是以可观测数据感知现状、用离线实验量化质量、用Bad Case驱动优化、用评分趋势验证效果。实践发现Skill优化与Harness工程需并行推进：Skill解决Agent应该做什么，Harness解决Agent不能做什么。AgentLoop还提供AI辅助优化功能，可将Bad Case交由AI分析并自动生成Skill修改建议，显著提升优化效率。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/yqzWQVQaGxTm3AV3dh6LYg"
     },
     {
       "title": "蚂蚁开源Avernet：多智能体协作操作系统——12大业务任务完成率超90%",
@@ -105,7 +117,8 @@
       "source_file": "2026-08-07_蚂蚁开源Avernet，为多智能体协作搭建\"操作系统\"！内部跑通12大业务、任务完成率超90%_InfoQ.md",
       "digest": "蚂蚁集团正式开源多智能体协作基础设施Avernet，首个版本聚焦智能体发现、共识、跨团队协作与治理。源于蚂蚁内部真实需求，解决找不到、对不齐、跑不快、留不住痛点。平台不绑定单一模型或引擎，支持异构智能体无缝接入。安全治理方面已开放身份认证、访问授权、权限控制和生命周期管理。截至7月31日，已在蚂蚁12个核心业务板块跑通，任务完成率稳定超90%。基于Apache 2.0协议开源，长期目标让人与智能体像组织一样运转。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/iUrpFSj6cOyqewXSgoSQ"
     },
     {
       "title": "Seedance 2.5实测：从片段到叙事——AI视频下半场",
@@ -113,7 +126,8 @@
       "source_file": "2026-08-07_Seedance 2.5 实测：从「片段」到「叙事」，AI 视频的下半场开始了｜AI 上新_极客公园.md",
       "digest": "字节发布Seedance 2.5视频生成模型，核心升级：单次生成从15秒翻倍至30秒，延长功能可至3分钟且人物一致性无跳变；支持50个全模态参考素材（远超2.0的9张），新增白模/绿幕参考、Maya/Blender插件接入专业影视管线；首次加入局部编辑，将AI创作从生成-判断-重来变为生成-微调-完成；文字渲染大幅改善，可准确呈现品牌名和slogan。同步上线即梦、豆包专业版、扣子和小云雀。Seedance系列已占国内AI视频市场超八成份额，AI视频正从生成片段走向完成创作。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "http://www.geekpark.net/news/368563"
     },
     {
       "title": "阿里推出国内首个AI语音平台CosyVoice Studio：语义理解融入语音能力",
@@ -121,7 +135,8 @@
       "source_file": "2026-08-07_阿里推出国内首个AI语音平台CosyVoice Studio，将语义理解融入语音能力_量子位.md",
       "digest": "阿里推出国内首个一站式AI语音平台CosyVoice Studio，基于Qwen-Audio模型，在Artificial Analysis全球评测中同时斩获ASR、实时交互和TTS三个赛道第一。三大核心功能：语音键盘CosyVoice叠加语义理解，自动过滤口语填充词、去除自我修正，口述直接生成结构化邮件和会议纪要；随记模式可长时间实时记录、声纹区分发言人；语音智能体CosyAgent支持自然语言创建实时对话Agent。即日起全平台免费下载，阿里巴巴志在全国率先实现听说创一站式语音AI。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://www.qbitai.com/2026/08/468324.html"
     },
     {
       "title": "DeepSeek的「斩杀线」正在重塑AI行业世界观",
@@ -129,7 +144,8 @@
       "source_file": "2026-08-07_DeepSeek 的「斩杀线」，正在重塑 AI 行业的世界观_极客公园.md",
       "digest": "DeepSeek V4 Flash以极端性价比在成本-性能坐标系上画出斩杀线——所有比它贵却没它强的模型进入斩杀区，引发微博热搜与开发者狂欢。然而仅两天后DeepSeek公告即将大幅涨价。背后必然逻辑：当调用量以万亿token级别涌入（单日8万亿），规模化让基础设施成为物理瓶颈，定价不得不回归。不仅是DeepSeek，智谱API定价较去年涨83%、Kimi K3输入涨超3倍，中国模型公司正集体从证明自己阶段转向长期竞争阶段。涨价背后更深层趋势是token正在大宗商品化——当模型能力趋同，定价逻辑变为成本加合理利润。真正竞争维度将上移到生态锁定、垂直场景适配和Agent工具链能力。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "http://www.geekpark.net/news/368556"
     },
     {
       "title": "飞猪AI V10：从回答问题到把事办完——消费Agent还缺什么",
@@ -137,7 +153,8 @@
       "source_file": "2026-08-07_从回答问题到把事办完，消费Agent还缺什么？飞猪新一代 AI 产品 V10 的一次探索_InfoQ.md",
       "digest": "飞猪CTO陈烨在V10评测会上剖析消费Agent难题：Coding Agent已找到PMF，但消费场景涉及实时供给、动态库存和后续履约，复杂度远超代码。V10推出帮我想、帮我订、帮我办三大入口，将AI嵌入首页、酒店、机票和订单页面。核心策略是受约束的自主性：架构从Multi-Agent向ReAct式AgentLoop迁移，通过商品短别名映射、白名单和规则引擎确保真实可达。算法三阶段：声明式Prompt替代命令式、机制层（白名单/沙箱/在线验证）守住底线、后训练用多维Reward Model内化领域知识。产品保留LUI+GUI混合交互，不做纯聊天框。陈烨判断消费Agent将润物细无声渗透，可能需两年以上。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://www.infoq.cn/article/t0wslR8w8H7yeRD2MwO6"
     }
   ],
   "同业": [
@@ -147,7 +164,8 @@
       "source_file": "2026-08-07_宁波银行\"阿波\"大模型完成内测——5000+员工参与对客应用.md",
       "digest": "宁波银行总行大模型阿波完成超5000员工内测，覆盖前中后台。具备对客应用完整能力：面向员工侧（办公/营销赋能）与面向客户侧（投教/账户/咨询）。作为中小银行大模型落地先行者，从内测到对客是重要跨越信号。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/nC13JlHyd2W_J-_1iBgCYQ"
     }
   ],
   "其他": [
@@ -157,7 +175,8 @@
       "source_file": "2026-08-07_Qwen3.8-Max_Cherry_Studio_2.0_GPT-5.6免费集体更新.md",
       "digest": "一周内Qwen3.8-Max（MoE旗舰多模态百万上下文）、Cherry Studio 2.0、GPT-5.6 Sol免费版集体更新。Claude Opus 5同步腰斩价格。模型与工具双线爆发，AI基础设施竞争白热化。",
       "is_model_related": true,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/4RYapyFBnkyaI-7DTH5z4A"
     },
     {
       "title": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
@@ -165,7 +184,8 @@
       "source_file": "2026-08-07_天才对AI发展多重要？辛顿本希奥萨顿三人改写加拿大技术地位.md",
       "digest": "以加拿大AI三巨头辛顿、本希奥、萨顿为线索，回溯神经网络如何在30年沉寂后逆袭。关键节点：2004年辛顿神经计算与感知项目获CIFAR资助、2006年深度信念网络突破、2012年AlexNet。三人改写的不只是加拿大技术地位，更是从边缘到主流的AI发展道路。",
       "is_model_related": false,
-      "is_merged": false
+      "is_merged": false,
+      "link": "https://mp.weixin.qq.com/s/kZmWsJ5S6wBpD0ThWOQOdg"
     }
   ],
   "stats": {
