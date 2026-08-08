@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-07",
+      "weekday": "周五",
+      "stats": {
+        "国际": 3,
+        "国内": 8,
+        "同业": 1,
+        "其他": 1,
+        "total": 13
+      },
+      "summary": "Anthropic详解Claude安全隔离架构：三层防线建立确定性安全边界/Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里..."
+    },
+    {
       "date": "2026-08-06",
       "weekday": "周四",
       "stats": {
