@@ -1,6 +1,6 @@
 ---
 title: 你的工作正在被蒸馏成Skill！硅谷YC掌门人：个人AGI不在云端，就藏在自己的文件夹里，下一代开发者，要拥有自己的“经验代码库”
-source: YC掌门人Garry
+source: 极客公园
 link: https://mp.weixin.qq.com/s/-mtLkbSE0IaHrLkwZmJnDw
 publish_date: 2026-08-07
 status: confirmed

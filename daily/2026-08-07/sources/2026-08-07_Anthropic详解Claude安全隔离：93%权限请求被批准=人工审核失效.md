@@ -1,6 +1,6 @@
 ---
 title: Anthropic 详解 Claude 的安全隔离架构：如何在 Web、开发和桌面环境中约束 Agent 行为
-source: Anthropic
+source: InfoQ
 link: https://mp.weixin.qq.com/s/R9KZ8uM4XyaqhTE9Mf4TfQ
 publish_date: 2026-08-07
 status: confirmed

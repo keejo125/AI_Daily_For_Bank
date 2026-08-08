@@ -1,6 +1,6 @@
 ---
 title: 腾讯云Team Memory来了！
-source: 腾讯云Team
+source: 腾讯云
 link: https://mp.weixin.qq.com/s/0Jxqy6UbI4Ma0XbfFgC6pg
 publish_date: 2026-08-07
 status: confirmed

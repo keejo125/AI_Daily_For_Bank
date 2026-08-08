@@ -1,6 +1,6 @@
 ---
 title: 当 human in the loop 变成“闭着眼睛点确认”，企业Agent 安全还能靠谁？
-source: Agent安全
+source: InfoQ
 link: https://mp.weixin.qq.com/s/_miUrpFSj6cOyqewXSgoSQ
 publish_date: 2026-08-07
 status: confirmed

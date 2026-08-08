@@ -1,6 +1,6 @@
 ---
 title: 涨价30倍仍是最便宜的模型，DeepSeek可能有这个底气
-source: DeepSeek涨价
+source: InfoQ
 link: https://mp.weixin.qq.com/s/HSQpnSYdw-4Jif81SRkWwg
 publish_date: 2026-08-07
 status: confirmed

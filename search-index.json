@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-08T17:18:53.541872",
+  "updated_at": "2026-08-08T18:18:04.380011",
   "total": 1097,
   "articles": [
     {
       "date": "2026-08-07",
       "title": "Anthropic详解Claude安全隔离架构：三层防线建立确定性安全边界",
-      "source": "Anthropic",
+      "source": "InfoQ",
       "digest": "Anthropic详解Claude安全隔离架构：三层防线建立确定性安全边界",
       "link": "https://mp.weixin.qq.com/s/R9KZ8uM4XyaqhTE9Mf4TfQ",
       "source_file": "",
@@ -15,7 +15,7 @@
     {
       "date": "2026-08-07",
       "title": "Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里",
-      "source": "Garry Tan",
+      "source": "极客公园",
       "digest": "Garry Tan：工作正在被蒸馏成Skill——个人AGI不在云端在文件夹里",
       "link": "https://mp.weixin.qq.com/s/-mtLkbSE0IaHrLkwZmJnDw",
       "source_file": "",
@@ -25,7 +25,7 @@
     {
       "date": "2026-08-07",
       "title": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
-      "source": "深度长文解读",
+      "source": "中信出版",
       "digest": "天才对AI发展到底有多重要？辛顿、本希奥、萨顿三人改写加拿大技术地位",
       "link": "https://mp.weixin.qq.com/s/kZmWsJ5S6wBpD0ThWOQOdg",
       "source_file": "",
@@ -35,7 +35,7 @@
     {
       "date": "2026-08-07",
       "title": "从胡言乱语到精准改代码：AI读懂老项目的上下文工程实践",
-      "source": "AI读老项目",
+      "source": "腾讯技术工程",
       "digest": "从胡言乱语到精准改代码：AI读懂老项目的上下文工程实践",
       "link": "https://mp.weixin.qq.com/s/acuC164Eh_5bfQJfS8hOXg",
       "source_file": "",
@@ -45,7 +45,7 @@
     {
       "date": "2026-08-07",
       "title": "DeepSeek涨价30倍仍最便宜：第三方Token更便宜但花的钱更多",
-      "source": "DeepSeek",
+      "source": "InfoQ",
       "digest": "DeepSeek涨价30倍仍最便宜：第三方Token更便宜但花的钱更多",
       "link": "https://mp.weixin.qq.com/s/HSQpnSYdw-4Jif81SRkWwg",
       "source_file": "",
@@ -55,7 +55,7 @@
     {
       "date": "2026-08-07",
       "title": "腾讯百度Cloudflare三方讨论：Agent安全——Human-in-loop正在变成最大安慰剂",
-      "source": "Agent安全",
+      "source": "InfoQ",
       "digest": "腾讯百度Cloudflare三方讨论：Agent安全——Human-in-loop正在变成最大安慰剂",
       "link": "https://mp.weixin.qq.com/s/_miUrpFSj6cOyqewXSgoSQ",
       "source_file": "",
@@ -75,7 +75,7 @@
     {
       "date": "2026-08-07",
       "title": "字节Seed为何不蒸馏美国模型？张一鸣三次否决蒸馏路线",
-      "source": "字节Seed",
+      "source": "硅星人Pro",
       "digest": "字节Seed为何不蒸馏美国模型？张一鸣三次否决蒸馏路线",
       "link": "https://mp.weixin.qq.com/s/cZc6XbcSzrq9Np86ZtlUZQ",
       "source_file": "",
@@ -85,7 +85,7 @@
     {
       "date": "2026-08-07",
       "title": "梁汝波回应砍中层：字节真正调整的不是管理层而是AI时代组织逻辑",
-      "source": "梁汝波砍中层",
+      "source": "36氪",
       "digest": "梁汝波回应砍中层：字节真正调整的不是管理层而是AI时代组织逻辑",
       "link": "https://mp.weixin.qq.com/s/ehvs0Hdtq_5HfyWdSM6_EA",
       "source_file": "",
@@ -95,7 +95,7 @@
     {
       "date": "2026-08-07",
       "title": "腾讯云Team Memory发布：Agent Memory 2.0支持团队记忆共享",
-      "source": "腾讯云Team",
+      "source": "腾讯云",
       "digest": "腾讯云Team Memory发布：Agent Memory 2.0支持团队记忆共享",
       "link": "https://mp.weixin.qq.com/s/0Jxqy6UbI4Ma0XbfFgC6pg",
       "source_file": "",
@@ -105,7 +105,7 @@
     {
       "date": "2026-08-07",
       "title": "阿里云AgentLoop Skill评估与优化最佳实践：六步闭环从草稿到发布",
-      "source": "阿里云AgentLoop",
+      "source": "阿里云云原生",
       "digest": "阿里云AgentLoop Skill评估与优化最佳实践：六步闭环从草稿到发布",
       "link": "https://mp.weixin.qq.com/s/yqzWQVQaGxTm3AV3dh6LYg",
       "source_file": "",
@@ -115,7 +115,7 @@
     {
       "date": "2026-08-07",
       "title": "宁波银行大模型\"阿波\"完成员工内测——5000+员工参与对客应用",
-      "source": "宁波银行",
+      "source": "银行科技研究社",
       "digest": "宁波银行大模型\"阿波\"完成员工内测——5000+员工参与对客应用",
       "link": "https://mp.weixin.qq.com/s/nC13JlHyd2W_J-_1iBgCYQ",
       "source_file": "",
@@ -125,7 +125,7 @@
     {
       "date": "2026-08-07",
       "title": "Qwen3.8-Max、Cherry Studio 2.0、GPT-5.6免费集体更新——模型与工具双线爆发",
-      "source": "Qwen3.8",
+      "source": "AI前沿观察",
       "digest": "Qwen3.8-Max、Cherry Studio 2.0、GPT-5.6免费集体更新——模型与工具双线爆发",
       "link": "https://mp.weixin.qq.com/s/4RYapyFBnkyaI-7DTH5z4A",
       "source_file": "",
