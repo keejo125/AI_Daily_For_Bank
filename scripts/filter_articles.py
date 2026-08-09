@@ -8,6 +8,7 @@
 """
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -48,6 +49,9 @@ def main():
         sys.exit(1)
 
     date_str = sys.argv[1]
+    if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+        print(f"❌ 无效日期格式: '{date_str}'，期望 YYYY-MM-DD（如 2026-08-08）")
+        sys.exit(1)
 
     # 读取配置
     config = load_config()

@@ -49,6 +49,10 @@ def sanitize_filename(name, max_len=80):
 def get_target_date(date_arg=None):
     """解析日期参数，无参则返回昨天 (Asia/Shanghai)"""
     if date_arg:
+        # 校验日期格式，防止 --date / --help 等误传
+        if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_arg):
+            print(f"❌ 无效日期格式: '{date_arg}'，期望 YYYY-MM-DD（如 2026-08-08）")
+            sys.exit(1)
         return date_arg
     yesterday = datetime.now(TZ_SHANGHAI) - timedelta(days=1)
     return yesterday.strftime("%Y-%m-%d")
