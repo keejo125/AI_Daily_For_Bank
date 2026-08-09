@@ -8,10 +8,23 @@ description: >
   生成智能研发日报时触发。触发词:早报、日报、AI daily、每日汇总。
 license: MIT
 metadata:
-  version: "3.3"
+  version: "3.6"
   category: productivity
-  updated: "2026-08-05"
+  updated: "2026-08-12"
   changelog: |
+    v3.6 (2026-08-12):
+    - 新增:铁规11 日期参数必须是YYYY-MM-DD位置参数，严禁传--date（脚本含格式校验）
+    - 修正:铁规5 spawn路径 agentId: "main"（此前pool路径非法导致fork验证永远跳过）
+    - 修正:脚本 fetch_web_articles.py / filter_articles.py 加日期格式正则校验
+    v3.5 (2026-08-08):
+    - 重构: build_classification.py 重写为纯聚合器（只读front matter+merge_plan.json）
+    - 新增: fetch_web_articles.py 抓取时写link/source到front matter
+    - 新增: merge_plan.json 承载跨文章合并信息
+    - 修复: generate_html.py INLINE_DAILY_INDEX 正则改为贪婪匹配
+    - 新增: .gitignore 黑名单 + Step6 禁止 git add -A
+    v3.4 (2026-08-08):
+    - 新增:铁规7 source文件link字段必须非空
+    - 新增:铁规8 source值=真实公众号名称（禁止推断/改写/自命名）
     v3.3 (2026-08-05):
     - 新增:铁规6 标题中文化(所有英文标题必须翻译为中文)
     - 改变:摘要从~300字精简为~300字中文
@@ -144,7 +157,7 @@ if item.get('is_merged') is True:
 
 **验证方式**:Step 4 第 3 轮增加检查项 13:所有 title 字段不含全英文(允许含英文专有名词)
 
-### 铁规 5:3 轮 fork 验证不可省略(2026-07-12 老板新增)
+### 铁规 5:3 轮 fork 验证不可省略(2026-07-12 老板新增，v3.6 修正 spawn 路径)
 
 **问题**:主 Agent 分类自查后,直接跳到 Step 5 生成 HTML--**违反了 Step 4 的 3 轮 fork 验证强制要求**。本次自查漏判 6 处错误(1 漏删 + 1 国际国内互换 + 1 产业调其他 + 3 模型打标),幸被老板发现,补做 3 轮 fork 才纠正。
 
@@ -154,6 +167,20 @@ if item.get('is_merged') is True:
 - ✅ 每轮 5/5 检查项全部通过,才进入下一轮
 - ❌ **绝对禁止**主 Agent 跳到 Step 5 直接生成 HTML
 - ❌ **绝对禁止**"赶时间"省略 3 轮验证
+
+**spawn 路径（v3.6 修正）**:
+- 此前 spawn 尝试用 `qclaw/pool-deepseek-v4-pro` 等池子路径 → 非法（agentId 必须是 `[a-z0-9][a-z0-9_-]*`）
+- **正确路径**:`agentId: "main"`（复用当前 QClaw agent，独立 session），本次会话已验证可用
+- spawn 命令模板:
+  ```python
+  sessions_spawn(
+      agentId="main",
+      task="你是AI早报分类验证员...",
+      taskName="verify_round_1",
+      mode="run"
+  )
+  ```
+- 如果 spawn 彻底不可用（如 gateway 版本升级等极端情况），**必须停下来报告老板**，不得自行跳过
 
 **自查 ≠ 验证**:程序员测自己的代码 = 认知盲区无法消除。子智能体独立 session 才有意义。
 
@@ -211,8 +238,12 @@ Step 7  反思与优化  → 写反思 / 改 skill
 **命令**:
 ```bash
 cd /Users/zhengk/GitProjects/agent-docs/projects/AI-Daily-for-bank/scripts
-python3 fetch_web_articles.py [YYYY-MM-DD]  # 不传参数则用昨天
+python3 fetch_web_articles.py 2026-08-09
+# ↑ 日期是位置参数，不是 --date flag！
+# 脚本已内置格式校验，传 --date 等非法值会直接报错退出
 ```
+
+⚠️ **铁规11（v3.6 新增）**：日期参数必须是 `YYYY-MM-DD` 位置参数，**严禁**传 `--date`、`-d` 等 flag 前缀。脚本内置正则校验，非法格式直接拒绝。
 
 **信源架构(v3.0 重构)**:
 
