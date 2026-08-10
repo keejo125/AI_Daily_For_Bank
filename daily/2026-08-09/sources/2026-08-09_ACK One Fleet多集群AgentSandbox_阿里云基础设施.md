@@ -6,7 +6,7 @@ status: confirmed
 category: 国内
 is_model_related: false
 digest: |
-  阿里云发布ACK One Fleet多集群Agent Sandbox方案，解决单集群容量瓶颈和故障风险集中问题。支持E2B SDK和Kubernetes CR双协议链路，全局控制面与数据面分离。核心能力：全局水位视图+实时资源路由+跨集群故障转移+削峰填谷。Sandbox提供MicroVM级隔离、内存级休眠唤醒、Checkpoint克隆，最高每分钟15K弹性扩展。
+  阿里云ACK One Fleet发布多集群Agent Sandbox方案，解决单集群容量天花板和故障域集中问题。方案支持E2B SDK与Kubernetes CR双协议链路，全局控制面与数据面分离，仅代理控制面流量、数据面由子集群自行完成。核心调度能力包括：全局水位视图+实时资源路由+跨集群故障转移+削峰填谷+预热池亲和调度。Sandbox本身提供MicroVM级隔离、内存级休眠唤醒和Checkpoint克隆，最高每分钟15K弹性扩展。对业务方而言，将单集群的容量和可用性上限一举打开，实现大规模多地域高可用部署，同时提升资源利用率和启动速度。
 ---
 
 # ACK One Fleet：让Agent Sandbox从"单集群"走向"多集群"

@@ -6,7 +6,7 @@ status: confirmed
 category: 国际
 is_model_related: true
 digest: |
-  Pokee AI发布Pokee-Isaac 28B，一款1000万token超长上下文智能体模型。最大亮点：模型设计为在客户边界内本地运行，无需将数据发送到第三方API，满足企业数据主权和合规需求。支持10M token上下文窗口，适合长期对话、大型代码库分析、多轮Agent工作流等场景。
+  Pokee AI发布Pokee-Isaac 28B，一款1000万token超长上下文智能体模型，关键卖点是在客户边界内本地运行——支持VPC、本地部署或设备端，无需将数据发送至第三方API。RULER基准测试在1000万token处仍保持93.3%得分，竞品模型均未超过200万token。BFCL v4功能性调用得分70.94，τ³-bench平均0.662领先Gemini。安全方面DTAP红队测试中综合攻击成功率最低（35.6%），同时保持82.5%良性任务成功率。定价为每百万token输入0.15美元/输出1.00美元（暂定），权重不开源但已获许可部署。适用于医疗、金融、国防等数据不可离开边界的高合规行业。
 ---
 
 # Pokee AI Releases Pokee-Isaac 28B: A 10M-Token Context Agentic Model Built to Run Inside the Customer Boundary
