@@ -6,7 +6,7 @@ publish_time: 1786331694
 publish_date: 2026-08-10
 status: confirmed
 category: 同业
-is_model_related: true
+is_model_related: false
 digest: |
   国金证券CIO王洪涛：DeepSeek-V4赋能证券业AI友好建设路径探索，提出AI友好型组织2.0三阶段实践路径。
 ---

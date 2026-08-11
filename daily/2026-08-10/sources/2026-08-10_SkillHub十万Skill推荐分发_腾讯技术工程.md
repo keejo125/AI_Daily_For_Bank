@@ -5,7 +5,7 @@ source: 腾讯技术工程
 publish_time: 1786354560
 publish_date: 2026-08-10
 status: confirmed
-category: 国际
+category: 国内
 is_model_related: false
 digest: |
   腾讯SkillHub分享10万+Skill社区如何通过TRACE评测体系和推荐分发帮用户找到20%好用的Skill。
