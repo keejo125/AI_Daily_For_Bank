@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-11T10:12:06.292352",
-  "total": 1165,
+  "updated_at": "2026-08-11T10:24:57.398908",
+  "total": 1163,
   "articles": [
     {
       "date": "2026-08-10",
@@ -9,26 +9,6 @@
       "digest": "OpenAI被曝将于8月发布GPT-6（代号Astra），参数规模预计达10万亿，约为GPT-4的5倍以上。另有内部代号Doug的年底模型，据称使用英伟达尚未全面铺开的Vera Rubin芯片训练，将是OpenAI迄今最大规模的预训练模型。消息人士指出，OpenAI已超过两年未完成下一代前沿模型的全规模预训练，Doug的出现标志着其预训练能力的全面回归。Anthropic方面则准备以Fable 5.1作为应对，计划定价与Fable 5持平以直接对标Astra。谷歌方面首席科学家Jeff Dean离职创业，哈萨比斯卸任DeepMind CEO退居董事长，ASI三巨头格局变为OpenAI与Anthropic的双雄对决。",
       "link": "https://mp.weixin.qq.com/s/yNMLruKUnWHM63zl_5silg",
       "source_file": "sources/2026-08-10_GPT6曝光10万亿参数_新智元.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-08-10",
-      "title": "Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model That Runs on One Consumer GPU",
-      "source": "MarkTechPost",
-      "digest": "Meta以Apache 2.0协议发布Muse Glimmer，一个从Muse Spark蒸馏而来的300亿参数多模态模型，专为本地Agent工作流优化。模型通过4-bit量化压缩至20GB以下搭配DFlash推测解码，可在单张消费级GPU或Mac上运行。训练分三个阶段：预训练使用logit蒸馏、中训练加入长上下文Agent数据、后训练结合SFT与强化学习。支持文本图像双模态输入、131K+上下文、32个query head/2个KV head的GQA注意力机制，覆盖桌面Agent、编程Agent、文档理解、合成数据生成等场景。",
-      "link": "https://www.marktechpost.com/2026/08/10/meta-ai-releases-muse-glimmer/",
-      "source_file": "sources/2026-08-10_Meta AI Releases Muse Glimmer_ A 30B Open-Weights _MarkTechPost.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-08-10",
-      "title": "Meta 推出 300 亿参数的开放权重模型 Muse Glimmer",
-      "source": "Solidot",
-      "digest": "Meta在Apache 2.0许可证下推出300亿参数开放权重模型Muse Glimmer，为本地运行的智能体工作流优化，可在配备单个消费级GPU的Mac或PC上运行，支持本地智能体、函数调用、编程和LLM自动化评估等场景。未来几天将推出llama.cpp、MLX和ExecuTorch集成。",
-      "link": "https://www.solidot.org/story?sid=85054",
-      "source_file": "sources/2026-08-10_Meta 推出 300 亿参数的开放权重模型 Muse Glimmer_Solidot.md",
       "category": "国际",
       "is_model_related": true
     },

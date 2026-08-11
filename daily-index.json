@@ -4,13 +4,13 @@
       "date": "2026-08-10",
       "weekday": "周一",
       "stats": {
-        "国际": 13,
+        "国际": 11,
         "国内": 12,
         "同业": 1,
         "其他": 4,
-        "total": 30
+        "total": 28
       },
-      "summary": "刚刚，OpenAI曝光GPT-6！传10万亿参数，8月强行发布/Meta AI Releases Muse Glimmer: A 30B Open-Wei..."
+      "summary": "刚刚，OpenAI曝光GPT-6！传10万亿参数，8月强行发布/突发！Meta重回开源：首发Muse Spark 1.2，顺手扔出30B强悍端侧Agent..."
     },
     {
       "date": "2026-08-09",
