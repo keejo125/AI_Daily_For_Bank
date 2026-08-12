@@ -1,0 +1,31 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-11_Claude骂声中启动「隐形水印」：新模型全量嵌入，标记所有文字_量子位.md",
+      "main_name": "量子位",
+      "items": [
+        {
+          "source_file": "sources/2026-08-11_Claude 生成的文本添加看不见的水印_Solidot.md",
+          "name": "Solidot",
+          "link": "https://www.solidot.org/story?sid=85063"
+        },
+        {
+          "source_file": "sources/2026-08-11_Claude宣布给文字打上隐形水印_你用AI写的每个字都藏不住了_APPSO.md",
+          "name": "APPSO",
+          "link": "https://mp.weixin.qq.com/s/bEdjfPFXI3awrarTr2Gktw"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-11_小扎万字长文炮轰闭源_蒸馏无罪_Meta正式重回开源模型路线_InfoQ.md",
+      "main_name": "InfoQ",
+      "items": [
+        {
+          "source_file": "sources/2026-08-11_小扎高调开战闭源AI_推30B智能体模型_消费级显卡就能跑_杨立昆点赞_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/QNeE3AhSFQG7nA9wnkehow"
+        }
+      ]
+    }
+  ]
+}
