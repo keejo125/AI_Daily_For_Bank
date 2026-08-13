@@ -1,7 +1,7 @@
 ---
 publish_time: 1786527000
 status: confirmed
-category: 同业
+category: 国际
 is_model_related: false
 digest: |
   Ramp 内部 Agent 平台 Inspect 正把「无人值守」变为现实。Claude Code 创始人 Boris 对话 Ramp CTO Rahul 与 AI 开发者体验负责人 Austin，拆解 Agent 从告警到 PR 的完整工作流。

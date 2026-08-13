@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T12:41:18.940649",
+  "updated_at": "2026-08-13T12:53:53.041819",
   "total": 1224,
   "articles": [
     {
@@ -21,6 +21,16 @@
       "source_file": "sources/2026-08-12_Putting sign language AI into users’ hands_Google DeepMind.md",
       "category": "国际",
       "is_model_related": true
+    },
+    {
+      "date": "2026-08-12",
+      "title": "AI编程进入“无人值守”！Claude Code创始人联合Ramp CTO、AI开发负责人，拆解Agent从告警到PR的完整工作流",
+      "source": "51CTO技术栈",
+      "digest": "Ramp 内部 Agent 平台 Inspect 正把「无人值守」变为现实。Claude Code 创始人 Boris 对话 Ramp CTO Rahul 与 AI 开发者体验负责人 Austin，拆解 Agent 从告警到 PR 的完整工作流。",
+      "link": "https://mp.weixin.qq.com/s/0xl_q9uy3doi1Z6ezXe30Q",
+      "source_file": "sources/2026-08-12_AI编程进入“无人值守”！Claude Code创始人联合Ramp CTO、AI开发负责人，拆解Agent从告警到PR的_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
     },
     {
       "date": "2026-08-12",
@@ -81,16 +91,6 @@
       "source_file": "sources/2026-08-12_马斯克GrokBot云原生Agent_新智元.md",
       "category": "国际",
       "is_model_related": false
-    },
-    {
-      "date": "2026-08-12",
-      "title": "人形之外，擎羽把“身体”变成具身智能的新变量",
-      "source": "量子位",
-      "digest": "擎羽科技（香港大学机器人学博士、前大疆工程师创立）提出「柔性本体走向跨本体基础智能」的路线，主张通用机器人并不必然意味着通用身体。文章援引李飞飞的观察：人体是为开放非结构化环境演化出的通用形态，当任务边界足够明确时，最高效的身体可能沿完全不同的方向演化。",
-      "link": "https://www.qbitai.com/2026/08/470874.html",
-      "source_file": "sources/2026-08-12_人形之外，擎羽把“身体”变成具身智能的新变量_量子位.md",
-      "category": "国内",
-      "is_model_related": true
     },
     {
       "date": "2026-08-12",
@@ -224,13 +224,13 @@
     },
     {
       "date": "2026-08-12",
-      "title": "AI编程进入“无人值守”！Claude Code创始人联合Ramp CTO、AI开发负责人，拆解Agent从告警到PR的完整工作流",
-      "source": "51CTO技术栈",
-      "digest": "Ramp 内部 Agent 平台 Inspect 正把「无人值守」变为现实。Claude Code 创始人 Boris 对话 Ramp CTO Rahul 与 AI 开发者体验负责人 Austin，拆解 Agent 从告警到 PR 的完整工作流。",
-      "link": "https://mp.weixin.qq.com/s/0xl_q9uy3doi1Z6ezXe30Q",
-      "source_file": "sources/2026-08-12_AI编程进入“无人值守”！Claude Code创始人联合Ramp CTO、AI开发负责人，拆解Agent从告警到PR的_51CTO技术栈.md",
-      "category": "同业",
-      "is_model_related": false
+      "title": "人形之外，擎羽把“身体”变成具身智能的新变量",
+      "source": "量子位",
+      "digest": "擎羽科技（香港大学机器人学博士、前大疆工程师创立）提出「柔性本体走向跨本体基础智能」的路线，主张通用机器人并不必然意味着通用身体。文章援引李飞飞的观察：人体是为开放非结构化环境演化出的通用形态，当任务边界足够明确时，最高效的身体可能沿完全不同的方向演化。",
+      "link": "https://www.qbitai.com/2026/08/470874.html",
+      "source_file": "sources/2026-08-12_人形之外，擎羽把“身体”变成具身智能的新变量_量子位.md",
+      "category": "其他",
+      "is_model_related": true
     },
     {
       "date": "2026-08-12",
