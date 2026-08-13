@@ -1,9 +1,12 @@
 ---
 publish_time: 1786533900
-status: pending
-category:
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
+  OpenAI 推出 /import 迁移工具，可一键把 Claude Code、Cursor 用户机器上的配置、技能、插件、项目与最近 30 天聊天「搬」进 Codex：CLAUDE.md 变为 AGENTS.md、settings.json 收进 config.toml，MCP、Hooks、子智能体、slash 命令逐一映射。
+
+  官方强调导入的是副本，不修改或删除原配置，相当于给竞品用户派免费搬家车。但整个流程文档中始终没有 /export——只能搬进不能搬出，桌面端自动更新也是单向同步。8 月 11 日 OpenAI 将外部智能体导入说明统一到一份文档，CLI /import 认 Claude Code 与 Cursor。
 link: https://mp.weixin.qq.com/s/wvuMzSGL3ogrgBlZjxOy-A
 source: 新智元
 title: OpenAI搬空Claude Code！用户家当一键进Codex，唯独带不走Claude

@@ -1,6 +1,30 @@
 {
   "issues": [
     {
+      "date": "2026-08-12",
+      "weekday": "周三",
+      "stats": {
+        "国际": 8,
+        "国内": 14,
+        "同业": 1,
+        "其他": 6,
+        "total": 29
+      },
+      "summary": "英伟达发布 Nemotron 3.5 Lightning：30B 开源 MoE 模型与 NeMo Switchyard 路由库/将手语 AI 交到用户手中..."
+    },
+    {
+      "date": "2026-08-11",
+      "weekday": "周二",
+      "stats": {
+        "国际": 4,
+        "国内": 23,
+        "同业": 2,
+        "其他": 3,
+        "total": 32
+      },
+      "summary": "Daybreak模型现已上线AWS/webAI发布TwIL-LM：面向本地硬件的1.7B与3B形式逻辑模型家族/Seedance 2.5 上线后，LibT..."
+    },
+    {
       "date": "2026-08-10",
       "weekday": "周一",
       "stats": {

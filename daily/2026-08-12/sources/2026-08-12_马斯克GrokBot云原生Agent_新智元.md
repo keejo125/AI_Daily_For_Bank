@@ -1,9 +1,12 @@
 ---
 publish_time: 1786494861
-status: pending
-category:
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
+  马斯克 600 亿美元收购 Cursor 后亮出首个整合成果：SpaceXAI 发布 Grok Bot 早期测试版，一个拥有自己云端电脑的 AI 队友。每个 Bot 背后是一台独立云端 Linux 虚拟机，自带浏览器、文件系统与终端，7×24 小时云端在线，合上笔记本也不停。
+
+  它能登录用户各种账号端到端干活，多 Bot 并行协作分工，支持「跟班学习」演示式编程，并继承 Cursor 连接器、可调用 Cursor Cloud Agent 写代码。本周还将发布 Grok 4.6 版 Grok Bot。其「出生即云原生」的定位，直指刚上云的 Anthropic Claude Cowork。
 link: https://mp.weixin.qq.com/s/LlwtkEuyW0dHvGRUmZa7gw
 source: 新智元
 title: 刚刚，马斯克终极大招Grok Bot来了！

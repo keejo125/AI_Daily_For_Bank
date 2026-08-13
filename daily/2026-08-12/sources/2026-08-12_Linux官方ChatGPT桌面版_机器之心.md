@@ -1,9 +1,12 @@
 ---
 publish_time: 1786508049
-status: pending
-category:
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
+  OpenAI 宣布适用于 Linux 的 ChatGPT 桌面应用正式进入预览阶段，填补了原生 AI 能力在 Linux 桌面端长期缺位的空白。预览版支持 Ubuntu 24.04 LTS 与 26.04 LTS、Debian 13、Fedora 43/44 等发行版，可通过 .deb 或 .rpm 包安装 x64 或 ARM64 版本。
+
+  用户可在受支持的 Linux 系统上直接使用 ChatGPT、ChatGPT Work 与 Codex 三件套，在熟悉的开发环境里处理项目与浏览器工作流。虽兼容性仍有限，但社区期待已久，也有网友在非官方支持的发行版上尝试运行。
 link: https://mp.weixin.qq.com/s/Wa2i99kpN2SPCBafSrBODA
 source: 机器之心
 title: 终于！Linux用户等来了官方ChatGPT桌面版

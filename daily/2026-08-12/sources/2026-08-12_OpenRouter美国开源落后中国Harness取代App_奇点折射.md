@@ -1,9 +1,12 @@
 ---
 publish_time: 1786532187
-status: pending
-category:
-is_model_related: true
+status: confirmed
+category: 其他
+is_model_related: false
 digest: |
+  20VC 播客深度访谈 OpenRouter 联合创始人兼 CEO Alex Atallah（前 OpenSea 联创），提出三大判断。其一，开源大模型上美国已落后中国很远——OpenRouter 真实调用榜单中 DeepSeek、GLM、Kimi 凭性价比与迭代速度霸榜，开发者无模型忠诚度，谁便宜好用用谁。
+
+  其二，企业害怕依赖 OpenAI、Anthropic 等前沿巨头，极简「Harness（驾驭层）」正取代传统 App，薄营销外壳的 SaaS 创业公司面临清算。其三，AI 时代员工成本结构彻底动态化，每个员工每天消耗公司算力账单，天天滥用高价模型却产不出业务价值的员工将被划入「担忧象限」。
 link: https://mp.weixin.qq.com/s/bf35RW4DuQCfmB-HebecwQ
 source: 奇点折射
 title: 美国开源被中国甩在身后，套壳创业者更遭惨烈清算！OpenRouter CEO：天天乱用高价AI的员工要小心了
