@@ -1,14 +1,14 @@
 ---
 publish_time: 1786601601
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
+  学术头条报道，Google DeepMind 团队在 Nature 发表观点文章，提出 Agentic Profile（智能体画像）框架，重新定义 AI Agent 治理。文章指出，现有监管（欧盟 AI 法案风险分级、NIST 框架）以“系统整体风险等级”为出发点，缺乏对 Agent 核心属性的精细刻画；随着 LLM 与工具调用、推理协议、外部记忆结合，Agent 已在数十个真实场景独立执行任务，治理需求迫切。Agentic Profile 从自主性（autonomy）、效能（efficacy）、目标复杂度（goal complexity）和泛化（generality）四个维度系统刻画 Agent 属性，并以 AlphaGo、ChatGPT-3.5、Claude 3.5 Sonnet（含工具）、Waymo 为案例绘制画像，推导差异化监管。
 link: https://mp.weixin.qq.com/s/nKT-Ov2Pv0ATNpRzXdGasw
 source: 学术头条
 title: 刚刚，Google DeepMind团队Nature发文：重新定义AI Agent治理
 ---
-
 # 刚刚，Google DeepMind团队Nature发文：重新定义AI Agent治理
 
 来源：学术头条

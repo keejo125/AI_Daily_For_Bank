@@ -1,14 +1,14 @@
 ---
 publish_time: 1786629876
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  InfoQ 报道 8 月 13 日 DeepSeek 面向全球开发者开放 DeepSeek Harness 开发者预览版（v0.1，MIT 开源），开发者可用 `npx @deepseek-ai/dsh web` 启动 Web UI 或从 GitHub 拉取。文章解析其“一切皆插件”思路——连 Agent Loop 都可替换，模型、工具、技能、调度、UI 皆以 Cordis 插件组合；并对比主流 Coding Agent 多只开放工具/技能层，而 DeepSeek 把可扩展范围推进到上下文组织、错误重试与完成判定等核心。该篇与 DeepSeek 官方、机器之心报道同源，合并入主条。
 link: https://mp.weixin.qq.com/s/hHCpyIlDiBHSzA3TzO5LmQ
 source: InfoQ
 title: DeepSeek 把 Harness 开源了：模型、工具、Agent Loop 全是插件
 ---
-
 # DeepSeek 把 Harness 开源了：模型、工具、Agent Loop 全是插件
 
 来源：InfoQ

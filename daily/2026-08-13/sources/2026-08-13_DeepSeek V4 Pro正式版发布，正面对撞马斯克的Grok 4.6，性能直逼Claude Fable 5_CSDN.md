@@ -1,14 +1,14 @@
 ---
 publish_time: 1786600209
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: true
 digest: |
+  CSDN 报道，8 月 12 日深夜 DeepSeek 将预览状态的 V4 Pro 静默更新为正式版（模型版本号 DeepSeek-V4-Pro-0813），未发博客、无社媒公告，由 API 模型与价格页面率先暴露。新版本支持 100 万 Token 上下文，输入价每百万 Token 0.435 美元、输出 0.87 美元；同时 DeepSeek 预告将整体上调 API 定价并引入峰谷机制（高峰时段价格翻倍）。文章将其与马斯克 Grok 4.6 对标，认为其在多项能力上正面对撞。该篇与 DeepSeek 官方、财联社报道同源，合并入主条。
 link: https://mp.weixin.qq.com/s/NhDraVIppustqs4FIUdWhQ
 source: CSDN
 title: DeepSeek V4 Pro正式版发布，正面对撞马斯克的Grok 4.6，性能直逼Claude Fable 5
 ---
-
 # DeepSeek V4 Pro正式版发布，正面对撞马斯克的Grok 4.6，性能直逼Claude Fable 5
 
 来源：CSDN

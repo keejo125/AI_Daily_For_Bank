@@ -1,14 +1,14 @@
 ---
 publish_time: 1786583014
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: true
 digest: |
+  财联社 AI daily 报道 DeepSeek V4 Pro 正式版已更新至 API，模型名不变，重点增强 Agent 能力，支持 Responses API 和 Codex 接入，支持 1M 上下文、最大输出 384K Token，并提供非思考/思考双模式。官方评测显示其在 HLE、Terminal Bench、Cybergym、DeepSWE 等 Agent 基准上超过 Claude Opus 4.8、逼近 Fable 5，部分榜单反超。价格方面当前未调（缓存命中输入 0.025 元、未命中 3 元、输出 6 元），但 DeepSeek 已预告近期整体涨价并引入峰谷定价。该篇与 DeepSeek 官方、CSDN 报道同源，合并入主条。
 link: https://mp.weixin.qq.com/s/WO4Ns1-twKKIRFr7JPGdvg
 source: 财联社AI daily
 title: DeepSeek V4 Pro正式版来了！
 ---
-
 # DeepSeek V4 Pro正式版来了！
 
 来源：财联社AI daily

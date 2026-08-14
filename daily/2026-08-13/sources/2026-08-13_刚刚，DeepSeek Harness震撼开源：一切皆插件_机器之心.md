@@ -1,14 +1,14 @@
 ---
 publish_time: 1786625928
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  机器之心报道，继 DeepSeek V4 Pro 发布后，DeepSeek Harness 开发者预览版（v0.1，MIT 开源）也正式到来。内测体验显示，配置官方 V4-Flash 的 Harness 可在 30 多分钟 one-shot 生成一个可玩的第一人称丧尸射击游戏；在“华强买瓜”基准上，基于文本描述将经典片段复现为 3D 动画，剧情与人物关系大体还原。文章认为 Harness 注定给 AI 社区带来新变革，其“一切皆插件”架构让模型、工具、Agent Loop 均可替换，并与同提示词下 GPT-5.6 等方案对比。该篇与 DeepSeek 官方、InfoQ 报道同源，合并入主条。
 link: https://mp.weixin.qq.com/s/mcVfdDVUVlEYJj61sJWKZA
 source: 机器之心
 title: 刚刚，DeepSeek Harness震撼开源：一切皆插件
 ---
-
 # 刚刚，DeepSeek Harness震撼开源：一切皆插件
 
 来源：机器之心

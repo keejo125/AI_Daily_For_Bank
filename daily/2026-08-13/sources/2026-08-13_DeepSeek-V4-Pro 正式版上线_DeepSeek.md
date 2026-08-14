@@ -1,14 +1,14 @@
 ---
 publish_time: 1786619977
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: true
 digest: |
+  DeepSeek 官方宣布 V4 Pro 正式版上线，已同步在 APP、网页端与 API 更新，API 模型名不变。正式版大幅增强 Agent 能力，在 Code Agent 等生产环境任务上表现显著提升；原生支持 OpenAI Responses API 并针对性适配 Codex，提供一键配置脚本。思考强度控制升级为 low / high / max 三档，可按任务复杂度灵活选择。定价方面，随着 V4 全系列正式版上线将采用峰谷定价（闲时价为高峰一半）以调配资源。官方称其为当前除 Fable 5 外最强大的模型之一，在 PaperBench、OSWorld-Verified、参数化 CAD 等基准上领先 GPT-5.6 Sol、Fable 5、Claude Opus 4.8，并与 Grok 4.6 正面对撞，标志国产旗舰模型进入新阶段。（与 CSDN、财联社报道同源，合并入本条）
 link: https://mp.weixin.qq.com/s/XGzdn5Kk5jmaM9XYAy9JMg
 source: DeepSeek
 title: DeepSeek-V4-Pro 正式版上线
 ---
-
 # DeepSeek-V4-Pro 正式版上线
 
 来源：DeepSeek

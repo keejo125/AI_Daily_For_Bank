@@ -1,0 +1,34 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-13_DeepSeek-V4-Pro 正式版上线_DeepSeek.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-13_DeepSeek V4 Pro正式版发布，正面对撞马斯克的Grok 4.6，性能直逼Claude Fable 5_CSDN.md",
+          "name": "CSDN",
+          "link": "https://mp.weixin.qq.com/s/NhDraVIppustqs4FIUdWhQ"
+        },
+        {
+          "source_file": "sources/2026-08-13_DeepSeek V4 Pro正式版来了！_财联社AI daily.md",
+          "name": "财联社AI daily",
+          "link": "https://mp.weixin.qq.com/s/WO4Ns1-twKKIRFr7JPGdvg"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-13_DeepSeek Harness 开发者预览版：一切皆插件_DeepSeek Harness 团队.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-13_DeepSeek 把 Harness 开源了：模型、工具、Agent Loop 全是插件_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/hHCpyIlDiBHSzA3TzO5LmQ"
+        },
+        {
+          "source_file": "sources/2026-08-13_刚刚，DeepSeek Harness震撼开源：一切皆插件_机器之心.md",
+          "name": "机器之心",
+          "link": "https://mp.weixin.qq.com/s/mcVfdDVUVlEYJj61sJWKZA"
+        }
+      ]
+    }
+  ]
+}

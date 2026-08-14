@@ -1,14 +1,14 @@
 ---
 publish_time: 1786604806
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  腾讯 WorkBuddy 发布 5.3.11 版本，将“资料库”升级为 AI 原生的知识管理空间，让所有工作产物统一存放、人与 AI 共同读写与协同编辑。亮点包括：HTML/Markdown 等 AI 原生格式支持人机双写与多人多 AI 协同——生成和编辑 HTML 比写 Word 还简单，改动实时可见，并可一键发布为公开网页链接；Markdown 支持多人批注、框选修改，AI 建议以批注/修订形式呈现，逐条审阅接受后才写入正文。资料库还支持“一句话搭出会存数据的网站”：HTML 内嵌 CSV 数据表即可实现多端实时双向同步，让本地页面真正“活”起来。文章定位 WorkBuddy 为“AI 时代的 Office”，强调从“能生成”到“能编辑、能协作、能沉淀”的体验跃迁。
 link: https://mp.weixin.qq.com/s/07Y5pX6t2k50WyuBb36PQQ
 source: 腾讯WorkBuddy
 title: WorkBuddy 重磅升级：内置 AI 原生资料库，让你的资料 “活” 起来
 ---
-
 # WorkBuddy 重磅升级：内置 AI 原生资料库，让你的资料 “活” 起来
 
 来源：腾讯WorkBuddy

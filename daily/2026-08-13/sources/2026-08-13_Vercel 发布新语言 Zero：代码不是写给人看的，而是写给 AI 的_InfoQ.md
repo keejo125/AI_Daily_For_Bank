@@ -1,14 +1,14 @@
 ---
 publish_time: 1786602600
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
+  Vercel Labs 发布实验性系统编程语言 Zero（.0 扩展名，Apache 2.0），其核心前提是：编译器输出的主要阅读者不再是人，而是 AI 智能体。Zero 编译为 Linux/macOS/Windows 原生二进制，Hello World 可在一毫秒内构建、体积仅 16.2 KiB，GitHub 已超 5200 Star。更具特色的是其工具链契约：单一 zero 二进制每个子命令都支持统一 --json 与带稳定代码（如 NAM003）、带类型的修复元数据；`zero fix --plan --json` 返回机器可读的修复计划，供智能体接受、编辑或拒绝。副作用也显式化——任何与外部交互的函数必须接受 World 能力参数并由编译器校验。文章认为 Zero 体现了“代码写给 AI 看”的趋势：用结构化、可机读的诊断与修复元数据，把编译错误变成智能体可低成本消费的动作。
 link: https://mp.weixin.qq.com/s/8Js-DxkB06xeoiwPn0UMSA
 source: InfoQ
 title: Vercel 发布新语言 Zero：代码不是写给人看的，而是写给 AI 的
 ---
-
 # Vercel 发布新语言 Zero：代码不是写给人看的，而是写给 AI 的
 
 来源：InfoQ

@@ -1,14 +1,14 @@
 ---
 publish_time: 1786602600
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
+  InfoQ 整理 Anthropic Claude Code 团队 Daisy Hollman（前 C++ 标准委员会主席）在 NDC Copenhagen 的演讲，拆解 Claude Code 插件设计与上下文工程原语。核心观点：模型并非要取代人，而是放大人——关键是赋予模型完成工作所需信息的访问权限。文章揭示 Agentic 编程 Harness 的本质：模型请求执行 shell 等工具、Harness 执行并把结果回填上下文，循环往复即构成 Agent；编辑工具才是编码 Agent 的主力。Claude Code 的插件抽象以“钩子”为核心——不匹配就不注入，只在触发时才往上下文放东西，避免污染固定且有限的上下文窗口。2026 年的核心转变是从“把信息输入模型”转向“把信息从模型输出给用户”，因为人的注意力才是系统中最小的盒子；演讲还披露了 Anthropic 内部运作多 Agent 工作流的经验。
 link: https://mp.weixin.qq.com/s/7mgQ6wk0bgUL7ev-rwQXEw
 source: InfoQ
 title: Claude Code没有“魔法”
 ---
-
 # Claude Code没有“魔法”
 
 来源：InfoQ

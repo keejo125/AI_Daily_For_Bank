@@ -1,7 +1,207 @@
 {
-  "updated_at": "2026-08-13T12:53:53.041819",
-  "total": 1224,
+  "updated_at": "2026-08-14T10:54:38.007670",
+  "total": 1244,
   "articles": [
+    {
+      "date": "2026-08-13",
+      "title": "刚刚！Ilya首个模型曝光了",
+      "source": "量子位",
+      "digest": "量子位报道，X 网友爆料 Ilya Sutskever 创办的 SSI 正在探索一种基于 TTT（Test-Time Training，测试时训练）的小型推理引擎：用专门整理的数据学习“如何学习”，在解题过程中更新部分权重，即便规模不大也足以媲美更大规模训练的模型。爆料称当前版本已就绪、下一代将扩 10 倍，最快 8 月向少数用户开放，但亦有“本月可能又不发”的说法。文章梳理三条佐证线索：Ilya 去年播客主张“超级智能应像 15 岁少年般部署后持续学习”；英伟达 7 月与 SSI 达成长期合作并投资（路透称约 50 亿美元），提供 Vera Rubin 系统；TTT 范式近两年的进展。若属实，SSI 藏两年的第一把剑或真将出鞘，路线聚焦“部署后继续改变自己”。",
+      "link": "https://mp.weixin.qq.com/s/dTEIveibYoC1vsbNS1oNxw",
+      "source_file": "sources/2026-08-13_刚刚！Ilya首个模型曝光了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-13",
+      "title": "昨夜，马斯克甩出Grok 4.6！性能直逼Fable 5，英伟达祝贺",
+      "source": "智东西",
+      "digest": "智东西编译，马斯克宣布推出新一代旗舰模型 Grok 4.6，主打智能、快速、高性价比，在相同价格下较 Grok 4.5 性能显著优化。多项智能体编程与知识工作基准显示，Grok 4.6 high 综合性能与 GPT-5.6 Sol Max、Claude Fable 5 Max 相当；Code Arena WebDev 测试中以 1618 分排名第七，与 GPT-5.6 Sol、GLM-5.2、Claude Fable 5 接近。定价为每百万输入 Token 2 美元、输出 6 美元（快速版 2 倍）。Grok 4.6 已在 Cursor、Grok Build 发布，并上线 API 及 OpenRouter、Vercel、Cloudflare 等平台，首周在 Grok Build 与 Cursor 内提供 2 倍用量。英伟达在评论区第一时间祝贺。",
+      "link": "https://mp.weixin.qq.com/s/xYOIbHbvQ4vbR4m6t3pM7Q",
+      "source_file": "sources/2026-08-13_昨夜，马斯克甩出Grok 4.6！性能直逼Fable 5，英伟达祝贺_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Claude Code没有“魔法”",
+      "source": "InfoQ",
+      "digest": "InfoQ 整理 Anthropic Claude Code 团队 Daisy Hollman（前 C++ 标准委员会主席）在 NDC Copenhagen 的演讲，拆解 Claude Code 插件设计与上下文工程原语。核心观点：模型并非要取代人，而是放大人——关键是赋予模型完成工作所需信息的访问权限。文章揭示 Agentic 编程 Harness 的本质：模型请求执行 shell 等工具、Harness 执行并把结果回填上下文，循环往复即构成 Agent；编辑工具才是编码 Agent 的主力。Claude Code 的插件抽象以“钩子”为核心——不匹配就不注入，只在触发时才往上下文放东西，避免污染固定且有限的上下文窗口。2026 年的核心转变是从“把信息输入模型”转向“把信息从模型输出给用户”，因为人的注意力才是系统中最小的盒子；演讲还披露了 Anthropic 内部运作多 Agent 工作流的经验。",
+      "link": "https://mp.weixin.qq.com/s/7mgQ6wk0bgUL7ev-rwQXEw",
+      "source_file": "sources/2026-08-13_Claude Code没有“魔法”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Vercel 发布新语言 Zero：代码不是写给人看的，而是写给 AI 的",
+      "source": "InfoQ",
+      "digest": "Vercel Labs 发布实验性系统编程语言 Zero（.0 扩展名，Apache 2.0），其核心前提是：编译器输出的主要阅读者不再是人，而是 AI 智能体。Zero 编译为 Linux/macOS/Windows 原生二进制，Hello World 可在一毫秒内构建、体积仅 16.2 KiB，GitHub 已超 5200 Star。更具特色的是其工具链契约：单一 zero 二进制每个子命令都支持统一 --json 与带稳定代码（如 NAM003）、带类型的修复元数据；`zero fix --plan --json` 返回机器可读的修复计划，供智能体接受、编辑或拒绝。副作用也显式化——任何与外部交互的函数必须接受 World 能力参数并由编译器校验。文章认为 Zero 体现了“代码写给 AI 看”的趋势：用结构化、可机读的诊断与修复元数据，把编译错误变成智能体可低成本消费的动作。",
+      "link": "https://mp.weixin.qq.com/s/8Js-DxkB06xeoiwPn0UMSA",
+      "source_file": "sources/2026-08-13_Vercel 发布新语言 Zero：代码不是写给人看的，而是写给 AI 的_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "刚刚，Google DeepMind团队Nature发文：重新定义AI Agent治理",
+      "source": "学术头条",
+      "digest": "学术头条报道，Google DeepMind 团队在 Nature 发表观点文章，提出 Agentic Profile（智能体画像）框架，重新定义 AI Agent 治理。文章指出，现有监管（欧盟 AI 法案风险分级、NIST 框架）以“系统整体风险等级”为出发点，缺乏对 Agent 核心属性的精细刻画；随着 LLM 与工具调用、推理协议、外部记忆结合，Agent 已在数十个真实场景独立执行任务，治理需求迫切。Agentic Profile 从自主性（autonomy）、效能（efficacy）、目标复杂度（goal complexity）和泛化（generality）四个维度系统刻画 Agent 属性，并以 AlphaGo、ChatGPT-3.5、Claude 3.5 Sonnet（含工具）、Waymo 为案例绘制画像，推导差异化监管。",
+      "link": "https://mp.weixin.qq.com/s/nKT-Ov2Pv0ATNpRzXdGasw",
+      "source_file": "sources/2026-08-13_刚刚，Google DeepMind团队Nature发文：重新定义AI Agent治理_学术头条.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "DeepSeek-V4-Pro 正式版上线",
+      "source": "DeepSeek",
+      "digest": "DeepSeek 官方宣布 V4 Pro 正式版上线，已同步在 APP、网页端与 API 更新，API 模型名不变。正式版大幅增强 Agent 能力，在 Code Agent 等生产环境任务上表现显著提升；原生支持 OpenAI Responses API 并针对性适配 Codex，提供一键配置脚本。思考强度控制升级为 low / high / max 三档，可按任务复杂度灵活选择。定价方面，随着 V4 全系列正式版上线将采用峰谷定价（闲时价为高峰一半）以调配资源。官方称其为当前除 Fable 5 外最强大的模型之一，在 PaperBench、OSWorld-Verified、参数化 CAD 等基准上领先 GPT-5.6 Sol、Fable 5、Claude Opus 4.8，并与 Grok 4.6 正面对撞，标志国产旗舰模型进入新阶段。（与 CSDN、财联社报道同源，合并入本条）",
+      "link": "https://mp.weixin.qq.com/s/XGzdn5Kk5jmaM9XYAy9JMg",
+      "source_file": "sources/2026-08-13_DeepSeek-V4-Pro 正式版上线_DeepSeek.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-13",
+      "title": "刚刚，阿里开源2.4万亿参数大模型！性能比肩Fable 5",
+      "source": "智东西",
+      "digest": "智东西报道，阿里千问大模型团队开放 Qwen3.8-2.4T-A95B 模型权重，这是千问首次将 Max 级别旗舰模型对外开放权重。该模型总参数 2.4 万亿、每 Token 激活 950 亿，原生支持 262144 Token 上下文（可扩展至 101 万），采用 Qwen3.5 架构，在编程、办公、科研、长周期智能体任务上提升明显，默认思考模式运行。Unsloth AI 以动态 1-bit 分层量化将其 4.9TB 体积压缩至 397GB（缩减 91%），设备内存+显存 410GB 以上即可本地运行。基准上，Qwen3.8-Max 在 PaperBench 达 93.0 分（高于 GPT-5.6 Sol、Fable 5、Claude Opus 4.8），OSWorld-Verified 86.1 分居首，但 TerminalBench 2.1、SWE-bench Pro 等仍落后；其重点是可脱离人工、自主完成跨天数周的长周期任务。",
+      "link": "https://mp.weixin.qq.com/s/nw4tNAh-K8iOL4zMtAOkSg",
+      "source_file": "sources/2026-08-13_刚刚，阿里开源2.4万亿参数大模型！性能比肩Fable 5_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-13",
+      "title": "6 支快手工程团队，让 AI 落地真实业务",
+      "source": "快手技术",
+      "digest": "快手内部 6 支工程团队系统总结了 AI 从“辅助写代码”走向“穿透真实业务全流程”的实践。文章指出，尽管 AI Coding 让单人代码产出大幅提升（某团队 AI 代码贡献率达 63.1%），但团队整体交付效率仅提升 12.8%——瓶颈不在写代码，而在需求、评审、测试等环节仍按“人与人”模式串行协作。周路团队据此搭建 Agent-First 产研协作平台 Agent Teammates，让产品、研发、测试等 Agent 共享上下文、接续前序判断，把多角色交接变为并行推进；“知识产权入池”项目仅用 1 名产品经理、1 名工程师和 6 个 Agent，以 40 分钟产出首版 PRD，6 天上线（传统估算需 60 人天）。其余团队则将 AI 用于商家经营“小二”、业务现场辅助、反作弊平台与全栈小团队交付，并由生产质量体系把关。核心结论：AI 落地的关键不是模型能力，而是为 Agent 重新设计协作流程。",
+      "link": "https://mp.weixin.qq.com/s/o26o0hFRSLLoOWt6mUA5sA",
+      "source_file": "sources/2026-08-13_6 支快手工程团队，让 AI 落地真实业务_快手技术.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Agent 越改越乱之后，我用评测和轨迹把它拉回来了",
+      "source": "阿里技术",
+      "digest": "阿里技术分享了一套把“改 skill（SKILL.md 工作手册）”变成可重复流程的方法，解决 Agent 在实战中“打地鼠式”退化的难题。作者指出，给 Agent 配一份结构化 skill 能界定其能力上限，但实战总会暴露 case 短板；人工逐条修补既慢又容易顾此失彼。其方案分为五步：先跑一批测试任务定位出错 case，再按规则自动分析失败原因，自动生成 patch 修改 skill，然后用评测验证修复是否引入回归，最后将闭环沉淀为可复用流程。核心是把 Agent 完成任务的能力沿评测结果自驱前进，让 skill 在“跑任务—分析—改—再评测”的循环中持续进化，而非依赖一次性写对；只要任务满足“结论可被客观判对错”，这套结果驱动的自进化方法即可平移到其它场景。",
+      "link": "https://mp.weixin.qq.com/s/h0ZsF5FdYZ_j5XrGmHBdXw",
+      "source_file": "sources/2026-08-13_Agent 越改越乱之后，我用评测和轨迹把它拉回来了_阿里技术.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "DeepSeek Harness 开发者预览版：一切皆插件",
+      "source": "DeepSeek Harness 团队",
+      "digest": "DeepSeek 发布 Harness 开发者预览版（v0.1）并以 MIT 协议开源，正式回答“DeepSeek 会怎样做自己的 Agent Harness”。其设计原则是“一切皆插件”：基于具有时空可组合性的 Cordis 插件系统，模型、工具、技能、会话、沙箱、存储、循环、调度、UI 等所有 Agent 能力均由插件组合而成，开发者无需改动源码即可独立替换、扩展任一能力。DeepSeek Harness 提供四种运行模式（标准、极简等），分别默认加载不同插件集合，适配从简单对话到复杂编码 Agent 的场景；当前版本仍处早期，核心插件与接口将快速迭代。它标志着围绕 AI Coding 的讨论正从模型转向 Harness——后者决定模型能看到什么、调用哪些工具、如何组织上下文与处理错误，是同一模型表现差异的关键。（与 InfoQ、机器之心报道同源，合并入本条）",
+      "link": "https://mp.weixin.qq.com/s/mANdGRI4fO_sEbC1ECEoZQ",
+      "source_file": "sources/2026-08-13_DeepSeek Harness 开发者预览版：一切皆插件_DeepSeek Harness 团队.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "WorkBuddy 重磅升级：内置 AI 原生资料库，让你的资料 “活” 起来",
+      "source": "腾讯WorkBuddy",
+      "digest": "腾讯 WorkBuddy 发布 5.3.11 版本，将“资料库”升级为 AI 原生的知识管理空间，让所有工作产物统一存放、人与 AI 共同读写与协同编辑。亮点包括：HTML/Markdown 等 AI 原生格式支持人机双写与多人多 AI 协同——生成和编辑 HTML 比写 Word 还简单，改动实时可见，并可一键发布为公开网页链接；Markdown 支持多人批注、框选修改，AI 建议以批注/修订形式呈现，逐条审阅接受后才写入正文。资料库还支持“一句话搭出会存数据的网站”：HTML 内嵌 CSV 数据表即可实现多端实时双向同步，让本地页面真正“活”起来。文章定位 WorkBuddy 为“AI 时代的 Office”，强调从“能生成”到“能编辑、能协作、能沉淀”的体验跃迁。",
+      "link": "https://mp.weixin.qq.com/s/07Y5pX6t2k50WyuBb36PQQ",
+      "source_file": "sources/2026-08-13_WorkBuddy 重磅升级：内置 AI 原生资料库，让你的资料 “活” 起来_腾讯WorkBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "WorkSwarm 引领办公智能体新范式，重塑桌面生产力",
+      "source": "CSDN",
+      "digest": "华为 2012 实验室、华为云、终端、计算联合构建的开源 AI Agent 平台 openJiuwen，将其蜂群智能体升级为 WorkSwarm 蜂群办公智能体，率先上架鸿蒙 PC 应用市场并支持 Windows、Mac。WorkSwarm 的理念是：办公智能体的下一站不是更聪明的单个助手，而是一支会协作、会成长、人也身在其中的 AI 团队——统一工作台内置“工作”与“Code”双空间，按任务复杂度在“单 Agent”与“集群”模式间切换。文章指出，写汇报、做工具、组织评审等办公任务本质都是多角色接力的工序链，单助手体验仍停留在“多了一个对话框”，而蜂群模式让 AI 组队拆解、执行与验收。openJiuwen 还提出 Coordination Engineering（协同工程）思路，把“与 AI 组队”推向系统化。",
+      "link": "https://mp.weixin.qq.com/s/kjBBp0n3ZKC7UnN965vUZQ",
+      "source_file": "sources/2026-08-13_WorkSwarm 引领办公智能体新范式，重塑桌面生产力_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "一个应用，覆盖一万种场景：寻找AI落地“最优解”",
+      "source": "智东西",
+      "digest": "智东西报道，8 月 12 日百度伐谋在 AI Day 发布 AI4S“1+10+N”战略，启动 AI4S 科学家计划，并携手南京林业大学上线全国首个 AI+早期松材线虫病防治一体化平台。百度伐谋定位于“让 AI 进入复杂问题的求解过程”——结合大语言模型推理与大规模进化搜索，在复杂约束下持续探索、评估、优化方案，而非仅按已有知识生成结果。其能力从算法优化延伸至生产排程、物流规划、工艺优化等企业核心场景，企业无需预先整理完整业务模型，业务专家通过持续反馈即可让系统理解自身逻辑。文章强调，在材料设计、港口调度、科研验证等“不存在标准答案”的任务中，AI4S 正成为帮助人类在更大候选空间中寻找更优解的重要方向。",
+      "link": "https://mp.weixin.qq.com/s/7_z_3g7rYyx54wpxzxH2LA",
+      "source_file": "sources/2026-08-13_一个应用，覆盖一万种场景：寻找AI落地“最优解”_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "一文读懂：FDE的12项核心能力",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者（腾讯云架构师同盟约稿）基于国内大模型 toB 市场公开数据（2025 年中标 7539 个项目、披露金额约 295 亿元、数量同比增 396%），梳理 FDE（前线部署工程师，Frontline Deployment Engineer）的四阶段 × 12 项核心能力培养清单。文章指出，中国 toB 市场从不缺驻场的人，缺的是能把 AI 项目“交付成、验收掉、回款回、复制开”的人——这是 FDE 与传统驻场的本质区别。清单按中国 toB 真实约束（招投标、账期、免费 POC、需求蔓延、数据不出域、信创合规、领导可见性）校准，每项能力回答“防止什么事故、怎么练、过关标准”，可直接作团队培养 SOP 与每周复盘检查表，也为个人转型提供对照。",
+      "link": "https://mp.weixin.qq.com/s/6_-S0yIVlCtqW8U8JfwdGA",
+      "source_file": "sources/2026-08-13_一文读懂：FDE的12项核心能力_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "一次实验：我们感受到离AI自主测试越来越近了",
+      "source": "软件工程3.0时代",
+      "digest": "软件工程 3.0 时代作者分享一次自主测试实验：仅给提示词，AI（其 OpenCode）自主规划 6 个步骤，一气呵成完成测试分析、用例设计、脚本执行与测试报告。AI 先自主探索 Web 页面、识别待测功能与风险并输出分析报告，再设计 46 个带优先级的测试用例，生成脚本执行；遇错自主 fix 缺陷，全程更改 212 个文件，持续约 26 分钟，最终产出测试报告。作者借此警示测试人员的核心竞争力重塑，并提示企业管理者思考未来软件研发的流程与组织重构。文章认为，当 AI 能端到端接管“分析—设计—执行—报告”的测试闭环，测试职能正从人工执行转向需求理解、策略制定与质量把关。",
+      "link": "https://mp.weixin.qq.com/s/m9_7pfECOH1z_kroNqkKsA",
+      "source_file": "sources/2026-08-13_一次实验：我们感受到离AI自主测试越来越近了_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "从“工具”到“同事”——AI 时代的产品进化",
+      "source": "InfoQ",
+      "digest": "InfoQ 整理良仓孵化器创始合伙人、前阿里产品经理苏杰在 QCon 2026 北京站的演讲。其核心判断：当 AI 把产品生产成本趋近于零，“能做产品”不再构成核心竞争力，将来产品、技术、设计、运营不再分野，统一为全栈 builder，而“新同事”就是 AI。演讲分四层递进：大判断（AI 折叠时间、重构产品/组织/角色）、新形态（产品长什么样）、新方法（AI 时代怎么做产品创新）、组织与个人（我们该怎么办）。苏杰以“把话筒交给数字分身”的行为艺术开场，探讨 AI 如何解构创新范式，并提出下一代人机协作的硬件雏形（语音键、enter、accept、reject）。文章为技术社区提供了一套可推演的产品与组织演进思考框架。",
+      "link": "https://mp.weixin.qq.com/s/57L1Qokt5dxCgAVyhQrYcA",
+      "source_file": "sources/2026-08-13_从“工具”到“同事”——AI 时代的产品进化_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "AI投毒对支付安全的影响分析",
+      "source": "中国金融电脑+",
+      "digest": "中国银联风险控制部撰文，系统剖析 AI 深度嵌入支付生态后催生的新型系统性风险——AI 投毒。文章将投毒攻击分为三类：数据投毒（污染训练数据，最常见）、后门投毒（训练/微调时植入触发器，隐蔽性强）、反馈投毒（污染 RLHF 等在线学习信号）。在支付链条上，攻击已渗透终端设备（如带 AI 生成痕迹的 NGate 恶意软件窃取支付数据）、身份认证（GEO 批量生成伪原创内容植入虚假金融机构联系方式）、持卡人决策（黑产用 GEO 操控 AI 推荐结果）等环节；Agent 高权限环境下的自主支付更使消费者面临信息泄露与资金劫持风险。对此，作者建议强化网络信息治理、推进生成式引擎优化（GEO）技术规制、加快 Agent 权限管理与可信标准制定，构建多元共治的支付安全防线。",
+      "link": "https://mp.weixin.qq.com/s/97Bx-ADGCDe07w9PIm3kEw",
+      "source_file": "sources/2026-08-13_AI投毒对支付安全的影响分析_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "招行信用卡或将有新动作？刚从6家头部大模型厂商采购AI权益兑换服务",
+      "source": "银行科技研究社",
+      "digest": "银行科技研究社报道，招商银行信用卡中心于 8 月 6 日公示“AI 权益兑换采购项目”单一来源采购，从豆包、Kimi、MiniMax、千问、腾讯混元、智谱 6 家头部大模型厂商（对应火山引擎、月之暗面、稀宇、通义云启、腾讯云、智谱华章）采购 AI 权益兑换服务，以系统直连或券码形式提供产品及售后。此前 6 月招行已上线运通工程师信用卡专属 AI 权益，Kimi 推出全球首张 AI 原生信用卡，银行业正“卷”AI 权益联名卡以吸引特定人群。此次采购预示招行或在 AI 信用卡上有进一步动作，也反映大模型能力正通过“权益兑换”等轻量场景加速嵌入银行零售业务。",
+      "link": "https://mp.weixin.qq.com/s/u7Lf3ev4pV3OuMH0N_sBuA",
+      "source_file": "sources/2026-08-13_招行信用卡或将有新动作？刚从6家头部大模型厂商采购AI权益兑换服务_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "智见｜大模型破局，重塑银行服务科创实体新模式",
+      "source": "现代商业银行杂志",
+      "digest": "现代商业银行杂志刊发建设银行浙江分行文章，探讨大模型如何重塑银行服务科创实体模式。文章指出，传统银行重抵押、靠财报的经营模式难以适配科创企业轻资产、高研发、长周期特征，普遍存在授信不准、拓客低效、风控滞后等痛点。依托大模型、AI 智能体、大数据中台，商业银行可搭建科创专属智能评价体系，自动抓取研发投入、专利、团队、产业政策等维度量化企业价值，实现“数据授信、技术换信用”；并按初创、成长、成熟全生命周期实施分层数智化服务，完成拓客、授信、风控、产品创新全链路 AI 升级。文章以兴业“技术流”、建行科创画像等案例，提出配套组织、数据、风控、人才等六大保障机制。",
+      "link": "https://mp.weixin.qq.com/s/s2935AfIapD510gL1f_tVw",
+      "source_file": "sources/2026-08-13_智见｜大模型破局，重塑银行服务科创实体新模式_现代商业银行杂志.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-13",
+      "title": "绍兴银行“数智绍芯”工程的创新实践与价值绽放",
+      "source": "金融电子化",
+      "digest": "金融电子化报道，绍兴银行历时 17 个月打造“数智绍芯”新一代核心系统，为中小银行数字化转型探索出低成本、高适配、快落地的路径。工程以 100% 自主可控为目标，构建从芯片到应用的全信创链路：硬件采用信创处理器与操作系统替代 Intel/Linux，核心数据库选用分布式数据库并配合准实时同步（延迟<1 秒）与 Oracle 异构逃生库形成双活；完成核心、柜面、ESB 等 21 套业务系统信创改造，全面替代小型机。系统上线后联机交易处理能力提升近百倍（峰值 4000 笔/秒），日终批处理从 2 小时压缩至 25 分钟，核心联机平均响应<1 秒，并实现业务能力中台化，缓解大型银行下沉与跨界竞争压力。",
+      "link": "https://mp.weixin.qq.com/s/Yx4AsDeXQpWqE12GtYDR4A",
+      "source_file": "sources/2026-08-13_绍兴银行“数智绍芯”工程的创新实践与价值绽放_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-12",
       "title": "英伟达发布 Nemotron 3.5 Lightning：30B 开源 MoE 模型与 NeMo Switchyard 路由库",

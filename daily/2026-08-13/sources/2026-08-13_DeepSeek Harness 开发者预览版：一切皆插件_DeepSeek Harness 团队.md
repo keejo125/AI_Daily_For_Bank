@@ -1,14 +1,14 @@
 ---
 publish_time: 1786625871
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  DeepSeek 发布 Harness 开发者预览版（v0.1）并以 MIT 协议开源，正式回答“DeepSeek 会怎样做自己的 Agent Harness”。其设计原则是“一切皆插件”：基于具有时空可组合性的 Cordis 插件系统，模型、工具、技能、会话、沙箱、存储、循环、调度、UI 等所有 Agent 能力均由插件组合而成，开发者无需改动源码即可独立替换、扩展任一能力。DeepSeek Harness 提供四种运行模式（标准、极简等），分别默认加载不同插件集合，适配从简单对话到复杂编码 Agent 的场景；当前版本仍处早期，核心插件与接口将快速迭代。它标志着围绕 AI Coding 的讨论正从模型转向 Harness——后者决定模型能看到什么、调用哪些工具、如何组织上下文与处理错误，是同一模型表现差异的关键。（与 InfoQ、机器之心报道同源，合并入本条）
 link: https://mp.weixin.qq.com/s/mANdGRI4fO_sEbC1ECEoZQ
 source: DeepSeek Harness 团队
 title: DeepSeek Harness 开发者预览版：一切皆插件
 ---
-
 # DeepSeek Harness 开发者预览版：一切皆插件
 
 来源：DeepSeek Harness 团队

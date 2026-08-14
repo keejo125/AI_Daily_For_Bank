@@ -1,14 +1,14 @@
 ---
 publish_time: 1786618843
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  华为 2012 实验室、华为云、终端、计算联合构建的开源 AI Agent 平台 openJiuwen，将其蜂群智能体升级为 WorkSwarm 蜂群办公智能体，率先上架鸿蒙 PC 应用市场并支持 Windows、Mac。WorkSwarm 的理念是：办公智能体的下一站不是更聪明的单个助手，而是一支会协作、会成长、人也身在其中的 AI 团队——统一工作台内置“工作”与“Code”双空间，按任务复杂度在“单 Agent”与“集群”模式间切换。文章指出，写汇报、做工具、组织评审等办公任务本质都是多角色接力的工序链，单助手体验仍停留在“多了一个对话框”，而蜂群模式让 AI 组队拆解、执行与验收。openJiuwen 还提出 Coordination Engineering（协同工程）思路，把“与 AI 组队”推向系统化。
 link: https://mp.weixin.qq.com/s/kjBBp0n3ZKC7UnN965vUZQ
 source: CSDN
 title: WorkSwarm 引领办公智能体新范式，重塑桌面生产力
 ---
-
 # WorkSwarm 引领办公智能体新范式，重塑桌面生产力
 
 来源：CSDN
