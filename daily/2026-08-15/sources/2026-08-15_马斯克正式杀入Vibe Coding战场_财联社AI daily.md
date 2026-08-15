@@ -1,0 +1,30 @@
+---
+publish_time: 1786749120
+status: pending
+category: 
+is_model_related: false
+digest: |
+link: https://mp.weixin.qq.com/s/InTplf1j6tOxkAgi7WPKaQ
+source: 财联社AI daily
+title: 马斯克正式杀入Vibe Coding战场
+---
+
+# 马斯克正式杀入Vibe Coding战场
+
+来源：财联社AI daily
+原文链接：https://mp.weixin.qq.com/s/InTplf1j6tOxkAgi7WPKaQ
+
+文|赵昊
+SpaceX已完成对人工智能编程初创公司Cursor的收购，这笔交易是埃隆·马斯克追赶Anthropic、OpenAI等竞争对手的重要一步。
+根据监管文件，这笔交易于8月14日正式生效。Cursor也在官网宣布正式被SpaceX收购，收购流程始于今年4月，当时两家公司宣布建立合作，以加速模型训练。
+来源：Cursor官网
+两个月前，SpaceX正式同意收购Cursor，助力其在编程工具领域追赶对手。这笔交易估值为600亿美元，使其成为科技行业中规模较大的一宗收购案。
+编程是当前AI应用中一个利润丰厚的市场。马斯克旗下的AI业务如今被称为SpaceXAI，此前在企业市场的应用有限，并经历了一系列裁员和组织重组。
+本月早些时候，马斯克在SpaceX的一场员工会议上表示，公司“必须在软件领域取得成功”。
+当时马斯克还强调，人工智能是SpaceX当下以及未来发展的核心。他在会议上表示：“到9月份，我们的AI收入将超过SpaceX的所有其他收入。”
+Cursor于2023年推出AI助手，旨在帮助程序员更高效地编写和调试代码。此后，它以历史级的速度崛起，并成为科技行业“氛围编程”（vibe coding）时代的核心参与者。
+随着交易完成，Cursor的联合创始人们将成为亿万富翁，而该初创公司的团队也将能够使用SpaceX储备的大量先进AI芯片。
+Cursor在博客文章中表示：“我们将能够使用全球规模最大的GPU集群，从而获得更多算力，构建更强大的模型，同时降低模型的运行成本。”
+今年7月（在交易正式完成之前），SpaceX和Cursor联合推出首个模型Grok 4.5。两家公司称，Grok 4.5专注于编程、金融、法律等任务，使用成本低于其他竞品模型。
+此后，SpaceX又推出了Grok Bot，这款产品能够像一支AI智能体团队一样，在一天之中持续接收并执行各种任务。此外，公司还推出了升级版Grok 4.6模型。
+Cursor之外，SpaceX还达成了一系列数十亿美元规模的交易，让Anthropic、谷歌等能够使用其计算资源。
