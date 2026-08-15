@@ -1,0 +1,69 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-14_深度体验DeepSeek Harness，我原谅它涨价了_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-13_DeepSeek Harness：AI正在从“大脑”走向“工作系统”_Space AIThinker.md",
+          "name": "Space AIThinker",
+          "link": "https://mp.weixin.qq.com/s/nSKNkwNkLCQNbltd_NeLpQ"
+        },
+        {
+          "source_file": "sources/2026-08-14_DeepSeek Harness 拆解：一套能拼装的 Agent 架构_腾讯技术工程.md",
+          "name": "腾讯技术工程",
+          "link": "https://mp.weixin.qq.com/s/DeIty-Nn8tQvE4osy7_bpg"
+        },
+        {
+          "source_file": "sources/2026-08-14_DeepSeek 把 Harness 开源了：模型、工具、Agent Loop 全是插件_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/de9AljWc4ejW2KAyW8dD"
+        },
+        {
+          "source_file": "sources/2026-08-14_实测DeepSeek Harness！梁文锋憋的“黑色鲸鱼”大招，有惊喜_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/xSS-d5Pr36o7x7Cp25fPKQ"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-14_刚刚，GLM-5.3来了！拿下多个开源SOTA，我用它“魔改”DeepSeek Harness_智东西.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-14_Z.ai Ships GLM-5.3 Without Retraining the Base Mod_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"
+        },
+        {
+          "source_file": "sources/2026-08-14_刚刚，GLM-5.3发布：Coding更接近Fable 5！潜伏40年的bug都被揪出来了_量子位.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/08/473038.html"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-14_Introducing Gemini 3.7 Flash_Google DeepMind.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-14_Gemini 3.7 Flash 突袭！谷歌AI紧急换帅后的首个大动作，“内斗”真相浮出水面_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/h_RHEiNKd81-KIMXZBsWRw"
+        },
+        {
+          "source_file": "sources/2026-08-14_Google AI Just Released Gemini 3.7 Flash_ A Coding_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-14_百度文库网盘「库库AI」AI办公MAU超2500万，新推办公独立端_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-14_提前3年布局AI办公，百度率先突围_36氪.md",
+          "name": "36氪",
+          "link": "https://mp.weixin.qq.com/s/EdpvTrUi2-gHCtD0edyvXw"
+        }
+      ]
+    }
+  ]
+}

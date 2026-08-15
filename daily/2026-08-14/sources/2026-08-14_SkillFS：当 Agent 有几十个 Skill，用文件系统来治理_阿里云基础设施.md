@@ -1,13 +1,13 @@
 ---
 publish_time: 1786702498
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
-digest: |
-  阿里云基础设施团队介绍SkillFS：当Agent挂载几十个Skill时，用FUSE虚拟文件系统把Skill组织成可寻址、可版本化、可按需加载的目录树，解决Skill膨胀后的治理、检索与权限问题，是AgentSkill体系工程化落地的关键基础设施。
 link: https://mp.weixin.qq.com/s/0iilxBXDV9p7wLiYc7gHyg
 source: 阿里云基础设施
 title: SkillFS：当 Agent 有几十个 Skill，用文件系统来治理
+digest: |
+  阿里云基础设施团队介绍 ANOLISA 运行时组件 SkillFS：基于 FUSE 的虚拟文件系统，将物理 Skill 目录映射为 /skills/ 运行入口，按视图、安全策略和生命周期状态决定 Agent 实际可见的 Skill。通过默认运行视图、发现视图、安装候选入口及 .staging/.certified/.quarantine 等生命周期命名空间裁剪 Skill 集合，减少 Token 消耗与误选。安全上提供三态决策（current/fallback/hidden）、Active Mapping 热刷新、句柄级版本固定、.skill-meta 元数据保护。基于 38 个 Skill、27 场景实测，多数模型 Token 节省 7%~21%（kimi-2.5 省 21.37%）。已开源，独立 Rust 工程，仅支持 Linux。
 ---
 # SkillFS：当 Agent 有几十个 Skill，用文件系统来治理
 

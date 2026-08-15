@@ -1,13 +1,13 @@
 ---
 publish_time: 1786701401
-status: pending
-category: 
+status: confirmed
+category: 同业
 is_model_related: false
-digest: |
-  中国金融电脑+报道华为星河AI金融网络方案，以AI-Centric架构重构金融数据中心联接，面向大模型训练/推理的算力调度与低时延互联，构筑智慧金融新联接底座，服务银行等高并发金融场景。
 link: https://mp.weixin.qq.com/s/uAeFqIjyebWGhe3YBuDbBg
 source: 中国金融电脑+
 title: 凝金荟智 网行天下 | 华为星河AI金融网络，构筑AI-Centric智慧金融新联接
+digest: |
+  华为在 2026 金融网络创新峰会发布星河 AI 金融网络全栈升级，面向 AI 原生时代金融联接。华为指出金融机构三大挑战：2028 年部分大行 AI 面客业务增 50 倍但算力满足度仅 55%；长距算力调度算效劣化超 37%；AI 降低攻击门槛（前沿模型 2 天入侵摩根大通系统）。方案含 AI Fabric（全网吞吐 98%、Llama3-70B Token 效率最高提 5.8 倍）、AI WAN（远程用算效率 95%+）、AI Campus 三大板块，及三层安全围栏（AI 防火墙/HiSec AIGuard/AI EDR）。中信银行联合落地自动驾驶网络 ADN L4，17 大场景自动生成变更；Gartner “Hands-Off NetOps” 华为首次第一。已应用于 1800+ 金融机构。
 ---
 # 凝金荟智 网行天下 | 华为星河AI金融网络，构筑AI-Centric智慧金融新联接
 

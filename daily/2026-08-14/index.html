@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-08-14</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.card-digest p {
+  margin: 0 0 8px 0;
+}
+.card-digest p:last-child {
+  margin-bottom: 0;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+.original-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: transparent;
+  color: var(--cat-intl, #3b82f6);
+  border: 1px solid currentColor;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition);
+  min-height: 32px;
+}
+.original-link:hover {
+  background: var(--cat-intl, #3b82f6);
+  color: #fff;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-08-14</div>
+    <div class="banner-stats" id="banner-stats">国际 7 篇 · 国内 11 篇 · 同业 1 篇 · 其他 2 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">谷歌 DeepMind 发布 Gemini 3.7 Flash</div><div class="source-tags"><span class="source-tag"><a href="https://deepmind.google/blog/introducing-gemini-3-7-flash/" target="_blank">Google DeepMind</a></span><span class="source-tag"><a href="https://mp.weixin.qq.com/s/h_RHEiNKd81-KIMXZBsWRw" target="_blank">InfoQ</a></span><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/" target="_blank">MarkTechPost</a></span></div><div class="card-digest">Google DeepMind于8月13日发布Gemini 3.7 Flash，定位为迄今最智能的“workhorse”（主力）编码与Agent模型，距3.6 Flash仅三周，源于开发者反馈与算法创新。编码显著进步：FrontierCode 1.1 Main 43.6% vs 34.4%，DeepSWE v1.1 65.3% vs 49.0%；Web开发WebDev Arena Elo 1588 vs 1538。知识密集领域同步提升：GDP.pdf（复杂文档处理）34.0% vs 22.0%，AutomationBench（真实业务工作流）30.4% vs 17.0%。开发者体验改善：更好适应障碍、澄清意图、更谨密地做多步规划与工具调用，减少人工监督与重试。价格方面，年内 introductory 价为$0.75/百万输入token、$3.75/百万输出token，为3.6 Flash原价一半。Gemini Spark（160+国Pro/Ultra订阅）即日起换用该模型，提升Workspace工具调用与多技能工作流质量。安全上更新CBRN与网络进攻防护。开发者可通过Gemini API、AI Studio、Antigravity及Gemini Enterprise等渠道使用。</div></div>
+<div class="card"><div class="card-title">AI 圈上演神级互撕！Codex、Claude Code 两位负责人公开对喷</div><span class="source-tag"><a href="https://www.infoq.cn/article/YWXm26HRwC9ySEGZ9Lpp" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ 整理 Codex（OpenAI）与 Claude Code（Anthropic）两位负责人围绕“模型能力 vs Agent 编排层”的公开交锋。核心信号：AI 竞争的重心正从纯模型能力转向 Agentic Harness——连接模型、工具与用户环境的编排层（多以 Rust 实现）。OpenAI 在 GPT-5.6 架构中已把 Agentic Harness 单列，Codex/ChatGPT Work 采用一套 Rust 编排系统调度工具调用与环境交互。对银行研发启示：自建 Agent 系统时，“harness”（工具集成、环境绑定、长程编排）的重要性已不亚于模型选型，并正成为差异化竞争点。</div></div>
+<div class="card"><div class="card-title">Linux内核被AI搞“太大了”！Linus吐槽：AI找了一堆小Bug，但这已成为「新常态」</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/3uK55H5jNtuYaCbEITkdZg" target="_blank">CSDN</a></span><div class="card-digest">Linus Torvalds 发布 Linux 7.2 rc7，吐槽 AI 辅助编程工具批量生成大量微小修复补丁，使内核“发福”、commit 数创多年新高，称这是“新常态”（rc6 已是多年来最大版本）。AI 工具能在短时间内扫描海量代码找出边界条件问题，但补丁“量太大”，整体 diff 规模远超往常。Linus 5 月曾抱怨 AI 生成的 Bug 报告泛滥、安全邮件列表“几乎无法管理”；7 月态度转圜，称 Linux 不反 AI，但要求提交者对每行代码负责、反对用 AI 灌劣质代码。7.2 引入缓存感知调度、DRM 公平调度等特性。社区褒贬不一，核心担忧是“人们已不会手写代码，如何审查 AI 结果”。</div></div>
+<div class="card"><div class="card-title">Rust 给 AI 编程立新规：能帮你看，不能替你写，用多了还会“熔断”</div><span class="source-tag"><a href="https://www.infoq.cn/article/4t8SKMGI28buD345I2Ta" target="_blank">InfoQ</a></span><div class="card-digest">Rust 项目五个团队（编译器、标准库、类型系统、rustdoc、bootstrap）正式采纳 LLM 使用准则，作者 Jynn Nelson 于 2026-08-05 在 Inside Rust 公布。核心原则：可用 LLM 思考、审查、翻译、发现 Bug，但不可“创造”代码；LLM 参与须披露，隐瞒视为违反行为准则。准则分三层：私人用途完全允许；翻译、微小修改、找 Bug、审查机器人须披露；直接生成评论/文档/编译器诊断明确禁止。新贡献者受限更严，并设“熔断”机制——任一六周窗口内 LLM 创建 PR 超半数，则全部暂停合并并冷却至少 10 天。背景是 PR 信号失效、审查资源紧张。与 Zig 彻底禁用 LLM 形成对比。</div></div>
+<div class="card"><div class="card-title">Zig 创始人直言，Bun 靠 Claude 生成的 Rust 重构版是“没人把关的烂代码”</div><span class="source-tag"><a href="https://www.infoq.cn/article/5JAOs4xARzjGb5sj2LxG" target="_blank">InfoQ</a></span><div class="card-digest">Bun 创始人 Jarred Sumner 借助约 50 个并行 Claude Code 工作流、11 天将 Bun 从 Zig 移植到 Rust，生成超 100 万行 Rust 代码，按 API 定价耗资约 16.5 万美元；基于百万条断言测试套件全平台 100% 通过。Anthropic 于 2025-12 收购 Bun。Zig 创始人 Andrew Kelley 批评此举，称问题不在语言或 AI，而在 Bun 的“价值观体系”与糟糕编程实践，其此前已有大量漏洞（含关联 Claude 源码泄露的 Bundler 缺陷）。他指出缺乏工程监督的百万行 AI 代码隐患巨大：“测试连 Zig 的 Bug 都发现不了，怎会发现 Rust 的？”Zig 以“不接受 AI 贡献”政策拒绝 Bun 的改动。</div></div>
+<div class="card"><div class="card-title">谷歌开始肢解DeepMind，数个团队被划归总部</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/473153.html" target="_blank">量子位</a></span><div class="card-digest">量子位据路透社报道，Google 将 DeepMind 多个非技术团队划回总部、研究线保留；联合创始人布林重新介入，明确把资源向“递归自我改进”（AI 自进化训练循环）倾斜，并推动 Gemini 加速融入搜索、Cloud 等产品。文中披露 Gemini 因 TPU 算力在训练／消费产品／Cloud 间争夺而受阻、3.5 Pro 取消、发版慢于对手。对银行研发启示：前沿实验室正围绕“自进化训练”与“产品化速度”重组；算力分配（TPU／训练资源）是模型研发的决定性约束，组织效率已成为比纯技术更关键的变量。</div></div>
+<div class="card"><div class="card-title">走进 CTO 圆桌：构建 AI 原生组织的工程领导者经验分享 | 技术趋势</div><span class="source-tag"><a href="https://www.infoq.cn/article/cFMO2oN8SyaR9vuUVUeQ" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ报道Snowflake Summit 2026首届CTO Circle，350多位来自金融、电信、零售、科技行业的CTO探讨如何构建AI原生工程组织，讨论收敛于三主题：让AI真正进生产、在速度与风险间平衡、为AI重新设计工程团队。Snowflake把开发者当客户经营，18个月内内部开发者NPS提升30+点；AI采纳分Adoption/Mastery/Optimization三阶段，竞争优势来自把成功工作流制度化。Jeremy Burton强调AI有效性取决于上下文（语义层、知识图谱、MCP接口）而非仅数据；Netflix根因分析的成功更多依赖多年数据架构沉淀。Hex解散集中式AI团队、把责任下放产品团队（“burning the boats”）；Barclays强调速度须与治理、信任配套。Capital One指出工程价值转向规划、架构与判断；Cursor COO称code review与验证成新瓶颈；Cerebras以“Code Yellow”推动组织变革。核心结论：AI-native不在于谁最快用工具，而在于组织多快学习、沉淀并制度化更好的软件构建方式。</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">刚刚，GLM-5.3来了！拿下多个开源SOTA，我用它“魔改”DeepSeek Harness</div><div class="source-tags"><span class="source-tag"><a href="https://mp.weixin.qq.com/s/YryeWZygdwA2OOS98cvGDw" target="_blank">智东西</a></span><span class="source-tag"><a href="https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/" target="_blank">MarkTechPost</a></span><span class="source-tag"><a href="https://www.qbitai.com/2026/08/473038.html" target="_blank">量子位</a></span></div><div class="card-digest">智东西报道：智谱发布最新旗舰模型GLM-5.3（7430亿参数，主打编程），将在两周内开源。多项基准居已开/将开模型第一，编程与智能体能力逼近Claude Fable 5、GPT-5.6 Sol，与Kimi K3互有胜负、领先DeepSeek-V4-Pro-0813，网安能力占优。同档思考预算下准确率31.5%（超Opus 4.8的29.5%），平均输出约5万token不及Opus一半。实测：搭配ZCode从OpenStreetMap拉取8万+节点，1:1复刻陆家嘴—外滩3D驾驶游戏（约4900行代码，埋雷条款全部通过）；“裸考”DeepSeek刚开源的Harness（7400+文件仓库），开发零侵入“人格插件”（约690万token、28项文档门禁全过），展现跨包溯源与遵循陌生规范的能力。能力提升主要来自后训练Scaling，并涌现网安能力（CyberGym 84.5%）；发布前联合清华等多团队红队测试2周发现2436个漏洞，已报送国家漏洞库。模型已上线ZCode、AutoClaw等，API将很快推出。</div></div>
+<div class="card"><div class="card-title">苹果与阿里巴巴合作为中国市场训练专用大模型</div><span class="source-tag"><a href="https://www.solidot.org/story?sid=85095" target="_blank">Solidot</a></span><div class="card-digest">Solidot讯：苹果与阿里巴巴合作为中国市场训练了一个专用大模型。此前苹果倾向采用中国合作伙伴的模型，为在华iPhone等设备提供生成式AI功能；如今推出专为中国市场定制的AI模型，意在竞争最激烈的中国市场更好地掌控AI体验。Apple Intelligence预计将在未来数月通过iOS更新在中国推出。近年苹果在华份额已被华为等本土竞争对手蚕食，竞争对手凭AI手机迅速抢占领先。网信办已登记苹果的生成式AI服务，为国行iPhone首次登陆Apple Intelligence铺平了监管道路。</div></div>
+<div class="card"><div class="card-title">SkillFS：当 Agent 有几十个 Skill，用文件系统来治理</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/0iilxBXDV9p7wLiYc7gHyg" target="_blank">阿里云基础设施</a></span><div class="card-digest">阿里云基础设施团队介绍 ANOLISA 运行时组件 SkillFS：基于 FUSE 的虚拟文件系统，将物理 Skill 目录映射为 /skills/ 运行入口，按视图、安全策略和生命周期状态决定 Agent 实际可见的 Skill。通过默认运行视图、发现视图、安装候选入口及 .staging/.certified/.quarantine 等生命周期命名空间裁剪 Skill 集合，减少 Token 消耗与误选。安全上提供三态决策（current/fallback/hidden）、Active Mapping 热刷新、句柄级版本固定、.skill-meta 元数据保护。基于 38 个 Skill、27 场景实测，多数模型 Token 节省 7%~21%（kimi-2.5 省 21.37%）。已开源，独立 Rust 工程，仅支持 Linux。</div></div>
+<div class="card"><div class="card-title">一切皆插件之后，Agent 工程的新范式</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/OgYIw9l8PBeRk5MGMhYTmA" target="_blank">阿里云云原生</a></span><div class="card-digest">阿里云云原生解析 DeepSeek Harness 提出的“一切皆插件”Agent 工程新范式：模型、工具、会话、记忆、UI、Agent 主循环等全部做成可插拔组件，以“日志为唯一真相源”实现每次运行可回放、分叉、审计，降低 Agent 体验与成本优化复杂度。对比 LangChain 等“向上封装”框架在模型黑盒外叠加框架黑盒、定位困难；Pi Agent 走“最小核心+按需扩展”；DeepSeek Harness 插件化更彻底，分 Bundle→Profile→Patch→Overlay 四层叠加成插件树。该透明架构使效果调优（换循环/上下文注入）与成本调优（看清每次 Token 来源）可操作，但目前仍为开发者预览阶段。</div></div>
+<div class="card"><div class="card-title">中国算力新版图：训练西迁、推理东沉</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/MF1SDfWiFX_AcZMc51Bc8w" target="_blank">财联社AI daily</a></span><div class="card-digest">财联社走访内蒙古乌兰察布、青海海东、黑龙江哈尔滨等地算力中心，呈现中国算力新版图。乌兰察布集聚华为、苹果、阿里、快手、腾讯等，绿电占比约 45%、电价 3 毛 2~3 毛 5（比东部低约 50 亿元/年·GW 级），DeepSeek 早有租用；青海建成机架 49760 架、算力 28116PFLOPS，为首个绿色算电协同试点省；哈尔滨实现 AI 芯片 100% 国产化。AIDC 时代单机柜功率达 100kW、未来或达 1000kW，高功率数据中心需求旺盛、低功率闲置率高。趋势上“训练西迁、推理东沉”：万卡集群已迁至胡焕庸线以西，推理算力向长三角、大湾区、京津冀下沉。</div></div>
+<div class="card"><div class="card-title">从PUE到TPW，商汤大装置首提AI基础设施新效能标尺</div><span class="source-tag"><a href="https://www.infoq.cn/article/sqrwd9GiTamVIiLTkRHe" target="_blank">InfoQ</a></span><div class="card-digest">商汤大装置提出 AI 基础设施新效能标尺 TPW（Tokens Per Watt，单位电力成本产生的有效 Token），弥补 PUE 只测“用了多少电”、答不了“产出多少价值”的局限，打通电力到 Token 的评价格局。实现路径：八级数据穿透体系贯通任务—算力—物理用电映射；按业务优先级与延迟容忍度分级调度（在线推理即时、训练批处理可错峰）释放资源弹性；结合储能、需求响应放大负荷弹性。临港 AIDC 实测：现有供电下 IT 有效承载提升约 60%；迎峰度夏需求响应削减午间负荷 75%、释放 4.6 万度削峰电量。算电协同 Agent 使单位电力 Token 产出提升 80%、电费低于同区约 10%、负荷预测准确率达 96%。</div></div>
+<div class="card"><div class="card-title">企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/D4RId9oiULoFj567vawPig" target="_blank">腾讯云开发者</a></span><div class="card-digest">腾讯云开发者分享企业 Agent 落地实践：企业 Agent 的分水岭不是模型而是运行时（harness）。架构分四层——入口层、控制面（skill/配置/评测）、企业 harness（身份/权限/审计）、通用 runtime。核心三件套：统一 harness 承载执行与安全；skill 把领域经验变成可治理资产（含联邦所有权、两阶段路由由检索预筛+LLM 终选）；虚拟文件系统 VFS 管理长任务上下文与产物（evidence/working/artifacts/checkpoints 分层），并与 sandbox 隔离。安全采用 effective capability = 用户授权∩配置∩skill 策略∩会话 scope∩工具侧强制，至少四道门。以 Stripe Kai 为案例，给出从基线治理到统一 harness、两阶段路由、trace-to-skill 闭环的四阶段演进路径。</div></div>
+<div class="card"><div class="card-title">深度体验DeepSeek Harness，我原谅它涨价了</div><div class="source-tags"><span class="source-tag"><a href="https://www.qbitai.com/2026/08/472208.html" target="_blank">量子位</a></span><span class="source-tag"><a href="https://mp.weixin.qq.com/s/nSKNkwNkLCQNbltd_NeLpQ" target="_blank">Space AIThinker</a></span><span class="source-tag"><a href="https://mp.weixin.qq.com/s/DeIty-Nn8tQvE4osy7_bpg" target="_blank">腾讯技术工程</a></span><span class="source-tag"><a href="https://www.infoq.cn/article/de9AljWc4ejW2KAyW8dD" target="_blank">InfoQ</a></span><span class="source-tag"><a href="https://mp.weixin.qq.com/s/xSS-d5Pr36o7x7Cp25fPKQ" target="_blank">智东西</a></span></div><div class="card-digest">量子位深度体验：DeepSeek Harness（DSH，“黑鲸”）终于发布并开源源代码，作者称其为“彻头彻尾为自进化与DIY而生的马鞍”。其核心是“一切皆插件”架构，以Cordis为底座（类比乐高底板），官方内置100+插件，开发者可自定义Agent运行时；作者称其为“Agent时代的安卓”，相对Codex闭源哲学彻底开放。提供四类Agent预设：标准、PTC（Code Mode SDK）、极简、创造模式。体验细节：开启会话需选工作目录与Agent预设；“轨迹”功能可回放原始事件级记录监控Agent内部行为；内置dsh-code-review等开发Skill；黑鲸在指令不明时主动拉起提问、开展头脑风暴。Token统计表显示缓存命中率常达99%。实测凸显长程任务能力（猪八戒3D白模猛跑20分钟、社区有10小时案例）。架构上Cordis允许模型在不打断任务时自写插件、再融回主线，作者视其为目前较可落地的“自进化”实现路线。</div></div>
+<div class="card"><div class="card-title">百度文库网盘「库库AI」AI办公MAU超2500万，新推办公独立端</div><div class="source-tags"><span class="source-tag"><a href="https://www.qbitai.com/2026/08/473144.html" target="_blank">量子位</a></span><span class="source-tag"><a href="https://mp.weixin.qq.com/s/EdpvTrUi2-gHCtD0edyvXw" target="_blank">36氪</a></span></div><div class="card-digest">8月14日百度AI Day上，百度文库网盘通用智能体GenFlow正式官宣中文名「库库AI」。今年4月GenFlow月活破1亿，其中AI办公MAU超2500万，居通用AI办公赛道第一。文库网盘新推库库AI独立端（PC客户端、网页端、小程序、企业版）。三年前即布局AI办公：2023年大模型重构推出智能PPT，2024年文库网盘融合打通18亿文档数据飞轮；2025年4月上线1.0、一年内迭代至4.0，可调用Office Agent并行完成PPT/Excel/Word等复杂任务，支持全模态生成与元素级编辑。底层为MoE架构、全模态编辑器、Skill、子Agent、长期记忆与端云协同，获国家工信安全中心Office Agent工作流测评第一。办公模式首期面向金融场景优化，支持跨设备端云任务接力、全天候自动化任务执行（如股票盯盘），内置金融数据与股票/量化等专家Skill。企业版打通公域、私域与行业三类数据，依托80万家企业应用经验、500余家机构共建Skills生态。</div></div>
+<div class="card"><div class="card-title">算力需求两年涨10倍，机器人为了走进真实物理世界，正在疯狂「吃算力」</div><span class="source-tag"><a href="https://www.qbitai.com/2026/08/472722.html" target="_blank">量子位</a></span><div class="card-digest">量子位报道，逐际动力「创学营2026」黑客松借助阿里云无影灵构云工作站跑仿真评测。逐际动力CTO谌骅称过去两年研发算力需求增长5–10倍，“有多少卡吃多少卡”。机器人研发需经历遥操作采集、算法调试、仿真训练、真机部署，是围绕算力、数据与工程效率的长期竞赛。阿里云张献涛提出机器人时代需要“第三朵云”，让算力、开发环境与3D交互一起进入研发流程。传统“采购工作站—配GPU—逐台维护”模式痛点突出：CUDA/ROS2/Isaac Sim版本冲突、新人环境配置耗大半天。无影灵构将软件驱动打包成固定镜像一键复制；算力按任务弹性选配GPU规格；自研ASP流化协议在Isaac Sim对比WebRTC时帧率提升约32%（达满帧97%），10%丢包弱网下仍27fps，带宽降约50%。今年4月逐际动力开源具身智能大模型工程底座FluxVLA Engine，与无影灵构方向呼应。多家具身头部企业已基于无影灵构构建云上数据采集工厂与仿真评测，加速研发周期。</div></div>
+<div class="card"><div class="card-title">让 AI 替人写代码这件事，人类已经尝试了 70 年</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/AaGUtq4b9AbmM_HJeE9-xA" target="_blank">CSDN</a></span><div class="card-digest">CSDN长文节选自邹欣《构建之法》第四版，系统回顾AI辅助编程70年探索史。1952年格蕾丝·霍珀提出编程自动化愿景，FORTRAN(1957)/COBOL以更高抽象提升效率；1968年“软件工程”诞生，80–90年代CASE工具试图自动化软件全生命周期却因方法论锁定、与敏捷冲突而衰落。MIT「程序员学徒」(1987)精准预言今日AI结对编程，但因识别计划等价于子图同构（NP完全）的组合爆炸失败，印证萨顿“苦涩的教训”；90年代微软西蒙尼「意图编程」主张以结构化树存储“意图”而非文本，因生态惯性与战略冲突未普及，其哲学以DSL形式传承。现代纪元以统计学习取胜：code2vec(2018)借AST捕捉结构、Transformer(2017)与BERT、CodeBERT(2020)直至大模型，标志统计方法对形式化方法的决定性胜利。结论：技术会变、问题永恒，AI增强而非取代老方法，工程师需培养判断何时用何工具的智慧。</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="card"><div class="card-title">凝金荟智 网行天下 | 华为星河AI金融网络，构筑AI-Centric智慧金融新联接</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/uAeFqIjyebWGhe3YBuDbBg" target="_blank">中国金融电脑+</a></span><div class="card-digest">华为在 2026 金融网络创新峰会发布星河 AI 金融网络全栈升级，面向 AI 原生时代金融联接。华为指出金融机构三大挑战：2028 年部分大行 AI 面客业务增 50 倍但算力满足度仅 55%；长距算力调度算效劣化超 37%；AI 降低攻击门槛（前沿模型 2 天入侵摩根大通系统）。方案含 AI Fabric（全网吞吐 98%、Llama3-70B Token 效率最高提 5.8 倍）、AI WAN（远程用算效率 95%+）、AI Campus 三大板块，及三层安全围栏（AI 防火墙/HiSec AIGuard/AI EDR）。中信银行联合落地自动驾驶网络 ADN L4，17 大场景自动生成变更；Gartner “Hands-Off NetOps” 华为首次第一。已应用于 1800+ 金融机构。</div></div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="card"><div class="card-title">AI技术是真的，泡沫也是真的！华尔街科技分析师：免费额度、低价Token和模型红利都可能结束，大模型最终会像电力一样“消失”</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/RuLXKXIc8H1Hdp6Xlbi8zQ" target="_blank">51CTO技术栈</a></span><div class="card-digest">51CTO技术栈转载华尔街科技分析师、MIT数字经济研究员Paul Kedrosky观点：AI技术真实，但泡沫也可能真实。他质疑——科技公司为支撑能力重金建数据中心、采购芯片，而Token持续降价、模型差距收窄，投入越来越重、卖出的“智能”却越来越便宜，生意能否持续存疑。Token越便宜，卖Token越难赚钱；新模型送额度、云厂商折扣多含推广成本，长期价格未必低。头部模型最佳实践趋近，换模型机会成本降低，开发者开始“货比三家”，建议业务代码别绑死单一SDK、留统一接口、准备降级路径。模型公司为获回报向应用层迁移（编程工具、Agent、办公入口）。泡沫若破，先消失的或是补贴与“套壳”产品。Kedrosky判断大模型最终会像电力退到幕后，竞争壁垒留在行业数据、工作流与交付责任，而非仅“接上了电”。</div></div>
+<div class="card"><div class="card-title">今天企业「不用AI」才是最大的成本</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/UQiU3UjVbWPedPqEZpWZEA" target="_blank">软件工程3.0时代</a></span><div class="card-digest">软件工程3.0时代观点文指出：2026年企业“不用AI”才是最大成本。人力成本是非线性复杂系统（招、培、留、管、协调、波动），而AI Agent运行一小时全成本约6–8美元，低于印度BPO的10美元、仅为美国后台员工的1/5左右。可见账本：金山WPS智能体使月报从3–5天压至0.5–1.5天；首钢45个AI体提升热轧排程80%；农信数智AI巡检降猪只发病率约30%；南方电网配网智能体提升规划效率80%。非线性收益：数命科技11人冲击5–12亿营收；林晰智能3人撬动300家工厂；极光AI代理打入日本市场。人才鸿沟上，要求“生产级系统交付”岗位同比+217%。资本验证：摩根士丹利量化生成式AI投资ROIC达25%–50%；阿里云AI收入连续十季度三位数增长；过去一年AI推理成本降超九成。结论：用AI成本下降、不用AI成本指数上升，两条曲线已完成历史性交叉。</div></div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "谷歌 DeepMind 发布 Gemini 3.7 Flash", "source": "Google DeepMind", "digest": "Google DeepMind于8月13日发布Gemini 3.7 Flash，定位为迄今最智能的“workhorse”（主力）编码与Agent模型，距3.6 Flash仅三周，源于开发者反馈与算法创新。编码显著进步：FrontierCode 1.1 Main 43.6% vs 34.4%，DeepSWE v1.1 65.3% vs 49.0%；Web开发WebDev Arena Elo 1588 vs 1538。知识密集领域同步提升：GDP.pdf（复杂文档处理）34.0% vs 22.0%，AutomationBench（真实业务工作流）30.4% vs 17.0%。开发者体验改善：更好适应障碍、澄清意图、更谨密地做多步规划与工具调用，减少人工监督与重试。价格方面，年内 introductory 价为$0.75/百万输入token、$3.75/百万输出token，为3.6 Flash原价一半。Gemini Spark（160+国Pro/Ultra订阅）即日起换用该模型，提升Workspace工具调用与多技能工作流质量。安全上更新CBRN与网络进攻防护。开发者可通过Gemini API、AI Studio、Antigravity及Gemini Enterprise等渠道使用。", "link": "https://deepmind.google/blog/introducing-gemini-3-7-flash/", "content": "", "category": "国际", "is_model_related": true, "source_file": "sources/2026-08-14_Introducing Gemini 3.7 Flash_Google DeepMind.md", "source_items": [{"name": "Google DeepMind", "link": "https://deepmind.google/blog/introducing-gemini-3-7-flash/"}, {"source_file": "sources/2026-08-14_Gemini 3.7 Flash 突袭！谷歌AI紧急换帅后的首个大动作，“内斗”真相浮出水面_InfoQ.md", "name": "InfoQ", "link": "https://mp.weixin.qq.com/s/h_RHEiNKd81-KIMXZBsWRw"}, {"source_file": "sources/2026-08-14_Google AI Just Released Gemini 3.7 Flash_ A Coding_MarkTechPost.md", "name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/"}]}, {"title": "AI 圈上演神级互撕！Codex、Claude Code 两位负责人公开对喷", "source": "InfoQ", "digest": "InfoQ 整理 Codex（OpenAI）与 Claude Code（Anthropic）两位负责人围绕“模型能力 vs Agent 编排层”的公开交锋。核心信号：AI 竞争的重心正从纯模型能力转向 Agentic Harness——连接模型、工具与用户环境的编排层（多以 Rust 实现）。OpenAI 在 GPT-5.6 架构中已把 Agentic Harness 单列，Codex/ChatGPT Work 采用一套 Rust 编排系统调度工具调用与环境交互。对银行研发启示：自建 Agent 系统时，“harness”（工具集成、环境绑定、长程编排）的重要性已不亚于模型选型，并正成为差异化竞争点。", "link": "https://www.infoq.cn/article/YWXm26HRwC9ySEGZ9Lpp", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_AI 圈上演神级互撕！Codex、Claude Code 两位负责人公开对喷_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/YWXm26HRwC9ySEGZ9Lpp"}]}, {"title": "Linux内核被AI搞“太大了”！Linus吐槽：AI找了一堆小Bug，但这已成为「新常态」", "source": "CSDN", "digest": "Linus Torvalds 发布 Linux 7.2 rc7，吐槽 AI 辅助编程工具批量生成大量微小修复补丁，使内核“发福”、commit 数创多年新高，称这是“新常态”（rc6 已是多年来最大版本）。AI 工具能在短时间内扫描海量代码找出边界条件问题，但补丁“量太大”，整体 diff 规模远超往常。Linus 5 月曾抱怨 AI 生成的 Bug 报告泛滥、安全邮件列表“几乎无法管理”；7 月态度转圜，称 Linux 不反 AI，但要求提交者对每行代码负责、反对用 AI 灌劣质代码。7.2 引入缓存感知调度、DRM 公平调度等特性。社区褒贬不一，核心担忧是“人们已不会手写代码，如何审查 AI 结果”。", "link": "https://mp.weixin.qq.com/s/3uK55H5jNtuYaCbEITkdZg", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_Linux内核被AI搞“太大了”！Linus吐槽：AI找了一堆小Bug，但这已成为「新常态」_CSDN.md", "source_items": [{"name": "CSDN", "link": "https://mp.weixin.qq.com/s/3uK55H5jNtuYaCbEITkdZg"}]}, {"title": "Rust 给 AI 编程立新规：能帮你看，不能替你写，用多了还会“熔断”", "source": "InfoQ", "digest": "Rust 项目五个团队（编译器、标准库、类型系统、rustdoc、bootstrap）正式采纳 LLM 使用准则，作者 Jynn Nelson 于 2026-08-05 在 Inside Rust 公布。核心原则：可用 LLM 思考、审查、翻译、发现 Bug，但不可“创造”代码；LLM 参与须披露，隐瞒视为违反行为准则。准则分三层：私人用途完全允许；翻译、微小修改、找 Bug、审查机器人须披露；直接生成评论/文档/编译器诊断明确禁止。新贡献者受限更严，并设“熔断”机制——任一六周窗口内 LLM 创建 PR 超半数，则全部暂停合并并冷却至少 10 天。背景是 PR 信号失效、审查资源紧张。与 Zig 彻底禁用 LLM 形成对比。", "link": "https://www.infoq.cn/article/4t8SKMGI28buD345I2Ta", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_Rust 给 AI 编程立新规：能帮你看，不能替你写，用多了还会“熔断”_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/4t8SKMGI28buD345I2Ta"}]}, {"title": "Zig 创始人直言，Bun 靠 Claude 生成的 Rust 重构版是“没人把关的烂代码”", "source": "InfoQ", "digest": "Bun 创始人 Jarred Sumner 借助约 50 个并行 Claude Code 工作流、11 天将 Bun 从 Zig 移植到 Rust，生成超 100 万行 Rust 代码，按 API 定价耗资约 16.5 万美元；基于百万条断言测试套件全平台 100% 通过。Anthropic 于 2025-12 收购 Bun。Zig 创始人 Andrew Kelley 批评此举，称问题不在语言或 AI，而在 Bun 的“价值观体系”与糟糕编程实践，其此前已有大量漏洞（含关联 Claude 源码泄露的 Bundler 缺陷）。他指出缺乏工程监督的百万行 AI 代码隐患巨大：“测试连 Zig 的 Bug 都发现不了，怎会发现 Rust 的？”Zig 以“不接受 AI 贡献”政策拒绝 Bun 的改动。", "link": "https://www.infoq.cn/article/5JAOs4xARzjGb5sj2LxG", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_Zig 创始人直言，Bun 靠 Claude 生成的 Rust 重构版是“没人把关的烂代码”_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/5JAOs4xARzjGb5sj2LxG"}]}, {"title": "谷歌开始肢解DeepMind，数个团队被划归总部", "source": "量子位", "digest": "量子位据路透社报道，Google 将 DeepMind 多个非技术团队划回总部、研究线保留；联合创始人布林重新介入，明确把资源向“递归自我改进”（AI 自进化训练循环）倾斜，并推动 Gemini 加速融入搜索、Cloud 等产品。文中披露 Gemini 因 TPU 算力在训练／消费产品／Cloud 间争夺而受阻、3.5 Pro 取消、发版慢于对手。对银行研发启示：前沿实验室正围绕“自进化训练”与“产品化速度”重组；算力分配（TPU／训练资源）是模型研发的决定性约束，组织效率已成为比纯技术更关键的变量。", "link": "https://www.qbitai.com/2026/08/473153.html", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_谷歌开始肢解DeepMind，数个团队被划归总部_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/473153.html"}]}, {"title": "走进 CTO 圆桌：构建 AI 原生组织的工程领导者经验分享 | 技术趋势", "source": "InfoQ", "digest": "InfoQ报道Snowflake Summit 2026首届CTO Circle，350多位来自金融、电信、零售、科技行业的CTO探讨如何构建AI原生工程组织，讨论收敛于三主题：让AI真正进生产、在速度与风险间平衡、为AI重新设计工程团队。Snowflake把开发者当客户经营，18个月内内部开发者NPS提升30+点；AI采纳分Adoption/Mastery/Optimization三阶段，竞争优势来自把成功工作流制度化。Jeremy Burton强调AI有效性取决于上下文（语义层、知识图谱、MCP接口）而非仅数据；Netflix根因分析的成功更多依赖多年数据架构沉淀。Hex解散集中式AI团队、把责任下放产品团队（“burning the boats”）；Barclays强调速度须与治理、信任配套。Capital One指出工程价值转向规划、架构与判断；Cursor COO称code review与验证成新瓶颈；Cerebras以“Code Yellow”推动组织变革。核心结论：AI-native不在于谁最快用工具，而在于组织多快学习、沉淀并制度化更好的软件构建方式。", "link": "https://www.infoq.cn/article/cFMO2oN8SyaR9vuUVUeQ", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-08-14_走进 CTO 圆桌：构建 AI 原生组织的工程领导者经验分享 _ 技术趋势_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/cFMO2oN8SyaR9vuUVUeQ"}]}, {"title": "刚刚，GLM-5.3来了！拿下多个开源SOTA，我用它“魔改”DeepSeek Harness", "source": "智东西", "digest": "智东西报道：智谱发布最新旗舰模型GLM-5.3（7430亿参数，主打编程），将在两周内开源。多项基准居已开/将开模型第一，编程与智能体能力逼近Claude Fable 5、GPT-5.6 Sol，与Kimi K3互有胜负、领先DeepSeek-V4-Pro-0813，网安能力占优。同档思考预算下准确率31.5%（超Opus 4.8的29.5%），平均输出约5万token不及Opus一半。实测：搭配ZCode从OpenStreetMap拉取8万+节点，1:1复刻陆家嘴—外滩3D驾驶游戏（约4900行代码，埋雷条款全部通过）；“裸考”DeepSeek刚开源的Harness（7400+文件仓库），开发零侵入“人格插件”（约690万token、28项文档门禁全过），展现跨包溯源与遵循陌生规范的能力。能力提升主要来自后训练Scaling，并涌现网安能力（CyberGym 84.5%）；发布前联合清华等多团队红队测试2周发现2436个漏洞，已报送国家漏洞库。模型已上线ZCode、AutoClaw等，API将很快推出。", "link": "https://mp.weixin.qq.com/s/YryeWZygdwA2OOS98cvGDw", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-08-14_刚刚，GLM-5.3来了！拿下多个开源SOTA，我用它“魔改”DeepSeek Harness_智东西.md", "source_items": [{"name": "智东西", "link": "https://mp.weixin.qq.com/s/YryeWZygdwA2OOS98cvGDw"}, {"source_file": "sources/2026-08-14_Z.ai Ships GLM-5.3 Without Retraining the Base Mod_MarkTechPost.md", "name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/"}, {"source_file": "sources/2026-08-14_刚刚，GLM-5.3发布：Coding更接近Fable 5！潜伏40年的bug都被揪出来了_量子位.md", "name": "量子位", "link": "https://www.qbitai.com/2026/08/473038.html"}]}, {"title": "苹果与阿里巴巴合作为中国市场训练专用大模型", "source": "Solidot", "digest": "Solidot讯：苹果与阿里巴巴合作为中国市场训练了一个专用大模型。此前苹果倾向采用中国合作伙伴的模型，为在华iPhone等设备提供生成式AI功能；如今推出专为中国市场定制的AI模型，意在竞争最激烈的中国市场更好地掌控AI体验。Apple Intelligence预计将在未来数月通过iOS更新在中国推出。近年苹果在华份额已被华为等本土竞争对手蚕食，竞争对手凭AI手机迅速抢占领先。网信办已登记苹果的生成式AI服务，为国行iPhone首次登陆Apple Intelligence铺平了监管道路。", "link": "https://www.solidot.org/story?sid=85095", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-08-14_苹果与阿里巴巴合作为中国市场训练专用大模型_Solidot.md", "source_items": [{"name": "Solidot", "link": "https://www.solidot.org/story?sid=85095"}]}, {"title": "SkillFS：当 Agent 有几十个 Skill，用文件系统来治理", "source": "阿里云基础设施", "digest": "阿里云基础设施团队介绍 ANOLISA 运行时组件 SkillFS：基于 FUSE 的虚拟文件系统，将物理 Skill 目录映射为 /skills/ 运行入口，按视图、安全策略和生命周期状态决定 Agent 实际可见的 Skill。通过默认运行视图、发现视图、安装候选入口及 .staging/.certified/.quarantine 等生命周期命名空间裁剪 Skill 集合，减少 Token 消耗与误选。安全上提供三态决策（current/fallback/hidden）、Active Mapping 热刷新、句柄级版本固定、.skill-meta 元数据保护。基于 38 个 Skill、27 场景实测，多数模型 Token 节省 7%~21%（kimi-2.5 省 21.37%）。已开源，独立 Rust 工程，仅支持 Linux。", "link": "https://mp.weixin.qq.com/s/0iilxBXDV9p7wLiYc7gHyg", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_SkillFS：当 Agent 有几十个 Skill，用文件系统来治理_阿里云基础设施.md", "source_items": [{"name": "阿里云基础设施", "link": "https://mp.weixin.qq.com/s/0iilxBXDV9p7wLiYc7gHyg"}]}, {"title": "一切皆插件之后，Agent 工程的新范式", "source": "阿里云云原生", "digest": "阿里云云原生解析 DeepSeek Harness 提出的“一切皆插件”Agent 工程新范式：模型、工具、会话、记忆、UI、Agent 主循环等全部做成可插拔组件，以“日志为唯一真相源”实现每次运行可回放、分叉、审计，降低 Agent 体验与成本优化复杂度。对比 LangChain 等“向上封装”框架在模型黑盒外叠加框架黑盒、定位困难；Pi Agent 走“最小核心+按需扩展”；DeepSeek Harness 插件化更彻底，分 Bundle→Profile→Patch→Overlay 四层叠加成插件树。该透明架构使效果调优（换循环/上下文注入）与成本调优（看清每次 Token 来源）可操作，但目前仍为开发者预览阶段。", "link": "https://mp.weixin.qq.com/s/OgYIw9l8PBeRk5MGMhYTmA", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_一切皆插件之后，Agent 工程的新范式_阿里云云原生.md", "source_items": [{"name": "阿里云云原生", "link": "https://mp.weixin.qq.com/s/OgYIw9l8PBeRk5MGMhYTmA"}]}, {"title": "中国算力新版图：训练西迁、推理东沉", "source": "财联社AI daily", "digest": "财联社走访内蒙古乌兰察布、青海海东、黑龙江哈尔滨等地算力中心，呈现中国算力新版图。乌兰察布集聚华为、苹果、阿里、快手、腾讯等，绿电占比约 45%、电价 3 毛 2~3 毛 5（比东部低约 50 亿元/年·GW 级），DeepSeek 早有租用；青海建成机架 49760 架、算力 28116PFLOPS，为首个绿色算电协同试点省；哈尔滨实现 AI 芯片 100% 国产化。AIDC 时代单机柜功率达 100kW、未来或达 1000kW，高功率数据中心需求旺盛、低功率闲置率高。趋势上“训练西迁、推理东沉”：万卡集群已迁至胡焕庸线以西，推理算力向长三角、大湾区、京津冀下沉。", "link": "https://mp.weixin.qq.com/s/MF1SDfWiFX_AcZMc51Bc8w", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_中国算力新版图：训练西迁、推理东沉_财联社AI daily.md", "source_items": [{"name": "财联社AI daily", "link": "https://mp.weixin.qq.com/s/MF1SDfWiFX_AcZMc51Bc8w"}]}, {"title": "从PUE到TPW，商汤大装置首提AI基础设施新效能标尺", "source": "InfoQ", "digest": "商汤大装置提出 AI 基础设施新效能标尺 TPW（Tokens Per Watt，单位电力成本产生的有效 Token），弥补 PUE 只测“用了多少电”、答不了“产出多少价值”的局限，打通电力到 Token 的评价格局。实现路径：八级数据穿透体系贯通任务—算力—物理用电映射；按业务优先级与延迟容忍度分级调度（在线推理即时、训练批处理可错峰）释放资源弹性；结合储能、需求响应放大负荷弹性。临港 AIDC 实测：现有供电下 IT 有效承载提升约 60%；迎峰度夏需求响应削减午间负荷 75%、释放 4.6 万度削峰电量。算电协同 Agent 使单位电力 Token 产出提升 80%、电费低于同区约 10%、负荷预测准确率达 96%。", "link": "https://www.infoq.cn/article/sqrwd9GiTamVIiLTkRHe", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_从PUE到TPW，商汤大装置首提AI基础设施新效能标尺_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/sqrwd9GiTamVIiLTkRHe"}]}, {"title": "企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统", "source": "腾讯云开发者", "digest": "腾讯云开发者分享企业 Agent 落地实践：企业 Agent 的分水岭不是模型而是运行时（harness）。架构分四层——入口层、控制面（skill/配置/评测）、企业 harness（身份/权限/审计）、通用 runtime。核心三件套：统一 harness 承载执行与安全；skill 把领域经验变成可治理资产（含联邦所有权、两阶段路由由检索预筛+LLM 终选）；虚拟文件系统 VFS 管理长任务上下文与产物（evidence/working/artifacts/checkpoints 分层），并与 sandbox 隔离。安全采用 effective capability = 用户授权∩配置∩skill 策略∩会话 scope∩工具侧强制，至少四道门。以 Stripe Kai 为案例，给出从基线治理到统一 harness、两阶段路由、trace-to-skill 闭环的四阶段演进路径。", "link": "https://mp.weixin.qq.com/s/D4RId9oiULoFj567vawPig", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统_腾讯云开发者.md", "source_items": [{"name": "腾讯云开发者", "link": "https://mp.weixin.qq.com/s/D4RId9oiULoFj567vawPig"}]}, {"title": "深度体验DeepSeek Harness，我原谅它涨价了", "source": "量子位", "digest": "量子位深度体验：DeepSeek Harness（DSH，“黑鲸”）终于发布并开源源代码，作者称其为“彻头彻尾为自进化与DIY而生的马鞍”。其核心是“一切皆插件”架构，以Cordis为底座（类比乐高底板），官方内置100+插件，开发者可自定义Agent运行时；作者称其为“Agent时代的安卓”，相对Codex闭源哲学彻底开放。提供四类Agent预设：标准、PTC（Code Mode SDK）、极简、创造模式。体验细节：开启会话需选工作目录与Agent预设；“轨迹”功能可回放原始事件级记录监控Agent内部行为；内置dsh-code-review等开发Skill；黑鲸在指令不明时主动拉起提问、开展头脑风暴。Token统计表显示缓存命中率常达99%。实测凸显长程任务能力（猪八戒3D白模猛跑20分钟、社区有10小时案例）。架构上Cordis允许模型在不打断任务时自写插件、再融回主线，作者视其为目前较可落地的“自进化”实现路线。", "link": "https://www.qbitai.com/2026/08/472208.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_深度体验DeepSeek Harness，我原谅它涨价了_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/472208.html"}, {"source_file": "sources/2026-08-13_DeepSeek Harness：AI正在从“大脑”走向“工作系统”_Space AIThinker.md", "name": "Space AIThinker", "link": "https://mp.weixin.qq.com/s/nSKNkwNkLCQNbltd_NeLpQ"}, {"source_file": "sources/2026-08-14_DeepSeek Harness 拆解：一套能拼装的 Agent 架构_腾讯技术工程.md", "name": "腾讯技术工程", "link": "https://mp.weixin.qq.com/s/DeIty-Nn8tQvE4osy7_bpg"}, {"source_file": "sources/2026-08-14_DeepSeek 把 Harness 开源了：模型、工具、Agent Loop 全是插件_InfoQ.md", "name": "InfoQ", "link": "https://www.infoq.cn/article/de9AljWc4ejW2KAyW8dD"}, {"source_file": "sources/2026-08-14_实测DeepSeek Harness！梁文锋憋的“黑色鲸鱼”大招，有惊喜_智东西.md", "name": "智东西", "link": "https://mp.weixin.qq.com/s/xSS-d5Pr36o7x7Cp25fPKQ"}]}, {"title": "百度文库网盘「库库AI」AI办公MAU超2500万，新推办公独立端", "source": "量子位", "digest": "8月14日百度AI Day上，百度文库网盘通用智能体GenFlow正式官宣中文名「库库AI」。今年4月GenFlow月活破1亿，其中AI办公MAU超2500万，居通用AI办公赛道第一。文库网盘新推库库AI独立端（PC客户端、网页端、小程序、企业版）。三年前即布局AI办公：2023年大模型重构推出智能PPT，2024年文库网盘融合打通18亿文档数据飞轮；2025年4月上线1.0、一年内迭代至4.0，可调用Office Agent并行完成PPT/Excel/Word等复杂任务，支持全模态生成与元素级编辑。底层为MoE架构、全模态编辑器、Skill、子Agent、长期记忆与端云协同，获国家工信安全中心Office Agent工作流测评第一。办公模式首期面向金融场景优化，支持跨设备端云任务接力、全天候自动化任务执行（如股票盯盘），内置金融数据与股票/量化等专家Skill。企业版打通公域、私域与行业三类数据，依托80万家企业应用经验、500余家机构共建Skills生态。", "link": "https://www.qbitai.com/2026/08/473144.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_百度文库网盘「库库AI」AI办公MAU超2500万，新推办公独立端_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/473144.html"}, {"source_file": "sources/2026-08-14_提前3年布局AI办公，百度率先突围_36氪.md", "name": "36氪", "link": "https://mp.weixin.qq.com/s/EdpvTrUi2-gHCtD0edyvXw"}]}, {"title": "算力需求两年涨10倍，机器人为了走进真实物理世界，正在疯狂「吃算力」", "source": "量子位", "digest": "量子位报道，逐际动力「创学营2026」黑客松借助阿里云无影灵构云工作站跑仿真评测。逐际动力CTO谌骅称过去两年研发算力需求增长5–10倍，“有多少卡吃多少卡”。机器人研发需经历遥操作采集、算法调试、仿真训练、真机部署，是围绕算力、数据与工程效率的长期竞赛。阿里云张献涛提出机器人时代需要“第三朵云”，让算力、开发环境与3D交互一起进入研发流程。传统“采购工作站—配GPU—逐台维护”模式痛点突出：CUDA/ROS2/Isaac Sim版本冲突、新人环境配置耗大半天。无影灵构将软件驱动打包成固定镜像一键复制；算力按任务弹性选配GPU规格；自研ASP流化协议在Isaac Sim对比WebRTC时帧率提升约32%（达满帧97%），10%丢包弱网下仍27fps，带宽降约50%。今年4月逐际动力开源具身智能大模型工程底座FluxVLA Engine，与无影灵构方向呼应。多家具身头部企业已基于无影灵构构建云上数据采集工厂与仿真评测，加速研发周期。", "link": "https://www.qbitai.com/2026/08/472722.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_算力需求两年涨10倍，机器人为了走进真实物理世界，正在疯狂「吃算力」_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/08/472722.html"}]}, {"title": "让 AI 替人写代码这件事，人类已经尝试了 70 年", "source": "CSDN", "digest": "CSDN长文节选自邹欣《构建之法》第四版，系统回顾AI辅助编程70年探索史。1952年格蕾丝·霍珀提出编程自动化愿景，FORTRAN(1957)/COBOL以更高抽象提升效率；1968年“软件工程”诞生，80–90年代CASE工具试图自动化软件全生命周期却因方法论锁定、与敏捷冲突而衰落。MIT「程序员学徒」(1987)精准预言今日AI结对编程，但因识别计划等价于子图同构（NP完全）的组合爆炸失败，印证萨顿“苦涩的教训”；90年代微软西蒙尼「意图编程」主张以结构化树存储“意图”而非文本，因生态惯性与战略冲突未普及，其哲学以DSL形式传承。现代纪元以统计学习取胜：code2vec(2018)借AST捕捉结构、Transformer(2017)与BERT、CodeBERT(2020)直至大模型，标志统计方法对形式化方法的决定性胜利。结论：技术会变、问题永恒，AI增强而非取代老方法，工程师需培养判断何时用何工具的智慧。", "link": "https://mp.weixin.qq.com/s/AaGUtq4b9AbmM_HJeE9-xA", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-08-14_让 AI 替人写代码这件事，人类已经尝试了 70 年_CSDN.md", "source_items": [{"name": "CSDN", "link": "https://mp.weixin.qq.com/s/AaGUtq4b9AbmM_HJeE9-xA"}]}, {"title": "凝金荟智 网行天下 | 华为星河AI金融网络，构筑AI-Centric智慧金融新联接", "source": "中国金融电脑+", "digest": "华为在 2026 金融网络创新峰会发布星河 AI 金融网络全栈升级，面向 AI 原生时代金融联接。华为指出金融机构三大挑战：2028 年部分大行 AI 面客业务增 50 倍但算力满足度仅 55%；长距算力调度算效劣化超 37%；AI 降低攻击门槛（前沿模型 2 天入侵摩根大通系统）。方案含 AI Fabric（全网吞吐 98%、Llama3-70B Token 效率最高提 5.8 倍）、AI WAN（远程用算效率 95%+）、AI Campus 三大板块，及三层安全围栏（AI 防火墙/HiSec AIGuard/AI EDR）。中信银行联合落地自动驾驶网络 ADN L4，17 大场景自动生成变更；Gartner “Hands-Off NetOps” 华为首次第一。已应用于 1800+ 金融机构。", "link": "https://mp.weixin.qq.com/s/uAeFqIjyebWGhe3YBuDbBg", "content": "", "category": "同业", "is_model_related": false, "source_file": "sources/2026-08-14_凝金荟智 网行天下 | 华为星河AI金融网络，构筑AI-Centric智慧金融新联接_中国金融电脑+.md", "source_items": [{"name": "中国金融电脑+", "link": "https://mp.weixin.qq.com/s/uAeFqIjyebWGhe3YBuDbBg"}]}, {"title": "AI技术是真的，泡沫也是真的！华尔街科技分析师：免费额度、低价Token和模型红利都可能结束，大模型最终会像电力一样“消失”", "source": "51CTO技术栈", "digest": "51CTO技术栈转载华尔街科技分析师、MIT数字经济研究员Paul Kedrosky观点：AI技术真实，但泡沫也可能真实。他质疑——科技公司为支撑能力重金建数据中心、采购芯片，而Token持续降价、模型差距收窄，投入越来越重、卖出的“智能”却越来越便宜，生意能否持续存疑。Token越便宜，卖Token越难赚钱；新模型送额度、云厂商折扣多含推广成本，长期价格未必低。头部模型最佳实践趋近，换模型机会成本降低，开发者开始“货比三家”，建议业务代码别绑死单一SDK、留统一接口、准备降级路径。模型公司为获回报向应用层迁移（编程工具、Agent、办公入口）。泡沫若破，先消失的或是补贴与“套壳”产品。Kedrosky判断大模型最终会像电力退到幕后，竞争壁垒留在行业数据、工作流与交付责任，而非仅“接上了电”。", "link": "https://mp.weixin.qq.com/s/RuLXKXIc8H1Hdp6Xlbi8zQ", "content": "", "category": "其他", "is_model_related": false, "source_file": "sources/2026-08-14_AI技术是真的，泡沫也是真的！华尔街科技分析师：免费额度、低价Token和模型红利都可能结束，大模型最终会像电力一样“消_51CTO技术栈.md", "source_items": [{"name": "51CTO技术栈", "link": "https://mp.weixin.qq.com/s/RuLXKXIc8H1Hdp6Xlbi8zQ"}]}, {"title": "今天企业「不用AI」才是最大的成本", "source": "软件工程3.0时代", "digest": "软件工程3.0时代观点文指出：2026年企业“不用AI”才是最大成本。人力成本是非线性复杂系统（招、培、留、管、协调、波动），而AI Agent运行一小时全成本约6–8美元，低于印度BPO的10美元、仅为美国后台员工的1/5左右。可见账本：金山WPS智能体使月报从3–5天压至0.5–1.5天；首钢45个AI体提升热轧排程80%；农信数智AI巡检降猪只发病率约30%；南方电网配网智能体提升规划效率80%。非线性收益：数命科技11人冲击5–12亿营收；林晰智能3人撬动300家工厂；极光AI代理打入日本市场。人才鸿沟上，要求“生产级系统交付”岗位同比+217%。资本验证：摩根士丹利量化生成式AI投资ROIC达25%–50%；阿里云AI收入连续十季度三位数增长；过去一年AI推理成本降超九成。结论：用AI成本下降、不用AI成本指数上升，两条曲线已完成历史性交叉。", "link": "https://mp.weixin.qq.com/s/UQiU3UjVbWPedPqEZpWZEA", "content": "", "category": "其他", "is_model_related": false, "source_file": "sources/2026-08-14_今天企业「不用AI」才是最大的成本_软件工程3.0时代.md", "source_items": [{"name": "软件工程3.0时代", "link": "https://mp.weixin.qq.com/s/UQiU3UjVbWPedPqEZpWZEA"}]}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 剥离 HTML 标签，支持多段落渲染（\n\n 分段）
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      // 按双换行分段，每段一个 <p>
+      var paragraphs = stripped.split(/\n\s*\n/);
+      return paragraphs.map(function(p) {
+        var trimmed = p.replace(/\n/g, '<br>').trim();
+        return trimmed ? '<p>' + escapeHtmlLite(trimmed) + '</p>' : '';
+      }).join('');
+    } catch (e) {
+      return '<p>' + escapeHtml(digest) + '</p>';
+    }
+  }
+
+  function escapeHtmlLite(str) {
+    // 保留已插入的 <br> 和 <p>，只转义其他特殊字符
+    return str.replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    // 多来源标签（可点击跳转）
+    var actionsHtml = '';
+    var sourceItems = article.source_items;
+    if (sourceItems && sourceItems.length > 0) {
+      sourceItems.forEach(function(si) {
+        if (si.link) {
+          actionsHtml += '<a href="' + escapeAttr(si.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(si.name) + '</a>';
+        } else {
+          actionsHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      // fallback: single source
+      if (article.link) {
+        actionsHtml += '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="source-tag">' + escapeHtml(article.source) + '</a>';
+      } else {
+        actionsHtml += '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (digestHtml ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            actionsHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>

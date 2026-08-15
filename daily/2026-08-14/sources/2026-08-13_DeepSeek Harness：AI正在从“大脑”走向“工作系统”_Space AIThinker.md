@@ -1,13 +1,13 @@
 ---
 publish_time: 1786635236
-status: pending
-category: 
-is_model_related: true
-digest: |
-  Space AIThinker评论DeepSeek Harness：AI正从'大脑'(纯推理)走向'工作系统'(可调度工具、执行任务、闭环交付)，Harness是这一范式跃迁的载体，勾勒Agent从对话到生产的演进路径。
+status: confirmed
+category: 国内
+is_model_related: false
 link: https://mp.weixin.qq.com/s/nSKNkwNkLCQNbltd_NeLpQ
 source: Space AIThinker
 title: DeepSeek Harness：AI正在从“大脑”走向“工作系统”
+digest: |
+  量子位深度体验：DeepSeek Harness（DSH，“黑鲸”）终于发布并开源源代码，作者称其为“彻头彻尾为自进化与DIY而生的马鞍”。其核心是“一切皆插件”架构，以Cordis为底座（类比乐高底板），官方内置100+插件，开发者可自定义Agent运行时；作者称其为“Agent时代的安卓”，相对Codex闭源哲学彻底开放。提供四类Agent预设：标准、PTC（Code Mode SDK）、极简、创造模式。体验细节：开启会话需选工作目录与Agent预设；“轨迹”功能可回放原始事件级记录监控Agent内部行为；内置dsh-code-review等开发Skill；黑鲸在指令不明时主动拉起提问、开展头脑风暴。Token统计表显示缓存命中率常达99%。实测凸显长程任务能力（猪八戒3D白模猛跑20分钟、社区有10小时案例）。架构上Cordis允许模型在不打断任务时自写插件、再融回主线，作者视其为目前较可落地的“自进化”实现路线。
 ---
 # DeepSeek Harness：AI正在从“大脑”走向“工作系统”
 

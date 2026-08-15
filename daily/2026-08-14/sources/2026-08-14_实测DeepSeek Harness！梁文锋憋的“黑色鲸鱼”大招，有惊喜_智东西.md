@@ -1,13 +1,13 @@
 ---
 publish_time: 1786637587
-status: pending
-category: 
-is_model_related: true
-digest: |
-  智东西实测DeepSeek Harness：上手体验梁文锋团队最新Agent架构'黑色鲸鱼'大招，实测其在任务拆解、工具调用与自主闭环上的表现，总体'有惊喜'，给出一手使用评测与能力边界。
+status: confirmed
+category: 国内
+is_model_related: false
 link: https://mp.weixin.qq.com/s/xSS-d5Pr36o7x7Cp25fPKQ
 source: 智东西
 title: 实测DeepSeek Harness！梁文锋憋的“黑色鲸鱼”大招，有惊喜
+digest: |
+  量子位深度体验：DeepSeek Harness（DSH，“黑鲸”）终于发布并开源源代码，作者称其为“彻头彻尾为自进化与DIY而生的马鞍”。其核心是“一切皆插件”架构，以Cordis为底座（类比乐高底板），官方内置100+插件，开发者可自定义Agent运行时；作者称其为“Agent时代的安卓”，相对Codex闭源哲学彻底开放。提供四类Agent预设：标准、PTC（Code Mode SDK）、极简、创造模式。体验细节：开启会话需选工作目录与Agent预设；“轨迹”功能可回放原始事件级记录监控Agent内部行为；内置dsh-code-review等开发Skill；黑鲸在指令不明时主动拉起提问、开展头脑风暴。Token统计表显示缓存命中率常达99%。实测凸显长程任务能力（猪八戒3D白模猛跑20分钟、社区有10小时案例）。架构上Cordis允许模型在不打断任务时自写插件、再融回主线，作者视其为目前较可落地的“自进化”实现路线。
 ---
 # 实测DeepSeek Harness！梁文锋憋的“黑色鲸鱼”大招，有惊喜
 

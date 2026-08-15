@@ -1,13 +1,13 @@
 ---
 publish_time: 1786668300
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
-digest: |
-  腾讯云开发者分享企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统（呼应SkillFS），给出大型企业把Agent从Demo推进到生产可用的工程框架与踩坑经验。
 link: https://mp.weixin.qq.com/s/D4RId9oiULoFj567vawPig
 source: 腾讯云开发者
 title: 企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统
+digest: |
+  腾讯云开发者分享企业 Agent 落地实践：企业 Agent 的分水岭不是模型而是运行时（harness）。架构分四层——入口层、控制面（skill/配置/评测）、企业 harness（身份/权限/审计）、通用 runtime。核心三件套：统一 harness 承载执行与安全；skill 把领域经验变成可治理资产（含联邦所有权、两阶段路由由检索预筛+LLM 终选）；虚拟文件系统 VFS 管理长任务上下文与产物（evidence/working/artifacts/checkpoints 分层），并与 sandbox 隔离。安全采用 effective capability = 用户授权∩配置∩skill 策略∩会话 scope∩工具侧强制，至少四道门。以 Stripe Kai 为案例，给出从基线治理到统一 harness、两阶段路由、trace-to-skill 闭环的四阶段演进路径。
 ---
 # 企业内Agent工具落地实践：统一Harness、Skill与虚拟文件系统
 

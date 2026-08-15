@@ -1,13 +1,13 @@
 ---
 publish_time: 1786680000
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
-digest: |
-  CSDN报道Linus吐槽：AI辅助编程虽能找大量小Bug，却让Linux内核代码量迅速膨胀、'太大了'，这种'AI制造的补丁新常态'引发内核维护负担讨论，折射AI编程在质量与规模上的双刃剑效应。
 link: https://mp.weixin.qq.com/s/3uK55H5jNtuYaCbEITkdZg
 source: CSDN
 title: Linux内核被AI搞“太大了”！Linus吐槽：AI找了一堆小Bug，但这已成为「新常态」
+digest: |
+  Linus Torvalds 发布 Linux 7.2 rc7，吐槽 AI 辅助编程工具批量生成大量微小修复补丁，使内核“发福”、commit 数创多年新高，称这是“新常态”（rc6 已是多年来最大版本）。AI 工具能在短时间内扫描海量代码找出边界条件问题，但补丁“量太大”，整体 diff 规模远超往常。Linus 5 月曾抱怨 AI 生成的 Bug 报告泛滥、安全邮件列表“几乎无法管理”；7 月态度转圜，称 Linux 不反 AI，但要求提交者对每行代码负责、反对用 AI 灌劣质代码。7.2 引入缓存感知调度、DRM 公平调度等特性。社区褒贬不一，核心担忧是“人们已不会手写代码，如何审查 AI 结果”。
 ---
 # Linux内核被AI搞“太大了”！Linus吐槽：AI找了一堆小Bug，但这已成为「新常态」
 

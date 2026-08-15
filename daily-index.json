@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-14",
+      "weekday": "周五",
+      "stats": {
+        "国际": 7,
+        "国内": 11,
+        "同业": 1,
+        "其他": 2,
+        "total": 21
+      },
+      "summary": "谷歌 DeepMind 发布 Gemini 3.7 Flash/AI 圈上演神级互撕！Codex、Claude Code 两位负责人公开对喷/刚刚，GLM..."
+    },
+    {
       "date": "2026-08-13",
       "weekday": "周四",
       "stats": {
