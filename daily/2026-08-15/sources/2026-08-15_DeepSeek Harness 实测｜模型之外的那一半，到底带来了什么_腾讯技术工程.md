@@ -1,9 +1,11 @@
 ---
 publish_time: 1786757400
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  腾讯技术工程基于开源仓库实测DeepSeek Harness（dsh，与V4 Pro同期开源的Agent runtime）。结论：它更像可重新组装的Agent平台脚手架而非成品coding agent，Trajectory（追加式事件日志）与可观测性口碑最佳。本机跑通Web/Headless/Python SDK四条入口。
+  固定Kimi K3对比Kimi Code：两题均15/15通过，DSH minimal更碎步（依赖规划11次工具调用vs 5次）但token/缓存/请求日志更易冻结复现，Kimi Code更快（48.9秒 vs 112.2秒）。同一V4 Pro各做“跳一跳”游戏：DSH三段约25分钟/85步/96次调用，Kimi Code约21分钟。源码层面DSH以Cordis插件化Agent Loop、Session Event、Capability Seam，开放度高于Kimi Code。
 link: https://mp.weixin.qq.com/s/vT0K-xNvGik0ddtMkUe3Vg
 source: 腾讯技术工程
 title: DeepSeek Harness 实测｜模型之外的那一半，到底带来了什么

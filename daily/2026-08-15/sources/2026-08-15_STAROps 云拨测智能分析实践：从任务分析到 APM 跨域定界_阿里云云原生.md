@@ -1,9 +1,11 @@
 ---
 publish_time: 1786759200
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  阿里云云原生介绍STAROps云拨测智能分析：通过Agent自动串联云拨测、SLS、UModel与APM，把“发现异常”推进到“解释异常并定界”。核心五功能：单任务分析（覆盖HTTP/Ping/DNS/Browser等，按协议阶段下钻）、Workspace智能巡检（高频/每日/每周三模板）、协议细粒度诊断、请求链路可视化（按真实阶段生成图）、APM跨域定界（对齐拨测client span与后端server/业务/下游依赖Span）。
+  证据策略“总体聚合→风险筛选→协议下钻→代表样本→跨域对齐”，区分网络侧、应用入口前链路与后端/下游依赖侧，避免把异常传播误判为根因，并明确“APM证据不足”时不妄断后端正常。
 link: https://mp.weixin.qq.com/s/Bu6hvgT80RednBa_Z4MM1Q
 source: 阿里云云原生
 title: STAROps 云拨测智能分析实践：从任务分析到 APM 跨域定界

@@ -1,9 +1,12 @@
 ---
 publish_time: 1786760100
-status: pending
-category: 
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
+  MATS研究员Alexander Panfilov联合马克斯·普朗克所、图宾根ELLIS所与安全公司Snyk发表116页论文《Stealing Reasoning Traces from Proprietary LLM APIs》（arXiv:2608.09867，阅读量超210万），披露Anthropic、OpenAI、Google三大厂商API存在密码学旁路漏洞。
+  攻击者用低成本轻量模型（如Haiku 4.5）作“fuzzy decoder”，配合越狱提示即可从加密推理包转录出顶级模型隐藏思维链；实验显示Claude/GPT/Gemini提取明文Token数与账单thinking token高度贴合y=x，解密1万条仅约720美元。从约7000份公开Trace重放获62个高权限API Key、33个明文密码等敏感数据。
+  记忆度分析还发现Kimi-K3、GLM-5.2对Opus推理存在异常风格漂移（复现成本骤降约13个数量级），暗示防蒸馏体系形同虚设。
 link: https://mp.weixin.qq.com/s/frLApgp9AYdRAjgNwNlHoA
 source: InfoQ
 title: 年度AI论文！全球三大顶尖模型的防蒸馏机制全面告破：小模型“套出”大模型隐藏思维链，Kimi-K3重现概率异常

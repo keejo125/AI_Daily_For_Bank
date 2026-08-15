@@ -1,0 +1,29 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-15_DeepSeek Harness 实测｜模型之外的那一半，到底带来了什么_腾讯技术工程.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-15_新发布的DeepSeek Harness的五大创新及其启示_软件工程3.0时代.md",
+          "name": "软件工程3.0时代",
+          "link": "https://mp.weixin.qq.com/s/zwxY2pBtYXhTlTcXzT6j3w"
+        },
+        {
+          "source_file": "sources/2026-08-15_DeepSeek Harness插件一夜燃爆GitHub：长期记忆、电子宠物、4399小游戏全来了_量子位.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/08/473597.html"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-15_智谱发布 GLM-5.3，编程能力更强；传苹果训练国内专用 AI 模型；微信：朋友圈现在、过去、未来_极客公园.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-15_编程能力提高50%！GLM-5.3 满分通过了GPT-5.6给的Coding 测试_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/YXpK1rCRVIz3451csUJGzg"
+        }
+      ]
+    }
+  ]
+}

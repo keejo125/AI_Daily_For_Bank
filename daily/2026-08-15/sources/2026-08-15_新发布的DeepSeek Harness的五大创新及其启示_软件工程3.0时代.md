@@ -1,9 +1,11 @@
 ---
 publish_time: 1786765253
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  软件工程3.0时代梳理DeepSeek Harness（dsh，MIT许可Agent驾驭框架）五大创新：1）自改写运行时（Typert反射+Cordis动态加载，node:vm沙箱生成插件）；2）事件溯源+可重放会话（类型化事件日志、Keyless重放、SQLite FTS5血缘追踪）；3）异构子Agent协议（ACP/dsh-sdk，可把Claude Code、Codex当sub-agent）；4）可移植沙箱+fail-closed（跨平台Landlock/bwrap/Seatbelt，退出码125）；5）机器强制工程纪律（100%覆盖、snapshot测试、约680条Agent Notes决策记录）。
+  文章指其本质是把Agent从“能跑”变“敢交付”的可控基础设施，标志Harness Engineering从调参走向工程规范。
 link: https://mp.weixin.qq.com/s/zwxY2pBtYXhTlTcXzT6j3w
 source: 软件工程3.0时代
 title: 新发布的DeepSeek Harness的五大创新及其启示

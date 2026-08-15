@@ -1,9 +1,11 @@
 ---
 publish_time: 1786749120
-status: pending
-category: 
+status: confirmed
+category: 其他
 is_model_related: false
 digest: |
+  财联社AI daily报道，SpaceX于8月14日正式完成对AI编程初创公司Cursor的收购，交易估值约600亿美元，流程始于今年4月双方合作加速模型训练。Cursor为2023年推出的AI编程助手，是“氛围编程（vibe coding）”时代核心玩家，交易完成后团队可使用SpaceX大规模GPU集群。
+  双方此前已联合推出编程向模型Grok 4.5，SpaceX还发布Grok Bot（AI智能体团队）与升级版Grok 4.6；SpaceX另与Anthropic、谷歌达成数十亿美元算力交易。马斯克称9月AI收入将超SpaceX其他收入。该文主体为并购商业事件，非技术内容。
 link: https://mp.weixin.qq.com/s/InTplf1j6tOxkAgi7WPKaQ
 source: 财联社AI daily
 title: 马斯克正式杀入Vibe Coding战场

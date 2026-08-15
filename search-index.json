@@ -1,7 +1,187 @@
 {
-  "updated_at": "2026-08-15T08:41:04.728603",
-  "total": 1265,
+  "updated_at": "2026-08-16T06:10:17.897135",
+  "total": 1283,
   "articles": [
+    {
+      "date": "2026-08-15",
+      "title": "AI 正在重塑故障处理流程，但棘手问题仍需人类解决",
+      "source": "InfoQ",
+      "digest": "InfoQ翻译Craig Risi文章，结合Uptime Labs\"Incident Fest\"研讨（Uptime Labs、Chime、Rootly参与）与NIST 2026年研究，探讨AI对故障处理的重塑与悖论。当AI准确诊断时响应效率远超人工，但一旦给出错误建议，人类表现反不如无AI协助。\n文章提出\"剩余原则\"：自动化接管常规任务后，留给人类的都是非常规、模糊的难题，而工程师因常规事故减少导致历练与态势感知退化，出现\"责任缺口\"；NIST亦警示人机反馈循环研究不足。结论：AI改变而非消除事故响应者角色，需以演练、混沌工程维持人力技能，并强化部署管控、可观测性、功能开关与快速回滚等工程实践。",
+      "link": "https://mp.weixin.qq.com/s/ABoL1eLWvu8mHKExqFq_5g",
+      "source_file": "sources/2026-08-15_AI 正在重塑故障处理流程，但棘手问题仍需人类解决_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Cloudflare Computer 发布：让 AI 智能体拥有持久化运行环境",
+      "source": "InfoQ",
+      "digest": "Cloudflare发布开源运行时Cloudflare Computer，为AI智能体提供接近真实“计算机”的持久化运行环境，而非临时容器。其@cloudflare/computer包由平台决定代码在isolate、容器沙箱或浏览器中运行，目标仅不到10%工作需容器，编码、音视频处理、文档创建均可由isolate完成，以支撑数亿至数十亿并发智能体。\n架构核心是基于SQLite的共享文件系统，isolate与容器均可访问、任务可无缝转移；提供容器项目、isolate shell、isolate JavaScript三种后端，并能持久保存智能体状态、不运行时休眠。目前处早期预览，仅适合实验与原型。",
+      "link": "https://www.infoq.cn/article/RaKIH7E4lA9uQ4Iasltb",
+      "source_file": "sources/2026-08-15_Cloudflare Computer 发布：让 AI 智能体拥有持久化运行环境_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "与运行时无关的 AI 工作流：一种兼顾生产环境稳定性和快速评估迭代的模式",
+      "source": "InfoQ",
+      "digest": "InfoQ翻译Brex工程师Mateus Moury的文章，提出\"运行时无关\"的AI工作流编排模式，以兼顾生产环境持久性与快速离线评估。核心是将编排逻辑编写为针对接口（Steps接口）的普通函数，而非绑定特定框架（如LangGraph/Mastra）或引擎（如Temporal）。\n生产环境用Temporal适配器（活动在Node进程运行、编排在确定性沙箱重放），评估用进程内适配器（返回测试数据、LLM调用为真）。Brex开户代理每日运行约百次、单次20-60分钟，接入Temporal后任务完成率从约96%升至99.9%；基于该平台的代理已能为超半数开户申请生成自动化决策。代价是丧失部分运行时原生工具与开箱即用的可视化。",
+      "link": "https://mp.weixin.qq.com/s/lqYTPjsfQ5-ZbXWtVfxHbQ",
+      "source_file": "sources/2026-08-15_与运行时无关的 AI 工作流：一种兼顾生产环境稳定性和快速评估迭代的模式_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "年度AI论文！全球三大顶尖模型的防蒸馏机制全面告破：小模型“套出”大模型隐藏思维链，Kimi-K3重现概率异常",
+      "source": "InfoQ",
+      "digest": "MATS研究员Alexander Panfilov联合马克斯·普朗克所、图宾根ELLIS所与安全公司Snyk发表116页论文《Stealing Reasoning Traces from Proprietary LLM APIs》（arXiv:2608.09867，阅读量超210万），披露Anthropic、OpenAI、Google三大厂商API存在密码学旁路漏洞。\n攻击者用低成本轻量模型（如Haiku 4.5）作“fuzzy decoder”，配合越狱提示即可从加密推理包转录出顶级模型隐藏思维链；实验显示Claude/GPT/Gemini提取明文Token数与账单thinking token高度贴合y=x，解密1万条仅约720美元。从约7000份公开Trace重放获62个高权限API Key、33个明文密码等敏感数据。\n记忆度分析还发现Kimi-K3、GLM-5.2对Opus推理存在异常风格漂移（复现成本骤降约13个数量级），暗示防蒸馏体系形同虚设。",
+      "link": "https://mp.weixin.qq.com/s/frLApgp9AYdRAjgNwNlHoA",
+      "source_file": "sources/2026-08-15_年度AI论文！全球三大顶尖模型的防蒸馏机制全面告破：小模型“套出”大模型隐藏思维链，Kimi-K3重现概率异常_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "智谱发布 GLM-5.3，编程能力更强；传苹果训练国内专用 AI 模型；微信：朋友圈现在、过去、未来都不会有二次编辑功能 | 极客早知道",
+      "source": "极客公园",
+      "digest": "极客早知道汇总多条AI动态，头条为智谱8月14日发布GLM-5.3：基座模型未变，依赖极致后训练Scaling提升智能上限，内部编程体感评测较GLM-5.2提升50%，在TerminalBench3.0、Agents'LastExam(CLI)等公开基准取得开源第一，两周后开放权重。\n另据三位知情人士称，苹果在阿里巴巴支持下为中国市场训练专属大模型；阿里当晚开源Qwen3.8系列（Apache2.0，Qwen3.8-27B为原生多模态稠密模型，量化后消费级显卡可跑），全球下载超30亿次；英伟达Spectrum-X Ethernet Photonics CPO交换机量产；SpaceX完成收购Cursor（隐含估值600亿美元）；月之暗面发声明警示冒名融资。文末提及微信确认朋友圈永无二次编辑功能。",
+      "link": "http://www.geekpark.net/news/368849",
+      "source_file": "sources/2026-08-15_智谱发布 GLM-5.3，编程能力更强；传苹果训练国内专用 AI 模型；微信：朋友圈现在、过去、未来_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-15",
+      "title": "根治AI音乐通病！这家国产音乐模型正面挑战SUNO",
+      "source": "量子位",
+      "digest": "深耕AI音乐全栈自研的国产团队音潮于8月14日全平台上线音乐大模型V4.0，定位正面挑战SUNO。相比V3.5实现底层重构，多组盲测显示其在“warm/groovy/happy”情绪关键词理解、十二小节布鲁斯结构还原、多乐器层次（原声吉他+大提琴）等维度明显提升，被称为层级式跃升。\nV4.0新增俄、德、葡、意、法五语种，实现全球十大主流语种全覆盖；专业纯音乐生成能力正式向C端开放（带人声/纯音乐双模式）。同步推出音潮API Platform，集歌词生成、歌曲生成、仿写、扩写四大能力，目前限时免费试用。",
+      "link": "https://www.qbitai.com/2026/08/473866.html",
+      "source_file": "sources/2026-08-15_根治AI音乐通病！这家国产音乐模型正面挑战SUNO_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-15",
+      "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
+      "source": "量子位",
+      "digest": "阿里Qwen3.8-27B正式开源，总参数270亿，量化后24GB显存消费级显卡（如RTX 4090）可整卡装载。多项榜单超Claude Opus 4.6 Max：SWE-bench Pro +8.3、QwenSWEBench +15.2、CoWorkBench 70.7 vs 68.2、OSWorld-Verified 84.3 vs 72.7、AndroidWorld 81.9 vs 62.0、WebArena-Verified 64.8。\n原生多模态（看图文/PDF/视频）、262K原生上下文可扩100万Token；内置推理档位（xhigh/medium/low）与preserve_thinking；架构64层（48层Gated DeltaNet线性注意力+16层完整Attention）。已接Transformers/vLLM/SGLang/TokenSpeed，本地玩家可直接部署。",
+      "link": "https://www.qbitai.com/2026/08/473669.html",
+      "source_file": "sources/2026-08-15_源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-15",
+      "title": "至知研究院提出大模型可解释性新路线：拆权重，数据成本不到1%",
+      "source": "量子位",
+      "digest": "至知研究院（IQuest Research）联合Safe AI Forum、牛津、斯坦福、清华提出稀疏权重分解（SWD），直接从预训练权重\"拆\"出可干预单元，无需再训练替代网络。方法将稠密权重W≈AB分解为两个稀疏矩阵，共享中间维度成为可独立评分、选择、消融的瓶颈单元（rank-one读写路径），用少量校准文本优化输出误差并硬阈值维持稀疏。\n在GPT-2、Qwen2.5、Qwen3.5-27B验证：达到匹配替换保真度所用数据不到Transcoder等训练型基线1%；以更少瓶颈单元与活跃连接通过充分性/必要性因果测试；扩展到27B并覆盖GPT-2全部48个注意力与MLP矩阵（SWD-FT将CE从3.90降至3.44，仅用约2060万token，而稀疏预训练基线用28.84亿）；还提供完全不依赖校准文本的zero-data版本。",
+      "link": "https://www.qbitai.com/2026/08/473876.html",
+      "source_file": "sources/2026-08-15_至知研究院提出大模型可解释性新路线：拆权重，数据成本不到1%_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-15",
+      "title": "DeepSeek Harness 实测｜模型之外的那一半，到底带来了什么",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程基于开源仓库实测DeepSeek Harness（dsh，与V4 Pro同期开源的Agent runtime）。结论：它更像可重新组装的Agent平台脚手架而非成品coding agent，Trajectory（追加式事件日志）与可观测性口碑最佳。本机跑通Web/Headless/Python SDK四条入口。\n固定Kimi K3对比Kimi Code：两题均15/15通过，DSH minimal更碎步（依赖规划11次工具调用vs 5次）但token/缓存/请求日志更易冻结复现，Kimi Code更快（48.9秒 vs 112.2秒）。同一V4 Pro各做“跳一跳”游戏：DSH三段约25分钟/85步/96次调用，Kimi Code约21分钟。源码层面DSH以Cordis插件化Agent Loop、Session Event、Capability Seam，开放度高于Kimi Code。",
+      "link": "https://mp.weixin.qq.com/s/vT0K-xNvGik0ddtMkUe3Vg",
+      "source_file": "sources/2026-08-15_DeepSeek Harness 实测｜模型之外的那一半，到底带来了什么_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "STAROps 云拨测智能分析实践：从任务分析到 APM 跨域定界",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生介绍STAROps云拨测智能分析：通过Agent自动串联云拨测、SLS、UModel与APM，把“发现异常”推进到“解释异常并定界”。核心五功能：单任务分析（覆盖HTTP/Ping/DNS/Browser等，按协议阶段下钻）、Workspace智能巡检（高频/每日/每周三模板）、协议细粒度诊断、请求链路可视化（按真实阶段生成图）、APM跨域定界（对齐拨测client span与后端server/业务/下游依赖Span）。\n证据策略“总体聚合→风险筛选→协议下钻→代表样本→跨域对齐”，区分网络侧、应用入口前链路与后端/下游依赖侧，避免把异常传播误判为根因，并明确“APM证据不足”时不妄断后端正常。",
+      "link": "https://mp.weixin.qq.com/s/Bu6hvgT80RednBa_Z4MM1Q",
+      "source_file": "sources/2026-08-15_STAROps 云拨测智能分析实践：从任务分析到 APM 跨域定界_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "对话郎咸朋：用机器人创业重做一次“百万智驾量产”",
+      "source": "量子位",
+      "digest": "量子位1.9万字访谈理想智能驾驶0到1核心负责人郎咸朋，其离理想后与任庚创办具身公司昆仑行，三个月获数十亿融资跻身独角兽。昆仑行选择\"理解而非模仿\"路线，构建物理因果世界模型与\"数据编译\"管线，主张以数据使用效率（编译富含物理因果的样本）替代单纯堆规模。\n技术上采用MoT架构并按\"目的—干预—结果\"划分专家，设计单向流动的联合因果注意力机制以防作弊；坚持全栈软硬一体自研（关节、电机、本体），先toB再进家庭。他认为具身将重演自动驾驶2015-16年路线未定阶段，真正洗牌要看能否量产自我造血，目标24个月进行业前三。",
+      "link": "https://www.qbitai.com/2026/08/473407.html",
+      "source_file": "sources/2026-08-15_对话郎咸朋：用机器人创业重做一次“百万智驾量产”_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "当 AI 开始批量写 HTML，WorkBuddy 想解决「生成之后」的问题",
+      "source": "极客公园",
+      "digest": "极客公园实测WorkBuddy资料库升级，聚焦\"AI生成HTML之后\"的维护、同步与协作断点。其将\"人机双写\"延伸至HTML与智能Markdown：HTML支持选区精准修改、所见即所得编辑、多人实时协作与版本历史回溯，并可一键发布为链接；智能Markdown为AI修改加审阅批注，人保留最终拍板权。\n\"轻应用\"以HTML为交互界面、智能CSV承载数据，将网页从一次性展示变为可在线存储、多端实时同步、持续更新的个人/团队工作台，解决此前数据仅存浏览器localStorage、换设备即丢失的痛点。文章认为Markdown写、HTML呈现、CSV供数的AI原生格式组合，正构成\"AI时代Office\"的新底座。",
+      "link": "http://www.geekpark.net/news/368851",
+      "source_file": "sources/2026-08-15_当 AI 开始批量写 HTML，WorkBuddy 想解决「生成之后」的问题_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "高效低成本开发，商业增长回报高，鸿蒙元服务背后的“开发厨房”让开发者按时吃饭！",
+      "source": "量子位",
+      "digest": "量子位解析鸿蒙元服务背后的ASCF（Atomic Service Cross Framework）跨端框架如何降低开发成本。ASCF让小程序开发者复用存量资产、仅适配生态能力，实现\"一次开发、一次备案、全端同步\"，内部戏称\"按时吃饭\"框架；京东借此将购物流程解耦为200+场景卡片接入负一屏，缩短跨端上线周期。\n结合HarmonyOS开发助手AI插件（VS Code），京东迁移中自动识别并一键修复121处代码异常、全量编译通过；Skill能力将复杂功能封装为即插即用模块；与码上飞合作的AI零代码让商户\"口述\"即可生成服务。深圳万象城停车等场景已复制至11个商场，形成低成本—高效—高回报闭环。",
+      "link": "https://www.qbitai.com/2026/08/473395.html",
+      "source_file": "sources/2026-08-15_高效低成本开发，商业增长回报高，鸿蒙元服务背后的“开发厨房”让开发者按时吃饭！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "上海银行引入FDE工作模式！AI工程师与业务人员共建智能应用",
+      "source": "银行科技研究社",
+      "digest": "上海银行引入“业技融合（FDE）”工作模式（前沿部署工程师派驻业务一线共建智能应用），并配套《数智化创新工作管理办法》与创新实验室，形成“业务提问题—现场验证—迭代优化”闭环。FDE模式最早由Palantir推出、OpenAI亦有跟进。\n该行已落地多个AI场景：基金交易文件解析压缩至十秒级、效率较人工提升80%以上；“同业存单AI机器人”替代超60%重复作业，服务超100家交易对手、协助募资破百亿。计划三年内AI人才从60人扩至200人，近期社招AI全栈开发工程师等岗位。",
+      "link": "https://mp.weixin.qq.com/s/r4hGRU0pZ9bDGPR5vQ7aqA",
+      "source_file": "sources/2026-08-15_上海银行引入FDE工作模式！AI工程师与业务人员共建智能应用_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "中国银行首发“算力Token贷”",
+      "source": "银行青年",
+      "digest": "中国银行广州分行推出“算力Token贷”，将企业Token消耗量作为授信核定关键指标，按合同/Token消耗额度核定，担保以信用、应收账款质押、订单融资为主，可组合保证/抵押扩额；新公司可在原经营企业佐证或担保下按订单融资。\n据悉该行前期试单授信资金已达2800万元。该产品把AI算力消耗转化为信贷依据，面向AI相关企业，是银行业将大模型Token消耗与金融授信结合的AI+金融产品尝试。",
+      "link": "https://mp.weixin.qq.com/s/8iM22KfEOxvnzOhm3CBQbA",
+      "source_file": "sources/2026-08-15_中国银行首发“算力Token贷”_银行青年.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "数智筑基 效赢新程：邮储银行 AI 驱动的科技数智化转型实践",
+      "source": "金融电子化",
+      "digest": "邮储银行金融科技部总经理汪航撰文介绍其AI驱动的科技数智化中台实践。中台以自主核心业务技术平台与\"邮智\"大模型平台为底座，叠加Graph RAG，构建基础能力、数据资产、中台服务、智能体、视图展现五层结构，含十五大能力中心，并打造科技管理、需求、业务建模、研发、测试、VOC、运维七大类智能体。\n2024年9月中台上线，已推广至总行37个部门及36家分行；需求线上化率100%，治理入仓数据21亿条，科技制度从发布到系统功能上线效率提升76%，功能点智能审核覆盖超71万项、时长缩短25%、重复功能点识别准确率提升50%；大模型赋能覆盖全行60%系统，VOC智能体分析用户声音超350万条，运维智能体告警排查效率提升90%、威胁攻击研判准确率超96%。中台用户已超20万。",
+      "link": "https://mp.weixin.qq.com/s/GXfydfOXO6ja-CFNbRO8Eg",
+      "source_file": "sources/2026-08-15_数智筑基 效赢新程：邮储银行 AI 驱动的科技数智化转型实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "年轻美国人日益不信任 AI 及 AI 公司高管",
+      "source": "Solidot",
+      "digest": "Solidot援引一项针对1088名18-34岁美国人的调查，揭示年轻群体对AI公司及高管的普遍不信任。45%受访者认为AI将对其职业生涯产生负面影响，仅10%认为会有帮助。\n在对投资AI的大公司高管的信任度上，Palantir CEO Alex Karp最不受信任（81%不信任），其后为董事长Peter Thiel（79%）、Alphabet CEO Sundar Pichai与Anthropic CEO Dario Amodei（均75%）；Sam Altman、马斯克、黄仁勋不信任度约70%，微软Satya Nadella略低为65%。\n此外60%美国人认为数据中心建设应放缓，仅15%希望加快速度。",
+      "link": "https://www.solidot.org/story?sid=85103",
+      "source_file": "sources/2026-08-15_年轻美国人日益不信任 AI 及 AI 公司高管_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-15",
+      "title": "马斯克正式杀入Vibe Coding战场",
+      "source": "财联社AI daily",
+      "digest": "财联社AI daily报道，SpaceX于8月14日正式完成对AI编程初创公司Cursor的收购，交易估值约600亿美元，流程始于今年4月双方合作加速模型训练。Cursor为2023年推出的AI编程助手，是“氛围编程（vibe coding）”时代核心玩家，交易完成后团队可使用SpaceX大规模GPU集群。\n双方此前已联合推出编程向模型Grok 4.5，SpaceX还发布Grok Bot（AI智能体团队）与升级版Grok 4.6；SpaceX另与Anthropic、谷歌达成数十亿美元算力交易。马斯克称9月AI收入将超SpaceX其他收入。该文主体为并购商业事件，非技术内容。",
+      "link": "https://mp.weixin.qq.com/s/InTplf1j6tOxkAgi7WPKaQ",
+      "source_file": "sources/2026-08-15_马斯克正式杀入Vibe Coding战场_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-14",
       "title": "谷歌 DeepMind 发布 Gemini 3.7 Flash",
