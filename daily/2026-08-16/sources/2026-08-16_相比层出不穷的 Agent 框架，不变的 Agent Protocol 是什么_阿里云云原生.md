@@ -1,13 +1,15 @@
 ---
 publish_time: 1786845600
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
+  阿里云云原生文章抽离出"Agent Protocol"这一稳定抽象：生产级 Agent 系统的核心不是模型调用，而是任务生命周期管理。文章将 Agent Runtime 拆解为 Thread/Run/Step/Event/Artifact/Checkpoint 等跨框架稳定对象，以及 stream/interrupt/resume/cancel/retry 等生命周期操作。
+  指出框架会迭代、协议对象会换名，但任务、上下文、状态、产物等底层问题不会消失；区分玩具 Agent 与生产 Agent 的关键在于状态持久化、中断恢复、可观测性与可评测性。选型时应关注协议边界与 Runtime 抽象，而非具体框架 API。
 link: https://mp.weixin.qq.com/s/It5xtZ-VDNdiTREeYHrMMA
 source: 阿里云云原生
-title: 相比层出不穷的 Agent 框架，不变的 Agent Protocol 是什么
 ---
+
 
 # 相比层出不穷的 Agent 框架，不变的 Agent Protocol 是什么
 

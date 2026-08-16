@@ -1,13 +1,15 @@
 ---
 publish_time: 1786846500
-status: pending
-category: 
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
+  Anthropic 宣布 Claude Sonnet 5 首发定价永久保留：输入每百万 2 美元、输出 10 美元，取消原定 8 月 31 日上调至 3/15 美元的计划，相当于削减三分之一。Sonnet 5 拥有 100 万上下文、SWE-bench Verified 85.20%，以中端价格提供接近旗舰的能力，公开价比 OpenAI GPT-5.6 Terra 更低。
+  文章分析，智能体任务多轮调用会放大 token 成本，稳定低价对大规模自动化企业尤为关键；同时视为 Anthropic 在 IPO 前以低单价换用量、加深客户锁定的策略。开发者则吐槽"性价比太低，谁会用"。
 link: https://mp.weixin.qq.com/s/ci9EaFAxA9TyPJfvoQ7igg
 source: InfoQ
-title: Anthropic不走高端路线，Sonnet 5永久降价！开发者算帐后锐评：性价比太低，到底谁会用啊？
 ---
+
 
 # Anthropic不走高端路线，Sonnet 5永久降价！开发者算帐后锐评：性价比太低，到底谁会用啊？
 

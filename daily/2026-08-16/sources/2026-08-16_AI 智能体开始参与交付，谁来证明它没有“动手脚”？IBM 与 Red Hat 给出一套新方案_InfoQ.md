@@ -1,13 +1,15 @@
 ---
 publish_time: 1786846500
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
+  IBM 与 Red Hat 扩展开源项目 Lightwell，推出面向 AI 辅助软件开发的可信软件供应链商业产品。它整合 Sigstore、in-toto、SLSA 与 SBOM 等标准，统一提供工件签名、来源追踪、策略验证与生命周期管理，使企业能证明由人类与 AI 生成的软件"源自何处、如何构建、是否被篡改、是否符合安全策略"。
+  文章指出，随着 AI 智能体直接生成代码、修改基础设施并参与交付，信任需成为贯穿软件生命周期的属性，而非发布前的最后一次检查；这与可验证执行、加密证明、工作负载身份等行业方向一致。
 link: https://mp.weixin.qq.com/s/dhSn6R2KtjZNKYXbfyR05A
 source: InfoQ
-title: AI 智能体开始参与交付，谁来证明它没有“动手脚”？IBM 与 Red Hat 给出一套新方案
 ---
+
 
 # AI 智能体开始参与交付，谁来证明它没有“动手脚”？IBM 与 Red Hat 给出一套新方案
 

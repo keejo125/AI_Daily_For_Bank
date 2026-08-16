@@ -1,13 +1,15 @@
 ---
 publish_time: 1786846500
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: true
 digest: |
+  DeepSeek-V4-Pro-0813 于 8 月 13 日凌晨静默上线，官方跑分亮眼（Terminal-Bench 2.1 达 87.9，逼近 Claude Fable 5 的 88.0），但实测口碑两极分化：1.6 万亿参数旗舰体感不稳，Artificial Analysis 综合仅 53 分，网络安全扫描误报频出。
+  蹊跷的是同一任务相隔数小时结果迥异，当天下午官网撤下公告。社区扒出 HF 仓库配置疑似"挂错模型"——初版 hidden_size、专家数等与 V4-Flash 一致，后修正为 7168/384 专家等并替换二进制权重，疑似发布即回滚的工程乌龙。
 link: https://mp.weixin.qq.com/s/7x7p1Ubpvv6x1mBmgKX1iw
 source: InfoQ
-title: 梁神变牢梁的原因找到了！疑似 DeepSeek 发错模型，HF配置和API后台紧急切换
 ---
+
 
 # 梁神变牢梁的原因找到了！疑似 DeepSeek 发错模型，HF配置和API后台紧急切换
 
