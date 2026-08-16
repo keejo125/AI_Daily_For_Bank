@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-17T06:43:29.705057",
-  "total": 1293,
+  "updated_at": "2026-08-17T06:52:59.123200",
+  "total": 1292,
   "articles": [
     {
       "date": "2026-08-16",
@@ -89,16 +89,6 @@
       "digest": "李飞飞在 Huberman Lab 访谈中强调\"AI 不是替代者，而是个人能力的放大镜\"，并讨论\"苏格拉底是最顶尖的提示词工程师\"\"不应一刀切禁止学生用 AI\"等观点。\n她回顾视觉是智能基石、ImageNet 与 2012 年深度学习转折，指出 GPU 算力、神经网络与海量数据三要素集齐才催生现代 AI；并呼吁不能只让少数科技企业替社会做决定，应看见教师群体、引导青少年正确使用 AI。属观点访谈，非技术发布。",
       "link": "https://www.qbitai.com/2026/08/474140.html",
       "source_file": "sources/2026-08-16_李飞飞最新访谈：AI咋能代替人呢？_量子位.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-16",
-      "title": "杭州95后小伙，5亿买走硅谷城堡",
-      "source": "量子位",
-      "digest": "xAI 联创、杭州 95 后吴宇怀（Tony Wu）以约 7000 万美元（约 5 亿人民币）购入硅谷希尔斯伯勒一座 12 英亩庄园，成为北加州今年最大住宅交易。吴宇怀主攻推理模型，曾参与 AlphaStar、Minerva、AlphaGeometry 等，是 Grok 3\"先思考再回答\"能力的核心推手，今年 2 月随 xAI 并入 SpaceX 后离职。\n文章借其\"硅谷买房\"的经历带出其 AI 研究背景与 xAI/SpaceX 合并造富的 IPO 红利。属人物动态，非技术内容。",
-      "link": "https://www.qbitai.com/2026/08/474245.html",
-      "source_file": "sources/2026-08-16_杭州95后小伙，5亿买走硅谷城堡_量子位.md",
       "category": "其他",
       "is_model_related": false
     },
