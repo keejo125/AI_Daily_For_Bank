@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-18",
+      "weekday": "周二",
+      "stats": {
+        "国际": 2,
+        "国内": 13,
+        "同业": 1,
+        "其他": 1,
+        "total": 17
+      },
+      "summary": "Cursor上线Origin，为Agent重建GitHub/GPT新模型在OpenAI内网自建留言板！3个月聊了几十万条，一直没人发现/AI开始自己研发A..."
+    },
+    {
       "date": "2026-08-17",
       "weekday": "周一",
       "stats": {

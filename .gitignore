@@ -55,3 +55,7 @@ __pycache__/
 wiki/
 三驾马车日视图/
 wiki/
+
+# 临时脚本（Step3 自动生成）
+scripts/step3_*.py
+scripts/*_frontmatter*.py
