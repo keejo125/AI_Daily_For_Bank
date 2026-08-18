@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-18T09:49:46.795348",
-  "total": 1328,
+  "updated_at": "2026-08-18T21:09:44.253457",
+  "total": 1333,
   "articles": [
     {
       "date": "2026-08-17",
@@ -39,6 +39,16 @@
       "digest": "OpenAI研究员Tibo披露只需3行配置即可在Codex中解锁GPT-5.6 Sol的1M上下文（约90万token起自动压缩）。官方文档本就支持但默认不开启，因超长上下文会显著推高token消耗且长上下文利用率下降（MRCR v2在512K-1M区间从91.5%降至73.8%）。OpenAI将选择权交还用户，但提醒谨慎使用。",
       "link": "https://mp.weixin.qq.com/s/rcZoiUU66V66V8iEurCRtg",
       "source_file": "sources/2026-08-17_Codex正式开放1M上下文！解除GPT-5.6 Sol封印，三行配置搞定_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-17",
+      "title": "Netflix 详述其基于 Triton 与 vLLM 的内部 LLM 服务平台",
+      "source": "InfoQ",
+      "digest": "Netflix 公开其将 LLM 推理纳入内部服务平台的生产经验，讨论如何支撑不同模型规模、硬件与快速演进的推理引擎。平台基于现有 JVM 服务层构建（负责路由、特征获取、后处理与日志），小模型在 CPU 进程内运行，大模型请求委托给 MSS，由 Triton 负责模型加载、批处理与 GPU 调度，vLLM 执行推理并提供扩展点。Netflix 强调需固定兼容的 Triton 与 vLLM 版本以防加载失败，并以 Red-Black/Versioned 策略做部署隔离。文章还详解受约束解码的状态同步难题——vLLM 暂停 GPU 资源后恢复请求时，需重建解码状态以强制输出合法 JSON。通用服务接口并未消除底层差异，打包、兼容性、约束解码与部署隔离仍需逐层工程实现。",
+      "link": "https://www.infoq.cn/article/J9Zi9LELcpxFRe23PHdY",
+      "source_file": "sources/2026-08-17_Netflix详述其基于Triton与vLLM的内部LLM服务平台_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -104,6 +114,16 @@
     },
     {
       "date": "2026-08-17",
+      "title": "从模型能力到工程优化，海外开发者正在“榨干” Qwen3.8-27B",
+      "source": "InfoQ",
+      "digest": "Qwen3.8-27B 是 Apache 2.0 开源的 27B 原生多模态稠密模型，量化后可跑在消费级 GPU，在 SWE-bench Pro、LiveCodeBench v6 等编程与 Agent 基准上超过 Claude Opus 4.6 Max。开源 12 小时即登 Hugging Face 趋势榜首，两天下载破百万、衍生约 500 个量化版本；NVIDIA、AMD、平头哥、沐曦等芯片厂商及 vLLM、SGLang、Ollama 等推理框架迅速适配。模型沿用 Gated DeltaNet+Gated Attention 混合架构，原生支持 262K 上下文（可扩展至 100 万 token），并引入多 Token 预测（MTP）提升解码速度。海外开发者围绕量化精度、MTP 推测解码与不同硬件展开“推理侧工程”优化：RTX 4090 经 MTP 提速从 47.7 升至 76.3 tokens/s，Apple Silicon 挑战使性能较基线提升 153%。文章指出权重不等于最终体验，开源社区正共同完成模型到本地的工程化落地。",
+      "link": "https://www.infoq.cn/article/MljtE2Xk6hVkd061LY7k",
+      "source_file": "sources/2026-08-17_从模型能力到工程优化，海外开发者正在“榨干” Qwen3.8-27B_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-17",
       "title": "快讯｜范式PhanRouter上线智谱GLM-5.3，即日开放调用",
       "source": "量子位",
       "digest": "智谱GLM-5.3首发上线范式PhanRouter并即日开放调用，成为首批支持平台。GLM-5.3总参数量7430亿，能力提升全来自后训练强化学习，编程较上代提升50%、Terminal-Bench 3.0位列开源第一，真实终端任务达前代六倍以上。PhanRouter以统一API、智能路由与缓存优化提供低于官方的价格及99.9% SLA，已兼容昇腾、寒武纪等国产芯片，适配模型超22万个。",
@@ -119,6 +139,16 @@
       "digest": "Noiz AI联合港科大、清华、CMU、DeepMind等发布实时可交互音视频世界模型HelixWorld 1.0，支持24FPS画面+48kHz立体声实时生成，声画由原生Transformer统一生成、随用户操作同步变化。补齐了可交互世界模型有画无声短板，权重与代码将在数周内完全开源，推动世界模型具备原生多模态响应。",
       "link": "https://www.qbitai.com/2026/08/474334.html",
       "source_file": "sources/2026-08-17_终于！世界模型进入“有声时代”：24FPS画面+48kHz立体声实时生成_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-17",
+      "title": "编程能力提高 50%！GLM-5.3 满分通过了 GPT-5.6 给的 Coding 测试",
+      "source": "InfoQ",
+      "digest": "智谱 GLM-5.3 于 8 月 14 日发布，基于 GLM-5.2 长程强化学习技术栈扩大训练规模，在内部智谱 Code Bench 上代码能力较 5.2 提升约 50%，并已向 Coding Plan 用户及 ZCode、Claude Code、OpenCode 等 Agent 开放。InfoQ 用 GPT-5.6 sol 设计的测试包考核 ZCode，GLM-5.3 约 13 分钟满分通过（评 A−），展现较强“受约束工程执行能力”，但测试仅为小型单文件任务。性能提升全部来自后训练：IndexShare 长上下文、SAO 长程 RL、slime 异步训练框架使长程 Coding RL 吞吐提升超 2.3 倍。GLM-5.3 还意外强化网络安全能力，在 CyberGym 达 84.5%，并在真实开源项目发现 2436 个漏洞（含 1097 高危/严重）。团队称约两周后公开模型权重。",
+      "link": "https://www.infoq.cn/article/xWyWwu4ZNptlhpb15tia",
+      "source_file": "sources/2026-08-17_编程能力提高50%！GLM-5.3 满分通过了GPT-5.6给的Coding 测试_InfoQ.md",
       "category": "国内",
       "is_model_related": true
     },
@@ -184,6 +214,16 @@
     },
     {
       "date": "2026-08-17",
+      "title": "世界机器人大会今年不一定「Wow！」，但有五个问题很值得关注",
+      "source": "极客公园",
+      "digest": "2026 世界机器人大会（8/19–23 北京，300 余家企业、2000 余件展品）前夕，极客公园提出五个值得关注的问题：①是否“只能是人形”——形态在扩散还是收敛；②通用性进展——垂直场景长程任务能力是否实质推进；③数据是否变成硬件生意——遥操、动捕、数据手套等“卖铲子”玩家涌现；④关键部件（灵巧手、触觉、电机、关节）进步几何；⑤具身智能何时比电动汽车更大。文章指出行业“日拱一卒”：真实变化在手指自由度、电机成本、连续两小时不掉链子的可靠性，而非舞台高光。背景上宇树科创板申购估值近千亿，但 2025 年仅出货 5500 台，行业仍处“数据、本体、算法均未收敛但跑得足够快”的阶段。",
+      "link": "http://www.geekpark.net/news/368887",
+      "source_file": "sources/2026-08-17_世界机器人大会今年不一定「Wow！」，但有五个问题很值得关注_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-17",
       "title": "中国算力只有美国 1/10，模型为什么没差 10 倍?",
       "source": "CSDN",
       "digest": "基于华为昇腾首席科学家廖恒近5小时访谈，文章探讨「中国可识别算力约美国1/10，头部模型却未差10倍」的悖论。核心结论是差距被转换率吃掉：单卡非英伟达，但拥有算力、可集中算力、转换率三件事决定模型能力；训练万亿参数模型只需千卡月级。竞争单位正从卡换轨到GW（吉瓦）。",
@@ -199,6 +239,16 @@
       "digest": "港大超维战队（香港大学+超维动力）让两台人形机器人按11分制自主打完一局乒乓球，无遥控、无人喂球，将在第二届世界人形机器人运动会作为正式自主对抗项目亮相。背后是自主研发的SMASH系统（视觉感知+轨迹预测+动作规划+全身控制闭环），从1.0升级到2.0，支持长球短球与自主发球，对局数据用于后续真机强化学习。",
       "link": "https://www.qbitai.com/2026/08/474518.html",
       "source_file": "sources/2026-08-17_人形机器人开始打国球了！两台机器人完整打完11分制比赛_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-17",
+      "title": "共生知行发布人形机器人赛车 Demo：以卡丁车测试双足机器人的“全身智能”",
+      "source": "量子位",
+      "digest": "具身智能初创公司共生知行（Symbiosis Robotics）发布双足人形机器人驾驶卡丁车 Demo，并同步上线官网。视频中机器人双手握方向盘、双脚控制踏板，在封闭赛道完成行驶，需同时协调视觉感知、多接触点平衡与手眼脚协同。公司将卡丁车定义为“全身智能压力测试”而非商业应用，意在把感知、平衡、力控放入连续任务链，检验机器人像人一样调动全身完成物理交互——这正是人形机器人从“能运动”走向“能完成任务”的难点。共生知行定位为双足人形机器人全身智能基座模型公司，走端到端 VLA 路线，核心成员来自智源、港科大、小米、达摩院等，创始人丁鹏翔的 ReconVLA 获 AAAI-26 杰出论文奖。",
+      "link": "https://www.qbitai.com/2026/08/474537.html",
+      "source_file": "sources/2026-08-17_共生知行发布人形机器人赛车Demo：以卡丁车测试双足机器人的“全身智能”_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
