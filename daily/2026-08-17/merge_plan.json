@@ -1,0 +1,19 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-17_DeepSeek AI Releases DeepSeek Harness in Developer_MarkTechPost.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-17_Cordis如何支撑DeepSeek Harness的插件化构建：基于源码与架构互证的深度分析_软件工程3.0时代.md",
+          "name": "软件工程3.0时代",
+          "link": "https://mp.weixin.qq.com/s/YTE0rKXFa3zcr5T4lMOtTA"
+        },
+        {
+          "source_file": "sources/2026-08-17_DeepSeek Harness 全景可观测实践_阿里云云原生.md",
+          "name": "阿里云云原生",
+          "link": "https://mp.weixin.qq.com/s/b6_-8JB6QigS_uA-txPKLQ"
+        }
+      ]
+    }
+  ]
+}

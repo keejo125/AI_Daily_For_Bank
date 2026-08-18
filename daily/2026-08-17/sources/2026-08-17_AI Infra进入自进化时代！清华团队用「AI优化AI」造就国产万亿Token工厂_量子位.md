@@ -1,15 +1,14 @@
 ---
 publish_time: 1786960800
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
-  清华团队（清昴智能）构建 AI Infra 自进化体系，用 AI 优化 AI 基础设施（自动调优算子/编译/调度），支撑国产大模型万亿 Token 级训练/推理工厂。在“中国算力约为美国 1/10”的约束下，以系统优化弥补硬件差距，提升算力利用率、降低单位 Token 成本。
+  清昴智能（清华朱文武实验室技术脉络）推出以AI驱动、具备自我迭代能力的算力基础设施，主打「AI优化AI」的自进化Infra。文章指出上层模型已迈向L4自主执行，底层国产算力却仍依赖人工调优的L1模式，算力底座需进入由算法与自动化驱动的反馈循环，为Agent时代数万亿Token产出提供底座。硅谷与中国均在押注RSI（递归自我改进）方向。
 link: https://mp.weixin.qq.com/s/WSdLvHOr1YHgXj5spag-5g
 source: 量子位
 title: AI Infra进入自进化时代！清华团队用「AI优化AI」造就国产万亿Token工厂
 ---
-
 # AI Infra进入自进化时代！清华团队用「AI优化AI」造就国产万亿Token工厂
 
 来源：量子位

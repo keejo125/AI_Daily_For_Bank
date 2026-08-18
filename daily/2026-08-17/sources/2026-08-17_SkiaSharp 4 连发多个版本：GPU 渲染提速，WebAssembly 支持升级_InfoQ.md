@@ -1,15 +1,10 @@
 ---
 publish_time: 1786945200
 status: pending
-category: 
-is_model_related: false
-digest: |
-  Microsoft 与 Uno Platform 发布 SkiaSharp 4 稳定版（4.148/4.150/4.151），引擎升级至 Skia m148–m151。GPU 渲染性能最高提升 24%、CPU 噪声着色快约 6 倍；SKFont 替代 SKPaint 文本成员（破坏性升级）。强化 .NET WebAssembly 支持，与上游里程碑对齐发布节奏。
 link: https://mp.weixin.qq.com/s/KUNcDsAJ-K8uMxAWyxobuw
 source: InfoQ
 title: SkiaSharp 4 连发多个版本：GPU 渲染提速，WebAssembly 支持升级
 ---
-
 # SkiaSharp 4 连发多个版本：GPU 渲染提速，WebAssembly 支持升级
 
 来源：InfoQ

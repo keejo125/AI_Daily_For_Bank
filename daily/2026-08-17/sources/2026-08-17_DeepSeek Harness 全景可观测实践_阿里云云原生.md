@@ -1,15 +1,14 @@
 ---
 publish_time: 1786962910
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
-  阿里云将 DeepSeek Harness (dsh) 接入 OpenTelemetry + SLS + ARMS，构建 Agent 可观测体系，将 token 成本、工具调用、上下文窗口、子 Agent 生命周期、Trajectory 回放全部可视化。长任务（如 87 分钟跑批）可定位拖慢步骤与失控子 Agent，把排障从“看日志”升级为“看指标+看链路”。
+  阿里云可观测团队基于开源LoongSuite为DeepSeek Harness（DSH）提供两条全景可观测路线：可从插件市场独立安装的@loongsuite/dsh-plugin，以及LoongSuite Pilot内置集成，均基于OpenTelemetry GenAI语义。文章说明如何用Trace与Metrics回答这轮为何花47秒、失败重试几次、Token来自主Agent还是Subagent等性能、成本与错误问题。（DeepSeek Harness 同主题合并从条）
 link: https://mp.weixin.qq.com/s/b6_-8JB6QigS_uA-txPKLQ
 source: 阿里云云原生
 title: DeepSeek Harness 全景可观测实践
 ---
-
 # DeepSeek Harness 全景可观测实践
 
 来源：阿里云云原生

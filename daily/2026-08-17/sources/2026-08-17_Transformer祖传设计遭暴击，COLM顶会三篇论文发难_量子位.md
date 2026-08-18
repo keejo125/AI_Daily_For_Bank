@@ -1,15 +1,14 @@
 ---
 publish_time: 1786948643
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: true
 digest: |
-  COLM 2026 三篇论文从不同角度质疑 Transformer 核心设计：注意力机制 O(n²) 复杂度、位置编码的归纳偏置、下一 token 预测的训练目标，并提出线性注意力/状态空间模型（SSM）等更高效替代架构。暗示“祖传设计”未必是终局，架构创新窗口仍敞开。
+  COLM 2026上多篇论文集体重审Transformer祖传设计。Ai2等《Cracks in the Foundation》训练26个7B-8B模型做排列组合，发现QK归一化、GQA、滑动窗口等标配在长上下文维度付出实打实代价，有害设计叠加会放大掉分；康奈尔《Lost in Backpropagation》则质疑被忽视的输出投影层。研究呼吁重新审视被视为圭臬的架构默认选择。
 link: https://mp.weixin.qq.com/s/AxXMNUF98NGsv__jTuzLPA
 source: 量子位
 title: Transformer祖传设计遭暴击，COLM顶会三篇论文发难
 ---
-
 # Transformer祖传设计遭暴击，COLM顶会三篇论文发难
 
 来源：量子位

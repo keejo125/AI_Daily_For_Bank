@@ -1,15 +1,14 @@
 ---
 publish_time: 1786923360
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
-  深度分析：DeepSeek Harness 用仅约 2000 行 TypeScript 的元框架 Cordis 作微内核，以“一切皆插件”（Plugin/Context/Service/Typed Events/Effects）承载 54 个包组、2000+ 模块的完整 Agent 产品。涵盖声明式组合、双端插件化、运行时自修改、生成式文档与不变式门禁，为智能体平台架构选型提供工业级范本。
+  深度分析DeepSeek Harness（dsh）的「一切皆插件」架构如何由约2000行TypeScript的元框架Cordis支撑。文章以源码互证剖析Cordis五大插件规范（Plugin/Context/Service/Typed Events/Effects）在Harness中的落地，提炼六项架构实践，论证Cordis不仅是软件总线，更是让Agent系统获得可演化、可自举能力的进化底座。（DeepSeek Harness 同主题合并从条）
 link: https://mp.weixin.qq.com/s/YTE0rKXFa3zcr5T4lMOtTA
 source: 软件工程3.0时代
 title: Cordis如何支撑DeepSeek Harness的插件化构建：基于源码与架构互证的深度分析
 ---
-
 # Cordis如何支撑DeepSeek Harness的插件化构建：基于源码与架构互证的深度分析
 
 来源：软件工程3.0时代

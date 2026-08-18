@@ -1,15 +1,14 @@
 ---
 publish_time: 1786945200
-status: pending
-category: 
+status: confirmed
+category: 其他
 is_model_related: false
 digest: |
-  Anthropic CEO Dario Amodei 罕见发文承认“AI 信任危机”源于行业未兑现“让世界变好”的承诺，而非公关问题，主张坦诚谈风险反而利信任。LeCun 反驳其“监管约束前沿公司”主张，认为应以开放、多样的 AI 制衡权力集中。分歧在于权力集中（监管）vs 权力分散（开放）。
+  Anthropic CEO Dario Amodei罕见在X发长文回应「为何越来越多人不信AI」，承认AI公司尚未兑现宏大承诺，并将信任危机归因于权力集中。他主张正确的游戏规则应同时应对网络安全/生物安全/对齐风险、以制度约束前沿公司权力、为开放权重模型留空间。LeCun则开炮称信任危机源于权力集中。帖子浏览量破千万。
 link: https://mp.weixin.qq.com/s/8B_51RWyMJj-PcPx38fTPw
 source: InfoQ
 title: Dario “破防小作文”超千万人围观！LeCun 开炮：信任危机是因为你搞权力集中
 ---
-
 # Dario “破防小作文”超千万人围观！LeCun 开炮：信任危机是因为你搞权力集中
 
 来源：InfoQ

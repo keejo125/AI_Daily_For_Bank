@@ -1,15 +1,14 @@
 ---
 publish_time: 1786922100
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
-  开源工具 unlockGW 号称可剥离 Claude 输出中的 C2PA 内容凭证/水印，GitHub 斩获 11k Star。其通过解析或移除元数据使 AI 生成内容溯源失效，直接削弱 EU AI Act 等推行的“AI 内容可识别”基础。Anthropic 已通过 ToS 与 npm 分发渠道限制，但开源特性使其难以彻底封堵。事件再次凸显 AI 生成内容溯源的技术脆弱性。
+  Anthropic为Claude全量文本加隐藏水印（基于Google DeepMind SynthID-Text），引发争议。一个去水印开源项目5天冲到11k Star，实现三层清除：确定性清洗不可见字符、Agent改写破坏统计水印、清除文件元数据。戏剧性的是Claude拒绝安装该Skill，最终由GLM 5.2完成——折射出水印与去水印的持久猫鼠博弈。
 link: https://mp.weixin.qq.com/s/ZXcLRIli8V8shxuauW2TQw
 source: 机器之心
 title: Claude水印已被破解，斩获11k Star！但会被拒绝安装
 ---
-
 # Claude水印已被破解，斩获11k Star！但会被拒绝安装
 
 来源：机器之心

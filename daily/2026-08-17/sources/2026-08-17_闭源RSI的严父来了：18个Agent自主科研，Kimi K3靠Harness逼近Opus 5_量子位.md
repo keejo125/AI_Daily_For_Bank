@@ -1,15 +1,14 @@
 ---
 publish_time: 1786944699
-status: pending
-category: 
-is_model_related: true
+status: confirmed
+category: 国际
+is_model_related: false
 digest: |
-  月之暗面 Kimi K3 采用“递归自我改进 (RSI)”路线：18 个 Agent 自主做科研（提出假设→实验→写代码→审稿），配合 Harness 工程化（沙箱隔离、版本化），能力逼近 Opus 5。RSI 使模型自己改进自己，是高风险高回报的能力跃迁路径，须配人工安全门禁防止失控。
+  开源AI基础设施公司Prime Intellect用多智能体Harness把监控与实现交给更小更便宜的开源模型，在nanoGPT优化器速通中让18个前沿模型自主科研：开源Kimi K3配Prime Agent Harness跑出2930步，逼近Claude Opus 5（2920步）、超过GPT-5.6 Sol（3042步）。表明模型不必最强、科研机器够高效，开源模型也能靠试错吞吐量追上第一梯队，凸显Harness在AI4AI上的潜力。
 link: https://mp.weixin.qq.com/s/BM4vYijAcAwdjPNTKfLAhg
 source: 量子位
 title: 闭源RSI的严父来了：18个Agent自主科研，Kimi K3靠Harness逼近Opus 5
 ---
-
 # 闭源RSI的严父来了：18个Agent自主科研，Kimi K3靠Harness逼近Opus 5
 
 来源：量子位
