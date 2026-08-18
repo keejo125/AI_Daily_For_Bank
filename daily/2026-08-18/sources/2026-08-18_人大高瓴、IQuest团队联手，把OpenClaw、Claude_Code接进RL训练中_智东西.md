@@ -1,0 +1,127 @@
+---
+publish_time: 1787047405
+status: pending
+category: 
+is_model_related: false
+digest: |
+link: https://mp.weixin.qq.com/s/ZrJ8jCs3VX0ngLROxUmJdw
+source: 智东西
+title: 人大高瓴、IQuest团队联手，把OpenClaw、Claude Code接进RL训练中
+---
+
+# 人大高瓴、IQuest团队联手，把OpenClaw、Claude Code接进RL训练中
+
+来源：智东西
+原文链接：https://mp.weixin.qq.com/s/ZrJ8jCs3VX0ngLROxUmJdw
+
+Harness也可以直接成为模型学习和提升的环境。
+作者 |
+陈骏达
+编辑 |
+心缘
+智东西8月18日报道，昨天，中国人民大学高瓴人工智能学院、至知创新研究院团队联合提出了一个
+面向复杂Agent Harness的黑盒强化学习框架ClawGym II
+。
+ClawGym的长期愿景，是构建一套面向General Agent持续训练、能力演进与可靠评测的完整基础设施，推动Agent从依赖外部强模型和离线数据，逐步走向能够在真实交互环境中持续学习和提升。
+在Part I中，团队围绕这一目标，率先打通了从高质量任务合成、真实Agent交互轨迹收集，到模型训练与系统化评测的完整链路，并验证了利用真实Agent系统产生的交互数据训练专用模型、提升Agent能力的可行性。相关工作已开源在：
+https://github.com/ClawGym
+。
+在此基础上，ClawGym II进一步将真实Agent Harness直接纳入强化学习闭环：无需改动Claude Code、OpenClaw等Harness的内部实现，即可让模型通过其真实执行过程进行强化学习，并支持多个异构Harness联合训练同一个策略模型。
+实验显示，通过OpenClaw和Claude Code进行黑盒RL均能稳定提升模型的Agent任务能力；进一步将不同Harness产生的rollout纳入统一训练后，一个共享策略模型也能够同时从多个异构Harness中学习。
+论文链接：
+https://arxiv.org/abs/2608.16798。
+01
+.
+更强的Harness
+模型未必会用
+Agent Harness已成为现代智能体系统的执行基础。它把系统提示、工具接口、上下文管理、工作流和错误恢复等机制整合在一起，让模型能够在复杂环境中持续交互、完成长程任务。
+Claude Code、Codex、OpenClaw等系统的发展也表明，Harness正在成为影响Agent能力的重要因素。但更强的Harness并不意味着模型能自然用好这些能力——面对更复杂的工具、交互协议和执行机制，模型仍要学习如何规划、决策并与环境交互。
+ClawGym II延续了ClawGym围绕真实Agent系统训练模型的研究路线，但进一步把问题从“利用Harness产生的交互数据训练模型”，推进到“直接通过Harness进行强化学习”。
+它试图回答一个更进一步的问题：
+能否直接通过真实、复杂的Agent Harness持续优化模型本身？
+对于Claude Code、OpenClaw这类复杂系统，其内部控制流和执行逻辑对训练系统不可见，团队将这一设定称为黑盒强化学习（Black-box RL）：Harness保持原有执行逻辑不变，训练系统只基于其产生的交互轨迹优化底层策略模型。
+直接通过复杂黑盒Harness做强化学习，首先要过三道坎。
+第一道是可扩展且稳定的执行基础设施：
+通用Agent任务依赖独立且有状态的运行环境，大规模并发rollout与长程交互中的延迟、异常和失败，都可能影响训练稳定性。
+第二道是从碎片化黑盒轨迹中进行有效优化：
+黑盒Harness暴露给训练系统的只是分散、分叉甚至冗余的模型调用，完整的多轮训练轨迹并不可见，Harness内部的消息处理还可能进一步带来训练-推理不一致。
+第三道是跨异构Harness的可扩展性：
+不同Harness在交互协议、工具接口、上下文管理和工作流上差异显著，训练框架需要以较低的适配成本支持不同Harness，并进一步实现统一训练。
+02
+.
+执行与优化解耦：
+Sandbox隔离跑任务，模型边界抓数据
+针对这三道坎，ClawGym II的核心思路是将Harness执行与策略优化解耦：Harness保持原生执行逻辑，负责工具调用、上下文管理、重试恢复、subagent调度以及环境交互；训练系统则在模型服务边界捕获模型侧信息，结合任务奖励完成轨迹构建与策略更新。
+由此，无需重新实现Harness内部复杂的控制流程，即可直接通过不同Harness对模型进行强化学习。
+执行层面，ClawGym II将每个任务环境与对应Harness一同运行在临时Sandbox中。通用Agent任务的一条rollout会在多轮交互中持续修改文件、进程和工具状态，Sandbox在rollout开始时按需创建、结束后释放，为每条rollout提供相互隔离的工作空间和运行环境，支撑大规模并发执行。
+除Harness原生提供的工具外，网页搜索等通用能力以及任务特定工具还可以通过MCP接入，无需修改Harness原有工作流。模型侧信息则通过模型边界捕获：虽然Harness内部控制流不可见，但所有模型行为最终都必须经过模型服务边界。
+团队在Harness与策略模型之间部署了Serving Proxy，作为Harness的模型服务端点调用当前rollout policy完成生成，同时记录输入token、生成token、rollout log-probability和任务信息。
+任务结束后，Verifier根据最终环境状态计算reward，并将奖励与调用记录一同送入训练流程。针对真实Harness执行中的超时、连接异常和轨迹缺失等问题，框架还加入了容错与过滤机制，保证长时程rollout的可靠性。
+03
+.
+前缀树拼回碎片轨迹
+多Harness联合训练
+Serving Proxy捕获到的模型调用只是黑盒Harness在serving boundary上暴露出的碎片记录，无法直接作为完整多轮轨迹训练：相邻调用往往包含大量重复历史，而retry、context compaction、subagent等机制还可能让一次rollout产生多个共享历史的执行分支。
+为此，团队提出了
+基于前缀树的轨迹重建（Prefix-Tree Reconstruction）
+：将同一次rollout中捕获的模型调用组织成一棵前缀树，相同交互历史合并为公共前缀，不同后续执行保留为独立分支，同时恢复 Harness 插入的工具结果和环境反馈，使每条root-to-leaf路径重新对应一条完整的多轮交互轨迹。
+但前缀树中的所有分支并非都具有有效训练信号。框架进一步执行
+轨迹过滤与树结构优化
+：移除retry产生的dead leaves，过滤context compaction、subagent等难以与最终任务reward建立可靠credit assignment的辅助轨迹，并直接丢弃异常过度分叉的rollout。
+过滤后，一次rollout仍可能保留多条共享历史的有效轨迹，它们共同对应同一个 workspace 终态和 rollout-level reward。
+训练时，所有有效分支均参与优化，但
+共享前缀在整棵树中只计算一次 loss，各分支独有的后续token分别参与更新
+，从而避免因轨迹分叉而重复训练相同历史，也避免高度分叉的 rollout 获得不成比例的训练权重。
+在此基础上，团队进一步使
+GRPO与PPO适配一对多的树状轨迹结构
+。对于GRPO，reward normalization仍然在同一任务的多个rollout之间进行，每个rollout得到一个统一的advantage，再广播到该rollout恢复出的全部有效轨迹.
+对于PPO，则将同一rollout中的不同分支独立进行advantage estimation，不在兄弟分支之间传播advantage，从而在保留rollout-level reward语义的同时，使传统策略优化算法能够处理黑盒Harness产生的forked trajectories。
+除了轨迹结构，黑盒训练还必须解决
+训练与推理的一致性（Training–Inference Consistency）
+。在 token 层面，团队采用
+Black-box Token-in-Token-out
+：为每次模型调用维护彼此解耦的Harness视图和训练视图。推理引擎实际生成的原始token被直接记录并作为训练的唯一模型输出，而解码后的结构化文本只交给Harness执行；即使Harness随后进行了格式规范化、重新序列化等操作，也不会覆盖训练侧保存的原始token。
+进一步地，团队在probability层面采用
+token-level importance-sampling rollout correction
+，修正推理引擎与训练引擎重新计算概率时产生的偏差，从token sequence和token probability两个层面共同降低off-policy bias。
+当Harness的执行逻辑与策略优化被彻底解耦后，整个训练流程也不再绑定某一种Harness的内部实现。基于这一点，团队进一步提出
+Mix-Harness Training
+：将
+Task–Harness Pair
+作为基本训练实例，让OpenClaw、Claude Code等不同 Harness 产生的rollout随机混合进入同一个training batch，共同优化一个共享策略模型。
+对于GRPO，advantage normalization在各自的Task–Harness Pair内独立进行，避免不同Harness的交互模式和reward distribution干扰相对优势估计；而不同Harness产生的梯度最终仍在同一步策略更新中聚合。由此，ClawGym II不仅能够通过任意单一黑盒Harness直接训练模型，也进一步实现了
+跨异构Harness的统一联合强化学习
+。
+04
+.
+跨越多类复杂任务
+黑盒RL均实现稳定提升
+团队以Qwen3-30B-A3B为主要骨干模型，分别考察了单一Harness训练与Mix-Harness训练两种设置。在OpenClaw与Claude Code两个结构差异显著的Harness上，黑盒RL均带来了显著且可迁移的性能提升：ClawII-OC-30A3B与ClawII-CC-30A3B在ClawGym-Bench上相比各自初始化模型分别提升9.98和14.81分，
+在PinchBench上提升分别达到11.71和17.28分。
+这说明通过复杂Harness进行强化学习能够持续提升模型的Agent能力，并迁移到新的任务分布。稳定性方面，在两个Harness上，critic-based PPO与critic-free GRPO均能稳定训练约200–400个optimization steps，training reward与下游评测表现整体持续提升，最终性能也较为接近。
+Mix-Harness训练中，团队将OpenClaw与Claude Code产生的rollout纳入同一训练过程，共同优化一个Qwen3-30B-A3B策略模型。
+实验结果显示，该模型在两个Harness上都能保持与对应单Harness训练相当的training reward和下游评测表现，整个训练过程保持稳定，
+说明来自不同Harness的学习信号可以在统一框架中被有效联合优化
+，一个共享策略模型能够同时适配多个异构Harness。
+为进一步验证ClawGym II的通用性，团队将黑盒强化学习扩展到JobBench和 OfficeQA两类更具挑战、结构差异明显的任务。
+其中，JobBench面向复杂职业工作流，涉及图片、数据库及Office文件等多种数据形式，要求Agent跨文件理解并完成实际工作产物；OfficeQA则侧重大规模文档中的检索、分析与多步推理，最终生成可验证答案。
+针对两类任务，团队分别合成JobBench-style和OfficeQA-style训练数据，并以Qwen3-30B-A3B为骨干模型、Claude Code为Harness进行黑盒RL。得益于统一的任务接口，新任务只需定义任务指令、初始化工作空间和验证器，即可直接接入现有训练流程，无需修改底层RL框架。
+实验结果显示，模型在JobBench-Easy上由20.46提升至27.20，在 OfficeQA-Full上由8.53提升至21.54，两组训练的reward也均保持稳定上升。
+这表明，ClawGym II能够跨越不同任务形式，从复杂Workspace操作到长文档检索与推理，都可以在同一套黑盒RL框架下进行稳定、有效的策略优化。
+团队还在一个显式构建的简单White-box AgentLoop上进行了强化学习，以比较不同训练范式的效果。WhiteBox-30A3B在对应AgentLoop下达到59.90，相比初始模型提升18.21分。
+当这一模型直接切换到未参与训练的OpenClaw上执行时，仍能达到50.33，相比初始模型提升5.22分，说明简单AgentLoop中学到的部分通用Agent能力具有一定的跨Harness迁移性。但这种迁移并不足以完全适应复杂Harness：直接通过OpenClaw进行黑盒RL的ClawII-OC-30A3B在相同评测下达到62.62，明显高于白盒训练模型。
+面对真实Harness中更复杂的交互协议与执行机制，仅依赖白盒训练仍有差距，直接通过目标Harness进行优化才能更充分地适应其实际执行机制。
+05
+.
+结语：从借助Harness完成任务，到通过Harness提升自己
+如今，Harness不再只是模型能力的执行载体，也可以直接成为模型学习和提升的环境。ClawGym II的实验验证了这种训练范式的可行性：不同形态的真实Harness能够接入统一的优化框架，并共同推动同一个策略模型学习。
+未来，团队将继续围绕真实Agent系统中的学习与演进展开研究，关注模型如何在持续交互和真实执行过程中不断适应环境、积累经验并提升能力。沿着这一方向，ClawGym将继续推动真实Agent系统中的模型学习与能力演进，为通用智能体的发展提供基础支撑。
+9月20-21日，智东西主办的
+2026全球AI芯片峰会
+将在上海举行，设有开幕式，
+大模型AI芯片、Agent推理芯片、具身智能芯片
+3场高峰论坛
+，以及
+Token工厂异构混训混推、超节点、AI芯片架构创新、新型存储器、大模型KV Cache
+5场技术研讨会
+。
