@@ -10,7 +10,7 @@ merge_target: "2026-08-10_Meta重回开源MuseSpark12_AI寒武纪.md"
 digest: |
   Meta以Apache 2.0协议发布Muse Glimmer，一个从Muse Spark蒸馏而来的300亿参数多模态模型，专为本地Agent工作流优化。模型通过4-bit量化压缩至20GB以下搭配DFlash推测解码，可在单张消费级GPU或Mac上运行。训练分三个阶段：预训练使用logit蒸馏、中训练加入长上下文Agent数据、后训练结合SFT与强化学习。支持文本图像双模态输入、131K+上下文、32个query head/2个KV head的GQA注意力机制，覆盖桌面Agent、编程Agent、文档理解、合成数据生成等场景。
 ---
-# Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model That Runs on One Consumer GPU
+# Meta AI 发布 Muse Glimmer：300 亿参数开放权重 Agentic 模型，单 GPU 即可运行
 
 > 原文链接：https://www.marktechpost.com/2026/08/10/meta-ai-releases-muse-glimmer/
 > 来源：MarkTechPost

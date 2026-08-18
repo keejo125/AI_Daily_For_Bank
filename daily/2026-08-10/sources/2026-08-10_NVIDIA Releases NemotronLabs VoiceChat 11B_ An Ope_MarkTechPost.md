@@ -8,7 +8,7 @@ is_model_related: true
 digest: |
   英伟达发布NemotronLabs VoiceChat 11B，一个开源的端到端语音到语音模型，采用混合Mamba/Transformer架构实现全双工实时对话。模型将ASR、LLM和TTS统一为单一网络，端到端延迟约448毫秒，支持用户打断（480毫秒内接管率达100%）。独特之处在于支持边对话边工具调用，通过独立输出通道发送TOOLCALL脚本，并自动生成占位语填充API执行间隙。目前仅提供研究用途，需要80GB以上显存GPU（A100/H100），存在2分钟音频上下文上限和长对话后产生乱码等已知限制。
 ---
-# NVIDIA Releases NemotronLabs VoiceChat 11B: An Open Full-Duplex Speech-to-Speech Model with ~450 ms Turn-Taking and Live Tool Calling
+# NVIDIA 开源全双工语音模型 NemotronLabs VoiceChat 11B：~450ms 轮转+实时工具调用
 
 > 原文链接：https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling/
 > 来源：MarkTechPost

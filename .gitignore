@@ -34,6 +34,7 @@ projects/增强记忆系统-实施计划.md
 daily/*/articles_raw.json
 daily/*/filtered_articles.json
 daily/*/classification.json
+daily/*/classification.json.merged
 daily/*/classification_task.txt
 daily/*/combined_articles.json
 daily/*/merge_plan.json

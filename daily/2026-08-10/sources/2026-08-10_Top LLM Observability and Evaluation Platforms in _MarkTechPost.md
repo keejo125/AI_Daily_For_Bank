@@ -8,7 +8,7 @@ is_model_related: false
 digest: |
   LLM可观测与评估平台市场2026年规模达26.9亿美元（较2025年增长36%），预计2030年达92.6亿美元。Gartner预测到2028年LLM可观测投资将占GenAI部署的50%。LangChain对1300余名专业人士的调查显示57%已在生产环境中运行Agent，89%已实施可观测性，但52.4%仅做离线评估，29.5%未做任何评估，32%认为质量是生产部署最大障碍。文章系统对比了Langfuse、LangSmith、Braintrust、Arize等主流平台，从追踪深度、评估能力和生产监控三个维度展开分析。市场已分化为四类：AI原生可观测平台、传统APM扩展、开源自托管方案和评估专用平台。
 ---
-# Top LLM Observability and Evaluation Platforms in 2026: Langfuse, LangSmith, Braintrust, Arize, and More Compared
+# 2026 年 LLM 可观测性平台对比：Langfuse、LangSmith、Braintrust、Arize 等
 
 > 原文链接：https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/
 > 来源：MarkTechPost

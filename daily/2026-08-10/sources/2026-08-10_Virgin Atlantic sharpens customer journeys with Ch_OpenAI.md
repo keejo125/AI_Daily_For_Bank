@@ -8,7 +8,7 @@ is_model_related: false
 digest: |
   维珍航空正在使用ChatGPT Work帮助团队理解复杂客户旅程并加速服务优化。在制定五年数字战略时，数字产品团队利用ChatGPT Work构建结构化框架，研究竞争对手体验、追踪客户旅程并将发现组织为可审查的数据集，将原本需要数周的竞品调研工作压缩到数小时内完成。分析帮助维珍航空识别了数字化体验中的优势领域、需要保护的能力以及值得进一步投资的机遇。这是ChatGPT Work在企业客户体验管理场景中的典型应用案例。
 ---
-# Virgin Atlantic sharpens customer journeys with ChatGPT Work
+# 维珍航空用 ChatGPT Work 优化客户旅程
 
 > 原文链接：https://openai.com/index/virgin-atlantic/chatgpt-work
 > 来源：OpenAI
