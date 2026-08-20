@@ -1,8 +1,11 @@
 ---
 publish_time: 1787214383
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  文章解读 DeepSeek 于 2026 年 8 月发布的 DeepSeek Harness 开发者预览版 v0.1（MIT 协议开源）。文章强调这并非新模型，而是一套让 Agent 进入项目、调用工具、组合插件并完成工作流的开发框架，反映 AI 编程竞争从"模型会不会写代码"转向"Agent 能不能真正完成任务"。
+  其核心理念是"Everything is a plugin"，模型、工具、技能、会话、文件系统与 UI 均可通过插件组合替换，使开发者按场景配置职责与权限不同的专属 Agent（如代码审查、测试、项目维护 Agent）。文章指出普通开发者可先快速上手再理解架构，并推荐极客时间从快速上手、架构拆解到生态入门的三份内容，认为 AI 编程正从生成代码走向围绕目标连续完成任务。
 link: https://mp.weixin.qq.com/s/rK05HF0h6ILOx2IHxFPGhQ
 source: InfoQ
 title: 150K Star 之后，DeepSeek Harness 给 AI 编程带来了什么？| 极客时间

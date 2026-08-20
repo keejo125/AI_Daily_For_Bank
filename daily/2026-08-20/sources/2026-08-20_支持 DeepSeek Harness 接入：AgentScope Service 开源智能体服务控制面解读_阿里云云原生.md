@@ -1,8 +1,11 @@
 ---
 publish_time: 1787221800
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  阿里云 AgentScope Java 社区开源发布 AgentScope Service 组件，定位为企业级分布式智能体的统一控制面，不绑定任何 Agent 框架。它兼容 AgentScope、LangChain、ADK、Claude、Qoder 等运行时，为所有智能体提供注册、查询、分布式协调与多智能体编排能力，并配套 Managed Agents 低代码平台与可视化 Dashboard。
+  文章详解控制面架构：向上通过 SDK/Sidecar 接入四类 Agent，协调类状态落在控制面 Postgres；向下由副本直连业务自备的 AgentStateStore，通过 SessionTurnGate 做并发控制。文中重点说明 DeepSeek Harness 可通过 aistio 插件以不改源码的方式注册到控制面，并梳理 Agent Teams 的对等协作机制（共享 Task Board 与 Mailbox）、Remote Subagent 流量代理，以及 Brain/Hands 分离带来的权限与数据边界。
 link: https://mp.weixin.qq.com/s/GJ3SNaTwRUwmEbb5qbIWMQ
 source: 阿里云云原生
 title: 支持 DeepSeek Harness 接入：AgentScope Service 开源智能体服务控制面解读

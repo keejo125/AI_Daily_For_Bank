@@ -1,8 +1,11 @@
 ---
 publish_time: 1787224200
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  阿里云 Workbench CLI 已上架 Qoder IDE 插件市场及官网能力市场，让开发者在 Qoder 中用自然语言直接操作 ECS，无需公网 IP、SSH 或记忆运维命令。文章介绍该工具面向 Agent 设计：返回结构化 JSON、透传远程命令 exit code、无状态执行、命令语义直观（list/connect/exec/upload/download）。
+  文中以 5 分钟部署 WordPress、本地项目打包部署到 ECS 并调试、查看网站访问日志三个场景演示 Agent 如何自动调用 workbench 命令完成全流程。为兼顾安全，工具要求破坏性命令（rm -rf、shutdown 等）与文件覆盖前须经用户明确确认，官方 Skill 也约束 Agent 先 ls 检查再上传，做到"危险动作仍由人把关"。
 link: https://mp.weixin.qq.com/s/nMNFhxVkvfurHCrtAgx4Uw
 source: Qoder
 title: 阿里云 Workbench CLI 上架 Qoder 插件市场，不用 SSH 也能操作 ECS

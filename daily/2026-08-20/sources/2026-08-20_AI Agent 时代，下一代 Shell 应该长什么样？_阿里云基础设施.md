@@ -1,8 +1,11 @@
 ---
 publish_time: 1787221977
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  文章介绍 ANOLISA（面向 AI Agent 的操作系统）的终端入口 cosh（Copilot Shell），它叠在原有 bash/zsh 之上，让用户与 Agent 共享同一份 CLI 体验，无需更换终端或迁移会话。核心理念是"主驾始终是你"：命令、别名、脚本照旧，AI 作为"副驾"有三种介入模式——一句话接手执行（带风险分级审批卡）、命令挂了顺 exit code 主动补位（提示卡+幽灵建议）、登录即先扫一遍机器状态给出健康卡与建议提示词。
+  文章以新建 Vite 项目、cargo 测试失败修复、OOM 诊断三个现场演示共驾流程，并指出 cosh 兼容性是入场券、AI 是增益。ANOLISA 还内置 Token 效率、AgentSight、AgentSecCore 等开箱组件，随 Alibaba Cloud Linux 4 Agentic 版镜像内置。
 link: https://mp.weixin.qq.com/s/WsMhBJTI5vhuf-N2PnFK_w
 source: 阿里云基础设施
 title: AI Agent 时代，下一代 Shell 应该长什么样？

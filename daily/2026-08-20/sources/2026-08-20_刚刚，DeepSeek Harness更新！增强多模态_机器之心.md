@@ -1,8 +1,11 @@
 ---
 publish_time: 1787179094
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  机器之心报道 DeepSeek Harness 于深夜发布 v0.1.0-rc.8 更新（距 RC.7 仅两天）。此次更新覆盖多模态输入、子代理、工具调用、Windows 终端与底层存储等方向。最值得关注的两点：一是多模态能力补齐，DeepSeek 模型适配器可开启原生图片请求，/goal、/plan 等命令支持图文混合输入，@ 菜单新增文件与会话引用；二是 Claude Code 与 Codex 被进一步纳入 Harness 的 Agent 编排体系，可作为 Profile Bundle 按需安装并作为子代理调用，Codex 还支持非交互权限模式与多命名实例，使 Harness 更像统一调度层。
+  工具调用方面，web_search 支持并发查询、reportDelivery 可唤醒父任务；Windows 端 PTY 持久化 PowerShell 会话默认开启。文末还列出图片载荷、流式生成、自定义网关等修复项。
 link: https://mp.weixin.qq.com/s/D-kkE__o9yt8QVzQLUlvOw
 source: 机器之心
 title: 刚刚，DeepSeek Harness更新！增强多模态

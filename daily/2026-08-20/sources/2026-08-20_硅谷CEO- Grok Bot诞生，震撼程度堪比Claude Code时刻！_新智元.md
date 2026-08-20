@@ -1,8 +1,11 @@
 ---
 publish_time: 1787200200
-status: pending
-category:
+status: confirmed
+category: 国际
 is_model_related: false
+digest: |
+  新智元报道硅谷投资人 Gavin Baker 等盛赞 xAI 的 Grok Bot，称其震撼程度堪比"Claude Code 时刻"，个人 AI 使用量增长约 100 倍。文章总结 Grok Bot 的三大特点：极致"零配置"的极主见工作流（替用户决定模型与参数）、强制的云原生虚拟机（安全隔离、本地不卡顿）、多智能体原生协同（Bot 间自动发消息组队）。
+  文中给出"赛博 CEO"配置指南：置顶 CEO Bot 自动派活，用"大脑倾倒+逆向提示词"让 Bot 自创分工团队，并装配 Agent Mail、Vercel、Tailscale 等插件；以 Alex Finn 的 5 个 Bot（Build/Barry/Dusty/Cindy/Reed）说明"一人公司"打法。文章也引述冷静声音：界面不够严肃、底层模型尚非独孤求败，且与 Hermes、OpenClaw 可共存而非取代。
 link: https://mp.weixin.qq.com/s/Suq0Z4bseQHEzL42s18Nbw
 source: 新智元
 title: 硅谷CEO: Grok Bot诞生，震撼程度堪比Claude Code时刻！

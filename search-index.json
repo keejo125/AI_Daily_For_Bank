@@ -1,7 +1,217 @@
 {
-  "updated_at": "2026-08-20T09:37:57.200071",
-  "total": 1387,
+  "updated_at": "2026-08-21T07:10:04.975909",
+  "total": 1408,
   "articles": [
+    {
+      "date": "2026-08-20",
+      "title": "Agent也会被记忆拖累！IBM Research：记忆越多，效果未必越好，不同模型需要不同的记忆剂量",
+      "source": "51CTO技术栈",
+      "digest": "IBM Research 在 8 款模型上测试 Agent 记忆对任务完成率的影响，发现\"记忆越多效果未必越好\"，需按模型能力校准\"记忆剂量\"。团队使用 AppWorld（585 个多步骤任务）基准，对比无记忆、全量经验库、筛选后高置信度记忆三种方案：轻量的 gpt-oss-120b 全量灌入反而不如筛选方案（39.9%→56.0%，Token 仅增 5%）；旗舰模型 DeepSeek-V3.2、Claude Opus 4.6、GPT-5.5 能吃下完整经验库并补齐失败场景，但 Token 成本显著上升（如 DeepSeek-V3.2 从 14.8 万涨至 26.3 万）；GLM-5 加记忆前后均为 87.5%，呈现\"饱和\"。\nIBM 开源的 ALTK-Evolve 不更新权重，而是从成功/失败轨迹提炼可执行规则注入上下文。文章建议上线前做剂量测试，并关注 Token、延迟与场景完成率，提醒错误经验被长期保存并反复调用会放大问题。",
+      "link": "https://mp.weixin.qq.com/s/lmsIQc6MOQH5tiIEYRNnWg",
+      "source_file": "sources/2026-08-20_Agent也会被记忆拖累！IBM Research：记忆越多，效果未必越好，不同模型需要不同的记忆剂量_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Jeff Dean离职后首次公开访谈火力有点猛。。。",
+      "source": "量子位",
+      "digest": "量子位整理 Jeff Dean 从谷歌离职后首次公开访谈（斯坦福 2026 Frontier&Pioneer Symposium）的重点内容。他回顾 Gemini 早期在 Coding 能力上重视偏晚，但承认从一开始就让模型具备多模态是很成功的决定；并坦承 TensorFlow 当年两个失误——未及早加入 Eager Execution、contrib 子目录造成社区困惑。\n谈及离职创业，他表示小团队可极致聚焦科学与工程自动化；其新公司 Discovery Loop 目标是把机器学习、科学与工程设计自动化，构建能拥有多领域 PhD 级能力、调度 Agent 与 Multi-Agent 自动迭代实验的 Loop，使一轮实验从一天压缩到一分钟。他还建议研究时广扫论文摘要而非精读单篇，并警示 AI 在网络安全攻防两端能力已可能超越顶级人类攻击者。",
+      "link": "https://mp.weixin.qq.com/s/XpeRZ6A_FBL7rS3JcyJbAg",
+      "source_file": "sources/2026-08-20_Jeff Dean离职后首次公开访谈火力有点猛。。。_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "当“做应用”这件事不再只属于程序员——对话 Google 亚太开发者生态负责人 Sami Kizilbash",
+      "source": "CSDN",
+      "digest": "本文为 CSDN 对 Google 亚太开发者生态负责人 Sami Kizilbash 的访谈。Sami 表示中国初创公司\"从第一天就具备全球化思维\"并已付诸行动，举例 InReality、AI Sphere（智象未来）等完成大额融资与商业化，Polyverse 下载量突破 4500 万；认为中国在内容与短视频、智能硬件方向引领趋势。\n关于 Vibe Coding，他提出\"评估（Evaluations）就是新的编译器\"，开发者角色转向设计目标与测试。谈及开源模型，他介绍 Gemma 4 首次采用 Apache 2.0 协议，并强调边缘部署、数据主权等优势；解释 Google 取消独立 AI Studio 移动端 App、改整合进 Gemini App 的原因。他还拆解从构思、原型到部署的开发生命周期，并看好垂直细分模型的机会。",
+      "link": "https://mp.weixin.qq.com/s/A3WoP3PsZhm51Z80su2hIw",
+      "source_file": "sources/2026-08-20_当“做应用”这件事不再只属于程序员——对话 Google 亚太开发者生态负责人 Sami Kizilbash_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "硅谷CEO: Grok Bot诞生，震撼程度堪比Claude Code时刻！",
+      "source": "新智元",
+      "digest": "新智元报道硅谷投资人 Gavin Baker 等盛赞 xAI 的 Grok Bot，称其震撼程度堪比\"Claude Code 时刻\"，个人 AI 使用量增长约 100 倍。文章总结 Grok Bot 的三大特点：极致\"零配置\"的极主见工作流（替用户决定模型与参数）、强制的云原生虚拟机（安全隔离、本地不卡顿）、多智能体原生协同（Bot 间自动发消息组队）。\n文中给出\"赛博 CEO\"配置指南：置顶 CEO Bot 自动派活，用\"大脑倾倒+逆向提示词\"让 Bot 自创分工团队，并装配 Agent Mail、Vercel、Tailscale 等插件；以 Alex Finn 的 5 个 Bot（Build/Barry/Dusty/Cindy/Reed）说明\"一人公司\"打法。文章也引述冷静声音：界面不够严肃、底层模型尚非独孤求败，且与 Hermes、OpenClaw 可共存而非取代。",
+      "link": "https://mp.weixin.qq.com/s/Suq0Z4bseQHEzL42s18Nbw",
+      "source_file": "sources/2026-08-20_硅谷CEO- Grok Bot诞生，震撼程度堪比Claude Code时刻！_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "150K Star 之后，DeepSeek Harness 给 AI 编程带来了什么？| 极客时间",
+      "source": "InfoQ",
+      "digest": "文章解读 DeepSeek 于 2026 年 8 月发布的 DeepSeek Harness 开发者预览版 v0.1（MIT 协议开源）。文章强调这并非新模型，而是一套让 Agent 进入项目、调用工具、组合插件并完成工作流的开发框架，反映 AI 编程竞争从\"模型会不会写代码\"转向\"Agent 能不能真正完成任务\"。\n其核心理念是\"Everything is a plugin\"，模型、工具、技能、会话、文件系统与 UI 均可通过插件组合替换，使开发者按场景配置职责与权限不同的专属 Agent（如代码审查、测试、项目维护 Agent）。文章指出普通开发者可先快速上手再理解架构，并推荐极客时间从快速上手、架构拆解到生态入门的三份内容，认为 AI 编程正从生成代码走向围绕目标连续完成任务。",
+      "link": "https://mp.weixin.qq.com/s/rK05HF0h6ILOx2IHxFPGhQ",
+      "source_file": "sources/2026-08-20_150K Star 之后，DeepSeek Harness 给 AI 编程带来了什么？- 极客时间_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "AI Agent 时代，下一代 Shell 应该长什么样？",
+      "source": "阿里云基础设施",
+      "digest": "文章介绍 ANOLISA（面向 AI Agent 的操作系统）的终端入口 cosh（Copilot Shell），它叠在原有 bash/zsh 之上，让用户与 Agent 共享同一份 CLI 体验，无需更换终端或迁移会话。核心理念是\"主驾始终是你\"：命令、别名、脚本照旧，AI 作为\"副驾\"有三种介入模式——一句话接手执行（带风险分级审批卡）、命令挂了顺 exit code 主动补位（提示卡+幽灵建议）、登录即先扫一遍机器状态给出健康卡与建议提示词。\n文章以新建 Vite 项目、cargo 测试失败修复、OOM 诊断三个现场演示共驾流程，并指出 cosh 兼容性是入场券、AI 是增益。ANOLISA 还内置 Token 效率、AgentSight、AgentSecCore 等开箱组件，随 Alibaba Cloud Linux 4 Agentic 版镜像内置。",
+      "link": "https://mp.weixin.qq.com/s/WsMhBJTI5vhuf-N2PnFK_w",
+      "source_file": "sources/2026-08-20_AI Agent 时代，下一代 Shell 应该长什么样？_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "AI办公成了新战场！WorkBuddy们上岗前，数据和Token得先收回企业手里",
+      "source": "智东西",
+      "digest": "文章探讨 AI 办公热潮下的企业安全与成本治理，介绍浪潮信息元脑 AI Work 一体机。文章指出 Agent 时代安全边界从数据层扩展到运行全过程，重划为权限边界（Agent 拿到什么权限）、行为边界（运行过程是否可记录复盘）、资产边界（Skill 供应链风险）三个维度。\n元脑 AI Work 一体机选择\"疏\"的路线，Foundation 版让企业在自有环境统一部署模型与 Token 服务，员工两步接入 WorkBuddy 即可使用；Premium 版提供统一 Web Agent，集中纳管 WorkBuddy、OpenClaw、Codex 等并做运行时防护与 Skill 扫描，提供工作站、服务器、超节点三种硬件形态。成本方面，一体机将散落的模型调用转为统一 Token 服务，记录调用人、模型、Token 量与时延，使 AI 使用可核算、可追溯。",
+      "link": "https://mp.weixin.qq.com/s/V-aXQ_lggFDv1dgTA699aQ",
+      "source_file": "sources/2026-08-20_AI办公成了新战场！WorkBuddy们上岗前，数据和Token得先收回企业手里_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "MiniMax Design：从操作像素，到操作语义和表达意图",
+      "source": "MiniMax 稀宇科技",
+      "digest": "MiniMax 介绍其新产品 MiniMax Design——一款把多模态模型能力变为生产力的 Harness，围绕原生多模态视频模型 H3 构建。用户提出创作需求后，它能理解目标、拆解任务、调用模型与 Skills，完成从素材处理、生成、编辑到交付的完整流程。\n文章提出两点思考：未来创作修改将走向语义层面（用户表达高层意图而非操作像素）；多模态模型的下一步进展来自对更复杂 Context（整个 Project 的历史、多轮对话与资产）的理解。MiniMax Design 擅长目标明确、多环节、需持续生成修改的商业内容任务（如品牌素材批量迭代、知识视频、PV/MV/电影片头），提供 Agent 3D 导演台确定构图与镜头，并在生成后自动剪辑字幕；也可接入 ComfyUI 等开源工作流，支持云端或本地运行。",
+      "link": "https://mp.weixin.qq.com/s/vMmhr2rCeBC_dM_tBdks1A",
+      "source_file": "sources/2026-08-20_MiniMax Design：从操作像素，到操作语义和表达意图_MiniMax 稀宇科技.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "TLS for DeepSeek Harness 可观测实践：从系统总览到会话复盘",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎介绍 TLS for DeepSeek Harness 可观测插件，将 DSH 会话中的模型请求与工具调用转为 OpenTelemetry Trace 上报到 TLS 日志服务，开发者无需改使用方式即可从系统总览下钻到单次请求与会话复盘。插件将执行过程组织为 agent.turn、llm.request、tool.call 三类核心 Span。\n文章以\"分析 DSH 源码并梳理核心设计\"的真实任务演示分析路径：总览感知（近 7 天 5 会话、33 次模型请求、45 次工具调用、约 119 万 Token）→ Trace 定位→ Span 分析→会话复盘（示例两轮共 115 万 Token，主要成本来自输入上下文）。插件监听 DSH EventLog 增量转 Span，并面向 Codex、Claude Code、OpenCode、TRAE、Cursor、Pi 等 Agent 适配；TLS 正在建设基于 GenAI 语义检测与 TLS Agent 大模型分析的轨迹异常检测与智能归因能力。",
+      "link": "https://mp.weixin.qq.com/s/LJMHb4nwDOqIUqDL795dcw",
+      "source_file": "sources/2026-08-20_TLS for DeepSeek Harness 可观测实践：从系统总览到会话复盘_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "从搜答案到交成品，百度把高阶Agent能力免费开放了",
+      "source": "量子位",
+      "digest": "百度在 AI DAY 发布文心助手任务引擎 2.0，并将高阶 Agent 能力免费开放。文章实测多项功能：多张图片一键转为含 86 条专业记录的 Excel；跨平台金融研究任务（登录网盘与雪球、检索监管信息）生成交互式 HTML 分析报告；生成可旋转的 3D 太阳系模拟器。百度搜索结果也升级为\"GUI 交互式答案\"，已上线 2326 个交互组件覆盖 K9 数理化高频考点。\n任务引擎 2.0 的工作链路为\"任务规划→智能路由（选模型/工具/技能）→执行与检查\"，并依赖长上下文理解与记忆调取应对长任务\"失忆\"。在 PinchBench v2 评测中文心助手任务 Agent 取得 94.6% 综合成功率与 94.4% 平均分居首，SuperCLUE XClaw 以 97.62 分第一；文章称 6 月文心助手日活同比增长 83%。",
+      "link": "https://mp.weixin.qq.com/s/e7NQbVpSoDgeQhoWxnh5AQ",
+      "source_file": "sources/2026-08-20_从搜答案到交成品，百度把高阶Agent能力免费开放了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "从新版 MCP 到 Gateway API 推理扩展：读懂 Higress v2.2.4 的关键变化",
+      "source": "阿里云云原生",
+      "digest": "文章解读开源网关 Higress v2.2.4 的关键变化。第一，Higress 成为首个支持 MCP 2026-07-28 无状态 HTTP Tools 基线的开源网关，实现 server/discover、tools/list、tools/call，支持 modern/legacy 显式桥接与边界校验。第二，同步升级并通过对齐 Gateway API v1.6（官方一致性测试 37/37 通过）与 Gateway API Inference Extension v1.4（12/12 通过），前者新增 per-Gateway 部署隔离模式，后者补齐多端口、数据并行与 served-endpoint 支持，已提交推理扩展收录申请。\n第三，社区正冲刺 CNCF 孵化，建立 LFX 月会、CodeQL 门禁等治理机制。其他改动包括 AI 负载均衡新增 AdaptiveScore、观测与限流增强、插件统一版本机制（43 个官方插件记录版本与 digest），以及累计 65 项生产稳定性优化。",
+      "link": "https://mp.weixin.qq.com/s/KJ_f87Jo6bA2FVqYKeK-wA",
+      "source_file": "sources/2026-08-20_从新版 MCP 到 Gateway API 推理扩展：读懂 Higress v2.2.4 的关键变化_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "刚刚，DeepSeek Harness更新！增强多模态",
+      "source": "机器之心",
+      "digest": "机器之心报道 DeepSeek Harness 于深夜发布 v0.1.0-rc.8 更新（距 RC.7 仅两天）。此次更新覆盖多模态输入、子代理、工具调用、Windows 终端与底层存储等方向。最值得关注的两点：一是多模态能力补齐，DeepSeek 模型适配器可开启原生图片请求，/goal、/plan 等命令支持图文混合输入，@ 菜单新增文件与会话引用；二是 Claude Code 与 Codex 被进一步纳入 Harness 的 Agent 编排体系，可作为 Profile Bundle 按需安装并作为子代理调用，Codex 还支持非交互权限模式与多命名实例，使 Harness 更像统一调度层。\n工具调用方面，web_search 支持并发查询、reportDelivery 可唤醒父任务；Windows 端 PTY 持久化 PowerShell 会话默认开启。文末还列出图片载荷、流式生成、自定义网关等修复项。",
+      "link": "https://mp.weixin.qq.com/s/D-kkE__o9yt8QVzQLUlvOw",
+      "source_file": "sources/2026-08-20_刚刚，DeepSeek Harness更新！增强多模态_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "大模型之外，向量存储如何支撑 Agent 的检索链路",
+      "source": "阿里云基础设施",
+      "digest": "文章从 Agent 实际工程需求出发，系统梳理向量存储在 Agent 检索链路中的角色与实现。核心观点：向量存储主要承担\"检索\"与\"记忆\"两类职责，在大语言模型之外管理外部知识与跨任务记忆，通过 Embedding 将语义相近内容在向量空间中拉近，支撑 RAG。\n文章对比三类主流近似最近邻（ANN）索引路线——内存图索引 HNSW、面向 SSD 的 DiskANN、聚类分区索引 IVF，分析其在召回率、延迟、成本与数据规模上的取舍；讨论混合检索如何把向量、全文关键词与租户/权限等过滤条件放进同一查询链路，以及分布式架构下分片执行与全局 TopK 合并。\n文章指出 Agent 应用让\"资源如何交付\"成为新的选型维度，并介绍阿里云 Tablestore SearchIndex 与 OSS Vectors 两种 Serverless 向量存储的资源模型、创建流程及读写伪代码，强调相同 Embedding 模型、维度与距离度量对查询一致性的关键作用。",
+      "link": "https://mp.weixin.qq.com/s/dYo1c2W3JSo-oYtFR8jjNA",
+      "source_file": "sources/2026-08-20_大模型之外，向量存储如何支撑 Agent 的检索链路_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "大规模分布式训练的稳定性工程：自动驾驶千卡集群的毛刺理论与优化实践",
+      "source": "腾讯云开发者",
+      "digest": "本文以自动驾驶端到端感知规划大模型的千卡训练为案例，系统阐述大规模分布式训练的稳定性工程。文章建立三层理论框架：分布式系统短板效应（AllReduce 强同步使集群 Step Time 由最慢节点决定）、独立事件概率乘法法则（单机毛刺率 p 在 N 节点下被指数放大，256 机需压至 0.1%–0.3%）、串联系统可靠性模型（MTBF 随规模退化）。\n基于\"多机性能问题=单机毛刺率问题\"的转化，文章逐项解析软件层（hyper-trace 慢节点检测、SimpleProfiler 观测者效应、GIL 单核瓶颈、tcmalloc 后台线程、显存碎片、异步 DataLoader 竞争）与系统层（LMDB 冷读、脏数据、GC 随机性）的毛刺根因，核心方法论是\"将随机扰动改造为确定性周期代价\"。相关优化借助 HyperAcc 落地，训练吞吐提升 50%，单任务规模从双机扩展至千卡，周期缩短 5 倍以上。",
+      "link": "https://mp.weixin.qq.com/s/jFn1tOBJycXte_MxFZkeBA",
+      "source_file": "sources/2026-08-20_大规模分布式训练的稳定性工程：自动驾驶千卡集群的毛刺理论与优化实践_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "支持 DeepSeek Harness 接入：AgentScope Service 开源智能体服务控制面解读",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AgentScope Java 社区开源发布 AgentScope Service 组件，定位为企业级分布式智能体的统一控制面，不绑定任何 Agent 框架。它兼容 AgentScope、LangChain、ADK、Claude、Qoder 等运行时，为所有智能体提供注册、查询、分布式协调与多智能体编排能力，并配套 Managed Agents 低代码平台与可视化 Dashboard。\n文章详解控制面架构：向上通过 SDK/Sidecar 接入四类 Agent，协调类状态落在控制面 Postgres；向下由副本直连业务自备的 AgentStateStore，通过 SessionTurnGate 做并发控制。文中重点说明 DeepSeek Harness 可通过 aistio 插件以不改源码的方式注册到控制面，并梳理 Agent Teams 的对等协作机制（共享 Task Board 与 Mailbox）、Remote Subagent 流量代理，以及 Brain/Hands 分离带来的权限与数据边界。",
+      "link": "https://mp.weixin.qq.com/s/GJ3SNaTwRUwmEbb5qbIWMQ",
+      "source_file": "sources/2026-08-20_支持 DeepSeek Harness 接入：AgentScope Service 开源智能体服务控制面解读_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "给 Agent 做“CT”：大规模 Agent 的可观测与质量保障体系",
+      "source": "InfoQ",
+      "digest": "本文整理自火山引擎应用观测技术负责人钱世俊在 QCon 2026 北京站的分享，系统阐述大规模 Agent 的可观测与质量保障体系。文章指出 Agent 因自主规划、工具调用与记忆检索带来\"黑盒\"困境，并将观测挑战归结为可见性、可解释性与可行动性三个维度，以及业务层、框架层、模型层、基础设施层之间的链路断、语义断与因果断。\n火山引擎通过统一观测基座（全栈门户、OneAgent 采集器、统一数据加工、看板、告警）融合 Metrics/Traces/Logs 与 Prompt、Token 等 AI 特有数据；在 AgentKit 上做白盒化调用链分析，并对记忆与 RAG 做监控。文章还提出\"观测数据回流→评测集→评测→迭代\"的工程闭环，并以 OpenClaw 落地为例，说明通过多层 SLI 体系与 Hook 采集，将平均修复时间降低 80% 以上，并复盘 Token 成本爆炸、模型幻觉等典型排障场景。",
+      "link": "https://mp.weixin.qq.com/s/AJiOSsQ-xyxiBq_hDaDxgw",
+      "source_file": "sources/2026-08-20_给 Agent 做“CT”：大规模 Agent 的可观测与质量保障体系_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "阿里云 Workbench CLI 上架 Qoder 插件市场，不用 SSH 也能操作 ECS",
+      "source": "Qoder",
+      "digest": "阿里云 Workbench CLI 已上架 Qoder IDE 插件市场及官网能力市场，让开发者在 Qoder 中用自然语言直接操作 ECS，无需公网 IP、SSH 或记忆运维命令。文章介绍该工具面向 Agent 设计：返回结构化 JSON、透传远程命令 exit code、无状态执行、命令语义直观（list/connect/exec/upload/download）。\n文中以 5 分钟部署 WordPress、本地项目打包部署到 ECS 并调试、查看网站访问日志三个场景演示 Agent 如何自动调用 workbench 命令完成全流程。为兼顾安全，工具要求破坏性命令（rm -rf、shutdown 等）与文件覆盖前须经用户明确确认，官方 Skill 也约束 Agent 先 ls 检查再上传，做到\"危险动作仍由人把关\"。",
+      "link": "https://mp.weixin.qq.com/s/nMNFhxVkvfurHCrtAgx4Uw",
+      "source_file": "sources/2026-08-20_阿里云 Workbench CLI 上架 Qoder 插件市场，不用 SSH 也能操作 ECS_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "普惠金融创新盘点丨科技赋能普惠金融筑根基 小微e贷数智服务启新局——农业银行“小微e贷”精准适配赋能小微企业",
+      "source": "金融电子化",
+      "digest": "文章盘点农业银行依托\"数字普惠2.0\"战略推出的\"小微e贷\"平台，介绍其以\"场景化定制、智能化适配\"为理念，构建全链路智慧普惠服务体系。技术上，平台搭建\"总行通用底座+分行特色插件\"弹性架构，打通行内核心系统与税务、工商、征信等 20 余类数据源，建立近千项指标的标准化\"活数据\"仓库；并构建\"基础大模型赋能+领域小模型精调\"的大小模型协同架构，形成模型智能调优、精准风险识别、智能资料核查、智能问答四大智慧能力。\n平台面向科技型、制造业、农业农村等场景推出\"科捷贷\"\"政担e贷\"\"雪域专合e贷\"等专项产品，运用多模态大模型将 AI 资料核查审查时效从小时级降至分钟级、精准度提升三成以上。文末引述农行《2025 年度可持续发展报告》称其普惠贷款余额、增量、有贷户数居同业之首。",
+      "link": "https://mp.weixin.qq.com/s/HHFjprMv788gzTs6ohTLVw",
+      "source_file": "sources/2026-08-20_普惠金融创新盘点丨科技赋能普惠金融筑根基 小微e贷数智服务启新局——农业银行“小微e贷”精准适配赋能小微企业_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "Vibe check：你的 AI 产品真的能落地吗",
+      "source": "InfoQ",
+      "digest": "本文讨论 AI 产品如何从\"能做出来\"走向\"真正落地\"。核心观点：模型与编码工具已大幅降低原型门槛，单纯拥有功能难成长期优势，客户真正付费的是可嵌入业务流程、持续交付的结果。文章建议把顺序倒过来——先问清客户想要什么结果、出现在什么流程、最小切口做出可运行交付，再产品化；并用五个问题验证需求（客户是谁、是否高频够痛、价值能否量化、能否进工作流、为何信赖持续使用）。\n好的 AI 场景需自然嵌入已有系统，并在反馈中持续迭代，把交付过程标准化、固化为壁垒；通用功能易被大平台整合，更可靠壁垒来自客户数据、行业流程与长期关系。文末以线下社交、知识共创、AI 短视频剪辑三个案例说明聚焦清晰人群与结果的重要性。",
+      "link": "https://mp.weixin.qq.com/s/XsYrr7t1cA8IfVBRxGCu9g",
+      "source_file": "sources/2026-08-20_Vibe check：你的 AI 产品真的能落地吗_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "“Anthropic不再是AI圈的信仰”",
+      "source": "InfoQ",
+      "digest": "本文结合市场研究机构 TickerTrends 等数据，分析 Claude Code 与 OpenAI Codex 的竞争格局与用户口碑变化。文章称开发者使用注意力自 4 月起向 Codex 倾斜，有用户反馈 Claude Code 体验下滑、AI 腔严重，而 Codex 理解力强、直接执行。\nTickerTrends 估算截至 8 月 10 日 Claude Code 年化经常性收入（ARR）达 151.2 亿美元、Codex 为 88.3 亿美元，但 7 月 6 日至 8 月 10 日 Codex ARR 增幅超 50%、Claude Code 约 6%，两者差距缩小。文章还引用 Sacra、SemiAnalysis 数据，指出 Anthropic 通过 Amazon Bedrock 等间接渠道的 ARR 占比已超 40%，按总额确认收入可能高估利润贡献；并讨论企业版订阅按量计费导致开销超支的现象。文末附开发者对模型效果与定价的不满评论。",
+      "link": "https://mp.weixin.qq.com/s/dCjt6pL9aUyg-xCmKsMuTQ",
+      "source_file": "sources/2026-08-20_“Anthropic不再是AI圈的信仰”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-20",
+      "title": "人工智能的五个悖论",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院资深专家闫德利撰文梳理人工智能领域的五个悖论。预测悖论：图灵奖得主、企业家等对 AI 未来的预测常不准确或过于保守，AGI 实现时间在企业家的激进与学者的悲观间分化明显。就业量化悖论：OECD、IMF、高盛等机构的 AI 就业影响测算结果差距巨大（约 0.4%–67%），且 AI 影响难以从多重因素中剥离。\n生产率悖论：欧盟劳动生产率近年近乎零增长，美国增速仅相当于长期平均水平，印证\"索洛悖论\"的时滞解释。数据价值悖论：数据被誉为\"新石油\"却难以货币化，我国 136 家上市公司数据资源入表金额仅 37.86 亿元。工业革命悖论：数十年来诸多技术被赋予\"第四次工业革命\"使命，而工业革命多为事后叙事。文章呼吁理性看待 AI 能力与影响。",
+      "link": "https://mp.weixin.qq.com/s/7fQ4DkjPi9vvxNFMDoHfUQ",
+      "source_file": "sources/2026-08-20_人工智能的五个悖论_腾讯研究院.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-19",
       "title": "奥特曼瘫坐叫停“GPT-6”训练！太强触发最高安全警报",

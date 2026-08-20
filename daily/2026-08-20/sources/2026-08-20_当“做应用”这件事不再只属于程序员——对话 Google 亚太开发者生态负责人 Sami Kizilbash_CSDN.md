@@ -1,8 +1,11 @@
 ---
 publish_time: 1787198400
-status: pending
-category:
+status: confirmed
+category: 国际
 is_model_related: false
+digest: |
+  本文为 CSDN 对 Google 亚太开发者生态负责人 Sami Kizilbash 的访谈。Sami 表示中国初创公司"从第一天就具备全球化思维"并已付诸行动，举例 InReality、AI Sphere（智象未来）等完成大额融资与商业化，Polyverse 下载量突破 4500 万；认为中国在内容与短视频、智能硬件方向引领趋势。
+  关于 Vibe Coding，他提出"评估（Evaluations）就是新的编译器"，开发者角色转向设计目标与测试。谈及开源模型，他介绍 Gemma 4 首次采用 Apache 2.0 协议，并强调边缘部署、数据主权等优势；解释 Google 取消独立 AI Studio 移动端 App、改整合进 Gemini App 的原因。他还拆解从构思、原型到部署的开发生命周期，并看好垂直细分模型的机会。
 link: https://mp.weixin.qq.com/s/A3WoP3PsZhm51Z80su2hIw
 source: CSDN
 title: 当“做应用”这件事不再只属于程序员——对话 Google 亚太开发者生态负责人 Sami Kizilbash

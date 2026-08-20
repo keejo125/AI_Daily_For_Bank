@@ -1,8 +1,11 @@
 ---
 publish_time: 1787214383
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  本文整理自火山引擎应用观测技术负责人钱世俊在 QCon 2026 北京站的分享，系统阐述大规模 Agent 的可观测与质量保障体系。文章指出 Agent 因自主规划、工具调用与记忆检索带来"黑盒"困境，并将观测挑战归结为可见性、可解释性与可行动性三个维度，以及业务层、框架层、模型层、基础设施层之间的链路断、语义断与因果断。
+  火山引擎通过统一观测基座（全栈门户、OneAgent 采集器、统一数据加工、看板、告警）融合 Metrics/Traces/Logs 与 Prompt、Token 等 AI 特有数据；在 AgentKit 上做白盒化调用链分析，并对记忆与 RAG 做监控。文章还提出"观测数据回流→评测集→评测→迭代"的工程闭环，并以 OpenClaw 落地为例，说明通过多层 SLI 体系与 Hook 采集，将平均修复时间降低 80% 以上，并复盘 Token 成本爆炸、模型幻觉等典型排障场景。
 link: https://mp.weixin.qq.com/s/AJiOSsQ-xyxiBq_hDaDxgw
 source: InfoQ
 title: 给 Agent 做“CT”：大规模 Agent 的可观测与质量保障体系

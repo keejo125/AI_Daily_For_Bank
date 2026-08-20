@@ -1,8 +1,11 @@
 ---
 publish_time: 1787214383
-status: pending
-category:
+status: confirmed
+category: 其他
 is_model_related: false
+digest: |
+  本文结合市场研究机构 TickerTrends 等数据，分析 Claude Code 与 OpenAI Codex 的竞争格局与用户口碑变化。文章称开发者使用注意力自 4 月起向 Codex 倾斜，有用户反馈 Claude Code 体验下滑、AI 腔严重，而 Codex 理解力强、直接执行。
+  TickerTrends 估算截至 8 月 10 日 Claude Code 年化经常性收入（ARR）达 151.2 亿美元、Codex 为 88.3 亿美元，但 7 月 6 日至 8 月 10 日 Codex ARR 增幅超 50%、Claude Code 约 6%，两者差距缩小。文章还引用 Sacra、SemiAnalysis 数据，指出 Anthropic 通过 Amazon Bedrock 等间接渠道的 ARR 占比已超 40%，按总额确认收入可能高估利润贡献；并讨论企业版订阅按量计费导致开销超支的现象。文末附开发者对模型效果与定价的不满评论。
 link: https://mp.weixin.qq.com/s/dCjt6pL9aUyg-xCmKsMuTQ
 source: InfoQ
 title: “Anthropic不再是AI圈的信仰”

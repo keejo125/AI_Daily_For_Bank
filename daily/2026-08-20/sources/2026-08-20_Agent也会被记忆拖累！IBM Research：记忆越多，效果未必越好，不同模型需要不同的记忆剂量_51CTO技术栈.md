@@ -1,8 +1,11 @@
 ---
 publish_time: 1787220000
-status: pending
-category:
+status: confirmed
+category: 国际
 is_model_related: false
+digest: |
+  IBM Research 在 8 款模型上测试 Agent 记忆对任务完成率的影响，发现"记忆越多效果未必越好"，需按模型能力校准"记忆剂量"。团队使用 AppWorld（585 个多步骤任务）基准，对比无记忆、全量经验库、筛选后高置信度记忆三种方案：轻量的 gpt-oss-120b 全量灌入反而不如筛选方案（39.9%→56.0%，Token 仅增 5%）；旗舰模型 DeepSeek-V3.2、Claude Opus 4.6、GPT-5.5 能吃下完整经验库并补齐失败场景，但 Token 成本显著上升（如 DeepSeek-V3.2 从 14.8 万涨至 26.3 万）；GLM-5 加记忆前后均为 87.5%，呈现"饱和"。
+  IBM 开源的 ALTK-Evolve 不更新权重，而是从成功/失败轨迹提炼可执行规则注入上下文。文章建议上线前做剂量测试，并关注 Token、延迟与场景完成率，提醒错误经验被长期保存并反复调用会放大问题。
 link: https://mp.weixin.qq.com/s/lmsIQc6MOQH5tiIEYRNnWg
 source: 51CTO技术栈
 title: Agent也会被记忆拖累！IBM Research：记忆越多，效果未必越好，不同模型需要不同的记忆剂量

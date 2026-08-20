@@ -1,8 +1,11 @@
 ---
 publish_time: 1787186160
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  MiniMax 介绍其新产品 MiniMax Design——一款把多模态模型能力变为生产力的 Harness，围绕原生多模态视频模型 H3 构建。用户提出创作需求后，它能理解目标、拆解任务、调用模型与 Skills，完成从素材处理、生成、编辑到交付的完整流程。
+  文章提出两点思考：未来创作修改将走向语义层面（用户表达高层意图而非操作像素）；多模态模型的下一步进展来自对更复杂 Context（整个 Project 的历史、多轮对话与资产）的理解。MiniMax Design 擅长目标明确、多环节、需持续生成修改的商业内容任务（如品牌素材批量迭代、知识视频、PV/MV/电影片头），提供 Agent 3D 导演台确定构图与镜头，并在生成后自动剪辑字幕；也可接入 ComfyUI 等开源工作流，支持云端或本地运行。
 link: https://mp.weixin.qq.com/s/vMmhr2rCeBC_dM_tBdks1A
 source: MiniMax 稀宇科技
 title: MiniMax Design：从操作像素，到操作语义和表达意图

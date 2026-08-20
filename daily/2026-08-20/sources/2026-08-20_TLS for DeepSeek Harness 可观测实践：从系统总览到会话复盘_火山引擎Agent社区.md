@@ -1,8 +1,11 @@
 ---
 publish_time: 1787223900
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  火山引擎介绍 TLS for DeepSeek Harness 可观测插件，将 DSH 会话中的模型请求与工具调用转为 OpenTelemetry Trace 上报到 TLS 日志服务，开发者无需改使用方式即可从系统总览下钻到单次请求与会话复盘。插件将执行过程组织为 agent.turn、llm.request、tool.call 三类核心 Span。
+  文章以"分析 DSH 源码并梳理核心设计"的真实任务演示分析路径：总览感知（近 7 天 5 会话、33 次模型请求、45 次工具调用、约 119 万 Token）→ Trace 定位→ Span 分析→会话复盘（示例两轮共 115 万 Token，主要成本来自输入上下文）。插件监听 DSH EventLog 增量转 Span，并面向 Codex、Claude Code、OpenCode、TRAE、Cursor、Pi 等 Agent 适配；TLS 正在建设基于 GenAI 语义检测与 TLS Agent 大模型分析的轨迹异常检测与智能归因能力。
 link: https://mp.weixin.qq.com/s/LJMHb4nwDOqIUqDL795dcw
 source: 火山引擎Agent社区
 title: TLS for DeepSeek Harness 可观测实践：从系统总览到会话复盘

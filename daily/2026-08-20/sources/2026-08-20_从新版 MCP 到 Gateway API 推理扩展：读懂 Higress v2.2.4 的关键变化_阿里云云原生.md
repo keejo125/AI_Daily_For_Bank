@@ -1,8 +1,11 @@
 ---
 publish_time: 1787216922
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  文章解读开源网关 Higress v2.2.4 的关键变化。第一，Higress 成为首个支持 MCP 2026-07-28 无状态 HTTP Tools 基线的开源网关，实现 server/discover、tools/list、tools/call，支持 modern/legacy 显式桥接与边界校验。第二，同步升级并通过对齐 Gateway API v1.6（官方一致性测试 37/37 通过）与 Gateway API Inference Extension v1.4（12/12 通过），前者新增 per-Gateway 部署隔离模式，后者补齐多端口、数据并行与 served-endpoint 支持，已提交推理扩展收录申请。
+  第三，社区正冲刺 CNCF 孵化，建立 LFX 月会、CodeQL 门禁等治理机制。其他改动包括 AI 负载均衡新增 AdaptiveScore、观测与限流增强、插件统一版本机制（43 个官方插件记录版本与 digest），以及累计 65 项生产稳定性优化。
 link: https://mp.weixin.qq.com/s/KJ_f87Jo6bA2FVqYKeK-wA
 source: 阿里云云原生
 title: 从新版 MCP 到 Gateway API 推理扩展：读懂 Higress v2.2.4 的关键变化

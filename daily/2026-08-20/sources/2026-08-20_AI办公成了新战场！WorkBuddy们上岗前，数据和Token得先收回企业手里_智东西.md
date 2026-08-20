@@ -1,8 +1,11 @@
 ---
 publish_time: 1787218200
-status: pending
-category:
+status: confirmed
+category: 国内
 is_model_related: false
+digest: |
+  文章探讨 AI 办公热潮下的企业安全与成本治理，介绍浪潮信息元脑 AI Work 一体机。文章指出 Agent 时代安全边界从数据层扩展到运行全过程，重划为权限边界（Agent 拿到什么权限）、行为边界（运行过程是否可记录复盘）、资产边界（Skill 供应链风险）三个维度。
+  元脑 AI Work 一体机选择"疏"的路线，Foundation 版让企业在自有环境统一部署模型与 Token 服务，员工两步接入 WorkBuddy 即可使用；Premium 版提供统一 Web Agent，集中纳管 WorkBuddy、OpenClaw、Codex 等并做运行时防护与 Skill 扫描，提供工作站、服务器、超节点三种硬件形态。成本方面，一体机将散落的模型调用转为统一 Token 服务，记录调用人、模型、Token 量与时延，使 AI 使用可核算、可追溯。
 link: https://mp.weixin.qq.com/s/V-aXQ_lggFDv1dgTA699aQ
 source: 智东西
 title: AI办公成了新战场！WorkBuddy们上岗前，数据和Token得先收回企业手里
