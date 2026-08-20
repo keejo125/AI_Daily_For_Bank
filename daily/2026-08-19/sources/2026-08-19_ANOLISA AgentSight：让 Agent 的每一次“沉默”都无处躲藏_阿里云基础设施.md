@@ -2,11 +2,11 @@
 publish_time: 1787139267
 link: https://mp.weixin.qq.com/s/N-Vkw4KGxfjJ_88q927QLA
 source: 阿里云基础设施
-status: pending
+status: confirmed
 category: 国内
-is_model_related: true
+is_model_related: false
 digest: |
-  你的 Agent 可能正在“装忙”——不报错、不吭声，却在原地空转、闷声烧钱。ANOLISA（Agentic OS）的可观测组件 AgentSight 就专治这个，而且代码已经开源： https://github.com/alibaba/anolisa （src/agentsight/ 目录） 。下面就讲它怎么把这些“沉默故障”一个个揪出来。觉得有用，顺手点个 star。 AI Agent 有一个
+  AgentSight 是阿里云 ANOLISA（Agentic OS）的开源可观测组件，专治 AI Agent 的"沉默故障"——不报错、不吭声却在原地空转或闷声烧钱。它采用零代码接入：无需 SDK 埋点、不改代码、不重启进程，在 Linux 内核层采集本机 Agent 的 TLS 加密流量（macOS 则扫描本地会话文件），自动识别 Agent 进程并只对匹配目标挂探针，采集数据全部落本机 SQLite 不对外传输，支持 AES-256-GCM 加密落盘。诊断分四层：第一层可用性监控，判断进程是否存活及崩溃是否影响对话；第二层调用失败归类，将限流、配额、权限等失败精确归类到责任方；第三层空转检测，用确定性轻量算法识别死循环、自我复读、无效重试等"无错误但无推进"问题并支持自动止血；第四层会话质量评估，以固定规则打分形成评分卡，辅以离线因果分析。代码已开源至 github.com/alibaba/anolisa。
 ---
 
 # ANOLISA AgentSight：让 Agent 的每一次“沉默”都无处躲藏

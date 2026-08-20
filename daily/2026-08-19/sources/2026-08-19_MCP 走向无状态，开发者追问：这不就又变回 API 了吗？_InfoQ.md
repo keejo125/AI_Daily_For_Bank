@@ -2,11 +2,11 @@
 publish_time: 1787121201
 link: https://mp.weixin.qq.com/s/FLIWjokqgTKi-qaIsjTE-w
 source: InfoQ
-status: pending
+status: confirmed
 category: 国际
-is_model_related: true
+is_model_related: false
 digest: |
-  作者 ｜ Steef-Jan Wiggers 译者 ｜ 田橙 MCP 2026-07-28 规范 取消了协议会话。迄今为止，相关报道将此描述为可扩展性方面的一项进步，事实也的确如此。但同一版本还新增了两个必需的 HTTP 标头，而借助这些标头，网关无需打开请求正文，就能对智能体流量进行路由、限流和计量。 早期传输以 initialize 和 initialized 交互开始，由此建立会话，并通过 
+  MCP 2026-07-28 版规范取消了协议会话，早期以 initialize/initialized 握手建立会话、通过 Mcp-Session-Id 跟踪状态的机制被移除，每个请求自携带协议版本、客户端身份与能力，可落到任意实例，解决了自动扩缩与会话迁移难题。同时新增两个必需 HTTP 标头 Mcp-Method 和 Mcp-Name，网关、限流器、WAF 无需解析 JSON 正文即可按方法/工具对智能体流量路由、限流与计量。Elicitation 被拆成多轮往返请求，动态客户端注册被弃用，授权改用 RFC 9207/8707。Hacker News 社区分歧尖锐：一派认为有状态 MCP 本就是错误、如今退回"发个 POST 就行"的 REST 形态；辩护者则强调 MCP 的核心价值是被 AI 提供商认可、模型已学会使用的约定标准。Anthropic 报告 MCP SDK 月下载量超 4 亿次、年内增长三倍。作者认为资金正流向网关、注册中心与认证层而非服务器本身。
 ---
 
 # MCP 走向无状态，开发者追问：这不就又变回 API 了吗？

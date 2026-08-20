@@ -9,6 +9,26 @@
           "link": "https://www.infoq.cn/article/LrAzoZZQiecRCtyVX1u9"
         }
       ]
+    },
+    {
+      "main": "sources/2026-08-19_奥特曼瘫坐叫停“GPT-6”训练！太强触发最高安全警报_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-19_OpenAI又宣布“暂缓前沿模型训练”_财联社AI daily.md",
+          "name": "财联社AI daily",
+          "link": "https://mp.weixin.qq.com/s/08Tm26mLcRs_YixDFvTR-w"
+        },
+        {
+          "source_file": "sources/2026-08-19_突发！OpenAI下一代模型Astra项目生变_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/uVV46FqUACEFsqJZPGUh0A"
+        },
+        {
+          "source_file": "sources/2026-08-19_OpenAI 因安全问题突然停训GPT-6！网友：当你造出一个神，就不可能再给它拴上绳子_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/BLfF9zUGrzpqJ5QbSBJD"
+        }
+      ]
     }
   ]
 }

@@ -2,11 +2,11 @@
 publish_time: 1787121201
 link: https://mp.weixin.qq.com/s/kz9qWs9qYqaa_-ug3xSZsQ
 source: InfoQ
-status: pending
-category: 国际
-is_model_related: true
+status: confirmed
+category: 国内
+is_model_related: false
 digest: |
-  整理 | 褚杏娟 最近，一个名为 J-Space Cognition Suite 的社区项目近日在 X 上快速传播。项目方声称，在完全不修改 DeepSeek V4-Pro-0813 模型权重的情况下，仅通过一套推理时 Harness，就能显著提升模型在多项 Agent Benchmark 上的表现，甚至超过 Fable 5。 不过，这一看起来颇为惊人的结论目前仍缺少最关键的一环：第三方复现。据 
+  社区项目 J-Space Cognition Suite 近日在 X 上快速传播，声称在完全不修改 DeepSeek V4-Pro-0813 模型权重的情况下，仅通过推理时 Harness 就能提升其在多项 Agent Benchmark 上的表现，甚至超过 Fable 5。但 ExplainX 梳理指出，截至 8 月 18 日所有性能数据均来自项目方自测，尚无第三方在相同条件下复现。该项目针对 DeepSeek V4 Pro 长任务的"表征漂移"与"过早停止"问题，在 Harness 层改善重试、验证、记忆与停止条件。需澄清的是，它与 Anthropic 此前关于 Claude 内部"J-space"神经表征的可解释性研究不是一回事。文章进一步讨论 Agent Harness 的长任务状态管理、Compaction、验证与停止条件等短板，以及通用 Harness 与模型原生 Harness 两条路线的分化。有开发者实测 J-Space 的 Token 消耗反而比基线更高。
 ---
 
 # 撞名Anthropic的“外挂”刷屏：让“DeepSeek V4‑Pro碾压 Fable 5”但无人能复现，Token开销反而翻倍

@@ -2,11 +2,11 @@
 publish_time: 1787124366
 link: https://mp.weixin.qq.com/s/Jy9sHgjuif2N8B45NvrBNg
 source: 阿里云云原生
-status: pending
+status: confirmed
 category: 国内
-is_model_related: true
+is_model_related: false
 digest: |
-  01 引言 Cloud Native 随着大语言模型的能力边界从文本生成向任务执行扩展，"模型之外的运行时"正成为 Agent 工程的核心议题。DeepSeek 于 2026 年 8 月以 MIT 协议开源其 Agent 运行框架 Harness，随着其 star 的快速增加，也进一步证明了 "Agent = Model + Harness" 的工程命题：模型决定能力上限，而 Harness——负
+  本文报告基于阿里云 AgentLoop 平台的 DeepSeek Harness 评测实践。DeepSeek 于 2026 年 8 月以 MIT 协议开源 Agent 运行框架 Harness，采用 Cordis 微内核与"一切皆插件"架构，以 Session Log 作为唯一权威事件源。评测以 terminal-bench 2.1 的 10 任务子集为载体，任务在自包含容器中执行、以容器终态而非文本作答为判定对象。在此基础上构建三个正交的确定性评估器——任务完成度（outcome）、红线规则判定（compliance）与执行过程可靠性（process），全部以规则化脚本实现并封装为 AGENT+Skill 形态，排除 LLM 打分的方差与宽松偏差。结果显示 DeepSeek Harness 与 Codex（均搭载 Qwen3.7-Plus）通过率持平（均 8/10），但二值通过率之下面貌各异：extract-elf 与 qemu-startup 呈交叉差异，超时任务被 0.50 封顶。三维平均分为 process 0.83、compliance 0.98、outcome 0.74。
 ---
 
 # 基于阿里云 AgentLoop 的 DeepSeek Harness 评测实践
