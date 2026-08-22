@@ -1,12 +1,12 @@
 ---
 publish_time: 1787300470
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/DamSt1CbI6tWveUQkUqV6Q
 source: 财联社AI daily
-title: OpenAI：首批英伟达Vera Rubin机架已就位，将支持下一代前沿AI预训练
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  OpenAI基础设施负责人宣布首批英伟达Vera Rubin机架已到位并运行公司训练栈，将支持下一代前沿AI预训练。Vera Rubin是英伟达新一代AI算力系统，标志着OpenAI算力基础设施向更大规模演进。
 ---
 
 # OpenAI：首批英伟达Vera Rubin机架已就位，将支持下一代前沿AI预训练

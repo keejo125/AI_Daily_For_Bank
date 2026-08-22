@@ -1,12 +1,12 @@
 ---
 publish_time: 1787307764
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/xw-hxtHMcxxSGqbSbp98RQ
 source: DeepSeek Harness 团队
-title: DeepSeek Harness 更新：官方多模态支持
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  DeepSeek Harness团队宣布自开发者预览版发布以来连续完成三次版本更新（v0.1.0-rc.7/rc.8及本次），重点加入官方多模态支持，使Harness能够处理图像理解等视觉任务。更新持续完善工具调用、记忆与沙箱能力，推动DSH从原型向可用框架演进。
 ---
 
 # DeepSeek Harness 更新：官方多模态支持

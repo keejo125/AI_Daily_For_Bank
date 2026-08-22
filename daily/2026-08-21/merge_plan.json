@@ -1,0 +1,44 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-21_V4-Flash-Vision-Exp 上线，开启多模态 API 服务_DeepSeek.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-21_DeepSeek 发布多模态模型，“小鲸鱼”长出了眼睛_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/jlTfe57D4r0Juzpz8Fk5"
+        },
+        {
+          "source_file": "sources/2026-08-21_DeepSeek多模态模型终于来了！一张图最高只要0.001元_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/Yqqc18jWgs8Y68jked8yrA"
+        },
+        {
+          "source_file": "sources/2026-08-21_刚刚！DeepSeek多模态视觉理解模型上线_CSDN.md",
+          "name": "CSDN",
+          "link": "https://mp.weixin.qq.com/s/FTs3pJGGfKqG_ewim5SkKw"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-21_开源国产8B模型，比肩闭源Image 2了！_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-21_8B参数！国产轻量级多模态开源，实测超长指令、4K生图_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/wqPYbYLRFgr5qAYtVxVjwQ"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-21_全SOTA！不止纯文本，阿里多模态站上全球第一梯队_智东西.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-21_从单点突破到全数 SOTA，阿里打响「模型团战」第一枪_极客公园.md",
+          "name": "极客公园",
+          "link": "http://www.geekpark.net/news/369200"
+        }
+      ]
+    }
+  ]
+}

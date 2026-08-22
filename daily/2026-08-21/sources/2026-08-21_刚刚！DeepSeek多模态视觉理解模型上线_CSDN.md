@@ -1,12 +1,12 @@
 ---
 publish_time: 1787306416
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FTs3pJGGfKqG_ewim5SkKw
 source: CSDN
-title: 刚刚！DeepSeek多模态视觉理解模型上线
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  DeepSeek官方宣布实验性质的多模态视觉理解模型DeepSeek-V4-Flash-Vision-Exp正式上线API平台，与此前以文本为主的V4-Flash形成互补，补齐视觉理解拼图。
 ---
 
 # 刚刚！DeepSeek多模态视觉理解模型上线

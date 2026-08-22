@@ -1,12 +1,12 @@
 ---
 publish_time: 1787285100
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/u836jNOwfUkTIaYroklEJw
 source: 51CTO技术栈
-title: 程序员岗位被AI掏空了！前OpenAI高管参与AGI激辩：AI替代岗位，可能根本没有裁员通知
+status: confirmed
+category: 其他
+is_model_related: false
+digest: |
+  前OpenAI高管参与AGI激辩，讨论AI替代程序员岗位的话题，指出“看到的不是软件工程师被裁员，而是岗位被掏空”——AI可能在不发裁员通知的情况下逐步消解传统编码岗位需求，引发对开发者职业路径的警示。
 ---
 
 # 程序员岗位被AI掏空了！前OpenAI高管参与AGI激辩：AI替代岗位，可能根本没有裁员通知

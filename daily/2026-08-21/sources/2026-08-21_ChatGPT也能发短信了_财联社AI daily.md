@@ -1,12 +1,12 @@
 ---
 publish_time: 1787279790
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/usP1PNUxAh4Z82yXWsVTng
 source: 财联社AI daily
-title: ChatGPT也能发短信了
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  OpenAI推出ChatGPT操控苹果iMessage功能，支持读取与发送短信，引发隐私安全担忧。业内认为该功能将与苹果即将推出的Siri AI形成直接竞争，也凸显ChatGPT向系统级入口渗透的趋势。
 ---
 
 # ChatGPT也能发短信了

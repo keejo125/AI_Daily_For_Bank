@@ -1,12 +1,12 @@
 ---
 publish_time: 1787306416
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/VGLla6Oj2vwX_FEEIFFqjw
 source: CSDN
-title: “AI写的代码，我完全不看”，世界级编程大师Bob大叔警示：说软件基础不重要的人会吃苦头，不会等太久
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  世界级编程大师Robert C. Martin（Bob大叔）直言“完全不看Agent写出的任何代码”，警示盲目信任AI生成代码的风险。他认为软件基础能力仍不可或缺，说软件基础不重要的人“吃苦头不会等太久”，呼吁工程师在AI辅助下守住工程素养与代码审查底线。
 ---
 
 # “AI写的代码，我完全不看”，世界级编程大师Bob大叔警示：说软件基础不重要的人会吃苦头，不会等太久

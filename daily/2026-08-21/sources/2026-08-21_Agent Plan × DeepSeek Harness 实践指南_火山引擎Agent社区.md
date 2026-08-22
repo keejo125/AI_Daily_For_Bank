@@ -1,12 +1,12 @@
 ---
 publish_time: 1787302800
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/ub58e-2uoj8tmVD8nB8jOg
 source: 火山引擎Agent社区
-title: Agent Plan × DeepSeek Harness 实践指南
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  文章介绍DeepSeek Harness（DSH）开源智能体框架，涵盖Model、Tool、Memory、Sandbox、Agent等核心模块，并结合Agent Plan给出实践指南。DSH定位为可本地化部署的Agent应用基座，支持开发者基于DeepSeek模型快速搭建具备工具调用与记忆能力的自主智能体。
 ---
 
 # Agent Plan × DeepSeek Harness 实践指南

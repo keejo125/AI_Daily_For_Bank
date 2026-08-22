@@ -1,7 +1,447 @@
 {
-  "updated_at": "2026-08-21T07:10:04.975909",
-  "total": 1408,
+  "updated_at": "2026-08-22T08:23:20.420184",
+  "total": 1452,
   "articles": [
+    {
+      "date": "2026-08-21",
+      "title": "Liquid AI 发布 LFM2.5-DSpark 草稿模型，解码提速最高 3.18 倍且不改变输出",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI发布LFM2.5-DSpark草稿模型checkpoint，针对三款模型提供草稿模型，在不改变模型输出的前提下实现最高3.18倍解码加速。DSpark面向推理加速场景，通过草稿模型机制降低自回归生成延迟。",
+      "link": "https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/",
+      "source_file": "sources/2026-08-21_Liquid AI Releases LFM2.5-DSpark Draft Models That_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "本地运行、支持视觉与工具调用：Meta 开源智能体模型",
+      "source": "InfoQ",
+      "digest": "Meta AI Research推出Muse Glimmer——300亿参数开放权重模型，采用Apache 2.0许可。该模型专为始终在线的本地工作流设计，使开发者无需云API即可在消费级GPU与工作机上运行自主智能体、复杂工具调用与本地编码，支持视觉与工具调用。",
+      "link": "https://www.infoq.cn/article/aGfkSN1YlmLrUQMPea9L",
+      "source_file": "sources/2026-08-21_本地运行、支持视觉与工具调用：Meta 开源智能体模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "神秘“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱 or 小米",
+      "source": "InfoQ",
+      "digest": "OpenRouter未开发布会即放出代号“Ox Alpha”的神秘模型，性能据称超过Fable 5，引发全网猜测其身份（智谱或小米）。该模型以忍者表情低调亮相，无技术报告，延续“神秘模型突袭”的社区传播方式。",
+      "link": "https://www.infoq.cn/article/3MNJh5F34GSsRQJJWJzY",
+      "source_file": "sources/2026-08-21_神秘“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱 or 小_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "ChatGPT也能发短信了",
+      "source": "财联社AI daily",
+      "digest": "OpenAI推出ChatGPT操控苹果iMessage功能，支持读取与发送短信，引发隐私安全担忧。业内认为该功能将与苹果即将推出的Siri AI形成直接竞争，也凸显ChatGPT向系统级入口渗透的趋势。",
+      "link": "https://mp.weixin.qq.com/s/usP1PNUxAh4Z82yXWsVTng",
+      "source_file": "sources/2026-08-21_ChatGPT也能发短信了_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "从雅达利到星战前夜：DeepMind 十五年游戏 AI 研究回顾",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind回顾其15年游戏AI研究历程，从Atari到EVE Online，介绍SIMA 2——能在虚拟3D世界中与玩家一起游玩、推理与学习的智能体。文章梳理游戏作为AI研究试验场的演进，以及从感知、规划到协作式学习的进展。",
+      "link": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "source_file": "sources/2026-08-21_From Atari to EVE Online_ Building on 15 Years of _Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "OpenAI：首批英伟达Vera Rubin机架已就位，将支持下一代前沿AI预训练",
+      "source": "财联社AI daily",
+      "digest": "OpenAI基础设施负责人宣布首批英伟达Vera Rubin机架已到位并运行公司训练栈，将支持下一代前沿AI预训练。Vera Rubin是英伟达新一代AI算力系统，标志着OpenAI算力基础设施向更大规模演进。",
+      "link": "https://mp.weixin.qq.com/s/DamSt1CbI6tWveUQkUqV6Q",
+      "source_file": "sources/2026-08-21_OpenAI：首批英伟达Vera Rubin机架已就位，将支持下一代前沿AI预训练_财联社AI daily.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Vercel Zero 引发争议：AI 时代真的需要一门新语言吗？",
+      "source": "InfoQ",
+      "digest": "Vercel正式推出v0 API，让开发者以编程方式访问其AI应用构建智能体：发送提示词生成并修改应用文件、在Vercel Sandbox运行并获得预览URL。API以聊天为单位组织应用，引发“AI时代是否需要一门新语言”的争议。",
+      "link": "https://www.infoq.cn/article/v44qVA7JeYOckqlztLMP",
+      "source_file": "sources/2026-08-21_Vercel Zero 引发争议：AI 时代真的需要一门新语言吗？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "“烂代码”转正？Bun稳定版终落地：跳票一个半月，2900个问题清零",
+      "source": "InfoQ",
+      "digest": "8月20日Bun 1.4稳定版发布，是Rust重写后的首个稳定版本，也是被Anthropic收购后的首次大版本更新，距上一稳定版1.3跳票一个半月、清零2900个问题。Bun作为JS运行时在性能与工具链一体化上持续演进。",
+      "link": "https://mp.weixin.qq.com/s/QUlORoDLsY-pWTlmcgVy5w",
+      "source_file": "sources/2026-08-21_“烂代码”转正？Bun稳定版终落地：跳票一个半月，2900个问题清零_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "撞名Anthropic的“外挂”刷屏：让“DeepSeek V4‑Pro碾压 Fable 5”但无人能复现，Token开销反而翻倍",
+      "source": "InfoQ",
+      "digest": "一个名为J-Space Cognition Suite的社区项目在X上快速传播，声称在不修改DeepSeek V4-Pro权重前提下，仅凭推理时Harness就能显著提升多项Agent Benchmark表现，但无人能复现，且带来Token开销翻倍，引发对“外挂”有效性的质疑。",
+      "link": "https://www.infoq.cn/article/MKDQBpGhC5Uu3pB4kMbC",
+      "source_file": "sources/2026-08-21_撞名Anthropic的“外挂”刷屏：让“DeepSeek V4‑Pro碾压 Fable 5”但无人_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "MiniMax，做视频领域的 Claude Code 的野心已经藏不住了",
+      "source": "极客公园",
+      "digest": "MiniMax H3视频生成模型发布后，文章分析其“做视频领域的Claude Code”野心。H3支持最高2K分辨率视频生成，在流畅度、画面精细度与后期修改便捷度上达到SOTA级。MiniMax试图将视频生成从单次产出升级为可迭代、可编辑的生产流程，对标Adobe、Canva的创作工作流。",
+      "link": "http://www.geekpark.net/news/369201",
+      "source_file": "sources/2026-08-21_MiniMax，做视频领域的 Claude Code 的野心已经藏不住了_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "V4-Flash-Vision-Exp 上线，开启多模态 API 服务",
+      "source": "DeepSeek",
+      "digest": "DeepSeek在API平台上线实验性质的多模态视觉理解模型DeepSeek-V4-Flash-Vision-Exp，开始提供图像理解服务。图片转换为token后按token计费，单张图片成本低至0.001元。该模型补足了V4系列的多模态拼图，多模态Agent能力据称接近Opus 4.8。",
+      "link": "https://mp.weixin.qq.com/s/UGMfvPMwBIB4oFYZZejekA",
+      "source_file": "sources/2026-08-21_V4-Flash-Vision-Exp 上线，开启多模态 API 服务_DeepSeek.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "全SOTA！不止纯文本，阿里多模态站上全球第一梯队",
+      "source": "智东西",
+      "digest": "过去一个月阿里巴巴模型发布全面提速，大语言、图像、语音、视频、音乐五大类模型密集完成重要版本迭代，性能均跻身国际第一梯队。文章从榜单到场景，分析阿里多模态能力如何走进产业一线，多模态开始从展示走向落地。",
+      "link": "https://mp.weixin.qq.com/s/CdrVtbVbmlzRJJdcjXwgOw",
+      "source_file": "sources/2026-08-21_全SOTA！不止纯文本，阿里多模态站上全球第一梯队_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "小红书悄悄开源发布了自己的大模型，内容平台也要造底座",
+      "source": "极客公园",
+      "digest": "小红书在海外发布大模型dots3-note preview，采用MoE架构、总参数280B、激活16B，支持512K上下文及文本、视觉、语音多模态理解，后续将有jazz、aria等定位版本。作为内容平台，小红书下场自研底座模型，延续国内大厂与互联网公司“造底座”趋势。",
+      "link": "http://www.geekpark.net/news/369161",
+      "source_file": "sources/2026-08-21_小红书悄悄开源发布了自己的大模型，内容平台也要造底座_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "开源国产8B模型，比肩闭源Image 2了！",
+      "source": "量子位",
+      "digest": "国产生图模型时隔三周推出正式版本，参数8B、支持4K直出、开源，性能比肩闭源Image 2。文章称该模型在图像生成质量与细节控制上显著提升，国产开源生图阵营在轻量化与高画质之间取得平衡，降低高质量图像生成的使用门槛。",
+      "link": "https://mp.weixin.qq.com/s/9N_86XvCn-pJAvgmKNHhbQ",
+      "source_file": "sources/2026-08-21_开源国产8B模型，比肩闭源Image 2了！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "扩散语言模型驱动的实时交互视频模型：SigmaZ 完成数百万美元融资",
+      "source": "InfoQ",
+      "digest": "视觉AI交互模型赛道出现新路线：从像素表达（Pixel-based）分支出代码路线（Code-based），SigmaZ基于扩散语言模型驱动实时交互视频生成。文章介绍其完成数百万美元融资，并阐释Pixel擅长appearance、Code擅长structure的联合表达思路。",
+      "link": "https://www.infoq.cn/article/FsItSiDkVkz3epqzvcFY",
+      "source_file": "sources/2026-08-21_扩散语言模型驱动的实时交互视频模型：SigmaZ 完成数百万美元融资_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "机器人的GPT-3时刻真·来了！卡卡西上身，看3秒就学会新动作",
+      "source": "量子位",
+      "digest": "文章称机器人界正迎来类似GPT-3的时刻：机器人看3秒演示即可学会新动作，即便从未见过的新任务也能快速泛化。这一突破被视为具身智能从专用技能向通用学习跃迁的信号，有望大幅降低机器人新技能部署成本。",
+      "link": "https://www.qbitai.com/2026/08/476596.html",
+      "source_file": "sources/2026-08-21_机器人的GPT-3时刻真·来了！卡卡西上身，看3秒就学会新动作_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-21",
+      "title": "AI for Science 进入下半场，AI 如何“重做”科研？",
+      "source": "InfoQ",
+      "digest": "8月21日，2026科学智能大会在北京开幕，以“人工智能变革科研范式”为主题，汇聚近50位院士、80余位青年学者及百余场学术报告。文章探讨AI for Science进入下半场，AI正从辅助工具转向重构科研全流程——从文献挖掘、假设生成到实验自动化，科研组织方式与评价体系面临重塑。",
+      "link": "https://www.infoq.cn/article/E8ABFCLKfca959iFfm5H",
+      "source_file": "sources/2026-08-21_AI for Science 进入下半场，AI 如何“重做”科研？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "AI时代不吐不快的12条判断",
+      "source": "腾讯云开发者",
+      "digest": "作者作为互联网后台研发，结合大量使用AI编码、调试、评审的经验，提出12条判断：AI不会取代程序员但会改变其工作方式，基础软件能力仍关键，AI生成代码需严格审查等。文章强调“软件基础不重要的说法会吃苦头”，呼吁在拥抱AI的同时守住工程基本功。",
+      "link": "https://mp.weixin.qq.com/s/zVj-0k-DfIS5bHz05MQ8bg",
+      "source_file": "sources/2026-08-21_AI时代不吐不快的12条判断_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Agent Plan × DeepSeek Harness 实践指南",
+      "source": "火山引擎Agent社区",
+      "digest": "文章介绍DeepSeek Harness（DSH）开源智能体框架，涵盖Model、Tool、Memory、Sandbox、Agent等核心模块，并结合Agent Plan给出实践指南。DSH定位为可本地化部署的Agent应用基座，支持开发者基于DeepSeek模型快速搭建具备工具调用与记忆能力的自主智能体。",
+      "link": "https://mp.weixin.qq.com/s/ub58e-2uoj8tmVD8nB8jOg",
+      "source_file": "sources/2026-08-21_Agent Plan × DeepSeek Harness 实践指南_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "DeepSeek Harness 更新：官方多模态支持",
+      "source": "DeepSeek Harness 团队",
+      "digest": "DeepSeek Harness团队宣布自开发者预览版发布以来连续完成三次版本更新（v0.1.0-rc.7/rc.8及本次），重点加入官方多模态支持，使Harness能够处理图像理解等视觉任务。更新持续完善工具调用、记忆与沙箱能力，推动DSH从原型向可用框架演进。",
+      "link": "https://mp.weixin.qq.com/s/xw-hxtHMcxxSGqbSbp98RQ",
+      "source_file": "sources/2026-08-21_DeepSeek Harness 更新：官方多模态支持_DeepSeek Harness 团队.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "WRC展会拿旧Demo炒冷饭？扒一扒千寻藏在水下的全栈底牌",
+      "source": "量子位",
+      "digest": "文章在WRC期间剖析千寻位置的具身智能全栈能力，认为其展示了真实技术底牌而非旧Demo炒冷饭。千寻依托高精度定位与机器人本体控制能力，在商业服务与工业场景中推进具身智能落地，文章从感知、定位、规划到执行梳理其技术栈。",
+      "link": "https://www.qbitai.com/2026/08/476532.html",
+      "source_file": "sources/2026-08-21_WRC展会拿旧Demo炒冷饭？扒一扒千寻藏在水下的全栈底牌_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
+      "source": "量子位",
+      "digest": "前华为智驾AI一号位黄青虬创办的通用具身智能公司墨奇智能，成立仅半年估值超70亿元。文章介绍其机器人在WRC展示的家务能力——猛干15分钟收纳、补货、叠衣服，并抛出观点：世界模型与VLA都不是答案，强调从真实交互数据中学习具身技能。",
+      "link": "https://www.qbitai.com/2026/08/476413.html",
+      "source_file": "sources/2026-08-21_WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "“AI写的代码，我完全不看”，世界级编程大师Bob大叔警示：说软件基础不重要的人会吃苦头，不会等太久",
+      "source": "CSDN",
+      "digest": "世界级编程大师Robert C. Martin（Bob大叔）直言“完全不看Agent写出的任何代码”，警示盲目信任AI生成代码的风险。他认为软件基础能力仍不可或缺，说软件基础不重要的人“吃苦头不会等太久”，呼吁工程师在AI辅助下守住工程素养与代码审查底线。",
+      "link": "https://mp.weixin.qq.com/s/VGLla6Oj2vwX_FEEIFFqjw",
+      "source_file": "sources/2026-08-21_“AI写的代码，我完全不看”，世界级编程大师Bob大叔警示：说软件基础不重要的人会吃苦头，不会等太久_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "不跟风、不堆模型，百度靠什么突围AI办公赛道？",
+      "source": "InfoQ",
+      "digest": "百度文库网盘官宣通用智能体GenFlow启用中文品牌名“库库AI”，并上线独立客户端、小程序、Web三端产品。“库库AI”整合百度早于三年前布局的AI办公能力，入局竞争激烈的AI办公赛道，主打不跟风堆模型、以场景化办公智能体突围。",
+      "link": "https://www.infoq.cn/article/9x1ohAMlMpMCLdygg8Yf",
+      "source_file": "sources/2026-08-21_不跟风、不堆模型，百度靠什么突围AI办公赛道？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "国产“预制算力”来了：工厂预制率超90% 24小时内投运 交付效率提升70%",
+      "source": "量子位",
+      "digest": "国产AI芯片企业太初元碁发布面向产业集群建设的分布式算力解决方案，以“预制算力”模式实现工厂预制率超90%、24小时内投运、交付效率提升70%。方案将算力建设从工地施工转向工厂预制，试图缓解算力交付周期长、部署复杂的痛点。",
+      "link": "https://www.qbitai.com/2026/08/476409.html",
+      "source_file": "sources/2026-08-21_国产“预制算力”来了：工厂预制率超90% 24小时内投运 交付效率提升70%_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”？",
+      "source": "InfoQ",
+      "digest": "8月19日“人形机器人第一股”宇树科技登陆科创板，开盘暴涨629.44%、最终市值超3400亿元；同日2026 WRC世界机器人大会开幕。文章借宇树上市与行业盛会，分析市场对人形机器人赛道的评判标尺，并探讨“下一个宇树”可能来自哪些具备核心技术的公司。",
+      "link": "https://www.infoq.cn/article/YCUZHUzTmNxOTxtXM2Yw",
+      "source_file": "sources/2026-08-21_宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景",
+      "source": "量子位",
+      "digest": "明略科技（2718.HK）与海康机器人联合参展2026 WRC，聚焦商业服务领域展示“Agent+具身”联合方案。双方将明略的认知智能与海康的机器人本体及视觉能力结合，推进具身智能在商业场景的落地进展。",
+      "link": "https://www.qbitai.com/2026/08/476733.html",
+      "source_file": "sources/2026-08-21_明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "最大运力自动驾驶轻卡落地，来自无人车巨头",
+      "source": "量子位",
+      "digest": "无人配送头部公司九识智能联合商用车龙头宇通发布无人轻卡九识Z20，载重4.2吨、容积19.32m³，面向工厂与园区等更重运输任务。文章介绍无人轻卡在最大运力与自动驾驶能力上的突破，标志自动驾驶从小型配送车向更重资产场景渗透。",
+      "link": "https://www.qbitai.com/2026/08/476778.html",
+      "source_file": "sources/2026-08-21_最大运力自动驾驶轻卡落地，来自无人车巨头_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "材科源图三个月完成两轮融资，AI全链路闭环加速材料产业化",
+      "source": "InfoQ",
+      "digest": "苏州材科源图（MatSource）近三个月完成两轮超亿元天使轮系列融资，资金用于完善“数据—物理模型—智能体—自动化实验”研发链。该公司以AI for Science思路加速材料产业化，构建材料发现到实验验证的AI全链路闭环。",
+      "link": "https://www.infoq.cn/article/YB51rwb95keVmlIZ0xQd",
+      "source_file": "sources/2026-08-21_材科源图三个月完成两轮融资，AI全链路闭环加速材料产业化_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "科学家只管提问题，AI负责跑实验：深势科技把科研全流程搬进桌面",
+      "source": "量子位",
+      "digest": "深势科技将科研全流程搬进桌面：科学家只需提出科学问题，AI负责文献检索、方案设计与自动化实验执行。文章介绍其把科研从繁琐准备工作中解放，让科学家时间回到创造性思考，展示AI for Science在科研提效上的落地形态。",
+      "link": "https://www.qbitai.com/2026/08/476591.html",
+      "source_file": "sources/2026-08-21_科学家只管提问题，AI负责跑实验：深势科技把科研全流程搬进桌面_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "行业首发「3+N」批量部署行业解决方案亮相WRC 2026",
+      "source": "InfoQ",
+      "digest": "2026 WRC上乐聚机器人携行业首发全栈国产化“3+N”批量部署行业解决方案亮相，是本届唯一实现全场景全自主全天候机器人不停机作业的展台，覆盖科研、商服、工业三大领域，夸父作为“主理人”可自主讲解其他工位机器人真实作业。",
+      "link": "https://www.infoq.cn/article/FhmYRbEbgXhyGDDUpRT0",
+      "source_file": "sources/2026-08-21_行业首发「3+N」批量部署行业解决方案亮相WRC 2026_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "视频生成迎来“Claude Code时刻”，MiniMax Design “杀入” Adobe、Canva 腹地",
+      "source": "InfoQ",
+      "digest": "MiniMax Design试图将视频生成变为“Claude Code时刻”——从一次性产出转向可迭代、可编辑的生产流程，“杀入”Adobe、Canva腹地。文章分析AI视频生成的隐性账单与多场景批量生产需求，MiniMax以产品设计切入专业创作工具市场。",
+      "link": "https://www.infoq.cn/article/7FAcAhVUw89VJNwuOwrc",
+      "source_file": "sources/2026-08-21_视频生成迎来“Claude Code时刻”，MiniMax Design “杀入” Adobe、Ca_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "设计无边界！中坚科技旗下子公司桦之坚携巨型概念机器人ZERO惊艳2026世界机器人大会",
+      "source": "量子位",
+      "digest": "中坚科技旗下桦之坚携概念人形机器人ZERO亮相2026 WRC。ZERO以巨型概念形态展示公司在人形机器人领域的造型与系统集成能力，反映传统制造企业向具身智能赛道延伸的趋势。",
+      "link": "https://www.qbitai.com/2026/08/476525.html",
+      "source_file": "sources/2026-08-21_设计无边界！中坚科技旗下子公司桦之坚携巨型概念机器人ZERO惊艳2026世界机器人大会_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "谦合益邦打造全球首款4层3D DRAM存算一体芯片",
+      "source": "InfoQ",
+      "digest": "3D存算一体芯片企业谦合益邦宣布全球首款4层3D DRAM堆叠存算一体芯片成功回片并点亮，标志该技术从验证迈入工程落地。芯片采用自研三维集成原生计算架构，首次实现4层芯片垂直高密度集成，将计算单元与存储单元在三维空间就近融合，服务于AI算力能效提升。",
+      "link": "https://www.infoq.cn/article/aKHizVqHrpxxdChDGT9A",
+      "source_file": "sources/2026-08-21_谦合益邦打造全球首款4层3D DRAM存算一体芯片_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "雷鸟iO发布：两天续航、全天候主动式AI，轻至34g",
+      "source": "量子位",
+      "digest": "雷鸟创新发布AI眼镜新品系列雷鸟iO，主打两天续航、全天候主动式AI、轻至34g。作为消费级AR品牌，雷鸟将AI能力下沉到轻量化眼镜形态，支持主动式信息提醒与交互，反映AI硬件在可穿戴场景的轻量化竞争。",
+      "link": "https://www.qbitai.com/2026/08/476628.html",
+      "source_file": "sources/2026-08-21_雷鸟iO发布：两天续航、全天候主动式AI，轻至34g_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "靠这10个优化点，我们把Multi-Agent工作流成本降了50%以上",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程分享用AI Agent驱动前后端全流程开发的经验：由1个TL+6个子Agent组成harness工作流，从需求分析到自动化测试。文章总结10个优化点，将Multi-Agent工作流成本降低50%以上，涵盖上下文管理、任务拆分与并行调度等工程实践。",
+      "link": "https://mp.weixin.qq.com/s/TIdXNlrcAOUZWVW1oWnnKQ",
+      "source_file": "sources/2026-08-21_靠这10个优化点，我们把Multi-Agent工作流成本降了50%以上_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "五重跃迁：本体论如何重塑银行的组织能力与创新范式",
+      "source": "中国金融电脑+",
+      "digest": "文章提出银行构建业务本体是一套机器可读的“宪法”体系，承载业务本质。上海银行数据管理与应用部作者从本体论视角阐述其如何重塑银行组织能力与创新范式，包括业务语义统一、知识资产化与AI可理解的业务建模，推动银行从流程驱动转向语义驱动。",
+      "link": "https://mp.weixin.qq.com/s/SCJvSACEaeIaf5OJ3X-l0g",
+      "source_file": "sources/2026-08-21_五重跃迁：本体论如何重塑银行的组织能力与创新范式_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "全球｜国内外银行业生成式人工智能金融应用与风险防范研究",
+      "source": "现代商业银行杂志",
+      "digest": "文章系统梳理国内外银行业生成式人工智能在金融应用与风险防范上的实践，涵盖智能客服、营销、风控等场景，并分析数据安全、幻觉、合规等风险。指出银行业需在应用效能与风险防范间平衡，建立适配GenAI的治理框架。",
+      "link": "https://mp.weixin.qq.com/s/BLcerlIt8eqXw6qEa4Rwrg",
+      "source_file": "sources/2026-08-21_全球｜国内外银行业生成式人工智能金融应用与风险防范研究_现代商业银行杂志.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "星展银行：AI在部分业务初见成效，已向企业客户推出智能体助手",
+      "source": "银行科技研究社",
+      "digest": "星展银行（DBS）表示AI在部分业务已初见成效，并明确透露AI实现收入增长，已向企业客户推出智能体助手。文章介绍星展在银行AI应用上的进展，反映国际银行将AI从降本增效推向直接业务收入的增长路径。",
+      "link": "https://mp.weixin.qq.com/s/Te96VHGi8mknO91B1xpOsg",
+      "source_file": "sources/2026-08-21_星展银行：AI在部分业务初见成效，已向企业客户推出智能体助手_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "ChatGPT 登陆 iMessage、Anthropic 会议记录器、Mistral 智能搜索（TLDR AI 每日简讯）",
+      "source": "TLDR AI",
+      "digest": "本期TLDR AI汇总了ChatGPT接入苹果iMessage、Anthropic会议记录工具、Mistral Agentic Search三款产品的功能更新动态，涵盖消费级AI入口、企业会议自动化与智能搜索等方向。",
+      "link": "https://tldr.tech/ai/2026-08-21",
+      "source_file": "sources/2026-08-21_ChatGPT Apple Messages 💬, Anthropic’s meeting reco_TLDR AI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "Jeff Dean离职后首次公开访谈火力有点猛。。。",
+      "source": "量子位",
+      "digest": "离开谷歌后的首次公开访谈中，Jeff Dean坦言离开原因之一是为了小团队能极致聚焦，并直言Gemini早期在Coding上表现不佳。作为前谷歌AI核心人物，其锐评老东家技术路线与组织方式，引发业界对大厂AI研发效率的讨论。",
+      "link": "https://www.qbitai.com/2026/08/476468.html",
+      "source_file": "sources/2026-08-21_Jeff Dean离职后首次公开访谈火力有点猛。。。_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "“Anthropic不再是AI圈的信仰”",
+      "source": "InfoQ",
+      "digest": "文章探讨“Anthropic不再是AI圈信仰”的现象：尽管其产品定价最高，却攫取最多收入，但用户体感波动大。今年4月起开发者注意力向Codex重新分配，Claude Code体验的不稳定让部分用户流失，反映AI编码工具竞争中的口碑脆弱性。",
+      "link": "https://www.infoq.cn/article/hfJrKqqoww06UYcygUrJ",
+      "source_file": "sources/2026-08-21_“Anthropic不再是AI圈的信仰”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "曝周杰伦将代言 vivo 手机；华为「阔直板」手机曝光；柯洁透露战胜 AI 秘诀：装弱智｜极客早知道",
+      "source": "极客公园",
+      "digest": "本期极客早知道综合简讯涵盖《黑神话：钟馗》15分钟实机演示公布、周杰伦将代言vivo手机、华为“阔直板”手机曝光、柯洁透露战胜AI秘诀等科技与消费电子动态，其中柯洁“装弱智”战胜AI的策略引发讨论。",
+      "link": "http://www.geekpark.net/news/369114",
+      "source_file": "sources/2026-08-21_曝周杰伦将代言 vivo 手机；华为「阔直板」手机曝光；柯洁透露战胜 AI 秘诀：装弱智｜极客早知道_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-21",
+      "title": "程序员岗位被AI掏空了！前OpenAI高管参与AGI激辩：AI替代岗位，可能根本没有裁员通知",
+      "source": "51CTO技术栈",
+      "digest": "前OpenAI高管参与AGI激辩，讨论AI替代程序员岗位的话题，指出“看到的不是软件工程师被裁员，而是岗位被掏空”——AI可能在不发裁员通知的情况下逐步消解传统编码岗位需求，引发对开发者职业路径的警示。",
+      "link": "https://mp.weixin.qq.com/s/u836jNOwfUkTIaYroklEJw",
+      "source_file": "sources/2026-08-21_程序员岗位被AI掏空了！前OpenAI高管参与AGI激辩：AI替代岗位，可能根本没有裁员通知_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-20",
       "title": "Agent也会被记忆拖累！IBM Research：记忆越多，效果未必越好，不同模型需要不同的记忆剂量",
