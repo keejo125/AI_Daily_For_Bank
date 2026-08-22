@@ -35,6 +35,17 @@ MANUAL_LINKS_PATH = PROJECT_DIR / "manual_links.json"
 TZ_SHANGHAI = timezone(timedelta(hours=8))
 
 
+# ---------- 依赖自检：确保 requests 可用（缺失则自动 pip 安装到当前解释器） ----------
+# 适配器(sources/base.py 等)依赖 requests；若当前解释器缺包，先自动安装再继续，避免 ModuleNotFoundError。
+try:
+    import requests  # noqa: F401
+except ImportError:
+    import subprocess
+    print("⚠️ 未检测到 requests 依赖，正在自动安装...", flush=True)
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    import requests  # noqa: F401
+
+
 # ---------- 工具函数 ----------
 
 def sanitize_filename(name, max_len=80):
