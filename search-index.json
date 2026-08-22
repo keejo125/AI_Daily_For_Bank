@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-22T08:23:20.420184",
-  "total": 1452,
+  "updated_at": "2026-08-22T11:09:30.692035",
+  "total": 1444,
   "articles": [
     {
       "date": "2026-08-21",
@@ -154,16 +154,6 @@
     },
     {
       "date": "2026-08-21",
-      "title": "机器人的GPT-3时刻真·来了！卡卡西上身，看3秒就学会新动作",
-      "source": "量子位",
-      "digest": "文章称机器人界正迎来类似GPT-3的时刻：机器人看3秒演示即可学会新动作，即便从未见过的新任务也能快速泛化。这一突破被视为具身智能从专用技能向通用学习跃迁的信号，有望大幅降低机器人新技能部署成本。",
-      "link": "https://www.qbitai.com/2026/08/476596.html",
-      "source_file": "sources/2026-08-21_机器人的GPT-3时刻真·来了！卡卡西上身，看3秒就学会新动作_量子位.md",
-      "category": "国内",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-08-21",
       "title": "AI for Science 进入下半场，AI 如何“重做”科研？",
       "source": "InfoQ",
       "digest": "8月21日，2026科学智能大会在北京开幕，以“人工智能变革科研范式”为主题，汇聚近50位院士、80余位青年学者及百余场学术报告。文章探讨AI for Science进入下半场，AI正从辅助工具转向重构科研全流程——从文献挖掘、假设生成到实验自动化，科研组织方式与评价体系面临重塑。",
@@ -204,26 +194,6 @@
     },
     {
       "date": "2026-08-21",
-      "title": "WRC展会拿旧Demo炒冷饭？扒一扒千寻藏在水下的全栈底牌",
-      "source": "量子位",
-      "digest": "文章在WRC期间剖析千寻位置的具身智能全栈能力，认为其展示了真实技术底牌而非旧Demo炒冷饭。千寻依托高精度定位与机器人本体控制能力，在商业服务与工业场景中推进具身智能落地，文章从感知、定位、规划到执行梳理其技术栈。",
-      "link": "https://www.qbitai.com/2026/08/476532.html",
-      "source_file": "sources/2026-08-21_WRC展会拿旧Demo炒冷饭？扒一扒千寻藏在水下的全栈底牌_量子位.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
-      "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
-      "source": "量子位",
-      "digest": "前华为智驾AI一号位黄青虬创办的通用具身智能公司墨奇智能，成立仅半年估值超70亿元。文章介绍其机器人在WRC展示的家务能力——猛干15分钟收纳、补货、叠衣服，并抛出观点：世界模型与VLA都不是答案，强调从真实交互数据中学习具身技能。",
-      "link": "https://www.qbitai.com/2026/08/476413.html",
-      "source_file": "sources/2026-08-21_WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…_量子位.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
       "title": "“AI写的代码，我完全不看”，世界级编程大师Bob大叔警示：说软件基础不重要的人会吃苦头，不会等太久",
       "source": "CSDN",
       "digest": "世界级编程大师Robert C. Martin（Bob大叔）直言“完全不看Agent写出的任何代码”，警示盲目信任AI生成代码的风险。他认为软件基础能力仍不可或缺，说软件基础不重要的人“吃苦头不会等太久”，呼吁工程师在AI辅助下守住工程素养与代码审查底线。",
@@ -254,36 +224,6 @@
     },
     {
       "date": "2026-08-21",
-      "title": "宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”？",
-      "source": "InfoQ",
-      "digest": "8月19日“人形机器人第一股”宇树科技登陆科创板，开盘暴涨629.44%、最终市值超3400亿元；同日2026 WRC世界机器人大会开幕。文章借宇树上市与行业盛会，分析市场对人形机器人赛道的评判标尺，并探讨“下一个宇树”可能来自哪些具备核心技术的公司。",
-      "link": "https://www.infoq.cn/article/YCUZHUzTmNxOTxtXM2Yw",
-      "source_file": "sources/2026-08-21_宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”？_InfoQ.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
-      "title": "明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景",
-      "source": "量子位",
-      "digest": "明略科技（2718.HK）与海康机器人联合参展2026 WRC，聚焦商业服务领域展示“Agent+具身”联合方案。双方将明略的认知智能与海康的机器人本体及视觉能力结合，推进具身智能在商业场景的落地进展。",
-      "link": "https://www.qbitai.com/2026/08/476733.html",
-      "source_file": "sources/2026-08-21_明略科技携手海康机器人亮相世界机器人大会，以“Agent+具身”联合进入商业机器人场景_量子位.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
-      "title": "最大运力自动驾驶轻卡落地，来自无人车巨头",
-      "source": "量子位",
-      "digest": "无人配送头部公司九识智能联合商用车龙头宇通发布无人轻卡九识Z20，载重4.2吨、容积19.32m³，面向工厂与园区等更重运输任务。文章介绍无人轻卡在最大运力与自动驾驶能力上的突破，标志自动驾驶从小型配送车向更重资产场景渗透。",
-      "link": "https://www.qbitai.com/2026/08/476778.html",
-      "source_file": "sources/2026-08-21_最大运力自动驾驶轻卡落地，来自无人车巨头_量子位.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
       "title": "材科源图三个月完成两轮融资，AI全链路闭环加速材料产业化",
       "source": "InfoQ",
       "digest": "苏州材科源图（MatSource）近三个月完成两轮超亿元天使轮系列融资，资金用于完善“数据—物理模型—智能体—自动化实验”研发链。该公司以AI for Science思路加速材料产业化，构建材料发现到实验验证的AI全链路闭环。",
@@ -304,31 +244,11 @@
     },
     {
       "date": "2026-08-21",
-      "title": "行业首发「3+N」批量部署行业解决方案亮相WRC 2026",
-      "source": "InfoQ",
-      "digest": "2026 WRC上乐聚机器人携行业首发全栈国产化“3+N”批量部署行业解决方案亮相，是本届唯一实现全场景全自主全天候机器人不停机作业的展台，覆盖科研、商服、工业三大领域，夸父作为“主理人”可自主讲解其他工位机器人真实作业。",
-      "link": "https://www.infoq.cn/article/FhmYRbEbgXhyGDDUpRT0",
-      "source_file": "sources/2026-08-21_行业首发「3+N」批量部署行业解决方案亮相WRC 2026_InfoQ.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
       "title": "视频生成迎来“Claude Code时刻”，MiniMax Design “杀入” Adobe、Canva 腹地",
       "source": "InfoQ",
       "digest": "MiniMax Design试图将视频生成变为“Claude Code时刻”——从一次性产出转向可迭代、可编辑的生产流程，“杀入”Adobe、Canva腹地。文章分析AI视频生成的隐性账单与多场景批量生产需求，MiniMax以产品设计切入专业创作工具市场。",
       "link": "https://www.infoq.cn/article/7FAcAhVUw89VJNwuOwrc",
       "source_file": "sources/2026-08-21_视频生成迎来“Claude Code时刻”，MiniMax Design “杀入” Adobe、Ca_InfoQ.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-21",
-      "title": "设计无边界！中坚科技旗下子公司桦之坚携巨型概念机器人ZERO惊艳2026世界机器人大会",
-      "source": "量子位",
-      "digest": "中坚科技旗下桦之坚携概念人形机器人ZERO亮相2026 WRC。ZERO以巨型概念形态展示公司在人形机器人领域的造型与系统集成能力，反映传统制造企业向具身智能赛道延伸的趋势。",
-      "link": "https://www.qbitai.com/2026/08/476525.html",
-      "source_file": "sources/2026-08-21_设计无边界！中坚科技旗下子公司桦之坚携巨型概念机器人ZERO惊艳2026世界机器人大会_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
