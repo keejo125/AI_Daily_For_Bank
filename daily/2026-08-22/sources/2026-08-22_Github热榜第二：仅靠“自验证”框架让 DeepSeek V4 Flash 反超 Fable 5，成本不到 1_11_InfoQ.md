@@ -1,15 +1,18 @@
 ---
 publish_time: 1787373713
-status: pending
-category: 
-is_model_related: false
+status: confirmed
+category: 国际
+is_model_related: true
 digest: |
+  由 Jacky Kwok 牵头、联合斯坦福、UC伯克利与英伟达研究院学者团队开源的 LLM-as-a-Verifier 框架（v0.2.0）登上 GitHub 热榜第二。该框架不额外训练奖励模型，直接利用现有 LLM 对 Agent 执行轨迹进行细粒度验证与排序。在 Terminal-Bench 2.1 基准上，DeepSeek V4 Flash 仅对每个任务采样5条候选轨迹并以自身作为 Verifier 挑选最优解（Best-of-5），系统成功率从78.7%升至88.0%，超越闭源前沿模型 Claude Fable 5（Oracle 上限达96.6%）。
+
+  成本方面，DeepSeek 单任务验证约0.11美元，而 Fable 5 约1.3美元，相差逾十倍。其核心机制是深入模型底层对数概率分布（logprob）计算连续验证分数，弥补传统离散评分平局率高达26.7%的瓶颈；并提出“验证计算三维扩展（3D Scaling）”与 PPT 排序、前缀缓存等工程降本方案，证明验证侧计算本身可成为独立于 Test-time Scaling 的 Scaling 轴。
 link: https://mp.weixin.qq.com/s/M0Sw8LdPLgXnDO9Ix3rzRQ
 source: InfoQ
-title: Github热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11
+title: GitHub热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11
 ---
 
-# Github热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11
+# GitHub热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11
 
 来源：InfoQ
 原文链接：https://mp.weixin.qq.com/s/M0Sw8LdPLgXnDO9Ix3rzRQ

@@ -1,9 +1,12 @@
 ---
 publish_time: 1787364000
-status: pending
-category: 
-is_model_related: false
+status: confirmed
+category: 国内
+is_model_related: true
 digest: |
+  阿里云开源网关 Higress 以 Wasm 插件形式接入 Qwen3Guard-Gen 安全审核模型，把 AI 内容安全做进网关主链路。该方案业务零改造：不修改应用代码、不改动上游模型服务，应用继续使用 Chat Completions 协议；覆盖输入、非流式输出与 SSE 流式输出审核；Qwen3Guard 按官方方式独立部署扩缩容，风险阈值与拒答文案由网关统一配置。
+
+  Qwen3Guard 是基于 Qwen3 构建的安全审核模型系列，使用超119万条带安全标注数据训练，提供0.6B/4B/8B三档，默认调用4B版本，输出三级风险映射为两档网关策略（Safe/Unsafe）。插件在请求进入模型前审核输入、模型返回后结合“问题+回答”审核输出，命中阈值直接返回拒答以节省推理资源；流式场景分段缓冲累计文本重复送检。该集成将安全从“模型外围附加功能”变为可复用的网关执行力，避免安全逻辑散落各业务仓库。
 link: https://mp.weixin.qq.com/s/FolCzOk-nnB52CLvUan41w
 source: 阿里云云原生
 title: Higress 接入 Qwen3Guard：不改一行业务代码，把 AI 内容安全做进网关主链路

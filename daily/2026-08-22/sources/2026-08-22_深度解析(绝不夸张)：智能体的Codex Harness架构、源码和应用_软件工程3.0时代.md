@@ -1,9 +1,12 @@
 ---
 publish_time: 1787359238
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
+  OpenAI 开源了可嵌入任意产品的 agent harness（智能体执行系统）Codex Harness，标志着 Codex 从“编码助手”向“智能体平台”的定位转变。文章深度拆解其源码：codex-core 是一个抵制膨胀的 Rust 核心（约33万行上限），通过 Thread/Session/Turn 三级状态管理驱动 agent loop，支持工具调用、并行执行、上下文压缩与人工审批；app-server 以 MCP 风格的 JSON-RPC 2.0 协议对外暴露，使任何应用都能以编程方式接入；安全体系采用“统一策略+三套原生沙箱（macOS Seatbelt / Linux bubblewrap / Windows restricted token）”的纵深防御，并将审批流作为协议一等公民。
+
+  工程启示包括：单一核心多前端、协议优先的平台化、执行与判定分离、核心抵制膨胀、远程 exec-server 实现异 OS 执行。实测数据显示，在 ARC-AGI-3 基准上，保留推理+上下文压缩将 GPT-5.6 Sol 得分从13.3%提升至38.3%，输出 token 减少6倍，印证“harness 质量与模型质量同等重要”。
 link: https://mp.weixin.qq.com/s/neYcA33iylKCh-CFpDUpbA
 source: 软件工程3.0时代
 title: 深度解析(绝不夸张)：智能体的Codex Harness架构、源码和应用

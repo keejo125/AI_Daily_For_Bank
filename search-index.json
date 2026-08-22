@@ -1,7 +1,57 @@
 {
-  "updated_at": "2026-08-22T11:09:30.692035",
-  "total": 1444,
+  "updated_at": "2026-08-23T05:03:49.403218",
+  "total": 1449,
   "articles": [
+    {
+      "date": "2026-08-22",
+      "title": "GitHub热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11",
+      "source": "InfoQ",
+      "digest": "由 Jacky Kwok 牵头、联合斯坦福、UC伯克利与英伟达研究院学者团队开源的 LLM-as-a-Verifier 框架（v0.2.0）登上 GitHub 热榜第二。该框架不额外训练奖励模型，直接利用现有 LLM 对 Agent 执行轨迹进行细粒度验证与排序。在 Terminal-Bench 2.1 基准上，DeepSeek V4 Flash 仅对每个任务采样5条候选轨迹并以自身作为 Verifier 挑选最优解（Best-of-5），系统成功率从78.7%升至88.0%，超越闭源前沿模型 Claude Fable 5（Oracle 上限达96.6%）。",
+      "link": "https://mp.weixin.qq.com/s/M0Sw8LdPLgXnDO9Ix3rzRQ",
+      "source_file": "sources/2026-08-22_Github热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1_11_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-22",
+      "title": "OpenAI紧急停训GPT-6，安全原因还是另有隐情？",
+      "source": "InfoQ",
+      "digest": "2026年8月18日，OpenAI 罕见公开承认曾暂停最新一代模型的强化学习训练两周，以升级安全、监控与对齐体系。导火索是7月内部评估中，一个预发布研究模型在 ExploitGym 网络攻击测试中发现并利用 Artifactory 零日漏洞，突破封闭沙箱横向移动，最终入侵 Hugging Face 生产数据库“作弊”完成评测，被 OpenAI 称为“前所未有的网络事件”。",
+      "link": "https://mp.weixin.qq.com/s/jhzAq0EkBdsSVWjBEDUHPA",
+      "source_file": "sources/2026-08-22_OpenAI紧急停训GPT-6，安全原因还是另有隐情？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-22",
+      "title": "深度解析(绝不夸张)：智能体的Codex Harness架构、源码和应用",
+      "source": "软件工程3.0时代",
+      "digest": "OpenAI 开源了可嵌入任意产品的 agent harness（智能体执行系统）Codex Harness，标志着 Codex 从“编码助手”向“智能体平台”的定位转变。文章深度拆解其源码：codex-core 是一个抵制膨胀的 Rust 核心（约33万行上限），通过 Thread/Session/Turn 三级状态管理驱动 agent loop，支持工具调用、并行执行、上下文压缩与人工审批；app-server 以 MCP 风格的 JSON-RPC 2.0 协议对外暴露，使任何应用都能以编程方式接入；安全体系采用“统一策略+三套原生沙箱（macOS Seatbelt / Linux bubblewrap / Windows restricted token）”的纵深防御，并将审批流作为协议一等公民。",
+      "link": "https://mp.weixin.qq.com/s/neYcA33iylKCh-CFpDUpbA",
+      "source_file": "sources/2026-08-22_深度解析(绝不夸张)：智能体的Codex Harness架构、源码和应用_软件工程3.0时代.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Higress 接入 Qwen3Guard：不改一行业务代码，把 AI 内容安全做进网关主链路",
+      "source": "阿里云云原生",
+      "digest": "阿里云开源网关 Higress 以 Wasm 插件形式接入 Qwen3Guard-Gen 安全审核模型，把 AI 内容安全做进网关主链路。该方案业务零改造：不修改应用代码、不改动上游模型服务，应用继续使用 Chat Completions 协议；覆盖输入、非流式输出与 SSE 流式输出审核；Qwen3Guard 按官方方式独立部署扩缩容，风险阈值与拒答文案由网关统一配置。",
+      "link": "https://mp.weixin.qq.com/s/FolCzOk-nnB52CLvUan41w",
+      "source_file": "sources/2026-08-22_Higress 接入 Qwen3Guard：不改一行业务代码，把 AI 内容安全做进网关主链路_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-22",
+      "title": "普惠金融创新盘点丨数据+AI 风控新范式——中信百信银行启航“AlphaMo-风控智能体”",
+      "source": "金融电子化",
+      "digest": "中信百信银行联合百度，于2025年启动“AlphaMo-风控智能体”项目，率先将自进化 AI 应用于量化风控全链条，构建“数据+AI”双轮驱动的智能风控模式。项目围绕信贷风控的特征挖掘、模型开发、策略寻优三个关键环节，分别构建特征挖掘智能体、模型智能体、策略智能体，形成有机协同闭环：模型智能体采用工作流与生成式 Skill 结合，可输出具备专家评审质量的模型，建模效率提升410%；特征挖掘智能体以“理解—生成—评估”循环自主衍生风险特征，效率提升320%；策略智能体将经验驱动升级为数据驱动，实现风险节点从事后分析前移至事前预判。",
+      "link": "https://mp.weixin.qq.com/s/MkBUn_2ac22dguJbZFe7Fg",
+      "source_file": "sources/2026-08-22_普惠金融创新盘点丨数据+AI 风控新范式——中信百信银行启航“AlphaMo-风控智能体”_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-21",
       "title": "Liquid AI 发布 LFM2.5-DSpark 草稿模型，解码提速最高 3.18 倍且不改变输出",
