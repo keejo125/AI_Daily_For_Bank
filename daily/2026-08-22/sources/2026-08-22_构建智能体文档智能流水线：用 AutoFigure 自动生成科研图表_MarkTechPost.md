@@ -9,7 +9,7 @@ digest: |
   MarkTechPost 教程演示用开源工具 AutoFigure 将文本或论文描述自动生成科研示意图：搭建环境、修复 Pillow 兼容、配置 API 驱动的生成流程，把长文档智能体流水线转成出版级 SVG/PNG。文章给出完整 Colab 代码，涵盖文档归一化、路由规划、专家模块（摘要/抽取/表格/视觉/引用）、预算感知编排与校验层，适用于论文图表与金融文档智能场景。
 ---
 
-# Building Agentic Document Intelligence Pipelines: Creating Scientific Figures with AutoFigure
+# 构建智能体文档智能流水线：用 AutoFigure 自动生成科研图表
 
 > 原文链接：https://www.marktechpost.com/2026/08/21/building-agentic-document-intelligence-pipelines-creating-scientific-figures-with-autofigure/
 > 来源：MarkTechPost

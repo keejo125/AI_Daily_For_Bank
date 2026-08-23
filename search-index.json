@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-23T09:16:13.594780",
+  "updated_at": "2026-08-23T09:45:04.348615",
   "total": 1456,
   "articles": [
     {
       "date": "2026-08-22",
-      "title": "Anthropic Brings Claude Mythos 5 to Claude Security: Enterprise Teams Get Frontier Vulnerability Scanning Without Direct Model Access",
+      "title": "Anthropic 将 Claude Mythos 5 引入 Claude Security：企业团队无需直连模型即可获得前沿漏洞扫描",
       "source": "MarkTechPost",
       "digest": "Anthropic 将 Claude Mythos 5 引入 Claude Security 企业安全产品线，面向企业与政府的安全分析、威胁检测场景提供更强推理能力。该模型主打网络安全任务中的多步研判与深度推理，延续其在防御性安全与前沿模型上的布局，旨在满足客户对高精度威胁研判与合规审计的需求，将前沿模型能力嵌入企业级安全运营工作流。",
       "link": "https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/",
-      "source_file": "sources/2026-08-22_Anthropic Brings Claude Mythos 5 to Claude Securit_MarkTechPost.md",
+      "source_file": "sources/2026-08-22_Anthropic 将 Claude Mythos 5 引入 Claude Security：企业团队无需直连模型即可获得前沿漏洞扫描_MarkTechPost.md",
       "category": "国际",
       "is_model_related": true
     },
@@ -34,21 +34,21 @@
     },
     {
       "date": "2026-08-22",
-      "title": "Building Agentic Document Intelligence Pipelines: Creating Scientific Figures with AutoFigure",
+      "title": "拆解 AI 开源课程：运行 Agent Loop 的三种方式及其背后的供应商经济性",
       "source": "MarkTechPost",
-      "digest": "MarkTechPost 教程演示用开源工具 AutoFigure 将文本或论文描述自动生成科研示意图：搭建环境、修复 Pillow 兼容、配置 API 驱动的生成流程，把长文档智能体流水线转成出版级 SVG/PNG。文章给出完整 Colab 代码，涵盖文档归一化、路由规划、专家模块（摘要/抽取/表格/视觉/引用）、预算感知编排与校验层，适用于论文图表与金融文档智能场景。",
-      "link": "https://www.marktechpost.com/2026/08/21/building-agentic-document-intelligence-pipelines-creating-scientific-figures-with-autofigure/",
-      "source_file": "sources/2026-08-22_Building Agentic Document Intelligence Pipelines_ _MarkTechPost.md",
+      "digest": "MarkTechPost 介绍开源课程 Decoding AI 中 Paul Iusztin 的 Decode 编码智能体，剖析 agent loop 三种运行形态及其推理供应商经济学：交互式在线以低延迟为上、按 token 计费；远程离线与异步模式以吞吐量为目标、按 GPU 小时计费。结合 LangChain 实验（仅换 harness 便将编码智能体从第30名升至前5），文章主张 harness 工程比模型选择更决定质量，并给出千份文档处理从约97美元降至约13美元的测算。",
+      "link": "https://www.marktechpost.com/2026/08/22/decoding-ais-open-source-course-maps-three-ways-to-run-an-agent-loop-and-the-provider-economics-behind-each/",
+      "source_file": "sources/2026-08-22_拆解 AI 开源课程：运行 Agent Loop 的三种方式及其背后的供应商经济性_MarkTechPost.md",
       "category": "国际",
       "is_model_related": false
     },
     {
       "date": "2026-08-22",
-      "title": "Decoding AI’s Open-Source Course Maps Three Ways to Run an Agent Loop and the Provider Economics Behind Each",
+      "title": "构建智能体文档智能流水线：用 AutoFigure 自动生成科研图表",
       "source": "MarkTechPost",
-      "digest": "MarkTechPost 介绍开源课程 Decoding AI 中 Paul Iusztin 的 Decode 编码智能体，剖析 agent loop 三种运行形态及其推理供应商经济学：交互式在线以低延迟为上、按 token 计费；远程离线与异步模式以吞吐量为目标、按 GPU 小时计费。结合 LangChain 实验（仅换 harness 便将编码智能体从第30名升至前5），文章主张 harness 工程比模型选择更决定质量，并给出千份文档处理从约97美元降至约13美元的测算。",
-      "link": "https://www.marktechpost.com/2026/08/22/decoding-ais-open-source-course-maps-three-ways-to-run-an-agent-loop-and-the-provider-economics-behind-each/",
-      "source_file": "sources/2026-08-22_Decoding AI’s Open-Source Course Maps Three Ways t_MarkTechPost.md",
+      "digest": "MarkTechPost 教程演示用开源工具 AutoFigure 将文本或论文描述自动生成科研示意图：搭建环境、修复 Pillow 兼容、配置 API 驱动的生成流程，把长文档智能体流水线转成出版级 SVG/PNG。文章给出完整 Colab 代码，涵盖文档归一化、路由规划、专家模块（摘要/抽取/表格/视觉/引用）、预算感知编排与校验层，适用于论文图表与金融文档智能场景。",
+      "link": "https://www.marktechpost.com/2026/08/21/building-agentic-document-intelligence-pipelines-creating-scientific-figures-with-autofigure/",
+      "source_file": "sources/2026-08-22_构建智能体文档智能流水线：用 AutoFigure 自动生成科研图表_MarkTechPost.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -94,11 +94,11 @@
     },
     {
       "date": "2026-08-22",
-      "title": "Best GPU Neoclouds 2026: CoreWeave, Nebius, Lambda, Crusoe, and Groq Ranked by Published Pricing and Contracted Power",
+      "title": "2026 最佳 GPU 新云厂商：CoreWeave、Nebius、Lambda、Crusoe、Groq 按公开定价与签约算力排名",
       "source": "MarkTechPost",
       "digest": "SemiAnalysis 对比 CoreWeave、Nebius、Lambda、Crusoe、Groq 五家 GPU 云服务（neocloud）的公开定价与签约电力：CoreWeave Q2 营收25.75亿美元（+112%）、Nebius AI云ARR 30亿美元、Crusoe 签约电力4.9GW、Groq 转型推理云。CoreWeave 的 H100 时价6.36美元居溢价，Nebius 的 B200 最低6.69美元且唯一公布B300按需价；容量实际成交价远超标价。",
       "link": "https://www.marktechpost.com/2026/08/21/best-gpu-neoclouds-2026/",
-      "source_file": "sources/2026-08-22_Best GPU Neoclouds 2026_ CoreWeave, Nebius, Lambda_MarkTechPost.md",
+      "source_file": "sources/2026-08-22_2026 最佳 GPU 新云厂商：CoreWeave、Nebius、Lambda、Crusoe、Groq 按公开定价与签约算力排名_MarkTechPost.md",
       "category": "其他",
       "is_model_related": false
     },

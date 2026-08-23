@@ -9,7 +9,7 @@ digest: |
   Anthropic 将 Claude Mythos 5 引入 Claude Security 企业安全产品线，面向企业与政府的安全分析、威胁检测场景提供更强推理能力。该模型主打网络安全任务中的多步研判与深度推理，延续其在防御性安全与前沿模型上的布局，旨在满足客户对高精度威胁研判与合规审计的需求，将前沿模型能力嵌入企业级安全运营工作流。
 ---
 
-# Anthropic Brings Claude Mythos 5 to Claude Security: Enterprise Teams Get Frontier Vulnerability Scanning Without Direct Model Access
+# Anthropic 将 Claude Mythos 5 引入 Claude Security：企业团队无需直连模型即可获得前沿漏洞扫描
 
 > 原文链接：https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/
 > 来源：MarkTechPost

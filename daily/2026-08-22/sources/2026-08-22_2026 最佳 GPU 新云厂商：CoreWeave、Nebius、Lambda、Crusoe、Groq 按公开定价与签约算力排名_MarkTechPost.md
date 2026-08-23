@@ -9,7 +9,7 @@ digest: |
   SemiAnalysis 对比 CoreWeave、Nebius、Lambda、Crusoe、Groq 五家 GPU 云服务（neocloud）的公开定价与签约电力：CoreWeave Q2 营收25.75亿美元（+112%）、Nebius AI云ARR 30亿美元、Crusoe 签约电力4.9GW、Groq 转型推理云。CoreWeave 的 H100 时价6.36美元居溢价，Nebius 的 B200 最低6.69美元且唯一公布B300按需价；容量实际成交价远超标价。
 ---
 
-# Best GPU Neoclouds 2026: CoreWeave, Nebius, Lambda, Crusoe, and Groq Ranked by Published Pricing and Contracted Power
+# 2026 最佳 GPU 新云厂商：CoreWeave、Nebius、Lambda、Crusoe、Groq 按公开定价与签约算力排名
 
 > 原文链接：https://www.marktechpost.com/2026/08/21/best-gpu-neoclouds-2026/
 > 来源：MarkTechPost

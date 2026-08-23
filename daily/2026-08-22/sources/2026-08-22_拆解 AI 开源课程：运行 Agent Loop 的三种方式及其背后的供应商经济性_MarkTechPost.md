@@ -9,7 +9,7 @@ digest: |
   MarkTechPost 介绍开源课程 Decoding AI 中 Paul Iusztin 的 Decode 编码智能体，剖析 agent loop 三种运行形态及其推理供应商经济学：交互式在线以低延迟为上、按 token 计费；远程离线与异步模式以吞吐量为目标、按 GPU 小时计费。结合 LangChain 实验（仅换 harness 便将编码智能体从第30名升至前5），文章主张 harness 工程比模型选择更决定质量，并给出千份文档处理从约97美元降至约13美元的测算。
 ---
 
-# Decoding AI’s Open-Source Course Maps Three Ways to Run an Agent Loop and the Provider Economics Behind Each
+# 拆解 AI 开源课程：运行 Agent Loop 的三种方式及其背后的供应商经济性
 
 > 原文链接：https://www.marktechpost.com/2026/08/22/decoding-ais-open-source-course-maps-three-ways-to-run-an-agent-loop-and-the-provider-economics-behind-each/
 > 来源：MarkTechPost
