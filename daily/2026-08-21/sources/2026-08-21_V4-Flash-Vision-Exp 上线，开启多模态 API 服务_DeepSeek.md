@@ -1,12 +1,12 @@
 ---
 publish_time: 1787303536
+status: pending
+category: 
+is_model_related: false
+digest: |
 link: https://mp.weixin.qq.com/s/UGMfvPMwBIB4oFYZZejekA
 source: DeepSeek
-status: confirmed
-category: 国内
-is_model_related: true
-digest: |
-  DeepSeek在API平台上线实验性质的多模态视觉理解模型DeepSeek-V4-Flash-Vision-Exp，开始提供图像理解服务。图片转换为token后按token计费，单张图片成本低至0.001元。该模型补足了V4系列的多模态拼图，多模态Agent能力据称接近Opus 4.8。
+title: V4-Flash-Vision-Exp 上线，开启多模态 API 服务
 ---
 
 # V4-Flash-Vision-Exp 上线，开启多模态 API 服务
