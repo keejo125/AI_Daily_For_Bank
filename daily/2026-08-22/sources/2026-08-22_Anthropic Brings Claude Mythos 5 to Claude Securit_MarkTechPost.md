@@ -1,0 +1,73 @@
+---
+publish_time: 1787346953
+link: https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/
+source: MarkTechPost
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  Anthropic 将 Claude Mythos 5 引入 Claude Security 企业安全产品线，面向企业与政府的安全分析、威胁检测场景提供更强推理能力。该模型主打网络安全任务中的多步研判与深度推理，延续其在防御性安全与前沿模型上的布局，旨在满足客户对高精度威胁研判与合规审计的需求，将前沿模型能力嵌入企业级安全运营工作流。
+---
+
+# Anthropic Brings Claude Mythos 5 to Claude Security: Enterprise Teams Get Frontier Vulnerability Scanning Without Direct Model Access
+
+> 原文链接：https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/
+> 来源：MarkTechPost
+
+Anthropic has moved its most cyber-capable model into a product security teams can switch on themselves. As of August 21, 2026, Claude Security scans run on Claude Mythos 5, the Mythos-class model that until now reached only vetted defenders through Project Glasswing. The scan connects to a GitHub repository, traces data flows across files, and returns findings with a CWE category, confidence and severity ratings, and a suggested patch. Claude Security hands back a scan result instead of a prompt box, so the same model that finds vulnerabilities cannot be steered into writing exploits. The feature is in public beta for Claude Enterprise customers, with no separate model add-on.
+
+Is it deployable?
+
+Yes, but only on one path. Claude Security is available in public beta for Claude Enterprise customers. There is no separate model add-on; Mythos 5 scans are billed as standard token usage under the existing plan. An admin enables it in the admin console, and users start a scan at claude.ai/security.
+
+Which companies: Enterprise-tier organizations with a Claude Enterprise agreement and code in GitHub. Startups and mid-market teams on Pro, Max, or Team plans do not get the Mythos-powered scan. The separate Claude Security plugin for Claude Code is in beta for all Claude Code users, but it runs on the models in your account — not Mythos 5.
+
+Industries: Anthropic names hospitals, utilities, financial systems, and the software supply chain as the defender constituency. Add any regulated shop already running SAST in CI: healthcare, fintech, government contractors, critical infrastructure.
+
+Applications: Pre-release codebase audits, legacy code review, scheduled regression scanning, triage of an existing vulnerability backlog, and directory-scoped scans on high-risk services.
+
+Three New Updates
+
+Three things landed in the same announcement:
+
+First, Claude Security scans now run on Mythos 5 for Enterprise customers. 
+
+Second, Anthropic launched the Defender Advantage Fund (0xDAF), offering $35 million in Claude credits to organizations securing open-source software. 
+
+Third, it said it will expand the Cyber Verification Program over the coming weeks to cover broader dual-use capabilities on Opus and Sonnet, with Mythos-class access to follow. 
+
+Anthropic is also working with cybersecurity vendors to embed Mythos 5 inside partner tooling, with an interest form open.
+
+How the scan works
+
+A user connects a GitHub repository. Claude Mythos 5 scans it, tracing data flows across files and reading Git history rather than pattern-matching against rules. Anthropic says each finding then passes an adversarial verification step in which the model challenges its own result before surfacing it — the stated mechanism for cutting false positives.
+
+Findings return with a CWE category, confidence and severity ratings, and a suggested fix. Anthropic says the target class is high-severity work: memory corruption, injection flaws, authentication bypasses, and cross-file logic errors. Results can be pushed to Slack or Jira via webhooks, or exported as CSV or Markdown. Scans can be scoped to a directory and scheduled.
+
+Patching happens separately. Users open Claude Code on the web to implement fixes, and that step uses whatever models the organization already has. The Mythos scan does not extend Mythos access to other surfaces. Every patch requires human review and approval.
+
+Why the packaging is the point
+
+Mythos-class models sit above the Opus tier and were withheld for a reason. Anthropic has stated Mythos 5 has the strongest cybersecurity capabilities of any model in the world, and that the same skills that find vulnerabilities can write exploits. Claude Fable 5 is the same underlying model shipped broadly, with classifiers that route cyber, biology, chemistry, and distillation queries away from it.
+
+The argument in this release is about interface, not capability. Anthropic&#8217;s position is that risk concentrates when a user can prompt the model directly. Claude Security gives the user a scan result instead of a prompt box. The model runs in the background on code you own and returns a fixed artifact. There is no path to ask it for an exploit.
+
+That is the same reasoning applied to partner integrations, where end users receive a defined output — a patch list, an alert — generated by Mythos but never steerable by the person receiving it.
+
+Key Takeaways
+
+Claude Security scans now run on Claude Mythos 5, in public beta for Claude Enterprise customers.
+
+No separate model access is needed; scans bill as standard token usage under the existing plan.
+
+Findings return with CWE category, confidence, severity, and a suggested patch requiring human approval.
+
+Mythos runs only inside the scan; interactive patching uses your account&#8217;s existing models.
+
+Anthropic also launched a $35M open-source security credit fund and will expand the Cyber Verification Program.
+
+Check out the Anthropic / Claude blog, Claude Security product page, Claude Fable 5 and Claude Mythos 5 announcement and @claudeai on X. Also, feel free to follow us on Twitter and don’t forget to join our 150k+ML SubReddit and Subscribe to our Newsletter. Wait! are you on telegram? now you can join us on telegram as well.
+
+Need to partner with us for promoting your GitHub Repo OR Hugging Face Page OR Product Release OR Webinar etc.? Connect with us
+
+The post Anthropic Brings Claude Mythos 5 to Claude Security: Enterprise Teams Get Frontier Vulnerability Scanning Without Direct Model Access appeared first on MarkTechPost.

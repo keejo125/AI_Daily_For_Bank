@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-08-23T05:03:49.403218",
-  "total": 1449,
+  "updated_at": "2026-08-23T09:16:13.594780",
+  "total": 1456,
   "articles": [
+    {
+      "date": "2026-08-22",
+      "title": "Anthropic Brings Claude Mythos 5 to Claude Security: Enterprise Teams Get Frontier Vulnerability Scanning Without Direct Model Access",
+      "source": "MarkTechPost",
+      "digest": "Anthropic 将 Claude Mythos 5 引入 Claude Security 企业安全产品线，面向企业与政府的安全分析、威胁检测场景提供更强推理能力。该模型主打网络安全任务中的多步研判与深度推理，延续其在防御性安全与前沿模型上的布局，旨在满足客户对高精度威胁研判与合规审计的需求，将前沿模型能力嵌入企业级安全运营工作流。",
+      "link": "https://www.marktechpost.com/2026/08/21/anthropic-brings-claude-mythos-5-to-claude-security/",
+      "source_file": "sources/2026-08-22_Anthropic Brings Claude Mythos 5 to Claude Securit_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-08-22",
       "title": "GitHub热榜第二：仅靠“自验证”框架让 DeepSeek V4 Flash 反超 Fable 5，成本不到 1/11",
@@ -21,6 +31,26 @@
       "source_file": "sources/2026-08-22_OpenAI紧急停训GPT-6，安全原因还是另有隐情？_InfoQ.md",
       "category": "国际",
       "is_model_related": true
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Building Agentic Document Intelligence Pipelines: Creating Scientific Figures with AutoFigure",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 教程演示用开源工具 AutoFigure 将文本或论文描述自动生成科研示意图：搭建环境、修复 Pillow 兼容、配置 API 驱动的生成流程，把长文档智能体流水线转成出版级 SVG/PNG。文章给出完整 Colab 代码，涵盖文档归一化、路由规划、专家模块（摘要/抽取/表格/视觉/引用）、预算感知编排与校验层，适用于论文图表与金融文档智能场景。",
+      "link": "https://www.marktechpost.com/2026/08/21/building-agentic-document-intelligence-pipelines-creating-scientific-figures-with-autofigure/",
+      "source_file": "sources/2026-08-22_Building Agentic Document Intelligence Pipelines_ _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Decoding AI’s Open-Source Course Maps Three Ways to Run an Agent Loop and the Provider Economics Behind Each",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 介绍开源课程 Decoding AI 中 Paul Iusztin 的 Decode 编码智能体，剖析 agent loop 三种运行形态及其推理供应商经济学：交互式在线以低延迟为上、按 token 计费；远程离线与异步模式以吞吐量为目标、按 GPU 小时计费。结合 LangChain 实验（仅换 harness 便将编码智能体从第30名升至前5），文章主张 harness 工程比模型选择更决定质量，并给出千份文档处理从约97美元降至约13美元的测算。",
+      "link": "https://www.marktechpost.com/2026/08/22/decoding-ais-open-source-course-maps-three-ways-to-run-an-agent-loop-and-the-provider-economics-behind-each/",
+      "source_file": "sources/2026-08-22_Decoding AI’s Open-Source Course Maps Three Ways t_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
     },
     {
       "date": "2026-08-22",
@@ -44,12 +74,52 @@
     },
     {
       "date": "2026-08-22",
+      "title": "网易有道Confucius4-TTS 迎来重要更新：补齐高性能推理与服务化能力，技术论文获海外社区关注",
+      "source": "InfoQ",
+      "digest": "网易有道开源 TTS 模型 Confucius4-TTS 迎来更新，新增 vLLM 推理后端、流式语音生成与 Web Demo/API，补齐高性能推理与服务化能力；配套论文介绍其跨语种零样本语音合成与音色克隆方案。在英→中、中→英、中→韩、中→日方向人工评测中，该模型斩获3项综合第一、音色相似度4项第一、16项核心指标10项第一，获海外社区关注。",
+      "link": "https://www.infoq.cn/article/A59yGpmHXR5BbokJAPk5",
+      "source_file": "sources/2026-08-22_网易有道Confucius4-TTS 迎来重要更新：补齐高性能推理与服务化能力，技术论文获海外社区关_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-22",
       "title": "普惠金融创新盘点丨数据+AI 风控新范式——中信百信银行启航“AlphaMo-风控智能体”",
       "source": "金融电子化",
       "digest": "中信百信银行联合百度，于2025年启动“AlphaMo-风控智能体”项目，率先将自进化 AI 应用于量化风控全链条，构建“数据+AI”双轮驱动的智能风控模式。项目围绕信贷风控的特征挖掘、模型开发、策略寻优三个关键环节，分别构建特征挖掘智能体、模型智能体、策略智能体，形成有机协同闭环：模型智能体采用工作流与生成式 Skill 结合，可输出具备专家评审质量的模型，建模效率提升410%；特征挖掘智能体以“理解—生成—评估”循环自主衍生风险特征，效率提升320%；策略智能体将经验驱动升级为数据驱动，实现风险节点从事后分析前移至事前预判。",
       "link": "https://mp.weixin.qq.com/s/MkBUn_2ac22dguJbZFe7Fg",
       "source_file": "sources/2026-08-22_普惠金融创新盘点丨数据+AI 风控新范式——中信百信银行启航“AlphaMo-风控智能体”_金融电子化.md",
       "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Best GPU Neoclouds 2026: CoreWeave, Nebius, Lambda, Crusoe, and Groq Ranked by Published Pricing and Contracted Power",
+      "source": "MarkTechPost",
+      "digest": "SemiAnalysis 对比 CoreWeave、Nebius、Lambda、Crusoe、Groq 五家 GPU 云服务（neocloud）的公开定价与签约电力：CoreWeave Q2 营收25.75亿美元（+112%）、Nebius AI云ARR 30亿美元、Crusoe 签约电力4.9GW、Groq 转型推理云。CoreWeave 的 H100 时价6.36美元居溢价，Nebius 的 B200 最低6.69美元且唯一公布B300按需价；容量实际成交价远超标价。",
+      "link": "https://www.marktechpost.com/2026/08/21/best-gpu-neoclouds-2026/",
+      "source_file": "sources/2026-08-22_Best GPU Neoclouds 2026_ CoreWeave, Nebius, Lambda_MarkTechPost.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-22",
+      "title": "微信灰测「按住转文字」功能被吐槽；DeepSeek 上线多模态功能；应急机械拉手难操作，多家车企召回 427 万辆车",
+      "source": "极客公园",
+      "digest": "本期科技简讯：深度求索上线多模态视觉模型 DeepSeek-V4-F,Flash-Vision-Exp，多模态 Agent 能力接近 Opus-4.8；Anthropic 拟允许企业客户在自有设施留存30天内数据；字节 Seed 基础模型部门新设四个一级部门；雷鸟发布 AI 眼镜 iO（首发1996元起）；微信灰度\"按住转文字\"引吐槽；多家车企因应急机械拉手问题召回超427万辆车。",
+      "link": "http://www.geekpark.net/news/369206",
+      "source_file": "sources/2026-08-22_微信灰测「按住转文字」功能被吐槽；DeepSeek 上线多模态功能；应急机械拉手难操作，多家车企召回_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-22",
+      "title": "越会用 AI 的人，学习能力退化得越快",
+      "source": "极客公园",
+      "digest": "《经济学人》援引斯德哥尔摩大学与香港大学论文《生成式AI学习惩罚》：对2.7万名中国中学生追踪30个月发现，用AI写作业者作业分涨18%、用时降30%，但闭卷月考成绩反低约20%（1.4个标准差），且\"外包\"比例两年内升至81%。MIT、METR等多项研究在成人身上验证：AI在场产出变好、离场能力变差，呈现\"认知负债\"。作者指出惩罚需两年才长满。",
+      "link": "http://www.geekpark.net/news/369212",
+      "source_file": "sources/2026-08-22_越会用 AI 的人，学习能力退化得越快_极客公园.md",
+      "category": "其他",
       "is_model_related": false
     },
     {
