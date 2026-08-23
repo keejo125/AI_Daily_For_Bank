@@ -1,12 +1,12 @@
 ---
 publish_time: 1787447220
-status: pending
-category: 
+status: confirmed
+category: 国际
 is_model_related: false
-digest: |
-link: https://mp.weixin.qq.com/s/RHvM8mKN--uNzysHFgUpYw
 source: 新智元
-title: 刚刚，Anthropic把员工入职第一课给公开了！
+link: https://mp.weixin.qq.com/s/RHvM8mKN--uNzysHFgUpYw
+digest: |
+  Anthropic 将其新员工入职培训课程原样搬到线上，免费推出 Claude Academy，包含 289 个资源（课程、教程、真实用例），覆盖从 AI 通识到 Claude Code、API、MCP、agents 与生产级部署，注册免费 Claude 账号即可学习并获可公开验证的结业徽章。其核心是 Anthropic 与学者共同开发的「AI Fluency 4D 框架」：Delegation（哪些活交给 AI）、Description（说清需求）、Discernment（挑剔检查 AI 产出）、Diligence（负责任使用）。文章强调具体技巧在快速贬值，重心应从"教动作"转向"养心智"，按风险高低决定验证力度，敏感内容仍需自己写、探索性分析可交 AI 但核对要自己来。
 ---
 
 # 刚刚，Anthropic把员工入职第一课给公开了！

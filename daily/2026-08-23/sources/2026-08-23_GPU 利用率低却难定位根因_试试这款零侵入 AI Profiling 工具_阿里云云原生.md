@@ -1,12 +1,12 @@
 ---
 publish_time: 1787450400
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: false
-digest: |
-link: https://mp.weixin.qq.com/s/chjUVB0-uXGBvQF4K5VMmA
 source: 阿里云云原生
-title: GPU 利用率低却难定位根因？试试这款零侵入 AI Profiling 工具
+link: https://mp.weixin.qq.com/s/chjUVB0-uXGBvQF4K5VMmA
+digest: |
+  阿里云操作系统控制台运维组件 SysOM 推出 AI Profiling，一款面向 AI 作业全生命周期的性能观测与诊断工具，聚焦 GPU 利用率低、显存异常、通信长尾等难定位问题。它具备零侵入特性——不改代码、不重启进程，从 Python 调用栈到 GPU Kernel 层全链路采集，支持单卡到千卡集群。核心能力包括：一键 Profiling 分钟级出报告、多维度观测（GPU 算子、显存、FLOPS、RDMA 通信等）、显存快照时序分析、迭代时间与损失精度统计，并内置 TimeLine 视图免去 Perfetto/Chrome Tracing 依赖。该工具是阿里云可观测在智算/AI Infra 方向的协同探索。
 ---
 
 # GPU 利用率低却难定位根因？试试这款零侵入 AI Profiling 工具

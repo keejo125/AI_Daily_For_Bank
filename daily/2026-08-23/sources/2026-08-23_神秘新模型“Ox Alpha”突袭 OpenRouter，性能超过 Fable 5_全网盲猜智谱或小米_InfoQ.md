@@ -1,12 +1,12 @@
 ---
 publish_time: 1787450400
-status: pending
-category: 
+status: confirmed
+category: 国内
 is_model_related: true
-digest: |
-link: https://mp.weixin.qq.com/s/R6igtWlkkxqKSNmJg3yvpA
 source: InfoQ
-title: 神秘新模型“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱或小米
+link: https://mp.weixin.qq.com/s/R6igtWlkkxqKSNmJg3yvpA
+digest: |
+  匿名模型 Ox Alpha（中文圈称"牛来大模型"）于 8 月 20 日亮相 OpenRouter，免费开放一周，引发全网"猜模型"热潮。该模型拥有超 100 万 token 上下文、13 万 token 最大输出，支持文本/图像/视频输入，主攻长周期软件工程、复杂推理与 Agent 工作流，OpenCode 更宣称提供每天约 100 万亿 token 的测试容量。开发者实测显示其在 DeepSWE 代码基准上得分约 80%，高于 Claude Fable 5 的 65% 与 GPT-5.6 Sol 的 52%；但 OpenRouter 未公布任何官方基准成绩，"frontier"定位尚缺公开证据。技术指纹层面，社区从 tokenizer、视频 token 预算与 API 报错码多维度比对，普遍指向智谱（与 GLM-5.3/GLM-5V-Turbo 高度吻合），亦有猜测为谷歌或小米。在身份、稳定性与真实能力确认前，社区共识是不宜以"frontier"标签替代成熟生产模型。
 ---
 
 # 神秘新模型“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱或小米

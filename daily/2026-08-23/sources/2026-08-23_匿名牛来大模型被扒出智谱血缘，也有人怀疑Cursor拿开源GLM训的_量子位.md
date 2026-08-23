@@ -1,19 +1,24 @@
 ---
-publish_time: 1787463000
-status: pending
-category: 
+publish_time: 1787478972
+status: confirmed
+category: 国内
 is_model_related: true
-digest: |
-link: https://mp.weixin.qq.com/s/GnZUPoFB8RVuibig79JRmw
 source: 量子位
-title: 匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的
+is_merged: true
+link: https://www.qbitai.com/2026/08/478191.html
+digest: |
+  匿名模型 Ox Alpha（中文圈称"牛来大模型"）8 月 20 日登陆 OpenRouter 后引发全网"猜模型"热潮，目前最热门候选为智谱与谷歌。技术指纹分析指向智谱：其 tokenizer 与智谱 GLM-5.3/GLM-5.2 呈现高度一致的固定偏移关系（25 组 Prompt 验证一致）；多模态视频 token 预算与 GLM-5V-Turbo 在多项特征上逐项吻合；API 服务层报错码、参数限制与中英文混排返回方式亦与智谱服务相似，社区甚至捕捉到"trained by Z.ai"残留信息。该模型拥有约 104.86 万 token 上下文、13.1 万 token 最大输出，支持文本/图像/视频输入，主攻代码、长周期 Agent 与复杂推理。也有人怀疑 Cursor 使用了开源 GLM 进行训练。
 ---
 
 # 匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的
 
-来源：量子位
-原文链接：https://mp.weixin.qq.com/s/GnZUPoFB8RVuibig79JRmw
+> 原文链接：https://www.qbitai.com/2026/08/478191.html
+> 来源：量子位
 
+匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的
+衡宇
+量子位
+Tokenizer、视频编码、API报错全扒一遍
 衡宇 发自 凹非寺
 量子位 | 公众号 QbitAI
 全世界刷屏的“牛来大模型”，到底是谁家的牛？
@@ -22,8 +27,6 @@ title: 匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开�
 讨论度最高的模型厂商候选人，一是智谱，二是谷歌。
 猜智谱的人已经开始验Tokenizer、测视频token消耗、找API报错，恨不得给模型做一套数字DNA鉴定。
 猜谷歌的人则主要盯着DeepMind员工最近的发言，以及那个迟迟没有正式露面的Gemini 3.5 Pro。
-△
-图片由AI生成
 牛来大模型其实叫
 Ox Alpha
 。
@@ -32,8 +35,7 @@ Ox Alpha
 它有104.86万token上下文，单次最多吐出13.1万token，能读文本、图片和视频，专门盯着代码、长周期Agent和复杂推理。
 而且OpenCode随后宣布，Ox Alpha上线OpenCode Go，
 连续数天几乎不限量免费使用，而且不计入用户原本的Go额度
-（公开讨论中甚至出现了每天100万亿token级别服务容量的说法）
-。
+（公开讨论中甚至出现了每天100万亿token级别服务容量的说法）。
 于是开发者们拿着代码库、终端和各种刁钻任务，一拥而上去给它出题。
 然后纷纷猜测：
 牛来啊牛来，你到底是谁家的大模型？
@@ -50,8 +52,6 @@ tokenizer负责把输入内容切成模型能够处理的token。不同模型家
 多出来的75个token
 ，恰好能够由模型外部附加的一段隐藏System Prompt解释。
 另有测试者使用25组不同Prompt进行验证，也观察到了类似的固定偏移关系。
-△
-图片由AI生成
 后面的
 多模态指纹
 更有意思。
@@ -91,7 +91,7 @@ Techmeme汇总的社媒讨论里，还有不少开发者注意到，
 ，也有人因此把牛来大模型与Gemini 3.5 Pro甚至Gemini 4联系起来。
 于是网上迅速分成两派——
 一派拿着Tokenizer和视频token账单喊“这明明就是GLM”。
-另一派指着DeepMind员工的𝕏帖子说“Google你别演了”。
+另一派指着DeepMind员工的帖子说“Google你别演了”。
 目前没有公开证据能够支持这种说法，但这也说明，仅凭模型外部行为判断开发者身份越来越困难。
 尤其在蒸馏、模型融合、后训练以及第三方推理服务越来越普遍以后，“模型是谁训练的”和“模型在哪里部署”甚至都可能是两道题。
 一头免费牛，把全世界程序员都吸过来了
@@ -99,8 +99,6 @@ Techmeme汇总的社媒讨论里，还有不少开发者注意到，
 首先是规格。
 1M上下文意味着，一次Prompt理论上能够塞进去整个大型代码仓库、数百页文档，或者一长串Agent运行记录。
 131K最大输出也远超普通聊天场景。
-△
-图片由AI生成
 再加上图片和视频输入、工具调用以及强制推理模式，Ox Alpha从一开始瞄准的就是代码Agent和长周期任务。
 目前OpenCode公开数据显示，牛大劳模模型已经累计出现250B token级别的使用量，拥有约8500名独立用户和超过11万次完成会话。
 Stripe CEO Patrick Collison也亲自上手试了一遍后也表示“It’s very impressive.”
@@ -121,23 +119,60 @@ One More Thing
 另一种调侃称，也
 有可能是Cursor拿智谱模型自己训了一遍
 。
-然后套了个牛头
-（？）
+然后套了个牛头（？）
 至于答案，大概率不会藏太久。
 毕竟按照OpenRouter最近几次Alpha模型的剧情发展，匿名期结束之后，总得有人出来牵牛回家。
 哞——
 参考链接：
-[1]https://openrouter.ai/api/v1/models
-[2]https://opencode.ai/docs/zen/
-[3]https://www.reddit.com/r/singularity/comments/1vufbx1/i_fingerprinted_ox_alpha_same_tokenizer_as_glm53/
-[4]https://www.businessinsider.com/ox-alpha-ai-model-mystery-2026-8
-[5]https://openrouter.ai/models?fmt=cards&input_modalities=video&q=amazon
-[6]https://ox-alpha-evidence-production.up.railway.app/
-一键三连
-「点赞」「转发」「小心心」
-欢迎在评论区留下你的想法！
-—
-完
-—
-🌟 点亮星标 🌟
-科技前沿进展每日见
+[1]
+https://openrouter.ai/api/v1/models
+[2]
+https://opencode.ai/docs/zen/
+[3]
+https://www.reddit.com/r/singularity/comments/1vufbx1/i_fingerprinted_ox_alpha_same_tokenizer_as_glm53/
+[4]
+https://www.businessinsider.com/ox-alpha-ai-model-mystery-2026-8
+[5]
+https://openrouter.ai/models?fmt=cards&input_modalities=video&q=amazon
+[6]
+https://ox-alpha-evidence-production.up.railway.app/
+版权所有，未经授权不得以任何形式转载及使用，违者必究。
+多模态
+牛来大模型
+超长上下文
+衡宇
+WRC唯一真「人机共生」展台，是家沉浸式机器人咖啡店
+英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元
+全球首次！机器人迎战网球运动员，极限救球，摔倒光速弹起
+不做硅谷follower：几个读博的年轻人，押注双足人形的一体化大脑
+扫码分享至朋友圈
+相关阅读
+用多模态LLM做自动驾驶决策器，可解释性有了！比纯端到端更擅长处理特殊场景，来自商汤
+自动驾驶新解法
+丰色
+多模态
+自动驾驶
+开源多模态SOTA再易主，19B模型比肩GPT-4v，16G显存就能跑
+在线可玩
+梦晨
+多模态
+值得买科技与人大高瓴人工智能学院首个多模态领域联合研究成果亮相CNCC2024
+提升AIGC内容生成尤其是声音生成方面的质量和智能化水平
+梦晨
+多模态
+北大&腾讯打造多模态15边形战士！语言作“纽带”，拳打脚踢各模态，超越Imagebind
+还自建首个有深度和红外的大规模多模态数据集
+西风
+多模态
+大模型
+预训练框架
+业界突破多模态泛化推理能力，OPPO研究院&港科广提出OThink-MR1技术
+基于动态强化学习
+一水
+OPPO
+多模态
+强化学习
+多模态模型挑战北京杭州地铁图！o3成绩显著，但跟人类有差距
+首个聚焦于高分辨率交通图（主要为地铁图）的多模态推理评测基准
+白交
+多模态

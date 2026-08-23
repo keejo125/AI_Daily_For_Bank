@@ -1,7 +1,97 @@
 {
-  "updated_at": "2026-08-23T10:01:58.852773",
-  "total": 1455,
+  "updated_at": "2026-08-24T05:06:12.113173",
+  "total": 1464,
   "articles": [
+    {
+      "date": "2026-08-23",
+      "title": "边缘原生 MoE 推理引擎 FreeToken：单张工作站 GPU 跑起 753B 的 GLM-5.2",
+      "source": "MarkTechPost",
+      "digest": "UC Berkeley 与 UT Austin 的研究团队提出 FreeToken，一款边缘原生 MoE 推理服务引擎，把个人机器（含消费级 GPU）当作统一的弹性推理平台，将计算与模型状态持续映射到机器实际拥有的 GPU/CPU/内存/互联带宽上。它可在 8GB 笔记本 GPU 上以交互速度跑 35B 模型、游戏主机上跑 284B、单张工作站卡跑 753B 的 GLM-5.2。FreeToken 以 Apache-2.0 开源（PyPI freetoken v0.1.2），提供 ft serve（兼容 OpenAI/Anthropic 端点）与 ft launch claude（对接 Claude Code/Codex/OpenCode）。其带宽自适应执行、语义感知缓存与弹性内存管理三项机制，在 RTX 5090 上较 llama.cpp/Ollama/KTransformers 基线提速 1.5—2.3 倍，最适合医疗、法律、金融、IP 密集研发等数据不出本机的场景。",
+      "link": "https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/",
+      "source_file": "sources/2026-08-23_Meet FreeToken_ An Edge-Native MoE Serving Engine _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "企业 AI 安全护栏实战：用 NeMo Guardrails 构建可控金融助手",
+      "source": "MarkTechPost",
+      "digest": "本文是一篇面向企业的 NeMo Guardrails 实战教程，演示如何用分层护栏在请求全生命周期内管控一个基于 LLM 的金融助手 FinBot。方案组合了确定性的 PII 检测与脱敏、基于 LLM 的输入/输出自检、检索过滤、账号号码掩码、主题限制与基于策略的工具门控，并实现有状态的多轮交互、护栏激活链路追踪、token 计费与红队风格覆盖报告，据此评估助手是否安全响应、哪个控制环节处理了请求，以及保护所增加的计算成本。对银行构建合规、可控的智能客服/助手有直接参考价值。",
+      "link": "https://www.marktechpost.com/2026/08/22/the-developers-guide-to-nemo-guardrails-for-enterprise-ai-safety/",
+      "source_file": "sources/2026-08-23_The Developer’s Guide to NeMo Guardrails for Enter_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Vercel 推出 Is Agentic：用 100+ 项检查审计网站智能体就绪度的免费评分工具",
+      "source": "MarkTechPost",
+      "digest": "Vercel 发布免费公开工具 Is Agentic，用于给网站评分——衡量 AI 智能体能否发现、访问、理解并使用该网站。扫描与评分由时代实验室旗下的 agent 体验研究公司 Ora 完成，覆盖发现（20 分）、访问（30 分）、可用性（40 分）、支付（10 分）四层共 118 项检查，对标真实的智能体运行而非主观意见。工具提供网页、只读 API、CLI 与 MCP 服务器，均无需 API Key；CLI 可接入 CI 作为回归门禁，MCP 服务器暴露报告/方法论/开发者文档三类工具。Vercel 声明其非认证、安全审计或可访问性审查，仅视为带优先级的技术复审。",
+      "link": "https://www.marktechpost.com/2026/08/23/vercel-introduces-is-agentic-a-free-agent-readiness-scoring-tool-that-audits-public-websites-using-oras-100-checks/",
+      "source_file": "sources/2026-08-23_Vercel Introduces ‘Is Agentic’, a Free Agent-Readi_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "刚刚，Anthropic把员工入职第一课给公开了！",
+      "source": "新智元",
+      "digest": "Anthropic 将其新员工入职培训课程原样搬到线上，免费推出 Claude Academy，包含 289 个资源（课程、教程、真实用例），覆盖从 AI 通识到 Claude Code、API、MCP、agents 与生产级部署，注册免费 Claude 账号即可学习并获可公开验证的结业徽章。其核心是 Anthropic 与学者共同开发的「AI Fluency 4D 框架」：Delegation（哪些活交给 AI）、Description（说清需求）、Discernment（挑剔检查 AI 产出）、Diligence（负责任使用）。文章强调具体技巧在快速贬值，重心应从\"教动作\"转向\"养心智\"，按风险高低决定验证力度，敏感内容仍需自己写、探索性分析可交 AI 但核对要自己来。",
+      "link": "https://mp.weixin.qq.com/s/RHvM8mKN--uNzysHFgUpYw",
+      "source_file": "sources/2026-08-23_刚刚，Anthropic把员工入职第一课给公开了！_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元",
+      "source": "量子位",
+      "digest": "据彭博社与 The Information 报道，英伟达已告知部分大客户，明年初交付的 AI 服务器价格可能上调 15% 以上，涉及现有 Grace Blackwell 及下一代旗舰 Vera Rubin。GB300 与 Vera Rubin 200 系统预计涨价约 17%，按现行价格模型估算，建设一座 1GW 级 AI 数据中心仅此轮加价就可能额外增加至少 50 亿美元成本。涨价主因为内存芯片成本飙升，且零部件价格波动频繁（部分机架一周内波动 2%—3%，NVMe 存储已高出基准 10%—15%）。2026 年以来英伟达硬件已历经游戏显卡、专业 GPU、AI 服务器三轮涨价，下一代 Rubin 亦在重新评估 HBM 内存配置。",
+      "link": "https://www.qbitai.com/2026/08/478164.html",
+      "source_file": "sources/2026-08-23_英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "神秘新模型“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5？全网盲猜智谱或小米",
+      "source": "InfoQ",
+      "digest": "匿名模型 Ox Alpha（中文圈称\"牛来大模型\"）于 8 月 20 日亮相 OpenRouter，免费开放一周，引发全网\"猜模型\"热潮。该模型拥有超 100 万 token 上下文、13 万 token 最大输出，支持文本/图像/视频输入，主攻长周期软件工程、复杂推理与 Agent 工作流，OpenCode 更宣称提供每天约 100 万亿 token 的测试容量。开发者实测显示其在 DeepSWE 代码基准上得分约 80%，高于 Claude Fable 5 的 65% 与 GPT-5.6 Sol 的 52%；但 OpenRouter 未公布任何官方基准成绩，\"frontier\"定位尚缺公开证据。技术指纹层面，社区从 tokenizer、视频 token 预算与 API 报错码多维度比对，普遍指向智谱（与 GLM-5.3/GLM-5V-Turbo 高度吻合），亦有猜测为谷歌或小米。在身份、稳定性与真实能力确认前，社区共识是不宜以\"frontier\"标签替代成熟生产模型。",
+      "link": "https://mp.weixin.qq.com/s/R6igtWlkkxqKSNmJg3yvpA",
+      "source_file": "sources/2026-08-23_神秘新模型“Ox Alpha”突袭 OpenRouter，性能超过 Fable 5_全网盲猜智谱或小米_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-23",
+      "title": "GPU 利用率低却难定位根因？试试这款零侵入 AI Profiling 工具",
+      "source": "阿里云云原生",
+      "digest": "阿里云操作系统控制台运维组件 SysOM 推出 AI Profiling，一款面向 AI 作业全生命周期的性能观测与诊断工具，聚焦 GPU 利用率低、显存异常、通信长尾等难定位问题。它具备零侵入特性——不改代码、不重启进程，从 Python 调用栈到 GPU Kernel 层全链路采集，支持单卡到千卡集群。核心能力包括：一键 Profiling 分钟级出报告、多维度观测（GPU 算子、显存、FLOPS、RDMA 通信等）、显存快照时序分析、迭代时间与损失精度统计，并内置 TimeLine 视图免去 Perfetto/Chrome Tracing 依赖。该工具是阿里云可观测在智算/AI Infra 方向的协同探索。",
+      "link": "https://mp.weixin.qq.com/s/chjUVB0-uXGBvQF4K5VMmA",
+      "source_file": "sources/2026-08-23_GPU 利用率低却难定位根因_试试这款零侵入 AI Profiling 工具_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "初级岗位消失、高级人才断层：下一代高级工程师从哪里来？",
+      "source": "InfoQ",
+      "digest": "AI 正在重塑工程职业阶梯。QCon London 演讲指出，AI 编写大量代码、消除初级岗位学习机会，导致初级开发者招聘放缓、高级人才断层。资深工程师的模式识别与系统判断力无法通过传统路径获得，而初级工程师正把遗留代码库调试等工作交给 AI 智能体，削弱了未来监督 AI 所需的核心技能。METR 随机对照试验显示，经验丰富开发者使用 AI 后速度反而降低 19%，却自认为提速 20%；Anthropic 研究亦表明初级工程师知识掌握得分下降 17%。文章建议建立结构化学习路径、基础工作轮岗（类住院医师培训），将\"上下文\"视为基础设施，衡量理解而非速度，并强调\"AI 是工具，不是老师\"。",
+      "link": "https://mp.weixin.qq.com/s/hVMhS1pYIMDAyzLOXm7hAQ",
+      "source_file": "sources/2026-08-23_初级岗位消失、高级人才断层：下一代高级工程师从哪里来_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-23",
+      "title": "澳大利亚国民银行将科技和AI职能整合至一个高管职位，人选已确定",
+      "source": "银行科技研究社",
+      "digest": "澳大利亚国民银行（NAB）将科技与人工智能职能整合至同一高管职位，现任集团数字、数据与人工智能执行官皮特·斯蒂尔出任集团技术与人工智能执行官，统管技术战略、数据分析、架构现代化与网络安全。数月前该行已设立首席人工智能官，并推出对话式分析工具（基于 Databricks Genie，单个用例可节省 2—4 天开发时间）。NAB 还计划启动智能体平台的安全与运营防护试点，让智能体代表客户与员工及系统交互，重点测试降低意外错误风险。此举是海外银行围绕 AI 应用优化组织与领导层的典型动作。",
+      "link": "https://mp.weixin.qq.com/s/xp9LaN11c5CqieUU5-6uqg",
+      "source_file": "sources/2026-08-23_澳大利亚国民银行将科技和AI职能整合至一个高管职位，人选已确定_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-22",
       "title": "Anthropic 将 Claude Mythos 5 引入 Claude Security：企业团队无需直连模型即可获得前沿漏洞扫描",

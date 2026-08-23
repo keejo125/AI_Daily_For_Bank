@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-23",
+      "weekday": "周日",
+      "stats": {
+        "国际": 5,
+        "国内": 3,
+        "同业": 1,
+        "其他": 0,
+        "total": 9
+      },
+      "summary": "边缘原生 MoE 推理引擎 FreeToken：单张工作站 GPU 跑起 753B 的 GLM-5.2/企业 AI 安全护栏实战：用 NeMo Guard..."
+    },
+    {
       "date": "2026-08-22",
       "weekday": "周六",
       "stats": {
