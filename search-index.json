@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-23T09:45:04.348615",
-  "total": 1456,
+  "updated_at": "2026-08-23T10:01:58.852773",
+  "total": 1455,
   "articles": [
     {
       "date": "2026-08-22",
@@ -99,16 +99,6 @@
       "digest": "SemiAnalysis 对比 CoreWeave、Nebius、Lambda、Crusoe、Groq 五家 GPU 云服务（neocloud）的公开定价与签约电力：CoreWeave Q2 营收25.75亿美元（+112%）、Nebius AI云ARR 30亿美元、Crusoe 签约电力4.9GW、Groq 转型推理云。CoreWeave 的 H100 时价6.36美元居溢价，Nebius 的 B200 最低6.69美元且唯一公布B300按需价；容量实际成交价远超标价。",
       "link": "https://www.marktechpost.com/2026/08/21/best-gpu-neoclouds-2026/",
       "source_file": "sources/2026-08-22_2026 最佳 GPU 新云厂商：CoreWeave、Nebius、Lambda、Crusoe、Groq 按公开定价与签约算力排名_MarkTechPost.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-22",
-      "title": "微信灰测「按住转文字」功能被吐槽；DeepSeek 上线多模态功能；应急机械拉手难操作，多家车企召回 427 万辆车",
-      "source": "极客公园",
-      "digest": "本期科技简讯：深度求索上线多模态视觉模型 DeepSeek-V4-F,Flash-Vision-Exp，多模态 Agent 能力接近 Opus-4.8；Anthropic 拟允许企业客户在自有设施留存30天内数据；字节 Seed 基础模型部门新设四个一级部门；雷鸟发布 AI 眼镜 iO（首发1996元起）；微信灰度\"按住转文字\"引吐槽；多家车企因应急机械拉手问题召回超427万辆车。",
-      "link": "http://www.geekpark.net/news/369206",
-      "source_file": "sources/2026-08-22_微信灰测「按住转文字」功能被吐槽；DeepSeek 上线多模态功能；应急机械拉手难操作，多家车企召回_极客公园.md",
       "category": "其他",
       "is_model_related": false
     },

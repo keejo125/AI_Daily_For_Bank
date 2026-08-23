@@ -7,8 +7,8 @@
         "国际": 6,
         "国内": 2,
         "同业": 1,
-        "其他": 3,
-        "total": 12
+        "其他": 2,
+        "total": 11
       },
       "summary": "Anthropic 将 Claude Mythos 5 引入 Claude Security：企业团队无需直连模型即可获得前沿漏洞扫描/GitHub热榜第..."
     },
