@@ -1,12 +1,13 @@
 ---
 publish_time: 1787559986
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/OViRWoTrtnjGL9giwnRKvQ
 source: 财联社AI daily
-title: TRAE、扣子并入豆包，字节将推统一办公品牌“豆包工作”
+status: confirmed
+category: 其他
+is_model_related: false
+digest: |
+  字节跳动完成办公 AI 产品团队整合：TRAE、扣子（Coze）团队整体并入豆包体系，TRAE Work、扣子与豆包工作场景能力整合，TRAE IDE 及 CLI 作为豆包品牌下编程产品线发展。字节进一步明确豆包 AI 主干业务定位，聚焦 AI 办公，最快本周内推出独立 AI 办公产品「豆包工作」作为统一产品及品牌。字节回应称旨在更好协同产品与技术资源、提供更优 AI 工作体验，现有用户权益不受影响。
+title: 'TRAE、扣子并入豆包，字节将推统一办公品牌“豆包工作”'
 ---
 
 # TRAE、扣子并入豆包，字节将推统一办公品牌“豆包工作”

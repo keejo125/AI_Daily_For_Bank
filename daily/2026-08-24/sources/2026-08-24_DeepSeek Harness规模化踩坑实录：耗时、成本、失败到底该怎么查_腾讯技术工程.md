@@ -1,12 +1,13 @@
 ---
 publish_time: 1787564160
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/6P9l4HftpJLDK-xZazMtow
 source: 腾讯技术工程
-title: DeepSeek Harness规模化踩坑实录：耗时、成本、失败到底该怎么查
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯云 Agent 可观测基于 OneSuite 能力，提供针对 DeepSeek Harness（DSH）的开源采集插件，解决其原生轨迹视图「本机、单会话、实时」在规模化后跨会话聚合、长期留存与失败回溯的不足。DSH 采用 Cordis 微内核+全插件化、ReAct 循环，执行结构运行前不确定。插件订阅生命周期事件、把散落事件还原为 entry/agent/step/chat/tool 五层调用树（符合 OpenTelemetry GenAI 语义），批量上报腾讯云。接入后可看完整调用链、耗时分布（模型推理 vs 工具执行）、Token 与成本聚合、失败定位（模型/工具/中断）、检索与告警。插件已发正式版并被 DSH 社区收录。
+title: 'DeepSeek Harness规模化踩坑实录：耗时、成本、失败到底该怎么查'
 ---
 
 # DeepSeek Harness规模化踩坑实录：耗时、成本、失败到底该怎么查

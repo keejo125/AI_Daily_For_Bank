@@ -1,12 +1,13 @@
 ---
 publish_time: 1787550338
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/z5tER47s_gxHViLGrNRqIw
 source: InfoQ
-title: “你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版”：Pi 核心贡献者谈 AI Token 黑箱
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Pi 核心贡献者 Armin Ronacher 在与 Modem 联创 Ben Vinegar 的播客中，将 token 市场比作「成分不明的商品」：买到的可能是高度量化的 1.5 bit 版 DeepSeek 冒充 Flash、掺了别的模型用于训练、或号称零数据保留却名不副实。他批评 Claude Code 默认 auto 审批让 supervisor 模型把关推高成本、OpenAI 多 Agent 编排提示词加密造成基础设施级锁定、缓存不可迁移且定价不透明。更尖锐的是，当银行让 AI 自己改自己代码时「问责制已经消失了」。两人还讨论订阅制掩盖真实成本、Steve Yegge 为游戏开 12 个订阅月耗约 9 万美元、YC 创业公司白拿 token 等激励扭曲现象。
+title: '“你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版”：Pi 核心贡献者谈 AI Token 黑箱'
 ---
 
 # “你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版”：Pi 核心贡献者谈 AI Token 黑箱

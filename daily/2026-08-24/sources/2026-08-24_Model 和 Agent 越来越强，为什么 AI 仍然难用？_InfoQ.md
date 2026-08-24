@@ -1,12 +1,13 @@
 ---
 publish_time: 1787550338
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/2OphdcBb4YGGkv773S8VJA
 source: InfoQ
-title: Model 和 Agent 越来越强，为什么 AI 仍然难用？
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  文章提出「Agent 能力—用户可用性鸿沟」：行业误把「Agent 完成任务」等同「用户完成工作」，但真实工作跨多轮、多人、多系统，需核对、保存、复用。作者认为跨越鸿沟不能只靠更强模型，而由 Product 承担复杂度——Model 提供智能、Agent 提供行动、Product 用文档/DataTable/Workflow 承载记忆、流程与界面，让普通人无需懂 Prompt 即可持续协作。核心观点：上下文≠产品记忆，Agent 保留灵活性、Product 承担复杂性；并借 Kition 实践说明「Agent 探索未知、Workflow 固化已知」的闭环。文章属围绕工作而非对话的 AI 产品方法论思考。
+title: 'Model 和 Agent 越来越强，为什么 AI 仍然难用？'
 ---
 
 # Model 和 Agent 越来越强，为什么 AI 仍然难用？

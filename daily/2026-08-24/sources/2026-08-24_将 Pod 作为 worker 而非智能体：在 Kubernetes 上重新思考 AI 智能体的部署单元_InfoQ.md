@@ -1,12 +1,13 @@
 ---
 publish_time: 1787550338
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/2KcCUbBSow7GTsYAygYQ2g
 source: InfoQ
-title: 将 Pod 作为 worker 而非智能体：在 Kubernetes 上重新思考 AI 智能体的部署单元
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  CNCF 博客中 Lin Sun 介绍 kagent 项目，提出 Pod 仍适合作为智能体的执行环境，但不应再是部署、身份与生命周期的单元。文章指出智能体行为与微服务不同：可能仅在分配任务时被唤醒、运行几秒到几分钟即空闲，或产生子智能体、等待人工批准时无限期暂停，为每个智能体常驻 Pod 很浪费。谷歌 Agent Sandbox 与 Agent Substrate 方案在 K8s 之上引入控制平面，将逻辑智能体（Actor）调度到长期运行的 Worker（Pod）上，支持挂起/恢复/迁移，身份归属移到 ActorTemplate/命名空间/租户层级。这改变了调度效率，也让访问控制、可观测性需跟随逻辑智能体。
+title: '将 Pod 作为 worker 而非智能体：在 Kubernetes 上重新思考 AI 智能体的部署单元'
 ---
 
 # 将 Pod 作为 worker 而非智能体：在 Kubernetes 上重新思考 AI 智能体的部署单元

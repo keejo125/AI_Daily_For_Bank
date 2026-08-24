@@ -1,12 +1,13 @@
 ---
 publish_time: 1787557195
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/h_fcfqID93pLaymlQuht8g
 source: CSDN
-title: Linux之父用AI修了个Bug，社区吵翻了：18次重启、24个补丁，最后只改了一行代码
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Linus Torvalds 亲自修复 Intel Xe 显卡驱动 Bug：因 CCS 偏移量取整方向错误（round_up 应为 round_down），导致本应保留的内存被误算进可用显存。为定位这一行代码，他加了 24 个调试补丁、重启内核 18 次，最终 Commit 说明也是 AI 写的。他坦言 AI 承担大量繁琐工作却几次想放弃，是他强制其继续排查。此事引发社区争议：有人质问「凭什么修 Bug 要夸 AI」、指其违反 Linux 内核 AI 贡献须标 Assisted-by 的政策；也有人指出这反映 AI 进入开源后的效率与审查成本之争。Linus 未透露所用 AI 工具。
+title: 'Linux之父用AI修了个Bug，社区吵翻了：18次重启、24个补丁，最后只改了一行代码'
 ---
 
 # Linux之父用AI修了个Bug，社区吵翻了：18次重启、24个补丁，最后只改了一行代码

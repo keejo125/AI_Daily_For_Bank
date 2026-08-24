@@ -1,12 +1,13 @@
 ---
 publish_time: 1787545416
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/9gbLabsLO2E-PPiQA6owwA
 source: 财联社AI daily
-title: OpenAI奥尔特曼：AI或被少数人控制
+status: confirmed
+category: 其他
+is_model_related: false
+digest: |
+  OpenAI CEO 奥特曼在播客中表示，担心 AI 未来被少数公司、模型或个人控制，使绝大多数消费者失去对技术发展话语权；他同时担忧另一种可能——AI 摆脱人类控制。他认为对后者的恐惧反而可能导致前者的实现（以安全换自由）。这番话被解读为暗指 Anthropic CEO Dario Amodei（曾警告 Mythos 模型构成真实风险、是唯一未签开放权重信的主要 AI 公司）。奥特曼还称美国 AI 领导者未能向公众证明技术如何让人拥有更大自主权，并提到即将迎来前所未有的小企业创业潮。
+title: 'OpenAI奥尔特曼：AI或被少数人控制'
 ---
 
 # OpenAI奥尔特曼：AI或被少数人控制

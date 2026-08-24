@@ -1,12 +1,13 @@
 ---
 publish_time: 1787566690
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Y6IKxQQjqq1Y6Fgwh94r9g
 source: 量子位
-title: AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  中科紫东太初旗下科研智能体 ScienceClaw 升级 AutoProject 项目级自主科研引擎，推动 AI 从执行孤立 Task 走向承接完整科研项目（Project）。系统由三层构成：Project2Task（项目级规划，自主拆解子任务与依赖）、TaskExecutor（长程自主执行，动态修复假设与参数）、EviGraph（证据驱动验证，可核验可回溯）。在 ARCBenchML 评测中 EviGraph 综合得分 0.865（基线 0.596），结论贴合事实指标由 0.442 升至 0.794。文章认为这标志 AI4S 从「工具级」迈向「系统级」，竞争重心从单点模型转向端到端系统综合能力。AutoProject 仍需科研人介入纠偏，非「无人科研」。
+title: 'AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project'
 ---
 
 # AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project

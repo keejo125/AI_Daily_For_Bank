@@ -1,7 +1,367 @@
 {
-  "updated_at": "2026-08-24T05:06:12.113173",
-  "total": 1464,
+  "updated_at": "2026-08-25T05:43:40.813595",
+  "total": 1500,
   "articles": [
+    {
+      "date": "2026-08-24",
+      "title": "GPT-5.6 入驻 Kiro，为开发者带来更高性价比",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布 GPT-5.6 现已在 AI 编程工具 Kiro 中可用，帮助开发者以更优的性价比完成软件的规划、构建、审查与测试。正文极短，仅一句话说明该模型定位：在 Kiro 中提供更高效的规划、构建、审查与测试能力，强调价格与性能的平衡。",
+      "link": "https://openai.com/index/gpt-5-6-in-kiro",
+      "source_file": "sources/2026-08-24_Advancing price-performance for developers with GP_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Google Research 推出 ME-POIs：为文本 POI 嵌入加入「场所如何被使用」的出行信息框架",
+      "source": "MarkTechPost",
+      "digest": "Google Research 与 USC 发布 ME-POIs（Mobility-Embedded POIs）框架，把聚合人类出行数据融入基于文本的 POI（兴趣点）嵌入。语言模型能描述「场所是什么」，却说不清「怎么被使用」——两家咖啡店类目相同，一家做通勤周转、一家留客 90 分钟。ME-POIs 将每次访问表示为坐标+到达/离开时间三元组，经 Space2Vec、Time2Vec 与 4 层 Transformer 编码，用对比学习对齐到每个 POI 的可学习原型；对长尾 POI 以多带宽高斯核+KL 项迁移。在洛杉矶/休斯顿地图增强任务中 34/35 配对提升，访问意图 F1 相对涨 81.9%、繁忙度 MAE 降 24.7%；纯出行变体甚至在价格分级上超越 Gemini 文本嵌入。模型约 5370 万参数、单张 V100 可训，但无公开代码/权重，门槛在出行数据授权。",
+      "link": "https://www.marktechpost.com/2026/08/24/google-research-introduces-me-pois-a-mobility-informed-framework-that-adds-how-a-place-is-used-to-text-based-poi-embeddings/",
+      "source_file": "sources/2026-08-24_Google Research Introduces ME-POIs_ A Mobility-Inf_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Harvey 推出 Harvey Tenet：基于 Kimi K3 基座、面向长程法律 Agent 的后训练模型",
+      "source": "MarkTechPost",
+      "digest": "Harvey 发布首个后训练模型 Harvey Tenet（研究预览），以 Kimi K3 为基座、联合 Fireworks 用异步强化学习在长程法律任务上后训练，训练语料含合成/公开/专家数据、未用客户数据。相较基座 K3，Tenet 在 Harvey 法律 Agent 基准（LAB）上完成近两倍留出任务、LAB:Contracts 全通过率分别 +9/+2 个百分点，登顶 LAB:Contracts、居 LAB 第二；能力未训练即迁移至 Mercor APEX 与 Crosby Redline Bench。训练约 150 张 B300 GPU、两月，用 GSPO+rank-64 LoRA，奖励塑造偏好短轨迹使质量与成本同升。Tenet 目前仅发布方法、无权重/API，目标是在开放权重上建前沿法律智能并让律所拥有自有模型。",
+      "link": "https://www.marktechpost.com/2026/08/23/harvey-tenet-post-trained-kimi-k3-legal-agent-model/",
+      "source_file": "sources/2026-08-24_Harvey Introduces Harvey Tenet_ A Kimi K3 Base Pos_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "刚刚，Claude两个新模型曝光！",
+      "source": "机器之心",
+      "digest": "有开发者在 Anthropic API 中发现两个未公开模型代号：claude-marshmallow-eap 与 claude-melon-eap，后缀「eap」表明处于早期访问计划、仅对少量开发者开放。两者均非 Fable 级别，社区推测将作为 Opus 或 Sonnet 更新，也有人猜含新一代 Haiku；早期测试者称 Marshmallow 表现优于 Melon、对话体验已超当前 Opus 5。Anthropic 内部命名由动物（如 Fennec）转向食物主题，或暗示新开发分支。考虑到大模型竞争白热化，正式发布可能下月，但代号也可能被重命名或取消。",
+      "link": "https://mp.weixin.qq.com/s/pfq_k0cO2cmOtiEzXbe4EQ",
+      "source_file": "sources/2026-08-24_刚刚，Claude两个新模型曝光！_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Claude Code反超GitHub Copilot登顶第一、90%程序员已用上Agent，最新AI编码调查报告来了！",
+      "source": "CSDN",
+      "digest": "JetBrains Research《2026 开发者生态系统调查》覆盖全球超 1.5 万专业开发者：约 90% 每周至少用一次 AI 编程 Agent、68% 每天使用。竞争格局剧变——Claude Code 使用率从 1 月 18% 飙至 5–7 月 39%，反超长期领先的 GitHub Copilot（降至 21%），成最广泛 AI 编码工具，美国达 47%；OpenAI Codex 从 3% 增至 16%（约 5 倍）；而 Cursor 从 18% 降至 12%（认知度仍 75%）。文章认为竞争重点已从「谁 AI IDE 好用」转向「谁 Agent 能真正接手开发任务」，开源 OpenCode 使用率 7%、Google Antigravity 6%。",
+      "link": "https://mp.weixin.qq.com/s/TroIreA6CMBgFHGJlHARFQ",
+      "source_file": "sources/2026-08-24_Claude Code反超GitHub Copilot登顶第一、90%程序员已用上Agent，最新AI编码调查报告来了！_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Linux之父用AI修了个Bug，社区吵翻了：18次重启、24个补丁，最后只改了一行代码",
+      "source": "CSDN",
+      "digest": "Linus Torvalds 亲自修复 Intel Xe 显卡驱动 Bug：因 CCS 偏移量取整方向错误（round_up 应为 round_down），导致本应保留的内存被误算进可用显存。为定位这一行代码，他加了 24 个调试补丁、重启内核 18 次，最终 Commit 说明也是 AI 写的。他坦言 AI 承担大量繁琐工作却几次想放弃，是他强制其继续排查。此事引发社区争议：有人质问「凭什么修 Bug 要夸 AI」、指其违反 Linux 内核 AI 贡献须标 Assisted-by 的政策；也有人指出这反映 AI 进入开源后的效率与审查成本之争。Linus 未透露所用 AI 工具。",
+      "link": "https://mp.weixin.qq.com/s/h_fcfqID93pLaymlQuht8g",
+      "source_file": "sources/2026-08-24_Linux之父用AI修了个Bug，社区吵翻了：18次重启、24个补丁，最后只改了一行代码_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Netflix 开源了一个用于因果推理的智能代理工作流",
+      "source": "InfoQ",
+      "digest": "Netflix 开源用于观察性因果推断（OCI）的智能代理工作流 oci-agent，减轻因果分析中的繁琐工作。基于现有 OCI 工具，Agent 根据用户分析计划生成规格、填参并执行笔记本，评审员评级（not_satisfactory/satisfactory_with_caveats/fully_satisfactory）并提修改建议，形成「执行—审核」循环，将易错/重复任务自动化、把问题构建与结果评估留给人。在 ACIC 竞赛数据上表现有竞争力；案例显示评估新型内容对用户留存影响时，oci-agent 估算效果值仅为 Claude 基准的 25%，并指出早期采用者偏差与安慰剂测试失败。轻量独立版已开源，强调流程审计+人工监督。",
+      "link": "https://www.infoq.cn/article/4h2jb2eOcBrP5AG5hLYt",
+      "source_file": "sources/2026-08-24_Netflix 开源了一个用于因果推理的智能代理工作流_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "“你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版”：Pi 核心贡献者谈 AI Token 黑箱",
+      "source": "InfoQ",
+      "digest": "Pi 核心贡献者 Armin Ronacher 在与 Modem 联创 Ben Vinegar 的播客中，将 token 市场比作「成分不明的商品」：买到的可能是高度量化的 1.5 bit 版 DeepSeek 冒充 Flash、掺了别的模型用于训练、或号称零数据保留却名不副实。他批评 Claude Code 默认 auto 审批让 supervisor 模型把关推高成本、OpenAI 多 Agent 编排提示词加密造成基础设施级锁定、缓存不可迁移且定价不透明。更尖锐的是，当银行让 AI 自己改自己代码时「问责制已经消失了」。两人还讨论订阅制掩盖真实成本、Steve Yegge 为游戏开 12 个订阅月耗约 9 万美元、YC 创业公司白拿 token 等激励扭曲现象。",
+      "link": "https://mp.weixin.qq.com/s/z5tER47s_gxHViLGrNRqIw",
+      "source_file": "sources/2026-08-24_“你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版”：Pi 核心贡献者谈 AI Token 黑箱_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "九成生物医学论文有 AI 辅助写作痕迹",
+      "source": "Solidot",
+      "digest": "一篇发表于 arXiv 的预印本对 PubMed Central 收录的 2025 年全年英文论文分析显示，LLM 辅助写作比例高达 77%（2024 年为 52%）；2025 年 12 月发表论文近九成出现 AI 辅助写作痕迹，71% 的研究人员自陈使用 AI 辅助写作（实际可能更高）。研究还发现 AI 写作在摘要、引言、讨论部分比方法、结果部分更常见。这反映 AI 已深度渗入科研写作，也引发对学术原创性与署名规范的讨论。",
+      "link": "https://www.solidot.org/story?sid=85173",
+      "source_file": "sources/2026-08-24_九成生物医学论文有 AI 辅助写作痕迹_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "将 Pod 作为 worker 而非智能体：在 Kubernetes 上重新思考 AI 智能体的部署单元",
+      "source": "InfoQ",
+      "digest": "CNCF 博客中 Lin Sun 介绍 kagent 项目，提出 Pod 仍适合作为智能体的执行环境，但不应再是部署、身份与生命周期的单元。文章指出智能体行为与微服务不同：可能仅在分配任务时被唤醒、运行几秒到几分钟即空闲，或产生子智能体、等待人工批准时无限期暂停，为每个智能体常驻 Pod 很浪费。谷歌 Agent Sandbox 与 Agent Substrate 方案在 K8s 之上引入控制平面，将逻辑智能体（Actor）调度到长期运行的 Worker（Pod）上，支持挂起/恢复/迁移，身份归属移到 ActorTemplate/命名空间/租户层级。这改变了调度效率，也让访问控制、可观测性需跟随逻辑智能体。",
+      "link": "https://mp.weixin.qq.com/s/2KcCUbBSow7GTsYAygYQ2g",
+      "source_file": "sources/2026-08-24_将 Pod 作为 worker 而非智能体：在 Kubernetes 上重新思考 AI 智能体的部署单元_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "硅谷押注的下一个 Harness，是整个桌面操作系统",
+      "source": "极客公园",
+      "digest": "文章介绍 Linux 发行版 Omarchy 4.0（作者 DHH）将 AI 直接装进系统，用户用一句话即可让系统操作电脑，被称为「AI 原生操作系统」。8 月 21 日 DHH 成立 Omacom 基金会，首期 800 万美元来自戴尔老板、Jack Dorsey、Shopify/Stripe CEO 等八位行业 CEO。Omarchy 把桌面环境重写成一个进程 Quickshell，系统配置全改 Lua 脚本，插件即 Git 仓库。核心卖点是「系统即 Harness」：Agent 需要的工具、权限、状态、反馈四要素齐全，开机即可从九家模型选默认 Agent。文章对比苹果/微软封闭系统不敢交出系统权限，认为操作电脑的主体正从人换成 Agent，「AI 接管」的真实含义是替人操作系统而非替人决策。",
+      "link": "http://www.geekpark.net/news/369298",
+      "source_file": "sources/2026-08-24_硅谷押注的下一个 Harness，是整个桌面操作系统_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "调查显示三分之一英文网页有 AI 创作痕迹",
+      "source": "Solidot",
+      "digest": "美国皮尤研究中心数据科学家用 AI 检测工具分析过去五年 50 万英文网页，发现 ChatGPT 推出后 AI 撰写内容比例持续上升：2026 年 7 月快照中逾三分之一的网页显示 AI 创作痕迹，全部样本里约十分之一有明显 AI 痕迹。分布不均——.com 域名约十分之一（是 .org 的两倍、.edu/.gov 的十倍）。语言特征上，破折号使用频率翻倍、牛津逗号增 63%、delve/interplay 等 AI 常用词翻倍，对比平行句式「it's not just X, it's Y」增至近三倍，可作为 AI 文本识别信号。",
+      "link": "https://www.solidot.org/story?sid=85172",
+      "source_file": "sources/2026-08-24_调查显示三分之一英文网页有 AI 创作痕迹_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "DeepSeek 上线多模态，我用它做了《牛来》小游戏｜AI 上新",
+      "source": "极客公园",
+      "digest": "8 月 21 日 DeepSeek 正式上线多模态视觉理解模型 DeepSeek-V4-Flash-Vision-Exp（API：deepseek-v4-flash-vision-exp），支持图片内联/URL/Files API 三种传入，单图最多 384 token（约为 GPT/Claude 同等图一半），纯文本能力不降级、多模态 Agent 能力「接近 Opus-4.8」。极客公园实测：喂《牛来》截图生成 SVG 卡通牛（35 秒、384 token）、做跑酷小游戏（36 秒）、看设计稿出可运行 HTML（26 秒）。踩坑提示：默认 thinking 模式推理 token 会吞光输出预算，需设 reasoning_effort:none。DeepSeek 选择在 Flash 而非 Pro 试水视觉，配合 Harness RC.8 打通多模态 Agent 管道。",
+      "link": "http://www.geekpark.net/news/369278",
+      "source_file": "sources/2026-08-24_DeepSeek 上线多模态，我用它做了《牛来》小游戏｜AI 上新_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "WRC 2026｜原生全模态世界模型：从模拟世界到交互世界",
+      "source": "量子位",
+      "digest": "8 月 19 日 WRC 2026 期间，智象未来（HiDream.ai）创始人兼 CEO 梅涛发表《原生全模态世界模型：从「模拟世界」到「交互世界」》演讲。公司基于自研 UiT（Unified Transformer）架构发布原生全模态交互式世界模型 HiDream-O1-World，首参评即登顶权威榜单 WBench 的 Navi 分榜榜首；支持文本/图像/交互操控多模态输入，具备漫游、编辑、交互三能力，核心突破是长时程时空一致性与物理一致性。梅涛提出「数据—认知—行动—反馈」闭环飞轮：世界模型为认知中枢，连接数据、智能体与具身本体，并用仿真数据增强降低机器人真实采集成本，推动 Physical AI 从探索迈向规模化。",
+      "link": "https://www.qbitai.com/2026/08/478421.html",
+      "source_file": "sources/2026-08-24_WRC 2026｜原生全模态世界模型：从模拟世界到交互世界_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "形界智能：沿用两段式架构，是市场对 AI 实时视频的最大误判",
+      "source": "极客公园",
+      "digest": "文章分析实时视频生成赛道，指出形界智能（CEO 王裕鑫，中科大博士、前元石科技 MoE 预训练负责人）走「全域沉浸式生成」第三条路线，区别于离线生成（字节 Seedance/可灵）与实时互动世界（World Labs/Odyssey/智象未来）。其核心模型 Rise 于 8 月发布（Genesis 于 7 月 WAIC 发布），采用端到端「理解+生成」统一架构（Native Interactive Representation Scaling），推翻行业「先理解再生成」的两段式方案：摄像头画面直接端到端视频输入输出，时延压至 500 毫秒、定价每秒 1 分钱（两段式约 7 毛）。Rise 为 10B 级参数，Post-training 仅用 300 小时赛车数据即实现逼真互动，被视作国内首家将体感延时控在 500 毫秒的玩家。团队 Stream-R1/Stream-T1 两篇论文曾登顶 Hugging Face 每日榜。",
+      "link": "http://www.geekpark.net/news/369264",
+      "source_file": "sources/2026-08-24_形界智能：沿用两段式架构，是市场对 AI 实时视频的最大误判_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "阿里视频大模型Wan3.0正式上线，行业评价“稳定、真实、有质感”",
+      "source": "量子位",
+      "digest": "8 月 24 日阿里巴巴视频生成大模型 Wan3.0 正式上线。模型在生成时长、万能创作、全能参考与真实世界还原等维度升级，单次可生成 30 秒视频，首次支持 doc/xls/ppt/pdf/md 等文档格式输入；角色、道具、声音、空间关系、风格等细粒度维度稳定保持。企业用户体验反馈高度一致——「稳定、真实、有质感」：补上 AI 视频长期缺失的真人质感稳定输出，追求「千人千面」刻画五官皮肤细节。公测已进短剧/影视/广告生产流程，用户可在阿里云百炼、千问 AI 平台等体验，8 月 24 日至 9 月 23 日标准版限时 7 折。",
+      "link": "https://www.qbitai.com/2026/08/478427.html",
+      "source_file": "sources/2026-08-24_阿里视频大模型Wan3.0正式上线，行业评价“稳定、真实、有质感”_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "阿里达摩院推出肝癌AI模型，精准识别1厘米微小肿瘤",
+      "source": "量子位",
+      "digest": "阿里巴巴达摩院联合中国医科大学附属盛京医院等研发肝癌诊断 AI 模型 DAMO LiON，可经 CT 影像识别微小肝脏癌变病灶。两个月真实世界前瞻临床试验中，该模型发现 15 例原被遗漏的恶性肿瘤（多为约 1 厘米病灶），帮助患者及时手术或药物治疗；医生用 AI 协助阅片用时减 27%、对恶性敏感性提高 11.5%，初级医生达资深水平。模型采用改进网络架构捕捉病灶与肝脏关系、保留局部纹理边界，并迭代融合多期相影像。相关论文登《自然·医学》，达摩院自 2017 年布局医疗 AI，此前已有 PANDA/GRAPE/COCA 等筛查模型。",
+      "link": "https://www.qbitai.com/2026/08/478473.html",
+      "source_file": "sources/2026-08-24_阿里达摩院推出肝癌AI模型，精准识别1厘米微小肿瘤_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-24",
+      "title": "AI 音乐走到「该怎么做」，中国大模型为啥选最难的路？",
+      "source": "极客公园",
+      "digest": "文章以音潮团队（中国）AI 音乐工具 V4.0 为例，探讨「AI 音乐从能不能做走到该怎么做」。Deezer 数据显示 AI 歌曲日增 7.5 万首却仅 1%–3% 被播放，产能过剩下「生成」不再是价值，「读懂」才是。音潮选择最难路线：从中文底座重新训练，把中文语境写进模型骨子里（而非在英文底座缝补），虽更慢更贵，但 WAIC 主题曲连续两年出自其手、拿下国际赛事亚军。V4.0 于 8 月 14 日全平台上线，重构指令理解/情绪落地/曲风细分，解锁 10 语种与纯音乐生成，形成 C 端 APP+Studio+出海 Hitto+API 四线闭环，全程基于壁仞国产 GPU 训练。",
+      "link": "http://www.geekpark.net/news/369273",
+      "source_file": "sources/2026-08-24_AI 音乐走到「该怎么做」，中国大模型为啥选最难的路？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project",
+      "source": "量子位",
+      "digest": "中科紫东太初旗下科研智能体 ScienceClaw 升级 AutoProject 项目级自主科研引擎，推动 AI 从执行孤立 Task 走向承接完整科研项目（Project）。系统由三层构成：Project2Task（项目级规划，自主拆解子任务与依赖）、TaskExecutor（长程自主执行，动态修复假设与参数）、EviGraph（证据驱动验证，可核验可回溯）。在 ARCBenchML 评测中 EviGraph 综合得分 0.865（基线 0.596），结论贴合事实指标由 0.442 升至 0.794。文章认为这标志 AI4S 从「工具级」迈向「系统级」，竞争重心从单点模型转向端到端系统综合能力。AutoProject 仍需科研人介入纠偏，非「无人科研」。",
+      "link": "https://mp.weixin.qq.com/s/Y6IKxQQjqq1Y6Fgwh94r9g",
+      "source_file": "sources/2026-08-24_AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "DeepSeek Harness规模化踩坑实录：耗时、成本、失败到底该怎么查",
+      "source": "腾讯技术工程",
+      "digest": "腾讯云 Agent 可观测基于 OneSuite 能力，提供针对 DeepSeek Harness（DSH）的开源采集插件，解决其原生轨迹视图「本机、单会话、实时」在规模化后跨会话聚合、长期留存与失败回溯的不足。DSH 采用 Cordis 微内核+全插件化、ReAct 循环，执行结构运行前不确定。插件订阅生命周期事件、把散落事件还原为 entry/agent/step/chat/tool 五层调用树（符合 OpenTelemetry GenAI 语义），批量上报腾讯云。接入后可看完整调用链、耗时分布（模型推理 vs 工具执行）、Token 与成本聚合、失败定位（模型/工具/中断）、检索与告警。插件已发正式版并被 DSH 社区收录。",
+      "link": "https://mp.weixin.qq.com/s/6P9l4HftpJLDK-xZazMtow",
+      "source_file": "sources/2026-08-24_DeepSeek Harness规模化踩坑实录：耗时、成本、失败到底该怎么查_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Model 和 Agent 越来越强，为什么 AI 仍然难用？",
+      "source": "InfoQ",
+      "digest": "文章提出「Agent 能力—用户可用性鸿沟」：行业误把「Agent 完成任务」等同「用户完成工作」，但真实工作跨多轮、多人、多系统，需核对、保存、复用。作者认为跨越鸿沟不能只靠更强模型，而由 Product 承担复杂度——Model 提供智能、Agent 提供行动、Product 用文档/DataTable/Workflow 承载记忆、流程与界面，让普通人无需懂 Prompt 即可持续协作。核心观点：上下文≠产品记忆，Agent 保留灵活性、Product 承担复杂性；并借 Kition 实践说明「Agent 探索未知、Workflow 固化已知」的闭环。文章属围绕工作而非对话的 AI 产品方法论思考。",
+      "link": "https://mp.weixin.qq.com/s/2OphdcBb4YGGkv773S8VJA",
+      "source_file": "sources/2026-08-24_Model 和 Agent 越来越强，为什么 AI 仍然难用？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "「米芯」三连发：雷军五年花了 210 亿，归来已「不只手机」",
+      "source": "极客公园",
+      "digest": "小米 8 月 24 日一口气发布三颗芯片：玄戒 O3（3nm 旗舰 SoC，安兔兔 522 万、安卓性能之王，AI 原生概念）、玄戒 O100（6nm 晶圆级堆叠 AI 加速芯片，1.22TB/s 带宽达 LPDDR5X 的 16 倍，配自研 5 值量化 MiMo 模型本地推理达 330 token/s）、玄戒 D100（国内首颗 3nm 智驾芯片，可装 200B 模型，并落地 AI Cube 桌面原型机）。雷军称「玄戒是小米 AI 战略的物理基础」，五年、210 亿、近 3000 人换来「从口袋到座舱、从客厅到工厂」的端侧算力产品线，押注端侧 AI 时代提前囤算力弹药。",
+      "link": "http://www.geekpark.net/news/369302",
+      "source_file": "sources/2026-08-24_「米芯」三连发：雷军五年花了 210 亿，归来已「不只手机」_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "一篇论文改写AI科研评价规则！中国公司拿出实践数据，双榜第一",
+      "source": "量子位",
+      "digest": "8 月 19 日论文《Measuring AI Scientists: From Exams to Discovery》首次提出 AI 科研评价的「发现回合（discovery episode）」范式：不再只看最终答案的闭卷考试，而是全程记录科研假说→方案执行→结果解读每一步，综合评分科学性。论文由中国 AI4S 企业深度原理联合微软、斯坦福、Allen AI 等全球机构完成，诺奖得主 Frances Arnold 署名。深度原理的 MIRA 平台为该范式样本：三层架构（多 Agent 小队+双执行引擎+科研记忆）跑通闭环，在 Research Claw 与 Science Agent Arena 双榜第一、成本最低。文章称这标志 AI4S 从「拼参数考试」转向「谁能真做出东西」的下半场。",
+      "link": "https://www.qbitai.com/2026/08/478568.html",
+      "source_file": "sources/2026-08-24_一篇论文改写AI科研评价规则！中国公司拿出实践数据，双榜第一_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "从现实到反馈：KDC 完整工程模型全景",
+      "source": "InfoQ",
+      "digest": "vivo 肖博系统阐述知识驱动计算（KDC）AI 应用软件工程理论：把领域现实、数字表示、知识、记忆、推理、技能、能力、行动、反馈组织成「Reality-to-Feedback」连续业务因果链，并提出对象化、运行时化、治理化三层工程模型。文章以退款场景串起完整闭环：Reality Map 界定现实对象→Knowledge Card 提供依据→Reasoning Object 记录判断→Skill 组织目标级能力→Capability 受治理执行→Feedback Contract 关联现实结果。强调当 AI 可退款/改权限时错误会进入现实，需把来源、权限、风险、审计从 Prompt 约定提升为系统机制；并区分已验证实践、理论推导与开放问题，建议企业从一个高影响业务闭环渐进采用，而非先建宏大平台。",
+      "link": "https://www.infoq.cn/article/6zto2Zd1cdiODGyBcf6r",
+      "source_file": "sources/2026-08-24_从现实到反馈：KDC 完整工程模型全景_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "会用AI也可能失业！欧亚集团创始人：未来3到5年，只有会部署AI的人才能留下",
+      "source": "51CTO技术栈",
+      "digest": "欧亚集团创始人 Ian Bremmer 在访谈中警告，未来 3 到 5 年只有真正会部署 AI 工具的人才能保住工作——AI 不会直接取代人，但会用 AI 的人会取代不用 AI 的人。他聚焦「deploy」能力：把 Agent 接进真实系统需解决上下文来源、可调工具、结果验收、权限收紧、失败撤回五件事，而非仅会写 Prompt。他谈到智能正像水电一样按量计费、模型既能补漏洞也能被利用漏洞，建议企业每周留一天做 AI 训练。文章也指出该预测并非严谨就业研判，短期更缓和的判断是「过程会遇到更多阻力」，岗位未一夜消失但任务正在换人。",
+      "link": "https://mp.weixin.qq.com/s/iZNzYt3Dl7BcV570bRcFlQ",
+      "source_file": "sources/2026-08-24_会用AI也可能失业！欧亚集团创始人：未来3到5年，只有会部署AI的人才能留下_51CTO技术栈.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "前保安杀进了AI决赛，高中生拿走25万！这AI比赛办得有点绝",
+      "source": "量子位",
+      "digest": "文章报道 TRAE AI 创造力大会比赛结果：前保安彭铭裕从数万人中杀入全国 20 强，凭纯网页体感游戏《动动脖子》获奖；冠军《词元开物》团队用 AI 硬件 IDE+桌面 PCB 雕刻机，让无电子基础的人也能「说一句话做出真硬件」，已带高中生 8 天完成作品；亚军高二学生 Kyle 用《动作帧 MotionFrame》做 AI 羽毛球教练，上架 App Store 冲到热门榜第 22；季军父子用 TRAE 做卫星态势感知软件。3.7 万人报名、1.4 万作品选 Top 20，胡彦斌、Tim 等颁奖。文章指出 AI Coding 已从「帮你写代码」走向「帮你把东西做出来」，创造力正取代代码能力成为作品核心差异，普通人「制造软件」的能力被下放。",
+      "link": "https://www.qbitai.com/2026/08/478358.html",
+      "source_file": "sources/2026-08-24_前保安杀进了AI决赛，高中生拿走25万！这AI比赛办得有点绝_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
+      "source": "量子位",
+      "digest": "中诚华隆在北京发布二代 HL200 推理芯片及超节点智算集群方案，实现国产 AI 推理算力从单芯片到万卡级集群的体系化跨越。HL200 原生支持 FP4/FP8 超低精度，单卡 FP4 算力 4P、能效比 5.12 TFLOPS/W 居国内第一梯队，兼容 PyTorch、vLLM 等主流栈及 OpenAI 兼容接口；在 DeepSeek V4 Flash/Pro、GLM 5.2 等适配测试中 Prefill 性能领先国际同级。集群单机柜 64 卡互联、最高 1024 卡纵向堆叠、横向扩展达 10240 卡，覆盖 8 卡至万卡全场景。公司与中国能建、浪潮、紫光等十余家达成合作，核心产品已中标移动、电信及全国 20 余省份近 50 个标段，服务政务、金融、能源等关键基础设施。",
+      "link": "https://www.qbitai.com/2026/08/478469.html",
+      "source_file": "sources/2026-08-24_单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "完全相信AI代码的Uncle Bob，坦诚这条路还没走通",
+      "source": "InfoQ",
+      "digest": "软件工程泰斗 Uncle Bob（Robert Martin）在播客中坦言已彻底放弃逐行人工评审 AI 代码，转而搭建强约束管控框架：单元测试、Gherkin 验收测试、圈复杂度阈值、变异测试等，只要 AI 代码通过全部关卡即信任其正确性。但他承认把架构规划流程全自动化暂时未达理想——AI 做架构常产出漏洞方案，架构与模块依赖仍由人主导。他建议放弃瀑布式重前置规划、采用敏捷小迭代，新人须亲手写代码积累底层基础，把自己当「人类智能体」接受自动化检测约束。文章引发「信任但要核验」的业界争论（Grady Booch 反对）。",
+      "link": "https://www.infoq.cn/article/ogFMPSyD3LqR9RtbIRky",
+      "source_file": "sources/2026-08-24_完全相信AI代码的Uncle Bob，坦诚这条路还没走通_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "行业首发｜智能体安全能力图谱发布：企业可落地的建设路径",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎基于字节内部 AI 安全治理实践，发布《智能体安全能力图谱》，系统梳理智能体安全建设的 10 大能力维度、60 项核心技术要素，覆盖 WorkFlow 类、办公类、AI Coding 类智能体。10 维度包括：合规准入、资产与供应链安全（AI-BOM）、内容安全合规、常态化测评加固、AI 安全网关、身份与认证管理（非人类身份体系）、权限与访问控制、运行时安全监控、安全可观测性与运营管理、模型与推理安全。并按企业阶段给出 L1 基础防护→L2 精细化管控→L3 持续运营三级路径，提供从「能否安全上线」到「体系化治理」再到「可持续运营」的完整框架。",
+      "link": "https://mp.weixin.qq.com/s/QH4QSPFRx7Hvl13vbfk9Yg",
+      "source_file": "sources/2026-08-24_行业首发｜智能体安全能力图谱发布：企业可落地的建设路径_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Token精算时代已来！银行业如何管好每一枚Token？",
+      "source": "银行科技研究社",
+      "digest": "文章系统论述银行业进入「Token 精算时代」。国家数据局将 Token 定名「词元」，黄仁勋提出「Token 经济学」。招行日均 Token 消耗 330 亿、微众 200 亿、邮储工行破百亿，头部银行年算力成本达亿元级。以某中型银行为例，上半年 Token 直接费用约 900 万占 IT 预算 8%，含间接投入全年 AI 投入约 5400 万–7200 万。文章拆解招行「业务端积极、开发端审慎」的度量体系（6 维度、高+中价值场景覆盖约 70%、成本收入比约 20%），并跨界对比互联网统一网关+智能路由、保险业 ROI 锚定、科技大厂潮汐调度与 qGPU 细粒度切分、SaaS 混合路线，提出「业技财」融合的五层精细化运营闭环（治理/度量/技术/资源/合规），呼应《指导意见》要求。",
+      "link": "https://mp.weixin.qq.com/s/rjC8cp_PbpetCeMCWzXVsg",
+      "source_file": "sources/2026-08-24_Token精算时代已来！银行业如何管好每一枚Token？_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "光大银行远程银行智能化建设应用实践",
+      "source": "中国金融电脑+",
+      "digest": "光大银行分享远程银行智能化建设实践。技术基座以「决策式 AI+生成式 AI」双轮驱动，构建模型算法、多元算力统一调度、数据三大能力；智能客服部署文本/语音机器人及数字人，推出「阳光小智」（近 12 万种问法、2000 余场景）、数字人「小璇」（累计服务超 2900 万人次）。内部研发「远程助手」引入大模型与 RAG，覆盖通话前中后 23 类大小模型组合场景，累计调用超 3 亿次、关键场景通话时长降 10%；并构建「技术+机制+人才」运营体系，功能满意度保持 90% 以上。文章提出从「辅助工具」到「超级员工」、认知决策引擎、「千人千面」、安全防线四点演进思考。",
+      "link": "https://mp.weixin.qq.com/s/brEj909rzlewE1Xq2qIYBA",
+      "source_file": "sources/2026-08-24_光大银行远程银行智能化建设应用实践_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "AI重塑商业，信任决定未来商业能走多远丨Visa大中华区总裁张文翊",
+      "source": "量子位",
+      "digest": "Visa 大中华区总裁张文翊撰文指出，AI 正在重构商业本身而非仅「AI 支付」：智能体进入商业决策的形成与执行环节。她提出三个转变——从「人找服务」到「服务理解人」、从「人操作交易」到「智能体协同决策」、从「完成支付」到「经营客户关系」；并强调决定落地的是信任，需回答身份（智能体是否代表你）、授权（授权了什么、边界在哪）、生态（多方共建）三个关键词。Visa 以 Intelligent Commerce 探索可信身份、清晰授权、安全凭证、支付控制、生态协同五维度。她认为中国因数字化成熟、平台生态丰富、用户接受度高，将是观察 AI 商业规模化的重要窗口。",
+      "link": "https://www.qbitai.com/2026/08/478670.html",
+      "source_file": "sources/2026-08-24_AI重塑商业，信任决定未来商业能走多远丨Visa大中华区总裁张文翊_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Anthropic 最强模型难以吸引用户",
+      "source": "Solidot",
+      "digest": "据支付服务集团 Ramp 对 7 万家公司支出数据统计，Anthropic 规模最大、成本最高的模型 Fable 5 发布两个多月后，其支出占各类 AI 工具总支出比例仅约 11% 且趋于稳定，打破企业默认选用最强模型的惯例。分析师认为主因是 Fable 5 价格高昂，而旧款模型已能满足大部分企业需求。在 Anthropic 即将进行史上最大规模 IPO（估值或达 2 万亿美元）前夕，这一低需求加剧市场对其高投入商业模式的质疑——前沿实验室数十亿美元训练更复杂模型的回报逻辑正受挑战。",
+      "link": "https://www.solidot.org/story?sid=85181",
+      "source_file": "sources/2026-08-24_Anthropic 最强模型难以吸引用户_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "2026 年最佳 GPU 新云（Neocloud）：CoreWeave、Nebius、Lambda 等按公开定价与合约电力排名",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 对比五家 GPU 新云（Neocloud）：CoreWeave、Nebius、Lambda、Crusoe、Groq，维度含公开定价、部署/合约电力、硬件路线图、合约结构与独立质量评级。CoreWeave 是 ClusterMAX 2.0 唯一白金级，H100 达 $6.16/GPU-hr（较同行溢价 10–15%），Q2 营收 25.75 亿美元（+112%）、合约电力约 3.7GW；Nebius 是唯一公布 B300 按需价、B200 仅 $7.15；Lambda 的 B200 最低 $6.69 且无 spot；Crusoe 唯一 AMD 选项、H200 最低 $4.29；Groq 转做推理云（LPU per-token）。文章指出列表价低估市场，Nebius Q3 短期容量成交超 $40M/MW。",
+      "link": "https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/",
+      "source_file": "sources/2026-08-24_Best GPU Neoclouds 2026_ CoreWeave, Nebius, Lambda_MarkTechPost.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "OpenAI奥尔特曼：AI或被少数人控制",
+      "source": "财联社AI daily",
+      "digest": "OpenAI CEO 奥特曼在播客中表示，担心 AI 未来被少数公司、模型或个人控制，使绝大多数消费者失去对技术发展话语权；他同时担忧另一种可能——AI 摆脱人类控制。他认为对后者的恐惧反而可能导致前者的实现（以安全换自由）。这番话被解读为暗指 Anthropic CEO Dario Amodei（曾警告 Mythos 模型构成真实风险、是唯一未签开放权重信的主要 AI 公司）。奥特曼还称美国 AI 领导者未能向公众证明技术如何让人拥有更大自主权，并提到即将迎来前所未有的小企业创业潮。",
+      "link": "https://mp.weixin.qq.com/s/9gbLabsLO2E-PPiQA6owwA",
+      "source_file": "sources/2026-08-24_OpenAI奥尔特曼：AI或被少数人控制_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-24",
+      "title": "TRAE、扣子并入豆包，字节将推统一办公品牌“豆包工作”",
+      "source": "财联社AI daily",
+      "digest": "字节跳动完成办公 AI 产品团队整合：TRAE、扣子（Coze）团队整体并入豆包体系，TRAE Work、扣子与豆包工作场景能力整合，TRAE IDE 及 CLI 作为豆包品牌下编程产品线发展。字节进一步明确豆包 AI 主干业务定位，聚焦 AI 办公，最快本周内推出独立 AI 办公产品「豆包工作」作为统一产品及品牌。字节回应称旨在更好协同产品与技术资源、提供更优 AI 工作体验，现有用户权益不受影响。",
+      "link": "https://mp.weixin.qq.com/s/OViRWoTrtnjGL9giwnRKvQ",
+      "source_file": "sources/2026-08-24_TRAE、扣子并入豆包，字节将推统一办公品牌“豆包工作”_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-23",
       "title": "边缘原生 MoE 推理引擎 FreeToken：单张工作站 GPU 跑起 753B 的 GLM-5.2",

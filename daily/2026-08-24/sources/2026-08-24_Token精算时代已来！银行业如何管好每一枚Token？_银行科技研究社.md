@@ -1,12 +1,13 @@
 ---
 publish_time: 1787541480
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/rjC8cp_PbpetCeMCWzXVsg
 source: 银行科技研究社
-title: Token精算时代已来！银行业如何管好每一枚Token？
+status: confirmed
+category: 同业
+is_model_related: false
+digest: |
+  文章系统论述银行业进入「Token 精算时代」。国家数据局将 Token 定名「词元」，黄仁勋提出「Token 经济学」。招行日均 Token 消耗 330 亿、微众 200 亿、邮储工行破百亿，头部银行年算力成本达亿元级。以某中型银行为例，上半年 Token 直接费用约 900 万占 IT 预算 8%，含间接投入全年 AI 投入约 5400 万–7200 万。文章拆解招行「业务端积极、开发端审慎」的度量体系（6 维度、高+中价值场景覆盖约 70%、成本收入比约 20%），并跨界对比互联网统一网关+智能路由、保险业 ROI 锚定、科技大厂潮汐调度与 qGPU 细粒度切分、SaaS 混合路线，提出「业技财」融合的五层精细化运营闭环（治理/度量/技术/资源/合规），呼应《指导意见》要求。
+title: 'Token精算时代已来！银行业如何管好每一枚Token？'
 ---
 
 # Token精算时代已来！银行业如何管好每一枚Token？

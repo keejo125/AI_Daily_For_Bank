@@ -1,12 +1,13 @@
 ---
 publish_time: 1787566800
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/TroIreA6CMBgFHGJlHARFQ
 source: CSDN
-title: Claude Code反超GitHub Copilot登顶第一、90%程序员已用上Agent，最新AI编码调查报告来了！
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  JetBrains Research《2026 开发者生态系统调查》覆盖全球超 1.5 万专业开发者：约 90% 每周至少用一次 AI 编程 Agent、68% 每天使用。竞争格局剧变——Claude Code 使用率从 1 月 18% 飙至 5–7 月 39%，反超长期领先的 GitHub Copilot（降至 21%），成最广泛 AI 编码工具，美国达 47%；OpenAI Codex 从 3% 增至 16%（约 5 倍）；而 Cursor 从 18% 降至 12%（认知度仍 75%）。文章认为竞争重点已从「谁 AI IDE 好用」转向「谁 Agent 能真正接手开发任务」，开源 OpenCode 使用率 7%、Google Antigravity 6%。
+title: 'Claude Code反超GitHub Copilot登顶第一、90%程序员已用上Agent，最新AI编码调查报告来了！'
 ---
 
 # Claude Code反超GitHub Copilot登顶第一、90%程序员已用上Agent，最新AI编码调查报告来了！
