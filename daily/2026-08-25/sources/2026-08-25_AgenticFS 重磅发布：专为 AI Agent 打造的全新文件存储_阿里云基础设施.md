@@ -1,11 +1,13 @@
 ---
 publish_time: 1787652000
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/L1MD4XJIFFqEKOBWimsHIA
 source: 阿里云基础设施
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云发布面向AI Agent的文件存储新规格AgenticFS：单个文件系统可管理百万级Agent工作空间（AgenticSpace），每空间独立权限、配额与性能隔离，支持10万QPS挂卸载、百PiB容量与5万亿文件。
+  采用跨集群分布式编排与零信任安全隔离（独立接入点+临时凭证），默认按量付费、0KiB起步。文章称其解决了百万级Agent并发下的性能瓶颈、安全隔离与资源管理难题，为Agent规模化落地提供基础设施基石。
 title: 'AgenticFS 重磅发布：专为 AI Agent 打造的全新文件存储'
 ---
 

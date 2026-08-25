@@ -1,11 +1,13 @@
 ---
 publish_time: 1787637841
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/p_r0ZtusZK7fL3gSMuNQyw
 source: 财联社AI daily
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  文章盘点腾讯、阿里、字节在AI办公Agent的「三强争霸」：腾讯WorkBuddy先发领跑（6月月访问2097万次居首），阿里千问办公整合QoderWork/悟空/MuleRun主攻企业级并接入钉钉，字节8月24日并入TRAE、扣子后推出「豆包工作」、与飞书打通。
+  IDC预计中国企业级AI智能体市场2026年达449亿元，行业从卷模型转向卷入口与商业化，已进入实质付费阶段；赛迪数据显示政务、制造、能源、金融四大行业智能体份额合计超70%。
 title: 'AI办公三强争霸卡位战'
 ---
 

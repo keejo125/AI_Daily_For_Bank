@@ -1,11 +1,13 @@
 ---
 publish_time: 1787660053
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/b1I6W3ZqiSgAqdbl7xUJ0w
 source: 火山引擎Agent社区
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  卓驭科技（前身大疆车载）分享企业级AI落地实践，提出公式：组织能力=技术就绪度×治理成熟度×人员准备度。围绕ArkClaw企业版搭建统一Admin底座（统一编排、权限管理、数据边界、运行观测），将Agent从个位数扩展到万级。
+  以三层安全前提（管出口、管过程、管数据链路）保障机密推理与合规，按数据密级做分级路由。实测典型任务提效30%–60%，覆盖财务、安全、办公自动化等场景，强调企业买的是「确定性」而非单点技术。
 title: '从个人提效到组织能力：卓驭科技基于 ArkClaw 的企业级 AI 落地实践'
 ---
 

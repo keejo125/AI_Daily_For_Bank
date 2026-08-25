@@ -1,11 +1,13 @@
 ---
 publish_time: 1787636280
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/mh8XQH5oDk5gq4EZq6oMlQ
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  得物推荐团队在AICon分享将AI从写代码推向研发全链路的实践：以PDCA循环串联需求、开发、验收、反思，并抽象出七阶段护栏。
+  关键设计包括TPRD+Contract明确需求边界、沙箱/UTD/外部依赖Mock三类基础设施减少AI等待、AI模拟用户做L1–L5推荐质量评测、CDD三层知识体系（L1硬边界/L2模块设计/L3注释）以及Highway+ATV混合Agent架构把已知问题代码化。AI渗透率约30%，问题排查时长降约80%。
 title: 'AI Coding 之后，如何让 Agent 进入企业研发全链路？得物推荐的 Harness 实践'
 ---
 

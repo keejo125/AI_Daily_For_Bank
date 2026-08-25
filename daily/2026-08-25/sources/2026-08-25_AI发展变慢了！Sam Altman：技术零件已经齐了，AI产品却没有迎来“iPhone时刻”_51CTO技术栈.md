@@ -1,11 +1,13 @@
 ---
 publish_time: 1787652600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/9Iy5jCx4NNtKrAEmgwROGg
 source: 51CTO技术栈
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Sam Altman在访谈中给AI革命时间表「踩刹车」：技术零件已齐，但企业与社会适应速度远慢于预期，AI尚未迎来彻底改变人机交互的「iPhone时刻」。
+  他指出当前瓶颈主要在产品——上下文、权限、验收与追溯尚未被做好，Agent虽能干活用户却不敢全交。OpenAI更想做平台公司而非产品公司，把订单流程、回滚规则等业务边界留给应用层去解决。
 title: 'AI发展变慢了！Sam Altman：技术零件已经齐了，AI产品却没有迎来“iPhone时刻”'
 ---
 

@@ -1,11 +1,13 @@
 ---
 publish_time: 1787650260
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/eyWQLHSHQjYP3NFkg6wxmA
 source: CSDN
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  文章剖析AI时代存储正从被动承载走向主动编排。阿里云飞天发布三款AI存储新品：CPFS（训练侧高性能并行文件存储，吞吐百TB/s级）、KVCacheStore（推理侧G3.5层KV Cache加速引擎，提命中降成本）、AgenticFS（Agent场景文件存储，百万级空间+10万QPS挂卸载+零信任隔离）。
+  作者认为存储正定义数据在模型全生命周期的流转方式，决定AI生产力下限，真正的竞争终将回到业务创新本身。
 title: 'GPU 之外的隐形战场：AI 时代，存储正在被重写'
 ---
 

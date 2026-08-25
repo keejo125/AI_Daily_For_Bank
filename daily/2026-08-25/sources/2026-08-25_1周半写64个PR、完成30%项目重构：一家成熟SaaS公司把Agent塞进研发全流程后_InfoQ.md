@@ -1,11 +1,13 @@
 ---
 publish_time: 1787636280
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/oH0J2l9iX3ne2Kd55mow_g
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Calendly公开其内部Agentic Engineering实践：Agent先审Jira需求、拆解任务，再并行写码、跑测试、做QA，最终由人Review与Merge。IAM团队一周半生成64个PR（37个已合）、完成解耦项目约30%工作。
+  文章指出瓶颈从「写代码」转向「判断力」，强调好需求与好护栏（Review Gate、有限权限、责任归属）才是让自主可用的前提，工程师角色转向规划者、评审者与调试者，真正改变的是工作方式而非速度。
 title: '1周半写64个PR、完成30%项目重构：一家成熟SaaS公司把Agent塞进研发全流程后'
 ---
 

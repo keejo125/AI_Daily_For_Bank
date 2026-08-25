@@ -1,11 +1,13 @@
 ---
 publish_time: 1787613328
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/TOz7SHlyAvX5P7PIXFpm4w
 source: 新智元
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  英伟达首测下一代机柜Vera Rubin NVL72：在AgentX基准（回放真实代码编写会话）下跑DeepSeek-V4-Pro，每兆瓦吞吐较GB300最高提升30倍、每百万Token成本最高降35倍。
+  配套量产的Groq 3 LPX推理加速器达3400 Token/秒；专为Agent打造的Vera CPU（88核Olympus）已由SpaceXAI规模化部署并计划送上天。文章称Agent时代基准与算力格局被重写，老黄卖的是「AI工厂」。
 title: '英伟达震撼首测Vera Rubin，DeepSeek吞吐暴涨30倍！'
 ---
 
