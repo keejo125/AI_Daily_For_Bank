@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-26T07:06:43.881238",
-  "total": 1526,
+  "updated_at": "2026-08-26T08:29:02.920470",
+  "total": 1523,
   "articles": [
     {
       "date": "2026-08-25",
@@ -84,31 +84,11 @@
     },
     {
       "date": "2026-08-25",
-      "title": "微软画图和照片应用生成的图像嵌入了看不见的水印",
-      "source": "Solidot",
-      "digest": "微软在Windows画图（Paint）与照片（Photos）应用中集成Copilot生成图像时，会嵌入两类水印：可见的Copilot logo，以及不可见、能追踪到用户身份的GUID。\n本地模型（限Copilot+ PC，四个文件不到400MB）与云端生成均如此；用户输入的提示词会发往微软服务器做内容审核，服务器返回GUID与审核后的提示词，GUID随后写入AI生成的图像之中。",
-      "link": "https://www.solidot.org/story?sid=85192",
-      "source_file": "sources/2026-08-25_微软画图和照片应用生成的图像嵌入了看不见的水印_Solidot.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-25",
       "title": "英伟达震撼首测Vera Rubin，DeepSeek吞吐暴涨30倍！",
       "source": "新智元",
       "digest": "英伟达首测下一代机柜Vera Rubin NVL72：在AgentX基准（回放真实代码编写会话）下跑DeepSeek-V4-Pro，每兆瓦吞吐较GB300最高提升30倍、每百万Token成本最高降35倍。\n配套量产的Groq 3 LPX推理加速器达3400 Token/秒；专为Agent打造的Vera CPU（88核Olympus）已由SpaceXAI规模化部署并计划送上天。文章称Agent时代基准与算力格局被重写，老黄卖的是「AI工厂」。",
       "link": "https://mp.weixin.qq.com/s/TOz7SHlyAvX5P7PIXFpm4w",
       "source_file": "sources/2026-08-25_英伟达震撼首测Vera Rubin，DeepSeek吞吐暴涨30倍！_新智元.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-25",
-      "title": "苹果 Mac mini M6 发布：两年涨 2500 块，AI 税反噬「龙虾神机」",
-      "source": "极客公园",
-      "digest": "苹果发布Mac mini M6（国行6999元起）与Mac Studio，M6为2nm制程、AI性能较M4快4倍。但更受关注的是涨价：Mac mini各容量档普遍上涨约2500元，而定位旗舰的Mac Studio零涨幅。\n文章指出涨价由AI数据中心推高DRAM产能紧缺所致——AI让更多人购买常开式小机器跑Agent，同一批AI数据中心又抬高内存价格，需求与成本同源。Gartner预计500美元以下入门PC价位段到2028年或消失。",
-      "link": "http://www.geekpark.net/news/369354",
-      "source_file": "sources/2026-08-25_苹果 Mac mini M6 发布：两年涨 2500 块，AI 税反噬「龙虾神机」_极客公园.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -199,16 +179,6 @@
       "digest": "文章分析大模型公司的「匿名公测」出海打法：Ox Alpha在OpenRouter免费上线（100万token上下文、支持图文与工具调用），社区边测能力边「验明正身」，最流行猜测其与智谱GLM-5.x关系近。\n此前HappyHorse（阿里）、Pony Alpha（GLM）、Hunter Alpha（小米）、Elephant Alpha（蚂蚁）均走过此路。匿名发布能让厂商绕开品牌滤镜、更快拿到真实反馈与口碑传播，但也把身份判断、数据政策与稳定性风险留给了用户。",
       "link": "http://www.geekpark.net/news/369324",
       "source_file": "sources/2026-08-25_《有头有脸的大模型公司，集体搞起「匿名公测」》_极客公园.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-08-25",
-      "title": "人民教育音像数字出版社与小猿达成合作 “中小学课本学习智能体”首落小猿AI学习机",
-      "source": "量子位",
-      "digest": "人民教育音像数字出版社与猿力科技旗下小猿学习机达成合作，「中小学课本学习智能体」于8月21日首发上线小猿AI学习机，小猿成首个发行该智能体的硬件渠道。\n产品以「AI伴学+AI导学」双模式为核心：伴学将静态课本转为动态可视化情景，导学以1V1互动讲解分学段规划学习路径。基于猿力大模型与权威教材内容，试点数据显示语文学科知识点掌握量提升33.6%、英语提升24%，家长日均陪读减少20分钟。",
-      "link": "https://www.qbitai.com/2026/08/478839.html",
-      "source_file": "sources/2026-08-25_人民教育音像数字出版社与小猿达成合作 “中小学课本学习智能体”首落小猿AI学习机_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
