@@ -1,7 +1,397 @@
 {
-  "updated_at": "2026-08-26T08:29:02.920470",
-  "total": 1523,
+  "updated_at": "2026-08-27T07:16:42.743214",
+  "total": 1562,
   "articles": [
+    {
+      "date": "2026-08-26",
+      "title": "535B 大模型“直播”训练三个月：代码、数据、Loss全公开，吴恩达公开力挺",
+      "source": "InfoQ",
+      "digest": "斯坦福基础模型研究中心（CRFM）牵头启动 Marin 535B-A23B 开放基础模型训练，总参 5350 亿、激活 230 亿，规划处理 18.75 万亿 Token，运行于 11 套 NVIDIA GB200 NVL72，预计约 3 个月、算力约 2.7×10²⁴ FLOPs。项目在训练未完成时即公开训练曲线、数据配方与技术讨论，探索基础模型能否像开源软件一样被公开研究与共建，获吴恩达公开力挺。",
+      "link": "https://www.infoq.cn/article/y7KTOS9YbBz0OcoyiweQ",
+      "source_file": "sources/2026-08-26_535B 大模型“直播”训练三个月：代码、数据、Loss全公开，吴恩达公开力挺_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-26",
+      "title": "IBM 发布 Granite 4.2：原生推理与智能体强化学习的开源企业模型",
+      "source": "MarkTechPost",
+      "digest": "IBM 发布 Granite 4.2 开源推理语言模型家族（3B/8B/30B），告别此前指令遵循定位，改为显式推理：每模型先输出思维链再作答，提供思考/非思考开关与低耗模式。8B 与 30B 经多阶段强化学习，含智能体 RL 模块，可在真实沙箱中改代码、驱动终端、跑搜索。三款均基于 Apache 2.0，并同步推出 470M 参数的 Granite Speech 5.0 Turbo CTC 模型。",
+      "link": "https://www.marktechpost.com/2026/08/25/ibm-releases-granite-4-2-bringing-native-reasoning-and-agentic-rl-to-open-enterprise-models/",
+      "source_file": "sources/2026-08-26_IBM Releases Granite 4.2_ Bringing Native Reasonin_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Anthropic 重磅发布：AI Native 软件开发方法论",
+      "source": "夕小瑶科技说",
+      "digest": "Anthropic 应用 AI 团队发布《The AI Native SDLC playbook》，提出将单向软件开发流水线改造为可版本化、可审计的循环：规划产出 intent.md、设计产出 spec.md、构建产出 plan.md 与代码测试、部署产出带审查记录的 PR。文章面向工程负责人与平台团队，强调在 AI 嵌入写码之外，需将评审、测试、发布、维护等上下游协同一并纳入 AI 驱动的闭环治理。",
+      "link": "https://mp.weixin.qq.com/s/53lMkvVQyR8RPuYAf0USLw",
+      "source_file": "sources/2026-08-26_Anthropic 重磅发布：AI Native 软件开发方法论_夕小瑶科技说.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Grab 借助 AI 代理将机械性分析的工作量从 44% 降至 30%",
+      "source": "InfoQ",
+      "digest": "东南亚出行平台 Grab 用 AI 代理重构分析工作流，将分析师处理的机械性工单占比从 2 月 44% 降至 6 月 30%。其 Spartan 系统基于五级自主模型，结合 50 余项技能与 120 多个分析框架路由请求；ContextIQ 维护超 5000 张认证表、4000 份上下文文档与 2000 条黄金记录，保障代理产出可靠。Scarlet 负责管道故障根因分析与修复。",
+      "link": "https://www.infoq.cn/article/LqdtQ5sKYcEAzhCNNToE",
+      "source_file": "sources/2026-08-26_Grab 借助 AI 代理将机械性分析的工作量从 44% 降至 30%_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Liquid AI 开源 Pipette：端侧模型+量化+运行时+设备的可复现基准平台",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI 联合 Artificial Analysis 开源 Pipette，一套面向端侧基础模型的基准测试平台，把模型表现视为『模型+量化+运行时+设备』完整配置的属性而非孤立模型指标。首发数据集覆盖 1000+ 模型×量化×运行时×设备×上下文配置，横跨 30+ 模型与 llama.cpp 在 macOS/iOS/Windows/Android 的构建，上下文长度 256–8192 Token，含五项端侧性能指标。",
+      "link": "https://www.marktechpost.com/2026/08/25/liquid-ai-open-sources-pipette-a-reproducible-benchmarking-suite-that-measures-on-device-models-quantization-runtime-and-hardware-together/",
+      "source_file": "sources/2026-08-26_Liquid AI Open-Sources Pipette_ A Reproducible Ben_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Meta 发布 MetaRoCE：面向 AI 规模以太网的干净 RDMA 传输协议",
+      "source": "MarkTechPost",
+      "digest": "Meta 发布 MetaRoCE，一套为 AI 规模以太网从头设计的 RDMA 传输协议。与标准 RoCE 假设网络有序交付不同，MetaRoCE 把网络视为有损，将排序、路径选择与恢复下沉到网卡（NIC），打破对 PFC 与包喷洒的限制，适配多平面大规模网络。Meta 同步开源规范、参考软件实现与合规测试套件，目标降低集合通信（all-reduce/all-to-all）中的网络摩擦与算力空转。",
+      "link": "https://www.marktechpost.com/2026/08/25/meta-ai-introduces-metaroce-a-clean-sheet-rdma-transport-built-for-ai-scale-ethernet/",
+      "source_file": "sources/2026-08-26_Meta AI Introduces MetaRoCE_ A Clean-Sheet RDMA Tr_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "OpenAI 首款自研推理芯片 Jalapeño 强于英伟达 Blackwell",
+      "source": "Solidot",
+      "digest": "OpenAI 在 Hot Chips 演示首款自研推理芯片 Jalapeño，由 OpenAI 与 Broadcom 联合研发，2024 年启动、约 16 个月流片。该芯片定位通用推理而非专属模型推理，几乎所有场景下性能/功耗比均优于英伟达 Blackwell。设计侧重 perf/W，源于当前 AI 公司瓶颈在供电而非数据中心数量——英伟达同期亦强调电力直接关乎营收。",
+      "link": "https://www.solidot.org/story?sid=85200",
+      "source_file": "sources/2026-08-26_OpenAI 首款自研推理芯片 Jalapeño 强于英伟达 Blackwell_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Perplexity 发布 Portable Computer：本地优先的智能体电脑（基于 DGX Spark）",
+      "source": "MarkTechPost",
+      "digest": "Perplexity 发布 Portable Computer，将智能体套件（harness、编排器、规划器、工具路由与后训练模型）本地化部署于 NVIDIA DGX Spark，任务先在本地设备启动、本地步骤零按 token 计费；需联网或前沿推理时再由编排器暂停征询后发往 15+ 云模型。系统以 OS 强制沙箱隔离，落地门槛为 GB10 级设备或 24GB 显存的 RTX 显卡。",
+      "link": "https://www.marktechpost.com/2026/08/25/perplexity-ships-portable-computer-on-nvidia-dgx-spark-local-harness-os-enforced-sandbox-and-zero-per-token-cost-for-local-steps/",
+      "source_file": "sources/2026-08-26_Perplexity Ships Portable Computer on NVIDIA DGX S_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Shopify CEO考虑禁用Claude Code，因其不兼容AGENTS.md",
+      "source": "机器之心",
+      "digest": "Shopify CEO Tobi Lütke 考虑在团队禁用 Claude Code，直至其支持读取 AGENTS.md、.agents/skills 等配置；Claude Code 目前仅读 CLAUDE.md 与 .claude/skills，与 Codex、Cursor 等采用的 AGENTS.md 体系并存时，多工具混用的仓库可能出现项目规则不一致。社区提出软链接或 @AGENTS.md 引用等变通，Lütke 指出大型 monorepo 难以保证每目录双套配置同步。",
+      "link": "https://mp.weixin.qq.com/s/Ytp9SN_60MrJqybvLvJT-w",
+      "source_file": "sources/2026-08-26_Shopify CEO考虑禁用Claude Code，因其不兼容AGENTS.md_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "OpenAI 公布 Hugging Face 安全事件复盘与整改方向",
+      "source": "OpenAI",
+      "digest": "OpenAI 公布 Hugging Face 安全事件复盘与后续举措，分享事件调查结论，并说明在 AI 模型安全、监控与对齐上加强的方向。文章聚焦模型供应链与平台协作中的安全边界，强调对模型资产、调用链路与权限的可见性与持续监控，作为对此次事件的系统性整改。",
+      "link": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "source_file": "sources/2026-08-26_The Hugging Face incident and the road ahead_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "智能体编码何时能取代初级工程师：四项必要条件检视",
+      "source": "MarkTechPost",
+      "digest": "文章逐一检视『智能体编码将取代初级工程师』这一结论的前提，指出从 benchmark 分数直接推导劳动力市场结果跳过了中间环节。作者列出四项必要条件（含任务长度上的可靠性、可审计性、成本可控、组织承接），认为其中三项尚不满足；真正值得警惕的是第四项——它不依赖前三项成立，却可能独立发生。",
+      "link": "https://www.marktechpost.com/2026/08/26/what-would-have-to-be-true-for-agentic-coding-to-replace-junior-engineers/",
+      "source_file": "sources/2026-08-26_What Would Have to Be True for Agentic Coding to R_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "英伟达公布 Vera Rubin 最新进展：推理、网络和定制芯片全面升级",
+      "source": "InfoQ",
+      "digest": "英伟达在 Hot Chips 披露 Vera Rubin 平台多项进展：面向低延迟推理的 Groq 3 LPX 量产，在 10 万 Token 上下文、Gemma 4 31B 下达每秒 3400 输出 Token，提速智能体等长链路负载；Spectrum-X 多平面以太网在不加第三层网络下扩展至 51.2 万 GPU；BlueField-4 的 Scale-In 接管 AI 工厂安全、存储与运维；NVLink Fusion 接入云厂自研 XPU/CPU。",
+      "link": "https://www.infoq.cn/article/3F8I0zcLfC5wcENtLASD",
+      "source_file": "sources/2026-08-26_英伟达公布 Vera Rubin 最新进展：推理、网络和定制芯片全面升级_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "阿里通义千问发布 Qwen3.8-Flash-Next：预览 Qwen4 架构的 125B 多模态 MoE 模型",
+      "source": "MarkTechPost",
+      "digest": "阿里通义千问发布并开源 Qwen3.8-Flash-Next，总参 125B、仅激活 6B，定位为预览 Qwen4 架构的开放权重多模态 MoE。关键改动含 Gated DeltaNet 与 Qwen 稀疏注意力混合、Gated Residual、N-gram 嵌入与 Muon 优化器；训练成本约为 Qwen3.7-Plus 的九分之一。FP8 权重 172.78 GiB，建议 TP4 部署于 GB300，亦可经千问办公与 API 获取。",
+      "link": "https://www.marktechpost.com/2026/08/26/alibabas-qwen-team-releases-qwen3-8-flash-next-a-125b-multimodal-moe-with-6b-active-parameters-previewing-the-qwen4-architecture/",
+      "source_file": "sources/2026-08-26_Alibaba’s Qwen Team Releases Qwen3.8-Flash-Next_ A_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Falcon TST 2.0获世界权威测评第一名，推动时间序列基础模型从通用预测走向金融应用",
+      "source": "量子位",
+      "digest": "蚂蚁国际发布自研时序 AI 预测大模型『鹰序 TST』（Falcon TST）2.0，在全球权威基准取得 SOTA（MASE 0.666），预测准确率稳定超 93%，专为跨境支付外汇风险管理打造，并拓展至电商供应链与航空运营。巴克莱、花旗、德意志、渣打等已用于现金流与外汇管理。文章梳理通用时序基础模型向金融场景专用化演进，蚂蚁以『通用时序能力+金融流程验证』切入。",
+      "link": "https://www.qbitai.com/2026/08/479631.html",
+      "source_file": "sources/2026-08-26_Falcon TST 2.0获世界权威测评第一名，推动时间序列基础模型从通用预测走向金融应用_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-26",
+      "title": "GLM-5.3-Flash：前沿智能进入普惠时代",
+      "source": "智谱",
+      "digest": "智谱上线并开源 GLM-5.3-Flash（320B-A18B），GLM-5 系列首个原生多模态模型，AA 综合智能指数 57 分、与 Claude Opus 4.8 持平，编程体感相当；定价为 GLM-5.3 的 1/10（限时 1/20）、Opus 4.8 的 1/40。架构上以线性与稀疏注意力混合降低长上下文成本，采用流形约束超连接提升 Scaling，激活参数 18B、45 层，算力全由国产芯片支持。",
+      "link": "https://mp.weixin.qq.com/s/O7RCVME1Kut-Z2oFYhgrkw",
+      "source_file": "sources/2026-08-26_GLM-5.3-Flash：前沿智能进入普惠时代_智谱.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-26",
+      "title": "DeepSeek 开源 Harness：AI 智能体基础设施开始“拆分”",
+      "source": "InfoQ",
+      "digest": "DeepSeek 发布 DeepSeek Harness（dsh）开发者预览版，采用 MIT 许可的开源执行运行时，用于构建自主 AI 智能体。其基于 Cordis 元框架、微内核架构，模型适配器、工具注册表、沙箱、会话状态、事件分发与 UI 皆以可替换插件加载，配置经 YAML/JSON 声明式定义；并含仅追加事件日志子系统，记录消息、工具调用、推理状态与 Token 指标，支持回放与基准测试，反映智能体基础设施向模块化、解耦架构演进。",
+      "link": "https://www.infoq.cn/article/vS7tpsLPdevZhMKdtxei",
+      "source_file": "sources/2026-08-26_DeepSeek 开源 Harness：AI 智能体基础设施开始“拆分”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "openJiuwen SwarmFlow 重磅升级，重新定义多智能体可控协作",
+      "source": "CSDN",
+      "digest": "华为 2012 实验室等联合构建的开源 AI Agent 平台 openJiuwen 升级 SwarmFlow，提出『协同工程』范式，将可编排固定流程与 Agent 智能结合：确定性的流程交脚本、每步怎么干交 Agent，搭好的流程可作为 Swarm Skill 复用。新版本直击多智能体三道坎——预算跑飞（超预算线即刹车并复用缓存）、人插不上手（流程中途等待人工决策）、想停停不下（支持中断改输入与让出额度）。",
+      "link": "https://mp.weixin.qq.com/s/r7YtXy3c0HSp7Stbs3jVYg",
+      "source_file": "sources/2026-08-26_openJiuwen SwarmFlow 重磅升级，重新定义多智能体可控协作_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程文章提炼 Agent 自进化『评测→记忆→落地→控制』四齿飞轮方法论：评测是闭环的眼（感知问题）、记忆是脑（沉淀经验）、Self-Improve 是手脚（经验变改进）、人机协作是方向盘与刹车（控方向）。指出多数团队把评测、记忆、自改进拆散做，环节数据通路断裂导致飞轮不转；需让评测信号流入记忆与 Skill 更新、更新后由评测验证，形成可落地的工程闭环。",
+      "link": "https://mp.weixin.qq.com/s/5VDN-T9K8Wr-DaQ15-I6CA",
+      "source_file": "sources/2026-08-26_一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "不懂算法的工厂老兵，在 AMD 锐龙 AI Max+ 395上跑出工业智能体",
+      "source": "InfoQ",
+      "digest": "一位无算法背景的工厂老兵曹冬冬，自学大模型与 Python，在 AMD 锐龙 AI Max+ 395 上搭建 CNC 非标报价智能体『Union·由你』，获 AMD 大赛冠军。系统先解析 STEP 三维图纸提取几何特征，再由本地模型判断工艺路线，最后用 Python 公式计算材料与工时成本；明确『大模型负责选、程序负责算』，把确定性计算交程序、以结构化数据控幻觉，沉淀老师傅经验为可执行系统。",
+      "link": "https://www.infoq.cn/article/RJDrRaDC1drafw0Kvoki",
+      "source_file": "sources/2026-08-26_不懂算法的工厂老兵，在 AMD 锐龙 AI Max+ 395上跑出工业智能体_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "从 Agent Harness 到 OS Harness，当凭据越过边界时如何阻断？",
+      "source": "阿里云基础设施",
+      "digest": "阿里云基础设施文章提出在应用级 Harness 之外再套一层『OS Harness』：应用级 Harness 只能看见经过自身的工具调用，当 Shell 真正 fork 子进程读取 .env、向外连接时，已超出其视野，受 Prompt 注入或恶意 Skill 影响的 Agent 更无力自证清白。OS Harness 在操作系统侧约束真实系统效果，具备路径无关、可拦截外传、可证明策略生效三特性，在凭据越界时兜底阻断。",
+      "link": "https://mp.weixin.qq.com/s/gfgHOa5x4ZnnEIIxfBCoVA",
+      "source_file": "sources/2026-08-26_从 Agent Harness 到 OS Harness，当凭据越过边界时如何阻断？_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "从Prompt到Harness，给反馈分类装上方向盘",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者介绍 AiSee 反馈分析平台的分类系统重构：将业务、Harness 与模型职责重新划分——业务用分类树与配置规则定方向，Harness 把业务定义组织成稳定分类流程，模型专注语义判断。针对 Prompt 膨胀、分支失控的维护难题，把海量用户反馈聚合成问题分布，支撑异常发现、责任归属与任务流转，并形成『反馈感知→分析→改进→验证』闭环。",
+      "link": "https://mp.weixin.qq.com/s/cOJso3zej_8ayEV2Ddpnxg",
+      "source_file": "sources/2026-08-26_从Prompt到Harness，给反馈分类装上方向盘_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "从「告警找人」到「Agent 先接手」，「古茗」如何用 AI Agent 重构万店运维？",
+      "source": "极客公园",
+      "digest": "茶饮品牌古茗全国上万家门店、100+ 数据库实例，DBA 团队仅数人，曾 70% 时间耗在接警—登跳板机—杀慢 SQL—判扩容。去年起与阿里云瑶池合作引入 AI 原生数据库服务 AIDBS，让 Agent 接管救火与答疑：Meta Agent 在 IDE 写 SQL 时自动识别涉及表、给出优化建议；人做判断与决策，Agent 调度执行，缓解研发链路瓶颈。",
+      "link": "http://www.geekpark.net/news/369401",
+      "source_file": "sources/2026-08-26_从「告警找人」到「Agent 先接手」，「古茗」如何用 AI Agent 重构万店运维？_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "每个人都快了，交付却没快，如何破局？",
+      "source": "软件工程3.0时代",
+      "digest": "文章剖析 2026 年『效率悖论』：腾讯九成员工用编程助手后编码时间缩 40% 但研发效率仅升约 20%，字节 TRAE 超 90% 代码由 AI 生成却未同比例提升人均交付。指出瓶颈在需求澄清、方案评审、上下文交接、测试验证、发布协同等未被重构的环节；从『个人→团队→组织』两道鸿沟出发，提出登上五级台阶方能从『我更快』走向『我们更稳』。",
+      "link": "https://mp.weixin.qq.com/s/1qskM-o28yV03uf2bLqTRg",
+      "source_file": "sources/2026-08-26_每个人都快了，交付却没快，如何破局？_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "南京银行以更大力度推进AI应用，AI大模型布局升级",
+      "source": "银行科技研究社",
+      "digest": "南京银行 2026 半年报显示其加速智能体落地：报告期内新增 30 个高价值业务智能体，累计建成 156 个（较 2025 年末 121 个扩容）。技术底座上迭代企业级智能中台、完成多模态大模型本地化部署并整合异构算力；场景上覆盖对公『产业大脑』、零售『营销大脑』、财富智能选基、零售信贷『信贷工厂 2.0』、智能贷后巡检与实时反欺诈等，并打造『灵犀』『光年』两大专属智能助手。",
+      "link": "https://mp.weixin.qq.com/s/m2ka-wUQ6rQycfx2SO3yVQ",
+      "source_file": "sources/2026-08-26_南京银行以更大力度推进AI应用，AI大模型布局升级_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "基于大模型技术打造新一代智能投顾内容创作平台",
+      "source": "金融电子化",
+      "digest": "国泰海通证券技术研发部基于大模型与数据融合引擎，自研新一代智能投顾内容创作平台，打通数据孤岛、形成统一客户画像，以智能算法驱动投资策略与用户特征动态匹配，自动生成宏观解读、个股点评与资产诊断报告。实证约 35% 投顾时间耗于基础数据采集整理，平台将内容生产压缩至分钟级，推动投顾服务从『人工主导』向『人机协同』转型，并展现智能投教、财富规划等扩展潜力。",
+      "link": "https://mp.weixin.qq.com/s/heKivD0SWg9Gz-nOyz4HNQ",
+      "source_file": "sources/2026-08-26_基于大模型技术打造新一代智能投顾内容创作平台_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "AI视频应用井喷，美图打开新的增长空间",
+      "source": "量子位",
+      "digest": "AI 视频应用年内井喷，美图凭 Wink、开拍、MVLAND 等多款产品切入视频赛道，走出与 Higgsfield、Firefly 不同的『更垂直、更聚焦、更深入』打法。文章认为『模型吞噬应用』并未发生，模型层与应用层走向协同：模型卖算力、应用卖效果，视频工具通过将模型能力编排为工作流，以 Agent、无限画布、Skills 构建内容生产系统，打开应用层想象空间。",
+      "link": "https://www.qbitai.com/2026/08/479895.html",
+      "source_file": "sources/2026-08-26_AI视频应用井喷，美图打开新的增长空间_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "OpenAI 将 ChatGPT for Teachers 扩展至 55 个美国学区",
+      "source": "OpenAI",
+      "digest": "OpenAI 将 ChatGPT for Teachers 扩展至 55 个美国学区，向逾 10 万教育工作者与员工提供安全的 AI 工具、培训与支持，把生成式 AI 引入 K-12 教学场景，作为 OpenAI 在教育领域持续落地的举措之一。",
+      "link": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "source_file": "sources/2026-08-26_Bringing ChatGPT for Teachers to more U.S. school _OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "旅游平台 loveholidays 借助 Codex 让全员参与软件开发",
+      "source": "OpenAI",
+      "digest": "旅游平台 loveholidays 借助 OpenAI Codex 让业务侧各团队都能参与软件开发，把想法更快变成产品。文章为 OpenAI 客户案例，展示 Codex 如何降低非工程角色的编码门槛，缩短从需求到上线的路径。",
+      "link": "https://openai.com/index/loveholidays",
+      "source_file": "sources/2026-08-26_How loveholidays is making everyone a builder with_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "OpenAI 报告：ChatGPT 如何让学习更连续",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布报告，探讨学生与教育者如何使用 ChatGPT 让学习更连续、延伸至课堂之外。报告聚焦真实使用行为，呈现生成式 AI 在个性化学习支持上的角色，属 OpenAI 教育方向的研究性内容。",
+      "link": "https://openai.com/index/learning-never-stops",
+      "source_file": "sources/2026-08-26_Learning never stops_ How AI makes learning contin_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "“额度想重置就重置”，Codex负责人Tibo谈OpenAI幕后：产品没做好就补偿、ChatGPT与Codex合并、暂停部分前沿模型RL训练",
+      "source": "CSDN",
+      "digest": "OpenAI 产品负责人 Tibo Sottiaux 接受访谈，罕见披露产品与模型研发幕后：ChatGPT 与 Codex 最终走向合并；因产品体验问题或值得补偿时，他可直接按下『重置』按钮为用户重置 Codex 额度；Sam Altman 曾叫停部分前沿模型的强化学习训练。访谈围绕 OpenAI 如何判断该做什么、如何分配资源展开。（合并自 InfoQ 同题报道）",
+      "link": "https://mp.weixin.qq.com/s/2-c_fTwo8cndM1qWLlSLaA",
+      "source_file": "sources/2026-08-26_“额度想重置就重置”，Codex负责人Tibo谈OpenAI幕后：产品没做好就补偿、ChatGPT与Codex合并、暂停部分前沿模型RL训练_CSDN.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "刚刚，Top级的视频AI免费了！我反手做了个精致版《牛来》",
+      "source": "量子位",
+      "digest": "AI 实验室 Agnes 发布 Agnes Video 2.5 系列并上线 Pavo 平台：Flash 版免费、适合短剧批量生成；正式版每日送 200 积分、每秒耗 2 积分、最高 100 秒、支持多图音视频参考与 2K，面向短剧、广告、电商等商业场景。AA 榜单达全球主流水平，每秒约 0.15 元。平台『无限画布』支持文本/图像/视频/音频节点联动与多分支生成，『3D 导演台』精细化调度人物。",
+      "link": "https://www.qbitai.com/2026/08/479670.html",
+      "source_file": "sources/2026-08-26_刚刚，Top级的视频AI免费了！我反手做了个精致版《牛来》_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "小宇宙推出《AI趋势报告》：AI创作、AI办公、协作型AI等成讨论新趋势",
+      "source": "量子位",
+      "digest": "播客平台小宇宙发布《2026 AI趋势报告》：近三年 AI 内容持续高速增长，2025 年创作者数同比增 187%、节目数增 239%；2026 年讨论重心从『AI 能做什么』转向『AI 如何做事、人何以自处』。『协作型 AI』搜索量同比增 227%，『AI×办公』增 105%，围绕『人的价值』讨论累计 33.5 万条评论，反映 AI 从技术前沿走入工作与创作现场。",
+      "link": "https://www.qbitai.com/2026/08/479811.html",
+      "source_file": "sources/2026-08-26_小宇宙推出《AI趋势报告》：AI创作、AI办公、协作型AI等成讨论新趋势_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "技术革命：为 Agentic AI 时代做好准备 | 技术趋势",
+      "source": "InfoQ",
+      "digest": "InfoQ 趋势文章研判 Agentic AI 在企业级应用的突破：消费侧 Agentic Commerce 让 AI 代理自主研究、议价与购买，品牌被迫从 SEO 转向 GEO；企业内部规范性引擎取代被动看板，自主调整排产、重规划运输并协商补货；WES 成为编排 physical AI 的中枢，空间计算与 RFID 构建门店实时数字孪生。文章同时将监管推动的极致透明列为并行技术转型。",
+      "link": "https://www.infoq.cn/article/8ouuK09WuWA7Up35W9vb",
+      "source_file": "sources/2026-08-26_技术革命：为 Agentic AI 时代做好准备 _ 技术趋势_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "新西兰提出法案禁止 16 岁以下儿童使用社媒和 AI 陪伴服务",
+      "source": "Solidot",
+      "digest": "新西兰提出《Online Safety (Minimum Age and Child Safety Risk Assessment) Bill》，拟禁止 16 岁以下儿童使用社媒与 AI 陪伴服务，要求平台通过面部扫描与活动模式验证年龄，并对 18 岁以下用户做儿童安全风险评估。有害功能含推荐系统、无限信息流、反馈与限时机制；即时通讯、职业社交、游戏与音乐平台及教育健康工具不受限。",
+      "link": "https://www.solidot.org/story?sid=85197",
+      "source_file": "sources/2026-08-26_新西兰提出法案禁止 16 岁以下儿童使用社媒和 AI 陪伴服务_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "月之暗面与微软、亚马逊和 Google 协商收益分成协议",
+      "source": "Solidot",
+      "digest": "月之暗面正与微软、亚马逊、Google 协商收益分成协议，拟允许三家美国云巨头托管其旗舰模型 Kimi K3，并从相关云服务收入中最高抽取 30% 分成；若达成，将是中国 AI 公司与美国云厂商间首个大型收益分成协议，凸显性价比更高的中国模型在美国日益增长的需求。谈判尚处早期。",
+      "link": "https://www.solidot.org/story?sid=85201",
+      "source_file": "sources/2026-08-26_月之暗面与微软、亚马逊和 Google 协商收益分成协议_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "深度实测「豆包工作」+飞书：目前最接近企业Agent终局的答案",
+      "source": "量子位",
+      "digest": "字节『豆包工作』作为面向生产力场景的 Agent 产品正式发布，并与飞书深度打通：可沿团队既有讨论、多维表格与工作流继续推进任务，不再每次从零认识公司。实测中它读取品牌资料产出宣传图、视频与交互网页，并基于视觉操作浏览器完成百台设备采购比选、生成对比看板；支持飞书账号一键登录，被视为目前 Agent 进入组织的最佳答案之一。",
+      "link": "https://www.qbitai.com/2026/08/479348.html",
+      "source_file": "sources/2026-08-26_深度实测「豆包工作」+飞书：目前最接近企业Agent终局的答案_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "离开剪映后创业，她想把一支设计团队装进 AI 工作台",
+      "source": "极客公园",
+      "digest": "前剪映中国负责人张琪智离职创业，创办 AI 产品原型设计工作台 OJO 并完成近亿元首轮融资（顺为、联想创投联合投资）。OJO 定位『Design Agent Team Workspace』，用自然语言完成产品思考、界面设计、迭代与代码交付，把设计判断在产品、设计、开发间连续传递；张琪智认为模型越强越需要系统把能力调度到具体场景。",
+      "link": "http://www.geekpark.net/news/369395",
+      "source_file": "sources/2026-08-26_离开剪映后创业，她想把一支设计团队装进 AI 工作台_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "腾讯高管：大模型竞赛刚跑“头一公里”，场景是最厚底牌",
+      "source": "财联社AI daily",
+      "digest": "腾讯 CSIG CEO 汤道生在内刊发文系统回应外界对腾讯 AI『步调偏慢』的疑虑，将大模型竞赛比作马拉松、称『刚跑完头一公里』，强调场景是腾讯最厚底牌——既有大量 to C/to B 产品连接真实用户与业务流程。文章亦谈及 WorkBuddy 的诞生、元宝方向，以及紧跟前沿基础研究的同时更重真实场景落地。",
+      "link": "https://mp.weixin.qq.com/s/wa_qrDc2De-VNScI_kyx6g",
+      "source_file": "sources/2026-08-26_腾讯高管：大模型竞赛刚跑“头一公里”，场景是最厚底牌_财联社AI daily.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-26",
+      "title": "达卯科技与福建智算方舟达成合作，全栈式算电协同服务在闽落子",
+      "source": "量子位",
+      "digest": "达卯科技与福建智算方舟达成合作，为长乐机场综保区人工智能智算中心（一期，规划 15000P）提供全栈算电协同服务，覆盖建设咨询、平台部署、储能运营与智能运维全生命周期。项目依托能源大模型与多智能体技术，落地削峰填谷、需求响应、能效优化等智能化运营，打造东南沿海绿色智算枢纽，深化闽港、闽台数字协作。",
+      "link": "https://www.qbitai.com/2026/08/479808.html",
+      "source_file": "sources/2026-08-26_达卯科技与福建智算方舟达成合作，全栈式算电协同服务在闽落子_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-25",
       "title": "1周半写64个PR、完成30%项目重构：一家成熟SaaS公司把Agent塞进研发全流程后",

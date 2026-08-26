@@ -1,11 +1,12 @@
 ---
 publish_time: 1787738286
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/2-c_fTwo8cndM1qWLlSLaA
 source: CSDN
+status: confirmed
+category: 其他
+is_model_related: false
+digest: |
+  OpenAI 产品负责人 Tibo Sottiaux 接受访谈，罕见披露产品与模型研发幕后：ChatGPT 与 Codex 最终走向合并；因产品体验问题或值得补偿时，他可直接按下『重置』按钮为用户重置 Codex 额度；Sam Altman 曾叫停部分前沿模型的强化学习训练。访谈围绕 OpenAI 如何判断该做什么、如何分配资源展开。（合并自 InfoQ 同题报道）
 title: '“额度想重置就重置”，Codex负责人Tibo谈OpenAI幕后：产品没做好就补偿、ChatGPT与Codex合并、暂停部分前沿模型RL训练'
 ---
 

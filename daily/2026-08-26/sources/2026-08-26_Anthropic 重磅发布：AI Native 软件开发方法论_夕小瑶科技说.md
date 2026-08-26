@@ -1,11 +1,12 @@
 ---
 publish_time: 1787709400
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/53lMkvVQyR8RPuYAf0USLw
 source: 夕小瑶科技说
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Anthropic 应用 AI 团队发布《The AI Native SDLC playbook》，提出将单向软件开发流水线改造为可版本化、可审计的循环：规划产出 intent.md、设计产出 spec.md、构建产出 plan.md 与代码测试、部署产出带审查记录的 PR。文章面向工程负责人与平台团队，强调在 AI 嵌入写码之外，需将评审、测试、发布、维护等上下游协同一并纳入 AI 驱动的闭环治理。
 title: 'Anthropic 重磅发布：AI Native 软件开发方法论'
 ---
 

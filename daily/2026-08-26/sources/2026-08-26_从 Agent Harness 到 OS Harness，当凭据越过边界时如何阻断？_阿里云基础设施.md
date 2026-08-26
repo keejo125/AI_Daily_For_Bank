@@ -1,11 +1,12 @@
 ---
 publish_time: 1787739493
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/gfgHOa5x4ZnnEIIxfBCoVA
 source: 阿里云基础设施
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云基础设施文章提出在应用级 Harness 之外再套一层『OS Harness』：应用级 Harness 只能看见经过自身的工具调用，当 Shell 真正 fork 子进程读取 .env、向外连接时，已超出其视野，受 Prompt 注入或恶意 Skill 影响的 Agent 更无力自证清白。OS Harness 在操作系统侧约束真实系统效果，具备路径无关、可拦截外传、可证明策略生效三特性，在凭据越界时兜底阻断。
 title: '从 Agent Harness 到 OS Harness，当凭据越过边界时如何阻断？'
 ---
 

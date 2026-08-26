@@ -1,11 +1,12 @@
 ---
 publish_time: 1787716800
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/r7YtXy3c0HSp7Stbs3jVYg
 source: CSDN
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  华为 2012 实验室等联合构建的开源 AI Agent 平台 openJiuwen 升级 SwarmFlow，提出『协同工程』范式，将可编排固定流程与 Agent 智能结合：确定性的流程交脚本、每步怎么干交 Agent，搭好的流程可作为 Swarm Skill 复用。新版本直击多智能体三道坎——预算跑飞（超预算线即刹车并复用缓存）、人插不上手（流程中途等待人工决策）、想停停不下（支持中断改输入与让出额度）。
 title: 'openJiuwen SwarmFlow 重磅升级，重新定义多智能体可控协作'
 ---
 

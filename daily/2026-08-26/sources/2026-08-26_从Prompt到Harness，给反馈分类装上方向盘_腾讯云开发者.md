@@ -1,11 +1,12 @@
 ---
 publish_time: 1787705160
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/cOJso3zej_8ayEV2Ddpnxg
 source: 腾讯云开发者
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯云开发者介绍 AiSee 反馈分析平台的分类系统重构：将业务、Harness 与模型职责重新划分——业务用分类树与配置规则定方向，Harness 把业务定义组织成稳定分类流程，模型专注语义判断。针对 Prompt 膨胀、分支失控的维护难题，把海量用户反馈聚合成问题分布，支撑异常发现、责任归属与任务流转，并形成『反馈感知→分析→改进→验证』闭环。
 title: '从Prompt到Harness，给反馈分类装上方向盘'
 ---
 

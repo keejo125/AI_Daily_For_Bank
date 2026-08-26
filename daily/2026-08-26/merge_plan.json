@@ -1,0 +1,24 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-26_Alibaba’s Qwen Team Releases Qwen3.8-Flash-Next_ A_MarkTechPost.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-26_今晚，Qwen3.8-Flash发布并开源！_财联社AI daily.md",
+          "name": "财联社AI daily",
+          "link": "https://mp.weixin.qq.com/s/qHDfVd8p9NJQQRojy6v2uw"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-26_“额度想重置就重置”，Codex负责人Tibo谈OpenAI幕后：产品没做好就补偿、ChatGPT与Codex合并、暂停部分前沿模型RL训练_CSDN.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-26_“额度想重置就重置，不问财务”，Codex Tibo首曝幕后：产品没做好，就补偿用户_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/Ztjb9xolQG8qFThbgxBD"
+        }
+      ]
+    }
+  ]
+}

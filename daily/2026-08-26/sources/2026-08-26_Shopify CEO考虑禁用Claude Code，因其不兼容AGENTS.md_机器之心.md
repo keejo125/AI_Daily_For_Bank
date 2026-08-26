@@ -1,11 +1,12 @@
 ---
 publish_time: 1787736600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Ytp9SN_60MrJqybvLvJT-w
 source: 机器之心
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Shopify CEO Tobi Lütke 考虑在团队禁用 Claude Code，直至其支持读取 AGENTS.md、.agents/skills 等配置；Claude Code 目前仅读 CLAUDE.md 与 .claude/skills，与 Codex、Cursor 等采用的 AGENTS.md 体系并存时，多工具混用的仓库可能出现项目规则不一致。社区提出软链接或 @AGENTS.md 引用等变通，Lütke 指出大型 monorepo 难以保证每目录双套配置同步。
 title: 'Shopify CEO考虑禁用Claude Code，因其不兼容AGENTS.md'
 ---
 
