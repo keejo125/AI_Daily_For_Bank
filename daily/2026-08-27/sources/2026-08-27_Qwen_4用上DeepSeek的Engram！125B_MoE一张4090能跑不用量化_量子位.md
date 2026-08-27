@@ -1,11 +1,12 @@
 ---
 publish_time: 1787795940
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/DcWsDYykew5jG7WHjd1K8g
 source: 量子位
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  阿里在 Qwen4 新架构中引入 DeepSeek 提出的 Engram 稀疏记忆机制。新架构以 125B 参数 MoE、仅 6B 激活参数预览，并宣称单张 RTX 4090 即可运行、无需量化。Engram 通过结构化外部记忆缓解长上下文与知识遗忘问题，使模型在有限激活算力下保持长程一致性。该权重以 Qwen3.8-Flash-Next 名义开源，被视为 Qwen4 架构的早期预览。
 title: Qwen 4用上DeepSeek的Engram！125B MoE一张4090能跑不用量化
 ---
 

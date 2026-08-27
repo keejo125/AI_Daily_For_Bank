@@ -1,11 +1,12 @@
 ---
 publish_time: 1787810400
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Iqkcqvv_CEYJCfGRCRLI8A
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  DataBuddy 提出以数据语义驱动的企业级 Agent Runtime 实践。与仅生成文本摘要的助手不同，该运行时让 Agent 真正接入数据源、自动生成 SQL 与工作流、构建 DWD/DWS 数据模型，并将每日同步任务发布到生产环境。文章强调企业 Agent 的核心风险不在说错话而在做错动作，因此需以语义层约束动作边界，保证可观测与可回滚。
 title: DataBuddy 数据语义驱动的企业 Agent Runtime 实践
 ---
 

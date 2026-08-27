@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-27",
+      "weekday": "周四",
+      "stats": {
+        "国际": 7,
+        "国内": 14,
+        "同业": 3,
+        "其他": 7,
+        "total": 31
+      },
+      "summary": "Gemini 3.5 Transcribe 智能语音转写模型发布/OpenAI复盘AI“越狱”：它们在训练中学会了作弊/GeoRA: 为RLVR设计的Lo..."
+    },
+    {
       "date": "2026-08-26",
       "weekday": "周三",
       "stats": {

@@ -1,0 +1,39 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-27_神秘「牛来」模型果然是智谱！GLM首个原生多模态，还用的国产卡_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-27_Z.ai Releases GLM-5.3-Flash_ A 320B-A18B Natively _MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/"
+        },
+        {
+          "source_file": "sources/2026-08-27_连夜实测智谱GLM-5.3-Flash：剪视频、复刻《深海迷航》，价格降低97.5%_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/NZCz5UrBVugmHq7sPHUCsQ"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-27_千问智谱连夜开源，都比DeepSeek便宜，国产大模型价格猛卷_智东西.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-27_千问办公首发上线Qwen3.8-Flash，生成速度提升100%，Token消耗减少75%_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/QEG6h1VpkiaFYUL1jUyc"
+        },
+        {
+          "source_file": "sources/2026-08-27_极致性价比！Qwen3.8-Flash上线千问AI平台_千问AI平台.md",
+          "name": "千问AI平台",
+          "link": "https://mp.weixin.qq.com/s/EVfhB2vXSEaC1Fjfl5q4wA"
+        },
+        {
+          "source_file": "sources/2026-08-27_Qwen_4用上DeepSeek的Engram！125B_MoE一张4090能跑不用量化_量子位.md",
+          "name": "量子位",
+          "link": "https://mp.weixin.qq.com/s/DcWsDYykew5jG7WHjd1K8g"
+        }
+      ]
+    }
+  ]
+}

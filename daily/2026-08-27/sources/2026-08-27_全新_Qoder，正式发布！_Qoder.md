@@ -1,11 +1,12 @@
 ---
 publish_time: 1787804302
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/zv__neHCaFBZrWP2Nvmxxg
 source: Qoder
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里正式发布全新 Qoder——以 Coding 能力为核心底座的智能体工作台。用户只需描述目标，Qoder 即理解上下文、制定计划、调用工具、执行并验证，全程可查看、调整或接管。Qoder 不再局限于编程，向数字世界任务执行延伸，标志着阿里在 AI 编程智能体赛道的整体产品化升级，与 Claude Code、Cursor 等形成直接竞争。
 title: 全新 Qoder，正式发布！
 ---
 

@@ -1,11 +1,12 @@
 ---
 publish_time: 1787826600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Rq-SUoZxDjUlO1FHUVW_jA
 source: 阿里云云原生
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云分享 Apache RocketMQ 面向 AI 的演进：推出 LiteTopic 以支撑百万级多智能体（Agent）会话协作。文章以内部两类生产落地的 AI 系统为例——编程智能体 Qoder 与多 Agent 编排——说明传统消息队列在 Agent 长周期、高并发会话下面临的挑战，并介绍 LiteTopic 在轻量主题、会话状态管理与可靠投递上的改进，为大规模 Agent 协同提供消息基础设施保障。
 title: Apache RocketMQ 面向 AI 演进：LiteTopic 支撑百万级多 Agent 会话协作
 ---
 

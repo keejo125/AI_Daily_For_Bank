@@ -1,11 +1,12 @@
 ---
 publish_time: 1787824800
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/pZ50p2ZnwHVmNPiiv1amDQ
 source: 火山引擎Agent社区
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  火山引擎介绍企业 AI 网关方案，统一解决三类规模化落地痛点：模型难管理（多模型并行、用量攀升）、老系统接不上（存量系统缺 API）、Agent 连不起来（跨系统编排）。网关提供模型路由、限流、鉴权、观测与协议转换能力，将模型、系统与 Agent 高效连接并统一治理，是企业从单点试用走向 Agent 规模化的关键中间件。
 title: 模型管不住、老系统接不上、Agent 连不起来？一个 AI 网关全搞定！
 ---
 

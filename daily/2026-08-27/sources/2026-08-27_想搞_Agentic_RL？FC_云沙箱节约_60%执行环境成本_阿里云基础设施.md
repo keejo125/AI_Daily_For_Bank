@@ -1,11 +1,12 @@
 ---
 publish_time: 1787826963
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/C1WR5-SJWDl98-bvwGWRNw
 source: 阿里云基础设施
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云基础设施介绍 FC 云沙箱如何为 Agentic RL 降本：当 Agent 在 Browser、Filesystem、Desktop 等环境执行长链路 Rollout（数十至上百步），每次 action 都改变环境状态，传统常驻沙箱成本高企。FC 按需弹性创建隔离执行环境，使单条 Rollout 的环境成本下降约 60%，让在环境中完成任务的强化学习训练与评测在成本上可行。
 title: 想搞 Agentic RL？FC 云沙箱节约 60%执行环境成本
 ---
 
