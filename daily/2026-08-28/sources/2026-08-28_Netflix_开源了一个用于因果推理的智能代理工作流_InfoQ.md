@@ -1,11 +1,12 @@
 ---
 publish_time: 1787889296
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/X-pVE1ONCIIgriYz7SfMlg
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Netflix开源用于观察性因果推断（OCI）的智能代理工作流，减轻因果分析中的繁琐工作。该工作流基于行为者-批评者循环，利用人类分析计划评估因果关系、撰写报告并提出后续建议，将敏感性分析等易错任务自动化，高层次任务留给人。在ACIC竞赛数据集上表现具竞争力，并已开源轻量独立版本。
 title: Netflix 开源了一个用于因果推理的智能代理工作流
 ---
 

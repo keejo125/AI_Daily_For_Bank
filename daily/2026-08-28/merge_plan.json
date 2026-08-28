@@ -1,0 +1,64 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-08-28_Anthropic做了个通用“接口”，Agent开始接管显微镜、机械臂和量子计算机_智东西.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-28_Anthropic发布首款在物理世界运行的AI工具_财联社AI_daily.md",
+          "name": "财联社AI daily",
+          "link": "https://mp.weixin.qq.com/s/_NnGjsMcaQD6bbVY44gzoQ"
+        },
+        {
+          "source_file": "sources/2026-08-28_Claude开始接管物理世界！能用机械臂阻拦5000万美元打款了_量子位.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/08/480487.html"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-28_谷歌落后一个时代？CEO 亲自官宣“语音转文字”模型，网友：你们看不清形势啊_InfoQ.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-28_Google AI Releases Gemini 3.5 Transcribe_ A Speech_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/08/27/google-ai-releases-gemini-3-5-transcribe-a-speech-to-text-model-reporting-2-6-average-wer-across-85-languages/"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-28_商汤大装置助力智象未来实现视频生成业务向国产算力无感迁移_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-28_智象未来×商汤大装置：国产算力跑通视频生成规模化应用_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/cjDC6chGbANykR1p2k47"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-28_智谱 GLM-5.3-Flash上线，商汤大装置提供国产算力支持_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-28_智谱认领“牛来”模型，实测：“牛马”友好_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/sTYSudHtvkbNJvuSbp31"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-08-28_腾讯混元 Hy4 preview 开源，参与“训练自己”！WorkBuddy实测：有了小型团队交付实_InfoQ.md",
+      "items": [
+        {
+          "source_file": "sources/2026-08-28_火速实测腾讯Hy4_preview：一条提示词直出3D开放世界游戏，缓存价格看齐DeepSeek_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/Sg6ewYfW1hkpx0rL0296Dg"
+        },
+        {
+          "source_file": "sources/2026-08-28_腾讯混元_Hy4_preview_发布，稳居开源模型第一梯队_腾讯技术工程.md",
+          "name": "腾讯技术工程",
+          "link": "https://mp.weixin.qq.com/s/c9rNyCQ7UfmcizMUCCEClQ"
+        }
+      ]
+    }
+  ]
+}

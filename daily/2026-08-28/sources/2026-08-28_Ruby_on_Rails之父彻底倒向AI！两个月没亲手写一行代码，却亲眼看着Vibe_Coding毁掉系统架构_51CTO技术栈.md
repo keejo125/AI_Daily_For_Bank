@@ -1,11 +1,12 @@
 ---
 publish_time: 1787910600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/zNoh0aWvbrWPL94eNxMI5g
 source: 51CTO技术栈
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Ruby on Rails之父DHH在Lex Fridman访谈中称，Omarchy Quattro近两个月上线的代码无一由其亲手敲出，全部交由Agent完成，但架构方向、数据约束与关键边界仍逐行审查。他以Basecamp 5为例指出：设计师用Vibe Coding提交的大量PR单独看都合理，合在一起却改坏了系统架构——实现权可下放，判断权不能一起下放。
 title: Ruby on Rails之父彻底倒向AI！两个月没亲手写一行代码，却亲眼看着Vibe Coding毁掉系统架构
 ---
 

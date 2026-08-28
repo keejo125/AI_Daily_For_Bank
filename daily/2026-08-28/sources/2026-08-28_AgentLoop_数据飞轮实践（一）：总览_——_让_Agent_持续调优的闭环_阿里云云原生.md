@@ -1,11 +1,12 @@
 ---
 publish_time: 1787901417
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/q53_zsgspgaxKgc7YRz_dQ
 source: 阿里云云原生
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云云原生介绍AgentLoop数据飞轮实践：Agent上线后的持续调优不能靠零散改Prompt，而需'数据接入—观测—审计—数据集—评估—实验'的闭环。演示以客服Agent为例，将badcase沉淀为数据集，通过多轮实验回测验证收益，旨在让Agent一次比一次聪明，覆盖从开发到上线后的全过程调优。
 title: AgentLoop 数据飞轮实践（一）：总览 —— 让 Agent 持续调优的闭环
 ---
 

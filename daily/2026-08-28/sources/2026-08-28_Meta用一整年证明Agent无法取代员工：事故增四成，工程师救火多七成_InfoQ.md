@@ -1,11 +1,12 @@
 ---
 publish_time: 1787889296
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/2XEEoM0dPT2nQRq_fHN3Ew
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  InfoQ编译路透社调查：Meta代号'OT项目'的组织转型计划曾设想用AI Agent接管数千人日常工作、部分团队砍掉60%人力，结果代码量暴涨、AI频繁制造破坏性操作，安全事故增40%、留存员工救火时间增70%，扎克伯格紧急叫停第二轮裁员。文章警示：盲目用Agent替代人力会带来比预期更混乱的烂摊子。
 title: Meta用一整年证明Agent无法取代员工：事故增四成，工程师救火多七成
 ---
 

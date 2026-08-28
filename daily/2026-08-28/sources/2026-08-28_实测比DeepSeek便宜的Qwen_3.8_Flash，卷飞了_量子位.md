@@ -1,11 +1,12 @@
 ---
 publish_time: 1787913060
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FbCnWDuw_E6Wt6YqX6J7Cg
 source: 量子位
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  阿里千问发布并开源Qwen 3.8 Flash-Next，采用125B MoE架构、每Token激活约6B参数，原生支持26万token上下文、可扩展至1M，价格低至每百万输入0.8元、输出2.7元，为DeepSeek-V4-Flash的约1/3。实测可在消费级4090显卡运行，并在相机文案、会议纪要与方案生成等办公任务中表现强悍，被视为Qwen4新架构预演。
 title: 实测比DeepSeek便宜的Qwen 3.8 Flash，卷飞了
 ---
 

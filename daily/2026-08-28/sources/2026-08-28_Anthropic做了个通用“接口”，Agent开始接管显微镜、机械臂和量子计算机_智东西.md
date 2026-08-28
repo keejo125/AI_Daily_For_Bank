@@ -1,11 +1,12 @@
 ---
 publish_time: 1787906948
-status: pending
-category: 
+link: https://mp.weixin.qq.com/s/Q3croP768Bn0aGvuOFhO1A
+source: Anthropic
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
-link: https://mp.weixin.qq.com/s/Q3croP768Bn0aGvuOFhO1A
-source: 智东西
+  Anthropic发布面向硬件设备的模型硬件标准（Model Hardware Standard，MHS）研究预览版，可视为物理世界的MCP。该标准让AI智能体能够安全发现、连接并操作显微镜、液体处理仪、激光器、机械臂等可编程设备，将设备集成时间从数周缩短至数小时。在量子计算公司QuEra测试中，Agent接管激光系统后锁定恢复成功率达99.3%。MHS与具体模型解耦、向所有Agent框架开放，计划正式开源前先完成安全评估，首批应用面向科研实验室与先进制造。
 title: Anthropic做了个通用“接口”，Agent开始接管显微镜、机械臂和量子计算机
 ---
 

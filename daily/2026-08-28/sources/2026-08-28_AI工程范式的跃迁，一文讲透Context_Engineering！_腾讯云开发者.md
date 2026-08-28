@@ -1,11 +1,12 @@
 ---
 publish_time: 1787884775
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/tExSOifZrzCUW8GLMF5IrQ
 source: 腾讯云开发者
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯云开发者梳理AI应用复杂度提升下的范式演进：从Prompt Engineering（优化单次调用）到ReAct（让LLM调用工具、多步任务），再到Context Engineering（解决长任务上下文盲点）。文章详解ReAct在20步以上循环中上下文无限膨胀的隐患，引出以结构化、动态上下文管理替代堆砌对话历史的新范式。
 title: AI工程范式的跃迁，一文讲透Context Engineering！
 ---
 

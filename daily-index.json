@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-28",
+      "weekday": "周五",
+      "stats": {
+        "国际": 11,
+        "国内": 18,
+        "同业": 1,
+        "其他": 1,
+        "total": 31
+      },
+      "summary": "Cohere 发布 Parse 5：将企业文档转为 Markdown 的 23 亿参数视觉语言模型/Gemini Omni 1.1 Flash 发布：为生..."
+    },
+    {
       "date": "2026-08-27",
       "weekday": "周四",
       "stats": {

@@ -1,11 +1,12 @@
 ---
 publish_time: 1787893200
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/cEqRXbamIofa0W93sMVtYg
 source: 千问AI平台
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里千问AI平台分享AI Native视觉还原的工程范式：当上下文工程深入'治理脏数据'，以及上下文做到位后为何仍需循环工程（Loop Engineering）。文章以一份混乱设计稿为例，指出层次嵌套过深、Flex布局不一致等结构性脏数据会填满Agent上下文致其出错，提出'建图书馆而非管道'并引入循环工程实现质量收敛。
 title: 场景营销互动&体验 AI Coding— AI Native 视觉还原的两个支点：上下文工程与循环工程
 ---
 

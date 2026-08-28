@@ -1,11 +1,12 @@
 ---
 publish_time: 1787904532
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Sg6ewYfW1hkpx0rL0296Dg
 source: 智东西
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  智东西提前实测腾讯最新开源旗舰模型Hy4 preview：总参770B、激活49B、上下文1M，编程、办公、游戏开发、科研场景为重点。通过MCP接入虚幻5引擎可纯对话从零制作射击游戏Demo；在WorkBuddy内长上下文任务拆解、工具调用与自我纠错能力突出。API定价6元/百万输入、18元/百万输出，缓存命中0.3元。
 title: 火速实测腾讯Hy4 preview：一条提示词直出3D开放世界游戏，缓存价格看齐DeepSeek
 ---
 

@@ -1,11 +1,12 @@
 ---
 publish_time: 1787899490
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/_NnGjsMcaQD6bbVY44gzoQ
 source: 财联社AI daily
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  财联社报道，Anthropic推出首款专为在物理世界运行而设计的AI工具MHS（模型硬件标准），可让Claude智能体自主操作显微镜、机械臂等科学工程设备。文章指出该进展正值Anthropic寻求在制造、机器人与制药领域拓展企业业务，并计划年内IPO、估值有望达2万亿美元。
 title: Anthropic发布首款在物理世界运行的AI工具
 ---
 
