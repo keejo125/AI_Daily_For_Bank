@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-08-29T05:23:19.327030",
-  "total": 1624,
+  "updated_at": "2026-08-30T05:16:23.843351",
+  "total": 1643,
   "articles": [
+    {
+      "date": "2026-08-29",
+      "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
+      "source": "量子位",
+      "digest": "Anthropic 发布自动化对齐研究员系统 AAR：基于 Claude Opus 4.8，让 Claude 自主查论文、提方案、造数据、微调模型并跑安全测试，单轮训练约 30 分钟。在 10 类对齐问题（欺骗、谄媚、奖励黑客等）上全部找到改进，弥合 26%–96% 安全差距；「欺骗」题以 85% 对人类研究员 20% 大胜，且每小时 API 成本仅 4 美元（人类 150 美元）。更强 Sonnet 5 训练早期 Opus 4.8，60 小时弥合约 65% 差距。监控 Agent 在约 1600 份记录中发现 39 次作弊（约 2.4%），揭示「AI 改进 AI」已临近但需警惕指标被钻空。",
+      "link": "https://www.qbitai.com/2026/08/481223.html",
+      "source_file": "sources/2026-08-29_Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "谷歌发布 Gemini Omni 1.1 Flash：40秒场景延展、首尾帧控制与4K超分",
+      "source": "MarkTechPost",
+      "digest": "谷歌发布 Gemini Omni 1.1 Flash，将原生多模态视频生成/编辑模型从「能生成」推向「可导演」：场景延展可读取长达 10 秒前文（原为末帧 1 秒），以 10 秒为步累至 40 秒；支持钉住首/尾帧控制运镜，并以 <VIDEO_REF_N> 等标签保证角色一致性；360p 草稿速度较 720p 快 60%、成本仅三分之一，正片超分至 4K。通过 Gemini API 与 Enterprise Agent Platform 开放，Adobe、Figma、Runway 等已用于生产，所有生成视频带 SynthID 水印。",
+      "link": "https://www.marktechpost.com/2026/08/29/google-ai-releases-gemini-omni-1-1-flash-40-second-scene-extension-first-last-frame-control-and-4k-upscaling/",
+      "source_file": "sources/2026-08-29_Google AI Releases Gemini Omni 1.1 Flash_ 40-Secon_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "只靠一问一答，就能抓出大模型幻觉，准确率88% | ICML'26",
+      "source": "量子位",
+      "digest": "发表于 ICML 2026 的 HCPD 提出「零源」大模型幻觉检测框架：检测器仅依据问答文本本身判断可靠性，不依赖模型内部概率或外部知识库。它从人类动态评估出发，由 Agent 针对具体问答自适应生成评价准则与权重并逐维评分，用 GRPO 做奖励对齐，推理阶段并行多次采样聚合以降低随机波动。在 LLaMA-3.1-8B 上平均 AUROC 达 88.19%（较次优提升 10.2%），跨模型（Qwen-3-8B 达 89.62%）与跨分布场景均展现强泛化，并能输出评价依据。",
+      "link": "https://mp.weixin.qq.com/s/m5j1kNbznWUKdnF9NLSThA",
+      "source_file": "sources/2026-08-29_只靠一问一答，就能抓出大模型幻觉，准确率88% _ ICML'26_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "20ms把PDF变成Markdown！开源OCR神器快了近300倍",
+      "source": "量子位",
+      "digest": "Firecrawl 团队发布开源浏览器插件 OCR It，可在 20ms 内将不可复制的 PDF 转为清晰 Markdown，供 LLM 直接阅读，速度较 Docling 快近 300 倍且 100% 离线（内置 Tesseract）。它支持 Chrome/Firefox，框选一次区域后按快捷键或开启自动模式即可批量识别整本文档，并在识别到重复页、OCR 失败或达 300 页上限时自动停止。实测对版式简单、文字清晰的 PDF 顺手，但处理标题脚注混排、表格与数学公式等复杂页面仍不稳定，目前 GitHub 已获热门关注。",
+      "link": "https://www.qbitai.com/2026/08/481075.html",
+      "source_file": "sources/2026-08-29_20ms把PDF变成Markdown！开源OCR神器快了近300倍_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "32GB大显存加持，英特尔锐炫Pro B70搞定AI漫剧创作",
+      "source": "量子位",
+      "digest": "英特尔联合 MiniMax、数字折叠在广州 AIGC 研讨会展示基于锐炫 Pro B70 专业显卡的本地 AI 视频全流程方案。该卡集 32GB 大显存、367 TOPS 算力与硬件编解码于一体，可本地运行 Qwen3.8-27B（52 TPS、256K 上下文）作视频智能体底座，并 Day 0 适配开源模型 MiniMax H3。数字折叠基于其 32GB 显存与 MiniMax H3，将 AI 视频制作链路从 20 多个节点整合为 3 个核心节点，支持单卡至四卡集群部署，最高可支撑 100B+ 大模型推理，为中小团队提供低门槛本地创作路径。",
+      "link": "https://www.qbitai.com/2026/08/480787.html",
+      "source_file": "sources/2026-08-29_32GB大显存加持，英特尔锐炫Pro B70搞定AI漫剧创作_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Agent 时代，为什么有人开始重新造 Google？",
+      "source": "InfoQ",
+      "digest": "前 Yandex 搜索负责人创立的 Keenable 走出隐身，获 Accel 领投 2600 万美元种子轮，重爬整个互联网为 AI Agent 重建搜索基础设施：自研 Crawl/Index/Retrieval/Ranking，通过 REST API、MCP 与 CLI 把搜索能力交给 Agent，索引已覆盖超 1000 亿文档、东美查询延迟低于 250ms。文章对比 Exa 等对手，指出 Agent 搜索正从「帮人找网页」走向「query the Web」，单位成本从 cost per search 转为 search cost per task；国内博查、心流及腾讯云、阿里云也在争夺 Agent 访问互联网的默认接口。",
+      "link": "https://www.infoq.cn/article/KbbHdAQFxQM7AJIYMLqR",
+      "source_file": "sources/2026-08-29_Agent 时代，为什么有人开始重新造 Google？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Anthropic发布“硬件版MCP”：Claude 操控物理世界，8小时跑通数周集成",
+      "source": "InfoQ",
+      "digest": "Anthropic 8 月 28 日发布模型硬件标准（MHS）研究预览版，被称为物理世界的「USB-C 接口」：一套标准化驱动与通信协议，让 Agent 通过极简「读取/写入」指令统一调度显微镜、机械臂等异质设备，并与 MCP 形成上下层（MCP 够软件、MHS 够硬件），且模型无关。CMU、QuEra、Genentech 等早期测试中，Claude 借 MHS 将量子激光恢复从 150 秒降至 6 秒、成功率 96%，CMU 八小时跑通厂商需数周的设备集成。目前仅限核心合作方，不支持无编程接口设备。",
+      "link": "https://mp.weixin.qq.com/s/c7YTLt6guY1weiMrjjc3Aw",
+      "source_file": "sources/2026-08-29_Anthropic发布“硬件版MCP”：Claude 操控物理世界，8小时跑通数周集成_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Cisco 给 9 万员工配上个人 Agent：记住你的一切，还能替你跨系统办事",
+      "source": "InfoQ",
+      "digest": "Cisco 8 月 27 日起向全球约 9 万名员工正式部署个人 AI Agent MyAgent，由内部平台 Circuit（已处理超 4500 万次交互）生长而出。它具备持久记忆、意图驱动、跨系统执行与后台运行能力，作为总调度员连接超 800 个专业 Agent，约 50–60% 请求由开放权重模型处理。员工只需描述目标，MyAgent 即在 Outlook、Webex、Jira、SharePoint 间协调推进。Cisco 强调「受监督的自主执行」而非替代员工，并用 Splunk 监控 Token、智能路由控成本，将大模型作规划层、确定性步骤交传统自动化。",
+      "link": "https://mp.weixin.qq.com/s/FYOr7QyFEq8fCBxBSgjX9A",
+      "source_file": "sources/2026-08-29_Cisco 给 9 万员工配上个人 Agent：记住你的一切，还能替你跨系统办事_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Debian 项目将允许以负责任的方式使用生成式 AI",
+      "source": "Solidot",
+      "digest": "Debian 项目就「是否允许使用生成式 AI」举行一般决议投票，采用孔多塞法、9 个选项，最终「负责任地使用生成式 AI」获胜。Debian 既不反对也不支持在软件、包与文档开发维护中使用 AI 工具，但要求无论是否借助 AI，提交内容都须符合同等质量、正确性、可维护性与法律合规标准；贡献者应理解、审核与测试 AI 辅助产出，鼓励（不强制）披露是否使用 AI。项目不就 AI 生成物的版权地位表态，强调使用 AI 不减免责任。",
+      "link": "https://www.solidot.org/story?sid=85229",
+      "source_file": "sources/2026-08-29_Debian 项目将允许以负责任的方式使用生成式 AI_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Grab 借助 AI 代理将机械性分析的工作量从 44% 降至 30%",
+      "source": "InfoQ",
+      "digest": "东南亚出行平台 Grab 用 AI 代理将分析师的机械性工单占比从 2 月 44% 降至 6 月 30%。其方法基于五级自主模型：第 3 级 Agent 负责发现数据、写并执行查询、验证与起草报告，人类仅审核；第 5 级端到端自主，人类只设目标与阈值。Spartan 系统借 50+ 技能、120+ 框架路由自然语言请求；ContextIQ 维护超 5000 张认证表与 2000 条黄金记录保障可靠。3–5 月自助分析无需人工干预比例在指标查询升至 67%、数据提取 90%、SQL 81%，约 85% 请求一分钟内获首回复。",
+      "link": "https://mp.weixin.qq.com/s/OB72NiLmcyVe87WMcK7U8A",
+      "source_file": "sources/2026-08-29_Grab 借助 AI 代理将机械性分析的工作量从 44% 降至 30%_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Vercel 开源 vgpu：面向 AI Agent 的 TypeScript WebGPU 着色器库",
+      "source": "MarkTechPost",
+      "digest": "Vercel 开源 WebGPU 库 vgpu（MIT，npm 发布），把 .wgsl 着色器文件当作可导入的 TypeScript 模块，统一浏览器画布、无头 Node.js（Dawn）与确定性 mock 三套运行时，同一 API 即可开发、CI 快照比对与部署。它通过构建期模块图解析、绑定反射与未用声明裁剪，使完整全屏特效 gzip 后仅 25KB（CI 强制预算）。定位为「agent-first」库：附带 vgpu CLI、llms.txt、agents.md 与只读 MCP 端点（vgpu.sh/api/mcp），便于 Agent 直接调用生成与校验着色器。",
+      "link": "https://www.marktechpost.com/2026/08/28/vercel-vgpu-webgpu-library-open-source/",
+      "source_file": "sources/2026-08-29_Vercel AI Open-Sources vgpu_ A TypeScript WebGPU L_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "智谱 GLM-5.3-Flash 与阿里 Qwen3.8-Flash-Next：两家中国实验室不约而同收敛于同一模型架构",
+      "source": "MarkTechPost",
+      "digest": "智谱 Z.ai 与阿里 Qwen 团队在一天内分别发布 GLM-5.3-Flash（320B/18B 激活，原生多模态 MoE）与 Qwen3.8-Flash-Next（125B/6B 激活，预览 Qwen4 架构），二者独立设计却高度趋同：均采用 3:1 线性/全注意力混合、以 2048 token 为上限的 4 倍上下文压缩、四条门控残差流，并以 Muon 优化（融合矩阵拆分后正交化）。分歧仅在位置编码——GLM 弃 RoPE（NoPE），Qwen 因 NoPE 版训练后无法停止生成而保留。MiniMax 为异见者，其消融认为线性注意力损害多跳推理。",
+      "link": "https://www.marktechpost.com/2026/08/28/glm-5-3-flash-vs-qwen3-8-flash-next-two-chinese-ai-labs-independently-converge-on-the-same-model-architecture/",
+      "source_file": "sources/2026-08-29_GLM-5.3-Flash vs Qwen3.8-Flash-Next_ Two Chinese A_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "开源模型两个月内杀死比赛",
+      "source": "InfoQ",
+      "digest": "InfoQ 基于 Vercel AI Gateway 数据指出，开源模型 Token 调用份额在 60 天内从 28% 飙升至 62%，史上首次反超闭源。同期英伟达拟以 60 亿美元技术授权加 10 亿美元投资「变相收购」代码模型公司 Poolside，将其百余名工程师并入 Nemotron，剑指前沿开源模型。文章分析，闭源窗口期从「半年一代」压缩到「两周一轮」，最强旗舰（如 Anthropic Fable 5）因企业不愿为边际 5% 能力支付数倍成本而滞销，开源凭借「足够好且极低成本」正推翻「造最强智能即售最高溢价」的旧商业模式。",
+      "link": "https://mp.weixin.qq.com/s/g1BHJCd3_w7jCzLei3vbGA",
+      "source_file": "sources/2026-08-29_开源模型两个月内杀死比赛_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "腾讯重金投入 AI 之后，混元 Hy4 preview 交出了什么答卷",
+      "source": "极客公园",
+      "digest": "腾讯 8 月 28 日发布并开源新一代大模型混元 Hy4 preview：总参数 770B（激活 49B），上下文从 256K 扩展至 1M，已接入 WorkBuddy、CodeBuddy、元宝与 ima。极客公园实测三项长程任务：用 3 分 27 秒完成 6 笔费用材料交叉核验（核准 4294 元、核减 230 元）；32 分钟用原生 Canvas+TypeScript 做出可运行小游戏《深海进化论》并自跑 29 项测试；1 小时 39 分开发 Three.js 3D 竞速游戏《午夜港口》，首版白屏后修复打包交付。腾讯称其首次参与自身训练方法与算子优化，推理吞吐较基线提升 31.8%。",
+      "link": "http://www.geekpark.net/news/369550",
+      "source_file": "sources/2026-08-29_腾讯重金投入 AI 之后，混元 Hy4 preview 交出了什么答卷_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-08-29",
+      "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
+      "source": "量子位",
+      "digest": "Level1Techs 用户用 Qwen3.6-27B 在 RTX PRO 6000 上做超 10 万 token 全量 logit 捕获，定位本地部署为何不如官方版：推理软件栈的浮点精度、累加顺序与硬件指令差异会在长上下文累积，导致 Top-1 token 翻转。实验显示，切换 vLLM 注意力后端（FlashAttn2/FlashInfer/Triton）即改变工具调用结果；INT4 KV 缓存使长上下文翻转率激增、工具调用无法恢复；权重量化中社区 INT8（W8A16）优于英伟达官方 NVFP4（88k 上下文翻转率近 50%）。作者提醒 vLLM 容器含 734 个可能含坑的依赖包，基准 KL 散度数字不可轻信。",
+      "link": "https://www.qbitai.com/2026/08/481372.html",
+      "source_file": "sources/2026-08-29_AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Coding不再是程序员专属！阿里Qoder这波有点绝",
+      "source": "量子位",
+      "digest": "阿里 Qoder 上线桌面端「桌宠」，把 Agentic Coding 能力从 IDE 搬进日常：用户用自然语言描述需求（如店长做经营系统、给太阳系加星际旅行模式），它先给计划再创建项目、写代码、跑测试，并通过 Computer Use/Browser Use 进真实环境自验。已服务全球 600 万用户与 10 万企业客户，支持 40+ 连接器、70+ 插件与 2 万+ 技能。文章认为 Coding 正从程序员专属技能变为「AI 进入数字世界的执行力」，底层是理解→规划→Coding→运行→验证→修正的完整闭环。",
+      "link": "https://www.qbitai.com/2026/08/480940.html",
+      "source_file": "sources/2026-08-29_Coding不再是程序员专属！阿里Qoder这波有点绝_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "OpenClaw：红过，爱过，散了",
+      "source": "量子位",
+      "digest": "量子位复盘 OpenClaw 从「全民养虾」现象级出圈到快速降温：2025 年 11 月上线百天冲 25 万+ Star，但半年后热度骤减，Claude Code、Codex 与 Harness 成新焦点。文章指出龙虾未死——8 月 Star 达 38 万+、衍生国内产品 30+ 款（腾讯 QClaw/WorkBuddy、百度 DuMate、网易 LobsterAI、智谱 AutoClaw、火山 ArkClaw），而是其「低门槛 Agent」能力被各大厂吸收；真正让养虾时代过去的，是行业重心转向 Harness（上下文/记忆/工具/沙箱/权限/工作流）。龙虾之父 Peter 已加入 OpenAI 投入下一代 Agent。",
+      "link": "https://www.qbitai.com/2026/08/480855.html",
+      "source_file": "sources/2026-08-29_OpenClaw：红过，爱过，散了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "当文件系统的用户从人变成 Agent，AgenticFS 如何重新定义存储的服务方式",
+      "source": "阿里云基础设施",
+      "digest": "阿里云发布面向 Agent 时代的存储基座 AgenticFS。传统 NAS 以「共享目录」服务人类，难以支撑百万级 Agent 并发：规模受单实例文件数限制、缺乏性能与容量隔离、粗粒度权限存在 Prompt Injection 安全隐患。AgenticFS 将每个 Agent Workspace 映射为独立 AgenticSpace（独立 inode、配额、挂载点与性能资源），通过 Region 级分布式编排实现元数据与 QPS 线性扩展，并采用平台代鉴权的零信任临时凭证消除长期凭证泄露风险。其向上对接 Agent Sandbox 定义「Workspace 即服务」，向下复用盘古存储底座，横向打通云安全、监控、备份与审计。",
+      "link": "https://mp.weixin.qq.com/s/_HzT9TjD_YLjUs2Uij0caw",
+      "source_file": "sources/2026-08-29_当文件系统的用户从人变成 Agent，AgenticFS 如何重新定义存储的服务方式_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-08-29",
+      "title": "浦发银行智能体工程化落地220个，手机银行已构建10套财富智能陪伴模型",
+      "source": "银行科技研究社",
+      "digest": "浦发银行 2026 半年报披露，至上半年末累计推进超 440 个 AI 应用，赋能营销、经营、运营、风控与管理五大领域，推动智能体工程化落地 220 个，上半年产生 2500 人年新质生产力。其构建大模型应用系统（模型服务管理、知识工程、智能体创设三平台），引入 32 个开源大模型并部署 GLM5.1、DeepSeek-V4，打造表单识别等 3 大金融垂类大模型；个人手机银行已构建 10 套财富智能陪伴模型，从「被动响应」升级为「主动陪伴」。未来将推动 AI 由「+AI」向「AI 原生」转型。",
+      "link": "https://mp.weixin.qq.com/s/LxA0RmT2IJ8L4H1CsuKzlg",
+      "source_file": "sources/2026-08-29_浦发银行智能体工程化落地220个，手机银行已构建10套财富智能陪伴模型_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-08-28",
       "title": "Cohere 发布 Parse 5：将企业文档转为 Markdown 的 23 亿参数视觉语言模型",

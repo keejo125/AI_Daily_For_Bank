@@ -1,19 +1,23 @@
 ---
-publish_time: 1787975940
-status: pending
-category: 
+publish_time: 1788005497
+link: https://www.qbitai.com/2026/08/480940.html
+source: 量子位
+status: confirmed
+category: 国内
 is_model_related: false
 digest: |
-link: https://mp.weixin.qq.com/s/2hT23BYT6obKY6cXKhZQ0w
-source: 量子位
-title: Coding不再是程序员专属！阿里Qoder这波有点绝
+  阿里 Qoder 上线桌面端「桌宠」，把 Agentic Coding 能力从 IDE 搬进日常：用户用自然语言描述需求（如店长做经营系统、给太阳系加星际旅行模式），它先给计划再创建项目、写代码、跑测试，并通过 Computer Use/Browser Use 进真实环境自验。已服务全球 600 万用户与 10 万企业客户，支持 40+ 连接器、70+ 插件与 2 万+ 技能。文章认为 Coding 正从程序员专属技能变为「AI 进入数字世界的执行力」，底层是理解→规划→Coding→运行→验证→修正的完整闭环。
 ---
 
 # Coding不再是程序员专属！阿里Qoder这波有点绝
 
-来源：量子位
-原文链接：https://mp.weixin.qq.com/s/2hT23BYT6obKY6cXKhZQ0w
+> 原文链接：https://www.qbitai.com/2026/08/480940.html
+> 来源：量子位
 
+Coding不再是程序员专属！阿里Qoder这波有点绝
+闻乐
+量子位
+Coding正在变成Al世界的数字执行力
 闻乐 发自 凹非寺
 量子位 | 公众号 QbitAI
 Qoder，长出新形态了。
@@ -33,7 +37,7 @@ Qoder, beyond coding
 这次模拟一个连锁咖啡店的区域店长，手里管着5家门店，每天除了盯营业额、订单量和爆款商品，还得操心员工排班的那种。
 干脆自己做一个能看经营情况、管理员工的系统。
 问题是，店长不会Coding啊。
-没关系，直接把Qoder桌宠喊出来聊：
+没关系，直接把Qoder桌宠喊出来聊。
 第一遍说不全，后面再慢慢补也ok。
 等需求差不多对齐，Qoder也没立刻一头扎进去猛写代码。
 它先给了份计划书，把刚才散落在几轮对话里的要求重新捋了一遍。
@@ -142,11 +146,10 @@ Qoder这次做的，就是
 目前Qoder上线活动已经同步开启，上线5天内，所有个人用户每天可以领取500 Credits，是Qwen 3.8系列的专用积分。
 Qoder，beyond coding——
 Coding能抵达的地方，不只是程序员的IDE了。
-一键三连
-「点赞」「转发」「小心心」
-欢迎在评论区留下你的想法！
-—
-完
-—
-🌟 点亮星标 🌟
-科技前沿进展每日见
+版权所有，未经授权不得以任何形式转载及使用，违者必究。
+闻乐
+AI4S开始进入「项目时代」：紫东太初把AI从做Task推向做Project
+前保安杀进了AI决赛，高中生拿走25万！这AI比赛办得有点绝
+用DeepSeek网页版就能瓜分鹅厂600万？？！
+AI Infra进入自进化时代！清华团队AI优化AI造就国产万亿Token工厂
+扫码分享至朋友圈

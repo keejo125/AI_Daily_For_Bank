@@ -1,11 +1,12 @@
 ---
 publish_time: 1787997600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/_HzT9TjD_YLjUs2Uij0caw
 source: 阿里云基础设施
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云发布面向 Agent 时代的存储基座 AgenticFS。传统 NAS 以「共享目录」服务人类，难以支撑百万级 Agent 并发：规模受单实例文件数限制、缺乏性能与容量隔离、粗粒度权限存在 Prompt Injection 安全隐患。AgenticFS 将每个 Agent Workspace 映射为独立 AgenticSpace（独立 inode、配额、挂载点与性能资源），通过 Region 级分布式编排实现元数据与 QPS 线性扩展，并采用平台代鉴权的零信任临时凭证消除长期凭证泄露风险。其向上对接 Agent Sandbox 定义「Workspace 即服务」，向下复用盘古存储底座，横向打通云安全、监控、备份与审计。
 title: 当文件系统的用户从人变成 Agent，AgenticFS 如何重新定义存储的服务方式
 ---
 

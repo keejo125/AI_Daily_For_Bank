@@ -1,11 +1,12 @@
 ---
 publish_time: 1787974057
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/c7YTLt6guY1weiMrjjc3Aw
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Anthropic 8 月 28 日发布模型硬件标准（MHS）研究预览版，被称为物理世界的「USB-C 接口」：一套标准化驱动与通信协议，让 Agent 通过极简「读取/写入」指令统一调度显微镜、机械臂等异质设备，并与 MCP 形成上下层（MCP 够软件、MHS 够硬件），且模型无关。CMU、QuEra、Genentech 等早期测试中，Claude 借 MHS 将量子激光恢复从 150 秒降至 6 秒、成功率 96%，CMU 八小时跑通厂商需数周的设备集成。目前仅限核心合作方，不支持无编程接口设备。
 title: Anthropic发布“硬件版MCP”：Claude 操控物理世界，8小时跑通数周集成
 ---
 

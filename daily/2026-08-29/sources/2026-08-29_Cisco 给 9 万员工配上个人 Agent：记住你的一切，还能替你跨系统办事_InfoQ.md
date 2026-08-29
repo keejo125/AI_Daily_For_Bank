@@ -1,11 +1,12 @@
 ---
 publish_time: 1787985000
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FYOr7QyFEq8fCBxBSgjX9A
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Cisco 8 月 27 日起向全球约 9 万名员工正式部署个人 AI Agent MyAgent，由内部平台 Circuit（已处理超 4500 万次交互）生长而出。它具备持久记忆、意图驱动、跨系统执行与后台运行能力，作为总调度员连接超 800 个专业 Agent，约 50–60% 请求由开放权重模型处理。员工只需描述目标，MyAgent 即在 Outlook、Webex、Jira、SharePoint 间协调推进。Cisco 强调「受监督的自主执行」而非替代员工，并用 Splunk 监控 Token、智能路由控成本，将大模型作规划层、确定性步骤交传统自动化。
 title: Cisco 给 9 万员工配上个人 Agent：记住你的一切，还能替你跨系统办事
 ---
 
