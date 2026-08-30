@@ -1,11 +1,12 @@
 ---
 publish_time: 1788075000
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/yF8IMzig4IvfD5M5iBDMcA
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  大厂竞相切入“AI 办公”赛道：腾讯 Workbuddy、阿里千问办公、字节豆包工作（与飞书深度整合）先后入局。文章指出，办公 Agent 的竞争焦点并不在 Agent 本身，而在“上下文”——企业沉淀于 ERP、POS、知识库中的历史与规则，是 Agent 能否好用的关键。模型决定理解与推理上限，Harness 是背后的运行管控基础设施，二者终将同质化，真正的护城河是企业上下文的调度能力。高盛在《Decoding the Agentic Economy》中强调，Agentic 模式下 Token 消耗因“思考-检索-调用工具-重读上下文”循环而暴涨，强大的模型加 Harness 只是合格执行者，结合完整企业上下文才能成为好用的办公智能体。
 title: 办公Agent大战，重点不是Agent
 ---
 

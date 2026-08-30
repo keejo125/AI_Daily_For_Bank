@@ -1,11 +1,12 @@
 ---
 publish_time: 1788067789
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/J70Ut1v35xYwTSS87f2GZw
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  InfoQ 采访通用 Agent 公司 Floatboat，拆解其自研全栈 Harness 的技术选择与产品逻辑。Floatboat 公布评测：用 DeepSeek-V4-Flash（混合价 0.175 美元/百万 token）接入自家 Harness 跑完五项基准，全面超越贵 57.1 倍的 Claude Opus 4.8；同一模型在官方 Harness 上一项未赢，接 Floatboat 后五项全胜，增益随任务程长递增（长程 DeepSWE 达 23.6%）。团队自研完整 Runtime、Agent Loop、Tools 与 Infra，并设计 FloatSail 自适应进化系统，核心理念是“不确定时才用 Agent、能 Workflow 解决就不动用模型”，以此把成本“设计”出来而非“优化”出来；任务越长程，Harness 增益越大（HLR 从 0.78 倍升至 3.57 倍）。
 title: 自研Runtime、Agent Loop、Infra：一家通用Agent公司的全栈赌注
 ---
 

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-08-30",
+      "weekday": "周日",
+      "stats": {
+        "国际": 6,
+        "国内": 2,
+        "同业": 1,
+        "其他": 1,
+        "total": 10
+      },
+      "summary": "Code-as-World：将真实视频重写为可执行 MuJoCo 物理程序的智能体循环/OpenAI新王Astra首测曝光，前端不存在了？/办公Agent..."
+    },
+    {
       "date": "2026-08-29",
       "weekday": "周六",
       "stats": {

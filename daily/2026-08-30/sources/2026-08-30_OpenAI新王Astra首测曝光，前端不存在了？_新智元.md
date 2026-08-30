@@ -1,11 +1,12 @@
 ---
 publish_time: 1788051346
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/hsqiFXH2bhDKoft1IE_tmw
 source: 新智元
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  新智元报道，OpenAI 已扩大新一代模型 Astra（内部代号 mozaik-alpha-fdm）的灰度测试，在 Max effort 零样本下一次性生成 3D 像素城堡与可交互前端网页，细节把控力令开发者惊呼“Frontend is solved”。据泄露特征与行业预测，Astra 的核心突破可能在四方面：端到端多智能体编排（原生集成 UI 设计师、前端工程师、代码审查员角色）、超长程任务能力、持久化推理模式，以及生成代码时在内部沙盒完成“虚拟渲染”/AST 逻辑跑通以实现即时自我纠错。其发布窗口预计在 9 月首周，将与 Anthropic 加速推进的 Fable 5.1 正面竞争，双方均主打更强的代码能力与更长程任务。
 title: OpenAI新王Astra首测曝光，前端不存在了？
 ---
 
