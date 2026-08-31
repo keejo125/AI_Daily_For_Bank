@@ -1,11 +1,12 @@
 ---
 publish_time: 1788172200
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/lmZaSJpyTKdBeytRYeIeJg
 source: 阿里云云原生
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云云原生介绍智能体观测与优化平台 AgentLoop 的数据接入设计：基于 OTel 标准协议+探针，以 Trace ID 串联模型调用与工具调用、还原执行轨迹；针对通用 Agent、框架研发、高代码自研、零改动接入四种形态提供对应方式，并以基于 Claude Code 的 Agent 为例演示接入，强调选标准协议保障数据未来可被任意 OTel 生态消费。
 title: 数据飞轮的起点：四种方式把 Agent 连进 AgentLoop丨AgentLoop 数据飞轮实践（二）
 ---
 
