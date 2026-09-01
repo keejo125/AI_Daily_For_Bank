@@ -1,11 +1,12 @@
 ---
 publish_time: 1788240119
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/qj8Pdhtng6lWyEvPvaSRQA
 source: CSDN
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  技术报告《openJiuwen: Beyond Static Harnesses for Long-Horizon Coding Agents》提出面向长程编码智能体的执行架构，刷新 SWE-bench Verified 与 Terminal-Bench 2.1 两项榜单 SOTA：在 500 个真实 GitHub issue 上取得 82.6%，在真实终端环境复杂指令集上斩获 87.19%。报告核心论点是：当团队用上同一批顶尖模型，驱动其运转的执行架构（harness）差异会显著影响成绩，为编码智能体从「模型能力」竞争转向「执行架构」竞争提供实证参考，并已落地于 WorkSwarm。
 title: 再迎突破！openJiuwen技术论文刷新Coding多榜单SOTA，并在WorkSwarm落地
 ---
 

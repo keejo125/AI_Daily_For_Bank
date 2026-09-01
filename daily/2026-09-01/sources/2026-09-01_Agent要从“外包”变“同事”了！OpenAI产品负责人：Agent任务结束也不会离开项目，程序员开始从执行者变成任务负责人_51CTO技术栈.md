@@ -1,11 +1,12 @@
 ---
 publish_time: 1788256800
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/fjV--whoqvHZvoXUIFXK8g
 source: 51CTO技术栈
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  OpenAI Codex 与 ChatGPT Work 产品负责人 Tara Seshan 在访谈中提出，AI 产品正从「聊天」走向「Agent」，再迈向「持久同事」——一个会长期留在项目里、记得目标与进度、持续推进任务的协作者。她指出，若 Agent 要像同事一样工作，需补齐长期记忆、上下文延续与安全可控等能力。这反映出编程范式正从「人写代码」转向「人定义任务、Agent 持续执行」，开发者角色从执行者变为任务负责人。
 title: Agent要从“外包”变“同事”了！OpenAI产品负责人：Agent任务结束也不会离开项目，程序员开始从执行者变成任务负责人
 ---
 
