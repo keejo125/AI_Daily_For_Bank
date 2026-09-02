@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-02",
+      "weekday": "周三",
+      "stats": {
+        "国际": 9,
+        "国内": 7,
+        "同业": 0,
+        "其他": 0,
+        "total": 16
+      },
+      "summary": "Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1：Terminal-Bench-Science 达 52.6%、缓存读..."
+    },
+    {
       "date": "2026-09-01",
       "weekday": "周二",
       "stats": {

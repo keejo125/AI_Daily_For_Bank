@@ -1,19 +1,23 @@
 ---
-publish_time: 1788299923
-status: pending
-category: 
+publish_time: 1788315492
+link: https://www.qbitai.com/2026/09/482652.html
+source: 量子位
+status: confirmed
+category: 国际
 is_model_related: false
 digest: |
-link: https://mp.weixin.qq.com/s/KdVs9PsujDFrpl4dtyjP4A
-source: 量子位
-title: Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线
+  量子位报道，Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1：8 项公开基准测试全部第一，价格最高降 45%，并上线反蒸馏机制。在科学研究与代码能力上明显超越前代及 GPT-5.6 Sol；以中低推理程度运行即可媲美旧版 Mythos 5 极高推理。缓存读取降至每百万 token 0.25 美元（降幅 75%）。
 ---
 
 # Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线
 
-来源：量子位
-原文链接：https://mp.weixin.qq.com/s/KdVs9PsujDFrpl4dtyjP4A
+> 原文链接：https://www.qbitai.com/2026/09/482652.html
+> 来源：量子位
 
+Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线
+梦晨
+量子位
+无论你此前让Claude处理什么任务，Fable 5.1都能做更多，并且把最难的部分完成得更出色
 梦晨 发自 凹非寺
 量子位 | 公众号 QbitAI
 刚刚，
@@ -22,24 +26,17 @@ Fable 5.1
 Mythos 5.1
 发布！
 8项公开基准测试全部第一，
-价格最高
-降
-45%
+价格最高降45%
 。
 尤其是在
 科学研究和代码
 这两项上，明显甩开了Fable 5和隔壁GPT-5.6 Sol。
-换个更直观的视角，
-现在用
+换个更直观的视角，现在用
 中、低推理程度跑Fable 5.1，
 表现基本相当于
 老版Mythos 5开到极高甚至最高推理程度
 。
-这一波属于是“牢Fable
-”
-干掉了“Mythos圣
-”
-。
+这一波属于是“牢Fable”干掉了“Mythos圣”。
 价格方面，Fable 5.1把
 缓存读取价格降至每百万token 0.25美元，降幅75%
 。
@@ -121,17 +118,49 @@ Fable 5.1的网络安全误报率比Fable 5降低了60%，
 对于这种情况建议主动设好prefix_mismatch_behavior提前测试，别等用户先炸了你才发现。
 One More Thing
 A社整这么大动静，隔壁OpenAI肯定坐不住啊。
-但他们家新模型Astra是真还差一点没弄好，只好
-先
-象征性地发点预告。
+但他们家新模型Astra是真还差一点没弄好，只好先象征性地发点预告。
 还有Ilya在Fable 5.1和OpenAI Astra发布之际，也少见地出来喊话，呼吁加强网络安全。
 参考链接：
-[1]https://www.anthropic.com/claude-fable-and-mythos-5-1
-一键三连
-「点赞」「转发」「小心心」
-欢迎在评论区留下你的想法！
-—
-完
-—
-🌟 点亮星标 🌟
-科技前沿进展每日见
+[1]
+https://www.anthropic.com/claude-fable-and-mythos-5-1
+版权所有，未经授权不得以任何形式转载及使用，违者必究。
+Claude
+梦晨
+OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了
+不是Demo！优必选把客户产线1:1搬进WRC，解锁具身智能真落地路径
+写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”
+Eon用LIF“上传”果蝇脑，中国团队直接上精细神经元和跨身体平台
+扫码分享至朋友圈
+相关阅读
+OpenAI离职到估值千亿美元，Anthropic4年时间引硅谷巨头疯狂押注
+预计新增融资50亿美元
+鹭羽
+Anthropic
+Claude
+融资
+Claude接管人类电脑12小时：学会摸鱼，敲着敲着代码看风景去了
+突破对话框走向现实世界之后……
+衡宇
+Anthropic
+Claude
+OpenAI和Anthropic罕见互评模型：Claude幻觉明显要低
+网友：以后就这么搞！
+十三
+Anthropic
+Claude
+GPT-4
+OpenAI
+Claude终于承认乱扣费！最高多收你20倍，一句「你好」干掉13%额度
+这两天的Claude Code，已经接近“不可用”的状态。
+henry
+Claude
+Claude Code
+Claude编程支持一键共享，第一批网友已经开始晒作品了
+网友：OpenAI在干啥？
+克雷西
+Claude
+最强编码模型Claude 4！7小时不间断写代码，连玩24小时宝可梦，GitHub已选为Copilot底层模型
+网友一次性用它写完俄罗斯方块
+衡宇
+AI编程
+Claude
