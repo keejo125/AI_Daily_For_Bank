@@ -35,15 +35,20 @@ MANUAL_LINKS_PATH = PROJECT_DIR / "manual_links.json"
 TZ_SHANGHAI = timezone(timedelta(hours=8))
 
 
-# ---------- 依赖自检：确保 requests 可用（缺失则自动 pip 安装到当前解释器） ----------
-# 适配器(sources/base.py 等)依赖 requests；若当前解释器缺包，先自动安装再继续，避免 ModuleNotFoundError。
-try:
-    import requests  # noqa: F401
-except ImportError:
-    import subprocess
-    print("⚠️ 未检测到 requests 依赖，正在自动安装...", flush=True)
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
-    import requests  # noqa: F401
+# ---------- 依赖自检：确保全部必需依赖可用（缺失则自动 pip 安装到当前解释器） ----------
+# 适配器(sources/base.py 等)依赖 requests/feedparser；网页正文抓取依赖 beautifulsoup4；
+# 部分信源(量子位/Google DeepMind)的 RSS 解析依赖 lxml 解析器。
+# 若当前解释器缺包，先自动安装再继续，避免 ModuleNotFoundError / "Couldn't find a tree builder" 等运行期失败。
+import subprocess
+_REQUIRED_DEPS = ["requests", "feedparser", "beautifulsoup4", "lxml"]
+for _dep in _REQUIRED_DEPS:
+    try:
+        __import__(_dep)
+    except ImportError:
+        print(f"⚠️ 未检测到 {_dep} 依赖，正在自动安装...", flush=True)
+        subprocess.check_call([sys.executable, "-m", "pip", "install", _dep])
+        __import__(_dep)
+import requests  # noqa: F401  (其余依赖随用随 import，此处仅确保自检通过)
 
 
 # ---------- 工具函数 ----------
