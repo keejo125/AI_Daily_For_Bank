@@ -2,7 +2,7 @@
 publish_time: 1788340936
 link: https://www.qbitai.com/2026/09/483274.html
 source: 量子位
-status: confirmed
+status: pending
 category: 国内
 is_model_related: false
 digest: |
