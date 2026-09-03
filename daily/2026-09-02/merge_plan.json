@@ -12,6 +12,21 @@
           "source_file": "sources/2026-09-02_Fable 5.1 正式发布：性能翻倍、Agent成本下降45%，Anthropic 把顶级模型送进_InfoQ.md",
           "name": "InfoQ",
           "link": "https://www.infoq.cn/article/K8OwgoWM1gHNi2i4yLkU"
+        },
+        {
+          "source_file": "sources/2026-09-02_Claude Fable 5.1深夜空降！8项霸榜，缓存降价75%，奥尔特曼急了_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/z4wL3jgn8LR824D4XfjOEA"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-02_GPT-6 真要来了！OpenAI全新推理架构“循环深度”首次曝光：可榨出14倍参数潜能_InfoQ.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-02_“GPT-6”Astra能力首次公开！浙大同济校友参与研发_量子位.md",
+          "name": "量子位",
+          "link": "https://mp.weixin.qq.com/s/IbauVSJcNipvMYG7Nb5Lyg"
         }
       ]
     }
