@@ -1,0 +1,71 @@
+{
+  "urls": [
+    "https://www.solidot.org/story?sid=85259",
+    "http://www.geekpark.net/news/369719",
+    "https://www.infoq.cn/article/JSgkNf4EBVRL6HPP8D1u",
+    "https://www.qbitai.com/2026/09/483097.html",
+    "http://www.geekpark.net/news/369724",
+    "http://www.geekpark.net/news/369690",
+    "https://www.solidot.org/story?sid=85261",
+    "https://www.solidot.org/story?sid=85260",
+    "https://www.solidot.org/story?sid=85264",
+    "https://www.solidot.org/story?sid=85258",
+    "https://www.solidot.org/story?sid=85262",
+    "https://tldr.tech/ai/2026-09-02",
+    "https://www.infoq.cn/article/eWdhZ7b2DjRetvtzcl7k"
+  ],
+  "history": [
+    {
+      "url": "https://www.solidot.org/story?sid=85259",
+      "reason": "step3:非AI"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369719",
+      "reason": "step3:具身消费噱头"
+    },
+    {
+      "url": "https://www.infoq.cn/article/JSgkNf4EBVRL6HPP8D1u",
+      "reason": "step3:活动赛事"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/483097.html",
+      "reason": "step3:人事变动"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369724",
+      "reason": "step3:融资估值"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369690",
+      "reason": "step3:综合资讯拼盘"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85261",
+      "reason": "filter:非AI"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85260",
+      "reason": "filter:非AI融资收购"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85264",
+      "reason": "filter:非AI"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85258",
+      "reason": "filter:非AI"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85262",
+      "reason": "filter:非AI"
+    },
+    {
+      "url": "https://tldr.tech/ai/2026-09-02",
+      "reason": "filter:综合资讯拼盘(TLDR)"
+    },
+    {
+      "url": "https://www.infoq.cn/article/eWdhZ7b2DjRetvtzcl7k",
+      "reason": "filter:非AI"
+    }
+  ]
+}

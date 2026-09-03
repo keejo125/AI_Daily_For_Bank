@@ -106,8 +106,10 @@ def main():
         print(f"   ✅ {title[:60]}")
 
     # 删除不匹配文章的 .md 文件
+    # 重要：删除前必须把 URL 登记进排除清单，否则下次 fetch 会把它们重新抓回来
     sources_dir = day_dir / "sources"
     deleted_count = 0
+    deleted_links = []
     for art in removed:
         source_file = art.get("source_file", "")
         if source_file:
@@ -116,8 +118,15 @@ def main():
                 try:
                     filepath.unlink()
                     deleted_count += 1
+                    if art.get("link"):
+                        deleted_links.append(art["link"])
                 except Exception as e:
                     print(f"   ⚠️ 删除失败: {filepath} - {e}")
+
+    if deleted_links:
+        from exclude_store import add_excluded
+        added = add_excluded(deleted_links, reason=f"filter:{date_str}")
+        print(f"   📌 已登记 {added} 个 URL 到排除清单（防止下次重抓）")
 
     # 输出 filtered_articles.json
     filtered_data = {
