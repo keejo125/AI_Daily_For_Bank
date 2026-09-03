@@ -1,0 +1,59 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-09-03_Introducing Gemini 3.8 Flash and 3.8 Flash Cyber_Google DeepMind.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-03_Google DeepMind Releases Gemini 3.8 Flash and Gemi_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/09/02/google-deepmind-releases-gemini-3-8-flash-and-gemini-3-8-flash-cyber-one-core-model-two-access-envelopes/"
+        },
+        {
+          "source_file": "sources/2026-09-03_“美国大豆包”Gemini翻身：输出速度碾压同行、智能水平重回第一梯队_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://mp.weixin.qq.com/s/Wo2nnScSOJkQ_w76L_iCPw"
+        },
+        {
+          "source_file": "sources/2026-09-03_“美国豆包”又又又更了，15%价格叫板Opus 5，姚顺宇高度评价_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/BHMFdo3pOez7K-E6DijO_A"
+        },
+        {
+          "source_file": "sources/2026-09-03_谷歌邪修Gemini 3.8 Flash！险胜DeepSeek，姚顺宇：RSI一大步_量子位.md",
+          "name": "量子位",
+          "link": "https://mp.weixin.qq.com/s/NtWNaDco-3e2FFOyavWTsw"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-03_Meta新模型逼平Fable 5，小扎：开源且便宜到你懒得算账_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-03_Meta旗舰模型翻身！比DeepSeek还便宜，华裔掌门人骑脸Gemini_智东西.md",
+          "name": "智东西",
+          "link": "https://mp.weixin.qq.com/s/kv1YsmetgCs3QJxyy3KWKQ"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-03_腾讯WorkBuddy发布开放平台，想用开放「连」起一个AI生态_CSDN.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-03_AI 下一场竞争：谁能成为 Agent 的「上下文操作系统」_极客公园.md",
+          "name": "极客公园",
+          "link": "http://www.geekpark.net/news/369767"
+        },
+        {
+          "source_file": "sources/2026-09-03_当 Agent 走出 App：WorkBuddy 的朋友圈开始向外生长_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/vogOaCpOeNfe0hjAXfzy"
+        },
+        {
+          "source_file": "sources/2026-09-03_腾讯WorkBuddy联名硬件来了！首批100多家伙伴入场_量子位.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/09/483786.html"
+        }
+      ]
+    }
+  ]
+}

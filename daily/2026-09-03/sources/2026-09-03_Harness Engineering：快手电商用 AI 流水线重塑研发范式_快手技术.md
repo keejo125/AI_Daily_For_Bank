@@ -1,11 +1,12 @@
 ---
 publish_time: 1788428124
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FPUqOssSU0jUb7lKUZRoCA
 source: 快手技术
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  快手电商商家团队分享以工具提效加组织升级整体提升研发效率的实践。其B&M端系统链路长、业务域交织，人均周token消耗大几千万、代码量增170%，但需求交付时长改善有限。团队将AI贯穿需求全生命周期：需求侧预评审、交付侧跨角色协同、新同学业务上下文学习，用规范与约束指导AI，而非仅靠工具替换，实现组织级提效。
 title: Harness Engineering：快手电商用 AI 流水线重塑研发范式
 ---
 

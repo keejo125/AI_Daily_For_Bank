@@ -1,11 +1,12 @@
 ---
 publish_time: 1788413899
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/kv1YsmetgCs3QJxyy3KWKQ
 source: 智东西
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  智东西报道Meta发布Muse Spark 1.3，AI分析指数62分，仅次于Claude Fable 5.1与Opus 5，发布4小时后即反超谷歌Gemini 3.8 Flash（59分）。新模型5个月迭代4款，在长上下文、编程多项测试优于GPT-5.6 Sol与Opus 5，相对薄弱在Agent能力。定价持平前代，略高于Gemini 3.8 Flash，比DeepSeek-V4-Pro高峰价更便宜。
 title: Meta旗舰模型翻身！比DeepSeek还便宜，华裔掌门人骑脸Gemini
 ---
 

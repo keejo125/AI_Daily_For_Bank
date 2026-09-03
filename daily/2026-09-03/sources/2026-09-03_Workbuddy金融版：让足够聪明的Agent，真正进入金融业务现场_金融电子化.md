@@ -1,11 +1,12 @@
 ---
 publish_time: 1788402600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FEF8nCk6mOlCLNhWGUT5Ig
 source: 金融电子化
+status: confirmed
+category: 同业
+is_model_related: false
+digest: |
+  腾讯发布WorkBuddy金融版，在通用Harness上叠加金融业务视图、行业Skill、专家团、MCP App、数据连接器与流程规则，形成懂金融的行业级智能工作平台，并贯穿数据输入、执行、输出与审计的全链路安全底座。典型场景银行信贷尽调从约10天压缩至1天：材料清单、跨系统交叉核验、模板化报告与流程推进，已入职中金、平安银行等百余家金融机构。
 title: Workbuddy金融版：让足够聪明的Agent，真正进入金融业务现场
 ---
 

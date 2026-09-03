@@ -1,11 +1,12 @@
 ---
 publish_time: 1788423842
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/wYgU7rQEt-31j7sd-QRoJA
 source: 阿里云云原生
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  阿里云AgentLoop系列终篇介绍经验库：算法从Agent运行轨迹自动挖掘成功与失败模式，沉淀为经验资产，以上下文注入让Agent越跑越好。集成只需装一个经验召回Skill，每条经验可追溯出处。文章用消融实验回答关键问题：经验注入确有收益，并给出收益最大的使用方式，完成从专家驱动到自动化的数据飞轮闭环。
 title: 经验自进化：自动挖掘经验资产，消融实验验证真实收益丨AgentLoop 数据飞轮实践（五）
 ---
 

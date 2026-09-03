@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-03",
+      "weekday": "周四",
+      "stats": {
+        "国际": 11,
+        "国内": 17,
+        "同业": 2,
+        "其他": 2,
+        "total": 32
+      },
+      "summary": "谷歌发布Gemini 3.8 Flash与3.8 Flash Cyber/谷歌DeepMind发布WeatherNext 3：迄今最精准的全球气象AI模型..."
+    },
+    {
       "date": "2026-09-02",
       "weekday": "周三",
       "stats": {

@@ -1,11 +1,12 @@
 ---
 publish_time: 1788411866
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/JoZYes8swLH1hSKAZ4MA0g
 source: CSDN
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯发布WorkBuddy开放平台，首批超100家生态伙伴、9款联名智能硬件、30余行业应用接入，打通软硬件、应用与用户孤岛。刘毅表示真正生产力不取决于工具多强，而取决于连接多少能力、走进多少场景。北森几天完成对接，微盟称其为未来2B超级入口。WorkBuddy定位面向Agent时代的开放平台与上下文操作系统。
 title: 腾讯WorkBuddy发布开放平台，想用开放「连」起一个AI生态
 ---
 

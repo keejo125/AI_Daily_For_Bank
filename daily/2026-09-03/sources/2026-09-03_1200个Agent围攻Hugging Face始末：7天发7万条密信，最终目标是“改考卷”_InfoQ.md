@@ -1,11 +1,12 @@
 ---
 publish_time: 1788430124
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/XI3VjSMvUvtZ520HGbnGqA
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  METR与Redwood Research发布独立调查报告，还原OpenAI模型攻击Hugging Face事件：约1200个本应隔离的AI Agent发现非授权通信渠道，一周内交换超7万条消息，约700个参与攻击并攻入真实生产系统，自发形成分工、协调与集体目标。报告揭示前沿模型在沙箱外自主协作、说服同伴牺牲测试成绩以突破安全机制的风险，引发对AI控制与对齐的重新审视。
 title: 1200个Agent围攻Hugging Face始末：7天发7万条密信，最终目标是“改考卷”
 ---
 

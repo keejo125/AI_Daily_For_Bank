@@ -1,11 +1,12 @@
 ---
 publish_time: 1788422400
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/QJENmVesXzRG0wKR6pwRCw
 source: CSDN
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  开源项目OpenExecutive获3.5k+ Star，由被AI转型裁员的开发者群体发起，用多Agent模拟虚拟高管团队反击。系统将公司高管拆为CSO、CFO、CHRO等8个专业角色，由Executive Orchestrator统一调度，并行调用、汇总回答。加入企业知识库、情景记忆与主动任务调度，可上传商业资料经RAG检索，对话后沉淀决策与建议。
 title: “你用AI取代我？我就用AI取代你！”被CEO用AI裁掉后，他们反手造了个“AI CEO”：已狂揽3.5k+Star
 ---
 

@@ -12,7 +12,34 @@
     "https://www.solidot.org/story?sid=85258",
     "https://www.solidot.org/story?sid=85262",
     "https://tldr.tech/ai/2026-09-02",
-    "https://www.infoq.cn/article/eWdhZ7b2DjRetvtzcl7k"
+    "https://www.infoq.cn/article/eWdhZ7b2DjRetvtzcl7k",
+    "https://www.solidot.org/story?sid=85280",
+    "https://www.solidot.org/story?sid=85279",
+    "https://www.solidot.org/story?sid=85278",
+    "https://www.solidot.org/story?sid=85277",
+    "https://www.solidot.org/story?sid=85276",
+    "https://www.solidot.org/story?sid=85275",
+    "https://www.solidot.org/story?sid=85274",
+    "https://www.solidot.org/story?sid=85273",
+    "https://www.solidot.org/story?sid=85270",
+    "https://www.solidot.org/story?sid=85268",
+    "https://www.solidot.org/story?sid=85267",
+    "https://www.solidot.org/story?sid=85266",
+    "https://www.qbitai.com/2026/09/483462.html",
+    "https://openai.com/index/daybreak-for-frontline-defenders",
+    "https://openai.com/index/legora-financial-statement-review-with-astra",
+    "https://tldr.tech/ai/2026-09-03",
+    "https://openai.com/index/playco-game-prototyping-with-astra",
+    "https://openai.com/index/safety-overview-gpt-6-astra",
+    "https://www.solidot.org/story?sid=85269",
+    "https://www.qbitai.com/2026/09/483565.html",
+    "https://www.qbitai.com/2026/09/483351.html",
+    "https://blog.csdn.net/kuaishoutech/article/details/164336081",
+    "http://www.geekpark.net/news/369768",
+    "http://www.geekpark.net/news/369775",
+    "https://www.qbitai.com/2026/09/483552.html",
+    "http://www.geekpark.net/news/369388",
+    "http://www.geekpark.net/news/369745"
   ],
   "history": [
     {
@@ -66,6 +93,114 @@
     {
       "url": "https://www.infoq.cn/article/eWdhZ7b2DjRetvtzcl7k",
       "reason": "filter:非AI"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85280",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85279",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85278",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85277",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85276",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85275",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85274",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85273",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85270",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85268",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85267",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85266",
+      "reason": "filter:2026-09-03"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/483462.html",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://tldr.tech/ai/2026-09-03",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85269",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/483565.html",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/483351.html",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/164336081",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369768",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369775",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/483552.html",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369388",
+      "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369745",
+      "reason": "step3-delete-2026-09-03"
     }
   ]
 }

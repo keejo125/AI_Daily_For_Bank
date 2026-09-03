@@ -1,11 +1,12 @@
 ---
 publish_time: 1788402665
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Wo2nnScSOJkQ_w76L_iCPw
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  InfoQ解读Gemini 3.8 Flash：六周内第三款Flash，Artificial Analysis智能指数59分，与GPT-5.6 Sol、Grok 4.6持平，DeepSWE v1.1长程软件工程登顶。输出速度约300 token/秒，为多数主流模型4至6倍。Google未直接做成缩小版Pro，而是让模型多思考、多调工具、多轮次，加权生成时间更长但智能回升，被戏称美国大豆包翻身。
 title: “美国大豆包”Gemini翻身：输出速度碾压同行、智能水平重回第一梯队
 ---
 
