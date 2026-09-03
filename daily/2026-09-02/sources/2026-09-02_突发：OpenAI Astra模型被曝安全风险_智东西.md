@@ -4,6 +4,7 @@ status: confirmed
 category: 国际
 is_model_related: true
 digest: |
+  智东西编译The Information爆料：OpenAI尚未发布的旗舰Astra采用“循环深度（recurrent depth）”技术，将文本在同一网络层循环多次处理、隐藏部分推理过程，以较小模型逼近大模型性能并降本，但更难观测异常行为。Astra已达“网络关键级”门槛，可自主发现未知漏洞并生成利用方案，OpenAI将对其高阶网络能力施加严格访问限制。
 link: https://mp.weixin.qq.com/s/meSwEmquwcffT56Xmkx-5Q
 source: 智东西
 title: 突发：OpenAI Astra模型被曝安全风险

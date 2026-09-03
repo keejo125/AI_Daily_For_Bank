@@ -4,6 +4,7 @@ status: confirmed
 category: 国际
 is_model_related: false
 digest: |
+  微软Office/LinkedIn负责人Roslansky在LinkedIn吐槽“AI垃圾”渗透办公、自己读AI写文再让AI总结毫无新意，称其为“死亡循环（doom loop）”。文章指出这恰印证“模型崩溃”：AI吃AI生成内容致输出同质化；Reddit已限制Google与ChatGPT抓取。讽刺的是，微软正是大力推广Copilot、加剧此乱象的推手之一。
 link: https://mp.weixin.qq.com/s/H9Yl3TD0tExQkmA9aBGj4w
 source: CSDN
 title: “这就是死亡循环！”微软高管怒斥「AI垃圾」：AI写完AI总结，最后全是废话！网友：您自己先反思一下？

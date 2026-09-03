@@ -4,6 +4,7 @@ status: confirmed
 category: 
 is_model_related: false
 digest: |
+  智东西报道Anthropic推出Claude Fable 5.1与Mythos 5.1（同底座、护栏不同）。Fable 5.1在放出8项基准中霸榜第一，擅长编程与长周期任务，科学研究智能体测试近翻倍；缓存读取资费降75%，Agent任务最高降本45%（但单任务实际成本高约20%）。已兼容AWS、谷歌云与Azure，模型名claude-fable-5-1。
 link: https://mp.weixin.qq.com/s/z4wL3jgn8LR824D4XfjOEA
 source: 智东西
 title: Claude Fable 5.1深夜空降！8项霸榜，缓存降价75%，奥尔特曼急了

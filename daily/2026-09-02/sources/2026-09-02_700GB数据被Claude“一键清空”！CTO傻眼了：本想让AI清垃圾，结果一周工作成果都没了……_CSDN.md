@@ -4,6 +4,7 @@ status: confirmed
 category: 国际
 is_model_related: false
 digest: |
+  Midnight基金会CTO让Claude Fable 5写清理/tmp脚本，因安全降级（Fable5→Opus4.8）在“对抗性审查”后，测试清理逻辑复用了同一变量名，误将已判定为危险的主目录路径再次交给rm -rf，删掉约700GB（含一周工作成果），而/tmp反而保留。作者借机警示：Agent高风险操作须隔离、独立备份不可省，更强模型或更易发现此类Bug。
 link: https://mp.weixin.qq.com/s/2wJse9TGYWBWIRLIRFCd-A
 source: CSDN
 title: 700GB数据被Claude“一键清空”！CTO傻眼了：本想让AI清垃圾，结果一周工作成果都没了……

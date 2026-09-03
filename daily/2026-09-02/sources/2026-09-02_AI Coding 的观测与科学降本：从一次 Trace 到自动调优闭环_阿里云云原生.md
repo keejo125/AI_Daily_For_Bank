@@ -4,6 +4,7 @@ status: confirmed
 category: 国内
 is_model_related: false
 digest: |
+  阿里云云原生介绍AI Coding降本平台AgentLoop。内部统计单部门周耗数千亿token，其中“思考税”占64.6%、零产出Session占12.4%。AgentLoop构建“采集→观测→评估→归因→调优→实验”数据飞轮，用24维Rubric把浪费可视化、可归因；经验注入后SWE-bench成功率67.2%→74.4%、token降超50%。核心纪律：质量不降，单任务Token持续下降。
 link: https://mp.weixin.qq.com/s/JGiZxD9U3vaPQZde8ofp6Q
 source: 阿里云云原生
 title: AI Coding 的观测与科学降本：从一次 Trace 到自动调优闭环

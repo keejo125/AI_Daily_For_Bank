@@ -4,6 +4,7 @@ status: confirmed
 category: 国际
 is_model_related: true
 digest: |
+  InfoQ报道OpenAI下一代旗舰GPT-6（内部代号Astra）采用“循环深度”架构：35亿参数模型推理时可等效500亿参数、榨出约14倍潜能，以较小模型实现庞大性能、降低内存与带宽成本，但思维链不可读加重安全担忧。Altman罕见因“能力过强”主动刹车；Astra内部版已攻克10个十年以上数学难题，单题算力成本约2000美元。
 link: https://mp.weixin.qq.com/s/-Do-8Lcuq8xMxhKYQ_gxpw
 source: InfoQ
 title: GPT-6 真要来了！OpenAI全新推理架构“循环深度”首次曝光：可榨出14倍参数潜能

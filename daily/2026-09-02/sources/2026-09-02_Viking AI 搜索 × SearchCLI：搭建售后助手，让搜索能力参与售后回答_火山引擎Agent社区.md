@@ -4,6 +4,7 @@ status: confirmed
 category: 国内
 is_model_related: false
 digest: |
+  火山引擎介绍用Viking AI搜索+SearchCLI搭建售后AI助手实践：将1000条售后资料（工单/SOP/多模态指南）接入，Agent从文本、图片与会话抽取意图，并带型号、版本、客户等级、SLA等硬约束检索，返回可溯源、可执行的答案。三个案例展示图片召回、错误码收敛与VIP高风险转人工。核心观点：Agent是入口、搜索是底座，Bad Case可定位复现。
 link: https://mp.weixin.qq.com/s/96LFdIYHg4l999QaBeTu-g
 source: 火山引擎Agent社区
 title: Viking AI 搜索 × SearchCLI：搭建售后助手，让搜索能力参与售后回答
