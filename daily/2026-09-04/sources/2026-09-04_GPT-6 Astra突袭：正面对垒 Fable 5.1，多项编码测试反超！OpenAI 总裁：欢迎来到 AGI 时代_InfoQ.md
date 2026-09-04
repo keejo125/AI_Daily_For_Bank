@@ -1,11 +1,12 @@
 ---
 publish_time: 1788476243
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/8Xy-JQ5c8uHJIuTC_JJp0g
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  InfoQ 报道，OpenAI GPT-6 Astra 此次发布被外界解读为对 Anthropic Claude Fable 5.1 的正面突袭。在多项编码基准测试中，GPT-6 Astra 实现反超，OpenAI 总裁高调宣称"欢迎来到 AGI 时代"。文章从工程与产品节奏角度分析两大阵营在 agentic coding 赛道上的最新交锋。
 title: GPT-6 Astra突袭：正面对垒 Fable 5.1，多项编码测试反超！OpenAI 总裁：欢迎来到 AGI 时代
 ---
 

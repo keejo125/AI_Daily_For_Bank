@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-09-04T05:19:38.497771",
-  "total": 1772,
+  "updated_at": "2026-09-05T05:13:17.689472",
+  "total": 1794,
   "articles": [
+    {
+      "date": "2026-09-04",
+      "title": "GPT-6 Astra 正式登场：烧了 10万块 GPU、多项跑分逼近满分，OpenAI 开启“AGI时代”",
+      "source": "OpenAI",
+      "digest": "OpenAI 正式发布新一代旗舰模型 GPT-6 Astra，公司称其为\"多年研究与大量投资\"的成果。据披露，该模型训练动用约 10 万块 GPU，多项基准测试逼近满分，能力覆盖复杂推理、编码与多模态理解。OpenAI 总裁在发布中宣称\"AGI 时代\"到来，并将其定位为面向智能体协作与计算机操作（computer use）的核心底座。此次发布被视为对同期竞品（如 Claude Fable 5.1）的正面回应，标志着大模型竞赛进入以 agentic 能力为主轴的新阶段。",
+      "link": "https://www.infoq.cn/article/mKGb7ZiPRlAiFDZCWK0v",
+      "source_file": "sources/2026-09-04_GPT-6 Astra 正式登场：烧了 10万块 GPU、多项跑分逼近满分，OpenAI 开启“AG_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "谷歌 DeepMind WeatherNext 3：基于气象站观测的 5 公里全球预报，每小时刷新",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 发布 WeatherNext 3 气象模型，基于全球气象站观测数据训练，可提供 5 公里分辨率、每小时刷新的全球天气预报。相较依赖物理方程的传统模式，该模型用三年时间大幅缩小与物理预报的差距，并在刷新频率与空间精度上具备优势，显示 AI 气象模型正从研究走向业务化。",
+      "link": "https://www.marktechpost.com/2026/09/03/google-deepminds-weathernext-3-trains-on-weather-station-observations-to-deliver-5-km-global-forecasts-refreshed-every-hour/",
+      "source_file": "sources/2026-09-04_Google DeepMind’s WeatherNext 3 Trains on Weather _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "Meta 发布 Muse Spark 1.3：工具调用减少约 20%、Token 减少约 25% 的智能体编程模型",
+      "source": "Meta AI",
+      "digest": "Meta 超级智能实验室发布智能体编程模型 Muse Spark 1.3，这是该系列五个月内第四次迭代。相比 1.2 版本，新模型在完成任务时使用约 20% 更少的工具调用与约 25% 更少的 token，在 agentic coding 场景下兼顾效果与成本，延续 Meta 在高效智能体编程上的工程路线。",
+      "link": "https://www.marktechpost.com/2026/09/03/meta-ai-released-muse-spark-1-3-an-agentic-coding-model-that-uses-20-fewer-tool-calls-and-25-fewer-tokens-than-muse-spark-1-2/",
+      "source_file": "sources/2026-09-04_Meta AI Released Muse Spark 1.3_ An Agentic Coding_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "“美国大豆包”Gemini翻身：输出速度碾压同行、智能水平重回第一梯队",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道，Gemini 近期在中文互联网被戏称为\"美国大豆包\"，但新版本在输出速度上碾压同类、智能水平重回第一梯队。文章分析 Gemini 在工程优化（如推理提速）与多模态能力上的改进，认为其凭借性价比与速度重新获得开发者青睐。",
+      "link": "https://www.infoq.cn/article/M792kCZ4FIzk7YHe4WhT",
+      "source_file": "sources/2026-09-04_“美国大豆包”Gemini翻身：输出速度碾压同行、智能水平重回第一梯队_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+      "source": "量子位",
+      "digest": "量子位报道，OpenAI 新版 GPT Image 2.5 图像生成能力显著提升，已能高保真\"伪造\"一场 GPT-6 发布会现场图，逼真到足以以假乱真。文章展示其在细节、光影与文本渲染上的进步，同时提示深度伪造风险，反映生成式视觉模型在真实感上的快速演进。",
+      "link": "https://www.qbitai.com/2026/09/483948.html",
+      "source_file": "sources/2026-09-04_新版GPT Image 2.5已经能伪造GPT-6发布会了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "李飞飞刚发Atlas，中国开源“同款”已抢跑半年？",
+      "source": "量子位",
+      "digest": "李飞飞创办的 World Labs 发布全球首个多模态世界模型（omni world model）Atlas，可将文字、图像、视频与 3D 信息统一到空间上下文，从单张或数张图片重建三维场景并沿指定轨迹生成新视角。与此同时，国内空间智能团队影溯的开源世界模型 InSpatio-World 已抢跑半年并在 WorldArena 2.0 榜单登顶，显示世界模型正从视频生成走向可驱动的空间/时空状态建模。",
+      "link": "https://www.qbitai.com/2026/09/484163.html",
+      "source_file": "sources/2026-09-04_李飞飞刚发Atlas，中国开源“同款”已抢跑半年？_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-04",
+      "title": "Anthropic 发布 Claude 商业智能体：覆盖零售、旅游、电信与娱乐的开源蓝图",
+      "source": "MarkTechPost",
+      "digest": "Anthropic 发布 Claude Commerce Agents 开源蓝图（Apache-2.0），为零售、旅游、电信与娱乐等场景的购物与商家智能体提供可复用的脚手架。该蓝图抽象了订单、支付与对话等通用模块，帮助团队避免重复搭建，加速客服、导购与履约类 agent 的落地。",
+      "link": "https://www.marktechpost.com/2026/09/03/anthropic-released-claude-commerce-agents-an-apache-2-0-blueprint-for-shopping-and-merchant-agents-across-retail-travel-telecom-and-entertainment/",
+      "source_file": "sources/2026-09-04_Anthropic Released Claude Commerce Agents_ An Apac_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "奥特曼押注AI效率，扎克伯格却要开发者保住退路：别把产品锁死在一个模型上",
+      "source": "51CTO技术栈",
+      "digest": "51CTO 技术栈对比奥特曼与扎克伯格在 AI 策略上的分歧：前者押注 AI 带来的效率跃迁，主张全力投入单一前沿模型；后者提醒开发者保留\"退路\"，不要把产品锁死在单一模型上。文章从工程与架构角度讨论多模型冗余、供应商锁定与可移植性的现实取舍。",
+      "link": "https://mp.weixin.qq.com/s/q99fK8WsJyS1nHDyWhM1tw",
+      "source_file": "sources/2026-09-04_奥特曼押注AI效率，扎克伯格却要开发者保住退路：别把产品锁死在一个模型上_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "英伟达发布开源工具将闲置算力连成个人数据中心",
+      "source": "Solidot",
+      "digest": "Solidot 报道，英伟达发布开源工具，可将分散的闲置算力（如闲置 GPU）连接成一个个人数据中心，降低个人与小团队利用本地算力的门槛。该工具延续英伟达在 AI 基础设施软件上的开放策略，面向开发者的本地训练与推理场景。",
+      "link": "https://www.solidot.org/story?sid=85284",
+      "source_file": "sources/2026-09-04_英伟达发布开源工具将闲置算力连成个人数据中心_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "AI Coding 的下一步不是写得更快，而是可验收：蚂蚁数科 Harness 工程实践",
+      "source": "InfoQ",
+      "digest": "在 AICon 大会上，蚂蚁数科资深技术专家魏长征结合两个真实项目分享 AI Coding 实践：在 40 万行 Rust 新项目中，从第一天将 Harness 内建进研发流程；在 60 万行 C++ 存量项目中，先重建事实源与质量门禁再让 Agent 参与升级，缺陷率从 20% 以上降至个位数。他认为 AI Coding 放大了需求模糊、验证不足等旧问题，Harness 是围绕约束、验证与验收建立研发闭环的体系。",
+      "link": "https://mp.weixin.qq.com/s/RqbHLu_kzpyzlY3E8BLG_Q",
+      "source_file": "sources/2026-09-04_AI Coding 的下一步不是写得更快，而是可验收：蚂蚁数科 Harness 工程实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "AgentKit 实战｜搭建一个有记忆、懂业务、会执行的智能客服",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎 Agent 社区分享基于 AgentKit 搭建智能客服的实战：通过赋予智能体记忆（沉淀用户与业务上下文）、业务理解（对接知识库与工单系统）与执行能力（调用工具完成查询、下单等操作），构建\"有记忆、懂业务、会执行\"的客服智能体，解决传统对话机器人答非所问、无法闭环的痛点。",
+      "link": "https://mp.weixin.qq.com/s/3tt3JjdoC9T5__DuhGvcmQ",
+      "source_file": "sources/2026-09-04_AgentKit 实战｜搭建一个有记忆、懂业务、会执行的智能客服_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "《中国中小微企业信贷黑灰产乱象与AI防控研究报告》发布：以“智”制“智”构建金融反欺诈新防线",
+      "source": "金融电子化",
+      "digest": "8 月 11 日，《中国中小微企业信贷黑灰产乱象与 AI 防控研究报告》在清华大学经济管理学院发布。报告围绕中小微企业信贷黑灰产演化、AI 在金融反欺诈中的应用与多方协同治理展开研讨，提出以\"智\"制\"智\"——用 AI 防控被 AI 助长的信贷欺诈，构建金融反欺诈新防线。",
+      "link": "https://mp.weixin.qq.com/s/B7CfghnHDK18gfwPS74KxQ",
+      "source_file": "sources/2026-09-04_《中国中小微企业信贷黑灰产乱象与AI防控研究报告》发布：以“智”制“智”构建金融反欺诈新防线_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "【CIKM'2026】CQ-SID：LLM生成式检索在手猫搜索召回中的探索与应用",
+      "source": "千问AI平台",
+      "digest": "千问 AI 平台团队在 CIKM 2026 发表 CQ-SID，探索 LLM 生成式检索在手猫搜索召回中的应用。文章将生成式检索引入电商搜索召回环节，利用大模型理解查询意图并生成结构化候选，提升长尾与复杂 query 的召回质量，是 LLM 与工业级搜索系统结合的实践案例。",
+      "link": "https://mp.weixin.qq.com/s/USAPkWw031i8d2D37jBqtg",
+      "source_file": "sources/2026-09-04_【CIKM'2026】CQ-SID：LLM生成式检索在手猫搜索召回中的探索与应用_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "一篇AI味100%的文章是怎样炼成的？",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者刊文拆解\"AI 味 100%\"文章的特征与可检测性：从用词套路、结构模板到缺乏真实细节，AI 生成内容正形成可识别的风格指纹。文章讨论如何通过检测与写作规范应对内容同质化，对研发团队在文档、报告与营销内容生产中保持人工质感具有参考价值。",
+      "link": "https://mp.weixin.qq.com/s/pOgXFPHtusldxjh51MorVw",
+      "source_file": "sources/2026-09-04_一篇AI味100%的文章是怎样炼成的？_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "九问ScienceDiscovery实现树搜索驱动RSI，加速科学发现，小时级写出通用积分器，低成本找出物理科学规律",
+      "source": "量子位",
+      "digest": "openJiuwen 社区开源的 AI 科研工作台 ScienceDiscovery 用树搜索驱动 RSI（科研自我迭代）：给定目标后，模型改写科研代码、进沙箱评分、按得分长成搜索树，全程无需人工逐轮介入。文章以振荡积分、₂F₁ 求值与符号回归三案例说明，其用现成模型（deepseek-v4-flash、glm-5.2）在 2 小时内产出可用求解器，把\"几十到上百次试错\"交给程序自行完成。",
+      "link": "https://www.qbitai.com/2026/09/484293.html",
+      "source_file": "sources/2026-09-04_九问ScienceDiscovery实现树搜索驱动RSI，加速科学发现，小时级写出通用积分器，低成本_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "人人都能整个“自己的DeepSeek Harness”，那我们为啥还在给Claude Code们充会员？",
+      "source": "InfoQ",
+      "digest": "InfoQ 围绕\"人人都能搭建自己的 DeepSeek Harness\"展开讨论，嘉宾（唐刘、茹炳晟等）对比自研 harness 与直接购买 Claude Code 等托管服务的取舍。文章指出，随着模型能力趋同，研发效能的差异越来越取决于围绕模型构建的约束、验证与工具链（即 harness），并探讨中小团队自建的可行性。",
+      "link": "https://www.infoq.cn/article/6Jc130IN2OaXqsPDIzmJ",
+      "source_file": "sources/2026-09-04_人人都能整个“自己的DeepSeek Harness”，那我们为啥还在给Claude Code们充会_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "传统企业 AI 转型的最短路径，藏在研发部门",
+      "source": "InfoQ",
+      "digest": "InfoQ 文章提出，传统企业 AI 转型的最短路径藏在研发部门：相比在业务前端大规模铺开，先在研发环节用 AI 提升工程效能（编码、测试、知识沉淀），能以更低风险验证价值并形成可复制方法论，再向业务侧外溢。文章从组织与实践角度给出落地建议。",
+      "link": "https://mp.weixin.qq.com/s/asyLqqOICNaX-nGgF2j9uQ",
+      "source_file": "sources/2026-09-04_传统企业 AI 转型的最短路径，藏在研发部门_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "千问办公上线首月用户数突破 3000万，企业用户占比过半",
+      "source": "量子位",
+      "digest": "量子位报道，阿里千问办公上线首月用户数突破 3000 万，企业用户占比过半。该产品将大模型能力嵌入办公场景（文档、协作、智能助理等），凭借 To B 与 To C 双轮增长快速起量，反映通用办公大模型在国内市场的落地速度与接受度。",
+      "link": "https://www.qbitai.com/2026/09/484155.html",
+      "source_file": "sources/2026-09-04_千问办公上线首月用户数突破 3000万，企业用户占比过半_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "趋境科技与摩尔线程达成战略合作，高品质 AI Token 国产异构方案性价比超越国际先进算力",
+      "source": "量子位",
+      "digest": "量子位报道，趋境科技与摩尔线程达成战略合作，推出高品质 AI Token 国产异构方案，在性价比上宣称超越国际先进算力。该方案面向大模型推理的 Token 成本与国产 GPU 适配痛点，试图以异构协同降低单位推理开销，是国产算力生态协同的最新案例。",
+      "link": "https://www.qbitai.com/2026/09/484547.html",
+      "source_file": "sources/2026-09-04_趋境科技与摩尔线程达成战略合作，高品质 AI Token 国产异构方案性价比超越国际先进算力_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "华夏银行提出打造“5S”AI原生银行，已设AI专门委员会",
+      "source": "银行科技研究社",
+      "digest": "华夏银行 2026 半年报提出打造\"5S\"AI 原生银行（智能、可持续、专业、安全、友好），并整合设立 AI 专门委员会统筹推进。该行构建贯通感知—认知—决策—行动智能的企业级 AI 平台，建成\"仓颉\"大模型知识平台与\"鲁班\"AI 原生研发平台，在授信尽调、对公营销、审计数智员工等场景落地，报告期内在线运行 AI 场景 3235 个，累计节约工时 26.13 万小时。",
+      "link": "https://mp.weixin.qq.com/s/nP_WfAZI-rMjrYhMAzmUNg",
+      "source_file": "sources/2026-09-04_华夏银行提出打造“5S”AI原生银行，已设AI专门委员会_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "金融AI的年度大考交卷了：2万名选手、30+家机构、百亿级数据开源",
+      "source": "量子位",
+      "digest": "第四届 AFAC 金融智能创新大赛（AFAC2026）总决赛在上海落幕，全球 5027 支队伍、近 2 万名选手同台，30 余家机构联合发起。四道赛题聚焦市场行为识别、复杂金融文档还原、稀疏反馈自动化实验与长文本 Agent 动态记忆压缩，直击金融 AI 真实约束；赛事同步开源\"AFAC 百万金融智能数据集\"，覆盖百亿级金融科技数据条目。",
+      "link": "https://www.qbitai.com/2026/09/484203.html",
+      "source_file": "sources/2026-09-04_金融AI的年度大考交卷了：2万名选手、30+家机构、百亿级数据开源_量子位.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-04",
+      "title": "四大 AI 模型同时下线",
+      "source": "Solidot",
+      "digest": "周四凌晨，ChatGPT、Claude、Grok 与 Gemini 四大 AI 服务在相近时段内罕见地同时发生故障：OpenAI 与 Anthropic 报告高错误率，Downdetector 显示 Gemini 亦受影响，而 AWS、Azure、Cloudflare 等底层云服务商未报告重大故障。文章指出，前沿模型服务短时集体中断虽不常见，但提示了 AI 基础设施在可靠性上的集中风险。",
+      "link": "https://www.solidot.org/story?sid=85283",
+      "source_file": "sources/2026-09-04_四大 AI 模型同时下线_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-03",
       "title": "谷歌发布Gemini 3.8 Flash与3.8 Flash Cyber",

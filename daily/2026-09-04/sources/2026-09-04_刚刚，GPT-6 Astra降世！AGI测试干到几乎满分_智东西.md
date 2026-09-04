@@ -1,11 +1,12 @@
 ---
 publish_time: 1788477495
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/2bcydnPWD23OlqQvcMSIDQ
 source: 智东西
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  智东西报道，OpenAI 发布 GPT-6 Astra，在 AGI 相关测试中成绩逼近满分，被外界视为对 Anthropic Claude Fable 5.1 的"全面狙击"。文章从跑分、上下文与 agentic 能力三个维度解读新版旗舰，认为其将大模型竞争拉入以智能体操作为核心的新阶段。
 title: 刚刚，GPT-6 Astra降世！AGI测试干到几乎满分
 ---
 

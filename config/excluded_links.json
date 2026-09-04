@@ -39,7 +39,15 @@
     "http://www.geekpark.net/news/369775",
     "https://www.qbitai.com/2026/09/483552.html",
     "http://www.geekpark.net/news/369388",
-    "http://www.geekpark.net/news/369745"
+    "http://www.geekpark.net/news/369745",
+    "https://www.qbitai.com/2026/09/484159.html",
+    "https://www.solidot.org/story?sid=85291",
+    "https://www.solidot.org/story?sid=85290",
+    "https://www.solidot.org/story?sid=85289",
+    "https://www.solidot.org/story?sid=85288",
+    "https://www.solidot.org/story?sid=85287",
+    "https://www.solidot.org/story?sid=85285",
+    "https://www.solidot.org/story?sid=85282"
   ],
   "history": [
     {
@@ -201,6 +209,38 @@
     {
       "url": "http://www.geekpark.net/news/369745",
       "reason": "step3-delete-2026-09-03"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/484159.html",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85291",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85290",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85289",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85288",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85287",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85285",
+      "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85282",
+      "reason": "filter:2026-09-04"
     }
   ]
 }

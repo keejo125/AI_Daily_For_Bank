@@ -1,11 +1,12 @@
 ---
 publish_time: 1788516354
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/RqbHLu_kzpyzlY3E8BLG_Q
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  在 AICon 大会上，蚂蚁数科资深技术专家魏长征结合两个真实项目分享 AI Coding 实践：在 40 万行 Rust 新项目中，从第一天将 Harness 内建进研发流程；在 60 万行 C++ 存量项目中，先重建事实源与质量门禁再让 Agent 参与升级，缺陷率从 20% 以上降至个位数。他认为 AI Coding 放大了需求模糊、验证不足等旧问题，Harness 是围绕约束、验证与验收建立研发闭环的体系。
 title: AI Coding 的下一步不是写得更快，而是可验收：蚂蚁数科 Harness 工程实践
 ---
 

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-04",
+      "weekday": "周五",
+      "stats": {
+        "国际": 9,
+        "国内": 10,
+        "同业": 2,
+        "其他": 1,
+        "total": 22
+      },
+      "summary": "GPT-6 Astra 正式登场：烧了 10万块 GPU、多项跑分逼近满分，OpenAI 开启“AGI时代”/谷歌 DeepMind WeatherNex..."
+    },
+    {
       "date": "2026-09-03",
       "weekday": "周四",
       "stats": {

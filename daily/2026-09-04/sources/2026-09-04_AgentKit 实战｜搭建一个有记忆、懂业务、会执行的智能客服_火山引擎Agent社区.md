@@ -1,11 +1,12 @@
 ---
 publish_time: 1788517610
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/3tt3JjdoC9T5__DuhGvcmQ
 source: 火山引擎Agent社区
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  火山引擎 Agent 社区分享基于 AgentKit 搭建智能客服的实战：通过赋予智能体记忆（沉淀用户与业务上下文）、业务理解（对接知识库与工单系统）与执行能力（调用工具完成查询、下单等操作），构建"有记忆、懂业务、会执行"的客服智能体，解决传统对话机器人答非所问、无法闭环的痛点。
 title: AgentKit 实战｜搭建一个有记忆、懂业务、会执行的智能客服
 ---
 

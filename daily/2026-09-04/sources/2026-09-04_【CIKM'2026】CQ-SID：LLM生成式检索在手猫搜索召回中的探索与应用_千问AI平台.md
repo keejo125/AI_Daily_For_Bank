@@ -1,11 +1,12 @@
 ---
 publish_time: 1788489889
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/USAPkWw031i8d2D37jBqtg
 source: 千问AI平台
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  千问 AI 平台团队在 CIKM 2026 发表 CQ-SID，探索 LLM 生成式检索在手猫搜索召回中的应用。文章将生成式检索引入电商搜索召回环节，利用大模型理解查询意图并生成结构化候选，提升长尾与复杂 query 的召回质量，是 LLM 与工业级搜索系统结合的实践案例。
 title: 【CIKM'2026】CQ-SID：LLM生成式检索在手猫搜索召回中的探索与应用
 ---
 
