@@ -47,7 +47,13 @@
     "https://www.solidot.org/story?sid=85288",
     "https://www.solidot.org/story?sid=85287",
     "https://www.solidot.org/story?sid=85285",
-    "https://www.solidot.org/story?sid=85282"
+    "https://www.solidot.org/story?sid=85282",
+    "https://www.solidot.org/story?sid=85297",
+    "https://www.solidot.org/story?sid=85296",
+    "https://www.solidot.org/story?sid=85295",
+    "https://www.solidot.org/story?sid=85293",
+    "https://www.solidot.org/story?sid=85292",
+    "http://www.geekpark.net/news/369871"
   ],
   "history": [
     {
@@ -241,6 +247,30 @@
     {
       "url": "https://www.solidot.org/story?sid=85282",
       "reason": "filter:2026-09-04"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85297",
+      "reason": "filter:2026-09-05"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85296",
+      "reason": "filter:2026-09-05"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85295",
+      "reason": "filter:2026-09-05"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85293",
+      "reason": "filter:2026-09-05"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85292",
+      "reason": "filter:2026-09-05"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369871",
+      "reason": "step3-delete-综合资讯拼盘-2026-09-05"
     }
   ]
 }

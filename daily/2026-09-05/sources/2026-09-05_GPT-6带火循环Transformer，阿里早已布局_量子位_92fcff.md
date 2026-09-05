@@ -1,22 +1,23 @@
 ---
-publish_time: 1788619681
-link: https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA
+publish_time: 1788620828
+link: https://www.qbitai.com/2026/09/484726.html
 source: 量子位
 status: confirmed
 category: 国内
 is_model_related: true
 digest: |
-  （同主题合并从条）GPT-6 Astra发布的“循环深度”技术让循环Transformer一夜走红，阿里此前已发表MeSH与SpiralFormer两篇论文攻坚“计算冗余”难题，循环架构被视为下一代高效大模型候选路线。
-title: GPT-6带火循环Transformer，阿里早已布局
+  GPT-6 Astra发布后，其使用的“循环深度”（recurrent depth）技术一夜走红：让同一组Transformer层反复运行，在不增同等参数的情况下把计算做更深。该技术引发AI安全争议，OpenAI首席科学家Pachocki被迫下场回应。文章指出循环模型常受“计算冗余”困扰、同等算力下常打不过普通Transformer；有意思的是阿里早在11个月前就发表两篇相关论文——MeSH（管理循环内部信息）与SpiralFormer（死磕循环间计算精度粒度），正面攻坚这一难题。循环架构由此成为下一代高效大模型的候选路线之一。
 ---
 
 # GPT-6带火循环Transformer，阿里早已布局
 
-来源：量子位
-原文链接：https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA
+> 原文链接：https://www.qbitai.com/2026/09/484726.html
+> 来源：量子位
 
-一水 发自 凹非寺
-量子位 | 公众号 QbitAI
+GPT-6带火循环Transformer，阿里早已布局
+一水
+量子位
+手握两篇顶会论文
 GPT-6 Astra一发布，recurrent depth突然一夜火了！
 最早是The Information爆料，Astra使用了这种「循环深度」技术：
 让同一组Transformer层反复运行，在不增加同等规模参数的情况下，把计算做得更深
@@ -196,11 +197,46 @@ Astra的出现，更是把这条原本偏学术的路线，一把推到了行业
 那就，让子弹再飞一会儿吧。
 MeSH：https://arxiv.org/abs/2510.07739
 SpiralFormer： https://arxiv.org/abs/2602.11698
-一键三连
-「点赞」「转发」「小心心」
-欢迎在评论区留下你的想法！
-—
-完
-—
-🌟 点亮星标 🌟
-科技前沿进展每日见
+版权所有，未经授权不得以任何形式转载及使用，违者必究。
+阿里
+一水
+刚刚，港股AGI第一股杀疯了！Agent业务半年进账近5亿，Token收入Q2暴涨500%
+650亿美元！IPO前夕，Anthropic营收底牌曝光
+WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队
+李飞飞最新访谈：AI咋能代替人呢？
+扫码分享至朋友圈
+相关阅读
+双11背后的技术力量，阿里云神龙治愈云计算阿克琉斯之踵
+晓查
+云计算
+阿里
+阿里百度旷视商汤京东，AI大厂怎么看产业实践？
+从这场京交会论坛，看出未来趋势
+郭一璞
+商汤
+旷视
+百度
+阿里
+马云宣布启动第三批非洲应急物资捐赠，其中包括460万个口罩
+白交
+新冠
+阿里
+马云
+仅480块GPU搞出万亿参数大模型！达摩院3个月打造，出手即商用
+能耗降低8成，效率还提升11倍
+十三
+万亿参数大模型
+达摩院
+阿里
+阿里达摩院正式加入5G巨头仗：瞄准新基建，成立XG实验室，要与华为战一战
+乾明
+雷刚
+5G
+华为
+达摩院
+阿里
+Canalys发布2019 Q4中国云市场报告：阿里腾讯百度位居前三
+鱼羊
+云服务
+腾讯
+阿里

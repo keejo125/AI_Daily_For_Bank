@@ -1,11 +1,12 @@
 ---
 publish_time: 1788574500
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Gxv_Y1RdoIStvNZQkuWlPg
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  AI编程助手Cursor推出Origin——一个内嵌于编辑器、面向智能体的代码托管平台，定位为已用Cursor团队的GitHub替代方案，目前向Pro/Teams/Enterprise用户开放Beta。Origin支持代码库创建、拉取请求与浏览器内代码浏览，提供Origin CLI，并通过镜像仓库与GitHub保持同步（推送仍指向GitHub）。Cursor将其定义为“智能体原生基础设施”，主打堆叠式PR与智能体感知合并队列（源自2025年收购Graphite）。发布正值GitHub经历数小时宕机，被外界解读为利用开发者对GitHub可靠性的不满。
 title: Cursor 推出 Origin：面向智能体的 GitHub 替代方案
 ---
 
