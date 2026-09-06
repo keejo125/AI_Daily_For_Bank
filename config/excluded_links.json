@@ -54,7 +54,12 @@
     "https://www.solidot.org/story?sid=85293",
     "https://www.solidot.org/story?sid=85292",
     "http://www.geekpark.net/news/369871",
-    "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA"
+    "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA",
+    "https://www.solidot.org/story?sid=85298",
+    "https://openai.com/index/an-alien-mind",
+    "https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/",
+    "https://www.solidot.org/story?sid=85299",
+    "https://www.solidot.org/story?sid=85300"
   ],
   "history": [
     {
@@ -276,6 +281,26 @@
     {
       "url": "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA",
       "reason": "duplicate-of-RSS-2026-09-05-GPT6循环Transformer-同源同篇忽略"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85298",
+      "reason": "filter:2026-09-06"
+    },
+    {
+      "url": "https://openai.com/index/an-alien-mind",
+      "reason": "filter:2026-09-06"
+    },
+    {
+      "url": "https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/",
+      "reason": "filter:2026-09-06"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85299",
+      "reason": "filter:2026-09-06"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85300",
+      "reason": "filter:2026-09-06"
     }
   ]
 }
