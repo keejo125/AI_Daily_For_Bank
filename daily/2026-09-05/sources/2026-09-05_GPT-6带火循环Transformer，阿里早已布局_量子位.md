@@ -2,7 +2,7 @@
 publish_time: 1788619681
 link: https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA
 source: 量子位
-status: confirmed
+status: pending
 category: 国内
 is_model_related: true
 digest: |

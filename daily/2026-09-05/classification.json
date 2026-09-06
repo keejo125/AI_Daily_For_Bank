@@ -175,11 +175,6 @@
         {
           "name": "量子位",
           "link": "https://www.qbitai.com/2026/09/484726.html"
-        },
-        {
-          "source_file": "sources/2026-09-05_GPT-6带火循环Transformer，阿里早已布局_量子位.md",
-          "name": "量子位",
-          "link": "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA"
         }
       ],
       "aid": 11
@@ -231,18 +226,6 @@
         }
       ],
       "aid": 14
-    },
-    {
-      "title": "GPT-6带火循环Transformer，阿里早已布局",
-      "source": "量子位",
-      "link": "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA",
-      "digest": "（同主题合并从条）GPT-6 Astra发布的“循环深度”技术让循环Transformer一夜走红，阿里此前已发表MeSH与SpiralFormer两篇论文攻坚“计算冗余”难题，循环架构被视为下一代高效大模型候选路线。",
-      "source_file": "sources/2026-09-05_GPT-6带火循环Transformer，阿里早已布局_量子位.md",
-      "is_model_related": true,
-      "publish_time": 1788619681,
-      "is_merged": true,
-      "merged_into": "sources/2026-09-05_GPT-6带火循环Transformer，阿里早已布局_量子位_92fcff.md",
-      "aid": 15
     }
   ],
   "同业": [
@@ -260,7 +243,7 @@
           "link": "https://mp.weixin.qq.com/s/cvCEm52gRpmAON3UcZt2SQ"
         }
       ],
-      "aid": 16
+      "aid": 15
     },
     {
       "title": "波士顿BCG何大勇：AI银行的3大目标状态",
@@ -276,7 +259,7 @@
           "link": "https://mp.weixin.qq.com/s/TOYhrG3wVp_XCsrHdXCI6g"
         }
       ],
-      "aid": 17
+      "aid": 16
     }
   ],
   "其他": [],
