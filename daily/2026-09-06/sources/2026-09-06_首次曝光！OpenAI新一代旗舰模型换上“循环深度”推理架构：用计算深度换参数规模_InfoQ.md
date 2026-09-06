@@ -1,11 +1,12 @@
 ---
 publish_time: 1788660900
-status: pending
-category: 
-is_model_related: false
-digest: ""
 link: https://mp.weixin.qq.com/s/TnQ2XON_rqzuou-2QT7GWA
 source: InfoQ
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  据《The Information》援引知情人士，OpenAI 即将推出的旗舰模型 Astra 采用“循环深度”（recurrent depth / 循环 Transformer）技术，在输出下一个词前将文本在同一网络层多次循环处理，用较小模型等效庞大模型性能，显著降低内存与带宽成本。研究显示，35 亿参数循环深度模型在推理时可等效最高约 500 亿参数模型的算力。该技术方向与 Latent Reasoning（潜空间推理）一致，让模型在连续数学表示空间而非人类语言中推理，但副作用是思维链不可读，加重安全担忧。奥特曼此前已因 Astra“能力过强”主动暂停训练。Astra 内部版本据称攻克 10 道悬置十年的数学与理论计算机难题，算力成本约 2000 美元，证明均形式化为 Lean 证书。
 title: 首次曝光！OpenAI新一代旗舰模型换上“循环深度”推理架构：用计算深度换参数规模
 ---
 

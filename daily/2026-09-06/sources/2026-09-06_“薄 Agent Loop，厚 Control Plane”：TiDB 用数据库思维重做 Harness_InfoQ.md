@@ -1,11 +1,12 @@
 ---
 publish_time: 1788669000
-status: pending
-category: 
-is_model_related: false
-digest: ""
 link: https://mp.weixin.qq.com/s/XwdD9d6jFbRFwMWhr5a7JA
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  TiDB 团队基于数据库可靠性哲学构建面向 Agent 的基础设施 TiDB Cloud Filesystem，将 Workspace 从 Session/Sandbox 生命周期中独立，提供数据库级持久化、版本、分支、回滚与权限控制，即使 Sandbox 被回收，新 Executor 也能接管同一份状态继续任务，目前已承载数百万个 Agent Workspace。TiDB 唐刘将其设计哲学概括为“薄 Agent Loop，厚 Control Plane”：Agent Loop 变化最快、最易同质化，可基于开源项目；而状态、权限与副作用边界必须稳定。他还提出多 Agent 协作应“通过状态共享而非消息广播”，推崇 Unix 式安静协作，并强调“Fail Fast 比 Retry 更重要”，以控制错误被不断重试后放大成系统雪崩。
 title: “薄 Agent Loop，厚 Control Plane”：TiDB 用数据库思维重做 Harness
 ---
 
