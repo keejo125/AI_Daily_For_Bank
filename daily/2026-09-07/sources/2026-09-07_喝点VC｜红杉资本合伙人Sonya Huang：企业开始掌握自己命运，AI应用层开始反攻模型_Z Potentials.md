@@ -1,11 +1,12 @@
 ---
 publish_time: 1788746642
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/eeeJMjCSQftjskkFc60ZNA
 source: Z Potentials
+status: confirmed
+category: 其他
+is_model_related: false
+digest: |
+  红杉资本合伙人 Sonya Huang 指出，随着开放权重模型逼近前沿、后训练基础设施成熟，越来越多 AI 应用公司重新评估哪些智能能力自建、哪些继续向前沿实验室购买。Sequoia 观察到企业开始为部分功能构建自有 AI 能力、通过纵向整合拥有并塑造模型权重；决定自建前必须先有 eval，每次前向传播都有评测结果，选模型才有量化依据。前沿实验室继续建“大脑”，最优秀产品公司培养专注特定领域的“小天才”。
 title: 喝点VC｜红杉资本合伙人Sonya Huang：企业开始掌握自己命运，AI应用层开始反攻模型
 ---
 

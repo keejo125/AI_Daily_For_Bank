@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-07",
+      "weekday": "周一",
+      "stats": {
+        "国际": 8,
+        "国内": 14,
+        "同业": 2,
+        "其他": 4,
+        "total": 28
+      },
+      "summary": "GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”/Meta FAIR 发布 AI 研究偏好模型（RPMs）/AI进入AI研发流程的中国样..."
+    },
+    {
       "date": "2026-09-06",
       "weekday": "周日",
       "stats": {

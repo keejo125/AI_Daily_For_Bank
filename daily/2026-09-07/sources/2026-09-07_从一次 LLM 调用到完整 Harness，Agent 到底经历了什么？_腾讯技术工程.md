@@ -1,11 +1,12 @@
 ---
 publish_time: 1788773760
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/kZZac-VBgnQIZeookE9Y8g
 source: 腾讯技术工程
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯技术工程梳理了 Agent 系统从一次 LLM 调用演进为“小型操作系统”的过程：模型不知历史→上下文，不能改世界→工具，一次调用不够→循环，上下文装不下→记忆，循环产生副作用→权限与沙箱，一个循环不够并行→子 Agent。文章指出，今天 Agent 管理子进程、维护长期记忆、驱动工具、处理权限隔离与恢复观测，复杂性并非一次设计出来，而是每次模型越过调用边界时，在模型外新增一个部件逐步长成。
 title: 从一次 LLM 调用到完整 Harness，Agent 到底经历了什么？
 ---
 

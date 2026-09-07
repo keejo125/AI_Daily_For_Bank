@@ -1,7 +1,287 @@
 {
-  "updated_at": "2026-09-07T07:20:00.674889",
-  "total": 1821,
+  "updated_at": "2026-09-08T05:14:10.615320",
+  "total": 1849,
   "articles": [
+    {
+      "date": "2026-09-07",
+      "title": "GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”",
+      "source": "腾讯科技",
+      "digest": "OpenAI 于 9 月初发布 GPT-6 旗舰模型 Astra，同日披露内部数据：研究员每工作一天即有 3 个多 Agent 工作日在同步运转，中位数研究员每日 Agent 推理消耗超 600 美元，并已实现可在人类指导下完成研究员数日任务的“自动化研究实习生”。随后被曝正在内测 GPT-6 家族新模型 Sol，单次测试速度约为 Astra 的 6 倍，整体能力弱于 Astra 但仍属“怪物级”。发布三天后，首席科学家 Jakub Pachocki 发表长文《An Alien Mind》，呼吁在能力快速扩张的同时建立对齐、监控与治理体系。据披露，Astra 使用约 10 万套 NVIDIA Grace Blackwell NVLink72 训练，后续还有 40 万套 GPU 上线。",
+      "link": "https://mp.weixin.qq.com/s/f_5eMcbaZSs2vbK4JQ4nzA",
+      "source_file": "sources/2026-09-07_GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”_腾讯科技.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Meta FAIR 发布 AI 研究偏好模型（RPMs）",
+      "source": "MarkTechPost",
+      "digest": "Meta FAIR 联合牛津大学、伦敦大学学院提出 AI Research Preference Models（RPMs），用于在耗费 GPU 工时训练候选模型之前，对机器学习实验进行偏好排序。随着 AI 研究智能体已能自行提出、实现并给实验打分，候选方案远多于可负担运行的量，RPMs 通过学习研究者对实验的偏好，在投入算力前筛选高价值候选，把“哪些实验值得跑”变成研究进展的真正杠杆。",
+      "link": "https://www.marktechpost.com/2026/09/06/meta-fair-introduces-ai-research-preference-models-rpms-ranking-ml-experiments-before-spending-gpu-hours/",
+      "source_file": "sources/2026-09-07_Meta FAIR Introduces AI Research Preference Models_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "AWS 开源 Kiro Crew，让 Coding Agent 异步跑起来",
+      "source": "InfoQ",
+      "digest": "Amazon 宣布开源 Kiro Crew，一套支持多个 Kiro Coding Agent 跨 Session、工具与任务协同运行的系统。开发者可将事故调查、工单分诊、迁移与 PR 监控等 Coding 任务交给 AI Agent 异步执行，即使离开电脑也能持续推进。Kiro Crew 支持持久化多 Session 开发，提供共享记忆、可复用 Skills、定时任务、并发 Agent 与专用 Apps，Agent 可保留项目上下文、委派子 Agent，并通过 MCP 与 Webhook 接入外部工具。该项目最初以 MeshClaw 名义在 Amazon 内部开发，已被超 3.9 万名内部开发者采用，现既可本地运行也可部署到自有基础设施。",
+      "link": "https://www.infoq.cn/article/uTRvjxweSGdp2kzlhPiV",
+      "source_file": "sources/2026-09-07_AWS 开源 Kiro Crew，让 Coding Agent 异步跑起来_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Claude 参与证明费马猜想，自动化 AI 研究员崭露头角",
+      "source": "TLDR AI",
+      "digest": "本期 TLDR AI 报道，Anthropic 的 Claude 配合自动化 AI 研究智能体，参与证明费马相关数学命题，展示大模型从“写代码”走向“做研究”的进展；同期亦提及 Z1 高效推理芯片等动态。该案例说明大模型与科研智能体正开始承接部分形式化证明与数学研究任务，尽管距完全自主的科研仍有距离，但已显露出 AI 参与基础科学研究的现实路径。",
+      "link": "https://tldr.tech/ai/2026-09-07",
+      "source_file": "sources/2026-09-07_Claude proves Fermat 🧮, automated AI researcher 🔬,_TLDR AI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Cloudflare 扩展了 AI 搜索功能，以便客服代表和开发人员可以更轻松地搜索自定义数据",
+      "source": "InfoQ",
+      "digest": "Cloudflare 推出 AI Search，一项面向 AI 智能体与应用的自定义数据搜索引擎，支持智能体集成、多模态搜索，并与 Workers AI、AI Gateway、Vectorize、R2、Browser Run 等基础组件无缝集成，自动处理端到端搜索管道。组织可对结构化或非结构化数据集建索引，让客服代表与开发者更便捷地检索数据。新版本支持“发现”模式，即使网站未发布站点地图也能自动发现页面；并提供统一公共端点，可跨多个实例或网站免认证搜索。",
+      "link": "https://www.infoq.cn/article/hJYBb35wMVeU07hTPWIb",
+      "source_file": "sources/2026-09-07_Cloudflare 扩展了 AI 搜索功能，以便客服代表和开发人员可以更轻松地搜索自定义数据_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "刚刚，OpenAI最新内部数据公开！2028年实现全自动AI研究",
+      "source": "机器之心",
+      "digest": "机器之心报道，OpenAI 公开 AI 模型加速内部科研的详细数据，并宣布已达成“自动化 AI 研究实习生”目标，计划在 2028 年实现完全自动化的 AI 研究人员。截至 2026 年 8 月中旬，OpenAI 研究部门每 1 个人类工作日对应 3.1 个 Agent 工作日在同步运转，Agent 已进入实验运行、技术支持、结果分析与监控等环节。作者呼吁各 AI 公司在递归式自我改进速度上保持透明，为公众讨论模型开发节奏提供信息。",
+      "link": "https://mp.weixin.qq.com/s/PWd5S1Xew2540h7YsX85Mg",
+      "source_file": "sources/2026-09-07_刚刚，OpenAI最新内部数据公开！2028年实现全自动AI研究_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "微软将人工智能治理从政策层面转向运行时执行",
+      "source": "InfoQ",
+      "digest": "微软发布一套人工智能治理架构，将治理重点从文档政策转向运行时执行、持续评估、可观测性与审计证据，适配生产环境内部署 AI 应用与智能体。框架涵盖政策、数据治理、模型治理、可观测性、评估、安全、身份与访问、审计合规及智能体治理九大领域，运行时控制覆盖用户、智能体、模型、工具、API、MCP 服务器与企业系统间的交互。架构与 Microsoft Foundry、Purview、Entra ID、Defender 及 Azure API Management 集成，Foundry AI 网关为认证、令牌限制、配额与策略执行提供运行时边界，并可在不改 MCP 服务器与智能体代码的前提下实现集中式认证、限流、IP 限制与审计日志。",
+      "link": "https://www.infoq.cn/article/STpCLL13xCQsoYrfWSLb",
+      "source_file": "sources/2026-09-07_微软将人工智能治理从政策层面转向运行时执行_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "深度｜对话OpenRouter CEO：Harness 正在取代超级 App，未来所有软件都只是 Agent 的后台工具",
+      "source": "Z Finance",
+      "digest": "OpenRouter 联合创始人 Alex Atallah 在与 20VC 的对谈中阐述其对多模型竞争与下一代 Agent 架构的判断：AI 不会只剩一个赢家，训练数据、方法与模型“性格”的差异本身就是价值，多模型并用将成为长期常态；推理服务并非无差异的“卖铲子”生意；随着模型增多、迭代加快，路由、记忆、安全与推理基础设施愈发重要，Harness 正取代超级 App，未来软件都只是 Agent 的后台工具。",
+      "link": "https://mp.weixin.qq.com/s/JSO9e-sQK20Lx1hv01lKPg",
+      "source_file": "sources/2026-09-07_深度｜对话OpenRouter CEO：Harness 正在取代超级 App，未来所有软件都只是 Agent 的后台工具_Z Finance.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "AI进入AI研发流程的中国样本：一个27B本地Agent模型如何在Qwen上“练”出来？",
+      "source": "InfoQ",
+      "digest": "盛大网络创始人陈大年创立的 StartLux 押注“轻量化基础模型+精准后训练”路线，发布 StartLux-V1.0-27B-Preview。该模型以 Qwen3.6-27B 为基座，主要围绕任务理解、工具选择、参数构造、多步执行、状态检查与结果验证等 Agent 能力后训练，而非从头训练更大模型。联合创始人兼 CTO 郭权玮以“用很小数据做像小孩一样聪明的模型，再上九年制义务教育”比喻其思路。陈大年判断三年内本地模型综合能力有机会追平顶级云端大模型并占 80% 市场。",
+      "link": "https://mp.weixin.qq.com/s/M2v6t2lC3CxOgMVQT9O7QQ",
+      "source_file": "sources/2026-09-07_AI进入AI研发流程的中国样本：一个27B本地Agent模型如何在Qwen上“练”出来？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "全国产算力训出2930亿参数！讯飞星火X2.5来了，附一手实测",
+      "source": "智东西",
+      "digest": "科大讯飞发布星火 X2.5 大模型，重点提升代码、智能体能力，并增强数学、理解等通用能力，已在讯飞开放平台上线。模型采用 MoE 架构，总参数 2930 亿、每次推理激活 300 亿，基于全国产算力完成全流程训练，支持 256K 上下文。智东西实测显示，其在游戏开发、3D 创作与网页前端任务中可产出可玩产品，数学推理与内容创作亦表现良好。价格上，每百万 Token 输入/输出分别 1.6 元/6 元（限时 5 折）。",
+      "link": "https://mp.weixin.qq.com/s/wQvl1xt7dEQ3l0ELYJiaEg",
+      "source_file": "sources/2026-09-07_全国产算力训出2930亿参数！讯飞星火X2.5来了，附一手实测_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3",
+      "source": "量子位",
+      "digest": "由含一位菲尔兹奖得主（2010 年证明渗流模型与平面 Ising 模型共形不变性）的 15 人团队 Mostik 提出新方案：4B 手机端 Qwen 配合云端 753B GLM-5.2，大模型全程不输出文字、仅由小模型写出最终答案，在 ARC-AGI 3 上刷出高分。团队称在大小模型间搭起“桥”，信息传输效率提升数个数量级，使 4B 模型补上约 50% 性能差距、自身准确率提高 25%，大模型侧推理成本降至约二十分之一。技术细节因比赛未结束暂未公开。",
+      "link": "https://www.qbitai.com/2026/09/485108.html",
+      "source_file": "sources/2026-09-07_菲尔兹奖得主入局大模型！4B手机Qwen+云端GLM刷爆ARC-AGI 3_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-07",
+      "title": "60% 用户渗透率、50% 完整采纳率：快手稳定性 Agent 如何落地？",
+      "source": "InfoQ",
+      "digest": "快手主站技术稳定性专家王泽锋在 AICon 分享“柯南 AI”工程实践：AI Coding 提升代码效率，但线上告警、根因定位、止损与修复等稳定性环节未同步提速，缺乏全局上下文的 AI 可能沿最小阻力路径消除表象、留下跨系统隐患。柯南 AI 重新设计人机分工——确定性流程交代码、概率推理交模型，通过 Skill 沉淀专家经验，以源码服务与端侧基建提供上下文，用 Bad Case 驱动进化。其在快手大前端研发中用户渗透率近 60%，根因分析完整采纳率约 50%，曾约 10 分钟定位鸿蒙 C++ Crash 的 Use-After-Free 问题。",
+      "link": "https://mp.weixin.qq.com/s/lqmVEaL1DHxuz6IlYqsbVw",
+      "source_file": "sources/2026-09-07_60% 用户渗透率、50% 完整采纳率：快手稳定性 Agent 如何落地？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "TikTok SRE 技术负责人：AI Agents 说到底就是分布式系统",
+      "source": "InfoQ",
+      "digest": "TikTok 站点可靠性工程师 Salman Munaf 指出，一旦模型开始调用外部服务，问题就从模型问题变成分布式系统问题：Agent 调用退款接口网络超时，重试可能导致重复执行。他系统拆解 AI Agent 从 LLM 调用演化为真正分布式系统的过程，强调必须借用分布式系统工具箱——请求标识符、幂等键、状态查询、超时与熔断等，才能让 Agent 在犯错时不造成不可逆后果。文章整理自其演讲视频。",
+      "link": "https://www.infoq.cn/article/atCusTaSOmddUx1vvJba",
+      "source_file": "sources/2026-09-07_TikTok SRE 技术负责人：AI Agents 说到底就是分布式系统_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "WorkBuddy上线鸿蒙手表端",
+      "source": "财联社AI daily",
+      "digest": "在华为全场景新品发布会上，腾讯 WorkBuddy 手表端首发，已适配 HUAWEI WATCH 5 系列、WATCH Ultimate 2、WATCH ULTIMATE DESIGN 及最新 WATCH 6 系列。作为面向鸿蒙手表的 AI 助手，它把 WorkBuddy 的能力延伸到腕上场景，是 AI 助手产品向多端、轻量化覆盖的又一落地。",
+      "link": "https://mp.weixin.qq.com/s/Lkdr_4gZVPf4WK7Y145fGw",
+      "source_file": "sources/2026-09-07_WorkBuddy上线鸿蒙手表端_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "“薄 Agent Loop，厚 Control Plane”：TiDB 用数据库思维重做 Harness",
+      "source": "InfoQ",
+      "digest": "TiDB 团队启动面向 Agent 的基础设施尝试 TiDB Cloud Filesystem，将 Workspace 从 Session 与 Sandbox 生命周期中独立，提供数据库级的持久化、版本、分支、回滚与权限控制，即使 Sandbox 回收，新 Executor 也能接管同一份文件与状态继续任务，已承载超数百万个 Agent Workspace。其 Harness 哲学被概括为“薄 Agent Loop，厚 Control Plane”：借助开源项目完成最内层 Agent Loop，将精力放在任务编排、权限、Sandbox、持久状态与失败恢复——这些正是数据库团队二十年擅长的领域。",
+      "link": "https://www.infoq.cn/article/38uc758e24YV4LUpAs77",
+      "source_file": "sources/2026-09-07_“薄 Agent Loop，厚 Control Plane”：TiDB 用数据库思维重做 Harne_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "业内首个！千问办公推出“多人工作台”",
+      "source": "千问办公",
+      "digest": "阿里巴巴旗下 Agent 产品“千问办公”推出业内首个“多人工作台”：用户描述需求即可生成并发布支持百人同时在线协作的网页，承载活动组织、家校协同、企业协作等复杂业务流程。相比面向个人的 AI 工作台，它具备角色权限、云端数据库、管理后台与在线发布四项核心能力，可承载多人业务流程；用户作为管理员或成员配置数据与操作权限，统一存储提交的数据、任务状态与进展，并通过后台集中管理统计，生成网页一键发布后团队成员按权限访问。",
+      "link": "https://mp.weixin.qq.com/s/bINXguaCisUfQ17tA61yUQ",
+      "source_file": "sources/2026-09-07_业内首个！千问办公推出“多人工作台”_千问办公QwenWork.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "从一次 LLM 调用到完整 Harness，Agent 到底经历了什么？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程梳理了 Agent 系统从一次 LLM 调用演进为“小型操作系统”的过程：模型不知历史→上下文，不能改世界→工具，一次调用不够→循环，上下文装不下→记忆，循环产生副作用→权限与沙箱，一个循环不够并行→子 Agent。文章指出，今天 Agent 管理子进程、维护长期记忆、驱动工具、处理权限隔离与恢复观测，复杂性并非一次设计出来，而是每次模型越过调用边界时，在模型外新增一个部件逐步长成。",
+      "link": "https://mp.weixin.qq.com/s/kZZac-VBgnQIZeookE9Y8g",
+      "source_file": "sources/2026-09-07_从一次 LLM 调用到完整 Harness，Agent 到底经历了什么？_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "传统企业 AI 转型的最短路径，藏在研发部门",
+      "source": "InfoQ",
+      "digest": "文章指出，传统企业的 AI 转型正从研发部门发起：研发人员最早踩坑、也最早沉淀出可在企业复用的经验——知道模型会一本正经地犯错、上下文给少给多都不行、一句“帮我开发系统”约等于什么都没说、AI 演示惊艳但接进生产环境就麻烦。这些“给 AI 收拾残局”的经验，比会不会写提示词更重要，使研发部门从成本中心转变为 AI 转型的发动机，并推动组织整体进化。",
+      "link": "https://www.infoq.cn/article/jrEuCFhtpA9LmGX60R1H",
+      "source_file": "sources/2026-09-07_传统企业 AI 转型的最短路径，藏在研发部门_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "判断用不用你的软件，Agent 只需 500 个 Token",
+      "source": "极客公园",
+      "digest": "文章提出 AEO（Agentic Engine Optimization，Agent 引擎优化）概念：正如 SEO 为搜索引擎优化，AEO 是为 AI Agent 优化。开发者普遍将 Agent 调 API 反复报错归咎于“模型不够聪明”，但 Google Cloud AI 工程总监 Addy Osmani 指出，问题常在于产品本身对 Agent 友好或不友好——有些天然对 Agent 友好、有些充满敌意。产品需要像适配爬虫一样，为 Agent 提供清晰、可机读的接口与上下文，才能在 Agent 时代被“选中”。",
+      "link": "http://www.geekpark.net/news/369960",
+      "source_file": "sources/2026-09-07_判断用不用你的软件，Agent 只需 500 个 Token_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
+      "source": "量子位",
+      "digest": "国内首份《中国办公 Agent 用户行为不完全报告》在京发布，基于国内首个大厂开源桌面端办公 Agent LobsterAI 真实用户数据。报告显示北京以显著优势居全国城市用户量首位，与上海、杭州、广州、深圳合计约 27%；海外用户占比超 12%；Top10 城市之外用户比例达 62.79%，表明 Agent 应用已突破一线城市圈层。报告发布呼应北京市 7 月印发的智能体发展若干措施，揭示人机协作方式的深刻变化。",
+      "link": "https://www.qbitai.com/2026/09/485064.html",
+      "source_file": "sources/2026-09-07_国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "成立 12 年，快看漫画重做 AI 时代的内容产品",
+      "source": "InfoQ",
+      "digest": "快看漫画宣布互动内容产品 Livo 即将上线，搭建新型 Multi-Agent 架构：最上层 World Agent 负责故事整体运行，管理角色日程、事件、天气与运势等全局状态，下层 NPC 根据用户选择、角色关系与环境动态“涌现”新故事与交互，用户离线时仿生世界仍自发运转。相较传统 RPG 有限剧情树，Livo 让每个用户经历独一无二的平行世界，是快看继条漫、漫剧、AI 陪伴互动漫画后在内容边界上的新探索。",
+      "link": "https://www.infoq.cn/article/kAHvBCLrI3sdMyONOveM",
+      "source_file": "sources/2026-09-07_成立 12 年，快看漫画重做 AI 时代的内容产品_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "月烧360亿Token、单次失控533美元！AI一天写4.4万行代码却没合并，程序员：AI Coding 真正的瓶颈来了",
+      "source": "CSDN",
+      "digest": "腾讯高级后台开发工程师、研发转型负责人任磊达分享其 AI 原生研发现场：月耗 360 亿 Token，单人并行 Agent 从 5 个增至 20 个；一次失控递归跑 7000+ 层、烧掉 7.34 亿 Token 与 533 美元；某天 AI 写出 4.4 万行代码，经 27 轮 Review 发现 193 个问题后决定不合并。文章指出，当 AI Coding 足够快，最大瓶颈已不是模型能力，而是人的注意力与整个研发系统能否接住 AI 产能——Review、测试、评测、反馈与组织机制必须随之 Scaling。",
+      "link": "https://mp.weixin.qq.com/s/ral4ih9yq6uq5XnigBA1OA",
+      "source_file": "sources/2026-09-07_月烧360亿Token、单次失控533美元！AI一天写4.4万行代码却没合并，程序员：AI Coding 真正的瓶颈来了_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "上海农商银行新设2个数据、数字化相关部门！推进AI在重点领域试点工作",
+      "source": "银行科技研究社",
+      "digest": "上海农商银行在 2026 半年报中披露，新设立数据经营与管理部、数字化转型与流程体验部两个数字化相关部门，完成数据管理部门架构调整，形成对全行数据的集中统筹管理。其中数据经营与管理部已启动招聘，设数据应用岗（8 人）与模型治理岗（6 人），分别负责数据应用平台建设、客户画像与风险图谱，以及建模方法论、模型评审标准与模型资产管理。该行同时加强 AI 大模型布局，推进 AI 在重点领域试点。",
+      "link": "https://mp.weixin.qq.com/s/IMBMNtIoMoWF1SCARsa3sw",
+      "source_file": "sources/2026-09-07_上海农商银行新设2个数据、数字化相关部门！推进AI在重点领域试点工作_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "智涌跃变：工商银行人工智能技术演进与体系创新实践",
+      "source": "中国金融电脑+",
+      "digest": "工商银行软件开发中心系统梳理其人工智能技术从“跟跑”到“领跑”的演进：历经“筑基探索、融合升级、跃迁引领”三阶段，完成从单点技术攻关到生态体系建设的转型，2024 年“金融行业千亿级大模型应用”项目获中国人民银行金融科技发展奖一等奖。文章聚焦技术演进关键跨越、体系构建核心突破、场景赋能实践与未来发展蓝图，呈现工行从“数字工行（D-ICBC）”向“数智工行（AI-ICBC）”迈进的“工行答卷”。",
+      "link": "https://mp.weixin.qq.com/s/8TBDPf8Gr1FHnuvouVBheg",
+      "source_file": "sources/2026-09-07_智涌跃变：工商银行人工智能技术演进与体系创新实践_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "AI 时代，「种草」这件事会变成什么样？",
+      "source": "极客公园",
+      "digest": "极客公园对话小红书种草产品负责人许晴与悦普集团 COO 鲍白白，探讨 AI 时代“种草”的演化。文章指出，AIGC 内容泛滥让用户对平台内容“过敏”、信任下降；AI 越擅长“完美”，人越渴望有取舍、有态度、带主观温度的表达。对品牌而言，挑战是如何在内容泛滥期重新赢得用户信任，从追流量转向经营用户关系。文章呈现营销从业者在 AI 时代的真实困惑与应对思路。",
+      "link": "http://www.geekpark.net/news/369962",
+      "source_file": "sources/2026-09-07_AI 时代，「种草」这件事会变成什么样？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "AI能做不代表AI应该做！比尔·盖茨：有些位置必须留给人，必须为人类工作划“保护区”",
+      "source": "51CTO技术栈",
+      "digest": "比尔·盖茨最新发声，将失业、权力集中、生物安全与“人是否还要工作”摆到 AI 讨论前台，并承认若处理不慎，AI 负面影响可能超过正面价值。他强调“AI 能做不代表 AI 应该做”，呼吁为某些岗位划出“人类保护区”，把部分位置留给人。文章整理其观点，呈现业界对 AI 替代与人类工作边界的再思考。",
+      "link": "https://mp.weixin.qq.com/s/WnhT4GSSxHW_Z3GMM_5pCg",
+      "source_file": "sources/2026-09-07_AI能做不代表AI应该做！比尔·盖茨：有些位置必须留给人，必须为人类工作划“保护区”_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "「AI Native 」不是魔法，「创业者」这三个字依旧厚重",
+      "source": "极客公园",
+      "digest": "极客公园作者基于走访 200 余位 AI 创业者的一线观察指出，真正跑出来的产品都有一个共同点——笃定地扎在一个方向、往死里抠细节。齐俊元的产品靠一点一点抠数据、框架、工程并准备后训练取胜；Vivix 刘宇通过模型目标优化，做到约 10 秒生成 9 个音画同步视频。文章呼吁，在“AI 应用不能投了”的悲观论调下，创业者仍需认真与耐心，产品形态创新之外更靠细活。",
+      "link": "http://www.geekpark.net/news/369955",
+      "source_file": "sources/2026-09-07_「AI Native 」不是魔法，「创业者」这三个字依旧厚重_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-07",
+      "title": "喝点VC｜红杉资本合伙人Sonya Huang：企业开始掌握自己命运，AI应用层开始反攻模型",
+      "source": "Z Potentials",
+      "digest": "红杉资本合伙人 Sonya Huang 指出，随着开放权重模型逼近前沿、后训练基础设施成熟，越来越多 AI 应用公司重新评估哪些智能能力自建、哪些继续向前沿实验室购买。Sequoia 观察到企业开始为部分功能构建自有 AI 能力、通过纵向整合拥有并塑造模型权重；决定自建前必须先有 eval，每次前向传播都有评测结果，选模型才有量化依据。前沿实验室继续建“大脑”，最优秀产品公司培养专注特定领域的“小天才”。",
+      "link": "https://mp.weixin.qq.com/s/eeeJMjCSQftjskkFc60ZNA",
+      "source_file": "sources/2026-09-07_喝点VC｜红杉资本合伙人Sonya Huang：企业开始掌握自己命运，AI应用层开始反攻模型_Z Potentials.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-06",
       "title": "首次曝光！OpenAI新一代旗舰模型换上“循环深度”推理架构：用计算深度换参数规模",

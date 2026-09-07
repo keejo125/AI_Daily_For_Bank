@@ -1,11 +1,12 @@
 ---
 publish_time: 1788760020
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/M2v6t2lC3CxOgMVQT9O7QQ
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  盛大网络创始人陈大年创立的 StartLux 押注“轻量化基础模型+精准后训练”路线，发布 StartLux-V1.0-27B-Preview。该模型以 Qwen3.6-27B 为基座，主要围绕任务理解、工具选择、参数构造、多步执行、状态检查与结果验证等 Agent 能力后训练，而非从头训练更大模型。联合创始人兼 CTO 郭权玮以“用很小数据做像小孩一样聪明的模型，再上九年制义务教育”比喻其思路。陈大年判断三年内本地模型综合能力有机会追平顶级云端大模型并占 80% 市场。
 title: AI进入AI研发流程的中国样本：一个27B本地Agent模型如何在Qwen上“练”出来？
 ---
 

@@ -1,11 +1,12 @@
 ---
 publish_time: 1788781571
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/JSO9e-sQK20Lx1hv01lKPg
 source: Z Finance
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  OpenRouter 联合创始人 Alex Atallah 在与 20VC 的对谈中阐述其对多模型竞争与下一代 Agent 架构的判断：AI 不会只剩一个赢家，训练数据、方法与模型“性格”的差异本身就是价值，多模型并用将成为长期常态；推理服务并非无差异的“卖铲子”生意；随着模型增多、迭代加快，路由、记忆、安全与推理基础设施愈发重要，Harness 正取代超级 App，未来软件都只是 Agent 的后台工具。
 title: 深度｜对话OpenRouter CEO：Harness 正在取代超级 App，未来所有软件都只是 Agent 的后台工具
 ---
 

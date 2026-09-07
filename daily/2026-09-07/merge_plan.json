@@ -1,0 +1,24 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-09-07_业内首个！千问办公推出“多人工作台”_千问办公QwenWork.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-07_业内首个！“千问办公”推出“多人工作台”_量子位.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/09/485046.html"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-07_GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”_腾讯科技.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-07_GPT-6不只Astra！Sol内测结果曝光，速度快6倍_量子位_469e45.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/09/485431.html"
+        }
+      ]
+    }
+  ]
+}

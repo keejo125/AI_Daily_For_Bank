@@ -1,11 +1,12 @@
 ---
 publish_time: 1788749842
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/f_5eMcbaZSs2vbK4JQ4nzA
 source: 腾讯科技
+status: confirmed
+category: 国际
+is_model_related: true
+digest: |
+  OpenAI 于 9 月初发布 GPT-6 旗舰模型 Astra，同日披露内部数据：研究员每工作一天即有 3 个多 Agent 工作日在同步运转，中位数研究员每日 Agent 推理消耗超 600 美元，并已实现可在人类指导下完成研究员数日任务的“自动化研究实习生”。随后被曝正在内测 GPT-6 家族新模型 Sol，单次测试速度约为 Astra 的 6 倍，整体能力弱于 Astra 但仍属“怪物级”。发布三天后，首席科学家 Jakub Pachocki 发表长文《An Alien Mind》，呼吁在能力快速扩张的同时建立对齐、监控与治理体系。据披露，Astra 使用约 10 万套 NVIDIA Grace Blackwell NVLink72 训练，后续还有 40 万套 GPU 上线。
 title: GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”
 ---
 

@@ -59,7 +59,33 @@
     "https://openai.com/index/an-alien-mind",
     "https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/",
     "https://www.solidot.org/story?sid=85299",
-    "https://www.solidot.org/story?sid=85300"
+    "https://www.solidot.org/story?sid=85300",
+    "http://www.geekpark.net/news/369959",
+    "http://www.geekpark.net/news/369954",
+    "https://www.qbitai.com/2026/09/485154.html",
+    "https://www.qbitai.com/2026/09/485039.html",
+    "https://www.solidot.org/story?sid=85313",
+    "https://www.solidot.org/story?sid=85312",
+    "https://www.solidot.org/story?sid=85311",
+    "https://www.solidot.org/story?sid=85310",
+    "https://www.solidot.org/story?sid=85309",
+    "https://www.solidot.org/story?sid=85308",
+    "https://www.solidot.org/story?sid=85307",
+    "https://www.solidot.org/story?sid=85306",
+    "https://www.solidot.org/story?sid=85305",
+    "https://www.solidot.org/story?sid=85304",
+    "https://www.solidot.org/story?sid=85303",
+    "https://www.marktechpost.com/2026/09/06/ifm-releases-k2-horizon-six-apache-2-0-models-from-0-9b-to-375b/",
+    "https://www.marktechpost.com/2026/09/06/h-company-releases-neomme-a-family-of-260m-and-800m-single-tower-multimodal-encoders-that-drop-the-vision-tower-and-causal-decoder/",
+    "https://www.qbitai.com/2026/09/485525.html",
+    "http://www.geekpark.net/news/369884",
+    "https://www.infoq.cn/article/D5heSof43WbGMHrCCIsy",
+    "https://www.solidot.org/story?sid=85302",
+    "https://www.qbitai.com/2026/09/485056.html",
+    "https://www.infoq.cn/article/5dtlrdsBbSIZfWUUF6JD",
+    "https://www.infoq.cn/article/boiE7qfjxSQjHKUtevvp",
+    "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "https://mp.weixin.qq.com/s/7UgT_nKsJBJdePgv_s8Piw"
   ],
   "history": [
     {
@@ -301,6 +327,110 @@
     {
       "url": "https://www.solidot.org/story?sid=85300",
       "reason": "filter:2026-09-06"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369959",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369954",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485154.html",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485039.html",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85313",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85312",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85311",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85310",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85309",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85308",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85307",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85306",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85305",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85304",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85303",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.marktechpost.com/2026/09/06/ifm-releases-k2-horizon-six-apache-2-0-models-from-0-9b-to-375b/",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.marktechpost.com/2026/09/06/h-company-releases-neomme-a-family-of-260m-and-800m-single-tower-multimodal-encoders-that-drop-the-vision-tower-and-causal-decoder/",
+      "reason": "filter:2026-09-07"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485525.html",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369884",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://www.infoq.cn/article/D5heSof43WbGMHrCCIsy",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85302",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485056.html",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://www.infoq.cn/article/5dtlrdsBbSIZfWUUF6JD",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://www.infoq.cn/article/boiE7qfjxSQjHKUtevvp",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/7UgT_nKsJBJdePgv_s8Piw",
+      "reason": "step3_non_ai_2026-09-07"
     }
   ]
 }
