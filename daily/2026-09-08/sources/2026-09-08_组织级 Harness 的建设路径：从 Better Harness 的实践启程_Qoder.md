@@ -1,11 +1,12 @@
 ---
 publish_time: 1788852700
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/a5UXf9wo1eMsUYx8Tq0m5w
 source: Qoder
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  Qoder 团队基于 Better Harness 实践，探讨组织级 Harness 建设路径：核心是如何把分布在不同 Agent、项目与机器上的执行数据串联成「需求—验证」完整任务链路，让 Agent 从「会完成一次编码任务」升级为可验证、可复制、可治理、可运营的交付能力。文章提出 Agent 能力进入组织需经历单点做成、持续丰富测试集评测、方法复用与规模化交付三阶段，应对上下文/工具/权限/规范等差异带来的结果漂移。
 title: 组织级 Harness 的建设路径：从 Better Harness 的实践启程
 ---
 

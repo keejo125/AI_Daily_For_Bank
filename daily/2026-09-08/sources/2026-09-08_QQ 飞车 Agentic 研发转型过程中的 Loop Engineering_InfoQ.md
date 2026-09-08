@@ -1,11 +1,12 @@
 ---
 publish_time: 1788840254
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/FTUowOWA8kbzGJ21DA4PoQ
 source: InfoQ
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯高级后台开发工程师任磊达在 AICon 分享《QQ 飞车 Agentic 研发转型过程中的 Loop Engineering》。基于每月约 300 亿 token 的密集使用经验，他提出从 hook 级循环、CI 级循环、工作流结构化拆分到团队级 graph engineering 的迭代方法论，核心是把 agent 的循环沉淀为可复用工程能力，从「让 agent 做具体事」走向「让 agent 学会如何做事」。
 title: QQ 飞车 Agentic 研发转型过程中的 Loop Engineering
 ---
 

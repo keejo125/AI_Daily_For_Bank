@@ -1,7 +1,287 @@
 {
-  "updated_at": "2026-09-08T05:14:10.615320",
-  "total": 1849,
+  "updated_at": "2026-09-09T07:25:22.185857",
+  "total": 1877,
   "articles": [
+    {
+      "date": "2026-09-08",
+      "title": "Cohere 发布 Parse 5，可以从复杂的文档中高效地提取多模态信息",
+      "source": "InfoQ",
+      "digest": "Cohere 发布专有多模态基础模型 Parse 5（parse-v5.0），用于从复杂企业文档中提取结构化数据。该模型为 23 亿参数视觉语言模型（VLM），可将财务报告、科学论文等富视觉 PDF 转为规范 Markdown 并输出边界框坐标。其基于开放权重架构 North-Micro-Vision 构建，采用 4 亿参数原生分辨率视觉编码器（SigLIP 2 初始化）与 20 亿参数自研语言模型，面向高吞吐企业负载优化，支持 8K 上下文。",
+      "link": "https://www.infoq.cn/article/C8WbrpalJEjLfSh2xJJj",
+      "source_file": "sources/2026-09-08_Cohere 发布 Parse 5，可以从复杂的文档中高效地提取多模态信息_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "OpenAI 推出 ChatGPT Images 2.5 图像生成",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 ChatGPT Images 2.5，帮助用户将草图、创意与参考照片转化为更个性化、更精致的图片，更好地还原想法。作为图像生成能力的版本更新，该模型延续 ChatGPT 内置图像生成路线，进一步降低从文字/草图到成品图像的门槛，适用于设计、内容创作等场景。",
+      "link": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "source_file": "sources/2026-09-08_Introducing ChatGPT Images 2.5_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "1Password 借助 Codex 将工程效率提升 21%",
+      "source": "OpenAI",
+      "digest": "密码管理与身份安全厂商 1Password 披露，其工程师团队已广泛使用 OpenAI Codex 快速构建新功能与内部工具，并在保持严格安全策略的前提下达到生产可用状态。文章展示 Codex 在真实企业研发场景中从原型到上线的落地路径，为企业评估 AI 编程助手的生产力收益提供实证参考。",
+      "link": "https://openai.com/index/1password",
+      "source_file": "sources/2026-09-08_1Password increases engineering productivity 21% w_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Arm 发布 Neoverse CSS N4：单裸片最高128核，押注智能体时代 CPU 需求",
+      "source": "InfoQ",
+      "digest": "Arm 在 Arm Everywhere China 年度大会发布新一代数据中心计算子系统 Neoverse CSS N4，单裸片最高 128 核，并公布 Arm AGI CPU 生态进展，同时宣布与新紫光集团深化合作、在中国成立联合通用人工智能创新中心。文章指出，智能体在推理之外还需检索、调用工具与多智能体协同，推高了对通用 CPU、内存带宽与高速 I/O 的需求。",
+      "link": "https://www.infoq.cn/article/IR6XdUEok3aY1YSDOvat",
+      "source_file": "sources/2026-09-08_Arm 发布 Neoverse CSS N4：单裸片最高128核，押注智能体时代 CPU 需求_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Claude Code团队讲究啊，这都往外说",
+      "source": "量子位",
+      "digest": "Claude Code 团队在一则访谈中分享如何用 Claude Code 持续优化 Claude Code 自身。团队成员表示当前已将 70%–80% 的日常工作交给 Slack 原生 AI Agent（Claude Task）完成，一年前工程师还在逐行审阅 AI 的工作记录。访谈强调在快迭代节奏下对构建物保持不执着、信任优于监督，以及软件工程作为「变化的职业」其内核始终是 problem solving。",
+      "link": "https://mp.weixin.qq.com/s/nbf34grXcYwe3zbYhO9iwQ",
+      "source_file": "sources/2026-09-08_Claude Code团队讲究啊，这都往外说_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Linux终将统治桌面端、手写代码时代正在终结，Ruby on Rails之父DHH：“我已经变得可有可无”，AI正在接管编程",
+      "source": "CSDN",
+      "digest": "Ruby on Rails 之父、37signals 联合创始人 DHH 在 Lex Fridman 采访中称，开发 Omarchy Linux 最新版本时过去两个月已没有亲手写任何最终上线的代码，代码主要交给 AI Agent 完成，自己只负责审查架构与关键代码。他认为 AI Agent 已开始自行理解问题、制定方案并完成整个开发任务，并预测 Linux 将战胜 Windows 与 macOS 成为桌面主流，手写代码时代正在终结。",
+      "link": "https://mp.weixin.qq.com/s/dKACLN3fzeZSxYDyTciLsw",
+      "source_file": "sources/2026-09-08_Linux终将统治桌面端、手写代码时代正在终结，Ruby on Rails之父DHH：“我已经变得可有可无”，AI正在接管编程_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "OpenAI 分享 Navier–Stokes 千禧年大奖问题的 AI 生成证明",
+      "source": "OpenAI",
+      "digest": "OpenAI 分享了一份由 AI 生成的纳维-斯托克斯千禧年大奖问题解，包含书面说明与 Lean 形式化证明。该成果展示前沿 AI 在形式化数学与科学推理方向的进展，将 AI 能力从自然语言生成延伸至严格数学证明的自动构造，是 AI for Science 在基础数学难题上的代表性尝试。",
+      "link": "https://openai.com/index/navier-stokes-solution",
+      "source_file": "sources/2026-09-08_On the Navier–Stokes Millennium Prize Problem_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "OpenAI 详解 GPT-Live 架构如何实现了连续的有状态语音交互",
+      "source": "InfoQ",
+      "digest": "OpenAI 发布 GPT-Live 工程报告，详述如何设计实时语音交互系统：将对延迟敏感的媒体处理与更广泛的应用逻辑分离，实时路径含媒体管道与推理循环，任务委托、工具使用、数据持久化等在异步 RPC 边界之后运行。系统为每个会话预留专用有状态推理实例，上下文可在资源耗尽时迁移；并以 WebRTC 为基础推出 WARP 优化与即时连接机制降低启动延迟，上线前用静默测试发现合成测试未覆盖的负载异常。",
+      "link": "https://www.infoq.cn/article/rdESg5icYIZ71J7xb69K",
+      "source_file": "sources/2026-09-08_OpenAI 详解 GPT-Live 架构如何实现了连续的有状态语音交互_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "OpenAI首曝“AI造AI”内部数据，2028年冲击AI研究员！黄仁勋高调祝贺：AGI已到来",
+      "source": "InfoQ",
+      "digest": "OpenAI 首次系统披露 AI Agent 如何参与其内部模型研发：公司表示已按内部标准在 9 月前开发出「自动化 AI 研究实习生」，下一步目标为 2028 年 3 月前开发出「自动化 AI 研究员」。文章承认公司正推进递归自我改进（RSI），意味着 AI Agent 已开始承接初级研究员工作，并强调前沿 AI 发展轨迹需向公众透明以便社会参与治理。",
+      "link": "https://www.infoq.cn/article/TkVMcVFzAgixGb70kUr9",
+      "source_file": "sources/2026-09-08_OpenAI首曝“AI造AI”内部数据，2028年冲击AI研究员！黄仁勋高调祝贺：AGI已到来_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测",
+      "source": "InfoQ",
+      "digest": "印度外卖与即时零售平台 Swiggy 开发客户终身价值（pLTV）预测模型，在新客户首单前生成参考指标以优化广告出价。模型采用 350+ 特征（获客渠道、设备、风险欺诈、地域行为、支付模式等），以三层共享隐藏层的多任务 MLP 学习通用表征，再接外卖与 Instamart 任务专属头；增加第二预测任务反使模型体积缩小 63% 且精度提升，满足广告系统冷启动需求。",
+      "link": "https://www.infoq.cn/article/9yQHZ7fZeIBMidz6pjPC",
+      "source_file": "sources/2026-09-08_Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "代码这种容易验证的死技能，最先被AI吞掉！a16z合伙人：算法在原地爬山，找山还得靠人",
+      "source": "奇点折射",
+      "digest": "a16z 合伙人 Anish Acharya 在 Lenny's Podcast 指出，对 AI 取代就业的末日式恐慌更多是硅谷脑补。他认为容易验证的「死技能」（如代码）会最先被 AI 吞掉，但算法只是在原地爬山、找山仍靠人；现实世界并未走向巨头垄断，实体经济仍在吸纳就业。对一线开发者而言，真正竞争力在于提出正确问题与定义目标，而非与 AI 比拼具体执行。",
+      "link": "https://mp.weixin.qq.com/s/Ta66pElxaAC8Ulpwf5tCOw",
+      "source_file": "sources/2026-09-08_代码这种容易验证的死技能，最先被AI吞掉！a16z合伙人：算法在原地爬山，找山还得靠人_奇点折射.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "感谢用GPT-6搓3D的！燃烧自己的token换来一次全体重置",
+      "source": "量子位",
+      "digest": "GPT-6 Astra 上线后，其 3D 生成能力成为全网最火玩法：用户通过对话直接驱动 Blender 建模、做游戏、生成贴图与 3D 网页，效果惊艳。因额度消耗过快，创作者 Tibo 对全体付费订阅发起一次性全局重置。文章盘点了看图建模、草图重建、游戏资产生成等典型用法，反映多模态大模型在 3D 内容生产上的能力跃迁与社区化扩散。",
+      "link": "https://www.qbitai.com/2026/09/485854.html",
+      "source_file": "sources/2026-09-08_感谢用GPT-6搓3D的！燃烧自己的token换来一次全体重置_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "程序员正在遇见AGI！OpenAI总裁：AGI没有发布日，它正在软件工程里逐步发生",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI 联合创始人兼总裁 Greg Brockman 在 GPT-6 Astra 发布前受访表示，AGI 没有清晰的发布日，而是一个渐进过程，正以 Coding Agent、电脑操作与长任务形式率先进入软件工程。他描述模型从补全代码、调用工具，到阅读整个仓库、自行拆解任务与持续执行的平滑演进，强调软件工程是最早感受到 AGI 的行业之一。",
+      "link": "https://mp.weixin.qq.com/s/YYbM6V87qq9i0KkZ6_DCsQ",
+      "source_file": "sources/2026-09-08_程序员正在遇见AGI！OpenAI总裁：AGI没有发布日，它正在软件工程里逐步发生_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "刚刚，DeepSeek新模型内测！网友实测：快得飞起！",
+      "source": "智东西",
+      "digest": "DeepSeek 开启 V4.1 Flash 中间版本内测，采用新模型结构，原生支持多模态，能力更强、速度更快且成本更低。开发者保持 base_url 不变、将模型名设为 deepseek-v4.1-flash-expires-on-0910 即可调用，计费与 V4 Flash 相同（空闲时段输入缓存命中 0.05 元/百万 token、输出 4.5 元），9 月 10 日自动过期。网友实测输出速度最高达 507 tokens/s，凸显其高吞吐低延迟特性。",
+      "link": "https://mp.weixin.qq.com/s/Y13161SUQE3FH1mac8sIxA",
+      "source_file": "sources/2026-09-08_刚刚，DeepSeek新模型内测！网友实测：快得飞起！_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "王云鹤创业后交出首个模型",
+      "source": "量子位",
+      "digest": "华为诺亚方舟实验室前主任、盘古大模型负责人王云鹤创办的基元律动，发布首个 Agent-Native 模型 NeoHorse-1（4B/9B 两版），面向工具调用、环境反馈读取、错误发现与路径调整等 Agent 能力。经 Agentic Post-Training，4B 版综合表现达/略超 9B 基础模型。该模型把基元律动积累的多模型执行经验首次注入参数，由无问芯穹提供算力与 Infra 优化，清华、北大参与算法与训练方法研究。",
+      "link": "https://www.qbitai.com/2026/09/485555.html",
+      "source_file": "sources/2026-09-08_王云鹤创业后交出首个模型_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "面壁智能开源 MiniCPM5-2B：AA 榜单全球 4B 以下第一，初具端侧通用 Agent 能力",
+      "source": "面壁智能",
+      "digest": "面壁智能联合 OpenBMB 开源社区开源新一代端侧语言基座模型 MiniCPM5-2B（2B 参数），支持工具调用、深度搜索、代码生成，初步具备端侧通用 Agent 能力。AA 榜单显示其综合能力 23 分，居全球 4B 以下开源模型第一，Agentic Index 得分 20（同级模型多低于 10），超越 Gemma 4 12B 与 Qwen3.5 9B。面壁同时开源自研强化学习框架 Meshy、JustRL II 与完整训练配方，截至 2026 年 8 月 MiniCPM 系列全球下载破 5000 万次。",
+      "link": "https://mp.weixin.qq.com/s/QjIQhrayJK47SAN2E5TpdA",
+      "source_file": "sources/2026-09-08_面壁智能开源 MiniCPM5-2B：AA 榜单全球 4B 以下第一，初具端侧通用 Agent 能力_面壁智能.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Agent 观测与优化开发者摸底报告",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生基于 8–9 月北京、上海、深圳三场开发者沙龙的 700+ 份问卷发布 Agent 观测与优化摸底报告。超六成受访者已进入 POC 或生产阶段，但仅 13.4% 能拿到完整 trajectory，对自动化评估、数据回灌闭环掌握度低。报告为企业看清 Agent 上线后的真实运行状态、建立可评估可优化的工程闭环提供参考。",
+      "link": "https://mp.weixin.qq.com/s/LIb_tnGxokZhi7As6yiVug",
+      "source_file": "sources/2026-09-08_Agent 观测与优化开发者摸底报告_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Karmada 正式从 CNCF 毕业，已用于多集群 AI 训练与 GPU 调度",
+      "source": "InfoQ",
+      "digest": "在 KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China 2026 期间，CNCF 宣布多集群 Kubernetes 编排项目 Karmada 正式毕业（Graduated）。Karmada 解决 Kubernetes 从单集群扩展到多集群后的应用编排问题，提供集中部署、资源分发、故障转移与多集群自动伸缩，其场景正从多云管理走向 AI Infra——用于多集群 AI 训练与 GPU 调度。",
+      "link": "https://www.infoq.cn/article/yfQdTa8cRxjJB0rzZMJR",
+      "source_file": "sources/2026-09-08_Karmada 正式从 CNCF 毕业，已用于多集群 AI 训练与 GPU 调度_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "OpenClaw 2.0 发布：简化配置，支持智能体协作",
+      "source": "InfoQ",
+      "digest": "开源个人 AI 智能体 OpenClaw 发布 2.0（版本号 2026.8.1），合并 933 名开发者的 16000+ PR。主要变化：简化部署配置（自动识别本地可用模型/订阅/API）、浏览器应用重构为主要界面、引入用于协作工作流的共享云端会话（多人可参与同一智能体会话并保留上下文）。保留模型无关架构，支持托管模型、API 与本地模型，运行状态保留在用户自控基础设施上。",
+      "link": "https://www.infoq.cn/article/hOJ5r8sQvQsGvm0KNHTd",
+      "source_file": "sources/2026-09-08_OpenClaw 2.0 发布：简化配置，支持智能体协作_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "QQ 飞车 Agentic 研发转型过程中的 Loop Engineering",
+      "source": "InfoQ",
+      "digest": "腾讯高级后台开发工程师任磊达在 AICon 分享《QQ 飞车 Agentic 研发转型过程中的 Loop Engineering》。基于每月约 300 亿 token 的密集使用经验，他提出从 hook 级循环、CI 级循环、工作流结构化拆分到团队级 graph engineering 的迭代方法论，核心是把 agent 的循环沉淀为可复用工程能力，从「让 agent 做具体事」走向「让 agent 学会如何做事」。",
+      "link": "https://mp.weixin.qq.com/s/FTUowOWA8kbzGJ21DA4PoQ",
+      "source_file": "sources/2026-09-08_QQ 飞车 Agentic 研发转型过程中的 Loop Engineering_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Xiaomi MiMo 桌面客户端开放邀测",
+      "source": "Xiaomi MiMo",
+      "digest": "小米 MiMo 桌面客户端（MiMo Desktop）携新一代模型 Preview 版开放邀测，面向真实工作场景：接收多格式素材、理解目标、拆解任务、调用工具并交付可继续编辑的成果（文档、表格、PPT、网页、图片、音视频乃至 3D 模型/App）。用户用自然语言说明目标即可，支持实时预览与修改，用于验证长链路执行、工具调用与交付质量的边界。",
+      "link": "https://mp.weixin.qq.com/s/Ey0GaGl3erC6sm_ubOOEEQ",
+      "source_file": "sources/2026-09-08_Xiaomi MiMo 桌面客户端开放邀测_Xiaomi MiMo.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "【智能体评测指南大全】构建可观察、可评估、可进化的Agent质量体系",
+      "source": "软件工程3.0时代",
+      "digest": "文章综合 AiDD 上海峰会两场报告与 2026 上半年业界动态，给出智能体评测完整指南。数据指出 57% 组织已在生产运行 Agent、81% 计划推进更复杂用例，但仅 29.5% 做离线评估、52.4% 依赖人工评估、74% 生产 Agent 靠人眼验收；使用评估工具的团队部署速度达 6 倍、用治理框架达 12 倍。文章系统梳理从场景到体系、从方法到落地的 Agent 评测与治理路径。",
+      "link": "https://mp.weixin.qq.com/s/nr5NXYMb_sXAEjMmlwXnsQ",
+      "source_file": "sources/2026-09-08_【智能体评测指南大全】构建可观察、可评估、可进化的Agent质量体系_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "我用腾讯 Kuikly，把 DeepSeek Harness装进了口袋",
+      "source": "腾讯技术工程",
+      "digest": "腾讯程序员用 Kuikly 跨端框架将 DeepSeek Harness（DSH）装进口袋：一套 Kotlin 代码覆盖 Android、iOS 与鸿蒙，按官方 Host 协议连接电脑上的 Harness。Agent 循环、工具执行与插件仍在电脑运行，手机负责连接、交互与渲染，承接审批、追问等短频交互，解决 Harness 长任务中间卡等人、人离电脑即停滞的痛点；相比 WebView 方案，原生客户端更能处理 WebSocket 长连、锁屏与网络切换。",
+      "link": "https://mp.weixin.qq.com/s/THtcdws01AV_Q3fe2pYRlQ",
+      "source_file": "sources/2026-09-08_我用腾讯 Kuikly，把 DeepSeek Harness装进了口袋_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "抢占 Agent 时代交互新入口，网易有道推出 AI 原生语音 Agent 网易叭哥说",
+      "source": "InfoQ",
+      "digest": "网易首个 AI 原生语音 Agent「网易叭哥说」正式上线，依托有道语音识别与翻译技术，把自然口语直接转化为结构化、可复用文本，跳出传统「语音转文字」工具定位。通过自研 ASR 与语义理解链路调优，将语音输入对键盘效率比提升至 5 倍（Google 公开数据为 2.5 倍），可识别口误与时间变更等意图，自动润色输出，压缩「想法产生」到「指令交付 AI」的距离。",
+      "link": "https://www.infoq.cn/article/gc6YXuw6hkaOXBwE385P",
+      "source_file": "sources/2026-09-08_抢占 Agent 时代交互新入口，网易有道推出 AI 原生语音 Agent 网易叭哥说_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "组织级 Harness 的建设路径：从 Better Harness 的实践启程",
+      "source": "Qoder",
+      "digest": "Qoder 团队基于 Better Harness 实践，探讨组织级 Harness 建设路径：核心是如何把分布在不同 Agent、项目与机器上的执行数据串联成「需求—验证」完整任务链路，让 Agent 从「会完成一次编码任务」升级为可验证、可复制、可治理、可运营的交付能力。文章提出 Agent 能力进入组织需经历单点做成、持续丰富测试集评测、方法复用与规模化交付三阶段，应对上下文/工具/权限/规范等差异带来的结果漂移。",
+      "link": "https://mp.weixin.qq.com/s/a5UXf9wo1eMsUYx8Tq0m5w",
+      "source_file": "sources/2026-09-08_组织级 Harness 的建设路径：从 Better Harness 的实践启程_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "邮储银行智能体规模化运营探索与实践",
+      "source": "中国金融电脑+",
+      "digest": "邮储银行软件研发中心副总经理朱礼华撰文，系统阐述该行智能体规模化运营探索与实践。文章指出，在「人工智能+」行动与《智能体规范应用与创新发展实施意见》政策驱动下，金融智能体已从辅助工具升级为人机协同伙伴，行业重心转向安全、可信、合规的规模化应用。邮储积极探索人机协同智能体运营体系，形成可复用方法论与可借鉴实践，为商业银行智能体规模化落地提供参考。",
+      "link": "https://mp.weixin.qq.com/s/DnMcHiXYgCgy_Pf3UxW3Jg",
+      "source_file": "sources/2026-09-08_邮储银行智能体规模化运营探索与实践_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "单人一月烧掉 19 万，硅谷开始倒查员工 AI 账单",
+      "source": "极客公园",
+      "digest": "微软内部出现员工自发维护的「每月 AI 花费」填报：约 350 名美国员工中，单人 28 天 AI 用量最高达 2.8 万美元（约 19 万元），公司中位数约 300 美元/月。报道称微软已收紧 token 用量管理——部门级预算生效、个人支出进仪表盘、默认模型切至 GPT-5.6 Sol。文章折射大模型普及后企业 AI 算力成本从隐性走向显性、进入精细化治理的阶段。",
+      "link": "http://www.geekpark.net/news/370006",
+      "source_file": "sources/2026-09-08_单人一月烧掉 19 万，硅谷开始倒查员工 AI 账单_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "现场围观金融AI决赛，大厂挑人的逻辑我悟了",
+      "source": "量子位",
+      "digest": "文章记录 AFAC2026 金融智能创新大赛总决赛现场：5000+ 支队伍、近 2 万名选手，最终路演十分钟需讲透技术方案并接住产业、学界、创投三方评委连环提问，优胜者获百万奖金、大厂直聘与 VC 跟投。赛题较往年更难，且紧贴真实金融业务痛点（带噪声数据、稀疏反馈），折射金融机构与大厂在金融 AI 人才与落地方案上的筛选逻辑。",
+      "link": "https://www.qbitai.com/2026/09/485794.html",
+      "source_file": "sources/2026-09-08_现场围观金融AI决赛，大厂挑人的逻辑我悟了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-07",
       "title": "GPT-6 Astra刚发布三天，OpenAI首席科学家喊“刹车”",

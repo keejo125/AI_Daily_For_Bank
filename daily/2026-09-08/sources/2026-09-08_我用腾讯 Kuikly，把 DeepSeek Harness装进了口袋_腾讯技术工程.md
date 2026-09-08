@@ -1,11 +1,12 @@
 ---
 publish_time: 1788861477
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/THtcdws01AV_Q3fe2pYRlQ
 source: 腾讯技术工程
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  腾讯程序员用 Kuikly 跨端框架将 DeepSeek Harness（DSH）装进口袋：一套 Kotlin 代码覆盖 Android、iOS 与鸿蒙，按官方 Host 协议连接电脑上的 Harness。Agent 循环、工具执行与插件仍在电脑运行，手机负责连接、交互与渲染，承接审批、追问等短频交互，解决 Harness 长任务中间卡等人、人离电脑即停滞的痛点；相比 WebView 方案，原生客户端更能处理 WebSocket 长连、锁屏与网络切换。
 title: 我用腾讯 Kuikly，把 DeepSeek Harness装进了口袋
 ---
 

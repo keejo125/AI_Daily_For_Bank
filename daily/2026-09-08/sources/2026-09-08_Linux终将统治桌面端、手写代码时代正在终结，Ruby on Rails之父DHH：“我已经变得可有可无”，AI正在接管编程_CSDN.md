@@ -1,11 +1,12 @@
 ---
 publish_time: 1788854724
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/dKACLN3fzeZSxYDyTciLsw
 source: CSDN
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Ruby on Rails 之父、37signals 联合创始人 DHH 在 Lex Fridman 采访中称，开发 Omarchy Linux 最新版本时过去两个月已没有亲手写任何最终上线的代码，代码主要交给 AI Agent 完成，自己只负责审查架构与关键代码。他认为 AI Agent 已开始自行理解问题、制定方案并完成整个开发任务，并预测 Linux 将战胜 Windows 与 macOS 成为桌面主流，手写代码时代正在终结。
 title: Linux终将统治桌面端、手写代码时代正在终结，Ruby on Rails之父DHH：“我已经变得可有可无”，AI正在接管编程
 ---
 

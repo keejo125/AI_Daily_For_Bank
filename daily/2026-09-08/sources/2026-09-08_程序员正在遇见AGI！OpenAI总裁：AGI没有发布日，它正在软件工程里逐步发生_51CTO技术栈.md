@@ -1,11 +1,12 @@
 ---
 publish_time: 1788861600
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/YYbM6V87qq9i0KkZ6_DCsQ
 source: 51CTO技术栈
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  OpenAI 联合创始人兼总裁 Greg Brockman 在 GPT-6 Astra 发布前受访表示，AGI 没有清晰的发布日，而是一个渐进过程，正以 Coding Agent、电脑操作与长任务形式率先进入软件工程。他描述模型从补全代码、调用工具，到阅读整个仓库、自行拆解任务与持续执行的平滑演进，强调软件工程是最早感受到 AGI 的行业之一。
 title: 程序员正在遇见AGI！OpenAI总裁：AGI没有发布日，它正在软件工程里逐步发生
 ---
 

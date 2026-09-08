@@ -1,11 +1,12 @@
 ---
 publish_time: 1788838208
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/QjIQhrayJK47SAN2E5TpdA
 source: 面壁智能
+status: confirmed
+category: 国内
+is_model_related: true
+digest: |
+  面壁智能联合 OpenBMB 开源社区开源新一代端侧语言基座模型 MiniCPM5-2B（2B 参数），支持工具调用、深度搜索、代码生成，初步具备端侧通用 Agent 能力。AA 榜单显示其综合能力 23 分，居全球 4B 以下开源模型第一，Agentic Index 得分 20（同级模型多低于 10），超越 Gemma 4 12B 与 Qwen3.5 9B。面壁同时开源自研强化学习框架 Meshy、JustRL II 与完整训练配方，截至 2026 年 8 月 MiniCPM 系列全球下载破 5000 万次。
 title: 面壁智能开源 MiniCPM5-2B：AA 榜单全球 4B 以下第一，初具端侧通用 Agent 能力
 ---
 

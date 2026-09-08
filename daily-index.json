@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-08",
+      "weekday": "周二",
+      "stats": {
+        "国际": 13,
+        "国内": 12,
+        "同业": 1,
+        "其他": 2,
+        "total": 28
+      },
+      "summary": "Cohere 发布 Parse 5，可以从复杂的文档中高效地提取多模态信息/OpenAI 推出 ChatGPT Images 2.5 图像生成/刚刚，De..."
+    },
+    {
       "date": "2026-09-07",
       "weekday": "周一",
       "stats": {

@@ -85,7 +85,29 @@
     "https://www.infoq.cn/article/5dtlrdsBbSIZfWUUF6JD",
     "https://www.infoq.cn/article/boiE7qfjxSQjHKUtevvp",
     "https://openai.com/index/supporting-independent-journalism-in-ukraine",
-    "https://mp.weixin.qq.com/s/7UgT_nKsJBJdePgv_s8Piw"
+    "https://mp.weixin.qq.com/s/7UgT_nKsJBJdePgv_s8Piw",
+    "http://www.geekpark.net/news/370007",
+    "https://www.solidot.org/story?sid=85324",
+    "https://www.solidot.org/story?sid=85323",
+    "https://www.solidot.org/story?sid=85321",
+    "https://www.solidot.org/story?sid=85320",
+    "https://www.solidot.org/story?sid=85318",
+    "https://www.solidot.org/story?sid=85317",
+    "https://www.solidot.org/story?sid=85315",
+    "https://www.solidot.org/story?sid=85314",
+    "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+    "https://www.marktechpost.com/2026/09/07/reducto-releases-r-1-a-single-pass-document-parsing-model-that-cuts-errors-20-at-1-cent-per-page/",
+    "https://www.solidot.org/story?sid=85319",
+    "https://www.marktechpost.com/2026/09/07/axis-robotics-releases-axis-a-browser-based-data-engine-with-207-robot-manipulation-tasks-and-50129-trajectories/",
+    "https://openai.com/index/teen-development-research-grants",
+    "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+    "https://tldr.tech/ai/2026-09-08",
+    "https://openai.com/index/the-work-now-within-reach",
+    "http://www.geekpark.net/news/369965",
+    "https://www.solidot.org/story?sid=85322",
+    "https://www.qbitai.com/2026/09/485630.html",
+    "https://www.qbitai.com/2026/09/485784.html",
+    "https://www.solidot.org/story?sid=85316"
   ],
   "history": [
     {
@@ -431,6 +453,94 @@
     {
       "url": "https://mp.weixin.qq.com/s/7UgT_nKsJBJdePgv_s8Piw",
       "reason": "step3_non_ai_2026-09-07"
+    },
+    {
+      "url": "http://www.geekpark.net/news/370007",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85324",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85323",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85321",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85320",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85318",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85317",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85315",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85314",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.marktechpost.com/2026/09/07/reducto-releases-r-1-a-single-pass-document-parsing-model-that-cuts-errors-20-at-1-cent-per-page/",
+      "reason": "filter:2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85319",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://www.marktechpost.com/2026/09/07/axis-robotics-releases-axis-a-browser-based-data-engine-with-207-robot-manipulation-tasks-and-50129-trajectories/",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://openai.com/index/teen-development-research-grants",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://tldr.tech/ai/2026-09-08",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://openai.com/index/the-work-now-within-reach",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "http://www.geekpark.net/news/369965",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85322",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485630.html",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://www.qbitai.com/2026/09/485784.html",
+      "reason": "step3_delete_2026-09-08"
+    },
+    {
+      "url": "https://www.solidot.org/story?sid=85316",
+      "reason": "step3_delete_2026-09-08"
     }
   ]
 }

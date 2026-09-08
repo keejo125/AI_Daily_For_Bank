@@ -1,11 +1,12 @@
 ---
 publish_time: 1788850551
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/Ey0GaGl3erC6sm_ubOOEEQ
 source: Xiaomi MiMo
+status: confirmed
+category: 国内
+is_model_related: false
+digest: |
+  小米 MiMo 桌面客户端（MiMo Desktop）携新一代模型 Preview 版开放邀测，面向真实工作场景：接收多格式素材、理解目标、拆解任务、调用工具并交付可继续编辑的成果（文档、表格、PPT、网页、图片、音视频乃至 3D 模型/App）。用户用自然语言说明目标即可，支持实时预览与修改，用于验证长链路执行、工具调用与交付质量的边界。
 title: Xiaomi MiMo 桌面客户端开放邀测
 ---
 

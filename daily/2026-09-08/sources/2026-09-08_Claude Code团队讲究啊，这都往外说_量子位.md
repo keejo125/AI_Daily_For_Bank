@@ -1,11 +1,12 @@
 ---
 publish_time: 1788874662
-status: pending
-category: 
-is_model_related: false
-digest: |
 link: https://mp.weixin.qq.com/s/nbf34grXcYwe3zbYhO9iwQ
 source: 量子位
+status: confirmed
+category: 国际
+is_model_related: false
+digest: |
+  Claude Code 团队在一则访谈中分享如何用 Claude Code 持续优化 Claude Code 自身。团队成员表示当前已将 70%–80% 的日常工作交给 Slack 原生 AI Agent（Claude Task）完成，一年前工程师还在逐行审阅 AI 的工作记录。访谈强调在快迭代节奏下对构建物保持不执着、信任优于监督，以及软件工程作为「变化的职业」其内核始终是 problem solving。
 title: Claude Code团队讲究啊，这都往外说
 ---
 
