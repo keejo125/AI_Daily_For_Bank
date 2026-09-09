@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T07:25:22.185857",
+  "updated_at": "2026-09-09T08:43:47.911903",
   "total": 1877,
   "articles": [
     {
@@ -89,16 +89,6 @@
       "digest": "OpenAI 首次系统披露 AI Agent 如何参与其内部模型研发：公司表示已按内部标准在 9 月前开发出「自动化 AI 研究实习生」，下一步目标为 2028 年 3 月前开发出「自动化 AI 研究员」。文章承认公司正推进递归自我改进（RSI），意味着 AI Agent 已开始承接初级研究员工作，并强调前沿 AI 发展轨迹需向公众透明以便社会参与治理。",
       "link": "https://www.infoq.cn/article/TkVMcVFzAgixGb70kUr9",
       "source_file": "sources/2026-09-08_OpenAI首曝“AI造AI”内部数据，2028年冲击AI研究员！黄仁勋高调祝贺：AGI已到来_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-09-08",
-      "title": "Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测",
-      "source": "InfoQ",
-      "digest": "印度外卖与即时零售平台 Swiggy 开发客户终身价值（pLTV）预测模型，在新客户首单前生成参考指标以优化广告出价。模型采用 350+ 特征（获客渠道、设备、风险欺诈、地域行为、支付模式等），以三层共享隐藏层的多任务 MLP 学习通用表征，再接外卖与 Instamart 任务专属头；增加第二预测任务反使模型体积缩小 63% 且精度提升，满足广告系统冷启动需求。",
-      "link": "https://www.infoq.cn/article/9yQHZ7fZeIBMidz6pjPC",
-      "source_file": "sources/2026-09-08_Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -260,6 +250,16 @@
       "link": "https://mp.weixin.qq.com/s/DnMcHiXYgCgy_Pf3UxW3Jg",
       "source_file": "sources/2026-09-08_邮储银行智能体规模化运营探索与实践_中国金融电脑+.md",
       "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测",
+      "source": "InfoQ",
+      "digest": "印度外卖与即时零售平台 Swiggy 开发客户终身价值（pLTV）预测模型，在新客户首单前生成参考指标以优化广告出价。模型采用 350+ 特征（获客渠道、设备、风险欺诈、地域行为、支付模式等），以三层共享隐藏层的多任务 MLP 学习通用表征，再接外卖与 Instamart 任务专属头；增加第二预测任务反使模型体积缩小 63% 且精度提升，满足广告系统冷启动需求。",
+      "link": "https://www.infoq.cn/article/9yQHZ7fZeIBMidz6pjPC",
+      "source_file": "sources/2026-09-08_Swiggy 基于 350 多个特征与多任务 MLP 实现客户终身价值预测_InfoQ.md",
+      "category": "其他",
       "is_model_related": false
     },
     {

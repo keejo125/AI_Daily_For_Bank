@@ -3,7 +3,7 @@ publish_time: 1788851160
 link: https://www.infoq.cn/article/9yQHZ7fZeIBMidz6pjPC
 source: InfoQ
 status: confirmed
-category: 国际
+category: 其他
 is_model_related: false
 digest: |
   印度外卖与即时零售平台 Swiggy 开发客户终身价值（pLTV）预测模型，在新客户首单前生成参考指标以优化广告出价。模型采用 350+ 特征（获客渠道、设备、风险欺诈、地域行为、支付模式等），以三层共享隐藏层的多任务 MLP 学习通用表征，再接外卖与 Instamart 任务专属头；增加第二预测任务反使模型体积缩小 63% 且精度提升，满足广告系统冷启动需求。
