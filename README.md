@@ -1,240 +1,45 @@
-# AI-Daily for Bank 🤖📰
+# 智能研发早报
 
-> 智能研发早报 — 每日自动从微信公众号获取 AI 相关文章，关键词过滤，智能分类（国际/国内/同业/其他），生成响应式静态 HTML 早报页面。
+面向银行科技从业者的每日 AI 技术资讯简报。每个工作日从公开技术媒体、厂商渠道与研究机构中筛选值得关注的动态，围绕「大模型与智能研发」主线归类编排，帮助读者在几分钟内掌握当日要点。
 
----
-
-## 📁 项目结构
-
-```
-AI-Daily-for-bank/
-├── config.json              # 项目配置（API 地址、关键词、分类）
-├── index.html               # 首页（历史归档 + 全文搜索）
-├── template.html            # 早报详情页模板
-├── viewer.html              # Markdown 原文查看器
-├── daily-index.json         # 日报索引（日期、统计、摘要）
-├── search-index.json        # 全文搜索索引
-├── scripts/
-│   ├── fetch_articles.py    # Step 1: 获取文章
-│   ├── filter_articles.py   # Step 2: 关键词过滤
-│   └── generate_html.py     # Step 4: 生成 HTML
-└── daily/
-    └── YYYY-MM-DD/          # 每日数据目录
-        ├── articles_raw.json      # 原始文章元数据
-        ├── filtered_articles.json # 过滤后的文章
-        ├── classification.json    # 智能分类结果
-        ├── index.html             # 当日早报页面
-        └── sources/               # 文章 Markdown 原文
-            └── *.md
-```
+- **在线阅读**：https://keejo125.github.io/AI_Daily_For_Bank/
+- **发布节奏**：每日一期
+- **归档范围**：2026 年 4 月 20 日至今，累计 136 期、2929 篇
 
 ---
 
-## 🔄 工作流程
+## 内容范畴
 
-```
-获取 → 过滤 → 分类 → 生成 → 验证
- │       │       │       │       │
- ▼       ▼       ▼       ▼       ▼
-Step1   Step2   Step3   Step4   Step5
-脚本    脚本    智能体   脚本    人工
-```
+早报聚焦大模型与生成式 AI 主线，不做泛科技资讯搬运。每篇入选文章均通读原文后撰写摘要，剔除标题党与重复报道。
 
-| 步骤 | 执行者 | 脚本/操作 | 输入 | 输出 |
-|:----:|:------:|:---------|:-----|:-----|
-| **1. 获取** | 脚本 | `fetch_articles.py` | `/api/rss/export/{date}` 导出接口 | `sources/*.md` + `articles_raw.json` |
-| **2. 过滤** | 脚本 | `filter_articles.py` | `articles_raw.json` + `config.json` 关键词 | `filtered_articles.json`（不匹配的 .md 会被删除） |
-| **3. 分类** | 智能体 | `create_classification.py` + 人工调整 | `filtered_articles.json` + `sources/*.md` | `classification.json` |
-| **4. 生成** | 脚本 | `generate_html.py` | `classification.json` + `template.html` | `daily/YYYY-MM-DD/index.html` + 更新索引 |
-| **5. 验证** | 人工 | 检查产出 | 生成的文件 | 确认完整 |
+| 关注维度 | 具体内容 |
+|---|---|
+| 模型与能力 | 基座模型发布与迭代、评测榜单、模型架构与推理优化 |
+| 工程与工具 | AI 编程与 Coding Agent、研发效能工具链、上下文工程与智能体框架 |
+| 落地与治理 | 企业级 AI 应用实践、知识工程与语料治理、交付质量与安全合规 |
+| 行业与生态 | 金融科技动态、厂商战略与生态合作、算力与基础设施 |
 
----
+凡属传统机器学习应用类内容，不按地域归入国际或国内，统一列入「其他」。
 
-## 🚀 快速使用
+## 分类口径
 
-### 前置条件
+每期按四个板块编排，板块内的模型发布与评测类资讯优先展示：
 
-- Python 3.x
-- `requests` 库：`pip3 install requests`
-- `wechat-query-skill` 导出接口可访问：将 `config.json` 中 `server.base_url` 配置为你的 API 地址后，确保服务可访问（返回 healthy）
+| 板块 | 口径 |
+|---|---|
+| 国际 | 海外厂商与机构的 AI 动态 |
+| 国内 | 国内厂商与开发者生态的动态 |
+| 同业 | 银行及金融机构的 AI 应用与实践 |
+| 其他 | 不属于上述三类的 AI 相关内容 |
 
-### 一键运行
+截至 2026 年 9 月的累计分布为：国际 804 篇、国内 1075 篇、同业 216 篇、其他 834 篇。
 
-```bash
-cd <PROJECT_DIR>/scripts
+## 信息来源
 
-# Step 1: 获取昨日文章（不传日期默认昨天，1-3秒完成）
-python3 fetch_articles.py
+内容取自公开渠道，以中文技术媒体与国内外厂商、研究机构为主。近一月出现频次较高的包括：InfoQ、量子位、MarkTechPost、极客公园、智东西、Solidot、OpenAI、CSDN、银行科技研究社、阿里云云原生、金融电子化等六十余个来源。
 
-# Step 2: 关键词过滤
-python3 filter_articles.py 2026-04-22
+## 阅读方式
 
-# Step 3: 智能分类（生成模板 + 人工调整）
-python3 create_classification.py 2026-04-22  # 自动生成分类模板
-# 然后编辑 classification.json，填写摘要并调整分类
-
-# Step 4: 生成 HTML
-python3 generate_html.py 2026-04-22
-```
-
-### 各脚本独立用法
-
-```bash
-# 获取指定日期的文章（调用 /api/rss/export/{date} 一键导出）
-python3 fetch_articles.py 2026-04-22
-
-# 过滤指定日期的文章（日期参数必填）
-python3 filter_articles.py 2026-04-22
-
-# 生成指定日期的 HTML（日期参数必填）
-python3 generate_html.py 2026-04-22
-```
-
----
-
-## ⚙️ 配置说明
-
-`config.json` 位于项目根目录：
-
-```json
-{
-  "server": {
-    "base_url": "<API_BASE_URL>"
-  },
-  "keywords": {
-    "include": ["AI", "大模型", "智能体", "skill"],
-    "exclude": []
-  },
-  "categories": ["国际", "国内", "同业", "其他"],
-  "output": {
-    "project_dir": "<PROJECT_DIR>"
-  }
-}
-```
-
-| 字段 | 说明 |
-|------|------|
-| `server.base_url` | wechat-query-skill API 地址（通过 Nginx 反代，导出接口：`/api/rss/export/{date}`） |
-| `keywords.include` | 🔍 保留文章的关键词列表（匹配标题 + digest，不区分大小写） |
-| `keywords.exclude` | 🚫 排除文章的关键词列表 |
-| `categories` | 分类类别，固定为国际/国内/同业/其他 |
-| `output.project_dir` | 项目输出根目录 |
-
-### 修改关键词
-
-直接编辑 `config.json` 中的 `keywords.include` / `keywords.exclude` 即可，无需重启任何服务。
-
----
-
-## 🖥️ 页面说明
-
-### `index.html` — 首页
-
-- 展示最新一期早报卡片 + 历史归档列表
-- 🔍 内置全文搜索：搜索标题、摘要、来源，实时高亮匹配
-- 加载 `daily-index.json` 渲染列表，加载 `search-index.json` 实现搜索
-
-### `template.html` — 早报详情页模板
-
-- 占位符：`{{DATE}}`、`{{STATS}}`、`{{ARTICLES_JSON}}`、`{{SECTION_INTL}}` 等
-- 包含 No-JS 降级内容 + JS 动态渲染两种模式
-- 按 4 个分类展示文章卡片，带摘要、来源标签、原文链接
-
-### `viewer.html` — Markdown 原文查看器
-
-- 通过 URL 参数 `?file=daily/YYYY-MM-DD/sources/xxx.md` 加载文章原文
-- 使用 marked.js 渲染 Markdown，自动提取标题和公众号来源
-
-### 🎨 页面特性
-
-- ✅ 响应式布局（手机 / 平板 / 桌面）
-- ✅ 亮色调为主，暗色模式自动适配（`prefers-color-scheme: dark`）
-- ✅ 纯静态，无需后端服务
-- ✅ 大模型相关文章自动标记 `【大模型】` 标签（仅针对模型发布、测评、架构内容）
-- ✅ 文章卡片显示发布时间（hh:mm格式），位于标题下方
-- ✅ 排序规则：每个分类内，大模型标签文章优先展示，同组按时间升序
-
----
-
-## 📊 数据文件说明
-
-| 文件 | 位置 | 说明 |
-|------|------|------|
-| `articles_raw.json` | `daily/YYYY-MM-DD/` | 获取阶段产出的原始文章元数据（aid、title、source、link、digest、source_file） |
-| `filtered_articles.json` | `daily/YYYY-MM-DD/` | 关键词过滤后的文章列表，含过滤统计（total_raw / total_filtered / removed） |
-| `classification.json` | `daily/YYYY-MM-DD/` | 智能分类结果，按 国际/国内/同业/其他 分组，含摘要和统计 |
-| `daily-index.json` | 项目根目录 | 所有日期的索引，含 weekday、stats、summary，按日期降序 |
-| `search-index.json` | 项目根目录 | 全文搜索索引，所有文章的标题/摘要/来源/分类，按日期降序 |
-
----
-
-## 🤖 智能体技能
-
-本项目是一个 **Qoder 智能体技能**，技能定义位于 `.agents/skills/ai-daily-report/SKILL.md`。
-
-### 触发方式
-
-对智能体说 **"生成今日AI早报"** 即可触发完整流程。
-
-触发词：`早报`、`日报`、`AI daily`、`每日汇总`
-
-### 分类规则
-
-| 分类 | 判断标准 |
-|------|---------|
-| 🌍 **国际** | 海外公司（OpenAI、Anthropic、Google、Meta、Apple、Nvidia、Microsoft、xAI 等）或国际 AI 动态 |
-| 🇨🇳 **国内** | 国内公司（阿里、腾讯、百度、字节、华为、智谱、DeepSeek、月之暗面、MiniMax 等）或国内 AI 动态 |
-| 🏦 **同业** | 银行/金融机构 AI 应用（智能客服、风控、信贷、理财、保险、证券等） |
-| 📌 **其他** | 不属于以上三类的 AI 相关文章 |
-
-> **优先级**：同业 > 其他分类；国际/国内冲突时按主要内容方向归类。
-
----
-
-## 📝 更新日志
-
-### 2026-04-26
-
-- 🛠️ **新增辅助脚本** `create_classification.py`：
-  - 基于 `filtered_articles.json` 自动生成 `classification.json` 模板
-  - 自动填充 aid, title, source, link, source_file 字段
-  - 根据关键词预分类（国际/国内/同业/其他）
-  - 自动处理中文引号（替换为方括号）
-  - 保留空的 digest 字段供智能体填写摘要
-  - **使用方法**：`python3 create_classification.py YYYY-MM-DD`
-- 🔧 **增强容错性**：`generate_html.py` 读取 classification.json 时自动标准化中文引号
-  - 使用 `normalize_chinese_quotes()` 函数统一处理
-  - 添加更详细的错误提示信息
-- 🎯 **优化大模型标签判断规则**：`generate_html.py` 中的 `detect_model_related()` 函数全面重构
-  - **新标准**：仅针对模型发布、测评、架构的内容添加标签
-    - ✅ 模型发布：DeepSeek V4、GPT-5.5 等新模型正式发布
-    - ✅ 模型测评：性能对比、实测报告、benchmark 评测
-    - ✅ 模型架构：技术论文、底层技术研究（LLM DNA、注意力机制等）
-  - **明确排除**：
-    - ❌ AI应用功能（如 Chronicle 屏幕记忆）
-    - ❌ 行业资讯（如量化公司创始人背景）
-    - ❌ 基础设施讨论（如 Token 工厂、算力芯片）
-    - ❌ 公司动态（如 OpenAI 裁员、投资并购、商业竞争）
-  - **实现方式**：通过关键词精准匹配 + 排除规则，避免误判
-- 🔧 **修正分类错误案例**：
-  - 黄仁勋访谈从"国内"移至"国际"（涉及英伟达、Token工厂等国际话题）
-  - 删除重复的广告文章（量子位AIGC评选申报通知）
-
-### 2026-04-25
-
-- ✨ **新增时间显示功能**：文章卡片现在显示发布时间（hh:mm格式）
-  - 时间位于标题下方、摘要上方
-  - 数据来源：`articles_raw.json` 中的 `publish_time` 字段（Unix 时间戳）
-  - JavaScript 和 Fallback 两种模式均支持
-  - 样式优化：中等粗细、次要文本颜色，视觉柔和不突兀
-- 🔧 **优化卡片布局**：调整元素顺序为 标题 → 时间 → 来源标签 → 摘要
-
----
-
-## ⚠️ 注意事项
-
-1. **登录态过期**：`wechat-query-skill` 的微信登录态约 **4 天**过期，如导出接口返回空数组，需检查并重新登录
-2. **API 地址**：`server.base_url` 通过 Nginx 反向代理访问，确保反代服务正常运行
-3. **导出接口**：`fetch_articles.py` v2 使用 `/api/rss/export/{date}` 一键导出，替代旧的逐公众号翻页流程，耗时从 4-10 分钟降至 1-3 秒
-3. **分类必须阅读原文**：不要仅凭标题分类，务必读取 `source_file` 对应的 Markdown 原文
-4. **默认日期为昨天**：用户说"生成早报"时，默认使用昨天的日期
+- 首页提供全部历史期归档，支持按标题、摘要、来源进行全文检索
+- 每期页面按板块分组展示卡片，含摘要、发布时间与来源标签，可直接跳转原文
+- 鼠标悬停来源标签会显示该原文链接的二维码，便于手机端继续阅读；未公开链接的来源不显示二维码

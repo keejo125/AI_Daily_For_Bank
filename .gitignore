@@ -1,14 +1,13 @@
-# OS
+# OS / IDE
 .DS_Store
 Thumbs.db
-
-# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+__pycache__/
 
-# AI tools config
+# AI 工具配置目录
 .agents/
 .codebuddy/
 .workbuddy/
@@ -17,46 +16,95 @@ Thumbs.db
 .qwen/
 .history/
 
-# Project config (local paths)
+# 本地配置
 config.json
 skills-lock.json
 
-# Other local projects (not part of AI Daily)
+# 其他本地项目与文档（非早报）
 projects/业界对标调研/
 projects/个人炼化技能调研/
 projects/前瞻月报/
 projects/算力分配方案调研/
 projects/增强记忆系统-实施计划.md
-
-# 本地调研文档（非早报）
 2026年4月_岗位智能体编码与测试阶段_业界动态调研报告.md
-
-# AI Daily 生成中间产物（临时脚本/文件）
-daily/*/articles_raw.json
-daily/*/filtered_articles.json
-daily/*/classification.json
-daily/*/classification.json.merged
-daily/*/classification_task.txt
-daily/*/combined_articles.json
-daily/*/merge_plan.json
-daily/*/_gen_classify.py
-daily/*/_verify.py
-daily/*/_classify.py
-daily/*/build_classification_*.py
-daily/*/checked_articles_report.md
-
-# 临时脚本（git add -A 误伤防护）
-scripts/update_frontmatter_*.py
-
-# 空目录残留
-daily/--date/
-
-# wiki/  # 已恢复跟踪，不再忽略
-__pycache__/
 wiki/
 三驾马车日视图/
-wiki/
 
-# 临时脚本（Step3 自动生成）
-scripts/step3_*.py
-scripts/*_frontmatter*.py
+# 制作层：本地保留、不入库
+scripts/
+skills/
+config/
+template.html
+build_classification.py
+requirements.txt
+RSSHUB-DEPLOY.md
+manual_links.json
+daily/*/sources/
+daily/*/*.json
+daily/*/*.md
+daily/*/*.py
+daily/*/*.txt
+
+# 例外：以下日期的页面在静态区直接链接了原文 Markdown，必须入库
+!daily/2026-04-23/sources/
+!daily/2026-04-24/sources/
+!daily/2026-04-25/sources/
+!daily/2026-04-26/sources/
+!daily/2026-04-27/sources/
+!daily/2026-04-28/sources/
+!daily/2026-04-30/sources/
+!daily/2026-05-01/sources/
+!daily/2026-05-22/sources/
+!daily/2026-05-26/sources/
+!daily/2026-05-27/sources/
+!daily/2026-05-29/sources/
+!daily/2026-06-02/sources/
+!daily/2026-06-05/sources/
+!daily/2026-06-08/sources/
+!daily/2026-06-09/sources/
+!daily/2026-06-10/sources/
+!daily/2026-06-11/sources/
+!daily/2026-06-12/sources/
+!daily/2026-06-13/sources/
+!daily/2026-06-16/sources/
+!daily/2026-06-17/sources/
+!daily/2026-06-18/sources/
+!daily/2026-06-23/sources/
+!daily/2026-06-24/sources/
+!daily/2026-06-25/sources/
+!daily/2026-06-26/sources/
+!daily/2026-06-27/sources/
+!daily/2026-06-28/sources/
+!daily/2026-06-29/sources/
+!daily/2026-06-30/sources/
+!daily/2026-07-01/sources/
+!daily/2026-07-02/sources/
+!daily/2026-07-03/sources/
+!daily/2026-07-04/sources/
+!daily/2026-07-05/sources/
+!daily/2026-07-06/sources/
+!daily/2026-07-07/sources/
+!daily/2026-07-08/sources/
+!daily/2026-07-09/sources/
+!daily/2026-07-10/sources/
+!daily/2026-07-11/sources/
+!daily/2026-07-12/sources/
+!daily/2026-07-13/sources/
+!daily/2026-07-14/sources/
+!daily/2026-07-15/sources/
+!daily/2026-07-16/sources/
+!daily/2026-07-17/sources/
+!daily/2026-07-18/sources/
+!daily/2026-07-19/sources/
+!daily/2026-07-20/sources/
+!daily/2026-07-21/sources/
+!daily/2026-07-22/sources/
+!daily/2026-07-23/sources/
+!daily/2026-07-24/sources/
+!daily/2026-07-25/sources/
+!daily/2026-07-26/sources/
+!daily/2026-07-27/sources/
+!daily/2026-07-28/sources/
+!daily/2026-07-29/sources/
+!daily/2026-08-05/sources/
+!daily/2026-08-06/sources/
