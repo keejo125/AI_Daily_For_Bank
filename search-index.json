@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T05:20:42.962294",
+  "updated_at": "2026-09-11T06:48:21.133067",
   "total": 1941,
   "articles": [
     {
@@ -26,7 +26,7 @@
       "date": "2026-09-10",
       "title": "LandingAI 发布 Agentic Document Extraction Gen2 文档智能提取",
       "source": "MarkTechPost",
-      "digest": "|",
+      "digest": "LandingAI 发布 Agentic Document Extraction（ADE）Gen2，围绕全新 DPT-3 模型族重构文档智能栈。Gen1 将文档视为扁平的 chunk 列表，Gen2 将其建模为树状结构，按返回字符数而非每页计费，并把每个答案溯源到页面具体的行或词。发布围绕三主题：可负担、面向 Agent 的输出、原子级溯源。该版本已正式可用，支持美/欧云端、自有 VPC、Snowflake 及离线环境部署。Gen2 将解析拆分为 DPT-3 Verity（确定性转录，成本约为 Pro 的 40%）与 DPT-3 Pro（先读版式再读词，处理扫描件、手写、非拉丁文与 LaTeX）两模型，按负载选型。计费改为「页数 + 输出字符」双分量，混合负载预计降本 25%–80%。响应结构为 markdown、metadata、structure 三字段，每个块带语义 ID 与 grounding 对象；原子溯源让 PII 按坐标擦除、文档比对与人工审阅 UI 得以工程化实现。",
       "link": "https://www.marktechpost.com/2026/09/09/landingai-releases-agentic-document-extraction-gen2-with-dpt-3-pro-and-dpt-3-verity/",
       "source_file": "sources/2026-09-10_LandingAI Releases Agentic Document Extraction Gen_MarkTechPost.md",
       "category": "国际",
@@ -166,7 +166,7 @@
       "date": "2026-09-10",
       "title": "打造10万卡国产算力集群推出JoyAI世界模型，京东发布物理AI建设最新成果",
       "source": "量子位",
-      "digest": "|",
+      "digest": "9月9日，JDD-2026 京东全球科技探索者大会以「JoyAI·跃迁物理世界」为主题在北京举行。京东全面展示建设「全球最大物理世界运营中心」战略，启动「物理AI加速计划」，提出以「云、数、模、端、场、链」六大模块为基础的超级 AI 供应链。算力上，与摩尔线程等共建国产万卡集群、规划十万卡集群；数据上，推进 1000 万小时具身数据采集，首批开源数据集 EgoLive 已对外开放；模型上，发布实时可交互世界模型 JoyAI-Echo WM（WBench Navigation 评测 81.6 分排名第一），并推出物流「超脑」3.0、工业 JoyIndustrial2.0、健康京医千询3.0 等垂域大模型。其中超脑 3.0 实现决策、流程、物理 AI 三位一体，亿级包裹端到端路径规划从分钟级压缩至秒级，具身模型物流多任务执行成功率达 96.7%。京东计划数年内实现机器人领域六项「全球第一」。",
       "link": "https://www.qbitai.com/2026/09/486436.html",
       "source_file": "sources/2026-09-10_打造10万卡国产算力集群推出JoyAI世界模型，京东发布物理AI建设最新成果_量子位.md",
       "category": "国内",
