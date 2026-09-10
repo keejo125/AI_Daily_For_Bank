@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-10",
+      "weekday": "周四",
+      "stats": {
+        "国际": 13,
+        "国内": 22,
+        "同业": 4,
+        "其他": 0,
+        "total": 39
+      },
+      "summary": "AGI时代的第一个生图模型，ChatGPT Images 2.5上线/OpenAI 发布 GPT-Live-1 全双工语音对话 API/DeepSeek ..."
+    },
+    {
       "date": "2026-09-09",
       "weekday": "周三",
       "stats": {
