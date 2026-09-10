@@ -500,6 +500,26 @@ body {
   /* ===== Fetch markdown ===== */
   // Encode the filePath to ensure proper URL resolution for Chinese filenames
   var fetchUrl = filePath.split('/').map(encodeURIComponent).join('/');
+  // 绝对文件路径（用于 file:// 下给出可直接打开的链接）
+  var absFileUrl = '';
+  try { absFileUrl = new URL(fetchUrl, window.location.href).href; } catch (e) {}
+
+  function buildErrorDetail(err) {
+    var lines = [];
+    lines.push('文件: ' + filePath);
+    lines.push('错误: ' + (err && err.message ? err.message : '无法读取文件内容'));
+    var html = '<div style="white-space:pre-wrap;margin-bottom:16px">' + escapeHtml(lines.join('\n')) + '</div>';
+    if (absFileUrl) {
+      html += '<a class="back-btn" style="background:var(--bg-code);color:var(--text-secondary);border-color:var(--border-card);text-decoration:none" href="' + escapeAttr(absFileUrl) + '" target="_blank" rel="noopener">直接打开原文文件</a>';
+    }
+    if (window.location.protocol === 'file:') {
+      html += '<p style="margin-top:16px;font-size:13px;color:var(--text-tertiary);line-height:1.6">提示：当前通过 <code>file://</code> 打开，浏览器会阻止读取本地文件（fetch 被安全策略拦截）。' +
+             '请在本仓库根目录启动本地服务器后再访问：<br><code>python3 -m http.server 8000</code><br>' +
+             '然后打开 <code>http://localhost:8000/viewer.html?file=' + escapeHtml(filePath) + '</code></p>';
+    }
+    return html;
+  }
+
   fetch(fetchUrl)
     .then(function(resp) {
       if (!resp.ok) throw new Error('HTTP ' + resp.status + '：无法加载文件');
@@ -509,7 +529,7 @@ body {
       renderContent(md);
     })
     .catch(function(err) {
-      showError('加载失败', '文件: ' + filePath + '\n错误: ' + (err.message || '无法读取文件内容'));
+      showError('加载失败', buildErrorDetail(err));
     });
 
   /* ===== Render Content ===== */
@@ -621,14 +641,14 @@ body {
   }
 
   /* ===== Error ===== */
-  function showError(title, detail) {
+  function showError(title, detailHtml) {
     titleEl.textContent = '加载失败';
     contentArea.innerHTML =
       '<div class="content-card">' +
         '<div class="error-state">' +
           '<div class="error-icon">📄</div>' +
           '<div class="error-title">' + escapeHtml(title) + '</div>' +
-          '<div class="error-detail">' + escapeHtml(detail) + '</div>' +
+          '<div class="error-detail">' + (detailHtml || '') + '</div>' +
           '<a class="back-btn" href="javascript:history.back()" style="background:var(--bg-code);color:var(--text-secondary);border-color:var(--border-card)">' +
             '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
             '返回早报' +
