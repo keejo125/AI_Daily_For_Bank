@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-11",
+      "weekday": "周五",
+      "stats": {
+        "国际": 12,
+        "国内": 10,
+        "同业": 3,
+        "其他": 3,
+        "total": 28
+      },
+      "summary": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”/Cohere 发布 218B MoE 翻译模型 North Small Translate（WM..."
+    },
+    {
       "date": "2026-09-10",
       "weekday": "周四",
       "stats": {
