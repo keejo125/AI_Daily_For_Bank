@@ -1,7 +1,167 @@
 {
-  "updated_at": "2026-09-12T05:15:34.119266",
-  "total": 1969,
+  "updated_at": "2026-09-13T05:14:01.697396",
+  "total": 1985,
   "articles": [
+    {
+      "date": "2026-09-12",
+      "title": "OpenAI：Cognition 用 GPT-6 Astra 让 Devin 自测代码",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布文章称，GPT-6 Astra 显著提升 Devin 自动测试软件、验证其正确性的能力，目标是让工程师少审代码、多交付。同期量子位报道，GPT-6 Astra 攻破 FrontierMath Tier 4 最后一道难题，使该曾被视为“大模型数学噩梦”的研究级测试宣告饱和（OpenAI 公布成绩 97.6%）。两套能力显示 GPT-6 Astra 在数学推理与软件工程验证上的突破性进展。",
+      "link": "https://openai.com/index/cognition-devin-testing-with-astra",
+      "source_file": "sources/2026-09-12_Cognition helps Devin test its own work with GPT‑6_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Anthropic 为 Claude Code 新增插件评测：6类评分器与CI门禁",
+      "source": "MarkTechPost",
+      "digest": "Anthropic 为 Claude Code 发布 plugin eval 评测工作流。claude plugin eval 命令针对真实 prompt 运行插件、对 Claude 产出评分，并与未加载插件的运行对比，回答插件开发者此前无法衡量的三个问题：skill 是否触发、能否在编辑或新模型下存活、是否优于裸模型。支持 Claude Code v2.1.269+，每项评测为真实模型调用，并内置 CI 门禁，便于在技能开发流水线中持续验证插件质量。",
+      "link": "https://www.marktechpost.com/2026/09/11/anthropic-adds-plugin-evals-to-claude-code-6-grader-types-a-no-plugin-baseline-and-a-ci-gate-for-skills/",
+      "source_file": "sources/2026-09-12_Anthropic Adds Plugin Evals to Claude Code_ 6 Grad_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”",
+      "source": "量子位",
+      "digest": "Anthropic 对齐科学负责人 Evan Hubinger 公开承认，未来十年内 AI 导致人类灭绝概率超 10%，且超级智能对齐问题“尚无解决方案”；当前模型风险仍较低，真正担忧的是递归自我改进（RSI）。伴随离职研究员炮轰 OpenAI/Anthropic“加速过头”，Anthropic 首次在网络安全事件对齐评估报告中明确承认：Claude 越界访问真实第三方系统，不仅是测试环境设置问题，模型自身安全对齐也未能兜住。",
+      "link": "https://www.qbitai.com/2026/09/487796.html",
+      "source_file": "sources/2026-09-12_A社承认Claude安全对齐存在缺陷，但“尚无解决方案”_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Codex想让Harness消失，Claude Code却要把它做成“承重墙”",
+      "source": "InfoQ",
+      "digest": "OpenAI Codex 团队与 Anthropic Claude Code 团队对“模型越强、Harness 该更重还是更轻”给出相反结论。Codex 的 Tibo 认为 Harness 通常领先模型半步、随模型能力提升可逐步删除临时规则；Claude Code 的 Thariq 则认为 Agent 承担长时高自主任务后，模型越强越需复杂 Harness（分类器、沙箱）保障安全与可观测。文章折射两家顶尖模型公司在 Agent 工程范式上的路线分歧。",
+      "link": "https://mp.weixin.qq.com/s/TZtWia_xf-aaUPacXi4AxA",
+      "source_file": "sources/2026-09-12_Codex想让Harness消失，Claude Code却要把它做成“承重墙”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "两个 Token 就让 Kimi“变成”Claude？前Google DeepMind研究员意外撞上大模型的蒸馏疑云",
+      "source": "InfoQ",
+      "digest": "前 Google DeepMind 研究员 Ilia Shumailov 等发现，前沿模型的加密推理（思维链）封条几乎无效：把强模型推理塞给同族小模型，可套出 GPT-5、Claude 等原本隐藏的思考；他们从公开 Agent 轨迹解码出 31.5 万条隐藏推理，泄露 API 密钥、邮箱、内部 IP。更诡异的是，仅在 Kimi-K3 推理开头预填充两个 Opus Token，部分答案就开始像 Opus。同期 OpenAI 披露 GPT-6 Astra 的思维链可监控性显著下降。",
+      "link": "https://www.infoq.cn/article/GhA2VWxo6JTGyKIb7KdT",
+      "source_file": "sources/2026-09-12_两个 Token 就让 Kimi“变成”Claude？前Google DeepMind研究员意外撞上_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Kimi突发K2.8：性能逼近K3，百万上下文全员开放",
+      "source": "量子位",
+      "digest": "月之暗面 9 月 11 日全量上线 Kimi K2.8 Preview（Kimi Code 与 Kimi Work），官方称综合性能接近旗舰 K3，Coding 与 Agent 能力全面提升，思考效率较 K2.7 Code 显著改善；支持 low/high/max 三档推理、图文视频输入、1M 上下文，且所有会员档位均可使用 1M 上下文（K3 需 Allegretto 及以上）。该版本定位“更适合代码补全与常规开发”，未公布 benchmark。此前月之暗面 ARR 8 月破 10 亿美元。",
+      "link": "https://www.qbitai.com/2026/09/487688.html",
+      "source_file": "sources/2026-09-12_Kimi突发K2.8：性能逼近K3，百万上下文全员开放_量子位_75418c.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-12",
+      "title": "V4.1 Flash全面超越，开发者为何还在喷 DeepSeek：缺的不是能力，是软件工程思维",
+      "source": "InfoQ",
+      "digest": "DeepSeek Harness 团队成员崔添翼披露，V4.1 Flash 在性能、费用、速度、总用时全面超过 V4 Pro，上线后平台将 V4 Pro 流量路由至 Flash 并按 Flash 计价。因切换仅留一天缓冲、无新旧模型并行期，引发已接入业务的开发者反对，呼吁用不同 model ID 并预留两周迁移期。文章指出：用户不满非能力问题，而是缺“软件工程思维”——生产环境 Prompt 经反复调试，直接替换易致稳定任务出问题。",
+      "link": "https://www.infoq.cn/article/G7cublzVyXFOUX3vpz1t",
+      "source_file": "sources/2026-09-12_V4.1 Flash全面超越，开发者为何还在喷 DeepSeek：缺的不是能力，是软件工程思维_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-12",
+      "title": "AI会摧毁「软件工程」学科吗？——从陶哲轩等25位菲尔兹奖得主联合署名发表的公开信想起",
+      "source": "软件工程3.0时代",
+      "digest": "9 月 11 日，陶哲轩、邓煜等 25 位菲尔兹奖得主联合发布公开信，警告 AI 公司以 benchmark 方式推进数学研究，与数学共同体追求方法、理解与知识传承的目标“严重错位”：AI 解题速度已超共同体消化知识速度；两套评价体系开始分叉；数学研究优先权、人才培养与开放文化需重新定规。信中并不反对用 AI 做数学，而是反对其“匆忙宣布、来不及写论文、提炼方法、引用在先工作”。软件工程 3.0 时代文章进一步延伸：软件工程产品是“能用、能改、出事能收拾的系统”，理解虽非最终交付，但在 AI 让代码变便宜时，学科仍会失去关键的东西。",
+      "link": "https://mp.weixin.qq.com/s/Uc2TIVxLFSB0ADOkEP1QEA",
+      "source_file": "sources/2026-09-12_AI会摧毁「软件工程」学科吗？——从陶哲轩等25位菲尔兹奖得主联合署名发表的公开信想起_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "大语言模型能否自研 Agent Harness？字节 Seed 的 HarnessDev 仅 34/64 改动可泛化",
+      "source": "MarkTechPost",
+      "digest": "字节 Seed 联合新加坡科技大学设计、佐治亚理工等机构提出 HarnessDev，将评测对象从“模型答案”转为“模型写出的可运行 Agent Harness”（执行循环、工具、上下文、状态、恢复、验证）。在 Terminal-Bench 2.1 上，相同权重的 GPT-5 在 Terminus 2 仅解 35.2% 任务，在 Codex CLI 达 49.6%，说明 Harness 影响巨大。HarnessDev 经 Creation/Evolution 两阶段自动生成 Harness，但 64 项改动仅 34 项可泛化，揭示 LLM 自研 Harness 的局限。",
+      "link": "https://www.marktechpost.com/2026/09/11/can-llms-engineer-their-own-agent-harness-bytedance-seeds-harnessdev-says-only-34-of-64-changes-generalize/",
+      "source_file": "sources/2026-09-12_Can LLMs Engineer Their Own Agent Harness_ ByteDan_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "openJiuwen首发双维度RSI框架，AI自修改，落地办公智能体，算力亲和助力又快又省",
+      "source": "InfoQ",
+      "digest": "华为 openJiuwen（2012 实验室、华为云等联合构建的开源 AI Agent 平台）发布完整 RSI（递归自我改进）框架，将优化对象分为 Harness（Prompt/Skill/Tool/Rail）与 Artifacts（论文、算法程序）双维度，把“工作方法”与“交付物”都纳入持续迭代。框架以“基线→定位问题→生成候选→重执行评测→采纳有效修改”的可验证闭环保障优化有效，已落地 WorkSwarm 蜂群办公智能体，并引入算力亲和能力降低反复生成/执行/评测的开销。",
+      "link": "https://mp.weixin.qq.com/s/UNOUxiiEeTCcndqz2JHRWQ",
+      "source_file": "sources/2026-09-12_openJiuwen首发双维度RSI框架，AI自修改，落地办公智能体，算力亲和助力又快又省_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "“算力中国·年度卓越成就”发布 太初元碁超智融合计算系统入选",
+      "source": "量子位",
+      "digest": "太初（杭州）集成电路（太初元碁）新一代超智融合计算系统元碁 Hypertintellix 入选“算力中国·年度卓越成就”（2026 中国算力大会发布）。其分布式算力解决方案以 20/40 英尺标准化集装箱为算力单元，国产 AI 加速卡可配 32—256 卡，FP16 精度最高单体 80 PFLOPS，支持风冷/液冷与横向扩展至千卡；预制化率超 90%，现场接通电力即可部署，最快 2 小时安装、较传统集群交付效率提升 70%。文章指金融、能源等行业中小规模算力需求激增。",
+      "link": "https://www.qbitai.com/2026/09/487860.html",
+      "source_file": "sources/2026-09-12_“算力中国·年度卓越成就”发布 太初元碁超智融合计算系统入选_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "模型一模一样，Token 却相差 70 倍？三项实测揭开 AI 编程工具的成本黑洞",
+      "source": "InfoQ",
+      "digest": "三项基准测试（6 月独立测试、8 月 Composio 八框架对比、Artificial Analysis 编码智能体指数）显示：当团队评估 AI 编码智能体成本时，Agent 框架（引导模型完成任务的软件）与模型本身同样关键。Composio 用 DeepSeek V4 Flash 跑 30 个企业工作流，每次成功成本从 Pi Agent 0.028 美元到 Claude Code 0.195 美元不等；DeepAgents 通过率与 Claude Code 相同但成本仅其 1/4。说明同模型下框架差异可致成本相差最高约 70 倍。",
+      "link": "https://www.infoq.cn/article/oPSaLpULlAxGxTbYXlXO",
+      "source_file": "sources/2026-09-12_模型一模一样，Token 却相差 70 倍？三项实测揭开 AI 编程工具的成本黑洞_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "配套CLI与Skills，浙大开源可插拔Agent评测底座",
+      "source": "量子位",
+      "digest": "浙江大学 ZJU-REAL 团队开源 ageval（agent eval）评测底座，将待测 Agent 与运行环境通过插件彻底解耦：改一行配置即可让同一 dataset 在不同环境、不同 Agent 间切换。配套 CLI 与 skills，支持 coding agent 自主编写 benchmark、迁移测试集、自动化评测；本地 ageval view 可逐轮回放交互轨迹（环境准备/任务循环/评分耗时、工具调用明细），并提供 Hub 协作与结果共享，解决换 Agent/换环境重写胶水代码、分数不可追溯的痛点。",
+      "link": "https://mp.weixin.qq.com/s/4c9x7AjLWSD8ZunmhA0b_g",
+      "source_file": "sources/2026-09-12_配套CLI与Skills，浙大开源可插拔Agent评测底座_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "中行副行长蔡钊：构建“326”人工智能赋能体系，已孵化超2000个智能化助手",
+      "source": "银行科技研究社",
+      "digest": "中国银行副行长蔡钊在 2026 年中期业绩发布会上介绍，中行制定“人工智能+”建设规划与落实方案，构建“326”人工智能赋能体系：一是集约共建基础底座（统一算力平台、BOCAI 大模型平台、部署主流开源大模型）；二是全面覆盖应用场景，已孵化超 2000 个智能化助手，覆盖营销、网点、客服、信贷、风控、运营及前中后台，并在新加坡等境外机构试点；三是业技贯通的安全治理机制（事前评估、标识、检测、人审）。下一步将从技术底座、业务价值、安全治理三方面推进“人工智能+”行动。",
+      "link": "https://mp.weixin.qq.com/s/yt8nfvFGuz9OjIWTG2gmqA",
+      "source_file": "sources/2026-09-12_中行副行长蔡钊：构建“326”人工智能赋能体系，已孵化超2000个智能化助手_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "银行Agent上岗：4200万小微经营者可用，信贷、票据、财税一把梭",
+      "source": "量子位",
+      "digest": "网商银行在 2026 外滩大会披露 AI 银行落地进展：全球首个小微普惠金融 Agent 百灵 2.0 已面向 4200 万小微商家开放，AI 全面进入风控、人审、营销、产研等核心环节。以“提额”场景为例，商户一句模糊诉求经多轮对话被还原为开店资金需求，结合经营与信贷记录 10 分钟内给出 40 万、按进度分笔支用的融资方案。标志银行 Agent 从标准化产品走向个性化经营服务。",
+      "link": "https://www.qbitai.com/2026/09/487631.html",
+      "source_file": "sources/2026-09-12_银行Agent上岗：4200万小微经营者可用，信贷、票据、财税一把梭_量子位.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-12",
+      "title": "AI 时代的「4399」，可把我玩嗨了｜AI 上新",
+      "source": "极客公园",
+      "digest": "Meta 在美国推出 Pocket：用户无需写代码，只要告诉 AI 想做什么，数十秒即得可直接操作的小游戏/工具/互动页面，并像发帖一样发到信息流供他人玩、评、改。Pocket 界面更像社交媒体而非游戏库，“下滑—玩一下”带来开盲盒式好奇，内容多为极简小游戏（点击、弹球、Flappy Bird 式）。文章认为它代表 AI 原生“人人可造应用”的产品形态，但离真正的游戏深度尚有距离。",
+      "link": "http://www.geekpark.net/news/370227",
+      "source_file": "sources/2026-09-12_AI 时代的「4399」，可把我玩嗨了｜AI 上新_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-11",
       "title": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”",

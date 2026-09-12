@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-12",
+      "weekday": "周六",
+      "stats": {
+        "国际": 5,
+        "国内": 8,
+        "同业": 2,
+        "其他": 1,
+        "total": 16
+      },
+      "summary": "OpenAI：Cognition 用 GPT-6 Astra 让 Devin 自测代码/Anthropic 为 Claude Code 新增插件评测：6类..."
+    },
+    {
       "date": "2026-09-11",
       "weekday": "周五",
       "stats": {
