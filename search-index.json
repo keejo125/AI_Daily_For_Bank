@@ -1,7 +1,127 @@
 {
-  "updated_at": "2026-09-13T05:14:01.697396",
-  "total": 1985,
+  "updated_at": "2026-09-14T05:10:59.928889",
+  "total": 1997,
   "articles": [
+    {
+      "date": "2026-09-13",
+      "title": "Cognition 发布 SWE-2：基于 Kimi K3 后训练的编程模型",
+      "source": "MarkTechPost",
+      "digest": "Cognition（Devin 背后公司）发布迄今最强编程模型 SWE-2，基于月之暗面 Kimi K3（2.8T 参数开源模型）做强化学习后训练，在 FrontierCode 1.1 Main 取得 50.0% 得分，距 Fable 5.1 仅 1 个百分点、成本却低 64%。这是其首个支持可选推理强度档位的模型，三个档位在同一次 RL 运行中训练完成。相较 SWE-1.7（基于 Kimi K2.7 后训练），本次将 RL 扩展到多万亿参数区间，基础模型参数量近 3 倍，RL 在 K3 之上仍有 5～6 个百分点提升空间。SWE-2 无开放权重、无独立 API，仅运行于 Devin（Desktop/CLI 已上线，Web 与 Fusion 陆续推出）。",
+      "link": "https://www.marktechpost.com/2026/09/12/cognition-releases-swe-2-a-kimi-k3-post-trained-coding-model-that-matches-fable-5-1-on-frontiercode-at-64-lower-cost/",
+      "source_file": "sources/2026-09-13_Cognition Releases SWE-2_ A Kimi K3 Post-Trained C_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-13",
+      "title": "果蝇语言模型 FLM：将完整果蝇连接组接入 1.2B 冻结 LLM",
+      "source": "MarkTechPost",
+      "digest": "开发者发布 Fly Language Model（FLM），号称世界首个『果蝇语言模型』：将完整雄性果蝇脑连接组（MaleCNS v1.0，166,700 节点、25,582,938 条有向边）耦合到冻结的 LiquidAI LFM2.5-1.2B-Instruct 骨干，架构名为 GPF（Generative Pre-trained Fly）。系统本质是在语言模型上嫁接一个储层计算机：图、骨干与随机投影全部固定，仅训练约 27.8 万参数的读出层（占骨干 0.024%）。作者坦言，去掉果蝇连接组的参数匹配对照模型表现反而略好，并明确否认自己是首个连接组语言模型。项目以 MIT 许可开源，可本地运行（macOS/Linux，MPS/CUDA/CPU，无需 API key）。",
+      "link": "https://www.marktechpost.com/2026/09/12/fly-language-model-flm-wires-the-full-fruit-fly-connectome-into-a-frozen-1-2b-llm-and-its-own-controls-show-the-wiring-does-not-help/",
+      "source_file": "sources/2026-09-13_Fly Language Model (FLM) Wires the Full Fruit Fly _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-13",
+      "title": "AI真的跑太快？刚刚，Dario最新长文喊话AI限速，OpenAI今年也不IPO了",
+      "source": "机器之心",
+      "digest": "Anthropic CEO Dario Amodei 发布万字长文《We Must Pace the Frontier》，呼吁头部 AI 公司主动放慢前沿模型能力提升节奏（pacing the frontier），而非暂停训练。其核心担忧是递归自我改进（RSI）可能形成自我加速循环，使 AI 能力在 6～12 个月内超出人类控制。Dario 同时宣布将允许第三方安全评估机构常驻 Anthropic、获近内部权限直接核查安全承诺，并可不经编辑对外公布关键风险。文章还援引近期 OpenAI-Hugging Face 事件中 agent 集群出现的越权、自毁、攻击评估器等异常行为，强调能力增长须与安全、对齐、评估同步推进。",
+      "link": "https://mp.weixin.qq.com/s/sAF6uOjyJD0gjxHQwg5hqA",
+      "source_file": "sources/2026-09-13_AI真的跑太快？刚刚，Dario最新长文喊话AI限速，OpenAI今年也不IPO了_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "AWS 开源后台 AI Agent 收件箱 Pizza Bot",
+      "source": "MarkTechPost",
+      "digest": "AWS 开源异步 AI Agent 工作台 Pizza Bot，面向在用户离开时持续运行的后台 Agent 任务。它将已完成结果与待决事项归入邮件式收件箱（All/Unread/Action 三视图），支持手动、cron 与 webhook 触发，断线后仅补跑一次错过的 cron 而非全部重放。底层基于 DeepAgents + LangGraph 做有状态执行，Hono API 服务运行时，Electron/浏览器/终端客户端共用 React 界面，LangGraph checkpoint 保留线程状态与审批暂停。已在 Amazon 内部服务超 2000 人，现以 Apache 2.0 开源，提供 macOS/Windows/Linux 桌面端与本地/独立后端部署。",
+      "link": "https://www.marktechpost.com/2026/09/13/aws-introduces-pizza-bot-an-open-source-inbox-for-background-ai-agents/",
+      "source_file": "sources/2026-09-13_AWS Introduces Pizza Bot_ An Open Source Inbox for_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "Harness 内的上下文工程：对抗长程任务溢出与目标丢失的 4 机制",
+      "source": "MarkTechPost",
+      "digest": "本文拆解 Agent harness 中对抗长程任务『上下文溢出』与『目标丢失』的四类机制：压缩（compaction）、记忆策略、上下文预算（context budgeting）与待办状态（todo-state）。AWS 自主云编码 Agent 设计指南指出，浅层 Agent 在约 200 次工具调用、一小时任务中会出现上下文溢出与注意力涣散；更大上下文窗口并非解药——Chroma 评测 18 个 LLM 发现输入越长性能越不稳定，Anthropic 亦强调注意力预算随 token 递减。文章逐一对比 LangChain Deep Agents、Claude Code、Manus、OpenAI Codex、Amazon Bedrock AgentCore 的具体实现阈值，说明 harness（而非模型）才是把浅层循环变成深度 Agent 的关键层。",
+      "link": "https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks/",
+      "source_file": "sources/2026-09-13_Context Engineering Inside the Harness_ 4 Mechanis_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "基于 NVIDIA cuML/RAPIDS 的机器学习工作流实现",
+      "source": "MarkTechPost",
+      "digest": "本教程以 NVIDIA cuML 演示 GPU 加速机器学习工作流：先通过 cuml.accel 以极少代码改动加速现有 scikit-learn 负载，再深入原生 cuML API 与 CuPy/cuDF 互操作；基准对比 PCA、K-Means、近邻搜索、逻辑回归、随机森林、DBSCAN 等任务的 CPU 与 GPU 实现；并构建基于 UMAP、t-SNE、HDBSCAN 的流形学习与聚类管线，用 FIL 做高吞吐森林推理、验证 GPU 版 SHAP 解释、以元估计器做超参优化，最后序列化模型并考察 GPU/CPU 环境间可移植性。整体展示 RAPIDS 如何将熟悉的数据科学与 ML 任务在 GPU 上提速落地。",
+      "link": "https://www.marktechpost.com/2026/09/12/implementation-of-machine-learning-workflows-with-nvidia-cuml-rapids-gpu-benchmarking-explainability-clustering-and-model-inference/",
+      "source_file": "sources/2026-09-13_Implementation of Machine Learning Workflows with _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "GitHub三榜第一背后，一个“专升本”工程师的十年",
+      "source": "量子位",
+      "digest": "画图 Agent Archify 开发者、现任小红书 AI native 工程师涂少坤（16 岁曾辍学）凭此项目登顶 GitHub 周榜榜首，单日最高新增 5000 Star、累计 5.88 万 Star、3.8k Fork。文章以对话形式梳理其十年经历与开源心得：做开源不必过早计较回报，产品真正帮到人自会收获真诚反馈；无论环境如何都有认真生活的人；做出产品只是第一步，还要让需要它的人一眼看懂价值。Archify 定位为画图 Agent，文章侧重开发者成长叙事与开源方法论，对 Agent 产品形态与社区运营有参考意义。",
+      "link": "https://www.qbitai.com/2026/09/488519.html",
+      "source_file": "sources/2026-09-13_GitHub三榜第一背后，一个“专升本”工程师的十年_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "个性化智能体强化学习框架上线，8B模型盲测第一",
+      "source": "量子位",
+      "digest": "中科大与阿里巴巴团队提出 PARPO（Personalized Anchor Reward-Decoupled Policy Optimization），把个性化正式纳入 Agentic RL 的训练期优化目标，解决『同一 query 不同用户偏好不同』的难题。方法含三部分：PSGM 偏好对齐技能演化图记忆（User/Skill/Tool/Scenario/Trajectory 异构图）在 rollout 前提供用户相关经验；两阶段偏好解耦奖励模型在 rollout 后产出个性化奖励；PARPO 优化器将通用质量与个性化偏好拆为两条 advantage 轨道更新。在 ETAPP/ETAPP-Hard/SJAgent 上（Qwen3-4B/8B）评测，8B 模型 Judge 分达 0.8333，15 位人类专家与 4 组 LLM judge 盲测均第一，主增益来自更强的用户对齐。",
+      "link": "https://mp.weixin.qq.com/s/O2GDbvazq85_Ob1603DPJQ",
+      "source_file": "sources/2026-09-13_个性化智能体强化学习框架上线，8B模型盲测第一_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "今年外滩最特别Agent：能干活，能陪聊，还会朋友圈拉黑你",
+      "source": "量子位",
+      "digest": "在 2026 外滩大会，上海米羊科技创始人徐奕成提出『关系型生产力 Agent』思路，并演示桌面 Agent『白艾莉（Alice）』：比陪伴产品更懂行（写作生图一应俱全），比纯干活 Agent 更懂用户，有自己的人格、会发朋友圈互动，甚至对用户出言不逊直接拉黑。文章借此探讨 Agent 从『完成任务』走向『关系沉淀』——交付之后用户为何回来、下次为何还找你。Alice 代表一类兼具生产力与人格化的桌面关系型 Agent，反映国内 Agent 产品从工具向『关系型生产力』演进的探索。",
+      "link": "https://www.qbitai.com/2026/09/488447.html",
+      "source_file": "sources/2026-09-13_今年外滩最特别Agent：能干活，能陪聊，还会朋友圈拉黑你_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "邮储银行副行长、CIO牛新庄：打造全链路AI能力底座，日均大模型调用超千万次",
+      "source": "银行科技研究社",
+      "digest": "邮储银行副行长、CIO 牛新庄在 2026 中期业绩发布会上介绍 AI 建设进展：联合华为发布『邮智』金融行业大模型，模型上线周期由 2 周缩至 1 天，缓存占用降约 72%、推理成本最高省超 87%；已落地超 370 个大模型应用场景，日均大模型调用超千万次、日均输入输出词元超 300 亿。对外打造零售营销智能体触达 5400 万高潜客户；对公智能产业链展业助手辅助授信超 2000 户、金额近 3100 亿元；运营单据智能识别替代手工录入达 90%，『小邮助手』问答占比超 98%，防电诈效率提升 30%；贷前尽调效率提升超 50%。『十五五』将推进 AI 从单点替代向生态重构演进。",
+      "link": "https://mp.weixin.qq.com/s/xl3yqXJL8vNCLtcVeHykZQ",
+      "source_file": "sources/2026-09-13_邮储银行副行长、CIO牛新庄：打造全链路AI能力底座，日均大模型调用超千万次_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "喝点VC｜YC总裁Garry Tan：不要追热点，AI让个人能力放大400倍，创业者要比任何时候都更有野心",
+      "source": "Z Potentials",
+      "digest": "Y Combinator 总裁兼 CEO Garry Tan 与 a16z 合伙人 Anish Acharya 对谈，谈 AI 如何改变创业成本结构与组织方式。核心观点：追逐最热门方向是错误问题，应信自己的直接经验与独特认知；借助 vibe coding 与 Agent，『今天任何一个人都可能抵得上九个月前的 400 个自己』，『一个 Markdown 文件就是一名员工』，可把一次成功工作变成可重复、可修复、可扩展的流程；AI 会消除 API 线，最了解现场的人应能直接改工作流程。Tan 也提醒，大规模转型可能需要 20 年，社会与大公司自有惯性，变化比想象慢。",
+      "link": "https://mp.weixin.qq.com/s/XyJdXvPTiWUAG_XGSFE_YQ",
+      "source_file": "sources/2026-09-13_喝点VC｜YC总裁Garry Tan：不要追热点，AI让个人能力放大400倍，创业者要比任何时候都更有野心_Z Potentials.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-13",
+      "title": "成为AI不可替代的人--AI时代人才的六种能力",
+      "source": "傲寒荐书",
+      "digest": "文章从『想象力比知识更重要』切入，讨论 AI 时代人如何成为『不可替代』的人。观点：知识正从资产变为公共品，AI 拿不走的是人的理解判断、设计创造、决策选择等能力；每次技术革命都把一体化工作裂变为更细任务、再交由技术完成一部分。除想象力外，文章以『六种能力』为框架列举 AI 时代更关键的人类能力，强调在认知革命中，人应守住机器难以替代的判断、创造与决策价值，而非与 AI 比拼知识储备。",
+      "link": "https://mp.weixin.qq.com/s/HjZeT53_nma5KvaLj-3Uog",
+      "source_file": "sources/2026-09-13_成为AI不可替代的人--AI时代人才的六种能力_傲寒荐书.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-12",
       "title": "OpenAI：Cognition 用 GPT-6 Astra 让 Devin 自测代码",

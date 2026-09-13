@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-13",
+      "weekday": "周日",
+      "stats": {
+        "国际": 6,
+        "国内": 3,
+        "同业": 1,
+        "其他": 2,
+        "total": 12
+      },
+      "summary": "Cognition 发布 SWE-2：基于 Kimi K3 后训练的编程模型/果蝇语言模型 FLM：将完整果蝇连接组接入 1.2B 冻结 LLM/GitH..."
+    },
+    {
       "date": "2026-09-12",
       "weekday": "周六",
       "stats": {
