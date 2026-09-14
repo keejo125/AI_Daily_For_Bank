@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-14",
+      "weekday": "周一",
+      "stats": {
+        "国际": 7,
+        "国内": 10,
+        "同业": 2,
+        "其他": 8,
+        "total": 27
+      },
+      "summary": "普林斯顿提出循环回路Transformer（RLT）：跨令牌传递解码器状态，实现无界时间深度/Anthropic「Pace the Frontier」三步..."
+    },
+    {
       "date": "2026-09-13",
       "weekday": "周日",
       "stats": {

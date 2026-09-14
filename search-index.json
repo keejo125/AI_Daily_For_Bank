@@ -1,7 +1,277 @@
 {
-  "updated_at": "2026-09-14T05:10:59.928889",
-  "total": 1997,
+  "updated_at": "2026-09-15T05:34:32.059883",
+  "total": 2024,
   "articles": [
+    {
+      "date": "2026-09-14",
+      "title": "普林斯顿提出循环回路Transformer（RLT）：跨令牌传递解码器状态，实现无界时间深度",
+      "source": "MarkTechPost",
+      "digest": "普林斯顿研究者 Yifan Zhang 的技术报告提出循环回路 Transformer（Recurrent Looped Transformer, RLT），尝试闭合大多数 decoder-only 模型中被打断的状态传递：将解码器最终隐状态与逐层滑动窗口注意力（SWA）缓存跨令牌、跨提示与回复边界持续携带，不重置。RLT 以因果编码器配对循环解码器，完整状态含最终输出与各级 SWA 键值，门控融合编码器表示与历史输出。报告明确为架构设计规范，定义了执行调度与 RL 回放契约，但明示未给出效率、推理质量或扩展性的实测结果。",
+      "link": "https://www.marktechpost.com/2026/09/13/a-princeton-researcher-proposes-recurrent-looped-transformer-rlt/",
+      "source_file": "sources/2026-09-14_A Princeton Researcher Proposes Recurrent Looped T_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "Anthropic「Pace the Frontier」三步计划获OpenAI、xAI与微软支持：放缓AI是否为时已晚？",
+      "source": "MarkTechPost",
+      "digest": "2026 年 9 月 12 日 Anthropic CEO Dario Amodei 发表长文《We Must Pace the Frontier》，直言须放缓前沿模型能力推进速度，数小时内获 OpenAI Altman、xAI Musk 公开附议，次日微软 Nadella 亦欢迎「审慎节奏」并主张嵌入评估员与全行业标准机构。文中提出三步计划（含向第三方评估者开放员工级永久访问），并把转向归因于递归自我改进（RSI）等两大触发因素。这是三家竞争前沿实验室负责人首次就「减速」达成一致，文章分析了时机是否已晚及证据指向。",
+      "link": "https://www.marktechpost.com/2026/09/13/anthropics-3-step-pace-the-frontier-plan-wins-openai-xai-and-microsoft-support-is-it-too-late-to-slow-ai-down/",
+      "source_file": "sources/2026-09-14_Anthropic’s 3-Step ‘Pace the Frontier’ Plan Wins O_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "Arm 推出 AI Portal：当 AI 应用从“模型可用”走向“平台可用”",
+      "source": "InfoQ",
+      "digest": "在 Arm Create 开发者大会上海站，Arm 发布 Arm AI Portal，定位为面向开发者与智能体的统一入口，帮助在 Arm 平台上发现、优化、部署 AI 软件，覆盖云、边缘与物理 AI 场景。它并非单一模型列表，而是把模型、运行时、性能数据、代码示例与部署工作流组织起来，首批支持语言/语音/视觉/神经图形负载，预优化模型含通义千问、Gemma、YOLO，运行时含 ExecuTorch、LiteRT、ONNX Runtime，生态伙伴含阿里、树莓派、Ultralytics。文章将其视为 Arm 从底层 KleidiAI 算子优化走向面向开发者生态入口的策略延伸。",
+      "link": "https://www.infoq.cn/article/xD9oWbebhcjwgHz1oEfa",
+      "source_file": "sources/2026-09-14_Arm 推出 AI Portal：当 AI 应用从“模型可用”走向“平台可用”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "Fyxer 如何打造让人信赖的 AI 行政助理",
+      "source": "OpenAI",
+      "digest": "OpenAI 案例研究介绍邮件智能助理 Fyxer 的构建实践：其基于 OpenAI 模型，结合微调、记忆与真实用户反馈，以用户个人语气整理收件箱、起草邮件。文章聚焦 Fyxer 如何在保障个性化与可信度的前提下，把邮件分类、起草与跟进等高频办公动作交给模型，并以用户自身声音生成内容，体现大模型在生产力工具中的产品化路径。",
+      "link": "https://openai.com/index/fyxer",
+      "source_file": "sources/2026-09-14_How Fyxer built an AI executive assistant people t_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "NVIDIA 开源 OSMO：一个 YAML 编排物理AI训练、仿真与机器人测试",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 开源 OSMO，一个 Kubernetes 原生的物理 AI 工作流编排器，用单个 YAML 文件描述从训练、仿真到部署的完整流水线并在各层运行，无需触碰基础设施代码。它将物理 AI 的「三计算机问题」（数据中心 GPU 训练、RTX 工作站仿真、Jetson 边缘部署）统一为一个控制平面，各后端作为注册到 CLI 的 K8s 集群，工作流只声明平台（如 gb200、jetson-agx-thor）由 OSMO 路由。OSMO 以 Apache-2.0 许可发布，提供 Helm chart 与容器，支持本地 KIND 快速启动。",
+      "link": "https://www.marktechpost.com/2026/09/14/nvidia-open-sources-osmo-one-yaml-orchestrates-physical-ai-training-simulation-and-robot-testing/",
+      "source_file": "sources/2026-09-14_NVIDIA Open-Sources OSMO_ One YAML Orchestrates Ph_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "OpenAI故意欠技术债，等Codex来还：仅2名工程师，把核心存储从Python重写成Rust",
+      "source": "InfoQ",
+      "digest": "OpenAI 在线存储平台 Habitat 最初为嵌入数十服务的 Python 客户端库，随着产品增多、逻辑复杂化被抽离为独立服务。团队明知 Python 难撑未来规模，仍主动承接技术债，赌 Codex 与 GPT 未来可大幅降低重写成本。一年后兑现：仅 2 名工程师借助 Codex 与 GPT-5.5 将 Habitat 从 Python 重写为 Rust，新版本承担 95% 生产请求，CPU 效率达 6 倍、内存 15 倍、延迟明显下降，堪称「大模型改变软件工程成本结构」的具体案例。",
+      "link": "https://mp.weixin.qq.com/s/-VI_IfEepSd6N5AMq6J_fw",
+      "source_file": "sources/2026-09-14_OpenAI故意欠技术债，等Codex来还：仅2名工程师，把核心存储从Python重写成Rust_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "Perplexity 以 GPT-6 Astra 驱动端到端系统",
+      "source": "OpenAI",
+      "digest": "OpenAI 案例研究介绍 Perplexity 如何以 GPT-6 Astra 驱动端到端系统：用其撰写对外沟通内容、修改软件、监控生产系统，且相较早期模型干预频率显著降低，体现前沿模型在真实生产工作流中承担更长链路自主任务的能力。",
+      "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "source_file": "sources/2026-09-14_Perplexity trusts GPT-6 Astra with end-to-end syst_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "AI开始改进“改进自己的方法”，RSI进入平方时代丨MetaRSI",
+      "source": "量子位",
+      "digest": "CosmosMind 联合斯坦福、伯克利、MIT、清华、北大等十余家高校发布 MetaRSI-v1，全球首个统一 Model-RSI、Data-RSI、Harness-RSI 的元递归架构，使 RSI 进入「平方时代」。其核心 Loop Kernel 把「进步如何发生」抽象为与对象无关的闭环（消费反馈→在 Data/Harness/Model 提出改动→验证器裁决→回流下一轮），并由 RSI² Agent 纵横双轴编排、元层改进编排策略本身。在无外部教师模型下，30 亿激活参数小模型四项基准平均自提升 10.9 分，GPT-5.6、Claude Opus 5 等六款旗舰平均提升 7.3 分。",
+      "link": "https://www.qbitai.com/2026/09/488832.html",
+      "source_file": "sources/2026-09-14_AI开始改进“改进自己的方法”，RSI进入平方时代丨MetaRSI_量子位_591c87.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "中国物理AI大突破：PhysBrain 1.5登顶全球开源榜一，空间智能与GPT-6 Astra并驾齐驱",
+      "source": "量子位",
+      "digest": "北京中关村企业深度机智发布物理基座模型 PhysBrain 1.5，在 28 项公开基准取得 72.5 综合均分，位居开源模型首位，与头部闭源 GPT-6 Astra（73.3）、Gemini 3.6 Flash（73.0）差距收窄至 1 分以内，获 14 项开源第一。模型沿「人类学习」路线深耕物理智能，在视觉空间感知、具身认知与规划、空间指向等五维能力链全线跻身开源前列，2B 与 8B 权重、技术报告与评测工具包全面开源，定位机器人从理解环境到执行任务的系统性基础能力。",
+      "link": "https://www.qbitai.com/2026/09/488725.html",
+      "source_file": "sources/2026-09-14_中国物理AI大突破：PhysBrain 1.5登顶全球开源榜一，空间智能与GPT-6 Astra并驾_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "人类造的最后一个AI!上交清华字节等发布递归自进化路线图",
+      "source": "AI寒武纪",
+      "digest": "上海交大、清华、字节跳动、商汤等 30 余位研究者发布 75 页综述《人类构建的最后一个 AI：走向真正的递归自我改进》，系统界定 RSI（递归自我改进）：AI 通过与任务、环境、智能体交互自主将经验转化为对自身持久、可传承的改进。论文以「头脑空间封闭指数（HCI）」刻画 2023—2026 年 393 条基准的能力剩余空间，指出软件工程、工具代理等交互型能力差距最大、恰是 RSI 最能发力处；并提出五级自主框架（B0 任务内改进至 B4 改进改进机制），分析循环何处闭合、什么被传承、哪些决策仍由外部控制。",
+      "link": "https://mp.weixin.qq.com/s/14SwhsSxzAyDr2agRXOpaA",
+      "source_file": "sources/2026-09-14_人类造的最后一个AI!上交清华字节等发布递归自进化路线图_AI寒武纪.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”",
+      "source": "量子位",
+      "digest": "分子之心自主研发的反应性原子建模平台 QuantaMind 相关研究发表于《Science Advances》，首次将接近密度泛函理论（DFT）精度的反应性分子动力学推进至数万原子级生物体系与数十纳秒尺度，最新扩展达十万原子级、百纳秒级，把 AI 大分子设计带入「动态反应模拟」时代。在约 1.8 万原子 PET 水解酶体系中完成 6 纳秒完整催化循环模拟，抽取 342 构型独立 DFT 校验，原子力 Pearson 相关系数超 0.99，突破精度—速度—尺度「不可能三角」。",
+      "link": "https://www.qbitai.com/2026/09/489023.html",
+      "source_file": "sources/2026-09-14_分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+      "source": "量子位",
+      "digest": "生数科技发布具身世界模型 Motus2，在一个模型内同时点亮行动（WAM 生成动作）、预测（AC-WM 脑补后果）、评估（VM 打分）三棵技能树，并形成「生成动作→预测后果→评估结果→更新策略」的闭环自进化，是对递归自我改进（RSI）的初步探索。其采用 Action-first 信息流杜绝时序作弊，推理阶段用 Best-of-N 规划、训练阶段把候选动作打分转化为策略更新信号（基于模型的强化学习）。Motus2 集成触觉、灵巧操作与 Ego 数据，切入具身智能深水区。",
+      "link": "https://www.qbitai.com/2026/09/489037.html",
+      "source_file": "sources/2026-09-14_探索RSI，生数新世界模型让机器人开始自我进化_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "智谱提前剧透下一代GLM：完全自训练方法公开了",
+      "source": "量子位",
+      "digest": "上市不足九月，智谱再融约 393 亿港元（配售新 H 股加零息可转债），其中约 60%（235 亿港元）投入下一代 GLM 基础模型与「完全自训练」体系研发及算力基础设施。智谱将 RSI 表述为「完全自训练」：下一代 GLM 在上一代搭建的环境里训练，形成递归式自我改进闭环，涵盖数据自产（模型间自对弈、规则校验、执行验证）、环境自造（智能体采集转化真实任务）、基础设施自我优化（模型协助优化自身训练推理系统）三维度，并强调长程任务强化学习与原生多模态统一建模。",
+      "link": "https://mp.weixin.qq.com/s/eljs58pwHL2_7zzjJIAHLg",
+      "source_file": "sources/2026-09-14_智谱提前剧透下一代GLM：完全自训练方法公开了_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装",
+      "source": "量子位",
+      "digest": "从北大走出的元空智能发布端侧模型 Boxer、办公 Agent「元空AI Work」与科研 Agent「元空AI Science」，形成模型—Agent—设备闭环，提出「生产力=元空端侧AI=模型×Agent×设备」，让模型与设备共同进化。其端侧模型已拿下惠普商务电脑预装，从高校实验室产品走入全球头部硬件厂商设备。文章指出静态互联网数据红利见顶（斯坦福 AI Index 2026 提及「Peak Data」），下一阶段能力增量更多来自真实任务与环境交互，端侧 AI 分水岭正从「跑起来」走向「长期跑」。",
+      "link": "https://www.qbitai.com/2026/09/488933.html",
+      "source_file": "sources/2026-09-14_端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装_量子位_5566e5.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-14",
+      "title": "openJiuwen 首发双维度 RSI 框架，AI 自修改，落地办公智能体，算力亲和助力又快又省",
+      "source": "InfoQ",
+      "digest": "华为开源 AI Agent 平台 openJiuwen 发布完整 RSI 框架，将优化对象分为 Harness（Prompt/Skill/Tool/Rail，决定如何完成任务）与 Artifacts（科研论文、算法程序等交付物）双维度，使 Agent 工作方法与成果均可持续迭代。框架以版本化优化对象、可验证执行证据与可扩展算法为核心，经六阶段闭环（评测建基线→分析定位→提案构建→采纳融合→经验沉淀→归档停止）保留有效改进。已落地 WorkSwarm 蜂群办公智能体，并引入算力亲和能力减少反复生成执行的计算开销。",
+      "link": "https://www.infoq.cn/article/JghIFNXBNVSAfbgbR4S9",
+      "source_file": "sources/2026-09-14_openJiuwen 首发双维度 RSI 框架，AI 自修改，落地办公智能体，算力亲和助力又快又省_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "别再只卷Prompt 了，真正拉开Agent差距的是Context Engineering",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程梳理从 Prompt Engineering 到 ReAct 再到 Context Engineering 的范式演进：Prompt 优化单次 LLM 调用，ReAct 以「思考—行动—观察」闭环让模型调用工具，却未规定上下文如何管理；当 Agent 走向生产级、任务轮次增多，上下文被稀释导致「忘记规则、信息淹没」。Context Engineering 由此成为准确描述该技能的词——核心不再是写好一条提示，而是持续选择、压缩、组织进入模型的信息，决定生产级 Agent 的可靠性。",
+      "link": "https://mp.weixin.qq.com/s/mbU0bE6BV5YfAsTmoY4H3A",
+      "source_file": "sources/2026-09-14_别再只卷Prompt 了，真正拉开Agent差距的是Context Engineering_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "支付宝“阿宝”背后的 Agentic 终端：从对话到办事，xUI 如何重构 AI 交互",
+      "source": "InfoQ",
+      "digest": "蚂蚁集团支付宝团队在 AICon 2026 深圳站分享支撑国民级应用「阿宝」的 xUI 技术体系，将其定义为面向 AI 的 Agentic 终端交互引擎。文章系统介绍 xUI 覆盖全双工多模态通信、生成式渲染交互、服务执行技术与多 Agent 生态协同四大核心方向，梳理其从端到云的架构演进与关键选型。阿宝被定位为「战略入口＋业务服务海量供给＋多端开放生态」的 AI 入口，而非单纯聊天机器人：它把支付、生活、政务等供给以对话与 Agent 执行方式提供给用户，并通过 MCP、Multi-Agent 等工程方法重构移动端产品形态。文章还呈现团队对异步任务与伴随式交互的远期判断。",
+      "link": "https://mp.weixin.qq.com/s/IsI0L2dKFisl1o4Pw5Zi2Q",
+      "source_file": "sources/2026-09-14_支付宝“阿宝”背后的 Agentic 终端：从对话到办事，xUI 如何重构 AI 交互_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "光大银行探索自主研发员工专属智能体，布局建设“三新”智能银行",
+      "source": "银行科技研究社",
+      "digest": "光大银行 2026 半年报披露 AI 最新进展：全行大模型应用累计服务近 2.3 万名员工，优化「10×10」智能体矩阵覆盖公司金融、零售财富、风险管理等十大领域，沉淀知识问答、客户分析、任务执行等十项通用能力，推进「一岗位一助手」。该行探索自主研发员工专属智能体 CEB-CLAW，支持员工自定义搭建业务流程；上线「问数」智能数据分析平台，以自然语言秒级查数，覆盖 7400 余项指标、1000 余份报告。业务运营落地 2000 多个自动化场景，并提出建设「三新」智能银行与强化 AI 治理。",
+      "link": "https://mp.weixin.qq.com/s/kxZpZXX4CLfeVB5HbMgQGA",
+      "source_file": "sources/2026-09-14_光大银行探索自主研发员工专属智能体，布局建设“三新”智能银行_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "聚焦服贸会｜奇富科技“一横N纵”AI矩阵，助推金融业从智力走向智能",
+      "source": "InfoQ",
+      "digest": "服贸会期间，奇富科技分享面向银行业的「一横 N 纵」企业级 AI 办公平台与智能体矩阵。「一横」为 Qwork 企业级 AI 办公平台，通过 MCP/API 打通邮箱、OA、云文档、风控、运营等内部系统，具备模型路由、Agent 路由、权限管理与 AI 安全网关四大能力，已在其内部数千员工验证；「N 纵」为覆盖授信风控与营销增长的多智能体体系（AI 尽调员、审批官、反诈师、信贷员等），已在全国性股份制银行与华东上市银行落地。现场亦设金融消保科普展台。",
+      "link": "https://www.infoq.cn/article/rRfHVDljodpVrRNb19xl",
+      "source_file": "sources/2026-09-14_聚焦服贸会｜奇富科技“一横N纵”AI矩阵，助推金融业从智力走向智能_InfoQ.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "AI 时代隐晦式安全已死",
+      "source": "Solidot",
+      "digest": "安全工程中长期依赖的「隐晦式安全」（Security through obscurity）在 AI 辅助 bug 发现时代宣告失效。软件供应商与独立研究者借助 AI 智能体在产品与开源代码中搜寻极隐蔽且存在已久的漏洞，使漏洞披露与补丁数量创历史新高、维护者积压剧增；微软单轮例行更新即修复 974 个 CVE，涉及 Telnet、RNDIS 等多年无人问津的组件。攻击者同样用 AI 对补丁逆向工程、数小时内开发利用，无需成为领域专家即可发动破坏性攻击。",
+      "link": "https://www.solidot.org/story?sid=85370",
+      "source_file": "sources/2026-09-14_AI 时代隐晦式安全已死_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "AI 负责创造，人来干脏活，这事儿能否停一下？",
+      "source": "InfoQ",
+      "digest": "文章反思「AI 承接低价值工作、人类做创造性工作」的流行叙事在 2026 年实际体感中往往反转：AI 端到端交付代码、文档、提案等工件（从 0 到 1 的创造），而模糊、琐碎的衔接动作仍由人类在不同工具间搬运粘贴。RooCline 甚至上线「Human Relay」模式专门搬运 AI 间问答。多项研究佐证人正成为自动化瓶颈：HBR 发现用 AI 的员工节奏更快、耗时更长；Fortune 指日常任务耗时最高增 346%。9 月 10 日亚马逊云科技宣布 AI 办公工具 Amazon Quick 全面可用，以 Activity Feed 主动识别处理邮件、会议、消息任务，试图缓解而非堆叠功能。",
+      "link": "https://mp.weixin.qq.com/s/CamulzkbK_EjkaES_bNi9A",
+      "source_file": "sources/2026-09-14_AI 负责创造，人来干脏活，这事儿能否停一下？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "AI越强，人类创造力反而越值钱！诺奖得主哈萨比斯：未来十年可能迎来一场“新文艺复兴”",
+      "source": "51CTO技术栈",
+      "digest": "DeepMind 联合创始人、2024 诺贝尔化学奖得主哈萨比斯在一场访谈中展望 AI 带来「新文艺复兴」：生成式 AI 成为科学、工程、艺术与人文的共同工具，把试错成本大幅压低，顶尖科学家与创作者产出或被放大十倍。但他也警示「AI 垃圾」增多的风险，强调 AI 越强、人类创造力越值钱——开发者须负责看见真问题、在可行方案中取舍、知道何时让 Agent 停下。他认为技术公司不应独自决定 AI 用途，教育需从重复练习转向项目与协作，并主张 DeepMind 邀请顶尖创作者共同设计 AI 工具。",
+      "link": "https://mp.weixin.qq.com/s/OidYqKKIs6ds4ZQDWoobcg",
+      "source_file": "sources/2026-09-14_AI越强，人类创造力反而越值钱！诺奖得主哈萨比斯：未来十年可能迎来一场“新文艺复兴”_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "一年连融三轮，这家金融AI公司又拿下超3亿B轮",
+      "source": "量子位",
+      "digest": "中国金融 AI 原生企业讯兔科技完成超 3 亿元 B 轮融资，一年内连完成三轮，投资方覆盖中保投资、广发信德、启明创投等险资、券商与头部创投。旗下 AI 投研助理 Alpha 派服务超 12 万专业用户、覆盖逾 8000 家机构；2026 年推出行业首个 AI 投研工作台 PaiWork，将金融数据、研究工具、办公套件与知识库整合进统一环境，AI 交互与 Token 调用数十倍增长；同期发布 iRaB 实战评测体系与 ORE 生态伙伴计划，形成工作流、评测、生态三块拼图，并启动海外布局。",
+      "link": "https://www.qbitai.com/2026/09/488912.html",
+      "source_file": "sources/2026-09-14_一年连融三轮，这家金融AI公司又拿下超3亿B轮_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+      "source": "量子位",
+      "digest": "9 月 12 日中国信通院发布算力电力协同测评认证，商汤大装置临港 AIDC 获最高等级 AAAAA，成为业界首个通过该测试的算力中心，叠加此前全国首个 5A 级智算中心认证，成为全国唯一获「算效+算电」双 5A 的智算中心。商汤联合宁德时代打造 17.888MW/35.776MWh 储能系统，并自研算电协同平台，打通算力调度、配电、储能、暖通等五类系统形成八级数据链路，以 24 小时滚动预测驱动储能充放电与需量控制，算力负荷预测准确率稳定在 96% 以上。",
+      "link": "https://www.qbitai.com/2026/09/489106.html",
+      "source_file": "sources/2026-09-14_全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "奥特曼被骗！A社一脚油门冲刺IPO，募资叫板SpaceX",
+      "source": "量子位",
+      "digest": "彭博社爆料，Anthropic 已选定纳斯达克为上市地点，最早今年 10 月敲钟，融资规模对标甚至超过 SpaceX（6 月刚募 863 亿美元创美股纪录），目标估值约 2 万亿美元。这与 CEO Dario Amodei 同期呼吁行业「踩刹车、放缓模型能力」形成鲜明反差，引发「油门刹车踩反」的质疑。文章披露 Anthropic 14 个月估值涨近 16 倍（H 轮后约 9650 亿美元登顶最贵 AI 创企），7 月底 ARR 超 650 亿美元；同时 OpenAI 表态今年不上市，被解读为借机抢占「最顾虑安全」叙事。",
+      "link": "https://www.qbitai.com/2026/09/488699.html",
+      "source_file": "sources/2026-09-14_奥特曼被骗！A社一脚油门冲刺IPO，募资叫板SpaceX_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "律师在谋杀案中捏造了证词，他将此归咎于 ChatGPT",
+      "source": "Solidot",
+      "digest": "美国新墨西哥州一谋杀案上诉中，律师 Stephen Aaron 将计算机生成的庭审记录输入 ChatGPT 并想当然认为会生成「无懈可击摘要」，结果在法律文件中捏造了警方证词与虚构证人。法官对其处以 5000 美元罚款，并将移交律师纪律委员会调查。案件特殊之处在于 AI 虚构的是证词而非惯常的虚假案例，再次警示法律从业者须核查生成式 AI 输出、警惕幻觉。",
+      "link": "https://www.solidot.org/story?sid=85372",
+      "source_file": "sources/2026-09-14_律师在谋杀案中捏造了证词，他将此归咎于 ChatGPT_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-14",
+      "title": "微信蠕虫事件敲响 AI 安全警钟",
+      "source": "Solidot",
+      "digest": "加州小型研究团队 Calif 发布名为 WeWorm 的 AI 驱动工具，可在数小时内劫持微信用户账户、拨打联系人电话并在设备间自动传播，揭示即使无政府背景的小型团队也能对月活 14 亿的国民级应用发起毁灭性攻击。复旦学者指出其破坏力堪比「新型核武器」，团队已向白宫与腾讯披露漏洞。该事件印证 AI 黑客能力的发展速度已超过防御跟进，凸显 AI 安全从理论走向现实的紧迫性。",
+      "link": "https://www.solidot.org/story?sid=85369",
+      "source_file": "sources/2026-09-14_微信蠕虫事件敲响 AI 安全警钟_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-13",
       "title": "Cognition 发布 SWE-2：基于 Kimi K3 后训练的编程模型",
