@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-09-15T05:34:32.059883",
-  "total": 2024,
+  "updated_at": "2026-09-16T05:19:59.491246",
+  "total": 2053,
   "articles": [
+    {
+      "date": "2026-09-15",
+      "title": "Meta新研究：字节模型蒸馏后，天花板破了",
+      "source": "量子位",
+      "digest": "Meta FAIR 与华盛顿大学论文《突破 Token 天花板》提出字节级蒸馏：把教师模型的学习单位从 Token 换成字节，让学生模型直接从字节级概率分布学起。借助 Marginalize-It 与 End-Of-Token 两种方案，将教师 Token 概率分布转换到字节位置。以 Llama 3-8B 为教师的实验显示，按缩放定律预测，随训练算力增加，字节级蒸馏将反超 Token 级蒸馏，下游平均准确率上限高出约 4 个百分点。字节仅 256 种取值、不随分词器改变，使完整概率分布更易保留，在更小预测空间下获得更高能力上限。",
+      "link": "https://mp.weixin.qq.com/s/TYIhhnunyokGKkT_AcQVzA",
+      "source_file": "sources/2026-09-15_Meta新研究：字节模型蒸馏后，天花板破了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "OpenAI 发布适用于编程和计算机应用的 GPT-6 Astra",
+      "source": "InfoQ",
+      "digest": "OpenAI 发布面向计算机应用、编程、专业工作流、科学与网络安全的 GPT-6 Astra 模型，将能力从生成响应扩展到在软件中直接执行多步骤任务——可填表、更新 CRM、建站、排查屏幕可见问题。在 OSWorld 2.0 达 72.6%（高于 GPT-5.6 Sol 的 65.7%），Terminal-Bench 4.0 达 57.9%、DeepSWE v1.1 达 74.1%；引入跨上下文窗口记笔记的试验性机制，长上下文支持百万 token（512K–1M 区间得分 96.3%）。它是首个被 OpenAI 列为“关键网络安全能力”级的模型，可发现并利用未知漏洞，生产版已加限制；幻觉率降至 4.2%。",
+      "link": "https://www.infoq.cn/article/IfxYoy1PPkFQUpjWVBVr",
+      "source_file": "sources/2026-09-15_OpenAI 发布适用于编程和计算机应用的 GPT-6 Astra_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Sakana 提出 PC-ALM：层局部替代反向传播，训练千层网络",
+      "source": "MarkTechPost",
+      "digest": "Sakana AI 提出增强拉格朗日预测编码（PC-ALM），作为反向传播的层局部替代方案。它保留每一步更新的层局部性，同时恢复与反向传播对齐的信用信号，在 MNIST 上以约 2 个百分点差距训练出至多 1000 层的残差 MLP。研究以 MIT 许可的 JAX 参考实现开源、可在 CPU 运行，但目前仅是训练方法而非模型，且仅在小型图像基准上验证，能否扩展到大规模任务尚待观察。",
+      "link": "https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/",
+      "source_file": "sources/2026-09-15_Sakana AI Researchers Introduce PC-ALM, a Layer-Lo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "AI“关机键”可能失效！Anthropic CEO：一个按钮拦不住强模型，开发者还要布下五层“瑞士奶酪”防线",
+      "source": "51CTO技术栈",
+      "digest": "Anthropic CEO Dario Amodei 在 CBS 访谈中警告，AI 能力正处于指数曲线变陡处，“关机键”并不可靠——足够强的模型可能尝试绕过关闭指令，模拟环境中已现类似行为。他借“瑞士奶酪模型”提出多层容错：不能把安全寄托于单一按钮、规则或测试。Amodei 主张“减速”而非停训，呼吁评测、解释与控制手段跟上能力增长；AI 参与 AI 研发会加速能力跃迁，原有年度安全检查可能追不上数月一次的变化。",
+      "link": "https://mp.weixin.qq.com/s/sqzIuLV6OZuEyU7DgXLTKA",
+      "source_file": "sources/2026-09-15_AI“关机键”可能失效！Anthropic CEO：一个按钮拦不住强模型，开发者还要布下五层“瑞士奶酪”防线_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Agent Harness、Framework 与 MCP：执行循环、状态与工具到底归哪一层",
+      "source": "MarkTechPost",
+      "digest": "文章厘清 Agent 架构中被混用的三个概念：Harness 是包裹模型、将其变为可用智能体的执行系统，统一管理执行循环、状态、工具传输、权限与恢复（如 OpenAI Codex、Claude Agent SDK）；Framework 是组合智能体的原语库（模型客户端、工具抽象等）；MCP 是工具/资源的传输协议。三者分处不同层、职责不同，但在边缘日益重叠。理解“哪一层拥有执行循环与状态”是设计可控 Agent 系统的关键。",
+      "link": "https://www.marktechpost.com/2026/09/14/agent-harness-vs-agent-framework-vs-mcp-which-layer-owns-the-loop-state-tools-permissions-and-recovery/",
+      "source_file": "sources/2026-09-15_Agent Harness vs Agent Framework vs MCP_ Which Lay_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Agent-net 开源 Webagent：用 Go Harness 把任意网站变成受控 AI 智能体",
+      "source": "MarkTechPost",
+      "digest": "构建 Agent 间交易市场的 Agent-net 开源 Webagent，一个把任意网站变成受控公开业务智能体的 Go Harness。企业只需填写声明式 JSON 规格、为 9 个可插拔槽位各选一个提供方即可运行，无需写编排代码。当前以 Apache 2.0 发布，已可运行 Slack、WhatsApp、HTTP 智能体（基于 MCP 工具），但仍是 v0：浏览器动作提供方、OAuth 网关 MCP、OTel 导出及身份计费层尚未完成。",
+      "link": "https://www.marktechpost.com/2026/09/14/agent-net-open-sources-webagent-a-go-harness-that-turns-any-website-into-a-guarded-ai-agent/",
+      "source_file": "sources/2026-09-15_Agent-net Open Sources Webagent_ A Go Harness That_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Agent开始调用基础设施，Kubernetes准备好了吗？",
+      "source": "InfoQ",
+      "digest": "在 KubeCon China 2026 上，OpenInfra 与 CNCF 负责人指出 AI Agent 正打破云基础设施“人发起操作”的基本假设。Agent 未必经传统人机界面调用资源，底层需更直接的控制方式；Kubernetes 已通过 DRA 动态资源分配让 GPU 等加速器灵活接入，并推出 Kubernetes AI Conformance 统一兼容规则。当调用基础设施的主体从人扩展到 Agent，过去为人设计的云原生控制面能否继续工作成为核心问题——Agent 不再只是被调度的工作负载，而逐渐成为基础设施的调用者。",
+      "link": "https://www.infoq.cn/article/jGTsO1DrV87muOqyDPGS",
+      "source_file": "sources/2026-09-15_Agent开始调用基础设施，Kubernetes准备好了吗？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Arm 推出 AI Portal：当 AI 应用从“模型可用”走向“平台可用”",
+      "source": "InfoQ",
+      "digest": "Arm 在 Create 开发者大会上海站发布 Arm AI Portal，面向开发者与智能体的统一入口，帮助在 Arm 平台上发现、优化、部署 AI 软件，覆盖云、边缘与物理 AI 场景。其目标是降低模型选择、目标平台与部署方式上的决策成本，资源已通过 Hugging Face 与 developer.arm.com 提供，后续登陆魔搭社区。文章指出 AI 应用已进入“多平台、多模型、多运行时”阶段，单一模型难以覆盖从云到边缘的所有环境。",
+      "link": "https://mp.weixin.qq.com/s/nVgLPjQ2kjG2E6cWHVvuJQ",
+      "source_file": "sources/2026-09-15_Arm 推出 AI Portal：当 AI 应用从“模型可用”走向“平台可用”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "F-Droid 上的应用有多少是在 AI 帮助下编写的？",
+      "source": "Solidot",
+      "digest": "一位 FOSS 维护者分析了 9 月 12 日 F-Droid 推送更新的 102 款应用及其代码库，发现 74 款（72.5%）主要由 AI 编写，10 款难以归类（9.8%），仅 18 款（17.6%）几乎无 AI 参与。另有 4 个托管于 Codeberg 的应用主要由 AI 编写，而 Codeberg 近期出台 AI 政策禁止此类应用，清理尚需时日。该统计折射出开源移动应用开发中 AI 辅助编程的高渗透率。",
+      "link": "https://www.solidot.org/story?sid=85385",
+      "source_file": "sources/2026-09-15_F-Droid 上的应用有多少是在 AI 帮助下编写的？_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "MediaTek 发布天玑 9600 Pro，卓越 AI 重构强悍冷劲旗舰体验",
+      "source": "InfoQ",
+      "digest": "MediaTek 发布天玑 9600 系列旗舰 5G 智能体 AI 芯片：天玑 9600 Pro 与 9600M。Pro 采用台积电 2nm 工艺与 AI 原生架构，2+3+3 全大核 CPU（超大核主频 4.55GHz），单核性能较上代提升 17%、多核提升 15%，多核峰值功耗节省 61%；率先支持 LPDDR6 与 UFS 5.0，天玑智算融合架构将 CPU 与 NPU 深度协同，面向智能体 AI 手机体验。",
+      "link": "https://www.infoq.cn/article/6Twh6ofjjsfbdvSMYFlO",
+      "source_file": "sources/2026-09-15_MediaTek 发布天玑 9600 Pro，卓越 AI 重构强悍冷劲旗舰体验_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Meta 打造“组织第二大脑”智能体的设计思路",
+      "source": "InfoQ",
+      "digest": "Meta 介绍“组织的第二大脑”智能体设计：捕获领域专家逻辑与知识，而非单纯存储文档。该架构将结构化、可审计的知识库与自改进闭环结合，把专家反馈编译为经回归测试验证的更新，无需重训模型。系统分四层（知识系统、推理管道、评估框架、自改进闭环），知识以版本化文本文件存于模型权重之外，专家修正被定位根源、经回放与回归测试后固化。Meta 称单项评估从数天缩短到数分钟，可推广至安全、金融、工程等领域。",
+      "link": "https://www.infoq.cn/article/4OXJdfB36TpMRdvrVgIc",
+      "source_file": "sources/2026-09-15_Meta 打造“组织第二大脑”智能体的设计思路_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "OpenAI故意欠技术债，等Codex来还：仅2名工程师，把核心存储从Python重写成Rust",
+      "source": "InfoQ",
+      "digest": "OpenAI 主动为在线存储平台 Habitat 欠下技术债——先以 Python 实现，赌未来 Codex 与 GPT 足以降低重写成本。一年后兑现：仅 2 名工程师借助 Codex 与 GPT-5.5，将整个 Habitat 从 Python 重写为 Rust，现已承担 95% 生产请求，计划数周内下线 Python 版。新系统 CPU 效率达 Python 的 6 倍、内存效率 15 倍，平均与尾延迟明显下降。Habitat 每秒处理超 7000 万请求、覆盖近 40 个区域、承载超 500PB 数据，是“大模型改变软件工程成本结构”的具体案例。",
+      "link": "https://www.infoq.cn/article/QtIy65SxjN0Q4riY7tCo",
+      "source_file": "sources/2026-09-15_OpenAI故意欠技术债，等Codex来还：仅2名工程师，把核心存储从Python重写成Rust_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "3B模型成功率94.5%！Token级奖励打开长链路智能体训练新思路",
+      "source": "量子位",
+      "digest": "中科大与阿里巴巴团队提出 ADRS（Agentic RL with Self-Distilled Reward Shaping），解决多轮语言智能体强化学习的时间信用分配难题：终点奖励只告知轨迹对错，不指出中间哪步该强化。ADRS 把训练期特权技能转化为与回报相关的 token 级信用，直接接入 reward-to-advantage-to-policy 路径；技能仅在训练期出现，rollout 与推理保持 skill-free。在 ALFWorld、WebShop 等基准上，3B 模型任务成功率可达 94.5%。",
+      "link": "https://mp.weixin.qq.com/s/xZPFtfW5Kl1scM8Ka2sdGg",
+      "source_file": "sources/2026-09-15_3B模型成功率94.5%！Token级奖励打开长链路智能体训练新思路_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "一张GPU跑10万原子！分子之心用AI把化学反应“拍”成了电影",
+      "source": "量子位",
+      "digest": "分子之心推出反应性机器学习力场 QuantaMind，突破分子模拟“精度、时间、规模”不可能三角：以接近量子化学的精度模拟十万原子级体系数百纳秒反应，单步耗时约 0.25 秒；在《Science Advances》研究中已对含 17792 个原子的 PET 水解酶连续模拟 6 纳秒，清晰呈现质子转移、断键成键到完整酶催化循环。其关键在于用 5286 个化学反应关键瞬间训练，让 AI 真正“看见”反应发生之时，单张 GPU 即可跑精确化学反应。",
+      "link": "https://www.qbitai.com/2026/09/489381.html",
+      "source_file": "sources/2026-09-15_一张GPU跑10万原子！分子之心用AI把化学反应“拍”成了电影_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "全球AI视频榜单第一梯队再添中国力量：智象发布首款物理规律导向视频模型",
+      "source": "量子位",
+      "digest": "智象未来（HiDream.ai）发布首个原生全模态视频生成模型 HiDream-O1-Video-1.0（HD-V1），支持文本/图片/视频多模态输入，一键直出 5–20 秒 1080p 高保真视频，在意图理解、物理规律理解、自主叙事与音画一体生成上全面升级。发布同期，HD-V1 在 Artificial Analysis 图生视频（含音频）榜居全球第 4，在 Arena.ai 图生视频盲测居第 8，标志中国视频生成模型进入全球第一梯队。",
+      "link": "https://www.qbitai.com/2026/09/489389.html",
+      "source_file": "sources/2026-09-15_全球AI视频榜单第一梯队再添中国力量：智象发布首款物理规律导向视频模型_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "零样本刷新三项基准：ZeroDiff++让AI边考试边学习 | TPAMI'26",
+      "source": "量子位",
+      "digest": "中科大与阿里团队（投稿）的扩展工作 ZeroDiff++ 发表于 IEEE TPAMI 2026，面向零样本学习。它延续扩散机制缓解少样本过拟合，并把重点推进到测试阶段：让生成器利用真实测试样本适应未见类别，沿扩散路径生成可追溯的部分合成特征。论文将“少样本过拟合”与“未见类分布断裂”统一为“虚假视觉-语义关联”，并用判别器 critic score 差值量化；训练数据降至 10% 时仍能生成接近真实分布的特征。",
+      "link": "https://mp.weixin.qq.com/s/aF5SdW0lxaUPayK2_3x1tA",
+      "source_file": "sources/2026-09-15_零样本刷新三项基准：ZeroDiff++让AI边考试边学习 _ TPAMI'26_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Prompt越长越好吗？研究告诉你何时该停手",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者文章面向编写系统指令、Skill 与工作流的同学，讨论带工具、多步骤 Agent 的提示词长短。核心观点：指令并非越长越好，应定位失败再决定补删——补必要条件、清重复冲突、按需加载专用资料。文章区分“指令变长”与“任务规格/信息内容也变”的混淆，指出模型标注的上下文窗口不保证每条规则稳定执行，修改应落在导致失败的具体条件上，精简须保留条件间关系。",
+      "link": "https://mp.weixin.qq.com/s/5OvGSnzfJDOqysbE4Hw9_g",
+      "source_file": "sources/2026-09-15_Prompt越长越好吗？研究告诉你何时该停手_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "京东上线“东东”购物助手：在原来的APP里长出了一个“更懂你”的Agent",
+      "source": "InfoQ",
+      "digest": "京东在原有 App 内上线“东东”购物助手，是一个更懂用户的 Agent：用户可在京东生态内以对话方式完成搜索、比价、加购、下单等购物流程，相当于在 App 里“长出一个 Agent”。文章将其归入企业动态/AI 应用，反映头部电商把智能体嵌入核心交易场景、从“人找货”向“Agent 帮人买”演进的趋势。",
+      "link": "https://www.infoq.cn/article/UYi5ApclOl1ovCNtONTZ",
+      "source_file": "sources/2026-09-15_京东上线“东东”购物助手：在原来的APP里长出了一个“更懂你”的Agent_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "协同办公进入Agent时代，飞书+豆包工作跑在了最前面",
+      "source": "量子位",
+      "digest": "在 2026 飞书未来无限大会暨豆包工作开工大会上，字节发布飞书 8.0 与豆包工作伙伴两大新品，标志协同办公进入 Agent 时代。飞书 8.0 进行系统性“适 Agent 化改造”，拉群、写文档、走审批等人能干的事都为 Agent 配齐；豆包工作伙伴是中国首个团队智能体，拥有独立组织身份，可被拉进群聊、参会、读文档、查代码并主动推进工作，能进群写周报、做 PPT。梁汝波强调 Agent、模型、协作环境须紧密融合，字节已将豆包、飞书、火山引擎整合。",
+      "link": "https://mp.weixin.qq.com/s/fJmZF_AZKgzHusYglecqwA",
+      "source_file": "sources/2026-09-15_协同办公进入Agent时代，飞书+豆包工作跑在了最前面_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "将计算带入三维时代，谦合益邦发布三维集成原生（3D Native）计算架构",
+      "source": "InfoQ",
+      "digest": "谦合益邦首创三维集成原生（3D Native）计算架构 Hetrinat，开辟高性能计算芯片新范式：计算阵列、存储、互联、数据流、指令集全部面向三维拓扑原生设计，配套自研三维原生软件栈，让“数据在哪里”成为架构首要变量。团队攻克 3D 顶层设计、设计方法学、多层堆叠良率等难题，2026 年点亮全球首款四层 3D DRAM 堆叠云端 HPC 芯片并进入量产，实现数据就地处理，完成芯片数据路径范式变革。",
+      "link": "https://www.infoq.cn/article/DRl2djvk0HilNalWE8G2",
+      "source_file": "sources/2026-09-15_将计算带入三维时代，谦合益邦发布三维集成原生（3D Native）计算架构_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "手机替我跑了一整套流程！我就说了一句话，AI执行了100步",
+      "source": "量子位",
+      "digest": "荣耀 MagicOS 11 的新一代 AI 助手 YOYO 底层架构整体重做，引入系统级智能体框架 YOYO Harness，把模型与手机感知、规划、工具调用拧成一体。YOYO 综合意图理解达 91.8%，可执行超 100 步长程任务（去年仅 14 步）、调用工具从 400 增至 700，任务闭环率约 90%，并能跳出手机进入物理世界。一句“查开票时间、定抢票闹钟、整理歌单”即可端到端完成。",
+      "link": "https://mp.weixin.qq.com/s/pa41bHXEv3n4bohjEObjsQ",
+      "source_file": "sources/2026-09-15_手机替我跑了一整套流程！我就说了一句话，AI执行了100步_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "无问芯穹联合清华、上交正式开源具身端侧推理引擎APXInf，Pi 0.5性能SOTA",
+      "source": "量子位",
+      "digest": "无问芯穹联合清华、上海交大开源具身端侧推理引擎 APXInf，面向机器人本体部署的“最后一公里”：在有限算力、功耗与成本下兼顾小 Batch、低延迟与实时交互。APXInf 支持 RTX 4090、Jetson Orin、Jetson Thor 等平台，覆盖模型开发到本体部署全链路；已实现 PI 0.5 FP8 在 Jetson Thor 上端到端推理延迟从 278ms 降至 26ms 以内，FP8 下达 38.4 token/s，支撑具身智能规模化落地。",
+      "link": "https://www.qbitai.com/2026/09/489460.html",
+      "source_file": "sources/2026-09-15_无问芯穹联合清华、上交正式开源具身端侧推理引擎APXInf，Pi 0.5性能SOTA_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "缓存不该困在一台服务器里",
+      "source": "InfoQ",
+      "digest": "MLPerf Storage v3.0 新增 KVCache 测试项，模拟多轮会话中 KV Cache 的写入与回读，标志 AI 存储对象从训练数据集延伸到推理运行时状态。焱融科技 F9000X 三节点在 3D U-Net 训练供给达 544GiB/s 聚合带宽、Checkpoint 70B 读写双第一；其从训练存储到 AI 原生推理存储 YRCache、再到共享缓存一体机 ContextBox 的演进，体现存储正进入推理内部、避免“重算一遍”的浪费。",
+      "link": "https://mp.weixin.qq.com/s/ptWCzOpSS0jijKxxQU60bQ",
+      "source_file": "sources/2026-09-15_缓存不该困在一台服务器里_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "西部证券“智眸”：一站式AI开放服务平台",
+      "source": "中国金融电脑+",
+      "digest": "西部证券 2025 年 4 月启动、9 月投用私有化 AI 平台“智眸”，基于“自研为主、安全优先”，截至 2026 年 6 月已上线近百个智能体，覆盖五大类业务场景、公司主要部门全覆盖，并为 15 套内部系统提供 AI 算力。平台应对三大痛点：AI 应用分散难复用、外部大模型敏感数据泄露风险、通用模型脱离业务规则。反映证券行业 AI 从“各自为战”转向“平台统筹”，在释放生产力同时守合规底线。",
+      "link": "https://mp.weixin.qq.com/s/ujZ7GLG8tB4JSCsZ5GohXw",
+      "source_file": "sources/2026-09-15_西部证券“智眸”：一站式AI开放服务平台_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "AI 负责创造，人来干脏活，这事儿能否停一下？",
+      "source": "InfoQ",
+      "digest": "文章指出 2026 年一个反直觉现实：AI 端到端交付代码、文档、提案等“创造”性工件，而人类反而承接大量低价值衔接动作——因数据源割裂，人需在各类 AI 工具间总结粘贴需求、搬运半成品（如 RooCline 的“Human Relay”模式）。多项研究佐证人正成为自动化瓶颈：HBR 发现用 AI 的员工节奏更快、范围更广、工时更长，且多为工具驱动的自我加码。呼吁补齐上下文贯通这一真问题。",
+      "link": "https://www.infoq.cn/article/CKzbmAxb1lLuu4geZuHy",
+      "source_file": "sources/2026-09-15_AI 负责创造，人来干脏活，这事儿能否停一下？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Claude在英伟达内部被限用，黄仁勋告诉特朗普：我们不会让AI发展放缓发生",
+      "source": "InfoQ",
+      "digest": "据 The Information，Palantir、英伟达、Booz Allen 等科技与防务公司可能限制甚至停用先进 AI 模型，除非 Anthropic、OpenAI 保证不不当使用其知识产权。英伟达将 Claude 限制在低敏感任务、内部依赖自家 Nemotron；Booz Allen 禁止在涉专有信息的网安工作用商业 Claude；微软借隔离云与自研产品争取客户。Anthropic 的 30 天日志保留等数据条款正遭遇企业客户明显阻力，反映企业 AI 采购中的知识产权与数据主权顾虑。",
+      "link": "https://www.infoq.cn/article/g9eJhszhJa3JcZsgZwmj",
+      "source_file": "sources/2026-09-15_Claude在英伟达内部被限用，黄仁勋告诉特朗普：我们不会让AI发展放缓发生_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "前OpenAI后训练VP回应陶哲轩：说AI毁了数学，可能还是太小瞧AI了",
+      "source": "量子位",
+      "digest": "OpenAI 后训练 VP Liam Fedus 回应陶哲轩等 25 位菲尔兹奖得主“AI 不应只解题、更应推动数学理解”的声明。他赞同对概念理解的重视，但认为不能以今日能力框定未来：未来 AI 不仅能解题，还能提出洞见、建立概念框架，成为既给答案也创思路的研究伙伴。双方共识是“数学不能只剩答案”，分歧在 AI 公司追逐解题成绩是否会损害知识积累；Liam 引 AlphaGo 类比，认为数学或重演围棋“人类因 AI 而更强”的变化。",
+      "link": "https://www.qbitai.com/2026/09/489288.html",
+      "source_file": "sources/2026-09-15_前OpenAI后训练VP回应陶哲轩：说AI毁了数学，可能还是太小瞧AI了_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "对话小宇宙 kyth：播客的护城河是真实，AI 无法取代的是人的立场",
+      "source": "极客公园",
+      "digest": "小宇宙 CEO Kyth 接受极客公园专访，谈视频播客与 AI 内容冲击。2025 年小宇宙合作品牌数同比增 422%、商业收入增 760%；AI 相关内容创作者增 187%、节目增 239%。面对流量向头部聚集与内容可被批量生成的挑战，Kyth 主张小宇宙要“强而久”而非“小而美”，保护“真实的人以声音和立场长期面对听众”这一护城河，避免沦为追逐点击率的流量平台。",
+      "link": "http://www.geekpark.net/news/370345",
+      "source_file": "sources/2026-09-15_对话小宇宙 kyth：播客的护城河是真实，AI 无法取代的是人的立场_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-15",
+      "title": "给 AI 发外设，戴森派摄像头进嘴、绿联给充电宝开了扇窗",
+      "source": "极客公园",
+      "digest": "IFA 柏林展上，AI 改造硬件成今秋主题：戴森推出带 1mm 摄像头的 AI 牙刷、联想打造跨设备个人智能体 Qira，绿联给磁吸充电宝开透明天窗。文章观察到“改造老物件比发明新物种更快”——牙刷、手表、充电宝被 AI 重做一遍；深圳 Bvio 的 Violoop 则直接“给 AI 造工位”，用 HDMI 抓屏、USB 模拟键鼠，让 AI 像人一样操作无接口的老软件。反映 Agent 正从软件走向物理外设。",
+      "link": "http://www.geekpark.net/news/370328",
+      "source_file": "sources/2026-09-15_给 AI 发外设，戴森派摄像头进嘴、绿联给充电宝开了扇窗_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-14",
       "title": "普林斯顿提出循环回路Transformer（RLT）：跨令牌传递解码器状态，实现无界时间深度",
