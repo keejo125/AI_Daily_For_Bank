@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-16T05:19:59.491246",
-  "total": 2053,
+  "updated_at": "2026-09-16T07:04:15.939305",
+  "total": 2054,
   "articles": [
     {
       "date": "2026-09-15",
@@ -29,6 +29,16 @@
       "digest": "Sakana AI 提出增强拉格朗日预测编码（PC-ALM），作为反向传播的层局部替代方案。它保留每一步更新的层局部性，同时恢复与反向传播对齐的信用信号，在 MNIST 上以约 2 个百分点差距训练出至多 1000 层的残差 MLP。研究以 MIT 许可的 JAX 参考实现开源、可在 CPU 运行，但目前仅是训练方法而非模型，且仅在小型图像基准上验证，能否扩展到大规模任务尚待观察。",
       "link": "https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/",
       "source_file": "sources/2026-09-15_Sakana AI Researchers Introduce PC-ALM, a Layer-Lo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-15",
+      "title": "突发！Opus 5.2深夜上线，RSI真来了？",
+      "source": "新智元",
+      "digest": "新智元报道，Anthropic 已在 Claude Code 中灰度上线 Claude Opus 5.2，疑似跳过 5.1 直接发布。开发者通过抓包发现，前端虽仍显示 Opus 5，但底层模型 slug 已指向 Opus 5.2（路由式灰度）；用「重置哥 Tibo」冷知识探针可验证两者权重不同。实测反馈集中在三点：响应速度大幅提升、输出更干净利落、彻底告别「偷懒病」——可自主进入「严酷循环」反复自我迭代完善代码。文章同时引述一份 Anthropic 内部风险报告：公司已在内部广泛使用代号「Model 2」的未发布模型（CoBench v2 达 62.8%，高于 Mythos 5 约 12.5 分），并用以大规模编写自身代码；作者据此判断，AI 编写下一代 AI、递归自我改进（RSI）的迹象正在显现。",
+      "link": "https://mp.weixin.qq.com/s/5GLPQGS2Ptwmdsa6bfzc_A",
+      "source_file": "sources/2026-09-15_突发！Opus 5.2深夜上线，RSI真来了？_新智元.md",
       "category": "国际",
       "is_model_related": true
     },
