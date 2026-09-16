@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-09-17T05:25:10.876886",
-  "total": 2087,
+  "updated_at": "2026-09-17T07:03:12.119267",
+  "total": 2090,
   "articles": [
+    {
+      "date": "2026-09-16",
+      "title": "AI不一定要“聊天”，OpenAI前研究员研发只做决策的模型，绕开文本生成，响应速度快200倍",
+      "source": "DeepTech深科技",
+      "digest": "前 OpenAI InstructGPT/RLHF 核心成员 Diogo Almeida 创立的 TypeSafe AI 发布决策模型 Jev：不再逐 token 生成自然语言，而是直接输出结构化判断、概率与置信度，面向软件后台持续决策场景。官方称在特定结构化工作流中比前沿 LLM 快近 200 倍、便宜 400 余倍，幻觉与类型错误率可做到 0%；同期完成 4000 万美元种子轮（DCVC 领投，估值约 2 亿美元），定位为区别于生成式 LLM 的\"System One\"新模型类。",
+      "link": "https://mp.weixin.qq.com/s/Ab4SkF0SCIBA9Zp8epZSxw",
+      "source_file": "sources/2026-09-16_AI不一定要“聊天”，OpenAI前研究员研发只做决策的模型_DeepTech深科技.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-09-16",
       "title": "GPT-6 Sol和Opus 5.2同时灰测！奥特曼阿莫迪周末刚喊刹车，一上班就踩油门",
@@ -319,6 +329,26 @@
       "digest": "优篮子 Ulanzi 与腾讯 WorkBuddy 联合推出 Vibe Key AI 键盘麦（269–299 元）：一个麦克风、三键一旋钮，按一下说话即可调动 AI 处理眼前工作，把“打开窗口—输提示词—传素材—复制结果”压缩成开口使唤。文章实际上手体验，探讨专用于“使唤 AI”的硬件是否必要、省掉哪些步骤、是否会多一件桌面设备。",
       "link": "https://www.infoq.cn/article/joXcPA6XF1QWgik9OALj",
       "source_file": "sources/2026-09-16_实测 Vibe Key：开口使唤 AI，真有当甲方的感觉_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-16",
+      "title": "微软 CEO 纳德拉：AI 应用的机会正在变大，模型成本将继续下降",
+      "source": "有新Newin",
+      "digest": "微软 CEO 纳德拉在 All-In Summit 2026 指出，模型层不会长期拿走 AI 产品的全部经济价值——随开源模型提供替代、Token 成本下降，Memory、Harness、Orchestration 及真正嵌入企业 Workflow 的应用将获得更大价值空间。其判断存在明显\"massive model overhang\"（模型能力已跑在产品与企业落地前面），即便前沿实验室暂转向可靠性与对齐，应用创新也不会停。他同时强调 AI 安全先回到工程问题：企业须掌控自身知识、IP 与模型权重，评估体系需足够开放。",
+      "link": "https://mp.weixin.qq.com/s/XcSi1wNGxyyQyWJTrhC6lg",
+      "source_file": "sources/2026-09-16_微软 CEO 纳德拉：AI 应用的机会正在变大，模型成本将继续下降_有新Newin.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-16",
+      "title": "现在最恶心的偷懒，是用AI狂产垃圾扔给同事！Shopify CEO怒批打工人摸鱼新方式：狂用AI“过度产出”",
+      "source": "奇点折射",
+      "digest": "Shopify CEO Tobi Lütke 在访谈中披露：内部约 50% 的 PR 已由 AI Agent（代号 River）自动生成，并强制全员在公开群聊中与 AI 交互（AI 甚至被赋予当众指出\"蠢需求\"的权限）。但工具爆发暴露出新失败模式——\"过度产出\"：员工随手让 AI 扩写冗长邮件或生成上千行代码不加审视即甩给同事，被戏称互掷\"垃圾手榴弹\"。核心命题：门槛被抹平后，人类价值在于最终担责与决断，\"机器不会替你去坐牢\"。",
+      "link": "https://mp.weixin.qq.com/s/cuc90pltnrepNU4oq6yj7A",
+      "source_file": "sources/2026-09-16_现在最恶心的偷懒，是用AI狂产垃圾扔给同事！Shopify CEO怒批_奇点折射.md",
       "category": "其他",
       "is_model_related": false
     },
