@@ -1,0 +1,24 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-09-16_Introducing Gemini 3.8 Live and 3.8 Live Extended _Google DeepMind.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-16_Google Releases Gemini 3.8 Live and 3.8 Live Exten_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/09/15/google-releases-gemini-3-8-live-and-3-8-live-extended-thinking-for-production-grade-voice-agents/"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-16_协同办公进入Agent时代，飞书+豆包工作跑在了最前面_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-16_在飞书的上下文底座上，豆包开工了_极客公园.md",
+          "name": "极客公园",
+          "link": "http://www.geekpark.net/news/370460"
+        }
+      ]
+    }
+  ]
+}
