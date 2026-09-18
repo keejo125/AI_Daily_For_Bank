@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-09-17T07:03:12.119267",
-  "total": 2090,
+  "updated_at": "2026-09-18T09:37:55.070077",
+  "total": 2107,
   "articles": [
+    {
+      "date": "2026-09-17",
+      "title": "Gemini 4 Pro提前泄露，2M上下文？",
+      "source": "夕小瑶科技说",
+      "digest": "社区发现Code Arena盲测池中疑似出现Gemini 4 Pro——有用户抽到标着gemini-3.8-flash的模型，生成的SVG动画（鹈鹕骑车、提壶冒热气）完成度明显高于正常3.8 Flash。爆料称新检查点内部代号argon，最高输出256K Token（前代64K的四倍）、2M上下文窗口，优先编码与长程Agent；Gemini 4被视为Google一年多来最重要的底座更新，原定9月因预训练问题推迟至10月，目前仍属爆料待官方确认。",
+      "link": "https://mp.weixin.qq.com/s/Bkzb3FKot0A21bjGpz5QFQ",
+      "source_file": "sources/2026-09-17_Gemini 4 Pro提前泄露，2M上下文？_夕小瑶科技说.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-17",
+      "title": "“宁愿放弃80%的工作机会，也不用AI写代码”！Android大神Jake Wharton谈Kotlin黄金时代、裁员与Google往事",
+      "source": "CSDN",
+      "digest": "Android与Kotlin生态核心贡献者、前Google工程师Jake Wharton在采访中谈AI编程工具与职业生涯。他列出求职九条准则，第一条即「不沾AI」——拒绝AI公司与强制使用AI的开发环境，称此举放弃约80%工作机会，并质疑AI工具能否实质提升代码质量、担忧版权伦理。文章还回顾Kotlin成为Android官方语言的过程，以及Meta、Google、Amazon大规模采用与他对Kotlin竞争优势弱化的判断。",
+      "link": "https://mp.weixin.qq.com/s/BBIyVfOCS6XZZszVWuNVCw",
+      "source_file": "sources/2026-09-17_“宁愿放弃80%的工作机会，也不用AI写代码”！Android大神Jake Wharton谈Kotlin黄金时代、裁员与Google往事_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "借助会话追踪与成本控制排查 AI 智能体故障",
+      "source": "InfoQ",
+      "digest": "StackGen首席工程师在CNCF博文分享生产环境智能体可观测实践：以Langfuse采集嵌套会话追踪，将每次LLM调用、工具执行与子智能体委派记录为span并附带延迟与token成本；执行前强制迭代上限与单工具调用次数限制，并将会话成本与滚动均值对比以发现模型路由错误、工具幻觉等异常。文章强调「追踪用于调试、指标用于告警」，并警示高基数会话ID标签可能压垮指标服务器。",
+      "link": "https://mp.weixin.qq.com/s/RzKJpa7GreWgWYqqYqzGcA",
+      "source_file": "sources/2026-09-17_借助会话追踪与成本控制排查 AI 智能体故障_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "刚刚，Anthropic关闭Claude Cowork独立入口，与Chat合并",
+      "source": "机器之心",
+      "digest": "Anthropic宣布将Claude Cowork并入统一Claude，不再要求用户提前选择工具；Claude可根据任务自动调用Cowork与Design能力，并继承已有上下文、技能与连接器。同时推出Claude Docs、Claude Slides与Claude Design（均Beta），支持在对话中创建可协作文档与演示文稿并下载为PPT或PDF，任务可后台持续运行。该功能未来数周向Pro、Max开放，被认为意在与微软Office正面竞争。",
+      "link": "https://mp.weixin.qq.com/s/9QFYRvVKO873mT8bXdIaFw",
+      "source_file": "sources/2026-09-17_刚刚，Anthropic关闭Claude Cowork独立入口，与Chat合并_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "程序员不一定失业，而是主动离开公司！OpenAI总裁：一个人带着Agent，也能完成过去整支团队的工作",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI总裁布罗克曼在一次访谈中描绘Agent重塑研发组织的图景：Codex可自主登录控制台修复网站安全、Astra能连贯工作24小时、Navier-Stokes实验并行运行1万个Agent（约270万条消息、1300亿输出Token）。他认为AI接走基础工作后程序员交付单位从代码变为任务，新人可更早参与业务，同时预警模型获得浏览器与工具后，安全需从上线前审查转为持续运行的「防御工厂」。",
+      "link": "https://mp.weixin.qq.com/s/D8hfwba0pr8E4yOm6-lTlg",
+      "source_file": "sources/2026-09-17_程序员不一定失业，而是主动离开公司！OpenAI总裁：一个人带着Agent，也能完成过去整支团队的工作_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "智谱唐杰突发长文曝RSI进展：Agent优化10万卡集群吞吐暴涨200%，AI造AI还远吗？",
+      "source": "智东西",
+      "digest": "智谱创始人唐杰发文披露递归自我改进（RSI）进展：在超10万卡国产芯片集群上，由GLM-5.3驱动的Infra Agent参与搭建支撑GLM-5.3 Flash的生产级推理服务，不到两周将端到端吞吐提升至基线3倍、硬件效率与单Token成本达到主流NVIDIA GPU相当水平。文章强调「稠密反馈」闭环（局部、低成本、可客观验证），认为RSI最小闭环已存在但距完全自主训练继任者系统仍远；该笔约50亿美元融资约60%将投入下一代GLM与自训练体系。",
+      "link": "https://mp.weixin.qq.com/s/z_qHpC3AR2zZKyXS2vUfgw",
+      "source_file": "sources/2026-09-17_智谱唐杰突发长文曝RSI进展：Agent优化10万卡集群吞吐暴涨200%，AI造AI还远吗？_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-17",
+      "title": "50万份文档、6万名员工：WPS如何把AI真正送进制造业一线？",
+      "source": "智东西",
+      "digest": "金山办公WPS Comate切入高端制造业企业AI，主张企业AI下半场拼的是数据与上下文。文章以中船动力近50万份研发文档、黄埔文冲200余本规范为例，说明通用模型不懂企业「靠谱业绩」口径与工艺规则；WPS以AIdocs解析保留文档结构、以DataHub固化指标与计算规则（良率分析从小时级降至分钟级），将企业数十年文档与「黑话」整理为AI可读的上下文，呼应腾讯WorkBuddy、千问办公、豆包工作「四强」竞争格局。",
+      "link": "https://mp.weixin.qq.com/s/7LG2nwrxumJcNutLI07zUQ",
+      "source_file": "sources/2026-09-17_50万份文档、6万名员工：WPS如何把AI真正送进制造业一线？_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "AI Coding 贡献率超 90%，需求交付却只快了 10%：菜鸟如何用 Agent 托管端到端交付？",
+      "source": "InfoQ",
+      "digest": "菜鸟研发总监在AICon分享：内部AI Coding贡献率从约10%升至90%以上，但需求交付周期仅快约10%，瓶颈在编码之外的需求澄清、方案、测试与部署仍由人推动。菜鸟据此探索需求端到端托管交付——以云端沙箱为运行环境，通用Agent提供Harness，Plugin承载能力，Playbook用自然语言描述流程并转todo.json保证长程任务确定性执行，上线30天交付100余个需求，非技术岗位亦可交付内部代码。",
+      "link": "https://mp.weixin.qq.com/s/qngxbSTQubV_FkTqkeN_aw",
+      "source_file": "sources/2026-09-17_AI Coding 贡献率超 90%，需求交付却只快了 10%：菜鸟如何用 Agent 托管端到端交付？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Kimi 发布金融行业解决方案",
+      "source": "月之暗面 Kimi",
+      "digest": "月之暗面发布Kimi金融行业解决方案，整合10余个权威数据源（Wind、万得、S&P Global、财联社等）、9项金融技能（财务建模、研究报告、PPT、持仓早报、HK IPO透镜等）与5项合规安全措施（数据分级、个人信息保护、授权访问、生成核验、审计追溯）。方案已与中信建投共建「风险评估网关」并试点：临时受托报告生成接入由原计划2个月缩至3个工作日，单份人工耗时降67%，面向券商、银行、保险、VC等数十家机构。",
+      "link": "https://mp.weixin.qq.com/s/ooqI84c0PRMl7f-DvDjMog",
+      "source_file": "sources/2026-09-17_Kimi 发布金融行业解决方案_月之暗面 Kimi.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "OpenViking：给 Codex 加上长期记忆",
+      "source": "火山引擎Agent社区",
+      "digest": "OpenViking是面向AI Agent的统一上下文数据库（火山引擎生态），将上下文抽象为Resource（项目材料）、Memory（偏好与经验）、Skill（可复用方法），并按L0摘要、L1概览、L2完整内容分级加载，避免长上下文一次性塞满。任务结束后Session Commit从对话与工具执行中提取值得长期保留的内容沉淀为Session、Trajectory、Experience，可通过插件、CLI、HTTP API与MCP接入Codex、豆包工作、Trae等主流Agent，实现跨会话、跨Agent记忆不再从零开始。",
+      "link": "https://mp.weixin.qq.com/s/aFHpPpidkes84K-Ca3uVZg",
+      "source_file": "sources/2026-09-17_OpenViking：给 Codex 加上长期记忆_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "一张展开的软件智能化测试能力地图，每一个测试人员不得不看",
+      "source": "软件工程3.0时代",
+      "digest": "文章给出软件智能化测试能力成熟度地图，主张「AI能增强每一项测试，但每项都需明确验证方法」。设计端指出需求生成用例的真正难点在处理业务歧义，而非数量；生成端以字节跳动与复旦合作的NL2Test为案例（51个工业场景82.4%完全匹配、3196条用例采纳率85.4%、平均265秒），核心经验是「模型提语义候选、程序查可验证约束、工程师确认业务意义」，判定端强调Oracle（什么叫对）才是地图中心。",
+      "link": "https://mp.weixin.qq.com/s/2skH8PN5UhFs4eF9lVMjBw",
+      "source_file": "sources/2026-09-17_一张展开的软件智能化测试能力地图，每一个测试人员不得不看_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "一本 Agent 白皮书，值得连续写两年么？",
+      "source": "阿里云云原生",
+      "digest": "阿里云基于一线工程师实践，将原有《AI原生应用架构白皮书》升级为开源项目「Alibaba Cloud AI Agent Handbook」，由50余位工程师撰写、超30万字，覆盖架构、构建、运行、治理、调优等30章。文章指出市场关注点已从快速构建智能体转向工程化、规模化与组织化三大挑战，强调Harness质量、Agent Infra、长期记忆与Skill沉淀等体系化能力建设，并主张以开源方式保持白皮书持久生命力。",
+      "link": "https://mp.weixin.qq.com/s/8rKgCc5iLfy38r2gom664A",
+      "source_file": "sources/2026-09-17_一本 Agent 白皮书，值得连续写两年么？_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "刚刚，华为昇腾960超节点提前登场！韬定律立功性能翻倍，剑指英伟达",
+      "source": "智东西",
+      "digest": "华为在2026全联接大会发布算力「全家桶」：昇腾960DT芯片（2 PFLOPS FP8、4 PFLOPS FP4，性能翻倍，预计2027年一季度就绪）、昇腾960超节点（4096卡、8 EFLOPS FP8、1PB HBM）、灵衢UnifiedBus统一互联总线（单集群支持100万颗AI处理器、10万卡MFU由20%升至35%）、全球首个量产NPO光引擎Hi-ONE，以及鲲鹏超节点（256TB统一内存池、沙箱启动快30倍）与AI记忆存储OceanStor M900（KV Cache时延降超50%）。",
+      "link": "https://mp.weixin.qq.com/s/DNoC_P7fBlvdqdS1GBQVYg",
+      "source_file": "sources/2026-09-17_刚刚，华为昇腾960超节点提前登场！韬定律立功性能翻倍，剑指英伟达_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮",
+      "source": "InfoQ",
+      "digest": "百度智能云在2026智能经济论坛发布行业首个「产业智能体操作系统」及「百度搭子」开发平台。文章提出以通用、专业、定制三类智能体承接企业20%、30%、50%任务，从OS层级破解「智能体烟囱」；平台以同源三层Harness与三层记忆架构提供托管运行环境，并配套Agent Cloud（极致弹性、安全、透明）与天池超节点等算力底座，主张Agent规模化运行将带动模型、Agent Infra与算力需求形成增长循环。",
+      "link": "https://mp.weixin.qq.com/s/Ejk2u8Ej2HDkjB-Lkj56UQ",
+      "source_file": "sources/2026-09-17_百度智能云首发产业智能体操作系统，要实现 AI 的商业和技术飞轮_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "真正烧Token的不是代码，而是模型反复看同一份上下文",
+      "source": "腾讯云开发者",
+      "digest": "腾讯轻量云团队拆解多Agent研发工作流DevFlow的Token成本：真正放大的不是代码，而是长上下文在多轮请求中被反复携带（约120K上下文的4轮修改，新增仅数十行却持续参与输入）。文章沿两条主线优化——控制信息进入上下文的时机与驻留范围（代码探索委托短生命周期Agent、低频模板按需加载），以及将可同时确定的动作合并提交、减少模型往返，二者互相放大降本效应。",
+      "link": "https://mp.weixin.qq.com/s/1jTuuEZzOryliS1C87Jy1g",
+      "source_file": "sources/2026-09-17_真正烧Token的不是代码，而是模型反复看同一份上下文_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "基于视觉与大语言多模型的 UI 智能化测试创新与实践",
+      "source": "金融电子化",
+      "digest": "甘肃银行依托DeepSeek语言模型与GLM-4.6V视觉模型，构建双模型协同的UI智能化测试框架，采用配置驱动、五层架构（配置、扫描、生成、执行、报告），已在个人网银等系统验证。框架以SKILL.md统一控制，Playwright扫描页面，语义匹配生成用例（某系统2440条、较传统减491冗余），三层回退定位与视觉断言验证，换站适配约10至16小时，整体可在非工作时间全自动完成，将测试工程师从脚本编写者升级为配置定义者。",
+      "link": "https://mp.weixin.qq.com/s/6RXssQJbNMW_pXbAfxhcaA",
+      "source_file": "sources/2026-09-17_基于视觉与大语言多模型的 UI 智能化测试创新与实践_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-17",
+      "title": "首发！工商银行联合华为发布 《金融AI原生技术应用生态建设白皮书》",
+      "source": "中国金融电脑+",
+      "digest": "工商银行联合华为发布《金融AI原生技术应用生态建设白皮书》，提出「从Chat到Work、从数字金融到数智金融、从云原生到AI原生」三大转变。白皮书直面金融智能体规模化的业务「三困」与技术「六难」，给出「三横两纵」总体架构（技术支撑层、AI原生资产层、智能体应用层＋运营与安全两纵），并凝练「两超多专」「四阶十步」落地方法，总结工行对客、办公、营销、交易、贷款五大领域实践。",
+      "link": "https://mp.weixin.qq.com/s/ZfkebZLnvUZXCMWGVUf_uw",
+      "source_file": "sources/2026-09-17_首发！工商银行联合华为发布 《金融AI原生技术应用生态建设白皮书》_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-16",
       "title": "AI不一定要“聊天”，OpenAI前研究员研发只做决策的模型，绕开文本生成，响应速度快200倍",

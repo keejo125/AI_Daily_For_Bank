@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-17",
+      "weekday": "周四",
+      "stats": {
+        "国际": 5,
+        "国内": 10,
+        "同业": 2,
+        "其他": 0,
+        "total": 17
+      },
+      "summary": "Gemini 4 Pro提前泄露，2M上下文？/“宁愿放弃80%的工作机会，也不用AI写代码”！Android大神Jake Wharton谈Kotlin黄..."
+    },
+    {
       "date": "2026-09-16",
       "weekday": "周三",
       "stats": {
