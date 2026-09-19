@@ -1,0 +1,24 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-09-18_刚刚，Claude Code大重构！内部3万Agent管理技术免费开放_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-18_Anthropic Launches Claude Code Projects in Beta_ P_MarkTechPost.md",
+          "name": "MarkTechPost",
+          "link": "https://www.marktechpost.com/2026/09/17/anthropic-launches-claude-code-projects-in-beta-parallel-cloud-sessions-that-keep-running-after-you-close-your-laptop/"
+        },
+        {
+          "source_file": "sources/2026-09-18_Claude Projects v2 ðŸ’¼, Google family agent ðŸ‘¨â_TLDR AI.md",
+          "name": "TLDR AI",
+          "link": "https://tldr.tech/ai/2026-09-18"
+        },
+        {
+          "source_file": "sources/2026-09-18_Claude“主导”Anthropic 26%的AI研发、3万Agent同时运行：当AI开始“造AI_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/CEphwKjzAe7LzbOriLcq"
+        }
+      ]
+    }
+  ]
+}
