@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T09:23:28.460453",
+  "updated_at": "2026-09-19T10:34:07.223183",
   "total": 2137,
   "articles": [
     {
@@ -79,6 +79,16 @@
       "digest": "文章指出，用 LLM 跑出一个炫酷原型从未如此容易，但进入生产环境，构建智能体只是开场 10% 的冲刺，真正决定企业 AI 成败的是后续 90%：持续评估、回归测试与部署后优化。任何人都可在周末“vibe code”出一个 AI 助手，却几乎无人能不靠严密护栏与深厚数据管道“vibe operate”一个企业级自主系统。Salesforce 的 Agentforce 正是瞄准这段从“氛围编程”到“经实战检验的编排”的鸿沟，强调企业 Agent 落地依赖评估与数据工程，而非模型本身。",
       "link": "https://www.marktechpost.com/2026/09/18/salesforce-agentforce-bridging-the-enterprise-ai-gap-from-vibe-coding-to-battle-tested-orchestration/",
       "source_file": "sources/2026-09-18_Salesforce Agentforce_ Bridging the Enterprise AI _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-18",
+      "title": "刚刚，Claude Code大重构！内部3万Agent管理技术免费开放",
+      "source": "量子位",
+      "digest": "Anthropic 重构 Claude Code 的 Projects 功能，原生支持多 Agent 并行：开发者在主对话框下达高阶目标（如“把鉴权模块重构为 OAuth 2.0 并补齐自动化测试”），协调器（Coordinator）自动拆解为多个子任务并调度并行工作线程，每个线程运行在云端独立环境、独立 Git 分支，写完直接提 PR，并新增共享记忆保证 Agent 间上下文对齐。同一时间 Anthropic 披露内部数据：其研发平台每天同时运行约 3 万个 AI Agent，核心 AI 研发已有 26% 由 Claude 主导（达 L4 级），半年前这一比例还不到 1%——标志头部 AI 公司正从“人写 AI”走向“AI 造 AI”的 RSI 阶段。该能力已免费开放。",
+      "link": "https://mp.weixin.qq.com/s/w4LCCflzIoWYWFQf2asBwg",
+      "source_file": "sources/2026-09-18_刚刚，Claude Code大重构！内部3万Agent管理技术免费开放_量子位.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -169,16 +179,6 @@
       "digest": "阿里云原生团队阐释 AgentScope 从 Agent Framework 到通用 Agent Harness 的定位升级：AgentScope 2.0 既是可深度定制的框架，更是一套面向企业任务的通用 Harness。文章从任务、信息、行动三层解析其底层机制，并说明“服务侧统一编排、沙箱内隔离执行”架构如何支撑企业构建 Managed Agents 平台。围绕企业 Agent 需求，文章归纳四类构建入口——高代码框架、产品化 Harness、Managed Agents 服务、Agent 云平台——体现不同责任分工，可组合使用；任务路径明确时采用确定性流程，需动态决策时交由 Agent 自主规划。",
       "link": "https://mp.weixin.qq.com/s/CVjyAlq4O0LWpp5hX8aRpQ",
       "source_file": "sources/2026-09-18_从 Agent Framework 到 Agent Harness，开源 AgentScope 项目新定位_阿里云云原生.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-09-18",
-      "title": "刚刚，Claude Code大重构！内部3万Agent管理技术免费开放",
-      "source": "量子位",
-      "digest": "Anthropic 重构 Claude Code 的 Projects 功能，原生支持多 Agent 并行：开发者在主对话框下达高阶目标（如“把鉴权模块重构为 OAuth 2.0 并补齐自动化测试”），协调器（Coordinator）自动拆解为多个子任务并调度并行工作线程，每个线程运行在云端独立环境、独立 Git 分支，写完直接提 PR，并新增共享记忆保证 Agent 间上下文对齐。同一时间 Anthropic 披露内部数据：其研发平台每天同时运行约 3 万个 AI Agent，核心 AI 研发已有 26% 由 Claude 主导（达 L4 级），半年前这一比例还不到 1%——标志头部 AI 公司正从“人写 AI”走向“AI 造 AI”的 RSI 阶段。该能力已免费开放。",
-      "link": "https://mp.weixin.qq.com/s/w4LCCflzIoWYWFQf2asBwg",
-      "source_file": "sources/2026-09-18_刚刚，Claude Code大重构！内部3万Agent管理技术免费开放_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
