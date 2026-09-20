@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-20",
+      "weekday": "周日",
+      "stats": {
+        "国际": 8,
+        "国内": 15,
+        "同业": 1,
+        "其他": 2,
+        "total": 26
+      },
+      "summary": "3万个Agent 进行自我迭代，26% AI研发已由Claude主导：RSI 走向落地、AI 开始参与制造下一代 AI/Claude Code下半年：格式..."
+    },
+    {
       "date": "2026-09-19",
       "weekday": "周六",
       "stats": {
