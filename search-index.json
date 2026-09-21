@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-22T05:27:11.301217",
-  "total": 2225,
+  "updated_at": "2026-09-22T07:08:20.615324",
+  "total": 2229,
   "articles": [
     {
       "date": "2026-09-21",
@@ -84,11 +84,31 @@
     },
     {
       "date": "2026-09-21",
+      "title": "刚刚，爆火模型Jev全面开放，所有用户送1.2亿token",
+      "source": "APPSO",
+      "digest": "由前 OpenAI 研究员 Diogo Almeida（RLHF 提出者之一）创立的 TypeSafe AI 宣布，其决策型模型 Jev 全面向所有用户开放，注册用户均获 5 美元额度（约 1.2 亿 Token）。Jev 刻意不做大语言模型，而是输出强类型的校准后决策——Choice 选项、Score 打分、Noul 是非判断，并附带完整概率分布与置信度，无需 JSON 提示词与解析器。官方数据称端到端延迟 70 至 500 毫秒，比同类 LLM 快 20 到 200 倍，输入每百万 Token 仅 0.042 美元、输出免费，已在浏览器代理、邮件分类、模型路由等场景验证显著降本提速。",
+      "link": "https://mp.weixin.qq.com/s/YJmteuFKuOsHRemL9YjQbg",
+      "source_file": "sources/2026-09-21_刚刚，爆火模型Jev全面开放，所有用户送1.2亿token_APPSO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-21",
       "title": "啊啊啊GPT-6 Astra这么不安全！这次马斯克都瘫坐了",
       "source": "量子位",
       "digest": "文章警示GPT-6 Astra在具身/机器人场景的安全风险（代号RoboHarm）：当大模型直接驱动物理执行器，微小的指令偏差或越权可能被放大为现实危害。作者呼吁在「大模型+机器人」落地前建立隔离、权限与回滚机制，避免实验室能力直接进入物理世界造成不可逆后果。",
       "link": "https://www.qbitai.com/2026/09/493241.html",
       "source_file": "sources/2026-09-21_啊啊啊GPT-6 Astra这么不安全！这次马斯克都瘫坐了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-21",
+      "title": "基础杂活全被一键秒杀，还要初级员工干嘛？Google Research负责人：以往熬15年的判断力，现在一出道就得硬抗",
+      "source": "奇点折射",
+      "digest": "Google Research 负责人 Yossi Matias 在官方播客访谈中系统阐述前沿研究方向：将大模型推向与严谨物理仿真融合的世界模型，并以多 Agent 系统 AI Co-Scientist 加速科研——帝国理工耗时数年的耐药菌假说，该系统三天即独立推导出来，相关成果发表于《自然》。他还介绍团队用 Gemini 通读全球 20 年新闻、标注 260 万起突发洪灾以训练预测模型，并勾勒地球 AI 行星级智能愿景。核心判断：AI 是人类智慧的放大器，当基础工作被接管，战略判断力成为终极壁垒。",
+      "link": "https://mp.weixin.qq.com/s/TXylfIKU0VZNO9eNzbW0mQ",
+      "source_file": "sources/2026-09-21_基础杂活全被一键秒杀，还要初级员工干嘛？Google Research负责人：以往熬15年的判断力，_奇点折射.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -209,6 +229,26 @@
       "digest": "IDC最新评估显示，中国AI算力管理平台中范式智能综合评分第一，并在四项关键维度获满分。报告认为智能体正重塑算力基础设施，预计中国智能算力规模将大幅增长。该结果凸显国产AI算力管理平台在调度、异构管理与能效上的成熟度，成为企业AI转型的关键底座。",
       "link": "https://www.qbitai.com/2026/09/493109.html",
       "source_file": "sources/2026-09-21_IDC评估中国AI算力管理平台_范式智能四项维度获满分，综合评分第一_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Kimi Code Desktop 正式与你见面",
+      "source": "月之暗面 Kimi",
+      "digest": "月之暗面正式发布 Kimi Code Desktop（macOS 与 Windows 同步上线），将 Kimi Code 智能编程能力带入桌面端。开发者可在统一图形界面中通过对话让 Agent 读写代码、运行命令、完成自动化任务，并制定可评审、可反馈的执行计划持续推进直至交付。桌面端内置终端、浏览器与 Git 状态查看，支持 Plan 规划模式、Goal 目标驱动、Swarm 多 Agent 协作与实验性 Tower 并行模式，还提供截图标注功能，让 Agent 直观看到页面错位或报错并精准定位问题。",
+      "link": "https://mp.weixin.qq.com/s/0x-tXOxlutrxE9YNODng0A",
+      "source_file": "sources/2026-09-21_Kimi Code Desktop 正式与你见面_月之暗面 Kimi.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-21",
+      "title": "ZCode 开源",
+      "source": "ZCode",
+      "digest": "开源编程工具 ZCode（zai-org）因产品安全问题完成整改并正式开源（github.com/zai-org/ZCode），将全部代码交社区监督，让产品开放透明。团队承诺相关代码数据无留存、从未用于模型训练，并邀请中国信息通信研究院与绿盟科技开展安全审计——确认阿里云 OSS 存储桶云端零数据、客户端已移除 Repo Wiki 功能并切断本地仓库快照上传链路。ZCode 表示将建立常态化安全漏洞机制，按问题严重程度给予反馈开发者相应回报。",
+      "link": "https://mp.weixin.qq.com/s/QCHjEye57BUKUNInPKb4cA",
+      "source_file": "sources/2026-09-21_ZCode 开源_ZCode.md",
       "category": "国内",
       "is_model_related": false
     },

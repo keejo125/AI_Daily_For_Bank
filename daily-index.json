@@ -4,11 +4,11 @@
       "date": "2026-09-21",
       "weekday": "周一",
       "stats": {
-        "国际": 13,
-        "国内": 19,
+        "国际": 15,
+        "国内": 21,
         "同业": 0,
         "其他": 5,
-        "total": 37
+        "total": 41
       },
       "summary": "2026年最佳语音克隆API盘点/GitHub Copilot 推出 HydraFusion 项目，依托多模型路由实现前沿级性能/GPT-6 Astra开..."
     },
