@@ -1,0 +1,24 @@
+{
+  "merged_groups": [
+    {
+      "main": "sources/2026-09-21_IDC评估中国AI算力管理平台_范式智能四项维度获满分，综合评分第一_量子位.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-21_IDC评估中国 AI算力管理平台：范式综合评分位列第一_InfoQ.md",
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/article/mMNcVfyGXtyFhPM0sKvN"
+        }
+      ]
+    },
+    {
+      "main": "sources/2026-09-21_StepFun Launches Step 5 Preview_ A 600B-Total, 27B_MarkTechPost.md",
+      "items": [
+        {
+          "source_file": "sources/2026-09-21_开源Top2！实测阶跃Step 5 Preview，真有点猛啊…_量子位_809808.md",
+          "name": "量子位",
+          "link": "https://www.qbitai.com/2026/09/493179.html"
+        }
+      ]
+    }
+  ]
+}
