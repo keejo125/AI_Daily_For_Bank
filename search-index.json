@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-09-22T07:08:20.615324",
+  "updated_at": "2026-09-22T08:13:29.341310",
   "total": 2229,
   "articles": [
+    {
+      "date": "2026-09-21",
+      "title": "刚刚，爆火模型Jev全面开放，所有用户送1.2亿token",
+      "source": "APPSO",
+      "digest": "由前 OpenAI 研究员 Diogo Almeida（RLHF 提出者之一）创立的 TypeSafe AI 宣布，其决策型模型 Jev 全面向所有用户开放，注册用户均获 5 美元额度（约 1.2 亿 Token）。Jev 刻意不做大语言模型，而是输出强类型的校准后决策——Choice 选项、Score 打分、Noul 是非判断，并附带完整概率分布与置信度，无需 JSON 提示词与解析器。官方数据称端到端延迟 70 至 500 毫秒，比同类 LLM 快 20 到 200 倍，输入每百万 Token 仅 0.042 美元、输出免费，已在浏览器代理、邮件分类、模型路由等场景验证显著降本提速。",
+      "link": "https://mp.weixin.qq.com/s/YJmteuFKuOsHRemL9YjQbg",
+      "source_file": "sources/2026-09-21_刚刚，爆火模型Jev全面开放，所有用户送1.2亿token_APPSO.md",
+      "category": "国际",
+      "is_model_related": true
+    },
     {
       "date": "2026-09-21",
       "title": "2026年最佳语音克隆API盘点",
@@ -79,16 +89,6 @@
       "digest": "腾讯技术工程发布万字长文，系统拆解Jev的工程实践：将Agent的「判断题」（决策）从大模型中剥离，用轻量模型在隐空间直接输出选择/评分，实现毫秒级响应。文章详述其推理加速、缓存与工具编排方案，为高频决策类Agent提供可复用的工程范式，也印证「快慢模型分工」的架构趋势。",
       "link": "https://mp.weixin.qq.com/s/D1La4jMoVZ5Ip_RrVY1kPw",
       "source_file": "sources/2026-09-21_一万字Jev 工程实践长文：把 Agent 的“判断题”从大模型里拆出来_腾讯技术工程.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-09-21",
-      "title": "刚刚，爆火模型Jev全面开放，所有用户送1.2亿token",
-      "source": "APPSO",
-      "digest": "由前 OpenAI 研究员 Diogo Almeida（RLHF 提出者之一）创立的 TypeSafe AI 宣布，其决策型模型 Jev 全面向所有用户开放，注册用户均获 5 美元额度（约 1.2 亿 Token）。Jev 刻意不做大语言模型，而是输出强类型的校准后决策——Choice 选项、Score 打分、Noul 是非判断，并附带完整概率分布与置信度，无需 JSON 提示词与解析器。官方数据称端到端延迟 70 至 500 毫秒，比同类 LLM 快 20 到 200 倍，输入每百万 Token 仅 0.042 美元、输出免费，已在浏览器代理、邮件分类、模型路由等场景验证显著降本提速。",
-      "link": "https://mp.weixin.qq.com/s/YJmteuFKuOsHRemL9YjQbg",
-      "source_file": "sources/2026-09-21_刚刚，爆火模型Jev全面开放，所有用户送1.2亿token_APPSO.md",
       "category": "国际",
       "is_model_related": false
     },
