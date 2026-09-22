@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-22",
+      "weekday": "周二",
+      "stats": {
+        "国际": 10,
+        "国内": 24,
+        "同业": 1,
+        "其他": 1,
+        "total": 36
+      },
+      "summary": "Grok 4.7来了！网友实测先把SpaceX玩坏了，大火箭走起/AI 有了“工号”，数据平台长出了手：Snowflake World Tour 上的三个..."
+    },
+    {
       "date": "2026-09-21",
       "weekday": "周一",
       "stats": {

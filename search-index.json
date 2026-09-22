@@ -1,7 +1,367 @@
 {
-  "updated_at": "2026-09-22T08:13:29.341310",
-  "total": 2229,
+  "updated_at": "2026-09-23T05:20:45.316577",
+  "total": 2265,
   "articles": [
+    {
+      "date": "2026-09-22",
+      "title": "Grok 4.7来了！网友实测先把SpaceX玩坏了，大火箭走起",
+      "source": "量子位",
+      "digest": "SpaceXAI 发布旗舰模型 Grok 4.7，面向编程、智能体与知识工作，采用更大的基础模型与更长的强化学习训练，上下文扩展到 50 万 Token，重点强化长时任务、自我检查与长上下文管理。官方称其在电气工程基准达 64%、终端操作基准由 20.3% 跃升至 38%，定价维持输入 2 美元/百万、输出 6 美元/百万。网友率先实测其火箭工程等趣味玩法。",
+      "link": "https://mp.weixin.qq.com/s/SE5sK_XOEgkShw_448PPnA",
+      "source_file": "sources/2026-09-22_Grok 4.7来了！网友实测先把SpaceX玩坏了，大火箭走起_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "AI 有了“工号”，数据平台长出了手：Snowflake World Tour 上的三个变化",
+      "source": "InfoQ",
+      "digest": "作者参加 Snowflake World Tour Shanghai 并对话其全球产品总裁，总结 Agent 时代数据平台的三个变化：AI 开始拥有“工号”嵌入企业编制、数据平台长出“手”可执行任务、Snowflake 拥抱开源。文章认为全球领先数据公司正重新定义自身在 Agent 时代的位置，企业级 AI 落地正从模型能力比拼转向外围系统与组织能力的竞争。",
+      "link": "https://mp.weixin.qq.com/s/KJXG4OiZg5GbZ2yvkYOaDQ",
+      "source_file": "sources/2026-09-22_AI 有了“工号”，数据平台长出了手：Snowflake World Tour 上的三个变化_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "AWS Strands 团队发布 Strands Harness：开源智能体框架，同等精度 Token 成本降 28%",
+      "source": "MarkTechPost",
+      "digest": "AWS Strands 团队发布 Strands Harness，一个开箱即用的通用智能体框架，面向“在 Claude Code/Codex 中可行、自建循环却难落地”的痛点。它支持本地或云端部署，以 Apache 2.0 提供 Python 与 TypeScript 版本，一行代码即可启动。团队称在同等精度下可降低约 28% 的 Token 成本，帮助开发者跳过从零搭建 agent loop 的环节。",
+      "link": "https://www.marktechpost.com/2026/09/21/aws-strands-agents-team-releases-strands-harness/",
+      "source_file": "sources/2026-09-22_AWS Strands Agents Team Releases Strands Harness_ _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Agent时代，CPU的价值该重估了",
+      "source": "量子位",
+      "digest": "英特尔在苏州技术创新大会上判断，Agent 时代 CPU 与 GPU 配比正从 1:4 走向 1:1，因 Agent 调用工具、执行任务使 CPU 承担更多调度、数据处理与执行工作。文章以“整理新闻”等任务说明 CPU 为何成为紧缺货，并指出英特尔股价单日上涨 12% 侧面印证市场对 CPU 在 Agent 时代重要性的认可。",
+      "link": "https://www.qbitai.com/2026/09/494430.html",
+      "source_file": "sources/2026-09-22_Agent时代，CPU的价值该重估了_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Meta 个人 AI 助手刚火 13 天，Amazon 就拉闸了",
+      "source": "极客公园",
+      "digest": "Meta 于 9 月 8 日发布“全球第一款为所有人打造的个人 AI Agent”Muse，上线 13 天下载超 250 万次并登顶美区 App Store 免费榜。但 Amazon 随即以“未经授权访问”为由封禁 Muse 在其商城中的 Agent 行为，理由是 Meta 未提前告知、Agent 不表明 AI 身份并可能捕获登录凭证。事件折射出个人 AI 助手与传统平台在访问权与数据上的冲突。",
+      "link": "http://www.geekpark.net/news/370797",
+      "source_file": "sources/2026-09-22_Meta 个人 AI 助手刚火 13 天，Amazon 就拉闸了_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "NVIDIA 推出 SoL-Pi：自动研究循环使编码智能体 Token 流量最高降 49%",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA、NTU 与 MIT 研究者发布 SoL-Pi，一套面向开源 Pi 编码智能体的 4 项效率机制。这些机制由 AI 在 harness 层运行自动研究循环自行发现，在 51 任务的 EdgeBench 评测上，较 Pi 基线将记录的 Token 流量降低 44.7%~49.0%，为长时运行编码智能体的成本与上下文膨胀问题提供缓解方案。",
+      "link": "https://www.marktechpost.com/2026/09/21/nvidia-researchers-have-released-sol-pi/",
+      "source_file": "sources/2026-09-22_NVIDIA Introduces SoL-Pi_ Auto-Research Loops That_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "NVIDIA Personal AI Router 将 AI 任务分配到本地计算资源上",
+      "source": "InfoQ",
+      "digest": "NVIDIA 推出 Personal AI Router（PAIR）测试版，可将本地网络中多台计算机的推理能力整合，自动在节点间分配 AI 请求，面向本地多代理工作负载。PAIR 与 Ollama、LM Studio 等本地推理服务无缝集成，无需改动底层架构或代理框架，由主代理分发子任务、PAIR 在后台完成调度，缓解单 GPU 瓶颈。",
+      "link": "https://www.infoq.cn/article/ZSAtWPoOgIDcANYa8CXc",
+      "source_file": "sources/2026-09-22_NVIDIA Personal AI Router 将 AI 任务分配到本地计算资源上_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "OpenAI 发布前沿模型第三方安全评估的原则与优先级",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布关于前沿模型与安全措施第三方独立安全评估的原则与优先级，强调评估应严谨、安全且独立。文章（RSS 摘要兜底、正文受限）概述了 OpenAI 在第三方评估上的立场框架，反映前沿模型厂商在透明度与外部审计之间的平衡取向。",
+      "link": "https://openai.com/index/priorities-principles-third-party-assessments",
+      "source_file": "sources/2026-09-22_Priorities and principles for effective third part_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Redis之父质疑Jev狂热！绝大多数开发者其实不需要它",
+      "source": "InfoQ",
+      "digest": "Redis 作者 antirez（Salvatore Sanfilippo）公开质疑近期爆火的 Jev 模型，称其炒作暴露了“AI 泡沫中多数人分不清什么重要”，与 AI 领域其他进展相比 Jev 只是一件小事却热度爆表。Jev 由 TypeSafe AI 于 9 月 15 日发布，定位“System One 模型”，不生成文本，仅对输入做分类、评分与判断并返回置信度，引发支持者与质疑者争论。",
+      "link": "https://mp.weixin.qq.com/s/u5t5_Gv5CfUSSA7vVJsSWQ",
+      "source_file": "sources/2026-09-22_Redis之父质疑Jev狂热！绝大多数开发者其实不需要它_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "“当年在OpenAI像在疯人院！”Jev作者完整访谈：全人类陪AI聊天的价值，不如程序员一个for循环",
+      "source": "奇点折射",
+      "digest": "TypeSafe AI 创始人、前 OpenAI 核心研究员 Diogo Almeida（InstructGPT 与 RLHF 关键作者）在 Latent Space 播客完整剖析为何反叛老东家路线，去做“闭嘴干活”的 Jev 模型。他直言当前大模型被框死在对话框形态，而 Jev 不写一句话、仅向程序输出带精度的决策判断，并质疑“AI 聪明到能挑战千禧年数学难题、却做不好企业基础自动化”的落地遮羞布。",
+      "link": "https://mp.weixin.qq.com/s/WfLG7s_QEpfXalB5KE4_aQ",
+      "source_file": "sources/2026-09-22_“当年在OpenAI像在疯人院！”Jev作者完整访谈：全人类陪AI聊天的价值，不如程序员一个for循环_奇点折射.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "6天烧光2000多万，拿下开源第一！小米史无前例「炼丹直播」收官",
+      "source": "量子位",
+      "digest": "小米正式发布并开源 MiMo-V2.6 系列（Pro/Flash 两款原生全模态模型），以 6 天、约 2344 万元人民币的 Live RL 训练，完成开源迄今最大规模单次强化学习。MiMo-V2.6-Pro 参数 1.02 万亿、激活 420 亿，在 Artificial Analysis 智能指数取得 46 分，超过 Kimi K3 与 Qwen3.8 Max，登顶开源第一，多 Agent 评测逼近 Claude Opus 5 与 GPT-5.6 Sol。团队同步开源 RL 环境与训练框架。",
+      "link": "https://www.qbitai.com/2026/09/494179.html",
+      "source_file": "sources/2026-09-22_6天烧光2000多万，拿下开源第一！小米史无前例「炼丹直播」收官_量子位_92bcc8.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里发布 Qwen-Image-2.1：7B 开源图像生成与编辑模型",
+      "source": "MarkTechPost",
+      "digest": "阿里 Qwen 团队发布 Qwen-Image-2.1，一个统一的文生图与图像编辑模型，视觉生成部分含 32 层单流 DiT、共 7B 参数。单一权重覆盖文生图、多参考编辑、局部修改与透明 RGBA 输出。发布即获 Diffusers、ComfyUI、vLLM-Omni、SGLang、LightX2V 等 Day 0 支持，可用于研究与评估，商业部署需申请。",
+      "link": "https://www.marktechpost.com/2026/09/21/alibaba-qwen-releases-qwen-image-2-1/",
+      "source_file": "sources/2026-09-22_Alibaba Qwen Releases Qwen-Image-2.1_ A 7B Open-We_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "MTFM：美团统一推荐基座大模型在外卖多业务场景的落地实践",
+      "source": "美团技术",
+      "digest": "美团在 MTGR 生成式精排框架基础上提出统一推荐基座大模型 MTFM，首次实现外卖多个主要业务的统一精排，围绕规模可扩展、场景可延展、架构高效三大挑战，以异构 Tokenizer 与动态掩码实现多场景特征免对齐。美团外卖多个业务订单量提升 2.06%~6.68%，推理成本降低 24%，相关工作被 KDD 2026 收录。",
+      "link": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html",
+      "source_file": "sources/2026-09-22_MTFM：美团统一推荐基座大模型在外卖多业务场景的落地实践_美团技术.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "华为云码道上线鸿蒙编码大模型，面向鸿蒙开发者全面升级",
+      "source": "CSDN",
+      "digest": "9 月 21 日华为云码道 CodeArts 代码智能体面向鸿蒙开发者升级，上线“鸿蒙编码大模型 + 码道鸿蒙智能体 + 鸿蒙开发者实践中心”，打造全球首个专为鸿蒙生态打造的 AI 编码智能体。鸿蒙编码大模型融合超百万鸿蒙原素材，千行代码错误率降低 80% 以上，一次编译通过率 78% 以上，单任务 Token 消耗降低 20% 以上。",
+      "link": "https://mp.weixin.qq.com/s/ZCmgeEnehkdGpz4bCiJryA",
+      "source_file": "sources/2026-09-22_华为云码道上线鸿蒙编码大模型，面向鸿蒙开发者全面升级_CSDN.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "讲真，我没看出这图是AI做的，更没想到是国产AI做的",
+      "source": "量子位",
+      "digest": "商汤正式发布图像生成模型 SenseNova U1 Pro，实测中生成图像在细节与真实感上难以区分 AI 与实拍，现已在商汤小浣熊平台可用、API 向企业客户开放。U1 Pro 不仅支持高质量生图，还强调生成后可多轮修改直至达到可商用，企业客户可通过 API 或 SenseNova Studio 体验，定位国产图像生成模型的新标杆。",
+      "link": "https://www.qbitai.com/2026/09/494263.html",
+      "source_file": "sources/2026-09-22_讲真，我没看出这图是AI做的，更没想到是国产AI做的_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-22",
+      "title": "AI 原生 SDLC 落地实战：Claude Code、Codex、Gemini 智能体工程开发完整指南",
+      "source": "51CTO技术栈",
+      "digest": "本文面向 AI 工程师与前沿部署工程师（FDE），系统讲解如何用 Claude Code、OpenAI Codex、Gemini CLI 三款主流智能体打通规划、设计、构建、测试、部署、维护全流程，实现单人效能比肩传统五人团队。文章指出 2026 年 AI 辅助开发的核心瓶颈已从代码生成转向评审、规划、部署等环节，强调以 AI 原生 SDLC 重构软件工程全生命周期，而非仅优化代码补全。",
+      "link": "https://mp.weixin.qq.com/s/GOY0fUsflDTzgJltRimBzA",
+      "source_file": "sources/2026-09-22_AI 原生 SDLC 落地实战：Claude Code、Codex、Gemini 智能体工程开发完整指南_51CTO技术栈.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Qoder Cloud Agents最佳实践：从 Model API 到 Agent as a service",
+      "source": "Qoder",
+      "digest": "Qoder Cloud Agents 提供模型调用、工具执行、运行环境、用户身份、个人配置、会话与定时任务等标准化能力，将云上 harness 以完整的 Agent as a Service 交付，而非仅 Model as a Service，降低大模型接入与应用开发复杂度。企业接入自身业务工具与用户体系后，即可由 Agent 通过云上沙箱（支持十万级并发）直接交付结果。",
+      "link": "https://mp.weixin.qq.com/s/sCNqJtwAcP9BE59xcnVRLg",
+      "source_file": "sources/2026-09-22_Qoder Cloud Agents最佳实践：从 Model API 到 Agent as a service_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Qoder产品线总裁丁宇：全新 Qoder，不止编程，无限创造 | 云栖主论坛演讲全文",
+      "source": "Qoder",
+      "digest": "在 2026 云栖大会，Qoder 产品线总裁丁宇发布主题演讲，宣布 Qoder 升级：更简约交互、更强大 Harness，覆盖计划、设计、实现、测试到维护发布的软件全生命周期。Agent Team、Qoder Project、Discussion、Qoder Security、语音与眼镜交互、Cloud Agents 及数字员工 QoderWake 等能力登场，让智能体“能看、能听、能说、能做”，服务全球超 800 万开发者。",
+      "link": "https://mp.weixin.qq.com/s/Yb-0K9vNPBFlVl2fatYFqA",
+      "source_file": "sources/2026-09-22_Qoder产品线总裁丁宇：全新 Qoder，不止编程，无限创造 _ 云栖主论坛演讲全文_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "RSI跑通33轮，参数冲上10T，阿里Qwen加速奔向机器智能",
+      "source": "CSDN",
+      "digest": "在 2026 云栖大会，阿里将 RSI（递归式自我改进）、下一代架构、全模态 I/O、开源生态及“模型—芯片—云”协同飞轮作为技术披露主线。吴泳铭提出“机器正在成为思考主力”，机器思考总量未来将达人类 1000 倍；Qwen 项目负责人强调 Agentic 阶段模型自主规划、调用工具、闭环完成任务，AI 消费从一次对话变为一项任务。",
+      "link": "https://mp.weixin.qq.com/s/34WlU2O9gvubf64wenheEw",
+      "source_file": "sources/2026-09-22_RSI跑通33轮，参数冲上10T，阿里Qwen加速奔向机器智能_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Seed‑2.1‑Pro‑0915 实战案例：多模态 Coding，把创意直接变成可运行作品",
+      "source": "火山引擎Agent社区",
+      "digest": "豆包大模型 Seed-2.1-pro-0915 更新后多模态 Coding 能力提升显著，文章筛选 5 个典型 Case：圆明园万方安和古建史料梳理与 3D 交互复原、CAD 图纸绘制与 3D 游戏开发、Blender 白模预演约束 AI 视频生成、AI 智能会议白板草图解析、拍照识物生成单词卡 iOS 学习 App，展示模型从理解资料到构建空间、从草图到可运行作品的综合能力。",
+      "link": "https://mp.weixin.qq.com/s/fW7tDoiDTrSfGLhbPtMI3Q",
+      "source_file": "sources/2026-09-22_Seed‑2.1‑Pro‑0915 实战案例：多模态 Coding，把创意直接变成可运行作品_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "不受控的 Agent ，凭什么上生产系统？",
+      "source": "InfoQ",
+      "digest": "文章以美联航客服机器人给出错误积分有效期、Gartner 预测超 40% Agentic AI 项目将在 2027 年前被取消为例，指出 Agent 刚入企业风险已现。作者认为企业级部署中模型只代表能力、外围系统才是生产力，并梳理 Harness、验证、治理等“模型之外还需要什么”的关键命题，强调风险控制是 Agent 上生产的先决条件。",
+      "link": "https://mp.weixin.qq.com/s/Fkh-ASPMLfMd9LG6t77j6w",
+      "source_file": "sources/2026-09-22_不受控的 Agent ，凭什么上生产系统？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "从生成内容到创造体验，多模态大模型如何改变内容生产？",
+      "source": "InfoQ",
+      "digest": "云栖大会上导演陆川用阿里多模态模型制作复原明代“王恭厂之变”的短片，传统需数月、千万级投入，此次仅用 5 天，其评价模型对上下文理解“达博士后水平”。文章指出多模态生成两条路径：从单模态走向多模态融合生成，以及从生成内容走向实时流式“创造体验”，贯穿阿里过去一年的多模态演进（如 Wan 2.6）。",
+      "link": "https://www.infoq.cn/article/rNHK14OsBl5CgSpMoTPq",
+      "source_file": "sources/2026-09-22_从生成内容到创造体验，多模态大模型如何改变内容生产？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "基元律动韩凯：从多模型调度到反馈闭环，探索Agent持续进化",
+      "source": "量子位",
+      "digest": "在云栖企业级 Agent 实践峰会，基元律动联合创始人兼 CTO 韩凯发表《从 Harness 到 RSI 飞轮》演讲，指出多模型长期异构并存、算力多元供给将成为产业长期结构，复杂 Agent 任务的组织与反馈闭环是新课题。据国家数据局数据，2026 年 3 月我国日均 Token 调用超 140 万亿；基元律动以开源项目 OpenSquilla 探索模型路由与异构适配。",
+      "link": "https://www.qbitai.com/2026/09/494120.html",
+      "source_file": "sources/2026-09-22_基元律动韩凯：从多模型调度到反馈闭环，探索Agent持续进化_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "字节QA并进RD：不是测试被淘汰，而是分工开始融合",
+      "source": "软件工程3.0时代",
+      "digest": "九月字节 Data 部门开始将 QA 并入 RD 序列，截止 2027 年 12 月纯 QA 岗位取消，同期蚂蚁国际也推进研发测试合并。作者认为这不是“砍掉测试”而是“岗位颗粒度调粗”——AI 已能替代每段工作 70%~80%，公司倾向把写页面、写接口、找 bug 并成一人从头管到尾，并用 AI agents 补位，开发、前端等岗位也面临类似重排。",
+      "link": "https://mp.weixin.qq.com/s/TorjNe9vcCyeq0faZUEzZg",
+      "source_file": "sources/2026-09-22_字节QA并进RD：不是测试被淘汰，而是分工开始融合_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "腾讯15年资深后台工程师，转战大模型推理的抉择",
+      "source": "腾讯技术工程",
+      "digest": "腾讯 15 年资深后台工程师讲述从搜索中台 T12 转战大模型推理工程团队、以归零心态入门的经历。文章围绕三条主线：从资深后台到推理工程新人的抉择、推理工程入门路径与自检方法、AI Infra 与通用 Infra 的同源与分野，为 AI 时代犹豫转型的同行提供参考，呼吁追赶效率新时代。",
+      "link": "https://mp.weixin.qq.com/s/g2xZZuqM55AqhbgtKyqM2g",
+      "source_file": "sources/2026-09-22_腾讯15年资深后台工程师，转战大模型推理的抉择_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "虎鲸文娱推出“鲸锐AI”影视制作与管理平台，打造文娱产业新基建",
+      "source": "量子位",
+      "digest": "在云栖“AI+文化传媒”论坛，虎鲸文娱（阿里文娱）推出行业首个 AI 影视制作与管理平台“鲸锐AI”，帮助创作者减少 AI 生成视频无效抽卡、实现制作全程精准可控，并支持大型团队多工种协作。CTO 杜颜龙透露计划 10 月开启内测，面向专业影视创作者开放，定位以 AI 新基建助力中国文娱生产力跃迁。",
+      "link": "https://www.qbitai.com/2026/09/493865.html",
+      "source_file": "sources/2026-09-22_虎鲸文娱推出“鲸锐AI”影视制作与管理平台，打造文娱产业新基建_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "蚂蚁密算韦韬：企业需要的不是更聪明的 AI，而是可信的 AI",
+      "source": "InfoQ",
+      "digest": "蚂蚁密算董事长韦韬在云栖期间首次介绍“可信智能”战略：围绕“双底座—Fabric 架构—密算服务平台”三层构建，底层为密态算力与 HOP 高阶程序可信原生智能体，中间由可信智能 Fabric 组织智能体、知识、数据与安全，上层密算一号平台交付治数、问数、分析建模与行业智能服务，强调企业 AI 走出“试用期”需以可信为前提。",
+      "link": "https://www.infoq.cn/article/hPK2Os8xKJt8ADf8KiRe",
+      "source_file": "sources/2026-09-22_蚂蚁密算韦韬：企业需要的不是更聪明的 AI，而是可信的 AI_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "边开飞机边换引擎：Harness如何解决验证难题",
+      "source": "腾讯云开发者",
+      "digest": "文章以某大型项目约两个月内替换登录系统、且正常需求不停为案例（“边开飞机边换引擎”），指出大型系统改造中代码生成不是难点，验证才是阻塞进度的关键。公开环境难以验证 Redis/DB 异常降级，预发路径偏长，作者分享如何通过 harness 与隔离环境解决 Agent 在最后一公里的环境与权限卡点。",
+      "link": "https://mp.weixin.qq.com/s/2-hYDib0sUzou0zsO98P8w",
+      "source_file": "sources/2026-09-22_边开飞机边换引擎：Harness如何解决验证难题_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里云 Agent Sandbox 重磅发布，构建智能体基础设施底座",
+      "source": "阿里云基础设施",
+      "digest": "阿里云在云栖发布智能体沙箱 Agent Sandbox，为每个 Agent 提供开箱即用、极致弹性、安全隔离的云上执行环境，加速从原型验证到生产运行。它既满足模型 RL 与 RSI 自我进化的毫秒级交付、百万级脉冲弹性，也在 Agent Serving/Use 场景提供工具调用、代码执行与大规模训练评测，每分钟创建吞吐十万个沙箱，P99 低于 180 毫秒，兼容 E2B API 与 K8s 接口。",
+      "link": "https://mp.weixin.qq.com/s/oJwamxNmU3elJbQFe1dVAw",
+      "source_file": "sources/2026-09-22_阿里云 Agent Sandbox 重磅发布，构建智能体基础设施底座_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里云 AgentBridge：为生产级 Agent 构建多源实时上下文",
+      "source": "阿里云云原生",
+      "digest": "阿里云在云栖 AI 实时数据智能论坛发布 AgentBridge，一站式 Agent 实时数据上下文服务，连接企业分散数据源，围绕业务任务组织实时事件、业务事实、历史信息与规则，为 Agent 提供可信、可追溯、持续更新的上下文。文章以一笔退单为例，说明 Agent 落地需关联消息队列、订单库、历史工单与适用规则，AgentBridge 旨在补齐企业 Agent 的数据难题。",
+      "link": "https://mp.weixin.qq.com/s/Q5dL1RlTUIzAgtt_TNqeMg",
+      "source_file": "sources/2026-09-22_阿里云 AgentBridge：为生产级 Agent 构建多源实时上下文_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里云发布 Alibaba Cloud AI Agent Handbook，阐述“智能面积”",
+      "source": "阿里云云原生",
+      "digest": "阿里云在云栖 Agentic 技术主论坛发布 Alibaba Cloud AI Agent Handbook（开源地址 github.com/aliyun/ai-agent-handbook），系统呈现 Agent 前沿思考与落地实践。相较去年《AI 原生应用架构白皮书》，新 Handbook 聚焦工程化（概率智能到可靠生产力）、规模化（稳定安全性能成本）、组织化（Agent 孤岛到智能组织）三大新挑战，提升实践篇幅与社区化协作。",
+      "link": "https://mp.weixin.qq.com/s/gU4n6nGb--2boJiGH6m0mA",
+      "source_file": "sources/2026-09-22_阿里云发布 Alibaba Cloud AI Agent Handbook，阐述“智能面积”_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里吴泳铭：千问将训练5-10万亿参数规模的新模型",
+      "source": "InfoQ",
+      "digest": "在 2026 云栖大会，阿里 CEO 吴泳铭阐述“机器智能”时代思考：机器正成为思考主力，未来机器思考总量将达人类 1000 倍以上。他提出机器智能三大基石为 AI 模型、AI 芯片、AI 云，并披露 Qwen 团队在 RSI 上的进展——旗舰 Qwen 3.8 Max 为 2.4 万亿参数，在训 Qwen 4 继续扩大规模，未来 Qwen 4.5/5 将扩大至 5~10 万亿参数。",
+      "link": "https://www.infoq.cn/article/L9QQKUgo3DEjschVRKD9",
+      "source_file": "sources/2026-09-22_阿里吴泳铭：千问将训练5-10万亿参数规模的新模型_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "阿里推新款真武AI芯片！吴泳铭：3倍性能，国产最强",
+      "source": "芯东西",
+      "digest": "阿里平头哥在云栖推出最新 AI 芯片真武 V900，算力达真武 M890 的 3 倍，显存 216GB，片间互联 1200GB/s，单一集群可扩展至 50 万卡，吴泳铭称其为“目前中国算力性能最强的 AI 芯片”。平头哥副总裁透露将坚持一年一代，2027 Q1 就绪，2028 Q3 推出真武 J900，并同步推出磐久超节点服务。",
+      "link": "https://mp.weixin.qq.com/s/q3Zkjz_sK7UMdTr8qwBlKg",
+      "source_file": "sources/2026-09-22_阿里推新款真武AI芯片！吴泳铭：3倍性能，国产最强_芯东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "陆川手搓历史现场，王珞丹熬夜抽卡，阿里全模态开始兜底生产",
+      "source": "量子位",
+      "digest": "导演陆川团队用阿里视频生成模型，仅 5 天复原 400 年前明代“王恭厂之变”灾难现场，传统影视工业中单场爆炸戏就需 19 天。团队将史料逐层翻译为视觉概念、经四轮提示词优化并参考真实影像校准，阿里模型对烟尘、碎片等复杂画面还原度达预期 95% 以上，AI 已进完整创作链路，视频生成环节贡献超一半。",
+      "link": "https://www.qbitai.com/2026/09/494429.html",
+      "source_file": "sources/2026-09-22_陆川手搓历史现场，王珞丹熬夜抽卡，阿里全模态开始兜底生产_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "网商银行CIO获批、信息科技部总经理获提拔，已打造八大AI工作台",
+      "source": "银行科技研究社",
+      "digest": "9 月 20 日国家金融监督管理总局批复马晓航任网商银行首席信息官（CIO），其由信息科技部总经理提拔，前后两任 CIO 均为技术型高管（均参与该行核心系统研发）。文章介绍网商银行持续推动 AI 应用：已打造服务三农客群的 AI 助手“农小宝”（政策解读、价格分析、病虫害防治、气象预警），并与农业农村部信息……强化 AI 在三农与具体业务领域的技术研发与组织配合。",
+      "link": "https://mp.weixin.qq.com/s/OZBdORo-MGI0ymqCe2ldHg",
+      "source_file": "sources/2026-09-22_网商银行CIO获批、信息科技部总经理获提拔，已打造八大AI工作台_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-22",
+      "title": "AI工程师最先失去的，可能不是工作，而是说“不”的权力！AI教父辛顿：模型出问题，现在还要靠内部员工爆料",
+      "source": "51CTO技术栈",
+      "digest": "图灵奖得主、“AI 教父”辛顿在 CNN 访谈中直言，当前模型出现越权、欺骗或异常协作时，外界往往无法直接看到全过程，企业高度依赖内部员工爆料才发现模型问题。他担忧当模型开始参与训练与评测下一代模型、企业不再需要大量研究人员时，能制衡模型的话语权将弱化。文章警示：AI 安全不能只靠工程师良心或人才稀缺，开发者将 Agent 接入生产系统需重新审视治理机制。",
+      "link": "https://mp.weixin.qq.com/s/fyD9YgLKjFTZmP9iPD1tOw",
+      "source_file": "sources/2026-09-22_AI工程师最先失去的，可能不是工作，而是说“不”的权力！AI教父辛顿：模型出问题，现在还要靠内部员工爆料_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-21",
       "title": "刚刚，爆火模型Jev全面开放，所有用户送1.2亿token",
