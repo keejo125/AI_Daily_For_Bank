@@ -1,7 +1,537 @@
 {
-  "updated_at": "2026-09-23T05:20:45.316577",
-  "total": 2265,
+  "updated_at": "2026-09-24T05:30:47.919606",
+  "total": 2318,
   "articles": [
+    {
+      "date": "2026-09-23",
+      "title": "Anthropic 发布 Claude Opus 5.5：运行成本较 Opus 5 降低 40%",
+      "source": "MarkTechPost",
+      "digest": "Anthropic 发布 Claude 5.5 系列首款模型 Claude Opus 5.5，官方称其在多数任务上达到 Claude Fable 5.1 水平，典型任务运行成本较 Opus 5 降低约 40%、输出速度提升超 30%。在智能体编程、计算机操作与知识工作基准上领先，通过托管 API 提供、未开源权重，已上线 Claude 及 AWS、Google Cloud、Azure 等平台。",
+      "link": "https://www.marktechpost.com/2026/09/22/anthropic-claude-opus-5-5-release/",
+      "source_file": "sources/2026-09-23_Anthropic Releases Claude Opus 5.5_ Fable 5.1-Leve_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Gemini 3.8 文本转语音模型发布",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 发布 Gemini 3.8 Flash TTS 与 Flash-Lite TTS，是其迄今最具表现力的音频生成模型。可用自然语言从零创建或复刻角色音色，逐行控制节奏、情绪与对话音效，面向有声书、播客与规模化实时语音智能体，并内置水印等安全工具。",
+      "link": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "source_file": "sources/2026-09-23_Gemini 3.8 text-to-speech says hello_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "OpenAI 发布 GPT-6 Sol 与 Luna 两款新模型",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布 GPT-6 家族新成员 GPT-6 Sol 与 GPT-6 Luna，将 GPT-6 Astra 在专业工作、事实性、编码、计算机使用与对齐方面的能力下放至更快、更经济的模型。两款模型 API 价格较 GPT-5.6 促销价下调 50%，得益于缓存与推理效率优化，主打以更低的单位任务成本承接日常 Agent 工作负载，目前已开放 API 调用。",
+      "link": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "source_file": "sources/2026-09-23_Introducing GPT-6 Sol and Luna_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Kyutai 发布 Voice of Reason：语音原生数学推理模型",
+      "source": "MarkTechPost",
+      "digest": "法国 AI 实验室 Kyutai 发布 Voice of Reason，两款开放权重的语音到语音模型可“出声”解题。两者均从 GLM-4-Voice-9B 出发，经 SFT 与强化学习训练，无需转录步骤、循环中也无独立文本 LLM。在口语 GSM8K 上准确率从基座的 27.3% 提升至 77.1%，可单张 H100 自托管。",
+      "link": "https://www.marktechpost.com/2026/09/22/kyutai-releases-voice-of-reason-a-speech-native-model-that-solves-spoken-math-with-reinforcement-learning/",
+      "source_file": "sources/2026-09-23_Kyutai Releases Voice of Reason_ A Speech-Native M_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Adobe 推出 Android 版免费视频编辑工具 Premiere",
+      "source": "Solidot",
+      "digest": "Adobe 推出功能完整的 Android 版免费视频编辑工具 Premiere，除 AI 视频生成功能外均免费，无需订阅或注册 Creative Cloud 账户。支持多视频轨剪辑、特效与最高 4K 导出，并从音频提取、降噪到旁白一应俱全；AI 功能每月免费提供 250 credits，收费为每月 8 美元或每年 70 美元。",
+      "link": "https://www.solidot.org/story?sid=85459",
+      "source_file": "sources/2026-09-23_Adobe 推出 Android 版免费视频编辑工具 Premiere_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Agents成新一代造王者，开发者正在快速失去技术决定权",
+      "source": "InfoQ",
+      "digest": "文章拆解行业权力结构的迁移：Agent 不再只是补全代码的工具，而开始替开发者选择编程语言、框架、库甚至界面字体，且常无视“不要用这个”的明确指令。作者援引《新造王者》指出，决定权正从开发者快速转移至 Agent，呼吁行业正视尚未准备好的治理与责任问题。",
+      "link": "https://www.infoq.cn/article/bakwHvI7PTqZr4Mh45xi",
+      "source_file": "sources/2026-09-23_Agents成新一代造王者，开发者正在快速失去技术决定权_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Airbnb 扩大 GPT-6 Astra 与 OpenAI 前沿模型使用权限",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍 Airbnb 如何扩大 GPT-6 Astra 与 OpenAI 前沿模型的使用权限，帮助工程团队更高效地排查缺陷、设计系统与加速交付。文章为 OpenAI 官方客户实践案例，展示前沿模型在大型互联网产品工程与协作场景中的落地方式。",
+      "link": "https://openai.com/index/airbnb-gpt-6-astra",
+      "source_file": "sources/2026-09-23_Airbnb widens access to GPT-6 Astra and OpenAI fro_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "OpenAI 改进 GPT-6 提示词缓存：更高命中率与更低时延成本",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍 GPT-6 在提示词缓存上的改进：更高的缓存命中率、新的诊断信息、显式断点与可控开关，用以降低智能体场景下的响应时延与调用成本。对长上下文、多轮对话与跨工具调用的 Agent 工作负载，缓存复用可显著减少重复处理。",
+      "link": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "source_file": "sources/2026-09-23_Better prompt caching for GPT-6_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Dropbox 升级 Riviera 平台，支持 AI 工作负载",
+      "source": "InfoQ",
+      "digest": "Dropbox 将 Riviera 从文件预览服务演进为通用内容处理平台，支持 300+ 文件格式与 100+ 转换能力，每秒执行数十万次转换，并支撑 Search、Sign、Dash 等 AI 工作负载复用早期内容处理基础设施。平台以可组合转换管道将编排与执行分离，并通过公共 API 开放文档转 Markdown、音视频转录与结构化元数据提取。",
+      "link": "https://www.infoq.cn/article/jJAcfJO5e0ElPhIxwwxo",
+      "source_file": "sources/2026-09-23_Dropbox 升级 Riviera 平台，支持 AI 工作负载_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "GPT-6猛砍价，Opus 5.5忙“变好用”：模型价格战，已经不能只看API定价",
+      "source": "InfoQ",
+      "digest": "文章对比 OpenAI 与 Anthropic 相隔约一小时的新一轮模型更新：GPT-6 Sol/Luna 将能力下放并大幅压低价格，Opus 5.5 则强化 Coding 与 Agent 能力、把“Communication”列为重点升级方向并降本。作者指出，模型价格战已从刷新能力上限转向比拼完成真实任务的单位成本，开发者关注点也从“能多强”变为“修好没”。",
+      "link": "https://mp.weixin.qq.com/s/NYwLNzEpMYsM_AHxsnt7rw",
+      "source_file": "sources/2026-09-23_GPT-6猛砍价，Opus 5.5忙“变好用”：模型价格战，已经不能只看API定价_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Grab 与 OpenAI 在东南亚推 AI 技能普及计划",
+      "source": "OpenAI",
+      "digest": "OpenAI 与东南亚超级应用 Grab 启动“GO Forward with AI”区域计划，帮助 3 万名合作伙伴在东南亚构建实用 AI 技能。文章为 OpenAI 官方合作案例，聚焦前沿模型在出行、配送与生活服务等多语言场景中的普惠式落地。",
+      "link": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "source_file": "sources/2026-09-23_Grab and OpenAI bring practical AI skills to South_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Harvey 借助 GPT-6 Astra 将法律上下文转化为更强草稿",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍法律科技公司 Harvey 如何使用 GPT-6 Astra 生成更具结构性与上下文感知的法律文书，让律师得以聚焦策略而非草稿整理。文章为 OpenAI 官方客户实践案例，展示前沿模型在专业法律服务场景中的应用价值。",
+      "link": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+      "source_file": "sources/2026-09-23_Harvey turns legal context into stronger drafts wi_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "invideo 借助 GPT-6 Astra 将调色效率提升 3 倍",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍视频创作平台 invideo 如何用 GPT-6 Astra 更精准地规划编辑、将色彩校正与分级效率提升 3 倍，并在一天内产出 50 个自定义特效。文章为 OpenAI 官方客户实践案例，展示前沿模型在创意生产管线中的应用。",
+      "link": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "source_file": "sources/2026-09-23_How invideo improves color grading 3x with GPT‑6 A_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "OpenAI 推出 MentalHealthBench 心理健康评测基准",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 MentalHealthBench，一个由专家参与设计的基准，用于评估 AI 在现实心理健康对话中给出有帮助且安全回应的能力。文章为 OpenAI 官方评测工具发布，旨在更严谨地衡量模型在敏感心理健康场景下的表现。",
+      "link": "https://openai.com/index/introducing-mentalhealthbench",
+      "source_file": "sources/2026-09-23_Introducing MentalHealthBench_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Jev vs Decitron：同为决策AI，为什么不是一回事？",
+      "source": "量子位",
+      "digest": "文章对比两款“决策 AI”：TypeSafe AI 的 Jev 把 AI 输出变成 Choice/Score/Probability，做瞬时判断、服务软件与 Agent；中科闻歌 6 月发布的 Decitron 决策机则把现实拆成状态、主体、行动与结果，用多智能体推演与博弈做复杂世界推演。两者共同点是让 AI 输出从“生成内容”走向“支持判断与行动”，并显式量化不确定性。",
+      "link": "https://www.qbitai.com/2026/09/496352.html",
+      "source_file": "sources/2026-09-23_Jev vs Decitron：同为决策AI，为什么不是一回事？_量子位_524c68.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "诺基亚开源 AnyJev：无需训练即可将任意开源 LLM 转为决策模型",
+      "source": "MarkTechPost",
+      "digest": "诺基亚应用研究团队开源 AnyJev，一个把开源 LLM 变成决策模型的 Python 库，无需训练。它借用了 TypeSafe AI 的 Jev 接口，给定类型化问题即可返回带阈值概率的决策，概率直接从模型 next-token 分布读取。支持选择、评分、比较三类问题，已上 PyPI、采用 Apache-2.0 许可。",
+      "link": "https://www.marktechpost.com/2026/09/23/nokia-open-sources-anyjev-a-training-free-layer-that-turns-any-open-llm-into-a-calibrated-decision-model/",
+      "source_file": "sources/2026-09-23_Nokia Open-Sources AnyJev_ A Training-Free Layer T_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "OpenAI 向乌克兰开放网络防御访问权限",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布将 Daybreak 项目访问权限扩展至乌克兰政府，以支持其民用基础设施的网络防御。文章为 OpenAI 官方政策与安全公告，反映前沿 AI 企业在地缘政治冲突中提供网络防护能力的立场。",
+      "link": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+      "source_file": "sources/2026-09-23_OpenAI extends cyber access to Ukraine for civilia_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Redis之父质疑Jev狂热！绝大多数开发者其实不需要它",
+      "source": "InfoQ",
+      "digest": "Redis 作者 antirez 公开质疑 Jev 热潮，称围绕它的炒作暴露了 AI 泡沫中多数人“分不清什么重要”。Jev 由 TypeSafe AI 于 9 月 15 日发布，定位为不生成文本、只做分类评分决策的“System One 模型”，但 antirez 认为绝大多数开发者其实并不需要它，热度与分量并不相称。",
+      "link": "https://www.infoq.cn/article/POjWf9P5wCYjQaB39jD6",
+      "source_file": "sources/2026-09-23_Redis之父质疑Jev狂热！绝大多数开发者其实不需要它_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Ringg 用 OpenAI 智能体自动处理 65% 客户来电",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍 Ringg 如何使用 GPT-5.6 驱动覆盖语音、聊天、WhatsApp 与网页的多语言智能体，自动解决高达 65% 的客户来电，成本较 GPT-4.1 降低约 90%。文章为 OpenAI 官方客户实践案例，展示智能体在客服场景的规模化落地。",
+      "link": "https://openai.com/index/ringg",
+      "source_file": "sources/2026-09-23_Ringg’s AI agents resolve up to 65% of customer ca_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "SpeakON 推出磁吸 AI 语音按钮",
+      "source": "MarkTechPost",
+      "digest": "SpeakON 发布一款 25 克磁吸 iPhone 背夹 AI 语音按钮，自带麦克风，可将整理好的成品文本直接写入当前打开的 App。产品定位为“AI Communicator”而非听写工具，瞄准创始人、管理者等没时间停下手来打字的场景，强调输出而非输入的智能化。",
+      "link": "https://www.marktechpost.com/2026/09/22/speakon-ships-a-magsafe-ai-voice-button/",
+      "source_file": "sources/2026-09-23_SpeakON Ships a MagSafe AI Voice Button With Its O_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Vibe Coding已经不够用了！Lovable创始人：AI编程最大的受益者不是程序员，而是干了十多年的行业老兵",
+      "source": "51CTO技术栈",
+      "digest": "Lovable 联合创始人兼 CEO Anton Osika 在接受访谈时表示，行业已走过“Vibe Coding”阶段，日常软件的生产权正在向非技术人群扩散。Lovable 内部数据显示 55% 用户拥有 11 年以上职业经验、约 80% 自认非技术岗，开发者工作则继续向架构、安全与生产责任迁移。",
+      "link": "https://mp.weixin.qq.com/s/AFVAMRv1SdPsM6-wWp2WsQ",
+      "source_file": "sources/2026-09-23_Vibe Coding已经不够用了！Lovable创始人：AI编程最大的受益者不是程序员，而是干了十多年的行业老兵_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "不要被 AI 炒作愚弄",
+      "source": "Solidot",
+      "digest": "文章提醒公众不要被 AI 公司的拟人化叙事与“失控模型”炒作所误导。作者指出，近期多起涉及模型的安全事件更多源于厂商疏于基本安全措施，而非真正意义上的“AI 智能体创造文明”；数学突破的原创性也受数学家质疑。AI 企业借炒作模型失控将责任转嫁给大模型本身，公众应警惕。",
+      "link": "https://www.solidot.org/story?sid=85466",
+      "source_file": "sources/2026-09-23_不要被 AI 炒作愚弄_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "刚刚，Codex Bot曝光！正面迎战小扎的Muse，比GPT-6还重磅？",
+      "source": "APPSO",
+      "digest": "文章梳理 OpenAI 个人 AI 智能体 Aeon（Codex Bot）的曝光线索：在 ChatGPT 客户端代码中，Aeon 与用户并列身份（aeonId 与 accountUserId 同层），且 gpt-6-astra-aeon 开关、aeon-core 指令集显示其为架在 Codex 之上的有状态持久化智能体与编排系统，而非新基础模型，呼应 Meta Muse 与 xAI Grok Bot 的个人智能体之争。",
+      "link": "https://mp.weixin.qq.com/s/7LODRsNVOdlFRceBIt-4MQ",
+      "source_file": "sources/2026-09-23_刚刚，Codex Bot曝光！正面迎战小扎的Muse，比GPT-6还重磅？_APPSO.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "英国准备施压 Google 向 Android 和 Chrome 用户展示 AI 助手选择屏",
+      "source": "Solidot",
+      "digest": "英国竞争监管机构 CMA 公布提案，要求 Google 在用户首次设置 Android 手机或打开 Chrome 时展示多种搜索引擎与符合技术安全标准的 AI 助手选择屏，并每年提示更换默认搜索引擎。提案进入公众咨询阶段，截止 10 月 9 日，CMA 预计年底前做出最终决定。",
+      "link": "https://www.solidot.org/story?sid=85465",
+      "source_file": "sources/2026-09-23_英国准备施压 Google 向 Android 和 Chrome 用户展示 AI 助手选择屏_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "实时世界模型进入“全科生”阶段，PixVerse R2先交卷！",
+      "source": "量子位",
+      "digest": "爱诗科技发布实时世界模型 PixVerse R2，把 LLM 的 Scaling 逻辑搬进实时世界模型：基于统一可扩展框架将完整时空关系压进模型，让场景沿时间持续演化、前后状态一致（“记得住”），并统一文字、图像、声音、动作，边生成边响应、音画同步（“控得动”），进入游戏与虚拟交互等场景。",
+      "link": "https://www.qbitai.com/2026/09/496329.html",
+      "source_file": "sources/2026-09-23_实时世界模型进入“全科生”阶段，PixVerse R2先交卷！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "斑马智能发布端模型AutoOmni2.0，让元神AI更懂“我的世界”",
+      "source": "量子位",
+      "digest": "云栖大会期间斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B，采用 MoE 架构，普通任务能力堪比 10 倍参数量云模型。亮相 AutoClaw 2.0 智舱协作服务实车方案，提出“三个连通”（云端与车端、多终端、用户与服务），让元神 AI 从智舱 AI 迈向 Personal AI。",
+      "link": "https://www.qbitai.com/2026/09/496471.html",
+      "source_file": "sources/2026-09-23_斑马智能发布端模型AutoOmni2.0，让元神AI更懂“我的世界”_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-23",
+      "title": "2026 年的云栖，阿里给 AI 行业递了一把新尺子",
+      "source": "InfoQ",
+      "digest": "2026 云栖大会 MaaS & Agent 技术主论坛上，阿里战略副总裁文征提出“智能价值密度=单任务价值×Token 生产效率×Token 单位能力”的新公式，标志 Agent 竞争从模型发布转向落地与价值交付。千问 AI 平台客户数不到一年增长 6 倍，并上线生产级 Agent 服务平台 Agent Studio 与手机/智舱行业方案。",
+      "link": "https://www.infoq.cn/article/zSPQbRwmS0AGpeTAhu9r",
+      "source_file": "sources/2026-09-23_2026 年的云栖，阿里给 AI 行业递了一把新尺子_InfoQ_aceb53.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "4096 张卡如何成为“一台计算机”？读懂华为的超节点布局",
+      "source": "InfoQ",
+      "digest": "华为在 HC2026 发布昇腾 960 超节点，全球首个采用 NPO 技术的超节点，支持 4096 卡、面向十万亿参数大模型训练推理。配合灵衢 UnifiedBus、11 颗关键芯片与 Hi-ONE 光引擎，马尔科夫实验室仿真显示由 4K 超节点组成的十万卡集群 MFU 较 8 卡服务器集群提升 2.75 倍。",
+      "link": "https://www.infoq.cn/article/uG1Um83JFgz2BVxWRYC9",
+      "source_file": "sources/2026-09-23_4096 张卡如何成为“一台计算机”？读懂华为的超节点布局_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "AI写得快 ≠ 真正提效：一文讲清Harness“记忆”和“验证闭环”",
+      "source": "腾讯云开发者",
+      "digest": "文章系统讲解用 Harness 给 AI 编程套上“记忆、动手、闭环、守门”的驾驭系统：通过会话复盘自动写入两级索引知识库、用 hook 强制“先查知识库再动手”；并让 AI 改完代码后继续完成验证、提交与上线确认，在关键路口保留人工守门，解决“写得快≠真正提效”。",
+      "link": "https://mp.weixin.qq.com/s/SVm_GONXEElhEsX6CXylKg",
+      "source_file": "sources/2026-09-23_AI写得快 ≠ 真正提效：一文讲清Harness“记忆”和“验证闭环”_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "AgentKit 模型网关上手指南｜告别多模型管理混乱",
+      "source": "火山引擎Agent社区",
+      "digest": "文章以 DeepSeek Harness 为例，手把手演示火山引擎 AgentKit 模型网关的接入与验证全流程。AgentKit 把模型接入、密钥托管、故障兜底与用量观测收拢到单一入口，业务侧只需指向网关、换掉密钥即可接入，并以 DeepSeek Harness 场景说明多模型统一治理的落地方式。",
+      "link": "https://mp.weixin.qq.com/s/THbeUTZ1gvnU9tyCAwfxsA",
+      "source_file": "sources/2026-09-23_AgentKit 模型网关上手指南｜告别多模型管理混乱_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "DeepSeek新论文公开Agent训练！梁文锋署名",
+      "source": "量子位",
+      "digest": "DeepSeek 公开梁文锋署名的 DSec（DeepSeek Elastic Compute）平台技术细节，这是为 Agent 训练批量制造沙盒的基础设施。系统单集群约 160 节点、3 万核 CPU、250TB 内存，单日服务约 300 万个沙盒、峰值并发超 38 万、创建速度超每秒 5000 个。论文为四类 Agent 任务提供 FnCall、Container、MicroVM、Full VM 四种后端与统一 Python SDK。",
+      "link": "https://www.qbitai.com/2026/09/496393.html",
+      "source_file": "sources/2026-09-23_DeepSeek新论文公开Agent训练！梁文锋署名_量子位_df0171.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Qoder 协作能力上线，「项目」和「讨论」来了",
+      "source": "Qoder",
+      "digest": "Qoder 升级协作能力，发布 Projects 与 Discussion 功能以应对“人人有 Agent、组织效率却未提升”的难题。Projects 用 Issue 组织多人研发工作、看板跟踪进度；Discussion 支持邀请同事与专业 Agent 共同讨论需求、评审方案或分析缺陷，让人不再做智能体之间的“人肉 API”。",
+      "link": "https://mp.weixin.qq.com/s/Ay2Kq9wwTSEUhqFOg5vyKA",
+      "source_file": "sources/2026-09-23_Qoder 协作能力上线，「项目」和「讨论」来了_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Qwen一号位定了！刘大一恒接棒",
+      "source": "量子位",
+      "digest": "阿里云栖大会官网嘉宾栏确认，前华为天才少年刘大一恒接棒林俊旸出任千问（Qwen）LLM 项目负责人，title 为阿里巴巴 ATH 事业群 Token Foundry Qwen LLM 项目负责人。刘大一恒本硕博就读川大、师从吕建成，主导 Qwen1 至 Qwen3.5 系列及 Qwen-Math 等开发，累计参与 300 多款 Qwen 模型开源。",
+      "link": "https://www.qbitai.com/2026/09/496384.html",
+      "source_file": "sources/2026-09-23_Qwen一号位定了！刘大一恒接棒_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "九章云极问鼎SAIR数学蒸馏挑战赛 四赛道满分全球第一",
+      "source": "InfoQ",
+      "digest": "九章云极言表实验室（yanbiao.ai）在 SAIR Foundation 数学蒸馏挑战赛第二阶段全部四个赛道取得满分第一。赛事由陶哲轩等组织，要求以 Lean 4 形式化证明或反例作答、由确定性验证器检验。同期九章云极与北大论文为 28 个长期开放等式建立新的 Austin 分类。",
+      "link": "https://www.infoq.cn/article/LxR0ykyXyE0QXC7rfB9q",
+      "source_file": "sources/2026-09-23_九章云极问鼎SAIR数学蒸馏挑战赛 四赛道满分全球第一_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "人人都在造世界模型，HappyWorld‑Bench 试着给出一张统一考卷",
+      "source": "InfoQ",
+      "digest": "文章指出世界模型行业“没有统考”：Google DeepMind Genie 3、World Labs、具身公司各用三套规则自证领先。云栖大会发布的 HappyWorld-Bench 试图统一评测——以表征（记住世界有什么）、预测（动作带来什么后果）、交互（事后更新状态）三问，给出可比较的世界模型能力考卷。",
+      "link": "https://www.infoq.cn/article/3rXojuNPmJANFv8iWqI8",
+      "source_file": "sources/2026-09-23_人人都在造世界模型，HappyWorld‑Bench 试着给出一张统一考卷_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "从 Coding 到 Running：AI Native SRE Agent 的工程实践",
+      "source": "InfoQ",
+      "digest": "腾讯云 CloudQ 技术负责人姚斌斌在 AICon 分享 AI Native SRE Agent 实践：软件 90% 以上时间处于运行状态，而“Running 世界”进展缓慢。文章介绍如何用全景图谱加 Agent 让运行世界变得可理解、可操作、可验证，覆盖建图、Harness 到评测，并落到运行治理实战案例。",
+      "link": "https://mp.weixin.qq.com/s/8LVwfSPux7-ITrSPSmvGew",
+      "source_file": "sources/2026-09-23_从 Coding 到 Running：AI Native SRE Agent 的工程实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "从“单目感知”到“多视角立体对齐”：PrismAlign 重新定义文档结构化提取的精度上限",
+      "source": "InfoQ",
+      "digest": "EMNLP Industry 2026 收录华为工作 PrismAlign，针对 VLM 在复杂表格、低质扫描等场景的幻觉问题，借鉴人类双目立体视觉先验，用多个 VLM 视角差异化观测、再以贝叶斯决策层做一致性对齐。文章认为文档结构化提取的还原精度正成为大模型时代数据管线的“有效位宽”。",
+      "link": "https://www.infoq.cn/article/ytHwXAq6vHzUm23RNYhk",
+      "source_file": "sources/2026-09-23_从“单目感知”到“多视角立体对齐”：PrismAlign 重新定义文档结构化提取的精度上限_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "从个人生产力到企业生产力，阿里云发布企业级 Agent 平台 AgentCore",
+      "source": "阿里云云原生",
+      "digest": "阿里云在云栖大会发布企业级 Agent 平台 AgentCore，面向企业 AI 中台，提供智能体的构建、运行、治理与调优能力，并引入 Team 协作空间，以 IM 式“岗位角色”组织长期工作。文章指出 Agent 成为企业生产力面临工程化、规模化与组织化三大挑战，AgentCore 旨在让智能体进入核心业务流程。",
+      "link": "https://mp.weixin.qq.com/s/jjYueFnlsPxcO9I9ZDK9Vw",
+      "source_file": "sources/2026-09-23_从个人生产力到企业生产力，阿里云发布企业级 Agent 平台 AgentCore_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "从单卡到千卡互联，平头哥真武 V900 背后的 AI 算力变局",
+      "source": "极客公园",
+      "digest": "平头哥在云栖大会发布新一代训推一体 AI 芯片真武 V900，搭载 216GB 显存、片间互联带宽 1200GB/s，单芯片性能为上代 M890 的 3 倍，为中国算力性能最强 AI 芯片，计划 2027 Q1 量产。文章指出 Agentic 时代负载从训练走向推理、硬件竞争从单卡扩展到算存网全栈协同的超节点。",
+      "link": "http://www.geekpark.net/news/370864",
+      "source_file": "sources/2026-09-23_从单卡到千卡互联，平头哥真武 V900 背后的 AI 算力变局_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "剪映，杀入 AI 互动影游",
+      "source": "极客公园",
+      "digest": "剪映在“AI 新创作发布会”集中更新专业版、移动端与生态：专业版新增由无限画布与多轨编辑器组成的“剪映 Hub”创作工作台，智能创作 Agent“剪映助手”进入具体剪辑工程；并首次展示 AI 互动影游创作平台 ICG Studio，让创作者从剧本出发制作可观看、选择与探索的互动故事。",
+      "link": "http://www.geekpark.net/news/370883",
+      "source_file": "sources/2026-09-23_剪映，杀入 AI 互动影游_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "小K快评：大厂间的AI大战进入“集团军”时代",
+      "source": "财联社AI daily",
+      "digest": "文章观察字节、阿里、腾讯在 AI 上的集团军式进击：字节整合豆包、飞书、火山引擎三军齐发企业 AI 市场；阿里以自研芯片、大模型与 AI 云全栈为基础断言思考力商品化；腾讯走生态赋能路线，WorkBuddy 已成药日活最高的办公效率智能体。竞争焦点从拼模型参数转向拼生态厚度与“能办事”的能力。",
+      "link": "https://mp.weixin.qq.com/s/4Glv2q2SQcpoECpdNbPPTQ",
+      "source_file": "sources/2026-09-23_小K快评：大厂间的AI大战进入“集团军”时代_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "把项目整包外包给 AI 蜂群：WorkSwarm Code 空间与集群模式实测",
+      "source": "CSDN",
+      "digest": "作者实测华为开源 AI Agent 平台 openJiuwen 的 WorkSwarm Code 集群模式，将完整小项目整包交付、仅做验收。WorkSwarm 不长在编辑器里，而是接下整个需求返回可运行成品，并集成刚发布的开源智能体资产平台 Agentic Hub（技能、连接器、插件、专家与专家团五类资产）。",
+      "link": "https://mp.weixin.qq.com/s/HuKCgxTq9zaNCyMOJoC63A",
+      "source_file": "sources/2026-09-23_把项目整包外包给 AI 蜂群：WorkSwarm Code 空间与集群模式实测_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "拆解下阿里的 AI 经济学，与它的下注",
+      "source": "极客公园",
+      "digest": "文章解读吴泳铭在云栖大会的主旨演讲，认为阿里已从“跟上时代”转向以经济学语言定义未来下注：机器供给的思考总量将达人类千倍以上，“思考力商品化”重构供给、需求与计价。作者视其为阿里对公司架构、投入结构与阵型的更高维战略思考。",
+      "link": "http://www.geekpark.net/news/370865",
+      "source_file": "sources/2026-09-23_拆解下阿里的 AI 经济学，与它的下注_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "智谱把 ZCode 开源了，然后呢？",
+      "source": "InfoQ",
+      "digest": "起因是开发者发现智谱 AI 编程工具 ZCode 会生成含 .git 历史等的本地工作区快照并存在上传阿里云 OSS 的链路，引发信任危机。智谱回应称源自代码库索引功能、相关数据销毁且未用于训练并致歉，随后将 ZCode 整体开源（Apache 2.0）并切断快照上传链路，邀请信通院与绿盟安全核查。",
+      "link": "https://www.infoq.cn/article/qEHi6k5ycwXUiasvfNKH",
+      "source_file": "sources/2026-09-23_智谱把 ZCode 开源了，然后呢？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "汇智智能发布Hellome：国内首个FDE直连智能体服务平台，把AI交付周期压进“周”",
+      "source": "量子位",
+      "digest": "南京人工智能企业汇智智能发布一站式 AI 服务平台 Hellome——国内首个 FDE（前沿部署工程师）直连智能体服务平台，把 AI 落地周期压至周级。客户发布需求、认证 FDE 承接，依托桌面智能体 Hzhermes 完成方案设计、部署与上线，方案沉淀为可复用“技能包”，并启动 FDE 百万激励计划。",
+      "link": "https://www.qbitai.com/2026/09/496493.html",
+      "source_file": "sources/2026-09-23_汇智智能发布Hellome：国内首个FDE直连智能体服务平台，把AI交付周期压进“周”_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "看见潮水的人很多，会造船的人很少",
+      "source": "软件工程3.0时代",
+      "digest": "文章以 AiDD 峰会为契机提出：AI 对研发的重塑不是“X+AI”而是“AI+X”，方向对了努力才有复利。作者指出模型越强、需求澄清、边界把关、结果验收、经验沉淀等被遮住的问题越浮出水面，呼吁国内研发组织把 AI 造进船里而非浮在水面，并给出 AI+开发/测试等五条主线。",
+      "link": "https://mp.weixin.qq.com/s/909vZ1pCY2qyWIdWwL-J1Q",
+      "source_file": "sources/2026-09-23_看见潮水的人很多，会造船的人很少_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "算法上线之后怎么办？格灵深瞳 VE²S 想解决视觉 AI 的长期运营问题",
+      "source": "InfoQ",
+      "digest": "格灵深瞳发布视觉智能工坊 VE²S，针对视觉 AI“上线即巅峰、上线即过期”的痛点，将算法生产、业务编排、现场运行与数据回流纳入同一体系。由 MENTOR（生产）、EXPERT（编排）、GBOX（边缘推理）三部分组成，现场误报漏报与难例可回流重新进入模型生产。",
+      "link": "https://www.infoq.cn/article/7CaVwi5bOzveHWUqv1i6",
+      "source_file": "sources/2026-09-23_算法上线之后怎么办？格灵深瞳 VE²S 想解决视觉 AI 的长期运营问题_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧",
+      "source": "量子位",
+      "digest": "联想携天禧 AI 全场景多端矩阵亮相云栖大会，提出“人+Agent”正成为组织最小生产单元。联想内部以 3 人、30 天、零例会跑通产品从设计到发布，并定义 AI 主机为“AI 执行团队”。文章认为比拼模型的时代在结束，比拼人+Agent 组织方式的时代已开始，端云协同是长期均衡。",
+      "link": "https://www.qbitai.com/2026/09/496609.html",
+      "source_file": "sources/2026-09-23_联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "让Token生产更高效：异构混推的关键技术演进与创新实践",
+      "source": "InfoQ",
+      "digest": "商汤大装置资深专家在 Token 工厂异构混训混推技术研讨会分享：Agent 时代推理负载呈现长上下文、多轮与突发长尾特征，日均 Token 服务量已从 2 月 0.46 万亿增至 8 月 4.5 万亿。文章介绍其“横向编排”统一异构算力画像、“纵向优化”提升有效吞吐与降低单位产能成本的实践。",
+      "link": "https://www.infoq.cn/article/N1g4SQh4w4FLl4tHA7xg",
+      "source_file": "sources/2026-09-23_让Token生产更高效：异构混推的关键技术演进与创新实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "达卯科技完成新一轮融资，算电协同核心软件层“稀缺标的”",
+      "source": "量子位",
+      "digest": "算电协同 AI 能源运营操作系统企业达卯科技完成约 2 亿元新一轮融资，此前 A+ 轮由宁德时代旗下溥泉资本领投。达卯依托自研垂类能源大模型与智能体集群，打造算电协同 2.0 平台・AIDC 绿电直连能源运营操作系统，股东含宁德时代、商汤、寒武纪，是赛道内率先跑通商业化闭环的软件层稀缺标的。",
+      "link": "https://www.qbitai.com/2026/09/496494.html",
+      "source_file": "sources/2026-09-23_达卯科技完成新一轮融资，算电协同核心软件层“稀缺标的”_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "这是一篇把“RSI”讲明白的科普级综述",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院发布 RSI（递归自我改进）科普综述：从 OpenAI 将“自我改进”列入 GPT-5.6 评测、快手 AgentX 与 Google 让智能体参与研发谈起，沿五次“边界推进”梳理 AI 如何逐步接手改进 AI 本身，并辨析“闭环怎么合上比是否合上更重要”，澄清 RSI 指数并非任务通过率或完成度。",
+      "link": "https://mp.weixin.qq.com/s/Riw5k5WZJAB93WbCpSBEHQ",
+      "source_file": "sources/2026-09-23_这是一篇把“RSI”讲明白的科普级综述_腾讯研究院.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "连接数据、算力与AI，蚂蚁密算发布企业级可信智能云服务平台“密算一号”",
+      "source": "InfoQ",
+      "digest": "蚂蚁密算在云栖大会发布企业级可信智能云服务平台“密算一号”并启动定向邀测。平台以密态计算为基础，让企业数据在“可用不可见、可控可计量”前提下安全参与跨机构合作与云上 AI 应用，提供跨机构数据合作、云上 AI 安全使用与业务经验沉淀复用三大核心能力。",
+      "link": "https://www.infoq.cn/article/UDTLt0xUTfQVQpMF0t13",
+      "source_file": "sources/2026-09-23_连接数据、算力与AI，蚂蚁密算发布企业级可信智能云服务平台“密算一号”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-23",
+      "title": "错误码排查从 3～8 小时到分钟级，Agent怎么做到的？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队分享如何用 Agent 将错误码排查从人工 3～8 小时压缩到分钟级。文章介绍其将历史工单、代码与监控信号沉淀为可检索知识，由 Agent 自动定位根因并给出修复路径的闭环实践，是“AI Native”运维在真实研发场景落地的案例。",
+      "link": "https://mp.weixin.qq.com/s/0QSAGGgffJoaG3iO6wItng",
+      "source_file": "sources/2026-09-23_错误码排查从 3～8 小时到分钟级，Agent怎么做到的？_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-22",
       "title": "Grok 4.7来了！网友实测先把SpaceX玩坏了，大火箭走起",
