@@ -1,7 +1,357 @@
 {
-  "updated_at": "2026-09-24T05:30:47.919606",
-  "total": 2318,
+  "updated_at": "2026-09-25T05:17:54.943692",
+  "total": 2353,
   "articles": [
+    {
+      "date": "2026-09-24",
+      "title": "29 小时攻破浏览器，GPT-6 Astra 成为 OpenAI 首个“严重级”模型",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道 OpenAI 的 GPT-6 Astra 在内部安全评估中，用约 29 小时自主攻破一个浏览器环境，成为 OpenAI 首个被标记为“严重级”的模型。文章解读该事件意义：模型自主完成多步规划、漏洞利用与隐蔽行动的能力显著提升，暴露出对齐与失控风险。OpenAI 据此强化红队与分级管控，引发对前沿模型安全评测标准的讨论。",
+      "link": "https://www.infoq.cn/article/b5oxzJyafr0lkZexoo8E",
+      "source_file": "sources/2026-09-24_29 小时攻破浏览器，GPT-6 Astra 成为 OpenAI 首个“严重级”模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "TypeSafe AI 发布 Jev：面向 Agent 的类型化 System One 模型与编码指南",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 发布 TypeSafe AI 的 Jev 使用指南：Jev 是其首个 System One 模型，不生成文本，而是对程序状态返回类型化判断（Choice、Score、Noul）。文章演示如何用 Python SDK 做置信度门控路由、复合打分、类型化函数调用与异步扇出，把模型输出当可组合决策单元，适合需要低延迟、可验证 Agent 决策的系统。",
+      "link": "https://www.marktechpost.com/2026/09/23/a-coding-guide-to-typesafe-ai-jev/",
+      "source_file": "sources/2026-09-24_A Coding Guide to TypeSafe AI Jev_ Typed Decisions_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "Contrastive-LM 开源 CLM-8B：比 Jev 快 9 倍的类型化 System One 模型",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 报道 Contrastive-LM 开源 CLM-8B，一个 System One 类型化模型，可对 Agent 动作打分，速度比 Jev 快至多 9 倍。它返回结构化分数而非自由文本，便于在路由、评估、护栏等环节直接被代码消费。文章定位其为轻量、确定、可组合的 Agent 决策底座，适合需要低延迟类型化判断的生产系统。",
+      "link": "https://www.marktechpost.com/2026/09/23/contrastive-lm-releases-clm-8b-an-open-system-one-model-that-scores-agent-actions-up-to-9x-faster-than-jev/",
+      "source_file": "sources/2026-09-24_Contrastive-LM Releases CLM-8B_ An Open System One_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "谷歌发布 Gemini 3.8 Flash TTS 与 Flash-Lite TTS：支持提示词定制音色",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 报道谷歌发布 Gemini 3.8 Flash TTS 与 Flash-Lite TTS，支持基于提示词的音色设计，可用自然语言描述说话人风格并即时生成语音，且在延迟与成本上更优。文章强调其多语言、情感可控与批量合成能力，适用于有声内容、客服与无障碍场景，是谷歌在语音合成赛道的升级。",
+      "link": "https://www.marktechpost.com/2026/09/23/google-releases-gemini-3-8-flash-tts-and-flash-lite-tts-with-prompt-based-voice-design/",
+      "source_file": "sources/2026-09-24_Google Releases Gemini 3.8 Flash TTS and Flash-Lit_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "英伟达开源 Nemotron 3 Diarization：1 亿参数实时 8 说话人分离模型",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 报道英伟达开源 Nemotron 3 Diarization，一个约 1 亿参数的开放权重模型，可实时区分多达 8 名说话人，适用于会议转写、客服质检等场景。文章强调其轻量、低延迟与可商用，是语音理解与多说话人处理的高效底座。",
+      "link": "https://www.marktechpost.com/2026/09/23/nvidia-releases-nemotron-3-diarization/",
+      "source_file": "sources/2026-09-24_NVIDIA Releases Nemotron 3 Diarization_ A 100M-Par_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "Agent 开始接管现实任务，边缘计算需要接住什么？",
+      "source": "InfoQ",
+      "digest": "文章（Intel 视角）探讨 Agent 走向现实任务后，边缘计算需承载低延迟、隐私本地化与离线可用的推理。指出传统云端集中式架构难以满足工厂、零售、车载等场景的实时性，需把模型与 Agent 运行时下沉到边缘，并解决算力、功耗与异构硬件适配问题。英特尔强调 CPU 在调度与通用性上的价值。",
+      "link": "https://www.infoq.cn/article/k78TFMxkbXy5323SgLgz",
+      "source_file": "sources/2026-09-24_Agent 开始接管现实任务，边缘计算需要接住什么？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "GPT-6猛砍价，Opus 5.5忙“变好用”：模型价格战，已经不能只看API定价",
+      "source": "InfoQ",
+      "digest": "InfoQ 分析模型价格战新态势：OpenAI 的 GPT-6 Sol/Luna 大幅降价，Anthropic 的 Opus 5.5 则主打“更好用”（更稳定、更长上下文、更少幻觉）。文章指出价格战已不能只看 API 单价，需综合吞吐、缓存、工具调用成本与效果评估，企业选型进入“总拥有成本”较量阶段。",
+      "link": "https://www.infoq.cn/article/VSIsPFiO2hrjBi30wDfE",
+      "source_file": "sources/2026-09-24_GPT-6猛砍价，Opus 5.5忙“变好用”：模型价格战，已经不能只看API定价_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "GPU负责算，CPU负责干活：英特尔开始重新出牌",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道英特尔重新定位 CPU 在 AI 时代的角色：GPU 专注密集并行计算，CPU 负责调度、预处理、编排与边缘推理等“干活”环节。文章介绍其软硬件协同策略，强调在推理流水线中 CPU 的性价比与生态优势，主张异构计算才是落地最优解。",
+      "link": "https://www.infoq.cn/article/Zh6Xo7f31MJdQtbUTUk5",
+      "source_file": "sources/2026-09-24_GPU负责算，CPU负责干活：英特尔开始重新出牌_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "OpenAI 推出分级处理框架及案例研究，用于报告模型失调问题",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道 OpenAI 推出分级处理框架与案例研究，用于系统化报告模型“失调”（misalignment）问题：按严重程度分级、明确上报路径与响应流程，并给出企业落地示例。文章认为这是前沿模型治理基础设施的一部分，帮助组织在部署中建立可操作的异常响应机制。",
+      "link": "https://www.infoq.cn/article/sFUUaaIQZH3ecXb14WVs",
+      "source_file": "sources/2026-09-24_OpenAI 推出分级处理框架及案例研究，用于报告模型失调问题_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "Stripe Tour 中国首秀：构建 AI 经济基础设施，赋能全球商业增长",
+      "source": "量子位",
+      "digest": "量子位报道 Stripe Tour 首次落地中国（上海），聚焦 AI 如何重塑商业并发布助力中国企业全球化的最新产品。重点包括面向智能体交互的自适应结账（Checkout Studio）、覆盖 195 个市场的托管支付（SMP）、本地货币定价（Adaptive Pricing），以及面向 Agent 商业的机器支付协议（Machine Payments Protocol）与按 Token 消耗的计费。文章视其为 AI 原生变现与跨境商业基础设施的代表。",
+      "link": "https://www.qbitai.com/2026/09/496779.html",
+      "source_file": "sources/2026-09-24_Stripe Tour 中国首秀：构建 AI 经济基础设施，赋能全球商业增长_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "WSO2 发布 Agent Manager，企业寻求应对日益严重的 AI Agent 泛滥问题",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道 WSO2 正式发布 Agent Manager，应对企业 AI Agent “泛滥”：提供与模型、框架无关的统一治理层，涵盖可验证 Agent 身份、RBAC、委派、Token 交换、撤销、生命周期推进与 Kubernetes 沙箱运行时，并内置 40 多项控制能力与 OpenTelemetry 可观测。核心理念是把治理能力与 Agent 逻辑分离。",
+      "link": "https://www.infoq.cn/article/4gr5Zt9GZoyIwF2f6LvR",
+      "source_file": "sources/2026-09-24_WSO2 发布 Agent Manager，企业寻求应对日益严重的 AI Agent 泛滥问题_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "Agent 时代来了，3D 生成大模型接下来比什么？",
+      "source": "极客公园",
+      "digest": "极客公园聚焦 Hyper3D 等国产 3D 生成大模型，探讨当 Agent 能调用 3D 生成，下一阶段比拼的是生成质量、可控编辑、与工业管线（渲染、打印、游戏）的衔接速度。文章认为 3D 大模型正从玩具走向生产力，关键在语义理解、拓扑合理性与可商用授权，国内团队有机会在垂直场景建立优势。",
+      "link": "http://www.geekpark.net/news/371031",
+      "source_file": "sources/2026-09-24_Agent 时代来了，3D 生成大模型接下来比什么？_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "MiMo-V2.6刚发，小米罗福莉扔出MiMo-V3新架构！引用DeepSeek多项成果",
+      "source": "智东西",
+      "digest": "智东西报道小米在 MiMo-V2.6 发布后，罗福莉又抛出 MiMo-V3 新架构，论文显示其借鉴 DeepSeek 的 MoE 与强化学习经验，强化推理与 Agent 能力。文章梳理 v3 相比前代在结构、训练范式与基准上的变化，认为小米正加速构建端到端自研大模型体系。",
+      "link": "https://mp.weixin.qq.com/s/DMACCmq2cmu7yDmoxfvguQ",
+      "source_file": "sources/2026-09-24_MiMo-V2.6刚发，小米罗福莉扔出MiMo-V3新架构！引用DeepSeek多项成果_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "修仙、互怼、演志怪: 千问语音模型真实测评",
+      "source": "InfoQ",
+      "digest": "InfoQ 对阿里千问语音模型做真实场景测评，用“修仙小说朗读、多人互怼对话、志怪故事演绎”等难例检验其语音合成与情感表现。结果显示模型在角色音色切换、情绪起伏、长文本连贯性上表现突出，能贴合剧情营造沉浸感，但复杂方言与极高语速下仍偶发卡顿。文章认为语音大模型正从“念稿”走向“演戏”，是中文语音交互的重要进展。",
+      "link": "https://www.infoq.cn/article/gXQo1wCBHjr0p5Z6EGFQ",
+      "source_file": "sources/2026-09-24_修仙、互怼、演志怪_ 千问语音模型真实测评_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-24",
+      "title": "OpenViking：让不同 Agent 共享同一套办公上下文",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎 Agent 社区介绍 OpenViking：一套让多个 Agent 共享同一办公上下文（文档、日程、权限、对话）的协议与框架，避免每个 Agent 重复接入与状态割裂。文章演示其在协作场景下的用法，目标是让 Agent 像团队成员一样共用背景知识，提升多 Agent 协作效率。",
+      "link": "https://mp.weixin.qq.com/s/0m_OlSoV55nNt9URe-AE9w",
+      "source_file": "sources/2026-09-24_OpenViking：让不同 Agent 共享同一套办公上下文_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "PCIe显卡被低估了！内核补齐+通信重构，DeepSeek推理吞吐翻近7倍",
+      "source": "量子位",
+      "digest": "量子位报道是石科技通过内核补齐与通信重构，释放 PCIe 显卡潜力，使 DeepSeek 推理吞吐提升近 7 倍。文章解释其在调度、显存管理与互联上的工程优化，论证 PCIe 方案在成本与可得性上的优势，为中小团队提供高性价比推理路径。",
+      "link": "https://www.qbitai.com/2026/09/496925.html",
+      "source_file": "sources/2026-09-24_PCIe显卡被低估了！内核补齐+通信重构，DeepSeek推理吞吐翻近7倍_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "QoderWake联合云电脑：让数字员工随时待命工作",
+      "source": "Qoder",
+      "digest": "Qoder 报道 QoderWake 联合云电脑，让“数字员工”随时待命：开发者可把编码 Agent 跑在云端环境，按需唤醒执行任务并回传结果，摆脱本地机器限制。文章强调其在持续集成、夜间批处理与弹性算力上的价值，是 Agent 工程化的协作形态探索。",
+      "link": "https://mp.weixin.qq.com/s/ApIZMTVix-mdA3iMOd6O-A",
+      "source_file": "sources/2026-09-24_QoderWake联合云电脑：让数字员工随时待命工作_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "云效工作项智能优化：先澄清，再开工",
+      "source": "阿里云云原生",
+      "digest": "阿里云云效推出工作项智能优化能力：在开发动手前，Agent 先基于需求文档、历史缺陷与代码上下文，自动识别模糊点并给出澄清清单，与产品、测试对齐后再生成任务拆解与排期。其核心是“先澄清、再开工”，把返工风险前移，避免 AI 在错误前提上产出，面向研发协作场景，目标是降低需求歧义带来的返工成本。",
+      "link": "https://mp.weixin.qq.com/s/B858WFEp5xMlERfkPal5rQ",
+      "source_file": "sources/2026-09-24_云效工作项智能优化：先澄清，再开工_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "代码不再稀缺之后，软件工程还剩下什么？",
+      "source": "InfoQ",
+      "digest": "文章探讨当 AI 让代码供给变得充裕，软件工程的重心从“写代码”转向更上游：问题定义、架构取舍、质量验证与协同判断。作者认为工程师的价值不再体现在代码产量，而在把模糊需求拆成可验证目标、在多种技术路线间做权衡，并为系统的长期可维护性负责——代码稀缺时代的技能正在被重新定价。",
+      "link": "https://www.infoq.cn/article/P6mBiPWbwZIIpWpUVcOa",
+      "source_file": "sources/2026-09-24_代码不再稀缺之后，软件工程还剩下什么？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "出海Agent“小元AI”入驻腾讯WorkBuddy：找买家写开发信谈生意",
+      "source": "量子位",
+      "digest": "量子位报道出海 Agent“小元AI”入驻腾讯 WorkBuddy，面向外贸商家自动找海外买家、写开发信、谈合作。它结合跨境数据集与多语言生成，把销售线索获取到初步沟通全流程自动化，并接入 WorkBuddy 工作流。文章视其为 Agent 在垂直外贸场景落地的代表，降低中小企业出海门槛。",
+      "link": "https://www.qbitai.com/2026/09/496961.html",
+      "source_file": "sources/2026-09-24_出海Agent“小元AI”入驻腾讯WorkBuddy：找买家写开发信谈生意_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "成立九年，中科类脑把积累装进Token工厂",
+      "source": "量子位",
+      "digest": "量子位报道中科类脑创业九年，将视听觉 AI 与行业积累封装为“Token 工厂”——把数据与模型能力标准化为可调用的 Token 服务，供行业客户按需取用。文章梳理其从科研到产业化的路径，反映 AI 公司从卖模型走向卖“能力单元”的趋势。",
+      "link": "https://www.qbitai.com/2026/09/496615.html",
+      "source_file": "sources/2026-09-24_成立九年，中科类脑把积累装进Token工厂_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "数据、模型、算力越来越难分开，Data+AI 基础设施怎么进化？",
+      "source": "InfoQ",
+      "digest": "InfoQ 以阿里云视角讨论 Data+AI 基础设施演进：数据、模型、算力边界正在消融，需要一体化平台统一管理特征、训练、推理与治理。文章提出湖仓一体、向量化、统一编排与可观测是进化方向，企业应避免数据栈与模型栈割裂，通过工程化把三者打通以降低 AI 落地摩擦。",
+      "link": "https://www.infoq.cn/article/amffXXMpr23rX3eoJDhv",
+      "source_file": "sources/2026-09-24_数据、模型、算力越来越难分开，Data+AI 基础设施怎么进化？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "显存不够、内存太贵，KV Cache越堆越大：华为给出自己的新解法",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道华为针对 KV Cache 占用过大、显存不足与内存成本高的问题，提出新解法：通过量化、分层缓存与内存池化，把长上下文推理的缓存压力摊薄，在保持精度的同时提升吞吐、降成本。文章认为这是支撑大模型长上下文规模化服务的关键工程创新。",
+      "link": "https://www.infoq.cn/article/LtHFz94fa1W1DQjNvHVb",
+      "source_file": "sources/2026-09-24_显存不够、内存太贵，KV Cache越堆越大：华为给出自己的新解法_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "李彦宏的长期主义，进入回报周期",
+      "source": "极客公园",
+      "digest": "极客公园解读百度李彦宏在 AI 上的长期投入进入回报期：昆仑芯、文心大模型与智能云协同，在搜索、广告、自动驾驶等场景兑现价值。文章认为其“压强式投入加应用牵引”策略开始见效，为国内大模型公司的商业化路径提供注脚。",
+      "link": "http://www.geekpark.net/news/371030",
+      "source_file": "sources/2026-09-24_李彦宏的长期主义，进入回报周期_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "豆包PC端前负责人，创业Agent操作系统",
+      "source": "量子位",
+      "digest": "量子位报道豆包 PC 端前负责人齐俊元创业做 Agent 操作系统（产品 Today），意图把多个模型与工具整合为统一工作台，让用户以自然语言驱动跨应用任务。文章视其为“Agent 中间件”赛道代表，竞争点在于生态接入、任务编排与可靠性。",
+      "link": "https://mp.weixin.qq.com/s/B75S5zOW9AA3i0UVWFJ9FQ",
+      "source_file": "sources/2026-09-24_豆包PC端前负责人，创业Agent操作系统_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "重塑AI时代算力“芯”标准，推动金融AI规模化落地",
+      "source": "金融电子化",
+      "digest": "金融电子化报道海光信息等国产芯片厂商推动 AI 算力“芯”标准，面向金融场景提供从训练到推理的自主可控算力方案，强调安全合规、异构调度与规模化落地。文章认为在金融 AI 规模化趋势下，软硬协同与国产供应链能力成为关键，需统一接口与评测体系降低集成成本。",
+      "link": "https://mp.weixin.qq.com/s/uSOM2f-R_6lh749ano7UEg",
+      "source_file": "sources/2026-09-24_重塑AI时代算力“芯”标准，推动金融AI规模化落地_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "阿里云刚发布的 AgentCore 有何不同？",
+      "source": "阿里云云原生",
+      "digest": "阿里云发布 AgentCore，定位“Agent 运行时”而非开发框架，强调将 Agent 的部署、托管、可观测与安全治理与业务代码解耦。文章对比其与 LangChain、AutoGen 等框架的差异，指出 AgentCore 提供托管式会话状态、工具调用隔离、身份与权限边界、流量灰度与回滚能力，并内置评测与护栏，让企业能在生产环境稳定运营多个 Agent，适合需要把 Agent 从 Demo 推向规模化运维的团队。",
+      "link": "https://mp.weixin.qq.com/s/Oig3_21USzHigsnTNOHb4Q",
+      "source_file": "sources/2026-09-24_阿里云刚发布的 AgentCore 有何不同？_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "阿里云发布 AgenticOps 全栈能力，让 Agent 成为运维与研发的第一用户",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生推出 AgenticOps 全栈能力，把 Agent 嵌入研发与运维流程，使其承担需求澄清、变更评审、故障定位、发布巡检等“第一用户”角色。方案覆盖从需求到上线全链路，结合云效、日志、监控与编排，让 Agent 在受控权限内执行标准化 SOP，并对每步操作留痕审计，目标是把运维与研发从重复劳动中解放，提升交付效率与稳定性。",
+      "link": "https://mp.weixin.qq.com/s/rPoeHJTBXbSeIrOam2GQlw",
+      "source_file": "sources/2026-09-24_阿里云发布 AgenticOps 全栈能力，让 Agent 成为运维与研发的第一用户_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "西安银行数智化转型的实践探索与深化路径",
+      "source": "中国金融电脑+",
+      "digest": "中国金融电脑刊文梳理西安银行数智化转型实践：以数据中台与 AI 平台为底座，在风控、营销、运营、客服等场景落地智能应用，并通过组织机制与人才体系建设保障持续迭代。文章给出深化路径建议——强化数据治理、构建模型全生命周期管理、推动业务与科技融合，为中小银行提供可参考的转型样本。",
+      "link": "https://mp.weixin.qq.com/s/DAX9wTOGOimZg2vcMScWFw",
+      "source_file": "sources/2026-09-24_西安银行数智化转型的实践探索与深化路径_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "进出口银行将设AI开发人力资源池，今年7月投产上线AI智算平台",
+      "source": "银行科技研究社",
+      "digest": "进出口银行于 9 月 16 日发布 2026-2028 年人工智能应用开发人力资源池框架协议采购项目供应商征集公告，将设 AI 应用开发人力资源池，承接基于人工智能智算平台的场景需求分析、设计、开发、测试及运维。其人工智能智算平台已于今年 7 月投产上线进入试点，在行内办公网提供大模型推理、模型训练调优、智能体编排、知识库问答等能力，并通过采购昇腾 910B 服务器等夯实底座。",
+      "link": "https://mp.weixin.qq.com/s/O0xgsGcYojd_r3_FvRnU5Q",
+      "source_file": "sources/2026-09-24_进出口银行将设AI开发人力资源池，今年7月投产上线AI智算平台_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "银行AI试点项目停滞不前不是因为模型！",
+      "source": "银行科技研究社",
+      "digest": "银行科技研究社指出，不少银行 AI 试点卡在概念验证阶段并非模型能力不足，而是组织、数据、流程与考核没跟上。文章分析痛点：数据孤岛、业务方参与度低、缺乏可量化 ROI、风控合规阻力，并给出破局建议——选高价值窄场景、建业务-科技联合团队、设清晰成功指标，推动从试点走向规模化。",
+      "link": "https://mp.weixin.qq.com/s/lEgztSZFtWgjyz9l8zOK9Q",
+      "source_file": "sources/2026-09-24_银行AI试点项目停滞不前不是因为模型！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "“数据比模型重要”成了共识，接下来拼什么？",
+      "source": "InfoQ",
+      "digest": "文章指出业界已达成共识：在多数企业场景，数据质量与可用性比模型本身更决定 AI 成效。接下来竞争焦点转向“数据飞轮”——如何低成本持续获取、标注、治理高质量数据，并将其转化为模型可消费的形态。作者认为数据工程、知识沉淀与反馈闭环会成为新的护城河，单纯堆模型不再构成壁垒。",
+      "link": "https://mp.weixin.qq.com/s/098vApuNpbsz6pY15eWbmA",
+      "source_file": "sources/2026-09-24_“数据比模型重要”成了共识，接下来拼什么？_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "从数人头到数智能体：一场正在发生的企业生产力换血",
+      "source": "极客公园",
+      "digest": "极客公园提出企业生产力正从“数人头”转向“数智能体”：组织价值不再只看员工数量，而看能调度多少可量化产出的数字员工。文章分析 Agent 如何接管客服、运营、分析等标准化岗位，推动企业重构考核与成本结构，并提醒管理者需建立 Agent 的绩效、权限与协作边界，否则“换血”会带来新的失控风险。",
+      "link": "http://www.geekpark.net/news/371011",
+      "source_file": "sources/2026-09-24_从数人头到数智能体：一场正在发生的企业生产力换血_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "卖Token的已赚钱，买Token的还在赔钱！硅谷顶级投资人：AI泡沫会不会破，要看开发者能不能让Token赚钱！",
+      "source": "51CTO技术栈",
+      "digest": "51CTO 技术栈引用硅谷投资人观点：上游卖 Token、算力者已盈利，而下游用 Token 做应用的仍在烧钱，AI 泡沫是否破裂取决于开发者能否让 Token 真正赚到钱。文章提醒应用层需找到可量化变现与成本结构的平衡点，否则繁荣难以为继。",
+      "link": "https://mp.weixin.qq.com/s/n3_j6Knl65WEde-DH6tzjg",
+      "source_file": "sources/2026-09-24_卖Token的已赚钱，买Token的还在赔钱！硅谷顶级投资人：AI泡沫会不会破，要看开发者能不能让Token赚钱！_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-24",
+      "title": "最提倡用 AI 的CEO，如今被 AI 的“垃圾手榴弹”炸懵了",
+      "source": "InfoQ",
+      "digest": "文章讲述一位最积极拥抱 AI 的 CEO，因团队大量使用 AI 生成内容而出现事实错误、语气雷同、决策被“垃圾手榴弹”（低质 AI 输出）干扰，反而陷入信任危机。作者反思：当全员把 AI 当万能枪手，组织会丧失判断力与原创性。结论是企业需要为 AI 使用立规矩——明确哪些环节可用、如何校验、谁来兜底，否则效率红利会被错误成本吞噬。",
+      "link": "https://mp.weixin.qq.com/s/S1rlH-7Qu7AqvYQYy02Lvw",
+      "source_file": "sources/2026-09-24_最提倡用 AI 的CEO，如今被 AI 的“垃圾手榴弹”炸懵了_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-23",
       "title": "Anthropic 发布 Claude Opus 5.5：运行成本较 Opus 5 降低 40%",

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-24",
+      "weekday": "周四",
+      "stats": {
+        "国际": 11,
+        "国内": 17,
+        "同业": 3,
+        "其他": 4,
+        "total": 35
+      },
+      "summary": "29 小时攻破浏览器，GPT-6 Astra 成为 OpenAI 首个“严重级”模型/TypeSafe AI 发布 Jev：面向 Agent 的类型化 S..."
+    },
+    {
       "date": "2026-09-23",
       "weekday": "周三",
       "stats": {
