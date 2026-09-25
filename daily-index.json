@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-25",
+      "weekday": "周五",
+      "stats": {
+        "国际": 7,
+        "国内": 7,
+        "同业": 1,
+        "其他": 2,
+        "total": 17
+      },
+      "summary": "Aikido发布Altar-1：从GLM-5.3剪枝的开源安全模型/BottleCap发布ThinkingCap-Qwen3.8-27B：推理token减..."
+    },
+    {
       "date": "2026-09-24",
       "weekday": "周四",
       "stats": {
