@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-09-28T09:27:02.528861",
-  "total": 2400,
+  "updated_at": "2026-09-29T05:22:36.346139",
+  "total": 2419,
   "articles": [
+    {
+      "date": "2026-09-28",
+      "title": "Fireworks AI 发布 Ember-1：后训练的 Kimi K3，推理省 40% Token",
+      "source": "MarkTechPost",
+      "digest": "Fireworks AI 通过后训练 Moonshot AI 的开权重模型 Kimi K3，推出专用模型 Ember-1。它学习生成更短的思考轨迹，在保持任务准确率的同时将 Kimi K3 的质量以约 40% 更少的 Token 实现。其与在推理时调低推理强度（reasoning effort）的做法不同：Fireworks 团队观察到推理模型如 Kimi K3 有时会将 90% 以上的生成 Token 花在内部推理上，多轮调用时成本被显著放大。Ember-1 目前仅通过 Fireworks 无服务器 API 以研究预览形式提供，未开源权重、训练代码与算法，暂不支持自托管。",
+      "link": "https://www.marktechpost.com/2026/09/28/fireworks-ai-releases-ember-1-a-post-trained-kimi-k3-that-uses-about-40-fewer-tokens/",
+      "source_file": "sources/2026-09-28_Fireworks AI Releases Ember-1_ A Post-Trained Kimi_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-28",
+      "title": "又一款匿名模型杀入编程榜：免费、性能追平 GPT-6 Astra",
+      "source": "InfoQ",
+      "digest": "又一款匿名模型 Pixel Canary 现身编程工具与评测榜单，引发关注。9 月 25 日它登陆 Vercel AI Gateway（标识 stealth/pixel-canary），平台限时免费开放，支持约 26.2 万 Token 上下文与可调推理强度，但未披露开发团队。在 Cline 平台的 Next.js Agent Evals 中，Pixel Canary 完成 31 项任务中的 28 项（成功率 90.3%），与 GPT-6 Astra（高推理强度）持平、高于 Kimi K3 的 84%；当评测通过 AGENTS.md 提供 Next.js 文档后，其成功率升至 96.8%。不过其平均耗时约 1015.80 秒（约 16 分 56 秒），远高于 GPT-6 Astra 的 251.89 秒，显示其具备完成复杂任务能力但尚未证明适合快节奏日常开发。",
+      "link": "https://mp.weixin.qq.com/s/ef8a4ULQqsqgXL-HwXwyTg",
+      "source_file": "sources/2026-09-28_又一款匿名模型杀入编程榜：免费、性能追平 GPT-6 Astra_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-28",
+      "title": "神秘模型“太空兔”火了，效果直逼GPT-6 Astra，10万人围观",
+      "source": "智东西",
+      "digest": "近期一款名为 Space Bunny 的匿名模型引发热议，9 月 23 日上线后稳居 OpenCode 调用量榜第二、OpenRouter 一度第一，网友称「太空兔」。该模型在 OpenCode 中免费使用，拥有 100 万上下文与多模态能力，匿名期间不留存用户数据，官宣贴浏览量已超百万。开发者实测显示其大概率为 Flash 模型、速度快且在 3D 输出方面突出：有开发者用约 40 分钟做出可破坏/放置方块的简易版《我的世界》；与 Claude Opus 5、GPT-6 Sol、Gemini 3.8 Flash 的火箭发射场景对比中，三分钟成品在速度上遥遥领先、效果可媲美 Opus 5。社区亦有反馈其表现参差，实际水准仍待验证。",
+      "link": "https://mp.weixin.qq.com/s/hUdzT_nEWVAF-OxY37o1qQ",
+      "source_file": "sources/2026-09-28_神秘模型“太空兔”火了，效果直逼GPT-6 Astra，10万人围观_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-28",
+      "title": "TypeSafe AI 的 Jev：20 个智能体应用案例",
+      "source": "MarkTechPost",
+      "digest": "TypeSafe AI 上周发布其首个 System One 模型 Jev，创始人 Diogo Almeida 曾任职 OpenAI 主导 ChatGPT 背后的指令跟随研究。Jev 不做对话、写代码或摘要，而是接收非结构化状态并返回带校准概率的类型化决策，天然适配 Agent 循环内成千上万次的微小判断——调用哪个模型、命令是否安全、段落是否相关、任务是否真的完成。其接口定义 Choice（从列表中选一并返回概率）、Score（按有序量规打分）、Noul（判断陈述为真的概率）三种原语，单次请求内并行评估同一状态的所有问题，并以强化学习校准决策（RLCD）训练，使高置信度对应高准确率。文章列举了 20 个 Agentic 落地场景。",
+      "link": "https://www.marktechpost.com/2026/09/27/20-agentic-use-cases-of-typesafe-ais-jev/",
+      "source_file": "sources/2026-09-28_20 Agentic Use Cases of TypeSafe AI’s Jev_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "AI编程已经卷到头了！马斯克：把目光转向“现实世界工程”，下一场硬仗，是让AI走出IDE",
+      "source": "51CTO技术栈",
+      "digest": "在 9 月 25 日央视财经对马斯克约 26 分钟的专访中，马斯克为 AI 工程划出一条分界线：Anthropic 已让 AI 擅长软件工程，但至今无人让 AI 真正擅长现实世界工程。当前 Coding Agent 能读仓库、改文件、调终端、跑测试并自我修复，OpenAI、Anthropic、Google 都在争夺开发者，Coding Agent 成为大模型公司标配；而汽车、机器人、工厂与火箭这条战线尚无人真正拿下。马斯克表示希望用 SpaceX 与 Tesla 的数据训练 Grok，让模型进入汽车、机器人与火箭等现实系统，前提是模型要学会感知现场、理解物理约束、控制硬件，并让每个动作可验证、可接管。",
+      "link": "https://mp.weixin.qq.com/s/vSmEzdjoGSBBpjrHnkFDEQ",
+      "source_file": "sources/2026-09-28_AI编程已经卷到头了！马斯克：把目光转向“现实世界工程”，下一场硬仗，是让AI走出IDE_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "谷歌研究推出 AI 视频联合导演：4 个智能体框架实现连贯长视频生成",
+      "source": "MarkTechPost",
+      "digest": "谷歌研究推出一套面向长视频生成的 AI 视频联合导演（co-director），由 4 个智能体框架组成，将短片段拼成连贯、长达数分钟的故事，重点解决当前多镜头 AI 视频管线最常见的两类失败：身份漂移（不同镜头间服饰或场景突变）与级联错误（一个上游资产出错污染后续所有镜头）。团队将其归因为信用分配（credit assignment）难题——最终视频崩坏难以回溯到引发问题的提示词。通过智能体化的框架设计，联合导演在维持角色与场景一致性的同时抑制错误传播。",
+      "link": "https://www.marktechpost.com/2026/09/27/google-research-introduces-an-ai-video-co-director-4-agentic-frameworks-for-coherent-minutes-long-video-generation/",
+      "source_file": "sources/2026-09-28_Google Research Introduces an AI Video Co-Director_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Imagination 发布 E 系列 GPU IP 新进展：一套架构支持图形、计算与AI",
+      "source": "InfoQ",
+      "digest": "9 月 21 日，Imagination Technologies 公布 E 系列 GPU IP 首批性能数据与演示，并推出 Neural Super Resolution（NSR）神经超分辨率 AI 加速方案，延续其「一套架构、一套软件栈」运行图形、计算与 AI 负载的 GPU-first 战略。E 系列去年首发，将可编程 AI 加速高效集成进 GPU 渲染管线，单颗处理器既可独立运行，也可与 CPU 及其他加速器协同，覆盖生成式 AI、神经渲染与游戏等负载。在典型边缘语言模型上，其预填充性能较上一代 D 系列提升 4.7 倍：以 Qwen 3.5 4B 为例，1.5GHz 四核 E 系列 GPU 可实现 0.2 秒首 Token 与每秒 150 Token 解码；Imagination 正将优化后的 Llama.cpp 后端贡献上游，后续提供原生 PyTorch 与 ONNX Runtime 支持。",
+      "link": "https://www.infoq.cn/article/5Xfeqshw0hwfUD95JpWE",
+      "source_file": "sources/2026-09-28_Imagination 发布 E 系列 GPU IP 新进展：一套架构支持图形、计算与AI_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "KDE 和 GNOME 考虑如何处理 AI 生成的贡献",
+      "source": "Solidot",
+      "digest": "随着 AI 生成代码增多，KDE 与 GNOME 两大开源桌面环境社区近期都在讨论如何处理 AI 辅助贡献。在 KDE 年度 Akademy 大会上，两位近期未贡献的知名开发者发表「lovable, sovereign, AI-native KDE」主题演讲，随后开发者 Nate Graham 发起如何限制 AI 辅助贡献的讨论，但议题很快超出范围：大量圈外人士围绕 AI 道德而非既定限制方式激烈争论，甚至要求 KDE 完全禁用 AI，讨论失控最终导致提案被撤回、主题被隐藏。此事折射出当前开源社区围绕 AI 应用普遍存在的分歧与治理困境。",
+      "link": "https://www.solidot.org/story?sid=85491",
+      "source_file": "sources/2026-09-28_KDE 和 GNOME 考虑如何处理 AI 生成的贡献_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+      "source": "量子位",
+      "digest": "9 月 21 日 2026 西门子 Xcelerator 繁星生态大会揭示工业创新的痛点：技术做出来只是第一关，后续还要场景验证、客户触达、方案适配、系统集成与交付复制，市场渠道与本地服务往往决定成败。截至 2026 年 8 月，西门子 Xcelerator 在中国已积累超 66 万注册用户、600 余家生态伙伴、900 余项数字化与低碳化解决方案。平台汇聚机器人与自动化、AI 产业应用、工业软件、知识教育等方向伙伴，让原本分散的能力互补衔接，形成能交付完整场景方案的协作体系。文章拆解了这一开放生态如何帮伙伴获客、做 Agent、出海，凸显工业 AI 落地依赖生态级通道而非单点技术。",
+      "link": "https://www.qbitai.com/2026/09/498877.html",
+      "source_file": "sources/2026-09-28_工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "华为盘古2.0，全栈开源",
+      "source": "智东西",
+      "digest": "9 月 28 日，华为宣布盘古大模型 2.0 开源版 openPangu-2.0 的预训练、监督微调（SFT）与后训练强化学习（RL）代码正式上线，开源地址为 gitcode.com/ascend-tribe，基于昇腾集群。openPangu Training Framework 是面向大规模基础模型训练的统一训练框架，支持大语言、视觉语言与多模态模型的预训练、SFT 与持续优化，提供多维分布式并行、高效数据流水线、混合精度与高可用训练能力。openPangu-2.0-RL 以强化学习开源框架 VERL 为编排内核，通过运行时补丁与昇腾亲和优化完成 Actor/Rollout/Reward 协同训练，支撑数学推理单轮与面向推理的代码生成多轮 Rollout，面向 GSPO/GRPO 后训练。",
+      "link": "https://mp.weixin.qq.com/s/oNDbnxXFmj7YNS8oWGGd6A",
+      "source_file": "sources/2026-09-28_华为盘古2.0，全栈开源_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-09-28",
+      "title": "AI用了一堆、钱没赚到？阿里瓴羊放话：AI员工得直接扛KPI",
+      "source": "量子位",
+      "digest": "麦肯锡数据显示，2025 年全球 88% 受访企业已在至少一个职能中常态化使用 AI，但能从 AI 获得显著价值、贡献至少 5% EBIT 的「AI 高绩效企业」仅占 6%。大量 AI 已进入公司却未真正带来收入增长。在 2026 云栖大会，阿里云智能集团瓴羊 CEO 朋新宇将问题挑明：AI 要从效率革命走向增长革命。7 月底，瓴羊 AgentOne 上的营销、销售、客服、运营四类 AI 员工正式上岗，并推出「AI 员工 7 日上场计划」——企业出真实业务题，AI 先试岗七天再用结果决定去留。瓴羊将企业 AI 分为 Chat/Work/Business 三层，自身定位在 Business 层，让 Agent 进入 ERP、CRM 等系统对收入、转化、留存负责。",
+      "link": "https://mp.weixin.qq.com/s/weh2IuCQsbqCZT1z73fGow",
+      "source_file": "sources/2026-09-28_AI用了一堆、钱没赚到？阿里瓴羊放话：AI员工得直接扛KPI_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "HC归来，华为正重新定义AIDC基础设施",
+      "source": "量子位",
+      "digest": "在华为全联接大会 2026 同期举办的 AIDC 基础设施峰会上，华为介绍「源网荷储 AIDC 1.0」解决方案及供电、储能与液冷领域的最新进展，回应能源与算力如何协同设计的行业焦点。IEA 预计全球数据中心用电量将从 2025 年的 485TWh 增至 2030 年的 950TWh（接近翻倍），其中面向 AI 的数据中心用电量同期增至约三倍；约 20% 规划数据中心项目可能因电网风险延误。算力扩张把「如何将可获得的电力持续稳定转化为有效计算」推到台前：供电、散热与交付任一环节掉链都会影响硬件发挥。此前一天，英伟达、Google 与 Emerald AI 已宣布成立 AI 能源管理联盟（AEMA），巨头们正把算电协同作为 AI 基础设施的新竞争焦点。",
+      "link": "https://www.qbitai.com/2026/09/498787.html",
+      "source_file": "sources/2026-09-28_HC归来，华为正重新定义AIDC基础设施_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Qoder 产品负责人刘洋洋：Qoder Agent SDK 全面开放，把 Harness 交给每一个行业",
+      "source": "Qoder",
+      "digest": "9 月 22 日云栖大会，Qoder 产品负责人刘洋洋（额台）系统分享 Qoder 对 Harness 与 Agent 的思考，并宣布支撑 Qoder 全系产品的 Agent SDK 向全行业开放。刘洋洋提出两条判断：Agent 竞争已从模型能力转向「模型+执行系统」共同完成真实任务的能力；Harness 的战场正从 Coding 走向复杂通用任务、从个人扩展到组织。Qoder 将 Agent SDK 定义为产品，8 月 11 日低调上线后受欢迎程度远超预期。从 Prompt Engineering 到 Context Engineering，再到今天难以用单一术语概括的 Harness，Qoder 认为 Agent 要解决的已从「怎么回答」变成「怎么在约束与反馈闭环中把真实任务办成」，并展示了多家重磅合作伙伴的落地案例。",
+      "link": "https://mp.weixin.qq.com/s/iCzhtYQitXzMhVp6tsQNNg",
+      "source_file": "sources/2026-09-28_Qoder 产品负责人刘洋洋：Qoder Agent SDK 全面开放，把 Harness 交给每一个行业_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "中国信通院云大所发布《驾驭工程：赋能智能原生软件工程研究报告（2026年）》",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院云计算与数字化研究所发布《驾驭工程：赋能智能原生软件工程研究报告（2026 年）》。报告指，截至 2026 年 5 月，67.3% 软件企业已将 AI 投入生产、31.2% 完成智能体与核心流程内嵌部署，软件研发管控对象从确定性程序变为自主决策智能体，传统流程管控难以适配。驾驭工程（Harness Engineering）作为面向智能体构建约束与反馈闭环的系统工程方法，承载统筹协同、规范治理、效率提升、安全保障四大职能，成为智能原生时代软件工程的核心管控框架。报告提出连接、编排、循环、效能、安全、评估优化六大核心能力，并构建能力成熟度模型；海外 Anthropic 等已完成工业级验证，国内 DeepSeek 开源 Harness 框架 24 小时获约 5.5 万星。",
+      "link": "https://mp.weixin.qq.com/s/G43nLaRxy5T40m3JJR32lQ",
+      "source_file": "sources/2026-09-28_中国信通院云大所发布《驾驭工程：赋能智能原生软件工程研究报告（2026年）》_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "中国智能汽车的后台，越来越像阿里云的主场",
+      "source": "极客公园",
+      "digest": "在 2026 云栖大会汽车行业峰会，智能汽车竞争主线显现：智能座舱全面进入 Agent 时代，车从执行指令的机器变为理解意图、主动办事的智能体；智能驾驶竞争从算法层下沉到工程层，数据产线效率、训练集群稳定性与模型迭代周期正决定胜负。沙利文联合头豹报告显示，阿里云在中国汽车公有云市场份额达 45.2%，在智能驾驶、智能座舱等六项细分赛道均居第一。阿里云以「芯、云、模一体」构建覆盖中国智能汽车全产业链的 AI 基础设施，座舱 AI 今年最大变化是从「聊天」走向「办事」——以 Harness（工程治理框架）+ 大模型替代规则引擎与多模块拼接，让模型承担意图理解、任务分解与工具调用。",
+      "link": "http://www.geekpark.net/news/371357",
+      "source_file": "sources/2026-09-28_中国智能汽车的后台，越来越像阿里云的主场_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "让 Agent 少踩坑，比压缩 Prompt 更省钱",
+      "source": "阿里云基础设施",
+      "digest": "阿里云基础设施团队介绍 AgentSight——智能体操作系统 Agentic OS 的可观测性组件，部署在用户本机，从 Agent 轨迹中把经验攒下来，让不该发生的轮次别发生，与「剪单次」降压手段互补。业界主流降本聚焦单次调用体积（压工具返回、截历史），但管不了轮次是否该发生；AgentSight 先看清 Token 花在哪，再从轨迹沉淀经验。当前版本接入无需改 Agent 代码：macOS 通过扫描本地 JSONL 会话文件生成轨迹，Linux 默认本地会话采集，开启完整 eBPF 管线需 root 与 5.8+ 内核。内置解析器覆盖 OpenAI、Anthropic、阿里云百炼及兼容端点，输出遵循 OpenTelemetry GenAI 语义约定与 ATIF v1.7 标准。",
+      "link": "https://mp.weixin.qq.com/s/HSrbMu8Ba1UCVHhaWUAVow",
+      "source_file": "sources/2026-09-28_让 Agent 少踩坑，比压缩 Prompt 更省钱_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "阿里 Open Code Review 登顶 GitHub Trending 周榜第一，作者李峥峰将在 QCon 上海站揭秘百万任务验证的 Agent 工程实践",
+      "source": "InfoQ",
+      "digest": "阿里巴巴开源的 AI 代码审查工具 Open Code Review（GitHub: alibaba/open-code-review）连续多日登顶 GitHub Trending 日榜第一，并以单周新增超 14,000 Star 强势登顶周榜总榜第一，大幅领先 Anthropic 官方 Claude Code；项目 Star 数已突破 40,000，成为 Alibaba GitHub Org 中 Star 数第一的开源项目，npm 包社区下载量近百万，来自 21 个国家和地区的 181 位开发者参与贡献。其走「确定性工程 + LLM Agent」混合架构：将文件筛选、规则匹配、行号定位等不能出错的环节从大模型手中收回用工程逻辑固化，只把需语义理解的深度审查交给 Agent，直击覆盖率不足、行号定位幻觉与 Token 成本失控三大痛点。作者李峥峰将出席 2026 QCon 上海站分享。",
+      "link": "https://mp.weixin.qq.com/s/rqchjYbUSg5Zw7qvmLJOTg",
+      "source_file": "sources/2026-09-28_阿里 Open Code Review 登顶 GitHub Trending 周榜第一，作者李峥峰将在 QCon 上海站揭秘百万任务验证的 Agent 工程实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "打破证券服务不可能三角，AI重构金融普惠新逻辑",
+      "source": "金融电子化",
+      "digest": "在证券行业 AI 主题交流中，「证券 AI 是否仅是算力与 Agent 的技术比拼」引发思考。专家认为券商 AI 数智化转型面临四大挑战：工程化（Demo 到产品化需长期打磨）、成本与价值评估（投入在科技部门、收益分散难归因）、模型与风险治理（合规贯穿全栈、幻觉与误判风险同步放大）、组织与人才适配（岗位能力代际差）。这些直接延伸至对客服务——证券业长期困于「专业性-规模化-个性化」不可能三角：专业投顾稀缺只能覆盖高净值客户，广谱客群难获精细陪伴。文章探讨以 AI 科学投资行为陪伴破解中小投资者服务困局，推动财富普惠。",
+      "link": "https://mp.weixin.qq.com/s/BDZ8M-m7jZ2mPHgt1aVbrQ",
+      "source_file": "sources/2026-09-28_打破证券服务不可能三角，AI重构金融普惠新逻辑_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-09-28",
+      "title": "OpenAI 扩展 Lenfest 新闻业 AI 协作计划",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布扩展 Lenfest AI Collaborative 与 Fellowship Program，提供 500 万美元资金，以及最高 500 万美元的软件额度与工程支持。Lenfest Institute 是一家新闻业非营利机构，该项目旨在支持新闻机构在新闻报道中负责任地应用 AI。此举延续了 OpenAI 面向公共部门与公益领域的投入，也反映出大型 AI 实验室正通过资金与算力支持，推动新闻等行业探索 AI 协同生产的边界与规范。",
+      "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "source_file": "sources/2026-09-28_The Lenfest Institute grows landmark program with _OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-27",
       "title": "Sarvam 发布 Saaras V4 语音识别模型，覆盖 22 种印度语言与全球英语",

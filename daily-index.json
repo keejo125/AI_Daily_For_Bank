@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-28",
+      "weekday": "周一",
+      "stats": {
+        "国际": 9,
+        "国内": 8,
+        "同业": 1,
+        "其他": 1,
+        "total": 19
+      },
+      "summary": "Fireworks AI 发布 Ember-1：后训练的 Kimi K3，推理省 40% Token/又一款匿名模型杀入编程榜：免费、性能追平 GPT-6..."
+    },
+    {
       "date": "2026-09-27",
       "weekday": "周日",
       "stats": {
