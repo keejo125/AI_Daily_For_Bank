@@ -4,11 +4,11 @@
       "date": "2026-09-27",
       "weekday": "周日",
       "stats": {
-        "国际": 7,
-        "国内": 5,
+        "国际": 9,
+        "国内": 6,
         "同业": 1,
         "其他": 0,
-        "total": 13
+        "total": 16
       },
       "summary": "Sarvam 发布 Saaras V4 语音识别模型，覆盖 22 种印度语言与全球英语/Supersonic Labs 发布 Julia 1：1.443 ..."
     },
