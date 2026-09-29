@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-29",
+      "weekday": "周二",
+      "stats": {
+        "国际": 12,
+        "国内": 15,
+        "同业": 3,
+        "其他": 1,
+        "total": 31
+      },
+      "summary": "OpenAI 推出 GPT-6.1 Sol/OpenAI因新模型太强叫停发布/阿里 Qwen 发布 Qwen-Audio-3.1-Realtime：可思考..."
+    },
+    {
       "date": "2026-09-28",
       "weekday": "周一",
       "stats": {
