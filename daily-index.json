@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-09-30",
+      "weekday": "周三",
+      "stats": {
+        "国际": 14,
+        "国内": 12,
+        "同业": 1,
+        "其他": 2,
+        "total": 29
+      },
+      "summary": "Liquid AI 发布 d1：零输出 token 的校准概率决策模型/NVIDIA 团队提出 Physis-Lang：自演化物理语言，助力 Cosmos..."
+    },
+    {
       "date": "2026-09-29",
       "weekday": "周二",
       "stats": {
