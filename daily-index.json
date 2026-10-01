@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-01",
+      "weekday": "周四",
+      "stats": {
+        "国际": 6,
+        "国内": 1,
+        "同业": 0,
+        "其他": 0,
+        "total": 7
+      },
+      "summary": "谷歌发布 Gemini 4 Argon 前沿旗舰模型：百万 Token 输出、面向长程软件工程与网络防御/英伟达发布 Kumo Tabular 表格基础模..."
+    },
+    {
       "date": "2026-09-30",
       "weekday": "周三",
       "stats": {

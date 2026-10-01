@@ -1,7 +1,77 @@
 {
-  "updated_at": "2026-10-01T05:26:14.905206",
-  "total": 2479,
+  "updated_at": "2026-10-02T05:15:21.680123",
+  "total": 2486,
   "articles": [
+    {
+      "date": "2026-10-01",
+      "title": "谷歌发布 Gemini 4 Argon 前沿旗舰模型：百万 Token 输出、面向长程软件工程与网络防御",
+      "source": "Google DeepMind",
+      "digest": "谷歌 DeepMind 发布 Gemini 4 系列首款前沿模型 Gemini 4 Argon，面向长程软件工程、法律/金融等企业知识工作与网络防御。最大变化是将单次输出上限从 64K 提升至 100 万 Token，支持深度长链推理。定价每百万输入 2 美元、输出 10 美元（缓存输入 0.1 美元），按折扣每任务成本约 1.99 美元，较 GPT-6 Astra 低约四成。基准上 DeepSWE v1.1 达 77.9%（新 SOTA），Vals Index 68.9% 居首，AutomationBench 51.3% 第一，LVBench 长视频理解 91.7%；但在 FrontierSWE v2、Terminal-Bench、OSWorld 上落后对手。网络防御可自主发现/验证/修复漏洞，CWE-bench v1 以 68% 并列第一，已通过 Fairwind 计划向受信任防御团队开放，暂未全面公开。",
+      "link": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "source_file": "sources/2026-10-01_Gemini 4 Argon_ our next era of frontier intellige_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-01",
+      "title": "英伟达发布 Kumo Tabular 表格基础模型：单次前向即可预测新行",
+      "source": "MarkTechPost",
+      "digest": "英伟达发布表格基础模型 Kumo Tabular（Small/Medium/Large，约 2800 万至 2.15 亿参数），面向分类与回归：以标注行作上下文，单次前向即可预测新行，无需训练、调参或特征工程。模型基于表结构 Transformer（列/行/上下文注意力），完全在合成表格（结构因果模型采样）上预训练，通过 GPU 原生 SDM 库（Apache-2.0）运行，权重采用 OpenMDW-1.1 许可可商用。官方称在 TabArena 综合第一（Elo 1950），单卡较 LimiX-2 快 17 倍；与 TabPFN-3、LimiX-2、TabFM 的非商用权重相比，其商用许可是主要差异点。",
+      "link": "https://www.marktechpost.com/2026/09/30/nvidia-releases-kumo-tabular/",
+      "source_file": "sources/2026-10-01_NVIDIA Releases Kumo Tabular_ Open Tabular Foundat_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-01",
+      "title": "OpenAI 发布 GPT-6.1 Sol：近 Astra 编程能力、价格仅五分之一",
+      "source": "MarkTechPost",
+      "digest": "OpenAI 发布 GPT-6 家族中端模型 GPT-6.1 Sol，主打智能体编程、电脑操作与专业工作，号称以约 Astra 五分之一的 Token 价格获得接近 Astra 的能力。定价每百万输入 2 美元、输出 10 美元，缓存输入 0.1 美元（较 GPT-6 Sol 再降 50%）。上下文窗口 105 万 Token、最大输出 12.8 万，提供 5 档推理强度。基准上 DeepSWE v1.1 与 Astra 持平、较 GPT-6 Sol 高 6.4 个百分点；AutomationBench 较 Opus 5.5 高 2.2 分且成本约三分之一；OSWorld 2.0 距 Astra 仅 2.1 分。仅通过 API、ChatGPT Work 与 Codex 提供，闭源权重，最难的科研任务仍由 Astra 领跑。",
+      "link": "https://www.marktechpost.com/2026/09/30/openai-releases-gpt-6-1-sol-near-astra-coding-and-computer-use-at-one-fifth-of-astras-token-price/",
+      "source_file": "sources/2026-10-01_OpenAI Releases GPT-6.1 Sol_ Near-Astra Coding and_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-01",
+      "title": "Perplexity 发布 pplx-embed-v2 上下文嵌入模型：检索答案及其佐证",
+      "source": "MarkTechPost",
+      "digest": "Perplexity 与 turbopuffer 发布上下文嵌入模型 pplx-embed-v2-context-9b-preview，面向 RAG 流水线：每个文本块在“整篇文档在视野内”的条件下嵌入，训练信号不再依赖单一金标准段落，而是让模型同时检索答案及其可验证的支撑证据。以 Perplexity 查询感知上下文压缩模型为教师，对块内 token 打分生成软目标并经 KL 散度蒸馏；支持 2048/1024 维与 int8 量化。权重以 MIT 许可发布于 Hugging Face，需 transformers≥5.4.0 且 trust_remote_code，暂未上 Perplexity API。",
+      "link": "https://www.marktechpost.com/2026/09/30/perplexity-releases-pplx-embed-v2-context-9b-preview-a-contextual-embedding-model-that-retrieves-answers-and-their-supporting-evidence/",
+      "source_file": "sources/2026-10-01_Perplexity Releases pplx-embed-v2-context-9b-previ_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-01",
+      "title": "三位大佬同台对话：马斯克要上天发电，黄仁勋要硬件熔断，A社创始人宣告代码不再值钱！",
+      "source": "奇点折射",
+      "digest": "2026 年 9 月 30 日华盛顿科技圆桌，英伟达黄仁勋、特斯拉/xAI 马斯克与 Anthropic 联合创始人 Tom Brown 同台。核心议题是 AI 竞争的实体底座：马斯克称每增 5GW 稳定基荷电可拉动约 1% 美国 GDP（约 3000 亿美元），地面发电受昼夜天气限制仅约五分之一到八分之一额定功率，主张将算力与太阳能搬上太空（SpaceX 计划年发射 200GW 轨道太阳能）；黄仁勋称数据中心实为“超级智能工厂”，强调 Agent 安全不能只靠软件沙盒，应基于 BlueField DPU 做硬件级带外熔断监控，并推出 OpenShell 隔离运行时；Tom Brown 称 Opus 5.5 已能承担长周期复杂任务，未来多数基础软件将由人与 AI 共写，软件开发成本断崖式下降。",
+      "link": "https://mp.weixin.qq.com/s/4thNKPzvn5850WeurmaDdQ",
+      "source_file": "sources/2026-10-01_三位大佬同台对话：马斯克要上天发电，黄仁勋要硬件熔断，A社创始人宣告代码不再值钱！_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-01",
+      "title": "何恺明团队新作：看猫片就能学会ARC挑战",
+      "source": "量子位",
+      "digest": "何恺明团队（MIT CSAIL）提出纯视觉 ARC 解题方案 NAT-ARC，不直接处理抽象格子，而是先在 ImageNet 上用何恺明 2022 年提出的 MAE 自监督预训练视觉编码器，再把“看猫狗花草”学到的视觉能力迁移到 ARC 抽象推理。ARC-1 上最佳单模型（0.6B）pass@2 达 63.4%，三策略集成（约 2B）达 70.2%，以约四分之一参数量逼近专用 LLM 系统（The ARChitects 用 8B 达 71.6%）。关键发现：加入预训练后 scaling 曲线才“健康”（无预训练时模型变大反而掉点），证明视觉路线此前受困于缺少预训练红利。",
+      "link": "https://www.qbitai.com/2026/10/499812.html",
+      "source_file": "sources/2026-10-01_何恺明团队新作：看猫片就能学会ARC挑战_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-01",
+      "title": "从数据到智能，再到进化：Agent正在重写AI基础设施",
+      "source": "极客公园",
+      "digest": "极客公园基于云栖大会梳理 Agent 对 AI 基础设施的重写：Agent 不再被动调用接口，而是自主找数据、拆任务、并发试错、持续运行的数字员工，使管控与隐形计算负载放大十倍百倍。阿里云将智能体落地拆为 Model（智能上限）、Context（业务理解）、Harness（调工具把事做完）三要素，并沿“数据→智能→进化”飞轮升级全栈——MaxCompute/EMR 提速具身数据处理约 40%、PAI-DLC 3.0 多模态训练提速 2.4 倍、PAI-InferX 承接 Agent 持续推理、PAI-CrystalLLM 用不到 1% GPU 模拟万卡“风洞”。文章指出基础设施自我优化仍有边界，数据质量、算法路线与物理设备决定智能最终走多远。",
+      "link": "http://www.geekpark.net/news/372065",
+      "source_file": "sources/2026-10-01_从数据到智能，再到进化：Agent正在重写AI基础设施_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
     {
       "date": "2026-09-30",
       "title": "Liquid AI 发布 d1：零输出 token 的校准概率决策模型",
