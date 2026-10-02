@@ -1,7 +1,157 @@
 {
-  "updated_at": "2026-10-02T05:15:21.680123",
-  "total": 2486,
+  "updated_at": "2026-10-03T05:16:48.962512",
+  "total": 2501,
   "articles": [
+    {
+      "date": "2026-10-02",
+      "title": "Cloudflare 开源决策模型 Clef 与 Clef-flash",
+      "source": "MarkTechPost",
+      "digest": "Cloudflare 发布 Clef 与 Clef-flash，这是其 Workers AI 团队训练的首批模型，定位为“决策模型”而非聊天机器人：每个模型读取输入状态与一组类型化问题，直接返回每个允许答案的概率，不生成自由文本。两者以 Apache 2.0 开源，兼容 TypeSafe AI 的 Jev API。Clef 由 Qwen3.8-27B 后训练而来，Clef-flash 源自 Qwen3.5-9B，均保留视觉编码器；推理分主干 prefill 与联合 schema 头两阶段。已在 Workers AI 上线，权重开放于 Hugging Face 供自托管。",
+      "link": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/",
+      "source_file": "sources/2026-10-02_Cloudflare Releases Clef and Clef-flash_ Open-Weig_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Cohere 发布嵌入模型家族 Embed 5",
+      "source": "MarkTechPost",
+      "digest": "Cohere 发布 Embed 5 嵌入模型家族，面向企业搜索、RAG 与智能体检索，分 Pro（重检索质量）与 Fast（重延迟与成本）两档，均支持文本、图像及图文融合输入，覆盖 100+ 语言、最长 128K token。关键设计为 Pro 与 Fast 共享同一向量空间，可“用 Pro 建索引、用 Fast 查询”，官方测试 Fast 查询相对 Pro 索引仅掉 1.6 分而吞吐翻倍（377 对 160 文档/秒）。Pro 默认 2048 维，支持 float/int8/binary 输出，可直接嵌入页面图像，对扫描件、图表等文本提取易丢信息的场景尤其有用。",
+      "link": "https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/",
+      "source_file": "sources/2026-10-02_Cohere Releases Embed 5_ How It Compares to Voyage_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Fable 5.5突然杀到！细节掌控高到离谱，GPT再不反击就掉队了",
+      "source": "量子位",
+      "digest": "Claude 网页版的 Fable 模型被悄然路由至新版本 Fable 5.5，可视为继 Opus 5.5 之后的新一轮图像/视频生成能力更新。首批测试显示，Fable 5.5 能用纯 JavaScript 绘制带视线跟随的漫威/DC 超级英雄动画，SVG 输出细节密度明显高于 Opus 5.5，画面与声效配合也更协调。其作品以 Claude 官网 Artifact 网页形式发布，支持拖动进度条。文章将 Fable 5.5 与同期 GPT-6 Astra 的同提示词作品对比，认为 OpenAI 若不出新反击则差距拉大。",
+      "link": "https://mp.weixin.qq.com/s/lJv_amIs81N00kQRRJKSHQ",
+      "source_file": "sources/2026-10-02_Fable 5.5突然杀到！细节掌控高到离谱，GPT再不反击就掉队了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Google Kauldron：面向研究速度的 JAX 训练库编码指南",
+      "source": "MarkTechPost",
+      "digest": "Google Research 开源的 JAX 训练库 Kauldron，主打研究速度与模块化。教程围绕其三大机制展开：konfig 将实验配置转化为可经 JSON 往返的纯字典树；kontext 用字符串键路径连接组件，使损失函数无需导入模型即可评分；运行时形状检查器以具名轴跨参数绑定，不匹配时报告绑定对象。文中还演示了自定义损失与指标、在合成数据上训练真实 Trainer、五变体单配置行扫描，以及训练断点自动续训。",
+      "link": "https://www.marktechpost.com/2026/10/01/a-coding-guide-to-google-researchs-kauldron-configs-that-are-plain-data-components-wired-by-string-and-a-jax-trainer-you-can-read-end-to-end/",
+      "source_file": "sources/2026-10-02_A Coding Guide to Google Research’s Kauldron_ Conf_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Claude开放插件最高权限Mods，DeepSeek崔添翼下场评价：与DSH殊途同归，但范围截然不同",
+      "source": "InfoQ",
+      "digest": "Anthropic 为 Claude Code 推出 Mods（修改模块）机制，允许开发者通过主进程内的函数钩子深度定制智能体的界面与运行逻辑，可由 Claude Code 自行编写、安装并在会话中热加载，被视为“进程内拦截”的最高权限插件形态。Mod 以 JS/TS 编写常驻主进程，可重构终端界面、双向拦截工具调用（调用前弹确认、返回前脱敏凭据）、注册自定义命令并按复杂度路由到更便宜的模型。DeepSeek Harness 负责人崔添翼评价其与 DeepSeek Harness 殊途同归，但后者“一切皆插件”的开放范围更广。",
+      "link": "https://mp.weixin.qq.com/s/j8TAh7pPf1mDo4iO76OROg",
+      "source_file": "sources/2026-10-02_Claude开放插件最高权限Mods，DeepSeek崔添翼下场评价：与DSH殊途同归，但范围截然不同_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Graphify：整合代码库上下文，优化基于代理的软件工程",
+      "source": "InfoQ",
+      "digest": "开源工具 Graphify 将代码库、文档与非结构化数据转换为可查询的多模态知识图谱，以优化 AI 编码工作流，解决大模型在跨文件推理与依赖关系上的上下文瓶颈。其多阶段流程用 Tree-Sitter 提取 AST、结合语义线索与社区检测算法构建统一图结构，并可通过 MCP 服务器与编码助手集成，显著减少令牌消耗。项目采用 MIT/Apache-2.0 双许可，支持 macOS/Windows/Linux，基准显示 LongMemEval-S 子集准确率达 76%，但社区反馈其在中等规模代码库中的日常集成仍有阻力。",
+      "link": "https://www.infoq.cn/article/8XuP4iZKKr3ex2VTDxpl",
+      "source_file": "sources/2026-10-02_Graphify：整合代码库上下文，优化基于代理的软件工程_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "StartLux推出开源决策模型StartLux-Decision，38项基准中31项高于Jev",
+      "source": "InfoQ",
+      "digest": "原点星辉（StartLux）开源决策模型 StartLux-Decision，一次性推出 0.8B、2B、4B、9B、27B 五档版本，采用团队自建的 Auto Research 研发管线，仅用 3 天完成研发与验证。在 Decision Index 0.2.1 评测中，27B 版本得分 63.88，38 项基准中 31 项高于 Jev 1.13；七项评测平均准确率 91.82%，亦高于 Jev 与 Intern-Decision。模型支持选择题、是非题与等级评分，可在一次请求中并行完成多个判断，覆盖客服工单分流、网页连续操作、办公协作等场景，并提供原始权重与多种 GGUF 量化版本。",
+      "link": "https://mp.weixin.qq.com/s/-6LH7YRH0HQPwjaTuDv9bw",
+      "source_file": "sources/2026-10-02_StartLux推出开源决策模型StartLux-Decision，38项基准中31项高于Jev_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-02",
+      "title": "AI搜索的下一站：可信度三层过滤机制，从点击监督到答案级反馈",
+      "source": "量子位",
+      "digest": "百度联合中国科学院计算技术研究所与武汉大学，提出面向 AI 搜索的“答案支撑—内容可信—上下文组织”三阶段框架，并结合百度工业实践梳理从检索排序到生成后反馈的优化链路。答案支撑阶段用可学习瓶颈向量压缩文档信息，在线仅访问瓶颈表示完成匹配；内容可信从来源、时效、事实三个维度核验，对每条事实声明生成检索查询寻找外部证据；上下文组织则去重聚合、按答案逻辑结构化重组。",
+      "link": "https://mp.weixin.qq.com/s/0NDu2ETO3USO2hDOc2gsWQ",
+      "source_file": "sources/2026-10-02_AI搜索的下一站：可信度三层过滤机制，从点击监督到答案级反馈_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
+      "source": "量子位",
+      "digest": "开源项目 openJiuwen 首发 X-Router 自演进模型路由技术，面向 Agent 场景对模型调用做智能调度，并与昇腾算力亲和。该技术让 Agent 在运行中越用越省，实测可减少 50% 以上的 Token 消耗。其核心在于根据任务动态选择并路由到合适模型，降低重复与冗余推理开销，对国产算力栈下的多模型协同具有工程参考价值。",
+      "link": "https://www.qbitai.com/2026/10/500098.html",
+      "source_file": "sources/2026-10-02_openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "从 Jev 到 QCA：Qoder Sites 让 Web 拥有双重智能",
+      "source": "Qoder",
+      "digest": "阿里 AI 编程产品 Qoder 的 Qoder Sites 把 Web 应用的创建、预览与发布串成一条流程：用自然语言描述需求，在 Qoder 中生成并修改代码、查看效果，再发布为可访问站点，调用模型或外部服务时密钥留在服务端。作者以此搭建基于开源结构化决策模型 Laya 的 Playground，展示“局部智能”如何嵌入网页交互（如斗地主、五子棋中由模型选择动作）。文章进一步提出 QCA（从“给出答案”到“完成工作”）理念，指出连续调用模型并不自动等于具备规划能力，复杂目标仍需能围绕执行反馈持续工作的另一类能力。",
+      "link": "https://mp.weixin.qq.com/s/xc5mMBVU1TD2RUkwpIzDFA",
+      "source_file": "sources/2026-10-02_从 Jev 到 QCA：Qoder Sites 让 Web 拥有双重智能_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Chatham 借助 Codex 与 GPT-5.6 重构金融工作流",
+      "source": "OpenAI",
+      "digest": "金融咨询机构 Chatham Financial 借助 OpenAI 的 Codex 与 GPT-5.6 重构技术与工作流，将交易校验（trade validation）环节从约 30 分钟压缩至 4 分钟以内，展示了大模型编码智能体在金融后台流程中的落地价值，通过自动化原先高度依赖人工的校验步骤显著提升处理效率。",
+      "link": "https://openai.com/index/chatham-financial",
+      "source_file": "sources/2026-10-02_Chatham scales its capital markets expertise with _OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Albertsons 借助 ChatGPT Enterprise 重塑零售",
+      "source": "OpenAI",
+      "digest": "美国零售巨头 Albertsons 借助 ChatGPT Enterprise 与 OpenAI API，帮助内部团队提升工作效率，并为数百万消费者简化杂货购物体验，是 OpenAI 在企业级零售场景落地的客户案例之一，展示了大模型从办公协同到消费端服务的延伸。",
+      "link": "https://openai.com/index/albertsons-reimagining-retail",
+      "source_file": "sources/2026-10-02_How Albertsons Companies is reimagining retail fro_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "OpenAI：AI 作为人类创造力的永恒互补",
+      "source": "OpenAI",
+      "digest": "OpenAI 发文探讨先进 AI 的价值定位，认为其最重要的作用或许在于承担支撑突破性创意的常规性执行工作，进而塑造下一阶段的经济与进步节奏，强调 AI 作为人类创造力的互补角色，而非替代。",
+      "link": "https://openai.com/index/the-eternal-complement",
+      "source_file": "sources/2026-10-02_The eternal complement_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "arXiv最严新规！每人每月最多提交2篇，拒稿不退额度",
+      "source": "量子位",
+      "digest": "预印本平台 arXiv 自 2026 年 10 月 1 日起执行投稿限额：每位作者每月最多提交 2 篇论文，且按“提交次数”计（被拒也占用额度），同时保留自 2024 年起“最多 3 篇处于 active 状态”的限制。新规直接针对 AI 引发的论文爆炸：arXiv 月投稿量从 2016 年 9 月的约 9869 篇增至 2026 年 9 月的 40363 篇，两年翻番，其中 cs.AI 分类增长超 6 倍，并为审核带来近 9000 张 support ticket。该政策对所有作者与分类一视同仁。",
+      "link": "https://www.qbitai.com/2026/10/499958.html",
+      "source_file": "sources/2026-10-02_arXiv最严新规！每人每月最多提交2篇，拒稿不退额度_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-02",
+      "title": "丘成桐新论文致谢了GPT和Claude",
+      "source": "量子位",
+      "digest": "菲尔兹奖得主丘成桐参与的最新微分几何论文在致谢中感谢 GPT-6 Astra 与 Claude Pro，称其协助探索了部分证明思路与计算。该论文处理的经典猜想关乎七维空间的“怪球”（exotic sphere）：28 种七维球面中除标准球面外的 27 种能否都配上截面曲率严格为正的度量，这一悬置半个多世纪的问题据称被本文补上最后一步。作者采用“双圆盘模型”将每种怪球切为两半分别构造正曲率度量并在接缝处对齐。",
+      "link": "https://www.qbitai.com/2026/10/499991.html",
+      "source_file": "sources/2026-10-02_丘成桐新论文致谢了GPT和Claude_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-01",
       "title": "谷歌发布 Gemini 4 Argon 前沿旗舰模型：百万 Token 输出、面向长程软件工程与网络防御",

@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-02",
+      "weekday": "周五",
+      "stats": {
+        "国际": 6,
+        "国内": 4,
+        "同业": 0,
+        "其他": 5,
+        "total": 15
+      },
+      "summary": "Cloudflare 开源决策模型 Clef 与 Clef-flash/Cohere 发布嵌入模型家族 Embed 5/StartLux推出开源决策模型S..."
+    },
+    {
       "date": "2026-10-01",
       "weekday": "周四",
       "stats": {
