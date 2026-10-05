@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-03",
+      "weekday": "周六",
+      "stats": {
+        "国际": 9,
+        "国内": 3,
+        "同业": 1,
+        "其他": 1,
+        "total": 14
+      },
+      "summary": "OpenAI 发布 GPT-6 系列模型实用构建指南/Jev估值100亿美元！创始人Diogo Almeida回答一切/颠覆刻板印象！Flash模型卷前端..."
+    },
+    {
       "date": "2026-10-02",
       "weekday": "周五",
       "stats": {

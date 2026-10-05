@@ -1,7 +1,147 @@
 {
-  "updated_at": "2026-10-03T05:16:48.962512",
-  "total": 2501,
+  "updated_at": "2026-10-05T10:48:45.501385",
+  "total": 2515,
   "articles": [
+    {
+      "date": "2026-10-03",
+      "title": "OpenAI 发布 GPT-6 系列模型实用构建指南",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布《GPT-6 系列实用构建指南》，面向创业团队讲解如何为生产环境选型 GPT-6 模型、调节推理力度（reasoning effort）、优化提示词与技能（skills）、协调工具调用，并将工作流就绪化。指南聚焦从原型到生产的工程实践，帮助开发者在成本、延迟与能力之间权衡，把 GPT-6 家族模型稳妥接入真实业务系统。",
+      "link": "https://openai.com/index/practical-guide-building-gpt-6",
+      "source_file": "sources/2026-10-03_A model guide for the GPT-6 family_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Jev估值100亿美元！创始人Diogo Almeida回答一切",
+      "source": "量子位",
+      "digest": "ChatGPT 缔造者之一、TypeSafe 创始人 Diogo Almeida 推出面向机器而非人类的低成本 AI 系统 Jev，据传估值有望冲上 100 亿美元。Jev 不输出文字，而是直接给出数字或概率（如判定一笔支付是否为欺诈），响应以纳秒计，比前沿大模型快约 194 倍、便宜约 445 倍。其用户主要是其它软件系统（客服分流、简历筛选、银行合规），System-One 内核负责简单查询直出、复杂分支交由模型完成。发布后需求暴增，TypeSafe 一度暂停注册。",
+      "link": "https://www.qbitai.com/2026/10/500148.html",
+      "source_file": "sources/2026-10-03_Jev估值100亿美元！创始人Diogo Almeida回答一切_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-03",
+      "title": "微软发布 MAI-Transcribe-2-Streaming 实时语音转写模型，Artificial Analysis 评测居首",
+      "source": "MarkTechPost",
+      "digest": "微软 AI 发布首款流式语音转写模型 MAI-Transcribe-2-Streaming，并同步推出 MAI-Voice-2.1 与 Flash 两款语音合成模型。该模型支持 60 种语言、连续语言检测，音频流入即流式回传文本，首字假设延迟约 100ms 并随上下文修正。Artificial Analysis 在 38 款模型中将其终稿与首字准确率均评为第一（终稿 WER 2.5% @ 0.13s）。其目标场景为语音 Agent、实时字幕与听写，让 Agent 能在用户说话中途就开始推理与调用工具。",
+      "link": "https://www.marktechpost.com/2026/10/02/microsoft-ai-releases-mai-transcribe-2-streaming-1-real-time-speech-to-text-model-on-artificial-analysis/",
+      "source_file": "sources/2026-10-03_Microsoft AI Releases MAI-Transcribe-2-Streaming_ _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-03",
+      "title": "2万亿美元估值靠什么撑？Anthropic 核心技术负责人：蒸馏会毁掉前沿研发，中美 AI 竞赛不会单边暂停",
+      "source": "InfoQ",
+      "digest": "Anthropic 技术负责人 Nicholas Marwell 与 Sholto Douglas 在播客中披露，公司已提交 IPO 申报：2025 年营收近 46 亿美元（同比约 12 倍），经营亏损仍超 80 亿美元，并签下至少 5180 亿美元的长期云与算力承诺；若上市顺利估值最高可超 2 万亿美元。两人阐释内部判断：边际智能单位创造的经济价值可能指数级增长，故敢于提前锁定数千亿算力。访谈还涉及 AGI 时间表、AI 从编程助手变为“员工”、反对模型蒸馏，以及中美 AI 竞赛难以单边暂停等风险判断。",
+      "link": "https://mp.weixin.qq.com/s/abPKyHINxa7376D0b0U82A",
+      "source_file": "sources/2026-10-03_2万亿美元估值靠什么撑？Anthropic 核心技术负责人：蒸馏会毁掉前沿研发，中美 AI 竞赛不会单边暂停_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "AI不是新物种，而是软件！黄仁勋：如果产品不安全，就别发布，与其争论末日，不如解决失控风险",
+      "source": "51CTO技术栈",
+      "digest": "英伟达 CEO 黄仁勋在 CNN 访谈中强调“AI 安全高于一切”，并提出 AI 不是新物种或生命，而是软件与数学。随着 Agent 获得访问网站、工具、记忆与文件的权限，风险从“回答是否准确”转向“动作是否越界”。他主张像管理数字员工一样治理 Agent：明确身份与权限边界、隔离运行环境、持续记录行为并在越界时尽早叫停，而非事后倒查。",
+      "link": "https://mp.weixin.qq.com/s/RwHMIrQaSYcIGnaqNAsmBQ",
+      "source_file": "sources/2026-10-03_AI不是新物种，而是软件！黄仁勋：如果产品不安全，就别发布，与其争论末日，不如解决失控风险_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "IBM 推出 Bob 自托管与空气隔离部署：代码不出域的智能体开发平台",
+      "source": "MarkTechPost",
+      "digest": "IBM 将其智能体软件开发平台 Bob 的自托管部署正式发布（GA），企业可在本地、私有云、主权云及空气隔离（air-gapped）网络中运行，代码与数据不出域。Bob 覆盖理解代码、规划、执行变更与验证的完整生命周期，支持 IDE、BobShell、并行工具调用、agent harness、skills 与多种模式；模型由客户按 IBM 支持清单自带（BYOL），推理位置由模型层决定。",
+      "link": "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/",
+      "source_file": "sources/2026-10-03_IBM Brings Bob to Self-Hosted and Air-Gapped Envir_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Meta、OpenAI 与 Uber 让智能体先开口：何时该沉默成新难题",
+      "source": "MarkTechPost",
+      "digest": "Meta Muse、OpenAI Dots 与 Uber 司机助手近期不约而同地让智能体“先开口”：从被动应答转为主动推送。Muse 可在 App 关闭时持续工作并主动建议；Dots 做只读监控，在 Slack/Teams 捕获遗漏的发票或 Bug；Uber 助手把实时供需信号转为接单建议。文章指出，主动式 Agent 的真正难题从“回答什么”转向“何时打断、走哪个渠道、给什么 offer”，需借助经典 ML 与决策模型平衡打扰与时效。",
+      "link": "https://www.marktechpost.com/2026/10/03/meta-openai-and-uber-just-taught-ai-agents-to-talk-first-what-about-when-to-stay-quiet/",
+      "source_file": "sources/2026-10-03_Meta, OpenAI and Uber Just Taught AI Agents to Tal_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Prime Intellect 推出 Prime Inference 开放模型推理服务平台",
+      "source": "MarkTechPost",
+      "digest": "Prime Intellect 推出 Prime Inference，一个面向前沿开源模型的推理服务平台，提供 serverless 弹性端点与自有 GPU（多数据中心）预留算力，正式发布前日处理近一万亿 token。它补齐了公司开放训练栈（prime-rl/verifier/sandbox）的“服务层”：部署模型产出的生产轨迹可回灌训练形成闭环。平台兼容 OpenAI API，组合 NVIDIA Dynamo、vLLM、Mooncake、FlashInfer，采用 prefill/decode 分离，p90 词间延迟降低近 40%，并支持数据中心间自动故障转移。",
+      "link": "https://www.marktechpost.com/2026/10/02/prime-intellect-launches-prime-inference-serverless-and-reserved-serving-for-frontier-open-models/",
+      "source_file": "sources/2026-10-03_Prime Intellect Launches Prime Inference_ Serverle_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "精灵不是问题，人类才是瓶颈——与 Kent Beck商榷「AI时代的软件工程」",
+      "source": "软件工程3.0时代",
+      "digest": "针对极限编程创始人 Kent Beck 在 Prodacity 2026 关于“AI 时代软件工程”的演讲，本文逐条商榷其七个观点。Beck 将 AI 比作“精灵”（实现愿望却给不想要的东西），提出“功能消耗未来”、代码行数不是使命、人类须坐驾驶座等判断。作者认可其“AI 生成代码须验证”“迭代优于一次性规约”等共识，但指出“AI 不比人类更会编码”“技艺过时”“全自主必脱轨”等结论正被工程现实超越，强调人类判断仍不可或缺。",
+      "link": "https://mp.weixin.qq.com/s/d-bokMWSB1DYY3tfCx6pog",
+      "source_file": "sources/2026-10-03_精灵不是问题，人类才是瓶颈——与 Kent Beck商榷「AI时代的软件工程」_软件工程3.0时代.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "颠覆刻板印象！Flash模型卷前端，效果硬刚Opus 5.5",
+      "source": "智东西",
+      "digest": "MiniMax 在国庆前上线并公测 M3.1-Flash，实测显示这款轻量 Flash 模型已具备旗舰级前端交互与动效生成能力，可直接产出可运行的 3D 网页、品牌广告与教学动画，在鸡尾酒制作、星空列车等任务上效果逼近甚至媲美 Claude Opus 5.5。文章通过多组对比指出，Flash 模型正打破“精致 UI 须押注高成本旗舰”的固有认知，把高质量前端交付的下限显著抬高。",
+      "link": "https://mp.weixin.qq.com/s/DuZb9oUqtxkMMn8U2_XNMg",
+      "source_file": "sources/2026-10-03_颠覆刻板印象！Flash模型卷前端，效果硬刚Opus 5.5_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-03",
+      "title": "DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师",
+      "source": "量子位",
+      "digest": "DeepSeek 弹性计算团队大规模招人，并公开技术分享《DSec：面向大规模 Agent 训练的沙盒基础设施》。DSec 支撑 DeepSeek-V4 全部训练、评测与数据预处理，单分片约 160 台服务器、3 万 CPU 核、250TB 内存，高峰期在线沙盒超 38 万个、每秒可创建 5000+。文章详述其三层镜像拆分（base/workspace/toolkit）、3FS 按需加载与 EROFS 挂载等降本增效实践，目标将 Agent 运行环境数量与种类扩充百千倍。",
+      "link": "https://www.qbitai.com/2026/10/501381.html",
+      "source_file": "sources/2026-10-03_DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "魔搭开源动态检索新框架，无需预构建向量索引，知识库还能自己进化",
+      "source": "量子位",
+      "digest": "阿里 ModelScope 团队开源动态检索框架 Sirchmunk，针对静态知识库在动态/时间敏感场景下易过期的痛点，提出免预建索引的即时检索与知识自进化。其核心算法 LENS（隐式证据导航与检索）在查询发生时直接于原始文件定位并核验证据，用低成本信号缩小范围、按已读内容调整下一步，并把验证过的问题-证据-答案沉淀为知识单元，随检索不断连接重组，缩短 Time-to-First-Query。框架提供 Python SDK、CLI、MCP、HTTP API 与 Web UI。",
+      "link": "https://mp.weixin.qq.com/s/aUEvKaotmC-2u4k5GBBoVw",
+      "source_file": "sources/2026-10-03_魔搭开源动态检索新框架，无需预构建向量索引，知识库还能自己进化_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "这家银行AI降本40多亿！",
+      "source": "银行科技研究社",
+      "digest": "法国兴业银行（Societe Generale）披露，AI 应用有望带来 5 亿至 6 亿欧元（约 38 亿至 46 亿元人民币）降本空间，其中已规划落实约 3.5 亿欧元，并与 Anthropic 达成战略合作分批部署 Claude。该行已约 200 个 AI 用例投产，覆盖聊天/语音机器人（年交互超 600 万次）、开户自动化、开发提效与文档摘要等，并成立集团实体“SocGen AI”统筹客户互动、合规、IT、生产力等六大领域，将 AI 降本写入硬性财务规划。",
+      "link": "https://mp.weixin.qq.com/s/qiKPhn4OEDuzlBEFjsPn_Q",
+      "source_file": "sources/2026-10-03_这家银行AI降本40多亿！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "OpenAI安全团队持续地震！负责人离职，三名员工因泄密被开",
+      "source": "量子位",
+      "digest": "OpenAI 安全透明度负责人 David Robinson 离职，且安全方向另有三名员工因泄密被解雇，安全团队再起动荡。Robinson 所率团队负责把内部技术发现、风险判断与部署决定整理成公众可读的 system card 与安全研究材料，他也是《Preparedness Framework 2.0》主要起草人——该框架新增追踪生物/化学、网络与 AI 自我改进三类能力，并设 High/Critical 阈值决定部署前须配置的防护措施。文章借此梳理了 OpenAI 安全透明度职能的定位与产出。",
+      "link": "https://www.qbitai.com/2026/10/501368.html",
+      "source_file": "sources/2026-10-03_OpenAI安全团队持续地震！负责人离职，三名员工因泄密被开_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-02",
       "title": "Cloudflare 开源决策模型 Clef 与 Clef-flash",
