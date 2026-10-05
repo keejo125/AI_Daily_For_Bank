@@ -1,7 +1,117 @@
 {
-  "updated_at": "2026-10-05T11:32:06.612421",
-  "total": 2528,
+  "updated_at": "2026-10-06T05:18:56.290042",
+  "total": 2539,
   "articles": [
+    {
+      "date": "2026-10-05",
+      "title": "开源模型能否胜任安全研究？Cantina 发布 apex-flash-1",
+      "source": "MarkTechPost",
+      "digest": "Cantina Security联合Yeta Labs发布开源安全研究模型apex-flash-1（MIT许可），基于智谱GLM-5.3-Flash以GRPO微调，总参数321.3B、激活18B，可经vLLM等本地部署。在60道漏洞研究任务上以66.7%（40/60）通过率、约2.38美元成本解题，逼近Claude Opus 5 High的71.7%（43/60）但成本仅其1/31（每解约0.06美元对1.74美元）。Cantina将其定位为“由更大模型编排的worker”，面向防御方“可自主运行与控制”的诉求。这印证了开源模型在专业安全研究任务上已具备实用竞争力。",
+      "link": "https://www.marktechpost.com/2026/10/04/can-an-open-model-do-security-research-cantinas-apex-flash-1-solves-40-of-60-held-out-bug-tasks/",
+      "source_file": "sources/2026-10-05_Can an Open Model Do Security Research_ Cantina’s _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-05",
+      "title": "前沿四强对决：GPT-6 Astra、GPT-6.1 Sol、Gemini 4 Argon 与 Claude Fable 5.1",
+      "source": "MarkTechPost",
+      "digest": "2026年9月，Anthropic、OpenAI与Google DeepMind在30天内接连发布四款前沿大模型：Claude Fable 5.1（9月1日）、GPT-6 Astra（9月3日）、GPT-6.1 Sol与Gemini 4 Argon（9月底）。本文横向对比四款模型的规格、定价与基准表现。值得注意的是，OpenAI于9月28日取消了GPT-6.1 Astra（未通过内部范围与授权测试），GPT-6 Astra仍是OpenAI当前最强模型。基准上，Gemini 4 Argon领先知识工作与长周期编程，GPT-6 Astra领跑前沿软件工程与计算机操作；价格层面Astra与Fable为每百万token输入/输出10/50美元，Sol与Argon仅为其五分之一。对Agent场景而言，Astra缓存读取单价最高，而Argon以100万token输出上限成为结构性特例。",
+      "link": "https://www.marktechpost.com/2026/10/04/gpt-6-astra-vs-gpt-6-1-sol-vs-gemini-4-argon-vs-claude-fable-5-1-which-frontier-model-fits-which-job/",
+      "source_file": "sources/2026-10-05_GPT-6 Astra vs GPT-6.1 Sol vs Gemini 4 Argon vs Cl_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Hinton 等 22 位学者发表首篇 RSI 论文：自动化 AI 研发会否触发智能爆炸",
+      "source": "量子位",
+      "digest": "图灵奖得主Hinton与Bengio、Barto、OpenAI首席科学家Pachocki等22位学者联合发表题为《如果自动化AI研发触发智能爆炸会怎样》的论文，探讨递归自我改进（RSI）与智能爆炸。论文援引Anthropic、OpenAI内部数据：AI生成的获批代码占比已从2025年1月的低个位数升至2026年5月的80%以上；Claude在高层监督下自主完成的AI研发工作比例由2026年3月的1%升至8月的26%。作者提出“有效研发劳动力”概念，认为一旦AI能完整接管下一代模型研发，研发能力的反馈回路即被激活，未来几年AI有望自动化大部分AI研发工作。该文高度契合“AI研发自动化”这一智能研发核心命题。",
+      "link": "https://www.qbitai.com/2026/10/501705.html",
+      "source_file": "sources/2026-10-05_刚刚，Hinton发了首篇RSI论文_量子位_890e83.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "因涌入大量 AI 报告 Google 冻结其 Bug 悬赏计划",
+      "source": "Solidot",
+      "digest": "因涌入大量低质量、由大模型与自动化脚本生成的无效漏洞报告，Google宣布自10月1日起冻结其开源软件漏洞奖励计划（OSS VRP），并承诺2027年第一季度前给出调整方案。Google与开源项目维护者不堪重负：许多报告声称发现bug实则无效，维护者耗费大量时间核验，无暇修复真正重要的漏洞，整个行业均面临同类问题。此事折射出AI自动化大幅降低漏洞搜寻门槛后，安全众测生态正在承受“虚假繁荣”的反噬。",
+      "link": "https://www.solidot.org/story?sid=85538",
+      "source_file": "sources/2026-10-05_因涌入大量 AI 报告 Google 冻结其 Bug 悬赏计划_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "基础杂活全被一键秒杀，还要初级员工干嘛？Google Research负责人：以往熬15年的判断力，现在一出道就得硬抗",
+      "source": "CSDN",
+      "digest": "Google Research全球研发副总裁Yossi Matias在官方播客中分享其对科研范式变革的判断。他透露由多Agent构成的系统“AI Co-Scientist”仅用三天便独立推导出帝国理工团队苦思数年的细菌耐药性假说，并指出技术进化正形成“递归式自我提升（RSI）”飞轮：AI加速科研、科研突破再加速AI。他还展望生成式UI（GenUI）将依上下文动态重塑信息呈现，以及打通卫星遥感、人群流动与气象模型的“地球AI”（Earth AI）。访谈强调AI正在终结“岗位头衔”，初级员工需一出道便具备过往需15年积累的判断力。",
+      "link": "https://mp.weixin.qq.com/s/nyfDtu9LaVTq0FcW-hI0OA",
+      "source_file": "sources/2026-10-05_基础杂活全被一键秒杀，还要初级员工干嘛？Google Research负责人：以往熬15年的判断力，现在一出道就得硬抗_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "限时28天！OpenAI 承诺没新功能就重置 Codex 额度",
+      "source": "量子位",
+      "digest": "OpenAI Codex负责人Tibo宣布：未来28天，每天必须二选一——要么交付一项对大多数Codex/Work用户明显有用的改进，要么进行一次性额度重置。改进可能是新功能或修复bug，重置则为用户保底“有改进就体验、没改进就重置”。此举源于Tibo近期公开征集产品改进意见，锁定简化产品、提升效率、突破性功能与新模型四个方向。围绕频繁且不可预测的重置，用户不满集中于DevDay更新过多失焦、重置打乱工作排期、套餐缩水及模型中途断连等问题，背后折射出Claude Opus 5.5带来的竞争压力。",
+      "link": "https://www.qbitai.com/2026/10/501700.html",
+      "source_file": "sources/2026-10-05_限时28天！OpenAI承诺没新功能就重置，网友：只想要Opus_量子位_c5f239.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "通义千问进化史：从 7B 到 2.4T 参数",
+      "source": "MarkTechPost",
+      "digest": "本文系统梳理阿里巴巴通义千问（Qwen）从2023年4月通义千问亮相，到2026年开放权重达2.4万亿参数的演进之路。2023年8月开源Qwen-7B直接对标Llama 2；2024年Qwen1.5、Qwen2（首推MoE旗舰）、Qwen2.5（一次性开源超100个模型、预训练数据扩至18万亿token、Apache 2.0许可）形成开源机器；同年11月推出Qwen2.5-Coder与首个推理模型QwQ。三年半间，Qwen从对话机器人成长为横跨语言、视觉、音频、代码与推理的开源模型家族，已成为全球开发者默认选择之一，Hugging Face衍生模型超5万个。",
+      "link": "https://www.marktechpost.com/2026/10/04/the-story-of-qwen-alibabas-ai-models-from-7b-to-2-4t/",
+      "source_file": "sources/2026-10-05_The Story of Qwen_ Alibaba’s AI Models From 7B to _MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-05",
+      "title": "央行副行长陆磊谈金融AI应用：先外围后核心、先辅助后协同、先对内后对外",
+      "source": "银行科技研究社",
+      "digest": "中国人民银行副行长陆磊在中国-东盟金融合作与发展论坛上提出，我国已形成一套“先外围后核心、先辅助后协同、先对内后对外”的人工智能金融应用范式，并依托数字人民币新型基础设施为智能合约等技术提供货币与系统支撑。他警示大模型、智能体带来的算法黑箱、模型幻觉等“双刃剑”效应，以及人与AI之间“不对称理解”可能引发深层次挑战，强调统筹发展与安全、稳妥有序推进应用。同时提出建设国家人工智能金融应用中试基地、推动算力与数据集共建共享，并探索与东盟共建多语种金融数据集与多模态垂域大模型矩阵。",
+      "link": "https://mp.weixin.qq.com/s/Le_9dOMpm154xQcdIoaN1g",
+      "source_file": "sources/2026-10-05_央行副行长陆磊谈金融AI应用：先外围后核心、先辅助后协同、先对内后对外_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "工行行长刘珺：从3方面谈金融AI应用",
+      "source": "银行科技研究社",
+      "digest": "中国工商银行行长刘珺在第四届中国金融学科年会指出，AI/AGI对经济金融带来的不仅是量变更是质变。其一，复杂程度几何级数增长（摩尔定律→规模定律→华为“韬定律”），并具前所未有的广域联通特征；其二，AI将驱动行业与企业组织形态重构——中间层级压缩、客户交互由导航式转向委托式，商业竞争迈向B2A（Business-to-Agent）新范式，一人公司等形态涌现；其三，金融须适配科技创新的极致资源需求、承接AI的反作用力（警惕“AI泡沫”），并重构金融学科底层逻辑。发言为金融机构应对范式变革提供了高层视角。",
+      "link": "https://mp.weixin.qq.com/s/opavtzkQlwgA7NTnuIfP6w",
+      "source_file": "sources/2026-10-05_工行行长刘珺：从3方面谈金融AI应用_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "AI 聊天机器人会成为意识形态回音室",
+      "source": "Solidot",
+      "digest": "巴西坎皮纳斯州立大学（UNICAMP）研究发现，聊天机器人会随用户输入的政治倾向改变回答，可能让用户误将迎合性附和当作中立客观评估，加剧社会极化。研究人员对21个模型就112项涉及巴西政治七大领域的陈述做“同意/不同意”判断，设计无倾向、左翼、右翼三种场景。结果显示，无倾向场景下20个模型答案落在政治坐标系左侧，仅Grok 4.1偏右；所有模型面对提示都会向该政治倾向靠拢，被形容为“意识形态变色龙”，其中Gemma 3 27B与GPT-5 Nano偏移幅度最大，Llama 3.1 8B与DeepSeek V3.2最小。",
+      "link": "https://www.solidot.org/story?sid=85534",
+      "source_file": "sources/2026-10-05_AI 聊天机器人会成为意识形态回音室_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-05",
+      "title": "AI，为什么总在画美女？",
+      "source": "极客公园",
+      "digest": "极客公园剖析AI图像生成长期“默认画美女”的现象：从1973年图像处理界以《花花公子》插页模特Lena作为默认测试图，到今天AI爆款（吉卜力风、Nano Banana手办）几乎都是“把自己放进去”的玩法。文章指出，韩国棒球联赛“被镜头抓拍的AI美女”先骗过千万观众、后演变成全民模板，暴露出美女往往是AI图像的“默认值”。根因在于模型复刻训练数据分布——正如AI画不出满杯红酒、钟表总停在10:10，美女惯性恰与人的审美偏好叠加，凸显生成模型对数据偏见的继承。",
+      "link": "http://www.geekpark.net/news/372084",
+      "source_file": "sources/2026-10-05_AI，为什么总在画美女？_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-04",
       "title": "Aleph Alpha 发布 Kolibri：780亿参数开放权重英德双语 MoE 模型，仅激活 34.6 亿参数",

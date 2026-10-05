@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-05",
+      "weekday": "周一",
+      "stats": {
+        "国际": 6,
+        "国内": 1,
+        "同业": 2,
+        "其他": 2,
+        "total": 11
+      },
+      "summary": "开源模型能否胜任安全研究？Cantina 发布 apex-flash-1/前沿四强对决：GPT-6 Astra、GPT-6.1 Sol、Gemini 4 ..."
+    },
+    {
       "date": "2026-10-04",
       "weekday": "周日",
       "stats": {
