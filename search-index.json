@@ -1,7 +1,137 @@
 {
-  "updated_at": "2026-10-05T10:48:45.501385",
-  "total": 2515,
+  "updated_at": "2026-10-05T11:32:06.612421",
+  "total": 2528,
   "articles": [
+    {
+      "date": "2026-10-04",
+      "title": "Aleph Alpha 发布 Kolibri：780亿参数开放权重英德双语 MoE 模型，仅激活 34.6 亿参数",
+      "source": "MarkTechPost",
+      "digest": "Aleph Alpha 发布开放权重 MoE 语言模型 Kolibri（Kolibri-1），专攻英德双语，总参数 780.1 亿、每 token 仅激活 34.6 亿（约 4.4%），上下文长达 104 万 token，支持按请求设定推理强度，以 Apache 2.0 许可在 Hugging Face 发布。模型由德国团队端到端研发，训练基础设施位于德国与芬兰，面向欧盟《通用人工智能行为准则》《AI 法案》与 GDPR，数据管线在训练前即对个人数据脱敏。\n\n架构上堆叠 50 个 transformer block，每个 MoE 层用 sigmoid 路由器为全部 384 个路由专家打分，每 token 取 top-6 并常驻 1 个共享专家，辅以精确分位数均衡。FP8 检查点约 78GB，可在单张 B200/B300/H200 或 2 张 H100 上经 vLLM 部署，面向政务、工业、航天等受监管行业的自主可控部署。",
+      "link": "https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/",
+      "source_file": "sources/2026-10-04_Aleph Alpha Releases Kolibri_ A 78.1B Open-Weight _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-04",
+      "title": "点头、抢话、会脸红，一半人分辨不出这是位「AI 小姐姐」",
+      "source": "极客公园",
+      "digest": "10 月 1 日，美国 AI 视频公司 Tavus 发布 Griffin 模型，定义为全球首个\"人类交互模型\"（HIM）。在一项一分钟视频通话测试中，54 名参与者里 26 人（约 48%）事后认为自己在与真人聊天，而上一代仅 2.4%。演示中\"Vanessa\"能接话、开玩笑、对魔方教学持续确认、等待对方思考再开口、理解\"沉默也是信息\"、玩\"西蒙说\"游戏时只在听到指令时模仿动作，且身体与背景均为实时生成。\n\nTavus 强调 Griffin 追求的是\"不出戏\"的自然交互，而非单纯\"脸像不像\"。这标志着数字人赛道从比拼外观真实，转向让 AI 学会\"像人一样聊天\"——实时生成、连贯停顿与抢话等社交微行为，成为区分真假的关键。",
+      "link": "http://www.geekpark.net/news/372075",
+      "source_file": "sources/2026-10-04_点头、抢话、会脸红，一半人分辨不出这是位「AI 小姐姐」_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-04",
+      "title": "AI算力硬合作，马斯克还是更相信中国制造",
+      "source": "量子位",
+      "digest": "马斯克在 X 上确认正与台积电讨论 Terafab 芯片制造合作，引发业界关注。Terafab 是马斯克旗下 Tesla、SpaceX 与 xAI 共同推进的超大规模垂直整合芯片项目，目标是以自有产能保障定制芯片供应。此前英特尔已被正式点名为合作伙伴，将提供 14A（约 1.4nm 级）工艺；此次台积电加入谈判，使两家宿敌因这一\"史诗级芯片工程\"走到一起。\n\n项目一期投资 168 亿美元，长期潜在总投资可达 1190 亿美元，规划年产约 1TW AI 算力（约为当前全球 AI 算力年产出 50 倍量级）。马斯克一面嫌台积电产能不足，一面又因需求压力与风险对冲考虑接触台积电，且台积电自身也在评估得州新基地，双方节奏高度咬合。",
+      "link": "https://www.qbitai.com/2026/10/501605.html",
+      "source_file": "sources/2026-10-04_AI算力硬合作，马斯克还是更相信中国制造_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Claude Code 的「乐高」模式，让程序员彻底玩「上头」了",
+      "source": "极客公园",
+      "digest": "Anthropic 于 10 月 1 日正式将 Claude Code 的 Mods 机制写入更新日志并默认开启，开发者可用几行 TypeScript 函数为终端开面板、改界面、拦截命令甚至转交另一模型。社区迅速产出像素宠物、呼吸引导、agent-race 计分板等玩法，claudemods.ai 已按游戏/仪表盘分类并支持投票。\n\n更关键的是，Claude Code 自身的 /diff 变更面板与 AGENTS.md 支持，并非写死的产品功能，而是官方用同一套 Mods 机制实现，源码与测试公开。这意味着 Anthropic 以\"积木\"方式搭自己的产品并开放给所有人改装。结合 9 月 23 日推出的 Claude Marketplace（已超 2000 个插件与连接器），其\"Vibe Coding 商店\"雏形渐显。",
+      "link": "http://www.geekpark.net/news/372074",
+      "source_file": "sources/2026-10-04_Claude Code 的「乐高」模式，让程序员彻底玩「上头」了_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元",
+      "source": "量子位",
+      "digest": "GPT-6 Astra 发布后，其用 Blender 搭建可导入 UE5 漫游场景的 3D 能力刷屏，引发\"通用模型能否取代专业 AI 3D 模型\"的讨论。但将同一参考图分别交给 Astra 与专业 AI 3D 公司 Meshy，后者在角色发丝、五官、装备层次与纹样还原上明显更优，暴露通用模型在复杂资产上的短板。\n\n与此同时，Meshy 的 ARR 在不到两年内从 100 万美元增长至 1 亿美元，增速接近 Bessemer 定义的\"超新星\"级（行业平均约 1.5 年），快于 HeyGen 的 29 个月。文章指出，3D 是难度最高的生成模态之一，需过拓扑、贴图、尺寸关卡才能进入引擎与打印；门槛降低使 3D 从专业工具走向亿级普通用户，专业模型与通用模型并非简单替代关系。",
+      "link": "https://www.qbitai.com/2026/10/501451.html",
+      "source_file": "sources/2026-10-04_GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "谷歌研究将联邦学习引入可信执行环境：Gboard 实现可外部验证的差分隐私训练",
+      "source": "MarkTechPost",
+      "digest": "Google Research 宣布基于可信执行环境（TEE）构建的新一代联邦学习（FL）系统，宣称首次为 FL 提供可外部验证的中心化差分隐私（DP）保障。自 2017 年 FL 问世以来，Gboard 联想词预测、Smart Compose 等依赖它，但旧系统存在信任缺口：外部无法验证数据是否未被记录或检查，且安全聚合与矩阵分解 DP-FTRL 等先进中心化 DP 算法不兼容，还需信任谷歌正确注入 DP 噪声。\n\n新设计将客户端梯度计算迁移至服务端并使其可证明（attestable），运营方不再需要被信任。系统协调数据上传、KMS 与策略校验、TEE 内计算、公开透明日志四大组件，在保密前提下实现可验证的隐私保护。",
+      "link": "https://www.marktechpost.com/2026/10/04/google-research-moves-federated-learning-into-tees-gboard-now-trains-with-externally-verifiable-differential-privacy/",
+      "source_file": "sources/2026-10-04_Google Research Moves Federated Learning Into TEEs_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "OpenAI 刚把多 Agent 做成产品，o1 奠基人却说：1 万个 Agent 解出世界级难题，多 Agent 贡献不到 10%",
+      "source": "InfoQ",
+      "digest": "9 月 29 日 OpenAI 在 DevDay 2026 上将多 Agent 从研究能力推向产品主线，发布可全天候工作的智能体 Dots：个人 Dot 可调用 Codex 编码，用户与 Dots 在同一 Space 协作，企业版 Specialist Dots 承担特定职责；Agents API 向开发者开放 Harness、多智能体控制与计算机操作能力。\n\n但 o1 及后续推理模型早期奠基者 Noam Brown 在播客中指出，多智能体易获超出实际贡献的关注——以\"千禧年难题\"为例，他称功劳主要来自一个强大的通用模型，\"多智能体贡献连 10% 都不到\"。他认为多智能体本质是一种并行扩展测试时计算的方式，能提速但效率略低于线性且高度依赖任务；尚无充分数据说明万级智能体的协调效率，且更强协作不保证始终服务于人类目标。",
+      "link": "https://mp.weixin.qq.com/s/Ia-3zDD9B2pOh5VcbCmwqg",
+      "source_file": "sources/2026-10-04_OpenAI 刚把多 Agent 做成产品，o1 奠基人却说：1 万个 Agent 解出世界级难题，多 Agent 贡献不到 10%_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Jev 之后，中国团队开始深挖 AI 的「直觉层」",
+      "source": "极客公园",
+      "digest": "前 OpenAI 研究员创办的 TypeSafe AI 于 9 月 15 日发布只做判断的\"系统一\"模型 Jev，定价每百万输入 token 0.042 美元、输出免费，把\"判断\"从\"生成\"中剥离成廉价高频基础设施；Vercel 称其上线 24 小时内 13% 付费用户已使用。两周内行业快速跟进：OpenAI 推 Decisions API、Cloudflare 开源 Clef、亚马逊放出 Strands Decider。\n\n国内团队同步发力——上海人工智能实验室开源多模态决策模型 Intern-Decision（0.8B/2B/4B，推理比 Jev 快 2–3 倍）；成立不足五个月的上海公司 StartLux（原点星辉，陈大年掌舵）发布 StartLux-Decision（0.8B–27B 五档，宣称 27B 在 38 项测试 31 项高于 Jev）。中国团队普遍选择开源与本地化路线。",
+      "link": "http://www.geekpark.net/news/372081",
+      "source_file": "sources/2026-10-04_Jev 之后，中国团队开始深挖 AI 的「直觉层」_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-04",
+      "title": "异构分组混合专家架构上线：参数瘦身20%，推理反超传统MoE | ACL'26",
+      "source": "量子位",
+      "digest": "中国联通数据科学与人工智能研究院提出异构分组混合专家架构 MoHGE（Mixture of Heterogeneous Grouped Experts），入选 ACL 2026 并开源。传统 MoE 强制所有专家同尺寸，面对简单 token 算力浪费；现有异构架构（MoDSE、HMoE）又易引发 GPU 负载不均与参数利用率低。\n\nMoHGE 借鉴动物智能进化，核心含三大机制：两级路由（组级门控按 token 复杂度选专家组、专家级门控组内定位）、组级辅助损失（引导简单 token 路由到小专家组，实现容量与难度动态匹配）、全尺寸解耦分配（每 GPU 均配跨组全尺寸专家组合，辅以组内辅助损失熨平波动）。在 MMLU/MATH/GSM8K 等基准上，3B/14B 规模较基线 MoE 削减约 20% 总参数、激活专家参数降近 1/4，准确率仍媲美或超越传统架构。",
+      "link": "https://mp.weixin.qq.com/s/KXcHiVoYrHCU6nXpVPiuGA",
+      "source_file": "sources/2026-10-04_异构分组混合专家架构上线：参数瘦身20%，推理反超传统MoE _ ACL'26_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-04",
+      "title": "DeepSeek Harness v0.2 发布官方桌面应用",
+      "source": "MarkTechPost",
+      "digest": "DeepSeek 为其开源智能体运行时 DeepSeek Harness（dsh）发布 v0.2 预览版官方桌面应用，提供 macOS（Apple 芯片）与 Windows（64 位）安装包，也可经 npx @deepseek-ai/dsh web 启动。dsh 是将模型变为智能体的运行时，负责读文件、跑命令、维护计划，v0.2 面向日常办公与编程。\n\n内置能力包括常用办公与开发工具、插件管理页、文件与 diff 预览侧栏、文档图表/幻灯片生成，以及可按频率调度的自动化任务插件；桌面版捆绑 dsh 命令，免装 Node.js/pnpm，支持 DeepSeek 账号登录或 API Key（账户模型免额外 Key 即可联网搜索）。架构延续\"一切皆插件\"的微内核设计，基于 Cordis 框架，团队提醒后续仍有不兼容变更。",
+      "link": "https://www.marktechpost.com/2026/10/03/deepseek-harness-v0-2-brings-official-desktop-apps-to-its-open-source-agent-harness/",
+      "source_file": "sources/2026-10-04_DeepSeek Harness v0.2 Brings Official Desktop Apps_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "刚刚，DeepSeek Harness负责人回应兼容Claude Mods：为验证能力子集，正训练Agent“用插件自进化”",
+      "source": "InfoQ",
+      "digest": "Anthropic 为 Claude Code 推送 Mods 扩展机制（进程内函数拦截深度定制界面与工具）后不到 24 小时，DeepSeek Harness（dsh）团队负责人崔添翼在 X 转发评论，称两家\"殊途同归\"：Claude Code 的 Mod 仍是既定软件上开洞的局部插件，而 DSH 从立项起就是\"一切皆插件\"的微内核架构。\n\n随后 dsh 仓库推送 v0.2.1-alpha.1，新增\"实验性 Claude Code Mods 兼容层\"（崔添翼亲自署名），提交日志称其目的是验证 Claude Code Mods API 大致为 DSH 插件的一个子集。技术本质是一层跨运行时 API 语义桥接（API Shim）：DSH 基于开源 Cordis 框架，内核无特权、模块皆以服务发布，该兼容层在 Cordis 之上转接 Claude Code Mods 的 TypeScript 定义。",
+      "link": "https://mp.weixin.qq.com/s/lBoZWXyVzQbFrWDkl7f_1A",
+      "source_file": "sources/2026-10-04_刚刚，DeepSeek Harness负责人回应兼容Claude Mods：为验证能力子集，正训练Agent“用插件自进化”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "最火AI岗位FDE：月薪5万，都干这些…",
+      "source": "量子位",
+      "digest": "FDE（Forward Deployed Engineer，前线部署工程师）成为 AI 时代最火岗位之一：海外公开薪资中位数约 20 万美元/年，国内大厂开出月薪三五万，小红书上求职经验帖遍地。其经典模式分 Echo（理解业务、设计方案）与 Delta（写代码、接数据落地）两角色，后方 Dev 开发标准平台。\n\n海外 Anthropic 拟投 1 亿美元在 2027 年底前培训 1 万名 FDE，OpenAI 携 40 亿美元成立部署公司，AWS 拿 10 亿美元组建 FDE 部门；国内 Kimi 联合 IT 服务商共建队伍，腾讯云推出 FDE 认证与合作伙伴招募。岗位重心从\"部署软件\"转向\"先帮客户想清 AI 能用在哪\"，围绕企业 Ontology（业务地图）梳理数据与流程，零一万物即采用\"一号位+前线 FDE 驻场梳理\"路径。",
+      "link": "https://www.qbitai.com/2026/10/501506.html",
+      "source_file": "sources/2026-10-04_最火AI岗位FDE：月薪5万，都干这些…_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "北京农商银行：AI应用场景建设采取业务+科技+数据的虚拟小组方式推进",
+      "source": "银行科技研究社",
+      "digest": "北京农商银行 2026 半年报与招投标信息显示，该行正强化 AI 布局：全行推广低代码平台、RPA、大模型、BI 自助分析、业务侧自助建模五大工具，上半年新增 618 个应用场景，并以\"业务+科技+数据\"虚拟小组推进。普惠金融侧基于外部数据与大模型设计\"触发式\"风险预警机制。\n\n招投标指向对公信贷、对公营销、测试等方向——包括大模型对公智能信贷咨询、对公营销智能助手（客户画像、商机雷达、营销策略生成）、测试案例生成智能体采购，以及私有化大模型安全围栏建设。该行已建统一 AI 能力底座，私域部署智能问答、知识库、智能客服；\"十五五\"将围绕智能信贷、营销、客服、问数、办公、研发六大场景推动\"大模型+智能体\"数字员工模式。",
+      "link": "https://mp.weixin.qq.com/s/VnNWLVbZKVzcL87ru3eRlA",
+      "source_file": "sources/2026-10-04_北京农商银行：AI应用场景建设采取业务+科技+数据的虚拟小组方式推进_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-03",
       "title": "OpenAI 发布 GPT-6 系列模型实用构建指南",
