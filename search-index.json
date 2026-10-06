@@ -1,7 +1,127 @@
 {
-  "updated_at": "2026-10-06T05:18:56.290042",
-  "total": 2539,
+  "updated_at": "2026-10-07T05:10:31.767162",
+  "total": 2551,
   "articles": [
+    {
+      "date": "2026-10-06",
+      "title": "JEPA-Anything：一套方法覆盖七领域的通用世界模型框架",
+      "source": "MarkTechPost",
+      "digest": "PhAI Labs、港中文、复旦、斯坦福、牛津、普林斯顿等机构联合发布 JEPA-Anything，一个领域无关的世界模型构建框架。它将联合嵌入预测架构（JEPA）扩展为正交预测分解（OPF），用同一套学习“配方”适配视觉、生物、临床轨迹、控制、分子动力学、物理场与天气等七个差异巨大的领域。OPF 将 latent 目标分解为 K 个正交子空间并各配专用预测器，配合正交性、因子活性、编码器方差三项正则，解决了标准 JEPA 的“容量分配”问题。实验显示其在 10 个动力学任务上全部超越对照 JEPA，单干预误差降 34.83%，并开源 Apache-2.0 核心代码与 HF 检查点。",
+      "link": "https://www.marktechpost.com/2026/10/05/beyond-domain-specific-world-models-jepa-anything-uses-1-recipe-for-7-fields/",
+      "source_file": "sources/2026-10-06_Beyond Domain-Specific World Models_ JEPA-Anything_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Reflection AI 发布 Beam：501B 参数开源 MoE 模型，专注编程与智能体",
+      "source": "MarkTechPost",
+      "digest": "Reflection AI 发布首款开源权重模型 Beam：一个 501B 总参数、23B 激活参数的稀疏 MoE 模型，专注编程、推理与智能体负载，以“西方开源前沿”定位对标 GLM 5.2 等更大模型，宣称以 3–4 倍更少的推理算力取得相近基准。Beam 预训练于 23.8T token（6,144 张 GB300 上不到 4 周完成），RL 阶段在 10.5K 张 GB300 上生成超 1 亿次 rollout，SWE-bench Verified 达 80.9、Terminal Bench v2.1 达 80.1。采用异步策略梯度、可调控长度惩罚，Apache 2.0 权重计划本月晚些时候开放。",
+      "link": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
+      "source_file": "sources/2026-10-06_Reflection AI Introduces Beam_ A 501B Open-Weight _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Reka 发布 Rho-1：19B 全能推理模型，统一文本/图像/视频与机器人动作",
+      "source": "MarkTechPost",
+      "digest": "Reka 发布 19B 全能推理模型 Rho-1 的研究预览：单一神经网络统一理解并生成文本、图像、视频，还能推理并直接输出机器人动作，意图替代在多模态专家模型间传递任务的 agentic 流水线。架构上每个 transformer 块含“理解”与“生成”两条专家权重流，共享注意力与同一 KV cache；离散 token 承载文本与高层指令，连续 token 承载图像潜变量、视频帧与机器人动作。Rho-1 视频生成约 0.79 倍实时，经蒸馏将去噪从 99 步降至 8 步；在 LIBERO 仿真中输出 7 通道机器人动作。目前仅研究预览，无公开权重。",
+      "link": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
+      "source_file": "sources/2026-10-06_Reka Releases Rho-1_ A 19B Omni-Reasoning Model Th_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-06",
+      "title": "OpenAI 与 Ironclad 推进面向专业工作的计算机操作智能体",
+      "source": "OpenAI",
+      "digest": "OpenAI 与法律合约平台 Ironclad 合作，围绕复杂的合同工作流训练并评估 AI 智能体，以推进面向专业工作的“计算机操作”（computer use）能力。据官方 RSS 提要，双方聚焦合同等高复杂度业务流程，让智能体理解并操作专业软件界面，完成端到端文档处理任务。本文为 OpenAI 官方发布的产品/合作动态，正文因官网访问限制（403）未能抓取，摘要依据 RSS 提要整理，细节有限。",
+      "link": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "source_file": "sources/2026-10-06_Advancing computer use with Ironclad_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "CLAUDE.md 还是 AGENTS.md？Anthropic 的答案是：以后都不用",
+      "source": "InfoQ",
+      "digest": "Anthropic Claude Code 团队核心成员 Thariq Shihipar 做客 Latent Space 播客，系统阐述其 Agent 工程理念。他确认 Claude Code 将支持行业标准的 AGENTS.md，但更激进的判断是：随模型变强，CLAUDE.md 乃至静态指令文件终将不再必要，新项目可先不写。访谈还详解 Claude Mods（可定制整个 harness 的执行逻辑与 UI）、Artifacts 作为“持久生成式界面”、Claude Tag 作为“组织级 harness”，以及 Agent 安全防线（Probes/auto mode/身份权限多层）。他认为企业落地 AI 第一件事是把数据准备好供 agent 使用，但也警示越重要的数据暴露给 agent 的攻击面越大。",
+      "link": "https://mp.weixin.qq.com/s/b979KA65CA2E54cXban_Mw",
+      "source_file": "sources/2026-10-06_CLAUDE.md 还是 AGENTS.md？Anthropic 的答案是：以后都不用_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Hinton、Bengio等人的论文研究显示：AI R&D自动化可能在未来几年内触发智能爆炸（附论文中文译本）",
+      "source": "软件工程3.0时代",
+      "digest": "Hinton、Bengio 等多位学者联名论文警告：AI R&D 自动化可能在未来几年内触发“智能爆炸”，而人类准备严重不足。论文给出三大量化发现——Anthropic 报告中 AI 批准的代码占比从 2025 年初个位数升至 2026 年中 80% 以上，自主完成任务比例半年内从 1% 升至 26%；以“研究努力回报率”r 值（1.2–1.9）建模，若维持该水平，AI 进步速度 1.5 年内将提升 10 倍；并分析收益递减、算力、数据、难自动化任务四大摩擦力。论文建议建立类似核监管的独立监督机构、标准化报告与隔离部署，以在快速变革中维持人类控制。",
+      "link": "https://mp.weixin.qq.com/s/7QyoIFFCmbRZRyGRh1teoQ",
+      "source_file": "sources/2026-10-06_Hinton、Bengio等人的论文研究显示：AI R&D自动化可能在未来几年内触发智能爆炸（附论文中文译本）_软件工程3.0时代.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Together Link：在 Claude Code/Codex 中调用 Kimi K3、GLM 5.3 等开源模型的免费 CLI",
+      "source": "MarkTechPost",
+      "digest": "Together AI 发布 Together Link，一款免费、MIT 许可的 CLI（测试版），可将开发者已在用的编码智能体（Claude Code、Codex、OpenCode、ChatGPT Desktop、Pi 等）连接到其在 Together 平台托管的开源模型。核心理念是“保留 harness、替换模型、降低账单”：通过自动路由器，简单任务路由到 Kimi K3、GLM 5.3、DeepSeek V4.1 Flash 等低成本开源模型，难题再升级到 Opus 5.5。每条会话结束即销毁临时配置，保持 prompt cache；并提供按会话的 token 与费用清单。",
+      "link": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/",
+      "source_file": "sources/2026-10-06_Meet Together Link_ A Free CLI That Runs Open Mode_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "OpenAI「疯狂28天」首日，这都发了些啥啊…",
+      "source": "量子位",
+      "digest": "OpenAI Codex 负责人 Tibo 启动“疯狂28天”计划：未来 28 天每天要么交付一项 Codex/ChatGPT Work 的明显改进，要么对全员额度做一次“重置”。首日成果为 GPT-6 Astra 与 GPT-6.1 Sol 默认推理速度提升约 50%（达 50TPS），但网友实测仅约 35TPS、且质疑只是补回此前因负载暴增变慢的坑。同期 OpenAI 宣布在 ChatGPT 图像生成中测试视觉贴片广告，并为应付欧盟 AI 法案对欧盟区文本加隐形统计水印；SemiAnalysis 报告更指其 200 美元 Pro 套餐 API 等值被砍半、500 美元新档性价比反被 Anthropic 碾压，评论区翻车。",
+      "link": "https://www.qbitai.com/2026/10/501726.html",
+      "source_file": "sources/2026-10-06_OpenAI「疯狂28天」首日，这都发了些啥啊…_量子位_f1c640.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "DigitalMate：打造个人移动超级智能体，一站式完成复杂任务",
+      "source": "CSDN",
+      "digest": "openJiuwen 社区发布面向移动场景的个人超级智能体 DigitalMate，运行于 HarmonyOS 设备。用户以自然语言提出需求，系统识别任务、调用工具与服务，并基于 A2UI（Agent 交互界面协议）实时生成适合当前任务的原生可交互界面，将地图、航班、邮件、本地生活、媒体等多源结果聚合到同一任务视图并保留来源。其设计强调“无真实结果不伪造答案”，对外部动作采用“先审阅再执行”，并提供“关于你”可查看、可修正的长期记忆。该项目的定位是让用户无需离开当前上下文即可完成跨应用任务。",
+      "link": "https://mp.weixin.qq.com/s/49UfZXUz61DHO5YSInO1tA",
+      "source_file": "sources/2026-10-06_DigitalMate：打造个人移动超级智能体，一站式完成复杂任务_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "兴业银行：日均词元调用量已达100亿，运行中的智能体超500个",
+      "source": "银行科技研究社",
+      "digest": "兴业银行披露其全行日均Token调用量已达100亿、运行中智能体超500个，并启动AI原生研发平台建设项目。该行“人工智能+”行动规划下，智慧集中作业平台融合开源模型与自研技术栈，日均处理影像超100万张；企业级智能平台构建“创新—开发—运行”三态闭环的智能体工程；大模型平台提供多元化模型市场与端到端SFT、LoRA、P-tuning后训练能力。从6月末的345个智能体增至如今超500个，不到3个月新增百余个。AI原生研发平台拟采购覆盖产品原型生成、代码理解、智能补全、单元测试、代码审查及企业级MCP/Skills/Rules/Spec等能力，面向科技研发全流程。",
+      "link": "https://mp.weixin.qq.com/s/ov8zzHkvx1Jn6fSCXQto5A",
+      "source_file": "sources/2026-10-06_兴业银行：日均词元调用量已达100亿，运行中的智能体超500个_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "央行公示浙江第七批金融科技创新应用，首次以“人工智能”为主题",
+      "source": "银行科技研究社",
+      "digest": "浙江省金融科技创新监管工具第七批创新应用对外公示，首次以“人工智能”为主题。申请机构均为银行，包括工行浙江省分行、浙江农商联合银行、浙江稠州商业银行、台州银行、浙江民泰商业银行等。工行浙江分行运用大模型、RAG、机器学习打造对公信贷AI助手，覆盖营销、尽调、审查审批与风险分析四大能力；浙江农商构建“意图识别—任务规划—工具执行—规范表达”四阶段智能体工程化管控机制与三维安全围栏；台州银行搭建多智能体风控辅助平台；民泰商业银行采用“大模型+RAG+规则引擎+反洗钱知识库”多智能体架构提升可疑交易报告质效。截至目前，浙江已公示7个批次共29个金融科技创新应用，全国累计公示561个，银行参与度98.22%。",
+      "link": "https://mp.weixin.qq.com/s/RzS-8B3cA9kA0F_VoanFUA",
+      "source_file": "sources/2026-10-06_央行公示浙江第七批金融科技创新应用，首次以“人工智能”为主题_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-06",
+      "title": "不er，咋陶哲轩也成AI减速派了？？",
+      "source": "量子位",
+      "digest": "菲尔兹奖得主陶哲轩在 SAIR 最新演讲中公开转向“AI 减速”立场，呼吁模型公司“慢下来”，称其无休止加速却对之后会发生什么一无所知。文章回顾其态度转变：三个月前他还积极拥抱 AI、称数学正经历“哥白尼革命”，如今却警示未解决的数学问题如同“灯塔”，真正珍贵的是研究过程建立的工具与洞见，而非答案本身；并引用 AI 自动解题可能削弱人类数学能力、造成知识断层的风险。同期 Villani 等数学家亦对 OpenAI 拿下千禧难题表达震惊。",
+      "link": "https://www.qbitai.com/2026/10/501736.html",
+      "source_file": "sources/2026-10-06_不er，咋陶哲轩也成AI减速派了？？_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-05",
       "title": "开源模型能否胜任安全研究？Cantina 发布 apex-flash-1",

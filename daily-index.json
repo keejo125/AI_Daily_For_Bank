@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-06",
+      "weekday": "周二",
+      "stats": {
+        "国际": 8,
+        "国内": 1,
+        "同业": 2,
+        "其他": 1,
+        "total": 12
+      },
+      "summary": "JEPA-Anything：一套方法覆盖七领域的通用世界模型框架/Reflection AI 发布 Beam：501B 参数开源 MoE 模型，专注编程与..."
+    },
+    {
       "date": "2026-10-05",
       "weekday": "周一",
       "stats": {
