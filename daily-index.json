@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-07",
+      "weekday": "周三",
+      "stats": {
+        "国际": 10,
+        "国内": 0,
+        "同业": 0,
+        "其他": 2,
+        "total": 12
+      },
+      "summary": "GPT-6 与 Intelligent UI 面向所有人开放/Google DeepMind 发布 EmbeddingGemma 2：基于 Gemma 4..."
+    },
+    {
       "date": "2026-10-06",
       "weekday": "周二",
       "stats": {

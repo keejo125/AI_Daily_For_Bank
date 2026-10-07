@@ -1,7 +1,127 @@
 {
-  "updated_at": "2026-10-07T05:10:31.767162",
-  "total": 2551,
+  "updated_at": "2026-10-08T05:13:13.458899",
+  "total": 2563,
   "articles": [
+    {
+      "date": "2026-10-07",
+      "title": "GPT-6 与 Intelligent UI 面向所有人开放",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布 GPT-6 通过 ChatGPT 面向全球用户推送，并引入 Intelligent UI——在对话中直接呈现可探索、可交互的可视化与交互式体验，同时带来更快的响应。该文为 OpenAI 官方发布页，因站点对自动化抓取返回 403，正文仅提供导语级内容，未披露模型架构与基准细节；本摘要据发布导语忠实撰写，未补充任何外部信息。",
+      "link": "https://openai.com/index/gpt-6-for-everyone",
+      "source_file": "sources/2026-10-07_GPT-6 and Intelligent UI for everyone_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-07",
+      "title": "Google DeepMind 发布 EmbeddingGemma 2：基于 Gemma 4 的 7.4 亿参数多模态嵌入模型",
+      "source": "MarkTechPost",
+      "digest": "Google DeepMind 发布 EmbeddingGemma 2，将文本、代码、图像、视频、音频统一映射到同一 768 维嵌入空间的开源多模态嵌入模型，基于 Gemma 4 架构、Apache 2.0 许可，参数 7.4 亿，8K 上下文。采用模块化编码器（文本 270M、视觉 170M、音频 300M 可选），量化后可在 Pixel 11 Pro 以约 191MB（纯文本）/ 567MB（全模态）内存本地运行；借助 Matryoshka 表示学习可将向量截断至 128 维，本地向量库存储最高降 6 倍。在 MTEB Code 上较上代提升 9.92 分，适合本地代码索引、语义检索与隐私优先 RAG。本文补充横向对比：其参数量与 Qwen3-VL-Embedding-2B、LCO-Embedding-Omni-3B 接近，且是唯一同时支持文 / 图 / 视频 / 音频的开源嵌入模型。",
+      "link": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
+      "source_file": "sources/2026-10-07_Google DeepMind Releases EmbeddingGemma 2, a 740M _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-07",
+      "title": "Mistral 发布 Large 4（Le Chonk）：1.05 万亿参数多模态 MoE 模型",
+      "source": "MarkTechPost",
+      "digest": "Mistral 发布旗舰模型 Mistral Large 4（Le Chonk）公开预览：细粒度 MoE，总参 1.05 万亿、每 token 激活 490 亿，原生支持图像输入，100 万 token 上下文，1.6B 视觉编码器；在 Mistral 自有欧洲数据中心以约 3800 张 Nvidia Grace Blackwell GPU 从头训练。API 现价 $1.36 / $4.18 每百万 token，权重将于 10 月底开放。亮点在网络安全：Cybench 93%、CyberGym-E2E 82%，Mistral 称若干闭源前沿模型因安全拒绝在该类任务近零分；Agent 编程 DeepSWE 61.7%、SWE-Atlas 59.4%。盲测 3.74/5，仅次于 Claude Opus 5（4.22）。",
+      "link": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+      "source_file": "sources/2026-10-07_Mistral AI Releases Mistral Large 4 (Le Chonk)_ A _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-07",
+      "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
+      "source": "量子位",
+      "digest": "OpenAI 一次性公开 722 篇数学手稿（372 组结果），均出自一个未发布的内部前沿模型，尝试约 4000 个研究问题，单项平均算力约相当于 ChatGPT Pro 思考 3 小时；论文、源码与部分 Lean 证明已上传 GitHub。成果触及准黎曼猜想（ζ 函数实部 >7/8 区域无零点）、有理数域希尔伯特第十问题、BSD 猜想、霍奇猜想、π 无理性指数 = 2、卡塔兰常数无理性等，含三道千禧难题。九人独立顾问组（含三位菲尔兹奖得主 Gowers、Hairer、Witten）声明不代表认可，数学界对产出速度远超理解速度表示担忧。",
+      "link": "https://www.qbitai.com/2026/10/501749.html",
+      "source_file": "sources/2026-10-07_OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-07",
+      "title": "海外开源模型重新提速：Mistral、“美版DeepSeek”同时亮牌",
+      "source": "InfoQ",
+      "digest": "西方开放模型阵营同步提速：美国 Reflection（“美版 DeepSeek”）10 月 5 日发布首款开放权重模型 Beam——MoE 总参 5010 亿、每 token 激活 230 亿，面向编程 / 推理 / Agent，预训练 23.8 万亿 token、以 1.05 万张 GB300 做 4 周强化学习，部分高级推理任务以 GLM-5.2 约 1/4–1/3 算力接近其表现，但距中国最新模型仍有代差；次日法国 Mistral 推出 Large 4（总参 1.05 万亿、激活 520 亿、原生多模态、100 万上下文）。文章指出中国模型已占 Hugging Face 年下载量约 41%，开放模型在生产流量占比一年内从不足 10% 升至 56%，并对比两家“拥有智能而非租赁智能”的全栈基础设施商业逻辑。",
+      "link": "https://mp.weixin.qq.com/s/T7uTDtrWrKO6fZHw4Z87bQ",
+      "source_file": "sources/2026-10-07_海外开源模型重新提速：Mistral、“美版DeepSeek”同时亮牌_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-07",
+      "title": "Laya 决策引擎开发指南：零样本决策与概率校准",
+      "source": "MarkTechPost",
+      "digest": "Laya 是 Convai Innovations 开源的决策引擎（421M 参数编码器），以非自回归方式在单次前向传播中完成分类、打分、是非判断等“零样本决策”并输出校准概率，被称为 TypeSafe Jev 的开源替代。本文用银行意图分类数据集 CLINC150 实测：仅以意图描述做零样本路由即达 0.804 准确率，与需每意图 3–10 条标注训练的 TF-IDF 分类器相当；裸意图名（0.878）优于带描述版本，反转选项顺序会改变 4.2% 的个别答案。文章同时揭示默认温度隐患——11 项以上选择题被钳制为 0.5 导致过度自信（ECE 0.102），在自有验证集上仅拟合所测分桶温度后降至 0.059；并给出按选项数分桶设置弃权门限、在标注数据上设定是非题阈值的工程建议，对构建生产级路由 / Agent 决策层有参考价值。",
+      "link": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+      "source_file": "sources/2026-10-07_A Developer’s Guide to Laya_ Zero-Shot Decisions a_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "Meta 开源 Rebalancer：日均处理约 4000 万分配问题的 C++ 求解器",
+      "source": "MarkTechPost",
+      "digest": "Meta 开源 Rebalancer——一个带 Python 接口的 C++ 分配问题求解库（Apache 2.0），用于在高可用与可扩展约束下决定“对象放哪个桶”。其设计将问题规格与求解分离：规格编译为表达式图，再由局部搜索（并行、每秒数百万次评估）或 MIP 求解器（FICO Xpress / Gurobi / HiGHS）求解。Meta 内部已运行 9 年，日均处理约 4000 万分配问题、30+ 种 formulation，P99 在 26.5 万对象 / 3200 桶上为 12 秒；并提供 Docker 化调试 UI Rebalancer Explorer。对标 Google OR-Tools，其优势是一套分配规格同时跑局部搜索与 MIP。",
+      "link": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
+      "source_file": "sources/2026-10-07_Meta AI Open-Sources Rebalancer_ A C++ Assignment _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！",
+      "source": "量子位",
+      "digest": "独立评测机构 Artificial Analysis 最新文生视频榜单中，影视公司 Utopai Studios 的模型 Utopai X 以 1150 分位列全球第二，仅次于阿里 Wan 3.0。Utopai X 以 MiniMax 开源视频模型 H3 为底座做后训练，在音频同步、运镜控制与物理一致性等 7 项能力上优于基座。公司同步推出制片平台 PAI，导演可在同一工作台从剧本推进到剪辑，Agent 会就镜头插入导致的视线不连续等风险主动预警。Utopai 由 00 后华裔创业者 Cecilia Shen 创立，福布斯估其约 10 亿美元，已预售部分国际发行权，多部院线作品计划 2027 年上映。文章认为其护城河在于片场生产数据回流模型与 Agent 的工作流。",
+      "link": "https://www.qbitai.com/2026/10/501803.html",
+      "source_file": "sources/2026-10-07_《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "代码量，不代表AI生产力！XP创始人：开发者真正的工作，发生在代码生成之后",
+      "source": "51CTO技术栈",
+      "digest": "XP 创始人、TDD 先驱 Kent Beck 在 Prodacity 2026 演讲中指出，AI 生成代码越来越便宜，但“代码量 / PR 数”离任务结果还隔两层：Effort→Output→Outcome→Mission。Agent 能快速补齐接口、页面并使测试变绿，却掩盖旧数据迁移、权限继承、支付幂等等生产风险。他提出以 Features（当下功能）与 Futures（系统下一步的可选择性）区分代码结构，主张每完成一个功能后停下来消除重复、补可观测性、检查边界，把开发者工作从“写实现”移向“限定意图、审查 Diff、验证风险”。对长期系统，一次性 Spec 驱动易退化为瀑布，需以小步部署—观察—迁移形成闭环。",
+      "link": "https://mp.weixin.qq.com/s/wfLM-k3VBizLnWIar3Ejsw",
+      "source_file": "sources/2026-10-07_代码量，不代表AI生产力！XP创始人：开发者真正的工作，发生在代码生成之后_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "刚刚，OpenAI四连更！API最高档付费砍半，Auto-review全面免费",
+      "source": "机器之心",
+      "digest": "OpenAI 的 Tibo 开启“28 天每日一更”挑战，第二天连发四项更新：① Auto-review 对所有 ChatGPT 登录用户免费，引入第二个 Agent 专查主 Agent 的高风险操作，缓解长任务中频繁人工确认的负担；② API 付费等级由五档简化为三档（Build / Launch / Grow），最高档累计付费门槛由 1000 美元降至 500 美元；③ Meetings 插件进入 ChatGPT，可记录会议并存入 Space 生成总结与待办；④ Decisions API 进入 public beta，由 GPT-6 Luna 驱动，输出 Predicates / Choices / Scores 三类低延迟决策（比 Responses API 快约 10 倍），用于路由、工具选择与风险判断。",
+      "link": "https://mp.weixin.qq.com/s/KSuZPCh333T4xdQfA7j5Aw",
+      "source_file": "sources/2026-10-07_刚刚，OpenAI四连更！API最高档付费砍半，Auto-review全面免费_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
+      "source": "量子位",
+      "digest": "AI 3D 多模态模型公司 Meshy 入选 a16z 首份“消费级 AI 应用月收入 Top 50”榜单第 31 名，为榜单唯一 AI 3D 公司，与 OpenAI、Anthropic、Canva 等共同上榜。a16z 第七版报告首次新增收入榜单，依据 YipitData 美国消费者银行卡消费数据，显示消费者愿为专业化创意工具付费。Meshy 由 MIT 博士胡渊鸣（Ethan Hu）创立，用户超 1500 万，ARR 突破 1 亿美元，2026 年 7 月完成近 4 亿美元 B 轮、估值 15 亿美元，标志 3D 成为独立付费品类。",
+      "link": "https://www.qbitai.com/2026/10/501791.html",
+      "source_file": "sources/2026-10-07_Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-07",
+      "title": "晕…这年头还有说人话的AI不",
+      "source": "量子位",
+      "digest": "量子位观察指出，当前主流 Coding 模型（Fable、Sol、Opus 等）输出普遍“不言人话”，充斥“单腿哑火”“同波大删除”等黑话，引发开发者集体吐槽。文章分析成因：一是 Coding 过拟合，二是厂商为压缩 Token 将思维链调成极简“穴居人语”——OpenAI 最早如此，Claude 在 Opus 4.6 后也跟进，同样一句话 Token 消耗可降约 70%。社区出现 CaveMan 等“教 AI 不说人话”的 GitHub 项目（逾 10 万星）。作者认为 Gemini 因语言能力与排版层级设计，成为少数仍“说人话”的模型。本文属产品体验评论，未涉及具体技术结论。",
+      "link": "https://www.qbitai.com/2026/10/501796.html",
+      "source_file": "sources/2026-10-07_晕…这年头还有说人话的AI不_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-06",
       "title": "JEPA-Anything：一套方法覆盖七领域的通用世界模型框架",
