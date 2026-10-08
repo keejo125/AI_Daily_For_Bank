@@ -1,7 +1,347 @@
 {
-  "updated_at": "2026-10-08T05:13:13.458899",
-  "total": 2563,
+  "updated_at": "2026-10-09T05:22:50.577964",
+  "total": 2597,
   "articles": [
+    {
+      "date": "2026-10-08",
+      "title": "ChatGPT 踢到铁板：能破解千禧数学难题，但论文复现率低至 13.98%",
+      "source": "量子位",
+      "digest": "OpenAI 模型近期攻克了千禧年七大数学难题之一，仅用 88 小时完成。但量子位援引基准 PaperBenchX 指出，AI 在科研场景的“复现率”仅约 13.98%，即能提出解法却难以稳定复现与验证，暴露当前 AI 科研能力的短板。文章认为，衡量 AI 科研实力不能只看“是否解出”，更要看可复现性与严谨性。",
+      "link": "https://www.qbitai.com/2026/10/501995.html",
+      "source_file": "sources/2026-10-08_ChatGPT踢到铁板了！能破解千禧数学难题，但论文复现率低至13.98%？_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Claude 新模型发布：跑分暴击 GPT-6 Luna，价格比竞品更便宜",
+      "source": "量子位",
+      "digest": "Anthropic 发布 Claude Haiku 5.5，小模型迎来“大逆袭”：官方跑分逐项超越 DeepSeek V4.1 Flash 与 GLM-5.3-Flash 等前代“斩杀线”模型，被定位为新的小模型守门员。其成本较前代 Haiku 4.5 显著降低（智东西称平均低约 75%），面向高吞吐、成本敏感任务，直接对标 OpenAI 的 GPT-6 Luna 轻量档。",
+      "link": "https://www.qbitai.com/2026/10/501832.html",
+      "source_file": "sources/2026-10-08_Claude新模型发布！跑分暴击GPT-6 Luna，价格比梁文谷还便宜，OpenAI只能送重置卡挽_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Liquid AI 发布开放权重 d1-3B 与 d1-omni-600M：零输出 token 的多模态决策模型",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI 发布开放权重模型系列 Open d1，包含两个多模态决策模型 d1-3B 与 d1-omni-600M。与传统生成模型不同，d1 采用“零输出 token”的决策范式，直接产出动作或选择而非逐 token 生成文本，面向需要快速、低延迟决策的 agentic 与多模态场景。",
+      "link": "https://www.marktechpost.com/2026/10/07/liquid-ai-releases-open-weight-d1-3b-and-d1-omni-600m-multimodal-decision-models-with-zero-output-tokens/",
+      "source_file": "sources/2026-10-08_Liquid AI Releases Open-Weight d1-3B and d1-omni-6_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Perplexity 发布 pplx-embed-v2-late：0.6B 边缘模型与 9B 模型 MADQA 得分 92.4%",
+      "source": "MarkTechPost",
+      "digest": "Perplexity 发布 pplx-embed-v2-late，包含两款 embedding 模型：一款 0.6B 的边缘（edge）模型与一款 9B 模型，其中 9B 模型在 MADQA 基准上取得 92.4% 的得分。该发布补足了 Perplexity 在检索/向量表示环节的自研能力，并兼顾端侧轻量化部署需求。",
+      "link": "https://www.marktechpost.com/2026/10/07/perplexity-ai-releases-pplx-embed-v2-late-a-0-6b-edge-model-and-a-9b-model-scoring-92-4-on-madqa/",
+      "source_file": "sources/2026-10-08_Perplexity AI Releases pplx-embed-v2-late_ A 0.6B _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "GPT-6 全面开放：免费用户也能用",
+      "source": "机器之心",
+      "digest": "OpenAI 宣布 GPT-6 面向全球所有 ChatGPT 用户开放，免费用户也能使用，覆盖范围进一步扩大。新版本配套 Intelligent UI（智能界面），让 AI 自主决定答案的呈现形式，把回答直接做成可交互的小应用。这被视为 OpenAI 在模型能力之外，向“交互即应用”产品形态迈出的重要一步。",
+      "link": "https://mp.weixin.qq.com/s/oifYd0edUnKIzGmbO_xs8g",
+      "source_file": "sources/2026-10-08_刚刚，GPT-6全面开放！免费用户也能用了_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "海外开源模型重新提速：“美版 DeepSeek” Reflection 首发 Beam，Mistral 亮出 Large 4",
+      "source": "InfoQ",
+      "digest": "海外开源模型阵营重新提速：当地时间 10 月 5 日，被称为“美版 DeepSeek”的美国创业公司 Reflection 发布首款开放权重模型 Beam；一天后，法国 Mistral 推出迄今最大的 Mistral Large 4。两家发布时选择的主要比较对象高度一致——中国的 GLM、Kimi 等，显示西方开放模型正以中国模型为标尺加速追赶。",
+      "link": "https://www.infoq.cn/article/0wk4G4cZwbHgYdeNoQPV",
+      "source_file": "sources/2026-10-08_海外开源模型重新提速：“美版 DeepSeek”第一次交卷，Mistral同时亮牌_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "谷歌把 AI 搜索塞进手机：不到 600MB 的 EmbeddingGemma 2 离线可搜图文音视频",
+      "source": "新智元",
+      "digest": "谷歌开源 EmbeddingGemma 2，将一个能搜图、看视频、听声音的搜索引擎塞进不到 600MB 的模型（约 740M 参数），手机、笔记本、浏览器均可离线运行。这是谷歌开源模型中首次支持文字、代码、图片、视频、音频的跨模态一句话联合检索，把端侧多模态检索推向实用。",
+      "link": "https://mp.weixin.qq.com/s/N4NqFYDaeYmtzJkxRuxwJA",
+      "source_file": "sources/2026-10-08_谷歌把AI搜索塞进手机！不到600MB，照片、视频、录音断网照样搜_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Anthropic 核心技术负责人：蒸馏会毁掉前沿研发，中美 AI 竞赛不会单边暂停",
+      "source": "InfoQ",
+      "digest": "Anthropic 两位关键技术负责人 Nicholas Marwell 和 Sholto Douglas 在播客中谈及公司 IPO 申报与前沿研发策略。披露文件显示，Anthropic 2025 年营收接近 46 亿美元，同比增长约 12 倍，并给出了 2 万亿美元量级的长期估值假设。两人强调，模型蒸馏（distillation）会侵蚀前沿模型的独特价值、削弱持续研发投入的动力；同时认为中美 AI 竞赛不会单边暂停，双方都会维持高强度投入。该表态折射出头部实验室在商业化加速与前沿能力护城河之间的权衡。",
+      "link": "https://www.infoq.cn/article/dS754RhjExrwFP6tWD9d",
+      "source_file": "sources/2026-10-08_2万亿美元估值靠什么撑？Anthropic 核心技术负责人：蒸馏会毁掉前沿研发，中美 AI 竞赛不会_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Architect 推出 Liquid Inference：LLM 推理的实时拍卖路由",
+      "source": "MarkTechPost",
+      "digest": "Architect Financial Technologies 推出 Liquid Inference，一个面向 LLM 推理的实时拍卖路由系统。它让不同的推理供应商在实时竞价中承接请求，按价格与延迟动态分配流量，旨在为应用方降低推理成本、提升供给弹性。该方案属于推理基础设施层面的调度优化，反映 LLM 服务市场向更具价格发现机制的形态演进。",
+      "link": "https://www.marktechpost.com/2026/10/08/architect-launches-liquid-inference-a-real-time-auction-for-llm-inference/",
+      "source_file": "sources/2026-10-08_Architect Launches Liquid Inference, a Real-Time A_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "OpenAI 瓦解两起 AI 赋能的“虚假阵线”影响力行动",
+      "source": "OpenAI",
+      "digest": "OpenAI 披露瓦解了两起利用 AI 赋能的“虚假阵线”（false front）影响力行动：相关行动通过伪装成独立记者和智库的幌子账号，散布地缘政治叙事。OpenAI 借助自身检测能力识别并封禁了这些由生成式 AI 辅助策划、放大传播的协同造假网络，凸显 AI 既能提升内容生产效率，也降低了信息操纵的门槛。",
+      "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+      "source_file": "sources/2026-10-08_Disrupting AI-enabled “false front” operations_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "NVIDIA PivotOPD：教多轮 AI 智能体从关键错误中恢复",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 联合普林斯顿大学与马里兰大学研究人员提出 PivotOPD，研究多轮 AI 智能体如何从关键性失误中恢复。现实中的长任务智能体往往在某一关键步骤出错后整体崩盘，PivotOPD 通过让 agent 识别“转折点”（pivotal）错误并主动纠偏、回滚到可恢复状态，提升多轮交互任务的鲁棒性，属于 agent 可靠性方向的研究。",
+      "link": "https://www.marktechpost.com/2026/10/08/nvidia-pivotopd-teaches-multi-turn-ai-agents-to-recover-from-pivotal-mistakes/",
+      "source_file": "sources/2026-10-08_NVIDIA PivotOPD Teaches Multi-Turn AI Agents to Re_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "OpenAI 针对欧洲用户在 ChatGPT 和 Codex 嵌入水印",
+      "source": "Solidot",
+      "digest": "OpenAI 针对欧洲用户，在 ChatGPT 与 Codex 中嵌入水印机制，以回应监管对 AI 生成内容可追溯性的要求。该举措是 AI 企业在欧盟《人工智能法案》等框架下，加强生成内容标识与责任界定的具体落地，也反映大模型厂商在合规与产品体验之间寻求平衡。",
+      "link": "https://www.solidot.org/story?sid=85544",
+      "source_file": "sources/2026-10-08_OpenAI 针对欧洲用户在 ChatGPT 和 Codex 嵌入水印_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "OpenAI 高管亲述：我们如何在一周内做出 Jev 竞品（Computer Use）",
+      "source": "InfoQ",
+      "digest": "OpenAI 高管在播客中亲述如何在一周内做出竞品 Jev（Computer Use 方向产品）。文章借此探讨计算机操作（Computer Use）技术进展缓慢的原因——结果易验证却难自动化，以及 OpenAI 在 9 月 29 日前后围绕“让 AI 真正学会操作电脑”所做的工程化尝试与产品判断。",
+      "link": "https://mp.weixin.qq.com/s/Ct_-fix9gtvQ0wacRAcB4w",
+      "source_file": "sources/2026-10-08_OpenAI 高管亲述：我们是怎么在一周内做出 Jev 竞品的_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "OpenAI 刚把多 Agent 做成产品，o1 奠基人却说：万个 Agent 解题贡献不到 10%",
+      "source": "InfoQ",
+      "digest": "当地时间 9 月 29 日 OpenAI 在 DevDay 2026 上将多 Agent 从研究能力推进到产品主线，推出可全天候协作的“AI 团队”产品 Dots：个人 Dot 可调用 Codex 完成编码等任务。但 o1 奠基人等泼冷水：实验显示 1 万个 Agent 解出世界级难题时，多 Agent 的贡献占比不到 10%，提醒业界警惕对多 Agent 协作效果的过度乐观。",
+      "link": "https://www.infoq.cn/article/3MSU3CcJuh0XjHDyjhXj",
+      "source_file": "sources/2026-10-08_OpenAI刚把多Agent做成产品，o1奠基人却说：1万个Agent解出世界级难题，多Agent贡_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "当可信模型仓库被篡改：Unsloth Studio 运行前先重检",
+      "source": "MarkTechPost",
+      "digest": "文章探讨本地 AI 工作流对可信模型仓库的依赖风险：当常用模型仓库（如 Hugging Face 上的受信赖 repo）被篡改时，下游本地推理会直接执行恶意代码。Unsloth Studio 的做法是在运行前对模型仓库重新校验（re-check），确认来源与内容未被篡改后再加载，为本地 AI 提供一道供应链安全检查。",
+      "link": "https://www.marktechpost.com/2026/10/07/what-happens-when-a-trusted-model-repo-changes-unsloth-studio-re-checks-before-it-runs/",
+      "source_file": "sources/2026-10-08_What Happens When a Trusted Model Repo Changes_ Un_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "代码交给 AI，心流却回来了：Codex 负责人不再怀念手写时代",
+      "source": "InfoQ",
+      "digest": "OpenAI Codex 负责人 Tibo Sottiaux 在 X 上立下可逐日检查的承诺：未来 28 天，每天要么推出一项对大多数 Codex/Work 用户明显有用的改进，要么进行一次完整的额度重置。这一“连续交付”机制把产品判断权交到用户手中。作者感慨，当代码交给 AI 编写，开发者反而重新获得心流，不再怀念手写时代。",
+      "link": "https://www.infoq.cn/article/rLaX4DEMuRxqW135ZSSC",
+      "source_file": "sources/2026-10-08_代码交给AI，心流却回来了：Codex负责人不再怀念手写时代_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "程序员不能急着自动化：OpenAI 总裁称未来差距在谁更懂工作流",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI 联合创始人、总裁 Greg Brockman 谈 AI 编程与自动化：他已不再亲自写软件，而是指导 AI 来写，并强调人必须保留控制权与责任、目标应来自人。他判断，未来的差距不在谁的 Agent 更多，而在谁更懂工作流——即把流程理清后再自动化。文章将其观点概括为“先懂工作流，再谈自动化”。",
+      "link": "https://mp.weixin.qq.com/s/KiZoi1HblfKwLOFaAKgjZQ",
+      "source_file": "sources/2026-10-08_程序员不能急着自动化！OpenAI总裁：未来的差距，不在谁的Agent更多，而在谁更懂工作流_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "陶哲轩：数学 2.0 时代应降低解决难题的核心地位",
+      "source": "Solidot",
+      "digest": "数学家陶哲轩发文探讨“数学 2.0”时代：随着 AI 辅助证明与形式化验证工具成熟，数学研究的生产方式正在改变。他认为应适度降低“解决难题”在学科中的核心地位，转而更重视问题的提出、结构的发现与人机协作的证明工程，反映顶尖学者对 AI 重塑数学研究的思考。",
+      "link": "https://www.solidot.org/story?sid=85545",
+      "source_file": "sources/2026-10-08_陶哲轩认为数学 2.0 时代应降低解决难题的核心地位_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "马斯克让 Grok Bot 接入 Claude：谁好用就用谁",
+      "source": "新智元",
+      "digest": "马斯克旗下 xAI 让 Grok Bot 接入 Claude，用户可在 Grok 中调用 Anthropic 的模型，主打“谁好用就用谁”的多模型路由思路。这一动作反映了头部 AI 产品从封闭单一模型走向多模型编排的趋势，也凸显模型层与产品层的进一步解耦。",
+      "link": "https://mp.weixin.qq.com/s/RZ04eOUQ4-54qosG1zAu1A",
+      "source_file": "sources/2026-10-08_马斯克让Grok Bot接入Claude！谁好用，就用谁_新智元.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "AI 写代码提速 35%？隐性成本才是技术团队最大坑",
+      "source": "51CTO技术栈",
+      "digest": "文章指出，几乎所有研发团队都已落地 AI 编码工具，行业通用数据显示其能让代码交付效率提升 25%–35%，无需扩招即可增加产出。但多数团队只盯着前端编码提速的红利，忽视了后端隐藏的巨额隐性成本：AI 生成代码带来的测试覆盖缺口、技术债累积、代码评审与维护负担，以及安全与合规风险。作者呼吁团队在采纳 AI 编程时，将隐性成本纳入度量体系，从“写得多”转向“交付得稳”。",
+      "link": "https://mp.weixin.qq.com/s/69xPADIPQeZF0TT-9ymOxw",
+      "source_file": "sources/2026-10-08_AI 写代码提速 35%？别被表面效率骗了，隐性成本才是技术团队最大坑_51CTO技术栈.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "AI 网关上线 FinOps 会话观测，助力企业优化 Agent 成本",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AI 网关上线 FinOps 会话观测能力，面向企业 Agent 场景提供成本可观测性。Agent 完成一次任务（排查故障、审合同、改代码）往往需工作数十分钟、多次调用模型与工具、读取大量上下文，却难以定位时间与 Token 消耗分布。新功能将一次会话拆解为各步骤，展示 Token 与时间花在何处、慢或贵的环节是任务本身复杂还是实现低效，帮助企业优化 Agent 调用策略、压降推理成本。",
+      "link": "https://mp.weixin.qq.com/s/KGzadbaHq6vMaqkwq_JKEA",
+      "source_file": "sources/2026-10-08_AI 网关上线 FinOps 会话观测，助力企业优化 Agent 成本_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Kitta：Code Review Agent，提升代码审查质量",
+      "source": "阿里云云原生",
+      "digest": "阿里云在《Alibaba Cloud AI Agent Handbook》中介绍 Code Review Agent Kitta，面向代码审查质量提升。文章指出，AI 辅助编程普及后代码产出指数级增长，但审查人力未同步扩张，内核等基础软件 PR 体积与评审耗时激增，通用 AI Review 工具又缺乏领域知识与业务上下文。Kitta 试图通过引入仓库级领域知识，缓解大规模 PR 的评审瓶颈。",
+      "link": "https://mp.weixin.qq.com/s/thZD8n53iiVEeSKKzLidUQ",
+      "source_file": "sources/2026-10-08_Kitta：Code Review Agent，提升代码审查质量_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "openJiuwen 发布并开源企业级 AgentOS，加速智能体规模落地企业",
+      "source": "量子位",
+      "digest": "openJiuwen 发布并开源企业级 AgentOS，旨在加速智能体在企业中的规模化落地。文章指出，智能体从演示走向生产仍面临复杂任务链路长、多智能体难协同、业务经验难沉淀、算力成本上升、数据权限与安全隔离等难关，AgentOS 试图以操作系统化的方式统一管理智能体编排、记忆、权限与异常恢复。",
+      "link": "https://mp.weixin.qq.com/s/mKDocV8ywDyEVor3FpjVQQ",
+      "source_file": "sources/2026-10-08_openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "何时值得采用规范驱动开发",
+      "source": "InfoQ",
+      "digest": "文章探讨在 AI 编程助手已成软件基础设施的当下，何时值得采用“规范驱动开发”（spec-driven development）。随着 AI 生成代码占比上升、覆盖全软件生命周期，验证正成为新的瓶颈。作者主张以规范/规格作为人机协作的契约与验证锚点，在需求、设计、测试之间建立可机器校验的闭环，降低 AI 代码带来的不确定性。",
+      "link": "https://mp.weixin.qq.com/s/_wVojVSbVTnPzosoOMc3HQ",
+      "source_file": "sources/2026-10-08_什么时候值得采用规范驱动开发_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "从刚发布的 DeepSeek Harness 洞察出九大结构性趋势",
+      "source": "软件工程3.0时代",
+      "digest": "文章从刚发布的 DeepSeek Harness（dsh）0.2.0-rc.2、0.2.1-alpha.1 版本出发，提炼出九大结构性趋势：Agent 框架正从“能跑”走向“可交付、可运营的 Agent 操作系统”。dsh 项目热度飙升（stars 超 246k、forks 超 29k），被视为开源 harness 架构演进的风向标，折射出智能体工程从工具集合向系统化平台的范式迁移。",
+      "link": "https://mp.weixin.qq.com/s/DpVWshGRa7S5_v6uTku7eQ",
+      "source_file": "sources/2026-10-08_从刚发布的DeepSeek Harness洞察出九大结构性趋势_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "大模型原生智能体手机 STEPX Neo 将于 10 月 13 日正式发布",
+      "source": "量子位",
+      "digest": "阶跃终端宣布将于 10 月 13 日在上海举办“Ready Builder One”主题发布会，推出旗下首款大模型原生智能体手机 STEPX Neo。该机在模型、系统、硬件层面皆为智能体原生打造，主打端侧智能体体验，是手机厂商将大模型与 Agent 能力下沉到终端设备的又一次尝试。",
+      "link": "https://www.qbitai.com/2026/10/501915.html",
+      "source_file": "sources/2026-10-08_大模型原生智能体手机STEPX Neo将于10月13日正式发布_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "搭载 NVIDIA RTX Spark N1X 超级芯片：联想 YOGA Pro 15 开启盲约，重塑本地智能体 AIPC",
+      "source": "量子位",
+      "digest": "联想 YOGA Pro 15 RTX Spark 笔记本电脑于 10 月 8 日开启全网盲约，全球首批搭载 NVIDIA RTX Spark N1X 超级芯片，定位本地智能体 AIPC。该芯片让笔记本在本地运行智能体工作负载，强调端侧隐私与离线可用性，反映 AI 算力向个人设备下沉、“本地智能体”成为 PC 新卖点的趋势。",
+      "link": "https://www.qbitai.com/2026/10/502020.html",
+      "source_file": "sources/2026-10-08_搭载NVIDIA RTX Spark™ N1X超级芯片：联想YOGA Pro 15开启盲约，重塑个人_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "蚂蚁×浙大新研究：让 AI 在流式对话中“读懂”情绪（EMNLP'26）",
+      "source": "量子位",
+      "digest": "蚂蚁集团安全实验室联合浙江大学提出面向流式视频情绪理解的框架 TRACE，论文被 EMNLP'26 接收。该框架持续跟踪模型对情绪判断的变化过程，让情绪理解兼顾识别效率与可解释性，使 AI 能在实时对话中更可靠地感知用户情绪，面向客服、陪伴等需要情绪感知的场景。",
+      "link": "https://mp.weixin.qq.com/s/LMQQXDEhgasGiJpdyYJOAQ",
+      "source_file": "sources/2026-10-08_蚂蚁×浙大新研究：让AI在流式对话中“读懂”情绪 _ EMNLP'26_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "腾讯 WorkBuddy 重磅升级：本地文件右键即可召唤 Buddy 干活",
+      "source": "腾讯WorkBuddy",
+      "digest": "腾讯 WorkBuddy 上线独立文件浏览器：用户在电脑中找到本地文件后，右键选择“打开方式”中的 WorkBuddy，即可在独立窗口查看文件并直接调用 AI 进行分析、修改或问答，无需先进入应用再上传。这一改动降低了本地文件接入 AI 的摩擦，是 AI 助手向操作系统级入口渗透的又一动作。",
+      "link": "https://mp.weixin.qq.com/s/3fTnMCfITqvbz-VlQVO3og",
+      "source_file": "sources/2026-10-08_重磅升级！用WorkBuddy打开本地文件，随时召唤Buddy干活_腾讯WorkBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "阿里 Qoder 宁晓民：AI Native 企业新范式——智能体重新定义生产力与生产关系",
+      "source": "Qoder",
+      "digest": "在 2026 云栖大会 Qoder 分论坛上，阿里巴巴 ATH 事业群 Qoder 解决方案总监宁晓民发表《AI Native 企业新范式》演讲，提出：模型越来越强、成本越来越低，相当于组织可随时随地雇佣成百上千个不知疲倦的数字员工。演讲围绕智能体如何重新定义生产力与生产关系，阐述 AI Native 企业的组织与工具重构路径。",
+      "link": "https://mp.weixin.qq.com/s/e9LWNC8rpYjmU4a0Slebaw",
+      "source_file": "sources/2026-10-08_阿里巴巴ATH事业群Qoder解决方案总监宁晓民：AI Native企业新范式——智能体重新定义生产力与生产关系 _ 云栖分论坛演讲全文_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "交行副行长钱斌：AI 赋能金融业发展的新趋势、新探索与新思考",
+      "source": "银行科技研究社",
+      "digest": "交通银行副行长钱斌在《新金融》撰文，梳理人工智能加速演进的新态势：能力跃升、成本下降、智能体加速铺开，从单点辅助走向跨岗协同，深刻重塑金融业生产方式与服务模式；同时 AI 安全治理挑战凸显，全球监管框架加速构建。文章结合交行在“人工智能+”方面的探索，探讨银行业如何把握趋势、守住风险底线。",
+      "link": "https://mp.weixin.qq.com/s/m69hdPoake2OdiMuSST99Q",
+      "source_file": "sources/2026-10-08_交行副行长钱斌：AI赋能金融业发展的新趋势、新探索与新思考_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "花 5 元做“邪恶老奶版”GTA 6：Vidu Q4 预览版体验",
+      "source": "量子位",
+      "digest": "文章体验了 Vidu Q4 预览版，作者称仅花约 5 元便生成了一段爆火的 GTA 6 风格短视频《邪恶老奶》。这反映了 AI 视频生成工具在成本与易用性上的快速下探，普通用户已能用极低成本完成过去需要专业团队的视频创作，AI 内容生产的门槛持续降低。",
+      "link": "https://www.qbitai.com/2026/10/502049.html",
+      "source_file": "sources/2026-10-08_真香！做这个邪恶老奶版「GTA 6」，我只花了5元！_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "美国男子因利用 AI 生成音乐和机器人账号欺诈播放被判 18 个月",
+      "source": "Solidot",
+      "digest": "一名美国男子因利用 AI 生成音乐，并通过机器人账号刷播放量实施欺诈，被判处有期徒刑 18 个月。案件显示，生成式 AI 降低了内容批量生产与流量造假的门槛，也带来了新的数字版权与平台反作弊挑战，凸显 AI 滥用治理的现实必要性。",
+      "link": "https://www.solidot.org/story?sid=85551",
+      "source_file": "sources/2026-10-08_美国男子因利用 AI 生成音乐和机器人账号欺诈播放被判 18 个月_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-08",
+      "title": "黑客利用 AI 攻击韩国银行",
+      "source": "Solidot",
+      "digest": "报道称黑客利用 AI 技术对韩国银行实施攻击，利用生成式与自动化手段提升攻击效率。事件再次提醒，金融业在加速拥抱 AI 的同时，也面临 AI 赋能的网络攻击这一对称性威胁，需同步强化以 AI 对抗 AI 的安全防御体系。",
+      "link": "https://www.solidot.org/story?sid=85546",
+      "source_file": "sources/2026-10-08_黑客利用 AI 攻击韩国银行_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-07",
       "title": "GPT-6 与 Intelligent UI 面向所有人开放",
