@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-09",
+      "weekday": "周五",
+      "stats": {
+        "国际": 15,
+        "国内": 12,
+        "同业": 3,
+        "其他": 3,
+        "total": 33
+      },
+      "summary": "JetBrains 发布 Mellum2.1：面向编程智能体的 12B MoE 开源模型/Saluki 27B：在端侧 llama.cpp 跑通的 2-b..."
+    },
+    {
       "date": "2026-10-08",
       "weekday": "周四",
       "stats": {

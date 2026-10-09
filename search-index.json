@@ -1,7 +1,337 @@
 {
-  "updated_at": "2026-10-09T05:22:50.577964",
-  "total": 2597,
+  "updated_at": "2026-10-10T05:28:54.628120",
+  "total": 2630,
   "articles": [
+    {
+      "date": "2026-10-09",
+      "title": "JetBrains 发布 Mellum2.1：面向编程智能体的 12B MoE 开源模型",
+      "source": "MarkTechPost",
+      "digest": "JetBrains 发布 Mellum2.1——一个面向编程智能体与快速子智能体的开源模型。该模型为 12B 参数的 MoE 思考模型，每 token 激活 2.5B 参数，基于 Apache 2.0 在 Hugging Face 发布。架构延续 Mellum2，提升几乎全部来自真实软件环境下的强化学习，可自托管、探索仓库、编辑文件并自检改动。",
+      "link": "https://www.marktechpost.com/2026/10/08/jetbrains-releases-mellum2-1-a-12b-moe-open-model-for-coding-agents/",
+      "source_file": "sources/2026-10-09_JetBrains Releases Mellum2.1_ A 12B MoE Open Model_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Saluki 27B：在端侧 llama.cpp 跑通的 2-bit Qwen3.8-27B",
+      "source": "MarkTechPost",
+      "digest": "Conway Research 的端侧助手 Underdog 以 Apache 2.0 发布 Saluki 27B——一个 2-bit GGUF 量化的 Qwen3.8-27B，仅 7.89GB（BF16 需 54GB）即可在原生 llama.cpp 中运行。量化专门保护工具调用能力（把聊天模型变成智能体的关键技能），让 27B 级智能体模型能在消费级显卡上运行。",
+      "link": "https://www.marktechpost.com/2026/10/09/meet-the-underdog-saluki-27b-a-2-bit-qwen3-8-27b-that-beats-the-original-at-tool-calling/",
+      "source_file": "sources/2026-10-09_Meet the Underdog Saluki 27B_ A 2-bit Qwen3.8-27B _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-09",
+      "title": "刚刚，GPT-6.1 Sol Ultrafast 来了！",
+      "source": "机器之心",
+      "digest": "在「连续 28 天发布或重置」第四天，OpenAI 推出 GPT-6.1 Sol 的 Ultrafast（极速）模式：在接近旗舰 Astra 的智能水平下，速度达标准版 8 倍。标准版 API 定价为每百万输入 token 2 美元、输出 10 美元；Fast 模式速度与价格翻倍；Ultrafast 输入 12 美元、输出 60 美元，为标准的 6 倍，但低于同档极速版 Astra。结合更新的模型控制系统，可及时响应用户指令调整。",
+      "link": "https://mp.weixin.qq.com/s/qe3dJ1yVFGaLpzmk_-9gEA",
+      "source_file": "sources/2026-10-09_刚刚，GPT-6.1 Sol Ultrafast 来了！_机器之心.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Asana 借 GPT-6.1 Sol 将浏览器智能体测试成本降 76 倍",
+      "source": "OpenAI",
+      "digest": "OpenAI 客户案例显示，Asana 在 Codex 中采用 GPT-6.1 Sol（Astra 级能力）构建浏览器操作智能体，将测试环节的单位成本降低 76 倍、速度提升 5 倍，从而向客户提供更强的模型能力。该案例体现了前沿模型通过智能体编排在企业工程场景中降本增效的落地路径。",
+      "link": "https://openai.com/index/asana-browser-agent",
+      "source_file": "sources/2026-10-09_Asana cuts model costs 76x in browser tests with G_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Codex 和 Claude Code 都跑偏了，前 OpenAI 研究员称 Jev 出现前 AI 世界是个悲剧",
+      "source": "InfoQ",
+      "digest": "TypeSafe CEO、Jev 创始人 Diogo Almeida（曾参与 OpenAI InstructGPT）认为，Claude Code 与 Codex 仍属「AI 围绕人提供辅助」的旧阶段，真正缺的是把智能引擎接进业务流程的接口。其答案 Jev 通过面向校准决策的强化学习（RLCD）让开发者把判断交给 AI，而不必守在旁边反复检查。",
+      "link": "https://www.infoq.cn/article/e0iQfJNgepz7VigRdD61",
+      "source_file": "sources/2026-10-09_Codex 和 Claude Code 都跑偏了，前 OpenAI 研究员称 Jev 出现前 AI _InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Google Research RRSI 指南：掌握自我改进的 AI 智能体",
+      "source": "MarkTechPost",
+      "digest": "Google Research 发布 RRSI（Regularized Recursive Self-Improvement）教程，给出一种让 LLM 智能体在不针对任务过拟合的前提下改写自身 harness、提示、工具、记忆与控制流的方法。完整循环用 Claude Opus（Vertex AI）起草改动并在 Docker 基准中打分，核心在于决定哪些改动可被采纳的规则。",
+      "link": "https://www.marktechpost.com/2026/10/08/google-research-rrsi-guide-mastering-self-improving-ai-agents/",
+      "source_file": "sources/2026-10-09_Google Research RRSI Guide_ Mastering Self-Improvi_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Oracle 用 ChatGPT Work 与 Codex 将数日工作压缩至数分钟",
+      "source": "OpenAI",
+      "digest": "OpenAI 客户案例介绍，Oracle 在招聘、工程与运营等场景中，借助 ChatGPT Work 与 Codex 将专家知识转化为快速、可复用的工作流，把原本需要数日的任务压缩到数分钟，体现了大模型在企业内部知识型与工程型任务中的规模化落地。",
+      "link": "https://openai.com/index/oracle",
+      "source_file": "sources/2026-10-09_How Oracle turns days of work into minutes with Ch_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "OpenAI 高管亲述：我们是怎么在一周内做出 Jev 竞品的",
+      "source": "InfoQ",
+      "digest": "在 9 月 29 日开发者日上，OpenAI 展示了 Dot、计算机操作（Computer Use）与一系列新开发者接口。Dot 可使用独立的云端 Linux 电脑打开浏览器、运行桌面应用。OpenAI CUA 团队与 API 平台负责人表示，过去一年最关键进步是智能体遇障后更会排错与重试，并能借助页面结构、无障碍信息和自写代码来操作软件。",
+      "link": "https://www.infoq.cn/article/IRqoPz4cNONlNFBolD9V",
+      "source_file": "sources/2026-10-09_OpenAI 高管亲述：我们是怎么在一周内做出 Jev 竞品的_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Sophos 用 OpenAI Daybreak 将威胁调查时间缩短 96%",
+      "source": "OpenAI",
+      "digest": "OpenAI 客户案例介绍，网络安全厂商 Sophos 借助 OpenAI 的 Daybreak 将网络威胁调查时间缩短 96%，并自动处理了 52% 的 MDR（托管检测与响应）案例，同时在关键环节保留人工监督，展示了大模型在安全运营中的落地价值。",
+      "link": "https://openai.com/index/sophos",
+      "source_file": "sources/2026-10-09_Sophos cuts threat investigation time by 96% with _OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "《State of AI Report 2026》最新洞察：模型公司开始卖交付 AI，软件产业的分工正在被改写",
+      "source": "有新Newin",
+      "digest": "10 月 8 日《State of AI Report 2026》发布，将 OpenAI 与 Anthropic 今年 5 月组建企业部署服务公司的动作并列：模型公司开始亲自承担把 AI 用起来的工作。报告以「AI 需要自己的 Genius Bar」作比，指出模型公司向部署延伸、软件公司承诺工作结果、服务团队把经验写成可重复运行的系统，竞争单位从「更好回答」转向「持续交付完整工作」。",
+      "link": "https://mp.weixin.qq.com/s/wWgT1tzmQymg6J6KgK8GPQ",
+      "source_file": "sources/2026-10-09_《State of AI Report 2026》最新洞察：模型公司开始卖交付 AI，软件产业的分工正在被改写_有新Newin.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "《柳叶刀》研究表明：AI 有望改善医患关系",
+      "source": "量子位",
+      "digest": "由 Google 与贝斯以色列女执事医疗中心（BIDMC）主导、发表于《柳叶刀》主刊的研究，在 BIDMC 门诊初级保健诊所让 98 名患者在急诊前使用 Google 研究级诊断 AI 聊天机器人 AMIE，全程由医生实时监控且无需中断。75% 场景下 AI 摘要帮助医生提前准备，超半数改变诊疗思路，鉴别诊断与医生确诊吻合度达 90%。",
+      "link": "https://www.qbitai.com/2026/10/502359.html",
+      "source_file": "sources/2026-10-09_《柳叶刀》研究表明：AI 有望改善医患关系_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "人类愿意向女性形象的 AI 智能体支付的报酬低于男性形象智能体",
+      "source": "Solidot",
+      "digest": "爱尔兰利默里克大学一项 VR 办公室研究发现，在底层技术相同的情况下，189 名参与者愿意向男性形象智能体 Johan 支付的报酬比女性形象 Johanna 低约 10%，且认为 Johan 更像人类。研究者承认实验数据存在严重不足、结论未必可靠，但仍提示了 AI 智能体形象带来的性别偏见问题。",
+      "link": "https://www.solidot.org/story?sid=85566",
+      "source_file": "sources/2026-10-09_人类愿意向女性形象的 AI 智能体支付的报酬低于男性形象智能体_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "今天，Gemini全面杀入AI办公大战！",
+      "source": "智东西",
+      "digest": "在 Gemini at Work 2026 大会上，谷歌云正式推出企业通用智能体 Gemini Agent，可用自然语言描述目标，自主拆解任务、调用企业数据、编写运行代码、生成文档与多媒体内容并持续推进复杂工作；面对大任务可组织多个子智能体协同，甚至以拥有独立企业身份（邮箱、日历、持久存储）的「数字同事」参与协作。谷歌云还补齐了四重记忆、跨平台协作、企业数据访问、安全隔离与成本控制等能力，并支持 Gemini 与 Claude 等模型。",
+      "link": "https://mp.weixin.qq.com/s/ztrJMXP-1YKyal_64nDqMw",
+      "source_file": "sources/2026-10-09_今天，Gemini全面杀入AI办公大战！_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "代码造世界，扩散绘现实：AgentGarten让智能体在实时试炼场中边玩边进化",
+      "source": "量子位",
+      "digest": "MirroS 团队发布 AgentGarten，把可执行的代码环境与实时神经渲染器连接起来：代码定义物理规则、模型生成视觉反馈，以超 30fps 吞吐让智能体持续与世界交互。在捉迷藏实验中，智能体自主学会搭掩体、借坡道翻墙，并通过自写的「实验手册」复盘、标注疑问，把经验带入下一轮，探索可反复试错的智能体训练范式。",
+      "link": "https://www.qbitai.com/2026/10/502096.html",
+      "source_file": "sources/2026-10-09_代码造世界，扩散绘现实：AgentGarten让智能体在实时试炼场中边玩边进化_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "黄仁勋为微软站台：没有 Windows 就不会有英伟达，Satya 当场“讨市值”",
+      "source": "InfoQ",
+      "digest": "在 10 月 8 日 Windows 发布会上，微软将「混合智能」引入 Windows：通过模型路由、Windows ML 与本地 AI 能力，让 GitHub Copilot 等按任务复杂度、成本与隐私在云端与本地模型间自动切换；GitHub Copilot 的 HydraFusion 将首次直接调用 Windows PC 上的本地模型。黄仁勋与 Nadella 回顾双方数十年合作，并一致判断 Agent 正成为新的「电脑用户」。",
+      "link": "https://www.infoq.cn/article/dQy1xkMRuPVj1Xh7Pohu",
+      "source_file": "sources/2026-10-09_黄仁勋为微软站台：没有 Windows 就不会有英伟达，Satya 当场“讨市值”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "HiRoute 开源：让 Agent 更能干，让模型订阅更耐用",
+      "source": "阿里云云原生",
+      "digest": "Higress 团队开源 HiRoute——一个运行在本地的 Agent 智能路由与协作引擎。它让经济模型承担常规工作、主力模型处理关键阶段，并按需把独立任务交给其他 Agent，从而在不牺牲质量的前提下减少订阅额度消耗与手动接力。HiRoute 已在 AGNTCon+MCPCon China 与云栖大会预告并开源，支持任务路由与模型路由独立或组合启用。",
+      "link": "https://mp.weixin.qq.com/s/xTymwSZrb3N4cW3B5QyTpQ",
+      "source_file": "sources/2026-10-09_HiRoute 开源：让 Agent 更能干，让模型订阅更耐用_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "TRAE终于把Code和Work合并了",
+      "source": "量子位",
+      "digest": "TRAE 将原有的 TraeCode 与 TraeWork 双端融合，统一升级为新的 TRAE，提供 Agent 模式与 IDE 模式两种形态。Agent 模式主打全局工作台，可在同一窗口管理项目、把不同工作分给多个 Agent，写代码、出文档、准备交付材料一并推进；IDE 模式保留 SOLO 与 IDE 玩法。官方以「3D 版鹈鹕骑自行车」演示了多 Agent 接力（写代码、测试、修复）协作产出完整功能的流程。",
+      "link": "https://www.qbitai.com/2026/10/502426.html",
+      "source_file": "sources/2026-10-09_TRAE终于把Code和Work合并了_量子位_e88a46.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
+      "source": "量子位",
+      "digest": "由华为 2012 实验室、华为云等团队联合高校与开发者构建的开源 AI Agent 平台 openJiuwen，发布并开源企业级 AgentOS，将多智能体协同、自演进、算力亲和与企业级安全可靠融入统一底座，并以插件化架构连接上层应用与底层模型、算力。其「多智能体原生」支持任务拆解、角色分工与并行执行，「自演进原生」让经验可沉淀复用，面向企业智能体规模化落地的开发、运行与管理。",
+      "link": "https://www.qbitai.com/2026/10/502106.html",
+      "source_file": "sources/2026-10-09_openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "一个人 = 一支团队：Qoder 在企业级 ERP/MES 的体系化实战",
+      "source": "Qoder",
+      "digest": "在云栖大会 Qoder「AI Coding 赋能超级个体」分论坛上，云极智 CEO 李煜中分享其用 Qoder 的实战：春节后 7 个月单人提交 593 次、产出约 110 万行 AIMES 代码，做了 3 个企业级项目（多租户 SaaS 制造执行系统）。他总结出关键教训——必须给 AI 充足上下文与文档，把架构、协议、AGENTS.md、E2E 测试连成从共识到验收的链路，才能避免「只有代码、没有文档」的失败。",
+      "link": "https://mp.weixin.qq.com/s/fDS-Ydf2g-sor8vPCNoosA",
+      "source_file": "sources/2026-10-09_一个人 = 一支团队：Qoder 在企业级 ERP_MES 的体系化实战_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "从 Coding 到 Co-creation：Qoder 的技术故事",
+      "source": "Qoder",
+      "digest": "Qoder 技术专家谢文欣在云栖大会讲述一线开发者用 AI Coding 打造 AI Coding 产品的真实经历：今年 1 月 5 人 7 天把 QoderWork 从 0 到 1 上线；8 月重做时发现「代码越快、对不上接不上的地方越多」，于是把架构与协议、AGENTS.md、E2E 端到端测试连成从共识到验收的链路。她提出 Qoder 希望保留的「统一性（让创造接得上）」与「野生感（让创造长得出来）」。",
+      "link": "https://mp.weixin.qq.com/s/ud6n7nUIL0JjtWrtgP7UTA",
+      "source_file": "sources/2026-10-09_从 Coding 到 Co-creation：Qoder 的技术故事_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "从 Demo 到生产：AI Agent 缺的到底是什么？",
+      "source": "InfoQ",
+      "digest": "文章指出，搭一个 AI Agent Demo 可能只需一个下午，但做到可投产完全是另一回事——需稳定在线、安全、可控成本与可观测性。这些能力几乎都不来自模型本身，而来自围绕模型的 Agent Harness（记忆、工具访问、模型路由、护栏、成本控制、trace）。作者以 FinBot 为例，对比完全托管 Harness-as-a-Service 与自主管理技术栈两种构建方式。",
+      "link": "https://www.infoq.cn/article/PLEWse6sEviMN99iLE93",
+      "source_file": "sources/2026-10-09_从 Demo 到生产：AI Agent 缺的到底是什么？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "全球扩散语言模型最大融资诞生：经纬、顺为、君联数亿元押注扩散智能DiffuSpace",
+      "source": "InfoQ",
+      "digest": "扩散智能 DiffuSpace 连续完成两轮融资，总金额数亿人民币，创全球扩散语言模型（dLLM）最大规模融资纪录，由经纬创投、顺为资本、君联资本联合领投，华为哈勃、地平线等跟投。DiffuSpace 由港大 NLP 实验室孔令鹏教授及博士生团队创立，深耕 dLLM，其 Dream 7B 曾全面超越同参数自回归模型；本轮资金将用于更大参数 dLLM 训练、垂直适配与基础设施研发，并计划近期开源。",
+      "link": "https://www.infoq.cn/article/kjPiCQV1cOO6AzaOjioR",
+      "source_file": "sources/2026-10-09_全球扩散语言模型最大融资诞生：经纬、顺为、君联数亿元押注扩散智能DiffuSpace_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "别只盯着AI Coding，真正的变化发生在整个研发流程",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队基于 OK 平台端到端自动交付的真实运营数据指出，AI 不应只被视为编码加速器，而需重构「人」与「代码」的协作方式：从零基思维出发，把需求评审、技术方案、编码、审查、部署串成端到端闭环。文章反思为何仍不能直接把需求丢给 AI、人为何仍需在环，并探讨让研发流程从提出端一路跑到交付端的实践路径。",
+      "link": "https://mp.weixin.qq.com/s/s_AmjWIB57b7fQY_3VNkoQ",
+      "source_file": "sources/2026-10-09_别只盯着AI Coding，真正的变化发生在整个研发流程_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "字节找到了DeepSeek时强时弱的原因",
+      "source": "量子位",
+      "digest": "字节 Seed 团队发现，DeepSeek-V4 的检索准确率会随信息在输入中的位置「每隔 4 个 token 周期性」波动，128K 长上下文测试中同一条信息仅因位置变化，准确率最高可拉开 40.2 个百分点。根因是其长上下文优化技术「分块 KV Cache 压缩」在省内存、提效率的同时，造成模型表现的周期性退化。",
+      "link": "https://www.qbitai.com/2026/10/502364.html",
+      "source_file": "sources/2026-10-09_字节找到了DeepSeek时强时弱的原因_量子位_5e182b.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "我使用国产「个人 AI 助手」的十天｜AI 上新",
+      "source": "极客公园",
+      "digest": "极客公园作者体验了由 Teambition 创始人齐俊元打造的国产 Personal AI「Today AI」（9 月 24 日国内版上线，已接入飞书、钉钉、腾讯文档与邮箱）。文章观察 Meta Muse、Manus Cue、OpenAI Dots 等海外 Personal Agent 因水土不服难以在国内落地，而 Today AI 尝试长期记住用户目标与偏好、进入国内常用软件并在用户未主动提问时持续工作。",
+      "link": "http://www.geekpark.net/news/372163",
+      "source_file": "sources/2026-10-09_我使用国产「个人 AI 助手」的十天｜AI 上新_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "联想天禧自研代码智能体TianxiCode斩获SWE-bench-Live全球第一",
+      "source": "量子位",
+      "digest": "在公认难度最高的软件工程动态评测 SWE-bench-Live（Lite）中，联想天禧 AI 自主研发的代码智能体框架 TianxiCode 配合 DeepSeek-v4.1-Flash，以 71% 问题解决率登顶全球第一并过官方审核。该基准以真实 GitHub 项目问题评估生成补丁与修复能力，标志联想自研代码智能体框架迈入国际第一梯队，未来将应用于联想 AI 硬件产品。",
+      "link": "https://www.qbitai.com/2026/10/502422.html",
+      "source_file": "sources/2026-10-09_联想天禧自研代码智能体TianxiCode斩获SWE-bench-Live全球第一_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "金融监管领域的 Harness 实践：让知识与数据驱动 Agent 稳定运行",
+      "source": "InfoQ",
+      "digest": "中软融鑫总工程师于浩军在 AICon 分享其在金融监管报送垂直领域落地 AI Agent 的经验：该领域对数据准确性要求极苛，通用大模型的「自由发挥」反而成最大风险。他系统阐述通过知识底座、数据底座、受控状态机与全链路可追溯，把发散的 Agent 改造成「宁可不答、不能答错」的严格受控系统，并讨论知识工程如何支撑 Agent 稳定可控。",
+      "link": "https://mp.weixin.qq.com/s/dTymrpR-UWR0DXxVt0nK6Q",
+      "source_file": "sources/2026-10-09_金融监管领域的 Harness 实践：让知识与数据驱动 Agent 稳定运行_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "从概念到现实：银行本体论变革的风险、挑战与实施路径",
+      "source": "中国金融电脑+",
+      "digest": "上海银行数据管理与应用部总经理于浩瀚等撰文，将「银行本体论」驱动的智能化转型从蓝图层面拉回工程现实：指出战略失焦（沦为「科技盆景」）、治理真空（语义分歧）等顶层风险，强调需以顶层设计、分阶段投资与统一业务概念「立法」推进；并坦诚审视数据隐私、模型幻觉、组织惯性等「冰山」，绘制确保航船抵远又御浪的导航图与施工图。",
+      "link": "https://mp.weixin.qq.com/s/XlkeDXEy03NrfGqIsgL1tw",
+      "source_file": "sources/2026-10-09_从概念到现实：银行本体论变革的风险、挑战与实施路径_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "工行行长刘珺：AI或AGI对经济系统带来的不仅是量变，更是质变",
+      "source": "现代商业银行杂志",
+      "digest": "中国工商银行行长刘珺在第四届中国金融学科年会（2026）上指出，AI/AGI 对经济系统带来的不仅是量变更是质变：复杂程度几何级数增长，从摩尔定律、规模定律到「韬定律」的时间微缩维度优化；金融一方面要适配科技创新对金融资源的极致化需求，另一方面要承接 AI 对金融运行的反作用力，推动经济金融发展的变轨与跃迁。",
+      "link": "https://mp.weixin.qq.com/s/YtpYQOg7tsyKdsIa3mNhuQ",
+      "source_file": "sources/2026-10-09_工行行长刘珺：AI或AGI对经济系统带来的不仅是量变，更是质变_现代商业银行杂志.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "韩国多家银行系统被攻击，6.8万名客户信息泄露！涉AI工具滥用、非核心业务系统",
+      "source": "银行科技研究社",
+      "digest": "据银行科技研究社，韩国多家大型商业银行与储蓄银行（新韩、KB 国民、韩亚、友利、NH 农协、BNK 釜山、Yegaram、Welcome 等）自 9 月底起接连遭黑客攻击，约 6.8 万名客户信息泄露。攻击者疑似利用 AI 工具，重点攻击员工办公系统等非核心系统；部分银行已中断相关服务、封锁外部 IP 并加强监控。事件凸显金融机构在非核心系统与办公侧的安全短板。",
+      "link": "https://mp.weixin.qq.com/s/p3V6rHREvi4cz7yRyJ5d7Q",
+      "source_file": "sources/2026-10-09_韩国多家银行系统被攻击，6.8万名客户信息泄露！涉AI工具滥用、非核心业务系统_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "a16z AI 应用 Top 100：只有 4.5% 的用户愿意付费订阅，AI 产品该换种方式收钱了",
+      "source": "Founder Park",
+      "digest": "a16z 发布第七期「Top 100 AI 消费应用」榜单并首次加入美国消费者付费数据：近一半美国人用 AI，但拥有 ChatGPT/Gemini/Claude 个人付费订阅的仅 4.5%，付费用户月支出中位数仅 25 美元且多年未涨；而最舍得花钱的 1% 用户月均花 903 美元、18 个月增长 80%，贡献 19.5% 消费额。报告认为 AI 产品过度依赖订阅、Personal Agent 或打开新变现路径。",
+      "link": "https://mp.weixin.qq.com/s/eRc_yoV7CEvsb779V_ntOw",
+      "source_file": "sources/2026-10-09_a16z AI 应用 Top 100：只有 4.5% 的用户愿意付费订阅，AI 产品该换种方式收钱了_Founder Park.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "全球最大独立 AI 原生影视公司，开始打破工具与制片厂的边界",
+      "source": "InfoQ",
+      "digest": "估值 10 亿美元、总部位于美国加州山景城的 Utopai Studios 认为，只做「技术供应商」的 AI 影视创业公司难获足够商业空间，因而横跨模型、生产系统与影视制作三层：模型端基于 MiniMax H3 定制视频模型 Utopai X；同时 OiiOii 向内容社区拓展、Genspark 自研模型、珀乐互动布局创作工具与动画 IP，各家都在向产业链更深处寻找护城河。",
+      "link": "https://www.infoq.cn/article/ZxZMY50COGlUNHLSAEUo",
+      "source_file": "sources/2026-10-09_全球最大独立 AI 原生影视公司，开始打破工具与制片厂的边界_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-09",
+      "title": "离大谱！Anthropic新规：禁止虐待AI，再骂Claude可能面临封号",
+      "source": "AI寒武纪",
+      "digest": "Anthropic 时隔一年多全面修改使用协议，正式禁止人类对 Claude 进行持续且不必要的虐待——若用户反复无目的地折磨模型，系统会主动结束对话，后续是否封号未明确。模型福利研究负责人 Kyle Fish 表示随模型能力变强，AI 是否拥有意识、道德地位与福利是严肃课题；Dario Amodei 也称人类尚不知大模型是否有意识。微软则公开拒绝赋予模型法律人格。",
+      "link": "https://mp.weixin.qq.com/s/a4-SllVsY_LHLfRxpfAFdQ",
+      "source_file": "sources/2026-10-09_离大谱！Anthropic新规：禁止虐待AI，再骂Claude可能面临封号_AI寒武纪.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-08",
       "title": "ChatGPT 踢到铁板：能破解千禧数学难题，但论文复现率低至 13.98%",
