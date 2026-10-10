@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-10-10T05:28:54.628120",
-  "total": 2630,
+  "updated_at": "2026-10-11T05:16:30.220835",
+  "total": 2649,
   "articles": [
+    {
+      "date": "2026-10-10",
+      "title": "微软发布 Microsoft-Decision-1：基于 Qwen3.5-9B 的决策评分模型",
+      "source": "微软",
+      "digest": "微软发布Microsoft-Decision-1，一款用于路由、分类、校验与智能体控制的决策模型。它基于阿里通义Qwen3.5-9B后训练而来，不生成文本，而是为一组固定选项返回校准后的概率，已在Microsoft Foundry与OpenRouter上线。该模型上下文窗口32,768 token，在微软36项基准对比中以83.5%平均准确率居首（p50延迟85毫秒），每百万输入token定价0.042美元、输出免费。局限在于权重未开源、仅支持文本、无解释，且所有基准均为厂商自测。",
+      "link": "https://www.marktechpost.com/2026/10/09/microsoft-ai-releases-microsoft-decision-1-a-qwen3-5-9b-decision-scoring-model/",
+      "source_file": "sources/2026-10-10_Microsoft AI Releases Microsoft-Decision-1_ A Qwen_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Nace AI 开源 Drex 1.5：9B 决策模型（为智能体评分而非生成文本）",
+      "source": "Nace AI",
+      "digest": "Nace.AI开源Drex 1.5，一款面向智能体与后端工作流的9B决策模型。它不写文本，而是读取状态与带类型的提问、为每个选项返回概率，单次前向即可完成。模型稠密8.95B参数、bf16权重约18GB，上下文默认16,384 token（可扩至131,072），单张24GB A10G即可运行，并提供Q8_0 GGUF版本。在公开Decision Index 0.3.1上取得58.08分（10B以下最高），与Jev 1.13.0处于同一区间；长文档（32K–128K token）准确率达93.4%，但细粒度情感较弱。",
+      "link": "https://www.marktechpost.com/2026/10/09/nace-ai-open-sources-drex-1-5-a-9b-decision-model-that-scores-options-not-text/",
+      "source_file": "sources/2026-10-10_Nace AI Open-Sources Drex 1.5_ A 9B Decision Model_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-10",
+      "title": "谷歌Gemini 4新模型大泄露！内测评价：这不Opus 5.5吗？！",
+      "source": "量子位",
+      "digest": "据Business Insider报道，谷歌Gemini 4系列至少出现三个内部代号：已发布的旗舰Argon、早期测试的Barium-B（最终成为公开版Argon），以及新近进入内部编程平台Jetski测试的Carbon——有员工称其编程表现已接近Claude Opus 5.5，另有员工称赞“Carbon is really good”。社区还扒出疑似Gemini 4 Flash预览版（gemini-4-flash-preview）踪迹，旗舰、更强内部版与Flash线索渐成“全家桶”。谷歌内部研发代号与最终产品名无严格对应（如Barium-B成为Argon），Carbon最终是作为Argon更新还是独立型号发布仍存悬念。",
+      "link": "https://mp.weixin.qq.com/s/H0iQbPnVfUSzAHv2Y32c4w",
+      "source_file": "sources/2026-10-10_谷歌Gemini 4新模型大泄露！内测评价：这不Opus 5.5吗？！_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-10",
+      "title": "CLAUDE.md 还是 AGENTS.md？Anthropic 的答案是：以后都不用",
+      "source": "Anthropic",
+      "digest": "Anthropic Claude Code团队核心成员Thariq Shihipar在Latent Space播客中表示，随着模型能力增强，CLAUDE.md等静态指令文件最终可能不再必要——简单任务的基线持续抬高，多数过去需写进CLAUDE.md的内容模型已能自行完成，正确做法是先让Agent跑、仅在反复出现同一失败模式时再补规则，他甚至建议新项目可先不写。访谈还谈及Claude Mods（可定制整个harness）、Claude Tag（组织级harness）、以及Agent自我修改Harness与多层安全防护（Probes、监控思维链等）。",
+      "link": "https://www.infoq.cn/article/MAo3KoDWm9FGIcKau9AK",
+      "source_file": "sources/2026-10-10_CLAUDE.md 还是 AGENTS.md？Anthropic 的答案是：以后都不用_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "OpenAI 只用 15 天，就杀死了估值 100 亿美元的 Jev？",
+      "source": "OpenAI",
+      "digest": "在DevDay上，OpenAI发布Decisions API（基于最小、最便宜的GPT-6 Luna），可在预设答案中作选择并返回置信度分数：延迟约150毫秒，而直接调用GPT-6 Luna需1.6秒。开发者传入问题、候选答案与上下文，模型不生成文字，而是给出程序可直接使用的决定（分类、路由、Agent下一步动作）。这一能力高度契合刚发布半个月的Jev的Choice原语，发布数小时后Reddit便出现“Jev Is Dead”热议。该API目前仅限量预览，定位为高频、低成本、可大规模嵌入Agent工作流的基础组件。",
+      "link": "https://www.infoq.cn/article/qmoRIQ1TceKfKwGlXN0S",
+      "source_file": "sources/2026-10-10_OpenAI 只用 15 天，就杀死了估值 100 亿美元的 Jev？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Pallas 内核怎么调优？Google 给出的答案是“少信模型，多看寄存器”",
+      "source": "Google",
+      "digest": "Google为开源TPU性能分析器XProf新增内核性能分析套件，使开发者能查看自定义Pallas内核的周期级细节（此前在追踪中显示为不透明块）。在TPU v7（Ironwood）上，XProf运行时采样硬件性能计数器；在一个分块矩阵乘法示例中，Google发现内存停顿问题，通过添加三重缓冲将内核执行时间从125.5µs降至88µs（约30%）。该套件分三层工作，配合编译器标志暴露MLIR与低级操作轨道，并提供亚微秒级外部事件触发采样模式，帮助工程师核查算子融合与内存分块是否合设计。",
+      "link": "https://www.infoq.cn/article/kVJUKEcbqhpL2qwpp2Eq",
+      "source_file": "sources/2026-10-10_Pallas 内核怎么调优？Google 给出的答案是“少信模型，多看寄存器”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "企业AI 走向生产环境，如何避免新一轮技术锁定",
+      "source": "SUSE",
+      "digest": "SUSE发布“企业级私有AI”战略，介绍与NVIDIA合作的AI Factory方案，并展示面向中国企业环境适配的云原生运维智能体Liz。SUSE将“开放选择”与“安全治理”置于核心，以既有Linux、Kubernetes与安全能力参与企业AI从试点走向规模部署。其定位聚焦基础设施层（infra for AI与AI for infra）：支持本地、多云与离线环境部署，将部署周期从数月缩至数天（SUSE口径），并设想向“Token Factory”演进。文章强调企业AI竞争正从单模型能力延伸至支撑长期运行的基础设施与避免厂商锁定。",
+      "link": "https://www.infoq.cn/article/kPhRafpM3Wr6umvUBPQV",
+      "source_file": "sources/2026-10-10_企业AI 走向生产环境，如何避免新一轮技术锁定_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "比 Astra 还贵！GPT-6.1 Sol 极速版上线，社区吐槽：“500 美元套餐都撑不过一天”",
+      "source": "OpenAI",
+      "digest": "10月8日OpenAI在Responses API为GPT-6.1 Sol增加Ultrafast极速模式并向所有API用户开放（受速率限制）。开发者无需换模型名，仅将服务档位设为ultrafast即可。该模型本身已于9月29日发布，此次为新增更快服务档位，Token单价为标准模式6倍。OpenAI称其在复杂编程、计算机操作与专业工作中以更低成本接近GPT-6 Astra：DeepSWE v1.1测试中以约1/5成本达到Astra水平，AutomationBench中等推理强度得分比Opus 5.5高2.2个百分点、成本约1/3。社区则吐槽“500美元套餐都撑不过一天”。",
+      "link": "https://www.infoq.cn/article/soBOt9TSckGlJlBS519y",
+      "source_file": "sources/2026-10-10_比 Astra 还贵！GPT-6.1 Sol 极速版上线，社区吐槽：“500 美元套餐都撑不过一天”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "程序员只写代码的时代结束了！OpenAI工程负责人：开发者要重新定义什么叫“任务完成”",
+      "source": "OpenAI",
+      "digest": "Latent Space采访OpenAI电脑操作Agent产品与工程负责人Ari Weinstein。他介绍Computer Use正把“代码生成、软件操作、排错、验收”接进同一条工作流：Agent写完功能后，会自己打开软件、像用户一样点击页面、填写表单、检查结果，把编码与验收相连。以订餐为例，人工约2小时、Computer Use约15分钟。在DevDay展示的Dots中，Agent被分配一台含浏览器的云端Linux虚拟机，可直接操作无API的软件。他认为开发团队关注点应从“代码能否写出来”延伸到“能否安全地把整件事做完”，并强调让Agent测试自己写的软件。",
+      "link": "https://mp.weixin.qq.com/s/axHTXiggotp9mBAXdDlazw",
+      "source_file": "sources/2026-10-10_程序员只写代码的时代结束了！OpenAI工程负责人：开发者要重新定义什么叫“任务完成”_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "阿里通义千问发布 Qwen-Image-2.1-Turbo：8 步 7B 图像模型",
+      "source": "阿里通义千问",
+      "digest": "阿里通义千问团队发布Qwen-Image-2.1-Turbo，是其开源图像模型Qwen-Image-2.1的加速版：在保持7B视觉生成架构与2K出图、编辑能力不变的前提下，将去噪步数从40步压缩到8步（5倍提速），并支持Diffusers直接加载与云端API。该模型采用单流DiT、32层、7B参数，搭配Qwen3-VL 8B文本编码器，CFG默认设为1，通过前缀KV缓存复用文本与参考图上下文。在Qwen-Image-Bench上取得60.28的开源权重最高分，仅限研究许可、商用需单独授权。",
+      "link": "https://www.marktechpost.com/2026/10/09/alibaba-qwen-releases-qwen-image-2-1-turbo-an-8-step-7b-image-model/",
+      "source_file": "sources/2026-10-10_Alibaba Qwen Releases Qwen-Image-2.1-Turbo, an 8-S_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-10",
+      "title": "单次RL后训练烧掉260万美元、每步37亿Token，小米披露MiMo-V2.6“规模化强化学习”路线",
+      "source": "小米",
+      "digest": "10月8日小米MiMo团队发布技术报告《MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement》，披露规模化Agentic RL训练方法：同步扩大训练Batch、任务环境与Harness，以及评判Agent行为的Grader Compute。发布MiMo-V2.6-Pro（总参1.02T、激活42B）与Flash（总参310B、激活15B），均采MoE架构并混合SWA与全局注意力。每个RL步采样1568个Prompt、每Prompt 16条Rollout，产生约2.5万条Agent轨迹、27–37亿Token，训练上下文最长100万Token。Pro的RL后训练成本约260万美元、Flash约90万，其中Grader占比已达12.7%–14.2%。",
+      "link": "https://www.infoq.cn/article/gNdWoDM8ygkAjXfsLaBK",
+      "source_file": "sources/2026-10-10_单次RL后训练烧掉260万美元、每步37亿Token，小米披露MiMo-V2.6“规模化强化学习”路_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-10",
+      "title": "2026 云栖大会分论坛亮点回顾 | 从“算得出”到“干得成”：阿里云打造 Agent 友好的计算服务",
+      "source": "阿里云",
+      "digest": "在2026云栖大会《Agent友好的计算服务加速企业进化》分论坛上，阿里云弹性计算系统阐述了面向Agent时代的产品与技术演进：以Agent友好的核心技术、计算产品与用户界面三层架构，让Agent更好地运行在ECS之上，并借助Agent服务用户。现场发布智能体专用型实例、第十代企业级实例g10a、E-HPC Agent与弹性计算Agent，覆盖开发者、企业规模化生产与科研计算运维闭环。文章指出，Agent时代算力从“支撑推理”转向“承接执行”，CPU、内存、存储与网络的协同成为智能体稳定落地的关键底座。",
+      "link": "https://mp.weixin.qq.com/s/Q7C4st1DHh0roBY2HfJp_Q",
+      "source_file": "sources/2026-10-10_2026 云栖大会分论坛亮点回顾 _ 从“算得出”到“干得成”：阿里云打造 Agent 友好的计算服务_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Agentic开发时代到来！鸿蒙PC三大原生开发工具公测，补齐国产操作系统生态关键短板",
+      "source": "智东西",
+      "digest": "智东西报道，10月8日华为鸿蒙PC版三大原生开发工具同步开启公测：可视化一站式IDE DevEco Studio、鸿蒙应用AI开发工具DevEco Code与AI开发能力套件DevEco CLI。三者分别承担集成开发与多端调试、端到端Agentic开发体验、以及对外输出鸿蒙开发能力并对接外部Agent工作流。依托自研BitFun底座，DevEco Studio支持快速启动与低资源占用，并内置鸿蒙知识体系、Skills与MCP工具。随着HarmonyOS 6/7终端规模突破9000万，鸿蒙PC正从应用运行终端升级为原生开发工作站。",
+      "link": "https://mp.weixin.qq.com/s/zI-bPMC99kxCGR7ALGu68w",
+      "source_file": "sources/2026-10-10_Agentic开发时代到来！鸿蒙PC三大原生开发工具公测，补齐国产操作系统生态关键短板_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "几乎没人手写代码了、IDE正在消失，2026年科技圈正在发生什么？",
+      "source": "CSDN",
+      "digest": "CSDN编译Gergely Orosz（曾任职Uber、Microsoft等）在LDX3工程领导力大会的分享：他走访OpenAI、Anthropic及Ramp、GitHub、Factory AI等公司后发现，AI已深刻改写软件开发——几乎无人再手写代码、同时使用5–10个AI Agent渐成常态、IDE存在感减弱，并列举过去一年约15个明显变化。他也指出问题：代码审查渐成“表演”、代码质量与可靠性下降；而团队、规划、非工程人员直接上线等仍未改变。他认为云端编码Agent与各类Harness正在兴起，工程师或将不再直接阅读代码。",
+      "link": "https://mp.weixin.qq.com/s/k6tDGRvxGWigmAsvVldUuA",
+      "source_file": "sources/2026-10-10_几乎没人手写代码了、IDE正在消失，2026年科技圈正在发生什么？_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "团队里的硅基同事程知远——基于QoderWake的数字员工实践",
+      "source": "Qoder",
+      "digest": "在云栖大会“Qoder赋能超级个体”分论坛，阿里云专有云AI Platform团队分享基于QoderWake建设的数字员工“程知远”实践。程知远具备部署升级、研发测试、运维支持、知识管理等多能力，通过接入层（钉钉）、推理层（QoderWake）、工作层三层架构，与多个Waker组成协作团队，落地一句话触发自动构建部署、日志异常根因定位、环境问题修复、缺陷监控与自动修复等场景。8月中旬至9月中旬，程知远服务153位对话者、239个群聊，处理3000+任务成功率98.9%，产生685次代码提交覆盖51个代码库，参与247次缺陷处理、182个自闭环解决。",
+      "link": "https://mp.weixin.qq.com/s/8NKZI8kFzF2S2eReT05r-w",
+      "source_file": "sources/2026-10-10_团队里的硅基同事程知远——基于QoderWake的数字员工实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "服务 10 万+ 师生，基于 AgentKit 的教育智能体规模化落地实践",
+      "source": "火山引擎",
+      "digest": "郑州威科姆基于火山引擎AgentKit，落地威科智考、实战任务作业智能评价系统、AI就业规划智能体三类高代码智能体，已覆盖20余所高校、服务10万余名师生。文章介绍其以VeADK进行代码级Agent开发、多智能体编排及工具/Skill扩展，并借助AgentKit的Gateway、Runtime、Identity、Observability、Evaluation等生产级能力，解决教育场景规模化落地的工程门槛：在评价、个性化辅学与就业指导中，将确定性业务规则与大模型能力明确区分，保证结果可解释、可追溯、可回归测试，并应对高并发、权限、安全与评测等生产问题。",
+      "link": "https://mp.weixin.qq.com/s/Fp2aX7MFKAvk2vDrNxzcRQ",
+      "source_file": "sources/2026-10-10_服务 10 万+ 师生，基于 AgentKit 的教育智能体规模化落地实践_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "模型开放之后，AI能力为什么仍难以复用？",
+      "source": "InfoQ",
+      "digest": "InfoQ探讨AI开源从“开放了什么”转向“开放的能力能否被验证、复用和持续迭代”。文章指出，模型可下载≠系统可复现、代码公开≠能力可调用、Demo可运行≠可迁移场景；AI系统运行还依赖模型权重、数据、提示词、工具接口、运行环境与硬件，任一要素变更都可能改变Agent行为。文章以2026世界人工智能开源大赛（91国、1.4万开发者、2999份作品）与Linux基金会Agentic AI Foundation（纳入MCP、goose、AGENTS.md）为例，说明能力组件化、接口稳定与第三方独立部署正成为开源评价的重要补充维度。",
+      "link": "https://www.infoq.cn/article/rKRPT18fGxtjipPAeaLa",
+      "source_file": "sources/2026-10-10_模型开放之后，AI能力为什么仍难以复用？_InfoQ_ed3a02.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "让 AI 组队干活，最强模型也只完成约一半任务：AgentWorld 如何评测 Agent 协作能力？",
+      "source": "InfoQ",
+      "digest": "InfoQ介绍AgentWorld——一个面向多智能体协作能力的评测基准（benchmark）。它让多个由大模型驱动的智能体在同一持续变化的环境中分工、沟通、共享资源并共同完成任务，将长时程任务、角色不对称与黑盒交互结合；以10个智能体组队在RPG世界中协作（如伐木工采木、木工加工、法师制作魔法杖）检验交接与配合。其程序化规则检查目标达成，并提出CCE指标追溯哪些行动/消息对结果有贡献。论文四个主模型实验中，主任务集最高成功率仅52.0%，揭示单Agent能力增强后团队层面协作仍存短板。",
+      "link": "https://mp.weixin.qq.com/s/AIWKfmWRlXDZeEMMilWneg",
+      "source_file": "sources/2026-10-10_让 AI 组队干活，最强模型也只完成约一半任务：AgentWorld 如何评测 Agent 协作能力？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-10",
+      "title": "全球｜美国四大银行AI实践：一场关于“人机协同”的深度实验",
+      "source": "现代商业银行杂志",
+      "digest": "现代商业银行杂志梳理美国四大银行（摩根大通、美国银行、富国银行、花旗）AI实践，归纳四大特征：AI已从提效工具升级为“核心基础设施”；大规模部署自研AI平台实现全员赋能（摩根大通LLM Suite覆盖约25万员工、花旗超18.2万员工使用自研AI工具）；应用从智能客服、文档处理等外围场景延伸至信贷审批、投资决策、风险管理等核心业务；人机协同成为关键组织模式（AI赋能而非替代员工）。文中以摩根大通为例，介绍客服中心规模化AI、财富管理“Connect Coach”（25个AI代理）、投行提案Agent等落地细节。",
+      "link": "https://mp.weixin.qq.com/s/fzPK6m6VWPj-_e-BTJ1OIw",
+      "source_file": "sources/2026-10-10_全球｜美国四大银行AI实践：一场关于“人机协同”的深度实验_现代商业银行杂志.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-09",
       "title": "JetBrains 发布 Mellum2.1：面向编程智能体的 12B MoE 开源模型",

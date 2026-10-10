@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-10",
+      "weekday": "周六",
+      "stats": {
+        "国际": 9,
+        "国内": 9,
+        "同业": 1,
+        "其他": 0,
+        "total": 19
+      },
+      "summary": "微软发布 Microsoft-Decision-1：基于 Qwen3.5-9B 的决策评分模型/Nace AI 开源 Drex 1.5：9B 决策模型（为..."
+    },
+    {
       "date": "2026-10-09",
       "weekday": "周五",
       "stats": {
