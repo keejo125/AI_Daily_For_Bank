@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-11",
+      "weekday": "周日",
+      "stats": {
+        "国际": 10,
+        "国内": 2,
+        "同业": 1,
+        "其他": 0,
+        "total": 13
+      },
+      "summary": "OpenAI悄悄上架了一个生命科学新模型，想当药企的工具供应商/网络安全模型 OrcaCyber Zero 1.5 发布（1M 上下文）/DeepSeek..."
+    },
+    {
       "date": "2026-10-10",
       "weekday": "周六",
       "stats": {
