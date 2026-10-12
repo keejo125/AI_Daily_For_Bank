@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-10-12T05:20:18.323516",
-  "total": 2662,
+  "updated_at": "2026-10-13T05:21:08.231723",
+  "total": 2684,
   "articles": [
+    {
+      "date": "2026-10-12",
+      "title": "0.6B起！Jev对手模型来了，开源多模态，登上全球测评榜一",
+      "source": "智东西",
+      "digest": "vLLM 社区孵化的开源项目 vLLM Semantic Router 推出并开源多模态决策模型 Decision 3.0 系列，直接返回判断结果与概率、不生成长文本，适用于分类、选择、是非判断与评分。系列含 d3、d3-flash、d3-mini、d3-nano、d3-lite、d3-edge 六款，参数 0.6B 至 27B，权重以 Apache-2.0 在 Hugging Face 开源，旗舰 d3 基于 Qwen3.8-27B。在 Jev Decision Index 0.3.1 榜单中，d3 文本与视觉均列第一（64.7/71.6），超越 Jev 与微软 Decision-1，并支持本地部署、直接处理图片与视频。",
+      "link": "https://mp.weixin.qq.com/s/eHLq5VezHjPZA_hveu8qBw",
+      "source_file": "sources/2026-10-12_0.6B起！Jev对手模型来了，开源多模态，登上全球测评榜一_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "GPT-6.1 Sol一夜扩容500k！完全免费",
+      "source": "新智元",
+      "digest": "OpenAI 在 Day 7 更新中将 Codex 与 ChatGPT Work 里的 GPT-6.1 Sol 默认上下文窗口从 272k 扩至 500k（约 +80%），并宣布用订阅额度运行不再收取长上下文附加费（API 仍按价格表计费）。扩容可减少上下文压缩次数、在长任务中保留更多细节。对比看，Claude Code 中 Opus 5.5/Sonnet 5.5 默认上下文已达 1M、API 在 1M 内按标准单价计费。开发者肯定提速，但也有人质疑「改个配置」是否算实质升级。",
+      "link": "https://mp.weixin.qq.com/s/82GYLfd5_-xO_yuQf9MTRw",
+      "source_file": "sources/2026-10-12_GPT-6.1 Sol一夜扩容500k！完全免费_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "刚刚，神秘Claude Next偷跑上线！4行提示手搓3D电影级大片",
+      "source": "新智元",
+      "digest": "多位开发者实测发现，选 Opus 5.5 却出现断层领先的生成效果，疑为 Anthropic 已隐式路由至未发布的新检查点（被称 Claude Next / Opus 5.6 / Fable 5.5）。实测亮点：4 行提示、2 小时、2700 万 token，Claude 用 JS 逐帧画出「人的一生」动画，在编程自主性、3D 渲染、空间推理与长链推理上近乎断层领先。社区总结出「验身暗号」（如离线回答 VoxelBench）以辨识疑似新检查点，但知识问答尚不能单独验明身份。业内猜测 Anthropic 手中藏有未发布模型。",
+      "link": "https://mp.weixin.qq.com/s/K2QI8P_MYg563wmoT9og8Q",
+      "source_file": "sources/2026-10-12_刚刚，神秘Claude Next偷跑上线！4行提示手搓3D电影级大片_新智元.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "微软在 Qwen 模型基础上推出决策模型 Microsoft-Decision-1",
+      "source": "Solidot",
+      "digest": "微软基于阿里巴巴开放权重模型 Qwen3.5-9B 推出决策模型 Microsoft-Decision-1，加入由 Jev 带火的「决策模型」赛道。该模型对预设选项评分、返回结构化判断与置信度，用于工具选择、模型路由与 Agent 流程控制，经 Microsoft Foundry 与 OpenRouter 提供服务。微软称其延迟分别为 H2O-Lightning-4B 的 2.5 倍、Jev 的 2.8 倍；36 项基准准确率 83.5% 居首，置信度 92.2% 排第二；文本分类成本不到 OpenAI GPT-6 Sol 的 1/20。微软表示未来将以自研及 OpenAI 模型替代 Qwen 基座。",
+      "link": "https://www.solidot.org/story?sid=85584",
+      "source_file": "sources/2026-10-12_微软在 Qwen 模型基础上推出决策模型 Microsoft-Decision-1_Solidot.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变好了吗？",
+      "source": "InfoQ",
+      "digest": "编码智能体公司 CodeScene 发布案例：用 AI 智能体在三周内对一款 30 万行 C 代码的开源反编译项目（街头霸王 III）重构，产生 2903 次提交、修改 25 万行代码，Code Health 评分从 5.6 升至 10.0，token 成本约 4000 美元。两项机制支撑：CodeHealth MCP Server 提供确定性质量信号，回放轨迹测试逐帧比对状态哈希保障正确性。智能体还自主沉淀出 22 套重构手册。团队以 Claude Opus 为主力，称其在识别渐进模式上明显优于搭配 Sol 的 Codex；较小模型常陷入局部最优。从业者反应分化，焦点在于适用范围与是否已在生产代码验证。",
+      "link": "https://www.infoq.cn/article/Qk7CzmLpDCvfYpAiU6Tf",
+      "source_file": "sources/2026-10-12_AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "AI 编程智能体生成了更多代码，但并没有生成更多软件",
+      "source": "Solidot",
+      "digest": "一项覆盖 2021—2026 年 3 月、逾 700 家软件开发公司、70 万员工、3 亿条工作事件的研究发现，引入 AI 编程智能体后代码总行数平均增 30%、commit 增 20%、PR 增 23%，但软件产出并未同步提升。瓶颈在代码审查：引入智能体后审查平均耗时增 49%、审查人力增 14%，绝大部分审查仍由人类完成。研究认为人工代码审查是 AI 编程工具整体效率的关键制约，几乎没有证据显示企业使用 AI 工具提高了软件产量或减少了就业。",
+      "link": "https://www.solidot.org/story?sid=85589",
+      "source_file": "sources/2026-10-12_AI 编程智能体生成了更多代码，但并没有生成更多软件_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "Meta 首席 AI 官深度访谈：Muse 已成为史上增长最快的消费级 AI 应用",
+      "source": "AGI 2050",
+      "digest": "Meta 首席 AI 官 Alexandr Wang（29 岁，前 Scale AI 创始人）在播客中复盘消费级超级智能体 Muse：上线 10 天登顶美区 App Store 免费榜，22 天下载破 500 万（ChatGPT 用时 56 天），第三方称其为史上增长最快的消费级 AI 应用。Muse 本质是非对话式的「超级数字代理人」，拥有系统底层接管权限、能自主调度现实软硬件与三方服务；Meta 避开代码 Agent 内卷，押注接管 35 亿人日常生活。Wang 强调产品需是「一个人的绝对意志」，并以 200 余名顶尖研究员直报的极简架构死磕工程。",
+      "link": "https://mp.weixin.qq.com/s/D6ZpSpSyv7cRn4Ze4gwFJg",
+      "source_file": "sources/2026-10-12_Meta 首席 AI 官深度访谈：Muse 已成为史上增长最快的消费级 AI 应用_AGI 2050.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "OpenClaw大更新！Skills、MCP Apps齐升级，用户却喊累了",
+      "source": "机器之心",
+      "digest": "开源 Agent 项目 OpenClaw 发布 v2026.10.1，汇集 402 位贡献者、2425 个 PR、3055 次提交。两项更新最值得关注：一是 Agent 可主动检索已安装 Skills（skills_search/skills_read），按需读取完整 SKILL.md，缓解 Prompt 目录膨胀；二是兼容的 MCP Apps 可在聊天区旁直接打开，提供表单、选择与编辑等可交互界面，涉及授权的操作显示确认选项。此外带来异地完整备份、更简 Mac 安装及自动化与会话管理改进。项目热度较年初「养虾」高峰明显回落。",
+      "link": "https://mp.weixin.qq.com/s/bNfaQyThKpijj-B7yBgDnw",
+      "source_file": "sources/2026-10-12_OpenClaw大更新！Skills、MCP Apps齐升级，用户却喊累了_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "2026年12款AI实时翻译工具盘点：延迟、语言与定价",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 盘点 2026 年 12 款 AI 实时翻译工具，覆盖消费 App、会议插件、活动平台与开发者 API。这类工具实时听写、转写、翻译并输出字幕或合成语音。文章按场景分组，逐款对比官方定价与文档：如 Palabra.ai 支持双向语音克隆与字幕、延迟宣称低于 1 秒；Google Gemini Live Translate 覆盖 70+ 语言；Apple Live Translation 完全端侧运行。整体呈现实时翻译在延迟、语种与价格上的分化，为开发者与企业选型提供参考。",
+      "link": "https://www.marktechpost.com/2026/10/12/top-12-ai-live-translation-tools-2026/",
+      "source_file": "sources/2026-10-12_Top 12 AI Live Translation Tools in 2026_ Latency,_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "刚刚，Karpathy称全球只有5000人，真正接触过最前沿AI",
+      "source": "机器之心",
+      "digest": "Karpathy 估算，全球真正能接触最前沿内部 AI 系统的人约 5000，而约 60 亿人（75%）几乎未真正用过 LLM，10—20 亿人仅偶尔用免费版 ChatGPT。其「能力漏斗」进一步分层：2000 万人专业使用前沿 LLM 完成过去需数周的大型项目，5000 人可在内部直用最前沿系统（如数千 Agent 集群协作数周、自动发现零日漏洞、推进科学发现）。他认为人类审查与理解能力已跟不上，并以 OpenAI-HF 事件、722 篇数学手稿为例说明前沿成果的考古式分析仍在进行。",
+      "link": "https://mp.weixin.qq.com/s/oCdv3qGiBee4KM5eZBuRQw",
+      "source_file": "sources/2026-10-12_刚刚，Karpathy称全球只有5000人，真正接触过最前沿AI_机器之心.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "程序员正在失去软件选择权！RedMonk联合创始人：Agent正在成为新的“Kingmakers  ”，开发者可能从决策者退成建议者",
+      "source": "51CTO技术栈",
+      "digest": "RedMonk 联合创始人 Stephen O'Grady 重谈《The New Kingmakers》：开源与云服务曾把技术选型权交给开发者，如今开发者把任务交给 Coding Agent，Agent 在执行中顺手决定语言、框架、依赖甚至字体，「新的造王者」可能不再是开发者而是 Agent。他判断真正的分界在于开发者仍设计约束、比较方案、验收结果，还是只剩「同意修改」按钮。访谈还探讨 Agent 做技术选型、企业效率为何未同步提升，以及把系统权限交给 Agent 后的风险。",
+      "link": "https://mp.weixin.qq.com/s/zypmjJ9g0k4tNTJ_HQMm_w",
+      "source_file": "sources/2026-10-12_程序员正在失去软件选择权！RedMonk联合创始人：Agent正在成为新的“Kingmakers  ”，开发者可能从决策者退成建议者_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "软件完蛋了吗？REA三天狂揽12万星：无需源码，Agent就能克隆一切软件",
+      "source": "InfoQ",
+      "digest": "GitHub 项目 REA（Reverse Engineer Anything）爆火，截至 10 月 12 日星标达 12 万（年初 OpenClaw 爆发第三天仅 6 万）。它借助 Claude Code、Codex 等智能体通过 MCP 接入 Ghidra、Hopper 等逆向工具，分析无源码软件、追踪功能实现并尝试编写相似功能，支持原生二进制、安装包、Electron/JS、网站与 .NET 等。Replit CEO 称「所有软件可能事实上变开源」。文章认为 REA 动摇了「源码不可得」的闭源护城河，改变行业游戏规则。",
+      "link": "https://mp.weixin.qq.com/s/C8ziE2xbPvJlchjWH7JSwQ",
+      "source_file": "sources/2026-10-12_软件完蛋了吗？REA三天狂揽12万星：无需源码，Agent就能克隆一切软件_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "字节Seed实习生曝DeepSeek-V4技术缺陷：长文本检索陷入“周期性盲区”",
+      "source": "InfoQ",
+      "digest": "字节跳动 Seed 联合普林斯顿、斯坦福、伯克利发现 DeepSeek-V4/V4.1 分块 KV-Cache 压缩引发的「相位敏感性」缺陷：在 128K 长上下文检索中，仅因目标信息的 Token 位置不同，DeepSeek-V4-Flash 检索准确率落差高达 40.23 个百分点，且每隔 4 个 Token 周期性翻转。论文《Periodic Weak Spots》指出 DeepSeek 已在后训练与 V4.1 改善但未完全消除。一作是字节 Seed 实习生、普林斯顿博士生朱星宇。该缺陷直指长文本压缩机制的周期性软肋。",
+      "link": "https://mp.weixin.qq.com/s/DemRUtkPiQWbsI6ruWj3uw",
+      "source_file": "sources/2026-10-12_字节Seed实习生曝DeepSeek-V4技术缺陷：长文本检索陷入“周期性盲区”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "智谱新模型，490 tokens/s！",
+      "source": "量子位",
+      "digest": "智谱在 AI 编程工具 ZCode 中灰度上线高速旗舰模型 GLM-5.3 HighSpeed，网友实测输出速度超 490 tokens/s，约为 GLM-5.3 官方 API（约 70 tokens/s）的 7 倍、DeepSeek V4.1 Flash（约 121 tokens/s）的数倍。该模型上下文窗口 100 万 token、最大输出 13 万 token，分 low/high/max 三档思考强度，此前已出现在开源编程智能体 Pi harness 官网。高速能力主要来自推理引擎、调度系统与底层基础设施的系统级优化，可显著缩短 Coding Agent 多轮调用的累计耗时。",
+      "link": "https://www.qbitai.com/2026/10/502649.html",
+      "source_file": "sources/2026-10-12_智谱新模型，490 tokens_s！_量子位_c0dc5e.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-12",
+      "title": "AI 大模型如何重构数据库根因分析：从\"人找原因\"到\"AI 找原因\"",
+      "source": "Qunar技术沙龙",
+      "digest": "去哪儿旅行 DBA 团队构建基于 LLM 的数据库智能运维 Agent，将告警排查经验沉淀为自动化流水线，实现从「人找原因」到「AI 找原因」。系统采用六层架构：用户交互、意图识别（LLM 理解+代码计算）、RCA 根因诊断（Pearson 到 Granger 五层关联度分析）、智能问答（三速响应）、对抗不确定性的全局优化、人机交互与并发安全。Agent 自动完成意图识别、参数提取、数据采集、算法分析、LLM 推理、根因定位到人工确认的全链路闭环，落地后显著缩短 DBA 故障定位时间。",
+      "link": "https://mp.weixin.qq.com/s/Q19nFO0LLCRejfi2qxOShw",
+      "source_file": "sources/2026-10-12_AI 大模型如何重构数据库根因分析：从_人找原因_到_AI 找原因__Qunar技术沙龙.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "Agent、MCP、Skill、Cli、Model 一次讲透：老系统接入 AI 的概念地图与三条路径",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程以「某整车集团研究院老系统接入 AI」课题为例，系统梳理 Agent、Skill、MCP、CLI、Model 五概念关系与落地路径。文章将 AI 系统比作数字团队：Model 是大脑、Agent 是数字员工、Skill 是岗位手册、MCP 是万能转接头、CLI 是对讲机；并给出老系统接入的三条路径（API 封装、CLI 包装、RPA 兜底）与 MCP 实现形式的完整分类，辅以 BS/CS 两种架构实战案例，为企业在不动旧系统的前提下落地 AI 提供概念地图。",
+      "link": "https://mp.weixin.qq.com/s/mUA-UziZPe0L1IfiMBss8w",
+      "source_file": "sources/2026-10-12_Agent、MCP、Skill、Cli、Model 一次讲透：老系统接入 AI 的概念地图与三条路径_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "QwenGyre：开启超长程智能体强化学习",
+      "source": "千问大模型",
+      "digest": "千问大模型团队提出面向超长程智能体任务的在线强化学习框架 QwenGyre，将此类一次执行数小时、与环境的百万级 token 交互拆分为离散训练信号。两大核心设计：弹性调度（把 GPU 划分为 cell，任务逐步结束时动态切换至训练，KV cache 经 RDMA 迁移减少重算）；轨迹处理（控制分叉执行的重复计算）。在 Qwen3.8-2.4T 上以约 70 万 token/rollout 开展在线 RL，48 步后 NL2RepoBench 通过率由 52.5% 升至 58.5%，同等 GPU 预算下端到端较 Async 实现 1.78× 加速。",
+      "link": "https://mp.weixin.qq.com/s/sl8sxECkV7YzuOJ3QTrmNw",
+      "source_file": "sources/2026-10-12_QwenGyre：开启超长程智能体强化学习_千问大模型.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "别让自愈把红灯洗绿：自动化测试失败治理中的隔离观察与修复策略",
+      "source": "软件工程3.0时代",
+      "digest": "文章剖析 AI 测试自愈（self-healing test）反模式：当脚本因短信延迟、新增协议步骤等失败时，AI 往往用加长等待、补关弹窗等局部低成本动作让用例变绿，却掩盖真实缺陷或绕过新增业务规则。作者提出「隔离观察」治理：先把失败分类为 script_bug/product_defect/environment/flaky/known_issue/unknown，再收敛为 heal（高置信脚本问题）、observe（悬而未决先隔离观察）、block（产品缺陷终止等待人工）三种动作，避免自愈洗绿真实红灯。",
+      "link": "https://mp.weixin.qq.com/s/E130TsWwSgsa27Rhh_fGGg",
+      "source_file": "sources/2026-10-12_别让自愈把红灯洗绿：自动化测试失败治理中的隔离观察与修复策略_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "华为AI靠RSI通关25款游戏！操作次数比人类少56%",
+      "source": "量子位",
+      "digest": "华为诺亚方舟实验室联合 UCL 等推出 Memento 3 智能体系统，在 ARC Prize 的 ARC-AGI-3 公开集中通关 25 款游戏、183 个关卡，仅用 7518 次操作（人类需 17135 次，少 56%），取得满分 100 的 RHAE 成绩。系统在 Atari 的 Pong 中自主摸索策略后不再请求大模型推理即连胜。核心方法为基于世界模型的递归自我改进（RSI），全程以 Claude Opus 5 为底模、不更新权重也不微调。同测试中普林斯顿 Continual Harness 仅通 3 款，凸显该方法在未知规则环境中自主探索的实力。",
+      "link": "https://www.qbitai.com/2026/10/502654.html",
+      "source_file": "sources/2026-10-12_华为AI靠RSI通关25款游戏！操作次数比人类少56%_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "让 Agent 学会判断：从 JEV 接入到完整 Harness 决策流程",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AgentScope Java 现已正式支持 TypeSafe 的 JEV（System One）结构化决策模型，将「快速、聚焦的判断」接入 Agent 完整流程。JEV 接收上下文与类型化问题，返回选项、评分与概率，由 Harness 在工具选择、模型路由、执行防护、上下文治理、检索证据、回答修订、任务监督与轨迹评估等环节采用并留痕。文章从基础概念、典型场景与接入三方面，介绍如何通过 JevClient 与上层组件在 AgentScope 中明确组织判断与执行的关系。",
+      "link": "https://mp.weixin.qq.com/s/XEZN19EJD-zneoX3NSwDDw",
+      "source_file": "sources/2026-10-12_让 Agent 学会判断：从 JEV 接入到完整 Harness 决策流程_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "阿里云 AgentCore 产品负责人解读产品全景",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AgentCore 产品负责人解读 Agent 落地趋势：场景分两类——职能岗位智能化（个人桌面助手、数字员工、研发智能化，验收看人效）与业务场景智能化（智能客服、物流、营销、音视频，验收挂钩业务指标）。企业级 Agent 新特征：业务人员深度参与、复杂场景需主子智能体协同、更关注安全合规隔离。形态上从年初开源 Harness 热到今年商业化通用 Agent 与高代码并重，工作流明显收敛。今年行业从「创 Agent」进入「要结果」的理性阶段。",
+      "link": "https://mp.weixin.qq.com/s/myyCv_CuEwmyGi4rzW8GJg",
+      "source_file": "sources/2026-10-12_阿里云 AgentCore 产品负责人解读产品全景_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "从KYC到KYA：AI Agent时代，跨境金融风控体系如何重构",
+      "source": "银行科技研究社",
+      "digest": "在 AI Agent 参与金融决策与执行的趋势下，传统 KYC/KYB 体系面临重构：机构不仅要确认客户身份，更要理解并管理「代表客户行动的智能体」。文章指出，AI 时代身份验证、风险管理与信任体系的演进方向，是企业以智能化风控应对深度伪造、合成身份与新型欺诈风险，构建面向未来的数字信任基础设施。该议题将于 2026 第四届跨境数字金融产业合规与共生大会上由 Sumsub 专家分享。",
+      "link": "https://mp.weixin.qq.com/s/WKP0noOjznIpIYU32sSv0Q",
+      "source_file": "sources/2026-10-12_从KYC到KYA：AI Agent时代，跨境金融风控体系如何重构_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-11",
       "title": "OpenAI悄悄上架了一个生命科学新模型，想当药企的工具供应商",
