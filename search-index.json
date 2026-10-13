@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-10-13T05:21:08.231723",
-  "total": 2684,
+  "updated_at": "2026-10-14T05:22:50.557566",
+  "total": 2714,
   "articles": [
+    {
+      "date": "2026-10-13",
+      "title": "OpenAI Higgsfield：AI 视频时长突破 10 分钟，迈向语音电影制作",
+      "source": "OpenAI",
+      "digest": "OpenAI 旗下 Higgsfield 借助 GPT-6 Astra 将 AI 视频时长从约 1 分钟扩展到 10 分钟以上，并用 GPT-Image-2.5 实现更精准的视觉控制，同时以 GPT-Live 铺路语音电影制作。该能力面向创作者，在延长视频时长的同时提升画面可控性，降低长视频叙事的制作门槛。",
+      "link": "https://openai.com/index/higgsfield-longer-videos-voice",
+      "source_file": "sources/2026-10-13_Higgsfield takes AI video from 1 minute to over 10_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "刚亮相就传被英伟达收购：Gemini 老兵团队凭什么还敢押注 Coding Agent？",
+      "source": "InfoQ",
+      "digest": "被称为「美国版 DeepSeek」的 Reflection AI（前 Google DeepMind 成员 2024 年创立）发布首个开放权重模型 Beam，总参 5010 亿、激活 230 亿的 MoE，主攻编程、推理与 Agent，部分高级推理基准接近 GLM-5.2 且算力仅其 1/3 到 1/4。发布不到一周即传出英伟达拟收购或深化投资，凸显前沿开放模型赛道与 Coding Agent 路线受巨头关注。",
+      "link": "https://mp.weixin.qq.com/s/Ff397ewy0vRMIgjetjFRXA",
+      "source_file": "sources/2026-10-13_刚亮相就传被英伟达收购：Gemini 老兵团队凭什么还敢押注 Coding Agent？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "干掉Fable 5.1！Meta甩出最强模型，即将上线Muse",
+      "source": "智东西",
+      "digest": "10 月 13 日，Meta 发布首个前沿模型系列 Muse Wonder（含 Muse Wonder 与 Wonder Full），面向个人与专业智能体任务，引入主动记忆（Active Memory）与主动专注（Active Focus），可持续跟踪用户关注并围绕目标推进任务，是迈向「个人超级智能」的重要一步。在 DeepSWE 1.1、SWE-Marathon 长流程测试中，Wonder Full 得分超过 Claude Fable 5.1、GPT-6 Astra 与 Opus 5.5，标志 Meta 杀回 AI 第一梯队。",
+      "link": "https://mp.weixin.qq.com/s/kOoEB9AwFiLHDbOqLvzGGA",
+      "source_file": "sources/2026-10-13_干掉Fable 5.1！Meta甩出最强模型，即将上线Muse_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "30 名工程师、一个宏大愿景，却没有真实需求：谷歌高管反思产品开发狂热",
+      "source": "InfoQ",
+      "digest": "谷歌 17 年老兵、负责 Google Labs、Gemini 应用与 AI Studio 的 Josh Woodward 在 Lenny's Podcast 分享产品方法论：企业应像实验室一样思考，给探索团队动手空间并识别「玩具」能否成为业务；好点子常来自好奇爱动手的小团队，而非头脑风暴。他维护一份「几乎可以实现」清单，技术跨过门槛即组织探索，但技术惊艳不意味产品成功。",
+      "link": "https://www.infoq.cn/article/uYQMXN91a1BDTT802G6p",
+      "source_file": "sources/2026-10-13_30 名工程师、一个宏大愿景，却没有真实需求：谷歌高管反思产品开发狂热_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Claude 开始自己写程序管理 Agent 了：Anthropic 披露动态工作流架构",
+      "source": "InfoQ",
+      "digest": "Anthropic 为 Claude Managed Agents 上线 Dynamic Workflows（动态工作流，Beta）。机制是：Claude 按任务需求生成一段编排程序，由程序负责启动子 Agent、衔接各阶段、处理返回结果并交回主 Agent，把原先需主 Agent 持续参与的协调工作交给后台程序。团队借 Unix/Linux 从个人走向大规模协作，类比多 Agent 组织的协调瓶颈。",
+      "link": "https://www.infoq.cn/article/8La5gsJVOOF5BvFiLAUF",
+      "source_file": "sources/2026-10-13_Claude 开始自己写程序管理 Agent 了：Anthropic 披露动态工作流架构_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Claude团队又搞事：实测AI全自主复制进智能家电",
+      "source": "量子位",
+      "digest": "Anthropic 安全研究员 William Zhou、Daniel Freeman 的安全实验让 GLM-5.2 把 80 亿参数模型自主扩散到隔离网络内的 8 台设备：5 次实验 4 次拿下全部 8 台，剩余 1 次也拿下 7 台。AI 自主完成搜寻目标、传输载荷、配环境装驱动、启动并孵化下一代，研究人员推算年底 30B 以下小模型或具备端到端全自主复制（ARA）能力。",
+      "link": "https://www.qbitai.com/2026/10/502920.html",
+      "source_file": "sources/2026-10-13_Claude团队又搞事：实测AI全自主复制进智能家电_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Meta、OpenAI、Google集体杀入，个人Agent一夜爆红：YC CEO说真正的 AGI 已经在你电脑里",
+      "source": "InfoQ",
+      "digest": "几周内 Meta、OpenAI、Google、Microsoft、xAI 几乎同时押注个人 Agent：Meta Muse 拥有自有运行环境与浏览器，可处理邮件、预订与长期任务；OpenAI Dots 配备云端电脑，持续围绕用户目标工作并连接外部应用。YC CEO Garry Tan 在 Startup School 2026 提出更激进判断：「个人 AGI」正从激进说法变成清晰产品路线。",
+      "link": "https://www.infoq.cn/article/pkFg3POvaTwJt9lei8Vj",
+      "source_file": "sources/2026-10-13_Meta、OpenAI、Google集体杀入，个人Agent一夜爆红：YC CEO说真正的 AGI _InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Palantir本体天龙之--没有北冥真气的年代",
+      "source": "傲寒荐书",
+      "digest": "傲寒荐书以《天龙八部》段誉、鸠摩智类比，解析 Palantir 为何在大模型出现二十年前就打造 Ontology + FDE 体系。天龙寺不知将来有「北冥真气」（大模型），仍先铺一阳指路线解决眼前问题——类比 Palantir 提前布局本体与前沿部署工程，用持续可演进的路线应对不确定需求。",
+      "link": "https://mp.weixin.qq.com/s/6_6Ho6eODS0Fjjg0vlIJyw",
+      "source_file": "sources/2026-10-13_Palantir本体天龙之--没有北冥真气的年代_傲寒荐书.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "不会编程的AI没多大用！马斯克：下一场竞争不是谁写得快，而是谁能让模型知道自己错了",
+      "source": "51CTO技术栈",
+      "digest": "马斯克在 X Takeover 2026 阐述以 600 亿美元收购 Cursor 的逻辑：通用 AI 若连编程都解决不了，就难在现实派上用场，编程正成为通用 AI 的「基础课」——模型要理解目标、调用工具、修改环境、观察反馈并迭代。Cursor 带来编程数据、Coding Agent 团队与数千家企业销售关系，SpaceX 则补上大规模 GPU 集群，拼出训练到落地的完整链路。",
+      "link": "https://mp.weixin.qq.com/s/W-Lit94-4jz723JnGubJnA",
+      "source_file": "sources/2026-10-13_不会编程的AI没多大用！马斯克：下一场竞争不是谁写得快，而是谁能让模型知道自己错了_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "美国核反应堆开始整合 AI 助手",
+      "source": "Solidot",
+      "digest": "加州公司 Atomic Canyon 与核工业组织合作推出核反应堆运营 AI 助手 NIVA（Nuclear Industry Virtual Assistant），已完成试点并向美国全部 94 座核反应堆开放使用。另一家核能 AI 初创 Nuclearn 服务逾 65 家美国合作方。核工业面临繁琐监管与海量合规文档，AI 擅长检索数据库、加速向联邦政府提交文件，被比作「核能领域的 ChatGPT」。",
+      "link": "https://www.solidot.org/story?sid=85592",
+      "source_file": "sources/2026-10-13_美国核反应堆开始整合 AI 助手_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "阿里 Qwen 团队发布 QwenGyre：面向极长程 Agent 的弹性强化学习框架",
+      "source": "MarkTechPost",
+      "digest": "阿里 Qwen 团队发布 QwenGyre，一个面向极长程 Agent 训练的弹性强化学习（RL）框架。它是在线 RL 系统，通过未修改的黑盒 harness 训练 coding agent，支持运行数小时、处理近百万 token 的 rollout，已在旗舰模型 Qwen 3.8 2.4T 上验证。两大核心：在 rollout 与训练间调度闲置 GPU，以及对 Agent 历史做分支以高效探索。",
+      "link": "https://www.marktechpost.com/2026/10/12/alibaba-qwen-introduces-qwengyre-elastic-reinforcement-learning-rl-for-xlong-horizon-agents/",
+      "source_file": "sources/2026-10-13_Alibaba Qwen Introduces QwenGyre_ Elastic Reinforc_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Z.ai 发布 GLM-Legal：法律 AI 模型在 Harvey 基准全通过率达 19.2%",
+      "source": "MarkTechPost",
+      "digest": "Z.ai 发布 GLM-Legal 法律 AI 模型，基于 GLM-5.3-Flash（320B 总参、18B 激活 MoE、1M 上下文），面向合同审查、证据分析与合规研究等 Agent 化法律工作。关键结果：在 Harvey 法律 Agent 基准（LAB）上全通过率 19.2%，近基座模型 6.7% 的 3 倍；API 目前仅申请制开放。",
+      "link": "https://www.marktechpost.com/2026/10/13/zai-glm-legal-harvey-lab-legal-ai-model/",
+      "source_file": "sources/2026-10-13_Z.ai GLM-Legal Beats Claude Fable 5 and Kimi K3 on_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "端侧多模态新上限，350 亿参数 MoE 手机平板 3GB 内存畅跑，MiniCPM-V 4.7正式开源",
+      "source": "面壁智能",
+      "digest": "面壁智能联合 OpenBMB 社区开源端侧多模态模型 MiniCPM-V 4.7，含 35B-A3B 与 1B 两版。35B-A3B 是全球首个可在端侧无损、流畅运行的开源 MoE 多模态大模型，约 3GB 内存即可在 iOS、安卓流畅运行，在 34 项权威基准全面领先同档，刷新多模态「性能—效率帕累托前沿」，把端侧多模态的能力密度与普惠推到新高度。",
+      "link": "https://mp.weixin.qq.com/s/f-f-I2q0S6HSeIp1kt6c9g",
+      "source_file": "sources/2026-10-13_端侧多模态新上限，350 亿参数 MoE 手机平板 3GB 内存畅跑，MiniCPM-V 4.7正式开源_面壁智能.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-13",
+      "title": "20年技术品牌建设都成浮云：编程智能体如何选择其首选工具",
+      "source": "InfoQ",
+      "digest": "开发者工具公司 Armature 分析了编程 Agent 的 1.7 万次工具选择会话，发现 Agent 高度依赖历史品牌认知（提到容器立刻想到 Docker），却对其新能力一无所知，二十年品牌建设仿佛被「冻结」。结论：随着任务端到端交给 Agent，厂商可通过影响 Agent 的选型逻辑提高产品被选中的概率。",
+      "link": "https://www.infoq.cn/article/MrxaqhrQBMrZTcSGEgL1",
+      "source_file": "sources/2026-10-13_20年技术品牌建设都成浮云：编程智能体如何选择其首选工具_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "AI 进入生产后，研发组织怎么变",
+      "source": "阿里云云原生",
+      "digest": "阿里云 CTO 产研线围绕业务北极星目标的 AI 原生实践取得局部成果，并复盘云栖大会《AI 原生研发组织论坛》。文章提出「模型 + Harness + Context」的智能体计算范式：模型负责理解、判断与实时决策，Context 提供统一、持续更新的上下文，Harness 负责智能体的自主运行与持续进化，强调单点提效远不够，须走向组织范式。",
+      "link": "https://mp.weixin.qq.com/s/kW6C4nE_s_mT43Bs93pNzw",
+      "source_file": "sources/2026-10-13_AI 进入生产后，研发组织怎么变_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "GitHub新晋顶流REA：当大模型能逆向一切，软件行业还剩什么？",
+      "source": "InfoQ",
+      "digest": "GitHub 项目 REA（Reverse Engineer Anything）爆火，截至 10 月 12 日已 12 万星。它借助 Claude Code、Codex 等编程 Agent，经 MCP 接入 Ghidra、Hopper 等逆向工具，让 Agent 分析无源码软件、追踪实现线索并尝试编写相似功能。对原生二进制支持最深（Mach-O/ELF/PE 等），亦覆盖 Electron、.NET、网站与归档包，把四十年逆向手艺变成 Agent 可稳定调用的能力。",
+      "link": "https://www.infoq.cn/article/BEJ6IXREBoXspGmXRQHj",
+      "source_file": "sources/2026-10-13_GitHub新晋顶流REA：当大模型能逆向一切，软件行业还剩什么？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Qoder Cloud Agents 助力开发者走进Personal Agent 时代",
+      "source": "Qoder",
+      "digest": "Qoder 阐述 Personal Agent 时代的演进：问答式 AI→任务型 Agent→Personal Agent（委托长期目标、持续行动并改进）。OpenAI Dots（云端电脑）、Meta Muse（专属云端环境）均指向「持续交付」。Qoder Cloud Agents 旨在助力开发者进入该阶段，让 AI 助手在用户离开对话后继续工作，并在下次对话承接进展。",
+      "link": "https://mp.weixin.qq.com/s/zX_PrmjVsUE7GcZsZHv43A",
+      "source_file": "sources/2026-10-13_Qoder Cloud Agents 助力开发者走进Personal Agent 时代_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "VeRL后训练实战： Agent Sandbox如何打通Coding Agent的“环境执行层”？",
+      "source": "阿里云基础设施",
+      "digest": "阿里云基础设施讲解开源 RL 后训练框架 VeRL（支持 PPO、GRPO）。随模型能力升级，RL 从单次文本生成扩展到多轮决策的 Agent RL，典型如 coding agent：读问题、改代码、跑测试、按结果修正，由测试通过给奖励。环境从训练系统外部设施变为训练过程一部分，Agent Sandbox 打通「环境执行层」，让多轮交互的奖励可在真实环境验证。",
+      "link": "https://mp.weixin.qq.com/s/S-UiuIV1HMND7WF0-7F7cA",
+      "source_file": "sources/2026-10-13_VeRL后训练实战： Agent Sandbox如何打通Coding Agent的“环境执行层”？_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "从 Harness 到 Loop：真正决定 Agent 落地的，从来不是更强的模型",
+      "source": "InfoQ",
+      "digest": "InfoQ《极客有约》× QCon 邀请蚂蚁、腾讯、京东专家，探讨 Agent 在生产环境的自进化。核心观点：Harness 解决「Agent 怎么把任务完成」（静态系统），Loop 解决「怎么越变越强」（进化系统）；模型能力不等于系统能力，工程化体系决定交付下限；Loop 能自动化执行，但决策与验收仍须人拍板，最大缺口是 Agent 缺乏人的上下文。",
+      "link": "https://mp.weixin.qq.com/s/sllFMVkgl-2o6E8DzGzJkA",
+      "source_file": "sources/2026-10-13_从 Harness 到 Loop：真正决定 Agent 落地的，从来不是更强的模型_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "千问Personal Agent硬件升级：AI眼镜可虹膜支付，携手Bose首发AI耳夹耳机",
+      "source": "InfoQ",
+      "digest": "10 月 13 日千问发布 AI 眼镜 N1、N1 Pro 与 AI 耳夹耳机（联合 Bose）。N1 Pro 是行业首个具备体征实时监测的 AI 眼镜（心率、血氧、皮肤温度），支持眼动交互与虹膜核身：看外文菜单即翻译，结账用支付宝「看一下支付」虹膜核验。AI 硬件被视为千问 Personal Agent 在物理世界的延伸，到手价眼镜 2218 元起、耳机 1099 元起。",
+      "link": "https://www.infoq.cn/article/xJ8vYf2lCwGWzVizOTSM",
+      "source_file": "sources/2026-10-13_千问Personal Agent硬件升级：AI眼镜可虹膜支付，携手Bose首发AI耳夹耳机_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "年薪百万的FDE，我认识的人里一个都没拿到",
+      "source": "腾讯云开发者",
+      "digest": "文章解析 Forward Deployed Engineering（前沿部署工程 FDE）：源于 2003 年 Palantir 承接 FBI 涉密订单时，因客户说不清需求、数据完全隔离，被迫把最贵工程师派到离问题最近的一线，先解决问题再沉淀回产品。作者反思 FDE 是否「伪命题」——核心启示是不要在办公室设计产品，而要把人扔到离问题最近的地方。",
+      "link": "https://mp.weixin.qq.com/s/GpdE4EaRcg4IFhpBEYh8AQ",
+      "source_file": "sources/2026-10-13_年薪百万的FDE，我认识的人里一个都没拿到_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "手机解锁先见 AI，不再先找 App：阶跃星辰首款智能体手机来了，定价 3999",
+      "source": "InfoQ",
+      "digest": "10 月 13 日，阶跃终端发布首款智能体手机 STEPX Neo 先行版，定价 3999 元，同步推出智能体原生操作系统 Step AOS 1.0 与开发工具 Step Studio，采用「软硬模」全栈定价并附 12 个月百亿 Token 额度。其最大变化是背部设智能体专属显示区：主屏负责人机交互，背屏呈现 Agent 的任务状态与反馈，对应其在后台持续执行任务的场景。",
+      "link": "https://www.infoq.cn/article/p2TobACROBC8UBPlRKXx",
+      "source_file": "sources/2026-10-13_手机解锁先见 AI，不再先找 App：阶跃星辰首款智能体手机来了，定价 3999_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "模型没兜底、账算不清、Key 散落各处，Agent 怎么上生产？",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎 AgentKit 是企业 AI Agent 基础设施平台，其模型网关在业务应用与底层模型间加一层统一管控，应对模型稳定性、资源用量与多模型接入治理。支持为主模型配置备用模型，异常时按策略切换且业务调用入口不变；并解决模型费用算不清、API Key 散落等普遍问题，把治理收口到统一层。",
+      "link": "https://mp.weixin.qq.com/s/i33bY_LrepXeSX3T8ZA0kw",
+      "source_file": "sources/2026-10-13_模型没兜底、账算不清、Key 散落各处，Agent 怎么上生产？_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "腾讯 A.I.G 接入 ClawHub 安全底座：中国开源安全能力走进全球 Agent 生态",
+      "source": "腾讯开源",
+      "digest": "腾讯开源的 AI 基础设施安全检测项目 A.I.G 近日接入全球最大开源 Agent 生态 ClawHub 的安全审核。此后上传到 ClawHub 的 Skill 与插件都将经过 A.I.G 扫描，一旦检出恶意内容，官方将依检测结果给予警告、下架等处罚。背景是 Koi Security 审计发现 ClawHub 上曾出现大量恶意 Skill（ClawHavoc 攻击），Agent 生态的供应链安全已成紧迫议题。",
+      "link": "https://mp.weixin.qq.com/s/NRMWJhT503r2CtiS323qEA",
+      "source_file": "sources/2026-10-13_腾讯 A.I.G 接入 ClawHub 安全底座：中国开源安全能力走进全球 Agent 生态_腾讯开源.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "越相信 Agent，越要管住 Agent：聊聊企业 Agent 的底线与上限",
+      "source": "阿里云云原生",
+      "digest": "在 AgentCore 论坛上，阿里云发布智能体构建与治理平台 Alibaba Cloud AgentCore。圆桌指出，约 70% 企业已把 AI 工具引入生产，但风向正从「谁用得多」转向「谁用得值」：企业开始追问每个 Token 带来了什么，并直面稳定性、权限、安全、成本与多 Agent 管理等问题。模型再聪明也解决不了生产的稳定、可复现与可追踪需求，急需治理平台兜底。",
+      "link": "https://mp.weixin.qq.com/s/wJnWnE7JmeYKiFr3ylSB7A",
+      "source_file": "sources/2026-10-13_越相信 Agent，越要管住 Agent：聊聊企业 Agent 的底线与上限_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "软件能跑到全球，不等于能卖到全球",
+      "source": "InfoQ",
+      "digest": "亚马逊云科技深圳、顺德四行业峰会暨 Marketplace 用户大会指出，中国企业出海正从「把货卖出去」走向「在当地扎下根」。Agentic AI 在重塑这套经营体系，但软件出海不止把服务部署到海外：基础设施解决「能不能运行」，商业化还要回答客户「能否找到、能否购买、买完能否用好」，后几步往往更难标准化。",
+      "link": "https://mp.weixin.qq.com/s/GIRjNa-mvJX5tkBm9HjzqQ",
+      "source_file": "sources/2026-10-13_软件能跑到全球，不等于能卖到全球_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "退差价、约保养、订球场、跟客服磨赔偿，千问Go什么都想管",
+      "source": "量子位",
+      "digest": "千问发布 Personal Agent「千问Go」，可代用户办事：常规机酒预订只是入门，更能翻找冷门入口、操作未知功能、与真人客服多轮磨赔偿。案例显示，用户仅凭购票平台与起始地，千问 Go 就找回遗忘的延误航班并代办理赔。用户丢一句话、回头收消息即办完，仅登录账号等无法代劳的操作除外。",
+      "link": "https://www.qbitai.com/2026/10/502849.html",
+      "source_file": "sources/2026-10-13_退差价、约保养、订球场、跟客服磨赔偿，千问Go什么都想管_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "阿里云 STAROps 全新升级，让 AI 持续推进问题闭环解决",
+      "source": "阿里云云原生",
+      "digest": "阿里云全域智能运维平台 STAROps 全新升级，将统一运维上下文、跨域分析诊断与持续闭环处置结合，让智能体在明确目标与权限范围内持续推进问题解决。核心变化是从「人不断提问、不断推进」走向「Agent 围绕目标持续工作、人负责关键决策」，即 Agentic Ops：用户设定持续运维目标，由 Agent 观察环境、发现异常、跟进处理与验证。",
+      "link": "https://mp.weixin.qq.com/s/NtsOAsHE38kHkGaFLXZJiw",
+      "source_file": "sources/2026-10-13_阿里云 STAROps 全新升级，让 AI 持续推进问题闭环解决_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "上海银行2500多万布局数芯工程，正从两方面推动对公智能化转型",
+      "source": "银行科技研究社",
+      "digest": "上海银行数芯工程业务系统建设及测试采购结果确定，一个月内耗资超 2500 万元（数字人民币业务系统建设 1218.97 万、测试 968.77 万、智能合约 366.3 万）。该行 8 月启动项目，刚获批数字人民币业务运营机构，正从底层系统建设与智能合约两方面推动对公智能化转型；此前拟单一来源采购长亮科技核心系统未果后改为公开招标。",
+      "link": "https://mp.weixin.qq.com/s/9EybgN_yEftE2BgjXSM91w",
+      "source_file": "sources/2026-10-13_上海银行2500多万布局数芯工程，正从两方面推动对公智能化转型_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "当AI Agent开始动用资金：如何构建可信、可控、可互操作的机构级AI Finance？",
+      "source": "银行科技研究社",
+      "digest": "在 2026 第四届跨境数字金融产业合规与共生大会上，MetaComp 首席合规官于嘉宁将分享「机构级 AI Finance」：当 Agent 代表企业发起支付、调度资金、参与理财，需建立可信、可控、可追溯的治理框架。涵盖机构与 Agent 间的身份识别、权限管理、交易控制、审计追踪，以及跨机构、跨平台的身份互信与系统互操作。",
+      "link": "https://mp.weixin.qq.com/s/BGNTQESM4yfhxHjnC9opdw",
+      "source_file": "sources/2026-10-13_当AI Agent开始动用资金：如何构建可信、可控、可互操作的机构级AI Finance？_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-12",
       "title": "0.6B起！Jev对手模型来了，开源多模态，登上全球测评榜一",
