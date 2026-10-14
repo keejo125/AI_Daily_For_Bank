@@ -1,7 +1,437 @@
 {
-  "updated_at": "2026-10-14T05:22:50.557566",
-  "total": 2714,
+  "updated_at": "2026-10-15T05:31:21.747821",
+  "total": 2757,
   "articles": [
+    {
+      "date": "2026-10-14",
+      "title": "Gemini 4 Argon的安全与负责任发布实践",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind阐述Gemini 4 Argon的安全与负责任发布方法。Argon在编程、金融、法律、网络安全与科学等复杂任务上达到前沿水平，其网络防御能力设计为让防御方占优。在有限访问期内，Wiz用Argon发现某医院软件此前模型遗漏的关键漏洞，保护数十万患者记录；谷歌安全团队亦用其扫描内外部关键系统。",
+      "link": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "source_file": "sources/2026-10-14_Developing Gemini 4 Argon responsibly and safely_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Gemini 4 Argon面向机器人：物理推理与具身应用",
+      "source": "Google DeepMind",
+      "digest": "Gemini 4 Argon在物理理解、代码生成与视觉语义推理上实现跃迁，面向机器人全生命周期。在Embodied Reasoning（ERQA）基准上以纯推理取得87%，超越所有其他前沿模型；可应用于机器人控制、Real2Sim仿真孪生构建、物理理解与多模态具身智能体等场景，加速通往物理AGI。",
+      "link": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "source_file": "sources/2026-10-14_Gemini 4 Argon for Robotics_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Gemini 4 Argon全球上线，API限时五折，谷歌要杀回第一梯队！",
+      "source": "智东西",
+      "digest": "智东西同题报道Gemini 4 Argon全球上线。该稀疏混合专家前沿模型10月1日发布、10月14日开放，擅长编程、金融、法律、网安与科学的长链路复杂任务，Vals Index排名第一。首发五折：输入2美元、输出10美元/百万token，缓存输入95%折扣至11月30日。演示中Argon从Pixel CAD文件出发经Blender MCP制作含拆解视图的动画，并整理餐饮文件夹生成客户演示文稿与邮件。",
+      "link": "https://mp.weixin.qq.com/s/eHXnMb6NEuNc5RDYFnDiiQ",
+      "source_file": "sources/2026-10-14_Gemini 4 Argon全球上线，API限时五折，谷歌要杀回第一梯队！_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Google DeepMind与新加坡合作微调反诈骗模型",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind与新加坡政府合作，基于Argon微调出面向诈骗检测的专用AI模型，作为国家层面AI合作的一部分。该模型将用于增强新加坡的反诈骗能力，把前沿大模型适配到本地公共安全与金融防护场景，体现前沿模型经微调后下沉到社会治理与民生安全领域的落地路径。（注：原文正文未抓取，摘要据标题与官方定位整理）",
+      "link": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "source_file": "sources/2026-10-14_Google DeepMind and Singapore Government collabora_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Jeff Dean投的RSI出成果了：Kimi K3自我进化排国产第一",
+      "source": "量子位",
+      "digest": "由Jeff Dean投资的AI初创hillclimb推出递归自我改进（RSI）新基准DeepRSI：给模型48小时自主科研挑战（自写代码、跑实验、改算法），15道真实机器学习题。结果Claude Fable 5.1以1548分第一，GPT-6 Astra 1232分第二，月之暗面Kimi K3以820分第三、国产与开源双第一，超Grok与Gemini。基准以公开+私有验证器双重防过拟合。",
+      "link": "https://mp.weixin.qq.com/s/ScwrHKmybM_AOlFhqwu4ow",
+      "source_file": "sources/2026-10-14_Jeff Dean投的RSI出成果了：Kimi K3自我进化排国产第一_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Liquid AI发布LFM2.5-24B-A2B：端侧智能体MoE模型",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI发布LFM2.5-24B-A2B，一款面向笔记本与PC端侧智能体的开放权重推理模型。该24B参数MoE每token激活约2B，为LFM2.5家族最大且最终成员，在流行Agent harness中训练以适配多步工具调用。在8项agentic与工具使用基准中5项领先或持平更大MoE，AutomationBench达27.69（超Qwen3.6-35B-A3B三倍），权重已上Hugging Face。",
+      "link": "https://www.marktechpost.com/2026/10/14/liquid-ai-lfm2-5-24b-a2b/",
+      "source_file": "sources/2026-10-14_Liquid AI Releases LFM2.5-24B-A2B_ A 2B-Active MoE_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "2026年最佳AI网关盘点：Bifrost、Portkey、LiteLLM、Kong等9款",
+      "source": "MarkTechPost",
+      "digest": "本文盘点2026年面向生产团队的最佳AI网关：Bifrost（自托管性能最优，Go二进制、11微秒开销）、Portkey（开源带护栏，已并入Palo Alto）、LiteLLM（采用最广，5.3万星）、Kong AI Gateway（LLM/MCP/A2A统一栈）及Cloudflare、Vercel、OpenRouter等托管方案。文章指出，网关选择已从功能风险升级为供应商与供应链安全风险（PyPI投毒、收购）。",
+      "link": "https://www.marktechpost.com/2026/10/14/best-ai-gateways-2026/",
+      "source_file": "sources/2026-10-14_9 Best AI Gateways in 2026_ Bifrost, Portkey, Lite_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "OpenAI Amp将AI智能体延伸到代码之外",
+      "source": "OpenAI",
+      "digest": "OpenAI介绍其Amp智能体如何借助GPT-6 Astra、Ultrafast、GPT-Live-1等模型，将能力从代码编写延伸到更广阔的工作场景。文章展示Amp在研发流程之外调用多模型完成端到端任务的实践，强调以ChatGPT登录打通身份与协作，体现OpenAI推动智能体从编程向通用工作流扩展的思路。（注：原文正文未抓取，摘要据标题与官方定位整理）",
+      "link": "https://openai.com/index/amp-beyond-coding",
+      "source_file": "sources/2026-10-14_Amp puts AI agents to work beyond code with OpenAI_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Claude写代码太快，Anthropic先扛不住了：连Git都要重做",
+      "source": "智东西",
+      "digest": "Anthropic内部代码合并量4个月从日均约2500笔激增至超3万笔，暴涨12倍，根源是Claude自主写码。原本面向人类的Git等基础设施不堪重负。一个7人团队5个月内自研出新版本控制系统Scion并迁移整个单体仓库：服务端承担全部计算，客户端只保留有限对象缓存，CPU与内存占用降至原Git镜像方案的1/200，CI检出速度提升两个数量级。Anthropic强调Scion并非Git通用替代品，仅适用于超大单体仓库。",
+      "link": "https://mp.weixin.qq.com/s/-0Lybx74T6hPCS_1eg8JlQ",
+      "source_file": "sources/2026-10-14_Claude写代码太快，Anthropic先扛不住了：连Git都要重做_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Claude写代码太快，Git扛不住了：Anthropic仅靠7人，5个月重造版本控制系统",
+      "source": "InfoQ",
+      "digest": "InfoQ同题报道Anthropic用7人团队5个月重造版本控制系统Scion。背景是Claude写码使Monorepo主分支历史近100GB、每日约2500万次检出，朴素Git方案每天或产生超600PB流量。Scion以服务端集中计算、变更集替代树指针，迁移后基础设施开销降至原方案约1/200，CI与研究作业检出提速约两个数量级，仅CI即省约25% CPU。",
+      "link": "https://www.infoq.cn/article/6iRATYfkqF7aITPaFR2R",
+      "source_file": "sources/2026-10-14_Claude写代码太快，Git扛不住了：Anthropic仅靠7人，5个月重造版本控制系统_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Third Moment Research如何用万级智能体连续运行36小时",
+      "source": "OpenAI",
+      "digest": "AI实验室Third Moment Research借助GPT-6 Astra、GPT-6.1 Sol、Codex与Daybreak（网安），构建出能专注数日、随使用而进化的智能体。文章展示其如何用上万智能体连续运行36小时以上完成长周期研究任务，体现前沿模型将智能体从短时工具推向可自主聚焦、持续改进的科研与生产基础设施。",
+      "link": "https://openai.com/index/third-moment-research",
+      "source_file": "sources/2026-10-14_How Third Moment Research runs 10,000 agents for 3_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "实战：用Meta Rebalancer做任务调度与优化",
+      "source": "MarkTechPost",
+      "digest": "本文以教程形式实现Meta的Rebalancer任务分配求解器：用C++核心加Python绑定，描述对象、容器、维度、作用域与分区，添加约束与目标，并对比局部搜索与精确混合整数求解器HiGHS。作者搭建小型数据中心、腾空繁忙主机，在24次求解中有14次solved标志为真却仍内存超限，揭示该开源求解器在规格校验与错误处理上的真实表现。",
+      "link": "https://www.marktechpost.com/2026/10/13/how-to-use-metas-rebalancer-for-task-placement-optimization/",
+      "source_file": "sources/2026-10-14_How to Use Meta’s Rebalancer for Task Placement & _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Linus Torvalds 用 LLM 辅助开发的补丁递交接受审查",
+      "source": "Solidot",
+      "digest": "Linux作者Linus Torvalds在维护者峰会上透露，他在大模型帮助下开发了一组解决长期问题的补丁，共10个已递交审查。补丁增强folio查找机制：标记热数据folio延迟释放至RCU周期结束，在RCU保护下完成查找与数据访问，测试中性能实现数量级提升，但已发现竞态条件需完善。",
+      "link": "https://www.solidot.org/story?sid=85612",
+      "source_file": "sources/2026-10-14_Linus Torvalds 用 LLM 辅助开发的补丁递交接受审查_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心",
+      "source": "InfoQ",
+      "digest": "Pi迎来今年最大更新：项目升级1.0，Code Mode与原生MCP进入稳定版，并推出全新长时Agent框架Pi Durable。Durable接管消息、工具结果、任务状态的持久化与崩溃恢复，让Agent进程挂掉后从中断处继续、不丢流式输出。曾被Pi公开拒绝的MCP最终以工具搜索与渐进式披露方式接入核心，标志Pi从终端编程Agent向完整Agent基础设施延伸。",
+      "link": "https://mp.weixin.qq.com/s/s4EyfKFau-eq3-XGMuBVeQ",
+      "source_file": "sources/2026-10-14_Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "SentinelOne借OpenAI Daybreak将恶意软件分析缩至小时级",
+      "source": "OpenAI",
+      "digest": "SentinelOne借助OpenAI Daybreak将恶意软件分析从数周压缩至数小时，腾出能力调查更多威胁。文章展示Daybreak如何把原本依赖安全专家手工逆向与研判的流程自动化，使中小团队也能以更高吞吐处理样本，体现OpenAI把前沿模型能力封装为安全产品、下沉到企业威胁检测场景的路径。（注：原文正文未抓取，摘要据标题整理）",
+      "link": "https://openai.com/index/sentinelone",
+      "source_file": "sources/2026-10-14_SentinelOne cuts malware analysis from weeks to ho_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "欧盟AI进入智能体时代：企业采用加速",
+      "source": "OpenAI",
+      "digest": "OpenAI新分析显示，智能体AI在欧洲企业与小企业中的采用正在增长，并指出了更深使用可释放价值的方向。文章梳理欧盟在监管框架下的AI落地节奏，说明Agent从试点走向生产时，在流程重构、合规与人力替代之间的权衡，为欧洲市场的智能体扩散提供参考。（注：原文正文未抓取，摘要据标题整理）",
+      "link": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "source_file": "sources/2026-10-14_The EU’s next chapter in AI is agentic_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "刚刚，Anthropic7个人用Claude造出新系统Scion：统治程序员20年的Git被AI干翻了",
+      "source": "AI寒武纪",
+      "digest": "AI寒武纪同题解读Anthropic自研Scion：7人5个月从零重写版本控制系统并迁移主代码库。起因是人类工具在AI提交面前失效——5月日均合并约2500次，9月破3万次，Monorepo主分支历史近100GB、每日约2500万次检出，朴素Git或日产超600PB流量。Scion以服务端集中计算、变更集替代树指针，客户端不存完整副本，颠覆Git去中心化假设。",
+      "link": "https://mp.weixin.qq.com/s/AZDJ7XAcKT2czISQnHOxdw",
+      "source_file": "sources/2026-10-14_刚刚，Anthropic7个人用Claude造出新系统Scion：统治程序员20年的Git被AI干翻了_AI寒武纪.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "扎克伯格与Alex Wang深度访谈：模型即产品，AI要能把事情做完",
+      "source": "Space AIThinker",
+      "digest": "Meta扎克伯格与Alex Wang在Cheeky Pint对话中阐释「模型即产品」：产品设计已深入模型行为、训练数据与评估方法。两人谈及Muse Wonder新模型、个人智能体、智能眼镜，以及Meta重建AI团队（扎克伯格清空日程亲自招聘、强调高人才密度与扁平组织）。他们还坦言在模型效果未验证时就须承诺巨额算力投入的压力，凸显大模型时代的组织与资源博弈。",
+      "link": "https://mp.weixin.qq.com/s/nRSB7KQ8yGKZFXMvoK65WA",
+      "source_file": "sources/2026-10-14_扎克伯格与Alex Wang深度访谈：模型即产品，AI要能把事情做完_Space AIThinker.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "机器人能外包大脑了？PI开放API，训练、推理搬上云端",
+      "source": "机器人前瞻",
+      "digest": "机器人模型公司Physical Intelligence（Pi）推出Pi API测试版，向外部开发者提供模型微调与云端推理：可上传任务数据在Pi托管算力上训练，再经API调用驱动机器人。案例：Almond 4天让双臂机器人自装零件去毛刺；Argon Robotics 35小时训出整理厨具模型；Chef Robotics次日即用新数据迭代；Deft部件装载成功率六天翻倍。",
+      "link": "https://mp.weixin.qq.com/s/n0DNahuhvufZsUrLAFBo3g",
+      "source_file": "sources/2026-10-14_机器人能外包大脑了？PI开放API，训练、推理搬上云端_机器人前瞻.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "DeepSeek又悄悄更新了？！实测：API突然变强",
+      "source": "量子位",
+      "digest": "热心网友发现DeepSeek「deepseek-flash」接口返回内容较9月v4.1明显变强：动画流畅度、光影与美学风格更精细，生成速度略慢。猜测指向DeepSeek-v4.2-flash、v4.1-flash新checkpoint或v4.1-pro返场，也有人认为是输出随机波动。官方未官宣，结论仍属坊间推测，文章呼吁以官方信息为准。",
+      "link": "https://mp.weixin.qq.com/s/qRFi0UYEm5APrQIbcSkfeQ",
+      "source_file": "sources/2026-10-14_DeepSeek又悄悄更新了？！实测：API突然变强_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Token 压缩率飙升60%：大模型分词告别贪心合并",
+      "source": "InfoQ",
+      "digest": "一篇arXiv预印本提出CNF-MCE分词框架，从「减少token数量」而非「加快每个token计算」切入降本。它用直接统计与使用频率构建词表，再以全局代价优化切分，使约250K词表英文网页压缩率较o200k_base、qwen250k提升26.7%与32.4%，扩展至百万词表时较同规模BPE提升67.0%；在1.8B与8B模型从头训练仍保持有竞争力下游表现。",
+      "link": "https://mp.weixin.qq.com/s/0_UI9fbrZingX8HRANa3fQ",
+      "source_file": "sources/2026-10-14_Token 压缩率飙升60%：大模型分词告别贪心合并_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "响应速度比Claude Code快3倍，实现真正无限上下文！APUS AI开源Reflex Agent",
+      "source": "量子位",
+      "digest": "APUS（麒麟合盛）10月13日开源Personal Agent产品Reflex Agent，基于自研开源决策模型Reflex构建Harness，结合Continuum记忆引擎实现长周期任务执行。Reflex承担模型路由、技能选择与结果审查，以「决策—执行—反馈—再决策」循环（Loop Working）推进；结合无限记忆减少摘要压缩损失，实测响应速度最快达Claude Code、Codex等3倍，采用MIT协议开源。",
+      "link": "https://www.qbitai.com/2026/10/503165.html",
+      "source_file": "sources/2026-10-14_响应速度比Claude Code快3倍，实现真正无限上下文！APUS AI开源Reflex Agen_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "智能体长任务总“失忆”？国产开源破局，类Jev模型接管Agent调度",
+      "source": "智东西",
+      "digest": "智东西同题报道APUS开源Reflex Agent：采用自研Reflex决策模型（基于Qwen3.5 4.5B微调）完成Harness决策环节，针对主流Agent「提示词+代码」方案的延迟与长任务遗忘痛点，以模型做Harness与无限上下文。Reflex每多想一步用户多等一步，APUS用决策模型当控制中枢把响应提3倍，并借Continuum记忆引擎无损保留原始内容实现长周期任务。",
+      "link": "https://mp.weixin.qq.com/s/nJgxeSzAZF6jTX4Sg3oyww",
+      "source_file": "sources/2026-10-14_智能体长任务总“失忆”？国产开源破局，类Jev模型接管Agent调度_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-14",
+      "title": "3 天4大展馆、120 余场论坛：没听完的云栖内容，交给 Agent 补齐",
+      "source": "InfoQ",
+      "digest": "2026云栖大会落幕后，会期上线的「云栖参会 Skill」延伸到会后：让 Agent 领取 100 余场分论坛与展区总结，按主题、日期或嘉宾筛选，并支持围绕具体议题持续追问。用户只需在 Agent 工具中执行 npx skills add 命令安装，即可把分散的发布、观点、数据与圆桌结论整理成结构化笔记；未能到场的内容也获得统一入口，使大会知识在会后持续流动、按需复用。",
+      "link": "https://www.infoq.cn/article/BYZ2ODFXp1VSxvJxHotq",
+      "source_file": "sources/2026-10-14_3 天4大展馆、120 余场论坛：没听完的云栖内容，交给 Agent 补齐_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "MemSilicon完成国际首款高密度、大容量1T4R 1Gb RRAM芯片流片",
+      "source": "量子位",
+      "digest": "铭芯启睿（MemSilicon）10月12日宣布完成基于1TnR路线的高密度大容量RRAM芯片「泰山一号（MountTai 2026）」流片：28nm CMOS、1T4R单元、单芯片1Gb、密度30Mb/mm²、访问延时小于20ns、集成片上硬件纠错。该芯片面向AI PC、具身智能等需容纳更多权重与KV Cache的场景，为多模态大容量非易失存储提供国产方案。",
+      "link": "https://www.qbitai.com/2026/10/503198.html",
+      "source_file": "sources/2026-10-14_MemSilicon完成国际首款高密度、大容量1T4R 1Gb RRAM芯片流片_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "QoderWake 上新：数字员工有了你的经验，也有了自己的电脑",
+      "source": "Qoder",
+      "digest": "QoderWake推出三项新能力：个人分身在用户授权后从钉钉聊天与会议纪要学习业务背景与表达；云电脑为数字员工提供持久化云端环境，使其7×24小时工作而不依赖本地开机；Waker小管家帮助用户理清需求、匹配并下发任务。三者共同把数字员工从「能对话」推向「有记忆、有环境、可委任」的工作搭档。",
+      "link": "https://mp.weixin.qq.com/s/JFd_TUqOq-E-zufvCS1oaQ",
+      "source_file": "sources/2026-10-14_QoderWake 上新：数字员工有了你的经验，也有了自己的电脑_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "REA为何一夜爆火？软件行业真要完蛋？一份基于源码与社区证据的深度拆解（下）",
+      "source": "软件工程3.0时代",
+      "digest": "REA爆火并非造出更强反编译器，而是把四十年只有少数专家掌握的逆向手艺，首次变成LLM Agent可稳定调用的标准能力，并以证据纪律与工程护栏让其可信、可复现、可规模化。文章（下篇）从架构拆解：Provider抽象支持Hopper/Ghidra/IDA/JEB等引擎即插即用、歧义时要求显式选择而非静默降级；会话与证据账本让分析成为可复用、可审计的流程。",
+      "link": "https://mp.weixin.qq.com/s/D8HPOjYRBcLJCoLKFBRO0Q",
+      "source_file": "sources/2026-10-14_REA为何一夜爆火？软件行业真要完蛋？一份基于源码与社区证据的深度拆解（下）_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "STEPX首款大模型原生智能体手机STEPX Neo正式发布",
+      "source": "量子位",
+      "digest": "阶跃终端（STEPX）10月13日发布首款大模型原生智能体手机STEPX Neo，搭载智能体原生操作系统Step AOS 1.0与新一代个人智能体阶跃Amoo。系统底层融入长期记忆、任务调度与安全机制，支持端云协同：端侧快反应、云侧强智能；双域记忆分别记录用户信息与Agent知识经验。背屏MiniLED点阵呈现Agent状态，主打「人机共生」。",
+      "link": "https://www.qbitai.com/2026/10/503201.html",
+      "source_file": "sources/2026-10-14_STEPX首款大模型原生智能体手机STEPX Neo正式发布_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "WorkBuddy × 企业微信深度融合：连接企业经营“全域上下文”",
+      "source": "腾讯WorkBuddy",
+      "digest": "WorkBuddy与企业微信深度融合：客户端可在企业授权范围内调用消息、文档、会议、微盘等十大能力，并以对话机器人身份进入通讯录，用户随时用聊天处理任务。新版本支持一句话总结未读消息与邮件并按需处理、群聊记录转发至WorkBuddy、微盘文件直接引用，以及下达指令让Buddy代为发送（须本人确认），把企业全域上下文接入Agent工作流。",
+      "link": "https://mp.weixin.qq.com/s/hX5VWunYUaRdzxwofodCBw",
+      "source_file": "sources/2026-10-14_WorkBuddy × 企业微信深度融合：连接企业经营“全域上下文”_腾讯WorkBuddy.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "《变形计》综艺赛博复活，AI版MrBeast爆火，LibTV下场「造星」了",
+      "source": "量子位",
+      "digest": "AI正催生新视频形态「AI综艺」：抖音账号@十万个挑战凭脑洞竞技吸粉200余万、单条赞189万；经典IP《变形计》被@重塑计用AI赛博重启，四期均赞超20万。这些创作者多为LibTV认证，后者已与抖音未来导演扶持计划合作。AI负责把脑洞变画面、平台给资源、创作者出创意，从极限挑战到IP二创扎堆占领互联网。",
+      "link": "https://www.qbitai.com/2026/10/503211.html",
+      "source_file": "sources/2026-10-14_《变形计》综艺赛博复活，AI版MrBeast爆火，LibTV下场「造星」了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "云栖回顾｜从游戏出海到智能治理，游戏行业AI+云网络质量治理最佳实践发布",
+      "source": "InfoQ",
+      "digest": "2026云栖大会，网易互娱云与阿里云、信通院联合发布《游戏行业AI+云网络质量治理技术实践》。针对游戏出海公网复杂、端云数据割裂，提出以玩家体验为目标、端云数据融合的治理框架：统一指标、业务语义注入、质量左移与运营闭环，覆盖规划、上线、运营全周期，把网络质量从技术指标转化为产品竞争力。",
+      "link": "https://www.infoq.cn/article/uDbSCQPLDoXl6jiw0pNS",
+      "source_file": "sources/2026-10-14_云栖回顾｜从游戏出海到智能治理，游戏行业AI+云网络质量治理最佳实践发布_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "云栖回顾｜阿里云提出Context Engine：让企业全域数据成为Agent的实时上下文",
+      "source": "InfoQ",
+      "digest": "2026云栖技术主论坛，阿里云提出面向Model、Harness、Context三维加持Agent，并推出Context Engine将企业全域数据转化为实时上下文：发布ApsaraLakebase与AI原生大数据服务ADA。ADA以多智能体协同架构，用自然语言调用离在线流式分析、AI训推与搜索；PAI推出RLS强化学习训练与InferX高保障SLO推理组合，让Agent从「知道什么」走向「此刻该做什么」。",
+      "link": "https://www.infoq.cn/article/PLhY4oWbWKHBoDptHstX",
+      "source_file": "sources/2026-10-14_云栖回顾｜阿里云提出Context Engine：让企业全域数据成为Agent的实时上下文_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "千问办公推电商版，给企业Agent打了个样",
+      "source": "智东西",
+      "digest": "10月14日，千问办公发布电商版Agent，商家切换至「电商经营」模式即可用一个Agent管起跨平台、多店铺、全流程生意，覆盖跨平台看板、趋势洞察、爆款素材批量生成与ROI优化。陈宇森称其已接入企业微信、钉钉、飞书与SAP等，定位独立第三方电商Agent；20%付费用户为电商从业者、周均38个任务，率先切入离钱最近行业。",
+      "link": "https://mp.weixin.qq.com/s/szHL4gVR9ifRrjH20RG9IA",
+      "source_file": "sources/2026-10-14_千问办公推电商版，给企业Agent打了个样_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "告别资料散落，让知识持续积累：openJiuwen首发个人知识空间，重塑个人办公智能体新体验！",
+      "source": "量子位",
+      "digest": "openJiuwen（WorkSwarm）首发个人知识空间：基于用户配置的本地文件夹、Edge收藏夹、知乎、飞书文档、GitHub等多源，自动或定时采集，经规则/规则+大模型/智能体三种方式整理为有目录、有联系、有出处的个人知识，渐进式披露供Agent按需读取。理念是「一次采集、反复使用」，缩短任务准备时间、减少token消耗并提升准确率。",
+      "link": "https://www.qbitai.com/2026/10/503157.html",
+      "source_file": "sources/2026-10-14_告别资料散落，让知识持续积累：openJiuwen首发个人知识空间，重塑个人办公智能体新体验！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "用自然语言驾驭日志：阿里云 SLS Agent Skills 实践指南",
+      "source": "阿里云云原生",
+      "digest": "阿里云日志服务SLS已提供8个Agent Skill，覆盖日志从采集、索引、查询分析、告警到可视化与根因分析全生命周期，支持渐进式上下文披露。文章以Codex用量监控为例，展示用自然语言让Agent自动完成Token采集上报、创建logstore与索引、搭建仪表盘、配置额度重置邮件告警，把运维配置从手写命令转为对话式编排。",
+      "link": "https://mp.weixin.qq.com/s/QaZI6LClAqfPF4DaHF0jBg",
+      "source_file": "sources/2026-10-14_用自然语言驾驭日志：阿里云 SLS Agent Skills 实践指南_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "百度智能云：跨越“三道门槛”，让智能体真正入职金融业",
+      "source": "金融电子化",
+      "digest": "百度智能云提出产业智能体即「智能体+产业系统」，在2026智能经济论坛阐述金融业落地方法论：智能体须做到「可控、可信、可持续」。其跨越三道门槛——体系化治理框架、面向Agent的数据与知识重构、算力与推理效率协同，并以「芯云模体」全栈优化，助金融机构让数字员工真正入职金融生产系统。",
+      "link": "https://mp.weixin.qq.com/s/EVrBD9_ayLza4eKvPo3M2w",
+      "source_file": "sources/2026-10-14_百度智能云：跨越“三道门槛”，让智能体真正入职金融业_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "调度效率提升80%！商汤大装置助力上海量子城市首批智能体落地",
+      "source": "量子位",
+      "digest": "商汤大装置与上海市规划资源局升级「云宇星空大模型」并发布量子城市首批政务智能体（禹智河洛防汛、美好生活掌中宝、沪派江南行等）。模型以OLA框架推进语料/米料/数料联动，攻关调图、识图、读图、生图「四图贯通」获专业空间推理；以统一模型服务分层灵活调度，将空间智能嵌入城市治理全流程，探索超大城市精细治理。",
+      "link": "https://www.qbitai.com/2026/10/503173.html",
+      "source_file": "sources/2026-10-14_调度效率提升80%！商汤大装置助力上海量子城市首批智能体落地_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "从模型安全走向智能体可信运行——《人工智能安全治理框架3.0》的演进逻辑与银行AI治理路径",
+      "source": "中国金融电脑+",
+      "digest": "文章解读《人工智能安全治理框架3.0》对银行AI治理的路径。框架3.0针对智能体、具身智能新增专项附件，构建覆盖智能体全生命周期的风险管理体系，并与金融监管总局「8号文」形成互补。银行治理三升级：范围从单点模型评测延伸至全链路业务风控；模式从一次性上线审核转向全周期动态管控；能力从模型性能校验升级为「模型+数据+权限+工具+流程」全场景安全校验。",
+      "link": "https://mp.weixin.qq.com/s/giy91GMBDKIxL7pY0fG4FQ",
+      "source_file": "sources/2026-10-14_从模型安全走向智能体可信运行——《人工智能安全治理框架3.0》的演进逻辑与银行AI治理路径_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "天津银行将迎50岁董事长，去年设立智能应用研究院",
+      "source": "银行科技研究社",
+      "digest": "天津银行董事长或变动：天津农商银行行长杨毅（1976年生，工行天津分行出身、经公开招募任农商行高管）拟任市管企业董事长，有望执掌天津银行；现任董事长于建忠于2023年8月任职、去年刚连任。该行近两年聚焦科技转型，2024年招募CIO与分管科技运营副行长，并设立智能应用研究院，组织架构向科技条线倾斜。",
+      "link": "https://mp.weixin.qq.com/s/cpjvMne_1LA5buwVopbczA",
+      "source_file": "sources/2026-10-14_天津银行将迎50岁董事长，去年设立智能应用研究院_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "AI不会平均地淘汰程序员！美国知名创业投资人：把最难的思考交给模型，你会迅速变弱",
+      "source": "51CTO技术栈",
+      "digest": "知名创业投资人Alex Hormozi指出，AI先把实现能力变便宜，再把会定义问题、验证结果的人与只会接收答案的人拉开差距。他以支付接口超时为例：有人把日志丢给Agent改重试逻辑，有人先厘清边界与补偿再让Agent补复现测试。他认为不少人只是用AI更快完成无价值的工作，企业若只看自动化率而非真实收益，反而更快烧钱。",
+      "link": "https://mp.weixin.qq.com/s/2HjROEubdZp10Vb1YqZcKw",
+      "source_file": "sources/2026-10-14_AI不会平均地淘汰程序员！美国知名创业投资人：把最难的思考交给模型，你会迅速变弱_51CTO技术栈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "NetBSD 成为反 AI 开发者青睐的开源操作系统",
+      "source": "Solidot",
+      "digest": "随着Linux阵营拥抱亲AI路线，NetBSD意外成为抵触AI的开发者青睐的开源操作系统。NetBSD早在2024年即表态拒绝AI，认为AI生成代码会污染代码库，未经核心团队书面批准严禁提交Copilot、ChatGPT、Code Llama等生成的代码。上月该项目收到12万余美元捐款，远超5万美元筹款目标。",
+      "link": "https://www.solidot.org/story?sid=85608",
+      "source_file": "sources/2026-10-14_NetBSD 成为反 AI 开发者青睐的开源操作系统_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "OpenAI 工程师因在高管会议室放置监听设备被捕",
+      "source": "Solidot",
+      "digest": "35岁沙特籍OpenAI工程师Abdulrahman Alfozan因在公司高管会议室内放置监听设备被捕并被解雇。OpenAI公告称目前无迹象表明其不当访问或窃取模型权重、源代码或客户数据。Alfozan曾任Meta、微软、SAP，是专注中东与北非市场的风投Raed Ventures合伙人，事件引发对AI企业安保的广泛关注。",
+      "link": "https://www.solidot.org/story?sid=85605",
+      "source_file": "sources/2026-10-14_OpenAI 工程师因在高管会议室放置监听设备被捕_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-14",
+      "title": "“Fable抢走了我的工作！”公司最后一位工程师被裁：不是AI比我强，是老板觉得AI更便宜",
+      "source": "CSDN",
+      "digest": "开发者Cendyne撰文称，公司最后一名工程师被AI编程工具Fable替代，关键并非Fable写码更强，而是其人力成本更便宜，给了管理层「可一路划水到并购」的信心。他回顾亲历多次裁员的心理冲击，指出AI未必比人强，但当企业把降本置于下一代基础设施之上时，工程师岗位便率先承压。",
+      "link": "https://mp.weixin.qq.com/s/6m7FIJxTFq-uR5DDwpZUlw",
+      "source_file": "sources/2026-10-14_“Fable抢走了我的工作！”公司最后一位工程师被裁：不是AI比我强，是老板觉得AI更便宜_CSDN.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-13",
       "title": "OpenAI Higgsfield：AI 视频时长突破 10 分钟，迈向语音电影制作",

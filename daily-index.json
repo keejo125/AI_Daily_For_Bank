@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-14",
+      "weekday": "周三",
+      "stats": {
+        "国际": 19,
+        "国内": 18,
+        "同业": 2,
+        "其他": 4,
+        "total": 43
+      },
+      "summary": "Gemini 4 Argon的安全与负责任发布实践/Gemini 4 Argon面向机器人：物理推理与具身应用/DeepSeek又悄悄更新了？！实测：AP..."
+    },
+    {
       "date": "2026-10-13",
       "weekday": "周二",
       "stats": {
