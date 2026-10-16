@@ -1,7 +1,407 @@
 {
-  "updated_at": "2026-10-15T05:31:21.747821",
-  "total": 2757,
+  "updated_at": "2026-10-16T05:31:51.104450",
+  "total": 2797,
   "articles": [
+    {
+      "date": "2026-10-15",
+      "title": "Claude疑似新模型曝光！代码直出画面音效，《汉密尔顿》都做出来了",
+      "source": "量子位",
+      "digest": "网友曝光Anthropic正灰测新模型Fable 5.5或Opus 5.6，可用极少提示词生成带光影、镜头与音效的动画短片，甚至做出音乐剧式自我介绍，被形容为'《汉密尔顿》再世'。文章认为编程模型的成果正从功能演示扩展到完整视听作品，视频生成模型或被Claude终结。",
+      "link": "https://mp.weixin.qq.com/s/UuCrLQ8gYOWfhCTRKHZg9g",
+      "source_file": "sources/2026-10-15_Claude疑似新模型曝光！代码直出画面音效，《汉密尔顿》都做出来了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "SpaceXAI 发布 Grok Voice 3.0：语音到语音模型登顶 Artificial Analysis 语音指数",
+      "source": "MarkTechPost",
+      "digest": "SpaceXAI发布Grok Voice 3.0，一个语音到语音模型，可听、推理、调用工具并说话，以86.9分登顶Artificial Analysis语音到语音指数（第1）。端点、事件与每分钟0.08美元价格沿用Grok Voice 2.0，仅提供托管API，无开放权重。",
+      "link": "https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/",
+      "source_file": "sources/2026-10-15_Meet Grok Voice 3.0_ SpaceXAI Voice Agent Model Ra_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "TypeSafe AI 发布 Jev 1.14：决策模型新增图像、Box 类型与 262K 长上下文",
+      "source": "MarkTechPost",
+      "digest": "TypeSafe AI发布Jev 1.14（代号jev-preview），在其System One决策模型中加入图像、Box类型与更长上下文三项实验性'危险区'功能，将类型化决策模型推向质检、定位等视觉任务；上下文默认64k/请求、32k/问题，可选262k。官方提示三项功能均未生产就绪。",
+      "link": "https://www.marktechpost.com/2026/10/14/typesafe-ai-jev-1-14-images-box-long-context/",
+      "source_file": "sources/2026-10-15_TypeSafe AI Releases Jev 1.14 With Images, Box Typ_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI 生成的代码，怎么才能进得了工程体系？",
+      "source": "InfoQ",
+      "digest": "文章以亚马逊云科技Kiro的规范驱动开发（spec-driven development）为主线，剖析AI编程从'能不能生成'转向'能不能进工程体系'：长会话上下文衰减、决策不可追溯、从Demo到生产的鸿沟三大痛点，以及用规范约束AI写码、向多Agent工作区延伸的应对思路。",
+      "link": "https://mp.weixin.qq.com/s/03EZ4fQuv9EH9ABXSdeDwA",
+      "source_file": "sources/2026-10-15_AI 生成的代码，怎么才能进得了工程体系？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI编程只是起点！软银创始人孙正义：AI将比人类聪明1万倍，程序员的验收标准也变了",
+      "source": "51CTO技术栈",
+      "digest": "软银孙正义接受黑石采访，预测超级智能或比人类聪明1万倍，并明确同时布局模型、芯片、数据中心与机器人。他认为AI编程只是起点，下一步是Physical AI——让模型进入机器人身体，程序员验收标准需从'测试通过'扩展到仿真、监控、权限与安全停止。",
+      "link": "https://mp.weixin.qq.com/s/mffDjX4HC0OXVPu8pat5kA",
+      "source_file": "sources/2026-10-15_AI编程只是起点！软银创始人孙正义：AI将比人类聪明1万倍，程序员的验收标准也变了_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "CopilotKit 发布 CLiF：将 Agent 轨迹与用户行为转化为技能、评测与微调数据的持续学习平台",
+      "source": "MarkTechPost",
+      "digest": "CopilotKit发布CLiF（Continual Learning）平台，将Agent运行轨迹与用户操作转化为技能、评测与微调数据，把'靠手写数百条eval再逐点打磨Agent'的循环自动化。团队可让产品自身用户行为持续喂养Agent改进，降低部署门槛。文章为赞助内容。",
+      "link": "https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/",
+      "source_file": "sources/2026-10-15_CopilotKit Releases CLiF_ A Continual Learning Pla_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Datalab 开源 OmniParseBench：面向文档解析器的 16288 项 Pass/Fail OCR 评测基准",
+      "source": "MarkTechPost",
+      "digest": "Datalab开源OmniParseBench，一个面向文档解析器的OCR评测基准：以16288项yes/no测试覆盖2937页、2343份文档、92种语言，帮工程师回答'哪款解析器适配我的文档'。基准以uv安装即可运行，Datalab自家解析器在榜单位列Gemini 3.8 Flash之后。",
+      "link": "https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/",
+      "source_file": "sources/2026-10-15_Datalab Releases OmniParseBench_ An Open OCR Bench_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Git不够用了？Anthropic 7 人团队重造源代码控制系统，5 个月完成迁移",
+      "source": "CSDN",
+      "digest": "Anthropic首次公开内部版本控制系统Scion，讲述7人团队如何在5个月内将大型代码仓库从Git迁移至自研系统。文章解释AI生成代码速度加快使Git成为瓶颈，Scion在元数据、合并与大规模协作上重构，并借助Claude重写核心架构、排查漏洞完成迁移。",
+      "link": "https://mp.weixin.qq.com/s/wDS5OIIC2Uk6ffaK3nosMg",
+      "source_file": "sources/2026-10-15_Git不够用了？Anthropic 7 人团队重造源代码控制系统，5 个月完成迁移_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Linux之父也用AI写内核了！曾嘲讽AI「90%是营销」，如今用Claude Code写了8个补丁，性能暴涨3倍",
+      "source": "CSDN",
+      "digest": "Linux之父Linus Torvalds在自己的内核仓库提交一组实验性补丁（noref-filemap-read-with-llm），明确公开Claude Code的参与。8个补丁针对页缓存性能瓶颈，在特定8线程文件读取测试中吞吐量从约1000万次/秒提升超3倍，但目前仍处实验阶段。",
+      "link": "https://mp.weixin.qq.com/s/4a3eamBrxZ9bRA64hjXvmw",
+      "source_file": "sources/2026-10-15_Linux之父也用AI写内核了！曾嘲讽AI「90%是营销」，如今用Claude Code写了8个补丁，性能暴涨3倍_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "OpenAI 推出 Study Mode 教学法，以分步引导式学习支持教师",
+      "source": "OpenAI",
+      "digest": "OpenAI介绍面向教师的Study Mode（学习模式），以分步、主动引导的方式支持循序渐进的学习，并提供巴西葡萄牙语等本地化版本。该文为OpenAI官方博文摘要，内容偏向教育理念与产品功能说明，技术细节有限。",
+      "link": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+      "source_file": "sources/2026-10-15_Teaching students to think and learn through quest_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "有预言家！A社研究蓝图曝光，Claude Code来自5年前",
+      "source": "量子位",
+      "digest": "因版权官司，Anthropic一份2021年7月内部研究路线图意外曝光，显示其在刚独立数月、仅十几人时，就已规划Claude Code、工具调用、自我评判、测试时计算乃至通用软件工程代理（'软件工程师同事'），比外界认为的Agent浪潮早数年。",
+      "link": "https://mp.weixin.qq.com/s/R-PuR8i6BU2FSNWYM-33aA",
+      "source_file": "sources/2026-10-15_有预言家！A社研究蓝图曝光，Claude Code来自5年前_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "黄仁勋谈中国 AI 公司：算力很缺，但他们就是在拼命把事情做成",
+      "source": "InfoQ",
+      "digest": "黄仁勋在与Lex Fridman的长谈中回忆英伟达与台积电结缘，并谈及对中国AI公司的观察：算力短缺正迫使它们设计更高效率架构，'限制非常大'却仍在融资推进、'拼命把事情做成'。他强调合作观——给伙伴留下持续经营与成长的利益。",
+      "link": "https://www.infoq.cn/article/HC8SAgaZmHc6sfwp9gc9",
+      "source_file": "sources/2026-10-15_黄仁勋谈中国 AI 公司：算力很缺，但他们就是在拼命把事情做成_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Fish Audio 发布 Drama 3：35B 参数开放权重 MoE 文本转语音模型",
+      "source": "MarkTechPost",
+      "digest": "Fish Audio发布Drama 3，一个35B参数的开放权重MoE文本转语音模型，每token激活约3B参数，支持自然语言表演指令，适用于有声书、配音与脚本对白。权重已上Hugging Face，模型亦在Fish Audio API可用，需单张48GB以上H200运行。",
+      "link": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/",
+      "source_file": "sources/2026-10-15_Fish Audio Releases Drama 3, a 35B Open-Weight MoE_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "蚂蚁百灵开源 560B 模型 Ling-3.1-flash：0.19 美元搞定复杂工作流",
+      "source": "InfoQ",
+      "digest": "蚂蚁百灵宣布开源Ling-3.1-flash：延续混合线性架构，总参数约560B、每token激活25B、上下文1M，面向办公、医疗、软件工程与终端操作等复杂工作流，在GDPVal-AA、HealthBench、FrontierSWE等基准表现良好，已在Hugging Face与ModelScope提供权重，主打'把真实工作流干完'。",
+      "link": "https://www.infoq.cn/article/SxQO3Aw6JCTgNMTGPPE8",
+      "source_file": "sources/2026-10-15_蚂蚁百灵开源 560B 模型 Ling-3.1-flash：0.19 美元搞定复杂工作流_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系统",
+      "source": "InfoQ",
+      "digest": "阶跃星辰开放Step 5 Preview权重（BF16/FP8），面向长程Agent任务，采用稀疏MoE、总参600B、每token激活27B、支持100万token上下文，原生文本与视觉输入。技术博客披露92层窄深架构、Sparse GQA与训练稳定性等，在OpenRouter Token用量周/日榜位列全球第二。",
+      "link": "https://www.infoq.cn/article/EwqsJX6f03ODRac6Kk4c",
+      "source_file": "sources/2026-10-15_阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-15",
+      "title": "2026 TMOT首个AI智能体走进电音现场，让听众成为音乐共创者",
+      "source": "量子位",
+      "digest": "阶跃终端携大模型原生智能体手机STEPX Neo亮相上海The Magic of Tomorrowland 2026电音节，基于StepAudio 3 Music模型与Step AOS系统，让观众把灵感转化为专属电音。现场同步推出Step Studio开发者工具，支持以自然语言生成AI App、智能体与Skill，将开放共创能力带入潮流场景。",
+      "link": "https://www.qbitai.com/2026/10/503611.html",
+      "source_file": "sources/2026-10-15_2026 TMOT首个AI智能体走进电音现场，让听众成为音乐共创者_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AgentKit AIOps Agent：故障一键定位，运维提效 80%",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎介绍基于AgentKit构建的AIOps Agent：针对传统排障需在日志、监控、链路、CMDB间反复切换、依赖个人经验的痛点，以系统拓扑与多Agent协同（问题发现、根因分析、自主修复、经验沉淀）形成自治闭环，已帮助SRE团队减少80%以上排障精力。",
+      "link": "https://mp.weixin.qq.com/s/DEFZJJqX55QxxgZKKsBT3g",
+      "source_file": "sources/2026-10-15_AgentKit AIOps Agent：故障一键定位，运维提效 80%_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "HiRoute 智能路由实战：GPT-6 Astra × Qwen-3.8 Flash，同等质量下成本降低 90%",
+      "source": "阿里云云原生",
+      "digest": "阿里云开源智能路由引擎HiRoute实战：将GPT-6 Astra与Qwen-3.8 Flash接入同一路由计划，在达到相同整单验收标准下，混合模式成本较全Astra降低约92%。长代码任务中，模型迟迟未交付时HiRoute自动升级模型并交接上下文，体现'长任务用合适阶段用合适能力'。",
+      "link": "https://mp.weixin.qq.com/s/_rlYr9LlOJJl6Gy94q0A1A",
+      "source_file": "sources/2026-10-15_HiRoute 智能路由实战：GPT-6 Astra × Qwen-3.8 Flash，同等质量下成本降低 90%_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Personal Agent 落地思考：主动性从哪来，又卡在哪？",
+      "source": "Qoder",
+      "digest": "Qoder分享Personal Agent落地思考：'更主动'由身份、数据源、记忆三要素组合而成，缺一则主动性缺失。Agent有了独立身份后，git push、merge等事件即成为唤醒源，可在用户离线时行动；主动性上限取决于人与Agent显式对齐的目标，权限与确认承接收敛风险。",
+      "link": "https://mp.weixin.qq.com/s/MiVOXi9T1Ih97OUsed6nVg",
+      "source_file": "sources/2026-10-15_Personal Agent 落地思考：主动性从哪来，又卡在哪？_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化",
+      "source": "美团技术",
+      "digest": "美团技术介绍面向搜推场景的SLM生成式高并发推理引擎：以'有界decode次数'工作负载为出发点，用静态DAG组织完整请求，结合AOT编译、Packed Prefill、请求内K/V共享与选择性FP8，在平均端到端时延低于20ms下Prefill-only有效MFU达67%、吞吐较SGLang提升10倍。",
+      "link": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html",
+      "source_file": "sources/2026-10-15_SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化_美团技术.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "openKylin 在 OSS EU 2026 阐述 AI 时代 Linux 重构愿景：KART 统一 AI 运行时与系统级智能体",
+      "source": "MarkTechPost",
+      "digest": "在OSS EU 2026上，openKylin执行主任刘敏发表主旨演讲，提出以KART统一AI运行时与系统级智能体执行环境重构Linux；社区成员李建峰亦分享基于RISC-V打造AI-Ready Linux桌面的实践，展现开源社区在AI时代操作系统演进上的路线。",
+      "link": "https://www.marktechpost.com/2026/10/15/openkylin-outlines-its-vision-for-reimagining-linux-in-the-ai-era-at-open-source-summit-europe-2026/",
+      "source_file": "sources/2026-10-15_openKylin Outlines Its Vision for Reimagining Linu_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "万字深度解密：华为麒麟2026韬定律大量技术细节首披露",
+      "source": "智东西",
+      "digest": "华为在上海举办深度技术沟通会，首次详细解读麒麟9050系列背后的'韬定律'、逻辑折叠、混合键合（间距1.5微米）等大量技术细节，并披露端侧30B大模型跑通所需的多级存算协同与量化创新。文章从影像、屏幕、可靠、定位、声音五大方向系统梳理华为终端技术路径。",
+      "link": "https://mp.weixin.qq.com/s/iCUkq6skehWAhsCrohgO4Q",
+      "source_file": "sources/2026-10-15_万字深度解密：华为麒麟2026韬定律大量技术细节首披露_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "为每一个0.1s而努力— Fast 模式速度优化技术详解",
+      "source": "Qoder",
+      "digest": "Qoder详解Fast模式速度优化：首响从8秒降至3秒、Credits消耗从1.1x降至0.8x。技术上基于意图的模型选择（按指令执行、连续反馈、目标明确三类场景分流），并新建专用Fast网络链路，p95大包传输耗时降低50%以上，在多轮模型调用中叠加显效。",
+      "link": "https://mp.weixin.qq.com/s/Sq66H8h994jr8kX7AWCgjQ",
+      "source_file": "sources/2026-10-15_为每一个0.1s而努力— Fast 模式速度优化技术详解_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "从芯出发，向端而生| 后摩智能携伙伴共拓端侧AI新蓝海",
+      "source": "InfoQ",
+      "digest": "后摩智能在'从芯出发，向端而生'大会上围绕2D/3D CIM两条存算一体路径及生态合作，分享面向Agent时代的端侧AI布局，定位自身为'端侧免费Token工厂'算力底座，并联合CPU、OS、模型、推理框架等企业发起Agent Computer共创计划与白皮书。",
+      "link": "https://www.infoq.cn/article/OBVJlMBtO9m6LumUhfk0",
+      "source_file": "sources/2026-10-15_从芯出发，向端而生_ 后摩智能携伙伴共拓端侧AI新蓝海_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "代码不再稀缺之后，软件工程还剩下什么？",
+      "source": "InfoQ",
+      "digest": "InfoQ《极客有约》X QCon直播探讨AI时代研发效能重估：AI把'生产代码'变便宜，但软件工程未变简单。嘉宾指出研发测试将揉进写码过程、确定性工程约束AI写码、好架构承载高并发协同，并预告QCon 2026上海站设【AI驱动的软件工程】专题。",
+      "link": "https://mp.weixin.qq.com/s/SOnSVYIfqmztLhvIBRGscQ",
+      "source_file": "sources/2026-10-15_代码不再稀缺之后，软件工程还剩下什么？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "你的 AI 团队由你来组 | 智能体与智能体团队功能全面开放",
+      "source": "Qoder",
+      "digest": "Qoder向个人用户开放智能体（Agent）与智能体团队（Agent Team）：可配置自定义智能体（职责、工具、Skills、MCP），复杂任务由Leader组织多角色协作；把反复交代的要求沉淀为专业岗位，按职责拆分上下文，避免全部堆积在同一窗口，提升专注与可评审性。",
+      "link": "https://mp.weixin.qq.com/s/tIJtOno6zL0f9j9zRLCdGg",
+      "source_file": "sources/2026-10-15_你的 AI 团队由你来组 _ 智能体与智能体团队功能全面开放_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "国产 GPU 越来越多，为什么反而更难用？",
+      "source": "InfoQ",
+      "digest": "文章以基流科技早期成员陈维的视角，剖析国产算力竞争从'有没有卡'转向'能不能规模化跑'：模型迁移、万卡集群通信调度与故障定位任一短板都会让加速卡空转，不同代际厂商算力如何纳入同一生产体系成为新成本。真正的考验是整个系统工程。",
+      "link": "https://www.infoq.cn/article/pkyTD9OWfpU7QvIbLX2j",
+      "source_file": "sources/2026-10-15_国产 GPU 越来越多，为什么反而更难用？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本",
+      "source": "量子位",
+      "digest": "苹果CEO库克在上海受访确认，Apple Intelligence及相关阿里千问大模型已获批准，将于10月底在中国发布测试版，首批含实时翻译、书写工具、照片清除等，但Siri AI不在首发。文章指苹果智能中国上线进入最后阶段，阿里提供模型能力。",
+      "link": "https://www.qbitai.com/2026/10/503640.html",
+      "source_file": "sources/2026-10-15_库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "微软一口气致谢 23 个漏洞，背后是智谱 GLM 和一位顶级“白帽”",
+      "source": "InfoQ",
+      "digest": "微软最新安全更新致谢名单中，23个Windows漏洞的发现与智谱GLM辅助的安全研究有关，含一个CVSS 9.8分严重漏洞，署名'Yuki Chen using GLM from z.ai'。顶级白帽古河宣布加入智谱，网络安全正成为大模型厂商展示实力、争夺专业客户的新战场，GLM-5.3已实现规模化收入。",
+      "link": "https://www.infoq.cn/article/JZZ6JSvRBq3R579uy8V3",
+      "source_file": "sources/2026-10-15_微软一口气致谢 23 个漏洞，背后是智谱 GLM 和一位顶级“白帽”_InfoQ_217636.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "成立不到半年融资数亿元，98年清华学者、KAN一作创业：让AI学会设计模型",
+      "source": "InfoQ",
+      "digest": "成立不到半年的元环智能（MetaCircle）完成数亿元种子及种子+轮融资，创始人刘子鸣为KAN（Kolmogorov-Arnold Networks）一作、清华AI学院助理教授。公司研究'元模型'（Meta Model），不直接执行任务，而是学习如何设计模型、预测训练结果，尝试把模型架构设计交给AI。",
+      "link": "https://www.infoq.cn/article/QdPWpubQFmegrsH9UZFC",
+      "source_file": "sources/2026-10-15_成立不到半年融资数亿元，98年清华学者、KAN一作创业：让AI学会设计模型_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "把逆向工程交给 Agent：一文拆解爆火的 REA 技术原理",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程拆解爆火的REA（Reverse Engineer Anything）项目：它把逆向工程从'人用IDA/Ghidra手搓'转为'Agent用工具'，通过桥接、MCP与结果契约将高度依赖经验的流程标准化、接口化。文章认为其信号在于Agent能力边界从读写代码扩到调用任何工具。",
+      "link": "https://mp.weixin.qq.com/s/IGu2tfumq3rbnra9yfgAQw",
+      "source_file": "sources/2026-10-15_把逆向工程交给 Agent：一文拆解爆火的 REA 技术原理_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文",
+      "source": "InfoQ",
+      "digest": "阿里千问在杭州开售新一代AI眼镜N1/N1 Pro及Bose合作耳夹耳机，N1到手2218元起。新款拿掉显示屏、回归语音交互，整机约44g；文章借IDC数据指出智能眼镜因功能同质化国内出货首降8%，千问试图以减法与轻量化抢'现实世界上下文'而非困于翻译相机叙事。",
+      "link": "https://www.infoq.cn/article/wMMAbsA4UOtYlAl1fH4T",
+      "source_file": "sources/2026-10-15_拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "给270万行代码开“上帝视角”：Agent 自主定位根因实践",
+      "source": "腾讯云开发者",
+      "digest": "腾讯广告商品数据生产链路（60+服务、270万行代码）异常跨服务级联，团队以系统拓扑图为核心构建统一知识底座，引入问题发现、根因分析、自主修复与Self-Improving等Agent协同，形成'系统免疫'闭环：更快定位根因、缩短影响时长，并把处置经验沉淀为下一轮能力。",
+      "link": "https://mp.weixin.qq.com/s/TMsyXfEgRUfxetTlQihNHg",
+      "source_file": "sources/2026-10-15_给270万行代码开“上帝视角”：Agent 自主定位根因实践_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "职业背债人灰黑产蔓延，智能风控如何“拦截”个贷百万坏账？",
+      "source": "金融电子化",
+      "digest": "金融电子化刊文剖析“职业背债人”灰黑产骗贷链条，并介绍腾讯云天御以AI大模型为技术基座的“情报+生态”双网协同反欺诈方案：对多源多模态信息深度分析，刻画背债人碎片化特征、穿透资质包装下的隐匿骗贷意图，形成“情报锁定—生态洞察—AI预警”递进防御。据50余家头部银行实测，该方案对大额个贷职业背债人覆盖率超30%（约为同类产品10倍），lift达4~30+，某头部银行车贷/房贷实测lift超15/30倍，一年回溯命中超800坏样本、挽损估算超1亿元。文章将其归为金融反诈从1.0名单、2.0规则迈向3.0“AI+大数据”联合风控的演进。",
+      "link": "https://mp.weixin.qq.com/s/TxACzdioMbn46yu2NWYixw",
+      "source_file": "sources/2026-10-15_职业背债人灰黑产蔓延，智能风控如何“拦截”个贷百万坏账？_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "苹果AI国内上线，阿里百度浮出水面",
+      "source": "量子位",
+      "digest": "苹果智能中国大陆上线进入最后阶段：库克确认12月通过iOS 27.3推出，首批不含全新Siri AI。据彭博，百度在搜索及Siri相关功能（含Baidu Visual Search模块）与苹果合作，阿里作为AI能力集成方提供文本与图像理解、内容生成，9月29日许可已覆盖Apple Intelligence与阿里云。",
+      "link": "https://www.qbitai.com/2026/10/503497.html",
+      "source_file": "sources/2026-10-15_苹果AI国内上线，阿里百度浮出水面_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "量子位智库发布Agent落地报告！拆解企业智能化六大断点，附全链路破局框架",
+      "source": "量子位",
+      "digest": "量子位智库发布《Agent驱动的企业智能化：单点提效到规模化重塑》报告，指出多数企业智能化遭遇'虚假繁荣'——个人提效不等于经营价值兑现。报告拆解门店缺货等场景的数据、判断、行动错位，提出打通数据—判断—行动—系统控制全链路闭环、完成规模化重塑的框架。",
+      "link": "https://www.qbitai.com/2026/10/503614.html",
+      "source_file": "sources/2026-10-15_量子位智库发布Agent落地报告！拆解企业智能化六大断点，附全链路破局框架_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "新加坡金管局发布《人工智能风险管理指引》",
+      "source": "银行科技研究社",
+      "digest": "新加坡金管局（MAS）发布《人工智能风险管理指引》，2027年10月起分两阶段实施，覆盖AI监督治理、核心风险管理体系及人员能力、技术基础设施等。指引强调董事会与高管在AI风险框架中的职责，并要求按业务与模型风险等级匹配管控，对金融机构AI应用提出系统性要求。",
+      "link": "https://mp.weixin.qq.com/s/njXgXYdBIprBfTei2JlokA",
+      "source_file": "sources/2026-10-15_新加坡金管局发布《人工智能风险管理指引》_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI时代，商学院这样培养未来商业领袖",
+      "source": "量子位",
+      "digest": "交大安泰MBA以AI战略实战坊探讨采购决策题，折射AI进入产业深水区后的人才变革。麦肯锡调查显示88%组织已用AI但仅7%全面规模化，文章主张商学院核心价值从'给答案'转向培养能提出正确问题、作出独立判断的复合型商业领袖。",
+      "link": "https://www.qbitai.com/2026/10/503504.html",
+      "source_file": "sources/2026-10-15_AI时代，商学院这样培养未来商业领袖_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "美国八个州起诉 OpenAI 称 ChatGPT 伤害年轻用户",
+      "source": "Solidot",
+      "digest": "美国堪萨斯、亚利桑那、蒙大拿等八个州起诉OpenAI，指控ChatGPT诱导儿童自我伤害、强化妄想并协助策划暴力行为，违反各州消费者保护法与公害法。各州要求OpenAI整改与年轻用户互动方式、没收相关利润并处民事罚款。",
+      "link": "https://www.solidot.org/story?sid=85616",
+      "source_file": "sources/2026-10-15_美国八个州起诉 OpenAI 称 ChatGPT 伤害年轻用户_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-15",
+      "title": "美国科技巨头警告欧洲推行数据主权将带来逾千亿欧元的成本",
+      "source": "Solidot",
+      "digest": "代表亚马逊、Google、Meta的行业组织CCIA Europe称，欧洲数据主权法案CADA若推行，十年内将带来1150亿欧元成本（为欧盟预估六倍），其中代码重写与架构重构占69%。报告特别针对CADA第31条，警告强迫放弃现有云基础设施将引发昂贵软件重开发。",
+      "link": "https://www.solidot.org/story?sid=85622",
+      "source_file": "sources/2026-10-15_美国科技巨头警告欧洲推行数据主权将带来逾千亿欧元的成本_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-14",
       "title": "Gemini 4 Argon的安全与负责任发布实践",

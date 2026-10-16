@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-15",
+      "weekday": "周四",
+      "stats": {
+        "国际": 12,
+        "国内": 24,
+        "同业": 1,
+        "其他": 3,
+        "total": 40
+      },
+      "summary": "Claude疑似新模型曝光！代码直出画面音效，《汉密尔顿》都做出来了/SpaceXAI 发布 Grok Voice 3.0：语音到语音模型登顶 Artif..."
+    },
+    {
       "date": "2026-10-14",
       "weekday": "周三",
       "stats": {
