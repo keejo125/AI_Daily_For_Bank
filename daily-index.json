@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-16",
+      "weekday": "周五",
+      "stats": {
+        "国际": 11,
+        "国内": 7,
+        "同业": 1,
+        "其他": 0,
+        "total": 19
+      },
+      "summary": "Liquid AI 发布 d1-ultra 多模态决策模型/Meta 发布 Muse Spark Open：816B 开放权重 MoE 模型/AI 生成的..."
+    },
+    {
       "date": "2026-10-15",
       "weekday": "周四",
       "stats": {

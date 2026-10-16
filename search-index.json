@@ -1,7 +1,197 @@
 {
-  "updated_at": "2026-10-16T05:31:51.104450",
-  "total": 2797,
+  "updated_at": "2026-10-17T05:12:04.997990",
+  "total": 2816,
   "articles": [
+    {
+      "date": "2026-10-16",
+      "title": "Liquid AI 发布 d1-ultra 多模态决策模型",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI 发布迄今最强决策模型 d1-ultra，可读取文本与图像并在单次前向传播中以概率回答有界问题、不生成输出 token，适用于分类、路由与评分调用。官方称其在 112 项评估套件中领先全部 8 类，Artificial Analysis Decision Index 得分 65 居首；参数与上下文长度未披露，基于比 d1 更大的开放权重主干，目前仅通过 Liquid API 提供（输入 0.042 美元/百万 token）。",
+      "link": "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+      "source_file": "sources/2026-10-16_Liquid AI Releases d1-ultra_ A Multimodal Decision_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Meta 发布 Muse Spark Open：816B 开放权重 MoE 模型",
+      "source": "MarkTechPost",
+      "digest": "Meta Superintelligence Labs 发布 Muse Spark Open 的开放权重版本：816B 参数 MoE，每 token 激活 42B（256 专家、每 token 8 个激活），支持文本/图像/视频/音频输入与 100 万 token 上下文，号称“迄今美国最强开放权重模型”。NVFP4 版本可跑在 2 台 M5 Ultra Mac Studio 或 4 张 Blackwell Ultra / 8 张 H200 上；智能体工具调用 MCP-Atlas 89.2 居首，但编码 Terminal-Bench 76.4 落后于 Kimi K3、GLM 5.3、Qwen3.8。",
+      "link": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
+      "source_file": "sources/2026-10-16_Meta Releases Muse Spark Open_ 816B Open-Weight Mo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-16",
+      "title": "英伟达发布 Nemotron 3.5 Super VL：120B 开放多模态智能体模型",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 发布 Nemotron 3.5 Super VL，一个面向常驻企业智能体的 120B 参数 MoE 开放视觉语言模型，每 token 激活 12B，读取文本/图像/文档/视频后可在同一模型内推理、调用工具并写代码，单个开放检查点替代独立文本与视觉模型。另发 2 个边缘模型 Bolt 74B-A9B 与 Bolt E4B。官方称单 GPU 吞吐最高达开源同侪 5 倍，GPQA-Diamond 89.90，但 tau3-bench banking 仅 17.78。",
+      "link": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+      "source_file": "sources/2026-10-16_NVIDIA Releases Nemotron 3.5 Super VL, a 120B Open_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-16",
+      "title": "OpenAI 推出 GPT-Rosalind 学术计划",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 Rosalind Academic Plan，为符合条件的学术实验室提供 GPT-Rosalind 及配套工具的赞助访问权限，以推进生命科学领域研究。该计划面向高校与科研机构，将 GPT-Rosalind 能力用于生物、医学等科研场景，是 OpenAI 面向学术界的模型访问支持项目（页面正文因官网访问受限仅含摘要）。",
+      "link": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+      "source_file": "sources/2026-10-16_Bringing GPT-Rosalind to academic research labs_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug",
+      "source": "InfoQ",
+      "digest": "Linus Torvalds 借助 Anthropic 的 Claude Code 编写 Linux 页面缓存修复补丁，在合成基准中将读取吞吐量提升 23 倍。但补丁尚未合入，人类内核审查者便发现其存在竞争条件：在 folio 被替换且文件大小随后扩展时，读取路径可能把尚未写入的数据当作有效内容返回。此事再次印证人类代码审查仍是 AI 生成代码不可或缺的最终防线。",
+      "link": "https://www.infoq.cn/article/hRw4BZQQUW14sqYMo5F6",
+      "source_file": "sources/2026-10-16_Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心",
+      "source": "InfoQ",
+      "digest": "Pi 今年最大更新：项目升至 1.0，Code Mode 与原生 MCP 进入稳定版，并推出长时 Agent 框架 Pi Durable。Pi Durable 接管对话记录、任务持久化、故障恢复与会话分叉，进程崩溃后可从中断处继续，据称可替代开发者约一半的周边代码。此前公开批评 MCP“臃肿、浪费 Token”的 Pi 团队，因模型对 MCP 训练增多、协议成熟而正式接入，标志 Pi 从终端编程 Agent 向 Agent 基础设施延伸。",
+      "link": "https://www.infoq.cn/article/hQOHf1ZXoBs7uMpWJQss",
+      "source_file": "sources/2026-10-16_Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Pizza Bot：开源的后台 AI 智能体收件箱",
+      "source": "InfoQ",
+      "digest": "亚马逊云科技团队开源自托管应用 Pizza Bot，为后台运行的 AI 智能体提供“收件箱式”管理界面：智能体可执行定时或 Webhook 触发的任务，委派给专用工作节点，并在重大操作前暂停等待人工批准。采用 Apache 2.0 许可、客户端/服务器架构，智能体状态与数据保留在用户本地，凭证存于系统密钥库，支持多种模型厂商与 MCP 服务器，灵感来自“环境智能体”理念。",
+      "link": "https://www.infoq.cn/article/aMgWFmwZ2HoZDtw1g0MQ",
+      "source_file": "sources/2026-10-16_Pizza Bot：开源的后台 AI 智能体收件箱_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Stack Overflow for Agents 借 ChatGPT 插件注册量增长三倍",
+      "source": "OpenAI",
+      "digest": "两名工程师用 Codex 在数周内搭建了 Stack Overflow for Agents，并借助其 ChatGPT 插件推动智能体创建量最高增长 10 倍。该插件让 ChatGPT 在编程场景中直接调用 Stack Overflow 的开发者问答资源，体现了“以 Codex 快速构建 + ChatGPT 插件分发”的 agent 化工具增长路径。",
+      "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "source_file": "sources/2026-10-16_Stack Overflow for Agents triples signups with Cha_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "为什么 Anthropic 不做 Personal AI",
+      "source": "极客公园",
+      "digest": "在 OpenAI dots、Meta Muse、Google Gemini Spark、SpacexAI Grok Bot 扎堆“always-on 个人 agent”之际，靠 Claude Code 出圈的 Anthropic 却无对标消费级产品。文章指出 Anthropic 其实早有布局：6 月发布的 Claude Tag 住在 Slack 频道、拥有共享身份与记忆并主动干活，公司产品团队 65% 代码出自内部版 Claude Tag，其路径是“分布式团队 AI”而非单人的“专属分身”。",
+      "link": "http://www.geekpark.net/news/372461",
+      "source_file": "sources/2026-10-16_为什么 Anthropic 不做 Personal AI_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "巅峰估值 50 亿美元的 AI 独角兽，何以不到 0.1 折贱卖",
+      "source": "极客公园",
+      "digest": "10 月 12 日，由 Transformer 论文核心作者创办、巅峰估值 50 亿美元的 AI 陪伴明星项目 Character.AI 在美提交破产重组申请，迪士尼以 2000 万美元底价竞购其部分 IP 非独占永久许可及过渡技术服务（不含公司主体与用户资产）。文章认为其陨落折射出生成式 AI 消费应用普遍面临的成本、版权与商业化困境，拍卖预计 11 月底至 12 月初收尾。",
+      "link": "http://www.geekpark.net/news/372437",
+      "source_file": "sources/2026-10-16_巅峰估值 50 亿美元的 AI 独角兽，何以不到 0.1 折贱卖_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "苹果和 Meta 和好了，是 AI 逼的",
+      "source": "极客公园",
+      "digest": "10 月 15 日 Meta 发布开放权重模型 Muse Spark Open（816B 参数、激活 42B、100 万 token 上下文，号称“美国最强开放权重模型”），扎克伯格感谢苹果合作使其能在新款 Mac Studio 上流畅运行，两周前还因 Muse 读取 Mac 私信而交恶的双方就此“和好”。两台 M5 Ultra Mac Studio（各 512GB 统一内存）即可装载全模型，本地大模型部署成为苹果与 Meta 重新结盟的纽带。",
+      "link": "http://www.geekpark.net/news/372458",
+      "source_file": "sources/2026-10-16_苹果和 Meta 和好了，是 AI 逼的_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "AI 生成的代码，怎么才能进得了工程体系？",
+      "source": "InfoQ",
+      "digest": "文章梳理 AI 编程竞争从“能不能生成”转向“生成物能否进入工程体系”。以亚马逊云科技 Kiro 的 spec-driven development 为例，指出 vibe coding 只是把工程成本以技术债形式推迟：长会话上下文衰减、决策不可追溯、从 Demo 到生产的鸿沟。Kiro 以三段式 Specs 将“先想清楚”变成可执行约束，并延伸至多 Agent 工作区，试图介入软件开发生命周期前端而非仅做项目级编程助手。",
+      "link": "https://www.infoq.cn/article/8iKz8xNQvxDfeuxH1QLA",
+      "source_file": "sources/2026-10-16_AI 生成的代码，怎么才能进得了工程体系？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "手机大厂开始做穿戴录音，卷的已经不是转写：OPPO 心力球体验",
+      "source": "极客公园",
+      "digest": "OPPO 在 9 月 ODC 上亮相 AI 穿戴硬件“心力球”（主机 9.8 克），主打 24 小时全时录音、5 米远距收音与声纹识别，取消手动开关，融入智能手机而非独立 App。文章指出 AI 穿戴录音赛道真正难题是如何把录音自然融入工作流；在 Personal AI Agent 概念走红后，手机厂商下场把录音硬件变为手机体验的一部分，区别于独立硬件按月收云端订阅的做法。",
+      "link": "http://www.geekpark.net/news/372428",
+      "source_file": "sources/2026-10-16_手机大厂开始做穿戴录音，卷的已经不是转写：OPPO 心力球体验_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "生产级大模型平台工程实战手册",
+      "source": "InfoQ",
+      "digest": "一家大型零售企业将其多智能体大模型库存推荐系统投入生产后，首月幻觉率约 15%，半年后降至 1.5%——关键并非更换更强基础模型，而是将大模型能力从应用层业务问题提升为平台基础设施来治理。文章记录了面向企业级流量的统一模型路由与治理体系：以 LiteLLM 对接 Gemini、GPT 等模型，覆盖 API 限流、上下文数据质量、幻觉监控等故障模式，并配套无隐藏抽象层的开源代码库，供数十个应用团队复用。",
+      "link": "https://www.infoq.cn/article/xQLd004RGWrzFhwqBOyC",
+      "source_file": "sources/2026-10-16_生产级大模型平台工程实战手册_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "第一款 AI 手机，被半个互联网「拒」了",
+      "source": "极客公园",
+      "digest": "10 月 14 日，豆包手机助手《屏幕自动化操作声明协议》(SAEP)结束 30 天公示，155 款第三方应用明确拒绝 AI 自动化操作，覆盖腾讯 66 款、阿里 23 款、美团 11 款、快手 14 款及 Kimi、DeepSeek 等。SAEP 把屏幕识别、模拟点击的权限选择权交还开发者，标志着超级 App 在 AI Agent 时代首次集体表态应用边界与流量主权，移动端流量格局出现新裂痕。",
+      "link": "http://www.geekpark.net/news/372436",
+      "source_file": "sources/2026-10-16_第一款 AI 手机，被半个互联网「拒」了_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "聚焦 AI 场景落地与 FDE 创新，2026 人工智能产业大会专项活动在济南举行",
+      "source": "InfoQ",
+      "digest": "2026 人工智能产业大会专项活动“AI 场景落地与 FDE 创新发展交流对接活动”在济南举行，同步启动 2027 人工智能产业大赛、共智方舟社区，并发布《2026—2027 AI 场景落地与 FDE 创新发展行动计划》。活动指出企业推进 AI 应用的关注点正从“技术能不能实现”转向“场景是否值得做、如何进入业务流程并完成交付”。鲁信集团、腾讯 WorkBuddy、麦港数据等分享了集团型 AI 落地、企业级智能体能力边界与“从前线部署到平台复用”的实践。",
+      "link": "https://www.infoq.cn/article/1XtKjZ1OCyrYTCmb4Zkb",
+      "source_file": "sources/2026-10-16_聚焦 AI 场景落地与 FDE 创新，2026 人工智能产业大会专项活动在济南举行_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "腾讯盯上了字节的摇钱树",
+      "source": "极客公园",
+      "digest": "红果短剧日活半年攀升至约 2.2 亿，成为字节最稳健的现金牛。腾讯 9 月底将原微信短剧小程序升级为“绿泡泡短剧”正面对标，但仍在早期爬坡。值得注意的是，绿泡泡从一开始就以 AI 剧为核心，灰度期用 AI 仿真人短剧《影后芽芽》验证效果，试图以 AI 低成本量产内容弥补真人剧储备差距——AI 生成内容正成为长短视频平台竞争的新变量。",
+      "link": "http://www.geekpark.net/news/372435",
+      "source_file": "sources/2026-10-16_腾讯盯上了字节的摇钱树_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "范式智能联合睿思智联推出开源一站式生产级AI部署平台 “模域ModelSphere”",
+      "source": "InfoQ",
+      "digest": "10 月 16 日，范式智能联合北京睿思智联宣布一站式生产级 AI 部署平台“模域”(ModelSphere)正式上线并免费开源，将算力管理、模型部署与运行优化整合为统一流程。平台内置自动弹性扩缩容、PD 分离、三级 KV 缓存、服务断流自动续写等企业级能力，融合 EngineX 推理引擎统一调度华为昇腾、天数智芯、摩尔线程、海光 DCU 等国产算力，已适配 DeepSeek-V4、Qwen、Kimi、MiniMax、GLM 等主流模型。",
+      "link": "https://www.infoq.cn/article/VZPlIIdGRg062mgwJe5y",
+      "source_file": "sources/2026-10-16_范式智能联合睿思智联推出开源一站式生产级AI部署平台 “模域ModelSphere”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-16",
+      "title": "美国银行雇佣千名合同工修复 AI 工具发现的软件漏洞",
+      "source": "Solidot",
+      "digest": "美国银行 CEO Brian Moynihan 披露，公司第二季度聘请 1000 名合同工协助修复 Anthropic Mythos 等 AI 工具发现的软件漏洞，加上原有 3000 名员工持续提供支持，第三季度在软件修复与反洗钱合规监管上投入超数亿美元。这是美国大型企业首次披露为保护系统免受 AI 工具（Mythos）影响所投入的人力与资金规模。",
+      "link": "https://www.solidot.org/story?sid=85625",
+      "source_file": "sources/2026-10-16_美国银行雇佣千名合同工修复 AI 工具发现的软件漏洞_Solidot.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-15",
       "title": "Claude疑似新模型曝光！代码直出画面音效，《汉密尔顿》都做出来了",
