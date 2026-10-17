@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-10-17T05:12:04.997990",
-  "total": 2816,
+  "updated_at": "2026-10-18T05:20:34.340689",
+  "total": 2833,
   "articles": [
+    {
+      "date": "2026-10-17",
+      "title": "Meta 发布其开放权重模型 Muse Spark Open",
+      "source": "Solidot",
+      "digest": "Meta 发布开放权重模型 Muse Spark Open，自称目前美国最强大的开放权重模型。该模型为多模态，总参数 8160 亿、激活 420 亿，支持 100 万 Token 上下文，并借助苹果开源数组框架 MLX 对 Apple Silicon 统一内存架构做了优化，可运行在搭载 M5 Ultra 的 Mac Studio 上（两台顶配即可容纳整个模型）。模型已发布于 Hugging Face。",
+      "link": "https://www.solidot.org/story?sid=85634",
+      "source_file": "sources/2026-10-17_Meta 发布其开放权重模型 Muse Spark Open_Solidot.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-17",
+      "title": "8000字，Codex逆袭​​ChatGPT抓马史首次大公开！",
+      "source": "量子位",
+      "digest": "Every 重磅长文《How Codex Happened》首次完整复盘 OpenAI Codex 的逆袭史：它如何从 2025 年 5 月云端版发布遇冷、找不到 PMF，一路翻盘成为 ChatGPT 桌面端的底座（新版桌面应用内部标识至今仍叫 com.openai.codex）。团队透露四点关键：首版 Cloud 遇冷后迅速转向本地 Agent；OpenAI 为 Codex 单开模型线，让研究、产品、工程协同；一年内更换四种产品形态，最终押中没有代码编辑器的桌面应用；并用 Codex 开发 Codex，几人几周即可搓出新产品。",
+      "link": "https://mp.weixin.qq.com/s/yWI4z-Mj0GN68l9SKO90Ww",
+      "source_file": "sources/2026-10-17_8000字，Codex逆袭​​ChatGPT抓马史首次大公开！_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变好了吗？",
+      "source": "InfoQ",
+      "digest": "CodeScene 发布案例研究：编码智能体在三周内重构了一个 30 万行 C 语言代码库（源自《街头霸王 III》开源反编译项目），产生 2903 次提交、修改 25.2 万行，将 Code Health 从 5.6 升至 10.0，token 成本约 4000 美元。两项机制支撑：CodeHealth MCP Server 提供确定性评分作为质量信号，回放轨迹测试框架逐帧比对哈希以保正确性。团队主要用 Claude Opus 完成（较 Codex+Sol 更擅长识别与记录模式），并积累出 22 个重构方案、82 条说明。作者坦言 4000 美元与三周为实测，而缺陷减 70%、token 浪费减 45% 仅为推算。",
+      "link": "https://mp.weixin.qq.com/s/eet_ozPzf8rs2QQabQHpzQ",
+      "source_file": "sources/2026-10-17_AI 智能体三周重构 30 万行代码，Code Health 从 5.6 升至 10.0：代码真的变好了吗？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Agent 删库频频发生，几十年前就有的数据库防呆机制不管用了？",
+      "source": "InfoQ",
+      "digest": "针对频发的 AI Agent 删库事故，卡内基梅隆大学教授、ClickHouse 研究副总裁 Andy Pavlo 在播客中指出：这并非新问题，而是权限与管控手段几十年前就已存在却被忽视——只急着让 Agent 干活，忘了先问干错了怎么办。他建议把 Agent 当学步小孩，用权限隔离、分支沙箱防其误删生产库，而非逐个点批准。他还判断向量数据库护城河不深（一年内各家都会有）、现成 text-to-SQL 准确率仅约 60%（某大银行投入数百万美元才提到 99.5%），并认为 LLM 15 分钟能给出足够好的调参结果。",
+      "link": "https://mp.weixin.qq.com/s/jAiKp_n7GXIBes3AsMN_jw",
+      "source_file": "sources/2026-10-17_Agent 删库频频发生，几十年前就有的数据库防呆机制不管用了？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Akka 在 65 个开源项目中测试基于规格的 AI 交付",
+      "source": "InfoQ",
+      "digest": "Akka 利用 65 个开源项目，对一种基于规格说明的 AI 辅助软件移植工作流做了实测：先用 Claude 配合 Akka Specify 分析代码、模型、模式并生成结构化规格，再实现、测试、审查，最后用通用基准运行器比对测试、代码规模与延迟。首轮耗时 99.3 小时、消耗 94.1 亿 token；65 个项目中 57 个在代码行数或性能上提升。发现：含声明、证据、类型化行为的规格能改善首次实现；Sonnet 平均每项 61 分钟、Opus 120 分钟但 token 少约 40%；较小模型更严守规范，较大模型可能即兴发挥。",
+      "link": "https://www.infoq.cn/article/uGNQwpOt5GGAKm2XlEZC",
+      "source_file": "sources/2026-10-17_Akka 在 65 个开源项目中测试基于规格的 AI 交付_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Perplexity 开源 SPACE：面向 AI 智能体的隔离沙箱",
+      "source": "MarkTechPost",
+      "digest": "Perplexity 开源了驱动 Perplexity Computer 每一任务的沙箱平台 SPACE（Sandboxed Platform for Agentic Code Execution），以 Apache 2.0 发布于 GitHub。SPACE 为每个 Agent 任务分配一个 Firecracker 微虚拟机（独立 guest 内核），凭证与出站流量由 VM 外部的网关管控，密钥从不进入 guest，为构建编码与浏览类 Agent 的团队提供可自托管的、经生产验证的隔离层。生产中沙箱创建中位延迟由 185ms 降至 60ms；在 9 个前沿模型上，108 次 VM 逃逸尝试 0 成功。",
+      "link": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
+      "source_file": "sources/2026-10-17_Perplexity Open-Sources SPACE, a Firecracker Micro_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "利用 AI 代码智能体优化软件架构的五种方法",
+      "source": "InfoQ",
+      "digest": "文章总结用 AI 编码智能体改进软件架构的五条实用经验：一是梳理遗留服务，让智能体记录数据流、扫描代码并识别风险；二是发现与修复架构缺陷，须由熟悉架构的成员以具体、可衡量的质量属性需求（QAR）与权衡方案引导；三是借助智能体做安全审计，扫描漏洞并生成补丁（合并前须人工评审）；四是为开发提供架构基础，用 Markdown 固化 QAR、规范与约束；五是生成可测试的最小可行架构（MVA）。核心观点：AI 让写代码变简单，但显式定义与实测需求反而更难、更关键。",
+      "link": "https://mp.weixin.qq.com/s/5gm5CFNstHmYIdUTGMk4wg",
+      "source_file": "sources/2026-10-17_利用 AI 代码智能体优化软件架构的五种方法_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "干掉 Bun 和 Tauri，旧插件全部报废！OpenCode 2.0 正式发布：一次“重大改造”",
+      "source": "InfoQ",
+      "digest": "斩获 21.4 万星的开源编程 Agent OpenCode 发布 2.0 稳定版，但 1.x 插件全线报废。此次重大改造将核心运行时从 Bun 切回 Node.js、桌面端从 Tauri 切回 Electron，以稳定性换体积；重构后台常驻服务与全新 API，让 Agent 从被动插件变为主动常驻进程；新增 Code Mode，把工具调用写成脚本，默认可接入上千个 MCP 服务器而仅增极少上下文开销；插件系统彻底重做（80+ 内置插件、热重载）。需注意：2.0 不再启动 LSP，且仅读 AGENTS.md（不再读 CLAUDE.md）。",
+      "link": "https://mp.weixin.qq.com/s/W7wJ0PEWa77E9lml3wTF3A",
+      "source_file": "sources/2026-10-17_干掉 Bun 和 Tauri，旧插件全部报废！OpenCode 2.0 正式发布：一次“重大改造”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "阶跃星辰发布 Step 5 Preview 开放权重模型（600B MoE）",
+      "source": "MarkTechPost",
+      "digest": "阶跃星辰（StepFun）发布旗舰 Agent 模型 Step 5 Preview 的开放权重（FP8/BF16 已在 HuggingFace、ModelScope 上线，API 已于 9 月 20 日推出）。该稀疏 MoE 模型总参数 600B、每 token 激活 27B、上下文最长 1M，面向软件工程、专业知识工作与金融等长周期 Agent 任务：可导航大型代码库、协调多文件改动、运行代码并迭代，也能分析长文档、图表、截图、视频产出结构化报告。架构采用 92 层窄深设计、门控滑窗与全注意力 3:1 交错、MTP-3 投机解码提速约 30%；编码接近 GLM-5.3、Kimi K3，弱于 GPT-6 Astra、Claude Opus 5。",
+      "link": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "source_file": "sources/2026-10-17_StepFun Releases Step 5 Preview Open Weights_ 600B_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-17",
+      "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+      "source": "量子位",
+      "digest": "DeepSeek 于 10 月 17 日推出 V4.1-Flash-1017，网页端、App 与 API 已同步更新，权重在 HuggingFace 与 ModelScope 开放下载，并配套发布 DeepSeek Harness 0.2.1（针对新模型专项优化，缩短任务运行时间、减少 token 消耗）。相较上一版，新模型在代码、Agent 等基准上整齐提升，同时压低了任务运行时间与输出长度，实现性能—费用帕累托改进：DeepSWE v1.1 max 档单次通过率 77.0%，超 GPT-6 Astra、Gemini 3.8 Flash、Claude Opus 5 等，单任务费用约从 3.3 元降至 1.3 元（降约六成）。此前 10 月 15 日近 5 小时 API 中断后，DeepSeek 已致歉并全额返还 10 月 8—14 日消耗赠金。",
+      "link": "https://mp.weixin.qq.com/s/rnlMFZR6zyJmEimC5k9Oig",
+      "source_file": "sources/2026-10-17_突发！DeepSeek新模型发布，超级性价比斩杀一切_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-17",
+      "title": "AI 进入生产后，研发组织怎么变",
+      "source": "阿里云基础设施",
+      "digest": "阿里云 CTO 产研线在云栖大会 AI 原生研发组织论坛后撰文，分享其面向研发组织的 AI Native 探索。文章提出模型+Harness+Context 智能体计算范式，并指出 Agent 进入生产链路才是分水岭；AI Native 将经历工具原生、工作流原生、组织原生三阶段。基于北极星、留白、沙箱的推进方式，其局部成果包括某项目全链路处理从 2 小时缩至 5 分钟、某项目两周完成数十需求（发布周期 40 天→2 天）并沉淀十余生产级 Skill。下一步平台需求收敛到三方向：任务可靠执行、经验持续积累、协作进入组织。",
+      "link": "https://mp.weixin.qq.com/s/7sMvHDJ22TiuSWw_Xtq_aQ",
+      "source_file": "sources/2026-10-17_AI 进入生产后，研发组织怎么变_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Ruby on Rails之父DHH访谈录：手写代码时代正在落幕，未来电脑应当由自然语言掌控",
+      "source": "软件工程3.0时代",
+      "digest": "Ruby on Rails 之父、37signals CTO DHH 在 GOSIM 深圳 2026 谈及 Agent 原生操作系统与编程范式：他认为 2026 是 Linux 桌面元年，AI Agent 补齐 Linux 最大短板，完全有机会超越 Mac、抗衡 Windows；提出放下铅笔（Pencil-down）新范式——人类聚焦愿景、审美、方向与验收，Agent 承担大量编码，并可用一个写、两个评审的多 Agent 同行评审提升质量。他还指出开源已被 AI 改变（不必强求并入上游），并成立 Omacom 基金会（获 2370 万美元认捐）保障 Omarchy 项目永续，同时看好中国 Agent 生态。",
+      "link": "https://mp.weixin.qq.com/s/7tGIhVWbt_v2wRAPf6wrSQ",
+      "source_file": "sources/2026-10-17_Ruby on Rails之父DHH访谈录：手写代码时代正在落幕，未来电脑应当由自然语言掌控_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "从单点探索到规模化运营：滔搏体育的企业级多智能体实践",
+      "source": "阿里云云原生",
+      "digest": "运动零售龙头滔搏（4360 家门店、超 9000 万用户）基于阿里云 AgentCore 底座，将分散的零售经验沉淀为可复用、能协作的专业能力。文章以一线练货、线索挖掘、门店经营三类场景说明多 Agent 协同：经营 Agent 识别偏差，商品 Agent 提供资料，陪练 Agent 组织训练；会员与营销 Agent 共同为店长准备可执行任务。统一底座负责模型连接、MCP 工具、Skill 与 Agent 管理，并以 Workspace、角色、凭证界定资源边界，配合 AgentLoop 评估改进。单月练货超 39 万次，单店经营分析由 2 小时缩短至约 20 分钟。",
+      "link": "https://mp.weixin.qq.com/s/CodXAjLUwORinOArQw3O2Q",
+      "source_file": "sources/2026-10-17_从单点探索到规模化运营：滔搏体育的企业级多智能体实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+      "source": "量子位",
+      "digest": "清华大学 THUNLP 联合面壁智能、OpenBMB 开源智能体操作系统 PilotDeck 2.0，专治 Agent 多项目时的上下文污染、长任务中断与调用成本失控三大痛点。它支持多项目隔离文件、记忆与任务，可查看修改的长期记忆，后台长周期执行与断点续跑，并按难度智能路由选模型（强模型管决策、小模型干杂活），从而把复杂长任务成本砍掉近六分之五。在 Workbuddy Bench 上用 Qwen3.6-35B-A3B 得分 79.1，优于 Claude Code 的 77.3，并完成 2000 条交互压力测试与 Office 全流程处理。",
+      "link": "https://mp.weixin.qq.com/s/r8-N9CCiWk26ZRzwvk6RJA",
+      "source_file": "sources/2026-10-17_清华开源！智能体操作系统任务成本降83%，AI记忆可查可改_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "Itaú 借助生成式 AI 服务全部客户",
+      "source": "OpenAI",
+      "digest": "巴西最大银行 Itaú 在 OpenAI 官网撰文介绍其 AI First 战略落地：通过对话式界面 ia.i 与 IARA 治理平台，把生成式 AI 同时应用于客户与员工侧，覆盖巴西监管最严格的金融领域之一。文章强调在高度受监管环境下，以治理平台保障合规、隐私与可控性，是金融业把生成式 AI 从试点推向全客户群生产链路的代表案例。",
+      "link": "https://openai.com/index/itau-generative-ai",
+      "source_file": "sources/2026-10-17_How Itaú is building generative AI for its entire _OpenAI.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "“科技+金融”、AI面试、AI反向背调，银行秋招释放了哪些信号？",
+      "source": "现代商业银行杂志",
+      "digest": "2027 届银行秋招中，AI、数据、科技类岗位位次逐年上升，工商银行科技菁英、招行智能科学研发、广发 AI 核心岗（硬要求大语言模型、多模态、MOE、RLHF、RAG、Agent）等纷纷扩招懂业务又懂 AI 的复合人才。AI 面试已成为初筛重要工具，可将初面从 1—2 周压缩至 2—3 天，但仅能筛下限、考察维度片面且涉生物信息隐私，关键岗位仍须人工把关。与此同时，毕业生开始用 AI 做反向背调评估企业，文章提示 AI 报告不可替代真实实习与面试体验。",
+      "link": "https://mp.weixin.qq.com/s/iHo9IIOh4J8T9cTi7pKlBA",
+      "source_file": "sources/2026-10-17_“科技+金融”、AI面试、AI反向背调，银行秋招释放了哪些信号？_现代商业银行杂志.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-17",
+      "title": "游戏逆向工程网站宣布关闭因为 AI 让反编译游戏变得非常容易",
+      "source": "Solidot",
+      "digest": "协作游戏逆向工程网站 decomp.dev 宣布关闭，管理员称根本原因是 AI（如 GPT-6-Astra 等前沿模型）让游戏反编译变得极快且极易操作，基于人工的社区协作模式已实质性瓦解——无法再区分哪些项目以人工为主导、哪些由 AI 完成。历史上匹配反编译动辄以年计时，如今前沿模型在遵循复杂指令、交叉检索符号与调试信息、按指引编写自然代码方面远强于人工，显著加速反编译；但也意味着反编译的社区属性就此结束。",
+      "link": "https://www.solidot.org/story?sid=85638",
+      "source_file": "sources/2026-10-17_游戏逆向工程网站宣布关闭因为 AI 让反编译游戏变得非常容易_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-16",
       "title": "Liquid AI 发布 d1-ultra 多模态决策模型",

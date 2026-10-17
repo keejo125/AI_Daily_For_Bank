@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-17",
+      "weekday": "周六",
+      "stats": {
+        "国际": 8,
+        "国内": 6,
+        "同业": 2,
+        "其他": 1,
+        "total": 17
+      },
+      "summary": "Meta 发布其开放权重模型 Muse Spark Open/8000字，Codex逆袭​​ChatGPT抓马史首次大公开！/阶跃星辰发布 Step 5 ..."
+    },
+    {
       "date": "2026-10-16",
       "weekday": "周五",
       "stats": {
