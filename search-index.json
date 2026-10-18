@@ -1,7 +1,107 @@
 {
-  "updated_at": "2026-10-18T05:20:34.340689",
-  "total": 2833,
+  "updated_at": "2026-10-19T05:17:20.677485",
+  "total": 2843,
   "articles": [
+    {
+      "date": "2026-10-18",
+      "title": "Meta 联手苹果推出全美最强开源模型，编码基测输给智谱、Kimi",
+      "source": "InfoQ",
+      "digest": "Meta 联合苹果于 10 月 15 日开放 Muse Spark Open 模型权重，定位为“迄今能力最强的美国开放权重模型”，主攻软件工程、长程任务执行与多步推理。模型采用稀疏混合专家架构，总参数 8160 亿、每 token 激活约 420 亿、支持 104 万 token 上下文，可接收文本/图片/音频/视频并输出文本；通过 MLX 可在两台 M5 Ultra Mac Studio 上本地部署（BF16 权重约 1.65TB，NVFP4 约 537GB）。基准上 JobBench 61.8、MCP-Atlas 89.2、OSWorld Verified 80.4，但在 Terminal-Bench 2.1（76.4）与 DeepSWE 1.1（60）上低于国产开源模型 GLM 5.3 max 与 Kimi K3 max。采用 Muse Model License，对高营收模型即服务企业设通知与单独协议要求。",
+      "link": "https://www.infoq.cn/article/EuYOPRUBAeBgBGBu5ktk",
+      "source_file": "sources/2026-10-18_Meta 联手苹果推出全美最强开源模型，编码基测输给智谱、Kimi_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Claude开始自己写程序管理Agent了：Anthropic公开新一代多Agent编排架构",
+      "source": "InfoQ",
+      "digest": "Anthropic 为 Claude Managed Agents 上线 Dynamic Workflows（动态工作流，Beta），由 Claude 根据任务动态生成一段编排程序，负责启动子 Agent、衔接各阶段、传递中间结果，并将执行情况交回主 Agent，从而把原本需主 Agent 持续参与的协调工作交给后台程序。单次工作流累计最多启动 1000 个 Agent、同时运行上限 64、默认最长 24 小时，并提供会话级预算机制控制成本。文章详细对比了传统 Subagents 委派与动态工作流在协调逻辑、共享文件系统、长任务验收等方面的差异，并指出工作流返回 completed 仅表示程序执行结束、不意味业务任务成功，开发者仍需自行设计校验与恢复机制。",
+      "link": "https://mp.weixin.qq.com/s/0VZL5qKn5_p1snJrX9ANpA",
+      "source_file": "sources/2026-10-18_Claude开始自己写程序管理Agent了：Anthropic公开新一代多Agent编排架构_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Google 开源 Harness²：递归式智能体脚手架框架",
+      "source": "MarkTechPost",
+      "digest": "Google Cloud AI Research 开源 Harness²，一个递归式智能体脚手架（harness）精调框架，目标是“模型权重不变、围绕模型的工程底座变好”。框架将 harness 拆为 8 个可编辑组件（系统提示、护栏、记忆、工具引导、子 Agent、技能、脚本、插件），部署时通过“提出—探测—组合”的对比式递归，依据 Agent 实际行为轨迹优化 harness 而非依赖标签或测试用例。在 WorkBuddy-Bench、JobBench、Harvey's LAB 三个基准上，单步精调即令 GLM-5（OpenCode）在 WorkBuddy-Bench 从 64.2 升至 75.7（+11.5 分），较弱执行器收益更大。框架以 Apache-2.0 开源并提供本地 demo。",
+      "link": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+      "source_file": "sources/2026-10-18_Google Open-Sources Harness2, a Recursive Agent Ha_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Voxel51 3.0 发布：面向实体智能的统一多模态数据平台",
+      "source": "MarkTechPost",
+      "digest": "Voxel51 发布 3.0 版本，将其多模态数据平台从视觉数据扩展为面向“实体智能（Physical AI）”的一站式平台，把搜索、整理、标注与评测整合进同一系统，面向在机器人、车辆、工厂传感器数据上训练模型的团队。新版本新增时间序列多模态支持、统一标注（含 Agentic Labeling 用视觉语言模型按自然语言指令生成标签）、Voxel51 Agent（内置 45+ MCP 工具、80+ 算子、18 个开源技能）以及四层数据溯源（部署/数据集/样本/版本）。免费层含 Voxel51 Agent、3 万次推理请求与 30 计算小时/月。",
+      "link": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+      "source_file": "sources/2026-10-18_Meet Voxel51 3.0_ A Unified Multimodal Data Platfo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "“大家用AI都太保守了！”Claude Code负责人：我的方法更有野心～",
+      "source": "量子位",
+      "digest": "Claude Code 桌面版负责人 Felix Rieseberg 撰文分享“用 AI 应更有野心”的使用方法论，把野心分为速度、高度、深度、广度四类：高度上建议把任务目标提到更高抽象层次、关注最终要发生什么；深度上要求模型使用顶尖专家的工具与方法、设定“不合理”目标再坚持让其尝试、用原始数据挑战既有结论、并引入外部验证而非让模型自评；广度上建议跨领域组队、把名词换成动词描述任务。文章强调，随着模型能力提升，让模型在更高抽象层次独立工作、构建无需人类持续介入的工作流正变得可行，但仍需配套权限、数据与工具访问。",
+      "link": "https://mp.weixin.qq.com/s/DSkimaN8KLtSRI0UFNFaPA",
+      "source_file": "sources/2026-10-18_“大家用AI都太保守了！”Claude Code负责人：我的方法更有野心～_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "DeepSeek新版真能许愿啊！3D世界随便搓，价格是Opus5.5的1/26",
+      "source": "量子位",
+      "digest": "DeepSeek V4.1-Flash-1017 版本发布后被网友当作“3D 工作室”使用，仅交互一轮即可处理近百万 Token 的超大体量任务，生成特斯拉飞车、蜜蜂、火箭、电动机原理动画等 3D 内容，并能与 Claude Opus 5.5、GPT-6.1 Sol 等同台对比。成本优势明显：3D 卡通小人任务 DeepSeek 花费 0.23 美元、耗时 1 小时，而 Opus 5.5 花费 6 美元、耗时 20 分钟；电动机动画 DeepSeek 1.25 美元对 Opus 16.36 美元，相差约 13 倍。作者认为 Opus 完成度更高，但 DeepSeek 以极低价格交出接近的效果，凸显许愿式编程场景下的性价比。",
+      "link": "https://mp.weixin.qq.com/s/Y-z2vFERGsAwQOk0XCu8Kw",
+      "source_file": "sources/2026-10-18_DeepSeek新版真能许愿啊！3D世界随便搓，价格是Opus5.5的1_26_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-18",
+      "title": "云栖实录丨面向 AgenticOps 的开源建设：采集标准化、统一语义建模与能力评测",
+      "source": "阿里云云原生",
+      "digest": "阿里云可观测团队在云栖大会分享其 AgenticOps 开源建设实践，围绕“运行事实可靠采集—故障上下文统一理解—能力可复现评测”三道墙展开。采集侧基于 OpenTelemetry 标准扩展出 LoongSuite（含基于 eBPF 的无侵入采集 OBI、面向 Coding Agent 的标准化采集，覆盖 20+ Agent），并大量回馈社区（三年 432 条贡献、259 个 PR）。上下文侧开源 UModel，以“静态语义模型—语义运行时—任务上下文”三层结构围绕故障对象组织证据，实验显示可提升 50%–100% 诊断质量。评测侧开源 BRiSE，按证据复杂度分层的任务集（数据查询/巡检异常/故障诊断）支持固定环境下反复复跑，已发布 RCA100/200。",
+      "link": "https://mp.weixin.qq.com/s/gdZ5JMpcbwC6Pw6TTrDB9Q",
+      "source_file": "sources/2026-10-18_云栖实录丨面向 AgenticOps 的开源建设：采集标准化、统一语义建模与能力评测_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "用 NVIDIA 结构化数据模型实现零训练表格预测",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 发布 Structured Data Models 库，将多个面向表格数据的预训练基础模型统一封装在一个 PyTorch 接口之后，使开发者无需自行训练即可对表格数据做预测。文章以教程形式演示如何加载该库、调用预训练表格基础模型完成零训练（zero-training）的表格预测任务，适用于需要快速从结构化数据中获取预测结果、而又缺乏标注数据或训练资源的场景。该内容属于传统机器学习/表格建模工具实践，与生成式大模型主线无关。",
+      "link": "https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/",
+      "source_file": "sources/2026-10-18_How to Make Zero-Training Tabular Predictions with_MarkTechPost.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Meta 新增条款允许其抓取客户内容并用于训练 AI",
+      "source": "Solidot",
+      "digest": "Meta 修改其商业服务条款，新增条款将于 2026 年 10 月 30 日生效，赋予 Meta 一项权利：可使用自动化软件（含网页抓取工具、机器人、爬虫及用户智能体等）抓取客户内容，并将其用于改进包括 AI 模型在内的公司产品。该变更意味着客户发布在 Meta 平台上的内容可能被纳入其 AI 训练数据来源，引发关于用户数据权益与训练数据合规的关注。",
+      "link": "https://www.solidot.org/story?sid=85640",
+      "source_file": "sources/2026-10-18_Meta 新增条款允许其抓取客户内容并用于训练 AI_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "内核开发者递交代码无需声明是否 AI 辅助编写",
+      "source": "Solidot",
+      "digest": "在 2026 年 10 月 8 日捷克布拉格举行的 Linux 内核维护者峰会（Maintainers Summit）上，维护者达成一项决策：向内核提交代码时，不再需要使用“Assisted-by”标签声明该代码是否由 AI 辅助编写。这一变化反映了开源社区对 AI 辅助编程态度的调整——从要求显式标注转向不再强制声明，也意味着 AI 辅助产出的代码将更自然地融入常规提交流程，相关贡献的归属与质量责任仍由提交者承担。",
+      "link": "https://www.solidot.org/story?sid=85641",
+      "source_file": "sources/2026-10-18_内核开发者递交代码无需声明是否 AI 辅助编写_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-17",
       "title": "Meta 发布其开放权重模型 Muse Spark Open",

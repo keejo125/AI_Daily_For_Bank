@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-18",
+      "weekday": "周日",
+      "stats": {
+        "国际": 5,
+        "国内": 2,
+        "同业": 0,
+        "其他": 3,
+        "total": 10
+      },
+      "summary": "Meta 联手苹果推出全美最强开源模型，编码基测输给智谱、Kimi/Claude开始自己写程序管理Agent了：Anthropic公开新一代多Agent编..."
+    },
+    {
       "date": "2026-10-17",
       "weekday": "周六",
       "stats": {
