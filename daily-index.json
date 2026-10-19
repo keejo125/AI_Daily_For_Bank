@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-19",
+      "weekday": "周一",
+      "stats": {
+        "国际": 11,
+        "国内": 13,
+        "同业": 1,
+        "其他": 4,
+        "total": 29
+      },
+      "summary": "Gemini 4 Argon：为您解决最棘手的问题/Mistral 发布 Timestral：209M 参数时序预测基础模型家族/Jev刚火，国产29B开..."
+    },
+    {
       "date": "2026-10-18",
       "weekday": "周日",
       "stats": {
