@@ -1,7 +1,267 @@
 {
-  "updated_at": "2026-10-20T05:20:03.867963",
-  "total": 2872,
+  "updated_at": "2026-10-21T05:25:14.916299",
+  "total": 2898,
   "articles": [
+    {
+      "date": "2026-10-20",
+      "title": "Claude新模型曝光！能跳出思维定势，修Bug治标又治本",
+      "source": "量子位",
+      "digest": "据 Information 消息，Claude 新模型内测反馈为\"重大飞跃\"：推理与直觉更好，擅长判断用户潜在意图与目标，修复 Bug 时能识别背后更大的根因类问题并询问是否一并修复，且更善于跳出思维定式而非重复常识建议。同期 Gemini 将发 Argon 升级款 Carbon（内测称可打 Opus 5.5），ChatGPT 将发 6.1 Terra 中杯。新一轮旗舰模型密集发布在即。",
+      "link": "https://www.qbitai.com/2026/10/504314.html",
+      "source_file": "sources/2026-10-20_Claude新模型曝光！能跳出思维定势，修Bug治标又治本_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Cloudflare 发布 Clairic 结构化抽取模型（Workers AI）",
+      "source": "MarkTechPost",
+      "digest": "Cloudflare 在 Workers AI 上预览 Clairic 结构化抽取模型：读取文本或图像并返回类型化字段值，而非生成自由文本，直击开发者通常用 LLM 完成的\"抽取总额、日期、ID 进 JSON\"任务。Clairic 对每请求字段一次性前向输出，无需推理与输出 Token。其上下文窗口 65536 Token、单请求最多 4 张图，以 Cloudflare 托管 GPU 运行。对 Agent 与数据管线，这是一种低成本、确定性的结构化抽取替代方案。",
+      "link": "https://www.marktechpost.com/2026/10/20/cloudflare-releases-clairic-a-system-one-extraction-model-on-workers-ai/",
+      "source_file": "sources/2026-10-20_Cloudflare Releases Clairic, a System One Extracti_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Inception 发布 Mercury 3 扩散语言模型：1068 Token/秒",
+      "source": "MarkTechPost",
+      "digest": "Inception 发布扩散语言模型 Mercury 3：以并行方式（而非逐 Token）写出答案，在英伟达 GPU 上达 1068 Token/秒，上下文窗口 100 万 Token。在 Inception 自测榜单的 12 项测试中，Mercury 3 在 8 项上领先 GPT-6 Luna 与 Claude Haiku 5.5。对构建 Agent、语音机器人与搜索工具的开发者，这是一个速度优先、分数有竞争力的模型；参数规模未披露。",
+      "link": "https://www.marktechpost.com/2026/10/19/inception-mercury-3-diffusion-llm/",
+      "source_file": "sources/2026-10-20_Inception Releases Mercury 3 Diffusion LLM at 1,06_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Nace AI 发布 Drex Max 多模态决策模型：智能体点击决策",
+      "source": "MarkTechPost",
+      "digest": "Nace AI 发布多模态决策模型 Drex Max，面向使用电脑与浏览器的智能体：读取文本与图像并返回校准概率，不直接生成文本，每个点击只需一次廉价、类型化的调用。在公开 Decision Index 0.3.2 上得分 67.59，较 TypeSafe 的 Jev 1.14 高 6.9 分。API 单问题最多 262144 Token（含图像），仅托管 API 提供。对 Agent 构建者，Drex Max 提供确定性的\"下一步点击\"决策能力。",
+      "link": "https://www.marktechpost.com/2026/10/19/nace-ai-drex-max-multimodal-decision-model/",
+      "source_file": "sources/2026-10-20_Meet Drex Max_ Nace AI’s Multimodal Decision Model_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI Agent 越用越贵？如何借助可观测性平衡性能、质量与成本 ｜ 技术趋势",
+      "source": "InfoQ",
+      "digest": "AI 智能体改变可观测性格局，也带来响应质量与支出新挑战：即使无错误，智能体仍可能检索到错误信息或生成低质响应，多步骤工作流更难定位质量下降与 Token 消耗源头，而遥测数据激增又抬高了保留成本。Snowflake Observe 即将推出 Agent Observability（智能体可观测性）私有预览，通过追踪交互过程并将智能体行为与成本、质量关联，提供埋点采集、指标、工具与界面，帮助团队监控、调试并改进 LLM 应用与 AI 智能体。",
+      "link": "https://www.infoq.cn/article/4FreCLUUQb4W4AXUhXo5",
+      "source_file": "sources/2026-10-20_AI Agent 越用越贵？如何借助可观测性平衡性能、质量与成本 ｜ 技术趋势_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI生成的代码看不懂就扔掉重来：一位首席架构师的 5 条 Agent 编程反常识原则",
+      "source": "InfoQ",
+      "digest": "受访首席架构师 Carlos Kelkboom 在播客中分享五条反常识的 Agent 编程原则：亲自搭建代码骨架并固定目录与函数签名；禁止主 Agent 直接改代码，充分理解需求后才启动执行 Agent；看不懂的生成代码就丢弃，执行结果隔离在 Git Worktree；把架构判断权留在人手中；让 PR 讨论与用户沟通不可替代。核心警示：软件更易生成，但\"为何做、为谁做、如何演进\"仍需人判断。",
+      "link": "https://www.infoq.cn/article/tgqMEJsqXfX6YzAcOiAR",
+      "source_file": "sources/2026-10-20_AI生成的代码看不懂就扔掉重来：一位首席架构师的 5 条 Agent 编程反常识原则_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI让软件进入“一次性消费”时代！Capital One首席软件工程师：有些代码写完就该扔",
+      "source": "51CTO技术栈",
+      "digest": "Capital One 首席软件工程师 Max Kanat-Alexander 提出\"可抛弃软件\"（Disposable Software）概念：当 AI 把代码生产成本压到极低，一次性小工具值得专门开发，而长生命周期系统仍需质量管控。判断标准不是\"AI 代码好不好\"，而是先回答——这段软件准备活多久、坏掉会伤到谁、多少人和系统依赖它、重写是否真的便宜。AI 推动软件从\"耐用资产\"走向\"按需生成、即时弃用\"。",
+      "link": "https://mp.weixin.qq.com/s/HSfL2-drX9rpFqUCz9TFPA",
+      "source_file": "sources/2026-10-20_AI让软件进入“一次性消费”时代！Capital One首席软件工程师：有些代码写完就该扔_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Anthropic几乎停招初级员工！占比一年半骤降33%：Agent工时已是员工6倍",
+      "source": "InfoQ",
+      "digest": "Anthropic 内部研究显示，自 2025 年初以来技术部门初级员工占比从 21% 降至 14%（相对降幅约 33%），新招聘中初级占比从 27% 骤降至 9%；截至 2026 年 8 月，公司 Agent 与人类工作时长比达 6:1，研究部门高达 19:1。CEO Dario Amodei 曾预测 2030 年一半入门级白领工作可能消失。数据印证：工程师代码变更次数达此前 5.1 倍，折射 AI Agent 对研发组织与人才结构的重塑。",
+      "link": "https://mp.weixin.qq.com/s/9RJjSfYuQgYYkaCWiDUkGw",
+      "source_file": "sources/2026-10-20_Anthropic几乎停招初级员工！占比一年半骤降33%：Agent工时已是员工6倍_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Codex天团深度复盘：编程顶流是如何诞生的？",
+      "source": "智东西",
+      "digest": "Every 创始人 Dan Shipper 长文复盘 OpenAI Codex 的逆袭：一年前 Codex 用户寥寥、口碑平平、团队濒临解散，如今成为 ChatGPT 桌面版底层系统、扛起 4000 万周活，CLI 下载量反超 Claude Code。关键教训包括——云端版内部好评却外部遇冷，根因是迫使外部用户整套搬开发环境上云、成本过高；产品要\"到用户所在的地方去\"，而非只在自己熟悉的环境好用；形态悬而未决时须贴近真实使用场景。",
+      "link": "https://mp.weixin.qq.com/s/6z7r8EFFNK6cFTQa4cBz0w",
+      "source_file": "sources/2026-10-20_Codex天团深度复盘：编程顶流是如何诞生的？_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Exa 3.0 搜索 API 发布：面向智能体的网页检索升级",
+      "source": "MarkTechPost",
+      "digest": "Exa 发布 3.0 网页搜索 API（面向 AI 智能体），升级更大的 embedding 模型并推出更便宜的 Exa Lite 搜索类型，Dynamic Highlights 正式可用。Exa 称在 8 项基准上领先 Perplexity、Brave 与 Parallel（基准由 Exa 自测，属自报数据）。Exa 追踪超 2 万亿 URL、服务 1000 亿页面；实用变化在成本——Lite 每 1000 次请求 4 美元。对 Agent 开发者，意味着更低价的网页检索与更稳定的结构化结果。",
+      "link": "https://www.marktechpost.com/2026/10/20/exa-3-0-search-api-lite/",
+      "source_file": "sources/2026-10-20_Exa 3.0 Search API Tops Perplexity, Brave and Para_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "国模Agent第一！MiniMax爆改Flash战力，全时段大肥鱼谷价",
+      "source": "量子位",
+      "digest": "匿名屠榜的神秘模型 Space Bunny（玉兔）被证实为 MiniMax 的 M3.1 Flash：Agents' Last Exam（ALE）得分 29.6% 居国产第一，AA 榜单 43 分；Coding、网络安全、Computer Use 均进全球第一梯队，输出最快 200+ TPS。价格极低——输入每百万 Token 1 元、输出 4 元、缓存读取 0.1 元，综合成本约为上一代 M3 的 30%，与谷期 V4.1 Flash 接近。MiniMax 凭性价比与速度切入 Agent 与推理市场。",
+      "link": "https://mp.weixin.qq.com/s/U9LetHV9_L0GO9snOXnHPQ",
+      "source_file": "sources/2026-10-20_国模Agent第一！MiniMax爆改Flash战力，全时段大肥鱼谷价_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI工程化防翻车指南",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者总结端到端 AI 交付的安全护栏实践：Agent 获得工具调用、代码执行与文件操作后，能力与风险同步上升，Harness 既是执行层也是安全边界。文章按事前（隔离、授权）、事中（循环封顶、人机分级、哨兵熔断）、事后（门禁、审计、自迭代）分层设防，将\"禁止做的\"边界落到机制而非提示词中——如澄清准入加 HITL、门禁与、Trip Wire 暴露问题、范围约束防过度重构，目标是\"模型出错也能兜住\"。",
+      "link": "https://mp.weixin.qq.com/s/5zhFeM48-ipqDyIAPvRj9A",
+      "source_file": "sources/2026-10-20_AI工程化防翻车指南_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Agent 自进化的数据底座：阿里云 SLS Session Store",
+      "source": "阿里云云原生",
+      "digest": "阿里云 SLS Session Store 将 Coding Agent 等智能体的运行记录组织为可查询、可复用的标准轨迹，为观测、数据集、LLM 评估与 RSI（递归自我改进）提供共同数据底座。围绕 RSI，系统可利用自身执行与评估反馈形成持久能力改进；一次用户请求往往包含数十轮模型与工具交互，SLS Session Store 把分散在 Trace/Log 中的信息按任务聚合、读懂并交付下游，使 Agent 自进化有迹可循。",
+      "link": "https://mp.weixin.qq.com/s/emyX6-jQAUMdYz4VuUIDRg",
+      "source_file": "sources/2026-10-20_Agent 自进化的数据底座：阿里云 SLS Session Store_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "Fast 档位如何变得更快：Harness 层的工程优化",
+      "source": "Qoder",
+      "digest": "Qoder 解析其 Fast 档位下的 Harness 工程优化：在编程任务中，用户最终要的是\"改对代码、通过验证\"的结果，而模型回答只是执行过程的一部分。Harness 负责把模型动作组织成可执行、可观察、可恢复的过程——组织每轮模型请求、管理上下文、校验并执行工具、记录结果、决定继续/结束/异常。Qoder CLI 承载 Agent 循环、上下文管理、工具调度、权限与恢复，并通过减少模型之外的等待（环境准备、读取代码、组织上下文、运行测试）来更早交付验收通过的修复。",
+      "link": "https://mp.weixin.qq.com/s/u5aEOea-QKB8-ut38gom8g",
+      "source_file": "sources/2026-10-20_Fast 档位如何变得更快：Harness 层的工程优化_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "从“提出假设”到持续试错：拆解“灵境造物”背后的 openJiuwen ScienceDiscovery",
+      "source": "CSDN",
+      "digest": "中科大等主办的智能科学家生态联盟第四届年会在合肥发布机器科学家 2.2，将大模型提假设、小模型计算求证与科研机器人实验结合。openJiuwen 社区 AI 科研工作台 ScienceDiscovery 以插件化方式为\"灵境造物\"提供探索支持：利用树搜索分配探索预算与试错机会，并为计算与实验协作提供执行与过程管理。面对有限预算，科研探索的难点在于决定下一步值得尝试什么，工作台把模型与实验设备连成持续运行的科研流程。",
+      "link": "https://mp.weixin.qq.com/s/RstoOeqFVOfAuKOrTwwVpA",
+      "source_file": "sources/2026-10-20_从“提出假设”到持续试错：拆解“灵境造物”背后的 openJiuwen ScienceDiscovery_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "从工程师到全员，从个体到组织：快手企业AI生产力实践",
+      "source": "快手技术",
+      "digest": "快手副总裁王诩在 QECon 分享两年 AI 重构研发效能、推进\"全民 AI\"并走向企业 AI 生产力（iWork）的路径：从研发工具，到全员通用 Agent，再到团队知识库、多 Agent 协作链与企业语义框架。核心判断是——AI 提效不能只停留在个体，真正跃迁来自组织协同。快手以\"CTO 效能\"机制（两周一次）固化先进能力，并自上而下推动转型，让研发效能从孤立话题变为组织级课题。",
+      "link": "https://mp.weixin.qq.com/s/Mhh3TtQ13SzBDiymrrjUng",
+      "source_file": "sources/2026-10-20_从工程师到全员，从个体到组织：快手企业AI生产力实践_快手技术.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "从日常办公积累到组织智能升级：WPS在金融行业的AI办公落地路径",
+      "source": "金融电子化",
+      "digest": "金山办公助理总裁冯文广以金融机构营销场景为例，梳理组织智能升级路径：从 Office 智能升级起步，经轻舟文档 AI 中台，升级为智能知识基座与 WPS Comate 智能体平台，最终通过 WPS 365 实现一站式 AI 协同办公。文章主张，员工熟悉的 WPS、业务系统的文档能力、文档中心沉淀资料与 WPS 365 沟通协同，都可作为下一阶段能力升级起点，让日常工作积累成为智能体高效工作的上下文工程。",
+      "link": "https://mp.weixin.qq.com/s/qZlcHufpl4wG6h01vxI8mw",
+      "source_file": "sources/2026-10-20_从日常办公积累到组织智能升级：WPS在金融行业的AI办公落地路径_金融电子化.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "刚刚，DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天",
+      "source": "InfoQ",
+      "digest": "10 月 20 日，DeepSeek 正式开源大规模云服务推理框架 DeepInfer 与生产级 Token 编解码组件 deepseek-recipe，二者已支撑 DeepSeek-V4.1-Flash 的高吞吐、低延迟线上推理。DeepInfer 集成高性能算子与深度优化推理引擎，支持分布式推理、推测解码、SWA Bounded Replay、结构化输出，可运行于英伟达与华为昇腾平台。据公布，单集群服务吞吐达 155 万亿 Token/天，按谷价整体收入约每卡每小时 38 美元；deepseek-recipe 与官方 API 对齐，方便第三方一致部署。开源仓库已公开。",
+      "link": "https://mp.weixin.qq.com/s/FYG44vrCk3r9VPQvSpPVIQ",
+      "source_file": "sources/2026-10-20_刚刚，DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "商汤大装置宣善明：Agentic时代，AI基础设施竞争转向高质量Token产能",
+      "source": "InfoQ",
+      "digest": "商汤大装置 CTO 宣善明在 CSDI Summit 指出，AI 应用从对话问答走向多 Agent 协作与长任务执行，Token 需求呈千倍级增长，而高端芯片供给受限使算力供给难以同步扩张；2026 年推理支出预计占 AI IaaS 总支出 55%、2027 年升至 59%。行业竞争关键不再只是算力规模，而是以架构创新、异构协同与资源调度，更低成本、更高效率、更稳定地持续产出高质量 Token。",
+      "link": "https://www.infoq.cn/article/VsdiWk3dM7Os0Rlizalt",
+      "source_file": "sources/2026-10-20_商汤大装置宣善明：Agentic时代，AI基础设施竞争转向高质量Token产能_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "数字员工 or 数字分身？研发端到端交付提效的实践",
+      "source": "阿里云云原生",
+      "digest": "阿里云云通信研发团队分享研发端到端交付提效实践：2024 年铺开代码补全与生成式 IDE，2025 年把规范与领域知识沉淀为\"宪法\"与 Skill，2026 年全面 Agent 化、迈向端到端交付。文章指出，编码提效不等于交付提效——需求翻译、生成代码质检与功能测试等前后环节仍由人承接时会成为瓶颈，需让 AI 干有章可循的活；数字员工/数字分身的价值在于把整条交付链路（而非仅编码）AI 化。",
+      "link": "https://mp.weixin.qq.com/s/6sO4cLsaUBZnqHKvya0Ueg",
+      "source_file": "sources/2026-10-20_数字员工 or 数字分身？研发端到端交付提效的实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "突破长文本推理瓶颈 九章云极Alaya-DFlash2助GLM-5.3解码提速3.41倍",
+      "source": "InfoQ",
+      "digest": "针对长文本推理\"输出阶段逐 Token 重算、上下文越长越贵\"的瓶颈，九章云极为智谱 GLM-5.3 打造推测解码加速方案 Alaya-DFlash2：以小草稿模型并行起草、主模型一次性验证，并用路径选择机制在长上下文保持高接受长度。评测显示，在 8×H200、单并发下解码速度约 288.2 Token/s（原生自回归 84.5），达 3.41 倍；总输出吞吐从 78.95 提升至 236.47 Token/s，兼顾交互流畅与并发承接。",
+      "link": "https://www.infoq.cn/article/mJ5udryLFwjov1pk4Dsq",
+      "source_file": "sources/2026-10-20_突破长文本推理瓶颈 九章云极Alaya-DFlash2助GLM-5.3解码提速3.41倍_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "设计师的第一个 Personal Agent，可能就是 Lovart 2.0 的 Arti 了",
+      "source": "极客公园",
+      "digest": "设计 Agent Lovart 迭代至 2.0，推出全球首个个人设计 Agent——Arti：不止生成物料，更能持续理解设计师风格（配色、已否版式），把前期调研、周期性物料等重复工作\"交代一次、按时自动做\"，推动 Personal Agent 从\"解决问题\"走向\"个性化、主动解决我的事\"。Lovart 已积累数千万专业创作者，折射 AI 设计从单次生成迈向可记忆、可协作的个人智能体。",
+      "link": "http://www.geekpark.net/news/372612",
+      "source_file": "sources/2026-10-20_设计师的第一个 Personal Agent，可能就是 Lovart 2.0 的 Arti 了_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "转卖Token",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院分析\"转卖 Token\"生意：同一模型在不同供应商处报价相差数倍，但高价未必对应更高质量与稳定性——arXiv 预印本对六个开放权重模型比较发现，某部署在知识类任务接近正常、多步推理却严重退化。文章揭示，用户选定模型投入生产后效果未必稳定，围绕\"模型调用\"已生长出复杂的 token 转卖链路，卖家赚钱逻辑各不相同，凸显 AI 基础设施供给的碎片化。",
+      "link": "https://mp.weixin.qq.com/s/yKkkCmEP3TXcMmCW39zb-w",
+      "source_file": "sources/2026-10-20_转卖Token_腾讯研究院.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "平安银行发布人工智能管理办法",
+      "source": "银行科技研究社",
+      "digest": "平安银行第十三届董事会第八次会议审议通过《平安银行人工智能管理办法》，或为上市银行首部公开披露的人工智能管理办法。据披露，其由董事会战略委员会统筹，坚持应用导向与风险导向统一，遵循\"谁使用谁负责\"、自主可控、安全发展原则，建立权责清晰、风险可控、持续迭代的治理体系；覆盖开发应用全过程，健全数据安全、算法风险、伦理审查与责任追溯机制，将 AI 风险纳入全面风险管理，并稳妥推进服务实体经济等方向的应用。",
+      "link": "https://mp.weixin.qq.com/s/703ELJ20YL7ykSGpuy6tRQ",
+      "source_file": "sources/2026-10-20_平安银行发布人工智能管理办法_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI slop 游戏充斥着 Steam 新品节",
+      "source": "Solidot",
+      "digest": "Steam 新品节于 10 月 19 日开幕，玩家发现其中充斥大量 AI slop（低质 AI 生成）游戏，让这一以挖掘独立精品著称的活动沦为廉价 AI 生成品的展示场。玩家呼吁平台方 Valve 引入一键过滤 AI 游戏的功能。同时，AI 工具降低逆向工程门槛，部分开发商因担心 DEMO 被破解克隆而减少公开试玩。事件折射出 AI 生成内容泛滥对创作生态与平台治理的冲击。",
+      "link": "https://www.solidot.org/story?sid=85667",
+      "source_file": "sources/2026-10-20_AI slop 游戏充斥着 Steam 新品节_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-20",
+      "title": "WhatsApp 帮助页面曾隐藏针对 AI 的秘密指令",
+      "source": "Solidot",
+      "digest": "《连线》发现 Meta 旗下 WhatsApp 的帮助页面曾隐藏一组对人眼不可见、但 LLM 可读取的指令，内容要求模型在用户提及删除账户、法律诉讼、数据保护法规（GDPR/LGPD/CCPA）等情形时，不得建议联系监管机构、不得引用法律文件、不得就责任发表言论。WhatsApp 称系 bug 并已移除，但互联网档案馆仍有存档。事件凸显 LLM 被悄然嵌入产品后的指令注入与问责隐患。",
+      "link": "https://www.solidot.org/story?sid=85658",
+      "source_file": "sources/2026-10-20_WhatsApp 帮助页面曾隐藏针对 AI 的秘密指令_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-19",
       "title": "Gemini 4 Argon：为您解决最棘手的问题",

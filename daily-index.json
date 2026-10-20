@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-20",
+      "weekday": "周二",
+      "stats": {
+        "国际": 10,
+        "国内": 13,
+        "同业": 1,
+        "其他": 2,
+        "total": 26
+      },
+      "summary": "Claude新模型曝光！能跳出思维定势，修Bug治标又治本/Cloudflare 发布 Clairic 结构化抽取模型（Workers AI）/国模Age..."
+    },
+    {
       "date": "2026-10-19",
       "weekday": "周一",
       "stats": {
