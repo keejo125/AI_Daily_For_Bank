@@ -4,11 +4,11 @@
       "date": "2026-10-21",
       "weekday": "周三",
       "stats": {
-        "国际": 16,
+        "国际": 15,
         "国内": 21,
         "同业": 2,
         "其他": 0,
-        "total": 39
+        "total": 38
       },
       "summary": "Cloudflare 开源面向 AI 智能体的决策模型 Clef/Google Cloud 发布 llm-d 1.0：面向 TPU 与 GPU 集群的缓存..."
     },
