@@ -1,7 +1,397 @@
 {
-  "updated_at": "2026-10-21T05:25:14.916299",
-  "total": 2898,
+  "updated_at": "2026-10-22T05:36:39.276844",
+  "total": 2937,
   "articles": [
+    {
+      "date": "2026-10-21",
+      "title": "Cloudflare 开源面向 AI 智能体的决策模型 Clef",
+      "source": "InfoQ",
+      "digest": "在近期“生日周”活动中，Cloudflare 开源了 Clef——一组开源权重的 AI 决策模型，用于在预设选项之间做选择而非生成文本。提供 270 亿参数（中位延迟 209.3ms）与 90 亿参数 Clef-Flash（中位延迟 38.8ms）两个版本，以及一个将其适配到特定决策任务的平台。Clef 是 270 亿参数多模态模型，以状态与带类型问题的 Schema 为输入，一次前向推理即返回各可选项概率，支持文本/JSON/图像/视频；相比 Typesafe 的 Jev，它多了视觉编码器且上下文窗口达 64k（Jev 为 32k）。它可驱动智能体做工单分配、升级或转人工等决策，已通过 Workers AI 与 Hugging Face 提供。社区对其“新品类”定位及公开基准的公正性存疑。",
+      "link": "https://www.infoq.cn/article/iqCrZLLizNkRTpfo2Jrb",
+      "source_file": "sources/2026-10-21_Cloudflare 开源面向 AI 智能体的决策模型 Clef_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Google Cloud 发布 llm-d 1.0：面向 TPU 与 GPU 集群的缓存感知路由",
+      "source": "MarkTechPost",
+      "digest": "Google 团队发布 llm-d 1.0，这是其分布式推理栈的首个稳定版本——一个 Kubernetes 原生的开源层，将 vLLM 或 SGLang 模型服务器编排为统一协同的资源池，面向自托管 Agent 与 RL 负载（这类场景下轮询负载均衡会失效）。llm-d 由 Red Hat、IBM、Google Cloud、CoreWeave 与 NVIDIA 于 2025 年创立，现已有超 500 名贡献者，是 CNCF Sandbox 项目（Apache 2.0）。1.0 新增多租户 QoS 流控、路由器高可用与零停机升级、会话感知路由等“day 2”能力，并支持 NVIDIA/AMD/Intel GPU 与 Google TPU。其核心是缓存感知路由：路由器追踪各副本持有的缓存前缀，按负载与预测延迟选节点；KV 缓存在显存/主机内存/SSD/Managed Lustre 间分层，Prefill 与 Decode 分离部署。官方基准：Ironwood TPU 上中位 TTFT 降低 85%+、吞吐 2.4x；17000 节点 GKE 跨 3 集群吞吐扩展 2.9x（99.9% 成功率）。",
+      "link": "https://www.marktechpost.com/2026/10/20/llm-d-1-0-open-source-distributed-inference-stack/",
+      "source_file": "sources/2026-10-21_Google Cloud Ships llm-d 1.0 With Cache-Aware Rout_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Mistral 发布 Voxtral 3：语音识别、语音合成与语音智能体 SDK",
+      "source": "MarkTechPost",
+      "digest": "Mistral AI 发布 Voxtral 3 语音模型家族及基于 LiveKit 的语音智能体 SDK，包含 3 个转录模型、1 个 TTS 模型与 1 套 SDK，均处于 Mistral API 公开预览。转录模型支持说话人分离（diarization）与上下文偏置，批处理覆盖 50 种语言；Small Transcribe 3 在 Artificial Analysis 上达 2.1% AA-WER（排名第 3），说话人分离 cpWER 18.4% 领先 Pyannote 与 MAI；实时转写以延迟换精度（240ms 下 FLEURS 35 WER 7.4%，落后于 Gemini 3.5 Realtime 的 4.2%）。TTS（Voxtral Speech 3）每百万字符 13 美元，支持情绪/节奏/重音控制与约 90ms 首音频延迟。语音智能体 SDK 将“听—推理—说话”合为一条流式管线，每轮低于 1 秒。批处理转录约 0.0035–0.004 美元/分钟，未发布开源权重。",
+      "link": "https://www.marktechpost.com/2026/10/20/mistral-voxtral-3-speech-models-voice-agent-sdk/",
+      "source_file": "sources/2026-10-21_Mistral AI Releases Voxtral 3_ Speech-to-Text, TTS_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-21",
+      "title": "17岁Kimi前研究员陈广宇被曝投奔Jeff Dean创业团队，新公司正寻求500亿美元估值",
+      "source": "InfoQ",
+      "digest": "据长期追踪硅谷 AI 人才流动的匿名账号 Arfur Grok 10月20日披露，月之暗面 Kimi 核心研发人员、17岁天才少年陈广宇（Nathan Chen）已加入 Google 前首席科学家 Jeff Dean 创办的 AI 初创公司 Discovery Loop。该公司今年8月成立，集结 Jeff Dean、Sanjay Ghemawat、Quoc Le、Oriol Vinyals 等 Google 顶尖科学家，尚未推出公开产品即被曝寻求约500亿美元估值融资（较8月100亿美元估值数周内提升4倍）。陈广宇2025年11月进入 Kimi，曾以共同一作发表《Attention Residuals》并应用于 Kimi K3 架构，10月15日宣布离职。其与 OpenAI 早期投资人 Vinod Khosla 的渊源或为入职桥梁，但入职消息目前仍停留在爆料阶段，尚未获本人或公司确认。",
+      "link": "https://www.infoq.cn/article/yH0DHL8Nil26ES43TeF1",
+      "source_file": "sources/2026-10-21_17岁Kimi前研究员陈广宇被曝投奔Jeff Dean创业团队，新公司正寻求500亿美元估值_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Anthropic几乎停招初级员工！占比一年半骤降33%：Agent工时已是员工6倍",
+      "source": "InfoQ",
+      "digest": "Anthropic 内部研究显示，自 2025 年初以来技术部门初级员工占比从 21% 降至 14%（相对降幅约 33%），新招聘中初级占比从 27% 降至 9%；截至 2026 年 8 月，公司整体 Agent 与人类工作时长比达 6:1，研究部门高达 19:1。代码合并量四个月内增长 12 倍，催生内部版本控制系统；管理与协调岗被迫亲自交付代码，“监督他人写代码”贬值。但 Anthropic 本来就几乎不招初级（工程师入职前经验中位数 12.2 年），并非 Agent 崛起后才如此。文章援引“认知公地的悲剧”与“验证纽带”警告：全行业削减入门岗位将削弱未来资深人才供给，且长期依赖 AI 会让识别其错误所需的领域经验更难积累。",
+      "link": "https://www.infoq.cn/article/bTVDaYaUJy2OvNlyuHgz",
+      "source_file": "sources/2026-10-21_Anthropic几乎停招初级员工！占比一年半骤降33%：Agent工时已是员工6倍_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "ChatGPT 广告扩展至 26 个新国家，超 10 万广告主已使用平台",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布 ChatGPT 广告业务扩展至 26 个新增国家，平台累计已有超过 10 万名广告主使用。这标志着 ChatGPT 的广告体系从早期试点走向更广泛的地域覆盖，是其商业化变现的重要一步，也为品牌在对话式界面中触达用户提供了新渠道。",
+      "link": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+      "source_file": "sources/2026-10-21_ChatGPT Ads expands to 26 new countries as over 10_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "前沿 AI 的民主化治理（二）：赋能网络防御者",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布前沿 AI 治理系列文章第二篇，主题为“赋能网络防御者”。文章探讨如何通过更民主化的治理与协同机制，让安全社区更好地借助 AI 应对日益复杂的网络威胁，强调防御方在 AI 安全治理中的主体地位。",
+      "link": "https://openai.com/index/empowering-cyber-defenders",
+      "source_file": "sources/2026-10-21_Democratic governance of frontier AI, part II_ Emp_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "我们如何构建 ChatGPT 的新型广告系统以兼顾用户信任与相关性",
+      "source": "OpenAI",
+      "digest": "OpenAI 撰文介绍 ChatGPT 新型广告系统的构建思路，强调在引入广告变现的同时必须兼顾用户信任与内容相关性。文章阐述其广告栈的设计原则，力图在商业收益与用户体验之间取得平衡。",
+      "link": "https://openai.com/index/building-chatgpt-ad-stack",
+      "source_file": "sources/2026-10-21_How we built ChatGPT’s novel ad stack for user tru_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "OpenAI 模型将登陆 Google Cloud",
+      "source": "OpenAI",
+      "digest": "OpenAI 与 Google Cloud 宣布合作，将 OpenAI 的前沿模型与 Codex 工作流接入 Gemini 的 Model Garden，并通过 Google Cloud Marketplace 向企业客户开放，扩大了 OpenAI 模型的可用渠道。",
+      "link": "https://openai.com/index/openai-models-google-cloud",
+      "source_file": "sources/2026-10-21_OpenAI models are coming to Google Cloud_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "修补星球：当智能体发现关键漏洞时的全球协同响应",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍“修补星球（Patch the Planet）”计划，描述当 AI 智能体在扫描中发现关键安全漏洞时，如何组织全球范围内的协同披露与应急修复响应机制，以负责任的方式处理高危漏洞，降低被恶意利用的风险。",
+      "link": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "source_file": "sources/2026-10-21_Patch the Planet_ global response coordination as _OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "用数千个 AI 智能体在生物数据中发掘新线索",
+      "source": "OpenAI",
+      "digest": "OpenAI 展示如何利用数千个 AI 智能体在复杂生物数据中并行挖掘新线索，体现多智能体协作在科研发现中的规模化应用。该方法有望加速生命科学领域的假设生成与实验设计，提升研究效率。",
+      "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+      "source_file": "sources/2026-10-21_Using thousands of AI agents to uncover new leads _OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "亚马逊 CTO Dr. Werner Vogels：二十余年技术实践，想与创业者分享这 4 点",
+      "source": "极客公园",
+      "digest": "在亚马逊云科技软件企业峰会创业加速营巅峰路演上，亚马逊副总裁兼 CTO Werner Vogels 博士与极客公园张鹏展开炉边对谈，分享二十年技术实践并给创业者四点建议。① 起点：二十年前因传统商业数据库无法承载海量并发而自主研发 Dynamo 等基础设施，并以“按需使用、用多少付多少”颠覆了 IT 商业模式。② 选问题：警惕只在大模型上包一层薄皮、无技术护城河的风口创业，应去解决客户正痛苦挣扎、无人解决的硬核真实痛点。③ 品味：好问题源于对痛点的极致同理心与激情（如印尼 HARA 用数字身份帮小农户获低息贷款）。④ 生存法则：安全永远是“第一要务（Job Zero）”，建议尽早采用抗量子加密；早期资源应投向 Serverless 与托管数据库而非底层运维。他还强调“你构建它，你就必须为它负责”，AI 时代形式化验证与代码审查更重要，并呼吁技术人用专长回馈社会。",
+      "link": "http://www.geekpark.net/news/372671",
+      "source_file": "sources/2026-10-21_亚马逊 CTO Dr. Werner Vogels：二十余年技术实践，想与创业者分享这 4 点_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "代码迁移准确率从 5.4% 飙至 97.9%！OpenAI 挑战 COBOL，几十年的老系统真能交给 AI 了？",
+      "source": "InfoQ",
+      "digest": "10月19日，OpenAI 发布面向“低资源编程语言”（如 COBOL、Fortran、Visual Basic、OCaml，公开训练数据稀缺）的最新研究。其设计的 MultiLangBench 要求模型用指定语言从零构建兼容 SQLite 的数据库引擎，GPT-6 Astra 在 20 种语言平均通过率 87.4%（上一代 GPT-5.6 Sol 仅 26.8%），COBOL 仍为最难（72.1%）。更受关注的是第二项 COBOL 迁移评测：用隐藏测试检查迁移前后程序可观察输出是否逐字节一致，GPT-5.6 Sol 低推理强度下准确率仅 5.4%，GPT-6.1 Sol 同强度升至 86.6%、成本还降 39%，高推理强度达 97.9%。但文章强调这仅衡量特定任务成功率，不代表银行可把核心系统直接交给 AI 重写；真实系统还有文档缺失、测试覆盖不足、并发与数据状态等难题，仍需专家审查与分阶段迁移。文章还回顾摩根士丹利 DevGen.AI 用 AI 将 900 万行遗留代码转为自然语言业务规范的实践，指出 AI 正从“理解”走向“迁移+行为一致性验证”。",
+      "link": "https://www.infoq.cn/article/LZsVYHAH1jyOtLg6Yiwk",
+      "source_file": "sources/2026-10-21_代码迁移准确率从 5.4% 飙至 97.9%！OpenAI 挑战 COBOL，几十年的老系统真能交给_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "对话亚马逊CTO：仍在招聘初级工程师，关注中国开放模型",
+      "source": "InfoQ",
+      "digest": "在深圳的一场媒体群访中，亚马逊 CTO Werner Vogels 就“AI 写代码、初级工程师怎么办”给出回答。① 招聘：亚马逊初级工程师招聘数量与过去一致，未出现紧缩；新人入组后还要学协作、读懂运行二十年的系统（如 S3）、判断哪些 AI 代码需仔细检查。② 协作仍是基本功：生成的代码需经讨论、整合、被同事接手维护，“开发者也是协作者”。③ 面对 AI 代码要判断好坏，他提出“验证债”概念，建议优先验证安全、个人身份信息等高风险部分，并欣赏有“代码之美”的优雅解法。④ 无需人人读 PhD：Agent 可承担解释与培训，资深工程师带新人读代码仍是传统有效路径。他还谈云计算按量付费改变成本讨论、企业采用 AI 要算完整收益；对中国开放模型表示肯定，特别提及 Kimi 的 Mooncake 架构“非常令人印象深刻”，并质疑对模型排名的过度关注。",
+      "link": "https://www.infoq.cn/article/XxOpQpEMZpdCCYhXxgaE",
+      "source_file": "sources/2026-10-21_对话亚马逊CTO：仍在招聘初级工程师，关注中国开放模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "开发者低估了AI的能力！Claude工程负责人：用旧方法指挥Agent，开发者们反倒成了“传送带”",
+      "source": "51CTO技术栈",
+      "digest": "曾负责 Claude.ai、Claude Code Desktop 工程的菲利克斯·里泽贝格在访谈中提醒：许多开发者虽已用上 Claude Code，却仍把一条崩溃记录复制给 Claude、修完再找下一条，他称这种状态为“Claude 的传送带”——人卡在最机械的转交环节，Agent 能力提高了反而把人留在低价值位置。他建议：把更高一层的结果直接作为任务交给模型（如让 Claude 读取全部崩溃数据自行判断哪些值得修），少替 Agent 搬东西、多设计可独立完成的闭环；不要靠“你是一位专家”这类角色扮演提示，而应提供真实工作所需的工具、数据与约束（如执行计划、慢查询日志、延迟目标、回滚 SQL）。验收上，他将生成、攻击、裁决拆给不同会话，并优先寻找“硬的外部证据”；不敢放手时先让人工与 Claude 并行跑、对比差异再逐步放权。他认为工程师评价标准正从“记住 API”转向“实际影响与系统组合能力”。",
+      "link": "https://mp.weixin.qq.com/s/5Eg3PCQ1lbUJStjJSwP0fQ",
+      "source_file": "sources/2026-10-21_开发者低估了AI的能力！Claude工程负责人：用旧方法指挥Agent，开发者们反倒成了“传送带”_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "曝高通启动全球裁员；上线 40 天，Muse 下载量突破 1000 万次；ChatGPT 上线幻灯片工具",
+      "source": "极客公园",
+      "digest": "本期极客公园早报汇总多条科技动态：① DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，已支撑 V4.1 Flash 大规模推理；② Meta 个人 Agent Muse 上线 40 天累计下载 1090 万次（美国 1020 万），留存优于 ChatGPT、Claude、Grok，成为继 Threads 后又一款快速破千万的应用；③ 高通 CEO 安蒙在内部备忘录称将在年度评估后开展以绩效为重点的全球裁员，通知 11 月起发出，主因消费电子销售低迷、存储芯片涨价，公司正向 AI 数据中心市场拓展；④ OpenAI 在 ChatGPT 上线 Slides 幻灯片工具，可基于对话/文件/大纲生成演示文稿并支持团队实时协同编辑，面向 Pro/Business/Enterprise 用户；另涉及华为引望与宁德时代合作换电车型拟 2027 上市、C919 国产发动机 CJ1000A 进入取证试飞、理想发布“连山”三电与电池终身保障、马斯克薪酬为员工中位数 250 万倍等。",
+      "link": "http://www.geekpark.net/news/372650",
+      "source_file": "sources/2026-10-21_曝高通启动全球裁员；上线 40 天，Muse 下载量突破 1000 万次；ChatGPT 上线幻灯片_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天",
+      "source": "InfoQ",
+      "digest": "10月20日，DeepSeek 宣布开源大规模云服务推理框架 DeepInfer，已用于 DeepSeek V4.1 Flash 的线上推理。该框架集成高性能算子与深度优化推理引擎，支持分布式推理、推测解码、SWA Bounded Replay、结构化输出，可运行于 NVIDIA 与华为昇腾平台。官方数据显示单集群日吞吐达 155 万亿 Token，按谷价整体收入每卡每小时 38 美元。KVCache 被做成集群级共享数据层，持久 Block KVCache 存入独立 3FS 集群（约 100 PiB SSD），Chatbot 流量 TTL 达 7 天、Agent 流量 3 天，峰值聚合读带宽 10 TiB/s；SWA 采用 Bounded Replay 仅重算最近 128 个 Token。同时开源 deepseek-recipe 做 API 协议与 Token 转换。KVCache 管理与负载均衡组件因与内部基础设施耦合较深暂未完整开源。",
+      "link": "https://www.infoq.cn/article/NBXP966Bz3eqr6Qidvaf",
+      "source_file": "sources/2026-10-21_DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-21",
+      "title": "比 Opus 5.5 便宜 88 倍！MiniMax M3.1 Flash “杀“回王座，顺手拿了个 Agent 国模第一",
+      "source": "InfoQ",
+      "digest": "10月19日，MiniMax 正式发布 M3.1 Flash。该模型在 Artificial Analysis 与 Agent 榜单中均登顶国产第一：DeepSWE v1.1 达 73.7%，OSWorld V2 61.7、ALE 29.6 位列中国模型第一（仅次于 Opus 5、GPT-5.6 Sol），BankerToolBench 76.2、CyberGym 82%、Automation-Bench 62.2。此前引发关注的匿名模型 Space Bunny 被确认为其早期版本。定价为输入 0.15 美元/百万 Token、输出 0.60 美元、缓存输入 0.015 美元，较上一代成本降约70%，输出速度超 200 TPS。文章指出，Agent 时代竞争已从单纯比拼 Token 单价，转向性能、成本与可靠性的综合较量。",
+      "link": "https://www.infoq.cn/article/7Twa7KBWIzi8JGOdVwCK",
+      "source_file": "sources/2026-10-21_比 Opus 5.5 便宜 88 倍！MiniMax M3.1 Flash “杀“回王座，顺手拿了个_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-21",
+      "title": "720P 直升 8K，解密 2026 抖音美好奇妙夜巨幕超分黑科技",
+      "source": "InfoQ",
+      "digest": "2026抖音美好奇妙夜在国家速滑馆“冰丝带”举行，20米巨幕上清晰细腻的8K画面，原始素材其实只有720P/1080P。这背后是火山引擎 AI MediaKit 面向巨幕场景的超分方案：核心是逐帧语义理解下的“生成式补全”，针对皮肤、织物、羽毛、金属等不同材质区域差异化生成原本不存在的纹理细节；同时重建边缘细节以消除放大后的接缝与轮廓发虚，并引入时序约束机制保障连续帧之间的纹理连贯、避免闪烁漂移。该方案目前已支持最高16bit全范围色深，技术上限可增强至16K/32K，此前已用于2026春晚将 Seedance 2.0 生成的720P视频增强至8K，可服务舞台、品牌发布、文旅展陈等超大屏场景。",
+      "link": "https://www.infoq.cn/article/2wtRouOh1O69dLA8f4Vm",
+      "source_file": "sources/2026-10-21_720P 直升 8K，解密 2026 抖音美好奇妙夜巨幕超分黑科技_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "AI Coding时代的柔性之美：从静态到自演化，软件研发正在重新进化",
+      "source": "CSDN",
+      "digest": "文章以奇点智能研究院《AI原生软件研发成熟度模型 AISMM 2026》白皮书为背景，提出“柔性软件（Elastic Software）”概念。从 Hermes Agent 的 Skill 自迭代，到 DeepSeek Harness（“一切皆插件”）与 Anthropic 为 Claude Code 推出的 Mods 将核心功能与 UI 也纳入运行时的自迭代，Agent 正获得修改、扩展自身的能力。柔性软件介于“发布即定型”的传统软件与“用完即弃”的即时软件之间：把确定性、强约束部分固化于稳定核心，将高频变化、个性化适配部分延迟到运行时由 Agent 绑定。文章给出三步演进路径（可被 Agent 使用→可被扩展定制→内置推理引擎成为领域 Agent），并指出软件工程需引入“绑定时机决策”、交付与验收延伸至运行时、质量保障采用“核心层确定性测试+扩展层 AgentOps”的双层模型。",
+      "link": "https://mp.weixin.qq.com/s/4ZqTZyRrqa5XBFRcoLNjYA",
+      "source_file": "sources/2026-10-21_AI Coding时代的柔性之美：从静态到自演化，软件研发正在重新进化_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "AI为什么越聊越容易犯错？Every评估负责人：旧的上下文，正在带偏你的 Agent",
+      "source": "51CTO技术栈",
+      "digest": "Every 评估负责人迈克·泰勒（Mike Taylor）撰文指出，单条对话随上下文不断累积会“带偏”Agent，他把这种现象称为 Context Rot（上下文退化）。实验显示，给 ChatGPT 加入几个“i-”命名示例后，其模仿乔布斯取名中以“i-”开头的比例从21%升至100%，说明模型会从上下文寻找模式并延续；长上下文还会淹没关键信息（斯坦福“Lost in the Middle”），且早期错误假设会污染后续任务状态（如 Gemini Plays Pokémon 误将旧版道具信息带入新任务）。他建议：跨任务切换时重开对话，将稳定项目规则留在 AGENTS.md/CLAUDE.md、当前需求写进任务简报、进度通过“交接文件”延续，避免让模型继承整段试错历史。",
+      "link": "https://mp.weixin.qq.com/s/K8t7-NeKlpcC4x6UhuHpcQ",
+      "source_file": "sources/2026-10-21_AI为什么越聊越容易犯错？Every评估负责人：旧的上下文，正在带偏你的 Agent_51CTO技术栈.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "AI开发时代，还需要跨平台框架吗？",
+      "source": "CSDN",
+      "digest": "文章探讨 AI 开发时代是否还需要跨平台框架。作者提出“Vibe 不可行系数 = 风险 × 复杂度”的判断框架：风险高、复杂度高的系统不适合纯 Vibe 开发，需人工 Review。为降低系统复杂度，应使用强约束、AI 熟悉的框架（如 TS+Vue）；在多平台场景下，跨平台框架是提升一致性的关键工具——Shopify 因 AI 降低了原生开发成本且性能更好而从 React Native 迁回原生，但国内需覆盖 Android、iOS、鸿蒙、小程序等多端，环境更复杂。文章以 7 个标准（AI 熟悉、平台覆盖、性能、生态、稳定性、动态化、验证反馈）对比 React Native、Flutter、uni-app x，认为 AI 时代理想的好框架应覆盖全平台、性能不输甚至超越原生、支持动态化，并指出 uni-app x 蒸汽模式在多项指标上接近理想状态。",
+      "link": "https://mp.weixin.qq.com/s/ATK4y7HRpO7hSY2I_I_blg",
+      "source_file": "sources/2026-10-21_AI开发时代，还需要跨平台框架吗？_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Agent as a Service：驱动 Personal Agent 与企业智能体的服务架构",
+      "source": "阿里云云原生",
+      "digest": "文章基于 AgentScope 提出“Agent as a Service”架构，以统一服务形态满足 Personal Agent 与企业智能体的共性需求：让 Agent 的身份、任务状态与长期记忆独立于单一客户端、Harness 实例和执行环境。文中区分四种构建入口（高代码框架、产品化 Harness、平台托管、云产品预制）与两种部署模式——Agent IN Sandbox（Agent 运行组件置于沙箱内）与 Sandbox as Tool（Harness 在远端、沙箱仅承接工具执行）。重点给出长工具任务的“挂起与恢复”执行协议（持久投递、去重、执行权交接），并提出四层可组合服务化边界：远端托管 Harness、本地/远端执行交接、Context 与 Memory 云端化、Brain/Hands 分离切换执行端。最终可复用同一套基础承载个人助手与企业事件驱动 Agent，并以阿里云 AgentCore 落地。",
+      "link": "https://mp.weixin.qq.com/s/u80EW2vjHx2U8x2kkMPEzw",
+      "source_file": "sources/2026-10-21_Agent as a Service：驱动 Personal Agent 与企业智能体的服务架构_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Agent 删库频频发生，几十年前就有的数据库防呆机制不管用了？",
+      "source": "InfoQ",
+      "digest": "本文整理 CMU 数据库教授、ClickHouse 研究副总裁 Andy Pavlo 在 The MAD Podcast 的访谈，剖析 Agent 时代数据库的四大变化。① Agent 删库并非新问题，而是几十年前就存在的权限与管控机制被忽视的结果，应像对待幼儿一样设置护栏、隔离生产库、用分支造沙箱，而非逐个点“批准”。② 向量数据库护城河不深（本质只是一个索引），一年内各厂商已将其标配，未来向通用系统或独立附加组件演化。③ text-to-SQL 现成方案准确率约 60%，某大银行投入数百万美元构建语义/上下文层后达 99.5%。④ AI 已能近乎零提示实现数据库系统（Opus 4 后闸门打开，超 60% 开源数据库出现 Agent commit），LLM 调参 15 分钟即达约 85% 水平。他还认为关系模型与 SQL 不会消失，图数据库、GPU 数据库前景有限。",
+      "link": "https://www.infoq.cn/article/2Z056Q54wWa6vAIQKsqJ",
+      "source_file": "sources/2026-10-21_Agent 删库频频发生，几十年前就有的数据库防呆机制不管用了？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "DeepSeek DeepInfer、PyTorch on TPUs 与 Ramp 智能体框架（TLDR AI 日报）",
+      "source": "TLDR AI",
+      "digest": "TLDR AI 日报本期精选三则行业动态：DeepSeek 推出推理框架 DeepInfer；PyTorch 宣布支持 TPU 训练，强化底层算力适配；Ramp 发布智能体（Agent）开发框架。三则分别覆盖推理性能优化、硬件适配与 Agent 工程化落地方向，反映 AI 基础设施持续升温。",
+      "link": "https://tldr.tech/ai/2026-10-21",
+      "source_file": "sources/2026-10-21_DeepSeek DeepInfer 🐋, PyTorch on TPUs ⚡, Ramp’s ag_TLDR AI.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Muse豆包遭集体“拉黑”，AI还能替我办事吗？",
+      "source": "智东西",
+      "digest": "近期个人智能体（Agent）刚爆火就撞上平台“门禁”：Meta 的 Muse（9月8日上线）遭亚马逊以“持续访问违反政策”抵制，xAI 的 Grok、OpenAI 的 Dots、Instinct 等也被亚马逊等拦截；Yelp、达美航空、eBay、摩根大通、阿迪达斯等纷纷限制 Agent 访问。国内，豆包手机助手 10月14日公告显示微信、淘宝、支付宝、美团、Kimi、DeepSeek 等 155 款 App 拒绝其自动化操作。矛盾根源是平台为维护广告曝光、数据主权与交易抽成而拦截，安全只是表层理由。Meta 选择与沃尔玛、Gap、百思买等合作定向打通，阿里千问 Go! 先在自有生态闭环；海外由 Meta、Sierra 推“个人 Agent 协议”、国内有字节 SAEP 与 Agent 互联国标，但利益分配未决。文章判断通用跨平台 Agent 短期难跑通，定向打通是当下可行形态。",
+      "link": "https://mp.weixin.qq.com/s/ToSeNgagFvYcd5fQqKidbg",
+      "source_file": "sources/2026-10-21_Muse豆包遭集体“拉黑”，AI还能替我办事吗？_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Qoder Cloud Agents：评测Loop，让 Agent 持续可靠地变好",
+      "source": "Qoder",
+      "digest": "文章指出 Agent 发布常靠“感觉还行”的高风险判断，因为 Agent 输出“答案+过程+产物+行为边界”，且带概率性，少量试跑无法证明其稳定或改动带来增益。Qoder Cloud Agents（QCA）主张建立持续运转的评测 Loop：以“考题=用例、考生=被评对象、考场=运行环境、解题过程=轨迹、答卷=回答与制品、阅卷老师=评估器、上次成绩=基线”对应，形成“发现问题→优化→回归验证”循环。其条件包括评测环境即真实现场、全程录像、高并发互不干扰、版本管理不影响线上；评估坚持“三看”（答案/过程/产物），客观题交代码、主观题交模型、实操题交 Agent 验货，并多次评估用 pass@k 衡量、结果封存防泄漏。优化须在克隆副本上做回归，仅改错题不算进步、整体不退步才算验证，线上真实问题再回流为评测集沉淀为业务资产。",
+      "link": "https://mp.weixin.qq.com/s/ScFF-weoB_PduDsDMNKghg",
+      "source_file": "sources/2026-10-21_Qoder Cloud Agents：评测Loop，让 Agent 持续可靠地变好_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Token三次改名背后，藏着 AI 经济的草蛇灰线",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院副院长杜晓宇为《一本书读懂词元经济》作序，梳理 Token 二十多年里三次身份转换——支付结算时代的“令牌”、区块链时代的“通证”、大模型时代的“词元”，并指出“词元经济”是以词元（大模型处理信息最小单位）为计量基础的智力服务新业态。他认为词元让“智力”首次有了标准化计量单位（类似电力“千瓦时”），但作为价值尺度还需乘以质量系数。词元经济因 Agent 而兴：模型竞争重心从“谁的模型强”转向“谁能把模型用好”，Agent 把词元消耗从对话小尺度跳到驱动业务大尺度。他提醒当前仍处“Agent+”早期，且存在计价结构性问题（按量计费算成本不算价值、订阅打包易亏损），呼吁以“每单位词元产出的经济价值”衡量成色，并以“人的AI次方 + 人×AI + 人+AI”描述人与 AI 协作关系。",
+      "link": "https://mp.weixin.qq.com/s/_rrSau-_yBWtWmmJx7ZinA",
+      "source_file": "sources/2026-10-21_Token三次改名背后，藏着 AI 经济的草蛇灰线_腾讯研究院.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "从试点到规模化落地：制造业领导者如何推动 AI 应用并赢得高管层支持 ｜ 技术趋势",
+      "source": "InfoQ",
+      "digest": "本文基于 Snowflake 电子书《迈入智能体 AI 时代：制造业领导者实践指南》，探讨制造企业如何从试点跨越到规模化自主运营。文章指出这道鸿沟并非技术问题——《全球 AI 与数据趋势调查》覆盖 2050 位高管（含 288 位制造业高管），52% 的制造企业已在核心供应链部署实际运行的 AI；停滞多因未就业务成果、数据就绪与投资影响达成一致（如 Penske Logistics 因试点前未定义成功标准而停滞）。治理应被视为加速器：制造业围绕合规与零失误的文化，在统一受治理数据基础之上反而成为创新通行证（如 Wolfspeed 用 AI 智能体将两小时故障诊断缩至两分钟，且原生集成安全操作规程）。文章给出四阶段路线图：数据资产现代化→统一数据 AI 就绪→构建边界明确的企业级智能体→多智能体编排规模化；并建议以“运营问题”而非“技术本身”向高管提出 AI 投资提案（如用恢复生产吞吐量挽回的金额量化收益）。",
+      "link": "https://www.infoq.cn/article/Ms3bMt5OcUyYMHwfaXgM",
+      "source_file": "sources/2026-10-21_从试点到规模化落地：制造业领导者如何推动 AI 应用并赢得高管层支持 ｜ 技术趋势_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "北大博士、零一万物联创黄文灏加入字节 Seed 两年后离职，下一步或创业",
+      "source": "InfoQ",
+      "digest": "据多家媒体报道，字节 Seed 团队模型评测负责人黄文灏已于近日离职，下一步可能创业，具体方向未明。黄文灏为北大计算机博士，曾任职微软亚研、智源研究院（AI for Life Science），2023 年以联创身份加入零一万物任算法副总裁，参与 Yi 系列训练；2024 年 8 月加入字节 Seed，后转向模型评测。其离职时点恰逢 Seed 重大重组：10月13日字节宣布成立“Seed Model-Alignment & Preparedness”部门（严林负责、汇报吴永辉），将安全与对齐嵌入预训练、SFT、RL 等多阶段，而非模型完成后再介入。文章梳理了 Seed 持续的人才流动——过去一年近 70 名技术人才离职（近 30 人去腾讯），顾全全（创立 Geodesic Intelligence）、冯佳时等也先后离开，并指出大厂 AI 研究同时面临“探索上限”与“业务交付”两套节奏的张力，人才竞争已从招聘转向组织能力竞争。",
+      "link": "https://www.infoq.cn/article/Xkjg7bLE3o6l9qCidVX0",
+      "source_file": "sources/2026-10-21_北大博士、零一万物联创黄文灏加入字节 Seed 两年后离职，下一步或创业_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "开发者别再自建搜索了：腾讯把「AI搜索」开放了！",
+      "source": "CSDN",
+      "digest": "10月20日，腾讯将“元宝搜索”以 API 形式在腾讯云对外开放，定义为一次“能力解耦”——从元宝 App 的隐藏功能变为可被任意应用调用的独立服务。文章指出大模型从“能对话”走到“能办事”后，所需不再是网页搜索框，而是干净、实时、带权威度标注的事实；传统搜索存在数据质量差（SEO 农场、信源无防御）、工程成本极高、语义理解不足、企业内容孤岛四大痛点。元宝搜索已在腾讯内部日均调用数亿次、支撑 WorkBuddy、ima、金融科技等 50+ 业务，技术上采用 RSI 式数据飞轮自进化、三阶段排序训练+Gist Token 压缩（省约 30% 推理成本）、倒排与向量融合索引（召回率 94%+、检索<10ms、1500亿+向量规模），内容侧用多源交叉验证与权威信源优先从源头挡谣言，旗舰版直接返回“结果权威度等级”字段。开发者可通过 API、Skill、MCP 三种方式接入。",
+      "link": "https://mp.weixin.qq.com/s/5Ko_DD5X1OHGO6jZKg2qXA",
+      "source_file": "sources/2026-10-21_开发者别再自建搜索了：腾讯把「AI搜索」开放了！_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "推动 AI 规模化落地的三大经验：来自公共部门领导者的实践洞察 ｜ 技术趋势",
+      "source": "InfoQ",
+      "digest": "本文整理 Snowflake Summit 上公共部门领导者的分享，提出弥合 AI 价值差距的三条经验。经验一：先构建坚实的数据基础——佛罗里达大学仅 10%–15% 数据完成语义定义，借助 NaviGator AI 与 Snowflake 大规模生成自然语言定义（人工需 83 周），并据此构建对话式分析产品 Navigator Insights。经验二：从孤立试点迈向企业级智能——Leidos 首席数据官建议先问“你究竟想解决什么问题”，区分只需自动化/流程再造还是真需智能体，避免为工具而工具；OpenAI 政府业务副总裁强调价值在于将前沿模型与企业数据、流程、治理集成。经验三：让 AI 与机构使命成果对齐而非只盯技术指标——通用动力用 Snowflake Cortex AI 零样本提示处理供应商 PDF，准确率从 50% 升至 85%，衡量重点是业务流程的速度、准确与成本改善。文章总结：真正的成效始于模型部署之前的数据基础、治理与组织目标协同。",
+      "link": "https://www.infoq.cn/article/GVcxHscrQqv9HXGRowJh",
+      "source_file": "sources/2026-10-21_推动 AI 规模化落地的三大经验：来自公共部门领导者的实践洞察 ｜ 技术趋势_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "模型好选，搜索难做：一个投研Agent的两年开发历程",
+      "source": "InfoQ",
+      "digest": "付费投研简报作者陈万维护了两年的 cleaner.py（网页清洗）和 sites.yaml（387个信源白名单）两份文件，最终在接入腾讯元宝搜索 API 后被彻底删除。文章以他的实践为例，揭示 Agent 开发中“模型好选、搜索难做”的现实：清洗网页、筛选信源、解析发布时间、对接多接口，这些基础工作往往消耗开发者大量精力。元宝搜索（SearchPro）提供 Mode/Industry/Site 检索来源参数、Freshness 时间参数、score 与 authority_level 双信号评分，以及 passage/content 两类摘要，并支持 API、MCP、Skill 三种接入方式。其定位是被调用方，不做独立入口，力求成为中文 Agent 的“水电煤”式基础设施。",
+      "link": "https://mp.weixin.qq.com/s/7J2EcX4yGcNTmvJMYBhTbw",
+      "source_file": "sources/2026-10-21_模型好选，搜索难做：一个投研Agent的两年开发历程_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "百度世界 2026 前瞻：10+ 重磅分论坛，全面解码 AI 时代的智能组织进化路径",
+      "source": "InfoQ",
+      "digest": "百度世界2026大会将于11月12日举行，聚焦“智能组织”议题。官方披露设10+场分论坛，围绕“AI驱动组织跃迁”“AI办公与知识工作”“技术、行业与生态”三大方向展开，涵盖组织进化（岗位边界重构、组织 looping 飞轮、智能体安全）、Agent规模化落地、超级个体、数字人、具身智能、RSI、AI4S 等话题，展现智能组织从个人提效走向组织增智、从组织实践走向行业落地的路径。大会设1场主论坛、30余场公开课及6000平米展区，李彦宏将发表主题演讲，百度还将发布“芯云模体”全栈AI最新进展。",
+      "link": "https://www.infoq.cn/article/eHF7Lx021FmxkbgikWLo",
+      "source_file": "sources/2026-10-21_百度世界 2026 前瞻：10+ 重磅分论坛，全面解码 AI 时代的智能组织进化路径_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "给AI写了800行规则，它反而更不听话了",
+      "source": "腾讯云开发者",
+      "digest": "作者团队分享用 AI 写业务代码的工程实践。最初写了一份500多行的流程 Skill，为防 AI 跳步又加五条“铁律”、长到800多行，结果规则越多 AI 越不听话——上下文被稀释，关键约束反被埋没。团队改用“流程、知识库、工具”三根支柱：x-flow 流水线把17个阶段拆给7组子 Agent，设 HALT 确认点，规则按阶段加载；三层知识库（代码图谱、模块文档、记忆）让经验可沉淀可淘汰；Cocos MCP 等工具把 AI 看不见的真实环境接进来。核心结论是：让 AI 可控不靠堆规则，而靠让它在每一步只看到该看的东西。",
+      "link": "https://mp.weixin.qq.com/s/LDdho64V5XZMAvxEGYlNNg",
+      "source_file": "sources/2026-10-21_给AI写了800行规则，它反而更不听话了_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "非算法工程师也能看懂，推理框架的来龙去脉",
+      "source": "阿里云云原生",
+      "digest": "本文面向非算法工程师，通俗讲解推理框架。推理框架负责把训练好的模型部署到硬件、接收请求、组织计算并返回结果，追求“快、多、省、稳、准”五目标。文章厘清推理引擎/框架/服务/MaaS 的差异，解析 Token、Prefill/Decode、KV Cache、TTFT/TBT/吞吐、MoE 等核心概念；梳理 vLLM、SGLang、llama.cpp、Ollama、Dynamo、llm-d、Mooncake、DeepInfer 等主流开源框架脉络；并跟一个请求走完接入、调度、执行、缓存、集群、采样全流程。文章强调，新模型需框架专门适配，硬件多元化也让推理框架作为模型与芯片适配层的价值日益凸显。",
+      "link": "https://mp.weixin.qq.com/s/WP7gqwg1w0JHtgKWzbpO4w",
+      "source_file": "sources/2026-10-21_非算法工程师也能看懂，推理框架的来龙去脉_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "面向 Qwen 系列模型线性注意力的高性能优化实践",
+      "source": "InfoQ",
+      "digest": "阿里巴巴 Qwen 团队算法工程师章程瑞东在 AICon 2026 分享面向 GDN（Gated Delta Network）线性注意力的高性能 GPU 算子库 FlashQLA。线性注意力可将复杂度从 O(N²d) 降至 O(Nd²)，但 FLA 的 Triton 实现存在并行度不足、状态传递开销大、SFU 负载重等痛点。FlashQLA 的核心优化包括：卡内序列并行（矫正矩阵，计算换访存）、利用 GDN 滑动窗口性质、提取大 Gamma 降低 SFU、矩阵连乘顺序改写，以及四个 warp group 的 warp specialization 乒乓流水线。实测前向加速2-3倍、反向约2倍，已成为 FLA 官方后端，支持 Hopper 与 Blackwell 全家。",
+      "link": "https://mp.weixin.qq.com/s/703b47tHESjmfRuRSoYASg",
+      "source_file": "sources/2026-10-21_面向 Qwen 系列模型线性注意力的高性能优化实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "数据和模型驱动银行业务敏捷化转型的可行性建议",
+      "source": "金融电子化",
+      "digest": "贵州农村商业联合银行李立志撰文，分析银行业数字化转型“系统烟囱林立、数据孤岛丛生”、仍以瀑布式开发难以敏捷的根源：① 信息科技的“稳态”（核心稳定、合规）与数字化转型“敏态”（快速响应、试错）在管理、资源、架构、合规四层面的冲突；② 数字化转型主要是组织问题而非技术问题，端到端负责机制缺失导致流程断裂、责任不清、配置低效；③ 传统以部门为单元的考核激励与跨部门协同形成结构性冲突。破局提出三条路径：以数据驱动业务敏捷（开放企业级离线分析库、配置专用算力、建数据决策平台，将建模迭代从按月升级为按周）；以端到端组织协同让流程“顺”起来（设数据官、建模团队嵌入业务、下放决策权限，协同效率提升 50%）；以“揭榜挂帅”激活人才（跨部门绩效绑定端到端价值）。并建议“试点先行、分层推进、科技支撑”落地，优先在普惠小微精准营销、线上信贷智能风控场景突破。",
+      "link": "https://mp.weixin.qq.com/s/f2-gY8qWwkdRW1JL_RZoFA",
+      "source_file": "sources/2026-10-21_数据和模型驱动银行业务敏捷化转型的可行性建议_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-21",
+      "title": "金融智能分析本体：四大核心要素与五条建设路线",
+      "source": "InfoQ",
+      "digest": "本文面向金融问数场景，系统讲解“本体”——把业务知识翻译成机器可校验结构化语言的方法。作者指出，无论采用何种方法论，本体内核均由四要素构成：概念（业务对象）、属性（对象特征）、关系（对象间关联）、约束/规则（业务校验与推导）。行业五条建设路线各有侧重：RDF/OWL/SPARQL、FIBO/BFO/DOLCE 重语义精度，TOGAF/ArchiMate、User Story/BPMN 重落地治理，Palantir Foundry/AIP 打包为商业产品。作者建议以业务驱动为主、架构驱动为辅，并以“AI能不能听懂、系统能不能执行、本体能不能保鲜”三问作为工程实用性试金石。",
+      "link": "https://www.infoq.cn/article/Be94YQbRtbWj3pzZ9rSh",
+      "source_file": "sources/2026-10-21_金融智能分析本体：四大核心要素与五条建设路线_InfoQ.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-20",
       "title": "Claude新模型曝光！能跳出思维定势，修Bug治标又治本",
