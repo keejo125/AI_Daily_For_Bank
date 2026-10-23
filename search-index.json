@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T05:19:03.953726",
-  "total": 2972,
+  "updated_at": "2026-10-23T08:37:59.031597",
+  "total": 2968,
   "articles": [
     {
       "date": "2026-10-22",
@@ -144,6 +144,16 @@
     },
     {
       "date": "2026-10-22",
+      "title": "死对头牵手！GPT住进Gemini家，OpenAI半年集齐三大云",
+      "source": "量子位",
+      "digest": "OpenAI与Google Cloud官宣合作：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna及Codex上线Google Cloud模型花园，企业可直接经Google Cloud API调用，费用并入同一账单并沿用既有数据治理与安全体系；未来还将接入Google Antigravity与Gemini Agent。继4月Azure独家绑定松动、4月28日进AWS后，OpenAI半年内集齐美国三大云厂商。\n文章分析：OpenAI图企业客户，顺云厂商既有关系铺模型；Google Cloud图平台生意，守住Marketplace与基础设施抽成；企业图省事，可同云内按能力/成本切模型。路透社概括为超大规模云厂商正成为前沿模型实验室最重要商业分销渠道，模型公司造货、云厂商握客户与结算抽成。",
+      "link": "https://mp.weixin.qq.com/s/8uKp8ratgarg9OonlbffFg",
+      "source_file": "sources/2026-10-22_死对头牵手！GPT住进Gemini家，OpenAI半年集齐三大云_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-22",
       "title": "被迫下场，Anthropic 推出个人 AI 助理 Claude Duet",
       "source": "极客公园",
       "digest": "10 月 21 日，Anthropic 推出个人 AI 助理 Claude Duet（基于 Claude Opus 5.5），加入 Meta Muse、OpenAI Dots、xAI Grok Bot 的“全天候主动型 AI 助理”大战。Duet 主打克制：每隔几小时巡检已连接账户、主动汇总紧要事项，但发消息、付款、签文件、删除都必须用户批准，证券与转账即便授权也不做。\n\n文章对比四家取向：Duet 几乎唯一放弃生活化叙事，锁定专业人士与小老板，用敏感信息分类器换取商业用户信任。但引用 Claire Vo 等人的体验指出“个人 Agent 疲劳”——独立 App 审批本身成了待办，且延迟高、无桌面端。Duet 是主动型智能体走向生产力场景的认真尝试，但克制能否换来习惯仍是未知数。",
@@ -254,16 +264,6 @@
     },
     {
       "date": "2026-10-22",
-      "title": "AI 漫剧越做越快，赚钱却没那么容易了",
-      "source": "极客公园",
-      "digest": "在阅文创作大会上，阅文发布 AI 动画项目并将 DramaBuddy 升级为 OPC 一站式平台。但一线从业者感受到的是另一番景象：AI 漫剧成本一年降 60%（80 分钟作品从约 10 万降至 4 万），人效涨数倍，可产能暴涨并未带来营收同步增长——月产两三百部、国内月营收仍约两千万，Token 成本已占一半。\n\n行业正从机构主导转向 OPC 个体创作者（阅文已签 5000 多个），但酱油判断 2026 年后中国或不再有传统 AI 漫剧机构。内卷也蔓延海外（TK 月上新从不到千部冲到二十万部，分成越跌越低）。文章还提出隐忧：产能爆炸、爆款频出，反而让漫剧难再沉淀出经典 IP，有天赋的创作者越来越不值钱。",
-      "link": "http://www.geekpark.net/news/372746",
-      "source_file": "sources/2026-10-22_AI 漫剧越做越快，赚钱却没那么容易了_极客公园.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
       "title": "Agent越能干，工程越要能兜底",
       "source": "软件工程3.0时代",
       "digest": "文章指出2026年「智能体元年」的真正分水岭不在「生成」，而在Agentic工程：Agent被造出后能否被管住、能否托管上生产。结构性落差明显——AI写代码快约6倍，团队吞吐量仅快约1.3倍；某大型科技公司把20万行Agent框架交Agent优化，11小时提出6方案仅2个安全可合入。真正瓶颈在隔离、权限、审计、可观测性等工具层成熟度，而非模型智能。\n作者提出Harness（确定性控制面）概念，套在概率性智能体外，让代码生成、补全、审查、验证形成可控闭环。文章认为模型决定Agent能做什么，工程决定其产出能否留下。文末推广11月20—21日深圳第11届AI+研发数字峰会（AiDD），聚焦Coding Agent Harness、Agentic研发流程、智能体评测等六条技术路线。",
@@ -319,46 +319,6 @@
       "digest": "王兴兴在宇树科技十周年暨世界物理 AI 大会上反复劝人“相信 AI”，并反思自己“相信得还不够”。他判断具身智能的“ChatGPT 时刻”已从“快则 2-3 年、慢则 5-10 年”压缩到“1-2 年”，并押注明年 GPT-7 可能打穿具身智能问题。\n\n战略上，宇树把硬件大规模制造能力排在第一位，目标年产千万台机器人；模型能力上采取“自进化”循环，并开放与国内外大模型公司合作（现场 demo 将 GPT-6 接入机器人零训练完成洗笔、落子）。文章认为，对机器人公司而言“相信 AI”是整套战略成立的前提：基础模型越强越便宜，宇树的硬件规模优势越早兑现。",
       "link": "http://www.geekpark.net/news/372759",
       "source_file": "sources/2026-10-22_宇树 10 周年，王兴兴：我劝你相信 AI_极客公园.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
-      "title": "我用 iPhone Duo 刷小红书、淘宝、飞书，发现作用不只是装「阔」",
-      "source": "极客公园",
-      "digest": "文章实测了 iPhone Duo 折叠屏在淘宝、高德、小红书、飞书、WPS、XMind、腾讯视频、NBA 游戏等 8 个适配 App 上的体验。核心结论是 Duo 与直板 iPhone 的差异不在合上时，而在三种用法：完全展开分两栏、半折立在桌上、两个 App 并排。\n\n具体来看，淘宝把图文拆成左右两栏并灰度测试 AI 试穿/试妆；高德利用双视野做车道级导航与地图同屏；飞书、WPS 把“看”与“聊/改”并排；腾讯视频和小红书在半折态让视频在上、操作在下。文章认为，iOS 27 开放铰链角度后，App 正重新思考大屏该怎么用，折叠屏竞争将不止于屏幕大小。",
-      "link": "http://www.geekpark.net/news/372710",
-      "source_file": "sources/2026-10-22_我用 iPhone Duo 刷小红书、淘宝、飞书，发现作用不只是装「阔」_极客公园.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
-      "title": "死对头牵手！GPT住进Gemini家，OpenAI半年集齐三大云",
-      "source": "量子位",
-      "digest": "OpenAI与Google Cloud官宣合作：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna及Codex上线Google Cloud模型花园，企业可直接经Google Cloud API调用，费用并入同一账单并沿用既有数据治理与安全体系；未来还将接入Google Antigravity与Gemini Agent。继4月Azure独家绑定松动、4月28日进AWS后，OpenAI半年内集齐美国三大云厂商。\n文章分析：OpenAI图企业客户，顺云厂商既有关系铺模型；Google Cloud图平台生意，守住Marketplace与基础设施抽成；企业图省事，可同云内按能力/成本切模型。路透社概括为超大规模云厂商正成为前沿模型实验室最重要商业分销渠道，模型公司造货、云厂商握客户与结算抽成。",
-      "link": "https://mp.weixin.qq.com/s/8uKp8ratgarg9OonlbffFg",
-      "source_file": "sources/2026-10-22_死对头牵手！GPT住进Gemini家，OpenAI半年集齐三大云_量子位.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
-      "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
-      "source": "量子位",
-      "digest": "特斯拉发布第三季度财报：全球交付 48.65 万辆、汽车业务毛利率回升至 18.5%，但营业利润同比大跌 56% 至 7.18 亿美元、营业利润率降至 2.6%，净利下滑主因研发费用同比大增约 69% 至 27.61 亿美元及费用端扩张，市值一夜蒸发超 680 亿美元。FSD 全球活跃付费用户达 174 万（同比增 67%，订阅占比首超 50%），其 ARR 或近 10 亿美元。马斯克透露 Robotaxi 累计无人监督里程近 200 万英里、Cybercab 车队月增约 10 倍，Optimus 已启动早期生产但大规模交付预计 2027 年底，并计划建设自研晶圆厂与 Terafab 芯片项目。",
-      "link": "https://www.qbitai.com/2026/10/504841.html",
-      "source_file": "sources/2026-10-22_特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先_量子位.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
-      "title": "谁在给OpenAI供应具身数据？",
-      "source": "量子位",
-      "digest": "文章追踪为 OpenAI 等头部 Physical AI 玩家供应具身数据的供应商 Maxinsights——一家成立两三年的硅谷初创，已向客户交付超 200 万小时第一人称（Egocentric）操作数据，月采集达 45 万小时，覆盖全球 2000 多个真实环境与 5 万余场景，客户包括 Google DeepMind、Figure、Dyna Robotics、Genesis AI 等。其 2026 年 Q3 Bookings 预计环比增 48%，ARR 连续多月接近 1 亿美元，标志进入规模化扩张。文章分析其“数据飞轮”商业模式：从按需交付升级为与顶尖模型团队共同定义下一代数据，并自研 MaxSLAM 等空间感知大模型，成为 Physical AI 数据与基础设施赛道的头部供应商。",
-      "link": "https://www.qbitai.com/2026/10/504800.html",
-      "source_file": "sources/2026-10-22_谁在给OpenAI供应具身数据？_量子位.md",
       "category": "其他",
       "is_model_related": false
     },
