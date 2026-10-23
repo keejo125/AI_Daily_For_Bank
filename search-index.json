@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T08:37:59.031597",
-  "total": 2968,
+  "updated_at": "2026-10-23T08:53:44.698104",
+  "total": 2967,
   "articles": [
     {
       "date": "2026-10-22",
@@ -269,16 +269,6 @@
       "digest": "文章指出2026年「智能体元年」的真正分水岭不在「生成」，而在Agentic工程：Agent被造出后能否被管住、能否托管上生产。结构性落差明显——AI写代码快约6倍，团队吞吐量仅快约1.3倍；某大型科技公司把20万行Agent框架交Agent优化，11小时提出6方案仅2个安全可合入。真正瓶颈在隔离、权限、审计、可观测性等工具层成熟度，而非模型智能。\n作者提出Harness（确定性控制面）概念，套在概率性智能体外，让代码生成、补全、审查、验证形成可控闭环。文章认为模型决定Agent能做什么，工程决定其产出能否留下。文末推广11月20—21日深圳第11届AI+研发数字峰会（AiDD），聚焦Coding Agent Harness、Agentic研发流程、智能体评测等六条技术路线。",
       "link": "https://mp.weixin.qq.com/s/tH_Dm8PW84_g8kjj0wwqdA",
       "source_file": "sources/2026-10-22_Agent越能干，工程越要能兜底_软件工程3.0时代.md",
-      "category": "其他",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-10-22",
-      "title": "超越树木覆盖：绘制全球森林类型地图",
-      "source": "Google DeepMind",
-      "digest": "Google DeepMind 与 Google Research 联合 WRI、IIASA 发布 Forest Typology (ForTy) 2020 全球地图，以 10 米分辨率将每片土地分为原生林、天然再生林、人工林、种植园林、树木作物与农林业、其他土地六类，并附带 2017-2025 年时间序列，显示森林如何逐年变化及被何种用地替代。\n\n该地图基于约 170 万标注样本训练，关键输入为 AlphaEarth Foundations 的卫星观测嵌入，能识别种植模式、生长周期等细微差异；在 9000 多个随机站点验证中，森林类型识别准确率 90%、林与非林 95%，优于其他全球森林图。ForTy 以概率分数输出，可适配 EU 毁林法规等场景，现已在 Google Earth Engine 开放，用于构建无毁林供应链与森林金融。",
-      "link": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-      "source_file": "sources/2026-10-22_Beyond tree cover_ mapping the world’s forest type_Google DeepMind.md",
       "category": "其他",
       "is_model_related": false
     },
