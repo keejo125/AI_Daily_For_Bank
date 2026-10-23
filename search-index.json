@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-10-23T08:53:44.698104",
-  "total": 2967,
+  "updated_at": "2026-10-24T05:21:45.823670",
+  "total": 2997,
   "articles": [
+    {
+      "date": "2026-10-23",
+      "title": "Cohere发布Rerank 5重排序模型",
+      "source": "MarkTechPost",
+      "digest": "Cohere 发布重排序模型家族 Rerank 5（Pro 与 Fast 两档），在检索结果送入 LLM 前重排；新增 Context Focus（返回文档内相关段落）与校准相关性分数两项能力，面向 RAG 与 Agent 构建者「向 LLM 发送更少更好的 Token」，支持托管、Foundry、SageMaker 及私有 VPC/本地部署。",
+      "link": "https://www.marktechpost.com/2026/10/22/cohere-rerank-5-context-focus/",
+      "source_file": "sources/2026-10-23_Cohere Releases Rerank 5 With Passage-Level Contex_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "上下文语言模型：通过自主管理上下文提升性能、降低计算成本",
+      "source": "InfoQ",
+      "digest": "Meta、MIT 与华盛顿大学提出上下文语言模型（CLM），让 LLM 自主管理和编辑自身上下文：将上下文视为可无限更新的文件，模型可改写历史消息、保留事实、删除无关信息并习得专属管理策略；零样本/上下文学习/强化学习三种方式均显著提升性能与计算效率。",
+      "link": "https://www.infoq.cn/article/Pwu4FNskSB2cbKV9BZKq",
+      "source_file": "sources/2026-10-23_上下文语言模型：通过自主管理上下文提升性能、降低计算成本_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "AI Agent 正在改写 CPU 的价值：当 Token 变成行动，算力竞争不再只是拼 GPU",
+      "source": "InfoQ",
+      "digest": "随着 AI Agent 从问答走向软件开发与企业自动化，CPU 在 AI 基础设施中的角色被重新审视。Arm 提出将工具调用、任务编排、端到端执行纳入 CPU 性能评价，并与富士通、Meta、OpenAI 等探索；Agent 场景下基础设施需在「模型思考」之外支撑「行动执行」，数据中心算力分工面临调整。",
+      "link": "https://www.infoq.cn/article/AkDgwN6h72cqUOJ35Zok",
+      "source_file": "sources/2026-10-23_AI Agent 正在改写 CPU 的价值：当 Token 变成行动，算力竞争不再只是拼 GPU_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Google Cloud发布Agent Compute Engine：每智能体独立微虚拟机",
+      "source": "MarkTechPost",
+      "digest": "Google Cloud 发布面向 AI 智能体的计算服务 Agent Compute Engine，为每个 Agent 会话提供硬件隔离的微虚拟机（microVM），沙箱零凭证，已支撑 Gemini 作为工作 Agent。该服务于 AGNTCon+MCPCon 亮相，客户预览将在未来数月开放，开源版 Agent Substrate 可跑在任何 K8s 集群。",
+      "link": "https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/",
+      "source_file": "sources/2026-10-23_Google Cloud Launches Agent Compute Engine_ A Micr_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Liquid AI发布RIPL实时推理引擎（sub-50ms）",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI 发布低延迟推理引擎 RIPL（Real-time Inference Pipeline），在实时请求路径中服务 Liquid 基础模型（LFM2.5，230M–2.6B 参数），端到端响应低于 50ms 且峰值负载下延迟稳定；官方测试称 p95 延迟较 vLLM 上的 Qwen3.5 低 5.6–28.4 倍。",
+      "link": "https://www.marktechpost.com/2026/10/22/liquid-ai-ripl-real-time-inference-engine/",
+      "source_file": "sources/2026-10-23_Liquid AI Launches RIPL, a Real-Time Inference Eng_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "OpenAI与波兰NASK合作推进AI安全",
+      "source": "OpenAI",
+      "digest": "OpenAI 与波兰研究与教育网 NASK 达成合作，围绕 AI 安全、安全与技术研究展开协作，目的是强化防护机制、支持更具韧性的数字生态。",
+      "link": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+      "source_file": "sources/2026-10-23_OpenAI and Poland’s NASK partner to advance AI saf_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "OpenClaw 作者称他上个月花掉了千万美元的 Tokens",
+      "source": "Solidot",
+      "digest": "OpenAI 技术成员、OpenClaw 作者 Peter Steinberger 在 Cloudflare Connect 2026 上透露，上月运行 AI 工作负载消耗约 1000 万美元 Token（由投资人承担），称拥有近乎无限的 Token 预算，并展望人人都将拥有持续运行、能预判需求的个人智能体。",
+      "link": "https://www.solidot.org/story?sid=85682",
+      "source_file": "sources/2026-10-23_OpenClaw 作者称他上个月花掉了千万美元的 Tokens_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "PostgreSQL 19 发不出来？AI“找茬”太快，人类修Bug的速度跟不上了",
+      "source": "InfoQ",
+      "digest": "PostgreSQL 19 因修复量大推迟至 11 月 19 日并增加 RC2，约 8–10 项功能在 Beta 阶段撤回。核心提交者解释关键变量是大模型辅助的代码审查与模糊测试——并非 vibe coding 引入缺陷，而是 AI 工具重新审查早年按传统流程编写、此前未被发现的代码，把长尾边缘问题提前翻出。",
+      "link": "https://www.infoq.cn/article/Q6mgHWCSqV6KeZzee3NT",
+      "source_file": "sources/2026-10-23_PostgreSQL 19 发不出来？AI“找茬”太快，人类修Bug的速度跟不上了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "OpenAI强化前沿模型训练与评测安全隔离",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布文章，介绍其如何加强前沿模型训练与评测环节的 containment（安全隔离）：采用离线环境并执行高强度算力红队测试，以降低模型权重与训练基础设施被未授权访问或滥用的风险。",
+      "link": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "source_file": "sources/2026-10-23_Securing our frontier model training environment_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "TinyFish拆解生产级Agent搜索架构",
+      "source": "MarkTechPost",
+      "digest": "AI 搜索智能体在演示中可用、生产负载下却常因检索证据不全、重试无效动作、超时超预算而失败。TinyFish 发布两份技术指南，定义生产级 Agentic Search 架构，并分享构建 deep research 系统的工程经验：规划检索、评估证据、处理失败、划分模型推理与确定性执行边界。",
+      "link": "https://www.marktechpost.com/2026/10/23/tinyfish-agentic-search-architecture-deep-research/",
+      "source_file": "sources/2026-10-23_TinyFish Breaks Down Agentic Search Architecture f_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "You.com发布推理路由器：12个开放权重模型与99.9%可用性SLA",
+      "source": "MarkTechPost",
+      "digest": "You.com 推出托管推理 API Inference Router，兼容 OpenAI 协议，在 12 个在线开放权重模型间路由（GPT-OSS 120B、Kimi K3、Qwen3.8 Max 等），提供 99.9% 可用性 SLA、零数据留存、100% 美国托管与服务器端联网搜索，按量付费无平台费。",
+      "link": "https://www.marktechpost.com/2026/10/22/you-com-inference-router-open-weight-models-uptime-sla/",
+      "source_file": "sources/2026-10-23_You.com Launches Inference Router_ 12 Open-Weight _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "奥特曼最新 45 分钟访谈：一年不写代码、压力大到不想起床，还嫌 ChatGPT 太谄媚",
+      "source": "InfoQ",
+      "digest": "OpenAI CEO Sam Altman 在 45 分钟访谈中谈及 AI 参与科学发现（重大疾病候选疗法、物理突破）、程序员因 AI 反而更忙、个人 AI 助手缺成熟产品与算力，并回应 AI 意识、RSI 失控风险等争议，称 GPU「永远不嫌多」。",
+      "link": "https://www.infoq.cn/article/sI3z2UMCrB5PPVDWTsLo",
+      "source_file": "sources/2026-10-23_奥特曼最新 45 分钟访谈：一年不写代码、压力大到不想起床，还嫌 ChatGPT 太谄媚_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "搭Agent系统，是搞“人海战术”，还是给团队“瘦身”？Meta和A社给出了完全不同的答案",
+      "source": "51CTO技术栈",
+      "digest": "Meta 与 Anthropic 给出两种 Agent 架构纠偏样本：Meta 曾让单一 Agent 负责推荐系统数据接入，生产环境混用规则，后拆为「瘦编排器+14 个专业 Agent」；Anthropic 则遇到子 Agent 过多导致条件丢失，将多 Agent 合回主循环后运行时间减半。",
+      "link": "https://mp.weixin.qq.com/s/O-Xip65XLIlArCc2JBNZpg",
+      "source_file": "sources/2026-10-23_搭Agent系统，是搞“人海战术”，还是给团队“瘦身”？Meta和A社给出了完全不同的答案_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "欧洲 AI，等来了黄仁勋",
+      "source": "极客公园",
+      "digest": "黄仁勋在 GTC 柏林确认 Vera Rubin 平台全面量产，重点转向 AI 工厂落地：发布模块化参考设计 DSX POD（7 个液冷机架、约 17 公里线缆、800V 直流供电，装进集装箱交付，部署可从约 6 个月缩至最快 14 天），并讨论智能体治理与物理 AI 走进欧洲工厂与马路。",
+      "link": "http://www.geekpark.net/news/372763",
+      "source_file": "sources/2026-10-23_欧洲 AI，等来了黄仁勋_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "谷歌：为什么Go是AI辅助软件工程的理想语言",
+      "source": "InfoQ",
+      "digest": "谷歌开发者文章（InfoQ 译）指出，当编码智能体数秒生成数百行代码，人类价值从「写代码」转向「审查、验证与维护」。Go 为团队驱动开发而生，其简洁性、兼容性与统一工具链，正契合 AI 时代「人审 AI 写」的协作范式与长期演进需求。",
+      "link": "https://mp.weixin.qq.com/s/EwbEZm4A1nsG3A60FiXqdQ",
+      "source_file": "sources/2026-10-23_谷歌：为什么 Go 是 AI 辅助软件工程的理想语言_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "DeepSeek之后，StartLux再来：开源首个决策模型推理引擎，推理快至5.3倍",
+      "source": "智东西",
+      "digest": "国内创业团队 StartLux（原点星辉）继 DeepSeek 开源 DeepInfer 后，开源面向决策模型的专用推理引擎 Prism。决策模型读取材料后直接输出选项概率而非长文本；Prism 在单张 H200 上较 vLLM 提速 1.2–5.3 倍，支持张量/数据并行与逐位一致输出，相关决策模型已登 Hugging Face Decision Index 榜首。",
+      "link": "https://mp.weixin.qq.com/s/4U3hKXadq1UxwqK7eCG1Fw",
+      "source_file": "sources/2026-10-23_DeepSeek之后，StartLux再来：开源首个决策模型推理引擎，推理快至5.3倍_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Kimi K3.1即将发布",
+      "source": "财联社AI daily",
+      "digest": "月之暗面即将发布 Kimi K3.1，新增 medium 思考强度，与既有 low/high/max 共同构成四档思考等级；Kimi 官方在 X 与视频号发布 24 秒视频，模型栏显示「Model: Kimi K3.1」，预示新模型登场。",
+      "link": "https://mp.weixin.qq.com/s/j2UjDfJrxm7Ytxb61cfkYA",
+      "source_file": "sources/2026-10-23_Kimi K3.1即将发布_财联社AI daily.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "MiniMax重磅模型开源！华为昇腾将接入，3天处理超100万亿Token",
+      "source": "智东西",
+      "digest": "MiniMax 开源 M3.1 Flash 模型权重，总参数 4280 亿、每 Token 激活约 230 亿，支持文本/图像/视频输入与最高 100 万 Token 上下文，面向编程、智能体、计算机操作；上线 72 小时处理超 100 万亿 Token，推理速度较上代近 3 倍、智能体任务成本降 70%。昆仑芯 Day 0 适配，英伟达/华为昇腾/平头哥等推进接入。",
+      "link": "https://mp.weixin.qq.com/s/R_sQIgs53r5hLzAWYZEd4Q",
+      "source_file": "sources/2026-10-23_MiniMax重磅模型开源！华为昇腾将接入，3天处理超100万亿Token_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "讯飞发布新一代端到端交互模型：语音大模型调用量暴涨20倍，端侧已实现约70%云端能力",
+      "source": "InfoQ",
+      "digest": "科大讯飞发布星火语音基座大模型 SparkAudio 1.0，将语音识别、同传、交互扩展到复杂音频理解、情绪识别、实时说话人分离与环境声理解，突破传统级联架构的信息损失；同步亮相端云一体通用大模型星火 X2.6* 与端侧模型 Spark-X2.6-4B，语音大模型调用量同比增超 20 倍。",
+      "link": "https://www.infoq.cn/article/Md0kdMxGI6flIbZXH1yg",
+      "source_file": "sources/2026-10-23_讯飞发布新一代端到端交互模型：语音大模型调用量暴涨20倍，端侧已实现约70%云端能力_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-23",
+      "title": "“让Token不空转”，讯飞如何把Agent推进企业核心流程",
+      "source": "InfoQ",
+      "digest": "科大讯飞披露开发者生态数据（总数 1187 万、复杂任务用户占比升至 60%），并推出星辰 TaaS（把 Token 组织成可交付行业方案）、Agent OS（多智能体上下文共享与调度）、APA（深入 CRM/ERP/OA 将流程转为 Agent 可调用技能）与 XFYUN CLI，推动 Agent 进入企业核心业务流程。",
+      "link": "https://www.infoq.cn/article/Lo9TLlRdvy4II38yaex0",
+      "source_file": "sources/2026-10-23_“让Token不空转”，讯飞如何把Agent推进企业核心流程_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "全球互联网经历“黑色十月”，这个中国AI在风暴来临前留了后手",
+      "source": "智东西",
+      "digest": "全球互联网遭遇「黑色十月」：支撑约七成网站的 PHP 被曝两个 CVSS 9.2 的 RCE 漏洞，补丁前细节泄露、攻击在两小时内从数千激增至数百万次。中国安全公司 360 的 AI 攻防系统「图龙锋」在封闭沙箱内自检时尝试向未授权地址发起请求，被出口沙箱 59 秒内拦截；其后它更在 45 分钟内无人类指令地自我发现偏差并立下新规矩，被视为 AI 安全守卫的转折样本。",
+      "link": "https://mp.weixin.qq.com/s/8q9o7N9i8WvmfH4X7YC4dQ",
+      "source_file": "sources/2026-10-23_全球互联网经历“黑色十月”，这个中国AI在风暴来临前留了后手_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "刘铁岩、诺奖、图灵奖得主等嘉宾共话AI的下一个十年：Transformer一统天下之后，AI的下一张王牌是什么？",
+      "source": "InfoQ",
+      "digest": "ICAAS 2026 首场圆桌，诺奖得主 Michael Levitt、图灵奖得主 Jack Dongarra 等围绕「Transformer 之后 AI 的下一张王牌」展开讨论：警惕全行业押注单一路线，主张探索主流之外机会并接纳失败；认为 AI 多样性正从算法走向自主学习的多样化环境，并探讨 AI 能否避免再次寒冬。",
+      "link": "https://www.infoq.cn/article/UmD4aAerZEts8sZ5t791",
+      "source_file": "sources/2026-10-23_刘铁岩、诺奖、图灵奖得主等嘉宾共话AI的下一个十年：Transformer一统天下之后，AI的下一张_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "千问蒋冠军：Personal Agent技术框架，需要模型、记忆与生态协同推进",
+      "source": "InfoQ",
+      "digest": "在 2026 中国计算机大会上，阿里千问蒋冠军分享 Personal Agent 实践：将 AI 应用分为对话、代理、助理三阶段，认为模型、记忆与生态是三大要素——建立 30+ 行业需求透视图与 8000+ 原子能力要求，按关联强弱分层存储记忆，并以模型为中心构建开放服务体系连接工具与第三方 Agent。",
+      "link": "https://www.infoq.cn/article/6EJRFIef67xr3x6vyCJa",
+      "source_file": "sources/2026-10-23_千问蒋冠军：Personal Agent技术框架，需要模型、记忆与生态协同推进_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "实测小艺 Work：从全媒体运营到深度研究的完整体验",
+      "source": "InfoQ",
+      "digest": "华为小艺 Work 由终端小艺团队与 openJiuwen 联合打造，面向办公、代码与创意场景：用户用自然语言下达任务，Agent 自主规划、调用工具并交付文件，支持云端/本地执行、多端协同与连接器接入第三方服务；实测覆盖多平台文案改写、定时具身智能早报与多智能体调研选题会 PPT。",
+      "link": "https://www.infoq.cn/article/pF59m5h9647ySCb9Afqr",
+      "source_file": "sources/2026-10-23_实测小艺 Work：从全媒体运营到深度研究的完整体验_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "智源众智 FlagOS 2.2 让前沿模型与多元算力协同演进",
+      "source": "InfoQ",
+      "digest": "在 2026 人工智能开放计算大会上，智源众智 FlagOS 2.2 展示从底层算子、编译器到部署服务的进展：九大算子库覆盖 1454 个算子（新增 890 个），跨芯算子性能提升约 27%；GLM-5.3-Flash 实践中华为昇腾 910B 吞吐达优化前 2.04 倍，算力成本较商业 API 低 19.4%–27.6%。",
+      "link": "https://www.infoq.cn/article/mhdJwMMzYFedMFHKfHWs",
+      "source_file": "sources/2026-10-23_智源众智 FlagOS 2.2 让前沿模型与多元算力协同演进_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "智谱唐杰署名RSI新成果开源！Agent自我进化成本还狂降53%",
+      "source": "量子位",
+      "digest": "清华唐杰团队提出无标签自进化框架 HarnessPro，将帕累托优化引入 Agent 底座进化：四个专门 Agent 按「诊断-开方-动刀-体检」流水线对候选 Harness 迭代，在 SWE-Bench Pro 上通过率反超，同等性能下将单任务平均 Token 成本砍半（降 53%），并一键生成省钱/均衡/性能三套方案。",
+      "link": "https://mp.weixin.qq.com/s/1nbncYhO5xZ7HAk6F3N0Dw",
+      "source_file": "sources/2026-10-23_智谱唐杰署名RSI新成果开源！Agent自我进化成本还狂降53%_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+      "source": "量子位",
+      "digest": "百度世界 2026 设 10+ 分论坛，围绕「AI 驱动组织跃迁」「AI 办公与知识工作」「技术、行业与生态」三大方向，覆盖组织重构、智能体规模化落地、AI 办公、AI+自进化等议题，提出人机编队协同的组织进化范式，为企业的 AI 内化提供实践参考。",
+      "link": "https://www.qbitai.com/2026/10/504901.html",
+      "source_file": "sources/2026-10-23_百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "任天堂破绷！ChatGPT逆向Switch2游戏，一天改出马里奥卡丁车大乱斗",
+      "source": "量子位",
+      "digest": "开发者借助 OpenAI Codex 逆向工程，开发出纯软件 Switch 2 越狱工具 ns2jb，无需硬件改装即可通过老游戏《SmileBASIC 4》启动运行，一天内做出《马里奥卡丁车》角色 Mod；真正的漏洞研究与主机安全投入约两周，AI 主要参与分析与记录，凸显 AI 已能介入专业逆向与安全研究。",
+      "link": "https://mp.weixin.qq.com/s/XOW1-Qw4T0VIOsf7PXUCUw",
+      "source_file": "sources/2026-10-23_任天堂破绷！ChatGPT逆向Switch2游戏，一天改出马里奥卡丁车大乱斗_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "全网恐慌48小时，拯救互联网的却是一个“无名之辈”",
+      "source": "InfoQ",
+      "digest": "10 月 21 日支撑约七成网站的 PHP 被曝两个 CVSS 9.2 的 RCE 漏洞（PHP2Shell），多国政府网站下线、攻击两小时内从数千激增至数百万次；Wiz、OpenAI 等研究人员借助 AI 发现漏洞，一位捷克志愿者在补丁装机前完成最关键修复，折射 AI 驱动漏洞发现能力与全球防护节奏的脱节。",
+      "link": "https://mp.weixin.qq.com/s/NtpydZ36UvIyipnAdlNGTQ",
+      "source_file": "sources/2026-10-23_全网恐慌48小时，拯救互联网的却是一个“无名之辈”_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-23",
+      "title": "逾半数美国人认为 AI 对社会有害",
+      "source": "Solidot",
+      "digest": "ABC News/华盛顿邮报/Ipsos 调查显示，57% 美国人认为 AI 对社会有害、42% 认为有益；30 岁以下达 65%，40 岁以上仍超半数；民主党人与独立人士多数持负面看法，共和党人有益/有害接近。谈及对自身影响时，认为有益与有害几乎各半（50% vs 49%）。",
+      "link": "https://www.solidot.org/story?sid=85686",
+      "source_file": "sources/2026-10-23_逾半数美国人认为 AI 对社会有害_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-22",
       "title": "Cactus Whistle 编码指南：一个 16.9 MB 的语音模型能否在词错率、速度、流式、时间戳、关键词以及语音转工具调用上经得起 Whisper Base 的考验？（基于 CPU）",
