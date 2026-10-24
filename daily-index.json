@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-24",
+      "weekday": "周六",
+      "stats": {
+        "国际": 6,
+        "国内": 7,
+        "同业": 0,
+        "其他": 0,
+        "total": 13
+      },
+      "summary": "Kyutai 开源 CADRE：面向交互式世界模型的因果扩散自编码器/英伟达发布 Nemotron 3.5 Bolt E4B：4GB 开放小语言模型/Ki..."
+    },
+    {
       "date": "2026-10-23",
       "weekday": "周五",
       "stats": {

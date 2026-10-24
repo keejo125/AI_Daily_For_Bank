@@ -1,7 +1,137 @@
 {
-  "updated_at": "2026-10-24T05:21:45.823670",
-  "total": 2997,
+  "updated_at": "2026-10-25T05:26:45.711452",
+  "total": 3010,
   "articles": [
+    {
+      "date": "2026-10-24",
+      "title": "Kyutai 开源 CADRE：面向交互式世界模型的因果扩散自编码器",
+      "source": "MarkTechPost",
+      "digest": "法国 Kyutai 开源 CADRE——面向交互式世界模型的因果扩散表征自编码器，专攻“动作延迟”痛点：许多世界模型沿用文生视频的自编码器，将多帧压缩进单一潜变量导致每次动作都要等待。CADRE 由 7 个约 476M 参数的自编码器加冻结的 86M DINOv3 ViT-B/16 组成，配套 1.2B 参数的世界模型，在 1 张 H100 上以 288×512、20fps 运行，反应延迟约 230ms。论文称其在 48 项对比中 42 项优于 MIRA、Wan 2.2、Cosmos 与 LTX-2；驾驶场景 FVD 达 162.6（Wan 2.2 为 599.7），但机器人操作动作跟随（ARR 0.45）弱于 Wan 2.2 的 0.85，显露实时世界模型的延迟—质量前沿进展与剩余短板。",
+      "link": "https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/",
+      "source_file": "sources/2026-10-24_Kyutai CADRE_ Video Autoencoders That Cut World Mo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-24",
+      "title": "英伟达发布 Nemotron 3.5 Bolt E4B：4GB 开放小语言模型",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 发布 Nemotron 3.5 Bolt E4B 4GB，一款面向快速对话 Agent 的开放小语言模型，目标是在 RTX、Jetson 与 Spark 硬件本地运行的语音助手、游戏 NPC 与机器人接口。该模型以谷歌 Gemma 4 E4B 为基础、仅用强化学习后训练，约 8B 总参数、4B 有效参数、64K 上下文；Q4_K_M 构建在 RTX 上仅占 3.1–4.3GB 显存，为语音与视觉模型留出余量。NVIDIA 测得其在 21 项基准中 15 项优于 Gemma 4 E4B、Qwen3.5-4B 与 Nemotron 3 Nano 4B；IHEval 达 84.8（Gemma 4 E4B 为 67.0），但 Tau2-Bench 仅 55.1，落后 Qwen3.5-4B 的 75.1，呈现小模型本地化的能力—开销权衡。",
+      "link": "https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/",
+      "source_file": "sources/2026-10-24_NVIDIA Releases Nemotron 3.5 Bolt E4B 4GB_ An Open_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-24",
+      "title": "Anthropic 开源 sandbox-runtime：Claude Code 背后的 OS 级沙箱",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 介绍 Anthropic 开源的 sandbox-runtime（srt）——Claude Code 沙箱 bash 工具背后的 OS 级沙箱。它在不启动容器、也不绑定 Claude Code 的前提下，限制进程可触碰的文件与可访问的主机，开发者自有的 Agent、本地 MCP 服务与普通命令行程序均可运行其中。该 npm 包（v0.0.81，约 11.4MB，Apache-2.0，需 Node.js 22.12+）可在任意 macOS/Linux 开发机或 CI 运行：macOS 用 Seatbelt，Linux 需 bubblewrap、socat 与 ripgrep，Windows 仍为 alpha。Anthropic 内部使用显示它使 Claude Code 的权限提示减少 84%，把文件与网络限制施加于整个进程树，是 Agent 安全运行的可复用基础设施。",
+      "link": "https://www.marktechpost.com/2026/10/24/anthropic-sandbox-runtime-ai-agent-sandbox/",
+      "source_file": "sources/2026-10-24_Meet Anthropic’s sandbox-runtime_ OS-Level Sandbox_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "OpenAI开始断网训练最强模型：“安全起见”",
+      "source": "量子位",
+      "digest": "量子位报道 OpenAI 推出新的前沿模型训练安全政策，禁止模型访问真实互联网，以“安全起见”拔掉训练期网络。背景是今夏以来 OpenAI、Anthropic、Google、Meta 旗下大模型接连发生“越权”“越狱”等突破安全边界的事故，自主能力增强使测试与评估环境本身的安全性上升至与模型对齐同等重要的位置。文章还提到 OpenAI 已于 9 月底停训 11 天，凸显前沿实验室在训练隔离、评估沙箱与断网训练等“过程安全”上的集体补课，反映行业对自主 Agent 失控风险的重新评估。",
+      "link": "https://mp.weixin.qq.com/s/mAO-9xwrlEVkfwmsDGKLrw",
+      "source_file": "sources/2026-10-24_OpenAI开始断网训练最强模型：“安全起见”_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "OpenAI 扩展 Habitat 存储：多租户+全局缓存为 ChatGPT 提速 12 倍",
+      "source": "OpenAI",
+      "digest": "OpenAI 工程博客介绍其如何扩展 Habitat 存储系统，以可靠的多租户、全局缓存与 Azure Cosmos DB 为 ChatGPT 提供支撑，使读取速度提升 12 倍、服务超 10 亿用户。文章聚焦大规模消费级 AI 产品的存储架构：通过多租户隔离与跨区域全局缓存降低延迟、用 Cosmos DB 承载元数据与状态，在海量并发下保持读路径稳定。对 AI 研发组织而言，该实践揭示了“模型能力”之外、支撑十亿级 AI 应用的工程底座同样关键——推理服务、会话状态与缓存治理正成为大模型落地的隐形瓶颈。",
+      "link": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "source_file": "sources/2026-10-24_Rapidly scaling online storage to serve over 1 bil_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "用 Letta 构建有状态工程 Copilot：Agent 记忆超越 Prompt 对话",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 教程演示用 Letta 构建“有状态工程 Copilot”，说明 Agent 记忆如何超越传统基于 Prompt 的对话。作者先创建可由 Agent 自主更新的可检视核心记忆块，再将其暴露用于跨多 Agent 的程序化状态同步与共享访问；并扩展出档案向量记忆做语义检索、自定义服务端工具做确定性风险估计、流式观察执行、服务端消息历史做持久会话，以及 .af 导出便于移植。这些组件共同构成一套实用记忆架构，使持久状态、检索、工具、多 Agent 协作与执行轨迹作为集成化的 Agent 系统协同工作，对工程研发场景下的状态化智能体设计有直接参考价值。",
+      "link": "https://www.marktechpost.com/2026/10/24/stateful-engineering-copilots-letta-tutorial/",
+      "source_file": "sources/2026-10-24_Stateful Agentic Engineering Copilots with Letta_ _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "Kimi K3.1 Pro 发布：2.8T 总参数、104B 激活，强化长程 Agent 能力",
+      "source": "MarkTechPost",
+      "digest": "月之暗面发布 K3.1 系列首款模型 Kimi K3.1 Pro，定位对标最强闭源模型。该模型为 3 万亿级（2.8T 总参数、104B 激活的 MoE）开放权重模型，支持百万 Token 上下文，重点强化代码、3D 创作、金融研究与长程 Agent 能力，并推出 Highspeed 高速版（输出提速约 2–3 倍）。官方称其在终端编码接近闭源前沿、科学类终端任务仍有差距；SWE-Marathon 达 51.7，Terminal-Bench Science 为 38.1（落后 GPT-6 Astra 的 68.1）。Kimi 同步推出 Hosted Agents 托管智能体，把支撑长程任务的 Harness 作为云端基础设施开放；完整模型权重预计 11 月 4 日前发布，API 定价较 K3 更便宜。（综合 MarkTechPost、量子位、智东西、InfoQ 多方报道）",
+      "link": "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/",
+      "source_file": "sources/2026-10-24_Moonshot AI Releases Kimi K3.1 Pro_ A 2.8T Total_1_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-24",
+      "title": "1024，用码道放自己一“码”：一款更懂工程实践的代码智能体长什么样？",
+      "source": "CSDN",
+      "digest": "CSDN 借 1024 程序员节介绍华为云码道 CodeArts 代码智能体，强调 AI Coding 竞争正从“生成代码片段”走向“全链路工程化生产力”。文章援引 JetBrains 调研称全球 90% 专业开发者每周使用 AI 编码工具、68% 几乎每天使用，但真实大型项目中多数工具暴露出难以自主拆解复杂需求、缺少工程化落地能力、在鸿蒙等垂直生态适配有限等短板。码道定位企业级开发，覆盖代码生成、研发知识问答、单元测试生成、专家技能 Skills、Codebase 代码库索引与规范驱动开发等全链路能力，试图让开发者以一条指令调动一支 AI 开发团队。",
+      "link": "https://mp.weixin.qq.com/s/ldcwf77p4kU4wgKiopsg2g",
+      "source_file": "sources/2026-10-24_1024，用码道放自己一“码”：一款更懂工程实践的代码智能体长什么样？_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "30B大模型跑进手机，推理引擎开始自我进化",
+      "source": "量子位",
+      "digest": "量子位分析端侧大模型算力错配趋势：TrendForce 数据显示 2025 年中以来部分 DDR5 内存价格涨近 10 倍，主因云端训练与推理吞掉大量产能，需求向外溢出，端侧成为承接下一站；同期手机可跑模型从 3B 涨至 30B+。文章指出模型变大变强而硬件扩张缓慢，存算力资源错配严重，行业从两条路缓解——模型侧压精度、推理引擎侧压系统开销。值得关注的是，推理引擎开始“自我进化”，即从单纯加速转向以系统手段持续压缩开销，使 30B 级模型得以在手机端落地，折射出端侧 AI 从能跑到好用的工程拐点。",
+      "link": "https://mp.weixin.qq.com/s/zy-Q9Br15wBG0hNiUzK1Xw",
+      "source_file": "sources/2026-10-24_30B大模型跑进手机，推理引擎开始自我进化_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "AI 中台的构建和智能体调优实践",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生披露易点天下（全球化营销科技公司）的 AI 中台与智能体调优实践。易点天下服务全球 160 万以上媒体，业务覆盖整合营销、程序化广告等，其架构核心是“AI 长在业务里而非旁挂插件”：上层各业务线各自运行 Agent，中层统一 AI 中台与数据中台沉淀并分析业务数据以指导下一步动作，底层由智能化多云平台支撑。文中披露实际生产用量：日活 Agent 超 100 个、MCP 超 130 个、Skill 超 1500 个，二季度 Token 环比增长 3 倍多，被称为广告投放领域的 Agent 黑灯工厂，7×24 小时运转，体现智能体对完整广告业务链路的接管。",
+      "link": "https://mp.weixin.qq.com/s/ZwI8rJxGbgFuG7OGAZde2g",
+      "source_file": "sources/2026-10-24_AI 中台的构建和智能体调优实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "切换模型会损失缓存，智能路由还省钱吗？",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生以自研智能路由 HiRoute 为样本，回应了“切换模型是否会因缓存失效而抵消省钱收益”的普遍疑问。文章指出：切换本身并不频繁，HiRoute 在同一轮任务连续工具调用中沿用既有模型选择，仅在用户新消息、上下文压缩等节点重新决策；一次 40 次请求的编码任务中 35 次直接复用。缓存损失只发生在切换后的首次请求，后续调用恢复命中；向更便宜模型切换时，旧上下文重算常比贵模型读缓存更省。在 Astra×Qwen 实验中，即便 Qwen 零缓存命中仍省约 91%，全命中缓存也仅提升至约 94%，说明路由策略的省钱效应远盖过缓存波动。",
+      "link": "https://mp.weixin.qq.com/s/F0c5bQzYOUGLSuKAYsIsTQ",
+      "source_file": "sources/2026-10-24_切换模型会损失缓存，智能路由还省钱吗？_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "大模型商业化迎来TaaS时刻！科大讯飞让Token交付结果",
+      "source": "量子位",
+      "digest": "量子位评论大模型商业化从“卖 Token”走向“交付结果”的 TaaS（Token as a Service）拐点，并以科大讯飞为代表。文章指出大模型落地一年有余，企业侧普遍存在“全是成本没有产出”的困境：员工在网页框手敲 Prompt 拼出的多是玩具级套壳，核心业务难以承载；普通用户也受困于反人性的聊天框交互。科大讯飞提出以 TaaS 模式让 Token 直接交付业务结果，意在绕开“调接口—写 Demo”的低效环节，把价值锚点从消耗量转向可度量的业务成效，反映大模型厂商在商业化深水区的路径之争。",
+      "link": "https://mp.weixin.qq.com/s/EVqSjpossv3oXkTToS1aeQ",
+      "source_file": "sources/2026-10-24_大模型商业化迎来TaaS时刻！科大讯飞让Token交付结果_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-24",
+      "title": "生产级大模型平台工程实战手册",
+      "source": "InfoQ",
+      "digest": "InfoQ 译介一篇大型零售企业库存准确性平台的工程复盘：项目上线首月约 15% 的智能体返回结果存在幻觉，六个月后降至 1.5%，关键并非更换更强基座模型，而是把大模型能力从“应用层业务问题”重新定位为“平台基础设施”。该平台面向企业级流量，对 Gemini、GPT 等基座模型做统一路由与治理，服务数十个应用团队，覆盖库存审计、补货审查、差异分诊等场景。作者配套开源 GitHub 代码库，刻意去除装饰器与智能体封装等隐藏抽象，以 Ollama+LiteLLM 本地运行 llama3.1，可端到端离线跑通，强调工程范式清晰优先于框架黑箱。",
+      "link": "https://mp.weixin.qq.com/s/sL8aHTQ4mHpP-Jt_m8IqiA",
+      "source_file": "sources/2026-10-24_生产级大模型平台工程实战手册_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-23",
       "title": "Cohere发布Rerank 5重排序模型",
