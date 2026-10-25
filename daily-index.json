@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-25",
+      "weekday": "周日",
+      "stats": {
+        "国际": 9,
+        "国内": 1,
+        "同业": 2,
+        "其他": 0,
+        "total": 12
+      },
+      "summary": "斯坦福与 UC 伯克利提出 TokenGate：长上下文预填充提速最高 11.3 倍/Anthropic 推出 OSS Scanner 免费 AI 漏洞扫..."
+    },
+    {
       "date": "2026-10-24",
       "weekday": "周六",
       "stats": {
