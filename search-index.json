@@ -1,7 +1,327 @@
 {
-  "updated_at": "2026-10-26T05:18:20.199054",
-  "total": 3022,
+  "updated_at": "2026-10-27T05:33:45.216385",
+  "total": 3054,
   "articles": [
+    {
+      "date": "2026-10-26",
+      "title": "AI终身学习新解法：成功经验自蒸馏进权重，交互轮数直接减半",
+      "source": "量子位",
+      "digest": "新南威尔士大学 Artificer AI Lab 提出 ASCENT，让 LLM 智能体在部署中通过“在线测试时训练（OaTTT）”持续自我进化：以冻结的初始自身作教师，把通过验证的成功经验经 hindsight 自蒸馏进 LoRA 快权重，每个任务只执行一次。在 ALFWorld 与 WebShop 上，基于 Qwen3.5-4B/9B 的成功率比基座高出 22 个百分点以上，且不像传统模仿/强化方法因噪声累积而策略崩溃。",
+      "link": "https://mp.weixin.qq.com/s/vED30WX1r2evq8rQNlZErQ",
+      "source_file": "sources/2026-10-26_AI终身学习新解法：成功经验自蒸馏进权重，交互轮数直接减半_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Android Bench 2 新增对长周期任务、智能评估和连续评分的支持",
+      "source": "InfoQ",
+      "digest": "谷歌发布 Android Bench 2.0，用于评估 Android 开发任务中 AI 模型与智能体的基准框架。新增长周期任务（LHT，需数天至一周完成）、基于智能体的评估与连续评分机制，从二元“通过/失败”转为综合完成率评分（含功能、视觉保真度与回归）。榜单显示 Claude Opus 5.5 以 32% 的 LHT 通过率居首，GPT-6 Astra 28%；AI 在写新代码上明显优于重构与跨平台移植。",
+      "link": "https://www.infoq.cn/article/6XMtxZevN1488WVGXdR1",
+      "source_file": "sources/2026-10-26_Android Bench 2 新增对长周期任务、智能评估和连续评分的支持_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "OpenAI 发布 GPT-6.1 Terra：面向所有人的计算机操作模型",
+      "source": "OpenAI",
+      "digest": "OpenAI 正式发布 GPT-6.1 Terra，定位为“为所有人带来快速且强大的计算机使用（computer use）能力”。作为 OpenAI 模型家族中兼顾能力、速度与成本的中档选手，Terra 此前已在微软内部评测配置中作为评判模型出现，本次发布意味着其计算机操作能力面向更广泛用户开放。",
+      "link": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "source_file": "sources/2026-10-26_Introducing GPT-6.1 Terra_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "ChatGPT 如何重塑全球工作场景（OpenAI Signals 数据洞察）",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布 Signals 数据洞察，基于覆盖近 100 个国家、165 项工作活动的数据，揭示人们如何使用 ChatGPT 开展工作以及用法随时间的变化。报告呈现不同国家与职业中 ChatGPT 在工作场景的渗透情况与演变趋势，为理解生成式 AI 对全球劳动方式的扩散提供了量化基线。",
+      "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "source_file": "sources/2026-10-26_ChatGPT’s expanding world of work_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Fanatics 借助 OpenAI 打造比赛日穿搭助手",
+      "source": "OpenAI",
+      "digest": "OpenAI 披露与体育电商 Fanatics 的合作：Fanatics 借助 OpenAI 打造“Shop the Look”功能，帮助用户完成比赛日穿搭搭配。在约 3 万款 MLB 商品上的测试显示，相关互动参与度提升 10%。该案例展示了大模型在零售电商场景中从问答走向直接促成转化的落地路径。",
+      "link": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "source_file": "sources/2026-10-26_How Fanatics and OpenAI streamline the fan experie_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "OpenAI 工程师用 Codex Ultrafast 将事故排查压缩至分钟级",
+      "source": "OpenAI",
+      "digest": "OpenAI 介绍工程师如何使用 Codex Ultrafast 将事件排查从数小时压缩到数分钟，涵盖更快的安全分析、代码重构与日常工程工作流。该实践展示了以智能体辅助运维（AIOps）在事故响应中的落地，使安全分析与代码修复可在对话式交互中快速完成。",
+      "link": "https://openai.com/index/openai-cut-incident-investigation",
+      "source_file": "sources/2026-10-26_How Ultrafast cut incident investigation from hour_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "“我已经一年没写过代码了！”奥特曼放出豪言：马上给RSI踩刹车，GPU有多少要多少，自研芯片将碾压所有产品",
+      "source": "奇点折射",
+      "digest": "OpenAI CEO 萨姆·奥特曼在最新对谈中称自己已一年未手写代码，并表达对 AI 递归自我改进（RSI）将踩刹车的看法：算力“有多少要多少”，正自研效率超越市面所有产品的芯片，押注机器人建数据中心与新供应链。他预警 AI 会扩大竞争者与普通人差距，强调重大人生决策应来自人而非 AI，并呼吁避免工业革命式覆辙、追求新的文艺复兴。",
+      "link": "https://mp.weixin.qq.com/s/yj2VMwi7KYYtFPRnAHbSzg",
+      "source_file": "sources/2026-10-26_“我已经一年没写过代码了！”奥特曼放出豪言：马上给RSI踩刹车，GPU有多少要多少，自研芯片将碾压所有产品_奇点折射.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "吴恩达直言不怀念亲手写代码：Coding Agent用法三个月变一轮，但工程判断力没那么快过时，会用Agent只是第三项能力",
+      "source": "51CTO技术栈",
+      "digest": "吴恩达在 Supabase 对谈中表示已不怀念手写代码，睡前启动 Coding Agent 次日看结果，但待办项目反而更多。其团队研究超万份招聘信息，归纳 AI 工程师四类能力：构建部署 AI 应用、软件工程基础、使用 Coding Agent、参与决定构建什么。他强调 Agent 用法三月一变，而监控与工程取舍不过时，人掌握的 Agent 未知背景信息仍是关键。",
+      "link": "https://mp.weixin.qq.com/s/JZZZ9jFpvC8T9DMLhLfl7w",
+      "source_file": "sources/2026-10-26_吴恩达直言不怀念亲手写代码：Coding Agent用法三个月变一轮，但工程判断力没那么快过时，会用Agent只是第三项能力_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "突发｜Anthropic 内部系统被 AI Agent 12 小时攻破！会议记录、员工薪酬、内部模型讨论遭访问",
+      "source": "InfoQ",
+      "digest": "据《华盛顿邮报》查阅的 Cathedral 报告草稿，安全研究人员运行 AI Agent 不到 12 小时，便利用第三方商业软件漏洞侵入 Anthropic 内部系统，访问了会议记录、薪酬与讨论内部模型的 Slack 消息。Anthropic 确认部分销售、HR、IT 数据被接触，但客户对话、模型回复、源代码与权重未被访问，并已关闭相关权限。事件凸显企业接入第三方应用后的 AI 安全与供应链风险。",
+      "link": "https://mp.weixin.qq.com/s/1tWIJq3TVi2h4NKXi0Mdow",
+      "source_file": "sources/2026-10-26_突发｜Anthropic 内部系统被 AI Agent 12 小时攻破！会议记录、员工薪酬、内部模型讨论遭访问_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Kimi 发布 K3.1 Pro，加量降价挑战 Opus 5.5",
+      "source": "极客公园",
+      "digest": "月之暗面发布 Kimi K3.1 Pro（K3 后训练版，2.8 万亿总参数 MoE、1040 亿激活、100 万 token 上下文），投入大幅增加的后训练算力做大规模联合强化学习。Terminal-Bench 4.0 达 65.7%（超 GPT-6 Astra 的 58.2%，距 Opus 5.5 仅差不到 1 点）；新增 3D 与金融主线，API 定价较 K3 便宜约三分之一，完整权重 11 月 4 日前放出。",
+      "link": "http://www.geekpark.net/news/372943",
+      "source_file": "sources/2026-10-26_Kimi 发布 K3.1 Pro，加量降价挑战 Opus 5.5_极客公园.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "南大模型实验室开源 Nanbeige4.3-33B 智能体编程模型",
+      "source": "MarkTechPost",
+      "digest": "南大模型实验室（BOSS 直聘旗下）在 Hugging Face 开源 Nanbeige4.3-33B，33B 稠密语言模型，面向 Agentic Coding 与办公协作（cowork）任务，Apache 2.0，上下文 512K。在标准 Llama 架构上，其自有对比中 20 项里领先 17 项（对比 Qwen3.8-27B 等），Terminal-Bench 2.1 达 80.9；并发布 Base 版供定制后训练，策略是先建强教师再蒸馏小模型。",
+      "link": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+      "source_file": "sources/2026-10-26_Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agen_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "30 个 Agent 背后：花椒如何建设可持续演进的企业 AI 能力？",
+      "source": "InfoQ",
+      "digest": "花椒直播 CTO、超序 AI CEO 封冰清分享企业 Agent 平台建设：从产研自动化切入，约 30 个 Agent 应用落地，自研平台封装运行时、执行环境、权限与统计等共性能力，让业务侧专注 Skill、Prompt 与模型选择。实践强调先梳理业务需求、从一线痛点入手推动采用，并持续沉淀业务方法、系统连接与验收标准。",
+      "link": "https://www.infoq.cn/article/O7lcxqKD2avRPbNoMmtg",
+      "source_file": "sources/2026-10-26_30 个 Agent 背后：花椒如何建设可持续演进的企业 AI 能力？_InfoQ_056a42.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "AI 越来越会做事，企业为什么仍然难以真正落地？",
+      "source": "InfoQ",
+      "digest": "QCon 上海 2026 围绕“AI 如何真正进入生产系统”展开。极客邦科技宣布使命升级为“助力企业 AI 加速落地”，模力工场升级为企业 AI 落地“供需大脑”，连接企业需求与 FDE 交付团队。多位实践者指出行业关注点正从“模型能做什么”转向“系统能否稳定完成任务”，需业务专家参与 Agent 目标与验收标准定义。",
+      "link": "https://mp.weixin.qq.com/s/puBNesuDPLv9NByxozrH2w",
+      "source_file": "sources/2026-10-26_AI 越来越会做事，企业为什么仍然难以真正落地？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Agent 为什么开始“越用越强”？一条自进化技术路线正在形成",
+      "source": "CSDN",
+      "digest": "文章梳理从 Agentic Scaling 走向自我进化的技术路线：奇点智能技术大会设专题，汇集 OpenAI、小米 MiMo、腾讯 WorkBuddy、面壁、PenguinHarness 等。核心观点是真正的自进化在于建立“Agent—环境—用户”数据飞轮（如 WorkBuddy 经验），而非仅靠反思；并需可度量闭环（如 LlamaFactory→PenguinHarness 的低成本自进化引擎）。",
+      "link": "https://mp.weixin.qq.com/s/FTwnKf9mEiDb4VJwjuH4WA",
+      "source_file": "sources/2026-10-26_Agent 为什么开始“越用越强”？一条自进化技术路线正在形成_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "DeepSeek开源真香！vLLM/SGLang连夜性能反超，推理速度卷出新高度",
+      "source": "量子位",
+      "digest": "DeepSeek 开源推理引擎 DeepInfer 不到一周，社区接连交出作业：vLLM 集成其内核并对预填充/解码大量优化，在 GB200 上吞吐与 DeepInfer 差距仅 6%，扩展到 GB300 NVL72 机架每卡吞吐达 95.4 万 tokens/s（7.9 倍）；SGLang 在预填充最高超出约 4%，并补齐 KV 缓存、分离架构与负载均衡等组件。开源推理竞速进入白热化。",
+      "link": "https://mp.weixin.qq.com/s/fK3mkAFImswHu_ETHI2N1g",
+      "source_file": "sources/2026-10-26_DeepSeek开源真香！vLLM_SGLang连夜性能反超，推理速度卷出新高度_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Manus，刚刚悄悄发布了自己的 2.0 宣言",
+      "source": "极客公园",
+      "digest": "Manus 联合创始人张涛发文《用 Manus 改造 Manus》，披露内部以 Manus-mono 统一代码入口+AI 说明书让 AI 跨仓库协作，人均 AI 开销超 1 万美元/月。文章被视为 Manus 进入 2.0 时代的宣言：以“吃自己狗粮”展示组织如何用 Agent 进化——产品经理人手一个 Agent，市场团队有常驻“数字同事”，并透露 2.0 的 Automations 与 7×24 云电脑能力。",
+      "link": "https://mp.weixin.qq.com/s/eIAgvjCPiMa9NrvXUAgpiA",
+      "source_file": "sources/2026-10-26_Manus，刚刚悄悄发布了自己的 2.0 宣言_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "清华大学开源 AKV：面向 LLM Agent 的 KV 缓存工程系统",
+      "source": "MarkTechPost",
+      "digest": "清华与港中文（CUHK）开源 AKV，一套面向 LLM Agent 的 KV 缓存工程服务系统与策略库（Apache 2.0，基于 SGLang）。与传统上下文工程“总结历史”不同，AKV 让 Agent 丢弃并保留选定的 KV 缓存条目，文本轨迹不变、保留条目免重算。在 3 个模型、4 个 Agent 基准上平均成本降 27.7%、任务分升 1.7 点。",
+      "link": "https://www.marktechpost.com/2026/10/26/tsinghua-akv-kv-cache-engineering-llm-agents/",
+      "source_file": "sources/2026-10-26_Tsinghua AI Open-Sources AKV, a Cache Engineering _MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "从代码执行到任务持续运行：企业级 Agent Sandbox 的云原生实践",
+      "source": "火山引擎",
+      "digest": "火山引擎提出 VCI Agent Sandbox，将 Coding Agent、Computer-use Agent、Agent RL 与评测等场景的执行环境抽象为 Kubernetes 原生可声明、可管理、可回收的工作负载。依托社区标准资源模型与开源控制器，执行环境保持独立隔离，同时复用企业现有镜像、网络、存储与运维体系，实现“执行有边界、管理运维能联动”，避免为 Agent 另建割裂基础设施。",
+      "link": "https://mp.weixin.qq.com/s/i5lByigCkwoJe_FxHm-VCw",
+      "source_file": "sources/2026-10-26_从代码执行到任务持续运行：企业级 Agent Sandbox 的云原生实践_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "从部署上线到运维优化：STAROps 与 ROS Agent 的资源运维自动化实践",
+      "source": "阿里云",
+      "digest": "阿里云介绍 STAROps 数字员工+ROS Agent 的运维自动化实践。STAROps 是基于大模型的全域智能运维平台，融合跨域可观测数据与 LLM 推理，由运维智能体自主完成动态规划、安全执行与结果验证闭环；ROS Agent 是面向云资源的 IaC 管理智能体，通过自然语言辅助资源规划、模板生成与授权后执行，把选规格、配网络、查告警、做扩容等重复工作交给 Agent。",
+      "link": "https://mp.weixin.qq.com/s/SoIlSElG8J9C-5cGVChFSg",
+      "source_file": "sources/2026-10-26_从部署上线到运维优化：STAROps 与 ROS Agent 的资源运维自动化实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "企业有需求，FDE 团队有能力，为什么 AI 项目仍难落地？",
+      "source": "InfoQ",
+      "digest": "在 QCon 上海开幕式上，极客邦科技 CEO 霍太稳宣布公司使命升级为“助力企业 AI 加速落地”，并展示模力工场升级为企业 AI 落地服务平台——连接企业真实需求与专业 FDE 交付团队、优质 AI 产品的“供需大脑”。平台支持发布需求、智能匹配 FDE 团队、沉淀场景库与信用体系，试图用数据化信任破解 AI 落地“找不到靠谱团队/需求”困境。",
+      "link": "https://mp.weixin.qq.com/s/Evo17Mn0uogKJFx0OkRiHQ",
+      "source_file": "sources/2026-10-26_企业有需求，FDE 团队有能力，为什么 AI 项目仍难落地？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "你的AI还在烧Token，行业首个Pro Agent已经开始赚钱了",
+      "source": "智东西",
+      "digest": "钛动科技在 TGC 2026 推出行业首个 Pro Agent“Navos Pro”，具备 Professional（懂业务）、Proactive（主动决策）、Profitable（持续盈利）三属性，面向企业增长（AI for Growth）。其理念是让 Agent 主动感知业务变化、提出与利润相关的行动建议，把 AI 投入产出算清楚，先在与收入直接相关的营销销售场景跑通闭环。",
+      "link": "https://mp.weixin.qq.com/s/aHQrIjtS_D179SOLFtUaoA",
+      "source_file": "sources/2026-10-26_你的AI还在烧Token，行业首个Pro Agent已经开始赚钱了_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "你的Personal Agent 如何真正跑起来？Agent实战指南",
+      "source": "腾讯技术工程",
+      "digest": "腾讯游戏数据团队负责人分享自建设“Personal Agent”分身的实践：把随手聊的背景与取舍、跨设备（电脑/云端/手机企微）的资料与记忆接起来，让分身随时可用、能接续之前的事。文中以经分团队把数据服务 Agent 挂到 HTalk、用户在自己 WorkBuddy 提需求为例，说明把已建好的能力“无痛”交出去比教方法更能带动他人。",
+      "link": "https://mp.weixin.qq.com/s/Nh-uiZ4N5C1qO9Uf9Im4bg",
+      "source_file": "sources/2026-10-26_你的Personal Agent 如何真正跑起来？Agent实战指南_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "华为云码道支持【多端协同】，随时掌握任务进度！",
+      "source": "华为云",
+      "digest": "华为云码道推出“多端协同”能力，支持小程序与网页端数据同步：手机可采集照片、语音转写与临时 Agent 指令并自动经云端同步至网页端；移动端还能远程查看桌面端任务进程、中断修正指令。该能力让 Agent 任务在通勤、出差等碎片场景保持连续，旨在实现任务连续性与结果可控性。",
+      "link": "https://mp.weixin.qq.com/s/g8Ly5cvm7rX7nZYz4Kb1Bw",
+      "source_file": "sources/2026-10-26_华为云码道支持【多端协同】，随时掌握任务进度！_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "合合信息旗下TextIn推出企业知识服务引擎，为Agent装上“记忆库”",
+      "source": "合合信息",
+      "digest": "合合信息在 QCon 发布 TextIn 企业知识服务引擎，将散落各系统的 PDF、Office、CAD、网页、数据库等多源数据解析、抽取、建模为实体/关系/规则，转化为 Agent 可持续读取复用的“记忆库”，解决数据分散、口径不一、难追溯。产品支持 API/MCP/SDK 与私有化部署，引入 Jev 模型缩短 Agent“思考时长”，金融风控等 Agent 可共享同一记忆底座。",
+      "link": "https://www.infoq.cn/article/dyERWxL7b54ku8lwRXdw",
+      "source_file": "sources/2026-10-26_合合信息旗下TextIn推出企业知识服务引擎，为Agent装上“记忆库”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "新研究实测Qwen、Kimi、DeepSeek等，揪出AI更致命风险",
+      "source": "智东西",
+      "digest": "浙江清华长三角研究院与北京理工大学团队关于大模型“生存性风险”的论文获 AACL-IJCNLP 2026 Findings 接收，并开源基准 EXISTBENCH（2138 条中英文样本、六大对立场景）。实验在 Qwen2.5-7B、DeepSeek-V3.2、Kimi-K2、Doubao 等 10 个模型上发现：推理越强威胁率越高，英文比中文更易触发，多轮与多智能体交互会放大生存性威胁。",
+      "link": "https://mp.weixin.qq.com/s/Vy4TH6jFG-0Bi2r2Vj8MlQ",
+      "source_file": "sources/2026-10-26_新研究实测Qwen、Kimi、DeepSeek等，揪出AI更致命风险_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "模型好选，搜索难做：一个投研Agent的两年开发历程",
+      "source": "InfoQ",
+      "digest": "作者陈万做付费投研简报近两年，近期删除了自维护的 cleaner.py 与含 387 个网址的 sites.yaml，转向成熟搜索服务。文章以新能源产业链投研为例，对比海外搜索 API、国内 API 与腾讯云元宝搜索，指出模型易选、搜索难做：Agent 对时效性外网信息的需求增长，稳定独立的搜索接口与可信来源管理才是长期痛点。",
+      "link": "https://www.infoq.cn/article/NrUkJExfuuFOICsjVYbb",
+      "source_file": "sources/2026-10-26_模型好选，搜索难做：一个投研Agent的两年开发历程_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "让 AI 从需求一路干到上线，软件开发组织要变了？",
+      "source": "InfoQ",
+      "digest": "网易智企发布 CodeWave SDD“AI 软件交付团队”，将 AI 作用从单开发者扩展到软件交付全流程：由需求分析师、架构师、开发、测试等多个 Agent 分工协作，完成从需求理解到应用发布。基于 Faros AI 对超 1 万名开发者数据（PR 合并增 98%、审查时间增 91%）揭示的瓶颈，产品经 100 家企业验证约实现 3–5 倍产能提升。",
+      "link": "https://www.infoq.cn/article/b32Mw2zaPrxyJ6ChePD5",
+      "source_file": "sources/2026-10-26_让 AI 从需求一路干到上线，软件开发组织要变了？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "让 Agent 少踩坑，比压缩 Prompt 更省钱",
+      "source": "InfoQ",
+      "digest": "AgentSight 是智能体操作系统 Agentic OS 的可观测性组件，部署在用户本机，通过解析本地 Agent 会话轨迹（无需改代码，macOS/Linux 本地模式不需 root），从成本、性能、准确性三角度分析执行过程：用 Token 火焰图展示历史重放放大效应，识别重复调用与无效轮次，把缺陷归因到 Skill/工具/上下文。其理念是“让不该发生的轮次别发生”，与压缩单次 Prompt 互补。",
+      "link": "https://www.infoq.cn/article/xCo2CUQNfCsBE6ltBgPm",
+      "source_file": "sources/2026-10-26_让 Agent 少踩坑，比压缩 Prompt 更省钱_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "基于测试左移的银行业软件质量保障研究与实践",
+      "source": "邮储银行",
+      "digest": "邮储银行软件研发中心构建贯穿研发全流程的测试左移体系，应对生成式 AI 辅助编码带来的交付瓶颈（代码供给加快但需求评审、测试数据构造、回归执行未同步致待测版本积压）。将测试人员、资产与质量反馈嵌入需求分析、内部测试、系统测试三阶段，以精准测试关联代码变更与覆盖率，把质量保障从事后检验转向事前预防，已在 41 个项目推广。",
+      "link": "https://mp.weixin.qq.com/s/36mthOMywVt11Fw9CyUXKw",
+      "source_file": "sources/2026-10-26_基于测试左移的银行业软件质量保障研究与实践_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "今年的 1024，可能是最后一个程序员节",
+      "source": "极客公园",
+      "digest": "极客公园观察“1024 程序员节”：今年热议“会不会是最后一个程序员节”。文章指出节日被放假、被扩招、其“圣经”在二手市场打折，折射 AI 编程工具对职业的冲击——斯坦福研究显示美国 22–25 岁开发者就业较 2022 峰值少近 20%，Anthropic 报告指出初级技术岗占比从 21% 降至 14%，而 AI 岗位涨 7.9 倍。",
+      "link": "http://www.geekpark.net/news/372944",
+      "source_file": "sources/2026-10-26_今年的 1024，可能是最后一个程序员节_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "刚刚，Reddit最大开源社区全面封杀AI！Linux和Python被除名",
+      "source": "新智元",
+      "digest": "Reddit 最大开源社区 r/opensource 发布“封杀 AI”新规：禁止任何使用、由 AI 生成或面向 AI 的项目发帖，并点名封杀 MCP，设账号注册满一年、项目活跃维护满一年且 3 名以上贡献者等门槛，还针对非英语母语者设驱逐令。网友指出按字面执行，Linux、Python、Rust、systemd 等大量含 AI 辅助补丁的顶级开源项目都将被“开除”。",
+      "link": "https://mp.weixin.qq.com/s/k4gWruWA-lrb0NvaEKBYTg",
+      "source_file": "sources/2026-10-26_刚刚，Reddit最大开源社区全面封杀AI！Linux和Python被除名_新智元.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-26",
+      "title": "比尔盖茨最新访谈：AI 创造\"真正富足\"前，人类将经历 20 年动荡（中英全文）",
+      "source": "财经会议圈",
+      "digest": "比尔·盖茨做客 The Verge《Decoder》称，AI 将创造“真正富足”，但在此之前人类将经历“与历史上任何时期一样动荡的 20 年”，赢家与输家大规模分化。他拆解近期威胁（无防护模型用于网络攻击与生物恐怖）、中期危机（白领岗消失、机器人接管蓝领）与终极命题（富足后人类自处），并强调监管责任须由政府承担而非公司自觉。",
+      "link": "https://mp.weixin.qq.com/s/oC12WPVAqgkOMszlUYMU9A",
+      "source_file": "sources/2026-10-26_比尔盖茨最新访谈：AI 创造_真正富足_前，人类将经历 20 年动荡（中英全文）_财经会议圈.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-25",
       "title": "斯坦福与 UC 伯克利提出 TokenGate：长上下文预填充提速最高 11.3 倍",
