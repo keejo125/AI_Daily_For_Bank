@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-27",
+      "weekday": "周二",
+      "stats": {
+        "国际": 12,
+        "国内": 10,
+        "同业": 4,
+        "其他": 3,
+        "total": 29
+      },
+      "summary": "Mirendil 发布首款模型 Fern 0.1，支持 1000 万 Token 上下文/Nace AI 发布面向 AI 智能体的搜索模型 Drex/百度..."
+    },
+    {
       "date": "2026-10-26",
       "weekday": "周一",
       "stats": {

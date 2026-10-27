@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-10-27T05:33:45.216385",
-  "total": 3054,
+  "updated_at": "2026-10-28T05:21:53.133491",
+  "total": 3083,
   "articles": [
+    {
+      "date": "2026-10-27",
+      "title": "Mirendil 发布首款模型 Fern 0.1，支持 1000 万 Token 上下文",
+      "source": "MarkTechPost",
+      "digest": "初创公司 Mirendil 发布其首款模型 Fern 0.1，支持 1000 万 Token（10M）上下文窗口，定位超长上下文理解场景，面向需要长文档与代码库分析的应用。",
+      "link": "https://www.marktechpost.com/2026/10/27/mirendil-fern-10m-token-context-model/",
+      "source_file": "sources/2026-10-27_Mirendil Launches Fern 0.1, Its First Model, With _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Nace AI 发布面向 AI 智能体的搜索模型 Drex",
+      "source": "MarkTechPost",
+      "digest": "Nace AI 发布面向 AI 智能体的搜索模型 Drex，在 BrowseComp-Plus 基准上取得 92.05% 的成绩（平均 12.6 次搜索调用），专为智能体自主检索与信息整合设计。",
+      "link": "https://www.marktechpost.com/2026/10/26/nace-ai-releases-drex-for-search-for-ai-agents/",
+      "source_file": "sources/2026-10-27_Nace AI Releases Drex for Search for AI Agents_ 92_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "TypeSafe AI发布Jev：一种只返回类型化概率而非文本的决策模型",
+      "source": "InfoQ",
+      "digest": "TypeSafe AI 发布决策模型 Jev，不同于生成式大模型，它只返回类型化概率而非自由文本，适用于需要结构化、可校验输出的决策场景，降低幻觉与不可控生成带来的风险。",
+      "link": "https://www.infoq.cn/article/3o7gwgKJt2SbH8AhdpkU",
+      "source_file": "sources/2026-10-27_TypeSafe AI发布Jev：一种只返回类型化概率而非文本的决策模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "vLLM Semantic Router 开源 27B 多模态决策模型 d3-ultra",
+      "source": "MarkTechPost",
+      "digest": "vLLM Semantic Router 团队开源 27B 多模态决策模型 d3-ultra（Apache-2.0）。该模型不生成文本，单次读取输入即返回每个候选答案的概率，可用于路由、分类、视觉定位与视频检查，单个开放权重调用即可完成；在自有私测中取得 6 款决策模型最高的 SR-Text 得分。",
+      "link": "https://www.marktechpost.com/2026/10/26/vllm-semantic-router-d3-ultra-27b-multimodal-decision-model/",
+      "source_file": "sources/2026-10-27_vLLM Semantic Router Releases d3-ultra_ A 27B Open_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "OpenAI 发布 GPT-6.1 Terra：价格腰斩、逼近旗舰能力",
+      "source": "InfoQ",
+      "digest": "OpenAI 发布 GPT-6.1 Terra，定位为面向日常工作场景的性价比模型：标准 API 价格较 GPT-5.6 Terra 与 GPT-6.1 Sol 下降 50%，在部分专业任务测试中逼近旗舰 GPT-6 Astra，而每 Token 成本仅为其约十分之一。视觉推理（MMMU-Pro）、电脑操作（OSWorld 2.1）与编程（Terminal-Bench 4.0 最高档解决 50.3% 任务）均有明显提升，低推理强度下事实错误率由 53.6% 降至 16.7%。",
+      "link": "https://mp.weixin.qq.com/s/nF7N9ePNR6lULRIR_S4iRw",
+      "source_file": "sources/2026-10-27_刚刚，GPT-6.1 Terra 发布：编程性能逼近 Opus 5.5，成本不到其 1_5_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Greptile 用 GPT-6 Astra 扩展代码缺陷检测",
+      "source": "OpenAI",
+      "digest": "Greptile 借助 OpenAI GPT-6 Astra 测试用户工作流、用 Daybreak 强化安全能力、并以 Codex 减少返工，展示大模型在代码审查之外的缺陷检测与质量保障应用。",
+      "link": "https://openai.com/index/greptile-code-review-codex-astra",
+      "source_file": "sources/2026-10-27_Greptile takes bug detection beyond code review wi_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Check Point 借助 Daybreak 加速漏洞研究",
+      "source": "OpenAI",
+      "digest": "Check Point 基于 OpenAI Daybreak 加速漏洞研究的流程，帮助分析师更快将漏洞情报转化为客户防御能力，体现大模型对安全研究的赋能。",
+      "link": "https://openai.com/index/check-point-daybreak",
+      "source_file": "sources/2026-10-27_How Check Point accelerates vulnerability research_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "IBM CEO 称开放权重模型性能优秀成本低廉",
+      "source": "Solidot",
+      "digest": "IBM 首席执行官公开表示，开放权重模型在性能与成本上已具备优势，认为开源权重路线值得重视，侧面反映大模型竞争格局中开放与闭源路线的此消彼长。",
+      "link": "https://www.solidot.org/story?sid=85720",
+      "source_file": "sources/2026-10-27_IBM CEO 称开放权重模型性能优秀成本低廉_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "npm创始人认为AI正在改写工程师这份工作：程序员的下一个瓶颈已经到来了，未来的资深工程师来源堪忧",
+      "source": "51CTO技术栈",
+      "digest": "npm 创始人指出，AI 正在改写工程师的工作方式，程序员的下一个瓶颈已经到来，未来资深工程师的来源令人担忧，反映 AI 编码工具对软件人才结构的深层影响。",
+      "link": "https://mp.weixin.qq.com/s/33a4ulmcGg3gtTGwZtUoTA",
+      "source_file": "sources/2026-10-27_npm创始人认为AI正在改写工程师这份工作：程序员的下一个瓶颈已经到来了，未来的资深工程师来源堪忧_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "token直省27%！Agent推理慢的病因找到了：不在模型，在决策链太长 | NeurIPS'26",
+      "source": "量子位",
+      "digest": "NeurIPS'26 一篇论文指出，Agent 推理变慢的根因不在模型本身，而在决策链过长；通过优化决策链路而非模型，可将 Agent 推理 token 消耗降低约 27%，为长程智能体的效率优化提供新思路。",
+      "link": "https://mp.weixin.qq.com/s/7esf6A-tuNwlTB3AnlV6Bw",
+      "source_file": "sources/2026-10-27_token直省27%！Agent推理慢的病因找到了：不在模型，在决策链太长 _ NeurIPS'26_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "帮用户抢 iPhone 折叠屏的 Agent，正在塑造 AI 时代电商的形状",
+      "source": "极客公园",
+      "digest": "Meta 个人 Agent Muse 在 iPhone Duo 抢购中批量下单，引发“AI 黄牛”争议；Shopify 则主动与 Muse 深度合作、以 Shop Pay 支持 Agent 结账，其 AI 搜索订单同比增长近 13 倍，凸显“是否让 Agent 进门”正成为 AI 时代电商竞争的关键变量。",
+      "link": "http://www.geekpark.net/news/373002",
+      "source_file": "sources/2026-10-27_帮用户抢 iPhone 折叠屏的 Agent，正在塑造 AI 时代电商的形状_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "深度解析 Codex Harness 架构及其全新上下文压缩记忆体系的设计思路",
+      "source": "千问AI平台",
+      "digest": "文章深度解析 OpenAI Codex Harness 架构及其全新的 Memory 与上下文压缩机制：核心 codex-core 模块坚持模块化解耦、禁止随意堆代码，并通过上下文压缩记忆体系降低长程任务的上下文成本，为智能体工程提供参考。",
+      "link": "https://mp.weixin.qq.com/s/IM-zakQ9Bnog54NdYiJSqA",
+      "source_file": "sources/2026-10-27_深度解析 Codex Harness 架构及其全新上下文压缩记忆体系的设计思路_千问AI平台.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "百度开源 Unlimited OCR 2 长文档解析模型",
+      "source": "MarkTechPost",
+      "digest": "百度开源长文档 OCR 模型 Unlimited OCR 2（3.34B 参数，MIT 许可）。该视觉语言模型单次请求可解析数百页书籍、财报与报告，核心改进 SR-SWA 稀疏注意力使逐 token 解码成本近乎持平；在 MarathonDocBench 百页文档基准上以 77.1 分领先，单卡 A800 即可运行。",
+      "link": "https://www.marktechpost.com/2026/10/26/baidu-unlimited-ocr-2-open-source-long-document-ocr/",
+      "source_file": "sources/2026-10-27_Baidu Open-Sources Unlimited OCR 2 for Hundred-Pag_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-27",
+      "title": "33万star、超过Ghidra三倍：REA为什么一夜爆火",
+      "source": "腾讯云开发者",
+      "digest": "REA（Reverse Engineer Anything）上线半年内 GitHub star 涨至 33 万、超过 Ghidra 三倍。它不新造逆向算法，而是把 Ghidra、IDA、Hopper、JADX 等桌面逆向工具封装为 Agent 可调用的 MCP 接口，并要求每次调用返回“发现+出处+置信度+局限”，将逆向工程从单线程人工回路转为可并行、可校验的智能体工作流。",
+      "link": "https://mp.weixin.qq.com/s/ELxElSJdiA4A7Civ-6KrbA",
+      "source_file": "sources/2026-10-27_33万star、超过Ghidra三倍：REA为什么一夜爆火_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Qoder Cloud Agents 手脑分离实践：RocketMQ LiteTopic 如何支撑规模化长程 Agent 任务",
+      "source": "阿里云云原生",
+      "digest": "阿里云 Qoder Cloud Agents 通过“手脑分离”架构支撑规模化长程 Agent 任务，以 RocketMQ LiteTopic 解耦任务调度与执行，保障海量长程任务下的可靠消息投递与状态一致性，为云端智能体工程提供基础设施参考。",
+      "link": "https://mp.weixin.qq.com/s/HDLycyI1BGoeZOqCH-DVNw",
+      "source_file": "sources/2026-10-27_Qoder Cloud Agents 手脑分离实践：RocketMQ LiteTopic 如何支撑规模化长程 Agent 任务_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "QoderWake上新：在业务群里，让一群数字员工自主分工协作",
+      "source": "Qoder",
+      "digest": "Qoder 推出 QoderWake：在业务群聊中让一群数字员工自主分工协作，将多个专用 Agent 编排进日常协作场景，使团队可在群内直接下达任务并由数字员工自主拆解、执行与汇合，降低智能体落地门槛。",
+      "link": "https://mp.weixin.qq.com/s/8XYKnJbq5Z80202Y1bt-7w",
+      "source_file": "sources/2026-10-27_QoderWake上新：在业务群里，让一群数字员工自主分工协作_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "《中国的人工智能治理：理念、实践和意义》报告发布",
+      "source": "中国信通院CAICT",
+      "digest": "中国信通院与中国国际问题研究院联合发布《中国的人工智能治理：理念、实践和意义》报告，系统介绍中国在推动伦理原则落地、加强模型安全治理、完善数据治理、规范生成内容、实施场景化治理等方面的实践，并探讨智能体自主决策带来的责任认定与追溯挑战。",
+      "link": "https://mp.weixin.qq.com/s/pSEco4oXVfk6N3dZHwWT7A",
+      "source_file": "sources/2026-10-27_《中国的人工智能治理：理念、实践和意义》报告发布_中国信通院CAICT.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "交付周期从 51 天缩短到 14 天，多 Agent 协作产品⾃进化背后的组织重构",
+      "source": "阿里云云原生",
+      "digest": "阿里云 Agentic SOC 以多 Agent 协作为核心做安全运营，并形成“真实问题—统一评测—修改验证—生产反馈”的产品自进化闭环。文章以一次角色识别错误为例，说明通过统一字段、复用判定与纳入回归基线，将单次缺陷转化为可持续验证的资产，并据此调整人机协作边界与团队组织方式。",
+      "link": "https://mp.weixin.qq.com/s/1lKVYvgfFz61yDy2J5JkHQ",
+      "source_file": "sources/2026-10-27_交付周期从 51 天缩短到 14 天，多 Agent 协作产品⾃进化背后的组织重构_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "今天的Agent Team靠谱吗？背后的多智能体是如何协同的？",
+      "source": "软件工程3.0时代",
+      "digest": "文章指出 2026 年 Agent Team 在真实生产中可靠性打折：ProgramBench 榜单近乎解决率 70.5% 但完全解决率仅 18.5%，德勤报告称 89% 的 Agent 试点未能落地；根因在于多 Agent 扁平化拟合、缺乏需求分级与主干/边角区分，堆数量填不平“看似可行”与“行为等价”之间的结构性鸿沟。",
+      "link": "https://mp.weixin.qq.com/s/zeuk3YEnGCkwSC_ZUTaHSA",
+      "source_file": "sources/2026-10-27_今天的Agent Team靠谱吗？背后的多智能体是如何协同的？_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "从三天 Demo 到一个月全员可用：小红书企业级 AI 助理 Seal 的规模化实践",
+      "source": "InfoQ",
+      "digest": "小红书基于开源 OpenClaw 二次开发企业级 AI 助理 Seal，三天内推出内测版、一个月内实现全员覆盖。文章分享其在安全、成本、记忆、能力复用与生态方面的规模化经验，以及从 Demo 到万级用户产品化的组织思考。",
+      "link": "https://mp.weixin.qq.com/s/2kL30r5uOXXo4hvQE_UHvA",
+      "source_file": "sources/2026-10-27_从三天 Demo 到一个月全员可用：小红书企业级 AI 助理 Seal 的规模化实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "决策模型也有专用推理引擎了：StartLux 开源 Prism，单卡最高提速 5.3 倍",
+      "source": "InfoQ",
+      "digest": "中国 AI 公司 StartLux 开源面向决策模型 StartLux-Decision 的专用推理引擎 Prism，在单张 H200 上较 vLLM 提速 1.2 至 5.3 倍。它只计算候选答案所需输出分数、跳过完整词表 Logits，并支持张量并行与数据并行组合，在 12351 次决策测试中平均准确率 92.94% 且输出逐位一致。",
+      "link": "https://mp.weixin.qq.com/s/7gHFPys1ehkM0oc7LhvN2Q",
+      "source_file": "sources/2026-10-27_决策模型也有专用推理引擎了：StartLux 开源 Prism，单卡最高提速 5.3 倍_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "左手开源模型，右手创作 Agent，Hi3D 的 AI 3D 下半场",
+      "source": "极客公园",
+      "digest": "AI 3D 公司 Hi3D 正式开源经生产验证的 Hi3D V1.0 底座，并推出以创作者为核心的 Hi3D Agent，打通从生成到创作全流程。文章指出行业上半场比拼单图生 3D 的“转台展示”效果，下半场竞争转向能否进入引擎装配、工业仿真与 3D 打印等真实生产流程。",
+      "link": "http://www.geekpark.net/news/372939",
+      "source_file": "sources/2026-10-27_左手开源模型，右手创作 Agent，Hi3D 的 AI 3D 下半场_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "AI赋能全生命周期财富服务数智引擎深耕养老金融新赛道",
+      "source": "金融电子化",
+      "digest": "工行四川省分行以“工银智涌”金融大模型为基座，围绕居民全生命周期财富经营逻辑打造本地化智能养老规划标杆应用，应对传统养老规划测算粗放、内外数据割裂、营销链路未闭环与方案同质化等痛点，以 AI 打通养老财富服务全链路。",
+      "link": "https://mp.weixin.qq.com/s/9MmKW4WeI76mneZ6rBdfPQ",
+      "source_file": "sources/2026-10-27_AI赋能全生命周期财富服务数智引擎深耕养老金融新赛道_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "大模型驱动的金融数智化转型研究",
+      "source": "金融电子化",
+      "digest": "中信建投探讨大模型驱动金融数智化转型：在数字营销侧以全域数据治理、智能内容生产与需求预判重构框架；在买方投顾侧以 RPA/API 自动化释放人力、以多模态智能决策支持认知升级、以实时语义分析强化合规风控，破解“高成本、低价值、窄覆盖”困境。",
+      "link": "https://mp.weixin.qq.com/s/oUuCQULlcNAjozN_DUurTA",
+      "source_file": "sources/2026-10-27_大模型驱动的金融数智化转型研究_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "语义智能增强的企业工程方法论探讨",
+      "source": "中国金融电脑+",
+      "digest": "文章探讨“语义智能增强的企业工程方法论”，围绕语义理解如何增强企业工程实践展开，强调以语义智能打通需求、设计与验证环节，提升工程活动的自动化与可控性。",
+      "link": "https://mp.weixin.qq.com/s/WMX40pITS7r4xeXctBB2yg",
+      "source_file": "sources/2026-10-27_语义智能增强的企业工程方法论探讨_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "银行应用AI如何担责？工行行长提出“用收益证明”的方案",
+      "source": "银行科技研究社",
+      "digest": "围绕银行应用 AI 如何担责，工行行长提出以“用收益证明”为核心的方案：通过 AI 带来的实际业务收益与风险可控性来论证责任边界，为金融机构在智能体自主决策场景下的问责机制提供思路。",
+      "link": "https://mp.weixin.qq.com/s/53rnf1yVGjDypA3hyN6fQw",
+      "source_file": "sources/2026-10-27_银行应用AI如何担责？工行行长提出“用收益证明”的方案_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Reddit 开源社区争议是否禁止 AI",
+      "source": "Solidot",
+      "digest": "Reddit 开源社区就“是否应禁止 AI”展开争论，反映开源与技术社区对 AI 生成内容、自动化参与与人机协作边界的持续张力，是 AI 社会影响的微观样本。",
+      "link": "https://www.solidot.org/story?sid=85722",
+      "source_file": "sources/2026-10-27_Reddit 开源社区争议是否禁止 AI_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "数据中心搅动世界",
+      "source": "Solidot",
+      "digest": "文章梳理全球数据中心扩张与电力、环境压力：全球约 12250 个数据中心，美国装机 53.73GW、中国 31.90GW，总用电量已超法国全国；AI 热潮推高基建需求，也引发公众对能耗与环境影响的抵制。",
+      "link": "https://www.solidot.org/story?sid=85726",
+      "source_file": "sources/2026-10-27_数据中心搅动世界_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-27",
+      "title": "维基百科如何清理 AI 生成文本",
+      "source": "Solidot",
+      "digest": "维基百科持续清理 AI 生成文本，探索在开放协作编辑中识别、标注与治理 AI 内容的机制，折射出生成式 AI 对知识生产与内容可信度的冲击。",
+      "link": "https://www.solidot.org/story?sid=85727",
+      "source_file": "sources/2026-10-27_维基百科如何清理 AI 生成文本_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-26",
       "title": "AI终身学习新解法：成功经验自蒸馏进权重，交互轮数直接减半",
