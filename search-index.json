@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-10-29T06:59:25.034825",
-  "total": 3104,
+  "updated_at": "2026-10-29T07:13:40.264082",
+  "total": 3103,
   "articles": [
-    {
-      "date": "2026-10-28",
-      "title": "世界模型 Genie 4 发布：新一代实时世界模拟",
-      "source": "Google DeepMind",
-      "digest": "Google DeepMind发布新一代世界模型Genie 4，实现前所未有的真实感与实时交互式模拟。Genie 4原生多模态，可同步生成音乐、环境音与交互对话；其能力构建并继承自Gemini家族——Gemini Omni锚定真实世界外观与行为，其他Gemini模型提供维持模拟连贯性的复杂推理。用户设定一个事件后，Genie 4即可模拟后续发展，推动世界模型在实时交互与长程一致性上迈进一步。",
-      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
-      "source_file": "sources/2026-10-28_Genie 4_ A new generation of world simulation_Google DeepMind.md",
-      "category": "国际",
-      "is_model_related": true
-    },
     {
       "date": "2026-10-28",
       "title": "Liquid AI 发布 LFM3：6 款开放权重 2B 级多模态模型",
