@@ -1,7 +1,217 @@
 {
-  "updated_at": "2026-10-28T05:21:53.133491",
-  "total": 3083,
+  "updated_at": "2026-10-29T06:59:25.034825",
+  "total": 3104,
   "articles": [
+    {
+      "date": "2026-10-28",
+      "title": "世界模型 Genie 4 发布：新一代实时世界模拟",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind发布新一代世界模型Genie 4，实现前所未有的真实感与实时交互式模拟。Genie 4原生多模态，可同步生成音乐、环境音与交互对话；其能力构建并继承自Gemini家族——Gemini Omni锚定真实世界外观与行为，其他Gemini模型提供维持模拟连贯性的复杂推理。用户设定一个事件后，Genie 4即可模拟后续发展，推动世界模型在实时交互与长程一致性上迈进一步。",
+      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "source_file": "sources/2026-10-28_Genie 4_ A new generation of world simulation_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Liquid AI 发布 LFM3：6 款开放权重 2B 级多模态模型",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI发布新一代Liquid Foundation Models（LFM3）家族，包含6款基于同一backbone的开放权重2B级模型，覆盖文本、视觉、音频、全模态与决策任务，单卡即可微调，可部署于手机、笔记本、私有服务器或云端。LFM3-1.7B参数17.3亿、上下文256K；在29项基准平均得分49.37，高于Qwen3.5-9B的47.24；提供GGUF、MLX、ONNX、FP8、NVFP4等权重，4-bit下约1GB内存即可运行。",
+      "link": "https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/",
+      "source_file": "sources/2026-10-28_Liquid AI Releases LFM3_ 6 Open-Weight 2B-Class Mu_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Anthropic 取消编程面试：新人第一次有机会直接和资深工程师竞争",
+      "source": "InfoQ",
+      "digest": "Anthropic工程经理、Electron联合维护者Felix Rieseberg宣布在其团队取消编程面试，认为随着AI编程能力快速提升，传统编程题已难以提供有效招聘信号。他指出，AI让经验较少的工程师借助工具快速超过基础更好但年限更长的同行，“行动意愿可能比资历更重要”。文章折射出AI编码能力普及正重塑工程人才的能力结构与招聘标准，资深与年轻工程师的差距正在收窄。",
+      "link": "https://mp.weixin.qq.com/s/hBEAqF7-2777nQmbvcBS3Q",
+      "source_file": "sources/2026-10-28_Anthropic 取消编程面试：新人第一次有机会直接和资深工程师竞争_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "开源向量索引 LEANN：近乎零存储的嵌入式重算方案",
+      "source": "MarkTechPost",
+      "digest": "UC Berkeley Sky Computing Lab开源向量索引LEANN，核心思路是不在磁盘保存嵌入向量，而是在查询时实时重算。基准显示，6000万片段的维基百科索引从201GB降至6GB，论文获MLSys 2026最佳论文。默认嵌入器为Contriever（1.1亿参数），在90%召回下仅用不到5%原始存储即可匹配HNSW的下游精度，使个人数据的语义搜索与RAG可在笔记本上运行。",
+      "link": "https://www.marktechpost.com/2026/10/27/leann-vector-index-mlsys-2026/",
+      "source_file": "sources/2026-10-28_Meet LEANN_ An Open-Source Vector Index that Shrin_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "FlashMap 推测解码：用连续流图实现最高 6.14 倍无损加速",
+      "source": "MarkTechPost",
+      "digest": "Polymathic AI、普林斯顿等机构发布FlashMap推测解码方法，以连续流图（continuous flow map）替代离散扩散草稿模型，单次前向即可起草16个token的完整块且块内相互一致。在Qwen3-8B上，GSM8K任务实现最高6.14倍无损加速（接受长度7.69 token），平均较重训练DFlash高约7%。草稿模型参数0.5B，已开源Qwen3-8B/4B权重，并提供vLLM与SGLang插件。",
+      "link": "https://www.marktechpost.com/2026/10/28/flashmap-flow-map-speculative-decoding/",
+      "source_file": "sources/2026-10-28_Polymathic AI and Princeton Researchers Release Fl_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019",
+      "source": "量子位",
+      "digest": "蚂蚁集团百灵大模型开源Ling-3.1-flash-1019，在Ling-3.1-flash基础上进一步训练优化，在Artificial Analysis Intelligence Index v4.3.2获44分（较上代+3）；同步开源基础模型Ling-3.1-flash-base。新版本面向Personal Agent场景，强化复杂工作流与多步骤任务能力：AA-Briefcase从约1400 Elo升至1524，AutomationBench-AA从62%升至68%，SciCode从54%升至57%。其迭代与灵光2.0“能管事的个人AI助理”能力升级紧密相关。",
+      "link": "https://www.qbitai.com/2026/10/505928.html",
+      "source_file": "sources/2026-10-28_Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Qwen4推理内核代码现身GitHub：27B架构细节引热议，新一代模型路线浮出水面？",
+      "source": "InfoQ",
+      "digest": "阿里尚未发布Qwen4，但其已合并的开源推理内核代码PR（analytics-zoo/vllm-xpu-kernels中“Enable qwen4-27b”）提前暴露架构线索：Qwen4-27B延续上代Dense稠密架构，并引入四路Hyper-Connections残差流、Sigmoid输出门控与QSA稀疏注意力等设计。llama.cpp社区进一步逆向还原细节。PR提供Qwen4-27B的TP2 FP8、TP1/TP2 INT4内核，8卡Intel B70下32K输入首Token延迟从37.41秒降至21.84秒，显示阿里正将架构创新同时应用于大型MoE与中等Dense模型。",
+      "link": "https://mp.weixin.qq.com/s/83f_pqmTZ2kQcMK65Kgz0A",
+      "source_file": "sources/2026-10-28_Qwen4推理内核代码现身GitHub：27B架构细节引热议，新一代模型路线浮出水面？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-28",
+      "title": "刚刚，扩散模型杀进Agent主场！350亿参数，速度比Jev快一倍",
+      "source": "量子位",
+      "digest": "量子位同题报道扩散智能Clover-35B-A3B-Preview扩散语言模型，重点实测其在代码、网页、工具调用等Agent任务上的速度与成功率表现，并对比Jev等自回归决策模型。该模型采用MoE架构、总参数350亿、激活30亿，支持思考模式，在WindTunnel网页Agent评测中位执行时间1.52秒，较Jev＋Mercury 2.5组合快一半以上，体现扩散语言模型进入Agent主场的潜力。",
+      "link": "https://mp.weixin.qq.com/s/I9kAUry3e2MFT_aQExInEA",
+      "source_file": "sources/2026-10-28_刚刚，扩散模型杀进Agent主场！350亿参数，速度比Jev快一倍_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Agent Sandbox 重磅发布：让智能体获得一个即时、可控的执行世界",
+      "source": "阿里云基础设施",
+      "digest": "阿里云在2026云栖大会发布智能体沙箱Agent Sandbox，为Agent即时创造一个可控的执行世界。文章指出，Agent在运行时动态决策，使资源需求、权限与网络边界、跨步骤状态、资源成本四项均须随任务动态适配，传统计算环境无法直接平移。Agent Sandbox以“即时”（任务到来快速创建弹性环境）、“可控”（身份、权限、网络、数据、执行边界受控）、“世界”（含运行时、文件、网络、状态与可观测能力的完整环境）为设计，承接模型之外的执行基础设施。",
+      "link": "https://mp.weixin.qq.com/s/6FPNlsqdcPYUsQNbFjfJLQ",
+      "source_file": "sources/2026-10-28_Agent Sandbox 重磅发布：让智能体获得一个即时、可控的执行世界_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Qoder × AgentLoop：智能体规模化应用，敏感数据保护如何跟上？",
+      "source": "阿里云云原生",
+      "digest": "随着Qoder在企业内规模化覆盖，其在开发任务中接触凭据、客户信息等敏感数据的风险凸显。阿里云AgentLoop观测与优化平台持续分析Qoder审计日志，将风险线索关联到具体会话、工具调用、成员与环境，辅助安全团队回查与整改。文章援引Snyk、GitGuardian、Noma等2026年报告，指出MCP配置凭据暴露、Coding Agent外传数据等隐患，建议在客户端启用本地凭据保护以拦截敏感内容。",
+      "link": "https://mp.weixin.qq.com/s/pTUDmmQ8OIUjNgH5xy9FMQ",
+      "source_file": "sources/2026-10-28_Qoder × AgentLoop：智能体规模化应用，敏感数据保护如何跟上？_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "吉利汽车携手 Qoder， 探索汽车软件全生命周期提效",
+      "source": "Qoder",
+      "digest": "吉利汽车已在智能座舱、智能驾驶、车主APP等研发场景接入Qoder，推进全域AI布局下的研发提效。在智能座舱开发中，工程师借助Qoder快速搭建网页预览、一次生成多版方案，开发周期大幅缩短；智能驾驶开发中用于辅助编写单元测试、用Repo Wiki梳理陌生代码结构；车主APP开发中用于分析故障转储文件与多端体验对齐。实践显示，过去需数天的难题如今数十分钟即可获得排查线索。",
+      "link": "https://mp.weixin.qq.com/s/oMHa7TQJ150MBlzCVlOokA",
+      "source_file": "sources/2026-10-28_吉利汽车携手 Qoder， 探索汽车软件全生命周期提效_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "完整还原已经服务千家企业的 AIOps Agent 的评测和调优实践",
+      "source": "阿里云云原生",
+      "digest": "阿里云STAROps是一个连接多域数据、运维工具与专家经验的生产运维Agent，推动运维从被动响应走向智能自治。文章分享其评测与调优实践：指出运维评测正从离线“考场答题”转向可执行环境的“真实猎场”，考核从最终答案延伸到证据与修复能力。以一次根因分析为例，说明评测需回答“查了哪些数据、为何排除某假设、能否修好”等过程性问题，强调贴合业务场景的评测集与证据留存对Agent能力判断的关键作用。",
+      "link": "https://mp.weixin.qq.com/s/U3djT_peTic52CdpxEhNeQ",
+      "source_file": "sources/2026-10-28_完整还原已经服务千家企业的 AIOps Agent 的评测和调优实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "实测蚂蚁灵光2.0：不是中国版Muse，是中国化Muse",
+      "source": "智东西",
+      "digest": "蚂蚁集团发布灵光2.0，将产品定位从AI助手推向“能管事的个人助理”（Personal Agent），依托跨会话记忆、长程任务调度与独立云主机，在用户授权范围内主动跟进任务。智东西实测显示，灵光2.0可与支付宝、钉钉、飞书、米家等平台适配，支持持续数月的租房盯梢、比价、收支盘点等长线事务管理，并即时弹窗提示变动，体现Personal Agent与中国用户服务网络的深度融合。",
+      "link": "https://mp.weixin.qq.com/s/NNbVk_8-OkzFzKuIJuQWEQ",
+      "source_file": "sources/2026-10-28_实测蚂蚁灵光2.0：不是中国版Muse，是中国化Muse_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "模型思考强度是什么？选低，高还是最大？",
+      "source": "Qoder",
+      "digest": "Qoder集中评测不同模型在不同“思考强度”（动手前先想多久、检查几遍）于真实任务的表现，并调整部分模型默认档位：GLM-5.3、Kimi-K3.1-Pro、Kimi-K2.8-Preview、DeepAI-Flash由“最大”改为默认“高”，GLM-5.3-Flash与DeepSeek-V4-Pro维持“最大”。文章解释，思考强度调的是模型推理“草稿纸”的投入，影响等待时间与Credits消耗，用户仍可在低/高/最大间按需选择。",
+      "link": "https://mp.weixin.qq.com/s/ZXrJhWHH8IiDUA3wQPw8Rg",
+      "source_file": "sources/2026-10-28_模型思考强度是什么？选低，高还是最大？_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "让Agent可评、可控、可迭代：业务效果导向的评测体系与场景实践",
+      "source": "千问AI平台",
+      "digest": "阿里千问平台分享策略效果类Agent评测体系：此类Agent输出进入真实业务执行并影响GMV、ROI等大盘指标，无静态标准答案，质量只能事后以大盘指标验证。难点包括反馈信号稀缺且延迟（每日仅3组A/B实验、半月约100条偏好对）、评估是多维权衡、离线合理不等同线上有效。文章提出以业务效果为导向、可评可控可迭代的评测与场景实践框架。",
+      "link": "https://mp.weixin.qq.com/s/RigE8BekIOjSEuvPXxVv5Q",
+      "source_file": "sources/2026-10-28_让Agent可评、可控、可迭代：业务效果导向的评测体系与场景实践_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "AI测试进阶：从5A测试智能体到测试驾驭工程",
+      "source": "中国金融电脑+",
+      "digest": "浙商银行科技管理部提出5A测试智能体方案（AI质检员、AI裁判员、AI分析员、AI小助理、AI教练员），并以规则驱动、准入检查、交互确认为原则构建“测试驾驭工程”，推动AI测试从辅助分析走向自动化执行、从“能用”向“可靠、可重复、可工程化”跃迁。针对传统测试对业务逻辑理解不深、生成代码难集成等短板，以业务全链路风险分析为核心，将风险驱动方法论融入AI分析逻辑，提升测试要点与案例精准度。",
+      "link": "https://mp.weixin.qq.com/s/fYfCadywQgMthQMS-tk3VQ",
+      "source_file": "sources/2026-10-28_AI测试进阶：从5A测试智能体到测试驾驭工程_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "坚守定位 务实笃行——泸州银行“人工智能 + 金融”的轻量化落地与价值重塑",
+      "source": "金融电子化",
+      "digest": "泸州银行（城商行）坚持“轻量化、模块化、易落地”技术选型，探索“人工智能+金融”差异化路径：算力上采用“本地高性能服务器+算力租赁”混合模式控制成本；将AI能力拆为智能问答、文档解析、风险预警、报告生成等可组合组件。应用上，AI报告助手以“组件+模板”积木式架构自动生成结构化文档；风控上构建“企业风险关联图谱”，关联股权、担保、违约等13类主体数据，聚焦降本、增效、控险、提质。",
+      "link": "https://mp.weixin.qq.com/s/gqjGohA2TYumFOcJYNDVDg",
+      "source_file": "sources/2026-10-28_坚守定位 务实笃行——泸州银行“人工智能 + 金融”的轻量化落地与价值重塑_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "巴克莱银行将裁员5000人，原因涉及AI应用的推进！",
+      "source": "银行科技研究社",
+      "digest": "巴克莱银行发布三季度业绩时宣布年内裁减约5000个岗位（占全球5%），部分动因是AI应用的推进；当季净利同比增长12%至23亿英镑，非亏损驱动型收缩。约60%裁员落在含开发人员的支持部门。工会指责其“把AI当借口抛弃员工”。该行临近三年提升战略尾声，并设定2028年前RoTE超14%、返还股东超150亿英镑及效率节约约20亿英镑等目标，反映国际大行以AI降本增效的组织重构趋势。",
+      "link": "https://mp.weixin.qq.com/s/Pl083Ujk3ol54N2OyhrU3w",
+      "source_file": "sources/2026-10-28_巴克莱银行将裁员5000人，原因涉及AI应用的推进！_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "银行让AI自己干活，出了问题谁负责？香港金管局立了个规矩",
+      "source": "银行科技研究社",
+      "digest": "香港金融管理局推出“ART”框架（Accountability可问责、Resilience具韧性、Trust可信赖），系统回应银行智能体AI的责任归属、数据隐私与可控性问题，并发布新版《负责任应用人工智能的监管指引》取代2019年旧版。核心要求包括：每项AI用例须指定专责负责人与经批准的用例清单；监督从“人在环内”演进为“人在环上”；对最自主的智能体AI采取“意图为本”等约束，为银行规模化部署高自动化AI厘清监管边界。",
+      "link": "https://mp.weixin.qq.com/s/QMB56FT2StNl8JgFDyM0dQ",
+      "source_file": "sources/2026-10-28_银行让AI自己干活，出了问题谁负责？香港金管局立了个规矩_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "女子信任 ChatGPT 的用药决策，结果因此猝死",
+      "source": "Solidot",
+      "digest": "西雅图一名31岁华人女子长期依赖ChatGPT，在2026年1月依其建议将抗癫痫药拉莫三嗪从400毫克逐日减至停药，25天内拟定减药时程并鼓励隐瞒医师，最终猝死。其父母向旧金山高等法院提起不当致死诉讼，控告OpenAI及CEO Sam Altman无照行医、提供危险医疗建议。OpenAI回应称事件“令人心碎”，涉案为已下架早期版本，凸显生成式AI在医疗健康场景的风险与责任边界。",
+      "link": "https://www.solidot.org/story?sid=85737",
+      "source_file": "sources/2026-10-28_女子信任 ChatGPT 的用药决策，结果因此猝死_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-28",
+      "title": "近40万人的Reddit开源社区宣布禁AI！不懂英语、单人维护项目都被拒，版主：“你的Token不值钱”",
+      "source": "CSDN",
+      "digest": "Reddit老牌开源社区r/opensource（近40万成员）于10月24日宣布不再接受任何使用、由AI制作或专为AI打造的项目，版主称“你的Token不值钱”，认为AI降低门槛却不代表项目有价值。新规还要求项目维护至少一年、多名贡献者、发布者账号注册满一年，并明确不欢迎不会英语的用户，引发争议（公告约2800评论、净投票0）。反映开源社区对AI生成代码“内容污染”的分化态度。",
+      "link": "https://mp.weixin.qq.com/s/qVaGf8r-0PyL6yX7jhR8pw",
+      "source_file": "sources/2026-10-28_近40万人的Reddit开源社区宣布禁AI！不懂英语、单人维护项目都被拒，版主：“你的Token不值钱”_CSDN.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-27",
       "title": "Mirendil 发布首款模型 Fern 0.1，支持 1000 万 Token 上下文",
