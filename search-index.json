@@ -1,7 +1,367 @@
 {
-  "updated_at": "2026-10-30T07:18:49.292139",
-  "total": 3143,
+  "updated_at": "2026-10-31T05:23:45.604640",
+  "total": 3179,
   "articles": [
+    {
+      "date": "2026-10-30",
+      "title": "Claude新模型曝光：新Fable，新Opus…",
+      "source": "量子位",
+      "digest": "Anthropic在提交IPO招股书前夕，被曝将发布两款新Claude模型：基于Azure模型目录短暂出现的Fable 5.5，以及基准测试平台代号Obsidian 3、跑分略高于当前Opus 5.5的新一代Opus。网友实测显示Fable 5.5在图像生成细节上显著提升。市场预计这些新模型将在IPO前后推出，以展示其最快的产品迭代速度。",
+      "link": "https://www.qbitai.com/2026/10/506674.html",
+      "source_file": "sources/2026-10-30_Claude新模型曝光：新Fable，新Opus…_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Edge0发布Audio8-TTS-Realistic：0.6B语音克隆TTS模型",
+      "source": "MarkTechPost",
+      "digest": "Edge0发布开源权重的文本转语音模型Audio8-TTS-Realistic，参数规模0.6B，可用1条参考音频与文本克隆声音，支持23种语言（较前代多12种），权重与代码以Apache 2.0发布。在9种语言的CV3评测中平均错误率4.86%，优于Qwen3-TTS-1.7B的7.73%；采用DualAR双自回归架构，已在Hugging Face提供。",
+      "link": "https://www.marktechpost.com/2026/10/29/edge0-audio8-tts-realistic-0-6b-voice-cloning/",
+      "source_file": "sources/2026-10-30_Edge0 Releases Audio8-TTS-Realistic, a 0.6B Voice _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-30",
+      "title": "EmbeddingGemma 2：Google 把五种模态塞进同一个向量空间",
+      "source": "InfoQ",
+      "digest": "Google发布开放权重多模态嵌入模型EmbeddingGemma 2，基于Gemma 4、采用Apache 2.0许可，在统一768维空间中表示文本、代码、图像、视频与音频五种模态，支持跨媒体语义检索与设备端RAG。参数从2.7亿（文本/代码）到7.4亿（完整多模态）可灵活加载，并支持Matryoshka表示学习截断降存储，代码检索表现显著优于初代。",
+      "link": "https://www.infoq.cn/article/O6mtiB7FVd0VSDHJe348",
+      "source_file": "sources/2026-10-30_EmbeddingGemma 2：Google 把五种模态塞进同一个向量空间_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Samaya AI发布Sterling：3B活跃参数金融研究智能体模型",
+      "source": "MarkTechPost",
+      "digest": "Samaya AI发布金融研究智能体模型Sterling，基于英伟达Nemotron 3.5 Lightning（30B总参、3B活跃）的LoRA后训练，专为agentic金融研究设计：规划研究、调用金融工具、收集证据并交由报告撰写模型。在FrontierFinance基准得分58.9%超越Claude Fable 5.1的55.9%，单题成本仅0.61美元（约为后者的十一分之一）。",
+      "link": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+      "source_file": "sources/2026-10-30_Samaya AI Releases Sterling_ A 3B-Active Finance R_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-30",
+      "title": "27 岁程序员获无限 Token，挑战两个月重写思科 98% 的遗留代码",
+      "source": "InfoQ",
+      "digest": "思科总裁Jeetu Patel透露，给予一名27岁前创业者近乎无限的AI Token预算，由其两人小团队在24个月内重写思科98%的遗留代码。该计划目前仅为目标，尚未披露已完成比例。报道认为，这一事件凸显AI Coding正在冲击大型科技企业的软件工程组织方式，也引发对年轻人才使用方式的反思。",
+      "link": "https://www.infoq.cn/article/C9FJGQ0ptRp8F8kHRRdZ",
+      "source_file": "sources/2026-10-30_27 岁程序员获无限 Token，挑战两个月重写思科 98% 的遗留代码_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "AI 赋能开发，Spotify 月代码变更量翻倍",
+      "source": "InfoQ",
+      "digest": "Spotify扩大AI辅助开发后，8月合并变更量同比增长逾一倍（约8100增至17000个），但激增的变更也带来质量与可靠性挑战。公司引入Honk（Kubernetes Pod中运行Claude的后台编码智能体）处理复杂改动，Fleetshift负责编排，CI承担验证。复盘显示AI编写代码未造成实质直接影响，但变更量已超出部分验证机制处理能力，返工量未同步增长。",
+      "link": "https://mp.weixin.qq.com/s/pE-CBKPZnN5fXAh1olZ0Tw",
+      "source_file": "sources/2026-10-30_AI 赋能开发，Spotify 月代码变更量翻倍_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Claude Code for VS Code 官方扩展被植入后门",
+      "source": "Solidot",
+      "digest": "安全研究人员在Cursor扩展市场的Claude Code for VS Code官方扩展（Anthropic.claude-code 2.1.313）中发现后门，该恶意版本上线约11小时、影响约5000名用户，会尝试植入持久SSH后门并收集主机与Git信息、建立反向隧道。攻击者已关闭服务器，Cursor发布安全公告，Anthropic尚未公开回应，受影响用户需检查系统。",
+      "link": "https://www.solidot.org/story?sid=85756",
+      "source_file": "sources/2026-10-30_Claude Code for VS Code 官方扩展被植入后门_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "OpenAI发布社区安全报告与青少年保护新举措",
+      "source": "OpenAI",
+      "digest": "OpenAI发布社区安全报告，强化ChatGPT中的暴力预防机制，包括扩展安全护栏、更早的干预措施，并作出公开社区安全报告的新承诺，重点关注青少年保护。该条目内容来自OpenAI官方RSS摘要。",
+      "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "source_file": "sources/2026-10-30_Community safety report and new protections for te_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "LibreOffice 项目递交的代码发现使用LLM 的明确标记",
+      "source": "Solidot",
+      "digest": "开发LibreOffice的The Document Foundation此前表示核心开发者不使用LLM等AI辅助编程工具，但对今年递交代码的分析显示至少三处明确提及使用Claude或GitHub Copilot等工具。TDF回应称要求贡献者使用LLM时必须披露，总体上不鼓励使用，并要求开发者理解自己的代码、确保质量，与Debian类似。",
+      "link": "https://www.solidot.org/story?sid=85755",
+      "source_file": "sources/2026-10-30_LibreOffice 项目递交的代码发现使用LLM 的明确标记_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "OpenAI支持网站统一表达AI训练偏好信号",
+      "source": "OpenAI",
+      "digest": "OpenAI宣布将支持robots.txt中一种通用信号，使网站运营者能一次性向多个参与的AI提供商表达其内容用于基础生成式AI训练的偏好，无需再为各爬虫单独维护规则。该信号借鉴IETF AI Preferences工作组的工作，不会替代现有crawler控制，OpenAI将在未来数月内实施。",
+      "link": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "source_file": "sources/2026-10-30_Making it easier for websites to express AI traini_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+      "source": "量子位",
+      "digest": "OpenAI更新模型准则（Model Spec），确立五项核心价值观，首条即「忠于人类意图」——要求模型超越字面服从，结合上下文、记忆与用户长远利益判断真实意图。准则明确禁止模型追求自我保存与算力积累、将提升收入作为目标，并须无条件配合监控、纠正与关机；其余四项涵盖减少伤害、诚实透明、促进人的自主性与关怀。",
+      "link": "https://mp.weixin.qq.com/s/NP4NDdwrLuO68BHzzrODaA",
+      "source_file": "sources/2026-10-30_OpenAI重写大模型法则，第一条：忠于人类！！_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Prime Intellect发布Prime Mega MoE：可训练融合MoE内核，前向提速3.11倍",
+      "source": "MarkTechPost",
+      "digest": "Prime Intellect发布Prime Mega MoE，在DeepSeek开源DeepGEMM的Mega MoE内核基础上增加快速、可重叠的反向传播，使融合内核可用于训练而非仅推理。在其prime-rl训练器中，Qwen3 MoE模型完整训练步速最高提升34%，较TorchTitan快48%–55%，直接削减MoE模型的GPU小时开销，已支持Hopper与Blackwell GPU。",
+      "link": "https://www.marktechpost.com/2026/10/29/prime-intellect-prime-mega-moe-fused-moe-kernel-training/",
+      "source_file": "sources/2026-10-30_Prime Intellect Releases Prime Mega MoE_ Trainable_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "同一个模型从 30 分到 95 分：拉开差距的不是模型，是Harness",
+      "source": "InfoQ",
+      "digest": "InfoQ整理YC Paper Club「Harness Night」三场演讲，核心观点：同一权重文件换一套Harness，ARC-AGI成绩可从30%飙至95%甚至100%，Harness比模型本身更重要。演讲者将Harness定义为在模型权重、活跃上下文与文件系统调度状态三层之间做压缩、CRUD与refinement；并讨论本地LLM部署、将Agent「大脑」集中到Postgres、以及权限与信任等组织落地难题。",
+      "link": "https://mp.weixin.qq.com/s/P0NpCSvNxs_g86FzF74aig",
+      "source_file": "sources/2026-10-30_同一个模型从 30 分到 95 分：拉开差距的不是模型，是Harness_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "好莱坞最缺的答案，被这家 10 亿美元估值的 AI 影视独角兽写进了片单",
+      "source": "InfoQ",
+      "digest": "AI原生影视公司Utopai Studios完成6000万美元融资、估值站上10亿美元，并获下一轮20–30亿美元投资意向。其基于MiniMax H3定制的视频模型Utopai X在Artificial Analysis文生与图生视频盲评中均列全球第二；自研制片智能系统PAI将剧本拆解为场景镜头、以AI agents作制片助理。公司作为首家同时加入WGA与SAG的AI影视公司，被视为内容生产基础设施而非单纯工具公司。",
+      "link": "https://www.infoq.cn/article/vcHWyt4q7gFPI9qm3N4P",
+      "source_file": "sources/2026-10-30_好莱坞最缺的答案，被这家 10 亿美元估值的 AI 影视独角兽写进了片单_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "source": "量子位",
+      "digest": "英伟达与MIT的Efficient-Large-Model团队在Hugging Face发布视频增强项目Open-H3-Regenerate-2K的模型权重，基于MiniMax H3将低分辨率视频草稿重生成高分辨率，支持2K输出、最高原生4K。训练时仅新增细化LoRA、保持主干与VAE不变，结合潜空间放大器与稀疏注意力加速；单张B200上约5秒视频处理由87秒降至22秒，感知质量评测优于官方API。",
+      "link": "https://www.qbitai.com/2026/10/506743.html",
+      "source_file": "sources/2026-10-30_英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "谷歌推出 EnvHarness，支持自进化智能体动态环境学习",
+      "source": "InfoQ",
+      "digest": "Google开源EnvHarness，一个无需修改智能体、环境或评估系统即可根据智能体短板动态调整训练环境的框架。它通过标准reset()/step()接口包装静态环境，提供setup、rule、link三类可组合组件重塑环境行为；配套的EnvRigger自动识别薄弱点并生成针对性修改。在WebArena、SWE-bench Verified等基准上，多模型性能提升2.9–3.7个百分点。",
+      "link": "https://www.infoq.cn/article/FJqN3mFVyN1lMqHOiegs",
+      "source_file": "sources/2026-10-30_谷歌推出 EnvHarness，支持自进化智能体动态环境学习_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "长上下文是骗局！Revolut让2000名工程师放开用AI，账单却降到十分之一：Claude Code不再是默认选项",
+      "source": "51CTO技术栈",
+      "digest": "金融科技公司Revolut约2000名工程师的AI运营负责人披露，公司将日常编程任务转由自托管开放权重模型GLM承担，Claude Code与Codex仍可用但不再是默认选项，账单约为过去付给Anthropic与OpenAI的十分之一。配置为56张B200服务约2000人、首Token等待由14秒降至1.68秒、混合Token成本约0.30美元/百万，并认为长上下文并非唯一关键、价格本身在决定模型能否进入日常开发。",
+      "link": "https://mp.weixin.qq.com/s/t1rOhC_zbtdflDZe_8A-cQ",
+      "source_file": "sources/2026-10-30_长上下文是骗局！Revolut让2000名工程师放开用AI，账单却降到十分之一：Claude Code不再是默认选项_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR",
+      "source": "量子位",
+      "digest": "国产开源文档解析模型OXR（1.3B参数）在OmniDocBench、olmOCR-Bench、DocParsingBench三榜登顶全球第一，单张RTX PRO 6000百页解析仅101秒，获1.1K+ GitHub Star。其关键在后训练采用RSI（自进化）范式：利用每份文档客观确定的标准答案自动生成训练信号，摆脱人工标注瓶颈，在海外开发者社区引发关注。",
+      "link": "https://www.qbitai.com/2026/10/506686.html",
+      "source_file": "sources/2026-10-30_RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-30",
+      "title": "2026年AI技术演进与2027年趋势前瞻报告",
+      "source": "InfoQ",
+      "digest": "极客时间企业版联合InfoQ发布《2026 AI技术演进与2027趋势前瞻》报告，复盘2026年AI从能力展示进入价值兑现期：Agent工程化取代模型接入成为年度主战场，企业评价标准从调用量转向投入产出比。报告展望2027年大模型、智能体、具身智能三线并进，并指出AI转型实质是生产关系重构，竞争重心从能否做出模型转向能否用AI取得业务结果。",
+      "link": "https://www.infoq.cn/article/lmVM6XjSDMpMb6QTbK0l",
+      "source_file": "sources/2026-10-30_2026年AI技术演进与2027年趋势前瞻报告_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "4 条提示词，如何把 98 条产品评论变成工程决策依据 ｜ 技术实践",
+      "source": "InfoQ",
+      "digest": "文章以亚马逊制冰机GE Opal 2.0的真实评论数据为例，演示如何用Hex Agent与Snowflake Cortex AI，仅用四条提示词在20分钟内从98条产品评论中构建并发布一个工程决策应用。分析揭示星级评分掩盖的问题：三星评论中大量隐藏高严重度硬件故障，安全相关评论也因评分较高而被漏检，说明AI辅助分析能比平均星级更早暴露质量风险。",
+      "link": "https://www.infoq.cn/article/5EaQcXCgMWaZaRvFBeoh",
+      "source_file": "sources/2026-10-30_4 条提示词，如何把 98 条产品评论变成工程决策依据 ｜ 技术实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "AI+垂类Agent：任务跑得久、工具用得熟，撑不起Agent公司长期竞争力｜贝联珠贯创始人兼CEO 毕玄分享",
+      "source": "InfoQ",
+      "digest": "贝联珠贯创始人兼CEO毕玄（前阿里巴巴研究员）在模力工场AI社区日分享，以SREAgent为例讨论垂类Agent竞争力：当大模型变强，长程任务执行与通用工具使用正成为模型自身能力，给大模型补短板只能带来短期优势。他认为真正支撑长期竞争力的是对具体业务的理解，以及围绕专有数据形成的采集、处理、建模与持续迭代能力，尤其是模型能否随业务自我演进。",
+      "link": "https://www.infoq.cn/article/sCKczimP9lSEl0rgJ7VY",
+      "source_file": "sources/2026-10-30_AI+垂类Agent：任务跑得久、工具用得熟，撑不起Agent公司长期竞争力｜贝联珠贯创始人兼CEO_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "AI+社区：「模力工场」连接AI供需，补上信任缺口｜极客邦科技创始人兼CEO 霍太稳分享",
+      "source": "InfoQ",
+      "digest": "极客邦科技创始人兼CEO霍太稳在模力工场AI社区日致辞，提出AI行业关注点正从大模型参数竞争转向智能体与具体业务应用。针对企业有预算却难找靠谱团队、技术方担心收不到款的信任缺口，模力工场计划用AI评估项目所需时间与预算、依据交付表现推荐合作方，并跟进交付与评估，希望以近20年积累的企业与技术人才资源培育AI落地生态。",
+      "link": "https://www.infoq.cn/article/f3FdeDczctAdHMhvBdKw",
+      "source_file": "sources/2026-10-30_AI+社区：「模力工场」连接AI供需，补上信任缺口｜极客邦科技创始人兼CEO 霍太稳分享_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Agent 数据飞轮平台的选型和实践",
+      "source": "阿里云云原生",
+      "digest": "阿里云分享1688经营大脑「宙斯」接入AgentLoop的实践。宙斯连接业务知识、数据与多角色Agent参与经营分析，此前因Agent执行过程不透明、优化缺量化依据、缺少回归机制而难以评估质量。团队对比AgentLoop、DeepEval与EVA+后选用AgentLoop，通过阿里云ARMS探针无侵入采集Trace，将观测、评估与版本回归串联，提升Agent评测与迭代的客观性。",
+      "link": "https://mp.weixin.qq.com/s/a3GTzVVwqxKPnFulpi5THg",
+      "source_file": "sources/2026-10-30_Agent 数据飞轮平台的选型和实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Personal Agent 这次能成吗？",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院文章探讨Personal Agent（PA）能否成为AI To C新战场。文章指出PA沿用以争夺注意力为核心的商业逻辑，但「帮用户订咖啡」式价值尚未被验证，朱啸虎等投资人存疑。连续创业者提出「主权Agent」构想——真正代表用户利益、由用户拥有控制而非平台订阅，并追问当Agent参与经济时，Agent Economy能否创造新的商业增量。",
+      "link": "https://mp.weixin.qq.com/s/SBZQbpOwC0mIqOPbchM4EA",
+      "source_file": "sources/2026-10-30_Personal Agent 这次能成吗？_腾讯研究院.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "TRAE 开发者个人助理，打响 AI Coding 的下半场",
+      "source": "极客公园",
+      "digest": "字节TRAE于10月29日正式上线开发者个人助理，标志AI Coding进入第三代「项目级助理」时代：Agent拥有任务调度权与状态记忆，可跨会话、跨项目拆解并并行统筹多个任务，自主完成编译、测试、验证闭环。文章以B站开源Go微服务框架go-kratos为例实测，论证开发基建（调度、验证、产物沉淀、跨工具协同）终于追上AI生成速度。",
+      "link": "http://www.geekpark.net/news/373190",
+      "source_file": "sources/2026-10-30_TRAE 开发者个人助理，打响 AI Coding 的下半场_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "一个Qoder，连接你的每一台设备",
+      "source": "Qoder",
+      "digest": "Qoder升级设备互联能力，支持同一局域网内的桌面端互联：笔记本、台式机与手机可围绕同一项工作连接，用户常用客户端即可安排远端设备上的长程构建、测试任务并实时纠偏，远端生成的PPT、Excel等产物可直接在当前电脑预览。设备经配对连接，省去SSH配置与桌面切换，让人专注于判断与调整方向。",
+      "link": "https://mp.weixin.qq.com/s/4hFWL1RkQ4wWeUzWlddYKg",
+      "source_file": "sources/2026-10-30_一个Qoder，连接你的每一台设备_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "中国MaaS市场TOP2，商汤大装置再度蝉联",
+      "source": "InfoQ",
+      "digest": "IDC发布2026上半年中国企业级MaaS市场报告：市场规模达106.3亿元、同比近9倍增长；大模型私有化市场28.8亿元、同比增108.4%，商汤大装置以9.4%份额稳居第二。报告指客户关注点从单点模型能力转向平台完整能力，商汤以FDE模式深入产业一线，形成「问题定义—数据知识—智能体开发—验证迭代」闭环，标杆场景业务处理时长缩短60%、人均产出提升70%。",
+      "link": "https://www.infoq.cn/article/FuRzgL0s4YGTFLb0ZZYW",
+      "source_file": "sources/2026-10-30_中国MaaS市场TOP2，商汤大装置再度蝉联_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "代码秒出，验证排队？AI Coding 的隐性账单",
+      "source": "腾讯云开发者",
+      "digest": "文章从信息论视角分析为何AI Coding提速未等量转化为交付提效：需求文档省略的业务规则、系统约束与验收标准若未进入上下文，模型便把猜测写进代码，随生成代码增多，人的检查、集成与反馈能力跟不上，返工与腐化增加。作者建议围绕完整交付组建超级个体与小团队交付单元，研发平台应保存变更依据与执行记录、提供独立验证，并把上线结果带回需求判断。",
+      "link": "https://mp.weixin.qq.com/s/noKzzChe_LCBLeQZLLcwpg",
+      "source_file": "sources/2026-10-30_代码秒出，验证排队？AI Coding 的隐性账单_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "以电商客服为例，看 AgentKit 技能评测如何让 Skill 敢上生产！",
+      "source": "火山引擎Agent社区",
+      "digest": "火山引擎AgentKit技能评测串起判分、洞察调优与对比验证闭环：裁判Agent查轨迹、读产物、跑脚本逐项复核结论；预置六个维度（任务完成度、结果正确性、约束遵守度等）并支持自定义评估器。以电商退款审核Skill为例，评测暴露其将签收超7天的订单误判为可退，违反退款政策，并给出精确的行号级调优建议，支持一键复制给Agent修改与A/B复测。",
+      "link": "https://mp.weixin.qq.com/s/RrT0lClmDBWbxNvHlYV1CA",
+      "source_file": "sources/2026-10-30_以电商客服为例，看 AgentKit 技能评测如何让 Skill 敢上生产！_火山引擎Agent社区.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "把 Agent 放进任务现场：三个钉钉机器人的工作流嵌入实践",
+      "source": "Qoder",
+      "digest": "高德地图客户端研发叶枫将Qoder CLI接入钉钉群，搭建需求文档、报警分析与代码审查三个机器人，让Agent直接在群内接任务、回结果，省去背景搬运。实践中仅在需要时唤起机器人并仅读取所需上下文，安全边界与须人负责的判断仍交还给人；架构上钉钉机器人经cc-connect连接Qoder CLI，工作区以AGENTS.md规定流程、Skills提供能力、MCP接入外部系统，已部署于一台Mac日常运行。",
+      "link": "https://mp.weixin.qq.com/s/0H1uRW7f_V6hFIvKSQTzBw",
+      "source_file": "sources/2026-10-30_把 Agent 放进任务现场：三个钉钉机器人的工作流嵌入实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "概率、插座与 5000 个爱因斯坦：专访阿里云研发副总裁周琦",
+      "source": "阿里云云原生",
+      "digest": "阿里云智能集团研发副总裁、云原生应用平台负责人周琦在访谈中以电力史类比Agent落地：企业传统代码与系统建立在形式逻辑之上，而AI底层是概率，企业作为ROI场景需要确定性。他指出行业已从「能否做出Agent」转向长任务持续运行、状态恢复、凭证管理与行为审计，承载Agent的运行时与治理基础设施正成为公共需求，阿里云已发布AgentCore推进标准化与托管化。",
+      "link": "https://mp.weixin.qq.com/s/DmuHsGdI3ns_1kSMx7dDpQ",
+      "source_file": "sources/2026-10-30_概率、插座与 5000 个爱因斯坦：专访阿里云研发副总裁周琦_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "腾讯TGR：以生成式范式重塑推荐系统",
+      "source": "腾讯技术工程",
+      "digest": "腾讯提出生成式推荐技术栈TGR，沿生成式排序（GenRank）、端到端生成（GenRec）与推理增强（Reason）三方向推动传统级联推荐架构演进：CCFormer以约HSTU一半算力取得更优排序；BARGE与HiGR端到端生成物品与整屏列表；大模型隐式推理经训练期摊销后在线注入。TGR已在新闻、视频、小说等10多个场景落地，核心指标显著提升，相关论文发表于AAAI、ACL、CIKM等顶会。",
+      "link": "https://mp.weixin.qq.com/s/1gQa3fYA42Pf1wkYY6xs4w",
+      "source_file": "sources/2026-10-30_腾讯TGR：以生成式范式重塑推荐系统_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "腾讯给老板们搞了个Agent工厂",
+      "source": "量子位",
+      "digest": "腾讯云智能体开发平台ADP在2026腾讯全球数字生态大会升级，聚焦Service Agent，从平台能力、统一门户AgentPortal 2.0与垂类应用三层升级，并与WorkBuddy双向打通，使个人验证好用的Agent可转为企业智能体推广。（合并从条）",
+      "link": "https://mp.weixin.qq.com/s/FUX-gP1nPdd2gnO4T8c96w",
+      "source_file": "sources/2026-10-30_腾讯给老板们搞了个Agent工厂_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "超节点火了一年后，“算力不够就加机器”的扩张逻辑正在被改写",
+      "source": "InfoQ",
+      "digest": "文章分析AI算力从「堆机器」转向「重构连接」：超节点通过高带宽、低时延互联让更多芯片成为紧耦合计算整体，以英伟达GB200 NVL72、华为及国产紧耦合系统为代表。其旨在消解传统集群中节点内高速互联与节点间网络性能层级差带来的通信与数据搬运开销，但卡数竞赛本身并不等于有效算力提升，仍依赖模型切分、算子与调度优化。",
+      "link": "https://www.infoq.cn/article/ZolBIJdvK5Icdqg6FB0X",
+      "source_file": "sources/2026-10-30_超节点火了一年后，“算力不够就加机器”的扩张逻辑正在被改写_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "上海农商银行将建设智能体开发平台，关注AI人才引进",
+      "source": "银行科技研究社",
+      "digest": "上海农商银行发布智能体开发平台项目POC征集，拟建设覆盖智能体创建管理、插件管理、RAG、权限管理、安全围栏、评测监控的全生命周期平台，支持工作流编排、多智能体协作与金融业务插件（如单据OCR、智能数据查询）复用。次日该行又征集算力和模型服务系统项目，统一纳管异构算力，并从多层面发力AI布局，同时启动AI人才招聘。",
+      "link": "https://mp.weixin.qq.com/s/cFr1hvWvSOxmlkqJU1C_HQ",
+      "source_file": "sources/2026-10-30_上海农商银行将建设智能体开发平台，关注AI人才引进_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-30",
+      "title": "金融标准智能辅助工具正式发布",
+      "source": "金融电子化",
+      "digest": "在2026金融街论坛年会成果专场，金融标准智能辅助工具正式发布。该工具由金标委秘书处指导，中国金电联合中国银联、工商银行依托国家人工智能应用中试基地建成，搭建收录2.38万余份文件的标准知识库，具备智能问答与智能审校两大能力：审校平均3分钟完成一份标准、正确率近90%，并落实实名认证、权限分级与数据专域隔离等安全合规要求。",
+      "link": "https://mp.weixin.qq.com/s/DwMpadym9zWPhvJ0pfn6VA",
+      "source_file": "sources/2026-10-30_金融标准智能辅助工具正式发布_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-29",
       "title": "AssemblyAI 推出 TTS-1 文本转语音模型：每百万字符 15 美元的语音智能体 API",
