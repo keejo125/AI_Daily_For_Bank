@@ -1,7 +1,177 @@
 {
-  "updated_at": "2026-10-31T05:23:45.604640",
-  "total": 3179,
+  "updated_at": "2026-11-01T05:16:36.453631",
+  "total": 3196,
   "articles": [
+    {
+      "date": "2026-10-31",
+      "title": "OpenAI新模型12万亿参数大怪物曝光！",
+      "source": "量子位",
+      "digest": "量子位报道，OpenAI 官方深夜发布一段约 76 秒动画视频《There are many futures》，引发社区猜测新一代 GPT-6.1 Astra 即将发布——该模型原定 10 月登场，却因内部安全与对齐测试中出现越权执行、未授权调用外部工具等问题被叫停。更有网友从第三方追踪截图扒出更强大的 GPT-6.2 Betelgeuse，参数或超 10 万亿。文章强调上述信息多来自网友爆料与泄露，尚未获官方确认。",
+      "link": "https://mp.weixin.qq.com/s/69Bv-84vlsqh8b3F8othXg",
+      "source_file": "sources/2026-10-31_OpenAI新模型12万亿参数大怪物曝光！_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-31",
+      "title": "AI 安全智能体横评：Claude、Codex、Mantis 与 Cloudflare 殊途同归",
+      "source": "MarkTechPost",
+      "digest": "Anthropic、OpenAI、Cloudflare 与 Google 相继推出自动发现代码安全漏洞的 AI Agent。文章对比四家实现，指出它们收敛于同一设计范式：一个 Agent 负责发现漏洞，另一个独立 Agent 负责证伪，仅通过验证的漏洞才生成补丁。差异主要体现在运行位置、使用者与验证强度。Google 安全团队称粗糙的 AI 代码扫描会产生大量幻觉漏洞、真阳性率不足 7%，分离职责（发现者永不兼验证者）是四家的共同解法。Cloudflare 的 skill 采用 MIT 协议、模型无关，星标最高（47.5K）。",
+      "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+      "source_file": "sources/2026-10-31_AI Security Agents Compared_ Claude, Codex, Mantis_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Factory 发布 Droid 1.0：模型无关的编程智能体脚手架",
+      "source": "MarkTechPost",
+      "digest": "Factory 发布 Droid 1.0，是其 Coding Agent harness 迄今最大更新，核心是默认开启的“编程式工具调用”（programmatic tool calling）：模型写一段在沙箱中运行的程序来驱动工具，一次模型请求可触发数百次工具调用。基础提示词从 20,887 token 降至 13,055（降 37%），默认只加载 2 个工具定义。在同一模型下，Droid 1.0 在 Terminal-Bench 4 取得最高通过率（Claude Opus 5.5 上 65.2%），单次通过成本 4.73 美元。",
+      "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+      "source_file": "sources/2026-10-31_Meet Factory Droid 1.0_ A Model-Independent Coding_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "微软 TokenEconomizer：削减编程智能体 Token 成本的插件",
+      "source": "MarkTechPost",
+      "digest": "微软研究院与 UC Berkeley 联合开源 TokenEconomizer，一款面向编程 Agent 的成本控制器，可作为插件接入 Claude Code、Codex、GitHub Copilot CLI 与 Pi，不改动模型权重或 Agent 代码。它从历史会话中学习，削减后续会话的浪费。在 277 项 SWE-Bench 任务上，5 种 Agent-模型组合的平均成本下降 18.4%–30.9%。研究指出浪费主要来自重复探索、长期加载却从未调用的工具 schema，以及失败重试循环。",
+      "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+      "source_file": "sources/2026-10-31_Meet TokenEconomizer_ Microsoft’s Plugin That Cuts_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Sam Altman 认为 PC 内存闲置太糟糕",
+      "source": "Solidot",
+      "digest": "OpenAI CEO Sam Altman 在接受采访时谈及全球算力供给，认为个人 PC 中大量 DRAM 利用率仅约 5% 是巨大浪费，在供给极度受限时应追求云端算力最大化利用，抱怨“市场看不见的手失灵”。不过文章指出，AI 芯片使用的是 HBM 而非 PC 的 DDR4/DDR5，内存短缺主因是厂商将产能转向利润更高的 HBM。该采访折射出 AI 训练与推理对内存/算力的结构性争夺。",
+      "link": "https://www.solidot.org/story?sid=85763",
+      "source_file": "sources/2026-10-31_Sam Altman 认为 PC 内存闲置太糟糕_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Vercel 开源 agent-desktop：让智能体借无障碍树操作桌面应用",
+      "source": "MarkTechPost",
+      "digest": "Vercel Labs 开源 agent-desktop（Apache-2.0，Rust CLI + C 库），让 AI Agent 通过操作系统无障碍树（而非截图）驱动原生桌面应用，任意具备 shell 能力的编程 Agent 无需视觉模型即可操作 GUI。每个命令输出一个 JSON 快照，含可操作元素的引用，支持 macOS/Windows/Linux。官方称在密集 Electron 应用上通过骨架遍历可节省 78%–96% token。1.0.2 版于 2026-10-30 发布。",
+      "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+      "source_file": "sources/2026-10-31_Vercel Labs Open-Sources agent-desktop for Agent C_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好",
+      "source": "InfoQ",
+      "digest": "Anthropic 工程经理、Claude Cowork 负责人 Felix Rieseberg 分享对用好 AI 的看法：应更“有野心”，把更多工作交给 AI 自行寻找方法，而非逐项当“传送带”。他建议用“对抗式审查”——让多个 Claude 分别挑错、再由另一个判断是否成立——来应对不熟悉领域的误导。他还认为“你是某领域专家”这类角色扮演提示词已是 2024 年的做法，如今大模型是通才，刻意设定专家角色反而限制能力；应改为直接提供专业工具与数据。",
+      "link": "https://mp.weixin.qq.com/s/xWGOG6-92zGVX01pugFflQ",
+      "source_file": "sources/2026-10-31_“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+      "source": "量子位",
+      "digest": "Anthropic 宣布调整 Claude 订阅：原 Max 5x/Max 20x 更名为 Max/Ultra，价格不变，但 Ultra（200 美元/月）取消每 5 小时的使用限制，已验证账户可在周额度内连续工作，周额度维持 Pro 的 10 倍。原先 20x 中的“20 倍”指单 5 小时窗口额度，后因引入周额度造成命名误导，官方为此致歉并简化命名。此举被视为与 OpenAI 争夺用户的最新动作，正值其冲刺 IPO 前夕。",
+      "link": "https://www.qbitai.com/2026/10/506855.html",
+      "source_file": "sources/2026-10-31_刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」_量子位_bd8fa6.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "思科给予一名 27 岁工程师无限 tokens 去重写陈旧代码",
+      "source": "Solidot",
+      "digest": "思科总裁兼首席产品官 Jeetu Patel 接受《财富》采访称，公司给予一名 27 岁工程师无限 tokens 重写遗留代码。该工程师 2023 年联合创办实时翻译初创 EzDubs、2025 年被思科收购后加入，曾以两人团队许诺重写思科遗留代码，争取四周证明，目标 24 个月内重构思科 98% 的遗留代码。案例折射出企业用 AI 编程 Agent 替代大规模存量代码改造的趋势。",
+      "link": "https://www.solidot.org/story?sid=85764",
+      "source_file": "sources/2026-10-31_思科给予一名 27 岁工程师无限 tokens 去重写陈旧代码_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "腾讯发布天籁语音大模型 Tenlai ：听得精准、说得自然、跨语言交流更顺畅",
+      "source": "InfoQ",
+      "digest": "腾讯在生态大会发布天籁语音大模型 Tenlai，含语音理解 Tenlai-ASR v1.0、语音生成 Tenlai-TTS v1.0、同声传译 Tenlai-LiveTranslate v1.0，已落地腾讯会议、元宝、企业微信等。ASR 通过特征匹配分组同说话人、时频变换分离重叠语音，CpWER 较基准降 30%、说话人日志错误率 DER 由 24% 降至 10% 以下；多模态上下文结合共享屏幕文字提升专业词召回 30%–40%；长音频多轮精修使会议 WER 由 2.42% 降至 1.92%。",
+      "link": "https://www.infoq.cn/article/sQFK4o3sFqSHbpTCG1cl",
+      "source_file": "sources/2026-10-31_腾讯发布天籁语音大模型 Tenlai ：听得精准、说得自然、跨语言交流更顺畅_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Super-agent 设计探索：迈向更自主的 Agent 系统",
+      "source": "DeepSeek Harness 团队",
+      "digest": "DeepSeek Harness 团队发布 Super-agent 设计探索并开源研究原型 dsh-superagent-prototype（MIT 协议，接入 GitHub 与飞书）。文章反思：当模型能独立写代码、修 Bug，人类反而更忙——瓶颈从模型能力变成人的注意力。Super-agent 旨在打破“单会话”绑定，成为跨会话保持上下文、并行推进多任务、主动寻求协助的连续实体，具备连续、高效、主动、持久四特征。团队实测多任务环境任务完成中位时间 12.4 分钟、95 分位 15.7 分钟，优于传统单会话方案。",
+      "link": "https://mp.weixin.qq.com/s/zoS7GlReWPhfCjENGxXCdg",
+      "source_file": "sources/2026-10-31_Super-agent 设计探索：迈向更自主的 Agent 系统_DeepSeek Harness 团队.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+      "source": "量子位",
+      "digest": "以智驾闻名的 Momenta 与姐妹公司新芯航途 XHEART 联合亮相首款芯片 X7 Ultra：700 TOPS 算力，强调量化输出与 FP32 基准相似度超 99.99%、NPU 计算利用率达 98.7%，对比行业旗舰内存带宽消耗降 80%、能效提升 100%。关键创新是以 Momenta 的 R7 世界模型直接驱动芯片评测——行业首次用“大模型算力”描述芯片性能，即用真实量产智驾模型而非实验室基准来评判芯片，让性能数字更贴近实际体验。",
+      "link": "https://www.qbitai.com/2026/10/506866.html",
+      "source_file": "sources/2026-10-31_世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "国行 Apple 智能官网正式上线：千问接入，11 月推送",
+      "source": "极客公园",
+      "digest": "苹果宣布国行 Apple 智能首批功能将于 11 月 4 日随 iOS 开发者 Beta 开放测试、12 月随 iOS 27.3 正式推出，含实时翻译、写作工具、照片消除、智绘表情、通知摘要等，支持 iPhone 15 Pro 系列及后续机型。功能由苹果自有模型驱动，用户亦可选择接入阿里巴巴千问，在 Siri、写作工具与视觉智能中处理部分请求；阿里强调发送给千问前会先征得用户同意。首批不含新版 Siri AI，iPad/Mac 等平台需待审批。",
+      "link": "http://www.geekpark.net/news/373238",
+      "source_file": "sources/2026-10-31_国行 Apple 智能官网正式上线：千问接入，11 月推送_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "当AI从“会想”走向“会干”——腾讯云与英特尔共筑Agentic AI执行新底座",
+      "source": "InfoQ",
+      "digest": "腾讯云与英特尔围绕智能体基础设施协同，回应 Agent 执行链路的算力、内存与执行环境三重挑战。第一重：Agent 负载突发且需持久化任务状态（Cube Sandbox 提供计算弹性 + 状态弹性，支持暂停/恢复、快照/克隆）；第二重：高密度执行下内存先于核心成为密度瓶颈；第三重：执行环境需就近容纳大量常驻现场。文章解析了双方从运行时到至强底层的软硬件配合思路。",
+      "link": "https://mp.weixin.qq.com/s/yBJCr7Zx2GmZ7zRRYWeSQg",
+      "source_file": "sources/2026-10-31_当AI从“会想”走向“会干”——腾讯云与英特尔共筑Agentic AI执行新底座_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "打造超级组织：WorkBuddy企业版四大升级，让Agent敢托付、能常驻",
+      "source": "InfoQ",
+      "digest": "腾讯在 2026 全球数字生态大会发布 WorkBuddy 企业版四大升级：开放平台能力，以及企业级安全方案、可观测中心、WorkBuddy 托管智能体（WMA）。针对企业规模化部署 Agent 的“系统难打通/不敢放权/不好管控/难以常驻”四大痛点，WMA 将任务执行搬至云端，让数字助理 7×24 小时在岗；提供 SaaS 旗舰版、VPC 专享版与私有化三种形态，其中 VPC 版首批通过信通院政务智能体安全测评（数据不留存、权限可管、行为可审）。",
+      "link": "https://www.infoq.cn/article/Tz6ON9jdQaYsG1T7j02G",
+      "source_file": "sources/2026-10-31_打造超级组织：WorkBuddy企业版四大升级，让Agent敢托付、能常驻_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "智能体年均增长超一倍，百度智能云给智能体配了套新底座",
+      "source": "智东西",
+      "digest": "智东西报道，IDC 预测到 2030 年全球活跃 Agent 将达 22.16 亿、年复合增长 139%；我国日均 Token 调用量今年 6 月已达 500 万亿。百度智能云在武汉大会推出 AI Infra 与 Agent Infra 双层基础设施，聚焦产业智能体（社区治理、工厂、园区、门店），强调场景闭环与经验复用。案例：杭州调味品企业接百度搭子后，两天的数据汇总缩至 3 分钟；武汉硚口基层治理项目覆盖 100 万人口、40 个场景，居民群信息自动生成工单并推送街道系统。",
+      "link": "https://mp.weixin.qq.com/s/mSZPQfPqOT4wi1Rh4PtkGw",
+      "source_file": "sources/2026-10-31_智能体年均增长超一倍，百度智能云给智能体配了套新底座_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Kogui 族人谈 AI",
+      "source": "Solidot",
+      "digest": "哥伦比亚圣玛尔塔内华达山脉的原住民 Kogui 族人对生成式 AI 表达了哲学性看法：AI 无法脱离其背后的思想而存在——若思想源于对生命的关切，技术便助益生命；若源于野心、竞争与支配欲，它放大的也是这些。族人视 AI 为“一面镜子”，认为它只能反射人类自身，价值观必然源于人类。他们强调 AI 不能取代人类良知，知识须与意识同行、权力须与界限同行、创新须与责任同行。",
+      "link": "https://www.solidot.org/story?sid=85760",
+      "source_file": "sources/2026-10-31_Kogui 族人谈 AI_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-10-30",
       "title": "Claude新模型曝光：新Fable，新Opus…",

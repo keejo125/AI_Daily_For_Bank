@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-10-31",
+      "weekday": "周六",
+      "stats": {
+        "国际": 9,
+        "国内": 7,
+        "同业": 0,
+        "其他": 1,
+        "total": 17
+      },
+      "summary": "OpenAI新模型12万亿参数大怪物曝光！/AI 安全智能体横评：Claude、Codex、Mantis 与 Cloudflare 殊途同归/腾讯发布天籁..."
+    },
+    {
       "date": "2026-10-30",
       "weekday": "周五",
       "stats": {
