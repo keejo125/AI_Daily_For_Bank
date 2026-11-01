@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02T05:19:10.660373",
-  "total": 3213,
+  "updated_at": "2026-11-02T07:12:30.441601",
+  "total": 3212,
   "articles": [
     {
       "date": "2026-11-01",
@@ -19,16 +19,6 @@
       "digest": "Nace.AI 开源决策模型 Drex Max v1（开放权重，Nace.AI Open RAIL-M 许可）：稠密 27B、上下文 26.2 万 token（默认 1.6 万），48 层 Gated DeltaNet 线性注意力加 16 层全注意力，单前向一次性输出每个选项概率、不做生成，适配 Agent 路由、工单分诊与护栏检查。提供 bf16、Q8_0 GGUF、affine Q4 权重及 llama.cpp/Ollama 分支，可在 NVIDIA GPU 与 24GB+ Apple Silicon Mac 本地离线运行。公开 Decision Index 0.4 得分 67.52（自报，领先 Drex v2.0 约 6.27 分），InfographicVQA 达 97.3。",
       "link": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
       "source_file": "sources/2026-11-01_Nace AI Open-Sources Drex Max v1_ A 27B Decision M_MarkTechPost.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-11-01",
-      "title": "Pika 基于 MiniMax H3 开源 H3 Flex，六步实现音视频联合生成",
-      "source": "InfoQ",
-      "digest": "Pika 发布基于 MiniMax H3 的衍生视频模型 H3 Flex，开放 LoRA 适配器权重与本地推理代码。模型以六步去噪联合生成画面与声音，支持文本、首尾帧与多模态参考输入，原生 480P/768P、5–15 秒视频加同步立体声；通过 PDMD 蒸馏把教师模型 50 步压到 6 步，并以奖励反馈与 DPO 训练 LoRA。提供 ComfyUI、Diffusers 接入与 API 高分辨率增强、音频分轨；五项音视频质量指标居参评模型之首，DesignArena 文生视频榜第八、为最高开源视频模型。",
-      "link": "https://www.infoq.cn/article/ZTAY3QA7vQU9aZExFehe",
-      "source_file": "sources/2026-11-01_Pika 基于 MiniMax H3 开源 H3 Flex，六步实现音视频联合生成_InfoQ.md",
       "category": "国际",
       "is_model_related": true
     },
