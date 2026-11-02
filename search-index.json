@@ -1,7 +1,297 @@
 {
-  "updated_at": "2026-11-02T07:15:52.332099",
-  "total": 3210,
+  "updated_at": "2026-11-03T05:17:07.359206",
+  "total": 3239,
   "articles": [
+    {
+      "date": "2026-11-02",
+      "title": "66 岁 Yann LeCun 发新论文挑战 Scaling Law：1.09 亿参数胜过 720 亿，模型越大不一定越懂世界",
+      "source": "InfoQ",
+      "digest": "Meta 首席科学家 Yann LeCun 与布朗大学 Randall Balestriero 发布 37 页论文《Proving and Improving the Platonic Representation Hypothesis with JEPAs》，论证不同模态模型即便独立训练也能学到可对齐的世界表征。实验显示，仅 1.09 亿参数的文本 JEPA 在跨模态表征对齐测试中超过 Qwen2.5-72B、Llama-3-70B 等大模型，参数相差约 660 倍；新方法的模型仅用 2160 万样本即达到下一 Token 预测模型需 9 亿样本的对齐水平（约 42 倍差距）。论文并非否定 Scaling Law，而是为「世界模型」路线提供理论支撑，提示行业在追求规模之外也需关注表征质量。",
+      "link": "https://www.infoq.cn/article/pWwkDpoFHIsfw9aCRkij",
+      "source_file": "sources/2026-11-02_66 岁 Yann LeCun 发新论文挑战 Scaling Law：1.09 亿参数胜过 720 _InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-02",
+      "title": "GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光",
+      "source": "量子位",
+      "digest": "进入 11 月，OpenAI 尚未官宣的 GPT-6.2 Astra 出现在部分用户 Codex 使用统计与 API 响应中，有人称已成功调用，灰度路由比例从约 20% 到 100% 不等，基本需 500 美元 Pro 套餐才触达。与此同时，Anthropic 官网前端代码短暂出现 Claude Mythos 5.5（传为含生物学研究与网络安全的版本），数小时后被移除；同期 HuggingFace 出现疑似 Mythos 权重仓库（真实性存疑，已超 5000 次下载）。两大厂商新模型线索同周曝光，引发 11 月旗舰集中更新的猜测。",
+      "link": "https://www.qbitai.com/2026/11/507082.html",
+      "source_file": "sources/2026-11-02_GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-02",
+      "title": "LifeVal：衡量 AI 日常任务辅助能力的基准",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 LifeVal 基准，用于衡量 AI 在协助人们完成日常任务时的实际表现，覆盖从寻找托育资源到管理财务与政府文书等真实场景。该基准聚焦「AI 是否真的帮到人」，而非单纯考察模型的知识或生成能力，旨在为日常助理性 AI 的可用性提供可量化的评估口径。作为 OpenAI 在 AI 评测体系上的又一布局，LifeVal 与既有学术/竞技基准形成互补，更贴近普通用户在生活场景中的真实需求。",
+      "link": "https://openai.com/index/lifeval",
+      "source_file": "sources/2026-11-02_LifeVal_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Agent的能力还不足维护代码库！HumanLayer创始人质疑“无人值守”的软件工厂",
+      "source": "51CTO技术栈",
+      "digest": "HumanLayer 创始人 Dexter Horsie 在演讲中质疑「关灯运行」的无人值守软件工厂。他指出，一张工单交给 Agent 几小时就能产出通过测试的 PR，但人工审查仍需读改动、查调用关系、确认是否破坏既有约定；当长期维护的系统叠加新需求时，无人在场的模型很难在一次次修改中维持代码库质量，规则易被散落至多处以致牵一发动全身。他并不反对自动化，认为范围清晰的小任务可由 Agent 从工单一路做到 PR，但复杂系统的持续维护仍需人来把关。",
+      "link": "https://mp.weixin.qq.com/s/CrEorp4srOhMM5wlS-Up7w",
+      "source_file": "sources/2026-11-02_Agent的能力还不足维护代码库！HumanLayer创始人质疑“无人值守”的软件工厂_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "ChatGPT Pro 额度翻倍：是让步，不是福利？",
+      "source": "InfoQ",
+      "digest": "10 月 29 日，OpenAI 产品负责人 Tibo 宣布 Pro 100/200/500 及 Business Premium 套餐的使用限制全面翻倍，并明确不再削减 Pro 200 的 ChatGPT Work 与 Codex 用量，等于撤回了此前引发争议的削减计划。Tibo 确认 Pro 500 约等于 Plus 套餐 50 倍使用量，进一步拉开付费层级差距。社区反应分化：部分低档位用户获实打实的额度上涨表示欢迎，而原 Pro 200 用户认为只是「恢复原有权益」而非新增福利。此次调整被视为用户反馈直接影响定价的典型案例。",
+      "link": "https://www.infoq.cn/article/WpTNht7guarWEyejJFV6",
+      "source_file": "sources/2026-11-02_ChatGPT Pro 额度翻倍：是让步，不是福利？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "qwenGPU：将 GPU 编译进 Qwen3.5 权重的实验模型",
+      "source": "MarkTechPost",
+      "digest": "开发者 Vixhal 在 GitHub 以 MIT 许可发布实验模型 qwenGPU：把一块 SIMT GPU 直接「编译」进 Qwen3.5-2B 的权重中，使其在前向推理过程中运行真实 CUDA（编译为 NVIDIA PTX）。模型由 Qwen3.5-2B（24 层）外加 45 个编译得到的 GPU 层共 69 层组成，上下文 262144 Token，可在 Apple 芯片、NVIDIA GPU 或 CPU 上以约 16GB 空闲内存运行。其思路是让精确计算发生在预训练 LLM 内部而非其外部，作为对「模型内计算」可行性的技术验证。",
+      "link": "https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/",
+      "source_file": "sources/2026-11-02_Meet qwenGPU_ Qwen3.5-2B With 45 Compiled GPU Laye_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "NVIDIA 开源 Auto Ontology 语义层",
+      "source": "MarkTechPost",
+      "digest": "NVIDIA 以 Apache 2.0 许可开源 Auto Ontology，一个为 AI Agent 编写 SQL 提供语义层框架。它从企业元数据构建上下文层，让 Agent 基于经过认证的业务定义生成 SQL，避免「数字算得快却算错」的问题。默认 LLM 采用 nvidia/nemotron-3-nano-30b-a3b，并配套 Nemotron 的嵌入与重排模型；部署支持本地 Docker Compose 或 Kubernetes（Helm）。该库面向企业数据分析场景，强调在 Agent 调用数据库时绑定权威业务口径，提升结果可信度。",
+      "link": "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+      "source_file": "sources/2026-11-02_NVIDIA Releases Auto Ontology_ An Open Semantic La_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+      "source": "量子位",
+      "digest": "OpenAI 更新模型准则（Model Spec），列出 5 条核心价值观，首条即「忠于人类意图」。其余四条为减少伤害、诚实透明、促进人的自主性、关怀。准则强调「忠于意图」而非「忠于指令」：死板执行字面命令本身被视为失职，模型需结合任务目的、对话上下文、记忆与用户历史判断真实诉求。文中举例，当小孩询问「牙仙子是否真的存在」时，应超越字面回答理解其潜在需求。这份约 5 万字的准则，意在为模型安全与价值对齐提供更细的行为规范。",
+      "link": "https://www.qbitai.com/2026/11/507225.html",
+      "source_file": "sources/2026-11-02_OpenAI重写大模型法则，第一条：忠于人类！！_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Proton 全力推动工程师转向 AI",
+      "source": "Solidot",
+      "digest": "以隐私服务著称的 Proton 正强力推动工程师转向 AI，CEO Andy Yen 甚至在内部 Slack 批评提出安全顾虑的员工是「失败者思维」，并一度计划对员工重新面试、要求说明 AI 使用情况，未充分使用者可能面临解雇；在公众抗议后取消了重新面试。公司随后发布 AI 宣言，宣称工程师的工作性质已变——「任务不再是写代码，LLM 也不是帮你更快写代码，而是你要帮 LLM 更快更好地写代码」。该事件引发对 AI 转型中管理方式与员工权益的讨论。",
+      "link": "https://www.solidot.org/story?sid=85773",
+      "source_file": "sources/2026-11-02_Proton 全力推动工程师转向 AI_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Qodo 为 Codex 注入企业代码评审上下文",
+      "source": "OpenAI",
+      "digest": "Qodo 推出面向 Codex 的集成，将企业自有知识与编码规范注入 AI 代码评审流程，帮助开发者在开 PR 之前跨仓库捕获 P0 级问题。其思路是把公司内部的代码约定、历史上下文带入 Codex 的评审环节，使 Agent 的审查建议更贴合团队实际工程标准，而非泛化的通用判断。这反映了 AI 编程正从「生成代码」向「带上下文的企业级评审与质量门禁」延伸，降低无人值守式自动合并带来的风险。",
+      "link": "https://openai.com/index/qodo-codex-plugin",
+      "source_file": "sources/2026-11-02_Qodo builds context into AI code review with Codex_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "如果 AI 幻觉也有预算，超支之后该怎么办？",
+      "source": "InfoQ",
+      "digest": "Grafana Labs 提出用可靠性工程方法衡量 AI 智能体表现：以评估、服务级别目标（SLO）与错误预算，将幻觉、任务完成度、毒性、成本等行为转为可监测的目标。传统可观测性只能说明响应快、无报错、耗了多少 Token，却无法判断答案是否正确、是否基于给定上下文、对用户是否有用。Grafana 的方法是先评估每次交互是否满足特定行为标准（可用 LLM 裁判或正则等确定性检查），再转化为可对照 SLO 的 SLI；它反对单一「智能体质量分数」，强调分维度、可持续监控。",
+      "link": "https://mp.weixin.qq.com/s/bE96rdFqMGDXdevGWtkANA",
+      "source_file": "sources/2026-11-02_如果 AI 幻觉也有预算，超支之后该怎么办？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "框架选不对，Claude 开发成本多一倍：前端十年框架膨胀，终于有人买单了",
+      "source": "InfoQ",
+      "digest": "前 Microsoft Edge 性能经理 Nolan Lawson 让 AI Agent 用 12 种 JavaScript 框架构建同一个 Pokémon 应用，从开发成本、Token 消耗、耗时、性能与维护规模等维度比较。结果显示，最便宜的 Hono+htmx 中位成本约 2.67 美元，而 Angular 达 4.97 美元、接近两倍；Token 消耗上 Angular 约 976 万、Hono+htmx 约 426 万，相差约 2.3 倍。结论是 AI 编程时代框架选型标准正在变化——除开发体验与运行性能外，「是否让模型更快完成、更少耗 Token、更易维护」成为新关键，老牌框架的膨胀正在被 Agent 成本显性化。",
+      "link": "https://mp.weixin.qq.com/s/oNTQWV7dflIzCDesLB1-oA",
+      "source_file": "sources/2026-11-02_框架选不对，Claude 开发成本多一倍：前端十年框架膨胀，终于有人买单了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "谷歌 SynthID Detector 简化了水印检测流程，并将支持范围扩展至其他 AI 提供商",
+      "source": "InfoQ",
+      "digest": "谷歌 DeepMind 宣布 SynthID Detector 全球发布，用于识别由 AI 生成的内容，覆盖使用 SynthID 合作伙伴（OpenAI、NVIDIA、Kakao，苹果即将支持）工具创建的图片、音频与视频。用户上传文件即可在合作伙伴体系内统一检测，给出「是/否」结果。需注意的是，它并非通用 AI 检测器：仅能识别已采用 SynthID 技术的公司内容，无法检测 Meta、微软等采用不同水印方案的输出；大规模修改也会削弱效果，阴性结果不代表内容一定非 AI 生成。",
+      "link": "https://www.infoq.cn/article/JoVxAdq1OjtIDkRBjWOW",
+      "source_file": "sources/2026-11-02_谷歌 SynthID Detector 简化了水印检测流程，并将支持范围扩展至其他 AI 提供商_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "美团发1.6万亿参数新模型，通用Agent测试超Opus-5，国产芯特别优化",
+      "source": "智东西",
+      "digest": "11 月 2 日，美团 LongCat 团队发布面向长程智能体任务的原生多模态模型 LongCat-2.5：总参数 1.6 万亿、每 Token 激活约 480 亿，在 LongCat-2.0 基础上强化原生视觉理解与智能体编程能力。在美团 AutomationBench、LongCatClawBench 等基准上领先 Claude-Opus-5、GPT-5.6-Sol；Terminal Bench v4.0 得分 38.5，超 GPT-5.6-Sol 但仍落后 Claude-Opus-5。训练引入更多长程轨迹数据与大规模长程强化学习，并把视觉信号表示为多层级离散 Token，使视觉与文本由同一主干统一处理，支撑视觉编程、创意设计与 3D 内容生成，并对国产算力做特别优化。",
+      "link": "https://mp.weixin.qq.com/s/-2n_xuyJNgLc0BWXB_Pwqg",
+      "source_file": "sources/2026-11-02_美团发1.6万亿参数新模型，通用Agent测试超Opus-5，国产芯特别优化_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-02",
+      "title": "顶级AI翻车的活儿，被这个新出的免费国产AI接住了！",
+      "source": "量子位",
+      "digest": "商汤发布 SenseNova 6.8 Flash，主打「顶级 AI 翻车的活儿它能接住」，尤其针对网页与 UI 这类连 Gemini 4 Carbon 也易翻车的场景：能完整生成时尚的相机介绍网站、办公常用的 3D 动态 PPT、动态海报，以及纯 3D 内容，产出达到「可直接拿来用」的程度。文章以 Gemini 4 Carbon 在 3D 能力强但网页/UI 表现不佳为对照，突出该国产新模型在网页与 UI 生成上的稳定性，并以「限时免费」降低试用门槛，反映国内多模态生成模型在可用性上的竞争焦点正转向具体场景的「好用」。",
+      "link": "https://www.qbitai.com/2026/11/507277.html",
+      "source_file": "sources/2026-11-02_顶级AI翻车的活儿，被这个新出的免费国产AI接住了！_量子位_59c145.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-02",
+      "title": "AI+FDE：合格的FDE，要亲手跟老师傅做业务，再把经验解法做成Skill ｜深空之序联合创始人兼COO 芦宇峰分享",
+      "source": "InfoQ",
+      "digest": "在 1024 模力工场·AI 社区日上，深空之序（前钉钉 CEO 叶军与芦宇峰创办）联合创始人兼 COO 芦宇峰以《FDE：AI 落地的核心竞争力》分享落地经验。他以刺绣项目为例：AI 生成的图案好看，老师傅却发现需剪线打结 700 余次，揭示「生成结果」到「实际可用」的落差正是 FDE（现场交付工程师）要解决的问题——须亲手做业务、弄清老师傅的经验判断与例外情况。义乌报关项目中，团队把零散单据识别能力现场打磨，将单份报关单制作从至少 3 小时缩至约 5 分钟、成本从约 70 元降至约 10 元，并强调把经验沉淀为可复用 Skill。",
+      "link": "https://www.infoq.cn/article/FckEhkVfCLoXg0jvaKBa",
+      "source_file": "sources/2026-11-02_AI+FDE：合格的FDE，要亲手跟老师傅做业务，再把经验解法做成Skill ｜深空之序联合创始人兼_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "AI+科研：Agent加速科研，论文写得快了，成果更难评了 ｜ 西湖大学工学院博导 王欢分享",
+      "source": "InfoQ",
+      "digest": "西湖大学工学院助理教授、ENCODE Lab 负责人王欢在 1024 模力工场·AI 社区日分享 Agent 对科研的影响。他认为 Agent 确实加速读文献、写代码、做实验，自己每天 6 点会收到 Agent 筛选推荐的 10 篇文献；但他提醒，论文产出更快不等于科学进步更快——当大量成果都声称有新发现，如何判断可靠、新在何处更紧迫。他还指出科研评价仍看重论文等量化指标，「慢科研」倡议与学生追求产出的矛盾凸显，Agent 的影响已超出效率本身，触及科研评价与诚信。",
+      "link": "https://www.infoq.cn/article/MbwRCg4cKC2f3bwv0Cpb",
+      "source_file": "sources/2026-11-02_AI+科研：Agent加速科研，论文写得快了，成果更难评了 ｜ 西湖大学工学院博导 王欢分享_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "AI+艺术：想让AI演得像“老戏骨”，多写提示词不如先演一遍 ｜ 奇点川越创始人 程佳伟导演分享",
+      "source": "InfoQ",
+      "digest": "奇点川越创始人程佳伟在分享中指出，要让 AI 演出细腻情绪，与其反复改提示词，不如真人先演一遍作参考，让 AI 跟随处理微表情与动作，比纯文字描述更稳定可控。他认为若只把 AI 当省时省钱工具便低估其价值——非科班创作者也能把脑中镜头做出来，小团队可承担更多制作，创意到验证的距离在缩短；但故事不会自动变好，人物设定与分镜仍需提前规划。团队采用「先定脚本、固定提示词模板、再交 Agent 批量生成」的流程，并提醒重视素材授权与对他人画风、形象、声音的直接模仿风险。",
+      "link": "https://www.infoq.cn/article/pXJoz3XPv5D224a9Fro1",
+      "source_file": "sources/2026-11-02_AI+艺术：想让AI演得像“老戏骨”，多写提示词不如先演一遍 ｜ 奇点川越创始人 程佳伟导演分享_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "从模型调用到任务交付：MaaS 如何走进 Agent 生产",
+      "source": "InfoQ",
+      "digest": "腾讯云 MaaS 产品中心总经理邹辉在腾讯全球数字生态大会判断「应用拐点已到来」，模型正以泛办公场景为代表加速渗透，并归结为三项趋势：模型能力拓展到超长上下文、复杂任务规划与工具调用；百万 Token 混合计价从「元」降到「角」乃至「分」；Agent 逐渐成为能规划执行的主体。企业关注点随之从「接入模型」转向把模型调用组织成可持续运行的服务——TokenHub 将多模型接入、调度与企业治理纳入统一平台，TI-ONE 推进训推升级，Agent 工具链配合，支撑调用治理与成本可控。",
+      "link": "https://mp.weixin.qq.com/s/tXu92aRnwl-qY1BE7HHJpQ",
+      "source_file": "sources/2026-11-02_从模型调用到任务交付：MaaS 如何走进 Agent 生产_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "从英伟达到 Pika，硅谷巨头为何“反向借力”这个国产模型？",
+      "source": "InfoQ",
+      "digest": "文章探讨中国多模态模型 MiniMax H3 被硅谷反向借力的现象：今年 8 月 MiniMax 开放 H3 权重后，开源首月下载超 2400 万次、衍生公开模型 300 余个，罕见地吸引了英伟达研究团队以其为基础开发视频生成模型。视频生成公司看重其在商品包装字迹不变形、角色跨镜头一致、批量短视频成本可控等商业生产现场的刚需。案例显示，中国开源多模态模型正从「被用 GPU 训练」转向「被硅谷巨头基于其再做开发」，生态位悄然上移。",
+      "link": "https://www.infoq.cn/article/h1310kHD9CWD1mO8aTAc",
+      "source_file": "sources/2026-11-02_从英伟达到 Pika，硅谷巨头为何“反向借力”这个国产模型？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "从长程 Agent 到 Super-agent，解锁更多场景",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生团队在 DeepSeek 8 月开源 DeepSeek Harness（一切插件化）基础上，开源 dsh-superagent-prototype，拆解 Agent 的「连续实体」能力。文章提出 Super-agent 概念：打破 Agent 与单次手动会话的绑定，成为能跨会话保持上下文、同时推进多项复杂任务且互不干扰的「连续实体」。相较 LangChain 降低开发复杂度、DeepSeek Harness 降低体验与成本优化复杂度，Super-agent 试图从架构上提升应用智能，让插件化颗粒度更细、运行更透明，支撑长程多任务并行。",
+      "link": "https://mp.weixin.qq.com/s/vL-Pj18UZb65LJTfZbTXkQ",
+      "source_file": "sources/2026-11-02_从长程 Agent 到 Super-agent，解锁更多场景_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
+      "source": "量子位",
+      "digest": "央视从 1200 家参赛企业中选出「中国 AI 创业十骏」，横跨机器人、智能制造、生命科学，其中唯一 AI 制药企业是清华 AIR 孵化、张亚勤院士创办的水木分子（聂再清教授任首席科学家）。水木分子聚焦药物研发深水区——如何让专家数十年经验被 AI 真正用起来，自 2023 年起推进自然语言与生物语言的连接，落地对话式药物研发平台 ChatDD，并把专家描述的研究方法整理为 AI 智能体可随时调用的技术模块，是国内 AI 制药「模型+管线双驱动」的代表性样本。",
+      "link": "https://www.qbitai.com/2026/11/507150.html",
+      "source_file": "sources/2026-11-02_央视严选「中国AI创业十骏」：唯一AI制药公司是清华系_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+      "source": "量子位",
+      "digest": "小米内部创新团队孵化开源 AI 硬件 HachimoDock（哈基米机），硬件自制成本约 150 元：一块小屏、三按键、一摇杆，屏幕里西高地小狗拟人互动。它并非单纯电子宠物，而是集成个性化桌宠、语音操控电脑端 Agent（如 Codex、WorkBuddy）、智能家居联动与自定义组件创作的万能桌搭。极低成本、精致外观与对各类 Agent 工具的广泛兼容，使其迅速吸引多圈层用户，社交媒体涌现复刻攻略，所用开发板与屏幕一度涨价缺货，折射出「语音+按键」新型 Agent 交互硬件的民间热度。",
+      "link": "https://www.qbitai.com/2026/11/507107.html",
+      "source_file": "sources/2026-11-02_小米开源了个150元的AI小玩意，火到配件都涨价了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "沙龙回顾｜快手披露万人组织的企业AI生产力实践路径",
+      "source": "快手技术",
+      "digest": "10 月 31 日快手技术沙龙第六期在北京举办，主题为「从研发效能走向企业 AI 生产力」。快手企业 AI 生产力副总裁王诩将快手 AI 演进总结为实践、产品工具推广、岗位职责调整、自上而下组织变革四阶段，今年 9 月成立 iWork 组织落地变革，并指出 Token 费用上升、重复建设与安全风险等现实问题。企业智能体建设负责人沈浪介绍，快手自 2025 年起围绕本地 AI Coding 工具 CodeFlicker 与云端研发平台 KATE，把需求分析、代码评审、测试用例、线上监控等能力 Agent 化，推动 AI 从工程师提效走向全员生产力。",
+      "link": "https://mp.weixin.qq.com/s/4tlN1mP4n3f8NxWpOTjHxQ",
+      "source_file": "sources/2026-11-02_沙龙回顾｜快手披露万人组织的企业AI生产力实践路径_快手技术.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "百度搜索 AI API 千次仅需 4.9 元，低于 DeepSeek",
+      "source": "InfoQ",
+      "digest": "10 月 30 日，百度 APP 围绕搜索框、AI 镜头、GUI 可视化等推出多项升级，并全新升级搜索 AI API：增强版活动价 4.9 元/千次、旗舰版 9.9 元/千次，称低于 DeepSeek 搜索 API，欲以更低成本扩大搜索能力在 Agent 中的使用。百度进一步开放 API、MCP、Skill 等接入方式，并把搜索从「一问一答」推向「一项任务、一份交付」，通过多 Agent 协同与在线反馈闭环实现「RSI」——每次真实检索与用户反馈沉淀为新训练信号，经「检索—反馈—再训练」持续优化，官方称数据可信率提升超 50%。",
+      "link": "https://www.infoq.cn/article/HJgTwfsPAugNBJ2jUefj",
+      "source_file": "sources/2026-11-02_百度搜索 AI API 千次仅需 4.9 元，低于 DeepSeek_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "腾讯云助力企业打造 AI 原生生产力飞轮",
+      "source": "InfoQ",
+      "digest": "腾讯云提出「AI 原生生产力飞轮」框架，以三大支柱相互驱动：AI 原生工作流推动 AI 融入业务、提升效率；AI 原生技术架构让 AI 高效运行、可管可控；AI 原生组织促进人机协同、增厚组织资产并激发创新。文章强调该飞轮「以人为本、循环增强」，目标是锻造可交付、可验证、可持续的生产力。文末推荐了多篇相关好文（如 Claude 开发成本、亚马逊 CTO 谈中国开放模型等），整体定位为腾讯云面向企业 AI 落地的方法论宣导。",
+      "link": "https://mp.weixin.qq.com/s/PeRv7JZLtCe_aS12K0xWdw",
+      "source_file": "sources/2026-11-02_腾讯云助力企业打造 AI 原生生产力飞轮_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "运维走出控制台：阿里云 AgentCore AI Native 运维实践",
+      "source": "阿里云云原生",
+      "digest": "阿里云分享 AgentCore AI Native 运维实践：以 UModel（统一可观测数据建模）关联业务对象、运行资源与日志/指标/事件，把 Agent、会话与底层 Sandbox 串联成可追踪现场；STAROps 承载 AgentCore 诊断能力，用自然语言发起排查、由运维数字员工按领域方法查证据、分析问题；AgentLoop 记录模型调用、工具执行与输出并评估质量，复核诊断是否找到关键证据、结论是否可靠，为修订排查手册提供依据。三者组合体现「用 Agent 运维 Agent」的可观测—诊断—评估闭环。",
+      "link": "https://mp.weixin.qq.com/s/Y_bMArb2vXnwIziX4LEAcQ",
+      "source_file": "sources/2026-11-02_运维走出控制台：阿里云 AgentCore AI Native 运维实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "数智原生产品的交互形态在银行服务中的研究与探索",
+      "source": "中国金融电脑+",
+      "digest": "中国工商银行金融科技研究院（业务研发中心）专家任长清、高明、张皓熊智航撰文，探讨银行数智原生产品的人机交互体系。文章指出，随着大模型与生成式 AI 落地，传统以 GUI 功能交付为核心的线性、标准化交互已难以满足智能化、个性化金融需求，行业缺乏适配数智场景的设计理念与标准。团队提出以「意图管理+任务处理」为核心的双页面标准化界面框架，结合金融特性提炼专属设计原则，并依托典型场景做概念设计，为银行智能金融产品的创新迭代与体验升级提供方法参考。",
+      "link": "https://mp.weixin.qq.com/s/VsQzeoLsWB8IbEEoIHzisg",
+      "source_file": "sources/2026-11-02_数智原生产品的交互形态在银行服务中的研究与探索_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Google AI Mode 未给网站带来流量",
+      "source": "Solidot",
+      "digest": "Reddit 最新财报印证了众多网站的抱怨：Google AI Mode 未给网站带来流量。AI Mode 以生成式总结响应用户查询，而非传统搜索提供链接与摘要，硅谷全面拥抱 AI 正在牺牲构成互联网的无数站点。Reddit 联合创始人兼 CEO Steve Huffman 表示用户仍需要 Reddit，只是 Google 不再像过去那样将其引导过去，上季度来自 Google 搜索的引荐流量显著下滑。Reddit 与众多新闻网站一样转向更封闭——强制登录或拥抱订阅，折射出 AI 搜索对内容生态流量的重构与冲击。",
+      "link": "https://www.solidot.org/story?sid=85767",
+      "source_file": "sources/2026-11-02_Google AI Mode 未给网站带来流量_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-01",
       "title": "Jev新成果，再次引爆开源",
