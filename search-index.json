@@ -1,7 +1,267 @@
 {
-  "updated_at": "2026-11-03T07:18:55.903609",
-  "total": 3235,
+  "updated_at": "2026-11-04T12:39:11.360687",
+  "total": 3261,
   "articles": [
+    {
+      "date": "2026-11-03",
+      "title": "Zyphra 发布分层注意力 ZHA，迈向真正亚二次方注意力",
+      "source": "MarkTechPost",
+      "digest": "Zyphra 发布分层注意力 ZHA，一种围绕树状结构化索引器构建的稀疏注意力方法，针对稀疏注意力长期短板——挑选 token 的索引器仍需全上下文扫描。技术论文显示，ZHA 可用约 4B token 蒸馏进冻结预训练模型；在 Qwen3.6-35B-A3B 上，推理、智能体编程与 256K 检索基准接近稠密注意力。该方法仅向模型增加约 81920 个可训练参数（约 0.00024%），已测至 256K 上下文。",
+      "link": "https://www.marktechpost.com/2026/11/02/zyphra-hierarchical-attention-zha-sparse-attention/",
+      "source_file": "sources/2026-11-03_Zyphra AI Introduces Zyphra Hierarchical Attention_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-03",
+      "title": "网友炸了：GPT-6 Astra给Qwen“改脑子”，数学成绩暴涨5倍",
+      "source": "智东西",
+      "digest": "MIT CSAIL 研究人员公布八项实验，测试 OpenAI GPT-6 Astra 直接读写神经网络权重的能力（称为「权重空间编程」）。最受关注的一项：GPT-6 Astra 在不采用梯度训练的情况下，直接修改 Qwen3.5-0.8B 约 0.016% 的权重，将其 MATH-500 准确率从 7.9% 提升至 48.1%（约 6 倍），指令遵循成绩亦升至近 3 倍。该实验在海外引发热议，共同作者帖子浏览量超 490 万。",
+      "link": "https://mp.weixin.qq.com/s/g-ZPVvEaOTVyskuFfGN90g",
+      "source_file": "sources/2026-11-03_网友炸了：GPT-6 Astra给Qwen“改脑子”，数学成绩暴涨5倍_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Anthropic团队零Rust经验起步，靠Claude完成核心API跨语言重构：CPU省40%，延迟降20%",
+      "source": "InfoQ",
+      "digest": "Anthropic 完成一项代表性工程改造：一个原本无 Rust 开发者的团队，借助 Claude 将 Messages API 从 Python 迁移至 Rust，改造后相关服务 CPU 消耗降约 40%—50%、首 Token 延迟改善 10%—20%。人类工程师主要负责架构、迁移策略与验证，Claude 承担大量编码。平台工程负责人指出，当 Agent 开始长时间自主运行与协作，身份认证、安全隔离与监控等软件基础设施正面临新工程挑战。",
+      "link": "https://www.infoq.cn/article/IMWM7ZXDi99sMiUVZBIF",
+      "source_file": "sources/2026-11-03_Anthropic团队零Rust经验起步，靠Claude完成核心API跨语言重构：CPU省40%，延_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Grok Bot 额度被曝暗削一半！马斯克：成本高得扛不住了",
+      "source": "AI信息Gap",
+      "digest": "马斯克旗下 AI 智能体 Grok Bot 突发 bug，付费用户周额度凭空缩水近一半，引发广泛不满；xAI（原 SpaceXAI）后退回多扣额度，但用户测算消耗速度仍较前快近一倍。马斯克回应称「相对收入，Grok Bot 服务成本高得扛不住」。与此同时，Grok Bot 刚开通国内支付宝订阅（首月半价 15 美元），额度横跳事件折射出超级智能体规模化服务的成本难题。",
+      "link": "https://mp.weixin.qq.com/s/RENckdJ73QJkWaAnqcM2kQ",
+      "source_file": "sources/2026-11-03_Grok Bot 额度被曝暗削一半！马斯克：成本高得扛不住了_AI信息Gap.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "OpenAI 推出 Git 后端 Pando，中位推送延迟降低约 80%",
+      "source": "MarkTechPost",
+      "digest": "OpenAI 推出新 Git 后端 Pando，现已服务于其单体仓库的全部开发。Pando 保留标准 Git 客户端与协议，工程师与 Codex 智能体仍照常执行 git push/fetch，仅服务端变更。OpenAI 称中位推送延迟下降近 80%（约 5 倍），每日交付近 1PB Git 数据，峰值一小时超 57TB，可在数千并发推送下无退化。该实践为大规模代码仓库的 AI 原生基础设施提供样本。",
+      "link": "https://www.marktechpost.com/2026/11/02/openai-pando-git-backend-monorepo/",
+      "source_file": "sources/2026-11-03_OpenAI Introduces Pando_ A Git Backend That Cuts M_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Supabase 创始人：Personal Agent 的下一步，是给每个人一个 Personal Database",
+      "source": "Founder Park",
+      "digest": "Supabase 联合创始人兼 CEO Paul Copplestone 谈 Personal Agent 趋势：Personal Database 可能成为其关键环节，而 Supabase 正处此位置。这家开源 Postgres 后端已是 Claude Code、Codex 等工具的默认数据库。过去一年注册用户从约 300 万增至 1300 万，托管数据库从 800 万增至近 5000 万，新增使用约 70% 来自 Agent。面对 Agent 为主的新负载，Supabase 全面转向 Code-First，并推轻量 Spark 承接起步负载。",
+      "link": "https://mp.weixin.qq.com/s/lt0JsC9Kx4l2FmuRGihvHQ",
+      "source_file": "sources/2026-11-03_Supabase 创始人：Personal Agent 的下一步，是给每个人一个 Personal Database_Founder Park.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "The Letter Company 发布编程智能体 Letterpress-1，面向增长工程",
+      "source": "MarkTechPost",
+      "digest": "The Letter Company 发布编程智能体 Letterpress-1（公测），面向增长工程的 coding agent、harness 与 IDE。它读取目标网站及其市场后，自行判断「应该存在什么」，在沙箱中构建改动并开出带实时预览的拉取请求。团队称其融合前沿模型与微调小模型，部署无需本地 GPU、5 分钟内完成；目前仅展示 1 个自报的页面构建对比，尚无公开基准。",
+      "link": "https://www.marktechpost.com/2026/11/02/letter-letterpress-1-growth-engineering-coding-agent/",
+      "source_file": "sources/2026-11-03_The Letter Company Releases Letterpress-1_ A Codin_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好",
+      "source": "InfoQ",
+      "digest": "Anthropic 工程经理、Claude Cowork 负责人 Felix Rieseberg 撰文呼吁用 AI 时「更有野心」：不要只让 AI 更快做事，而要重想工作最终目标、把更多事交给 AI 自主寻找方法。他举例自己不再逐条查看崩溃记录再交给 Claude 修复，而是让 Claude 直接读崩溃数据自行判断。他还分享「对抗式审查」做法——让多个 Claude 分别挑错、再由另一个 Claude 判定意见是否成立，以应对不熟悉领域的错误答案。",
+      "link": "https://www.infoq.cn/article/xaWSKT3MlZjbuJw16Vem",
+      "source_file": "sources/2026-11-03_“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Sk_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "员工担心AI编程安全，遭CEO怒骂“失败者思维”！Proton全员被要求“重新面试”，CTO更放话：编程已死！",
+      "source": "CSDN",
+      "digest": "隐私科技公司 Proton（总部瑞士，旗下 Proton Mail 等）在推进 AI 转型中爆发内部分歧：有员工建议新代码上线前多花几天做安全测试，遭 CEO Andy Yen 斥为「失败者思维」，并要求少用「精雕细琢的手写代码」、多用 AI；公司还计划让几乎全员重面以证明跟得上 AI。CTO 随后抛出「编程已死，但工程没有」，称目前 90% 代码由 AI 编写。事件折射传统安全厂商拥抱 AI 的阵痛。",
+      "link": "https://mp.weixin.qq.com/s/2jIPqUiLOc_Yjy8Bqrg44w",
+      "source_file": "sources/2026-11-03_员工担心AI编程安全，遭CEO怒骂“失败者思维”！Proton全员被要求“重新面试”，CTO更放话：编程已死！_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "框架选不对，Claude 开发成本多一倍：前端十年框架膨胀，终于有人买单了",
+      "source": "InfoQ",
+      "digest": "资深 Web 开发者 Nolan Lawson 让 AI Agent 用 12 种 JavaScript 框架构建同一 Pokémon 应用并比较成本：最便宜的 Hono+htmx 中位成本 2.67 美元，Angular 达 4.97 美元、接近两倍；Token 消耗上 Angular 976 万、Hono+htmx 426 万，差约 2.3 倍。文章提出，当开发者不再逐行写代码，过去围绕开发体验的框架选型是否还应原样保留，值得行业重新审视。",
+      "link": "https://www.infoq.cn/article/M6Q9I3DFrozJOREx9ztL",
+      "source_file": "sources/2026-11-03_框架选不对，Claude 开发成本多一倍：前端十年框架膨胀，终于有人买单了_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "程序员正迎来40年一遇的机会！前Arm工程师：AI会写代码了，让项目一直改得动才是难题",
+      "source": "51CTO技术栈",
+      "digest": "前 Arm 工程师、曾任 AI 总监的 Chavdar Yotov 认为，AI 会写代码正给软件工程师带来过去 40 年最大机会，核心不在「做出来」而在「一直改得动」。他指出 Agent 能快速产出软件，却未必清楚旧需求藏在哪份工单、哪些模块不能随意改、结果如何验收，导致小修改反而耗时数倍、改好一处坏另一处。他分享的工作流是：让 Agent 先弄清项目背景、限定可改范围、再校验实际运行结果。",
+      "link": "https://mp.weixin.qq.com/s/vUIG4NSzPsmNOZ2DKGVoKQ",
+      "source_file": "sources/2026-11-03_程序员正迎来40年一遇的机会！前Arm工程师：AI会写代码了，让项目一直改得动才是难题_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "谷歌宁愿少卖云算力，也要先把算力留给 Gemini：皮查伊罕见长访谈，披露 AI 自我改进与算力争夺内幕",
+      "source": "InfoQ",
+      "digest": "谷歌 CEO 皮查伊在访谈中披露，Gemini 4 Argon 上线前 72 小时使用量近 25 万亿 Token、约为 Gemini 3.0 同期三倍，但算力供给跟不上需求，谷歌已将算力优先分配给 AI 研究团队，云业务因此放弃部分短期收入。皮查伊称 AI 已深度参与谷歌代码开发——去年曾给出 25% 的比例，如今认为该数字意义不大；Argon 发布四周内代码变更提交量增约 30%、回滚减少约三分之一，并谈到 AI 自我改进与来自 OpenAI 的竞争。",
+      "link": "https://www.infoq.cn/article/JmVl0yY2RYIBNpuD0xuu",
+      "source_file": "sources/2026-11-03_谷歌宁愿少卖云算力，也要先把算力留给 Gemini：皮查伊罕见长访谈，披露 AI 自我改进与算力争夺_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "商汤新模型实测：8分钟速读582页招股书，“卡”在了做PPT上",
+      "source": "智东西",
+      "digest": "商汤发布多模态智能体模型 SenseNova 6.8 Flash，依托长期记忆与主动交互，在智能体协作、办公智能化与设计上表现突出。据披露，其在 TeamBench（团队协作）、DataAnalysis2.0（数据理解与分析推理）等基准超越 Claude Opus 5、GPT-6 Sol、Kimi K3 等模型。智东西实测显示其长上下文检索与可视化较好、生成 PPT 视觉语言一致，但生成后半程反复检查拖慢速度，可能与 Harness 环境有关。",
+      "link": "https://mp.weixin.qq.com/s/7PSHwtv6rGMFsyqVh0mgOw",
+      "source_file": "sources/2026-11-03_商汤新模型实测：8分钟速读582页招股书，“卡”在了做PPT上_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-03",
+      "title": "AI数据平台OceanBase获世界互联网大会杰出贡献奖",
+      "source": "量子位",
+      "digest": "OceanBase 在 2026 世界互联网大会获「杰出贡献奖」，大会颁奖词称其「打造 AI 数据基础设施，服务全球数字经济发展」。作为蚂蚁孵化的自研数据库企业，OceanBase 已从分布式数据库发展为面向 AI 时代的数据基础设施：今年发布湖库一体 AI 数据库，统一架构管理结构、半结构与非结构化数据，让同一份数据同时服务交易、实时分析与 AI 应用，减少跨系统复制与重复治理。",
+      "link": "https://www.qbitai.com/2026/11/507405.html",
+      "source_file": "sources/2026-11-03_AI数据平台OceanBase获世界互联网大会杰出贡献奖_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "DeepSeek官方智能体教程来了：一句话造插件，7套提示词免费公开",
+      "source": "量子位",
+      "digest": "DeepSeek Harness 官方发布「创造模式」玩法指南：用户只需在聊天框输入一句自然语言，AI 即可自动编写代码、生成插件，并将新功能直接装入工作界面，无需手动安装。官方同时公开多套示例 Prompt，覆盖 3D 建筑展厅、交互游戏、视频剪辑工具等场景，用户可据此快速搭建专属工作台。该模式将 Agent 的能力边界从「对话执行」推向「现场造物」，进一步降低非开发者定制 AI 工具的门槛。",
+      "link": "https://mp.weixin.qq.com/s/JLjRCh5zMq-B2zqjIW7PDQ",
+      "source_file": "sources/2026-11-03_DeepSeek官方智能体教程来了：一句话造插件，7套提示词免费公开_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "QoderWake：不用每次都 @，数字员工也能主动接活",
+      "source": "Qoder",
+      "digest": "Qoder 推出数字员工 QoderWake 的主动响应能力，解决群聊场景下「数字员工何时该主动承担任务」的核心痛点。区别于围绕个人目标的 Personal Agent，组织协作型数字员工被授予明确职责，需结合发送人身份、@提及、回复关系与职责策略，判断任务归属与自身行动的影响范围，避免误接或打断他人。该能力沿用既有 @Waker 任务系统，将「何时由我担责」作为群聊主动性的第一原则。",
+      "link": "https://mp.weixin.qq.com/s/KrKXOBOvbbrtCUoVIT_Ing",
+      "source_file": "sources/2026-11-03_QoderWake：不用每次都 @，数字员工也能主动接活_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Skill 路由优化实战：基于真实业务请求的 description 自进化",
+      "source": "千问AI平台",
+      "digest": "文章基于真实业务请求，分享 Agent 选错 Skill 时的路由优化实践。作者将问题拆为两部分：用本地首路由回放缩短反馈周期，以「归因与优化方向→description 改写→回归验证→经验沉淀」组织迭代。案例聚焦两条易混淆的相邻能力——一个在会话内交付结果、一个向外部渠道投递通知，指出写清「交付目的」比堆砌查询关键词更能解释修改方向。最终在 34 条开发请求上命中 31 条，首路由准确率达 91.18%。",
+      "link": "https://mp.weixin.qq.com/s/K9Eh1zezOx_idgh8bzFvMA",
+      "source_file": "sources/2026-11-03_Skill 路由优化实战：基于真实业务请求的 description 自进化_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "一文搞懂MCP开发",
+      "source": "腾讯云开发者",
+      "digest": "本文系统讲解 Model Context Protocol（MCP）的开发要点。MCP 由 Anthropic 于 2024 年底开源，定义了 AI 应用发现与调用外部能力的标准方式，以统一协议替代「N 个应用×M 个数据源」的胶水代码。文章覆盖协议核心概念、安全模型与传输机制，并基于 MCP 规范 2026-07-28 与 TypeScript SDK v2，演示 Server 侧如何声明工具、资源与提示模板，帮助开发者快速接入外部能力。",
+      "link": "https://mp.weixin.qq.com/s/8qB8xcp8d3yYXnGZNlutEA",
+      "source_file": "sources/2026-11-03_一文搞懂MCP开发_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "与DeepSeek Super Agent理念同频：人大复旦提出CoworkOS，构建你的「超级AI同事」！",
+      "source": "机器之心",
+      "digest": "中国人民大学与复旦大学联合团队提出 CoworkOS，呼应 DeepSeek 为下一代超级智能体（Super Agent）设定的「连续、高效、主动、持久」四标准，将复杂任务协作、共享应用与持久工作状态纳入同一系统。论文探索「超级 AI 同事」形态：任务复杂度上支持多轮环境交互完成复杂办公交付；时间跨度上实现跨天、跨会话持续工作并在中断后接续。项目已开放论文、代码与演示。",
+      "link": "https://mp.weixin.qq.com/s/oWPhyARCHxUaNkgF60Os7w",
+      "source_file": "sources/2026-11-03_与DeepSeek Super Agent理念同频：人大复旦提出CoworkOS，构建你的「超级AI同事」！_机器之心.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "从OpenClaw，怎么走到了Super Agent？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程团队复盘近一年 Agent 产品演进逻辑：年初受 OpenClaw 影响的 Bot 形态，到 4、5 月 WorkBuddy 等桌面/IDE 应用兴起，再到近两月双方互向对方靠拢——Bot 类补工作台与连接器，桌面类补手机与协作入口。文章指出背后是两股朴素需求驱动：Agent 需更接近人的真实工作环境，以及人越用越希望随时找到它、并把能力交给他人。DeepSeek Harness 等新用法正加速这一融合。",
+      "link": "https://mp.weixin.qq.com/s/R8v1fxHpErVHq1o6euSroA",
+      "source_file": "sources/2026-11-03_从OpenClaw，怎么走到了Super Agent？_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "从云栖到云栖：阿里云磐久超节点这一年",
+      "source": "阿里云基础设施",
+      "digest": "阿里云持续升级磐久超节点系列服务器，支撑 AI Native 技术变革。今年磐久 AL128 超节点全面升级算力、ScaleUp 域与带宽，除支持平头哥真武 M890 外，新增真武 V900 及产业 GPU，并完成 800V HVDC 落地；新推 AL64 分布式 SNPO 光互连超节点，最大扩展至 1024 卡；下一代 AL144 支持单柜 144 卡全互连、跨柜光互连最大 10368 卡，单芯片模组最高 3.5kW，PUE 降 3%、非 IT 能耗降 36%，延续开放架构兼容产业芯片。",
+      "link": "https://mp.weixin.qq.com/s/hZSresKjlatLlBBbURsI5w",
+      "source_file": "sources/2026-11-03_从云栖到云栖：阿里云磐久超节点这一年_阿里云基础设施.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "从模型调用到任务交付：MaaS 如何走进 Agent 生产",
+      "source": "InfoQ",
+      "digest": "腾讯云在模型与 MaaS 服务专场提出，Agent 进入日常任务后，模型调用嵌入连续工作（多轮推理、工具调用、结果校验），企业关切从「接入模型」转向「把调用组织成可持续服务」。TokenHub 统筹多模型接入、调度与治理；TI-ONE 推进训推升级；Agent Runtime 从沙箱拓展至运行、治理与进化；WorkBuddy 让模型能力进入办公任务——最终以可控成本把模型稳定嵌入业务流程。",
+      "link": "https://www.infoq.cn/article/zZutPTX8bsr6NWQYNC3A",
+      "source_file": "sources/2026-11-03_从模型调用到任务交付：MaaS 如何走进 Agent 生产_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "模型谁都买得到，拉开差距的是AI生产力系统",
+      "source": "量子位",
+      "digest": "文章指出大模型商业化正撞上「规模越大、亏损越高」的现实，单纯靠 API 套壳难成壁垒。海马云创始人党劲峰提出，AI 下一程本质是「确定性的系统交付」而非发散的概率生成，真正拉开差距的是算力、Harness（Agent、上下文、工具链）与数据深度咬合的「生产力发动机」，没有行业 Agent 与专家轨迹的 AI 只是会吐字的玩具。其 RunningHub 在 AIGC 领域具象落地，今年 3 月到 9 月全站访问量增长 266%。",
+      "link": "https://www.qbitai.com/2026/11/507448.html",
+      "source_file": "sources/2026-11-03_模型谁都买得到，拉开差距的是AI生产力系统_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "模拟计算进入矩阵时代！北大联手硅谷IBM，写下新定义",
+      "source": "量子位",
+      "digest": "北京大学人工智能研究院孙仲领衔，联合 IBM 苏黎世研究院与硅谷初创 Unconventional AI，在 Nature 旗下期刊发表综述，正式定义「现代模拟计算」。该方向试图用模拟/存内计算替代部分数字计算，将 AI 能耗降至千分之一量级；IBM 在模拟计算领域深耕超十年，硅谷相关公司估值已超 45 亿美元。文章认为，在 GPU 迭代之外，模拟计算正被重新定义为 AI 算力的一条新路径。",
+      "link": "https://www.qbitai.com/2026/11/507367.html",
+      "source_file": "sources/2026-11-03_模拟计算进入矩阵时代！北大联手硅谷IBM，写下新定义_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri",
+      "source": "量子位",
+      "digest": "一款名为 Orilo 的纯语音 Personal Agent 引发关注：用户可边喝咖啡边听它口头汇报当日新闻，中途打断派发「帮我回封邮件」等任务也不会冷场，被评价为「最接近科幻电影《Her》的 AI 助手」。文章认为，相比层出不穷的前沿花活，真正贴近普通人的产品更令人兴奋——Personal Agent 正从极客生产力工具卷向大众消费市场，Muse 增速一度反超 GPT。",
+      "link": "https://www.qbitai.com/2026/11/507419.html",
+      "source_file": "sources/2026-11-03_纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-03",
+      "title": "基于大模型的金融企业岗位智能化应用实践",
+      "source": "中国金融电脑+",
+      "digest": "国金证券以智能面试官培训助手项目为案例，剖析大语言模型在金融岗位智能化中的应用。文章指出，在数字金融「五篇大文章」框架下，核心在于驱动中后台经营管理全面数字化；以面试官培养为例，传统模式响应迟缓、缺乏实操检验，而大模型可重构人才筛选评价能力，实现面试官队伍管理的「岗位智能化」。该实践为金融机构运用前沿 AI 技术破解人才能力建设难题提供了落地路径。",
+      "link": "https://mp.weixin.qq.com/s/JJqQVCVK_UfTlYufq62rBQ",
+      "source_file": "sources/2026-11-03_基于大模型的金融企业岗位智能化应用实践_中国金融电脑+.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-02",
       "title": "66 岁 Yann LeCun 发新论文挑战 Scaling Law：1.09 亿参数胜过 720 亿，模型越大不一定越懂世界",
