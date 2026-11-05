@@ -1,6 +1,30 @@
 {
   "issues": [
     {
+      "date": "2026-11-05",
+      "weekday": "周四",
+      "stats": {
+        "国际": 15,
+        "国内": 16,
+        "同业": 2,
+        "其他": 0,
+        "total": 33
+      },
+      "summary": "GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了/OpenAI发布GPT-6 Cyber网络安全智能体模型/淘宝MNN团..."
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": "周三",
+      "stats": {
+        "国际": 24,
+        "国内": 12,
+        "同业": 4,
+        "其他": 0,
+        "total": 40
+      },
+      "summary": "OpenAI Daybreak Red（GPT-5.6 Cyber）登陆 AWS GovCloud/GPT-6.2 Astra首批测试结果！网友：这这这不..."
+    },
+    {
       "date": "2026-11-03",
       "weekday": "周二",
       "stats": {
