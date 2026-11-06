@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-06",
+      "weekday": "周五",
+      "stats": {
+        "国际": 13,
+        "国内": 22,
+        "同业": 2,
+        "其他": 0,
+        "total": 37
+      },
+      "summary": "A\\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间/Google 发布 Gemini Omni 1.2 Flash：更长片段、更快更..."
+    },
+    {
       "date": "2026-11-05",
       "weekday": "周四",
       "stats": {

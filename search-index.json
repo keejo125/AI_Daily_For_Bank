@@ -1,7 +1,377 @@
 {
-  "updated_at": "2026-11-06T05:21:23.677845",
-  "total": 3334,
+  "updated_at": "2026-11-07T05:15:08.586548",
+  "total": 3371,
   "articles": [
+    {
+      "date": "2026-11-06",
+      "title": "A\\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间",
+      "source": "量子位",
+      "digest": "METR 报告披露 Anthropic 三个内部模型 Model 2/3/4：分别今年 7 月、8-9 月、9-10 月完成训练，最强 Model 4 在 AECI 综合指数达 178.6，超 Opus 5.5 约 3.9 分（约 3 个月进步），15 项基准全超 50%。METR 估计自 2025 年 10 月其模型能力提升速度约为此前 1.9 倍，AI 正加速 Anthropic 自身研发。",
+      "link": "https://mp.weixin.qq.com/s/BIRCKgD9YOEeJV4Mn-UqJA",
+      "source_file": "sources/2026-11-06_A_三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Google 发布 Gemini Omni 1.2 Flash：更长片段、更快更省",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 发布 Gemini Omni 1.2 Flash，原生支持 15 秒视频生成，改进参考一致性与多轮对话式编辑，生成更快、成本更低（较 1.1 Flash 降价 30%），已在 Google Cloud 与 Gemini API 全面可用。作为视频生成与编辑模型的迭代，强化多模态创作能力。",
+      "link": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "source_file": "sources/2026-11-06_Gemini Omni 1.2 Flash_ Fast and cost-effective wit_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "OpenAI 推出 BioBasicsBench：评估智能体处理湿实验室科学任务",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 BioBasicsBench，含 100 项任务，评估 AI 智能体解读原始实验数据、处理日常湿实验室科学任务的能力，推动 AI 在生物实验场景的可靠性评测。",
+      "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "source_file": "sources/2026-11-06_Measuring how AI agents handle everyday wet-lab sc_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "估值 400 亿美元，美国公司，终于做出了中国开源模型的竞对",
+      "source": "极客公园",
+      "digest": "OpenAI 前 CTO Mira Murati 创立的 Thinking Machines Lab（TML）发布第二代开放权重模型 Inkling 2 Small：总参数 594B、激活 17B 的 MoE，支持百万上下文与可调思考力度，在 Artificial Analysis 智能指数得分 31（前代 13），成为“中国以外得分最高的开放权重模型”；训练数据后半程大量采样自更早模型（点名 Kimi K3）。同日据报道，TML 正以 400 亿美元投前估值筹集 50 亿美元新融资。",
+      "link": "http://www.geekpark.net/news/373637",
+      "source_file": "sources/2026-11-06_估值 400 亿美元，美国公司，终于做出了中国开源模型的竞对_极客公园.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "奥尔特曼急了，OpenAI连夜掏出新模型GPT-6 Cyber",
+      "source": "智东西",
+      "digest": "OpenAI 推出 GPT-6 Cyber，主攻安全研究，在 ExploitGym 基准得分 48.5%，较 GPT-5.6 Cyber 的 32.1% 相对提升 51%，已在 Linux、Firefox 等代码库发现并验证数千个漏洞，Mozilla、Palo Alto 等安全团队已应用。GPT-6 系列含 Astra/Sol/Terra/Luna 等型号，Cyber 专攻安全领域。",
+      "link": "https://mp.weixin.qq.com/s/fJQm6RzagZZkzP7qZjN5DA",
+      "source_file": "sources/2026-11-06_奥尔特曼急了，OpenAI连夜掏出新模型GPT-6 Cyber_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "AI 狂烧 2000亿美元，谷歌全球启动“自愿买断”计划：最高补偿12个月工资",
+      "source": "InfoQ",
+      "digest": "谷歌将自愿离职计划扩展至加、法、德、日、瑞等多国，瑞士员工最高补偿 12 个月工资。背景是其 Q3 营收 1276 亿美元、云收入同比翻倍，但全年资本支出预计 1950–2050 亿美元、单季自由现金流转负。反映 AI 与云成招聘重点、传统业务资源重配，DeepMind 暂未纳入。",
+      "link": "https://www.infoq.cn/article/vMSj216sQUhmeDH4H0G7",
+      "source_file": "sources/2026-11-06_AI 狂烧 2000亿美元，谷歌全球启动“自愿买断”计划：最高补偿12个月工资_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "澳大利亚高校将 ChatGPT 引入教学培养 AI 原生毕业生",
+      "source": "OpenAI",
+      "digest": "澳大利亚多所高校扩大 ChatGPT 使用并将 AI 引入教学，培养适应 AI 化劳动力的毕业生。反映教育机构从试点走向将 AI 能力嵌入人才培养体系。",
+      "link": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "source_file": "sources/2026-11-06_Australian universities are creating AI-native gra_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Cult.fit 借助 Codex 跨部门构建工具提速交付",
+      "source": "OpenAI",
+      "digest": "印度健康科技公司 Cult.fit 使用 OpenAI Codex 帮助跨职能团队构建工具、加快交付、改变工作方式，展示 Codex 在企业内部工具开发中的落地。",
+      "link": "https://openai.com/index/cultfit-builds-with-codex",
+      "source_file": "sources/2026-11-06_Cult.fit builds operational muscle with Codex_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "DigitalOcean 推出学习与数据服务，帮助 AI 智能体进行自我迭代",
+      "source": "InfoQ",
+      "digest": "DigitalOcean 发布 Learning Services 与 Agent Data Services 公开预览，让开发者在统一的 AI 原生云平台上构建、评估并持续改进智能体。前者含 Insights（记录活动）、Signals（识别失败与短板）、Simulations（部署前模拟测试）三项能力；后者提供带治理与访问控制的安全数据底座。配套 Inference Router 按任务优化模型选择、平衡成本与质量。",
+      "link": "https://www.infoq.cn/article/upfROwtEl8R75H24D13J",
+      "source_file": "sources/2026-11-06_DigitalOcean 推出学习与数据服务，帮助 AI 智能体进行自我迭代_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Kagi 开放搜索",
+      "source": "Solidot",
+      "digest": "付费无广告搜索引擎 Kagi 向所有人开放搜索，未注册可搜 50 次、注册后再增 100 次。Kagi 同时批评 Google 若美国学校禁用 AI 则关闭其搜索的决定，呼吁教育机构选择 Kagi 等替代，强调教育不应沦为广告公司人质。（Kagi 含 AI 搜索能力）",
+      "link": "https://www.solidot.org/story?sid=85812",
+      "source_file": "sources/2026-11-06_Kagi 开放搜索_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "NASA 通过 AI 生成图像宣布 X-70 试验机",
+      "source": "Solidot",
+      "digest": "NASA 宣布新试验机 X-70 Fractal，并展示一幅 AI 生成的（非实拍）概念图像。X-70 为载人飞行器，巡航 0.75 马赫、航程 2778 公里，局长称有望两年内首飞；公布图像与超音速侦察机 SR-71 相似，反映 AI 生成图像正进入航天等严谨领域的概念沟通。",
+      "link": "https://www.solidot.org/story?sid=85818",
+      "source_file": "sources/2026-11-06_NASA 通过 AI 生成图像宣布 X-70 试验机_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "OpenAI 携手 Hacktron 查找系统漏洞",
+      "source": "OpenAI",
+      "digest": "OpenAI 宣布与 Hacktron 合作，借助前沿 AI 查找自身系统漏洞、测试与第三方服务的连接并加固防御。属 AI 驱动的安全研究合作，体现头部实验室将 AI 用于攻防以提升系统韧性的趋势。",
+      "link": "https://openai.com/index/partnering-with-hacktron",
+      "source_file": "sources/2026-11-06_Partnering with Hacktron to find vulnerabilities i_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "沃顿教授：程序员的新工作是“经理”，监督AI比派任务更困难，别把Agent当“一键完成”",
+      "source": "51CTO技术栈",
+      "digest": "沃顿商学院伊桑·莫利克指出，Agent 接手执行任务后，人的新角色是“经理”：讲清目标、约定汇报节点、从方案中作选择。监督 Agent 同样耗时，且不应过早信任“一键完成”；研究什么、走哪条路仍由人决定，信任需从低风险任务逐步建立。",
+      "link": "https://mp.weixin.qq.com/s/mUp5ellTzv-OryuzH7Pjfw",
+      "source_file": "sources/2026-11-06_沃顿教授：程序员的新工作是“经理”，监督AI比派任务更困难，别把Agent当“一键完成”_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "百度发布 ERNIE 5.5 Flash Base：280B MoE 预训练基座模型",
+      "source": "MarkTechPost",
+      "digest": "百度发布 ERNIE 5.5 Flash Base，280B 参数稀疏 MoE、每 token 激活 14B 的预训练检查点（无后期训练），128K 训练上下文、微调/推理支持 1M。作为干净起点供团队对比微调、指令微调或 RL 方法，提供 SGLang 与 vLLM 多 GPU 参考配置。",
+      "link": "https://www.marktechpost.com/2026/11/05/baidu-ernie-5-5-flash-base-280b-moe/",
+      "source_file": "sources/2026-11-06_Baidu Releases ERNIE 5.5 Flash Base_ A 280B MoE Ba_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Kimi K3.1 Pro来了：基于CANN的Day0推理支持与性能优化",
+      "source": "CSDN",
+      "digest": "Moonshot AI 于 10 月 24 日发布、11 月 4 日开源 Kimi K3.1 Pro；CANN 完成其 Day0 支持与优化。模型交错使用 KDA 与 DSA（LI 筛选 Top-K 历史位置、SFA 完成稀疏注意力），复用 K3 阶段 FlashKDA/MegaMoE 等算子优化，结合混合并行、SuperKernel 与投机推理提升昇腾平台推理效率。",
+      "link": "https://mp.weixin.qq.com/s/ymQ1Pevb0cCNxFpDKzakAQ",
+      "source_file": "sources/2026-11-06_Kimi K3.1 Pro来了：基于CANN的Day0推理支持与性能优化_CSDN.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+      "source": "量子位",
+      "digest": "因 Hy4 调用激增，腾讯对 WorkBuddy 推理集群进行十倍扩容并提升免费额度。Hy4 在 Artificial Analysis 智能指数跻身 724 款模型前列、中国第二（仅次于 Kimi K3.1 Pro），Agent Arena 居开源模型第一；单任务成本约 0.78 美元，成本效率优于同分段 Grok 4.7 等。",
+      "link": "https://www.qbitai.com/2026/11/507967.html",
+      "source_file": "sources/2026-11-06_腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-06",
+      "title": "99.4%登顶全球第一！这个中国AI师承世界冠军",
+      "source": "量子位",
+      "digest": "360 自研 AI 安全攻防系统“图龙锋”在 CyberGym 榜单以 99.4% 漏洞复现成功率登顶全球第一，同场对阵 OpenAI GPT-5.5-Cyber、Claude Mythos、Gemini 3.8 Flash Cyber。基于 1507 个真实漏洞任务、连续三轮独立评测，由世界冠军安全团队打造，凸显人在回路的关键作用。",
+      "link": "https://www.qbitai.com/2026/11/508107.html",
+      "source_file": "sources/2026-11-06_99.4%登顶全球第一！这个中国AI师承世界冠军_量子位_f18913.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "AI Agent进入工程化竞争时代：八个值得关注的判断",
+      "source": "软件工程3.0时代",
+      "digest": "文章基于 2026 年 8-10 月调研提出八点判断：竞争从模型能力转向系统能力；Agent 价值在完成任务而非生成内容；Harness Engineering 成关键；开发者高频使用却不无条件信任；写码快≠交付快；多 Agent 不天然优于单 Agent；中国 Agent 进入平台化行业化；企业落地门槛在验证与治理。",
+      "link": "https://mp.weixin.qq.com/s/hBYqu_FkUCflPW7DB7PGMg",
+      "source_file": "sources/2026-11-06_AI Agent进入工程化竞争时代：八个值得关注的判断_软件工程3.0时代.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Agent 越用越多，企业为何仍不够 AI Native ？",
+      "source": "InfoQ",
+      "digest": "阿里云 CIO 蒋林泉复盘三年 AI 实践指出，AI 生码率飙升未带来 E2E 交付提速、通用 Agent 提效办公却未同步提升业务效能，“局部更快、整体不快”。强调 AI Native 是组织层面问题，需系统与组织双侧同步、CIO 与 CPO 联动，工具用量不等于组织形态变化。",
+      "link": "https://mp.weixin.qq.com/s/fJP8MMF_vAZfC4yZoGdN9A",
+      "source_file": "sources/2026-11-06_Agent 越用越多，企业为何仍不够 AI Native ？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "AgentCore + Codex 构建生产级 Agent 的原理与实践",
+      "source": "阿里云云原生",
+      "digest": "文章演示基于阿里云 AgentCore 自定义代码/镜像能力，结合自定义 Harness（Codex）实现端到端 Agent 应用：AgentCore 提供身份、模型、工具、技能、凭证、观测评估，Codex 通过 Runloop MCP Aggregator 以标准 tools 调用能力，Skill 按版本持久化、运行时只读映射，解耦物理存储。",
+      "link": "https://mp.weixin.qq.com/s/0oe8NGx3ZuwaXtqGg6AvyQ",
+      "source_file": "sources/2026-11-06_AgentCore + Codex 构建生产级 Agent 的原理与实践_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠开发者了",
+      "source": "InfoQ",
+      "digest": "截至 11 月 4 日，DeepSeek Harness 日活达 154 万、日耗 Token 约 92 万亿，第三方插件增至约 3.5 万个，约 60% 活跃用户制作或安装插件。平台提出“一切皆插件”，内置功能也可被替换，正从 Agent 工具走向开放式应用平台，但插件膨胀带来的上下文挤占与执行成本问题待解。",
+      "link": "https://mp.weixin.qq.com/s/MzArz2_3P4dvIgt5_zT0Cg",
+      "source_file": "sources/2026-11-06_DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠开发者了_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿",
+      "source": "量子位",
+      "digest": "墨芯人工智能完成近 10 亿元 C+ 轮融资，距上一轮仅 5 个月，反映资本对其专用稀疏推理芯片的认可。文章指出 DeepSeek-V4-Pro 等 MoE 模型仅激活约 3% 参数，推动稀疏计算从辅助优化走向算力设计要位；墨芯以“权重+激活”双稀疏算法及算法-软件-硬件协同设计卡位推理算力窗口。",
+      "link": "https://www.qbitai.com/2026/11/508155.html",
+      "source_file": "sources/2026-11-06_DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿_量子位_ed69b1.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "TechTalk丨从能买奶茶到能进企业，Agent 绕不开同一组问题",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AgentCore 架构师史明伟在 TechTalk 中指出，Personal Agent 与企业 Agent 平台绕不开同一组问题：权限如何放开、账号打通、数据权限、沙箱隔离。能付一杯奶茶就可能付更大账单，企业需管理整套账号体系与数据权限，中小团队应从治理基础设施起步。",
+      "link": "https://mp.weixin.qq.com/s/XywoivvE5gl-u-J1N-5thA",
+      "source_file": "sources/2026-11-06_TechTalk丨从能买奶茶到能进企业，Agent 绕不开同一组问题_阿里云云原生.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界的交互方式",
+      "source": "InfoQ",
+      "digest": "openJiuwen 首发 Agent Device Foundation（ADF），定义 Agent 与物理世界设备交互的统一协议：设备能力以结构化方式表达，Agent 可动态理解、选择、组合调用现实设备并感知执行结果。文章以家庭、会议、科研场景说明跨终端/跨厂商设备编排如何从“接接口”走向“组能力”。",
+      "link": "https://mp.weixin.qq.com/s/xNB2p8mjUhud23eM4ZEDiw",
+      "source_file": "sources/2026-11-06_openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界的交互方式_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "“超脑”统一指挥，“狼族”协同作战：京东物流打造供应链 AI 机器人军团",
+      "source": "InfoQ",
+      "digest": "京东物流推进“超脑+狼族”机器人军团在供应链全链路规模化应用：“超脑”大模型负责复杂场景智能决策与协同调度，“狼族”含 9 款产品 11 款机器人（智狼、地狼、飞狼等）。计划 5 年采购 300 万台机器人、100 万台无人车及 10 万架无人机，打造全球最大具身机器人应用军团。",
+      "link": "https://www.infoq.cn/article/1YeowHagkg1Or6wwy23P",
+      "source_file": "sources/2026-11-06_“超脑”统一指挥，“狼族”协同作战：京东物流打造供应链 AI 机器人军团_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "从 SuperAgent 设计探索，回看数字员工架构落地实践",
+      "source": "Qoder",
+      "digest": "文章借 DeepSeek Harness《Super-agent 设计探索》讨论，回看 QoderWake 数字员工实践：将消息路由与执行分离，Task Router 理解意图、关联任务、选执行者，Work 层围绕任务工作，Task Coordinator 管理任务锁/队列/生命周期，在持续变化的企业群聊中推进工作。",
+      "link": "https://mp.weixin.qq.com/s/r72ytLABzyf7ktUSgMseTg",
+      "source_file": "sources/2026-11-06_从 SuperAgent 设计探索，回看数字员工架构落地实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "从LLM到Ontology：本体驱动的AI数据研发原理与最佳实践",
+      "source": "千问AI平台",
+      "digest": "阿里千问 AI 平台文章指出，大模型生成 SQL 常犯选错表、用错字段、口径对不上三类错误，根因是业务知识碎片化、沉淀于历史代码与经验。提出以本体（Ontology）将隐性业务知识转为 AI 可读可验证的结构化资产，并给出自动抽取、召回与迭代机制及两层验证结果。",
+      "link": "https://mp.weixin.qq.com/s/OX9XTa_V13uZoc_CGvaBPg",
+      "source_file": "sources/2026-11-06_从LLM到Ontology：本体驱动的AI数据研发原理与最佳实践_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "从仓储到配送，全程由 AI“指挥”：京东物流“超脑”3.0 的工业级 AI 实践",
+      "source": "InfoQ",
+      "digest": "京东物流“超脑”大模型迭代至 3.0，由 PreX 预测、OptiX 决策、OmniX 多模态、GeoX 时空、EmbodiedX 具身五类工业级大模型组成，亿级包裹端到端路径规划从分钟级压缩至秒级。作为物流行业首个从仓储到配送全程由 AI 指挥的集成体，连接预测、求解、感知、控制为持续反馈闭环。",
+      "link": "https://www.infoq.cn/article/jBdvoUXheWN0oe6NfklO",
+      "source_file": "sources/2026-11-06_从仓储到配送，全程由 AI“指挥”：京东物流“超脑”3.0 的工业级 AI 实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "从模型到算子，国产算力如何让视频生成更快更省？",
+      "source": "InfoQ",
+      "digest": "商汤大装置通过模型与系统协同优化，将视频生成从“能跑”推向“高性价比规模化生产”。模型层以步数蒸馏把单条计算量压缩至约 1/7、DiT 时延下降 83.5%，29 轮去噪减至 4 轮；推理层做算子深度调优与重复计算消除，释放国产算力视频生产能力。",
+      "link": "https://www.infoq.cn/article/CvtRVUYAYxPh6fzzgDf4",
+      "source_file": "sources/2026-11-06_从模型到算子，国产算力如何让视频生成更快更省？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "从混元研发体系重构到 MaaS 推理优化，模型能力如何走向真实业务？",
+      "source": "InfoQ",
+      "digest": "腾讯云在 2026 生态大会模型与 MaaS 专场上指出大模型市场三项变化：能力持续增强、百万 Token 成本降至角/分、Agent 从对话接口进化为可规划执行的主体。围绕混元、TI-ONE、TokenHub 展示从研发、训练推理到业务应用的完整链路，并强调以 163 名业务专家参与评测，弥补公开基准对真实工作场景覆盖不足。",
+      "link": "https://www.infoq.cn/article/azhgYaRTIjsSSVfA8AaU",
+      "source_file": "sources/2026-11-06_从混元研发体系重构到 MaaS 推理优化，模型能力如何走向真实业务？_InfoQ_a5a62a.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "多Agent协作的下一场竞争，不在模型，而在上下文",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程以内部工具 Siboot 为例，提出多 Agent 协作的竞争焦点从模型转向上下文：协作本质是上下文的流动、隔离与接力，传统工具优化“发消息”但折损上下文；Agent 上桌后折损按乘法叠加，需重构群聊让上下文在 Agent 间低损传递。",
+      "link": "https://mp.weixin.qq.com/s/L7WgswCBgMGUF7mD7pcYfw",
+      "source_file": "sources/2026-11-06_多Agent协作的下一场竞争，不在模型，而在上下文_腾讯技术工程.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "奇富科技开源ModelEvo 2.0 推动业务建模迈向自主探索与持续进化",
+      "source": "InfoQ",
+      "digest": "奇富科技开源自动建模 Agent ModelEvo 2.0，面向结构化与表格数据，在标准化建模流程上实现自主搜索、可信评估与跨任务经验复用。坚持“大模型负责提案、代码负责裁决”，以统计检验、独立复现等机制防数据泄漏；在信贷违约预测等任务较对照方案高出 0.025 以上。",
+      "link": "https://www.infoq.cn/article/09ab6o2SMi91sH43oaj8",
+      "source_file": "sources/2026-11-06_奇富科技开源ModelEvo 2.0 推动业务建模迈向自主探索与持续进化_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "当 AI 在加速狂奔，什么反而应该“慢”下来？",
+      "source": "腾讯研究院",
+      "digest": "腾讯研究院王鹏指出，AI 从“对话交互”走向“自主交付”，WorkBuddy 累计承接超 90 亿次任务、Token 消耗增 50 倍，但“你的 AI 对我的 AI 说话”导致信息膨胀、思想碰撞被稀释。真正的超级团队不能仅靠超级个体，需打破部门会议对齐、重复造轮子、经验锁在少数人脑子里的困局。",
+      "link": "https://mp.weixin.qq.com/s/g5feo1ZueE45cQssvlEJgw",
+      "source_file": "sources/2026-11-06_当 AI 在加速狂奔，什么反而应该“慢”下来？_腾讯研究院.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "当 Coding Agent 走进研发团队：我们打造并开源了自进化研发平台 LoopForge",
+      "source": "InfoQ",
+      "digest": "腾讯轻量云团队开源云端自进化 AI 研发平台 LoopForge，集成 7×24 云端工作区、多角色共享会话、工程级 SOP 流水线、无人值守自动化与 RSI 自进化。已内部 20+ 业务落地、单月自动完成 200+ 需求。文章结合 DeepSeek Super-agent 探索，复盘从本地 Agent 到云端多角色协作的五步工程演进。",
+      "link": "https://www.infoq.cn/article/QGaIWSgd9uwx2WGw0yFv",
+      "source_file": "sources/2026-11-06_当 Coding Agent 走进研发团队：我们打造并开源了自进化研发平台 LoopForge_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "智能体 Harness 的演进：从链、图到代码化",
+      "source": "InfoQ",
+      "digest": "文章梳理智能体 Harness 从链式、图式到代码化的演进：链式（LangChain 式固定三步）落地快但脆弱、错误易级联；图式引入状态与分支提升韧性；代码化（以代码为执行载体）让 Agent 稳定、可观测、达生产级。核心是用工程约束把非确定性模型落地为可靠系统。",
+      "link": "https://www.infoq.cn/article/B7tsA5tjD08k2gd0OtXd",
+      "source_file": "sources/2026-11-06_智能体 Harness 的演进：从链、图到代码化_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "印度金融机构遭黑客利用 AI 工具发动的网络攻击",
+      "source": "Solidot",
+      "digest": "印度 CERT-In 通报“狡猾猎鹰”黑客组织入侵非银行贷款机构、金融科技公司及加密货币交易所，利用 ARTEX、PentAGI、Cairn、CyberStrikeAI 等公开 AI 工具实现高速自动化入侵，威胁“仍在发生且持续活跃”。对金融机构 AI 安全防控具警示意义。",
+      "link": "https://www.solidot.org/story?sid=85809",
+      "source_file": "sources/2026-11-06_印度金融机构遭黑客利用 AI 工具发动的网络攻击_Solidot.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-06",
+      "title": "招行零售条线高层变动，已部署未来两年AI算力投入规划",
+      "source": "银行科技研究社",
+      "digest": "招行零售条线高层变动：杭州分行行长王波拟任总行零售信贷部总经理，信用卡中心亦换帅，并将 AI 权益纳入信用卡体系。据透露，招行已部署未来两年 AI 算力投入规划，日均 Token 消耗超 800 亿；上半年落地领域模型 256 个、智能化场景 1386 个，构建零售智能应用矩阵。",
+      "link": "https://mp.weixin.qq.com/s/StdVzhs3Sh5dqit93v3-kw",
+      "source_file": "sources/2026-11-06_招行零售条线高层变动，已部署未来两年AI算力投入规划_银行科技研究社.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-05",
       "title": "GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了",
