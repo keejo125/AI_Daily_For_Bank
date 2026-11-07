@@ -1,7 +1,157 @@
 {
-  "updated_at": "2026-11-07T05:15:08.586548",
-  "total": 3371,
+  "updated_at": "2026-11-08T05:11:07.356714",
+  "total": 3386,
   "articles": [
+    {
+      "date": "2026-11-07",
+      "title": "GPT-6自主爆改Qwen权重被吹成神？Meta知名研究员泼冷水",
+      "source": "InfoQ",
+      "digest": "MIT 联合团队实验让前沿模型 GPT-6 Astra 在纯 Python 环境中直接读取并重写开源模型 Qwen3.5-0.8B 的底层高维张量，仅改动约 13 万权重（0.016%），使其 MATH-500 准确率从 7.9% 升至 48.1%，并凭空写出可运行的小型神经网络权重。舆论视其为模型递归式自我改进的起点，但 Meta 研究员 Lucas Beyer 等指出人类已在提示词中给出露骨定向引导，质疑标题党，认为传统梯度下降的地位并未被撼动。",
+      "link": "https://mp.weixin.qq.com/s/8riXQZu5oxlCwcIUnRYN6Q",
+      "source_file": "sources/GPT-6自主爆改Qwen权重被吹成神？Meta知名研究员泼冷水.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-07",
+      "title": "开源推理控制平面 Kinference 发布，面向 Kubernetes 与 vLLM",
+      "source": "MarkTechPost",
+      "digest": "Linkerd 背后公司 Buoyant 发布开源推理控制平面 Kinference（Apache 2.0，Rust 实现）。它位于 vLLM worker 集群之前，统一负责请求路由、令牌限速、KV-cache 感知的负载均衡与租户级指标，面向多模型服务多内部客户的团队。基准显示，在前缀密集型流量下相较普通 Kubernetes Service 路由，中位首 token 时延（TTFT）从 6.88 秒降至 0.31 秒。",
+      "link": "https://www.marktechpost.com/2026/11/07/buoyant-kinference-open-source-inference-control-plane-kubernetes-vllm/",
+      "source_file": "sources/2026-11-07_Buoyant Releases Kinference_ An Open Source Infere_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Jeff Dean李飞飞最新对谈：全是RSI非共识",
+      "source": "量子位",
+      "digest": "在斯坦福 HAI 与李飞飞的对谈中，Jeff Dean 谈递归式自我改进（RSI）的局限：自动化可省去等待实验结果的时间，但训练、计算、评估仍需大量时间，进步速度不可能无限快。他介绍新公司 Discovery Loop 已运行约 20 个自动改进循环，构建人-Agent 协作框架，目标将领域专家生产力提升 20-50 倍，并承认此前低估了编程能力对模型解决问题的深远影响。",
+      "link": "https://www.qbitai.com/2026/11/508196.html",
+      "source_file": "sources/2026-11-07_Jeff Dean李飞飞最新对谈：全是RSI非共识_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Zyphra 开源 FP8 FlashAttention 内核 ZYFA，AMD MI355X 提速最高 1.76 倍",
+      "source": "MarkTechPost",
+      "digest": "Zyphra 开源 FP8 注意力内核 ZYFA（Zyphra FlashAttention on AMD），面向 AMD Instinct MI355X（CDNA4），提供 FP8 e4m3 与 BF16 的长上下文 prefill 因果注意力，接口兼容 flash_attn_func，运行于 ROCm 7.2.3 与 PyTorch 2.12。实测真实激活下 FP8 吞吐较 AMD 默认库 AITER 快 1.16-1.76 倍，head dim 128 时 FP8 误差低 62-78%，32K token 达 2672 TFLOP/s。",
+      "link": "https://www.marktechpost.com/2026/11/06/zyphra-zyfa-fp8-flashattention-amd-mi355x/",
+      "source_file": "sources/2026-11-07_Zyphra ZYFA_ FP8 FlashAttention for AMD MI355X, Up_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞",
+      "source": "量子位",
+      "digest": "GitHub 于 11 月 3-4 日接连故障，影响 Git 操作与合并请求，根源是 AI 编程速度远超代码托管基础设施的承载力。OpenAI 工程师多次遭遇 GitHub 中断后自研 Git 后端 Pando（自 4 月起承接真实开发流量，单次推送中位耗时下降近八成），并拟收购代码托管工具 Pierre 将存储能力带入 Codex 产品；Anthropic 已将主代码库搬入自研系统，马斯克旗下 Cursor 也允许项目直接存于 Cursor。多家 AI 编程公司开始自建代码基建。",
+      "link": "https://mp.weixin.qq.com/s/IZHbW4SEgeIZKIeINWzuYg",
+      "source_file": "sources/GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "2.5小时一个零日，400多个root提权：Linux被AI挖成了筛子，人类逆向几周才看懂一个",
+      "source": "InfoQ",
+      "digest": "前 Cloud Security Alliance AI 安全主席 Caleb Sima 披露：把 Linux 交给模型只说一句「提权」，模型便找到 400 多个本地到 root 的 0-day 并产出可执行二进制，平均每个漏洞全流程约 2.5 小时；GPT-6 Cyber 更对 Linux 内核 948 个漏洞开发出可用提权利用，成功 948 个、复现 1724 个，约为上一代五倍，API 成本约 121 万美元。OpenSSH/musl 交界处的十年老漏洞也由 AI Agent 经约 17600 次认证测试翻出，AI 红队能力已实质超越人类逆向工程师。",
+      "link": "https://mp.weixin.qq.com/s/RJnjDsRgnALSFrAAzYFWQA",
+      "source_file": "sources/2.5小时一个零日，400多个root提权：Linux被AI挖成了筛子，人类逆向几周才看懂一个.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "AGENTS.MD，危险危险危险！！！",
+      "source": "量子位",
+      "digest": "安全机构 Forever Security 截获一种以 AGENTS.md 为载体的新型攻击：用户打开网页时，纯文本 AGENTS.md 被静默放入 ~/Downloads，当用 Claude Code、Cursor 或 Codex 等 Agent 处理该目录文件时，Agent 会把它当作最高指令执行——修改全局配置、关闭沙箱、下载恶意 npm 包、外泄 API Token。文章警示 Agent 时代「只要不点 exe 就安全」的认知已失效，文本文件成了新病毒，安全需成为普通人必须系统学习的事。",
+      "link": "https://www.qbitai.com/2026/11/508244.html",
+      "source_file": "sources/2026-11-07_AGENTS.MD，危险危险危险！！！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "办公提效之后，企业级 Agent 开始对经营结果负责",
+      "source": "极客公园",
+      "digest": "腾讯云在 2026 全球数字生态大会企业级 Agent 专场上宣布 ADP 平台完成全生命周期升级，并推出 FDE 交付方法论。文章指出办公场景 Agent 提效已成共识，但企业真正的痛点是让 Agent 走进业务经营、产出可量化价值：麦肯锡 8 月调查显示 80% 的人感受到个人效率提升，却不到四成认为 AI 真正贡献了公司利润。腾讯判断对话式办公 Agent 与服务经营的 Service Agent 将长期并行。",
+      "link": "http://www.geekpark.net/news/373642",
+      "source_file": "sources/2026-11-07_办公提效之后，企业级 Agent 开始对经营结果负责_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "博世用豆包工作：让工程师少搬信息，多解问题",
+      "source": "极客公园",
+      "digest": "博世某研发事业部把豆包工作与豆包工作伙伴接入工程师故障处理流程：定时巡检私聊识别故障信息并以本人身份转发至专项话题群；工作伙伴爬取群历史上下文，将流式碎片聚成完整问题描述，调用报告生成技能出初稿并登记飞书多维表格。AI 在「人无感」状态下自动沉淀知识、减少手动搬运，让工程师从重复沟通中解放，专注排障，缓解经验随人走而断档的恶性循环。",
+      "link": "http://www.geekpark.net/news/373643",
+      "source_file": "sources/2026-11-07_博世用豆包工作：让工程师少搬信息，多解问题_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？",
+      "source": "量子位",
+      "digest": "量子位报道，DeepSeek Harness 团队提出下一代 Super-agent 架构设想——拥有连续上下文、可自主调度多 Agent 并行、7×24 小时在线的超级智能体，以「让 Agent 管理 Agent」破解人类注意力瓶颈（普通人仅能同时跟进 3-5 个 Session）。文章指出，硅谷华人团队 AFK AI 的 Comma 早已沿「单 Router + 多 Worker」架构落地，提出连续、高效、主动、持久四大标准并开源代码；两者在底层架构上形成共识，指向个人 Agent 长期记忆与持续学习的下一命题。",
+      "link": "https://www.qbitai.com/2026/11/508264.html",
+      "source_file": "sources/2026-11-07_抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "9月银行AI项目动态：主体下沉、投入分层、场景务实",
+      "source": "银行科技研究社",
+      "digest": "据《智探AI应用》统计，2026 年 9 月银行 AI 相关项目中标共 40 个（8 月 43 个），涉及 28 家机构。城商行是绝对主力（24 个项目占 60%），长沙银行以 4 个居首；股份制银行 7 个项目单体金额突出，浙商银行智能体基础软硬件采购单笔 6489.61 万元为当月最高。整体呈「主体下沉、投入分层、场景务实」特征，采购活跃度集中在决策链较短的中小银行。",
+      "link": "https://mp.weixin.qq.com/s/CPrkbPHAlkNaS3Mhe-xyDA",
+      "source_file": "sources/9月银行AI项目动态：主体下沉、投入分层、场景务实.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "数智赋能跨境尽职调查ﾠ打造股权穿透分析创新平台",
+      "source": "金融电子化",
+      "digest": "东亚银行打造全球股权追溯智能分析平台，接入内地、香港及海外权威企业数据源，融合数据挖掘、知识图谱与自研股权穿透算法，构建全球企业股权知识图谱，实现自动化股权穿透、最终受益所有人识别与尽调报告生成，以人机协同重构跨境 KYC。项目分两期：2023 年 9 月境内模块投产，2024 年 12 月推广至香港母行及海内外分支，适配跨境投融资、两地关联企业授信等核心场景，夯实反洗钱与跨境风控能力。",
+      "link": "https://mp.weixin.qq.com/s/GbjlG5jCiyk6aMLzFx7SKA",
+      "source_file": "sources/数智赋能跨境尽职调查ﾠ打造股权穿透分析创新平台.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "浦发银行AI布局以“2+5+N”为实施路径，已启动多个AI岗位招聘",
+      "source": "银行科技研究社",
+      "digest": "浦发银行三季报披露 AI 进展：以「2+5+N」为实施路径（由上半年「2+N」细化），攻坚零售「智能财富助理-浦小财」与对公「数字客户经理」两大旗舰，赋能智慧营销、经营、运营、风控、管理五大领域。系统 AI 覆盖率达 52%（对公开户智能化覆盖 89.4%、远程银行智能服务占比 83.82%）；数字劳动力前三季度累计承担大量作业，智能办公助手已推出 25 类高频场景、60 余项可组合 Skill。",
+      "link": "https://mp.weixin.qq.com/s/YADV7PG2M95kfd4iG48MjQ",
+      "source_file": "sources/浦发银行AI布局以“2+5+N”为实施路径，已启动多个AI岗位招聘.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "广电总局整治 AI 低俗微短剧",
+      "source": "Solidot",
+      "digest": "广电总局 11 月 6 日部署新一轮 AI 微短剧专项治理（11 月 1 日至 12 月底），针对质量良莠不齐、AI 助长低俗内容反弹等问题，聚焦儿童不良、软色情、拜金、家庭伦理失范等内容创作治理，以及「盗脸」「偷声」等 AI 创作规范；传播端治理片名、宣推、弹幕、榜单的同质化，提升算法推荐多样性。",
+      "link": "https://www.solidot.org/story?sid=85821",
+      "source_file": "sources/2026-11-07_广电总局整治 AI 低俗微短剧_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "顶尖 AI 实验室正在成为“人才黑洞”！Claude Code 团队工程师离职后首次受访",
+      "source": "InfoQ",
+      "digest": "Anthropic 前 Claude Code 产品负责人 Cat Wu 转投 OpenAI，加上 Thariq Shihipar、Anthony Morris 等核心成员短期内接连离职，引发对顶尖 AI 实验室人才流动的关注。离职工程师在播客中反思：顶尖实验室像「人才黑洞」不断吸人，但机构聚集聪明人并不等于让人突变天才，离开亦非失去创造价值的机会，对犹豫创业的人他强调「勇气比天才更稀缺」。",
+      "link": "https://mp.weixin.qq.com/s/hqCzf_BkM7YSmq3XdQDziw",
+      "source_file": "sources/顶尖 AI 实验室正在成为“人才黑洞”！Claude Code 团队工程师离职后首次受访.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-06",
       "title": "A\\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间",

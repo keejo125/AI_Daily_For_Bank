@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-07",
+      "weekday": "周六",
+      "stats": {
+        "国际": 5,
+        "国内": 5,
+        "同业": 3,
+        "其他": 2,
+        "total": 15
+      },
+      "summary": "GPT-6自主爆改Qwen权重被吹成神？Meta知名研究员泼冷水/开源推理控制平面 Kinference 发布，面向 Kubernetes 与 vLLM/..."
+    },
+    {
       "date": "2026-11-06",
       "weekday": "周五",
       "stats": {
