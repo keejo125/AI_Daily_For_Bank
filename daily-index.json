@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-08",
+      "weekday": "周日",
+      "stats": {
+        "国际": 9,
+        "国内": 4,
+        "同业": 1,
+        "其他": 3,
+        "total": 17
+      },
+      "summary": "如何在 llama.cpp 中运行 NVIDIA Dory 4B：逐层“循环”推理指南/MoE 路由策略详解：Top-K、专家选择、Sigmoid 门控与..."
+    },
+    {
       "date": "2026-11-07",
       "weekday": "周六",
       "stats": {
