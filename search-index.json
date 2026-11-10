@@ -1,7 +1,307 @@
 {
-  "updated_at": "2026-11-10T05:16:13.841332",
-  "total": 3430,
+  "updated_at": "2026-11-11T06:57:55.310246",
+  "total": 3460,
   "articles": [
+    {
+      "date": "2026-11-10",
+      "title": "Fable 5.2首批实测来了！网友：Opus突然不香了",
+      "source": "量子位",
+      "digest": "Anthropic 推出 Claude Fable 5.2 与 Mythos 5.2（同底层），在智能体编程、科研与计算机操作等基准近乎全线超越 Opus 5.5，软件工程测试达 69.9%（+13.6pt），支持 100 万上下文、最高 12.8 万输出，速度较 5.1 快 30% 且降价 20%。网友实测用约 2.5 万个 Agent 生成 450 多个 3D 世界、将达·芬奇手稿复活为可交互模型；一团队以约千个代理 30 小时完成费马大定理形式化证明。",
+      "link": "https://www.qbitai.com/2026/11/508912.html",
+      "source_file": "sources/2026-11-10_Fable 5.2首批实测来了！网友：Opus突然不香了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-10",
+      "title": "成本仅1/3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5",
+      "source": "InfoQ",
+      "digest": "Meta 发布迄今最小、最高效的模型 Muse Ember，面向 Agent 全天高频重复执行：工具调用、编码子任务、路由、抽取与长文档解析。Artificial Analysis 测评显示其最高推理强度得 36 分，与 Claude Haiku 5.5 持平、高于 GPT-6 Luna；单任务成本约 0.136 美元，仅为 Haiku 最高配置的约三分之一，主打以低成本承接规模化 Agent 工作负载。",
+      "link": "https://www.infoq.cn/article/Ou4l4aD7zvUzXWXsWJfY",
+      "source_file": "sources/2026-11-10_成本仅1_3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-10",
+      "title": "ChatGPT 占全球 AI 聊天流量超 81%；iOS 27.3 曝光 Siri「个人记忆系统」；传玛莎拉蒂+尊界合作新车曝光｜极客早知道",
+      "source": "极客公园",
+      "digest": "据市场研究，OpenAI ChatGPT 占全球 AI 聊天机器人流量超 81%，呈现断层式领先。同期曝光信息显示，iOS 27.3 将为 Siri 引入「个人记忆系统」，使其能记住用户偏好与历史交互。报道同时梳理了 Anthropic 新模型 Fable 5.2 的定价与能力提升，反映头部产品正从单点能力比拼转向生态与个性化体验之争。",
+      "link": "http://www.geekpark.net/news/373736",
+      "source_file": "sources/2026-11-10_ChatGPT 占全球 AI 聊天流量超 81%；iOS 27.3 曝光 Siri「个人记忆系统」；_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "谷歌发布 TPU 8i Max 与 TPU 8tx 两款新系统",
+      "source": "MarkTechPost",
+      "digest": "谷歌为其第八代 TPU 阵容新增两款系统配置：TPU 8i Max 由两颗 TPU 8i 芯片封装而成，算力、SRAM 与 HBM 带宽较单颗翻倍，主打超大上下文窗口与机柜密度；TPU 8tx 面向安全、机密推理，相较 TPU 8t 延迟最高降低 2 倍。两者均复用既有硅片、非新芯片，计划于 2027 年通过 Google Cloud 提供。",
+      "link": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
+      "source_file": "sources/2026-11-10_Google Unveils TPU 8i Max and TPU 8tx_ A Dual-Chip_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "硅谷疯炒 AI 自我进化，李飞飞、Jeff Dean 齐泼冷水：无限加速不可信",
+      "source": "InfoQ",
+      "digest": "在斯坦福 HAI 活动上，Jeff Dean（Discovery Loop 创始人）系统介绍让 AI 自主设计实验、验证结果并持续学习的思路；李飞飞当场纠正，强调须区分「一般自我改进」与「递归自我改进（RSI）」。两人指出，任务模型变好不等于提出下一步实验的基础系统变好，且训练、计算与核查都要时间，「更快」不等于「无限快」，硅谷对 RSI 的无限加速叙事被泼冷水。",
+      "link": "https://www.infoq.cn/article/mZlISiZL9c1eurrsZRpo",
+      "source_file": "sources/2026-11-10_硅谷疯炒 AI 自我进化，李飞飞、Jeff Dean 齐泼冷水：无限加速不可信_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "给 AI 腾内存？Discord 抛弃Electron，省70%内存还秒开：Windows应用该跟进了",
+      "source": "InfoQ",
+      "digest": "Discord 联合创始人兼 CTO Vishnevskiy 宣布将客户端迁移至 Rust，桌面端移除 Electron、移动端放弃 React Native。新客户端代号「Discord Phoenix」，Windows 下内存约 290MB，而现客户端在多服务器下常超 1GB；新版本可同时运行多账户、启动更快、交互更跟手。这一底层重构被视为为后续 AI 功能腾出本地资源、改善性能的关键一步。",
+      "link": "https://www.infoq.cn/article/MQTTu6dgGxHBZm1wOLPI",
+      "source_file": "sources/2026-11-10_给 AI 腾内存？Discord 抛弃Electron，省70%内存还秒开：Windows应用该跟进_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "90天内，必须主动攻击自己一次！Facebook前首席安全官Stamos提议：花1亿美元用Rust重写Linux，是谷歌送给全世界最好的礼物！",
+      "source": "奇点折射",
+      "digest": "Cognition 首席安全官、前 Facebook 安全负责人 Alex Stamos 警示，AI 正把网络攻击链的多数环节自动化，开放权重模型已能自主侦察漏洞、编写利用程序并入侵大公司，攻击者边际成本趋近于零。他主张在未来 90 天内主动红队自身系统，并测算以约 1 亿美元用 Rust 重写 Linux 内核、系统性消除内存安全漏洞，称这是谷歌送给业界最好的礼物。",
+      "link": "https://mp.weixin.qq.com/s/1hQhYqExkxFWyVWuWNbM7w",
+      "source_file": "sources/90天内，必须主动攻击自己一次！Facebook前首席安全官Stamos提议：花1亿美元用Rust重写Linux，是谷歌送给全世界最好的礼物！.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "100轮图像编辑这道「毙刷题」，新出的Seedream 5.5稳上来了！",
+      "source": "量子位",
+      "digest": "字节 Seedream 5.5 在连续 100 轮图像编辑「高压测试」中显著优于 GPT-Image 2.6：后者约第 10 轮即开始畸变，Seedream 5.5 整体保真度更高。新版本提升真实感（人物、材质、光影）、小字与多语言渲染、透明图生成与图层拆解；速度更快，API 沿用「输入+输出」两段计费，2K 方图单张约 0.28 元，不到 5.0 Pro 一半。",
+      "link": "https://www.qbitai.com/2026/11/508828.html",
+      "source_file": "sources/2026-11-10_100轮图像编辑这道「毙刷题」，新出的Seedream 5.5稳上来了！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-10",
+      "title": "美团 LongCat-2.5 正式开源：从看见，到抵达",
+      "source": "美团技术",
+      "digest": "美团正式开源 LongCat-2.5，原生多模态、面向长程智能体任务的模型，采用 MIT 协议支持商用推理与二次训练。总参 1.6 万亿、每 Token 激活约 480 亿、支持百万上下文；在复杂代码库开发、完整项目构建与 Visual Coding 上端到端能力明显提升，并对国产算力芯片做了架构、适配与部署的协同优化。四项测试位列第一。",
+      "link": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+      "source_file": "sources/2026-11-10_美团 LongCat-2.5 正式开源：从看见，到抵达_美团技术.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-10",
+      "title": "触觉也能 Token 化！蚂蚁灵波发布通用触觉模型，把“具身原生”推进到机器人指尖",
+      "source": "InfoQ",
+      "digest": "蚂蚁灵波开源触觉基础模型 LingBot-Touch，为机器人大脑补齐触觉感知：基于近 5000 小时真实触觉数据预训练，统一磁触觉、视触觉与压阻式三类传感为同一表征，供不同灵巧手与动作模型使用。接入 LingBot-VLA 后，在 26 项真机测试中使平均任务成功率提升约 14–26 个百分点，把「具身原生」推进到指尖。",
+      "link": "https://www.infoq.cn/article/W7VPoeNBPX4y2u72WAGM",
+      "source_file": "sources/2026-11-10_触觉也能 Token 化！蚂蚁灵波发布通用触觉模型，把“具身原生”推进到机器人指尖_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
+      "source": "量子位",
+      "digest": "量子位解析 openJiuwen 提出的 TTSE（双轨自演进）：Agent 持续自我改进时，须区分陈述性知识（环境「是什么样的」）与程序性知识（「如何行动」），两类知识验证与更新方式不同。openJiuwen 据此让 Agent 在积累可复用经验的同时动态校准环境认知，避免把偶发成功误当稳定规律。",
+      "link": "https://www.qbitai.com/2026/11/508998.html",
+      "source_file": "sources/2026-11-10_Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "百度发布 ERNIE Evolve 自动化研究系统",
+      "source": "MarkTechPost",
+      "digest": "百度发布 ERNIE Evolve 自动化研究系统：给定代码仓库、目标与评估标准，系统自主挑选研究方向、修改代码并跑实验，仅保留通过隐藏评估器与独立评审的改动。在三项公开基准上优化 ERNIE-5.5-Flash 推理，昆仑芯 P800 上经四轮研究生成速度达基线 623.6%，并在四项公开指标中三项超越最佳公开结果。",
+      "link": "https://www.marktechpost.com/2026/11/09/baidu-ernie-evolve-automated-research-system/",
+      "source_file": "sources/2026-11-10_Baidu’s ERNIE Evolve Automated Research System Bea_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠开发者了",
+      "source": "InfoQ",
+      "digest": "DeepSeek Harness 公布进展：截至 11 月 4 日官方 API 日活达 154 万、日耗 Token 约 92 万亿，第三方插件约 3.5 万个，约六成活跃用户安装或制作插件。官方提出「一切皆插件」设计，希望成为 Agent 时代的操作系统，并将基础能力交给开发者扩展。文章也指出插件激增可能挤占上下文、抬高执行成本，开放与易用间的平衡成为新课题。",
+      "link": "https://www.infoq.cn/article/Y7lTO7Q1M8oN5JhxhirK",
+      "source_file": "sources/2026-11-10_DeepSeek Harness 日活154万，官方开始给插件作者发Token：Agent 生态要靠_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界的交互方式",
+      "source": "InfoQ",
+      "digest": "openJiuwen 首发 Agent Device Foundation，提出面向 Agent 的统一设备接入协议：现实设备不再只是被调用的接口，而成为 Agent 可理解、选择与组织的「能力」。文章指出设备能力异构、在线状态与权限动态变化、单设备调用正转为多设备多步骤任务，需一套协议让 Agent 动态认知「有哪些能力、此刻可用哪些、调用后世界发生了什么」。",
+      "link": "https://www.infoq.cn/article/dLF01VxLUZpLX40Wmlv7",
+      "source_file": "sources/2026-11-10_openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "中大本科生反AI逆向项目火了！让黑客Token账单原地暴涨300倍",
+      "source": "量子位",
+      "digest": "中山大学本科生开源项目 BLA，专门反制爆火的 AI 逆向工具 REA：通过「投毒（塞假凭据/假 Source Map）→ 耗尽预算 → 诱导误判」三步，使逆向 Agent 的 Token 消耗暴涨 300–2800 倍，已获 3900+ Star。项目还精确触发分析器硬编码配额上限致其报错，揭示逆向 Agent 在对抗性输入下的脆弱性。",
+      "link": "https://www.qbitai.com/2026/11/508787.html",
+      "source_file": "sources/2026-11-10_中大本科生反AI逆向项目火了！让黑客Token账单原地暴涨300倍_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "千问办公押注 Team Agent，企业 AI 的流水线时刻真的来了",
+      "source": "极客公园",
+      "digest": "极客公园分析企业级 Agent 困境：个人用 Agent 提效数倍，落到团队整体往往不到两倍，因单人产出提升无法让其他部门同步。11 月 9 日千问办公 2.0 发布，作为业内首个面向团队协作的 Team Agent，将多人协作、文档共创与自动任务整合，像项目经理一样推进项目与待办，标志 Agent 从单机提效走向组织协同的 2.0 时代。",
+      "link": "http://www.geekpark.net/news/373760",
+      "source_file": "sources/2026-11-10_千问办公押注 Team Agent，企业 AI 的流水线时刻真的来了_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "接大模型别再自己配 Key、搭代理了，火山引擎 IGA Pages 一步搞定",
+      "source": "InfoQ",
+      "digest": "火山引擎 IGA Pages 在全站加速体系中集成 AI 加速网关，把模型接入、服务端调用与应用部署串成一体：开发者无需再把 API Key 写进前端、单独搭建并维护代理处理跨域，页面与业务逻辑之外由平台托管模型服务与运行环境，降低 Web 应用接入大模型的门槛与运维负担。",
+      "link": "https://www.infoq.cn/article/juu2R26yD8B6ABUEQuWB",
+      "source_file": "sources/2026-11-10_接大模型别再自己配 Key、搭代理了，火山引擎 IGA Pages 一步搞定_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "达卯科技与浦东环保能源战略合作，黎明智算中心算电协同平台启动",
+      "source": "量子位",
+      "digest": "达卯科技与上海浦东环保能源签署战略合作，围绕数据中心节能优化、电力市场化运营与算电协同智能化体系建设展开，首个落地项目为浦东新区黎明智算中心算电协同平台。该中心为万卡级算力集群、国家级算电协同试点，设计总功率 18 兆瓦，采用生物质绿电直供与余热/余冷梯级利用，推动东部城市型智算中心向 E-AIDC 演进。",
+      "link": "https://www.qbitai.com/2026/11/508985.html",
+      "source_file": "sources/2026-11-10_达卯科技与浦东环保能源战略合作，黎明智算中心算电协同平台启动_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "AI 改变的是数据接口，而不是查询引擎",
+      "source": "InfoQ",
+      "digest": "文章以一个大型容灾演练自动化分析的原型为例：将 30 秒粒度指标存为 Parquet、用 DuckDB 做确定性聚合、再由 Agent 分类并给出证据。结论指出，Agent 并未让查询引擎消失，而是把引擎嵌入工作流内部；并给出四条判断依据，说明何时嵌入式引擎足够、何时仍需托管湖仓，厘清确定性计算与概率推理的分工。",
+      "link": "https://mp.weixin.qq.com/s/MwAu1ZYyLlc6FgdBJa0l8w",
+      "source_file": "sources/AI 改变的是数据接口，而不是查询引擎.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "AI+质量管理 | 人工智能技术在IT质量上的应用实施路径研究",
+      "source": "ICT数字化治理",
+      "digest": "文章基于信通院持续测试（CT）评估实践，指出质量分析是参评企业普遍薄弱项。提出以领域本体驱动数据融合、动态加权聚合成「质量健康分」，按 ISO/IEC 25010 覆盖代码质量、测试充分性、构建稳定性、安全合规、部署可靠性与过程健康度六维，并引入蒙特卡洛 Dropout 量化不确定性，构建「发现—告警—改进」闭环，已被作为推荐实践写入评估结论。",
+      "link": "https://mp.weixin.qq.com/s/QZgDaffnVtFjmB3fbH7E4Q",
+      "source_file": "sources/AI+质量管理 _ 人工智能技术在IT质量上的应用实施路径研究.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "AI从Working、Coding到Oncall：腾讯视频如何让知识流动起来？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯视频技术部分享在 Working/Coding/OnCall 三类工作中的知识实践，指出「个人效率↑ ≠ 组织产出↑」：知识不沉淀、能力不复用、标准不统一、上下文孤岛与企业特性缺失，使组织在重复造火花。团队建立 L0–L5 AI 应用成熟度模型，主张以组织级知识库、权限管控与审计合规，让 AI Agent 从个人狂欢走向组织提效。",
+      "link": "https://mp.weixin.qq.com/s/aOV53imdYpJ8Sle24yBoUQ",
+      "source_file": "sources/AI从Working、Coding到Oncall：腾讯视频如何让知识流动起来？.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Agent 能搭出来，为什么还做不成事？六位专家拆解智能体生产化的六道关",
+      "source": "CSDN",
+      "digest": "CSDN 与奇点智能研究院大会专题邀请中科院、Google Cloud、蚂蚁、腾讯、360、阿里云六位专家，拆解智能体生产化「六道关」：从 Prompt 到可交付产物、Personal Agent 持续服务、企业级 Runtime、安全基础设施与异步通信底座。核心共识是 Agent 不难搭，难在稳定、安全、持续地把事做成，需以 Harness 约束自由度、闭环沙盒与双层评审实现批量稳定交付。",
+      "link": "https://mp.weixin.qq.com/s/NeZIjMTV_gTTVXqK_NXp8g",
+      "source_file": "sources/Agent 能搭出来，为什么还做不成事？六位专家拆解智能体生产化的六道关.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Codex、Claude Code 都卷完了，居然还能跑出黑马？整个产品，现在都可以是一个提示词",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道开源编程 Agent 工具 T3 Code 的 Orchestrator V2 进入稳定版：一个约半年打磨、由三人兼职开发的项目，用户已超 70 万。它深耕编程，兼容 Claude Code、Codex、Cursor、Grok、OpenCode、Antigravity、Muse Code 等几乎所有主流模型与 Harness，并支持跨远程环境的多 Agent 编排，在已成熟赛道跑成黑马。",
+      "link": "https://mp.weixin.qq.com/s/pd7Z1jDfPH3Q5YsUgcLmEg",
+      "source_file": "sources/Codex、Claude Code 都卷完了，居然还能跑出黑马？整个产品，现在都可以是一个提示词.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "一文拆解DSH Super-agent双层架构：如何做到后台跑任务、前台继续接活",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者拆解 DeepSeek Harness 团队《Super-agent 设计探索》与开源原型 dsh-superagent-prototype：把会话管理与上下文同步从人手上移到系统层，Agent 成为跨会话保持上下文、并行推进多项任务的连续实体。内部实例显示系统在群聊中自主识别缺陷、后台复现定位并提交修复 PR，瓶颈由模型能力转向人的注意力。",
+      "link": "https://mp.weixin.qq.com/s/VMf36Wn27Iief5ydZkr3NQ",
+      "source_file": "sources/一文拆解DSH Super-agent双层架构：如何做到后台跑任务、前台继续接活.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "当AI十分钟梳理62万行代码：人类软件工程师的认知边界正在被突破吗？",
+      "source": "软件工程3.0时代",
+      "digest": "作者以 OpenCode + DeepSeek v4 对约 62 万行 C/C++ 固件 Marlin 逆向分析，约 10 分钟生成代码索引、架构报告、模块依赖图与数据流，形成可维护的 CodeWiki。文章判断：AI 正在扩大工程师可处理的软件信息规模、改变理解复杂系统的方式，但不等于十分钟内真正「读懂」全部代码，既要看到提效也不能把演示等同于全面超越。",
+      "link": "https://mp.weixin.qq.com/s/-OOmJNRcXmwAgusPuLlcVw",
+      "source_file": "sources/当AI十分钟梳理62万行代码：人类软件工程师的认知边界正在被突破吗？.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "满帮基于阿里云 AgentCore 打造生产级 SRE 稳定性数字人",
+      "source": "阿里云云原生",
+      "digest": "满帮基于阿里云 AgentCore 打造生产级 SRE 稳定性数字人，面向货源、发货、订单等业务链路的稳定运行需求。该数字人可在下单或发货异常时及时判断业务影响、定位原因并开展处置，将智能体用于运维稳定性保障，体现 Agent 从开发辅助走向生产级业务连续性管理。",
+      "link": "https://mp.weixin.qq.com/s/LJKGHOa8RHf8ZQ291jtEvQ",
+      "source_file": "sources/满帮基于阿里云 AgentCore 打造生产级 SRE 稳定性数字人.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "阿里云 Agent Sandbox 极速版：让沙箱拥有电子身份",
+      "source": "阿里云基础设施",
+      "digest": "阿里云智能体沙箱 Agent Sandbox 极速版引入 Agent Identity（智能体身份）机制，为沙箱内运行的 Agent 发放独立电子身份与临时凭据，替代把真实密钥写入环境变量或文件的做法，降低凭据泄露风险；临时凭证到期自动更新、用户授权失效可重新授权，使多服务编排下的权限与凭据管理更可控。",
+      "link": "https://mp.weixin.qq.com/s/ws-AOgs7ZiqL4EExGZdBrA",
+      "source_file": "sources/阿里云 Agent Sandbox 极速版：让沙箱拥有电子身份.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "上海银行以AI大模型赋能司库管理，已调整财富管理组织架构",
+      "source": "银行科技研究社",
+      "digest": "上海银行 2026 三季报披露，已在司库服务体系「上行 e 企赢」全面焕新，以 AI 大模型与智能体赋能司库管理，聚焦「数智+跨境+穿透」；数据管理与应用部多个在招岗位明确提及司库方向。该行同步推进对公授信智能化、高代码智能体工作站与 AI 中台建设，并在零售条线启动渠道转型与财富管理组织架构调整。",
+      "link": "https://mp.weixin.qq.com/s/D-cbQTmV63sP3_dJINhjHA",
+      "source_file": "sources/上海银行以AI大模型赋能司库管理，已调整财富管理组织架构.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "从辅助到共生：数字员工驱动银行业务智能化重构——新网银行智能体规模化落地的实践与思考",
+      "source": "金融电子化",
+      "digest": "新网银行信息科技部撰文分享数字员工规模化落地实践：呼应国家《智能体规范应用与创新发展实施意见》鼓励研发金融风控智能体，银行将智能体用于信贷审批、交易监控、账户安全等环节的风险识别与合规审计。文章提出从「辅助人」走向「与人共生」，以智能体重构业务流与组织协同，推动银行业务智能化升级。",
+      "link": "https://mp.weixin.qq.com/s/iz-iItJpZyn1xzIJSBE7fA",
+      "source_file": "sources/从辅助到共生：数字员工驱动银行业务智能化重构——新网银行智能体规模化落地的实践与思考.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-10",
+      "title": "从芯片到千比特整机，超导量子计算还有一场硬仗",
+      "source": "量子位",
+      "digest": "量子位报道正元量子完成近亿元天使轮融资，押注千比特超导量子计算机，从芯片底层连接与控制切入，加速三维封装、低温互连与集成测控验证。文章梳理超导路线现状：增加比特数与提高操作质量需并行推进，IBM 自 2023 年 Condor（1121 比特）到 Heron 持续迭代，纠错规模扩大已可换取更低逻辑错误率，但整机封装与测控仍是落地硬仗。",
+      "link": "https://www.qbitai.com/2026/11/509017.html",
+      "source_file": "sources/2026-11-10_从芯片到千比特整机，超导量子计算还有一场硬仗_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-09",
       "title": "Claude「做梦」机制大公开！AI睡一觉学会通关宝可梦",

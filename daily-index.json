@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-10",
+      "weekday": "周二",
+      "stats": {
+        "国际": 7,
+        "国内": 20,
+        "同业": 2,
+        "其他": 1,
+        "total": 30
+      },
+      "summary": "Fable 5.2首批实测来了！网友：Opus突然不香了/成本仅1/3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5/1..."
+    },
+    {
       "date": "2026-11-09",
       "weekday": "周一",
       "stats": {
