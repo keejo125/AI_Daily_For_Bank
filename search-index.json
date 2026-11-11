@@ -1,7 +1,327 @@
 {
-  "updated_at": "2026-11-11T06:57:55.310246",
-  "total": 3460,
+  "updated_at": "2026-11-12T05:18:08.991701",
+  "total": 3492,
   "articles": [
+    {
+      "date": "2026-11-11",
+      "title": "Datadog 推出面向 SRE 故障排查的专用 AI 模型",
+      "source": "Datadog",
+      "digest": "Datadog 发布 Scout，一款运行于 Bits Investigation 中的 SRE 故障排查专用模型，可接收告警、查看遥测数据并推测根因。在 AlertEval 基准中，Scout medium 得分接近 GPT-6.1 Sol high 与 Claude Opus 5.5 high，推理成本仅为其三分之一到八分之一；xhigh 档效果接近 Claude Fable 5.1 xhigh，成本仅四分之一。",
+      "link": "https://www.infoq.cn/article/py4PRbBWJSPm5aV10gHq",
+      "source_file": "sources/2026-11-11_Datadog 推出面向 SRE 故障排查的专用 AI 模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Fish Audio 发布 Live 3 全双工语音模型，响应延迟 186 毫秒",
+      "source": "MarkTechPost",
+      "digest": "Fish Audio 发布 Live 3，一款面向实时语音智能体的全双工语音模型，在说话时保持聆听， caller 可停顿、附和或改口而不中断通话，将轮次切换从手工编排的规则移入语音模型本身。提供托管 Fish Agent Platform、Fish Audio API 及企业本地部署。",
+      "link": "https://www.marktechpost.com/2026/11/10/fish-audio-live-3-full-duplex-voice-model/",
+      "source_file": "sources/2026-11-11_Fish Audio Releases Live 3, a Full-Duplex Voice Mo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Gemini 4 Carbon 正式开放（Google 最新前沿模型）",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 宣布 Gemini 4 Carbon 正式向开发者、企业、科研人员与消费者开放，覆盖 API、Google AI Ultra 订阅及 Antigravity 等入口。作为谷歌最新前沿模型，其在 CursorBench 4.0、WANDR、AutomationBench 等代理工作流基准排名第一，单任务成本低于排名最高外部模型一半，并强化网络安全、知识与代码能力。",
+      "link": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+      "source_file": "sources/2026-11-11_Gemini 4 Carbon is now available_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "MBZUAI 发布 PAN 2：29B 参数开源物理世界模型",
+      "source": "MarkTechPost",
+      "digest": "MBZUAI 基础模型研究所发布 PAN 2，一个面向物理智能的开源世界模型，输入场景图与文本动作、输出视频模拟结果，权重与训练/推理代码以 Apache 2.0 开源。模型为 29B 参数扩散 Transformer，输出 704×1248、24fps、最长 20 秒视频，供机器人与智能体开发者在行动前于仿真中验证计划。",
+      "link": "https://www.marktechpost.com/2026/11/10/ifm-pan-2-open-world-model/",
+      "source_file": "sources/2026-11-11_MBZUAI’s IFM Releases PAN 2, an Open 29B World Mod_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Agent 正在终结 Pull Request？连 GitHub 也开始重新审视传统开发流程",
+      "source": "InfoQ",
+      "digest": "GitHub 负责人 Jay Parikh 表示不再让所有项目都走 Pull Request 流程；截至今年 9 月，平台上超过 40% 的 PR 已由 Coding Agent 起草首版（3 月仅 17%，半年增长约 6 倍）。当越来越多代码由 Agent 生成，围绕人类开发者设计的软件协作流程正被重新审视，业界热议 PR 是否会走向终结。",
+      "link": "https://www.infoq.cn/article/x0B056QFxzYEewT1Et34",
+      "source_file": "sources/2026-11-11_Agent 正在终结 Pull Request？连 GitHub 也开始重新审视传统开发流程_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Anthropic 一夜逼疯微软？Claude 杀入办公软件腹地：能自己参会、做表格、生成PPT",
+      "source": "Anthropic",
+      "digest": "Anthropic 发布面向企业与知识工作者的 AI 办公套件，包括 Claude Meetings（以可见参与者身份加入视频会议、实时查资料与处理任务）、Claude Whiteboards、Claude Sheets 与 Claude Data，将会议讨论直接转化为计划、预算表与可视化报告，正面切入微软 Office 腹地；此前 Meta 与 OpenAI 也已推出类似协作功能。",
+      "link": "https://www.infoq.cn/article/1PdshF8SLevbGZbbZHoP",
+      "source_file": "sources/2026-11-11_Anthropic 一夜逼疯微软？Claude 杀入办公软件腹地：能自己参会、做表格、生成PPT_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Cloudflare 推出面向 AI 应用程序的 Web Search API",
+      "source": "Cloudflare",
+      "digest": "Cloudflare 通过 AI Gateway 推出测试版 Web Search API，可由 REST API 与 Workers 访问，提供统一日志、访问控制与计费，并支持自带提供商密钥；使 AI 代理能实时获取 Ceramic.ai、Exa、Linkup 的网页搜索结果，将搜索计费与模型推理打通，同时要求爬虫遵守“已验证机器人”规则并返回来源链接。",
+      "link": "https://www.infoq.cn/article/SgXuVvzbHr8lKrihTAZW",
+      "source_file": "sources/2026-11-11_Cloudflare 推出面向 AI 应用程序的 Web Search API_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "JioStar 首席架构师谈 5 亿用户规模下的 AI 发现",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布 JioStar 首席架构师 Vijay Seshadri 的访谈，分享其在 5 亿用户规模落地 AI 的实战教训，涵盖评测（evals）、护栏（guardrails）以及把 AI 推向生产环境的路径，面向大规模消费级 AI 产品的发现与治理给出经验。",
+      "link": "https://openai.com/index/jiostar-vijay-seshadri",
+      "source_file": "sources/2026-11-11_JioStar’s chief architect on AI discovery at 500M-_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Marktechpost AI 推出 GPU Leaderboard 与 Deploy It 浏览器插件",
+      "source": "MarkTechPost",
+      "digest": "Marktechpost 发布 GPU Leaderboard，一个免费的云 GPU 推理价格比对工具，读取各供应商官网的按需与竞价价格，按每 GPU 小时价格排序，并配套 Chrome 插件 Deploy It，帮助推理团队一站式回答“需要什么 GPU、哪里最便宜”。",
+      "link": "https://www.marktechpost.com/2026/11/11/marktechpost-gpu-leaderboard-chrome-extension-launch/",
+      "source_file": "sources/2026-11-11_Marktechpost AI Launches GPU Leaderboard and the D_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Meta FAIR 发布 e-means：以 1/10 轮数超越 k-means 的聚类算法",
+      "source": "MarkTechPost",
+      "digest": "Meta FAIR 发布 e-means，可作为 Lloyd k-means 算法的直接替代，仅用 1.4 至 2.6 个 epoch 即达到 k-means 需 25 个 epoch 的损失水平，已随 FAISS 1.16.0 以 faiss.contrib.e_means 发布，面向向量索引、量化器与数据清洗管线中聚类这一最慢的离线步骤。",
+      "link": "https://www.marktechpost.com/2026/11/10/meta-fair-e-means-k-means-faiss/",
+      "source_file": "sources/2026-11-11_Meta FAIR Releases e-means_ An Algorithm Beating k_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "当美国无法建设数据中心，会对 AI 产生怎样的冲击",
+      "source": "极客公园",
+      "digest": "文章推演若美国规划中数据中心全部建不成对 AI 的影响：据 Tokenpost 统计，今年 7 月至 11 月 4 日至少 21 个大型数据中心项目被取消，接近 2025 全年 23 个；潜在算力增长或被砍掉约 50%，将直接制约模型训练与推理扩张，Anthropic 已将暂停令写入招股书风险项。",
+      "link": "http://www.geekpark.net/news/373816",
+      "source_file": "sources/2026-11-11_当美国无法建设数据中心，会对 AI 产生怎样的冲击_极客公园.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "ChatGPT给商家开主页，还能派AI接待顾客",
+      "source": "Codexx",
+      "digest": "OpenAI 推出测试版 Businesses in ChatGPT，商家可认领资料页、维护商品信息，符合条件的可搭建 Business Agent 用自家 AI 接待顾客。ChatGPT 每周 12 亿用户，商家被提及后顾客可顺链接咨询；Business Agent 仅向美国符合条件的电商开放，下单仍导向商家网站，广告与独立回答分开标识。",
+      "link": "https://mp.weixin.qq.com/s/M-11bAau51c-PfyF7E-YHg",
+      "source_file": "sources/ChatGPT给商家开主页，还能派AI接待顾客.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Claude狂挖3.8万个漏洞，竟然管挖不管埋？！",
+      "source": "量子位",
+      "digest": "网络安全公司 VulnCheck 披露 Anthropic“玻璃翼计划”进展：Claude 累计挖出 37966 条候选漏洞，但公开记录仅 217 条被修复，引发“管挖不管埋”争议。该项目 4 月高调启动，宣称投入 1 亿美元额度与 400 万美元开源安全捐款，联合苹果、谷歌、微软等，但修复闭环尚待跑通。",
+      "link": "https://mp.weixin.qq.com/s/0WWCQ28eAuPxcMzivKhI9A",
+      "source_file": "sources/Claude狂挖3.8万个漏洞，竟然管挖不管埋？！.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "点一下「以后不再询问」，密码、API Key全被上传！Claude Code配置文件泄露数千条敏感信息，Anthropic回应",
+      "source": "CSDN",
+      "digest": "安全公司 Apiiro 发现大量公开 GitHub 仓库含 Claude Code 配置文件，部分竟包含数据库密码、API Key 乃至超级管理员凭证。根因在于用户选择“Yes, and don't ask again”后，Claude Code 将含敏感信息的授权命令持久化保存，导致凭据随仓库外泄；Anthropic 已回应。",
+      "link": "https://mp.weixin.qq.com/s/qYoa4_nZO8RY8kv-SfzdvA",
+      "source_file": "sources/点一下「以后不再询问」，密码、API Key全被上传！Claude Code配置文件泄露数千条敏感信息，Anthropic回应.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "面向产业决策的升级：蚂蚁数科LingDT-Decision 首发信息抽取能力",
+      "source": "蚂蚁数科",
+      "digest": "蚂蚁数科决策模型 LingDT-Decision 对 System One 协议扩展，首发信息抽取能力，可从句工单等上下文中抽取金额、日期等要素综合决策。该模型通过 mid-train 与强化学习适配产业侧精度与效率需求，信息抽取性能超过同尺寸乃至更大尺寸生成式模型，已在 DTMaaS 平台开放。",
+      "link": "https://www.infoq.cn/article/7wd1IyRiffi1vPz6goHS",
+      "source_file": "sources/2026-11-11_面向产业决策的升级：蚂蚁数科LingDT-Decision 首发信息抽取能力_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Qwen4-Max 预览版上线，Qwen Code 1.0 Preview 发布",
+      "source": "阿里",
+      "digest": "阿里发布 Qwen4-Max 预览版，首发上线阿里 Token Plan，同步开源 Qwen Code 1.0 Preview——融合 Qoder 与 Qwen Code 的 Harness 能力，以“事件为语言”连接 Agent 与世界，负责接收变化、调用工具、管理任务。Qwen4 知识理解更深、世界感知更立体，Coding 与 Agentic 能力进阶，已接入千问办公、Qoder、千问 APP 等。",
+      "link": "https://mp.weixin.qq.com/s/f6q1N-i-Xh1mtAFZnQP3qA",
+      "source_file": "sources/Qwen4-Max 预览版上线，Qwen Code 1.0 Preview 发布.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "文心 5.5 Flash Preview发布！",
+      "source": "百度",
+      "digest": "百度发布基础模型文心 5.5 Flash Preview，总参数 2800 亿、每 Token 激活 140 亿，支持百万 Token 上下文，编程、3D 建模、知识工作与内容创作表现突出。采用混合稀疏注意力、多路由器 MoE、ECHO 多 Token 预测等创新，生成速度超 200 tokens/秒，并首次引入自研 RSI 技术由 ERNIE Evolve 参与推理优化；权重将于 11 月 25 日前开源。",
+      "link": "https://mp.weixin.qq.com/s/w1xzkKGQdtd7KNJjS7SAyQ",
+      "source_file": "sources/文心 5.5 Flash Preview发布！.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-11",
+      "title": "AI 生成的代码并不可靠",
+      "source": "Solidot",
+      "digest": "一位近乎 100% 依赖 AI 生成代码的资深开发者指出，AI 代码库难以满足高可用、高扩展 SaaS 需求：测试过于简单、代码过度复杂、人类难以理解、审核时间被压缩，长期将累积技术债务并拉长故障修复时间。文章呼吁警惕 AI 生成代码的脆弱性。",
+      "link": "https://www.solidot.org/story?sid=85857",
+      "source_file": "sources/2026-11-11_AI 生成的代码并不可靠_Solidot.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "上下文也是成本：Agent 效率优化的新思路 ｜ 技术趋势",
+      "source": "InfoQ",
+      "digest": "文章指出上下文（context）已成为 Agent 运行的关键成本，提出通过精简历史、分级缓存、按需检索与压缩等手段优化 Agent 效率，在不牺牲效果的前提下降低 Token 消耗与延迟，被视为 Agent 从 Demo 走向生产的工程要点之一。",
+      "link": "https://www.infoq.cn/article/iaCUbU8Fwz6G6bDlQ9BV",
+      "source_file": "sources/2026-11-11_上下文也是成本：Agent 效率优化的新思路 ｜ 技术趋势_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "双11直播间爆改AI秀场，罗永浩上手TRAE，秒变AI Coding的大众嘴替",
+      "source": "量子位",
+      "digest": "今年双 11，AI Coding 工具 TRAE 借罗永浩直播间走向大众：自称不会写代码的老汉现场生成数据图表短剧报告、两套发布会级 PPT 及一款语音输入法软件。文章认为 AI 编程正从技术论坛走入大众消费场景，“按斤囤 Token”成为新现象。",
+      "link": "https://www.qbitai.com/2026/11/509146.html",
+      "source_file": "sources/2026-11-11_双11直播间爆改AI秀场，罗永浩上手TRAE，秒变AI Coding的大众嘴替_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "七成时间都在跑推理，5000 万次沙箱调用：Agent 后训练到底卡在哪里｜AI 进化论",
+      "source": "CSDN",
+      "digest": "文章指出进入 Agent 强化学习阶段后，70%—85% 集群时间被 Rollout 占据，后训练渐成持续在线的大规模推理系统，引发“训练与推理是否还要分家”之争。基于蚂蚁、清华等专家的直播对谈，探讨 Agent 后训练背后的基础设施挑战。",
+      "link": "https://mp.weixin.qq.com/s/VybvorXSac8fJaBimaKNdg",
+      "source_file": "sources/七成时间都在跑推理，5000 万次沙箱调用：Agent 后训练到底卡在哪里｜AI 进化论.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "从Agent自评到量化数据验证：华为云码道Skill自进化技术探索与实践",
+      "source": "CSDN",
+      "digest": "华为云码道构建“意图识别→评测集生成→Skill 编写→A/B 测试→轨迹分析”的演化循环，用量化结果与执行反馈指导下一轮 Skill 编写，并从用户与智能体任务轨迹中提炼可复用 Skill，解决传统 Skill 缺少评测数据、经验随会话流失的问题。",
+      "link": "https://mp.weixin.qq.com/s/8oWaUsf03xGPaHK2dRmlXQ",
+      "source_file": "sources/从Agent自评到量化数据验证：华为云码道Skill自进化技术探索与实践.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "关于 DeepSeek 的 SuperAgent，以及我们的实践",
+      "source": "阿里云",
+      "digest": "阿里云 AgentCore 已支持 DeepSeek Harness 部署。文章解析 DeepSeek SuperAgent 设计：核心是解决多任务调度压在人身上的瓶颈——“人通常只能同时跟进 3 到 5 个活跃会话”，让人“始终感觉只有一个 Agent 却同时做很多事”，并分享阿里类似 SuperAgent 的产品化探索。",
+      "link": "https://mp.weixin.qq.com/s/d6JQ8D3K2CIeOZxfM0s_3Q",
+      "source_file": "sources/关于 DeepSeek 的 SuperAgent，以及我们的实践.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "刚刚，腾讯版搜索引擎来了！几乎没广告，能搜公众号",
+      "source": "腾讯",
+      "digest": "腾讯正式推出面向普通用户的独立搜索产品“元宝搜索”，通过独立网站与 QQ 浏览器入口提供服务，主打权威信源优先、AI 深度融合，可生成 AI 总结、连续追问并溯源，接入微信公众号与视频号等来源，设学术科普、汽车、影视等结构化卡片；此前 To B 检索能力已通过 API/MCP/Skill 开放。",
+      "link": "https://mp.weixin.qq.com/s/EVLqIuIzfTm1jD-X1l-d9g",
+      "source_file": "sources/刚刚，腾讯版搜索引擎来了！几乎没广告，能搜公众号.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "前端岗位一年减少51%，FDE暴涨4.6倍：AI没有赶走工程师，却正在拆掉岗位边界",
+      "source": "CSDN",
+      "digest": "Lenny Rachitsky《State of the Tech Job Market: Late 2026》显示：前端岗位开放数一年降 51%、设计岗创新低，产品经理岗升至四年最高，FDE 岗位一年暴涨 4.6 倍；招聘启事增但实际入职降，AI 正重塑而非消灭工程岗位，岗位边界模糊化。",
+      "link": "https://mp.weixin.qq.com/s/SL_jQTxaIvTBymjX8y_rAQ",
+      "source_file": "sources/前端岗位一年减少51%，FDE暴涨4.6倍：AI没有赶走工程师，却正在拆掉岗位边界.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "程序员不能执着追求新技术！OpenClaw创始人：程序员最重要的能力不是写得快，而是“主动性”",
+      "source": "51CTO技术栈",
+      "digest": "OpenClaw 创始人 Peter Steinberger 在接受 51CTO 访谈时表示，不必追完每一个新工具，最重要的是“主动性”——把项目做出来、发布出去；他维护约 40 个开源项目，由 Agent 定期检查依赖更新、GitHub 问题与 PR，自己再决定关掉请求或让 Agent 继续改进发布。",
+      "link": "https://mp.weixin.qq.com/s/DY11oJVdD9_ba1WAfZn3Kg",
+      "source_file": "sources/程序员不能执着追求新技术！OpenClaw创始人：程序员最重要的能力不是写得快，而是“主动性”.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "阿里云+自建 IDC 混合运维：一套 AIOps 打通云监控与机房动环，实现跨域根因 RCA",
+      "source": "51CTO技术栈",
+      "digest": "文章介绍阿里云+自建 IDC 混合运维实践：通过一套 AIOps 打通云监控与机房动环（电力、制冷、温湿度），实现跨域根因分析（RCA），统一告警与定位，解决混合环境下故障定位割裂、响应慢的问题。",
+      "link": "https://mp.weixin.qq.com/s/6f4FwD5JGWsSQAW5WCLmSA",
+      "source_file": "sources/阿里云+自建 IDC 混合运维：一套 AIOps 打通云监控与机房动环，实现跨域根因 RCA.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "上市银行2026年半年报AI应用布局研究及对中小银行的启示——基于国有大行、股份制银行与头部城商行的分析",
+      "source": "中国金融电脑",
+      "digest": "文章基于国有大行、股份制银行与头部城商行 2026 年半年报，系统梳理上市银行 AI 应用布局，涵盖智能风控、智能营销、智能运营与研发提效等方向，并提炼对中小银行在战略规划、数据治理与场景选择上的启示，为同业提供可借鉴路径。",
+      "link": "https://mp.weixin.qq.com/s/4NF3HJl_gETp2Rk9sYyUBg",
+      "source_file": "sources/上市银行2026年半年报AI应用布局研究及对中小银行的启示——基于国有大行、股份制银行与头部城商行的分析.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "数字员工提质效 人机搭档启新程——RPA+AI双擎赋能银行数字化转型",
+      "source": "金融电子化",
+      "digest": "中国银行海南省分行立足海南自贸港，确立 RPA+AI 双引擎、人机协同全域赋能战略，搭建三级联动组织架构，在运营管理、客户服务与合规等场景落地数字员工，探索契合区域特色的规模化数智赋能路径，推动从人力依赖向智能运营转型。",
+      "link": "https://mp.weixin.qq.com/s/jFA-xt0RO7OkslbPt_QYdA",
+      "source_file": "sources/数字员工提质效 人机搭档启新程——RPA+AI双擎赋能银行数字化转型.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "数智筑基 赋能致远：中信银行加速推进智能化能力建设与应用",
+      "source": "金融电子化",
+      "digest": "中信银行将 AI 定位为核心引擎，战略由“AI First”升级为“AI Fast”，以“场景牵引+AI 赋能”推进“1+5+X”领先数智化银行框架，目标十五五末完成 90% 以上核心业务流程 AI 重塑，从“AI 辅助”走向“AI 原生”，搭建企业级智能金融能力体系。",
+      "link": "https://mp.weixin.qq.com/s/kHGRFqs27l4yPesIYmLAgQ",
+      "source_file": "sources/数智筑基 赋能致远：中信银行加速推进智能化能力建设与应用.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "从“卖Token”到“卖结果” | 科技有「联想」沙龙激辩Token经济三大议题",
+      "source": "量子位",
+      "digest": "10 月 30 日“科技有联想·Token 畅想曲”线下沙龙在京举行，产学研投 9 位嘉宾围绕 Token 经济展开激辩，议题涵盖成本核算、价值评估、安全治理、能源消耗与产业泡沫。文章认为 Token 正成为智能经济的“度量衡”，但业界尚未形成充分共识，亟需加强对话。",
+      "link": "https://www.qbitai.com/2026/11/509088.html",
+      "source_file": "sources/2026-11-11_从“卖Token”到“卖结果” _ 科技有「联想」沙龙激辩Token经济三大议题_量子位.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "如何提升 AI 的环境可持续性",
+      "source": "InfoQ",
+      "digest": "Charles Humble 在 GOTO Copenhagen 大会谈绿色 AI，主张可持续性应成为顶层架构设计关注点，建议采用预构建与更小模型、在低碳电力充足处运行计算、用可再生能源训练。IEA 数据显示全球数据中心用电占电力需求 1%—1.3%，微软、谷歌因 AI 用电与排放持续攀升。",
+      "link": "https://www.infoq.cn/article/GUXzTTTFvwWY7yx6WMyS",
+      "source_file": "sources/2026-11-11_如何提升 AI 的环境可持续性_InfoQ.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-10",
       "title": "Fable 5.2首批实测来了！网友：Opus突然不香了",
