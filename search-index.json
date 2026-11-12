@@ -1,7 +1,277 @@
 {
-  "updated_at": "2026-11-12T05:18:08.991701",
-  "total": 3492,
+  "updated_at": "2026-11-13T05:24:52.707016",
+  "total": 3519,
   "articles": [
+    {
+      "date": "2026-11-12",
+      "title": "谷歌发布首款决策模型 Gemini Decision 1：9 项测试拿下 7 项第一，准确率最高92.2%",
+      "source": "InfoQ",
+      "digest": "谷歌正式发布首款决策模型Gemini Decision 1及Gemini Decisions API。该模型不逐字生成文本，而是通过单次前向传播对预设候选答案评分，支持是或否判断、多选项（最多255项）与标准打分，可处理文本、图像、音频、视频与PDF，单次最多回答1000个问题，端到端延迟150至250毫秒。定价为每百万输入Token 0.10美元、输出免费，在9项基准中拿下7项第一、校准误差最低，已用于模型路由、Agent工具选择等场景。",
+      "link": "https://www.infoq.cn/article/E7QKIMUz3h0G0IE5Paii",
+      "source_file": "sources/2026-11-12_谷歌发布首款决策模型 Gemini Decision 1：9 项测试拿下 7 项第一，准确率最高92_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-12",
+      "title": "小模型王者易主！3毛钱2分钟就能写个网页",
+      "source": "量子位",
+      "digest": "Meta发布最小模型Muse Ember，专司为Agent打下手、承接重复且高Token消耗的任务。在Artificial Analysis智能指数榜单上基本追平Claude Haiku 5.5，单任务成本仅约其三分之一，并登顶Code Arena WebDev小模型榜；实测可一次生成网站与动画，平均每项约2分钟、0.04美元（约3毛钱）。",
+      "link": "https://mp.weixin.qq.com/s/7p8t8oUSwIvh-lD-f44yyA",
+      "source_file": "sources/小模型王者易主！3毛钱2分钟就能写个网页.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Anthropic玻璃翼计划被质疑！近4万个候补漏洞，只修了217条",
+      "source": "量子位",
+      "digest": "网络安全公司VulnCheck发布Anthropic玻璃翼计划（Project Glasswing）运行七个月的成绩单：Claude累计挖出37966条候选漏洞，但公开记录仅217条被修复，修复率不足百分之一。该计划旨在用Claude大规模挖掘开源与关键软件漏洞，但只挖不修引发开源社区质疑，亦凸显AI安全研究的披露与治理难题。",
+      "link": "https://www.qbitai.com/2026/11/509291.html",
+      "source_file": "sources/2026-11-12_Anthropic玻璃翼计划被质疑！近4万个候补漏洞，只修了217条_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Gilbert + Tobin 借 AI 重塑法律实务",
+      "source": "OpenAI",
+      "digest": "澳大利亚律所Gilbert+Tobin披露与OpenAI的合作实践：将AI深度嵌入法律实务，借助ChatGPT Enterprise等工具辅助合同审阅、法律研究与客户协作，并分享内部落地经验。案例体现专业服务机构围绕大模型和智能体重构工作流、提升人均产能的趋势。",
+      "link": "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "source_file": "sources/2026-11-12_Gilbert + Tobin rethinks the business of law with _OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Google 终于让 PyTorch 原生跑上 TPU，开发者：“早该如此！”",
+      "source": "InfoQ",
+      "digest": "Google与Meta合作推出开源项目TorchTPU，为TPU提供原生PyTorch后端，使现有PyTorch负载仅需少量代码改动即可运行在TPU上，并支持即时执行、编译执行与分布式计算。相较此前的PyTorch/XLA方案（需侵入式改写、编译延迟高），TorchTPU将即时执行列为优先，降低GPU到TPU的迁移成本。",
+      "link": "https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj",
+      "source_file": "sources/2026-11-12_Google 终于让 PyTorch 原生跑上 TPU，开发者：“早该如此！”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Holiday Extras 借助 Codex 重塑产品构建",
+      "source": "OpenAI",
+      "digest": "英国旅游服务商Holiday Extras分享基于OpenAI Codex的落地实践：将企业积累的客户领域知识转化为更好的应用、更高的预订转化与新增增长可能。案例展示Codex等编码智能体如何被中小企业用于把专有经验沉淀为软件能力。",
+      "link": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "source_file": "sources/2026-11-12_Holiday Extras is rethinking what it can build wit_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "OpenAI 投入研究 AI 与儿童安全",
+      "source": "OpenAI",
+      "digest": "OpenAI宣布投入200万美元支持AI与儿童安全相关研究，资助构建共享工具以衡量AI对青少年的风险与机遇。该投入延续其在AI安全与治理领域的布局，聚焦未成年人保护这一监管与企业责任重点议题。",
+      "link": "https://openai.com/index/children-first-declaration",
+      "source_file": "sources/2026-11-12_Supporting research on AI and children’s safety_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "《Big Walk》开发商利用 AI 修 Bug 引起争议",
+      "source": "Solidot",
+      "digest": "独立游戏《Big Walk》开发商House House承认借助生成式AI修复一个拖慢速度的bug：Unity工程师无法解决后，团队用大模型获得修复思路并写出10行最终代码。此举在独立游戏节引发激烈争议，评委联合呼吁制定反AI政策，亦折射AI辅助开发普遍化与披露伦理的张力。",
+      "link": "https://www.solidot.org/story?sid=85869",
+      "source_file": "sources/2026-11-12_《Big Walk》开发商利用 AI 修 Bug 引起争议_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "马斯克Grok泄露自家机密！SpaceX特斯拉工资绩效全曝光",
+      "source": "量子位",
+      "digest": "安全公司Claroc发现，超过3.5万个基于Grok构建的应用无需登录即可访问，其中约650至800个暴露了私密数据，涉及SpaceXSI、X及另外30家企业（含6家财富500强），甚至包括ICU患者化验结果、呼吸机记录与普通人的明文账户密码；特斯拉也出现技术人员评分表泄露。事件暴露AI应用默认开放配置与数据隔离缺失的安全隐患。",
+      "link": "https://www.qbitai.com/2026/11/509355.html",
+      "source_file": "sources/2026-11-12_马斯克Grok泄露自家机密！SpaceX特斯拉工资绩效全曝光_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "B2A崛起！Agent 14大应用与Infra赛道一文看懂",
+      "source": "智东西",
+      "digest": "a16z刊文提出B2A（Business-to-Agent）经济判断：AI Agent正成为互联网主要用户，企业未来不仅要争夺人类消费者，还要争夺Agent带来的流量与订单。数据显示Shopify来自AI的流量同比增8倍、AI搜索订单增近13倍；Supabase超60%新数据库由AI工具创建。文章认为Agent将重塑互联网流量分配、软件销售与支付。",
+      "link": "https://mp.weixin.qq.com/s/w9xTsZMnlhpdNpbSgMNglQ",
+      "source_file": "sources/B2A崛起！Agent 14大应用与Infra赛道一文看懂.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "刚刚，马斯克的 Grok Bot 转正了！进群接活、替你开会，还能指挥其他 AI",
+      "source": "AI信息Gap",
+      "digest": "马斯克旗下xAI发布Grok Bot 1.0正式版，定位与整个团队一起干活的AI队友：可在Slack与微软Teams群中被提及接活、参加视频会议并记笔记，Bot之间还能互相派活；团队版每席位每月30美元起。Grok Bot自8月内测、9月上线共享功能，现已在SpaceXSI的会计、客服、销售等部门落地。",
+      "link": "https://mp.weixin.qq.com/s/dLWAYREj7kn-2J-Gxz88Tw",
+      "source_file": "sources/刚刚，马斯克的 Grok Bot 转正了！进群接活、替你开会，还能指挥其他 AI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "多模态“源神”！MiniMax开源SOTA生图模型，原生4K，一张两毛",
+      "source": "量子位",
+      "digest": "MiniMax开源图像模型H3-Image，效果被称基本消除AI生图的恐怖谷：人脸毛孔、雀斑乃至绒毛可精细呈现，并支持CAD拆解等复杂生图任务。模型在海外网友实测中可处理游戏资产等任务，且以开源形式发布，被视为多模态领域高性价比的SOTA生图模型。",
+      "link": "https://www.qbitai.com/2026/11/509440.html",
+      "source_file": "sources/2026-11-12_多模态“源神”！MiniMax开源SOTA生图模型，原生4K，一张两毛_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-12",
+      "title": "InfoQ 2026 年趋势报告：AI、ML与数据工程",
+      "source": "InfoQ",
+      "digest": "InfoQ发布2026年AI、机器学习与数据工程年度趋势报告，基于编辑团队与外部嘉宾播客内容梳理未来十二个月值得关注的方向，并给出技术采用曲线。报告反映RAG已获企业采用、自主LLM智能体出现两三年后，AI创新在2026年持续加速，部分技术跨越鸿沟进入早期大众阶段，同时移除已主流化的技术。",
+      "link": "https://www.infoq.cn/article/7Pecd1CshYIMvCTeBhrm",
+      "source_file": "sources/2026-11-12_InfoQ 2026 年趋势报告：AI、ML与数据工程_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Token越烧越多，利润却没涨：李彦宏要重新设计企业组织",
+      "source": "InfoQ",
+      "digest": "李彦宏在2026百度世界大会提出下一幕：智能组织的判断：企业Token消耗持续增长但收益未同步提升，根因在于只换了工具、未重设计生产线。他主张围绕AI重新设计组织与业务流程，让人与智能体共同完成销售、客服、研发、运营等工作；百度内部日活智能体已从约5000个增至3.7万个。",
+      "link": "https://www.infoq.cn/article/JPf7ud6wuk9fYmUDoMjo",
+      "source_file": "sources/2026-11-12_Token越烧越多，利润却没涨：李彦宏要重新设计企业组织_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "从通用大模型到学习过程智能，AI如何真正进入课堂？",
+      "source": "InfoQ",
+      "digest": "字节跳动原高级副总裁陈林再创业项目银河智学亮相，首席科学家邓澍军披露AI教育产品小鹿爱学的架构：采用豆包大模型与自研智能学习引擎双核，聚焦学习过程智能，理解学科逻辑、识别个体认知差异，将技术转化为课堂可验证的学习效果，而非仅生成解题步骤。",
+      "link": "https://www.infoq.cn/article/dPPR4y75ZJtZ0ez03kWD",
+      "source_file": "sources/2026-11-12_从通用大模型到学习过程智能，AI如何真正进入课堂？_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "接入多款第三方模型，豆包工作也模型自由了",
+      "source": "极客公园",
+      "digest": "豆包工作宣布接入Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash等多款第三方模型，并标注各模型额度消耗倍率便于用户按需选型；同步推出指定时段额度折扣及豆包2.1 Lite、DeepSeek V4.1 Flash降价。至此其模型矩阵覆盖高端能力型、均衡通用型、轻量效率型三档，补齐企业多场景AI需求。",
+      "link": "http://www.geekpark.net/news/373881",
+      "source_file": "sources/2026-11-12_接入多款第三方模型，豆包工作也模型自由了_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "智能体 AI 架构中记忆、知识与上下文的系统化方案",
+      "source": "InfoQ",
+      "digest": "文章提出上下文即控制平面的Agent架构范式：将组织、行为与情境数据作为集中治理层，区分系统知识（策略、规则、硬事实）、记忆（跨会话持久化与学习）与上下文（活跃临时信息）。主张由任务上下文决定何时调用何种已知，以降低幻觉、让Agent像可靠软件系统一样运行。",
+      "link": "https://www.infoq.cn/article/COuPKpA6rTf05C6JM10y",
+      "source_file": "sources/2026-11-12_智能体 AI 架构中记忆、知识与上下文的系统化方案_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "腾讯计划将半数员工部署到 AI 原生业务",
+      "source": "Solidot",
+      "digest": "马化腾在年度演讲中称愿将半数员工投入AI原生业务，将腾讯核心业务比作陆军、新AI业务比作海军，敦促逾10万员工拥抱AI；并称所谓裁员50%传闻不实，实为资源向AI时代重新调度。该表态反映头部互联网企业围绕AI Native重构组织与资源分配的动向。",
+      "link": "https://www.solidot.org/story?sid=85865",
+      "source_file": "sources/2026-11-12_腾讯计划将半数员工部署到 AI 原生业务_Solidot.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "让AI真正懂业务：璇玑如何成为企业AI的语义基础设施",
+      "source": "量子位",
+      "digest": "中兴通讯璇玑系统以本体语义组织企业知识，连接业务语义与数据资源并接入智能体与应用，定位为企业AI的本体语义软件平台。文章指出企业AI的难点不在模型强弱，而在概念边界、数据含义与判断依据的统一，本体建模可补足大模型与RAG缺少的企业语义层。",
+      "link": "https://www.qbitai.com/2026/11/509349.html",
+      "source_file": "sources/2026-11-12_让AI真正懂业务：璇玑如何成为企业AI的语义基础设施_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "AI Agent可以承担完整的工程活动，大部分软件工程师会被取代吗？",
+      "source": "软件工程3.0时代",
+      "digest": "作者围绕开源3D打印固件，用OpenCode与大模型开展Agent工程实践：让Agent沿需求工程、规约分解、评审整改、系统设计、设计评审、组件实现、单元测试与代码评审链条工作。文章观察Agent能否跨越多个工程阶段、结合多轮评审与UTDD等方法持续完成关联任务，而非宣称单次突破。",
+      "link": "https://mp.weixin.qq.com/s/qY2yaWJ-RMosnQSzNvoHWA",
+      "source_file": "sources/AI Agent可以承担完整的工程活动，大部分软件工程师会被取代吗？.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "LLM 代理的三笔隐性账单：安全事故、运维投入与模型选择",
+      "source": "阿里云云原生",
+      "digest": "文章以开源LLM代理LiteLLM在2026年两度遭供应链投毒（CI令牌被盗、构建产物被篡改，恶意代码经pth启动钩子导出全部上游API Key）及密集高危CVE为注脚，拆解AI应用入口的三笔隐性账单：安全事故代价、自建自维护投入、散落在业务代码中的模型选择逻辑，并引出AI网关智能路由等解法。",
+      "link": "https://mp.weixin.qq.com/s/PuClVwke9fsuOU0Oi2L5tw",
+      "source_file": "sources/LLM 代理的三笔隐性账单：安全事故、运维投入与模型选择.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Qoder × Qwen Code 联合开源：想上手？用沙箱跑个任务",
+      "source": "阿里云基础设施",
+      "digest": "阿里云智能体沙箱Agent Sandbox上线Qwen Code沙箱模板：开发者无需在本机安装Node.js与CLI，即可在隔离云端环境中让Qoder与Qwen Code读代码、改文件、跑命令，环境按需创建、用完释放。文章给出从模板市场复制、SDK创建沙箱到接入自有应用的实操路径，降低编码Agent上手与运维门槛。",
+      "link": "https://mp.weixin.qq.com/s/ETOYura8U4cHfCzKcJQGqg",
+      "source_file": "sources/Qoder × Qwen Code 联合开源：想上手？用沙箱跑个任务.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "万联智策基于 AgentCore 构建数字员工团队，800+智能体规模化落地",
+      "source": "阿里云云原生",
+      "digest": "智能化企业商机地图万联智策携手阿里云，基于AgentCore、AgentLoop等打造AI数字员工团队商机智囊团：1个智能Leader带领4个专家级员工，并配套约800个可调度数字员工，将能力从商机研判延伸到挖掘、跟进转化全链路，体现AgentCore在规模化数字员工落地中的工程实践。",
+      "link": "https://mp.weixin.qq.com/s/eyS1MMWFFxeHWO_uoitVGQ",
+      "source_file": "sources/万联智策基于 AgentCore 构建数字员工团队，800+智能体规模化落地.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "构建面向 Agentic 推理的下一代 LLM 推理引擎",
+      "source": "InfoQ",
+      "digest": "TokenSpeed贡献者尚旭春在AICon 2026分享面向Agentic推理的下一代LLM推理引擎：相较传统Chat负载（一次性生成、KV Cache利用率低），Agent负载需持续思考、调工具、读结果，带来吞吐目标失效、缓存不足与硬件适配滞后等挑战。文章介绍分层解耦架构、自动并行编译、KV Cache演进与跨平台抽象及Blackwell实测。",
+      "link": "https://mp.weixin.qq.com/s/ZcmmJuyIAkigdAoZ2iJzhQ",
+      "source_file": "sources/构建面向 Agentic 推理的下一代 LLM 推理引擎.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "维护3.3万字符的长Prompt？让优化Agent迭代执行Agent",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者分享基于Google Research开源harness square（Recursive Agent Harnessing）框架，让优化Agent自动迭代执行Agent以调优超3.3万字符的长Prompt：在611条人工标注的连贯性打标数据上跑1轮（约95分钟、无人工介入），问题类F1从82.78%提升至89.89%，展示Agent自迭代闭环在Prompt工程中的落地。",
+      "link": "https://mp.weixin.qq.com/s/pMQFjkllDxcqSJhh_aZjZQ",
+      "source_file": "sources/维护3.3万字符的长Prompt？让优化Agent迭代执行Agent.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "全球竞速下的中国答卷：金融AI从试点探索走向范式跃迁",
+      "source": "金融电子化",
+      "digest": "神州信息首席咨询专家孙中东撰文指出，领先银行已从边缘助手进入信贷裁决、反洗钱等最不能出错的核心系统重塑，约30%银行实现事务性工作替代、核心现代化能力可提升25%至50%；行业正从做助手转向重设计核心业务。文章结合国家金融监督管理总局2026年6月关于银行业保险业人工智能安全开发应用的指导意见，提出中国方案聚焦部署能力、语义对齐与运行时治理。",
+      "link": "https://mp.weixin.qq.com/s/DUeUOaJFcCr6KJJQlE4OSw",
+      "source_file": "sources/全球竞速下的中国答卷：金融AI从试点探索走向范式跃迁.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-12",
+      "title": "黑客攻击频发！韩国银行大幅上调明年网络安全预算",
+      "source": "银行科技研究社",
+      "digest": "据韩国时报，接连发生疑似AI辅助实施的网络攻击后，韩国四大行大幅上调2027年信息安全预算：新韩银行拟拨1150亿韩元（约5.76亿元），约为今年2.8倍；韩亚、友利、KB国民亦计划超1000亿、763亿、1000亿韩元以上。背景是新韩约2.5万、KB国民2210名客户信息泄露等事件，凸显金融业网络安全投入与安全效果的落差。",
+      "link": "https://mp.weixin.qq.com/s/cXdJyYEUfNzWqefeDyMfJw",
+      "source_file": "sources/黑客攻击频发！韩国银行大幅上调明年网络安全预算.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-11",
       "title": "Datadog 推出面向 SRE 故障排查的专用 AI 模型",
