@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-13",
+      "weekday": "周五",
+      "stats": {
+        "国际": 7,
+        "国内": 15,
+        "同业": 2,
+        "其他": 1,
+        "total": 25
+      },
+      "summary": "谷歌发布 Gemini 4 Hydrogen：面向日常编程与智能体任务的快速执行模型/Liquid AI 发布 LiquidCodec：7400 万参数流..."
+    },
+    {
       "date": "2026-11-12",
       "weekday": "周四",
       "stats": {

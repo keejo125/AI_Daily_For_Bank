@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-11-13T05:24:52.707016",
-  "total": 3519,
+  "updated_at": "2026-11-14T05:10:43.679189",
+  "total": 3544,
   "articles": [
+    {
+      "date": "2026-11-13",
+      "title": "谷歌发布 Gemini 4 Hydrogen：面向日常编程与智能体任务的快速执行模型",
+      "source": "Google DeepMind",
+      "digest": "谷歌 DeepMind 于 11 月 12 日发布 Gemini 4 Hydrogen，定位为「日常智能体工作主力模型」，介于旗舰 Carbon 与深度推理 Argon 之下。默认 high 思考档在 Artificial Analysis 综合智能指数得 51 分（超 Argon 的 50），xhigh 档升至 54；任务执行速度达 Gemini 3.8 Flash 的 2.5 倍，Terminal-Bench 4.1 得分 57%（3.8 Flash 仅 18.2%）。模型仅经 API 与 Google 各产品入口提供，百万级统一上下文窗口，已接入 Google AI Studio、搜索与 Antigravity 等全档位，搜索侧称其为迄今最大一次模型升级。",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "source_file": "sources/2026-11-13_Introducing Gemini 4 Hydrogen_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Liquid AI 发布 LiquidCodec：7400 万参数流式语音编解码模型",
+      "source": "MarkTechPost",
+      "digest": "Liquid AI 开源 LiquidCodec，即其 LFM3-Audio-2B 与 LFM3-Omni-2B 背后的语音编解码器，约 7400 万参数，将 24kHz 音频压缩为 12 路 token 流（每 80ms 帧生成 12 个离散 token）。单 CPU 线程即可约 361 倍实时编码，在 8 个测试集的 ViSQOL 与梅尔距离上均优于 X-Codec 2、NanoCodec 与 Mimi；权重已上 Hugging Face，并提供 CUDA 与 llama.cpp GGUF 构建，替换此前使用的 Kyutai Mimi。",
+      "link": "https://www.marktechpost.com/2026/11/12/liquid-ai-liquidcodec-streaming-audio-codec/",
+      "source_file": "sources/2026-11-13_Liquid AI Releases LiquidCodec, a 74M-Parameter St_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "AWS 发布 AWS Emulator：由 AI 智能体构建的本地 AWS API 模拟器",
+      "source": "MarkTechPost",
+      "digest": "AWS 发布 AWS Emulator，一个本地运行的 AWS API 模拟器：在笔记本、开发服务器或 CI 中运行，CLI 与 SDK 改指向它即可，无需账号、无服务费。其特殊之处在于全部代码由自主智能体编写与审查，基于 438 个 AWS API 模型覆盖 200+ 服务；v1.0.322 通过 24243/42857 项保真测试（56.6%），KMS 最佳（93.9%）、CloudFormation 最弱（15.8%），为开发者与编码智能体提供快速免费的 AWS 形态测试回路。",
+      "link": "https://www.marktechpost.com/2026/11/12/aws-emulator-local-aws-api-emulator-ai-agents/",
+      "source_file": "sources/2026-11-13_AWS Releases AWS Emulator_ A Local Copy of 200+ AW_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "CopilotKit 发布 OpenBot 1.0：可自托管的 MIT 许可 AI 同事",
+      "source": "MarkTechPost",
+      "digest": "CopilotKit 于 11 月 9 日发布 OpenBot 1.0，一个 MIT 许可、可自托管的智能体工作区，反其道而行——企业自带模型、智能体与基础设施。每个 Bot 拥有独立容器（含专属浏览器、登录态与文件），仅触达被授予的工具；所有浏览器点击、文件写入、MCP 调用与组件都经由统一网关，先写审计行再执行，拒绝规则优先于允许规则，治理内置、动作可审。",
+      "link": "https://www.marktechpost.com/2026/11/12/copilotkit-openbot-1-0-open-source-ai-coworker/",
+      "source_file": "sources/2026-11-13_CopilotKit Releases OpenBot 1.0_ An MIT-Licensed, _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Docker 呼吁通过隔离与治理保障智能体安全",
+      "source": "InfoQ",
+      "digest": "Docker 发布指南，指出自主 AI 智能体在有限监督下浏览网页、运行代码、调用工具时存在五大安全风险：提示词注入、工具滥用与投毒、过度自主、凭证泄露与数据窃取。Docker 认为根因在于智能体可在运行时自选工具、串联操作并以启动者权限运行，主张以隔离与治理（而非仅靠模型约束）为防御主轴，并呼应 OWASP 智能体式 AI 威胁与缓解指南。",
+      "link": "https://www.infoq.cn/article/1pCuIRtm5HYwTyR4fIhA",
+      "source_file": "sources/2026-11-13_Docker 呼吁通过隔离与治理保障智能体安全_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "容器隔离还不够：Edera 从虚拟机监控器层限制 AI 智能体",
+      "source": "InfoQ",
+      "digest": "Edera 推出对象能力受限权限模型，直接在虚拟机监控器层实施细粒度对象能力控制，使自主智能体与 MCP 服务器同敏感凭证隔离。核心是将完成任务所需权限与底层凭证分离：capcurl 实现无凭证 API 访问，capsudo 管理限定作用域的命令执行，并集成 SPIFFE/SPIRE 做密码学工作负载身份，将入侵影响从整个环境缩小到特定任务操作，初步功能已发布。",
+      "link": "https://www.infoq.cn/article/MU0txcPXXuGdGKBNa6a2",
+      "source_file": "sources/2026-11-13_容器隔离还不够：Edera 从虚拟机监控器层限制 AI 智能体_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "谷歌推出 LiteRT Tensor API，用于构建、定制与优化端侧机器学习模型",
+      "source": "InfoQ",
+      "digest": "谷歌推出轻量级 C++ API LiteRT Tensor，让开发者用逐个算子的计算图直接面向端侧构建、定制与优化机器学习模型，同一份图可在 CPU/GPU/NPU 上运行而无需重写。支持直接导入 Hugging Face .safetensors 权重与零拷贝缓冲区互操作，并与 AI 编码智能体兼容——演示中智能体将 SAM 2 的逐帧决策移入计算图并重写触发 CPU 回退的操作，在 WebGPU 上 512×512 帧率从不足 10fps 升至 30fps 以上。",
+      "link": "https://www.infoq.cn/article/joYjCTbwWFSkbACK5lje",
+      "source_file": "sources/2026-11-13_谷歌推出 LiteRT Tensor API，用于构建、定制与优化端侧机器学习模型_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "无界前沿开源 Fx-Bio-1031：把 RSI 带进生命科学的生物信息大模型",
+      "source": "量子位",
+      "digest": "无界前沿开源生物信息大模型 Fx-Bio-1031 并开放完整权重，面向专业生信任务、支持本地部署与数据不出域。在 Anthropic BioMysteryBench 困难子集 Pass@5 达 70.59%，大幅超过 GPT-6-Astra（47.06%）与 Claude Opus-5（52.94%）；BiomniBench Pass@3 达 89.50%。它能写代码、装软件、调数据库、做交叉验证，应对真实科研中数百万行噪声数据，将 RSI 能力引入生命科学。",
+      "link": "https://www.qbitai.com/2026/11/509663.html",
+      "source_file": "sources/2026-11-13_高难盲测超越GPT-6-Astra与Opus-5！无界前沿开源Fx-Bio-1031，把RSI带进生_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "决策模型 Jev 可以直接上生产？用实验和公式理解 logit 调优与训练要领",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生文章解析决策模型（Decision Model，jev-like）如何替代 LLM-as-a-Judge 做自动化评测。传统生成式裁判开销大且给不出连续可信置信度（logits 被 RLHF/GRPO 推尖至 0.999/0.001）；自 TypeSafe Jev 起，Perplexity Decider、Liquid d1、Cloudflare Clef、OpenAI Decisions API 相继推出，砍掉自回归生成、单次输出校准概率。文章给出上线前 logit 调优要领，以避免默认阈值与原始概率造成的误判。",
+      "link": "https://mp.weixin.qq.com/s/JlJb6iOave1Ju4a3x84yNw",
+      "source_file": "sources/决策模型 Jev 可以直接上生产？用实验和公式理解 logit 调优与训练要领.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "国产大模型又杀出一匹黑马，引发硅谷关注！",
+      "source": "量子位",
+      "digest": "硅谷硬核媒体 Latent Space 新测评栏目首期实测中国公司 NaiveAI 的开源模型 Naive-N0.5-Flash（清华电子系副教授代季峰创立），综合能力介于 DeepSeek V4.1 Flash 与 GLM 5.3 Flash 之间、跻身国产第一梯队；极速模式峰值 2100 Token/s、中位响应 3.1 秒，架构、训练系统与推理优化均由 AI 参与研发，借稀疏注意力支持百万 token 上下文。",
+      "link": "https://mp.weixin.qq.com/s/d2PycGL_WwpYgcdB9dssMQ",
+      "source_file": "sources/国产大模型又杀出一匹黑马，引发硅谷关注！.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-13",
+      "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
+      "source": "量子位",
+      "digest": "openJiuwen 发布 RSI 原生 AgentOS，为递归自我改进（RSI）提供运行环境：在界面、网关、服务端和 Agent 执行等环节提供扩展点，覆盖运行全周期；新功能可热插拔、按版本管理、出问题可回退，接入时不用改应用原有代码。WorkSwarm 即基于此构建——Agent 可把需求直接打成「扩展包」作为系统插件加载，实现「Agent 所想即所得」，同一包装进 WorkSwarm 后成为系统插件。",
+      "link": "https://www.qbitai.com/2026/11/509653.html",
+      "source_file": "sources/2026-11-13_openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+      "source": "量子位",
+      "digest": "国产医疗 AI 公司「未来医生」与国内顶级三甲医院胸外科团队联合开展大规模肺癌实证：围绕 40 例复杂病例，在统一标准下由 250 名三甲医生评测，AI 对医生胜率 88:12；其 MedGPT 辅助下医生总体得分由 53.40 升至 66.27（增幅 24.1%）。在同条件横评中 MedGPT 综合得分 96.22，大幅超越 GPT-5.4（71.38）、Claude Opus 4.7（61.81）、Gemini 3.1 Pro（54.62），获中美多位肿瘤权威专家认可。",
+      "link": "https://www.qbitai.com/2026/11/509796.html",
+      "source_file": "sources/2026-11-13_中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "李彦宏定义 AI 下一个十年，智能组织是「新厂房」",
+      "source": "极客公园",
+      "digest": "百度世界 2026 上，李彦宏提出「智能组织是 AI 时代的新厂房」，认为当前 AI 未产生预期经济效益，本质是许多企业只换了电机、未重设计工厂。百度发布「芯云模体」全栈进展：大模型交易平台「词元所」上线一个月以来，日均调用 token 超 7000 亿；文心 5.5 Flash Preview 支持百万 token 上下文；文心闪电模型、一镜微表情模型上架千帆，可通过 API 接入。",
+      "link": "http://www.geekpark.net/news/373937",
+      "source_file": "sources/2026-11-13_李彦宏定义 AI 下一个十年，智能组织是「新厂房」_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "网易有道LobsterAI团队版正式发布，使用场景覆盖电商、软件开发、金融IT等领域",
+      "source": "InfoQ",
+      "digest": "网易有道桌面级办公 Agent LobsterAI 团队版发布，面向 20 人以内团队，主打「0 席位费、300 元起开通、积分有效期 365 天」，将计费单位从「人」换成「用量」以匹配小团队真实消耗。已在电商、软件开发、金融 IT、高教职教落地，强调代码 100% 开源、可审计；截至 9 月累计用户超 100 万、GitHub Stars 超 6.2K，属国内办公 Agent 代表产品之一。",
+      "link": "https://www.infoq.cn/article/etets7v8j0u0W5rBYURF",
+      "source_file": "sources/2026-11-13_网易有道LobsterAI团队版正式发布，使用场景覆盖电商、软件开发、金融IT等领域_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "AI工程师不够用了！吴恩达谈AI工程师的四项能力：开发者的基础能力不够，看不懂Agent做了那些取舍",
+      "source": "51CTO技术栈",
+      "digest": "吴恩达在 Neo4j NODES 2026 指出，熟练 AI 工程师仍紧缺，难在无人能替团队回答无标准答案的判断问题。其团队研究超 2 万份招聘描述后，将 AI 工程工作归为四类：构建部署 AI 应用、软件工程基础、使用 Coding Agent、参与决定产品要做什么。他强调 Coding Agent 已能自做部分质量检查，但需求、数据与结果是否符合业务仍需人判断，短缺的是会做取舍的人。",
+      "link": "https://mp.weixin.qq.com/s/J91-PiJV3RKsRfIhusBgAQ",
+      "source_file": "sources/AI工程师不够用了！吴恩达谈AI工程师的四项能力：开发者的基础能力不够，看不懂Agent做了那些取舍.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "AgentCore 支持 DeepSeek Harness 托管，加速企业生产化验证",
+      "source": "阿里云云原生",
+      "digest": "阿里云 AgentCore 将 DeepSeek 于 2026 年 8 月 MIT 开源的 Agent Harness（DSH）纳入可选托管，与 Qoder、Codex、Pi、QwenPaw 并列。文章指出 DSH 单机形态下十人装十份、会话/插件/凭证互不相通，推到部门即失沉淀；托管将其接入企业既有身份、网络、数据与运维体系，使同一 Harness 从个人工具升级为部门可依赖的基础设施，补齐多人共用环境缺口。",
+      "link": "https://mp.weixin.qq.com/s/7PyENhIfWep7zNck5paHbw",
+      "source_file": "sources/AgentCore 支持 DeepSeek Harness 托管，加速企业生产化验证.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "DeepSeek 发布全家桶应用 API",
+      "source": "DeepSeek",
+      "digest": "DeepSeek 开放「全家桶应用 API」：在原有 API 开启参数即可获得联网搜索、深度思考搜索、文件输入、阅读链接及模型安全等对话能力，V4.1-Flash 已在 Messages/Responses/Chat Completions 接口支持，开发者可近 1:1 复刻 DeepSeek App。底层能力（Search、Fetch、OCR、ASR、TTS）亦支持独立调用，官方同步开源轻量前端 Demo，方便接入自有工作流。",
+      "link": "https://mp.weixin.qq.com/s/78KBHc4-4N5b2vfL9SkutQ",
+      "source_file": "sources/DeepSeek 发布全家桶应用 API.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "不只是Memory：Ontology如何让Coding Agent越用越懂项目？",
+      "source": "腾讯技术工程",
+      "digest": "腾讯技术工程探讨 Coding Agent 如何真正熟悉项目：本体（Ontology）表达对领域概念、关系与成立条件的共享模型，解决「项目知识如何被理解」；RSI 利用执行反馈让后续任务受益；Memory 承担知识保存复用。文章以订单系统为例，说明用有版本的概念定义、关系类型与规则文件（如 OWL 2、SHACL）让 Agent 少花重理解时间、少犯团队已弄明的错误，落点在内部研发 Loop 实践。",
+      "link": "https://mp.weixin.qq.com/s/2IUREDltOXzXECO7tWIoPA",
+      "source_file": "sources/不只是Memory：Ontology如何让Coding Agent越用越懂项目？.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "为Agent全生命周期量身定制！海光掏出全家桶方案，打通Agent落地每一层",
+      "source": "智东西",
+      "digest": "智东西专题指出，智能体长流程、多轮调用、频繁读写重塑 AI 算力底座，负载从一次性生成变为持续状态读写，CPU 与存储节点价值被重定义。海光提出覆盖模型层、Harness 执行层、知识库、工具层、沙箱的全链路方案，回应 Agentic 时代对时延、吞吐、访存、任务调度与稳定性的新约束，强调国产底座、模块化节点与本地部署。",
+      "link": "https://mp.weixin.qq.com/s/dl6upli4wnqFiv8rd5-zAw",
+      "source_file": "sources/为Agent全生命周期量身定制！海光掏出全家桶方案，打通Agent落地每一层.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "智能互动 Agent 在快手商业场景的落地实践",
+      "source": "InfoQ",
+      "digest": "快手大模型专家在 AICon 2026 分享商业互动 Agent 落地：在效果、时延、成本「不可能三角」下，需动态知识库（应对直播/大促实时变价）、用户模拟器训练与自进化策略（防越用越退化）、对话奖励稀疏下的成交归因。文章给出端侧四重约束（成本、稳定性、知识变化速度、进化），并指出开源模型时延高、思考难关、输出不稳等落地痛点。",
+      "link": "https://mp.weixin.qq.com/s/dnbdxnExlO5xa42JeJEhiQ",
+      "source_file": "sources/智能互动 Agent 在快手商业场景的落地实践.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "智能体 Skill 调优“焚诀”——业务逻辑之外的胜负手",
+      "source": "千问AI平台",
+      "digest": "千问 AI 平台基于投研平台实践：用 Coding Agent 4 天生成 37 个技能，试运行却暴露路由不准、上下文爆炸、输出不可信三类问题，且全在业务逻辑之外。文章提出生产级 skill 标准，将 skill 拆为常驻索引（参与路由）、按需知识（命中注入）、外部确定性约束（代码护栏）三类运行时组件分别优化，强调「能生成」距离「能生产」隔着一整套工程体系。",
+      "link": "https://mp.weixin.qq.com/s/adXkn8Xo8R6CbD-_xMf0Tg",
+      "source_file": "sources/智能体 Skill 调优“焚诀”——业务逻辑之外的胜负手.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "阿里云智能体白皮书开源进展",
+      "source": "阿里云云原生",
+      "digest": "阿里云智能体白皮书自 9 月底发布后持续更新，作为沉淀智能体工程实践经验与教训的载体。近一个多月行业涌现 Jev 模型、Personal Agent 等新概念，白皮书相应新增实践内容，供企业提升智能体落地质量参考；项目已开源至 GitHub（aliyun/ai-agent-handbook），可通过阅读站持续跟进。",
+      "link": "https://mp.weixin.qq.com/s/D85AbRVCe3bcGxXBYGndsw",
+      "source_file": "sources/阿里云智能体白皮书开源进展.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "境内外金融机构AI应用情况、监管、风险及建议",
+      "source": "中国金融电脑+",
+      "digest": "安永团队系统梳理境内外金融机构 AI 应用与监管：境内聚焦平台化、场景化，覆盖客户经营、内部管理、风险管理；境外呈「低风险规模化、高风险人工兜底」审慎特征。文章解析欧盟、美、英、新加坡差异化监管，剖析数据边界、模型幻觉、偏差与可解释性风险，并从研发、部署、运行、使用四阶段提出全流程治理建议。",
+      "link": "https://mp.weixin.qq.com/s/GjzL_9CwcQwemf39Ap41oQ",
+      "source_file": "sources/境内外金融机构AI应用情况、监管、风险及建议.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "聚焦｜FDE模式下商业银行金融产品接入AI生态的渐进路径探索",
+      "source": "现代商业银行杂志",
+      "digest": "工行北京分行作者在《现代商业银行》指出，FDE（前沿部署工程师）模式正将金融需求接入企业 AI 工作流，北京已发文支持金融机构依法开发支持智能体落地的金融产品。文章分析银行存量产品（账户、结算、支付）作为接入 AI 生态的能力底座，指出现有产品表达难支持 Agent 调用，提出将能力拆分为规则知识、可信数据、受控执行三层分别开放。",
+      "link": "https://mp.weixin.qq.com/s/2bAbugXlR-Oa8ztv7tSZEg",
+      "source_file": "sources/聚焦｜FDE模式下商业银行金融产品接入AI生态的渐进路径探索.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "AI 录音硬件卖的是时间差，窗口可能只剩半年",
+      "source": "极客公园",
+      "digest": "极客公园分析 AI 录音硬件赛道：苹果 iOS 27.3 为 Apple Watch 加入 Live Rewind、Siri Recap 等 AI 转录摘要功能后，硬件创业者称「巨头下场抢赛道」。国内 OPPO 心力球、讯飞录音环、千问 QwenNote 等转向「只留文字不留录音」；但随着 Personal AI 兴起，记录阅读者从人变为 Agent，录音硬件未必是承载灵魂的最佳载体，窗口期或仅剩半年。",
+      "link": "http://www.geekpark.net/news/373946",
+      "source_file": "sources/2026-11-13_AI 录音硬件卖的是时间差，窗口可能只剩半年_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-12",
       "title": "谷歌发布首款决策模型 Gemini Decision 1：9 项测试拿下 7 项第一，准确率最高92.2%",
