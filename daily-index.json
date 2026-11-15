@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-15",
+      "weekday": "周日",
+      "stats": {
+        "国际": 1,
+        "国内": 2,
+        "同业": 1,
+        "其他": 0,
+        "total": 4
+      },
+      "summary": "Bland 发布 Tofu-1：面向通话场景的全双工语音到语音模型/Qoder IDE 本周更新/从真实任务到能力迭代：Agent Sandbox 与百炼..."
+    },
+    {
       "date": "2026-11-14",
       "weekday": "周六",
       "stats": {
