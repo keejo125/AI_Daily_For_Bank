@@ -2,8 +2,8 @@
 publish_time: 1794590631
 link: https://www.marktechpost.com/2026/11/13/best-ai-video-generation-models-2026/
 source: MarkTechPost
-status: confirmed
-category: 国际
+status: pending
+category: ""
 is_model_related: true
 digest: |
   MarkTechPost基于Artificial Analysis盲投人类偏好Elo榜（截至11月13日）盘点2026年AI视频模型：阿里Wan 3.0以T2V Elo 1175居首（文档转视频为差异化能力，闭源）；MiniMax H3以1161位列第三，是榜单中首个开放权重模型（受限许可，禁美欧英韩本地部署），且至少4款前14模型为其后训练版本；字节Seedance 2.5领跑I2V（1161 Elo但单价最高）；HeyGen Video 1与Pika H3 Flex以0.035–0.04美元/秒提供近前沿画质。Google Veo 3.1滑落至Kling 3.0锚点之下。榜单显示画质与价格已脱钩，H3系与轻量后训练成高性价比主力。
