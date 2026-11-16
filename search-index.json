@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-16T05:06:10.552387",
-  "total": 3561,
+  "updated_at": "2026-11-17T01:04:46.533208",
+  "total": 3562,
   "articles": [
     {
       "date": "2026-11-15",
@@ -939,6 +939,16 @@
       "digest": "Lenny Rachitsky《State of the Tech Job Market: Late 2026》显示：前端岗位开放数一年降 51%、设计岗创新低，产品经理岗升至四年最高，FDE 岗位一年暴涨 4.6 倍；招聘启事增但实际入职降，AI 正重塑而非消灭工程岗位，岗位边界模糊化。",
       "link": "https://mp.weixin.qq.com/s/SL_jQTxaIvTBymjX8y_rAQ",
       "source_file": "sources/前端岗位一年减少51%，FDE暴涨4.6倍：AI没有赶走工程师，却正在拆掉岗位边界.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "携程启动产研大融合，产品前端后端运营合并，全公司层面推广DRI制度",
+      "source": "大厂日爆",
+      "digest": "大厂日爆援引消息称，携程上周召开 all hands 大会，从公司层面宣布推广「产研融合」制度，以项目制将产品、运营、前端、后端、算法、测试等人员合并，目标是「人人是全栈、人人是产品经理」。该项目制名为 DRI（Directly Responsible Individual，直接负责人制），起源于苹果，据称 Anthropic 也在改良使用，核心是由一名负责人牵头、组内跨职能快协作围绕同一目标。携程推行中负责人不限定职能，以原产品、运营、技术 leader 为主；试行团队各工种 1 至 2 人，可能出现产品给技术打绩效、技术向运营汇报等情形，传统职能边界被打破，前端后端可自行提需求实现，产品运营的 idea 若可借 AI 实现也可独立交付。此前已在局部试点，此次由 COO 在全员会正式提出全司推广，旅游、机票、内容中心等事业部陆续响应，不搞一刀切。文章称出发点部分受硅谷理念影响，AI 时代工种打平是全球趋势，而国内大厂融合多停留在前后端测试；难点在于合格 DRI 门槛陡增且稀缺，优势是甩锅行不通、交付链路短、决策快。",
+      "link": "https://mp.weixin.qq.com/s/pWt3j-4k12b-K8c2iIQjDg",
+      "source_file": "sources/携程启动产研大融合，产品前端后端运营合并，全公司层面推广DRI制度.md",
       "category": "国内",
       "is_model_related": false
     },
