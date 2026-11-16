@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-16",
+      "weekday": "周一",
+      "stats": {
+        "国际": 11,
+        "国内": 12,
+        "同业": 1,
+        "其他": 0,
+        "total": 24
+      },
+      "summary": "Codex、Claude Code 都卷完了，居然还能跑出黑马？整个产品，现在都可以是一个提示词/DigitalOcean Managed Agents为..."
+    },
+    {
       "date": "2026-11-15",
       "weekday": "周日",
       "stats": {

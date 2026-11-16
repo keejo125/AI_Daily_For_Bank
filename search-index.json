@@ -1,7 +1,247 @@
 {
-  "updated_at": "2026-11-17T01:04:46.533208",
-  "total": 3562,
+  "updated_at": "2026-11-17T07:02:03.160373",
+  "total": 3586,
   "articles": [
+    {
+      "date": "2026-11-16",
+      "title": "Codex、Claude Code 都卷完了，居然还能跑出黑马？整个产品，现在都可以是一个提示词",
+      "source": "InfoQ",
+      "digest": "T3 Code 的 Orchestrator V2 上线稳定版，这套打磨约半年的多模型、多 Harness 编排能力让项目用户超过 70 万，在成熟的编程 Agent 赛道跑成黑马。它把 Codex、Claude、Cursor、Grok、OpenCode 等主流 Harness 统一接入，并通过 ACP Registry 支持 Amp、Cline、Copilot 等更多工具。远程环境管理是其明显优势，可在一个远程环境启动任务、再让子 Agent 到另一环境执行子任务，全部操作走自建 WebSocket 服务器。项目由三名兼职者开发，已有 987 位贡献者、5.44 万 GitHub Star，采用 MIT 协议。作者 Theo Browne 在播客中谈到，模型变聪明后计划模式被吸收进模型本身，skills 未来可能变成云端服务；他强调类型安全、测试、CI 与预览环境在 Agent 真正承担工作时反而更值钱。",
+      "link": "https://www.infoq.cn/article/8TySw9wzqf0l90keJUNf",
+      "source_file": "sources/2026-11-16_Codex、Claude Code 都卷完了，居然还能跑出黑马？整个产品，现在都可以是一个提示词_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "DigitalOcean Managed Agents为AI智能体提供托管云基础设施",
+      "source": "InfoQ",
+      "digest": "DigitalOcean 推出 Managed Agents 公开预览版，为 AI 智能体提供托管云基础设施，具备隔离的 microVM 运行时、受管控的工具访问和无服务器 AI 推理。方案由 Harness Runtime 与 Action Gateway 两项服务组成。前者基于轻量 microVM，为 Claude Code、Codex CLI、Hermes、LangGraph 等智能体提供持久化、隔离的计算环境，会话可暂停、恢复或分叉，空闲时自动暂停，并支持跨仓库、跨任务并行。后者通过统一 MCP 端点提供超过 16000 种工具，涵盖网页搜索、浏览器自动化及 GitHub、Stripe 等连接器，并实现集中式权限管理与敏感操作强制人工审批。有架构师评价，空闲暂停加受治理的工具，才是能规模化扩展智能体的运维模式。",
+      "link": "https://www.infoq.cn/article/LjVeWVAsBWwaiifdMRiu",
+      "source_file": "sources/2026-11-16_DigitalOcean Managed Agents为AI智能体提供托管云基础设施_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Docker Sandbox Kit规范：将AI智能体权限打包为OCI镜像",
+      "source": "InfoQ",
+      "digest": "Docker 宣布将 Sandbox Kit 规范捐赠给 CNCF，目标是让“AI 智能体能访问哪些资源”像智能体本身一样可移植。采用 Apache 2.0 许可的规范升级至 v3，把一个智能体、它使用的工具，以及经类型化声明的主机、凭证、卷清单统一打包为普通 OCI 镜像。v3 中 Kit 不再有自定义媒体类型或边车文件，清单只含一项声明，可用 docker buildx 构建、docker pull 拉取，并支持扫描、签名与在 FROM 指令中引用，固定摘要即等于固定内容与权限。各项声明是类型化、版本化的能力，凭据由代理托管、沙箱内只存哨兵值。Kit 只申请权限、由主机裁定，缺失符合规范的运行时则注解无效。Docker Sandboxes 是首个合规运行时，AWS、Datadog、Snyk 等参与共建。",
+      "link": "https://www.infoq.cn/article/yV89L6iMCqSLDHeSoLxo",
+      "source_file": "sources/2026-11-16_Docker Sandbox Kit规范：将AI智能体权限打包为OCI镜像_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Hark 发布 Handoff 二世：速度翻倍的电脑操作智能体",
+      "source": "MarkTechPost",
+      "digest": "Hark 发布其 Pro 应用中的电脑操作智能体 Handoff 二世，通过强化学习惩罚浪费的回合与延迟，网页任务完成速度较初版平均提升约 2 倍。该智能体像人一样点击、输入和滚动实时网页，而非调用 API，每次请求分配一台专属虚拟机，用户可从网页、iOS 和 Android 访问。在 Hark 内部 478 项任务基准上完成率 82%，对齐基准从初版的 90.3% 升至 93.8%；机票预订最快提升 3.8 倍，长时研究超过 5 倍。但在同一 harness 下，其浏览完成率仍落后 Claude Opus 5.5 最多 5 个百分点，且所有数字均为厂商自报、尚无第三方评测。",
+      "link": "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/",
+      "source_file": "sources/2026-11-16_Hark Releases Handoff², a 2x Faster Computer-Use A_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Meta 推出 JiTTests：专在风险代码变更时失败的大模型生成测试",
+      "source": "MarkTechPost",
+      "digest": "Meta 将 Catching Just-in-Time Tests（JiTTests）从研究原型投入生产基础设施。这是一套基于大模型的系统，专门编写“在风险代码变更时应当失败”的可执行测试，测试失败即证明这次改动改变了行为，从而在合入前暴露问题。Meta 报告 2026 年上半年在 diff 阶段捕获 74 个隐私严重缺陷，隐私类严重缺陷发生率下降 20%。该方法见于 FSE 2026 论文，分析超过 2.2 万个生成测试，运行于数亿行后端代码、利用夜间空闲算力，判定模型包括 Llama 3.3-70B、Gemini 3 Pro 与 Claude Sonnet 4，工程师报告全量部署真阳性率约 60%，但初期 41 次报告仅确认 8 次，且系统未公开、数据为自报。",
+      "link": "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/",
+      "source_file": "sources/2026-11-16_Meet Meta’s JiTTests_ LLM-Generated Tests Designed_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "部分因为 AI Overviews Reddit 年访问量下滑 13%",
+      "source": "Solidot",
+      "digest": "分析公司 Similarweb 的数据显示，2025 年 10 月至 2026 年 10 月期间 Reddit 全球访问量下滑 13%。2024 年 Reddit 与 Google 达成协议授权其平台内容用于 AI 训练，当时来自 Google 搜索的流量处于激增阶段，2023 年 5 月至 2024 年 5 月流量一度增长 39%。但随着 Google 的 AI Overviews 功能日益常见且实用，用户无需跳转即可获得答案，Reddit 的搜索引流随之下降。为应对流量下滑，Reddit 准备强制要求所有访客登录，业内认为该机制全面实施后流量可能进一步下滑。这反映出生成式 AI 摘要功能对内容平台流量分发格局的冲击。",
+      "link": "https://www.solidot.org/story?sid=85899",
+      "source_file": "sources/2026-11-16_部分因为 AI Overviews Reddit 年访问量下滑 13%_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "马斯克喊话“真男人自己管理内存”，三十年系统老将警告：Rust 也拦不住 AI 制造复杂性",
+      "source": "InfoQ",
+      "digest": "面对网友追问为何用 C/C++ 重写而弃用 Rust，马斯克以“真男人自己管理内存”回应，并宣布 xAI 弃用 JAX/SGLang、用 C/C++ 从零重写强化学习与推理技术栈。DTrace 联合作者、Oxide 联合创始人 Bryan Cantrill 认为，Rust 的价值要放回几十年的工程负担中理解：它要求开发者提前想清所有权与内存关系，用开发阶段的约束换运行时的安全可靠。但在 AI 编程时代，这种约束反而显出另一面，Rust 能拦住一部分错误，却拦不住大模型源源不断制造复杂性，系统可通过编译、符合内存安全，却充满多余模块与层层抽象。他以 Steve Yegge 的软件工厂 Gas Town 为例，指出模型不停自我扩建、Token 越烧越贵，Rust 无法替人判断工厂究竟还缺一块砖还是早该停工。",
+      "link": "https://www.infoq.cn/article/FWqT2oGIEl9zlyJ7HXZF",
+      "source_file": "sources/2026-11-16_马斯克喊话“真男人自己管理内存”，三十年系统老将警告：Rust 也拦不住 AI 制造复杂性_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "GPT-6.2难产！OpenAI怕了",
+      "source": "量子位",
+      "digest": "OpenAI 新一代模型因安全与对齐问题推迟发布，延期已持续数周，涉及 GPT-6.2 及 GPT-6.5。有工程师爆料称 OpenAI 已成为极度重视安全的公司，发布新模型降为次要任务；爆料博主 Token Gremlin 指核心难题是如何把超过 10 万亿参数的预训练成果变成公众可用的产品，且这些问题短期难解决。早在 11 月初社区就有人称已被灰度到 GPT-6.2，The Information 也曾透露新模型可能于 11 月 6 日推出，但半个月过去仍未兑现。文章将 OpenAI 比作 2022 年因安全与声誉顾虑迟疑发布产品的谷歌，并对比 Anthropic 11 月 9 日接连发布 Claude Fable 5.2 和 Mythos 5.2。",
+      "link": "https://mp.weixin.qq.com/s/xduECgYDntHalKoVJyoLKA",
+      "source_file": "sources/GPT-6.2难产！OpenAI怕了.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Grok Bot 首席工程师最新演讲：我是如何把 AI 的“垃圾代码”变成金子的？",
+      "source": "AGI 2050",
+      "digest": "在 AI Engineer Code Summit 分享中，Grok Bot 首席工程师 Lauren Tan 复盘了她用 6 个月实现个人单月上线 3000 个 PR、团队单月 11000 个 PR、回滚率压到 0.5% 的做法，核心是别跟 Agent 讲道理、给它戴上确定性枷锁。具体包括：在业务代码中禁用 React useEffect 以消灭易生垃圾代码的用法，禁掉 99% 的代码注释并把口头纠正一律转化为报错清晰的 lint 规则，把约 70% 的 Token 花在运行时与形式化验证上，让 TLA+、Lean 等工具在 Agent 降低成本后变得可用。她强调代码库是 Agent 最大的输入，临时变通与技术债会像杂草被下一个 Agent 照搬蔓延，而不断把纠错变成确定性检查后，大多数 PR 可让 Agent 自行合入。",
+      "link": "https://mp.weixin.qq.com/s/IpUhggHPqpLwyZAj9jLkOg",
+      "source_file": "sources/Grok Bot 首席工程师最新演讲：我是如何把 AI 的“垃圾代码”变成金子的？.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "刚刚，Anthropic公开Opus 5.5同款自主Agent架构：算力成本狂降78%",
+      "source": "AI寒武纪",
+      "digest": "Anthropic 工程文章首次披露全天候自主智能体的完整底层架构。其运行前提是模型判断力大幅提升、长任务成本断崖下跌，长周期编程测试中 Opus 5.5 单任务成本较 Opus 5 降 78%，常规任务降 40%。所谓全天候并非 24 小时消耗算力，而是大部分时间休眠不耗 Token，由外部事件唤醒执行短暂工作循环：事件触发、调取记录、调用工具完成任务、保存状态、重新休眠。底层有五个核心构件，包括作为唯一真实数据源的事件收件箱（数据库表、HTTP 接口、后台工作服务），以及分跟进计时与排程计时两类、单独存储由调度服务轮询的计时器，另有外部记忆等。",
+      "link": "https://mp.weixin.qq.com/s/X0-a-e99nb8NM1tRoN9TaQ",
+      "source_file": "sources/刚刚，Anthropic公开Opus 5.5同款自主Agent架构：算力成本狂降78%.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "别急着用AI裁员！OpenAI首席经济学家：模型会做任务，不代表岗位就会消失",
+      "source": "51CTO技术栈",
+      "digest": "OpenAI 首席经济学家罗尼·查特吉在访谈中指出，尽管许多公司称已在使用 AI，真正把 AI 接上现有软件的仍只是少数，没有连接器，AI 主要只能问答，无法读取实际信息、在现有流程完成工作。他预计未来 12 到 18 个月会有更多企业让 Agent 进入实际工作。谈到就业，他认为就业市场尚未出现预想的剧烈变化，但员工每天做的事已越过岗位说明边界，任务开始在岗位之间流动，岗位并未按任务清单一项项消失。他以自己为例，入职时亲手写的工作说明两年间变了约 6 次，并提到 OpenAI 内部技术团队先用上 Agent、非技术团队约晚 4 到 5 个月跟上。",
+      "link": "https://mp.weixin.qq.com/s/sbeaYwJE8OAe65xgNs10zw",
+      "source_file": "sources/别急着用AI裁员！OpenAI首席经济学家：模型会做任务，不代表岗位就会消失.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Hy4 flash 发布：日常工作的极致性价比模型",
+      "source": "腾讯混元",
+      "digest": "11 月 16 日腾讯混元发布 Hy4 flash，总参数 224B（含 64B Engram 参数），激活参数仅 12B，支持多模态和 1M 上下文，每百万 Token 输入 0.5 元、输出 2 元，命中缓存仅 0.02 元。预训练加入混合注意力、LatentMoE、Engram 架构，KV cache 仅为 Hy3 的 1/24；后训练经自蒸馏与强化学习使端到端输出长度降低 50%；评估采用基于 WorkBuddy 典型任务的 WorkIndex 内部评测集；推理结合 megakernel、4bit 量化、DFly，解码速度超过 150 tps。综合效果略优于总参 770B 的 Hy4 preview，单任务成本为其 1/13、为 Hy4 的 1/20。85 位 WorkBuddy 用户在 259 项任务盲测中满意度接近 Claude Haiku 5.5，且成本最低、时长最短。",
+      "link": "https://mp.weixin.qq.com/s/5yBbf-ctYziM5r0i6Y17lA",
+      "source_file": "sources/Hy4 flash 发布：日常工作的极致性价比模型.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Qwen4-Max 正式上线！",
+      "source": "阿里技术",
+      "digest": "11 月 16 日阿里发布 Qwen4-Max，Qwen4 系列首款模型，2.4T 总参数、每 Token 激活 71B，另有 328B N-gram Embedding 参数，具备原生视觉能力、支持百万 Token 上下文。架构在 Attention、Residual、Embedding 三方面升级：GDN 与稀疏注意力 QSA 结合降低长序列开销，门控残差设四条并行分支提升信息流与训练稳定性，N-gram Embedding 增加局部模式容量。Code Arena WebDev 盲测全球第 6、刷新中国模型最好成绩，Agents’ Last Exam 取得 46.7 最高分，JobBench 68.5。Work360 评测单任务平均费用由 26.58 元降至 11.16 元，降幅 58%。模型内置持续交付机制，可先给首版再逐版扩展；中小尺寸模型将陆续开源。",
+      "link": "https://mp.weixin.qq.com/s/2ItAKmm0HqDp5Pf0sk4KIw",
+      "source_file": "sources/Qwen4-Max 正式上线！.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-16",
+      "title": "DeepSeek又来掀桌子了！官方App全套能力开放API，联网搜索价格不到OpenAI、Claude的8%",
+      "source": "InfoQ",
+      "digest": "11月13日，DeepSeek 宣布开放“全家桶应用 API”，把官方 App 与网页端使用的联网搜索、深度思考搜索、文件输入、网页阅读等能力整合进现有 API，同时开放搜索、网页抓取、OCR、ASR、TTS 等独立接口，官方称开发者可 1:1 复刻完整 DeepSeek App。开发者只需在请求中声明 deepseek_web_search 与 deepseek_read_url 两个工具，模型即可自主决定是否调用，搜索与上下文处理由服务端完成。价格方面，联网搜索每千次 5 元，对比 OpenAI 与 Anthropic 同类工具的每千次 10 美元。有开发者测算，写一篇带资料检索的文章成本不到 4 毛钱，并指出贵的已不是 API 调用，而是控制调用次数的工程、合规与自身判断。此举意味着模型厂商竞争从模型本身延伸到开发者过去自行维护的工具链。",
+      "link": "https://www.infoq.cn/article/NWmk4epBL0jPAUtpKSKb",
+      "source_file": "sources/2026-11-16_DeepSeek又来掀桌子了！官方App全套能力开放API，联网搜索价格不到OpenAI、Claud_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Super Agent 进群：今年11.11，多了个会主动干活的“数字人队长”",
+      "source": "InfoQ",
+      "digest": "今年 11.11，京东零售技术保障现场出现一位“数字人队长”，它是面向大促保障构建的 Super Agent，与内部协同工具京 Me 原生打通，直接在群里参与协作。它不是被动问答机器人，而是具备跨群上下文、能主动调用工具开展架构评审、容量风险评估和代码风险分析的作战伙伴。围绕备战统筹、架构评审、故障应急和工单答疑，京东推出大促队长、高可用架构师、GOC、SRE 和技术支持数字人，以小队形式协同。团队把它定位为组织经验的工程化：把过去沉淀在专家个人身上的经验萃取为可调用能力，落到 AI 容量评估、巡检、故障定位等场景，人负责关键判断并承担责任，数字人负责在线、聚合、分析与协同。",
+      "link": "https://www.infoq.cn/article/myl5Mcw3iyCYv3ZJ3hwQ",
+      "source_file": "sources/2026-11-16_Super Agent 进群：今年11.11，多了个会主动干活的“数字人队长”_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "提速2.48倍且画质不掉线，AI视频“降本增效”有了新解法",
+      "source": "量子位",
+      "digest": "是石科技发布“多模态模型服务”，把优化重点放在视频生成推理加速、缓存与显存管理、多模态 Token 压缩，以及素材理解与生成的链路衔接上。其中基于历史缓存残差的自适应加速技术，通过评估缓存复用风险动态调整计算与刷新策略，对变化小的部分复用历史结果、对误差风险高的部分重新计算校准，在相同实验条件下相比 Dense 基线实现端到端平均 2.48 倍加速并保持生成质量。系统还把智能缓存决策与 SGLang 推理框架结合，通过分块、压缩与智能调度减少显存开销；模态自适应 Token 压缩降低音视频理解开销；基于全模态模型的 Context Engine 将素材理解结果转为结构化信息供视频生成模型执行。",
+      "link": "https://www.qbitai.com/2026/11/510369.html",
+      "source_file": "sources/2026-11-16_提速2.48倍且画质不掉线，AI视频“降本增效”有了新解法_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "龙芯、海光老兵集结，通研院孵化的AGI芯片公司浮出水面！半年连融数亿元",
+      "source": "量子位",
+      "digest": "由通用人工智能专家朱松纯发起、北京通用人工智能研究院孵化的通芯智能，今年 4 月成立，半年内连续完成种子轮与天使轮融资，合计数亿元，资金主要投入流片前的核心架构设计。公司面向 AGI 算法研发新型推理芯片，兼容主流模型，同时为逻辑、因果、价值推理增加专用硬件支持，让科学家与做过量产芯片的工程师共同设计，从快速演进的算法中辨认值得专门加速的计算。文章借 LeCun、李飞飞对世界模型的判断，以及 AMD 拟收购 World Labs、英伟达以 GPU 搭配 Groq 加速器应对智能体低延迟需求等动向，说明模型演进正倒逼芯片设计提前作出选择。",
+      "link": "https://www.qbitai.com/2026/11/510416.html",
+      "source_file": "sources/2026-11-16_龙芯、海光老兵集结，通研院孵化的AGI芯片公司浮出水面！半年连融数亿元_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "AI 写得快，谁来接住生产责任",
+      "source": "InfoQ",
+      "digest": "在 DBTalk 数据库 AI 技术沙龙成都站，腾讯云 PG 数据库技术专家黄辉指出，AI 缩短的是代码生成时间，而非生产工程的责任清单，责任只是从“谁来写”变成“谁来扛”。他把 Demo 走向生产的障碍归纳为三道鸿沟：成本结构不匹配，AI 负载波动大，买高规格常为闲置付费；资源供给不匹配，传统数据库数周至数月的评估周期跟不上快速试错；运行治理不完整，认证、权限、容灾在 Demo 阶段不需要、生产环境却一样不能少。解法是把责任写进系统默认值，按活跃时间片计算的 CU 计费精确到分钟、无请求不收费，预置初始化实例进资源池把交付从分钟级压到 3 秒内，并对标 Supabase 把 PostgreSQL Schema 作为权限与 AI 共同的后端契约，用行级安全策略实现租户隔离。",
+      "link": "https://mp.weixin.qq.com/s/syybZpNDy1-hODQPhOlkmA",
+      "source_file": "sources/AI 写得快，谁来接住生产责任.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "不止于写代码：华为云码道Agentic DevOps，让AI coding走向企业级项目交付",
+      "source": "CSDN",
+      "digest": "文章解析华为云码道的 Agentic DevOps 实践。传统 DevOps 通过流程标准化与自动化打通研发环节，Agentic DevOps 则引入智能体，让自然语言需求直接驱动研发工具链，协同完成需求理解、代码开发、检查、构建到部署验证，最终交付可运行应用。核心变化是从让流程自动化运行，转向让智能体围绕交付目标理解、组织并驱动全流程。能力覆盖需求管理、代码开发、代码质量、构建管理、部署交付、测试验收六大环节，并通过流水线编排调度、跨服务协同与自主诊断恢复，把分散操作串成端到端交付闭环。",
+      "link": "https://mp.weixin.qq.com/s/7XuKGq6vl5lCB_sFMDzJWA",
+      "source_file": "sources/不止于写代码：华为云码道Agentic DevOps，让AI coding走向企业级项目交付.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "用 Super-agent 的理念，拆解 Octop 团队模式",
+      "source": "腾讯技术工程",
+      "digest": "DeepSeek 近日发文阐述 Super-Agent 理念，以调度员（Router）加执行单元（Worker）双层架构实现任务并行与后台运行，让人无需停在单一窗口等待。腾讯云开源的多用户 AI 助手 Octop 在 1.0.2 版本已上线团队模式：由一名主持人 Agent 统筹分解任务、多名专家 Agent 并行执行，思路不谋而合。文章以 DeepSeek 的 Super-Agent 框架为参照，解析 Octop 团队模式的实现路径，对比两者如何在工程层面分别落地多任务并行这一共同目标。文中指出，一个人通常只能同时跟进三五个处于进行状态的复杂会话，而多 Agent 并行正是要缓解由此带来的记忆与等待负担。",
+      "link": "https://mp.weixin.qq.com/s/5r_EhRzdgRgzg8kWmZDyRQ",
+      "source_file": "sources/用 Super-agent 的理念，拆解 Octop 团队模式.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "腾讯：Buddy应用已覆盖55个专业场景",
+      "source": "财联社AI daily",
+      "digest": "上线两个月后，腾讯 WorkBuddy 开放平台公布进展：已覆盖 55 个专业场景、超 30 个垂直领域，包括金融、法律、医疗、教育、公益、设计、SaaS 等，中国科学院、通达信、中金财富、万得、美团企业版、LibTV 等各行业头部伙伴均已接入。目前该开放平台已开放连接器、专家、技能、硬件与 Buddy 应用五大能力。",
+      "link": "https://mp.weixin.qq.com/s/x38mskDoIqjP-0MsGfLdmA",
+      "source_file": "sources/腾讯：Buddy应用已覆盖55个专业场景.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "豆包工作上线“工作台”，首批覆盖21个专业场景",
+      "source": "财联社AI daily",
+      "digest": "豆包工作独家上线“工作台”功能，首批覆盖金融、医疗、教育、创意设计等 21 个专业场景，被称为业内首个面向多个专业场景、不同职业人群定制的 AI 工作台功能。以金融投研工作台为例，首页提供公告解读、业绩分析、市场简报、公司研究等常用任务入口，让 AI 办公进一步走向职业化。",
+      "link": "https://mp.weixin.qq.com/s/3EpwFleiVtsL-EqWRfCk9Q",
+      "source_file": "sources/豆包工作上线“工作台”，首批覆盖21个专业场景.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "软件工程教育改革之路：双轨并进，专业化培养与普及化教育",
+      "source": "软件工程3.0时代",
+      "digest": "文章指出 AI 正改变软件开发的社会分工。借助 AI，医生、工程师及金融、材料、能源等领域专业人员也能开发满足自身业务需要的应用，软件创造能力从少数专业人员向各行各业扩展，但并未消除软件系统的复杂性，操作系统、数据库、金融核心系统等仍需严谨架构与可靠性保障。未来分工将是领域专业人员借助 AI 创造大量领域应用，专业软件工程师更专注基础、复杂与关键系统。相应地，大学软件工程教育需从以专业人才培养为主，转向专业化培养与普及化教育并行的双轨制，前者培养能驾驭复杂系统的高水平人才，后者面向各专业人群普及软件创造能力。",
+      "link": "https://mp.weixin.qq.com/s/eUw7eLzTTOL0gGiUrmbjDg",
+      "source_file": "sources/软件工程教育改革之路：双轨并进，专业化培养与普及化教育.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "大模型驱动的人机协同投研新范式",
+      "source": "金融电子化",
+      "digest": "泰康资产自 2020 年启动多资产智能投研平台建设，早期以大数据、传统 AI 和量化模型赋能，随大模型兴起持续迭代，形成基于大模型人机协同驱动的创新平台。平台以云原生架构、统一数据中台、多层次算法体系和安全治理机制为核心底座：采用 Kubernetes 微服务架构，建标准化投研数据湖 TaiDB，形成四层治理框架与三重提效机制，整合 100 余个数据源、总数据量超 30TB、日增约 1.3GB，覆盖 8 大主题库、8 万余指标、48 万余投资标的；实现亿级数据秒级搜索与 Flink 流式毫秒级响应，数据接入效率由周级提升至天级，探索保险资管机构在投研领域的人机协同新范式。",
+      "link": "https://mp.weixin.qq.com/s/EPIxLoTHAugwshGJfr1nAg",
+      "source_file": "sources/大模型驱动的人机协同投研新范式.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-15",
       "title": "Bland 发布 Tofu-1：面向通话场景的全双工语音到语音模型",
