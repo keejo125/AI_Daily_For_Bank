@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18T05:18:01.194768",
-  "total": 3610,
+  "updated_at": "2026-11-18T07:02:06.357649",
+  "total": 3609,
   "articles": [
     {
       "date": "2026-11-17",
@@ -179,16 +179,6 @@
       "digest": "美团图灵评测发布《Agent评测白皮书》系列第二篇，以商家广告助手的巡检任务为贯穿案例，介绍如何构建业务Benchmark、通过评测器校准和错误分析推动评测体系完善与Agent能力提升。文章指出判断Agent能否用于生产不能只看回答是否像对的，还要验证意图理解、数据与工具调用、规则遵守和最终账户状态。目标是做到可测、可信、可优化。公开Benchmark成绩不能直接作为上线依据，需围绕广告业务自建Task集与判定机制。",
       "link": "https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html",
       "source_file": "sources/2026-11-17_《Agent评测白皮书》系列02：商家 AI 助手的评测与优化闭环实践_美团技术.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-17",
-      "title": "材料科学智能体MatOS正式开源！大幅提高材料研发任务成功率",
-      "source": "量子位",
-      "digest": "北京中关村学院、中关村人工智能研究院发布面向材料研发的科研智能体系统MatOS，将数据、知识、工具、技能、角色和工作流统一组织为科学资产。资产库含3135个数据集、386项技能、104个工作流和51个专家角色，集成48款材料计算软件，技术报告已在arXiv发布、代码在GitHub开源。在ResearchClawBench上比采用相同底座的Codex CLI平均得分高33.6%；MatTools基准完整问题成功率97.96%；从3000多万个候选结构中筛出97个固态电解质候选；合金熔点预测模型DuoCompNet平均绝对误差降至3.18摄氏度。",
-      "link": "https://www.qbitai.com/2026/11/510652.html",
-      "source_file": "sources/2026-11-17_材料科学智能体MatOS正式开源！大幅提高材料研发任务成功率_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
