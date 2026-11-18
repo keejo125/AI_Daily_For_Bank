@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T05:15:25.466761",
-  "total": 3644,
+  "updated_at": "2026-11-19T07:14:21.573338",
+  "total": 3642,
   "articles": [
     {
       "date": "2026-11-18",
@@ -109,16 +109,6 @@
       "digest": "一项随机实验显示，Google 的 AI Overviews 使流向外部网站的搜索点击量下降约四成。研究者对部分美国桌面端用户隐藏 AI Overviews，与正常看到该服务的用户搜索行为对比得出这一结论。DataForSEO 跟踪的美国搜索关键词中，逾五成会显示 AI Overviews，一年前仅 6%。用户看到 AI 答案后通常不再点击相关链接，AI 答案给网站带去的流量仅占总流量的 0.3%。",
       "link": "https://www.solidot.org/story?sid=85916",
       "source_file": "sources/2026-11-18_Google AI Overviews 导致搜索流量下降四成_Solidot.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-18",
-      "title": "Kubernetes Confidential Containers 获 Fortanix 认证与密钥管理支持",
-      "source": "InfoQ",
-      "digest": "Fortanix 宣布在 Confidential AI 平台支持 Confidential Containers（CoCo），打通 Kubernetes 工作负载认证与加密密钥发放，使符合策略的工作负载可在硬件可信执行环境（TEE）内解密模型与敏感数据。CoCo 是 CNCF 项目，将 Pod 运行在机密虚拟机内，以硬件加密内存保护使用中的数据。Fortanix 用机密计算管理器（CCM）验证环境、数据安全管理器（DSM）仅向已验证环境发放密钥，可同时认证 CPU 与 GPU；认证失败则密钥留在 DSM，工作负载无法解密模型或数据。开源组件 Trustee 已实现认证与有条件密钥交付，微软 Azure Secure Key Release 提供托管替代方案。",
-      "link": "https://www.infoq.cn/article/4PEbu8cLHkgz0oUF3etE",
-      "source_file": "sources/2026-11-18_Kubernetes Confidential Containers 获 Fortanix 认证与密_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -249,16 +239,6 @@
       "digest": "美团技术团队 20 余篇论文被 EMNLP 2026 收录，精选 12 篇主会长文，覆盖推理框架、策略优化、评估框架、强化学习、记忆框架、自适应训练、语义标签、数据合成、统计框架与奖励模型等方向。其中 LTS-Agent 提出听想说框架，用动态语义触发器与双角色流式编排器区分何时思考与如何增量推理，让实时语音智能体边说边想，并构建停顿与修复基准，在 VERA、Spoken-MQA 等基准上取得更优的准确率、延迟与效率权衡。另一篇提出 Latent-GRPO，通过潜在几何聚类自验证器缓解 GRPO 依赖稀疏离散奖励与昂贵外部验证器的问题。",
       "link": "https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html",
       "source_file": "sources/2026-11-18_EMNLP 2026 _ 美团技术团队学术论文精选_美团技术.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-18",
-      "title": "全球首个医疗健康AI独立评测与分析平台InclusionMed正式上线",
-      "source": "量子位",
-      "digest": "全球首个医疗健康 AI 独立评测与分析平台 InclusionMed 上线，同步推出评测图谱 InclusionMed Atlas 与首期评测指数 InclusionMed Index。平台由斯坦福、哈佛、北京协和医学院、蚂蚁集团等 29 家机构研究人员共建，被视为医疗健康领域的 Artificial Analysis。Atlas 以面向谁（患者公众、医疗专业人员、医疗管理人员）与考察什么能力（知识、推理、任务执行）交叉形成九宫格。首期聚焦临床诊疗与医疗管理，纳入 5 项基准、1034 项任务，对国内外 11 家厂商 22 个模型系统比较，选出 4 项公开基准与自建的 InclusionMed-DxFiles 构成首期指数。",
-      "link": "https://www.qbitai.com/2026/11/510916.html",
-      "source_file": "sources/2026-11-18_全球首个医疗健康AI独立评测与分析平台InclusionMed正式上线_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
