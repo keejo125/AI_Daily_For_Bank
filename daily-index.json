@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-18",
+      "weekday": "周三",
+      "stats": {
+        "国际": 21,
+        "国内": 13,
+        "同业": 1,
+        "其他": 0,
+        "total": 35
+      },
+      "summary": "Gemini新模型Neon箭在弦上，网友：遍历元素周期表？/OpenAI 发布 GPT-6.2 Astra 与 Sol，Astra API 降价 20%/..."
+    },
+    {
       "date": "2026-11-17",
       "weekday": "周二",
       "stats": {
