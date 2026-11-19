@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-19",
+      "weekday": "周四",
+      "stats": {
+        "国际": 13,
+        "国内": 9,
+        "同业": 3,
+        "其他": 0,
+        "total": 25
+      },
+      "summary": "谷歌 Genie 4 世界模型正式开放/谷歌发布 Gemini 4 Neon：面向软件工程与科研的前沿推理模型/SenseNova U1 Pro获Desi..."
+    },
+    {
       "date": "2026-11-18",
       "weekday": "周三",
       "stats": {

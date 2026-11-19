@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-11-19T07:14:21.573338",
-  "total": 3642,
+  "updated_at": "2026-11-20T07:17:32.994621",
+  "total": 3667,
   "articles": [
+    {
+      "date": "2026-11-19",
+      "title": "谷歌 Genie 4 世界模型正式开放",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 宣布向符合条件的 Google AI Ultra 订阅用户开放 Genie 4 世界模型，带来更灵敏、更具社交性和交互性的世界生成体验。用户可用自然语言实时编辑环境、添加原生音频，并将作品发布到新建的社区画廊供他人探索和再创作。同步升级的 Project Genie 引入专用智能体，可通过简单对话帮助用户构建复杂的定制世界；Genie 3 也获得更新，支持更长的交互时长、全景场景定位和相互关联的世界序列。Google AI Pro 会员可加入等候名单。",
+      "link": "https://deepmind.google/blog/genie-4-is-now-available/",
+      "source_file": "sources/2026-11-19_Genie 4 is now available_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "谷歌发布 Gemini 4 Neon：面向软件工程与科研的前沿推理模型",
+      "source": "Google DeepMind",
+      "digest": "Google DeepMind 发布 Gemini 4 Neon，定位在旗舰 Carbon 与轻量 Hydrogen 之间，面向复杂软件工程、知识工作和科学工作流，主打前沿智能水平下的快速端到端任务完成。模型在 Artificial Analysis 智能指数 xhigh 档取得 61 分、位列全球第三，Vals 指数排名第二并处于帕累托前沿，Agent Arena 可引导性排名第二，内部测试中编造率为 Gemini 系列最低。Neon 由 Carbon 适配而来，支持 100 万 token 上下文、文本图像音频视频原生多模态输入，知识截止 2026 年 3 月，提供 low 到 xhigh 四档思考深度，长任务支持上下文压缩并减少重复文件读取，在 Antigravity 中可担任编排者调度多个 Hydrogen 子智能体。定价为每百万输入 token 3 美元、输出 15 美元，缓存输入享 95% 折扣。已在 Gemini API、Google AI Studio、Gemini for business、Antigravity 及 Gemini 应用向订阅用户开放。",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "source_file": "sources/2026-11-19_Introducing Gemini 4 Neon_Google DeepMind.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "新 LoRA 适配器将 Qwen3.8 编码成功率从 39% 提升至 65%",
+      "source": "MarkTechPost",
+      "digest": "Hugging Face 的 harness-hub 团队发布 Qwen3.8-27B-pi-adapted，这是针对 Qwen3.8-27B 的 LoRA 适配器，通过强化学习训练，专为 pi 编码智能体优化，而非通用聊天场景。适配器采用 rank 32、alpha 64，作用于 q/k/v/o 等投影层，以 Apache-2.0 开源，合并后的 BF16 检查点约 54GB，可在启用 LoRA 的 vLLM 或搭配 GGUF 的 llama.cpp 上运行，训练使用两张 NVIDIA B200。效果上，关闭 thinking 时在 SWE-bench Pro 硬集上从 39.2% 提升至 64.7%，用约 4.5 倍更少的 token 达到思考级准确率；但在 Terminal-Bench 2.1 上为 55.8%，基础模型开启思考后本身也能达到 64.7%。评测集较小、数据自报、仅适用于 pi。",
+      "link": "https://www.marktechpost.com/2026/11/18/hugging-face-qwen3-8-27b-pi-adapted-lora/",
+      "source_file": "sources/2026-11-19_New LoRA Adapter Lifts Qwen3.8 Coding Success From_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "Bug0 发布 QA Agent，利用缓存的 Playwright 回放实现回归测试自动化",
+      "source": "InfoQ",
+      "digest": "Linearbytes 发布开源 Playwright 库 Bug0 QA Agent，用于智能体式浏览器回归测试。它把自然语言测试指令与界面操作关联，在适当情况下缓存操作以加快持续集成重放速度，并在界面变化时重新映射到测试规范。验证基于最多三个大语言模型的共识及视觉模型评估。Bug0 采用混合方法，将初始视觉探索与常规回归执行解耦：开发者用英文编写声明式步骤，首次执行时智能体检查可访问性树和截图并执行操作，成功的操作编译为浏览器操作缓存到 Redis，后续直接重放以避免推理延迟。界面变化时检测中断、清空缓存并重新调用多模态循环。断言不缓存，由 Claude 和 Gemini 独立评估，不一致时由第三模型裁决，视频模型可捕捉瞬时界面缺陷。",
+      "link": "https://www.infoq.cn/article/eO0w7sdaGClvppFqwt5j",
+      "source_file": "sources/2026-11-19_Bug0 发布 QA Agent，利用缓存的 Playwright 回放实现回归测试自动化_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "OpenAI 性能工厂如何保持 ChatGPT 的快速响应",
+      "source": "OpenAI",
+      "digest": "OpenAI 工程团队介绍其 Codex 驱动的性能工程系统 Performance Factory，用于在代理式开发加速的背景下自动发现并修复性能回归。工程师为重复性任务定义工作流并编写指令，由 Codex 智能体执行。其中回归工作流在性能告警触发时创建任务，一个智能体调查变慢原因并记录发现、提出修复方案供工程师审核，部署后另一智能体接续核查性能是否回到基线，实现从调查、修复到验证的全流程自动化。该工作流运行三个多月已跟踪 1700 多次调查、定位 600 多个根因，相当于每天 17 次自动化调查。文章还梳理了从人工调查演进到自动化工作流的过程，以及在生产环境构建和运行智能体工作流的早期经验。",
+      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "source_file": "sources/2026-11-19_How OpenAI’s Performance Factory keeps ChatGPT fas_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "AI 攻击者时代如何响应安全事件",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 文章指出，攻击者已用上强大 AI，智能体能以机器速度扫描、规划并发起入侵，导致攻击更频繁且具全球规模，企业更需要现代化的事件响应手册。文章基于 2026 年 5 月至 11 月多起 AI 平台安全事件，提出四大支柱：自动检测与遏制，因为人工速度的关停太慢；通过带外渠道快速安全沟通；借助外部取证专家彻底根除；持续缩小爆炸半径，即不存储的数据就无法被窃取。文中以 Fireworks AI 和 Klue 为例，说明成熟且结构健全的响应如何在实践中落地。",
+      "link": "https://www.marktechpost.com/2026/11/19/ai-security-incident-response-playbook-2026/",
+      "source_file": "sources/2026-11-19_Not If, But How_ Responding to Security Incidents _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "Nutrient 数据抽取 API：按自定义 schema 输出带引用与置信度的 JSON",
+      "source": "MarkTechPost",
+      "digest": "Nutrient 推出数据抽取 API，针对大语言模型把文档中错误抽取值当作事实输出的问题。该 API 可将 PDF、扫描件、图片和 Office 文件解析为空间 JSON 或 Markdown，Extract 能把字段映射到用户的 JSON schema，每个抽取值都通过边界框锚定到页面，并附带匹配标签和置信度分数，还提供 split、classify、form 等文档流水线基础能力。其引擎同样支撑 MCP 服务器、智能体技能、Mac 应用和 SDK。提供四种解析模式与自动路由，可运行在 Nutrient 云、自有服务器或苹果硅 Mac 上；浏览器工作台 Studio 支持编码前配置测试。官方 WholeDoc Bench 得分 86.2，居 19 种设置之首，每页成本 1.8 美分。",
+      "link": "https://www.marktechpost.com/2026/11/18/nutrient-data-extraction-api-citations-confidence/",
+      "source_file": "sources/2026-11-19_Nutrient Data Extraction API_ JSON Matching Your S_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "Sam Altman罕见发声：我不担心Anthropic先上市，市场上不缺投资者",
+      "source": "InfoQ",
+      "digest": "OpenAI 的 Sam Altman 在最新访谈中谈及黄仁勋去留、算力投资、超级智能控制等一系列产业问题。他对黄仁勋表达强烈敬意，称很难想象没有他的 AI 革命；对 Anthropic 抢先上市并不担心，认为市场不缺投资者需求。他提醒芯片厂商对需求的预期可能存在重复，DRAM 短缺暴露供应链扩产滞后。面对公众对 AI 和数据中心的抵触，他认为行业须重新赢得信任、明确人类始终掌握控制权，即使 AI 加速自身研发，OpenAI 也不会放弃人工监督和安全边界。他明确否认已进入可按按钮让模型无监督自我改进的阶段，认同用户应拥有自己的数据，并认为 AI 最值得期待的长期价值是推动科学发现、工程创新和生产力跃迁。",
+      "link": "https://www.infoq.cn/article/Mf3Zbm9JF3RWbkvjMKYZ",
+      "source_file": "sources/2026-11-19_Sam Altman罕见发声：我不担心Anthropic先上市，市场上不缺投资者_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "从业者正在对 Anthropic “没人需要 Claude Code 心理模型”的说法进行验证",
+      "source": "InfoQ",
+      "digest": "Anthropic 发文介绍 Claude Code 团队的代码审查流程，称 Claude 现已编写该代码库约 90% 的代码，并引发对不再需要心理模型这一说法的验证讨论。团队表示无人会在脑中完整构建代码库的思维模型，也不认为有人需要——想了解某部分时让 Claude 撰写说明文档即可，几分钟内准确反映当前状态。此举源于单体仓库合并量从 5 月每日约 2500 次激增到 9 月 3 万多次后审查系统成为瓶颈，目标是把多数拉取请求的介入降到最多一人。Hacker News 上评论者指出这种模式牺牲的东西：一旦出现无人能查明的漏洞，就没有人脑中的因果模型可供缓慢系统调试，新的信任模型是相信 Claude 总能理解和修复一切。文中还记录了自动关闭问题的误判等具体失效场景。",
+      "link": "https://www.infoq.cn/article/R9BxSitBpwGcDwfS22ac",
+      "source_file": "sources/2026-11-19_从业者正在对 Anthropic “没人需要 Claude Code 心理模型”的说法进行验证_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "微软官方 agent-framework 软件包被黑客劫持安装恶意程序",
+      "source": "Solidot",
+      "digest": "微软托管在 PyPI 上的 agent-framework 软件包被黑客劫持，植入窃取信息的恶意程序。该软件包每月下载量近 20 万次，主要用于构建和部署 AI 智能体。受影响版本为 v1.26.1 和 1.26.2，会窃取开发者在 Azure、Git、Docker、Hugging Face 等服务上的环境变量、凭据文件及其他敏感信息。更严重的是，该软件包无需被导入，只要安装它的 Python 解释器启动，恶意代码便会运行。微软发言人称调查期间已将部分软件包项目设为私有。该事件凸显 AI 智能体开发供应链的安全风险。",
+      "link": "https://www.solidot.org/story?sid=85931",
+      "source_file": "sources/2026-11-19_微软官方 agent-framework 软件包被黑客劫持安装恶意程序_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "模型刚接进业务，CEO又要换新：红帽如何接住企业AI落地难题？",
+      "source": "InfoQ",
+      "digest": "红帽全球副总裁兼大中华区总裁曹衡康指出企业落地 AI 的常见困境：刚选定模型、搭好平台、接入业务流程，市场又出现更好的模型，CEO 便要求尝试，而换模型牵动 GPU 适配、推理服务、数据接口和业务流程，整套环境难以重建。Agent 接入内部系统后又带来权限约束问题，缺乏有效约束时智能体可能删除生产数据库。红帽以四个 Any（任意加速器、任意云、任意模型、任意智能体）应对，平台已支持 20 多个开源模型合计 700 多个版本，并适配国产 GPU 沐曦。其布局从 GPU 调度、Token 工厂到 Agent 权限管理和漏洞修复。文章强调单价下降不等于总账单减少，思考模型和智能体会因多轮推理、工具调用推高 Token 消耗。",
+      "link": "https://www.infoq.cn/article/6xqcZfMgJ99ZQiGFbjym",
+      "source_file": "sources/2026-11-19_模型刚接进业务，CEO又要换新：红帽如何接住企业AI落地难题？_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "开发者不应该只学AI！谷歌前高管：别只盯着Vibe Coding，机会藏在旧产品里",
+      "source": "51CTO技术栈",
+      "digest": "曾任 Google X 首席商务官的莫·高达特在访谈中表示，开发者不必急着学 Vibe Coding，更该想象一个从一开始就为 AI 设计的世界并找到自己的位置。他指出 AI 原生不是在现有页面角落加聊天框，而是追问如果用户的目标可直接告诉 AI，软件原先要求人亲手完成的步骤还有多少必须保留。他以写文档为例，设想先与 AI 讨论内容和格式再由 AI 完成。他判断 AI 会让许多旧产品迎来重新设计的机会，老产品最难守住的可能是老流程；不懂技术的人也能从熟悉领域找问题发起产品，技术伙伴并未消失。他还谈到经济下行时有些 CEO 可能把 AI 当作裁员理由，而不承认公司本身的困难。",
+      "link": "https://mp.weixin.qq.com/s/XJqU8radVk8P6E31Yk6AzQ",
+      "source_file": "sources/开发者不应该只学AI！谷歌前高管：别只盯着Vibe Coding，机会藏在旧产品里.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "谷歌RSI新论文：自带记忆、自主迭代！",
+      "source": "智东西",
+      "digest": "谷歌云 AI、谷歌 DeepMind 与美国宾夕法尼亚州立大学研究团队联合发布论文《自我改进记忆实现持续递归自我改进》，提出自我改进记忆（SIM）方法。此前 AI 虽能自主优化大模型外部的运行框架 Harness，但更换模型或任务后往往需重新优化；SIM 首次把代码修改背后的原因、预期效果和实际结果组织成可持续更新的记忆，让 AI 继承并调整过去的改进经验，实现跨模型、跨任务的持续递归自我改进。研究在编程、文本分类、办公任务和工程设计四个领域测试：10 组独立编程对照中引入 SIM 的 9 组表现更好，平均领先 2.36 分；跨模型办公任务中引入 SIM 得 84.75 分，未引入仅 73.42 分。论文第一作者为南开大学毕业、现于宾州州立攻读博士的 Xin Yu。",
+      "link": "https://mp.weixin.qq.com/s/nCzrFKXbOtJsQslFNB8Ttw",
+      "source_file": "sources/谷歌RSI新论文：自带记忆、自主迭代！.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "SenseNova U1 Pro获Design Arena双榜中国第一、全球第六",
+      "source": "量子位",
+      "digest": "商汤科技日日新 SenseNova U1 Pro 在全球第三方 AI 设计评测平台 Design Arena 的图片生成与图片编辑两大榜单中均登顶中国第一，全球位列第六，仅次于 OpenAI GPT Image 2.x 系列。该模型主打长程任务能力，通过完整智能创作管线实现从需求到交付的连续完成，包括从论文出发做信息提取与视觉创作、从产品图出发生成素材与详情页、从创意需求生成海报菜单与分镜图，并从生成到自检、修正与交付校验实现一次性交付。Design Arena 采用同题生成、匿名两两对比和真实用户投票的 Elo 评分机制。效果与成本兼顾评测显示，其在高用户偏好的同时具备竞争力的生成成本。",
+      "link": "https://www.qbitai.com/2026/11/511179.html",
+      "source_file": "sources/2026-11-19_SenseNova U1 Pro获Design Arena双榜中国第一、全球第六_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "好清晰！最新国产AI画的8K图，放这么大大大大也不糊！",
+      "source": "量子位",
+      "digest": "可灵推出 Kling Image 4.0，主打原生 8K 高清出图，放大后人脸细纹、手指纹路、钻戒质感、睫毛与眼妆颗粒仍清晰稳定。除 8K 外，升级还包括超强文字表现力：单张图可生成 2000 个字，支持 70 多款预设字体与多种排版；连贯组图与长图生成：一次描述最多生成 10 张系列组图，并可生成超长商品详情页和网页设计长图。文章实测了影视级剧照效果，多人物场景下视线落点与层次自然，以及把整首《沁园春雪》用指定古风字体写入单张图并自动采用竖排从右往左阅读方式、补上盖章图案，展示其在海量文字与版式处理上的能力。",
+      "link": "https://www.qbitai.com/2026/11/511092.html",
+      "source_file": "sources/2026-11-19_好清晰！最新国产AI画的8K图，放这么大大大大也不糊！_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "杀入Agent主场之后：两年内部分替代自回归，扩散智能的底气从何而来？| 专访",
+      "source": "InfoQ",
+      "digest": "扩散智能（DiffuSpace）开源 Clover-35B-A3B-Preview，并于 11 月 19 日发布技术报告、开放 SFT 代码。该扩散语言模型总参数 350 亿、激活约 30 亿，采用分块扩散减少重复计算、在当前生成块内实现双向信息交互。在统一评测协议下，Clover 在报告所列对比模型的七项 Agent 指标上均取得最高分，覆盖工具使用、专业工作和智能体编程，其中 SWE-bench Verified 达 73.6、Terminal-Bench 2.1 达 51.7，部分配置下 token 生成速度达同级自回归模型的 5 至 10 倍。联合创始人兼首席科学家龚珊三接受专访时表示，从生成提速到完整任务效率提高仍在持续验证，并坚持未来一到两年扩散语言模型有机会在部分场景替代同规模自回归模型的判断。",
+      "link": "https://www.infoq.cn/article/rtBT5s1opGGazFgQi0YS",
+      "source_file": "sources/2026-11-19_杀入Agent主场之后：两年内部分替代自回归，扩散智能的底气从何而来？_ 专访_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "腾讯混元 Hy4 flash 上线首日登顶 OpenRouter，2 毛钱就能跑完一个任务！",
+      "source": "InfoQ",
+      "digest": "腾讯混元 Hy4 flash 在全球大模型聚合平台 OpenRouter 日榜登顶，上线首日 Token 调用量突破 50 万亿，创混元系列首日新高。价格方面每百万 Token 输入 0.5 元、输出 2 元，命中缓存仅 0.02 元，单任务成本 0.26 元，分别为 Hy4 preview 的 1/13、Hy4 的 1/20。参数上总参数 224B（含 64B Engram 参数）、激活仅 12B，支持多模态和 100 万上下文，综合效果略优于更大规模的 Hy4 preview，在深度搜索、文档处理、PPT 生成等日常办公任务表现良好。马化腾称 Hy4 已达中国顶尖大模型水平，Hy4 flash 显著降低推理成本。该模型已在腾讯云 TokenHub 上线。",
+      "link": "https://www.infoq.cn/article/o4edzZ1lM7CUQgcupk8H",
+      "source_file": "sources/2026-11-19_腾讯混元 Hy4 flash 上线首日登顶 OpenRouter，2 毛钱就能跑完一个任务！_InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "范式下场做基模了！国产算力全链路训练，双模型同步亮相",
+      "source": "量子位",
+      "digest": "范式智能（原第四范式）无预告发布两款 Phai 系列自研模型：语言模型 Phai-A1 与视频模型 Phai-M1，全流程在华为昇腾卡上训练。Phai-A1 面向代码开发与智能助手，官方称同等质量下响应速度比同参数级模型快 8 至 10 倍，采用 MoE 架构总参数 350 亿、每 token 激活约 30 亿，原生支持百万级上下文，单张 RTX 3090 消费级显卡即可本地运行，在 SWE-Bench 系列评测中表现优于同级模型。Phai-M1 面向真人影视场景，音画同步，约 3 分钟生成 15 秒 720P 视频，主打减少 AI 感。两款模型计划近期在 Hugging Face 和 ModelScope 开放权重，体验入口已上线。",
+      "link": "https://www.qbitai.com/2026/11/511071.html",
+      "source_file": "sources/2026-11-19_范式下场做基模了！国产算力全链路训练，双模型同步亮相_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-19",
+      "title": "12类高频任务、3类实践案例，商汤小浣熊带着街道办 AI 白皮书来了！",
+      "source": "InfoQ",
+      "digest": "商汤小浣熊及 OPC 人才孵化中心携手 Datawhale、InfoQ、51CTO 等编制《街道办 AI 智能化白皮书》，汇集商汤小浣熊在基层办公场景的落地实践、应用方法与案例。白皮书围绕政策咨询、12345 工单研判、网格巡查、会议督办、企业走访、公文与知识复用等 12 类高频任务逐项梳理所需材料、可由 AI 辅助的步骤、交付成果及必须由人确认的判断，并把任务步骤、核对要求和成果模板整合为可复用 Skill。案例包括从现场照片批量提取水印信息生成带图台账初稿、对热线工单提取关键信息并提出疑似同一事件的归并建议、按模板统一文档格式并比对内容标记疑似差异。白皮书还给出从任务选择到逐步推广的实施参考，强调以人工核对后的整体工作量衡量成效。",
+      "link": "https://www.infoq.cn/article/y1DHWaCUGxsuSrQwqEXi",
+      "source_file": "sources/2026-11-19_12类高频任务、3类实践案例，商汤小浣熊带着街道办 AI 白皮书来了！_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "初中毕业烘焙师，1 人搓出单集千万播放科幻剧，中国AI长片杀疯了！",
+      "source": "量子位",
+      "digest": "全球首个聚焦影视级长片创作的 AIGC 赛事 RunningHub 全球 AIGC 长片创作大赛收官，征集 1500 多部作品，长剧和电影级长片占比超八成，时长超 60 分钟的作品 20 多部，跑出近百条百万播放爆款和数十条千万播放长片。初中毕业、前烘焙师创作者灵玉的《代号：悟空》单集播放千万，团队狸狸安的韩剧风作品单条抖音播放超 1500 万。获 100 万元大奖的《空城又一计》和入围的《霍元甲》已进入院线电影立项开发流程。文章指出 AI 视频正告别十几秒抽卡时代进入长叙事和工业化量产，这批作品运行在海马云 RunningHub 的 AI 影视工业管线上，其 RHTV 剧本工坊帮助把长篇文学作品拆解为工业级镜头语言，解决剧本组织和分镜提示词失控等难题。",
+      "link": "https://www.qbitai.com/2026/11/510947.html",
+      "source_file": "sources/2026-11-19_初中毕业烘焙师，1 人搓出单集千万播放科幻剧，中国AI长片杀疯了！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "安谋科技深度解析Arm Cortex-M42，发布“星辰100e”AIoT原型平台，助力打造AI性能更强的嵌入式设计",
+      "source": "量子位",
+      "digest": "安谋科技（中国）举办 Arm Cortex-M CPU 新品说明会，深度解析 Cortex-M42 并推出基于该产品的星辰 100e AIoT 原型平台。Cortex-M42 面向成本与面积敏感的智能端点，基于 Armv8.1-M 架构，具备三大能力：Arm Helium 技术加速向量处理、提升机器学习与数字信号性能；Arm 自定义指令支持芯片伙伴针对特定负载优化；基于 AHB 的紧凑设计便于集成到现有 MCU 设计。该产品由安谋科技与 Arm 合作开发，在中国命名星辰 STAR-MC3，纳入 Cortex-M 全球路线图及 Arm 授权订阅组合。星辰 100e 是 Cortex-M42 加 Ethos-U55 NPU 的异构平台，已在 FPGA 上跑通关键字检测、目标识别、语音识别等用例。相比 Cortex-M33，Helium 带来 3 倍向量算力和 2 倍向量能效。",
+      "link": "https://www.qbitai.com/2026/11/511079.html",
+      "source_file": "sources/2026-11-19_安谋科技深度解析Arm Cortex-M42，发布“星辰100e”AIoT原型平台，助力打造AI性能_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "基于阿里云 AgentLoop 构建 Agent 进化数据飞轮闭环，让线上 Trace 沉淀为可复用经验",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生分享基于 AgentLoop 构建 Agent 进化数据飞轮的实践，案例来自无限极的门店 AI 助手灵知。灵知服务近 7000 家门店，依托养生、产品、经营三类知识库支撑找素材、讲话术、带团队、办业务等场景。上线后团队发现缺的不是数据而是让数据变成经验的链路：Trace 停留在观测系统、bad case 依赖人工翻查、优化结论停留在个人经验、用户反馈与运行链路存在断点。方案以 AgentLoop 串起七个环节与两处交接，围绕链路加工、信号关联、人工把关和经验沉淀，把线上 Trace 抽取清洗评估为可复用样本，将标注结论回写数据集并结构化沉淀 Prompt 修改依据，实现 Agent 持续改进与自进化。",
+      "link": "https://mp.weixin.qq.com/s/gkuvalVFEzUFLILZwb5tZw",
+      "source_file": "sources/基于阿里云 AgentLoop 构建 Agent 进化数据飞轮闭环，让线上 Trace 沉淀为可复用经验.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "当AI会说谎：银行如何为大模型系上“安全带”",
+      "source": "现代商业银行杂志",
+      "digest": "《现代商业银行杂志》文章探讨银行如何为大模型幻觉系上安全带。文章以加拿大航空聊天机器人错误解答丧亲票价、2024 年 2 月法庭判令航司担责为例，指出企业不能把 AI 输出视为与己无关的第三方信息。大模型本质是按上下文预测下一个词，追求语言流畅而非事实一致，在训练数据不足、知识过时、上下文偏差或提示词诱导时会生成看似可信却事实错误的内容。文章归纳银行面临的五类 AI 风险：操作风险（错误信息被复制进业务系统）、信用风险（虚构企业数据影响授信判断）、市场风险（错误解读引发决策趋同与风险共振）、合规与法律风险（专业人士引用不存在的法律案例），并强调专业领域 AI 输出必须经可靠来源核验。",
+      "link": "https://mp.weixin.qq.com/s/XQE2AUMLhRAjJM2pEgs8BQ",
+      "source_file": "sources/当AI会说谎：银行如何为大模型系上“安全带”.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "数字原生银行面向AI的数据质量管控思考",
+      "source": "金融电子化",
+      "digest": "四川新网银行首席信息官毛航撰文探讨数字原生银行面向 AI 的数据质量管控。文章指出大模型输出高度依赖训练语料与知识库质量，数据偏差会在推理中层层放大，引发信贷、风控等决策失真。微调场景下带事实偏差的样本会让模型生成逻辑自洽却结论失真的输出；检索增强生成场景下知识库若收纳过期监管文件或废止规则，智能体会输出看似权威实则错误的判断，隐蔽性更强。新网银行构建以组织架构为保障、数据标准为根基、知识中台为载体、语料防护为防线的多层次治理体系，建立数据治理委员会到治理专员的四级联动架构，形成事前防控、事中管控、事后复盘的全闭环，通过每周研判、月度通报、年度检查实现数据风险常态化精细化管控。",
+      "link": "https://mp.weixin.qq.com/s/nHRMLjP66-74dPgr_ktvbg",
+      "source_file": "sources/数字原生银行面向AI的数据质量管控思考.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-19",
+      "title": "银行密集出台AI相关管理办法",
+      "source": "银行科技研究社",
+      "digest": "《智探AI应用》梳理发现，至少已有 4 家上市银行披露董事会审议通过人工智能管理办法的信息。平安银行最早于 9 月 30 日审议通过《平安银行人工智能管理办法》，为上市银行首部公开披露的 AI 管理办法；10 月末苏州银行、建设银行、贵阳银行相继披露。其中建行同时审议通过十五五数字金融与金融科技发展规划及 AI 开发应用管理办法议案，苏州银行为首家区域性银行，贵阳银行明确为试行版本。从表述看平安与建行的办法已出台或即将发布，两家城商行仍在制定中。集中披露的直接原因是落实 2026 年 6 月金融监管总局《关于银行业保险业人工智能安全开发应用的指导意见》，该意见要求加强顶层设计与治理体系、建立全生命周期管理、加强应用场景和流程管理。",
+      "link": "https://mp.weixin.qq.com/s/By6GlMHvau2z7h9zm8H1eA",
+      "source_file": "sources/银行密集出台AI相关管理办法.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-18",
       "title": "Gemini新模型Neon箭在弦上，网友：遍历元素周期表？",
