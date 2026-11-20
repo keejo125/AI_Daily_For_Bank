@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-11-20T07:17:32.994621",
-  "total": 3667,
+  "updated_at": "2026-11-20T08:28:18.919501",
+  "total": 3665,
   "articles": [
-    {
-      "date": "2026-11-19",
-      "title": "谷歌 Genie 4 世界模型正式开放",
-      "source": "Google DeepMind",
-      "digest": "Google DeepMind 宣布向符合条件的 Google AI Ultra 订阅用户开放 Genie 4 世界模型，带来更灵敏、更具社交性和交互性的世界生成体验。用户可用自然语言实时编辑环境、添加原生音频，并将作品发布到新建的社区画廊供他人探索和再创作。同步升级的 Project Genie 引入专用智能体，可通过简单对话帮助用户构建复杂的定制世界；Genie 3 也获得更新，支持更长的交互时长、全景场景定位和相互关联的世界序列。Google AI Pro 会员可加入等候名单。",
-      "link": "https://deepmind.google/blog/genie-4-is-now-available/",
-      "source_file": "sources/2026-11-19_Genie 4 is now available_Google DeepMind.md",
-      "category": "国际",
-      "is_model_related": true
-    },
     {
       "date": "2026-11-19",
       "title": "谷歌发布 Gemini 4 Neon：面向软件工程与科研的前沿推理模型",
@@ -189,16 +179,6 @@
       "digest": "商汤小浣熊及 OPC 人才孵化中心携手 Datawhale、InfoQ、51CTO 等编制《街道办 AI 智能化白皮书》，汇集商汤小浣熊在基层办公场景的落地实践、应用方法与案例。白皮书围绕政策咨询、12345 工单研判、网格巡查、会议督办、企业走访、公文与知识复用等 12 类高频任务逐项梳理所需材料、可由 AI 辅助的步骤、交付成果及必须由人确认的判断，并把任务步骤、核对要求和成果模板整合为可复用 Skill。案例包括从现场照片批量提取水印信息生成带图台账初稿、对热线工单提取关键信息并提出疑似同一事件的归并建议、按模板统一文档格式并比对内容标记疑似差异。白皮书还给出从任务选择到逐步推广的实施参考，强调以人工核对后的整体工作量衡量成效。",
       "link": "https://www.infoq.cn/article/y1DHWaCUGxsuSrQwqEXi",
       "source_file": "sources/2026-11-19_12类高频任务、3类实践案例，商汤小浣熊带着街道办 AI 白皮书来了！_InfoQ.md",
-      "category": "国内",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-19",
-      "title": "初中毕业烘焙师，1 人搓出单集千万播放科幻剧，中国AI长片杀疯了！",
-      "source": "量子位",
-      "digest": "全球首个聚焦影视级长片创作的 AIGC 赛事 RunningHub 全球 AIGC 长片创作大赛收官，征集 1500 多部作品，长剧和电影级长片占比超八成，时长超 60 分钟的作品 20 多部，跑出近百条百万播放爆款和数十条千万播放长片。初中毕业、前烘焙师创作者灵玉的《代号：悟空》单集播放千万，团队狸狸安的韩剧风作品单条抖音播放超 1500 万。获 100 万元大奖的《空城又一计》和入围的《霍元甲》已进入院线电影立项开发流程。文章指出 AI 视频正告别十几秒抽卡时代进入长叙事和工业化量产，这批作品运行在海马云 RunningHub 的 AI 影视工业管线上，其 RHTV 剧本工坊帮助把长篇文学作品拆解为工业级镜头语言，解决剧本组织和分镜提示词失控等难题。",
-      "link": "https://www.qbitai.com/2026/11/510947.html",
-      "source_file": "sources/2026-11-19_初中毕业烘焙师，1 人搓出单集千万播放科幻剧，中国AI长片杀疯了！_量子位.md",
       "category": "国内",
       "is_model_related": false
     },
