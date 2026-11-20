@@ -1,7 +1,227 @@
 {
-  "updated_at": "2026-11-20T08:28:18.919501",
-  "total": 3665,
+  "updated_at": "2026-11-21T05:14:26.205624",
+  "total": 3687,
   "articles": [
+    {
+      "date": "2026-11-20",
+      "title": "AI能否帮助科学家筛选候选药物？OpenAI推出MedChemBench基准",
+      "source": "OpenAI",
+      "digest": "OpenAI 推出 MedChemBench 基准，用于评估 AI 模型在药物化学研究中的推理能力，测试模型能否把分子结构与实验证据关联起来，解释实验结果、比较化合物并预测属性。药物化学的难点在于改进分子某一属性往往会让另一属性变差。OpenAI 表示，构建能可靠支撑这类工作的 AI，是帮助科学家研发更好药物的一步，并公开了相关论文。",
+      "link": "https://openai.com/index/introducing-medchembench",
+      "source_file": "sources/2026-11-20_Can AI help scientists identify promising drug can_OpenAI.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Meta FAIR自我改进记忆方法在持续学习基准达56.0分",
+      "source": "MarkTechPost",
+      "digest": "Meta FAIR 联合华盛顿大学、约翰斯·霍普金斯大学研究者提出 Self-Improving Memory 方法，让 AI 智能体自主管理记忆：模型先自己发现记忆指令，再把这些技能训练进权重。方法以 Kimi-K2.6（1T 参数 MoE、32B 激活、256K 上下文）为基础，通过蒸馏加入 LoRA 适配器。自发现的记忆提示在三项任务上平均得 56.0 分，高于最优人工提示的 44.6 分，代码库任务达 64.3 分。",
+      "link": "https://www.marktechpost.com/2026/11/19/meta-fair-self-improving-memory-harness-distillation/",
+      "source_file": "sources/2026-11-20_Meta FAIR Self-Improving Memory Hits 56.0 on Conti_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-20",
+      "title": "英伟达发布Nemotron-Labs-Sigma连续扩散语言模型，开源14个检查点",
+      "source": "MarkTechPost",
+      "digest": "英伟达发布 Nemotron-Labs-Sigma，包含 3B 和 8B 共 14 个开源检查点。这是一族连续扩散语言模型，在 16 维嵌入空间中对文本去噪，不同于 LLaDA、Dream 等基于离散 token 的扩散模型，英伟达称其在平滑潜空间中更易实现少步蒸馏与轨迹引导。模型上下文 4096 token（8B instruct 版 8192），单张 H100 上每秒约 120 至 140 token。Sigma-8B 基础版在英伟达六项测试中平均 71.16 分，8B instruct 版在 GSM8K 上达 91.96 分。",
+      "link": "https://www.marktechpost.com/2026/11/20/nvidia-nemotron-labs-sigma-continuous-diffusion-language-model/",
+      "source_file": "sources/2026-11-20_NVIDIA AI Releases Nemotron-Labs-Sigma, a Continuo_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-20",
+      "title": "“美国大豆包”又发新模型，Neon 接入 Antigravity 后编程解题率升至三倍多",
+      "source": "InfoQ",
+      "digest": "InfoQ 报道，Carbon 向开发者开放仅八天，Google 又发布 Gemini 4 Neon。11 月 18 日亮相的 Neon 在默认推理档追平旗舰 Carbon，最高档高出 1 分，进入 Artificial Analysis 智能指数总榜前三，是 Google DeepMind 约七周内发布的第四款模型。两款模型在 high 档同为 60 分时，Neon 平均每项任务花费 3.74 美元，不到 Carbon 7.76 美元的一半，每秒生成约 110 个 token，接近 Carbon 两倍，完成任务时间缩短约四成。",
+      "link": "https://www.infoq.cn/article/tDxNggErsJNeb53ZkYeF",
+      "source_file": "sources/2026-11-20_“美国大豆包”又发新模型，Neon 接入 Antigravity 后编程解题率升至三倍多_InfoQ.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-20",
+      "title": "2026年13款最佳Agent网关盘点：覆盖MCP、A2A与LLM流量",
+      "source": "MarkTechPost",
+      "digest": "MarkTechPost 盘点 2026 年 13 款主流 Agent 网关，按流量覆盖、身份与授权、部署方式、成熟度和价格透明度五个维度排序，包括 Kong AI Gateway、Bifrost、AgentCore、Arcade 等。文章指出，Agent 网关不只是路由模型请求，还负责认证智能体、过滤其可见工具、记录每次调用，并新增 MCP 工具治理、智能体身份与 A2A 流量控制能力，成为智能体接入业务系统的统一控制点。",
+      "link": "https://www.marktechpost.com/2026/11/19/best-agent-gateways-2026/",
+      "source_file": "sources/2026-11-20_13 Best Agent Gateways in 2026 for MCP, A2A and LL_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Anthropic 的数论学家声称证明黎曼猜想",
+      "source": "Solidot",
+      "digest": "美国数学家 Levent Alpöge 以数论和算术统计方面的工作著称，目前在 AI 公司 Anthropic 工作。他发表声明，声称与公司 AI 工具 Claude 合作获得了数论经典难题黎曼猜想的一般性证明，并表示这一证明方法可进一步证明广义黎曼猜想和扩展黎曼猜想。该声明若得到学界验证，将是 AI 辅助基础数学研究的重要进展，目前仍待同行评议确认。",
+      "link": "https://www.solidot.org/story?sid=85949",
+      "source_file": "sources/2026-11-20_Anthropic 的数论学家声称证明黎曼猜想_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Grab 通过安全策略应对 AI 生成代码变更激增，提升移动端 App 稳定性",
+      "source": "InfoQ",
+      "digest": "东南亚出行平台 Grab 表示，AI 编程助手的普及加快了开发速度，也让每个版本的代码变更量变多，缺陷和应用崩溃出现的概率随之上升。为应对这些挑战，Grab 实现了一套分层防御策略，在整个开发与发布生命周期中对崩溃问题进行预防、检测和隔离。Grab 称，AI 提升了代码编写速度，而分层防御保障这种提速是安全的，通过多层技术手段在不牺牲交付效率的前提下维持移动端应用的稳定性。",
+      "link": "https://www.infoq.cn/article/AH8deOIGb5hMHRPIKfrf",
+      "source_file": "sources/2026-11-20_Grab 通过安全策略应对 AI 生成代码变更激增，提升移动端 App 稳定性_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Hebbia借助GPT-6 Astra提升金融研究能力",
+      "source": "OpenAI",
+      "digest": "OpenAI 发布客户案例，金融研究平台 Hebbia 在测试中使用 GPT-6 Astra 取得提升。在金融研报分析等任务中，GPT-6 Astra 相比测试中最优替代模型领先 13.6 个百分点，引用相关度达 99.5%，满足展示要求的比例达 97.9%、领先 14.4 个百分点。该案例展示了大模型在投研文档理解与结构化输出上的应用效果。",
+      "link": "https://openai.com/business/customer-stories/hebbia",
+      "source_file": "sources/2026-11-20_Hebbia sees improvements in financial research wit_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "IEA 警告称到 2030 年数据中心碳排放量将增加七成",
+      "source": "Solidot",
+      "digest": "国际能源署（IEA）发表报告警告，到 2030 年数据中心碳排放量将增加七成，用电量将达到目前水平的两倍，未来四年 AI 数据中心每年将额外消耗 350 TWh 电力，这一数字超过英国全年总耗电量。IEA 预计到这个十年末，中国 AI 数据中心所需电力中约半数来自燃煤电厂，其余主要来自可再生能源；美国数据中心约 60% 电力将依赖天然气供应，截至今年 8 月已有约 180 GW 新建天然气发电项目规划为数据中心供电。",
+      "link": "https://www.solidot.org/story?sid=85937",
+      "source_file": "sources/2026-11-20_IEA 警告称到 2030 年数据中心碳排放量将增加七成_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Perplexity推出Orchestrator API，支持故障转移与模型路由",
+      "source": "MarkTechPost",
+      "digest": "Perplexity 推出 Orchestrator API，用单一端点对外提供前沿模型与开放权重模型调用，按可用性、容量和延迟自动选择服务方，并统一计费。该网关覆盖 OpenAI、Anthropic、Google、xAI 的前沿模型，以及 GLM、Kimi、DeepSeek 等开放权重模型，兼容 OpenAI Chat Completions、Responses 与 Anthropic Messages 接口，多数团队只需替换 API 密钥和基础地址即可接入。",
+      "link": "https://www.marktechpost.com/2026/11/19/perplexity-orchestrator-api-failover-model-routing/",
+      "source_file": "sources/2026-11-20_Perplexity Launches Orchestrator API for Failover _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Snowflake Expedition 大会亮出哪些新能力？一文梳理重磅更新 ｜ 技术趋势",
+      "source": "InfoQ",
+      "digest": "InfoQ 梳理 2026 年 Snowflake Expedition 大会发布的系列升级，Snowflake 正由云数据平台演进为支持自主 AI 智能体、实时流式应用和对话式商业智能的统一引擎。此次发布围绕'AI 的价值取决于其所依托的企业业务上下文'展开，引入原生业务本体（Business Ontology），通过 Horizon Context 存储账户级业务定义，帮助企业统一客户、收入等术语含义，配合端到端延迟低于 15 秒的实时流式架构与对话式 BI，打通运营数据、分析工作流与 AI 推理。",
+      "link": "https://www.infoq.cn/article/KBcjdx4ZlUj4hyI7zvdd",
+      "source_file": "sources/2026-11-20_Snowflake Expedition 大会亮出哪些新能力？一文梳理重磅更新 ｜ 技术趋势_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "AI比人贵了…OpenAI：内部Agent开销已达研究员薪酬两倍",
+      "source": "量子位",
+      "digest": "量子位报道，OpenAI 发布内部研究报告《Research acceleration: The jagged frontier》，披露研究员使用 AI 的情况。报告称 Agent 已能独立完成约 46% 原本需人类 2 至 4 小时的研究任务，今年 3 月该比例还只有 23%；对需 4 至 8 小时的任务，自主完成率从 13% 升至 35%。10 月研究员人均每天在 Agent 上花费约 2400 美元，头部 10% 达 2.3 万美元，按累计运行 8 小时折算一个工作日，人均每天驱动 5.7 个 Agent 工作日。报告也指出能力提升并不均衡，沟通、分析任务表现好，构建类任务较弱。",
+      "link": "https://mp.weixin.qq.com/s/_xDMYYEPKob7gPH_Gfs3fg",
+      "source_file": "sources/AI比人贵了…OpenAI：内部Agent开销已达研究员薪酬两倍.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "程序员的AI工具正在给工作添乱！Instagram掌门人反对追逐Token用量：别把工具使用量，当成生产力",
+      "source": "51CTO技术栈",
+      "digest": "51CTO 技术栈根据访谈整理，Instagram 负责人亚当·莫塞里表示不会把 AI 使用量、Token 消耗、代码行数直接设为工作目标，而关注最终做出了什么、产品是否更有用。他以会议简报和邮件草稿为例，最初的长提示词只生成一份要额外读的材料，后来让系统对比自己改过的邮件与原草稿，从差异中学习语气和偏好。他认为工具能生成内容与能减少工作之间存在差距，用量数据应作为观察信号而非目标本身。",
+      "link": "https://mp.weixin.qq.com/s/5vOnlMbpinZXU5yEpNLrmA",
+      "source_file": "sources/程序员的AI工具正在给工作添乱！Instagram掌门人反对追逐Token用量：别把工具使用量，当成生产力.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1/27！",
+      "source": "量子位",
+      "digest": "量子位报道开源系统 Agnes Harness（Apache 2.0 许可，GitHub 约 2.1k Star），面向 Agent 落地中企业适配成本高、经验难沉淀的痛点。其核心有两项设计：一是 Sys1 双系统决策，需复杂推理的部分交给大模型 System 2，高频明确操作交给专门训练的 9B 决策模型 Agnes Sys1.0，由它判断调用哪个工具、是否继续执行；二是 TTT×RSI 双层自进化，让 Agent 在执行中沉淀经验。据介绍，该方案可使 Agent 效率最高提升 14 倍、成本降至原来的 1/27。",
+      "link": "https://www.qbitai.com/2026/11/511582.html",
+      "source_file": "sources/2026-11-20_双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1_27！_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "阿里巴巴警告未来两年算力紧缺",
+      "source": "Solidot",
+      "digest": "阿里巴巴集团首席执行官吴泳铭在二季度业绩电话会上表示，全球各区域算力政策出现较大变化，将影响阿里云数据中心建设。初步评估显示，阿里此前制定的到 2032 年全球数据中心规模超过 20 吉瓦的目标有可能下调，资本开支可能一定程度降低。管理层相信美国商务部的算力管制新规对 AI 产品进度影响短暂，公司已运用自研芯片训练下一代大模型。阿里预测 2027 年与 2028 年将是中国算力市场最紧缺的两年。",
+      "link": "https://www.solidot.org/story?sid=85947",
+      "source_file": "sources/2026-11-20_阿里巴巴警告未来两年算力紧缺_Solidot.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "AgentTeams 1.2.8：全新工作台与新官网，一键开启团队协作",
+      "source": "阿里云云原生",
+      "digest": "阿里云云原生介绍开源多智能体协作系统 AgentTeams 从 1.2.6 到 1.2.8 的更新。1.2.6 增加语音输入、执行追踪与人工介入收件箱，1.2.7 支持一键启动与多种 Harness、运行时选择，1.2.8 带来全新工作台与团队协作升级。系统由 Manager 协调、Leader 拆解验收、Workers 执行，消息在 Matrix 房间流转，文件存入共享存储，模型与 MCP 工具访问由 Higress AI 网关管理，全新官网 agentteams.cloud 同步上线。",
+      "link": "https://mp.weixin.qq.com/s/XA87awKj9XUCgqG1FJGS2g",
+      "source_file": "sources/AgentTeams 1.2.8：全新工作台与新官网，一键开启团队协作.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Fluid-Sinapis v0.1发布：让LLM+Agent 参与云原生缓存管理",
+      "source": "InfoQ",
+      "digest": "由南芥智能发起、与 Fluid 开源社区合作推出的 Fluid-Sinapis 发布 V0.1，让大模型 Agent 参与云原生缓存管理。系统从 Fluid、Kubernetes 和业务侧汇聚缓存容量、节点内存、文件访问等指标写入 Prometheus，Agent 读取后结合策略生成执行计划，经复核调用 Fluid 技能完成扩缩容与预热。职责边界上，缓存引擎仍由 Alluxio、JuiceFS、Curvine 承担，编排交给 Fluid，集群调度由 Kubernetes 负责，Agent 只做决策层编排。",
+      "link": "https://mp.weixin.qq.com/s/OZQPfqM1kuUt1upuaM-CjQ",
+      "source_file": "sources/Fluid-Sinapis v0.1发布：让LLM+Agent 参与云原生缓存管理.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "从单工程提效，走向复杂需求的 AI 原生研发",
+      "source": "Qoder",
+      "digest": "Qoder 分享智联招聘从单工程提效走向复杂需求 AI 原生研发的实践。客户早期分析显示编码时间仅占 30% 至 40%、沟通约占 50%，因此转型不止于编码：团队对上千个工程分别分析形成说明文件，Agent 先检索候选工程再读代码验证关系，讨论中的通用规则经 Skills 抽取补充知识库。流程采用探索、生成计划、编码、归档，按 OpenSpec 风格形成 proposal、design、tasks 与 specs，并在计划与代码产出后设置人工介入。",
+      "link": "https://mp.weixin.qq.com/s/jVnxThQZTfdm8UhH2PhlLQ",
+      "source_file": "sources/从单工程提效，走向复杂需求的 AI 原生研发.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "告别跑分竞赛：国产AI产业，比拼走向“Token产出效率”",
+      "source": "财联社AI daily",
+      "digest": "财联社旗下科创板日报报道，伴随 Agent 规模化落地，AI 产业竞争从参数与峰值算力跑分转向有效 Token 产出效率与低成本规模化交付。报道指出国内算力基建投入持续高增但存在生态割裂、芯模适配难、闲置率高的有量无效问题，2026 至 2030 年合计投入预计达 8.5 万亿元。腾讯云人士称智算中心已从算力机房转型为 Token 生产工厂，当前国内智算中心 GPU 平均利用率不足 30%，产业竞争转向工程化效率比拼。",
+      "link": "https://mp.weixin.qq.com/s/K_xB2_JWBJ5Vwmtzq3sRNw",
+      "source_file": "sources/告别跑分竞赛：国产AI产业，比拼走向“Token产出效率”.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "给万卡国产芯装个“超级外挂”！清华团队要造最强国产Token工厂",
+      "source": "量子位",
+      "digest": "量子位报道，清华系 AI 基础设施企业清昴智能联合华为昇腾生态及多家产业伙伴，发起昇腾 950DT 万卡级 Token 工厂联合运营计划，目标建成国内规模最大的独立国产 Token 工厂，把分散异构的国产算力转化为可计量、可验收、稳定交付的 Token 产能。计划 2027 年推进万卡级联合运营，未来五年扩展为覆盖多地域、多芯片的十万卡级 Token 工厂网络，由华为提供芯片、IDC 提供机房电力、模型与流量方提供需求、清昴负责软件优化与统一计量。",
+      "link": "https://mp.weixin.qq.com/s/t5fKrKTRAILeW2v8jrUKxA",
+      "source_file": "sources/给万卡国产芯装个“超级外挂”！清华团队要造最强国产Token工厂.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "【中国银行软件中心安全运营专家农时访谈】智能体时代的安全威胁与应对",
+      "source": "中国金融电脑+",
+      "digest": "《中国金融电脑》采访中国银行软件中心安全运营专家农时，探讨智能体时代的安全威胁与应对。农时认为智能体不同于以往自动化，能融合多领域应对未知变化，更灵活也更危险；攻击侧 AI 已可自动挖掘漏洞，防守侧也在探索漏洞检测智能体。他提醒金融机构在引入 Agent Skill 时易忽视智能体自身风险，需从安全攻防、威胁属性与多元防护维度重建体系，在拥抱 AI 的同时筑牢安全底线。",
+      "link": "https://mp.weixin.qq.com/s/tL4kiX807IuwwwYY9m6rUQ",
+      "source_file": "sources/【中国银行软件中心安全运营专家农时访谈】智能体时代的安全威胁与应对.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
+      "title": "以AI对抗AI，重构持续学习的网络攻防体系",
+      "source": "金融电子化",
+      "digest": "四川银行金融科技部撰文介绍以 AI 对抗 AI、重构持续学习网络攻防体系的实践。文章指攻击侧 AI 已升级为自主攻击体，能自动发现大量高危漏洞，而防守侧仍依赖规则库与人工研判，存在规则更新慢、分析师培养周期长两大短板。作者提出防御架构三大变革：从特征匹配转向语义理解、从单点告警转向多智能体协同、从人海战术转向人机协同闭环，并介绍该行深瞳 AI 的三级滤波告警降噪实践。",
+      "link": "https://mp.weixin.qq.com/s/G5eIhet8OWW7aOcLKZZLNA",
+      "source_file": "sources/以AI对抗AI，重构持续学习的网络攻防体系.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-19",
       "title": "谷歌发布 Gemini 4 Neon：面向软件工程与科研的前沿推理模型",
