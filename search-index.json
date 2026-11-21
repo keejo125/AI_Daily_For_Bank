@@ -1,7 +1,137 @@
 {
-  "updated_at": "2026-11-21T08:00:18.161904",
-  "total": 3685,
+  "updated_at": "2026-11-22T05:16:13.070537",
+  "total": 3698,
   "articles": [
+    {
+      "date": "2026-11-21",
+      "title": "27B！穆拉蒂开源“循环脑”模型：笔记本跑Agent起飞",
+      "source": "智东西",
+      "digest": "前OpenAI CTO米拉·穆拉蒂联合创办的Thinking Machines Lab推出混合专家模型Inkling 2 Mini，总参数27B、激活3.4B，每token有5.4B权重激活值以支撑循环机制，可在笔记本电脑本地运行。该模型采用循环Transformer，让模型思考更多、输出更少，总内存占用约20GB。在DeepSWE v1.1（48.2%）和Vals Index v2.2（46.5%）等基准上，于100B以内开放权重模型中名列前茅，长期智能体编程拿下同级SOTA，超过Gemma 4 31B、Qwen3.8-27B等。但在多约束指令跟随、多轮对话上弱于Qwen3.8-27B。模型以Apache 2.0协议在Hugging Face开放，并提供托管推理与微调，团队还计划放出可变循环研究模型。",
+      "link": "https://mp.weixin.qq.com/s/Mmkl79Palks1IdYNF9xnSQ",
+      "source_file": "sources/2026-11-21_27B！穆拉蒂开源“循环脑”模型：笔记本跑Agent起飞_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "Baseten 发布 Bison-1 与 Groundhog-1，登顶决策模型指数",
+      "source": "MarkTechPost",
+      "digest": "Baseten发布bison-1与groundhog-1两款基于Google Gemma 4构建的开放权重决策模型。决策模型不写文本，而是为是/否、选择与打分问题返回校准概率。bison-1在Artificial Analysis决策指数v2.1得76分、位列19个模型第一，为31B稠密模型；groundhog-1为26B MoE、约4B激活。两款模型将上下文从16k提升至128k token并支持图像输入，面向路由、分诊与护栏流水线，可在一次调用中容纳完整策略与历史记录。",
+      "link": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/",
+      "source_file": "sources/2026-11-21_Baseten Releases Bison-1 and Groundhog-1, Topping _MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "OpenAI 推出 GPT-Live-1.1 语音智能体模型，空闲成本降至每分钟 0.02 美元",
+      "source": "MarkTechPost",
+      "digest": "OpenAI通过API开放GPT-Live-1.1语音模型（模型ID gpt-live-1.1），为全双工多语言对话模型，可边听边说，官方称其跨语言口音更自然一致、任务完成更可靠。此次发布引入standby待机计费状态，降低语音智能体空闲会话成本，闲置成本降至每分钟0.02美元。Live会话默认上下文窗口12.8万token，仅通过OpenAI云端v1/live/sessions提供，客户端经WebRTC或WebSocket连接，不开放权重。",
+      "link": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
+      "source_file": "sources/2026-11-21_OpenAI Ships GPT-Live-1.1 for Voice Agents, Cuts I_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "RadixArk 发布 DaisyRose-27B：仅用强化学习训练的 27B 智能体编程模型",
+      "source": "MarkTechPost",
+      "digest": "RadixArk发布首个开放权重模型DaisyRose-27B，为27B智能体编程模型，基于Qwen3.8-27B经强化学习后训练，模型卡称仅用RL、未做SFT或蒸馏。以Apache 2.0协议作为基础模型的直接替代品发布。主要结果为Terminal Bench 4.1 pass@1从5.6提升至12.0。模型为27.8B稠密参数、26.2万token上下文，单GPU可运行，在全部7项报告基准上均超越基座模型，IFBench得82.4为同类中最高。",
+      "link": "https://www.marktechpost.com/2026/11/20/radixark-daisyrose-27b-agentic-model/",
+      "source_file": "sources/2026-11-21_RadixArk Ships DaisyRose-27B, a 27B Agentic Coding_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "反超Gemini之后，Karpo新作再开源，浏览器Agent速效双赢",
+      "source": "量子位",
+      "digest": "MachinePulse AI开源Karpo Decision 31B决策模型，专为Agent提供高频低延迟决策。在《城市扫描仪》挑战中2.6秒从36场活动筛出10个去处，较Gemini 3.5 Flash快近6倍、36题准确率100%；在300个模型同台的Decision Index总榜以73.9分登首，单题最多判断255个候选、校准误差2.3%。同时开源其Personal Agent产品Karpo的浏览器操作框架，含karpo-browser、Karpo Decision 27B Act模型及评测集KBB，在Browserbase Benchmark v2的102道核心任务上做到89%平均成功率、单任务成本0.096美元。文章亦梳理了Jev走红后决策模型成为热门赛道的背景。",
+      "link": "https://mp.weixin.qq.com/s/4N8Y12bIPGWnLBp95gtqgw",
+      "source_file": "sources/2026-11-21_反超Gemini之后，Karpo新作再开源，浏览器Agent速效双赢_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "米哈游发了个VLA论文",
+      "source": "量子位",
+      "digest": "米哈游崩坏AI研发团队发布VLA（视觉-语言-动作）基础模型Gamer，基于Qwen3-VL-8B训练、8B参数，可按键鼠操作玩《崩坏：星穹铁道》，在约50小时长流程评估中自主运行时间占比超95%。训练分三阶段：跨游戏数据持续预训练、约1000小时《崩铁》演示微调、在线强化学习；并提出稀疏思考与记忆摘要机制缓解推理延迟与上下文爆炸，配套Streaming-vLLM推理引擎。跨游戏实验与40个未见任务上，SFT后39.2%、加强化学习后49.7%，显著高于通用模型最高17.1%。论文称该能力有望用于自动化测试与游戏迭代。",
+      "link": "https://www.qbitai.com/2026/11/511740.html",
+      "source_file": "sources/2026-11-21_米哈游发了个VLA论文_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-21",
+      "title": "8万条群聊消息做成考卷：腾讯元宝×KCL发布首个基于群聊构建的Agent记忆基准",
+      "source": "量子位",
+      "digest": "腾讯元宝与伦敦国王学院NLP团队联合推出GroupAssistBench，基于50个真实群聊、80299条历史消息构建2395道评测题，考察Agent记忆能否从记得住走向用得好。研究对比完整上下文、检索增强和外部记忆等14组配置，发现一个反差：EverMemOS在L1记忆召回得分0.621高于完整上下文0.570，但在L2开放式服务评测仅0.247、低于完整上下文0.431，说明更会回忆不必然更会服务。论文已在arXiv公开，代码和数据集同步开放。",
+      "link": "https://mp.weixin.qq.com/s/CG8ony2wkCKSF1etPtOa1A",
+      "source_file": "sources/2026-11-21_8万条群聊消息做成考卷：腾讯元宝×KCL发布首个基于群聊构建的Agent记忆基准_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+      "source": "量子位",
+      "digest": "前DeepSeek V1作者、DeepSeek-VL项目负责人Tony Zhang公布创业项目Linger，定位个人Personal Agent，专为本地部署。它可操纵电脑上已登录的网页、邮箱、日历，支持接入第三方模型并针对本地LLM优化，一块12GB显存RTX 3060即可跑125B参数Qwen3.8-Flash-Next、生成速度45.5 tokens/秒。核心为Another Me系统，作记忆中枢每晚整理个人知识库，在LoCoMo基准准确率95%。还支持隐式强化学习、组建Agent团队、语音交互。底层PolyStrata为MoE推理引擎，动态在GPU、内存、SSD间调度专家模块。项目已开源。",
+      "link": "https://www.qbitai.com/2026/11/511570.html",
+      "source_file": "sources/2026-11-21_刚刚，DeepSeek V1作者创业项目曝光：开源Agent_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "同样的 Credits，多跑近一倍的任务：Qoder 耐用度优化技术拆解",
+      "source": "Qoder",
+      "digest": "Qoder披露缓存命中率优化进展：过去一个月Auto单任务平均Credits消耗从4.43降至2.6、下降约41%，原支持10个任务的额度现约可支持17个，消耗参考倍率从0.5x更新为0.3x。文章拆解缓存命中的三个条件——请求前缀逐字一致、缓存所在资源可用、缓存有效期内；以Qwen为例请求按工具定义、系统提示词、对话消息组织，命中缓存部分计费最低可降至未命中时的十分之一甚至几十分之一。属Token成本与推理效率优化工程实践。",
+      "link": "https://mp.weixin.qq.com/s/J5PUERXhORacx4B8orC2cw",
+      "source_file": "sources/2026-11-21_同样的 Credits，多跑近一倍的任务：Qoder 耐用度优化技术拆解_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "智能体 AI 架构：当前挑战与未来机遇",
+      "source": "InfoQ",
+      "digest": "译文讨论智能体AI架构（Agentic AI Architecture）的挑战与机遇。文章指出，微服务与云原生架构让工程师能以确定性方式推理系统，但未来大量IT系统将由AI驱动面向用户的功能。AI使系统从操作原始数据转向操作知识，将IT角色从数据管理提升为在知识层面支撑业务。智能体AI架构建立在微服务和云原生之上、加入智能体AI能力，以大规模使用智能体系统发挥生成式模型能力。属架构范式与工程实践讨论。",
+      "link": "https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX",
+      "source_file": "sources/2026-11-21_智能体 AI 架构：当前挑战与未来机遇_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "腾讯姚顺雨团队深夜回应一切：算力不足、模型刷榜、雷霆大思考",
+      "source": "智东西",
+      "digest": "腾讯混元团队在Reddit举办AMA，围绕Hy4系列模型与全球开发者交流，姚顺雨现身评论区。此前一天腾讯刚开放旗舰Hy4权重并发布System Card，近日又推出主打低成本的Hy4 flash。面对先进AI芯片获取受限的提问，团队回应正尽可能充分利用现有资源追赶前沿。团队透露下一代Hy模型将进一步扩大参数规模并继续投入大规模强化学习；Flash-Lite、面向24GB显存设备的模型正在规划。技术层面首次披露Hy4在GQA与MLA间的架构权衡，因DSA降低MLA解码阶段开销而最终选择MLA。问答还涉及模型评测、安全限制、AI编程生态与RSI等话题。",
+      "link": "https://mp.weixin.qq.com/s/JiUytK7X_siHOt-Q4IhQig",
+      "source_file": "sources/2026-11-21_腾讯姚顺雨团队深夜回应一切：算力不足、模型刷榜、雷霆大思考_智东西.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "AI驱动网络安全防御范式变革",
+      "source": "金融电子化",
+      "digest": "中金金融认证中心总经理赵海撰文指出，AI正将网络攻击从手工作坊推向工业化流水线，防守方须从基于规则的静态防御转向基于意图的动态对抗。文章以Anthropic发布的网络安全模型Claude Mythos Preview在CyberGym评分83.1%为例，说明攻击技术从经验驱动转向智能驱动。新型AI攻击核心能力包括长链路自主攻击规划、0day漏洞批量识别、攻击路径自适应调整。文章同时指出AI并未创造新的底层物理学漏洞，而是极大压缩了攻击者的时间与技术门槛。",
+      "link": "https://mp.weixin.qq.com/s/_AkUXuJJonRq73_L1YNkag",
+      "source_file": "sources/2026-11-21_AI驱动网络安全防御范式变革_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-21",
+      "title": "前沿AI驱动的网络风险与应对措施",
+      "source": "金融电子化",
+      "digest": "人民银行荆门市分行高博撰文解读ESRB 2026年7月警告，指出前沿AI模型已具备自主发现漏洞、生成利用程序并完成武器化的全流程攻击能力，正改变金融网络威胁格局。文章梳理四维运营韧性弱化与三类不对称风险：脆弱性发现数量爆发式增长、漏洞武器化周期从数天压缩至数小时、防御时间缓冲带近乎消失、基于特征库的检测效能下降。并解读ESRB依托《数字运营韧性法案》等三大法律框架的应对思路，立足我国金融信息化实际提出系统性策略。",
+      "link": "https://mp.weixin.qq.com/s/7Tj59TFHHSkJrROYApPfKg",
+      "source_file": "sources/2026-11-21_前沿AI驱动的网络风险与应对措施_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-20",
       "title": "Meta FAIR自我改进记忆方法在持续学习基准达56.0分",
