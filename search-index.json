@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-11-21T05:14:26.205624",
-  "total": 3687,
+  "updated_at": "2026-11-21T08:00:18.161904",
+  "total": 3685,
   "articles": [
-    {
-      "date": "2026-11-20",
-      "title": "AI能否帮助科学家筛选候选药物？OpenAI推出MedChemBench基准",
-      "source": "OpenAI",
-      "digest": "OpenAI 推出 MedChemBench 基准，用于评估 AI 模型在药物化学研究中的推理能力，测试模型能否把分子结构与实验证据关联起来，解释实验结果、比较化合物并预测属性。药物化学的难点在于改进分子某一属性往往会让另一属性变差。OpenAI 表示，构建能可靠支撑这类工作的 AI，是帮助科学家研发更好药物的一步，并公开了相关论文。",
-      "link": "https://openai.com/index/introducing-medchembench",
-      "source_file": "sources/2026-11-20_Can AI help scientists identify promising drug can_OpenAI.md",
-      "category": "国际",
-      "is_model_related": true
-    },
     {
       "date": "2026-11-20",
       "title": "Meta FAIR自我改进记忆方法在持续学习基准达56.0分",
@@ -49,16 +39,6 @@
       "digest": "MarkTechPost 盘点 2026 年 13 款主流 Agent 网关，按流量覆盖、身份与授权、部署方式、成熟度和价格透明度五个维度排序，包括 Kong AI Gateway、Bifrost、AgentCore、Arcade 等。文章指出，Agent 网关不只是路由模型请求，还负责认证智能体、过滤其可见工具、记录每次调用，并新增 MCP 工具治理、智能体身份与 A2A 流量控制能力，成为智能体接入业务系统的统一控制点。",
       "link": "https://www.marktechpost.com/2026/11/19/best-agent-gateways-2026/",
       "source_file": "sources/2026-11-20_13 Best Agent Gateways in 2026 for MCP, A2A and LL_MarkTechPost.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-20",
-      "title": "Anthropic 的数论学家声称证明黎曼猜想",
-      "source": "Solidot",
-      "digest": "美国数学家 Levent Alpöge 以数论和算术统计方面的工作著称，目前在 AI 公司 Anthropic 工作。他发表声明，声称与公司 AI 工具 Claude 合作获得了数论经典难题黎曼猜想的一般性证明，并表示这一证明方法可进一步证明广义黎曼猜想和扩展黎曼猜想。该声明若得到学界验证，将是 AI 辅助基础数学研究的重要进展，目前仍待同行评议确认。",
-      "link": "https://www.solidot.org/story?sid=85949",
-      "source_file": "sources/2026-11-20_Anthropic 的数论学家声称证明黎曼猜想_Solidot.md",
       "category": "国际",
       "is_model_related": false
     },
@@ -114,6 +94,16 @@
     },
     {
       "date": "2026-11-20",
+      "title": "双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1/27！",
+      "source": "量子位",
+      "digest": "量子位报道开源系统 Agnes Harness（Apache 2.0 许可，GitHub 约 2.1k Star），面向 Agent 落地中企业适配成本高、经验难沉淀的痛点。其核心有两项设计：一是 Sys1 双系统决策，需复杂推理的部分交给大模型 System 2，高频明确操作交给专门训练的 9B 决策模型 Agnes Sys1.0，由它判断调用哪个工具、是否继续执行；二是 TTT×RSI 双层自进化，让 Agent 在执行中沉淀经验。据介绍，该方案可使 Agent 效率最高提升 14 倍、成本降至原来的 1/27。",
+      "link": "https://www.qbitai.com/2026/11/511582.html",
+      "source_file": "sources/2026-11-20_双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1_27！_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-20",
       "title": "AI比人贵了…OpenAI：内部Agent开销已达研究员薪酬两倍",
       "source": "量子位",
       "digest": "量子位报道，OpenAI 发布内部研究报告《Research acceleration: The jagged frontier》，披露研究员使用 AI 的情况。报告称 Agent 已能独立完成约 46% 原本需人类 2 至 4 小时的研究任务，今年 3 月该比例还只有 23%；对需 4 至 8 小时的任务，自主完成率从 13% 升至 35%。10 月研究员人均每天在 Agent 上花费约 2400 美元，头部 10% 达 2.3 万美元，按累计运行 8 小时折算一个工作日，人均每天驱动 5.7 个 Agent 工作日。报告也指出能力提升并不均衡，沟通、分析任务表现好，构建类任务较弱。",
@@ -130,16 +120,6 @@
       "link": "https://mp.weixin.qq.com/s/5vOnlMbpinZXU5yEpNLrmA",
       "source_file": "sources/程序员的AI工具正在给工作添乱！Instagram掌门人反对追逐Token用量：别把工具使用量，当成生产力.md",
       "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-20",
-      "title": "双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1/27！",
-      "source": "量子位",
-      "digest": "量子位报道开源系统 Agnes Harness（Apache 2.0 许可，GitHub 约 2.1k Star），面向 Agent 落地中企业适配成本高、经验难沉淀的痛点。其核心有两项设计：一是 Sys1 双系统决策，需复杂推理的部分交给大模型 System 2，高频明确操作交给专门训练的 9B 决策模型 Agnes Sys1.0，由它判断调用哪个工具、是否继续执行；二是 TTT×RSI 双层自进化，让 Agent 在执行中沉淀经验。据介绍，该方案可使 Agent 效率最高提升 14 倍、成本降至原来的 1/27。",
-      "link": "https://www.qbitai.com/2026/11/511582.html",
-      "source_file": "sources/2026-11-20_双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1_27！_量子位.md",
-      "category": "国内",
       "is_model_related": false
     },
     {
