@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-22T05:16:13.070537",
-  "total": 3698,
+  "updated_at": "2026-11-22T11:26:31.845364",
+  "total": 3697,
   "articles": [
     {
       "date": "2026-11-21",
@@ -19,16 +19,6 @@
       "digest": "Baseten发布bison-1与groundhog-1两款基于Google Gemma 4构建的开放权重决策模型。决策模型不写文本，而是为是/否、选择与打分问题返回校准概率。bison-1在Artificial Analysis决策指数v2.1得76分、位列19个模型第一，为31B稠密模型；groundhog-1为26B MoE、约4B激活。两款模型将上下文从16k提升至128k token并支持图像输入，面向路由、分诊与护栏流水线，可在一次调用中容纳完整策略与历史记录。",
       "link": "https://www.marktechpost.com/2026/11/20/baseten-bison-1-groundhog-1-gemma-4-decision-models/",
       "source_file": "sources/2026-11-21_Baseten Releases Bison-1 and Groundhog-1, Topping _MarkTechPost.md",
-      "category": "国际",
-      "is_model_related": true
-    },
-    {
-      "date": "2026-11-21",
-      "title": "OpenAI 推出 GPT-Live-1.1 语音智能体模型，空闲成本降至每分钟 0.02 美元",
-      "source": "MarkTechPost",
-      "digest": "OpenAI通过API开放GPT-Live-1.1语音模型（模型ID gpt-live-1.1），为全双工多语言对话模型，可边听边说，官方称其跨语言口音更自然一致、任务完成更可靠。此次发布引入standby待机计费状态，降低语音智能体空闲会话成本，闲置成本降至每分钟0.02美元。Live会话默认上下文窗口12.8万token，仅通过OpenAI云端v1/live/sessions提供，客户端经WebRTC或WebSocket连接，不开放权重。",
-      "link": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
-      "source_file": "sources/2026-11-21_OpenAI Ships GPT-Live-1.1 for Voice Agents, Cuts I_MarkTechPost.md",
       "category": "国际",
       "is_model_related": true
     },
