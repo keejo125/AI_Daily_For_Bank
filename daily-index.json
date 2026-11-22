@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-22",
+      "weekday": "周日",
+      "stats": {
+        "国际": 8,
+        "国内": 7,
+        "同业": 1,
+        "其他": 0,
+        "total": 16
+      },
+      "summary": "哥伦比亚大学与CertiK提出TensorLean，在PTX层形式化验证GPU内核/Anthropic 到 2028 年使用的电力 98% 来自化石燃料/..."
+    },
+    {
       "date": "2026-11-21",
       "weekday": "周六",
       "stats": {
@@ -41,10 +53,10 @@
       "weekday": "周三",
       "stats": {
         "国际": 20,
-        "国内": 12,
+        "国内": 13,
         "同业": 1,
         "其他": 0,
-        "total": 33
+        "total": 34
       },
       "summary": "Gemini新模型Neon箭在弦上，网友：遍历元素周期表？/OpenAI 发布 GPT-6.2 Astra 与 Sol，Astra API 降价 20%/..."
     },
