@@ -1,27 +1,7 @@
 {
-  "updated_at": "2026-11-23T05:15:23.729696",
-  "total": 3714,
+  "updated_at": "2026-11-23T07:05:39.146260",
+  "total": 3711,
   "articles": [
-    {
-      "date": "2026-11-22",
-      "title": "哥伦比亚大学与CertiK提出TensorLean，在PTX层形式化验证GPU内核",
-      "source": "MarkTechPost",
-      "digest": "哥伦比亚大学与CertiK的研究团队提出TensorLean，一套在PTX层面对GPU内核做形式化验证的框架。它以Lean编写张量级数学规约，证明编译后的内核与规约一致，并验证无数据竞争、可终止、输出在容差内正确、不改动其他内存四项性质。团队检查了149个内核实例，覆盖FlashAttention-2、-3、-4的全部内核以及DeepGEMM，其中83个证明正确，其余66个暴露出38个正确性缺陷。该框架从未经修改的源码出发，用1.8千行PTX解析器、约1万行规约对应15万行内核源码，在16核工作站上运行，可检查面向A100、H100、B200编译的PTX。它捕获到一个在17760次测试运行中从未出现的FlashAttention-4数据竞争。38个缺陷已全部上报上游，FlashAttention占23个，另涉及Liger Kernel、TileOPs、TileLang、DeepGEMM、Triton，按类别包括19个内存访问错误、13个数值bug、7个数据竞争等。",
-      "link": "https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/",
-      "source_file": "sources/2026-11-22_A Team of Researchers from Columbia and CertiK Int_MarkTechPost.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-22",
-      "title": "Anthropic 到 2028 年使用的电力 98% 来自化石燃料",
-      "source": "Solidot",
-      "digest": "研究人员调查了AI公司Anthropic的用电需求，发现其未在美国承诺使用任何可再生能源，近期斥资34亿美元采购1.7GW燃气发电设备。美国规划中的数据中心自备发电装机容量高达177GW，足以满足65%家庭用电，且绝大多数依靠化石燃料。与Anthropic签署算力合同的美国数据中心提供商也大多用化石燃料供电。研究估计，到2028年Anthropic约87%的电力来自天然气、11%来自煤炭，其数据中心电力消耗产生的碳排放每年可能达1700万至3800万公吨二氧化碳当量，中值为3200万公吨，到2030年还可能翻倍。文章指出AI数据中心的扩张正越来越多依赖自建化石燃料电站，带来可观的碳排放压力。",
-      "link": "https://www.solidot.org/story?sid=85959",
-      "source_file": "sources/2026-11-22_Anthropic 到 2028 年使用的电力 98% 来自化石燃料_Solidot.md",
-      "category": "国际",
-      "is_model_related": false
-    },
     {
       "date": "2026-11-22",
       "title": "2026年个人AI智能体横评：OpenClaw、Hermes等在记忆、安全与成本上的对比",
@@ -69,16 +49,6 @@
       "digest": "Flask作者、Pi开发者Armin Ronacher与Pi创始人Mario Zechner在访谈中讨论Opus 5.5之后编码智能体的能力变化与工程隐忧。Armin转述同行的经历：系统故障时会议室里没人说得清问题在哪一层，所有人都在向Claude提问，他直言“太可怕了”。Pi每天收到约40到50个新Issue，团队已让智能体判断Bug是否成立、尝试复现、编写测试、生成修复方案并分配优先级，部分任务在测试证明修复有效、工程师确认后即可合并。两人指出，模型在编排子Agent与完成可验证任务上进步明显，但系统设计、架构与API设计并无多大进步；Mario曾让Agent优化启动速度，结果它删掉了整个应用。他们强调“验证被高估”：测试全绿不等于系统可靠，Agent可能测错或漏掉关键点，开发者不理解底层实现就无法判断测试证明了什么。对“黑灯软件工厂”，两人均表示目前看不到有经济价值的成功案例，主张保留人对系统的理解与最终责任。",
       "link": "https://mp.weixin.qq.com/s/jwfYA_kTMPcEozKfj5l4Lg",
       "source_file": "sources/2026-11-22_Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修_InfoQ.md",
-      "category": "国际",
-      "is_model_related": false
-    },
-    {
-      "date": "2026-11-22",
-      "title": "亚马逊云科技推出 TorchNeuron，可以直接在 AWS Trainium 上运行 PyTorch 模型，无需任何修改",
-      "source": "InfoQ",
-      "digest": "在2026年PyTorch北美大会上，亚马逊云科技推出TorchNeuron，这是一个原生PyTorch后端，让开发者几乎无需修改代码就在AWS Trainium芯片上运行现有PyTorch模型。借助torch.accelerator自动设备检测，唯一改动是把.to('cuda')换成.to('neuron')，迁移时无需重写和重新验证模型，并原生支持DDP、FSDP2、DTensor等分布式训练与并行API。开发团队对10万个热门模型和800多种机器学习架构做了验证。该后端还允许用Neuron内核接口（NKI）在模型代码中直接调用对性能关键的自定义内核，替代标准ATen操作以获得更精细的性能控制。TorchNeuron让企业可在训练与推理间共享硬件容量、非高峰时把资源从推理转向训练，语音AI公司Cartesia等已采用。这一发布紧随谷歌为TPU推出原生PyTorch后端TorchTPU之后，反映AI基础设施竞争正从芯片本身转向易用性与规模化成本。",
-      "link": "https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY",
-      "source_file": "sources/2026-11-22_亚马逊云科技推出 TorchNeuron，可以直接在 AWS Trainium 上运行 PyTorc_InfoQ.md",
       "category": "国际",
       "is_model_related": false
     },

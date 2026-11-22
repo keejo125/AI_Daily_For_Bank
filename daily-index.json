@@ -4,13 +4,13 @@
       "date": "2026-11-22",
       "weekday": "周日",
       "stats": {
-        "国际": 8,
+        "国际": 5,
         "国内": 7,
         "同业": 1,
         "其他": 0,
-        "total": 16
+        "total": 13
       },
-      "summary": "哥伦比亚大学与CertiK提出TensorLean，在PTX层形式化验证GPU内核/Anthropic 到 2028 年使用的电力 98% 来自化石燃料/..."
+      "summary": "2026年个人AI智能体横评：OpenClaw、Hermes等在记忆、安全与成本上的对比/GitHub 让 AI 接管工作流，单次默认预算 10 美元：是..."
     },
     {
       "date": "2026-11-21",
