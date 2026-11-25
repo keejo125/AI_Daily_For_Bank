@@ -1,7 +1,287 @@
 {
-  "updated_at": "2026-11-25T08:38:10.546669",
-  "total": 3755,
+  "updated_at": "2026-11-26T05:16:07.881709",
+  "total": 3783,
   "articles": [
+    {
+      "date": "2026-11-25",
+      "title": "Claude Opus 5.6灰测效果来了",
+      "source": "量子位",
+      "digest": "量子位报道，继解决黎曼猜想的重磅消息后，有网友爆料在Claude Code中已被悄悄灰度到Claude Opus 5.6。晒出的实测显示，Opus 5.6能画出细节极为丰富的鹈鹕骑自行车，还能生成极简版《咒术回战》片段，在古建筑整体生成精度和3D建模精细度上明显超过上一代Opus 5.5。陆续被灰度的用户反馈，新版本响应速度明显加快，整体效率约为此前版本的2至3倍，并推测该版本通过Opus 5.5 Extra入口路由，界面显示仍是5.5 Extra但背后模型已更换。也有开发者提醒，流出的演示集中在视觉与前端生成领域，效果与谷歌前两日发布的Neon接近，视觉惊艳不等于能胜任复杂具体的3D工程任务。灰度范围与正式版发布时间尚未官宣。",
+      "link": "https://mp.weixin.qq.com/s/HB0ICfpbmASEbiP0dCPD-w",
+      "source_file": "sources/2026-11-25_Claude Opus 5.6灰测效果来了_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Anthropic还藏着2个最强模型…",
+      "source": "量子位",
+      "digest": "量子位援引行业观察者爆料称Anthropic内部还有两款更强模型，未来半年能力可能迎来一轮大跃升，进步幅度或远超此前GPT-5.3到GPT-6、Opus 4.5到Fable 5.2的飞跃。线索来自独立AI评估机构METR今年8至10月进入Anthropic内部开展的调查，METR获得部分内部模型评测、训练与研发效率数据并访谈约15名员工，披露三款尚未完全公开身份的内部模型：Model 2于2026年7月完成训练，能力超过当时旗舰Mythos 5，被大量用于内部编程、Agent任务和数据生成，暂无对外发布计划；Model 3于8至9月训练，测试显示其AI研发能力强于最终发布版本，Anthropic在系统卡中承认主动限制了Fable 5.2与Mythos 5.2在GPU内核优化、改进大模型架构等任务上的能力；Model 4于9至10月训练，内部综合指数AECI达178.6分，高于Mythos 5.2的177.12分。",
+      "link": "https://www.qbitai.com/2026/11/512538.html",
+      "source_file": "sources/2026-11-25_Anthropic还藏着2个最强模型…_量子位.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Claude开始吞掉桌面应用了！一句话造Mac和Windows软件，个性化软件时代来了",
+      "source": "三次方AIRX",
+      "digest": "Anthropic为Claude桌面版推送新功能Install as app，用户在对话中生成的Artifact交互式小工具与迷你应用，可一键安装为Mac和Windows上的独立桌面软件，拥有自己的图标和窗口，从Dock栏或开始菜单启动，无需打包、签名、配置API Key或写代码。流程分三步：用自然语言描述需求，Claude生成Artifact后可在聊天窗口试用并提修改意见，满意后从菜单一键安装。安装后的App能调用操作系统级能力，如挂菜单栏或系统托盘、发系统通知、打通已连接的日历、邮件、Notion、Slack等Connectors，且修改原Artifact后已安装App会自动同步。该功能已在Mac和Windows全量beta，所有付费档位可用，企业版需管理员开启，调用Claude的用量计入套餐额度。Anthropic内部员工已用其做出分层图像编辑器、文件管理器等工具。",
+      "link": "https://mp.weixin.qq.com/s/jZ43m5Es2GzTH8-rxiSeVg",
+      "source_file": "sources/2026-11-25_Claude开始吞掉桌面应用了！一句话造Mac和Windows软件，个性化软件时代来了_三次方AIRX.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Meta解析Your Algorithm：如何用自然语言偏好驱动推荐排序",
+      "source": "MarkTechPost",
+      "digest": "Meta发布工程文章，拆解Facebook的Your Algorithm功能如何实现将用户的自然语言偏好接入生产级推荐排序系统。该功能于2026年10月13日上线，允许用户用大白话告诉Facebook自己想在Feed和Reels中看到什么。文章指出，这是少见地把显式偏好接入以隐式信号为主的排序栈的公开案例。Your Algorithm由三部分组成：一句Lately Summary概括近期观看内容、预填的Interested In兴趣列表，以及用户可编辑的偏好页面。显式兴趣会被送入四路召回源，并同时作用于Feed和Reels。系统运行于Meta服务端排序栈，配合Facebook应用端的缓存失效机制。对开发者而言，文章提供了一份LLM驱动排序的清晰蓝图，展示了如何让大模型在推荐系统中承担可解释、可控的偏好理解角色。",
+      "link": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/",
+      "source_file": "sources/2026-11-25_Meet Facebook’s Your Algorithm_ How Meta Turns Pla_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Netflix 基于运维数据打造知识图谱，实现 AI 可观测性",
+      "source": "InfoQ",
+      "digest": "Netflix正在开发基于本体论的知识图谱平台，用于加快生产环境故障排查，并让AI智能体对运行环境形成统一理解。公司称每天处理超20亿请求、每秒超3800万实时日志事件，但排查一次典型应用回归问题仍需约4小时，大部分时间花在不同系统间手动拼凑信息。方案用可观测性本体定义运营实体、属性及关系，采用RDF、OWL、SHACL和SPARQL等成熟标准，生成的知识图谱存于基于Rust redb引擎构建的分布式RDF数据库QuipuDB，由Enricher组件管道从运营系统拉取数据并转为三元组。部分数据增强是确定性的，部分环节使用大模型与概率方法解读结构化程度较低的信息，并用实体类型、URI命名等验证规则约束输出，为自动化根因分析和未来自愈基础设施奠定基础。",
+      "link": "https://www.infoq.cn/article/lVQK4fTxIJYZL2sZee2O",
+      "source_file": "sources/2026-11-25_Netflix 基于运维数据打造知识图谱，实现 AI 可观测性_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "OpenAI要给GPT做个“翻译官”，让智能体更懂业务",
+      "source": "智东西",
+      "digest": "据The Information援引知情人士爆料，OpenAI正在开发代号Athena的数据管理平台，旨在帮助ChatGPT Work中的数据分析智能体Data Agent理解企业业务，提高回答问题和执行任务的准确性。Athena功能类似业内所说的语义层，可统一收入、客户等业务指标定义，让Agent分清总收入与净收入、活跃客户与付费客户的区别。咨询公司Andersen Consulting董事总经理Jason Strimpel认为，Agent处理复杂业务数据常出错，重要原因是需自行判断数据含义及关系，语义层能充当业务术语与底层数据的翻译官，让不同部门、报表和看板采用相同指标定义。OpenAI还在为Athena开发一类Agent，负责收集、记录并持续更新其他Agent执行任务所需指导信息。项目仍处早期开发，开放时间与定价未公布。",
+      "link": "https://mp.weixin.qq.com/s/oCKoF3c0ip3OCETuKql3Pg",
+      "source_file": "sources/2026-11-25_OpenAI要给GPT做个“翻译官”，让智能体更懂业务_智东西.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修",
+      "source": "InfoQ",
+      "digest": "Flask作者、Pi开发者Armin Ronacher在访谈中讲述同行的经历：系统崩溃、工程师紧急开会，却没人说得清故障在哪一层、哪段代码，所有人都在向Claude提问，他感叹真的太可怕了。颇具反差的是，Ronacher本人正把越来越多开发工作交给AI——Pi每天收到约40至50个新Issue，团队已让Agent接手判断Bug是否存在、尝试复现、编写测试、生成修复方案乃至分配优先级，部分任务只要测试证明修复有效、工程师确认后即可合并。Pi创始人Mario Zechner的质疑更直接：行业似乎在追求开发者不必理解自己构建的软件，如果你什么都不需要理解了，你还有什么用。他并不排斥AI，自己也开发Coding Agent，却警告工程师正在失去对系统的理解。",
+      "link": "https://www.infoq.cn/article/ExbJjrItIlc9KLfQ2UeT",
+      "source_file": "sources/2026-11-25_Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "“Windows该淘汰了！”Rails之父DHH开炮：微软上万工程师干不过一个人带着AI干活",
+      "source": "InfoQ",
+      "digest": "Ruby on Rails创造者、Basecamp联合创始人DHH在播客中表示macOS和Windows已不适合Agent时代，并推动一个名为Omarchy的Linux发行版，称其为首个为Agent原生打造的操作系统。他希望三年内让Linux用户规模超过macOS。DHH认为，Linux过去最令人头疼的终端、配置文件和复杂错误信息，恰恰是Agent最擅长处理的东西，而苹果却在增加macOS与Agent协作的难度，甚至警告用户不要让Claude访问文件。在他看来，AI正让软件开发成本迅速下降，代码不再是长期护城河，Word、Photoshop等传统应用可能逐渐失去存在必要，过去只有微软、Adobe等巨头才能建立的产品生态，如今小团队也有机会重造。这场变化可能重新打开操作系统竞争的大门。",
+      "link": "https://www.infoq.cn/article/ApVrOK0hv1rmmoz2mfGM",
+      "source_file": "sources/2026-11-25_“Windows该淘汰了！”Rails之父DHH开炮：微软上万工程师干不过一个人带着AI干活_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "“我比黄仁勋更早看到英伟达的未来”！AI 教父回击黄仁勋，直言大规模失业是 AI 巨头赚钱的副作用",
+      "source": "InfoQ",
+      "digest": "诺贝尔物理学奖得主、AI教父Geoffrey Hinton在公开对谈中正面回击黄仁勋。黄仁勋此前批评Hinton宣扬AI导致人类灭绝的风险不负责任，Hinton则回应若确有风险却选择不说才是不负责任，并称早在2009年就告诉上千名机器学习研究者想做神经网络必须买英伟达芯片，而黄仁勋到2012年才作出该预测。他坦言当年关于放射科医生将被AI取代的预测既高估了计算机视觉速度也低估了职业复杂性。Hinton提出，模型发展速度已超过人类理解速度，大规模失业是AI公司追逐利润的副作用；他直言训练Agent各自追求个体目标的强化学习方式太疯狂了。被问及若给超级智能一句最高优先级道德指令会说什么，他回答Be nice to people，并认为让AI更聪明与更善良几乎是正交的两个方向。",
+      "link": "https://www.infoq.cn/article/6i2DoIJiaTcKyR0UyurQ",
+      "source_file": "sources/2026-11-25_“我比黄仁勋更早看到英伟达的未来”！AI 教父回击黄仁勋，直言大规模失业是 AI 巨头赚钱的副作用_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "日本政府开发智能体打击盗版动漫",
+      "source": "Solidot",
+      "digest": "Solidot报道，日本文化厅正在测试一款AI智能体，用于自动识别和标记可能包含非法或盗版内容的动漫网站。2025财年针对日本国内的一项调查显示，AI标记的1168条可疑X推文中有84%为非法内容；AI检测的1564个动画网站中89%含盗版动画，1935个漫画网站中盗版漫画比例高达94%。2026财年日本政府将监测范围扩大至海外，并计划最早于2027年3月汇总公布最新调查结果。该应用展示了AI智能体在版权监测与内容治理这类大规模、重复性识别任务中的落地，通过自动化筛查显著提升识别效率与覆盖面，为监管部门处理海量网络内容提供辅助手段。",
+      "link": "https://www.solidot.org/story?sid=85988",
+      "source_file": "sources/2026-11-25_日本政府开发智能体打击盗版动漫_Solidot.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "程序员别急着复制“全自动开发”！Gas Town作者：软件工厂先惊艳、后变“垃圾山”，最终还是要推倒重来",
+      "source": "51CTO技术栈",
+      "digest": "51CTO技术栈整理Beads与Gas Town创建者Steve Yegge的演讲。拥有约40年从业经历、曾在Amazon、Google和Sourcegraph工作并参与Cody开发的Yegge，过去一年多尝试让Agent管理Agent，把软件工厂用于长期维护的游戏。他反复遇到同一困境：模型先做出很棒的东西，后来整个系统变成垃圾山，已不得不推倒重来多次。问题包括玩家嫌更新太快、部分Agent整夜没推进任务、一句临时提醒被记成长期规则、限制越加越多导致大量待办却无可做之事。Yegge坦言两次编排系统尝试都失败，造出了巨大单体系统。他强调软件工厂不是多开几个Agent窗口，工厂能启动不等于能持续有序运转，并分享每天处理这些麻烦的做法，提醒行业别急着复制全自动开发。",
+      "link": "https://mp.weixin.qq.com/s/lPIP-OOEoDTSb3i5m5iRdg",
+      "source_file": "sources/2026-11-25_程序员别急着复制“全自动开发”！Gas Town作者：软件工厂先惊艳、后变“垃圾山”，最终还是要推倒重来_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "被中国网友扒出“偷数据”，7.7 万星开源AI编程神器创始人当场破防：今晚就闭源！",
+      "source": "InfoQ",
+      "digest": "InfoQ报道，GitHub上拥有7.75万星标的AI编程控制台T3 Code遭遇严重口碑反噬：官网宣称零遥测却默认回传使用数据，被指出跨目录读取本地Claude与Codex认证文件，还存在假删除留存记录、后台全机扫描进程明文参数等高危越界行为。硬核开发者陈大黄通过比对源码与公开Issue提出多项质疑，发现软件在桌面端和网页端静默接入PostHog与Sentry分析服务，连命令行启动本地服务也会后台上报事件，直到2026年11月更新才补上关闭遥测的开关但默认仍开启。更受关注的是Identify.ts文件会读取用户本机Claude与Codex认证文件提取账号信息。创始人Theo在X上一度情绪失控称今晚就闭源，随后又否认闭源计划。事件把AI编程工具在隐私采集与权限边界上的灰色地带摆上台面。",
+      "link": "https://mp.weixin.qq.com/s/c1syoY8dNYMFjb-Qtg9XFg",
+      "source_file": "sources/2026-11-25_被中国网友扒出“偷数据”，7.7 万星开源AI编程神器创始人当场破防：今晚就闭源！_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障",
+      "source": "InfoQ",
+      "digest": "InfoQ报道，谷歌开源环境质量智能体AQuA（Ambient Quality Agent），用于分析生产环境AI智能体会话、验证反复出现的故障模式，并对已部署源码做根因排查。该工具针对传统基础设施监控易遗漏的静默质量回归，如智能体忽略用户偏好、返回成功响应却跳过必需工具调用。AQuA在谷歌云中与业务智能体并行运行、不在请求链路里，从Cloud Trace、Cloud Logging或BigQuery读取遥测数据，每次最多采样1000条近期会话，经采样、审查、聚类发现、候选核验和问题跟踪五阶段处理。开发者可用goal.md配置领域质量标准，根因分析时会把异常会话与部署时捕获的不可变源码快照对比，诊断智能体可引用文件和代码行并给出修改建议，但不会自动修代码或建PR。在32条会话的受控实验中，修正提示词后绕过座位校验的会话从15降至2。",
+      "link": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS",
+      "source_file": "sources/2026-11-25_谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了",
+      "source": "量子位",
+      "digest": "量子位披露国内初创团队脸谱心智曾短暂公开后又收回一份《General Looped Model》技术报告，把循环架构统一为完整通用框架，首次系统呈现跨赛道全量实测结果。该团队早在2026年6月提交全球首篇面向世界模型的循环架构论文LoopWM，当日登顶Hugging Face论文日榜，比OpenAI Astra架构公开报道早约三个月，比智谱GLM-5.4发布早五个多月。其核心是把参数规模与计算深度解耦：不靠堆叠不同网络层，而是复用同一组权重对隐状态多轮迭代，问题简单则循环轮次少、输出快，任务复杂则迭代更深；权重体积不变、显存可控，增长的只有可动态调度的计算量。报告还给出把存量非Loop骨干改造为共享计算结构的工程路径，相当于公开一套可复用的显存优化方案，挑战了靠堆参数抬高智能上限的传统路线。",
+      "link": "https://www.qbitai.com/2026/11/512565.html",
+      "source_file": "sources/2026-11-25_9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了_量子位_be6b74.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 Scaling",
+      "source": "InfoQ",
+      "digest": "智谱于11月23日发布新一代旗舰模型GLM-5.4，把产品定位从传统Coding扩展到泛Coding，首次采用Loop Transformer架构，通过让共享权重的网络层循环执行，在不增加参数量的情况下增加有效计算深度。模型即日起向GLM Coding Plan全量用户开放，同步上线ZCode、Trae、WorkBuddy、Qoder、CatPaw和OpenCode等编码平台，V2、V3及团队版额度提升至1.5倍，API将在安全评估后开放，权重计划以负责任方式开源。智谱称模型在编程、长程任务和跨领域泛化上显著提升，泛Coding的判断是代码已成为模型描述、构建和操作数字内容的通用接口，视频、游戏、3D场景都可由代码生成。InfoQ用其在ZCode做Code2Video与3D专项测试，展现出跨领域整合能力，但开发耗时偏长、异常处理仍待加强。",
+      "link": "https://www.infoq.cn/article/gXU31yBa9HMEe19PxHVB",
+      "source_file": "sources/2026-11-25_GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 _InfoQ.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Hy4 flash 本地部署：让大模型跑在个人设备上",
+      "source": "腾讯混元",
+      "digest": "腾讯混元通过大模型压缩加速工具箱AngelSlim开源Hy4 flash的GGUF量化权重及配套推理代码，使这款总参数224B的模型可部署到个人设备，最小版本权重约为原始的30%。借助优化后的Strata offload框架，模型也能在64GB的Mac mini上运行，在48GB显存设备上生成速度最高达每秒89个token。团队已在RTX Spark、DGX Spark、M5 Max Mac、64GB Mac mini及4090D等设备上完成部署，并开源Q4_K_M、Q3_K、IQ2-AH及面向Spark的4bit等多个量化版本，IQ2-AH权重约125.73GiB，比原始的约410GiB减少约69%。测评显示，Q3_K在演示文稿生成、软件工程和自动化任务四项评测中与原模型差距均不超过0.4分，SPARK-4Bit在PPTGenBench上与原模型仅差0.1分。",
+      "link": "https://mp.weixin.qq.com/s/o0xxShVQX6g2UllrrEv1WQ",
+      "source_file": "sources/2026-11-25_Hy4 flash 本地部署：让大模型跑在个人设备上_腾讯混元.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI",
+      "source": "量子位",
+      "digest": "苹果前空间智能首席科学家、计算机视觉学者权龙离开苹果创办格秩科技（Envision AI），专注下一代空间与物理AI基础模型。权龙1988年在ICCV发表华人学者首篇论文，1995年提出奠定三视图重建基础的六点算法，2015年创办三维重建云平台Altizure并于2020年被苹果收购。面对GPT-6-Astra展现的空间理解与三维重建能力，他认为单纯的3D建模生成可能被大语言模型吞掉，于是选择构建原生空间与物理AI基座模型，补足大模型在空间、物理信息表达与泛化上的缺陷。其自研模型在城市级复杂场景三维建模上，把GPT-6-Astra数小时、单场景100至600美元的成本压到10美元以内，效率提升约一个数量级。公司已建立3000万空间物理数据资产、4000万以上空间物理视频数据及500万复杂场景资源。",
+      "link": "https://www.qbitai.com/2026/11/512498.html",
+      "source_file": "sources/2026-11-25_华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "神秘大模型火速杀进OpenCode前三！做MV、开发游戏、3D建模全拿捏，免费可蹬",
+      "source": "智东西",
+      "digest": "智东西报道，一款代号HungerG的匿名模型登陆AI编程平台OpenCode和Qoder后迅速引发关注，上线一天即冲上OpenCode模型调用量日榜第三，单日Token使用量达1.2万亿，仅次于DeepSeek V4.1 Flash和腾讯混元Hy4 Flash。据OpenCode披露，该模型拥有100万Token上下文并支持多模态输入，且在Qoder与OpenCode Go订阅中提供限时免费体验。智东西实测发现，HungerG能用一句话在12分钟生成3D体素风格罗马城、15分钟产出可控核聚变装置3D科普动画，还能复刻经典游戏、直接操控Blender拍摄3D动画，输出速度与质量达到较好平衡，部分开发者称其速度超过DeepSeek v4.1 flash。但其参数、技术架构与背后厂商均未公开，身份成谜。",
+      "link": "https://mp.weixin.qq.com/s/cJNzVZg6-bs1ax-H2NC4Pg",
+      "source_file": "sources/2026-11-25_神秘大模型火速杀进OpenCode前三！做MV、开发游戏、3D建模全拿捏，免费可蹬_智东西.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-25",
+      "title": "2026年IDEA 大会：AI时代编程语言将深刻影响软件能力交付上限",
+      "source": "InfoQ",
+      "digest": "在2026年IDEA大会上，IDEA研究院创院理事长沈向洋与院长张宏波围绕AI时代的编程语言展开讨论，并正式发布自研语言MoonBit 1.0。张宏波指出，过去一年软件工程底层正在重写，版本管理、代码审核等工具都在被重做，而编程语言是人向机器表达逻辑的媒介。AI时代编程主体正从人转向Agent：对人而言Vibe Coding让语言显得不再重要，但对Agent而言，语言选择直接决定软件的安全性、性能与可维护性，也就决定交付能力上限。以Python为代表的动态语言在性能验证上易触天花板，Rust因可靠性被微软列为tier1语言。IDEA研究院四年前立项MoonBit，如今每周全球下载近百万次，近四成代码由海外开发者贡献。演讲提出，为Agent而生的新语言打开了参与定义AI时代基础软件体系的窗口。",
+      "link": "https://www.infoq.cn/article/ad1ILH2yFyN1HighXoFF",
+      "source_file": "sources/2026-11-25_2026年IDEA 大会：AI时代编程语言将深刻影响软件能力交付上限_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Agent上下文管理，90%的人第一步就做反了",
+      "source": "腾讯云开发者",
+      "digest": "腾讯云开发者文章指出，Agent上下文压缩的常见误区是让模型写摘要，但摘要有损、不可逆、昂贵且会让Prompt Cache失效，成熟框架遵循能保留原文就保留、能剪除就不改写、能折叠就不摘要的原则，把摘要作为兜底手段。文章从上下文构成讲起，给出从剪除无用片段到改写、折叠的从无损到有损五层工程化治理手段，前四种不需额外调用模型，只决定发给模型哪些内容、发多少，第五种才让模型写摘要。评价维度中易被忽视的是Prompt Cache：主流模型服务支持前缀缓存，命中价格约为正常输入的十分之一，改写历史中某条消息会使其后的缓存全部失效，因此改写类手段应攒到接近阈值时批量触发，而非每轮都做。文章以规划北京三日游为例，展示处理前后的token占用差异。",
+      "link": "https://mp.weixin.qq.com/s/OFvkSyjORzjOOEDpqB5Mhw",
+      "source_file": "sources/2026-11-25_Agent上下文管理，90%的人第一步就做反了_腾讯云开发者.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "字节跳动与港大开源Laminar：面向大模型与长程智能体的异步强化学习后训练框架",
+      "source": "MarkTechPost",
+      "digest": "香港大学与字节跳动Seed团队开源异步强化学习后训练框架Laminar，面向大模型与长程智能体，核心思路是不再强制每条轨迹和每张GPU等待最慢者，这对训练rollout长且分布倾斜的编码智能体尤为关键。框架在Qwen3-Coder-30B-A3B-Instruct及Qwen2.5的7B、32B、72B上验证，运行于Ray与CUDA之上的多节点NVIDIA GPU集群，已在64张H800及最多1024张H800规模测试，推理用vLLM，训练用Megatron-LM或FSDP2。论文显示端到端吞吐最高提升5.48倍，SWE-bench Verified得分从基座模型的46.6%提升至52.2%。文章同时指出现存短板：项目处于早期、推理后端仅支持vLLM、逐步异步检查点仍在开发中，且对比混合了H800与H100。整体意义在于用更少样本和GPU小时换来更高的SWE-bench成绩。",
+      "link": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/",
+      "source_file": "sources/2026-11-25_ByteDance Researchers Open-Sources Laminar, an Asy_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "OceanBase给Agent造了套数据平台，核心数据库同步开源",
+      "source": "量子位",
+      "digest": "蚂蚁OceanBase在11月24日北京AI数据大会上发布AI战略产品湖库一体AI数据平台OceanLake，并宣布向全球开源核心引擎AI数据库OceanSeek。CEO杨冰提出，当模型越来越先进、Agent Harness越来越成熟，挑战终将归于数据，AI时代数据基础设施需坚持湖库一体、多模融合、Agent友好、开源开放四大原则。InfoQ采访OceanBase AI数据平台研发总经理杨志丰时指出，Agent持续优化离不开评测，但任务变复杂后评测本身成了工程挑战，一条高质量评测用例可能要几百到上千元，且若隔离不足，Agent在评测中读写数据会污染环境。IDC 2026年调查显示57%的亚太企业把数据准备度列为AI落地首要障碍，Fivetran报告则发现虽41%组织已在生产使用Agentic AI，仅15%在数据基础层面做好充分准备。",
+      "link": "https://mp.weixin.qq.com/s/R_U_gX8C3m0UICXvJWTAuA",
+      "source_file": "sources/2026-11-25_OceanBase给Agent造了套数据平台，核心数据库同步开源_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员",
+      "source": "InfoQ",
+      "digest": "InfoQ文章介绍如何在Octop中创建托管专家并对接CodeBuddy、OpenCode、Claude Code、Codex等主流编程智能体，打造7×24小时在线的AI程序员。Octop是腾讯云开源的自托管AI助手，通过多Agent架构构建智能环境，单进程即可运行Web控制台、CLI与IM集成，支持飞书、钉钉、QQ、微信、企业微信等通道及HTTP/SSE/WebSocket API，内置专家库、OAuth加MCP连接器与ACP双向协作。专家是Octop的对话入口，可配置技能、子智能体、定时任务、通道与模型；原生专家每轮对话由Octop Harness驱动，托管专家则把Harness交给后端绑定的编程智能体，在工作目录完成代码阅读、文件修改、测试运行与提交。文章详细对比了两种专家的差异与适用场景。",
+      "link": "https://www.infoq.cn/article/cgiP7vstrXKH94L1zj76",
+      "source_file": "sources/2026-11-25_Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "丢个故事就行！直出15分钟AI短片，家里二舅也能上手",
+      "source": "量子位",
+      "digest": "量子位报道秘塔AI推出新产品全民开机，主打一句话直出15分钟AI短片，试图让不懂提示词与电影术语的普通用户也能完成视频创作。作者以改编《森林冰火人》为森林电木娃为例，仅用语音输入剧本、复制粘贴后约十分钟即产出成片，无需设计光影、打磨资产。文章指出传统AI视频工作流要求用户逐镜头写几十条复杂运镜提示、反复抽卡生成15至30秒碎片素材、再导入剪辑软件对齐音画，一套下来往往一周才能完成，其痛点不在模型能力而在产品路径：为优先满足专业生产者，许多本可自动化的环节被强制暴露给用户。全民开机把编剧、分镜、美术、剪辑等角色收进一个全流程虚拟剧组，以产品化封装降低生成式视频的创作门槛。",
+      "link": "https://www.qbitai.com/2026/11/512727.html",
+      "source_file": "sources/2026-11-25_丢个故事就行！直出15分钟AI短片，家里二舅也能上手_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "把 AI 编程智能体装进同一个工作台：开源多 Agent 调度平台 Milletcode 实践",
+      "source": "InfoQ",
+      "digest": "InfoQ文章介绍开源多Agent调度平台Milletcode（当前v0.11.0），这是一个自托管Web工作台，把Claude Code、SmartCode等AI编程智能体以及本地与远程项目统一接入浏览器，完成项目发现、任务下达、实时输出、人工审批、文件管理和结果验收。作者指出，当AI编程工具从代码补全助手进化为能阅读项目、修改文件、执行命令和运行测试的智能体，研发管理重点就从会不会写代码转向如何分派任务、观察过程、控制风险并验收结果。团队高频使用这些工具后，会出现智能体散落不同终端、本地与远程项目需分别管理、任务状态难判断、代码修改与终端调试缺乏统一入口等问题，因此需要一个专门管理Agent的工作台。平台以浏览器为统一入口，把多智能体调度与研发过程可视化、可审批化。",
+      "link": "https://mp.weixin.qq.com/s/DZ0lDDWWNRqMnCz30YFN8w",
+      "source_file": "sources/2026-11-25_把 AI 编程智能体装进同一个工作台：开源多 Agent 调度平台 Milletcode 实践_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "深度解析 DeepSeek Super-agent：多端协同的自主 Agent 设计思路",
+      "source": "千问AI平台",
+      "digest": "千问AI平台文章深度解析DeepSeek Harness团队十月底开源的原型项目DSH Super-agent。作者指出，若说DeepSeek Harness为Agent开发范式打下地基，Super-agent则是在其上搭建面向自主Agent的新设计范式，官方已放出完整代码并撰文阐述设计哲学，但坦言项目仍处原型阶段、在Harness默认配置中未开启，更多是前沿探索与能力验证。文章梳理Agent从Coding Agent、CoWork办公Agent到Personal Agent的演进，指出当下Agent往往既要写代码又要满足办公需求，单一任务范式已不够用。作者基于源码与文档拆解Super-agent架构，认为其对Agent开发者极具参考价值，代表了下一代自主Agent该长什么样的系统性思考，值得深入学习其多端协同与任务调度设计。",
+      "link": "https://mp.weixin.qq.com/s/yPHBK48nEVRSAjkLKTJwwQ",
+      "source_file": "sources/2026-11-25_深度解析 DeepSeek Super-agent：多端协同的自主 Agent 设计思路_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "用 Super-agent 的理念，拆解 Octop 团队模式",
+      "source": "InfoQ",
+      "digest": "Octop负责人Jubaoliang撰文，以DeepSeek Super-Agent理念为参照解析Octop团队模式。DeepSeek近日发文阐述Super-Agent设计：打破AI单次仅处理单一任务的旧范式，采用调度员Router加执行单元Worker的双层架构实现任务并行与后台运行，耗时任务自动转后台、前台持续响应，每条消息仅保留核心上下文、冗长材料归档按需检索。Octop是腾讯云开源的多用户AI助手，早在1.0.2版本就上线团队模式，由一名主持人Agent统筹分解任务、多名专家Agent并行推进子任务。文章指出两者在不谋而合中形成跨越产品与时间的对照印证，并以日常收到季度报告通知的场景为例，解析两条路径如何在工程层面分别落地多任务并行这一共同目标。",
+      "link": "https://www.infoq.cn/article/xJVcbBYI4m86a9TIA6HH",
+      "source_file": "sources/2026-11-25_用 Super-agent 的理念，拆解 Octop 团队模式_InfoQ.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-25",
+      "title": "荣耀眼里的 AI 手机：前沿模型可以进来，但入口不能拿走",
+      "source": "极客公园",
+      "digest": "极客公园报道，荣耀在武汉发布荣耀700系列，真正受关注的是AI助手YOYO正式更名为AI手机助手YOYO豆包，成为继努比亚之后第二款搭载豆包手机助手的产品。新机AI能力围绕AI灵动背屏展开，首发AI定制随心贴，可对助手说一句话生成图片贴到背屏，并支持语音通话、英语陪练、航班打车快递外卖进度查看、后置主摄自拍取景及心率血氧测量。荣耀CEO李健称用户不在意后台接的是哪家模型，核心是体验；产品线总裁方飞强调AI只是技术，把背屏做成一个非常浅的入口直指普通用户找不到、不会用AI的痛点。文章指出公开材料未提及YOYO豆包可替用户在第三方App操作等GUI能力，目前仍是围绕背屏和模型对话的手机功能。",
+      "link": "http://www.geekpark.net/news/374462",
+      "source_file": "sources/2026-11-25_荣耀眼里的 AI 手机：前沿模型可以进来，但入口不能拿走_极客公园.md",
+      "category": "国内",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-24",
       "title": "Anthropic还藏着2个最强模型…",

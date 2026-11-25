@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>智能研发早报 2026-11-25</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-source-tag: #f1f5f9;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --text-banner: #1f2937;
+  --text-banner-sub: #3b82f6;
+  --text-source-tag: #4b5563;
+  --border-card: #e2e8f0;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.1);
+  --cat-intl: #3b82f6;
+  --cat-intl-bg: #eff6ff;
+  --cat-domestic: #10b981;
+  --cat-domestic-bg: #f0fdf4;
+  --cat-peer: #f59e0b;
+  --cat-peer-bg: #fffbeb;
+  --cat-other: #8b5cf6;
+  --cat-other-bg: #faf5ff;
+  --model-tag-bg: #f3e8ff;
+  --model-tag-text: #9333ea;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1219;
+    --bg-card: #1a1f2e;
+    --bg-banner: linear-gradient(135deg, #070d1a 0%, #0e1e3d 50%, #091428 100%);
+    --bg-source-tag: #252d3d;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+    --text-banner: #ffffff;
+    --text-banner-sub: #7da8d4;
+    --text-source-tag: #a0aec0;
+    --border-card: #2d3748;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.4);
+    --cat-intl-bg: rgba(59,130,246,0.1);
+    --cat-domestic-bg: rgba(16,185,129,0.1);
+    --cat-peer-bg: rgba(245,158,11,0.1);
+    --cat-other-bg: rgba(139,92,246,0.1);
+    --model-tag-bg: rgba(147,51,234,0.15);
+    --model-tag-text: #c084fc;
+  }
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (min-width: 768px) { .container { padding: 24px; } }
+@media (min-width: 1024px) { .container { padding: 32px 40px; } }
+
+/* ===== Banner ===== */
+.banner {
+  background: var(--bg-banner);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-banner);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.banner-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-banner-sub);
+  position: relative;
+}
+.banner-stats {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.12); }
+.stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.12); }
+.stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.12); }
+.stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.12); }
+
+@media (prefers-color-scheme: dark) {
+  .stat-chip { color: #e2e8f0; }
+  .stat-chip[data-cat="国际"] { background: rgba(59,130,246,0.25); }
+  .stat-chip[data-cat="国内"] { background: rgba(16,185,129,0.25); }
+  .stat-chip[data-cat="同业"] { background: rgba(245,158,11,0.25); }
+  .stat-chip[data-cat="其他"] { background: rgba(139,92,246,0.25); }
+}
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stat-dot[data-cat="国际"] { background: #3b82f6; }
+.stat-dot[data-cat="国内"] { background: #22c55e; }
+.stat-dot[data-cat="同业"] { background: #f59e0b; }
+.stat-dot[data-cat="其他"] { background: #a855f7; }
+
+@media (min-width: 768px) {
+  .banner { padding: 36px 32px; }
+  .banner-title { font-size: 26px; }
+  .banner-meta { font-size: 15px; }
+}
+
+/* ===== Category Section ===== */
+.cat-section {
+  margin-bottom: 24px;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+.cat-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cat-icon.intl { background: var(--cat-intl-bg); }
+.cat-icon.domestic { background: var(--cat-domestic-bg); }
+.cat-icon.peer { background: var(--cat-peer-bg); }
+.cat-icon.other { background: var(--cat-other-bg); }
+.cat-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cat-title.intl { color: var(--cat-intl); }
+.cat-title.domestic { color: var(--cat-domestic); }
+.cat-title.peer { color: var(--cat-peer); }
+.cat-title.other { color: var(--cat-other); }
+.cat-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+/* ===== Card List ===== */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== Article Card ===== */
+.article-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border: 1px solid var(--border-card);
+  -webkit-tap-highlight-color: transparent;
+}
+.article-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.card-main {
+  display: flex;
+  padding: 16px 18px;
+  gap: 14px;
+  align-items: flex-start;
+}
+.card-stripe {
+  width: 4px;
+  min-height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.card-stripe.intl { background: var(--cat-intl); }
+.card-stripe.domestic { background: var(--cat-domestic); }
+.card-stripe.peer { background: var(--cat-peer); }
+.card-stripe.other { background: var(--cat-other); }
+
+.card-body { flex: 1; min-width: 0; }
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.model-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--model-tag-bg);
+  color: var(--model-tag-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-digest {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.card-digest p {
+  margin: 0 0 8px 0;
+}
+.card-digest p:last-child {
+  margin-bottom: 0;
+}
+
+.card-date {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-time {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+}
+.source-tag:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* ===== Source QR Popover ===== */
+.qr-popover {
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+}
+.qr-popover.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.qr-popover svg {
+  display: block;
+  border-radius: 2px;
+}
+.qr-popover-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+.qr-popover-arrow.up {
+  top: -6px;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+}
+.qr-popover-arrow.down {
+  bottom: -6px;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg);
+}
+.original-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: transparent;
+  color: var(--cat-intl, #3b82f6);
+  border: 1px solid currentColor;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition);
+  min-height: 32px;
+}
+.original-link:hover {
+  background: var(--cat-intl, #3b82f6);
+  color: #fff;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-card);
+}
+.footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  min-height: 44px;
+  transition: all var(--transition);
+}
+.footer-back:hover {
+  color: var(--text-primary);
+  border-color: var(--cat-intl);
+  text-decoration: none;
+}
+.footer-info {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ===== Fallback (no-JS) ===== */
+#fallback-content .section {
+  margin-bottom: 24px;
+}
+#fallback-content .section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-card);
+}
+#fallback-content .section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+#fallback-content #section-intl .section-title { color: var(--cat-intl); }
+#fallback-content #section-domestic .section-title { color: var(--cat-domestic); }
+#fallback-content #section-peer .section-title { color: var(--cat-peer); }
+#fallback-content #section-other .section-title { color: var(--cat-other); }
+#fallback-content .card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+}
+#fallback-content .card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+#fallback-content .source-tag {
+  display: inline-block;
+  background: var(--bg-source-tag);
+  color: var(--text-source-tag);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+#fallback-content .card-digest {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+#fallback-content .card-date {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+#fallback-content .card-time {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+#fallback-content .empty {
+  color: var(--text-tertiary);
+  font-style: italic;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-card);
+}
+
+/* source-tag handles click interaction */
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.article-card { animation: fadeIn 0.3s ease forwards; }
+.article-card:nth-child(2) { animation-delay: 0.03s; }
+.article-card:nth-child(3) { animation-delay: 0.06s; }
+.article-card:nth-child(4) { animation-delay: 0.09s; }
+.article-card:nth-child(5) { animation-delay: 0.12s; }
+.article-card:nth-child(n+6) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== Banner ===== -->
+  <div class="banner">
+    <div class="banner-title">智能研发早报</div>
+    <div class="banner-meta">2026-11-25</div>
+    <div class="banner-stats" id="banner-stats">国际 13 篇 · 国内 15 篇</div>
+  </div>
+
+  <!-- ===== No-JS Fallback ===== -->
+  <div id="fallback-content">
+    <div id="section-intl" class="section"><div class="section-header"><div class="section-title">🌍 国际视野</div></div><div class="card"><div class="card-title">Claude Opus 5.6灰测效果来了</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/HB0ICfpbmASEbiP0dCPD-w" target="_blank">量子位</a></span><div class="card-digest">量子位报道，继解决黎曼猜想的重磅消息后，有网友爆料在Claude Code中已被悄悄灰度到Claude Opus 5.6。晒出的实测显示，Opus 5.6能画出细节极为丰富的鹈鹕骑自行车，还能生成极简版《咒术回战》片段，在古建筑整体生成精度和3D建模精细度上明显超过上一代Opus 5.5。陆续被灰度的用户反馈，新版本响应速度明显加快，整体效率约为此前版本的2至3倍，并推测该版本通过Opus 5.5 Extra入口路由，界面显示仍是5.5 Extra但背后模型已更换。也有开发者提醒，流出的演示集中在视觉与前端生成领域，效果与谷歌前两日发布的Neon接近，视觉惊艳不等于能胜任复杂具体的3D工程任务。灰度范围与正式版发布时间尚未官宣。</div></div>
+<div class="card"><div class="card-title">Anthropic还藏着2个最强模型…</div><span class="source-tag"><a href="https://www.qbitai.com/2026/11/512538.html" target="_blank">量子位</a></span><div class="card-digest">量子位援引行业观察者爆料称Anthropic内部还有两款更强模型，未来半年能力可能迎来一轮大跃升，进步幅度或远超此前GPT-5.3到GPT-6、Opus 4.5到Fable 5.2的飞跃。线索来自独立AI评估机构METR今年8至10月进入Anthropic内部开展的调查，METR获得部分内部模型评测、训练与研发效率数据并访谈约15名员工，披露三款尚未完全公开身份的内部模型：Model 2于2026年7月完成训练，能力超过当时旗舰Mythos 5，被大量用于内部编程、Agent任务和数据生成，暂无对外发布计划；Model 3于8至9月训练，测试显示其AI研发能力强于最终发布版本，Anthropic在系统卡中承认主动限制了Fable 5.2与Mythos 5.2在GPU内核优化、改进大模型架构等任务上的能力；Model 4于9至10月训练，内部综合指数AECI达178.6分，高于Mythos 5.2的177.12分。</div></div>
+<div class="card"><div class="card-title">Claude开始吞掉桌面应用了！一句话造Mac和Windows软件，个性化软件时代来了</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/jZ43m5Es2GzTH8-rxiSeVg" target="_blank">三次方AIRX</a></span><div class="card-digest">Anthropic为Claude桌面版推送新功能Install as app，用户在对话中生成的Artifact交互式小工具与迷你应用，可一键安装为Mac和Windows上的独立桌面软件，拥有自己的图标和窗口，从Dock栏或开始菜单启动，无需打包、签名、配置API Key或写代码。流程分三步：用自然语言描述需求，Claude生成Artifact后可在聊天窗口试用并提修改意见，满意后从菜单一键安装。安装后的App能调用操作系统级能力，如挂菜单栏或系统托盘、发系统通知、打通已连接的日历、邮件、Notion、Slack等Connectors，且修改原Artifact后已安装App会自动同步。该功能已在Mac和Windows全量beta，所有付费档位可用，企业版需管理员开启，调用Claude的用量计入套餐额度。Anthropic内部员工已用其做出分层图像编辑器、文件管理器等工具。</div></div>
+<div class="card"><div class="card-title">Meta解析Your Algorithm：如何用自然语言偏好驱动推荐排序</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/" target="_blank">MarkTechPost</a></span><div class="card-digest">Meta发布工程文章，拆解Facebook的Your Algorithm功能如何实现将用户的自然语言偏好接入生产级推荐排序系统。该功能于2026年10月13日上线，允许用户用大白话告诉Facebook自己想在Feed和Reels中看到什么。文章指出，这是少见地把显式偏好接入以隐式信号为主的排序栈的公开案例。Your Algorithm由三部分组成：一句Lately Summary概括近期观看内容、预填的Interested In兴趣列表，以及用户可编辑的偏好页面。显式兴趣会被送入四路召回源，并同时作用于Feed和Reels。系统运行于Meta服务端排序栈，配合Facebook应用端的缓存失效机制。对开发者而言，文章提供了一份LLM驱动排序的清晰蓝图，展示了如何让大模型在推荐系统中承担可解释、可控的偏好理解角色。</div></div>
+<div class="card"><div class="card-title">Netflix 基于运维数据打造知识图谱，实现 AI 可观测性</div><span class="source-tag"><a href="https://www.infoq.cn/article/lVQK4fTxIJYZL2sZee2O" target="_blank">InfoQ</a></span><div class="card-digest">Netflix正在开发基于本体论的知识图谱平台，用于加快生产环境故障排查，并让AI智能体对运行环境形成统一理解。公司称每天处理超20亿请求、每秒超3800万实时日志事件，但排查一次典型应用回归问题仍需约4小时，大部分时间花在不同系统间手动拼凑信息。方案用可观测性本体定义运营实体、属性及关系，采用RDF、OWL、SHACL和SPARQL等成熟标准，生成的知识图谱存于基于Rust redb引擎构建的分布式RDF数据库QuipuDB，由Enricher组件管道从运营系统拉取数据并转为三元组。部分数据增强是确定性的，部分环节使用大模型与概率方法解读结构化程度较低的信息，并用实体类型、URI命名等验证规则约束输出，为自动化根因分析和未来自愈基础设施奠定基础。</div></div>
+<div class="card"><div class="card-title">OpenAI要给GPT做个“翻译官”，让智能体更懂业务</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/oCKoF3c0ip3OCETuKql3Pg" target="_blank">智东西</a></span><div class="card-digest">据The Information援引知情人士爆料，OpenAI正在开发代号Athena的数据管理平台，旨在帮助ChatGPT Work中的数据分析智能体Data Agent理解企业业务，提高回答问题和执行任务的准确性。Athena功能类似业内所说的语义层，可统一收入、客户等业务指标定义，让Agent分清总收入与净收入、活跃客户与付费客户的区别。咨询公司Andersen Consulting董事总经理Jason Strimpel认为，Agent处理复杂业务数据常出错，重要原因是需自行判断数据含义及关系，语义层能充当业务术语与底层数据的翻译官，让不同部门、报表和看板采用相同指标定义。OpenAI还在为Athena开发一类Agent，负责收集、记录并持续更新其他Agent执行任务所需指导信息。项目仍处早期开发，开放时间与定价未公布。</div></div>
+<div class="card"><div class="card-title">Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修</div><span class="source-tag"><a href="https://www.infoq.cn/article/ExbJjrItIlc9KLfQ2UeT" target="_blank">InfoQ</a></span><div class="card-digest">Flask作者、Pi开发者Armin Ronacher在访谈中讲述同行的经历：系统崩溃、工程师紧急开会，却没人说得清故障在哪一层、哪段代码，所有人都在向Claude提问，他感叹真的太可怕了。颇具反差的是，Ronacher本人正把越来越多开发工作交给AI——Pi每天收到约40至50个新Issue，团队已让Agent接手判断Bug是否存在、尝试复现、编写测试、生成修复方案乃至分配优先级，部分任务只要测试证明修复有效、工程师确认后即可合并。Pi创始人Mario Zechner的质疑更直接：行业似乎在追求开发者不必理解自己构建的软件，如果你什么都不需要理解了，你还有什么用。他并不排斥AI，自己也开发Coding Agent，却警告工程师正在失去对系统的理解。</div></div>
+<div class="card"><div class="card-title">“Windows该淘汰了！”Rails之父DHH开炮：微软上万工程师干不过一个人带着AI干活</div><span class="source-tag"><a href="https://www.infoq.cn/article/ApVrOK0hv1rmmoz2mfGM" target="_blank">InfoQ</a></span><div class="card-digest">Ruby on Rails创造者、Basecamp联合创始人DHH在播客中表示macOS和Windows已不适合Agent时代，并推动一个名为Omarchy的Linux发行版，称其为首个为Agent原生打造的操作系统。他希望三年内让Linux用户规模超过macOS。DHH认为，Linux过去最令人头疼的终端、配置文件和复杂错误信息，恰恰是Agent最擅长处理的东西，而苹果却在增加macOS与Agent协作的难度，甚至警告用户不要让Claude访问文件。在他看来，AI正让软件开发成本迅速下降，代码不再是长期护城河，Word、Photoshop等传统应用可能逐渐失去存在必要，过去只有微软、Adobe等巨头才能建立的产品生态，如今小团队也有机会重造。这场变化可能重新打开操作系统竞争的大门。</div></div>
+<div class="card"><div class="card-title">“我比黄仁勋更早看到英伟达的未来”！AI 教父回击黄仁勋，直言大规模失业是 AI 巨头赚钱的副作用</div><span class="source-tag"><a href="https://www.infoq.cn/article/6i2DoIJiaTcKyR0UyurQ" target="_blank">InfoQ</a></span><div class="card-digest">诺贝尔物理学奖得主、AI教父Geoffrey Hinton在公开对谈中正面回击黄仁勋。黄仁勋此前批评Hinton宣扬AI导致人类灭绝的风险不负责任，Hinton则回应若确有风险却选择不说才是不负责任，并称早在2009年就告诉上千名机器学习研究者想做神经网络必须买英伟达芯片，而黄仁勋到2012年才作出该预测。他坦言当年关于放射科医生将被AI取代的预测既高估了计算机视觉速度也低估了职业复杂性。Hinton提出，模型发展速度已超过人类理解速度，大规模失业是AI公司追逐利润的副作用；他直言训练Agent各自追求个体目标的强化学习方式太疯狂了。被问及若给超级智能一句最高优先级道德指令会说什么，他回答Be nice to people，并认为让AI更聪明与更善良几乎是正交的两个方向。</div></div>
+<div class="card"><div class="card-title">日本政府开发智能体打击盗版动漫</div><span class="source-tag"><a href="https://www.solidot.org/story?sid=85988" target="_blank">Solidot</a></span><div class="card-digest">Solidot报道，日本文化厅正在测试一款AI智能体，用于自动识别和标记可能包含非法或盗版内容的动漫网站。2025财年针对日本国内的一项调查显示，AI标记的1168条可疑X推文中有84%为非法内容；AI检测的1564个动画网站中89%含盗版动画，1935个漫画网站中盗版漫画比例高达94%。2026财年日本政府将监测范围扩大至海外，并计划最早于2027年3月汇总公布最新调查结果。该应用展示了AI智能体在版权监测与内容治理这类大规模、重复性识别任务中的落地，通过自动化筛查显著提升识别效率与覆盖面，为监管部门处理海量网络内容提供辅助手段。</div></div>
+<div class="card"><div class="card-title">程序员别急着复制“全自动开发”！Gas Town作者：软件工厂先惊艳、后变“垃圾山”，最终还是要推倒重来</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/lPIP-OOEoDTSb3i5m5iRdg" target="_blank">51CTO技术栈</a></span><div class="card-digest">51CTO技术栈整理Beads与Gas Town创建者Steve Yegge的演讲。拥有约40年从业经历、曾在Amazon、Google和Sourcegraph工作并参与Cody开发的Yegge，过去一年多尝试让Agent管理Agent，把软件工厂用于长期维护的游戏。他反复遇到同一困境：模型先做出很棒的东西，后来整个系统变成垃圾山，已不得不推倒重来多次。问题包括玩家嫌更新太快、部分Agent整夜没推进任务、一句临时提醒被记成长期规则、限制越加越多导致大量待办却无可做之事。Yegge坦言两次编排系统尝试都失败，造出了巨大单体系统。他强调软件工厂不是多开几个Agent窗口，工厂能启动不等于能持续有序运转，并分享每天处理这些麻烦的做法，提醒行业别急着复制全自动开发。</div></div>
+<div class="card"><div class="card-title">被中国网友扒出“偷数据”，7.7 万星开源AI编程神器创始人当场破防：今晚就闭源！</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/c1syoY8dNYMFjb-Qtg9XFg" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ报道，GitHub上拥有7.75万星标的AI编程控制台T3 Code遭遇严重口碑反噬：官网宣称零遥测却默认回传使用数据，被指出跨目录读取本地Claude与Codex认证文件，还存在假删除留存记录、后台全机扫描进程明文参数等高危越界行为。硬核开发者陈大黄通过比对源码与公开Issue提出多项质疑，发现软件在桌面端和网页端静默接入PostHog与Sentry分析服务，连命令行启动本地服务也会后台上报事件，直到2026年11月更新才补上关闭遥测的开关但默认仍开启。更受关注的是Identify.ts文件会读取用户本机Claude与Codex认证文件提取账号信息。创始人Theo在X上一度情绪失控称今晚就闭源，随后又否认闭源计划。事件把AI编程工具在隐私采集与权限边界上的灰色地带摆上台面。</div></div>
+<div class="card"><div class="card-title">谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障</div><span class="source-tag"><a href="https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ报道，谷歌开源环境质量智能体AQuA（Ambient Quality Agent），用于分析生产环境AI智能体会话、验证反复出现的故障模式，并对已部署源码做根因排查。该工具针对传统基础设施监控易遗漏的静默质量回归，如智能体忽略用户偏好、返回成功响应却跳过必需工具调用。AQuA在谷歌云中与业务智能体并行运行、不在请求链路里，从Cloud Trace、Cloud Logging或BigQuery读取遥测数据，每次最多采样1000条近期会话，经采样、审查、聚类发现、候选核验和问题跟踪五阶段处理。开发者可用goal.md配置领域质量标准，根因分析时会把异常会话与部署时捕获的不可变源码快照对比，诊断智能体可引用文件和代码行并给出修改建议，但不会自动修代码或建PR。在32条会话的受控实验中，修正提示词后绕过座位校验的会话从15降至2。</div></div></div>
+    <div id="section-domestic" class="section"><div class="section-header"><div class="section-title">🇨🇳 国内动态</div></div><div class="card"><div class="card-title">9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了</div><span class="source-tag"><a href="https://www.qbitai.com/2026/11/512565.html" target="_blank">量子位</a></span><div class="card-digest">量子位披露国内初创团队脸谱心智曾短暂公开后又收回一份《General Looped Model》技术报告，把循环架构统一为完整通用框架，首次系统呈现跨赛道全量实测结果。该团队早在2026年6月提交全球首篇面向世界模型的循环架构论文LoopWM，当日登顶Hugging Face论文日榜，比OpenAI Astra架构公开报道早约三个月，比智谱GLM-5.4发布早五个多月。其核心是把参数规模与计算深度解耦：不靠堆叠不同网络层，而是复用同一组权重对隐状态多轮迭代，问题简单则循环轮次少、输出快，任务复杂则迭代更深；权重体积不变、显存可控，增长的只有可动态调度的计算量。报告还给出把存量非Loop骨干改造为共享计算结构的工程路径，相当于公开一套可复用的显存优化方案，挑战了靠堆参数抬高智能上限的传统路线。</div></div>
+<div class="card"><div class="card-title">GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 Scaling</div><span class="source-tag"><a href="https://www.infoq.cn/article/gXU31yBa9HMEe19PxHVB" target="_blank">InfoQ</a></span><div class="card-digest">智谱于11月23日发布新一代旗舰模型GLM-5.4，把产品定位从传统Coding扩展到泛Coding，首次采用Loop Transformer架构，通过让共享权重的网络层循环执行，在不增加参数量的情况下增加有效计算深度。模型即日起向GLM Coding Plan全量用户开放，同步上线ZCode、Trae、WorkBuddy、Qoder、CatPaw和OpenCode等编码平台，V2、V3及团队版额度提升至1.5倍，API将在安全评估后开放，权重计划以负责任方式开源。智谱称模型在编程、长程任务和跨领域泛化上显著提升，泛Coding的判断是代码已成为模型描述、构建和操作数字内容的通用接口，视频、游戏、3D场景都可由代码生成。InfoQ用其在ZCode做Code2Video与3D专项测试，展现出跨领域整合能力，但开发耗时偏长、异常处理仍待加强。</div></div>
+<div class="card"><div class="card-title">Hy4 flash 本地部署：让大模型跑在个人设备上</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/o0xxShVQX6g2UllrrEv1WQ" target="_blank">腾讯混元</a></span><div class="card-digest">腾讯混元通过大模型压缩加速工具箱AngelSlim开源Hy4 flash的GGUF量化权重及配套推理代码，使这款总参数224B的模型可部署到个人设备，最小版本权重约为原始的30%。借助优化后的Strata offload框架，模型也能在64GB的Mac mini上运行，在48GB显存设备上生成速度最高达每秒89个token。团队已在RTX Spark、DGX Spark、M5 Max Mac、64GB Mac mini及4090D等设备上完成部署，并开源Q4_K_M、Q3_K、IQ2-AH及面向Spark的4bit等多个量化版本，IQ2-AH权重约125.73GiB，比原始的约410GiB减少约69%。测评显示，Q3_K在演示文稿生成、软件工程和自动化任务四项评测中与原模型差距均不超过0.4分，SPARK-4Bit在PPTGenBench上与原模型仅差0.1分。</div></div>
+<div class="card"><div class="card-title">华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI</div><span class="source-tag"><a href="https://www.qbitai.com/2026/11/512498.html" target="_blank">量子位</a></span><div class="card-digest">苹果前空间智能首席科学家、计算机视觉学者权龙离开苹果创办格秩科技（Envision AI），专注下一代空间与物理AI基础模型。权龙1988年在ICCV发表华人学者首篇论文，1995年提出奠定三视图重建基础的六点算法，2015年创办三维重建云平台Altizure并于2020年被苹果收购。面对GPT-6-Astra展现的空间理解与三维重建能力，他认为单纯的3D建模生成可能被大语言模型吞掉，于是选择构建原生空间与物理AI基座模型，补足大模型在空间、物理信息表达与泛化上的缺陷。其自研模型在城市级复杂场景三维建模上，把GPT-6-Astra数小时、单场景100至600美元的成本压到10美元以内，效率提升约一个数量级。公司已建立3000万空间物理数据资产、4000万以上空间物理视频数据及500万复杂场景资源。</div></div>
+<div class="card"><div class="card-title">神秘大模型火速杀进OpenCode前三！做MV、开发游戏、3D建模全拿捏，免费可蹬</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/cJNzVZg6-bs1ax-H2NC4Pg" target="_blank">智东西</a></span><div class="card-digest">智东西报道，一款代号HungerG的匿名模型登陆AI编程平台OpenCode和Qoder后迅速引发关注，上线一天即冲上OpenCode模型调用量日榜第三，单日Token使用量达1.2万亿，仅次于DeepSeek V4.1 Flash和腾讯混元Hy4 Flash。据OpenCode披露，该模型拥有100万Token上下文并支持多模态输入，且在Qoder与OpenCode Go订阅中提供限时免费体验。智东西实测发现，HungerG能用一句话在12分钟生成3D体素风格罗马城、15分钟产出可控核聚变装置3D科普动画，还能复刻经典游戏、直接操控Blender拍摄3D动画，输出速度与质量达到较好平衡，部分开发者称其速度超过DeepSeek v4.1 flash。但其参数、技术架构与背后厂商均未公开，身份成谜。</div></div>
+<div class="card"><div class="card-title">2026年IDEA 大会：AI时代编程语言将深刻影响软件能力交付上限</div><span class="source-tag"><a href="https://www.infoq.cn/article/ad1ILH2yFyN1HighXoFF" target="_blank">InfoQ</a></span><div class="card-digest">在2026年IDEA大会上，IDEA研究院创院理事长沈向洋与院长张宏波围绕AI时代的编程语言展开讨论，并正式发布自研语言MoonBit 1.0。张宏波指出，过去一年软件工程底层正在重写，版本管理、代码审核等工具都在被重做，而编程语言是人向机器表达逻辑的媒介。AI时代编程主体正从人转向Agent：对人而言Vibe Coding让语言显得不再重要，但对Agent而言，语言选择直接决定软件的安全性、性能与可维护性，也就决定交付能力上限。以Python为代表的动态语言在性能验证上易触天花板，Rust因可靠性被微软列为tier1语言。IDEA研究院四年前立项MoonBit，如今每周全球下载近百万次，近四成代码由海外开发者贡献。演讲提出，为Agent而生的新语言打开了参与定义AI时代基础软件体系的窗口。</div></div>
+<div class="card"><div class="card-title">Agent上下文管理，90%的人第一步就做反了</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/OFvkSyjORzjOOEDpqB5Mhw" target="_blank">腾讯云开发者</a></span><div class="card-digest">腾讯云开发者文章指出，Agent上下文压缩的常见误区是让模型写摘要，但摘要有损、不可逆、昂贵且会让Prompt Cache失效，成熟框架遵循能保留原文就保留、能剪除就不改写、能折叠就不摘要的原则，把摘要作为兜底手段。文章从上下文构成讲起，给出从剪除无用片段到改写、折叠的从无损到有损五层工程化治理手段，前四种不需额外调用模型，只决定发给模型哪些内容、发多少，第五种才让模型写摘要。评价维度中易被忽视的是Prompt Cache：主流模型服务支持前缀缓存，命中价格约为正常输入的十分之一，改写历史中某条消息会使其后的缓存全部失效，因此改写类手段应攒到接近阈值时批量触发，而非每轮都做。文章以规划北京三日游为例，展示处理前后的token占用差异。</div></div>
+<div class="card"><div class="card-title">字节跳动与港大开源Laminar：面向大模型与长程智能体的异步强化学习后训练框架</div><span class="source-tag"><a href="https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/" target="_blank">MarkTechPost</a></span><div class="card-digest">香港大学与字节跳动Seed团队开源异步强化学习后训练框架Laminar，面向大模型与长程智能体，核心思路是不再强制每条轨迹和每张GPU等待最慢者，这对训练rollout长且分布倾斜的编码智能体尤为关键。框架在Qwen3-Coder-30B-A3B-Instruct及Qwen2.5的7B、32B、72B上验证，运行于Ray与CUDA之上的多节点NVIDIA GPU集群，已在64张H800及最多1024张H800规模测试，推理用vLLM，训练用Megatron-LM或FSDP2。论文显示端到端吞吐最高提升5.48倍，SWE-bench Verified得分从基座模型的46.6%提升至52.2%。文章同时指出现存短板：项目处于早期、推理后端仅支持vLLM、逐步异步检查点仍在开发中，且对比混合了H800与H100。整体意义在于用更少样本和GPU小时换来更高的SWE-bench成绩。</div></div>
+<div class="card"><div class="card-title">OceanBase给Agent造了套数据平台，核心数据库同步开源</div><div class="source-tags"><span class="source-tag"><a href="https://mp.weixin.qq.com/s/R_U_gX8C3m0UICXvJWTAuA" target="_blank">量子位</a></span><span class="source-tag"><a href="https://www.infoq.cn/article/2YvROKs0CHz1yR4Wi02o" target="_blank">InfoQ</a></span></div><div class="card-digest">蚂蚁OceanBase在11月24日北京AI数据大会上发布AI战略产品湖库一体AI数据平台OceanLake，并宣布向全球开源核心引擎AI数据库OceanSeek。CEO杨冰提出，当模型越来越先进、Agent Harness越来越成熟，挑战终将归于数据，AI时代数据基础设施需坚持湖库一体、多模融合、Agent友好、开源开放四大原则。InfoQ采访OceanBase AI数据平台研发总经理杨志丰时指出，Agent持续优化离不开评测，但任务变复杂后评测本身成了工程挑战，一条高质量评测用例可能要几百到上千元，且若隔离不足，Agent在评测中读写数据会污染环境。IDC 2026年调查显示57%的亚太企业把数据准备度列为AI落地首要障碍，Fivetran报告则发现虽41%组织已在生产使用Agentic AI，仅15%在数据基础层面做好充分准备。</div></div>
+<div class="card"><div class="card-title">Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员</div><span class="source-tag"><a href="https://www.infoq.cn/article/cgiP7vstrXKH94L1zj76" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ文章介绍如何在Octop中创建托管专家并对接CodeBuddy、OpenCode、Claude Code、Codex等主流编程智能体，打造7×24小时在线的AI程序员。Octop是腾讯云开源的自托管AI助手，通过多Agent架构构建智能环境，单进程即可运行Web控制台、CLI与IM集成，支持飞书、钉钉、QQ、微信、企业微信等通道及HTTP/SSE/WebSocket API，内置专家库、OAuth加MCP连接器与ACP双向协作。专家是Octop的对话入口，可配置技能、子智能体、定时任务、通道与模型；原生专家每轮对话由Octop Harness驱动，托管专家则把Harness交给后端绑定的编程智能体，在工作目录完成代码阅读、文件修改、测试运行与提交。文章详细对比了两种专家的差异与适用场景。</div></div>
+<div class="card"><div class="card-title">丢个故事就行！直出15分钟AI短片，家里二舅也能上手</div><span class="source-tag"><a href="https://www.qbitai.com/2026/11/512727.html" target="_blank">量子位</a></span><div class="card-digest">量子位报道秘塔AI推出新产品全民开机，主打一句话直出15分钟AI短片，试图让不懂提示词与电影术语的普通用户也能完成视频创作。作者以改编《森林冰火人》为森林电木娃为例，仅用语音输入剧本、复制粘贴后约十分钟即产出成片，无需设计光影、打磨资产。文章指出传统AI视频工作流要求用户逐镜头写几十条复杂运镜提示、反复抽卡生成15至30秒碎片素材、再导入剪辑软件对齐音画，一套下来往往一周才能完成，其痛点不在模型能力而在产品路径：为优先满足专业生产者，许多本可自动化的环节被强制暴露给用户。全民开机把编剧、分镜、美术、剪辑等角色收进一个全流程虚拟剧组，以产品化封装降低生成式视频的创作门槛。</div></div>
+<div class="card"><div class="card-title">把 AI 编程智能体装进同一个工作台：开源多 Agent 调度平台 Milletcode 实践</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/DZ0lDDWWNRqMnCz30YFN8w" target="_blank">InfoQ</a></span><div class="card-digest">InfoQ文章介绍开源多Agent调度平台Milletcode（当前v0.11.0），这是一个自托管Web工作台，把Claude Code、SmartCode等AI编程智能体以及本地与远程项目统一接入浏览器，完成项目发现、任务下达、实时输出、人工审批、文件管理和结果验收。作者指出，当AI编程工具从代码补全助手进化为能阅读项目、修改文件、执行命令和运行测试的智能体，研发管理重点就从会不会写代码转向如何分派任务、观察过程、控制风险并验收结果。团队高频使用这些工具后，会出现智能体散落不同终端、本地与远程项目需分别管理、任务状态难判断、代码修改与终端调试缺乏统一入口等问题，因此需要一个专门管理Agent的工作台。平台以浏览器为统一入口，把多智能体调度与研发过程可视化、可审批化。</div></div>
+<div class="card"><div class="card-title">深度解析 DeepSeek Super-agent：多端协同的自主 Agent 设计思路</div><span class="source-tag"><a href="https://mp.weixin.qq.com/s/yPHBK48nEVRSAjkLKTJwwQ" target="_blank">千问AI平台</a></span><div class="card-digest">千问AI平台文章深度解析DeepSeek Harness团队十月底开源的原型项目DSH Super-agent。作者指出，若说DeepSeek Harness为Agent开发范式打下地基，Super-agent则是在其上搭建面向自主Agent的新设计范式，官方已放出完整代码并撰文阐述设计哲学，但坦言项目仍处原型阶段、在Harness默认配置中未开启，更多是前沿探索与能力验证。文章梳理Agent从Coding Agent、CoWork办公Agent到Personal Agent的演进，指出当下Agent往往既要写代码又要满足办公需求，单一任务范式已不够用。作者基于源码与文档拆解Super-agent架构，认为其对Agent开发者极具参考价值，代表了下一代自主Agent该长什么样的系统性思考，值得深入学习其多端协同与任务调度设计。</div></div>
+<div class="card"><div class="card-title">用 Super-agent 的理念，拆解 Octop 团队模式</div><span class="source-tag"><a href="https://www.infoq.cn/article/xJVcbBYI4m86a9TIA6HH" target="_blank">InfoQ</a></span><div class="card-digest">Octop负责人Jubaoliang撰文，以DeepSeek Super-Agent理念为参照解析Octop团队模式。DeepSeek近日发文阐述Super-Agent设计：打破AI单次仅处理单一任务的旧范式，采用调度员Router加执行单元Worker的双层架构实现任务并行与后台运行，耗时任务自动转后台、前台持续响应，每条消息仅保留核心上下文、冗长材料归档按需检索。Octop是腾讯云开源的多用户AI助手，早在1.0.2版本就上线团队模式，由一名主持人Agent统筹分解任务、多名专家Agent并行推进子任务。文章指出两者在不谋而合中形成跨越产品与时间的对照印证，并以日常收到季度报告通知的场景为例，解析两条路径如何在工程层面分别落地多任务并行这一共同目标。</div></div>
+<div class="card"><div class="card-title">荣耀眼里的 AI 手机：前沿模型可以进来，但入口不能拿走</div><span class="source-tag"><a href="http://www.geekpark.net/news/374462" target="_blank">极客公园</a></span><div class="card-digest">极客公园报道，荣耀在武汉发布荣耀700系列，真正受关注的是AI助手YOYO正式更名为AI手机助手YOYO豆包，成为继努比亚之后第二款搭载豆包手机助手的产品。新机AI能力围绕AI灵动背屏展开，首发AI定制随心贴，可对助手说一句话生成图片贴到背屏，并支持语音通话、英语陪练、航班打车快递外卖进度查看、后置主摄自拍取景及心率血氧测量。荣耀CEO李健称用户不在意后台接的是哪家模型，核心是体验；产品线总裁方飞强调AI只是技术，把背屏做成一个非常浅的入口直指普通用户找不到、不会用AI的痛点。文章指出公开材料未提及YOYO豆包可替用户在第三方App操作等GUI能力，目前仍是围绕背屏和模型对话的手机功能。</div></div></div>
+    <div id="section-peer" class="section"><div class="section-header"><div class="section-title">🏦 同业观察</div></div><div class="empty">暂无</div></div>
+    <div id="section-other" class="section"><div class="section-header"><div class="section-title">📌 其他资讯</div></div><div class="empty">暂无</div></div>
+  </div>
+
+  <!-- ===== JS App ===== -->
+  <div id="app" style="display:none">
+    <div id="cat-sections"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="page-footer">
+    <a href="../../index.html" class="footer-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      返回首页
+    </a>
+    <div class="footer-info">智能研发早报 · AI-Daily-for-bank</div>
+  </div>
+
+</div>
+
+<!-- ===== QR Code Generator (Kazuhiko Arase, MIT License) ===== -->
+<script>
+var QR = (function(){var qrcode=(function(){var P=function(x,w){var g=236,l=17,n=x,s=O[w],t=null,r=0,h=null,i=[],v={},_=function(a,f){r=n*4+17,t=(function(e){for(var u=new Array(e),o=0;o<e;o+=1){u[o]=new Array(e);for(var d=0;d<e;d+=1)u[o][d]=null}return u})(r),B(0,0),B(r-7,0),B(0,r-7),E(),T(),m(a,f),n>=7&&N(a),h==null&&(h=nr(n,s,i)),U(h,f)},B=function(a,f){for(var e=-1;e<=7;e+=1)if(!(a+e<=-1||r<=a+e))for(var u=-1;u<=7;u+=1)f+u<=-1||r<=f+u||(0<=e&&e<=6&&(u==0||u==6)||0<=u&&u<=6&&(e==0||e==6)||2<=e&&e<=4&&2<=u&&u<=4?t[a+e][f+u]=!0:t[a+e][f+u]=!1)},y=function(){for(var a=0,f=0,e=0;e<8;e+=1){_(!0,e);var u=k.getLostPoint(v);(e==0||a>u)&&(a=u,f=e)}return f},T=function(){for(var a=8;a<r-8;a+=1)t[a][6]==null&&(t[a][6]=a%2==0);for(var f=8;f<r-8;f+=1)t[6][f]==null&&(t[6][f]=f%2==0)},E=function(){for(var a=k.getPatternPosition(n),f=0;f<a.length;f+=1)for(var e=0;e<a.length;e+=1){var u=a[f],o=a[e];if(t[u][o]==null)for(var d=-2;d<=2;d+=1)for(var c=-2;c<=2;c+=1)d==-2||d==2||c==-2||c==2||d==0&&c==0?t[u+d][o+c]=!0:t[u+d][o+c]=!1}},N=function(a){for(var f=k.getBCHTypeNumber(n),e=0;e<18;e+=1){var u=!a&&(f>>e&1)==1;t[Math.floor(e/3)][e%3+r-8-3]=u}for(var e=0;e<18;e+=1){var u=!a&&(f>>e&1)==1;t[e%3+r-8-3][Math.floor(e/3)]=u}},m=function(a,f){for(var e=s<<3|f,u=k.getBCHTypeInfo(e),o=0;o<15;o+=1){var d=!a&&(u>>o&1)==1;o<6?t[o][8]=d:o<8?t[o+1][8]=d:t[r-15+o][8]=d}for(var o=0;o<15;o+=1){var d=!a&&(u>>o&1)==1;o<8?t[8][r-o-1]=d:o<9?t[8][15-o-1+1]=d:t[8][15-o-1]=d}t[r-8][8]=!a},U=function(a,f){for(var e=-1,u=r-1,o=7,d=0,c=k.getMaskFunction(f),p=r-1;p>0;p-=2)for(p==6&&(p-=1);;){for(var b=0;b<2;b+=1)if(t[u][p-b]==null){var C=!1;d<a.length&&(C=(a[d]>>>o&1)==1);var A=c(u,p-b);A&&(C=!C),t[u][p-b]=C,o-=1,o==-1&&(d+=1,o=7)}if(u+=e,u<0||r<=u){u-=e,e=-e;break}}},H=function(a,f){for(var e=0,u=0,o=0,d=new Array(f.length),c=new Array(f.length),p=0;p<f.length;p+=1){var b=f[p].dataCount,C=f[p].totalCount-b;u=Math.max(u,b),o=Math.max(o,C),d[p]=new Array(b);for(var A=0;A<d[p].length;A+=1)d[p][A]=255&a.getBuffer()[A+e];e+=b;var R=k.getErrorCorrectPolynomial(C),I=K(d[p],R.getLength()-1),S=I.mod(R);c[p]=new Array(R.getLength()-1);for(var A=0;A<c[p].length;A+=1){var X=A+S.getLength()-c[p].length;c[p][A]=X>=0?S.getAt(X):0}}for(var Z=0,A=0;A<f.length;A+=1)Z+=f[A].totalCount;for(var J=new Array(Z),Q=0,A=0;A<u;A+=1)for(var p=0;p<f.length;p+=1)A<d[p].length&&(J[Q]=d[p][A],Q+=1);for(var A=0;A<o;A+=1)for(var p=0;p<f.length;p+=1)A<c[p].length&&(J[Q]=c[p][A],Q+=1);return J},nr=function(a,f,e){for(var u=Y.getRSBlocks(a,f),o=G(),d=0;d<e.length;d+=1){var c=e[d];o.put(c.getMode(),4),o.put(c.getLength(),k.getLengthInBits(c.getMode(),a)),c.write(o)}for(var p=0,d=0;d<u.length;d+=1)p+=u[d].dataCount;if(o.getLengthInBits()>p*8)throw"code length overflow. ("+o.getLengthInBits()+">"+p*8+")";for(o.getLengthInBits()+4<=p*8&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=p*8||(o.put(g,8),o.getLengthInBits()>=p*8));)o.put(l,8);return H(o,u)};v.addData=function(a,f){f=f||"Byte";var e=null;switch(f){case"Numeric":e=$(a);break;case"Alphanumeric":e=W(a);break;case"Byte":e=V(a);break;case"Kanji":e=q(a);break;default:throw"mode:"+f}i.push(e),h=null},v.isDark=function(a,f){if(a<0||r<=a||f<0||r<=f)throw a+","+f;return t[a][f]},v.getModuleCount=function(){return r},v.make=function(){if(n<1){for(var a=1;a<40;a++){for(var f=Y.getRSBlocks(a,s),e=G(),u=0;u<i.length;u++){var o=i[u];e.put(o.getMode(),4),e.put(o.getLength(),k.getLengthInBits(o.getMode(),a)),o.write(e)}for(var d=0,u=0;u<f.length;u++)d+=f[u].dataCount;if(e.getLengthInBits()<=d*8)break}n=a}_(!1,y())},v.createTableTag=function(a,f){a=a||2,f=typeof f>"u"?a*4:f;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+f+"px;",e+='">',e+="<tbody>";for(var u=0;u<v.getModuleCount();u+=1){e+="<tr>";for(var o=0;o<v.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+a+"px;",e+=" height: "+a+"px;",e+=" background-color: ",e+=v.isDark(u,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>",e},v.createSvgTag=function(a,f,e,u){var o={};typeof arguments[0]=="object"&&(o=arguments[0],a=o.cellSize,f=o.margin,e=o.alt,u=o.title),a=a||2,f=typeof f>"u"?a*4:f,e=typeof e=="string"?{text:e}:e||{},e.text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,u=typeof u=="string"?{text:u}:u||{},u.text=u.text||null,u.id=u.text?u.id||"qrcode-title":null;var d=v.getModuleCount()*a+f*2,c,p,b,C,A="",R;for(R="l"+a+",0 0,"+a+" -"+a+",0 0,-"+a+"z ",A+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',A+=o.scalable?"":' width="'+d+'px" height="'+d+'px"',A+=' viewBox="0 0 '+d+" "+d+'" ',A+=' preserveAspectRatio="xMinYMin meet"',A+=u.text||e.text?' role="img" aria-labelledby="'+F([u.id,e.id].join(" ").trim())+'"':"",A+=">",A+=u.text?'<title id="'+F(u.id)+'">'+F(u.text)+"</title>":"",A+=e.text?'<description id="'+F(e.id)+'">'+F(e.text)+"</description>":"",A+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',A+='<path d="',b=0;b<v.getModuleCount();b+=1)for(C=b*a+f,c=0;c<v.getModuleCount();c+=1)v.isDark(b,c)&&(p=c*a+f,A+="M"+p+","+C+R);return A+='" stroke="transparent" fill="black"/>',A+="</svg>",A},v.createDataURL=function(a,f){a=a||2,f=typeof f>"u"?a*4:f;var e=v.getModuleCount()*a+f*2,u=f,o=e-f;return er(e,e,function(d,c){if(u<=d&&d<o&&u<=c&&c<o){var p=Math.floor((d-u)/a),b=Math.floor((c-u)/a);return v.isDark(b,p)?0:1}else return 1})},v.createImgTag=function(a,f,e){a=a||2,f=typeof f>"u"?a*4:f;var u=v.getModuleCount()*a+f*2,o="";return o+="<img",o+=' src="',o+=v.createDataURL(a,f),o+='"',o+=' width="',o+=u,o+='"',o+=' height="',o+=u,o+='"',e&&(o+=' alt="',o+=F(e),o+='"'),o+="/>",o};var F=function(a){for(var f="",e=0;e<a.length;e+=1){var u=a.charAt(e);switch(u){case"<":f+="&lt;";break;case">":f+="&gt;";break;case"&":f+="&amp;";break;case'"':f+="&quot;";break;default:f+=u;break}}return f},ar=function(a){var f=1;a=typeof a>"u"?f*2:a;var e=v.getModuleCount()*f+a*2,u=a,o=e-a,d,c,p,b,C,A={"\u2588\u2588":"\u2588","\u2588 ":"\u2580"," \u2588":"\u2584","  ":" "},R={"\u2588\u2588":"\u2580","\u2588 ":"\u2580"," \u2588":" ","  ":" "},I="";for(d=0;d<e;d+=2){for(p=Math.floor((d-u)/f),b=Math.floor((d+1-u)/f),c=0;c<e;c+=1)C="\u2588",u<=c&&c<o&&u<=d&&d<o&&v.isDark(p,Math.floor((c-u)/f))&&(C=" "),u<=c&&c<o&&u<=d+1&&d+1<o&&v.isDark(b,Math.floor((c-u)/f))?C+=" ":C+="\u2588",I+=a<1&&d+1>=o?R[C]:A[C];I+=`
+`}return e%2&&a>0?I.substring(0,I.length-e-1)+Array(e+1).join("\u2580"):I.substring(0,I.length-1)};return v.createASCII=function(a,f){if(a=a||1,a<2)return ar(f);a-=1,f=typeof f>"u"?a*2:f;var e=v.getModuleCount()*a+f*2,u=f,o=e-f,d,c,p,b,C=Array(a+1).join("\u2588\u2588"),A=Array(a+1).join("  "),R="",I="";for(d=0;d<e;d+=1){for(p=Math.floor((d-u)/a),I="",c=0;c<e;c+=1)b=1,u<=c&&c<o&&u<=d&&d<o&&v.isDark(p,Math.floor((c-u)/a))&&(b=0),I+=b?C:A;for(p=0;p<a;p+=1)R+=I+`
+`}return R.substring(0,R.length-1)},v.renderTo2dContext=function(a,f){f=f||2;for(var e=v.getModuleCount(),u=0;u<e;u++)for(var o=0;o<e;o++)a.fillStyle=v.isDark(u,o)?"black":"white",a.fillRect(o*f,u*f,f,f)},v};P.stringToBytesFuncs={default:function(x){for(var w=[],g=0;g<x.length;g+=1){var l=x.charCodeAt(g);w.push(l&255)}return w}},P.stringToBytes=P.stringToBytesFuncs.default,P.createStringToBytes=function(x,w){var g=(function(){for(var n=rr(x),s=function(){var T=n.read();if(T==-1)throw"eof";return T},t=0,r={};;){var h=n.read();if(h==-1)break;var i=s(),v=s(),_=s(),B=String.fromCharCode(h<<8|i),y=v<<8|_;r[B]=y,t+=1}if(t!=w)throw t+" != "+w;return r})(),l=63;return function(n){for(var s=[],t=0;t<n.length;t+=1){var r=n.charCodeAt(t);if(r<128)s.push(r);else{var h=g[n.charAt(t)];typeof h=="number"?(h&255)==h?s.push(h):(s.push(h>>>8),s.push(h&255)):s.push(l)}}return s}};var D={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},O={L:1,M:0,Q:3,H:2},L={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},k=(function(){var x=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],w=1335,g=7973,l=21522,n={},s=function(t){for(var r=0;t!=0;)r+=1,t>>>=1;return r};return n.getBCHTypeInfo=function(t){for(var r=t<<10;s(r)-s(w)>=0;)r^=w<<s(r)-s(w);return(t<<10|r)^l},n.getBCHTypeNumber=function(t){for(var r=t<<12;s(r)-s(g)>=0;)r^=g<<s(r)-s(g);return t<<12|r},n.getPatternPosition=function(t){return x[t-1]},n.getMaskFunction=function(t){switch(t){case L.PATTERN000:return function(r,h){return(r+h)%2==0};case L.PATTERN001:return function(r,h){return r%2==0};case L.PATTERN010:return function(r,h){return h%3==0};case L.PATTERN011:return function(r,h){return(r+h)%3==0};case L.PATTERN100:return function(r,h){return(Math.floor(r/2)+Math.floor(h/3))%2==0};case L.PATTERN101:return function(r,h){return r*h%2+r*h%3==0};case L.PATTERN110:return function(r,h){return(r*h%2+r*h%3)%2==0};case L.PATTERN111:return function(r,h){return(r*h%3+(r+h)%2)%2==0};default:throw"bad maskPattern:"+t}},n.getErrorCorrectPolynomial=function(t){for(var r=K([1],0),h=0;h<t;h+=1)r=r.multiply(K([1,M.gexp(h)],0));return r},n.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case D.MODE_NUMBER:return 10;case D.MODE_ALPHA_NUM:return 9;case D.MODE_8BIT_BYTE:return 8;case D.MODE_KANJI:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case D.MODE_NUMBER:return 12;case D.MODE_ALPHA_NUM:return 11;case D.MODE_8BIT_BYTE:return 16;case D.MODE_KANJI:return 10;default:throw"mode:"+t}else if(r<41)switch(t){case D.MODE_NUMBER:return 14;case D.MODE_ALPHA_NUM:return 13;case D.MODE_8BIT_BYTE:return 16;case D.MODE_KANJI:return 12;default:throw"mode:"+t}else throw"type:"+r},n.getLostPoint=function(t){for(var r=t.getModuleCount(),h=0,i=0;i<r;i+=1)for(var v=0;v<r;v+=1){for(var _=0,B=t.isDark(i,v),y=-1;y<=1;y+=1)if(!(i+y<0||r<=i+y))for(var T=-1;T<=1;T+=1)v+T<0||r<=v+T||y==0&&T==0||B==t.isDark(i+y,v+T)&&(_+=1);_>5&&(h+=3+_-5)}for(var i=0;i<r-1;i+=1)for(var v=0;v<r-1;v+=1){var E=0;t.isDark(i,v)&&(E+=1),t.isDark(i+1,v)&&(E+=1),t.isDark(i,v+1)&&(E+=1),t.isDark(i+1,v+1)&&(E+=1),(E==0||E==4)&&(h+=3)}for(var i=0;i<r;i+=1)for(var v=0;v<r-6;v+=1)t.isDark(i,v)&&!t.isDark(i,v+1)&&t.isDark(i,v+2)&&t.isDark(i,v+3)&&t.isDark(i,v+4)&&!t.isDark(i,v+5)&&t.isDark(i,v+6)&&(h+=40);for(var v=0;v<r;v+=1)for(var i=0;i<r-6;i+=1)t.isDark(i,v)&&!t.isDark(i+1,v)&&t.isDark(i+2,v)&&t.isDark(i+3,v)&&t.isDark(i+4,v)&&!t.isDark(i+5,v)&&t.isDark(i+6,v)&&(h+=40);for(var N=0,v=0;v<r;v+=1)for(var i=0;i<r;i+=1)t.isDark(i,v)&&(N+=1);var m=Math.abs(100*N/r/r-50)/5;return h+=m*10,h},n})(),M=(function(){for(var x=new Array(256),w=new Array(256),g=0;g<8;g+=1)x[g]=1<<g;for(var g=8;g<256;g+=1)x[g]=x[g-4]^x[g-5]^x[g-6]^x[g-8];for(var g=0;g<255;g+=1)w[x[g]]=g;var l={};return l.glog=function(n){if(n<1)throw"glog("+n+")";return w[n]},l.gexp=function(n){for(;n<0;)n+=255;for(;n>=256;)n-=255;return x[n]},l})();function K(x,w){if(typeof x.length>"u")throw x.length+"/"+w;var g=(function(){for(var n=0;n<x.length&&x[n]==0;)n+=1;for(var s=new Array(x.length-n+w),t=0;t<x.length-n;t+=1)s[t]=x[t+n];return s})(),l={};return l.getAt=function(n){return g[n]},l.getLength=function(){return g.length},l.multiply=function(n){for(var s=new Array(l.getLength()+n.getLength()-1),t=0;t<l.getLength();t+=1)for(var r=0;r<n.getLength();r+=1)s[t+r]^=M.gexp(M.glog(l.getAt(t))+M.glog(n.getAt(r)));return K(s,0)},l.mod=function(n){if(l.getLength()-n.getLength()<0)return l;for(var s=M.glog(l.getAt(0))-M.glog(n.getAt(0)),t=new Array(l.getLength()),r=0;r<l.getLength();r+=1)t[r]=l.getAt(r);for(var r=0;r<n.getLength();r+=1)t[r]^=M.gexp(M.glog(n.getAt(r))+s);return K(t,0).mod(n)},l}var Y=(function(){var x=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],w=function(n,s){var t={};return t.totalCount=n,t.dataCount=s,t},g={},l=function(n,s){switch(s){case O.L:return x[(n-1)*4+0];case O.M:return x[(n-1)*4+1];case O.Q:return x[(n-1)*4+2];case O.H:return x[(n-1)*4+3];default:return}};return g.getRSBlocks=function(n,s){var t=l(n,s);if(typeof t>"u")throw"bad rs block @ typeNumber:"+n+"/errorCorrectionLevel:"+s;for(var r=t.length/3,h=[],i=0;i<r;i+=1)for(var v=t[i*3+0],_=t[i*3+1],B=t[i*3+2],y=0;y<v;y+=1)h.push(w(_,B));return h},g})(),G=function(){var x=[],w=0,g={};return g.getBuffer=function(){return x},g.getAt=function(l){var n=Math.floor(l/8);return(x[n]>>>7-l%8&1)==1},g.put=function(l,n){for(var s=0;s<n;s+=1)g.putBit((l>>>n-s-1&1)==1)},g.getLengthInBits=function(){return w},g.putBit=function(l){var n=Math.floor(w/8);x.length<=n&&x.push(0),l&&(x[n]|=128>>>w%8),w+=1},g},$=function(x){var w=D.MODE_NUMBER,g=x,l={};l.getMode=function(){return w},l.getLength=function(t){return g.length},l.write=function(t){for(var r=g,h=0;h+2<r.length;)t.put(n(r.substring(h,h+3)),10),h+=3;h<r.length&&(r.length-h==1?t.put(n(r.substring(h,h+1)),4):r.length-h==2&&t.put(n(r.substring(h,h+2)),7))};var n=function(t){for(var r=0,h=0;h<t.length;h+=1)r=r*10+s(t.charAt(h));return r},s=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-48;throw"illegal char :"+t};return l},W=function(x){var w=D.MODE_ALPHA_NUM,g=x,l={};l.getMode=function(){return w},l.getLength=function(s){return g.length},l.write=function(s){for(var t=g,r=0;r+1<t.length;)s.put(n(t.charAt(r))*45+n(t.charAt(r+1)),11),r+=2;r<t.length&&s.put(n(t.charAt(r)),6)};var n=function(s){if("0"<=s&&s<="9")return s.charCodeAt(0)-48;if("A"<=s&&s<="Z")return s.charCodeAt(0)-65+10;switch(s){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+s}};return l},V=function(x){var w=D.MODE_8BIT_BYTE,g=x,l=P.stringToBytes(x),n={};return n.getMode=function(){return w},n.getLength=function(s){return l.length},n.write=function(s){for(var t=0;t<l.length;t+=1)s.put(l[t],8)},n},q=function(x){var w=D.MODE_KANJI,g=x,l=P.stringToBytesFuncs.SJIS;if(!l)throw"sjis not supported.";(function(t,r){var h=l(t);if(h.length!=2||(h[0]<<8|h[1])!=r)throw"sjis not supported."})("\u53CB",38726);var n=l(x),s={};return s.getMode=function(){return w},s.getLength=function(t){return~~(n.length/2)},s.write=function(t){for(var r=n,h=0;h+1<r.length;){var i=(255&r[h])<<8|255&r[h+1];if(33088<=i&&i<=40956)i-=33088;else if(57408<=i&&i<=60351)i-=49472;else throw"illegal char at "+(h+1)+"/"+i;i=(i>>>8&255)*192+(i&255),t.put(i,13),h+=2}if(h<r.length)throw"illegal char at "+(h+1)},s},j=function(){var x=[],w={};return w.writeByte=function(g){x.push(g&255)},w.writeShort=function(g){w.writeByte(g),w.writeByte(g>>>8)},w.writeBytes=function(g,l,n){l=l||0,n=n||g.length;for(var s=0;s<n;s+=1)w.writeByte(g[s+l])},w.writeString=function(g){for(var l=0;l<g.length;l+=1)w.writeByte(g.charCodeAt(l))},w.toByteArray=function(){return x},w.toString=function(){var g="";g+="[";for(var l=0;l<x.length;l+=1)l>0&&(g+=","),g+=x[l];return g+="]",g},w},z=function(){var x=0,w=0,g=0,l="",n={},s=function(r){l+=String.fromCharCode(t(r&63))},t=function(r){if(!(r<0)){if(r<26)return 65+r;if(r<52)return 97+(r-26);if(r<62)return 48+(r-52);if(r==62)return 43;if(r==63)return 47}throw"n:"+r};return n.writeByte=function(r){for(x=x<<8|r&255,w+=8,g+=1;w>=6;)s(x>>>w-6),w-=6},n.flush=function(){if(w>0&&(s(x<<6-w),x=0,w=0),g%3!=0)for(var r=3-g%3,h=0;h<r;h+=1)l+="="},n.toString=function(){return l},n},rr=function(x){var w=x,g=0,l=0,n=0,s={};s.read=function(){for(;n<8;){if(g>=w.length){if(n==0)return-1;throw"unexpected end of file./"+n}var r=w.charAt(g);if(g+=1,r=="=")return n=0,-1;if(r.match(/^\s$/))continue;l=l<<6|t(r.charCodeAt(0)),n+=6}var h=l>>>n-8&255;return n-=8,h};var t=function(r){if(65<=r&&r<=90)return r-65;if(97<=r&&r<=122)return r-97+26;if(48<=r&&r<=57)return r-48+52;if(r==43)return 62;if(r==47)return 63;throw"c:"+r};return s},tr=function(x,w){var g=x,l=w,n=new Array(x*w),s={};s.setPixel=function(i,v,_){n[v*g+i]=_},s.write=function(i){i.writeString("GIF87a"),i.writeShort(g),i.writeShort(l),i.writeByte(128),i.writeByte(0),i.writeByte(0),i.writeByte(0),i.writeByte(0),i.writeByte(0),i.writeByte(255),i.writeByte(255),i.writeByte(255),i.writeString(","),i.writeShort(0),i.writeShort(0),i.writeShort(g),i.writeShort(l),i.writeByte(0);var v=2,_=r(v);i.writeByte(v);for(var B=0;_.length-B>255;)i.writeByte(255),i.writeBytes(_,B,255),B+=255;i.writeByte(_.length-B),i.writeBytes(_,B,_.length-B),i.writeByte(0),i.writeString(";")};var t=function(i){var v=i,_=0,B=0,y={};return y.write=function(T,E){if(T>>>E)throw"length over";for(;_+E>=8;)v.writeByte(255&(T<<_|B)),E-=8-_,T>>>=8-_,B=0,_=0;B=T<<_|B,_=_+E},y.flush=function(){_>0&&v.writeByte(B)},y},r=function(i){for(var v=1<<i,_=(1<<i)+1,B=i+1,y=h(),T=0;T<v;T+=1)y.add(String.fromCharCode(T));y.add(String.fromCharCode(v)),y.add(String.fromCharCode(_));var E=j(),N=t(E);N.write(v,B);var m=0,U=String.fromCharCode(n[m]);for(m+=1;m<n.length;){var H=String.fromCharCode(n[m]);m+=1,y.contains(U+H)?U=U+H:(N.write(y.indexOf(U),B),y.size()<4095&&(y.size()==1<<B&&(B+=1),y.add(U+H)),U=H)}return N.write(y.indexOf(U),B),N.write(_,B),N.flush(),E.toByteArray()},h=function(){var i={},v=0,_={};return _.add=function(B){if(_.contains(B))throw"dup key:"+B;i[B]=v,v+=1},_.size=function(){return v},_.indexOf=function(B){return i[B]},_.contains=function(B){return typeof i[B]<"u"},_};return s},er=function(x,w,g){for(var l=tr(x,w),n=0;n<w;n+=1)for(var s=0;s<x;s+=1)l.setPixel(s,n,g(s,n));var t=j();l.write(t);for(var r=z(),h=t.toByteArray(),i=0;i<h.length;i+=1)r.writeByte(h[i]);return r.flush(),"data:image/gif;base64,"+r};return P})();(function(){qrcode.stringToBytesFuncs["UTF-8"]=function(P){function D(O){for(var L=[],k=0;k<O.length;k++){var M=O.charCodeAt(k);M<128?L.push(M):M<2048?L.push(192|M>>6,128|M&63):M<55296||M>=57344?L.push(224|M>>12,128|M>>6&63,128|M&63):(k++,M=65536+((M&1023)<<10|O.charCodeAt(k)&1023),L.push(240|M>>18,128|M>>12&63,128|M>>6&63,128|M&63))}return L}return D(P)}})();qrcode.stringToBytes=qrcode.stringToBytesFuncs["UTF-8"];return qrcode;})();
+</script>
+
+<!-- marked.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  var ARTICLES = [{"title": "Claude Opus 5.6灰测效果来了", "source": "量子位", "digest": "量子位报道，继解决黎曼猜想的重磅消息后，有网友爆料在Claude Code中已被悄悄灰度到Claude Opus 5.6。晒出的实测显示，Opus 5.6能画出细节极为丰富的鹈鹕骑自行车，还能生成极简版《咒术回战》片段，在古建筑整体生成精度和3D建模精细度上明显超过上一代Opus 5.5。陆续被灰度的用户反馈，新版本响应速度明显加快，整体效率约为此前版本的2至3倍，并推测该版本通过Opus 5.5 Extra入口路由，界面显示仍是5.5 Extra但背后模型已更换。也有开发者提醒，流出的演示集中在视觉与前端生成领域，效果与谷歌前两日发布的Neon接近，视觉惊艳不等于能胜任复杂具体的3D工程任务。灰度范围与正式版发布时间尚未官宣。", "link": "https://mp.weixin.qq.com/s/HB0ICfpbmASEbiP0dCPD-w", "content": "", "category": "国际", "is_model_related": true, "source_file": "sources/2026-11-25_Claude Opus 5.6灰测效果来了_量子位.md", "source_items": [{"name": "量子位", "link": "https://mp.weixin.qq.com/s/HB0ICfpbmASEbiP0dCPD-w"}]}, {"title": "Anthropic还藏着2个最强模型…", "source": "量子位", "digest": "量子位援引行业观察者爆料称Anthropic内部还有两款更强模型，未来半年能力可能迎来一轮大跃升，进步幅度或远超此前GPT-5.3到GPT-6、Opus 4.5到Fable 5.2的飞跃。线索来自独立AI评估机构METR今年8至10月进入Anthropic内部开展的调查，METR获得部分内部模型评测、训练与研发效率数据并访谈约15名员工，披露三款尚未完全公开身份的内部模型：Model 2于2026年7月完成训练，能力超过当时旗舰Mythos 5，被大量用于内部编程、Agent任务和数据生成，暂无对外发布计划；Model 3于8至9月训练，测试显示其AI研发能力强于最终发布版本，Anthropic在系统卡中承认主动限制了Fable 5.2与Mythos 5.2在GPU内核优化、改进大模型架构等任务上的能力；Model 4于9至10月训练，内部综合指数AECI达178.6分，高于Mythos 5.2的177.12分。", "link": "https://www.qbitai.com/2026/11/512538.html", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_Anthropic还藏着2个最强模型…_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/11/512538.html"}]}, {"title": "Claude开始吞掉桌面应用了！一句话造Mac和Windows软件，个性化软件时代来了", "source": "三次方AIRX", "digest": "Anthropic为Claude桌面版推送新功能Install as app，用户在对话中生成的Artifact交互式小工具与迷你应用，可一键安装为Mac和Windows上的独立桌面软件，拥有自己的图标和窗口，从Dock栏或开始菜单启动，无需打包、签名、配置API Key或写代码。流程分三步：用自然语言描述需求，Claude生成Artifact后可在聊天窗口试用并提修改意见，满意后从菜单一键安装。安装后的App能调用操作系统级能力，如挂菜单栏或系统托盘、发系统通知、打通已连接的日历、邮件、Notion、Slack等Connectors，且修改原Artifact后已安装App会自动同步。该功能已在Mac和Windows全量beta，所有付费档位可用，企业版需管理员开启，调用Claude的用量计入套餐额度。Anthropic内部员工已用其做出分层图像编辑器、文件管理器等工具。", "link": "https://mp.weixin.qq.com/s/jZ43m5Es2GzTH8-rxiSeVg", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_Claude开始吞掉桌面应用了！一句话造Mac和Windows软件，个性化软件时代来了_三次方AIRX.md", "source_items": [{"name": "三次方AIRX", "link": "https://mp.weixin.qq.com/s/jZ43m5Es2GzTH8-rxiSeVg"}]}, {"title": "Meta解析Your Algorithm：如何用自然语言偏好驱动推荐排序", "source": "MarkTechPost", "digest": "Meta发布工程文章，拆解Facebook的Your Algorithm功能如何实现将用户的自然语言偏好接入生产级推荐排序系统。该功能于2026年10月13日上线，允许用户用大白话告诉Facebook自己想在Feed和Reels中看到什么。文章指出，这是少见地把显式偏好接入以隐式信号为主的排序栈的公开案例。Your Algorithm由三部分组成：一句Lately Summary概括近期观看内容、预填的Interested In兴趣列表，以及用户可编辑的偏好页面。显式兴趣会被送入四路召回源，并同时作用于Feed和Reels。系统运行于Meta服务端排序栈，配合Facebook应用端的缓存失效机制。对开发者而言，文章提供了一份LLM驱动排序的清晰蓝图，展示了如何让大模型在推荐系统中承担可解释、可控的偏好理解角色。", "link": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_Meet Facebook’s Your Algorithm_ How Meta Turns Pla_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/"}]}, {"title": "Netflix 基于运维数据打造知识图谱，实现 AI 可观测性", "source": "InfoQ", "digest": "Netflix正在开发基于本体论的知识图谱平台，用于加快生产环境故障排查，并让AI智能体对运行环境形成统一理解。公司称每天处理超20亿请求、每秒超3800万实时日志事件，但排查一次典型应用回归问题仍需约4小时，大部分时间花在不同系统间手动拼凑信息。方案用可观测性本体定义运营实体、属性及关系，采用RDF、OWL、SHACL和SPARQL等成熟标准，生成的知识图谱存于基于Rust redb引擎构建的分布式RDF数据库QuipuDB，由Enricher组件管道从运营系统拉取数据并转为三元组。部分数据增强是确定性的，部分环节使用大模型与概率方法解读结构化程度较低的信息，并用实体类型、URI命名等验证规则约束输出，为自动化根因分析和未来自愈基础设施奠定基础。", "link": "https://www.infoq.cn/article/lVQK4fTxIJYZL2sZee2O", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_Netflix 基于运维数据打造知识图谱，实现 AI 可观测性_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/lVQK4fTxIJYZL2sZee2O"}]}, {"title": "OpenAI要给GPT做个“翻译官”，让智能体更懂业务", "source": "智东西", "digest": "据The Information援引知情人士爆料，OpenAI正在开发代号Athena的数据管理平台，旨在帮助ChatGPT Work中的数据分析智能体Data Agent理解企业业务，提高回答问题和执行任务的准确性。Athena功能类似业内所说的语义层，可统一收入、客户等业务指标定义，让Agent分清总收入与净收入、活跃客户与付费客户的区别。咨询公司Andersen Consulting董事总经理Jason Strimpel认为，Agent处理复杂业务数据常出错，重要原因是需自行判断数据含义及关系，语义层能充当业务术语与底层数据的翻译官，让不同部门、报表和看板采用相同指标定义。OpenAI还在为Athena开发一类Agent，负责收集、记录并持续更新其他Agent执行任务所需指导信息。项目仍处早期开发，开放时间与定价未公布。", "link": "https://mp.weixin.qq.com/s/oCKoF3c0ip3OCETuKql3Pg", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_OpenAI要给GPT做个“翻译官”，让智能体更懂业务_智东西.md", "source_items": [{"name": "智东西", "link": "https://mp.weixin.qq.com/s/oCKoF3c0ip3OCETuKql3Pg"}]}, {"title": "Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修", "source": "InfoQ", "digest": "Flask作者、Pi开发者Armin Ronacher在访谈中讲述同行的经历：系统崩溃、工程师紧急开会，却没人说得清故障在哪一层、哪段代码，所有人都在向Claude提问，他感叹真的太可怕了。颇具反差的是，Ronacher本人正把越来越多开发工作交给AI——Pi每天收到约40至50个新Issue，团队已让Agent接手判断Bug是否存在、尝试复现、编写测试、生成修复方案乃至分配优先级，部分任务只要测试证明修复有效、工程师确认后即可合并。Pi创始人Mario Zechner的质疑更直接：行业似乎在追求开发者不必理解自己构建的软件，如果你什么都不需要理解了，你还有什么用。他并不排斥AI，自己也开发Coding Agent，却警告工程师正在失去对系统的理解。", "link": "https://www.infoq.cn/article/ExbJjrItIlc9KLfQ2UeT", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_Pi创始人曝现代开发奇观：系统崩了，一屋子工程师都在问Claude怎么修_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/ExbJjrItIlc9KLfQ2UeT"}]}, {"title": "“Windows该淘汰了！”Rails之父DHH开炮：微软上万工程师干不过一个人带着AI干活", "source": "InfoQ", "digest": "Ruby on Rails创造者、Basecamp联合创始人DHH在播客中表示macOS和Windows已不适合Agent时代，并推动一个名为Omarchy的Linux发行版，称其为首个为Agent原生打造的操作系统。他希望三年内让Linux用户规模超过macOS。DHH认为，Linux过去最令人头疼的终端、配置文件和复杂错误信息，恰恰是Agent最擅长处理的东西，而苹果却在增加macOS与Agent协作的难度，甚至警告用户不要让Claude访问文件。在他看来，AI正让软件开发成本迅速下降，代码不再是长期护城河，Word、Photoshop等传统应用可能逐渐失去存在必要，过去只有微软、Adobe等巨头才能建立的产品生态，如今小团队也有机会重造。这场变化可能重新打开操作系统竞争的大门。", "link": "https://www.infoq.cn/article/ApVrOK0hv1rmmoz2mfGM", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_“Windows该淘汰了！”Rails之父DHH开炮：微软上万工程师干不过一个人带着AI干活_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/ApVrOK0hv1rmmoz2mfGM"}]}, {"title": "“我比黄仁勋更早看到英伟达的未来”！AI 教父回击黄仁勋，直言大规模失业是 AI 巨头赚钱的副作用", "source": "InfoQ", "digest": "诺贝尔物理学奖得主、AI教父Geoffrey Hinton在公开对谈中正面回击黄仁勋。黄仁勋此前批评Hinton宣扬AI导致人类灭绝的风险不负责任，Hinton则回应若确有风险却选择不说才是不负责任，并称早在2009年就告诉上千名机器学习研究者想做神经网络必须买英伟达芯片，而黄仁勋到2012年才作出该预测。他坦言当年关于放射科医生将被AI取代的预测既高估了计算机视觉速度也低估了职业复杂性。Hinton提出，模型发展速度已超过人类理解速度，大规模失业是AI公司追逐利润的副作用；他直言训练Agent各自追求个体目标的强化学习方式太疯狂了。被问及若给超级智能一句最高优先级道德指令会说什么，他回答Be nice to people，并认为让AI更聪明与更善良几乎是正交的两个方向。", "link": "https://www.infoq.cn/article/6i2DoIJiaTcKyR0UyurQ", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_“我比黄仁勋更早看到英伟达的未来”！AI 教父回击黄仁勋，直言大规模失业是 AI 巨头赚钱的副作用_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/6i2DoIJiaTcKyR0UyurQ"}]}, {"title": "日本政府开发智能体打击盗版动漫", "source": "Solidot", "digest": "Solidot报道，日本文化厅正在测试一款AI智能体，用于自动识别和标记可能包含非法或盗版内容的动漫网站。2025财年针对日本国内的一项调查显示，AI标记的1168条可疑X推文中有84%为非法内容；AI检测的1564个动画网站中89%含盗版动画，1935个漫画网站中盗版漫画比例高达94%。2026财年日本政府将监测范围扩大至海外，并计划最早于2027年3月汇总公布最新调查结果。该应用展示了AI智能体在版权监测与内容治理这类大规模、重复性识别任务中的落地，通过自动化筛查显著提升识别效率与覆盖面，为监管部门处理海量网络内容提供辅助手段。", "link": "https://www.solidot.org/story?sid=85988", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_日本政府开发智能体打击盗版动漫_Solidot.md", "source_items": [{"name": "Solidot", "link": "https://www.solidot.org/story?sid=85988"}]}, {"title": "程序员别急着复制“全自动开发”！Gas Town作者：软件工厂先惊艳、后变“垃圾山”，最终还是要推倒重来", "source": "51CTO技术栈", "digest": "51CTO技术栈整理Beads与Gas Town创建者Steve Yegge的演讲。拥有约40年从业经历、曾在Amazon、Google和Sourcegraph工作并参与Cody开发的Yegge，过去一年多尝试让Agent管理Agent，把软件工厂用于长期维护的游戏。他反复遇到同一困境：模型先做出很棒的东西，后来整个系统变成垃圾山，已不得不推倒重来多次。问题包括玩家嫌更新太快、部分Agent整夜没推进任务、一句临时提醒被记成长期规则、限制越加越多导致大量待办却无可做之事。Yegge坦言两次编排系统尝试都失败，造出了巨大单体系统。他强调软件工厂不是多开几个Agent窗口，工厂能启动不等于能持续有序运转，并分享每天处理这些麻烦的做法，提醒行业别急着复制全自动开发。", "link": "https://mp.weixin.qq.com/s/lPIP-OOEoDTSb3i5m5iRdg", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_程序员别急着复制“全自动开发”！Gas Town作者：软件工厂先惊艳、后变“垃圾山”，最终还是要推倒重来_51CTO技术栈.md", "source_items": [{"name": "51CTO技术栈", "link": "https://mp.weixin.qq.com/s/lPIP-OOEoDTSb3i5m5iRdg"}]}, {"title": "被中国网友扒出“偷数据”，7.7 万星开源AI编程神器创始人当场破防：今晚就闭源！", "source": "InfoQ", "digest": "InfoQ报道，GitHub上拥有7.75万星标的AI编程控制台T3 Code遭遇严重口碑反噬：官网宣称零遥测却默认回传使用数据，被指出跨目录读取本地Claude与Codex认证文件，还存在假删除留存记录、后台全机扫描进程明文参数等高危越界行为。硬核开发者陈大黄通过比对源码与公开Issue提出多项质疑，发现软件在桌面端和网页端静默接入PostHog与Sentry分析服务，连命令行启动本地服务也会后台上报事件，直到2026年11月更新才补上关闭遥测的开关但默认仍开启。更受关注的是Identify.ts文件会读取用户本机Claude与Codex认证文件提取账号信息。创始人Theo在X上一度情绪失控称今晚就闭源，随后又否认闭源计划。事件把AI编程工具在隐私采集与权限边界上的灰色地带摆上台面。", "link": "https://mp.weixin.qq.com/s/c1syoY8dNYMFjb-Qtg9XFg", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_被中国网友扒出“偷数据”，7.7 万星开源AI编程神器创始人当场破防：今晚就闭源！_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://mp.weixin.qq.com/s/c1syoY8dNYMFjb-Qtg9XFg"}]}, {"title": "谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障", "source": "InfoQ", "digest": "InfoQ报道，谷歌开源环境质量智能体AQuA（Ambient Quality Agent），用于分析生产环境AI智能体会话、验证反复出现的故障模式，并对已部署源码做根因排查。该工具针对传统基础设施监控易遗漏的静默质量回归，如智能体忽略用户偏好、返回成功响应却跳过必需工具调用。AQuA在谷歌云中与业务智能体并行运行、不在请求链路里，从Cloud Trace、Cloud Logging或BigQuery读取遥测数据，每次最多采样1000条近期会话，经采样、审查、聚类发现、候选核验和问题跟踪五阶段处理。开发者可用goal.md配置领域质量标准，根因分析时会把异常会话与部署时捕获的不可变源码快照对比，诊断智能体可引用文件和代码行并给出修改建议，但不会自动修代码或建PR。在32条会话的受控实验中，修正提示词后绕过座位校验的会话从15降至2。", "link": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS", "content": "", "category": "国际", "is_model_related": false, "source_file": "sources/2026-11-25_谷歌开源环境质量智能体 AQuA，用于诊断生产环境 AI 智能体故障_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/YAc2TqCHc09kAFF1A7BS"}]}, {"title": "9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了", "source": "量子位", "digest": "量子位披露国内初创团队脸谱心智曾短暂公开后又收回一份《General Looped Model》技术报告，把循环架构统一为完整通用框架，首次系统呈现跨赛道全量实测结果。该团队早在2026年6月提交全球首篇面向世界模型的循环架构论文LoopWM，当日登顶Hugging Face论文日榜，比OpenAI Astra架构公开报道早约三个月，比智谱GLM-5.4发布早五个多月。其核心是把参数规模与计算深度解耦：不靠堆叠不同网络层，而是复用同一组权重对隐状态多轮迭代，问题简单则循环轮次少、输出快，任务复杂则迭代更深；权重体积不变、显存可控，增长的只有可动态调度的计算量。报告还给出把存量非Loop骨干改造为共享计算结构的工程路径，相当于公开一套可复用的显存优化方案，挑战了靠堆参数抬高智能上限的传统路线。", "link": "https://www.qbitai.com/2026/11/512565.html", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-11-25_9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了_量子位_be6b74.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/11/512565.html"}]}, {"title": "GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 Scaling", "source": "InfoQ", "digest": "智谱于11月23日发布新一代旗舰模型GLM-5.4，把产品定位从传统Coding扩展到泛Coding，首次采用Loop Transformer架构，通过让共享权重的网络层循环执行，在不增加参数量的情况下增加有效计算深度。模型即日起向GLM Coding Plan全量用户开放，同步上线ZCode、Trae、WorkBuddy、Qoder、CatPaw和OpenCode等编码平台，V2、V3及团队版额度提升至1.5倍，API将在安全评估后开放，权重计划以负责任方式开源。智谱称模型在编程、长程任务和跨领域泛化上显著提升，泛Coding的判断是代码已成为模型描述、构建和操作数字内容的通用接口，视频、游戏、3D场景都可由代码生成。InfoQ用其在ZCode做Code2Video与3D专项测试，展现出跨领域整合能力，但开发耗时偏长、异常处理仍待加强。", "link": "https://www.infoq.cn/article/gXU31yBa9HMEe19PxHVB", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-11-25_GLM-5.4 编程能力暴涨、3D惊艳，但推理变久了？智谱押注双路线：首发Loop架构，下一代继续 _InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/gXU31yBa9HMEe19PxHVB"}]}, {"title": "Hy4 flash 本地部署：让大模型跑在个人设备上", "source": "腾讯混元", "digest": "腾讯混元通过大模型压缩加速工具箱AngelSlim开源Hy4 flash的GGUF量化权重及配套推理代码，使这款总参数224B的模型可部署到个人设备，最小版本权重约为原始的30%。借助优化后的Strata offload框架，模型也能在64GB的Mac mini上运行，在48GB显存设备上生成速度最高达每秒89个token。团队已在RTX Spark、DGX Spark、M5 Max Mac、64GB Mac mini及4090D等设备上完成部署，并开源Q4_K_M、Q3_K、IQ2-AH及面向Spark的4bit等多个量化版本，IQ2-AH权重约125.73GiB，比原始的约410GiB减少约69%。测评显示，Q3_K在演示文稿生成、软件工程和自动化任务四项评测中与原模型差距均不超过0.4分，SPARK-4Bit在PPTGenBench上与原模型仅差0.1分。", "link": "https://mp.weixin.qq.com/s/o0xxShVQX6g2UllrrEv1WQ", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-11-25_Hy4 flash 本地部署：让大模型跑在个人设备上_腾讯混元.md", "source_items": [{"name": "腾讯混元", "link": "https://mp.weixin.qq.com/s/o0xxShVQX6g2UllrrEv1WQ"}]}, {"title": "华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI", "source": "量子位", "digest": "苹果前空间智能首席科学家、计算机视觉学者权龙离开苹果创办格秩科技（Envision AI），专注下一代空间与物理AI基础模型。权龙1988年在ICCV发表华人学者首篇论文，1995年提出奠定三视图重建基础的六点算法，2015年创办三维重建云平台Altizure并于2020年被苹果收购。面对GPT-6-Astra展现的空间理解与三维重建能力，他认为单纯的3D建模生成可能被大语言模型吞掉，于是选择构建原生空间与物理AI基座模型，补足大模型在空间、物理信息表达与泛化上的缺陷。其自研模型在城市级复杂场景三维建模上，把GPT-6-Astra数小时、单场景100至600美元的成本压到10美元以内，效率提升约一个数量级。公司已建立3000万空间物理数据资产、4000万以上空间物理视频数据及500万复杂场景资源。", "link": "https://www.qbitai.com/2026/11/512498.html", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-11-25_华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/11/512498.html"}]}, {"title": "神秘大模型火速杀进OpenCode前三！做MV、开发游戏、3D建模全拿捏，免费可蹬", "source": "智东西", "digest": "智东西报道，一款代号HungerG的匿名模型登陆AI编程平台OpenCode和Qoder后迅速引发关注，上线一天即冲上OpenCode模型调用量日榜第三，单日Token使用量达1.2万亿，仅次于DeepSeek V4.1 Flash和腾讯混元Hy4 Flash。据OpenCode披露，该模型拥有100万Token上下文并支持多模态输入，且在Qoder与OpenCode Go订阅中提供限时免费体验。智东西实测发现，HungerG能用一句话在12分钟生成3D体素风格罗马城、15分钟产出可控核聚变装置3D科普动画，还能复刻经典游戏、直接操控Blender拍摄3D动画，输出速度与质量达到较好平衡，部分开发者称其速度超过DeepSeek v4.1 flash。但其参数、技术架构与背后厂商均未公开，身份成谜。", "link": "https://mp.weixin.qq.com/s/cJNzVZg6-bs1ax-H2NC4Pg", "content": "", "category": "国内", "is_model_related": true, "source_file": "sources/2026-11-25_神秘大模型火速杀进OpenCode前三！做MV、开发游戏、3D建模全拿捏，免费可蹬_智东西.md", "source_items": [{"name": "智东西", "link": "https://mp.weixin.qq.com/s/cJNzVZg6-bs1ax-H2NC4Pg"}]}, {"title": "2026年IDEA 大会：AI时代编程语言将深刻影响软件能力交付上限", "source": "InfoQ", "digest": "在2026年IDEA大会上，IDEA研究院创院理事长沈向洋与院长张宏波围绕AI时代的编程语言展开讨论，并正式发布自研语言MoonBit 1.0。张宏波指出，过去一年软件工程底层正在重写，版本管理、代码审核等工具都在被重做，而编程语言是人向机器表达逻辑的媒介。AI时代编程主体正从人转向Agent：对人而言Vibe Coding让语言显得不再重要，但对Agent而言，语言选择直接决定软件的安全性、性能与可维护性，也就决定交付能力上限。以Python为代表的动态语言在性能验证上易触天花板，Rust因可靠性被微软列为tier1语言。IDEA研究院四年前立项MoonBit，如今每周全球下载近百万次，近四成代码由海外开发者贡献。演讲提出，为Agent而生的新语言打开了参与定义AI时代基础软件体系的窗口。", "link": "https://www.infoq.cn/article/ad1ILH2yFyN1HighXoFF", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_2026年IDEA 大会：AI时代编程语言将深刻影响软件能力交付上限_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/ad1ILH2yFyN1HighXoFF"}]}, {"title": "Agent上下文管理，90%的人第一步就做反了", "source": "腾讯云开发者", "digest": "腾讯云开发者文章指出，Agent上下文压缩的常见误区是让模型写摘要，但摘要有损、不可逆、昂贵且会让Prompt Cache失效，成熟框架遵循能保留原文就保留、能剪除就不改写、能折叠就不摘要的原则，把摘要作为兜底手段。文章从上下文构成讲起，给出从剪除无用片段到改写、折叠的从无损到有损五层工程化治理手段，前四种不需额外调用模型，只决定发给模型哪些内容、发多少，第五种才让模型写摘要。评价维度中易被忽视的是Prompt Cache：主流模型服务支持前缀缓存，命中价格约为正常输入的十分之一，改写历史中某条消息会使其后的缓存全部失效，因此改写类手段应攒到接近阈值时批量触发，而非每轮都做。文章以规划北京三日游为例，展示处理前后的token占用差异。", "link": "https://mp.weixin.qq.com/s/OFvkSyjORzjOOEDpqB5Mhw", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_Agent上下文管理，90%的人第一步就做反了_腾讯云开发者.md", "source_items": [{"name": "腾讯云开发者", "link": "https://mp.weixin.qq.com/s/OFvkSyjORzjOOEDpqB5Mhw"}]}, {"title": "字节跳动与港大开源Laminar：面向大模型与长程智能体的异步强化学习后训练框架", "source": "MarkTechPost", "digest": "香港大学与字节跳动Seed团队开源异步强化学习后训练框架Laminar，面向大模型与长程智能体，核心思路是不再强制每条轨迹和每张GPU等待最慢者，这对训练rollout长且分布倾斜的编码智能体尤为关键。框架在Qwen3-Coder-30B-A3B-Instruct及Qwen2.5的7B、32B、72B上验证，运行于Ray与CUDA之上的多节点NVIDIA GPU集群，已在64张H800及最多1024张H800规模测试，推理用vLLM，训练用Megatron-LM或FSDP2。论文显示端到端吞吐最高提升5.48倍，SWE-bench Verified得分从基座模型的46.6%提升至52.2%。文章同时指出现存短板：项目处于早期、推理后端仅支持vLLM、逐步异步检查点仍在开发中，且对比混合了H800与H100。整体意义在于用更少样本和GPU小时换来更高的SWE-bench成绩。", "link": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_ByteDance Researchers Open-Sources Laminar, an Asy_MarkTechPost.md", "source_items": [{"name": "MarkTechPost", "link": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/"}]}, {"title": "OceanBase给Agent造了套数据平台，核心数据库同步开源", "source": "量子位", "digest": "蚂蚁OceanBase在11月24日北京AI数据大会上发布AI战略产品湖库一体AI数据平台OceanLake，并宣布向全球开源核心引擎AI数据库OceanSeek。CEO杨冰提出，当模型越来越先进、Agent Harness越来越成熟，挑战终将归于数据，AI时代数据基础设施需坚持湖库一体、多模融合、Agent友好、开源开放四大原则。InfoQ采访OceanBase AI数据平台研发总经理杨志丰时指出，Agent持续优化离不开评测，但任务变复杂后评测本身成了工程挑战，一条高质量评测用例可能要几百到上千元，且若隔离不足，Agent在评测中读写数据会污染环境。IDC 2026年调查显示57%的亚太企业把数据准备度列为AI落地首要障碍，Fivetran报告则发现虽41%组织已在生产使用Agentic AI，仅15%在数据基础层面做好充分准备。", "link": "https://mp.weixin.qq.com/s/R_U_gX8C3m0UICXvJWTAuA", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_OceanBase给Agent造了套数据平台，核心数据库同步开源_量子位.md", "source_items": [{"name": "量子位", "link": "https://mp.weixin.qq.com/s/R_U_gX8C3m0UICXvJWTAuA"}, {"source_file": "sources/2026-11-25_做了 16 年数据库，蚂蚁 OceanBase 为什么要再造一个 AI 数据平台？_InfoQ.md", "name": "InfoQ", "link": "https://www.infoq.cn/article/2YvROKs0CHz1yR4Wi02o"}]}, {"title": "Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员", "source": "InfoQ", "digest": "InfoQ文章介绍如何在Octop中创建托管专家并对接CodeBuddy、OpenCode、Claude Code、Codex等主流编程智能体，打造7×24小时在线的AI程序员。Octop是腾讯云开源的自托管AI助手，通过多Agent架构构建智能环境，单进程即可运行Web控制台、CLI与IM集成，支持飞书、钉钉、QQ、微信、企业微信等通道及HTTP/SSE/WebSocket API，内置专家库、OAuth加MCP连接器与ACP双向协作。专家是Octop的对话入口，可配置技能、子智能体、定时任务、通道与模型；原生专家每轮对话由Octop Harness驱动，托管专家则把Harness交给后端绑定的编程智能体，在工作目录完成代码阅读、文件修改、测试运行与提交。文章详细对比了两种专家的差异与适用场景。", "link": "https://www.infoq.cn/article/cgiP7vstrXKH94L1zj76", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_Octop 托管 CodeBuddy 实战：打造 7×24 小时在线的 AI 程序员_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/cgiP7vstrXKH94L1zj76"}]}, {"title": "丢个故事就行！直出15分钟AI短片，家里二舅也能上手", "source": "量子位", "digest": "量子位报道秘塔AI推出新产品全民开机，主打一句话直出15分钟AI短片，试图让不懂提示词与电影术语的普通用户也能完成视频创作。作者以改编《森林冰火人》为森林电木娃为例，仅用语音输入剧本、复制粘贴后约十分钟即产出成片，无需设计光影、打磨资产。文章指出传统AI视频工作流要求用户逐镜头写几十条复杂运镜提示、反复抽卡生成15至30秒碎片素材、再导入剪辑软件对齐音画，一套下来往往一周才能完成，其痛点不在模型能力而在产品路径：为优先满足专业生产者，许多本可自动化的环节被强制暴露给用户。全民开机把编剧、分镜、美术、剪辑等角色收进一个全流程虚拟剧组，以产品化封装降低生成式视频的创作门槛。", "link": "https://www.qbitai.com/2026/11/512727.html", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_丢个故事就行！直出15分钟AI短片，家里二舅也能上手_量子位.md", "source_items": [{"name": "量子位", "link": "https://www.qbitai.com/2026/11/512727.html"}]}, {"title": "把 AI 编程智能体装进同一个工作台：开源多 Agent 调度平台 Milletcode 实践", "source": "InfoQ", "digest": "InfoQ文章介绍开源多Agent调度平台Milletcode（当前v0.11.0），这是一个自托管Web工作台，把Claude Code、SmartCode等AI编程智能体以及本地与远程项目统一接入浏览器，完成项目发现、任务下达、实时输出、人工审批、文件管理和结果验收。作者指出，当AI编程工具从代码补全助手进化为能阅读项目、修改文件、执行命令和运行测试的智能体，研发管理重点就从会不会写代码转向如何分派任务、观察过程、控制风险并验收结果。团队高频使用这些工具后，会出现智能体散落不同终端、本地与远程项目需分别管理、任务状态难判断、代码修改与终端调试缺乏统一入口等问题，因此需要一个专门管理Agent的工作台。平台以浏览器为统一入口，把多智能体调度与研发过程可视化、可审批化。", "link": "https://mp.weixin.qq.com/s/DZ0lDDWWNRqMnCz30YFN8w", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_把 AI 编程智能体装进同一个工作台：开源多 Agent 调度平台 Milletcode 实践_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://mp.weixin.qq.com/s/DZ0lDDWWNRqMnCz30YFN8w"}]}, {"title": "深度解析 DeepSeek Super-agent：多端协同的自主 Agent 设计思路", "source": "千问AI平台", "digest": "千问AI平台文章深度解析DeepSeek Harness团队十月底开源的原型项目DSH Super-agent。作者指出，若说DeepSeek Harness为Agent开发范式打下地基，Super-agent则是在其上搭建面向自主Agent的新设计范式，官方已放出完整代码并撰文阐述设计哲学，但坦言项目仍处原型阶段、在Harness默认配置中未开启，更多是前沿探索与能力验证。文章梳理Agent从Coding Agent、CoWork办公Agent到Personal Agent的演进，指出当下Agent往往既要写代码又要满足办公需求，单一任务范式已不够用。作者基于源码与文档拆解Super-agent架构，认为其对Agent开发者极具参考价值，代表了下一代自主Agent该长什么样的系统性思考，值得深入学习其多端协同与任务调度设计。", "link": "https://mp.weixin.qq.com/s/yPHBK48nEVRSAjkLKTJwwQ", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_深度解析 DeepSeek Super-agent：多端协同的自主 Agent 设计思路_千问AI平台.md", "source_items": [{"name": "千问AI平台", "link": "https://mp.weixin.qq.com/s/yPHBK48nEVRSAjkLKTJwwQ"}]}, {"title": "用 Super-agent 的理念，拆解 Octop 团队模式", "source": "InfoQ", "digest": "Octop负责人Jubaoliang撰文，以DeepSeek Super-Agent理念为参照解析Octop团队模式。DeepSeek近日发文阐述Super-Agent设计：打破AI单次仅处理单一任务的旧范式，采用调度员Router加执行单元Worker的双层架构实现任务并行与后台运行，耗时任务自动转后台、前台持续响应，每条消息仅保留核心上下文、冗长材料归档按需检索。Octop是腾讯云开源的多用户AI助手，早在1.0.2版本就上线团队模式，由一名主持人Agent统筹分解任务、多名专家Agent并行推进子任务。文章指出两者在不谋而合中形成跨越产品与时间的对照印证，并以日常收到季度报告通知的场景为例，解析两条路径如何在工程层面分别落地多任务并行这一共同目标。", "link": "https://www.infoq.cn/article/xJVcbBYI4m86a9TIA6HH", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_用 Super-agent 的理念，拆解 Octop 团队模式_InfoQ.md", "source_items": [{"name": "InfoQ", "link": "https://www.infoq.cn/article/xJVcbBYI4m86a9TIA6HH"}]}, {"title": "荣耀眼里的 AI 手机：前沿模型可以进来，但入口不能拿走", "source": "极客公园", "digest": "极客公园报道，荣耀在武汉发布荣耀700系列，真正受关注的是AI助手YOYO正式更名为AI手机助手YOYO豆包，成为继努比亚之后第二款搭载豆包手机助手的产品。新机AI能力围绕AI灵动背屏展开，首发AI定制随心贴，可对助手说一句话生成图片贴到背屏，并支持语音通话、英语陪练、航班打车快递外卖进度查看、后置主摄自拍取景及心率血氧测量。荣耀CEO李健称用户不在意后台接的是哪家模型，核心是体验；产品线总裁方飞强调AI只是技术，把背屏做成一个非常浅的入口直指普通用户找不到、不会用AI的痛点。文章指出公开材料未提及YOYO豆包可替用户在第三方App操作等GUI能力，目前仍是围绕背屏和模型对话的手机功能。", "link": "http://www.geekpark.net/news/374462", "content": "", "category": "国内", "is_model_related": false, "source_file": "sources/2026-11-25_荣耀眼里的 AI 手机：前沿模型可以进来，但入口不能拿走_极客公园.md", "source_items": [{"name": "极客公园", "link": "http://www.geekpark.net/news/374462"}]}];
+
+  /* ===== Category Config ===== */
+  var CATS = ['国际', '国内', '同业', '其他'];
+  var CAT_CONFIG = {
+    '国际': { key: 'intl', color: 'intl', icon: '\uD83C\uDF0D' },
+    '国内': { key: 'domestic', color: 'domestic', icon: '\uD83C\uDDE8\uD83C\uDDF3' },
+    '同业': { key: 'peer', color: 'peer', icon: '\uD83C\uDFE6' },
+    '其他': { key: 'other', color: 'other', icon: '\uD83D\uDCCC' }
+  };
+
+  /* ===== Extract date from URL path ===== */
+  function extractDateFromPath() {
+    var path = window.location.pathname;
+    var m = path.match(/\/daily\/([\d]{4}-[\d]{2}-[\d]{2})/);
+    return m ? m[1] : '';
+  }
+  var PAGE_DATE = extractDateFromPath();
+
+  /* ===== Build viewer link ===== */
+  function buildViewerLink(sourceFile) {
+    if (!sourceFile) return '#';
+    var prefix = '../../viewer.html?file=';
+    var encodedPath = sourceFile.split('/').map(encodeURIComponent).join('/');
+    if (PAGE_DATE) {
+      return prefix + 'daily/' + PAGE_DATE + '/' + encodedPath;
+    }
+    return prefix + encodedPath;
+  }
+
+  /* ===== Count by Category ===== */
+  var catCounts = {};
+  CATS.forEach(function(c) { catCounts[c] = 0; });
+  ARTICLES.forEach(function(a) {
+    if (catCounts[a.category] !== undefined) catCounts[a.category]++;
+  });
+
+  /* ===== Build Stats Chips ===== */
+  var statsEl = document.getElementById('banner-stats');
+  if (statsEl) {
+    var statsHtml = '';
+    CATS.forEach(function(cat) {
+      statsHtml += '<span class="stat-chip" data-cat="' + cat + '">' +
+        '<span class="stat-dot" data-cat="' + cat + '"></span>' +
+        cat + ' ' + catCounts[cat] + ' 篇</span>';
+    });
+    statsEl.innerHTML = statsHtml;
+  }
+
+  /* ===== Render Category Sections ===== */
+  var sectionsEl = document.getElementById('cat-sections');
+
+  function renderDigest(digest) {
+    if (!digest) return '';
+    // 剥离 HTML 标签，支持多段落渲染（\n\n 分段）
+    try {
+      var stripped = digest.replace(/<[^>]+>/g, '');
+      stripped = stripped.replace(/&lt;\/?[^&]+&gt;/g, '');
+      // 按双换行分段，每段一个 <p>
+      var paragraphs = stripped.split(/\n\s*\n/);
+      return paragraphs.map(function(p) {
+        var trimmed = p.replace(/\n/g, '<br>').trim();
+        return trimmed ? '<p>' + escapeHtmlLite(trimmed) + '</p>' : '';
+      }).join('');
+    } catch (e) {
+      return '<p>' + escapeHtml(digest) + '</p>';
+    }
+  }
+
+  function escapeHtmlLite(str) {
+    // 保留已插入的 <br> 和 <p>，只转义其他特殊字符
+    return str.replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function renderCard(article) {
+    var cfg = CAT_CONFIG[article.category] || CAT_CONFIG['其他'];
+    var digestHtml = renderDigest(article.digest);
+
+    var modelTagHtml = '';
+    if (article.is_model_related) {
+      modelTagHtml = '<span class="model-tag">大模型</span>';
+    }
+
+    // 格式化发布时间
+    var timeHtml = '';
+    if (article.publish_time) {
+      var dt = new Date(article.publish_time * 1000);
+      var hours = String(dt.getHours()).padStart(2, '0');
+      var minutes = String(dt.getMinutes()).padStart(2, '0');
+      timeHtml = '<div class="card-date"><span class="card-time">' + hours + ':' + minutes + '</span></div>';
+    }
+
+    // 多来源标签（可点击跳转）
+    var actionsHtml = '';
+    var sourceItems = article.source_items;
+    if (sourceItems && sourceItems.length > 0) {
+      sourceItems.forEach(function(si) {
+        if (si.link) {
+          actionsHtml += '<a href="' + escapeAttr(si.link) + '" target="_blank" rel="noopener" class="source-tag" data-qr-url="' + escapeAttr(si.link) + '">' + escapeHtml(si.name) + '</a>';
+        } else {
+          actionsHtml += '<span class="source-tag">' + escapeHtml(si.name) + '</span>';
+        }
+      });
+    } else if (article.source) {
+      // fallback: single source
+      if (article.link) {
+        actionsHtml += '<a href="' + escapeAttr(article.link) + '" target="_blank" rel="noopener" class="source-tag" data-qr-url="' + escapeAttr(article.link) + '">' + escapeHtml(article.source) + '</a>';
+      } else {
+        actionsHtml += '<span class="source-tag">' + escapeHtml(article.source) + '</span>';
+      }
+    }
+
+    return '<div class="article-card">' +
+      '<div class="card-main">' +
+        '<div class="card-stripe ' + cfg.color + '"></div>' +
+        '<div class="card-body">' +
+          '<div class="card-title-wrap">' +
+            '<div class="card-title">' + escapeHtml(article.title) + '</div>' +
+            modelTagHtml +
+          '</div>' +
+          timeHtml +
+          (digestHtml ? '<div class="card-digest">' + digestHtml + '</div>' : '') +
+          '<div class="card-actions">' +
+            actionsHtml +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(cat) {
+    var cfg = CAT_CONFIG[cat];
+    var articles = ARTICLES.filter(function(a) { return a.category === cat; });
+    var count = articles.length;
+
+    var html = '<div class="cat-section">' +
+      '<div class="cat-header">' +
+        '<div class="cat-icon ' + cfg.color + '">' + cfg.icon + '</div>' +
+        '<div class="cat-title ' + cfg.color + '">' + cat + '</div>' +
+        '<div class="cat-count">' + count + ' 篇</div>' +
+      '</div>';
+
+    if (count === 0) {
+      html += '<div class="empty-state">暂无</div>';
+    } else {
+      html += '<div class="card-list">';
+      articles.forEach(function(a) {
+        html += renderCard(a);
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  var allHtml = '';
+  CATS.forEach(function(cat) {
+    allHtml += renderSection(cat);
+  });
+  sectionsEl.innerHTML = allHtml;
+
+  /* ===== Source QR Popover (hover 显示来源链接二维码) ===== */
+  (function() {
+    if (typeof QR === 'undefined') return;
+    var canHover = window.matchMedia ? window.matchMedia('(hover: hover)').matches : true;
+    if (!canHover) return;
+    var QR_PX = 168;
+
+    var pop = document.createElement('div');
+    pop.className = 'qr-popover';
+    var arrow = document.createElement('div');
+    arrow.className = 'qr-popover-arrow up';
+    var body = document.createElement('div');
+    pop.appendChild(arrow);
+    pop.appendChild(body);
+    document.body.appendChild(pop);
+
+    var cache = {};
+    function svgFor(url) {
+      if (cache[url]) return cache[url];
+      try {
+        var qr = QR(0, 'M');
+        qr.addData(url);
+        qr.make();
+        var n = qr.getModuleCount(), q = 4, total = n + q * 2, d = '';
+        for (var r = 0; r < n; r++) {
+          for (var c = 0; c < n; c++) {
+            if (qr.isDark(r, c)) d += 'M' + (c + q) + ' ' + (r + q) + 'h1v1h-1z';
+          }
+        }
+        var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + QR_PX + '" height="' + QR_PX +
+          '" viewBox="0 0 ' + total + ' ' + total + '" shape-rendering="crispEdges">' +
+          '<rect width="' + total + '" height="' + total + '" fill="#ffffff"/>' +
+          '<path d="' + d + '" fill="#1f2937"/></svg>';
+        cache[url] = svg;
+        return svg;
+      } catch (e) {
+        return '';
+      }
+    }
+
+    var showTimer = null, hideTimer = null, current = null;
+
+    function place(el) {
+      var r = el.getBoundingClientRect();
+      var pw = pop.offsetWidth, ph = pop.offsetHeight;
+      var sx = window.pageXOffset || document.documentElement.scrollLeft || 0;
+      var sy = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var vw = document.documentElement.clientWidth, vh = window.innerHeight;
+      var mode = 'up', top = r.bottom + sy + 10;
+      if (r.bottom + 10 + ph > vh && r.top - 10 - ph > 0) {
+        top = r.top + sy - ph - 10;
+        mode = 'down';
+      }
+      var left = r.left + sx + r.width / 2 - pw / 2;
+      left = Math.max(sx + 8, Math.min(left, sx + vw - pw - 8));
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+      arrow.className = 'qr-popover-arrow ' + mode;
+      arrow.style.left = Math.max(8, Math.min((r.left + r.width / 2) - (left - sx) - 5, pw - 18)) + 'px';
+    }
+
+    function show(el) {
+      var url = el.getAttribute('data-qr-url');
+      if (!url) return;
+      var svg = svgFor(url);
+      if (!svg) return;
+      current = el;
+      body.innerHTML = svg;
+      pop.classList.add('is-visible');
+      place(el);
+    }
+
+    function hide() {
+      pop.classList.remove('is-visible');
+      current = null;
+    }
+
+    function tagOf(t) {
+      if (!t || !t.closest) return null;
+      return t.closest('.source-tag[data-qr-url]');
+    }
+
+    document.addEventListener('mouseover', function(e) {
+      var el = tagOf(e.target);
+      if (!el || el === current) return;
+      clearTimeout(hideTimer);
+      clearTimeout(showTimer);
+      showTimer = setTimeout(function() { show(el); }, 150);
+    });
+    document.addEventListener('mouseout', function(e) {
+      var el = tagOf(e.target);
+      if (!el) return;
+      clearTimeout(showTimer);
+      hideTimer = setTimeout(hide, 200);
+    });
+    pop.addEventListener('mouseenter', function() { clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave', function() { hideTimer = setTimeout(hide, 200); });
+    document.addEventListener('focusin', function(e) {
+      var el = tagOf(e.target);
+      if (!el) return;
+      clearTimeout(hideTimer);
+      show(el);
+    });
+    document.addEventListener('focusout', function(e) {
+      if (tagOf(e.target)) hide();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.keyCode === 27) hide();
+    });
+    window.addEventListener('scroll', function() {
+      if (pop.classList.contains('is-visible')) hide();
+    }, true);
+    window.addEventListener('resize', hide);
+  })();
+
+  /* ===== Utility ===== */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ===== Init ===== */
+  var fallback = document.getElementById('fallback-content');
+  if (fallback) fallback.style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+})();
+</script>
+</body>
+</html>
