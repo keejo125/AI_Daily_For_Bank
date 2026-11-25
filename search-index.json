@@ -1,7 +1,257 @@
 {
-  "updated_at": "2026-11-24T05:20:19.881326",
-  "total": 3730,
+  "updated_at": "2026-11-25T08:38:10.546669",
+  "total": 3755,
   "articles": [
+    {
+      "date": "2026-11-24",
+      "title": "Anthropic还藏着2个最强模型…",
+      "source": "量子位",
+      "digest": "量子位援引行业观察者爆料与METR报告，称Anthropic内部还有两款更强模型，未来半年能力或迎大跃升。METR于8月至10月进入Anthropic内部，获得部分内部模型评测、训练与研发效率数据并采访约15名员工，披露三款尚未完全公开身份的模型：Model 2于2026年7月完成训练，能力超过当时旗舰Mythos 5，大量用于内部编程、Agent任务与数据生成，暂无对外发布计划；Model 3于8月至9月完成训练，随11月9日Fable 5.2与Mythos 5.2发布身份浮出水面，METR测试显示其AI研发能力强于最终发布版本，系统卡承认主动限制了GPU内核优化、改进大语言模型架构等任务上的能力；Model 4于9月至10月完成训练，内部综合能力指数AECI达178.6分，高于Mythos 5.2的177.12分。METR测算自2025年10月以来Anthropic的AECI指数增速约为此前1.9倍，其中AI辅助研发贡献约80%，一位研究员称自身生产力已提高至过去的三倍。",
+      "link": "https://mp.weixin.qq.com/s/YTJ92Ni7j856vfxkYkniDw",
+      "source_file": "sources/2026-11-24_Anthropic还藏着2个最强模型…_量子位.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "METR最新报告：AI能力仍在指数级增长，但判断力仍不如人类",
+      "source": "麻省理工科技评论APP",
+      "digest": "非营利AI评测机构METR更新了\"任务时间跨度图\"。报告发现部分AI能力仍沿指数级增长轨道提升，前沿模型能成功完成的任务时长每四个月翻一倍；但在需要判断力的任务上，模型表现不如其在编程任务中的出色程度。新版图表纳入了更多任务，其中一些预计需人类花费远超原有测试集的时间，另一些开放性更强。当前关键问题是AI在可验证任务上的进步能多大程度迁移到难以衡量成败的任务。强化学习能训练神经网络在可自动判定的编程、数学任务上进步，但用于成功标准不明确或需长时间判断的任务则困难得多，而这恰是AI研发自动化的关键。METR新增的两项模糊任务中，一项要求模型设计新评测项目由员工打分，最先进模型无一达到可用于实际研究的标准；另一项对哲学论证评分，模型同样未达人类水平。本月早前一份删减版报告称AI可能将Anthropic研发速度提升两倍，引发对递归式自我改进的担忧。",
+      "link": "https://mp.weixin.qq.com/s/8xZksz4m4spscowmfDgqeg",
+      "source_file": "sources/2026-11-24_METR最新报告：AI能力仍在指数级增长，但判断力仍不如人类_麻省理工科技评论APP.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "RSI新进展！AI给自己改脑，Qwen模型数学能力大涨",
+      "source": "智东西",
+      "digest": "智东西报道，来自UIUC、卡内基梅隆大学等六所高校的研究团队联合发布论文《语言模型能够改写自身权重》，提出\"自我改写\"（Self-rewriting）的模型自进化思路，称之为迈向递归自我改进（RSI）的必要一步。该方法不计算梯度、不重新训练，让模型自行读取隐藏状态与底层权重、分析错误原因，再编写代码直接修改自己的权重，单卡数小时即可完成。实验选用Qwen3.5系列20亿、40亿、90亿与270亿参数四款开源模型，其中27B模型自我改写后，将490道未参与改写的数学题准确率从57.2%提升至63.8%，提升6.6%。论文第一作者Jiajun Fan为南开本科、清华硕士、UIUC计算机科学博士，末位作者刘謌为清华本科、MIT博士、UIUC助理教授。团队在论文中写道，训练与推理之间的界限源于现有工具的局限，而非智能本身的属性。",
+      "link": "https://mp.weixin.qq.com/s/wgze3ce0evVVxUvNzV8WpQ",
+      "source_file": "sources/2026-11-24_RSI新进展！AI给自己改脑，Qwen模型数学能力大涨_智东西.md",
+      "category": "国际",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Anthropic 推出 Claude Ship：三个智能体接管 GitHub PR 审核、修复与审批",
+      "source": "MarkTechPost",
+      "digest": "Anthropic于11月23日推出Claude Ship（Beta），瞄准程序员日常开发中长期被忽视的Pull Request环节，用三个智能体接管代码交付工作流。Code Review结合整个代码库上下文审查变更，通过对抗式验证排除误报，将问题分级后直接发布到PR，分Quick、Standard、Deep三档审核深度，已正式可用；PR Steward负责处理失败的检查、合并冲突与审查意见，推送修复提交，但不负责审批或合并，每次推送后说明改动及撤销方式；Claude Approvals按团队编写的审批策略核查每个PR。合并与否仍由GitHub分支规则决定。开发者在Claude Code中输入/ship命令即可自动推送代码、创建PR、审查修改并处理后续反馈。多数Code Review在6至10分钟内完成，约为研究预览版的三倍。Anthropic自报Claude Code团队6月至9月合并的PR数翻倍。其目标是让团队交付代码的速度跟上AI编写代码的速度。",
+      "link": "https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/",
+      "source_file": "sources/2026-11-24_Anthropic Launches Claude Ship for GitHub Pull Req_MarkTechPost.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "iFood 如何在 1.5 万个代码仓库规模化运行编码智能体",
+      "source": "OpenAI",
+      "digest": "OpenAI客户案例：iFood维护超过1.5万个代码仓库，这些仓库需定期执行验证代码是否符合内部标准、修复脆弱依赖、运行分析等任务。单个任务并不难，难点在于规模化。iFood构建了Remote Agents Platform，把工程任务变成API调用：团队委派工作，执行发生在远程沙箱，结果以merge request返回。平台已完成2.5万多次运行，平均每次推理成本0.04美元，内部安全平台修复的漏洞数翻倍以上。高级软件工程师Victor Coelho表示，解决一个仓库很容易，挑战在于跨全部1.5万个仓库规模化解决。此前各团队各自为战、方案碎片化，该平台提供了统一的能力层。",
+      "link": "https://openai.com/business/customer-stories/ifood",
+      "source_file": "sources/2026-11-24_How iFood scales coding agents across 15,000 repos_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "OpenAI 与思科推出 Shirudo：开源运行时让智能体无需停机防护系统",
+      "source": "OpenAI",
+      "digest": "OpenAI与思科11月23日推出Shirudo，一个开源运行时，帮助运营团队在推送补丁期间保护运行中的Linux系统，无需等待补丁或重启。在受控测试中，Codex生成的护盾在运行中的Elasticsearch服务上阻断了一次Java4Shell攻击尝试，服务无需重启。两家机构指出，测试与部署补丁仍可能耗时数天到数周，其间保护服务颇具挑战，因为攻击与合法请求可能依赖同一项Linux操作，直接阻断会使服务下线。Shirudo（日语意为\"盾\"）让安全团队验证临时护盾是否只阻断暴露漏洞的行为而放行合法请求，操作员批准后可在服务持续运行时部署。项目融合了OpenAI的前沿AI、安全与基础设施研究以及思科的基础设施与安全能力，并邀请开发者、安全研究者与基础设施运营者共同参与建设。",
+      "link": "https://openai.com/index/introducing-shirudo",
+      "source_file": "sources/2026-11-24_OpenAI and Cisco introduce Shirudo_OpenAI.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Pinterest 让大模型取代多阶段聚类，但最大的提速来自“少推理”",
+      "source": "InfoQ",
+      "digest": "InfoQ报道，Pinterest把用户旅程推断系统从多阶段聚类流水线改为经过微调的40亿参数语言模型，邮件点击率提升1.1%，推送消息打开率提升1.3%。新模型不再把关键词聚类为兴趣，而是分析用户活动历史识别长期目标。它读取360天内最多150项用户行为的时间顺序记录及精简画像，生成按优先级排序的旅程名称，搜索与保存行为权重高于偶然点击。团队用前沿模型根据活动历史生成合成训练样本，经监督微调和LoRA微调开放权重的Qwen3模型，测试了6亿至80亿参数后选择40亿以平衡质量与吞吐。工程上在L40S GPU的vLLM工作节点前部署NVIDIA Dynamo，配合连续批处理、PagedAttention与前缀缓存感知路由。提速最大的措施之一是直接避免不必要推理：记录每位用户旅程上次生成时间，跳过几天内已处理过的用户。",
+      "link": "https://www.infoq.cn/article/vaEUVvWD9AIaFXZhzSMH",
+      "source_file": "sources/2026-11-24_Pinterest 让大模型取代多阶段聚类，但最大的提速来自“少推理”_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "“3年，用户数超过macOS？”Rails之父DHH直言：Windows、macOS压根不适合Agent时代！指望几百万行源代码构成护城河？简直是在做梦",
+      "source": "CSDN",
+      "digest": "CSDN整理a16z播客中Ruby on Rails创造者DHH对AI时代软件行业变化的观察。他两年前转向Linux并亲手打造发行版Omarchy，过去五六个月没有手写一行代码，而是通过Agent写了几十万行。DHH认为过去40年围绕鼠标点击建立的操作系统已不适合Agent时代：操作系统可通过提示词随时修改，过去需专业团队耗费数年开发的软件如今可能几分钟重做，Linux迎来25年难得的机会，三年内有望超过macOS，移动端也可能出现同样变化。他还表示，认为源代码（哪怕数百万行）能构成护城河或保护生态的人简直是在做梦。访谈中他还谈到Agent如何消灭一整类传统应用、软件开发成本为何趋近于零、明年可能到来的超级智能，以及过去需几十名员工的工作如今他一人带一支Agent舰队即可推进。",
+      "link": "https://mp.weixin.qq.com/s/BzFBec4Ivfr3IRA4CBvn8g",
+      "source_file": "sources/2026-11-24_“3年，用户数超过macOS？”Rails之父DHH直言：Windows、macOS压根不适合Agent时代！指望几百万行源代码构成护城河？简直是在做梦_CSDN.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "当 AI 改变一切，下一步如何构建？",
+      "source": "InfoQ",
+      "digest": "InfoQ文章以亚马逊云科技首席开发者布道师Darko Mesaroš的身份危机切入：\"如果Agent能比我更快写代码，我还有什么价值？\"他回顾二十年前云计算兴起时自己从系统管理员转向掌握更广泛技术能力，因为基础设施被抽象为云服务。re:Invent大会是观察这两轮变革的集中舞台：2014年Lambda、2017年SageMaker、2018年首款Arm处理器Graviton、2025年Kiro autonomous agent、Security Agent与DevOps Agent。文章指出每次抽象与自动化都会产生新的工程问题：Serverless需处理冷启动与状态管理，机器学习平台需解决部署运维，Agent则带来执行权限、可靠性与成本控制挑战。2026年11月30日至12月4日将举办第十五届re:Invent，文章同时向读者征集希望带到现场的问题。",
+      "link": "https://www.infoq.cn/article/iRm9lBSQj0OCvDdgLQrO",
+      "source_file": "sources/2026-11-24_当 AI 改变一切，下一步如何构建？_InfoQ_0b3821.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "技术债务具有社会性：它是边做边学的代价",
+      "source": "InfoQ",
+      "digest": "InfoQ译文介绍Xin Yao在哥本哈根GOTO大会的演讲\"假如你最大的技术债务是社会性的\"。她引用Ward Cunningham对债务的定义\"不够完善的代码\"，指出技术债务未必代表工程质量糟糕，它可能是在软件实践中学习所付出的代价，也可以是一种主动选择的商业策略：明知代码未来看不够完美仍发布，以换取业务与用户反馈。技术债务源于在知识不完整时设计软件，发布软件让团队用真实情况检验假设，获得认知后须把经验放回代码中偿还债务。她引用Kent Beck的观点强调每行代码都是复杂性与约束，持续堆砌功能尤其借大模型生成，到临界点后团队全部精力只能还利息。推迟设计可保留选择权，\"等待不等于懒惰，等待是持有一项资产\"。AI带来的新挑战是软件产出速度快于团队形成共识与理解代码的速度，偿还技术债务不再只是纯技术任务，而是社会技术层面的工作。",
+      "link": "https://www.infoq.cn/article/rdfEoVWlwvbrW0MCsFKs",
+      "source_file": "sources/2026-11-24_技术债务具有社会性：它是边做边学的代价_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "程序员最该警惕的是“人人都能替代你”的错觉！Jira负责人：全员AI建设者是行不通的，会用工具，和懂这门专业是两回事",
+      "source": "51CTO技术栈",
+      "digest": "51CTO整理Atlassian（Jira与Confluence开发商）AI负责人谢里夫·曼苏尔访谈。Atlassian曾组织多支试验团队，让产品、设计、工程等不同专业的人用AI一起做产品，不再单独强调原有角色。起初大家称从没做得这么快，约一个月后又回去做各自熟悉的工作。谢里夫指出限制团队的并非做东西的速度而是方向：不是再多做一些，而是先弄明白该做什么，包括哪些东西值得先做、产出是否符合目标、做到什么程度适合交给用户。人人都能做原型与知道该推进哪个原型并非一回事。他强调拿到某领域的工具不等于已具备该领域的专业能力，AI会放大优势也会放大弱点；能使用工具不代表已是专家。程序员既不是被动等需求的人，也不必成为包办一切的\"万能员工\"，而应更早接触用户理解为什么做，再用技术经验参与决定怎样做。",
+      "link": "https://mp.weixin.qq.com/s/DZ3CbvLpUAz3z4tt9qiUzA",
+      "source_file": "sources/2026-11-24_程序员最该警惕的是“人人都能替代你”的错觉！Jira负责人：全员AI建设者是行不通的，会用工具，和懂这门专业是两回事_51CTO技术栈.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "谷歌发现，技术债务会通过“智能体分心”导致编码智能体偏离正轨",
+      "source": "InfoQ",
+      "digest": "InfoQ报道，谷歌高级软件工程师Sam Saccone与高级数据科学家Madhuri Garikapati指出智能体分心的代价：AI编码智能体会因陈旧的技术债务，如过时的TODO注释、已废弃的Bug引用与过时的规格说明，偏离正轨去执行用户没有要求的\"支线任务\"。研究者分析来自数千名工程师的分布式跟踪数据与数亿次智能体操作，发现约13%的会话遇到内联TODO/FIXME引用，其中6%针对被引用的缺陷采取了行动；在这些无提示的绕道操作中，41%处理的是已关闭工单，57%处理的是开放但超出请求范围的缺陷。多向固定效应回归显示，这些冗余操作使每次会话步骤增加70%、token消耗增加77%、等待时间增加105%。谷歌为此开发扫描智能体，检查长达数年的Git历史确认TODO及其意图已过时才提交PR移除引用，过去6个月移除数千个过时引用，人工审核认可率超过95%。",
+      "link": "https://www.infoq.cn/article/sFmubmDWkulIOTBLX0Dr",
+      "source_file": "sources/2026-11-24_谷歌发现，技术债务会通过“智能体分心”导致编码智能体偏离正轨_InfoQ.md",
+      "category": "国际",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "智谱发布 GLM-5.4：750B 规模、28 层循环执行两轮的 Loop Transformer",
+      "source": "MarkTechPost",
+      "digest": "Z.ai发布GLM-5.4，其首个基于Loop Transformer架构的旗舰模型。该架构把GLM-5基座的28层网络循环执行两轮，在不增加参数量的前提下增加有效计算深度，Z.ai称其智能水平可媲美2万亿至3万亿参数模型，模型规模为750B。面向开发者的卖点是\"泛Coding\"：把代码作为生成视频、游戏、3D着色器与CAD的通用工具。目前模型仅在Z.ai自有产品中提供，包括GLM Coding Plan、ZCode桌面应用与Z.ai Chat，权重尚未发布，自部署硬件要求未披露。Z.ai未公布旗舰基准表，仅给出30B循环消融实验结果：AIME25提升11.3分（19.17至30.42），IFBench提升3.3分（50.20至53.47）为最小增益，团队同时提示循环架构存在\"marathon thinking\"问题。",
+      "link": "https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/",
+      "source_file": "sources/2026-11-24_Z AI Releases GLM-5.4_ A 750B Loop Transformer Tha_MarkTechPost.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议",
+      "source": "量子位",
+      "digest": "11月24日，文心5.5 Flash Preview（ERNIE 5.5 Flash Preview）正式开源，采用Apache 2.0协议面向全球开源社区开放。开发者可在Hugging Face与ModelScope平台获取模型权重及配套资源进行本地部署与二次开发，支持vLLM、SGLang等主流推理框架。该模型总参数量达2800亿，每个Token激活140亿参数，支持最长100万Token上下文，在编程、3D建模、知识工作与内容创作等方面表现突出，在Terminal-Bench、AutomationBench等多项基准测试中取得有竞争力的得分，并保持极致的解码速度。在CodeArena WebDev榜单中，文心5.5 Flash Preview以1668分位列开源模型第二、国产模型第四，紧随Kimi K3.1 Pro、Qwen3.8-Max等大参数国产模型之后。权重开放后，全球开发者可基于该模型开展领域微调、工具链适配与部署优化。",
+      "link": "https://www.qbitai.com/2026/11/512354.html",
+      "source_file": "sources/2026-11-24_文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议_量子位.md",
+      "category": "国内",
+      "is_model_related": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "AI+软件研发 | 驾驭工程：Agent时代的工程化方法与实践观察",
+      "source": "ICT数字化治理",
+      "digest": "驾驭工程（Harness Engineering）是2026年业界为破解\"个体提效无法转化为组织能力\"瓶颈而收敛出的工程化方法。Mitchell Hashimoto提出核心理念：每当发现智能体犯错，即设计工程化方案确保同类错误不再发生；OpenAI将其用于百万行生产代码自动化开发，Anthropic将其定义为支撑复杂智能体运行的外部框架、控制机制与编排体系。驾驭工程管理的不再是一次对话质量，而是智能体在组织中持续运行的整个系统，区别于提示词工程与上下文工程。中国信通院调研了金融、通信、互联网头部企业实践：去哪儿围绕AI Coding构建七层Harness架构（Skill契约、脚本执行、证据工作区、流程编排、安全护栏、状态机闭环、本机端到端验证），以真实平台状态为闭环依据；银河证券构建\"模型能力＋Agent Harness＋User Harness\"三层控制结构，行动前以引导器注入上下文，行动后以传感器观察结果驱动自修正，重复问题反哺为新引导器或传感器；申万宏源基于CodeBuddy构建业务架构梳理Agent，由测试生成Skill完成影响分析到用例生成的标准化流程。",
+      "link": "https://mp.weixin.qq.com/s/oqdC1vjSz_2oKxgO9sNZCw",
+      "source_file": "sources/2026-11-24_AI+软件研发 _ 驾驭工程：Agent时代的工程化方法与实践观察_ICT数字化治理.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Auto 档位耐用度提升近1倍的背后：Qoder 的 Harness 优化实践",
+      "source": "Qoder",
+      "digest": "Qoder对Auto档位的任务执行过程做了一系列优化，单任务平均Credits消耗下降约41%，用户无需修改配置或改变使用习惯。文章解释了Harness的含义：模型之外负责上下文放什么、提供哪些工具、调用怎样执行、长任务怎样延续的执行层；模型相同时，Harness设计直接决定任务跑多少轮、每轮带多少内容。优化包括系统提示词引导模型把互不依赖的调用放在同一轮并行发出，读取实现、测试与配置三个文件由三轮请求压缩为一轮；对话中已确认的事实直接使用不再重复推导；验证围绕交付目标进行，相关代码未变化时不重跑已通过的检查。此外Qoder将MCP工具按需加载，避免接入多个服务后几十上百个工具说明每轮都进入上下文计费并抬高选错概率。这些优化减少重复读取文件与重复确认已完成工作等无效开销，把额度用在真正推进任务的步骤上。",
+      "link": "https://mp.weixin.qq.com/s/sp21erzeW2Ks4iwZhEHUfw",
+      "source_file": "sources/2026-11-24_Auto 档位耐用度提升近1倍的背后：Qoder 的 Harness 优化实践_Qoder.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "“AI 写代码一定比人好，但代码从来都是不可信的”！五位一线技术人激辩 AI 原生研发的真相与代价",
+      "source": "CSDN",
+      "digest": "CSDN报道11月20日奇点智能技术大会圆桌对话《AI原生软件研发时代：写代码变了，企业和人要怎么变？》，腾讯CodeBuddy陈秋远、小红书孙哲、北航杨健、百度Comate王旭、滴滴刘金晶五位一线专家参加。孙哲称现在AI写代码一定比人好，只要上下文可控，拆分子任务效果远超人类，但能否上线回归人的\"掌控感\"；陈秋远指出从代码本身来说它从来不可信，生成端攻击力爆发式增长而防御力缺失，未来\"人写代码\"可能不存在，\"人在防代码\"将成为常态。王旭说最大卡点是怎么花最少的钱证明Agent写的代码是对的；杨健称Coding Agent已跑通从调研、写码、跑实验到写论文的AutoResearch闭环，下一阶段迈向\"Code RSI\"。孙哲明确小红书不要求业务做AI-friendly改造；刘金晶把花两千万建的平台拆为生命周期不同的三层资产。",
+      "link": "https://mp.weixin.qq.com/s/jJ9kKzgqmDOs9eQIPuDcjA",
+      "source_file": "sources/2026-11-24_“AI 写代码一定比人好，但代码从来都是不可信的”！五位一线技术人激辩 AI 原生研发的真相与代价_CSDN.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "业界首提“端侧超节点”，让端侧AI组队计算：AI效率暴涨270%，不用换芯片或模型",
+      "source": "量子位",
+      "digest": "量子位报道，长期深耕端侧AI基础设施的辛米尔科技在业界率先提出\"端侧超节点\"（Edge SuperPOD），为分散的端侧AI设备搭建协同\"路网\"。实测显示，同样一组芯片与模型，仅改变系统组织计算任务的方式，AI有效任务吞吐量可提升270%。文章以城市交通作比：引擎决定单车性能，路网与调度决定整座城市的通行能力。端侧算力面临三道难关：算力分散、资源利用不均，不同设备缺少统一任务编排，易出现GPU闲置与NPU满载，且重复执行相同预处理；感知信息割裂，相机、三维传感器、音频与状态信号各取场景一部分，缺少整合机制；任务部署复杂，多种传感器与模型组合涉及芯片架构与开发生态差异。云端超节点依托集中资源与高速互联聚合算力，端侧超节点面对的是分布在不同位置、架构性能参差的异构设备，让它们围绕同一AI任务分工协作，以统一系统形态承接任务。",
+      "link": "https://www.qbitai.com/2026/11/512362.html",
+      "source_file": "sources/2026-11-24_业界首提“端侧超节点”，让端侧AI组队计算：AI效率暴涨270%，不用换芯片或模型_量子位_1a6be1.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "从提示词优化到决策模型：Jev 辅助业务 Agent 技能路由的探索与落地",
+      "source": "千问AI平台",
+      "digest": "千问AI平台文章介绍业务Agent技能路由从提示词优化走向决策模型的探索。用户请求到Agent给出答案之间需反复判断业务域、调用哪个工具、是否继续检索、信息是否充分、何时澄清与转交，这些判断位于关键路径，一步错步步错。该业务Agent路由准确率从早期33.6%经完善规则提升到62.1%，优化主Agent提示词后达70.1%，修正Skill职责描述与适用边界后达86.01%，此后收益开始放缓。团队转而关注TypeSafe于2026年9月发布的Jev，其创始人Diogo Almeida曾在OpenAI参与指令理解研究，官方把这类模型命名为\"System One Models\"，专注让\"这句话属于哪类意图\"\"下一步交给谁\"\"信息是否足够\"等范围明确的判断成为可独立调用的能力。文章比较了通用大模型、专用分类器与Jev在技能路由场景中的优势与局限。",
+      "link": "https://mp.weixin.qq.com/s/64X4sJ5Z2uoLI70xoCfGRA",
+      "source_file": "sources/2026-11-24_从提示词优化到决策模型：Jev 辅助业务 Agent 技能路由的探索与落地_千问AI平台.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "蚂蚁OceanBase发布湖库一体AI数据平台OceanLake，核心引擎向全球开源",
+      "source": "量子位",
+      "digest": "量子位报道，11月24日蚂蚁OceanBase AI数据大会在北京召开，正式发布AI战略产品——湖库一体AI数据平台OceanLake，并宣布向全球开源其核心引擎AI数据库，开源项目代号为OceanSeek。CEO杨冰提出AI时代数据基础设施应坚持\"湖库一体、多模融合、Agent友好、开源开放\"四大原则，并把企业数据生产力困境概括为\"三座冰山\"：私有与公有数据、多模态与结构化数据、乱序与有序数据。OceanLake融合数据库实时事务、数仓分析与数据湖开放存储，统一管理结构化、半结构化与非结构化数据，实现离线加工与在线分析检索一体化，覆盖数据与计算层、业务语义层、Agent运行层与数据智能层。落地场景中，平台为蚂蚁灵波、灵心巧手打通多模态数据处理与模型训练链路，支撑蚂蚁灵光超3000万个\"闪应用\"运行，帮助平安寿险将典型取数交付时间从2至5天缩短至约15分钟，并支持厦门航空通过DataPilot实现经营问数决策。OceanSeek支持多模态数据管理、混合检索与数据沙箱。",
+      "link": "https://www.qbitai.com/2026/11/512330.html",
+      "source_file": "sources/2026-11-24_蚂蚁OceanBase发布湖库一体AI数据平台OceanLake，核心引擎向全球开源_量子位.md",
+      "category": "国内",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "AI赋能运维革新 智能护航金融基石——交通银行数据中心智能运维建设实践与探索",
+      "source": "金融电子化",
+      "digest": "国有大型商业银行同步推进\"东数西算\"算力布局、分布式架构改造与自主信创替换，传统人工运维面临规模激增、跨域故障处置难、专家经验难复用等挑战。交通银行紧扣\"十五五\"金融科技规划与\"人工智能+\"行动方案，锚定运维自动化、可视化、智能化\"三化\"目标，构建\"1+2+4\"数智运维支撑体系，自研\"启明\"一体化智能运维驾舱，分数据治理、孪生可视化、AI自主自愈三阶段落地。交行以智能运维国标GB/T 43208.1-2023为遵循，形成覆盖架构、流程、人员、技术与风控的系统工程。其\"三地六中心\"分布式数据中心架构叠加集中式向分布式切换、商用软硬件向信创迁移、规则驱动向AI智能决策演进三重转型。通过三层六域统一数据底座、全域数字孪生运维蓝图、金融运维大模型与多智能体协同架构，实现故障快速定位、分钟级业务灾备恢复与AI辅助协同处置，构建适配多地多中心分布式场景的金融智能运维模式。",
+      "link": "https://mp.weixin.qq.com/s/OF-_gpXNHJPtFSYhEkpjWg",
+      "source_file": "sources/2026-11-24_AI赋能运维革新 智能护航金融基石——交通银行数据中心智能运维建设实践与探索_金融电子化.md",
+      "category": "同业",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Clay 借助 Codex 与 ChatGPT 帮助销售团队赢得客户",
+      "source": "OpenAI",
+      "digest": "OpenAI发布的客户案例：Clay是一家自我学习的营收引擎，用GPT-6 Astra、GPT-6 Sol等模型帮助用户构建公司与人员列表、用智能体丰富记录，并将这些信息用于市场进入策略。此次Clay通过Codex和ChatGPT插件把这些能力带到客户已有的工作场景，让销售代表创建并运行go-to-market流程、调研客户与交易。GPT-6模型负责其中的推理环节。Clay的AI负责人Jeff Barg表示，Clay in ChatGPT让销售代表更深入理解他们想推销的客户，把丰富上下文带到他们本就在工作的地方。Codex集成则让开发者直接在Codex中构建和运行市场进入流程，同时让销售代表获取调研客户或理解交易所需的数据。",
+      "link": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "source_file": "sources/2026-11-24_Clay helps sales teams win with Codex and ChatGPT_OpenAI.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Google 申请专利为用户量身定制 AI 电视频道",
+      "source": "Solidot",
+      "digest": "Solidot转述，Google提交了一项名为\"creating a channel of video experiences tailored to a user\"的专利申请，利用其掌握的用户信息创造一个由AI生成的电视频道。频道内容为用户量身定制，用户本人担任主角，并穿插个性化定制广告。该专利通过输入提示词要求大模型为用户生成定制视频，视频基于用户画像特征以及最常观看内容的风格与偏好生成，频道还会关联广告服务器为AI生成视频插入定制广告。文章称这是AI视频技术未来发展方向的最新信号：企业与广告商通过收集大量与个人相关的数据，自动生成源源不断、高度精准且完全个性化的内容。",
+      "link": "https://www.solidot.org/story?sid=85973",
+      "source_file": "sources/2026-11-24_Google 申请专利为用户量身定制 AI 电视频道_Solidot.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "华为星芒O1 Pro，如何把手机 AI 再往前努一小步",
+      "source": "极客公园",
+      "digest": "极客公园试用华为新品牌星芒OSTA的首款产品星芒OSTA O1 Pro，认为从中可看到大厂在手机AI光谱上向AI手机迈进的一小步。文章指出当前手机AI较为割裂：大厂把AI散落在键盘、录音、文字记录、笔记等功能之中，而字节、阶跃等挑战者试图用单一AI助手一杆子到底，却往往碰壁。O1 Pro采用阔直板形式，核心是\"AI Launcher\"：开机后呈现\"AI集合页\"，顶部的\"小星星\"助手会随检测快递、推荐出游等场景改变形象，甚至可被戳或晃晕。首次引导后开放两个主要功能区，消息推送区根据用户常用App及点赞收藏内容推荐相关信息，例如在小红书收藏景点后推送攻略，在京东浏览智能戒指后生成主流产品对比；另有小艺空间的场景页面。",
+      "link": "http://www.geekpark.net/news/374417",
+      "source_file": "sources/2026-11-24_华为星芒O1 Pro，如何把手机 AI 再往前努一小步_极客公园.md",
+      "category": "其他",
+      "is_model_related": false
+    },
+    {
+      "date": "2026-11-24",
+      "title": "豆包推出个人助理小豆App，我上手试了下",
+      "source": "AI普瑞斯",
+      "digest": "AI普瑞斯实测豆包推出的AI个人助理产品\"小豆\"。小豆已上架苹果应用商店与安卓市场，官方称处于邀请制公测阶段，实测下载登录即可使用。App分为四部分：对话界面、猜你所想（根据聊天内容与授权应用信息主动推荐并持续跟进）、任务进展（偏定时任务）与设置页（可查看记忆、管理连接的系统或第三方应用）。目前iOS版本仅支持抖音、飞书企业号、百度网盘、Apple健康、日历、地理信息、提醒事项与联系人8个应用，邮箱尚未支持。实测中，小豆主动提到作者写过Qclaw的稿子并推荐写作选题，追问后发现它会调用用户此前与豆包的对话存入自身记忆，也可全部删除。作者认为小豆功能与Muse等主流个人智能体相近，短板是支持的第三方应用较少，优势是接入了同账号豆包记忆，使用更顺手，整体偏生活助手并兼顾部分工作场景。",
+      "link": "https://mp.weixin.qq.com/s/923_1xmv_mAtDpZcYQRq_A",
+      "source_file": "sources/2026-11-24_豆包推出个人助理小豆App，我上手试了下_AI普瑞斯.md",
+      "category": "其他",
+      "is_model_related": false
+    },
     {
       "date": "2026-11-23",
       "title": "AI时代必备的27个网络安全术语：从模型攻击到智能体风险",
