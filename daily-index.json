@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-26",
+      "weekday": "周四",
+      "stats": {
+        "国际": 11,
+        "国内": 8,
+        "同业": 0,
+        "其他": 0,
+        "total": 19
+      },
+      "summary": "20个AI Agents组队，4天狂跑350次实验，超越ClickBench最佳公开成绩/381个AI直播冲刺证明P=NP！把GitHub干崩了/AI 3..."
+    },
+    {
       "date": "2026-11-25",
       "weekday": "周三",
       "stats": {
