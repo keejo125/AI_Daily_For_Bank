@@ -1,6 +1,18 @@
 {
   "issues": [
     {
+      "date": "2026-11-27",
+      "weekday": "周五",
+      "stats": {
+        "国际": 6,
+        "国内": 10,
+        "同业": 1,
+        "其他": 1,
+        "total": 18
+      },
+      "summary": "Sakana AI 发布 Namazu Small：基于 Nemotron 3 Nano 构建的 30B 推理模型/只改0.015%参数，问答提速10倍！..."
+    },
+    {
       "date": "2026-11-26",
       "weekday": "周四",
       "stats": {
